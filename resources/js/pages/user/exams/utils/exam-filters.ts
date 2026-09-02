@@ -12,7 +12,10 @@ export function matchesReviewFilter(
         status: ReviewStatusFilter;
     },
 ): boolean {
-    if (filters.category !== 'All Categories' && q.category !== filters.category) {
+    if (
+        filters.category !== 'All Categories' &&
+        q.category !== filters.category
+    ) {
         return false;
     }
 
@@ -32,20 +35,20 @@ export function matchesReviewFilter(
 
     if (filters.status === 'correct') {
         if (isDemographic || !isCorrect) {
-return false;
-}
+            return false;
+        }
     }
 
     if (filters.status === 'incorrect') {
         if (isDemographic || isCorrect) {
-return false;
-}
+            return false;
+        }
     }
 
     if (filters.status === 'flagged') {
         if (!flagged[idx]) {
-return false;
-}
+            return false;
+        }
     }
 
     return true;
@@ -61,16 +64,16 @@ export function matchesLiveFilter(
     const isFlagged = flagged[idx] === true;
 
     if (status === 'answered') {
-return isAnswered;
-}
+        return isAnswered;
+    }
 
     if (status === 'unanswered') {
-return !isAnswered;
-}
+        return !isAnswered;
+    }
 
     if (status === 'flagged') {
-return isFlagged;
-}
+        return isFlagged;
+    }
 
     return true;
 }

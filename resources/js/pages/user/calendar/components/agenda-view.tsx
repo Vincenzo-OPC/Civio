@@ -79,65 +79,69 @@ export function AgendaView({
     }, []);
 
     // Format all dates and organize agenda sections
-    const { overdueList, todayList, tomorrowList, upcomingDays, completedList } =
-        useMemo(() => {
-            const overdue: StudySchedule[] = [];
-            const today: StudySchedule[] = [];
-            const tomorrow: StudySchedule[] = [];
-            const upcomingMap = new Map<string, StudySchedule[]>();
-            const completed: Array<{ schedule: StudySchedule; date: string }> =
-                [];
+    const {
+        overdueList,
+        todayList,
+        tomorrowList,
+        upcomingDays,
+        completedList,
+    } = useMemo(() => {
+        const overdue: StudySchedule[] = [];
+        const today: StudySchedule[] = [];
+        const tomorrow: StudySchedule[] = [];
+        const upcomingMap = new Map<string, StudySchedule[]>();
+        const completed: Array<{ schedule: StudySchedule; date: string }> = [];
 
-            // 1. Process pastPending
-            pastPending.forEach((item) => {
-                if (filterScheduleByCategory(item)) {
-                    overdue.push(item);
+        // 1. Process pastPending
+        pastPending.forEach((item) => {
+            if (filterScheduleByCategory(item)) {
+                overdue.push(item);
+            }
+        });
+
+        // 2. Process all schedules in the map
+        const sortedDates = Array.from(schedules.keys()).sort();
+
+        sortedDates.forEach((dateStr) => {
+            const items = (schedules.get(dateStr) || []).filter(
+                filterScheduleByCategory,
+            );
+
+            items.forEach((item) => {
+                if (item.is_done) {
+                    completed.push({ schedule: item, date: dateStr });
+                }
+
+                if (dateStr === todayStr) {
+                    today.push(item);
+                } else if (dateStr === tomorrowDate) {
+                    tomorrow.push(item);
+                } else if (dateStr > tomorrowDate) {
+                    const existing = upcomingMap.get(dateStr) || [];
+                    existing.push(item);
+                    upcomingMap.set(dateStr, existing);
+                } else if (dateStr < todayStr && !item.is_done) {
+                    if (!overdue.some((o) => o.id === item.id)) {
+                        overdue.push(item);
+                    }
                 }
             });
+        });
 
-            // 2. Process all schedules in the map
-            const sortedDates = Array.from(schedules.keys()).sort();
-
-            sortedDates.forEach((dateStr) => {
-                const items = (schedules.get(dateStr) || []).filter(
-                    filterScheduleByCategory,
-                );
-
-                items.forEach((item) => {
-                    if (item.is_done) {
-                        completed.push({ schedule: item, date: dateStr });
-                    }
-
-                    if (dateStr === todayStr) {
-                        today.push(item);
-                    } else if (dateStr === tomorrowDate) {
-                        tomorrow.push(item);
-                    } else if (dateStr > tomorrowDate) {
-                        const existing = upcomingMap.get(dateStr) || [];
-                        existing.push(item);
-                        upcomingMap.set(dateStr, existing);
-                    } else if (dateStr < todayStr && !item.is_done) {
-                        if (!overdue.some((o) => o.id === item.id)) {
-                            overdue.push(item);
-                        }
-                    }
-                });
-            });
-
-            return {
-                overdueList: overdue,
-                todayList: today,
-                tomorrowList: tomorrow,
-                upcomingDays: Array.from(upcomingMap.entries()),
-                completedList: completed,
-            };
-        }, [
-            schedules,
-            pastPending,
-            todayStr,
-            tomorrowDate,
-            filterScheduleByCategory,
-        ]);
+        return {
+            overdueList: overdue,
+            todayList: today,
+            tomorrowList: tomorrow,
+            upcomingDays: Array.from(upcomingMap.entries()),
+            completedList: completed,
+        };
+    }, [
+        schedules,
+        pastPending,
+        todayStr,
+        tomorrowDate,
+        filterScheduleByCategory,
+    ]);
 
     const getCategoryDetails = (title: string, subcategoryId?: number) => {
         let catName = 'General';
@@ -308,7 +312,7 @@ export function AgendaView({
                             type="checkbox"
                             checked={isSelected}
                             onChange={() => toggleSelectSchedule(task.id)}
-                            className="mt-1 size-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800 shrink-0 cursor-pointer"
+                            className="mt-1 size-4 shrink-0 cursor-pointer rounded border-slate-300 text-blue-600 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800"
                             aria-label={`Select ${task.title}`}
                         />
                     )}
@@ -404,7 +408,7 @@ export function AgendaView({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="h-7 gap-1 px-2 text-[11px] font-bold border-indigo-200 text-indigo-700 bg-indigo-50/50 hover:bg-indigo-100 dark:border-indigo-900/40 dark:text-indigo-300 dark:bg-indigo-950/30"
+                            className="h-7 gap-1 border-indigo-200 bg-indigo-50/50 px-2 text-[11px] font-bold text-indigo-700 hover:bg-indigo-100 dark:border-indigo-900/40 dark:bg-indigo-950/30 dark:text-indigo-300"
                             onClick={() => onOpenStudyDrawer(task, dateStr)}
                         >
                             <Sparkles className="size-3" />
@@ -447,7 +451,7 @@ export function AgendaView({
         <div className="space-y-6">
             {/* OVERDUE TASKS SECTION */}
             {overdueList.length > 0 && (
-                <div className="rounded-3xl border border-rose-200 bg-rose-50/50 p-5 dark:border-rose-900/40 dark:bg-rose-950/20 sm:p-6">
+                <div className="rounded-3xl border border-rose-200 bg-rose-50/50 p-5 sm:p-6 dark:border-rose-900/40 dark:bg-rose-950/20">
                     <div className="mb-4 flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
                         <div className="flex items-center gap-2.5">
                             <div className="flex size-9 items-center justify-center rounded-xl bg-rose-500/10 text-rose-600 dark:bg-rose-400/10 dark:text-rose-400">
@@ -533,7 +537,7 @@ export function AgendaView({
             <div className="space-y-3">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <span className="flex size-7 items-center justify-center rounded-lg bg-blue-600 font-black text-xs text-white">
+                        <span className="flex size-7 items-center justify-center rounded-lg bg-blue-600 text-xs font-black text-white">
                             {new Date(todayStr + 'T00:00:00').getDate()}
                         </span>
                         <div>
@@ -564,14 +568,16 @@ export function AgendaView({
 
                 {todayList.length > 0 ? (
                     <div className="space-y-2.5">
-                        {todayList.map((task) => renderTaskCard(task, todayStr))}
+                        {todayList.map((task) =>
+                            renderTaskCard(task, todayStr),
+                        )}
                     </div>
                 ) : (
                     <Card className="flex flex-col items-center justify-center border-dashed p-8 text-center">
                         <div className="mb-2 flex size-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
                             <Sparkles className="size-5" />
                         </div>
-                        <p className="font-bold text-slate-800 text-sm dark:text-slate-200">
+                        <p className="text-sm font-bold text-slate-800 dark:text-slate-200">
                             No study tasks planned for today
                         </p>
                         <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
@@ -594,7 +600,7 @@ export function AgendaView({
             <div className="space-y-3">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <div className="flex size-7 items-center justify-center rounded-lg bg-slate-100 font-bold text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                        <div className="flex size-7 items-center justify-center rounded-lg bg-slate-100 text-xs font-bold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
                             {new Date(tomorrowDate + 'T00:00:00').getDate()}
                         </div>
                         <div>
@@ -639,7 +645,7 @@ export function AgendaView({
             {/* UPCOMING DAYS SCHEDULE */}
             {upcomingDays.length > 0 && (
                 <div className="space-y-4 pt-2">
-                    <h3 className="text-sm font-black uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                    <h3 className="text-sm font-black tracking-wider text-slate-400 uppercase dark:text-slate-500">
                         Upcoming Days
                     </h3>
 
@@ -647,7 +653,7 @@ export function AgendaView({
                         {upcomingDays.map(([dateStr, items]) => (
                             <div key={dateStr} className="space-y-2.5">
                                 <div className="flex items-center justify-between border-b border-slate-100 pb-1 dark:border-slate-800">
-                                    <span className="font-bold text-slate-700 text-xs dark:text-slate-300">
+                                    <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
                                         {new Date(
                                             dateStr + 'T00:00:00',
                                         ).toLocaleDateString('en-US', {
@@ -687,7 +693,8 @@ export function AgendaView({
                             <div className="flex items-center gap-2">
                                 <CheckCircle2 className="size-4.5 text-emerald-600 dark:text-emerald-400" />
                                 <span>
-                                    Completed Study Sessions ({completedList.length})
+                                    Completed Study Sessions (
+                                    {completedList.length})
                                 </span>
                             </div>
                             {isCompletedOpen ? (
@@ -701,7 +708,7 @@ export function AgendaView({
                             <Button
                                 size="sm"
                                 variant="outline"
-                                className="h-12 border-rose-200 text-rose-600 hover:bg-rose-50 hover:text-rose-700 dark:border-rose-900/40 dark:text-rose-400 dark:hover:bg-rose-950/30 px-3 font-bold text-xs shrink-0"
+                                className="h-12 shrink-0 border-rose-200 px-3 text-xs font-bold text-rose-600 hover:bg-rose-50 hover:text-rose-700 dark:border-rose-900/40 dark:text-rose-400 dark:hover:bg-rose-950/30"
                                 onClick={() =>
                                     handleBulkDelete({
                                         scope: 'completed',

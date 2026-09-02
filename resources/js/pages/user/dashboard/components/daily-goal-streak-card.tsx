@@ -45,7 +45,7 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
     const todayDayIndex = (new Date().getDay() + 6) % 7;
 
     return (
-        <Card className="relative flex flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-2xs backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700 sm:p-6">
+        <Card className="relative flex flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-2xs backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md sm:p-6 dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700">
             {/* Header */}
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
@@ -84,7 +84,7 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
                 {/* Weekly Habit Consistency Tracker */}
                 <div className="flex items-center justify-between gap-2 rounded-xl border border-slate-100 bg-slate-50/60 px-3.5 py-2.5 dark:border-slate-800/60 dark:bg-slate-950/30">
                     <div className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
-                        <Sparkles className="size-3.5 text-amber-500 shrink-0" />
+                        <Sparkles className="size-3.5 shrink-0 text-amber-500" />
                         <span className="truncate">Weekly Habit:</span>
                     </div>
 
@@ -103,15 +103,15 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
                                         isCompleted
                                             ? 'bg-amber-500 text-white shadow-2xs'
                                             : isToday
-                                            ? 'border border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-300 ring-1 ring-amber-400/40'
-                                            : 'bg-muted/70 text-muted-foreground'
+                                              ? 'border border-amber-300 bg-amber-50 text-amber-700 ring-1 ring-amber-400/40 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-300'
+                                              : 'bg-muted/70 text-muted-foreground'
                                     }`}
                                     title={`${day.name}: ${
                                         isCompleted
                                             ? 'Goal Completed'
                                             : isToday
-                                            ? 'Today'
-                                            : 'Upcoming'
+                                              ? 'Today'
+                                              : 'Upcoming'
                                     }`}
                                 >
                                     {day.label}
@@ -126,11 +126,11 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                             <Target className="size-4 text-blue-600 dark:text-blue-400" />
-                            <span className="text-xs font-bold text-slate-700 dark:text-slate-200 sm:text-sm">
+                            <span className="text-xs font-bold text-slate-700 sm:text-sm dark:text-slate-200">
                                 Questions Solved Today
                             </span>
                         </div>
-                        <div className="flex items-center gap-1 text-xs font-black text-slate-900 dark:text-white sm:text-sm">
+                        <div className="flex items-center gap-1 text-xs font-black text-slate-900 sm:text-sm dark:text-white">
                             <span>{questionsToday}</span>
                             <span className="text-slate-400 dark:text-slate-500">
                                 / {goalTarget}
@@ -146,24 +146,28 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
                     <div className="flex items-center justify-between text-xs font-semibold text-slate-500 dark:text-slate-400">
                         {isGoalMet ? (
                             <span className="flex items-center gap-1 font-bold text-emerald-600 dark:text-emerald-400">
-                                <CheckCircle2 className="size-3.5" /> Daily target met! Great work.
+                                <CheckCircle2 className="size-3.5" /> Daily
+                                target met! Great work.
                             </span>
                         ) : (
                             <span>
-                                {goalTarget - questionsToday} more questions to reach goal
+                                {goalTarget - questionsToday} more questions to
+                                reach goal
                             </span>
                         )}
-                        <span className="font-bold text-slate-700 dark:text-slate-300">{progressPct}%</span>
+                        <span className="font-bold text-slate-700 dark:text-slate-300">
+                            {progressPct}%
+                        </span>
                     </div>
                 </div>
 
                 {/* Quick Practice Study Jumpers (Custom Builder & Saved Sets) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                     <Link
                         href="/drills?tab=custom"
                         className="group flex items-center justify-between rounded-xl border border-violet-200/70 bg-violet-50/40 p-3 transition-all hover:border-violet-300 hover:bg-violet-50/70 dark:border-violet-900/40 dark:bg-violet-950/20 dark:hover:border-violet-800"
                     >
-                        <div className="flex items-center gap-2.5 min-w-0">
+                        <div className="flex min-w-0 items-center gap-2.5">
                             <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-violet-500/10 text-violet-600 dark:bg-violet-400/10 dark:text-violet-400">
                                 <SlidersHorizontal className="size-4" />
                             </div>
@@ -176,14 +180,14 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
                                 </p>
                             </div>
                         </div>
-                        <ChevronRight className="size-4 text-violet-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                        <ChevronRight className="size-4 shrink-0 text-violet-500 transition-transform group-hover:translate-x-0.5" />
                     </Link>
 
                     <Link
                         href="/drills?tab=saved"
                         className="group flex items-center justify-between rounded-xl border border-blue-200/70 bg-blue-50/40 p-3 transition-all hover:border-blue-300 hover:bg-blue-50/70 dark:border-blue-900/40 dark:bg-blue-950/20 dark:hover:border-blue-800"
                     >
-                        <div className="flex items-center gap-2.5 min-w-0">
+                        <div className="flex min-w-0 items-center gap-2.5">
                             <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400">
                                 <Bookmark className="size-4" />
                             </div>
@@ -196,7 +200,7 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
                                 </p>
                             </div>
                         </div>
-                        <ChevronRight className="size-4 text-blue-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                        <ChevronRight className="size-4 shrink-0 text-blue-500 transition-transform group-hover:translate-x-0.5" />
                     </Link>
                 </div>
             </div>

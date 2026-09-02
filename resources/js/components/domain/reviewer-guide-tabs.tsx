@@ -15,7 +15,6 @@ import {
     Calendar as CalendarIcon,
     TrendingUp,
     Sparkles,
-    Check,
 } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -50,8 +49,7 @@ export function ReviewerGuideTabs({
                 'Review your Next Recommended Practice Focus Area to immediately study your highest-yield weak spot.',
                 'Monitor your Daily Study Streak to build consistent long-term habit retention.',
             ],
-            proTip:
-                'Spend 2 minutes on the dashboard at the start of every study session to decide whether to read concepts or run drills.',
+            proTip: 'Spend 2 minutes on the dashboard at the start of every study session to decide whether to read concepts or run drills.',
             actionLabel: 'Go to Dashboard',
             actionUrl: '/dashboard',
         },
@@ -68,8 +66,7 @@ export function ReviewerGuideTabs({
                 'Schedule specific focus categories for individual dates (e.g., Numerical on Mondays, Verbal on Tuesdays).',
                 'Mark daily study milestones as complete to maintain study momentum.',
             ],
-            proTip:
-                'Aim for 30–45 focused minutes daily instead of 5-hour weekend cram sessions for superior factual recall.',
+            proTip: 'Aim for 30–45 focused minutes daily instead of 5-hour weekend cram sessions for superior factual recall.',
             actionLabel: 'Open Study Plan',
             actionUrl: '/study-schedules',
         },
@@ -86,8 +83,7 @@ export function ReviewerGuideTabs({
                 'Read bite-sized lessons with estimated reading times (typically 3–8 minutes each).',
                 'Study interactive summaries and formula cheatsheets before attempting practice drills.',
             ],
-            proTip:
-                'Pay extra attention to Republic Act 6713 (Code of Conduct) and the Philippine Constitution — these are guaranteed points in General Information.',
+            proTip: 'Pay extra attention to Republic Act 6713 (Code of Conduct) and the Philippine Constitution — these are guaranteed points in General Information.',
             actionLabel: 'Browse Study Hub',
             actionUrl: '/learn',
         },
@@ -104,8 +100,7 @@ export function ReviewerGuideTabs({
                 'Choose your question count and difficulty level.',
                 'Receive immediate answer keys and full explanations right after submitting each item.',
             ],
-            proTip:
-                'Always read the explanation even when you guess correctly — this solidifies the core logic for similar questions.',
+            proTip: 'Always read the explanation even when you guess correctly — this solidifies the core logic for similar questions.',
             actionLabel: 'Start Practice Drill',
             actionUrl: '/drills',
         },
@@ -122,8 +117,7 @@ export function ReviewerGuideTabs({
                 'Use the interactive Question Palette on the right to track answered, skipped, and flagged items.',
                 'Use the "Flag for Review" feature to mark difficult items and revisit them before final submission.',
             ],
-            proTip:
-                'Train under strict timer discipline: you have roughly 67 seconds per question on the Professional exam.',
+            proTip: 'Train under strict timer discipline: you have roughly 67 seconds per question on the Professional exam.',
             actionLabel: 'Take Mock Exam',
             actionUrl: '/exams',
         },
@@ -140,8 +134,7 @@ export function ReviewerGuideTabs({
                 'Click "Review Answers" on any attempt to inspect every stem, your chosen answer, the correct option, and full explanation.',
                 'Identify patterns in your wrong answers to prevent repeating the same mistakes.',
             ],
-            proTip:
-                'Keep an error log of questions you missed twice and re-test those specific subcategories using Practice Drills.',
+            proTip: 'Keep an error log of questions you missed twice and re-test those specific subcategories using Practice Drills.',
             actionLabel: 'View Attempt History',
             actionUrl: '/history',
         },
@@ -158,8 +151,7 @@ export function ReviewerGuideTabs({
                 'Inspect Category Mastery percentages to spot low-performing subjects.',
                 'Review your Average Answer Speed per question to optimize exam pacing.',
             ],
-            proTip:
-                'To pass the actual exam, you need BOTH an overall score of at least 80% AND no subtest score below 70%. Focus on your lowest subtest first.',
+            proTip: 'To pass the actual exam, you need BOTH an overall score of at least 80% AND no subtest score below 70%. Focus on your lowest subtest first.',
             actionLabel: 'Check Analytics',
             actionUrl: '/analytics',
         },
@@ -412,7 +404,11 @@ export function ReviewerGuideTabs({
                                 Feature-by-Feature User Manual
                             </h3>
                             <p className="text-sm leading-relaxed text-blue-800/90 dark:text-blue-300/80">
-                                Don't feel overwhelmed! Hiraya Review is designed with modular tools so you can practice at your own pace. Here is how each tool works and when to use it during your preparation journey.
+                                Don't feel overwhelmed! Hiraya Review is
+                                designed with modular tools so you can practice
+                                at your own pace. Here is how each tool works
+                                and when to use it during your preparation
+                                journey.
                             </p>
                         </div>
                     </div>
@@ -460,17 +456,19 @@ export function ReviewerGuideTabs({
                                                 How to Use:
                                             </span>
                                             <ul className="space-y-2 text-xs leading-relaxed text-muted-foreground">
-                                                {feature.steps.map((step, sIdx) => (
-                                                    <li
-                                                        key={sIdx}
-                                                        className="flex items-start gap-2"
-                                                    >
-                                                        <span className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[10px] font-black text-primary">
-                                                            {sIdx + 1}
-                                                        </span>
-                                                        <span>{step}</span>
-                                                    </li>
-                                                ))}
+                                                {feature.steps.map(
+                                                    (step, sIdx) => (
+                                                        <li
+                                                            key={sIdx}
+                                                            className="flex items-start gap-2"
+                                                        >
+                                                            <span className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[10px] font-black text-primary">
+                                                                {sIdx + 1}
+                                                            </span>
+                                                            <span>{step}</span>
+                                                        </li>
+                                                    ),
+                                                )}
                                             </ul>
                                         </div>
 
@@ -478,8 +476,12 @@ export function ReviewerGuideTabs({
                                         <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/80 bg-amber-50/70 p-3.5 text-xs text-amber-900 dark:border-amber-900/40 dark:bg-amber-950/20 dark:text-amber-300">
                                             <Lightbulb className="mt-0.5 size-4 shrink-0 text-amber-600 dark:text-amber-400" />
                                             <div>
-                                                <strong className="font-bold">Pro-Tip: </strong>
-                                                <span className="leading-relaxed">{feature.proTip}</span>
+                                                <strong className="font-bold">
+                                                    Pro-Tip:{' '}
+                                                </strong>
+                                                <span className="leading-relaxed">
+                                                    {feature.proTip}
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -491,7 +493,9 @@ export function ReviewerGuideTabs({
                                                 href={feature.actionUrl}
                                                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-xs font-bold text-primary-foreground shadow-xs transition hover:bg-primary/90"
                                             >
-                                                <span>{feature.actionLabel}</span>
+                                                <span>
+                                                    {feature.actionLabel}
+                                                </span>
                                                 <ArrowRight className="size-3.5" />
                                             </Link>
                                         </div>
@@ -776,8 +780,8 @@ export function ReviewerGuideTabs({
                                     All dynamic lessons and test questions are
                                     fully vetted by a dual-stage filtering
                                     system in the reviewer curation pipeline.
-                                    They align with Philippine Civil Service Exam
-                                    competency guidelines.
+                                    They align with Philippine Civil Service
+                                    Exam competency guidelines.
                                 </span>
                             </div>
                             <div className="space-y-1.5 pt-4">

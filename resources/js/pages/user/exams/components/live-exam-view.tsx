@@ -1,8 +1,6 @@
 import { Head, usePage } from '@inertiajs/react';
 import {
     LayoutGrid,
-    Clock,
-    Timer,
     AlertCircle,
     Flag,
     ChevronLeft,
@@ -16,9 +14,7 @@ import {
     Maximize2,
     Minimize2,
     Edit3,
-    EyeOff,
     Strikethrough,
-    MinusCircle,
     BookOpen,
 } from 'lucide-react';
 import { useState, useMemo, useEffect } from 'react';
@@ -34,8 +30,7 @@ import {
 
 import { renderFormattedText } from '@/lib/exam-formatters';
 import { useContentShield } from '../hooks/use-content-shield';
-import type { Question, SimulationDetails, LiveStatusFilter } from '../types';
-import { isDemographicQuestion } from '../utils/exam-utils';
+import type { Question, SimulationDetails } from '../types';
 import { ExamTimerDisplay } from './exam-timer-display';
 import QuestionPalettePanel from './question-palette-panel';
 
@@ -380,10 +375,14 @@ export function LiveExamView({
                 ) {
                     if (e.altKey) {
                         e.preventDefault();
-                        const isCurrentlyEliminated = eliminatedOptions[currentIdx]?.[optIdx];
+                        const isCurrentlyEliminated =
+                            eliminatedOptions[currentIdx]?.[optIdx];
                         const willBeEliminated = !isCurrentlyEliminated;
 
-                        if (willBeEliminated && answers[currentIdx] === optIdx) {
+                        if (
+                            willBeEliminated &&
+                            answers[currentIdx] === optIdx
+                        ) {
                             handleSelectOption(optIdx);
                         }
 
@@ -416,6 +415,7 @@ export function LiveExamView({
         handleQuestionNavigate,
         handleSelectOption,
         toggleFlag,
+        answers,
     ]);
 
     return (
@@ -478,12 +478,16 @@ export function LiveExamView({
                         <div className="flex min-w-0 items-center gap-1.5">
                             <button
                                 onClick={handleExitExam}
-                                title={isDrillSession ? 'Exit Drill' : 'Exit Exam'}
+                                title={
+                                    isDrillSession ? 'Exit Drill' : 'Exit Exam'
+                                }
                                 className="group flex h-8 shrink-0 items-center gap-1 rounded-md px-2 text-xs font-bold text-muted-foreground transition hover:bg-accent hover:text-foreground focus-visible:outline-none"
                             >
                                 <ChevronLeft className="size-4" />
                                 <span className="hidden sm:inline">
-                                    {isDrillSession ? 'Exit Drill' : 'Exit Exam'}
+                                    {isDrillSession
+                                        ? 'Exit Drill'
+                                        : 'Exit Exam'}
                                 </span>
                             </button>
 
@@ -856,7 +860,7 @@ export function LiveExamView({
                                                                     e,
                                                                     currentIdx,
                                                                     idx,
-                                                                    )
+                                                                )
                                                             }
                                                             title={
                                                                 isEliminated

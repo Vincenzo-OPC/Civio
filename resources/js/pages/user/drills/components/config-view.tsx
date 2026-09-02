@@ -1,3 +1,4 @@
+import { router } from '@inertiajs/react';
 import {
     Brain,
     ChevronLeft,
@@ -15,7 +16,6 @@ import React, { useState } from 'react';
 import { PageHeader } from '@/components/layout/page-header';
 import { Card } from '@/components/ui/card';
 import { makeBackOnClick } from '@/lib/smart-back';
-import { router } from '@inertiajs/react';
 import {
     categoryMeta,
     generateQuestionOptions,
@@ -63,7 +63,9 @@ export function ConfigView({
     const [isCustomMode, setIsCustomMode] = useState<boolean>(false);
 
     const isExternalOrigin = originInfo && originInfo.href !== '/drills';
-    const backLabel = isExternalOrigin ? `Back to ${originInfo.title}` : 'Back to Drill Hub';
+    const backLabel = isExternalOrigin
+        ? `Back to ${originInfo.title}`
+        : 'Back to Drill Hub';
 
     const handleBack = () => {
         if (isExternalOrigin) {
@@ -257,17 +259,25 @@ export function ConfigView({
                                     value={
                                         isCustomMode
                                             ? customInput
-                                            : typeof questionCount === 'number' &&
-                                              !generateQuestionOptions(filteredQCount).includes(questionCount)
-                                            ? String(questionCount)
-                                            : ''
+                                            : typeof questionCount ===
+                                                    'number' &&
+                                                !generateQuestionOptions(
+                                                    filteredQCount,
+                                                ).includes(questionCount)
+                                              ? String(questionCount)
+                                              : ''
                                     }
                                     placeholder={`1-${filteredQCount}`}
                                     onFocus={() => {
                                         setIsCustomMode(true);
 
-                                        if (typeof questionCount === 'number' && questionCount > 0) {
-                                            setCustomInput(String(questionCount));
+                                        if (
+                                            typeof questionCount === 'number' &&
+                                            questionCount > 0
+                                        ) {
+                                            setCustomInput(
+                                                String(questionCount),
+                                            );
                                         }
                                     }}
                                     onChange={(e) => {
@@ -281,20 +291,38 @@ export function ConfigView({
                                             const parsed = parseInt(raw, 10);
 
                                             if (!isNaN(parsed) && parsed > 0) {
-                                                const clamped = Math.min(filteredQCount, parsed);
+                                                const clamped = Math.min(
+                                                    filteredQCount,
+                                                    parsed,
+                                                );
                                                 setQuestionCount(clamped);
                                             }
                                         }
                                     }}
                                     onBlur={() => {
                                         if (isCustomMode) {
-                                            if (customInput === '' || Number(customInput) <= 0) {
-                                                const fallback = Math.min(10, filteredQCount);
+                                            if (
+                                                customInput === '' ||
+                                                Number(customInput) <= 0
+                                            ) {
+                                                const fallback = Math.min(
+                                                    10,
+                                                    filteredQCount,
+                                                );
                                                 setQuestionCount(fallback);
-                                                setCustomInput(String(fallback));
-                                            } else if (Number(customInput) > filteredQCount) {
-                                                setQuestionCount(filteredQCount);
-                                                setCustomInput(String(filteredQCount));
+                                                setCustomInput(
+                                                    String(fallback),
+                                                );
+                                            } else if (
+                                                Number(customInput) >
+                                                filteredQCount
+                                            ) {
+                                                setQuestionCount(
+                                                    filteredQCount,
+                                                );
+                                                setCustomInput(
+                                                    String(filteredQCount),
+                                                );
                                             }
                                         }
                                     }}

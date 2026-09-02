@@ -53,9 +53,13 @@ export function QuestionPreviewCard({
     actionSlot,
     className = '',
 }: QuestionPreviewCardProps) {
-    const [internalExpanded, setInternalExpanded] = useState(showOptionsByDefault);
+    const [internalExpanded, setInternalExpanded] =
+        useState(showOptionsByDefault);
 
-    const isExpanded = controlledExpanded !== undefined ? controlledExpanded : internalExpanded;
+    const isExpanded =
+        controlledExpanded !== undefined
+            ? controlledExpanded
+            : internalExpanded;
     const toggleExpand = () => {
         if (controlledOnToggleExpand) {
             controlledOnToggleExpand();
@@ -85,7 +89,11 @@ export function QuestionPreviewCard({
                         <button
                             type="button"
                             onClick={handleSelectClick}
-                            aria-label={isSelected ? 'Deselect question' : 'Select question'}
+                            aria-label={
+                                isSelected
+                                    ? 'Deselect question'
+                                    : 'Select question'
+                            }
                             className="mr-1 flex items-center gap-1.5 text-xs font-bold text-blue-600 transition hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-blue-400"
                         >
                             {isSelected ? (
@@ -93,7 +101,7 @@ export function QuestionPreviewCard({
                             ) : (
                                 <Square className="size-4.5 text-muted-foreground/50 hover:text-muted-foreground" />
                             )}
-                            <span className="hidden sm:inline text-[11px] font-extrabold uppercase tracking-wide">
+                            <span className="hidden text-[11px] font-extrabold tracking-wide uppercase sm:inline">
                                 {isSelected ? 'Selected' : 'Select'}
                             </span>
                         </button>
@@ -124,12 +132,15 @@ export function QuestionPreviewCard({
                         </span>
                     )}
 
-                    {showStatusBadge && question.isUnseen && !question.isMistake && !question.isCustom && (
-                        <span className="inline-flex items-center gap-1 rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[9px] font-black text-emerald-700 dark:border-emerald-900/30 dark:bg-emerald-950/40 dark:text-emerald-300">
-                            <EyeOff className="size-3" />
-                            Fresh / Unseen
-                        </span>
-                    )}
+                    {showStatusBadge &&
+                        question.isUnseen &&
+                        !question.isMistake &&
+                        !question.isCustom && (
+                            <span className="inline-flex items-center gap-1 rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[9px] font-black text-emerald-700 dark:border-emerald-900/30 dark:bg-emerald-950/40 dark:text-emerald-300">
+                                <EyeOff className="size-3" />
+                                Fresh / Unseen
+                            </span>
+                        )}
                 </div>
 
                 {/* Right Header Actions: Custom Action Slot + Expand Button */}
@@ -139,7 +150,11 @@ export function QuestionPreviewCard({
                         type="button"
                         onClick={toggleExpand}
                         aria-expanded={isExpanded}
-                        aria-label={isExpanded ? 'Collapse choices and explanation' : 'Expand choices and explanation'}
+                        aria-label={
+                            isExpanded
+                                ? 'Collapse choices and explanation'
+                                : 'Expand choices and explanation'
+                        }
                         className="flex items-center gap-1 rounded-lg border border-border bg-background px-2.5 py-1 text-[11px] font-bold text-muted-foreground transition hover:bg-muted hover:text-foreground active:scale-95"
                     >
                         <span>{isExpanded ? 'Collapse' : 'Inspect'}</span>
@@ -156,7 +171,7 @@ export function QuestionPreviewCard({
             <div className="p-4 sm:p-6">
                 <div
                     onClick={selectable ? handleSelectClick : toggleExpand}
-                    className={`cursor-pointer select-none text-sm font-semibold leading-relaxed text-foreground sm:text-base ${
+                    className={`cursor-pointer text-sm leading-relaxed font-semibold text-foreground select-none sm:text-base ${
                         !isExpanded ? 'line-clamp-2' : ''
                     }`}
                 >
@@ -170,12 +185,13 @@ export function QuestionPreviewCard({
                         <div className="flex flex-col gap-3">
                             {question.options.map((opt, idx) => {
                                 const letter = String.fromCharCode(65 + idx);
-                                const isCorrectOption = idx === question.correct_option;
+                                const isCorrectOption =
+                                    idx === question.correct_option;
 
                                 return (
                                     <div
                                         key={idx}
-                                        className={`shadow-3xs flex items-center gap-4 rounded-xl border p-3.5 sm:p-4 transition-all duration-200 ${
+                                        className={`shadow-3xs flex items-center gap-4 rounded-xl border p-3.5 transition-all duration-200 sm:p-4 ${
                                             isCorrectOption
                                                 ? 'border-emerald-500 bg-emerald-50/40 font-bold text-emerald-950 shadow-xs dark:border-emerald-500 dark:bg-emerald-950/30 dark:text-emerald-200'
                                                 : 'border-border bg-card text-foreground/80'
@@ -191,12 +207,17 @@ export function QuestionPreviewCard({
                                             {letter}
                                         </span>
                                         <div className="flex flex-1 items-center justify-between gap-3">
-                                            <p className="text-sm font-bold leading-relaxed transition sm:text-base">
-                                                {renderFormattedText(opt, false, undefined, true)}
+                                            <p className="text-sm leading-relaxed font-bold transition sm:text-base">
+                                                {renderFormattedText(
+                                                    opt,
+                                                    false,
+                                                    undefined,
+                                                    true,
+                                                )}
                                             </p>
                                             {isCorrectOption && (
                                                 <div className="flex shrink-0 items-center gap-1.5 pl-2">
-                                                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[9px] font-black uppercase tracking-wider text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+                                                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[9px] font-black tracking-wider text-emerald-800 uppercase dark:bg-emerald-950 dark:text-emerald-300">
                                                         Correct Answer
                                                     </span>
                                                     <CheckCircle2 className="size-4.5 text-emerald-600 dark:text-emerald-400" />
@@ -213,12 +234,14 @@ export function QuestionPreviewCard({
                             <div className="shadow-3xs overflow-hidden rounded-2xl border border-blue-200/70 bg-blue-50/40 text-sm leading-relaxed transition-all dark:border-blue-900/40 dark:bg-blue-950/20">
                                 <div className="flex items-center gap-2 border-b border-blue-200/50 bg-blue-100/40 px-4 py-2.5 text-xs font-bold text-blue-950 dark:border-blue-900/30 dark:bg-blue-950/40 dark:text-blue-200">
                                     <Lightbulb className="size-4 text-amber-500" />
-                                    <span className="font-heading font-black uppercase tracking-wider">
+                                    <span className="font-heading font-black tracking-wider uppercase">
                                         Explanation & Rationale
                                     </span>
                                 </div>
-                                <div className="p-4 sm:p-5 text-xs sm:text-sm text-foreground/90">
-                                    <ExplanationPreview text={question.explanation} />
+                                <div className="p-4 text-xs text-foreground/90 sm:p-5 sm:text-sm">
+                                    <ExplanationPreview
+                                        text={question.explanation}
+                                    />
                                 </div>
                             </div>
                         )}

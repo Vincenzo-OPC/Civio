@@ -1,7 +1,6 @@
 import { Link } from '@inertiajs/react';
 import {
     Target,
-    Brain,
     BookOpen,
     ClipboardList,
     ChevronRight,
@@ -26,7 +25,7 @@ export function SmartStudyLaunchers({
     primaryWeakness,
 }: SmartStudyLaunchersProps) {
     return (
-        <Card className="relative flex min-h-[460px] h-full flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700 sm:p-6">
+        <Card className="relative flex h-full min-h-[460px] flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md sm:p-6 dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700">
             {/* Header */}
             <div className="flex shrink-0 items-center justify-between">
                 <div className="flex items-center gap-2.5">
@@ -45,7 +44,7 @@ export function SmartStudyLaunchers({
             </div>
 
             {/* 4 Contextual Tiles Grid */}
-            <div className="my-auto py-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="my-auto grid grid-cols-1 gap-3 py-3 sm:grid-cols-2">
                 {/* Tile 1: Practice Drills */}
                 <Link
                     href={
@@ -109,7 +108,9 @@ export function SmartStudyLaunchers({
 
                 {/* Tile 3: Learn Modules */}
                 <Link
-                    href={nextModule ? `/learn/${nextModule.slug}` : learnIndex()}
+                    href={
+                        nextModule ? `/learn/${nextModule.slug}` : learnIndex()
+                    }
                     className="group relative flex flex-col justify-between rounded-xl border border-sky-100 bg-gradient-to-br from-sky-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md dark:border-sky-950/60 dark:from-sky-950/30 dark:to-slate-900/60 dark:hover:border-sky-800"
                 >
                     <div>

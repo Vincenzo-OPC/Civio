@@ -1,5 +1,13 @@
 import { Link } from '@inertiajs/react';
-import { BookOpen, RotateCcw, Clock, CheckCircle, XCircle, Layers, Tag } from 'lucide-react';
+import {
+    BookOpen,
+    RotateCcw,
+    Clock,
+    CheckCircle,
+    XCircle,
+    Layers,
+    Tag,
+} from 'lucide-react';
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import type { Attempt } from '../types';
@@ -15,20 +23,27 @@ export function AttemptExpandableRow({ attempt }: AttemptExpandableRowProps) {
 
     // Construct Retake URL
     let retakeUrl = '/exams';
+
     if (isDrill) {
         const queryParams = new URLSearchParams();
+
         if (attempt.category_id) {
             queryParams.set('category_id', String(attempt.category_id));
         }
+
         if (attempt.question_count && attempt.question_count !== 'all') {
             queryParams.set('count', String(attempt.question_count));
         }
+
         if (subcategories.length > 0) {
             queryParams.set('subcategories', subcategories.join(','));
         }
+
         retakeUrl = `/drills?${queryParams.toString()}`;
     } else {
-        const trackParam = attempt.track.toLowerCase().includes('subprofessional')
+        const trackParam = attempt.track
+            .toLowerCase()
+            .includes('subprofessional')
             ? 'subprofessional'
             : 'professional';
         retakeUrl = `/exams?track=${trackParam}`;
@@ -56,10 +71,13 @@ export function AttemptExpandableRow({ attempt }: AttemptExpandableRowProps) {
                             </span>
                             {attempt.avg_time_per_q ? (
                                 <>
-                                    <span className="text-muted-foreground/60">•</span>
+                                    <span className="text-muted-foreground/60">
+                                        •
+                                    </span>
                                     <span className="flex items-center gap-1 font-medium text-muted-foreground">
                                         <Clock className="size-3.5" />
-                                        Avg ~{attempt.avg_time_per_q}s / question
+                                        Avg ~{attempt.avg_time_per_q}s /
+                                        question
                                     </span>
                                 </>
                             ) : null}
@@ -67,14 +85,25 @@ export function AttemptExpandableRow({ attempt }: AttemptExpandableRowProps) {
 
                         {/* Direct Action Buttons */}
                         <div className="flex items-center gap-2">
-                            <Button asChild size="sm" variant="outline" className="h-8 gap-1.5 text-xs font-bold">
+                            <Button
+                                asChild
+                                size="sm"
+                                variant="outline"
+                                className="h-8 gap-1.5 text-xs font-bold"
+                            >
                                 <Link href={retakeUrl}>
                                     <RotateCcw className="size-3.5 text-blue-600 dark:text-blue-400" />
                                     Retake {isDrill ? 'Drill' : 'Exam'}
                                 </Link>
                             </Button>
-                            <Button asChild size="sm" className="h-8 gap-1.5 bg-blue-600 text-xs font-bold text-white hover:bg-blue-700">
-                                <Link href={`/exams?attempt_id=${attempt.id}&from=history`}>
+                            <Button
+                                asChild
+                                size="sm"
+                                className="h-8 gap-1.5 bg-blue-600 text-xs font-bold text-white hover:bg-blue-700"
+                            >
+                                <Link
+                                    href={`/exams?attempt_id=${attempt.id}&from=history`}
+                                >
                                     <BookOpen className="size-3.5" />
                                     Review Answers
                                 </Link>
@@ -121,17 +150,23 @@ export function AttemptExpandableRow({ attempt }: AttemptExpandableRowProps) {
                                             className="flex flex-col gap-1.5 rounded-lg border border-border/60 bg-white p-2.5 dark:bg-slate-950/60"
                                         >
                                             <div className="flex items-center justify-between text-xs font-bold">
-                                                <span className="truncate text-foreground" title={cat.name}>
+                                                <span
+                                                    className="truncate text-foreground"
+                                                    title={cat.name}
+                                                >
                                                     {cat.name}
                                                 </span>
                                                 <span className="shrink-0 text-muted-foreground">
-                                                    {cat.correct}/{cat.total} ({cat.percentage}%)
+                                                    {cat.correct}/{cat.total} (
+                                                    {cat.percentage}%)
                                                 </span>
                                             </div>
                                             <div className="h-1.5 w-full rounded-full bg-slate-100 dark:bg-slate-800">
                                                 <div
                                                     className={`h-full rounded-full transition-all duration-300 ${barColor}`}
-                                                    style={{ width: `${Math.max(4, cat.percentage)}%` }}
+                                                    style={{
+                                                        width: `${Math.max(4, cat.percentage)}%`,
+                                                    }}
                                                 />
                                             </div>
                                         </div>

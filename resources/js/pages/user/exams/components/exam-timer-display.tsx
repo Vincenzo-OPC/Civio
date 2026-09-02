@@ -23,7 +23,8 @@ export const ExamTimerDisplay = React.memo(function ExamTimerDisplay({
     }
 
     const isCritical = timeLeft <= 300; // < 5 mins
-    const isWarning = !isCritical && timeLeft <= EXAM_CONSTANTS.TIMER_RED_ZONE_SECS; // < 10 mins
+    const isWarning =
+        !isCritical && timeLeft <= EXAM_CONSTANTS.TIMER_RED_ZONE_SECS; // < 10 mins
 
     return (
         <div

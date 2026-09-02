@@ -602,27 +602,29 @@ export function PrintableExam({
                             const img = clonedDoc.createElement('img');
                             img.src =
                                 'data:image/svg+xml;base64,' +
-                                window.btoa(unescape(encodeURIComponent(svgStr)));
+                                window.btoa(
+                                    unescape(encodeURIComponent(svgStr)),
+                                );
 
                             // Copy all styles and classes
                             img.style.cssText = svg.style.cssText;
                             const cls = svg.getAttribute('class');
 
                             if (cls) {
-img.setAttribute('class', cls);
-}
+                                img.setAttribute('class', cls);
+                            }
 
                             // Retain explicit dimensions if any
                             const w = svg.getAttribute('width');
                             const h = svg.getAttribute('height');
 
                             if (w) {
-img.setAttribute('width', w);
-}
+                                img.setAttribute('width', w);
+                            }
 
                             if (h) {
-img.setAttribute('height', h);
-}
+                                img.setAttribute('height', h);
+                            }
 
                             svg.parentNode?.replaceChild(img, svg);
                         } catch (e) {

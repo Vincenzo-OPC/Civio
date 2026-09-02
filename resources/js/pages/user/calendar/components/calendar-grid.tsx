@@ -282,7 +282,7 @@ export function CalendarGrid({
     };
 
     return (
-        <div className="overflow-x-auto pb-4 [scrollbar-width:thin]">
+        <div className="[scrollbar-width:thin] overflow-x-auto pb-4">
             <div className="min-w-[720px] md:min-w-full">
                 {/* Sticky Day headers */}
                 <div className="sticky top-0 z-20 mb-2 grid grid-cols-7 gap-2 rounded-lg bg-slate-50/95 py-2 backdrop-blur-sm dark:bg-slate-900/95">
@@ -290,7 +290,7 @@ export function CalendarGrid({
                         (day) => (
                             <div
                                 key={day}
-                                className="flex items-center justify-center font-bold text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400"
+                                className="flex items-center justify-center text-xs font-bold tracking-wider text-slate-500 uppercase dark:text-slate-400"
                             >
                                 {day}
                             </div>
@@ -327,7 +327,7 @@ export function CalendarGrid({
                                                 openModal(calendarDay.date);
                                             }
                                         }}
-                                        className={`group relative flex h-44 sm:h-52 min-w-0 flex-col rounded-xl border p-2 sm:p-2.5 transition-all ${
+                                        className={`group relative flex h-44 min-w-0 flex-col rounded-xl border p-2 transition-all sm:h-52 sm:p-2.5 ${
                                             calendarDay.isCurrentMonth &&
                                             calendarDay.date >= todayStr
                                                 ? 'cursor-pointer hover:border-blue-300 hover:shadow-sm'
@@ -408,7 +408,7 @@ export function CalendarGrid({
                                         </div>
 
                                         {/* Study items for this day with smooth scrollbar */}
-                                        <div className="mt-1.5 min-h-0 flex-1 space-y-1 overflow-y-auto pr-0.5 [scrollbar-width:thin]">
+                                        <div className="mt-1.5 min-h-0 flex-1 [scrollbar-width:thin] space-y-1 overflow-y-auto pr-0.5">
                                             {calendarDay.schedules.map(
                                                 (schedule) => {
                                                     const isOverdue =
@@ -451,11 +451,10 @@ export function CalendarGrid({
                                                     let match;
 
                                                     while (
-                                                        (match =
-                                                            linkRegex.exec(
-                                                                schedule.description ||
-                                                                    '',
-                                                            )) !== null
+                                                        (match = linkRegex.exec(
+                                                            schedule.description ||
+                                                                '',
+                                                        )) !== null
                                                     ) {
                                                         rawLinks.push({
                                                             title: match[1],
@@ -472,7 +471,9 @@ export function CalendarGrid({
                                                             ) => {
                                                                 e.stopPropagation();
 
-                                                                if (onOpenStudyDrawer) {
+                                                                if (
+                                                                    onOpenStudyDrawer
+                                                                ) {
                                                                     onOpenStudyDrawer(
                                                                         schedule,
                                                                         calendarDay.date,
@@ -521,7 +522,7 @@ export function CalendarGrid({
                                                                 </button>
                                                                 <div className="min-w-0 flex-1">
                                                                     <span
-                                                                        className={`block text-xs font-bold leading-snug break-words ${
+                                                                        className={`block text-xs leading-snug font-bold break-words ${
                                                                             schedule.is_done
                                                                                 ? 'text-slate-400 line-through dark:text-slate-500'
                                                                                 : 'text-slate-900 dark:text-white'
@@ -538,7 +539,9 @@ export function CalendarGrid({
                                                                     {onOpenStudyDrawer && (
                                                                         <button
                                                                             type="button"
-                                                                            onClick={(e) => {
+                                                                            onClick={(
+                                                                                e,
+                                                                            ) => {
                                                                                 e.stopPropagation();
                                                                                 onOpenStudyDrawer(
                                                                                     schedule,
@@ -597,7 +600,7 @@ export function CalendarGrid({
                                                                     {catName}
                                                                 </Badge>
                                                                 {schedule.study_time && (
-                                                                    <span className="flex items-center gap-0.5 rounded bg-slate-100 px-1 py-0.2 text-[9px] font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                                                                    <span className="py-0.2 flex items-center gap-0.5 rounded bg-slate-100 px-1 text-[9px] font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
                                                                         <Clock className="size-2.5" />
                                                                         {schedule.study_time.substring(
                                                                             0,
@@ -607,7 +610,7 @@ export function CalendarGrid({
                                                                 )}
                                                                 {isOverdue &&
                                                                     !schedule.is_done && (
-                                                                        <span className="rounded bg-rose-200/80 px-1 py-0.2 text-[9px] font-extrabold text-rose-800 dark:bg-rose-900/60 dark:text-rose-300">
+                                                                        <span className="py-0.2 rounded bg-rose-200/80 px-1 text-[9px] font-extrabold text-rose-800 dark:bg-rose-900/60 dark:text-rose-300">
                                                                             Overdue
                                                                         </span>
                                                                     )}

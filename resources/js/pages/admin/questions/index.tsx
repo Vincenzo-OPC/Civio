@@ -10,12 +10,10 @@ import {
     LayoutGrid,
     List,
     FileImage,
-    ListChecks,
-    Save,
     Edit3,
     HelpCircle,
 } from 'lucide-react';
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { getCategoryStyles } from '@/components/domain/curation-index-shell';
 import { PageContainer } from '@/components/layout/page-container';
 import { ConfirmModal } from '@/components/shared/confirm-modal';
@@ -24,7 +22,7 @@ import { Button } from '@/components/ui/button';
 const QuickEditModal = lazy(() =>
     import('./components/quick-edit-modal').then((module) => ({
         default: module.QuickEditModal,
-    }))
+    })),
 );
 import {
     Dialog,
@@ -38,12 +36,14 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { renderFormattedText, extractPropositions } from '@/lib/exam-formatters';
+import {
+    renderFormattedText,
+    extractPropositions,
+} from '@/lib/exam-formatters';
 import {
     index as questionsIndex,
     create as questionsCreate,
     edit as questionsEdit,
-    update as questionsUpdate,
     destroy as questionsDestroy,
     show as questionsShow,
 } from '@/routes/questions';
@@ -56,13 +56,20 @@ export default function QuestionsIndex({
     categories = [],
 }: QuestionsIndexProps) {
     const [filterSearch, setFilterSearch] = useState(filters.search || '');
-    const [filterStatus, setFilterStatus] = useState<string>(filters.status || 'all');
-    const [filterCategory, setFilterCategory] = useState<string>(filters.category || 'all');
-    const [filterSubcategory, setFilterSubcategory] = useState<string>(filters.subcategory || 'all');
-    const [filterLanguage, setFilterLanguage] = useState<string>(filters.language || 'all');
+    const [filterStatus, setFilterStatus] = useState<string>(
+        filters.status || 'all',
+    );
+    const [filterCategory, setFilterCategory] = useState<string>(
+        filters.category || 'all',
+    );
+    const [filterSubcategory, setFilterSubcategory] = useState<string>(
+        filters.subcategory || 'all',
+    );
+    const [filterLanguage, setFilterLanguage] = useState<string>(
+        filters.language || 'all',
+    );
     const [perPage, setPerPage] = useState<number>(filters.per_page || 10);
     const currentPage = pagination.current_page;
-    const totalPages = pagination.last_page;
     const [deleteModal, setDeleteModal] = useState<{
         isOpen: boolean;
         id: number | null;
@@ -76,7 +83,8 @@ export default function QuestionsIndex({
     const [previewQuestion, setPreviewQuestion] = useState<QuestionItem | null>(
         null,
     );
-    const [editModalQuestion, setEditModalQuestion] = useState<QuestionItem | null>(null);
+    const [editModalQuestion, setEditModalQuestion] =
+        useState<QuestionItem | null>(null);
 
     const getCleanStemText = (stem: string) => {
         if (!stem) {
@@ -145,12 +153,24 @@ export default function QuestionsIndex({
         router.get(
             questionsIndex().url,
             {
-                search: params.search !== undefined ? params.search : filterSearch,
-                status: params.status !== undefined ? params.status : filterStatus,
-                category: params.category !== undefined ? params.category : filterCategory,
-                subcategory: params.subcategory !== undefined ? params.subcategory : filterSubcategory,
-                language: params.language !== undefined ? params.language : filterLanguage,
-                per_page: params.per_page !== undefined ? params.per_page : perPage,
+                search:
+                    params.search !== undefined ? params.search : filterSearch,
+                status:
+                    params.status !== undefined ? params.status : filterStatus,
+                category:
+                    params.category !== undefined
+                        ? params.category
+                        : filterCategory,
+                subcategory:
+                    params.subcategory !== undefined
+                        ? params.subcategory
+                        : filterSubcategory,
+                language:
+                    params.language !== undefined
+                        ? params.language
+                        : filterLanguage,
+                per_page:
+                    params.per_page !== undefined ? params.per_page : perPage,
                 page: params.page !== undefined ? params.page : 1,
             },
             {
@@ -296,12 +316,17 @@ export default function QuestionsIndex({
 
                 {/* Search & Filters */}
                 <div className="mb-6 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border bg-card p-4 shadow-xs">
-                    <form onSubmit={handleSearchSubmit} className="flex min-w-[260px] flex-1 items-center gap-2">
+                    <form
+                        onSubmit={handleSearchSubmit}
+                        className="flex min-w-[260px] flex-1 items-center gap-2"
+                    >
                         <input
                             type="text"
                             value={filterSearch}
                             onChange={(e) => setFilterSearch(e.target.value)}
-                            onBlur={() => updateFilters({ search: filterSearch, page: 1 })}
+                            onBlur={() =>
+                                updateFilters({ search: filterSearch, page: 1 })
+                            }
                             placeholder="Search questions (stem, ID, topic)..."
                             className="w-full rounded-lg border border-border bg-muted px-3 py-1.5 text-xs font-semibold text-foreground transition placeholder:text-muted-foreground focus:border-blue-500 focus:outline-none"
                         />
@@ -316,7 +341,11 @@ export default function QuestionsIndex({
                                     const val = e.target.value;
                                     setFilterCategory(val);
                                     setFilterSubcategory('all');
-                                    updateFilters({ category: val, subcategory: 'all', page: 1 });
+                                    updateFilters({
+                                        category: val,
+                                        subcategory: 'all',
+                                        page: 1,
+                                    });
                                 }}
                                 className="w-full appearance-none rounded-lg border border-border bg-background py-1.5 pr-8 pl-2.5 text-xs font-bold text-foreground transition focus:border-blue-500 focus:outline-none"
                             >
@@ -363,7 +392,11 @@ export default function QuestionsIndex({
                                         }
                                     }
 
-                                    updateFilters({ subcategory: val, category: newCat, page: 1 });
+                                    updateFilters({
+                                        subcategory: val,
+                                        category: newCat,
+                                        page: 1,
+                                    });
                                 }}
                                 className="w-full appearance-none rounded-lg border border-border bg-background py-1.5 pr-8 pl-2.5 text-xs font-bold text-foreground transition focus:border-blue-500 focus:outline-none"
                             >
@@ -466,7 +499,10 @@ export default function QuestionsIndex({
                                     onChange={(e) => {
                                         const val = e.target.value;
                                         setFilterLanguage(val);
-                                        updateFilters({ language: val, page: 1 });
+                                        updateFilters({
+                                            language: val,
+                                            page: 1,
+                                        });
                                     }}
                                     className="w-full appearance-none rounded-lg border border-border bg-background py-1.5 pr-8 pl-2.5 text-xs font-bold text-foreground transition focus:border-blue-500 focus:outline-none"
                                 >
@@ -831,7 +867,7 @@ export default function QuestionsIndex({
                                                                     : choicesStr;
                                                             })()
                                                         ) : (
-                                                            <span className="italic text-muted-foreground">
+                                                            <span className="text-muted-foreground italic">
                                                                 No choices
                                                                 defined
                                                             </span>
@@ -1126,12 +1162,15 @@ export default function QuestionsIndex({
                                 <span className="text-xs font-bold text-muted-foreground">
                                     Showing{' '}
                                     <strong className="text-foreground">
-                                        {(pagination.current_page - 1) * pagination.per_page + 1}
+                                        {(pagination.current_page - 1) *
+                                            pagination.per_page +
+                                            1}
                                     </strong>{' '}
                                     to{' '}
                                     <strong className="text-foreground">
                                         {Math.min(
-                                            pagination.current_page * pagination.per_page,
+                                            pagination.current_page *
+                                                pagination.per_page,
                                             pagination.total,
                                         )}
                                     </strong>{' '}
@@ -1148,7 +1187,10 @@ export default function QuestionsIndex({
                                         disabled={pagination.current_page === 1}
                                         onClick={() =>
                                             handlePageChange(
-                                                Math.max(1, pagination.current_page - 1),
+                                                Math.max(
+                                                    1,
+                                                    pagination.current_page - 1,
+                                                ),
                                             )
                                         }
                                         className="cursor-pointer rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-bold text-foreground transition hover:bg-muted focus:outline-none disabled:cursor-not-allowed disabled:opacity-40"
@@ -1162,14 +1204,19 @@ export default function QuestionsIndex({
                                     ).map((pageNum) => {
                                         if (
                                             pagination.last_page > 7 &&
-                                            Math.abs(pageNum - pagination.current_page) >
-                                                2 &&
+                                            Math.abs(
+                                                pageNum -
+                                                    pagination.current_page,
+                                            ) > 2 &&
                                             pageNum !== 1 &&
                                             pageNum !== pagination.last_page
                                         ) {
                                             if (
-                                                pageNum === pagination.current_page - 3 ||
-                                                pageNum === pagination.current_page + 3
+                                                pageNum ===
+                                                    pagination.current_page -
+                                                        3 ||
+                                                pageNum ===
+                                                    pagination.current_page + 3
                                             ) {
                                                 return (
                                                     <span
@@ -1207,7 +1254,10 @@ export default function QuestionsIndex({
 
                                     <button
                                         type="button"
-                                        disabled={pagination.current_page === pagination.last_page}
+                                        disabled={
+                                            pagination.current_page ===
+                                            pagination.last_page
+                                        }
                                         onClick={() =>
                                             handlePageChange(
                                                 Math.min(
@@ -1323,7 +1373,10 @@ export default function QuestionsIndex({
                                                                 ? opt.is_correct
                                                                 : previewQuestion.correct_option ===
                                                                   idx;
-                                                        const label = String.fromCharCode(65 + idx);
+                                                        const label =
+                                                            String.fromCharCode(
+                                                                65 + idx,
+                                                            );
 
                                                         return (
                                                             <div
@@ -1355,7 +1408,7 @@ export default function QuestionsIndex({
                                                                             text,
                                                                             false,
                                                                             undefined,
-                                                                            true
+                                                                            true,
                                                                         )}
                                                                     </p>
                                                                 </div>
@@ -1376,38 +1429,72 @@ export default function QuestionsIndex({
                                     <div className="shadow-3xs mt-2 overflow-hidden rounded-2xl border border-border bg-card text-sm leading-relaxed text-muted-foreground transition-all">
                                         <div className="flex w-full items-center gap-2 p-4 font-bold text-foreground sm:p-5">
                                             <HelpCircle className="size-4 text-blue-600 dark:text-blue-400" />
-                                            <span>Explanation &amp; Rationale</span>
+                                            <span>
+                                                Explanation &amp; Rationale
+                                            </span>
                                         </div>
                                         <div className="border-t border-border/60 bg-muted/30 p-5">
                                             {(() => {
-                                                const propositions = extractPropositions(previewQuestion.stem);
-                                                const letterMap: Record<string, string> = {};
-                                                propositions.forEach((prop, idx) => {
-                                                    letterMap[prop.letter] = String.fromCharCode(65 + idx);
-                                                });
+                                                const propositions =
+                                                    extractPropositions(
+                                                        previewQuestion.stem,
+                                                    );
+                                                const letterMap: Record<
+                                                    string,
+                                                    string
+                                                > = {};
+                                                propositions.forEach(
+                                                    (prop, idx) => {
+                                                        letterMap[prop.letter] =
+                                                            String.fromCharCode(
+                                                                65 + idx,
+                                                            );
+                                                    },
+                                                );
 
                                                 return (
                                                     <>
-                                                        {propositions.length > 0 && (
+                                                        {propositions.length >
+                                                            0 && (
                                                             <div className="shadow-3xs mb-4 rounded-xl border border-border bg-background p-4">
                                                                 <span className="mb-2 block font-heading text-[10px] font-black tracking-wider text-muted-foreground uppercase">
-                                                                    Proposition Key:
+                                                                    Proposition
+                                                                    Key:
                                                                 </span>
                                                                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                                                                    {propositions.map((prop, idx) => (
-                                                                        <div key={idx} className="flex items-center gap-2 text-xs">
-                                                                            <span className="inline-flex size-5 items-center justify-center rounded border border-blue-100/60 bg-blue-50 font-mono text-[10px] font-black text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-400">
-                                                                                {String.fromCharCode(65 + idx)}
-                                                                            </span>
-                                                                            <span className="font-medium text-foreground">
-                                                                                {prop.phrase}
-                                                                            </span>
-                                                                        </div>
-                                                                    ))}
+                                                                    {propositions.map(
+                                                                        (
+                                                                            prop,
+                                                                            idx,
+                                                                        ) => (
+                                                                            <div
+                                                                                key={
+                                                                                    idx
+                                                                                }
+                                                                                className="flex items-center gap-2 text-xs"
+                                                                            >
+                                                                                <span className="inline-flex size-5 items-center justify-center rounded border border-blue-100/60 bg-blue-50 font-mono text-[10px] font-black text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-400">
+                                                                                    {String.fromCharCode(
+                                                                                        65 +
+                                                                                            idx,
+                                                                                    )}
+                                                                                </span>
+                                                                                <span className="font-medium text-foreground">
+                                                                                    {
+                                                                                        prop.phrase
+                                                                                    }
+                                                                                </span>
+                                                                            </div>
+                                                                        ),
+                                                                    )}
                                                                 </div>
                                                             </div>
                                                         )}
-                                                        {renderFormattedText(previewQuestion.explanation, false, letterMap)}
+                                                        {renderFormattedText(
+                                                            previewQuestion.explanation,
+                                                            false,
+                                                            letterMap,
+                                                        )}
                                                     </>
                                                 );
                                             })()}

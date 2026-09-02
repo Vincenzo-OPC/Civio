@@ -45,14 +45,18 @@ export function SavedSetsView({
         e.preventDefault();
 
         if (!setName.trim()) {
-return;
-}
+            return;
+        }
 
         setIsSubmitting(true);
 
         try {
             const csrfToken =
-                (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '';
+                (
+                    document.querySelector(
+                        'meta[name="csrf-token"]',
+                    ) as HTMLMetaElement
+                )?.content || '';
 
             const res = await fetch('/drills/saved-sets', {
                 method: 'POST',
@@ -83,14 +87,18 @@ return;
 
     const handleConfirmDelete = async () => {
         if (!setToDelete) {
-return;
-}
+            return;
+        }
 
         setIsDeleting(true);
 
         try {
             const csrfToken =
-                (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '';
+                (
+                    document.querySelector(
+                        'meta[name="csrf-token"]',
+                    ) as HTMLMetaElement
+                )?.content || '';
 
             const res = await fetch(`/drills/saved-sets/${setToDelete.id}`, {
                 method: 'DELETE',
@@ -114,7 +122,7 @@ return;
     return (
         <div className="flex flex-col gap-6">
             {/* Header / Intro */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs sm:p-6">
+            <div className="flex flex-col justify-between gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs sm:flex-row sm:items-center sm:p-6">
                 <div className="flex items-start gap-3">
                     <div className="flex size-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400">
                         <Bookmark className="size-5" />
@@ -124,7 +132,8 @@ return;
                             Saved Question Sets
                         </h2>
                         <p className="text-xs text-muted-foreground sm:text-sm">
-                            Personal practice sets created by bookmarking difficult items during exam and drill reviews.
+                            Personal practice sets created by bookmarking
+                            difficult items during exam and drill reviews.
                         </p>
                     </div>
                 </div>
@@ -185,7 +194,10 @@ return;
                                         </div>
                                         <div className="flex items-center gap-1.5">
                                             <span className="rounded-full bg-muted px-2.5 py-0.5 text-[11px] font-black text-foreground">
-                                                {set.questions_count} Question{set.questions_count === 1 ? '' : 's'}
+                                                {set.questions_count} Question
+                                                {set.questions_count === 1
+                                                    ? ''
+                                                    : 's'}
                                             </span>
                                             <button
                                                 type="button"
@@ -194,7 +206,7 @@ return;
                                                     setSetForEdit(set);
                                                 }}
                                                 title="Edit Set & Questions"
-                                                className="rounded-lg p-1 text-muted-foreground opacity-70 transition hover:bg-blue-50 hover:text-blue-600 hover:opacity-100 dark:hover:bg-blue-950/40 cursor-pointer"
+                                                className="cursor-pointer rounded-lg p-1 text-muted-foreground opacity-70 transition hover:bg-blue-50 hover:text-blue-600 hover:opacity-100 dark:hover:bg-blue-950/40"
                                             >
                                                 <Pencil className="size-3.5" />
                                             </button>
@@ -205,7 +217,7 @@ return;
                                                     setSetToDelete(set);
                                                 }}
                                                 title="Delete Set"
-                                                className="rounded-lg p-1 text-muted-foreground opacity-70 transition hover:bg-rose-50 hover:text-rose-600 hover:opacity-100 dark:hover:bg-rose-950/30 cursor-pointer"
+                                                className="cursor-pointer rounded-lg p-1 text-muted-foreground opacity-70 transition hover:bg-rose-50 hover:text-rose-600 hover:opacity-100 dark:hover:bg-rose-950/30"
                                             >
                                                 <Trash2 className="size-3.5" />
                                             </button>
@@ -216,33 +228,43 @@ return;
                                         {set.name}
                                     </h3>
                                     <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
-                                        {set.description || 'Custom bookmarked practice set.'}
+                                        {set.description ||
+                                            'Custom bookmarked practice set.'}
                                     </p>
 
                                     {/* Category tags */}
-                                    {set.sample_categories && set.sample_categories.length > 0 && (
-                                        <div className="mt-3 flex flex-wrap gap-1">
-                                            {set.sample_categories.map((cat, idx) => (
-                                                <span
-                                                    key={idx}
-                                                    className="rounded-md bg-muted/60 px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground"
-                                                >
-                                                    {cat}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    )}
+                                    {set.sample_categories &&
+                                        set.sample_categories.length > 0 && (
+                                            <div className="mt-3 flex flex-wrap gap-1">
+                                                {set.sample_categories.map(
+                                                    (cat, idx) => (
+                                                        <span
+                                                            key={idx}
+                                                            className="rounded-md bg-muted/60 px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground"
+                                                        >
+                                                            {cat}
+                                                        </span>
+                                                    ),
+                                                )}
+                                            </div>
+                                        )}
                                 </div>
 
                                 <div className="mt-6 flex flex-col gap-2 border-t border-border pt-4">
                                     <button
                                         type="button"
                                         disabled={!hasQuestions}
-                                        onClick={() => onLaunchSavedSetDrill(set.id)}
+                                        onClick={() =>
+                                            onLaunchSavedSetDrill(set.id)
+                                        }
                                         className="flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-blue-600 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-blue-700 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
                                     >
                                         <Play className="size-3.5 fill-current" />
-                                        <span>{hasQuestions ? 'Practice This Set' : 'No Questions Yet'}</span>
+                                        <span>
+                                            {hasQuestions
+                                                ? 'Practice This Set'
+                                                : 'No Questions Yet'}
+                                        </span>
                                     </button>
                                     <button
                                         type="button"
@@ -266,7 +288,9 @@ return;
                         No Saved Sets Yet
                     </h3>
                     <p className="mx-auto mt-1 max-w-2xl text-xs leading-relaxed text-muted-foreground">
-                        Create a set or bookmark tricky questions while reviewing past exam results to build your targeted study deck.
+                        Create a set or bookmark tricky questions while
+                        reviewing past exam results to build your targeted study
+                        deck.
                     </p>
                     <button
                         type="button"
@@ -322,7 +346,9 @@ return;
                                     rows={2}
                                     placeholder="Brief note about the focus of this set..."
                                     value={setDescription}
-                                    onChange={(e) => setSetDescription(e.target.value)}
+                                    onChange={(e) =>
+                                        setSetDescription(e.target.value)
+                                    }
                                     className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs font-semibold text-foreground transition focus:border-blue-500 focus:outline-none"
                                 />
                             </div>
@@ -340,7 +366,9 @@ return;
                                     disabled={isSubmitting || !setName.trim()}
                                     className="rounded-xl bg-blue-600 px-5 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-blue-700 active:scale-95 disabled:opacity-40"
                                 >
-                                    {isSubmitting ? 'Creating...' : 'Create Set'}
+                                    {isSubmitting
+                                        ? 'Creating...'
+                                        : 'Create Set'}
                                 </button>
                             </div>
                         </form>

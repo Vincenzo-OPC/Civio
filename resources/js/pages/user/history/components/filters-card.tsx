@@ -29,10 +29,7 @@ export function FiltersCard({
         <div className="rounded-xl border border-border bg-card p-4 shadow-2xs">
             <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
                 {/* Search bar form */}
-                <form
-                    onSubmit={handleSearchSubmit}
-                    className="relative flex-1"
-                >
+                <form onSubmit={handleSearchSubmit} className="relative flex-1">
                     <Input
                         type="text"
                         value={searchVal}
@@ -55,7 +52,9 @@ export function FiltersCard({
                         >
                             <option value="All Tracks">All Tracks</option>
                             <option value="Professional">Professional</option>
-                            <option value="Subprofessional">Subprofessional</option>
+                            <option value="Subprofessional">
+                                Subprofessional
+                            </option>
                             <option value="Drill">Drill</option>
                         </select>
                         <ChevronDown className="pointer-events-none absolute top-1/2 right-2.5 size-3.5 -translate-y-1/2 text-muted-foreground" />

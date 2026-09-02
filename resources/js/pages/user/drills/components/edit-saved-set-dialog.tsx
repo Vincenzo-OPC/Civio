@@ -46,7 +46,9 @@ function EditSavedSetModalBody({
     onClose: () => void;
     onUpdated?: () => void;
 }) {
-    const [activeTab, setActiveTab] = useState<'details' | 'questions' | 'add'>('questions');
+    const [activeTab, setActiveTab] = useState<'details' | 'questions' | 'add'>(
+        'questions',
+    );
     const [name, setName] = useState(drillSet.name);
     const [description, setDescription] = useState(drillSet.description || '');
     const [color] = useState(drillSet.color || 'blue');
@@ -68,8 +70,12 @@ function EditSavedSetModalBody({
     // Questions in this set
     const [setQuestions, setSetQuestions] = useState<Question[]>([]);
     const [isLoadingQuestions, setIsLoadingQuestions] = useState(true);
-    const [removingQuestionId, setRemovingQuestionId] = useState<number | null>(null);
-    const [addingQuestionId, setAddingQuestionId] = useState<number | null>(null);
+    const [removingQuestionId, setRemovingQuestionId] = useState<number | null>(
+        null,
+    );
+    const [addingQuestionId, setAddingQuestionId] = useState<number | null>(
+        null,
+    );
 
     // Add Questions Search & Filters
     const [searchQuery, setSearchQuery] = useState('');
@@ -115,7 +121,11 @@ function EditSavedSetModalBody({
 
         try {
             const csrfToken =
-                (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '';
+                (
+                    document.querySelector(
+                        'meta[name="csrf-token"]',
+                    ) as HTMLMetaElement
+                )?.content || '';
 
             const res = await fetch(`/drills/saved-sets/${drillSet.id}`, {
                 method: 'PUT',
@@ -150,18 +160,27 @@ function EditSavedSetModalBody({
 
         try {
             const csrfToken =
-                (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '';
+                (
+                    document.querySelector(
+                        'meta[name="csrf-token"]',
+                    ) as HTMLMetaElement
+                )?.content || '';
 
-            const res = await fetch(`/drills/saved-sets/${drillSet.id}/questions/${questionId}`, {
-                method: 'DELETE',
-                headers: {
-                    Accept: 'application/json',
-                    'X-CSRF-TOKEN': csrfToken,
+            const res = await fetch(
+                `/drills/saved-sets/${drillSet.id}/questions/${questionId}`,
+                {
+                    method: 'DELETE',
+                    headers: {
+                        Accept: 'application/json',
+                        'X-CSRF-TOKEN': csrfToken,
+                    },
                 },
-            });
+            );
 
             if (res.ok) {
-                setSetQuestions((prev) => prev.filter((q) => q.id !== questionId));
+                setSetQuestions((prev) =>
+                    prev.filter((q) => q.id !== questionId),
+                );
                 toast.success('Question removed from set.');
                 router.reload();
                 onUpdated?.();
@@ -180,7 +199,11 @@ function EditSavedSetModalBody({
 
         try {
             const csrfToken =
-                (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '';
+                (
+                    document.querySelector(
+                        'meta[name="csrf-token"]',
+                    ) as HTMLMetaElement
+                )?.content || '';
 
             const res = await fetch('/drills/saved-sets/add-question', {
                 method: 'POST',
@@ -216,7 +239,10 @@ function EditSavedSetModalBody({
     };
 
     // Filter available questions to add
-    const currentQuestionIds = useMemo(() => new Set(setQuestions.map((q) => q.id)), [setQuestions]);
+    const currentQuestionIds = useMemo(
+        () => new Set(setQuestions.map((q) => q.id)),
+        [setQuestions],
+    );
 
     const availableToAddQuestions = useMemo(() => {
         const query = searchQuery.toLowerCase().trim();
@@ -228,8 +254,12 @@ function EditSavedSetModalBody({
 
             if (selectedCategory !== 'all') {
                 const matches =
-                    q.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-                    selectedCategory.toLowerCase().includes(q.category.toLowerCase());
+                    q.category
+                        .toLowerCase()
+                        .includes(selectedCategory.toLowerCase()) ||
+                    selectedCategory
+                        .toLowerCase()
+                        .includes(q.category.toLowerCase());
 
                 if (!matches) {
                     return false;
@@ -238,8 +268,12 @@ function EditSavedSetModalBody({
 
             if (query) {
                 const stemMatch = q.stem.toLowerCase().includes(query);
-                const subcatMatch = (q.subcategory || '').toLowerCase().includes(query);
-                const catMatch = (q.category || '').toLowerCase().includes(query);
+                const subcatMatch = (q.subcategory || '')
+                    .toLowerCase()
+                    .includes(query);
+                const catMatch = (q.category || '')
+                    .toLowerCase()
+                    .includes(query);
 
                 return stemMatch || subcatMatch || catMatch;
             }
@@ -249,7 +283,7 @@ function EditSavedSetModalBody({
     }, [allQuestions, currentQuestionIds, selectedCategory, searchQuery]);
 
     return (
-        <div className="flex flex-col h-full overflow-hidden">
+        <div className="flex h-full flex-col overflow-hidden">
             {/* Content Shield Style Injection */}
             <style dangerouslySetInnerHTML={{ __html: styleBlock }} />
 
@@ -273,8 +307,9 @@ function EditSavedSetModalBody({
                             <DialogTitle className="font-heading text-base font-bold text-foreground">
                                 Manage Practice Set
                             </DialogTitle>
-                            <p className="text-xs text-muted-foreground line-clamp-1">
-                                {drillSet.name} • {setQuestions.length} Questions
+                            <p className="line-clamp-1 text-xs text-muted-foreground">
+                                {drillSet.name} • {setQuestions.length}{' '}
+                                Questions
                             </p>
                         </div>
                     </div>
@@ -335,7 +370,9 @@ function EditSavedSetModalBody({
                         {isLoadingQuestions ? (
                             <div className="flex flex-col items-center justify-center py-12 text-muted-foreground">
                                 <Loader2 className="size-6 animate-spin" />
-                                <p className="mt-2 text-xs">Loading set questions...</p>
+                                <p className="mt-2 text-xs">
+                                    Loading set questions...
+                                </p>
                             </div>
                         ) : setQuestions.length > 0 ? (
                             <div className="space-y-2.5">
@@ -344,7 +381,7 @@ function EditSavedSetModalBody({
                                         key={q.id}
                                         className="group flex items-start justify-between gap-3 rounded-xl border border-border bg-card p-3.5 transition hover:border-blue-500/40"
                                     >
-                                        <div className="flex items-start gap-3 min-w-0 flex-1">
+                                        <div className="flex min-w-0 flex-1 items-start gap-3">
                                             <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-muted text-[11px] font-black text-muted-foreground">
                                                 {idx + 1}
                                             </span>
@@ -359,8 +396,11 @@ function EditSavedSetModalBody({
                                                         </span>
                                                     )}
                                                 </div>
-                                                <div className="text-xs leading-relaxed font-semibold text-foreground line-clamp-2">
-                                                    {renderFormattedText(q.stem, true)}
+                                                <div className="line-clamp-2 text-xs leading-relaxed font-semibold text-foreground">
+                                                    {renderFormattedText(
+                                                        q.stem,
+                                                        true,
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>
@@ -368,8 +408,12 @@ function EditSavedSetModalBody({
                                         <Button
                                             variant="ghost"
                                             size="sm"
-                                            disabled={removingQuestionId === q.id}
-                                            onClick={() => handleRemoveQuestion(q.id)}
+                                            disabled={
+                                                removingQuestionId === q.id
+                                            }
+                                            onClick={() =>
+                                                handleRemoveQuestion(q.id)
+                                            }
                                             className="shrink-0 text-muted-foreground hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-950/40"
                                             title="Remove from set"
                                         >
@@ -387,14 +431,17 @@ function EditSavedSetModalBody({
                                 <div className="mb-2 flex size-10 items-center justify-center rounded-xl bg-muted text-muted-foreground">
                                     <Layers className="size-5" />
                                 </div>
-                                <h4 className="text-xs font-bold text-foreground">No Questions in Set</h4>
+                                <h4 className="text-xs font-bold text-foreground">
+                                    No Questions in Set
+                                </h4>
                                 <p className="mt-1 text-[11px] text-muted-foreground">
-                                    Switch to the &ldquo;Add Questions&rdquo; tab or bookmark items during exam reviews.
+                                    Switch to the &ldquo;Add Questions&rdquo;
+                                    tab or bookmark items during exam reviews.
                                 </p>
                                 <Button
                                     size="sm"
                                     onClick={() => setActiveTab('add')}
-                                    className="mt-3 gap-1.5 text-xs bg-blue-600 hover:bg-blue-700 text-white"
+                                    className="mt-3 gap-1.5 bg-blue-600 text-xs text-white hover:bg-blue-700"
                                 >
                                     <Plus className="size-3.5" />
                                     <span>Add Questions Now</span>
@@ -408,24 +455,32 @@ function EditSavedSetModalBody({
                 {activeTab === 'add' && (
                     <div className="space-y-3.5">
                         {/* Search & Category Filter Bar */}
-                        <div className="flex flex-col sm:flex-row gap-2">
+                        <div className="flex flex-col gap-2 sm:flex-row">
                             <div className="relative flex-1">
-                                <Search className="absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground" />
+                                <Search className="absolute top-1/2 left-3 size-3.5 -translate-y-1/2 text-muted-foreground" />
                                 <Input
                                     value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    onChange={(e) =>
+                                        setSearchQuery(e.target.value)
+                                    }
                                     placeholder="Search by keyword, stem, or topic..."
                                     className="pl-8 text-xs"
                                 />
                             </div>
                             <select
                                 value={selectedCategory}
-                                onChange={(e) => setSelectedCategory(e.target.value)}
-                                className="rounded-xl border border-border bg-background px-3 py-2 text-xs font-semibold text-foreground focus:outline-none focus:border-blue-500"
+                                onChange={(e) =>
+                                    setSelectedCategory(e.target.value)
+                                }
+                                className="rounded-xl border border-border bg-background px-3 py-2 text-xs font-semibold text-foreground focus:border-blue-500 focus:outline-none"
                             >
                                 <option value="all">All Categories</option>
                                 {categories
-                                    .filter((c) => c.name.toLowerCase() !== 'demographic')
+                                    .filter(
+                                        (c) =>
+                                            c.name.toLowerCase() !==
+                                            'demographic',
+                                    )
                                     .map((c) => (
                                         <option key={c.id} value={c.name}>
                                             {c.name}
@@ -435,47 +490,56 @@ function EditSavedSetModalBody({
                         </div>
 
                         {/* Available Questions List */}
-                        <div className="space-y-2 max-h-[380px] overflow-y-auto pr-1">
+                        <div className="max-h-[380px] space-y-2 overflow-y-auto pr-1">
                             {availableToAddQuestions.length > 0 ? (
-                                availableToAddQuestions.slice(0, 30).map((q) => (
-                                    <div
-                                        key={q.id}
-                                        className="flex items-start justify-between gap-3 rounded-xl border border-border bg-card p-3 transition hover:border-blue-500/40"
-                                    >
-                                        <div className="min-w-0 flex-1">
-                                            <div className="mb-1 flex flex-wrap items-center gap-1.5">
-                                                <span className="rounded-md bg-blue-50 px-1.5 py-0.5 text-[10px] font-bold text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">
-                                                    {q.category}
-                                                </span>
-                                                {q.subcategory && (
-                                                    <span className="rounded-md bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
-                                                        {q.subcategory}
-                                                    </span>
-                                                )}
-                                            </div>
-                                            <div className="text-xs leading-relaxed font-semibold text-foreground line-clamp-2">
-                                                {renderFormattedText(q.stem, true)}
-                                            </div>
-                                        </div>
-
-                                        <Button
-                                            size="sm"
-                                            variant="outline"
-                                            disabled={addingQuestionId === q.id}
-                                            onClick={() => handleAddQuestion(q.id)}
-                                            className="shrink-0 gap-1 text-xs border-blue-200 text-blue-600 hover:bg-blue-50 dark:border-blue-800 dark:text-blue-400 dark:hover:bg-blue-950/40"
+                                availableToAddQuestions
+                                    .slice(0, 30)
+                                    .map((q) => (
+                                        <div
+                                            key={q.id}
+                                            className="flex items-start justify-between gap-3 rounded-xl border border-border bg-card p-3 transition hover:border-blue-500/40"
                                         >
-                                            {addingQuestionId === q.id ? (
-                                                <Loader2 className="size-3.5 animate-spin" />
-                                            ) : (
-                                                <Plus className="size-3.5" />
-                                            )}
-                                            <span>Add</span>
-                                        </Button>
-                                    </div>
-                                ))
+                                            <div className="min-w-0 flex-1">
+                                                <div className="mb-1 flex flex-wrap items-center gap-1.5">
+                                                    <span className="rounded-md bg-blue-50 px-1.5 py-0.5 text-[10px] font-bold text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">
+                                                        {q.category}
+                                                    </span>
+                                                    {q.subcategory && (
+                                                        <span className="rounded-md bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
+                                                            {q.subcategory}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                <div className="line-clamp-2 text-xs leading-relaxed font-semibold text-foreground">
+                                                    {renderFormattedText(
+                                                        q.stem,
+                                                        true,
+                                                    )}
+                                                </div>
+                                            </div>
+
+                                            <Button
+                                                size="sm"
+                                                variant="outline"
+                                                disabled={
+                                                    addingQuestionId === q.id
+                                                }
+                                                onClick={() =>
+                                                    handleAddQuestion(q.id)
+                                                }
+                                                className="shrink-0 gap-1 border-blue-200 text-xs text-blue-600 hover:bg-blue-50 dark:border-blue-800 dark:text-blue-400 dark:hover:bg-blue-950/40"
+                                            >
+                                                {addingQuestionId === q.id ? (
+                                                    <Loader2 className="size-3.5 animate-spin" />
+                                                ) : (
+                                                    <Plus className="size-3.5" />
+                                                )}
+                                                <span>Add</span>
+                                            </Button>
+                                        </div>
+                                    ))
                             ) : (
-                                <div className="py-8 text-center text-xs text-muted-foreground border border-dashed border-border rounded-xl">
+                                <div className="rounded-xl border border-dashed border-border py-8 text-center text-xs text-muted-foreground">
                                     No questions available matching this search.
                                 </div>
                             )}
@@ -512,7 +576,7 @@ function EditSavedSetModalBody({
                             />
                         </div>
 
-                        <div className="flex justify-end gap-2 pt-2 border-t border-border">
+                        <div className="flex justify-end gap-2 border-t border-border pt-2">
                             <Button
                                 type="button"
                                 variant="outline"
@@ -526,9 +590,11 @@ function EditSavedSetModalBody({
                                 type="submit"
                                 size="sm"
                                 disabled={isSavingDetails || !name.trim()}
-                                className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold gap-1.5"
+                                className="gap-1.5 bg-blue-600 text-xs font-bold text-white hover:bg-blue-700"
                             >
-                                {isSavingDetails && <Loader2 className="size-3.5 animate-spin" />}
+                                {isSavingDetails && (
+                                    <Loader2 className="size-3.5 animate-spin" />
+                                )}
                                 <span>Save Changes</span>
                             </Button>
                         </div>
@@ -553,7 +619,7 @@ export function EditSavedSetDialog({
 
     return (
         <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-            <DialogContent className="max-h-[90vh] flex flex-col sm:max-w-3xl overflow-hidden p-0 gap-0">
+            <DialogContent className="flex max-h-[90vh] flex-col gap-0 overflow-hidden p-0 sm:max-w-3xl">
                 <EditSavedSetModalBody
                     key={drillSet.id}
                     drillSet={drillSet}

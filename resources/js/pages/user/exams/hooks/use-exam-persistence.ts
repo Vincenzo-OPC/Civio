@@ -106,8 +106,8 @@ export function useExamPersistence({
             const rawData = localStorage.getItem(PERSISTENCE_KEY);
 
             if (!rawData) {
-return;
-}
+                return;
+            }
 
             const data: ActiveSessionData = JSON.parse(rawData);
             // Expire sessions older than 12 hours
@@ -132,13 +132,20 @@ return;
         if (isExamActive && !isExamSubmitted) {
             saveSession();
         }
-    }, [answers, currentIdx, flagged, isExamActive, isExamSubmitted, saveSession]);
+    }, [
+        answers,
+        currentIdx,
+        flagged,
+        isExamActive,
+        isExamSubmitted,
+        saveSession,
+    ]);
 
     // Interval save every 30s
     useEffect(() => {
         if (!isExamActive || isExamSubmitted) {
-return;
-}
+            return;
+        }
 
         const interval = setInterval(() => {
             saveSession();

@@ -19,14 +19,17 @@ export function useExamTimer({
     onTimerExpired,
 }: UseExamTimerProps) {
     const [timeLeft, setTimeLeft] = useState(sessionTimeLimitSecs);
-    const [questionTimes, setQuestionTimes] = useState<Record<number, number>>({});
+    const [questionTimes, setQuestionTimes] = useState<Record<number, number>>(
+        {},
+    );
     const timeLeftRef = useRef(sessionTimeLimitSecs);
+    const currentIdxRef = useRef(currentIdx);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
     const warned10MinRef = useRef(false);
     const warned1MinRef = useRef(false);
-    const currentIdxRef = useRef(currentIdx);
-
-    currentIdxRef.current = currentIdx;
+    useEffect(() => {
+        currentIdxRef.current = currentIdx;
+    }, [currentIdx]);
 
     const resetTimer = useCallback((newLimitSecs: number) => {
         setTimeLeft(newLimitSecs);
@@ -50,8 +53,8 @@ export function useExamTimer({
                     setTimeLeft((prev) => {
                         if (prev <= 1) {
                             if (timerRef.current) {
-clearInterval(timerRef.current);
-}
+                                clearInterval(timerRef.current);
+                            }
 
                             timeLeftRef.current = 0;
                             onTimerExpired();
@@ -65,15 +68,21 @@ clearInterval(timerRef.current);
                         // Timer warnings
                         if (next === 600 && !warned10MinRef.current) {
                             warned10MinRef.current = true;
-                            toast.warning('10 minutes remaining in this session.', {
-                                id: 'timer-warning-10m',
-                            });
+                            toast.warning(
+                                '10 minutes remaining in this session.',
+                                {
+                                    id: 'timer-warning-10m',
+                                },
+                            );
                         } else if (next === 60 && !warned1MinRef.current) {
                             warned1MinRef.current = true;
-                            toast.error('1 minute remaining! Your exam will auto-submit soon.', {
-                                id: 'timer-warning-1m',
-                                duration: 10000,
-                            });
+                            toast.error(
+                                '1 minute remaining! Your exam will auto-submit soon.',
+                                {
+                                    id: 'timer-warning-1m',
+                                    duration: 10000,
+                                },
+                            );
                         }
 
                         return next;

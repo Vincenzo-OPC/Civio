@@ -14,7 +14,9 @@ interface ExamSessionContextType {
     setCurrentIdx: (idx: number) => void;
     toggleFlag: (idx: number) => void;
     handleSelectOption: (optionIdx: number) => void;
-    setScratchpads: React.Dispatch<React.SetStateAction<Record<number, string>>>;
+    setScratchpads: React.Dispatch<
+        React.SetStateAction<Record<number, string>>
+    >;
 }
 
 const ExamSessionContext = createContext<ExamSessionContextType | null>(null);
@@ -26,14 +28,20 @@ export function ExamSessionProvider({
     value: ExamSessionContextType;
     children: React.ReactNode;
 }) {
-    return <ExamSessionContext.Provider value={value}>{children}</ExamSessionContext.Provider>;
+    return (
+        <ExamSessionContext.Provider value={value}>
+            {children}
+        </ExamSessionContext.Provider>
+    );
 }
 
 export function useExamSession(): ExamSessionContextType {
     const ctx = useContext(ExamSessionContext);
 
     if (!ctx) {
-        throw new Error('useExamSession must be used within an ExamSessionProvider');
+        throw new Error(
+            'useExamSession must be used within an ExamSessionProvider',
+        );
     }
 
     return ctx;

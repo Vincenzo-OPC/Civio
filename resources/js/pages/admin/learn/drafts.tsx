@@ -3,6 +3,10 @@ import { Check, X, Edit3, FileText, Sparkles, Save } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { DraftsReviewShell } from '@/components/domain/drafts-review-shell';
 import type { CategoryItem } from '@/components/domain/drafts-review-shell';
+import type {
+    PaginationData,
+    DraftFilters,
+} from '@/components/domain/drafts-review-shell';
 import { LessonMarkdown } from '@/components/domain/lesson-markdown';
 import { ConfirmModal } from '@/components/shared/confirm-modal';
 import { Button } from '@/components/ui/button';
@@ -29,8 +33,6 @@ import {
     bulkDestroy as adminLearnBulkDestroy,
     update as adminLearnUpdate,
 } from '@/routes/admin/learn';
-
-import type { PaginationData, DraftFilters } from '@/components/domain/drafts-review-shell';
 
 interface DraftModule {
     id: number;
@@ -298,14 +300,28 @@ export default function DraftsLearnList({
         setDeleteModal({ isOpen: true, type: 'bulk', id: null });
     };
 
-    const handleFilterChange = (newFilters: DraftFilters & { page?: number }) => {
+    const handleFilterChange = (
+        newFilters: DraftFilters & { page?: number },
+    ) => {
         router.get(
             adminLearnDrafts().url,
             {
-                search: newFilters.search !== undefined ? newFilters.search : (filters.search || ''),
-                category: newFilters.category !== undefined ? newFilters.category : (filters.category || 'all'),
-                subcategory: newFilters.subcategory !== undefined ? newFilters.subcategory : (filters.subcategory || 'all'),
-                per_page: newFilters.per_page !== undefined ? newFilters.per_page : (pagination.per_page || 10),
+                search:
+                    newFilters.search !== undefined
+                        ? newFilters.search
+                        : filters.search || '',
+                category:
+                    newFilters.category !== undefined
+                        ? newFilters.category
+                        : filters.category || 'all',
+                subcategory:
+                    newFilters.subcategory !== undefined
+                        ? newFilters.subcategory
+                        : filters.subcategory || 'all',
+                per_page:
+                    newFilters.per_page !== undefined
+                        ? newFilters.per_page
+                        : pagination.per_page || 10,
                 page: newFilters.page !== undefined ? newFilters.page : 1,
             },
             {

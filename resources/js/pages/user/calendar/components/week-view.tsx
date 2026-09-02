@@ -277,6 +277,7 @@ export function WeekView({
             const foundSub = potentialSubs.find((s) =>
                 title.toLowerCase().includes(s.name.toLowerCase()),
             );
+
             if (foundSub) {
                 matchedSubcategoryName = foundSub.name;
             }
@@ -364,7 +365,7 @@ export function WeekView({
             </div>
 
             {/* 7-Column Week Planner Grid */}
-            <div className="overflow-x-auto pb-2 [scrollbar-width:thin]">
+            <div className="[scrollbar-width:thin] overflow-x-auto pb-2">
                 <div className="min-w-[720px] md:min-w-full">
                     <DndContext
                         sensors={sensors}
@@ -403,11 +404,11 @@ export function WeekView({
                                         {/* Column Day Header */}
                                         <div className="flex shrink-0 items-center justify-between border-b border-slate-200/60 pb-2 dark:border-slate-800">
                                             <div className="flex items-center gap-1.5">
-                                                <span className="text-xs font-black uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                                                <span className="text-xs font-black tracking-wider text-slate-500 uppercase dark:text-slate-400">
                                                     {weekdayNames[idx]}
                                                 </span>
                                                 <span
-                                                    className={`flex size-6 items-center justify-center rounded-md font-black text-xs ${
+                                                    className={`flex size-6 items-center justify-center rounded-md text-xs font-black ${
                                                         isCurrentDayToday
                                                             ? 'bg-blue-600 text-white shadow-sm'
                                                             : 'text-slate-800 dark:text-slate-200'
@@ -419,12 +420,12 @@ export function WeekView({
 
                                             <div className="flex items-center gap-1">
                                                 {isCurrentDayToday && (
-                                                    <span className="rounded bg-blue-100 px-1 py-0.2 text-[9px] font-black text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+                                                    <span className="py-0.2 rounded bg-blue-100 px-1 text-[9px] font-black text-blue-700 dark:bg-blue-950 dark:text-blue-300">
                                                         Today
                                                     </span>
                                                 )}
                                                 {isExamDay && (
-                                                    <span className="rounded bg-red-600 px-1 py-0.2 text-[9px] font-black text-white">
+                                                    <span className="py-0.2 rounded bg-red-600 px-1 text-[9px] font-black text-white">
                                                         Exam
                                                     </span>
                                                 )}
@@ -435,7 +436,9 @@ export function WeekView({
                                                         <TooltipTrigger asChild>
                                                             <button
                                                                 type="button"
-                                                                onClick={(e) => {
+                                                                onClick={(
+                                                                    e,
+                                                                ) => {
                                                                     e.stopPropagation();
                                                                     openModal(
                                                                         calendarDay.date,
@@ -455,7 +458,7 @@ export function WeekView({
                                         </div>
 
                                         {/* Task Cards in this Day Column with dedicated vertical scroll */}
-                                        <div className="mt-2.5 min-h-0 flex-1 space-y-2 overflow-y-auto pr-1 [scrollbar-width:thin]">
+                                        <div className="mt-2.5 min-h-0 flex-1 [scrollbar-width:thin] space-y-2 overflow-y-auto pr-1">
                                             {calendarDay.schedules.map(
                                                 (schedule) => {
                                                     const isOverdue =
@@ -539,7 +542,7 @@ export function WeekView({
                                                                 </button>
                                                                 <div className="min-w-0 flex-1">
                                                                     <span
-                                                                        className={`block text-xs font-bold leading-snug break-words ${
+                                                                        className={`block text-xs leading-snug font-bold break-words ${
                                                                             schedule.is_done
                                                                                 ? 'text-slate-400 line-through dark:text-slate-500'
                                                                                 : 'text-slate-900 dark:text-white'
@@ -599,7 +602,7 @@ export function WeekView({
                                                                     {catName}
                                                                 </Badge>
                                                                 {schedule.study_time && (
-                                                                    <span className="flex items-center gap-0.5 rounded bg-slate-100 px-1 py-0.2 text-[9px] font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                                                                    <span className="py-0.2 flex items-center gap-0.5 rounded bg-slate-100 px-1 text-[9px] font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
                                                                         <Clock className="size-2.5" />
                                                                         {schedule.study_time.substring(
                                                                             0,
@@ -609,7 +612,7 @@ export function WeekView({
                                                                 )}
                                                                 {isOverdue &&
                                                                     !schedule.is_done && (
-                                                                        <span className="rounded bg-rose-200/80 px-1 py-0.2 text-[9px] font-extrabold text-rose-800 dark:bg-rose-900/60 dark:text-rose-300">
+                                                                        <span className="py-0.2 rounded bg-rose-200/80 px-1 text-[9px] font-extrabold text-rose-800 dark:bg-rose-900/60 dark:text-rose-300">
                                                                             Overdue
                                                                         </span>
                                                                     )}

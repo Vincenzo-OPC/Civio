@@ -200,14 +200,20 @@ export function AdminTable<T>({
                     <tbody className="divide-y divide-slate-50 font-semibold text-slate-700 dark:divide-slate-900 dark:text-slate-300">
                         {isLoading ? (
                             Array.from({ length: pageSize }).map((_, rIdx) => (
-                                <tr key={`skeleton-${rIdx}`} className="animate-pulse">
+                                <tr
+                                    key={`skeleton-${rIdx}`}
+                                    className="animate-pulse"
+                                >
                                     {getItemId && (
                                         <td className="px-4 py-4.5 sm:px-6">
                                             <Skeleton className="size-4 rounded" />
                                         </td>
                                     )}
                                     {columns.map((col, cIdx) => (
-                                        <td key={`skeleton-col-${cIdx}`} className={`px-6 py-4.5 ${col.className || ''}`}>
+                                        <td
+                                            key={`skeleton-col-${cIdx}`}
+                                            className={`px-6 py-4.5 ${col.className || ''}`}
+                                        >
                                             <Skeleton className="h-4 w-3/4 rounded" />
                                         </td>
                                     ))}

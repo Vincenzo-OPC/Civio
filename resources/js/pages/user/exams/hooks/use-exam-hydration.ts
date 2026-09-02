@@ -6,7 +6,13 @@ import {
     getSessionOrigin,
     getOriginTitle,
 } from '@/lib/smart-back';
-import type { Question, SavedAttempt, ExamResults, CategoryScore, AttemptMetadata } from '../types';
+import type {
+    Question,
+    SavedAttempt,
+    ExamResults,
+    CategoryScore,
+    AttemptMetadata,
+} from '../types';
 import { isDemographicQuestion, EXAM_CONSTANTS } from '../utils/exam-utils';
 import { shuffleOptionsForQuestion } from './use-exam-pool-builder';
 
@@ -16,13 +22,17 @@ interface UseExamHydrationProps {
     auth?: any;
     isExamActive: boolean;
     isExamSubmitted: boolean;
-    selectedExamId: number | null;
+    selectedExamId?: number | null;
     setSelectedExamId: (id: number | null) => void;
     setActiveQuestions: (qs: Question[]) => void;
     setCurrentIdx: (idx: number) => void;
     setAnswers: React.Dispatch<React.SetStateAction<Record<number, number>>>;
-    setQuestionTimes: React.Dispatch<React.SetStateAction<Record<number, number>>>;
-    setAnswerChanges: React.Dispatch<React.SetStateAction<Record<number, number>>>;
+    setQuestionTimes: React.Dispatch<
+        React.SetStateAction<Record<number, number>>
+    >;
+    setAnswerChanges: React.Dispatch<
+        React.SetStateAction<Record<number, number>>
+    >;
     setFlagged: React.Dispatch<React.SetStateAction<Record<number, boolean>>>;
     setIsExamActive: (val: boolean) => void;
     setIsExamSubmitted: (val: boolean) => void;
@@ -48,7 +58,6 @@ export function useExamHydration({
     auth,
     isExamActive,
     isExamSubmitted,
-    selectedExamId,
     setSelectedExamId,
     setActiveQuestions,
     setCurrentIdx,
@@ -78,8 +87,8 @@ export function useExamHydration({
     // 1. Saved Attempt Hydration
     useEffect(() => {
         if (!savedAttempt) {
-return;
-}
+            return;
+        }
 
         let loadedQuestions: Question[] = [];
 
@@ -90,10 +99,12 @@ return;
         }
 
         const catScores = savedAttempt.cat_scores ?? {};
-        const meta: AttemptMetadata = (catScores.metadata ?? {}) as AttemptMetadata;
+        const meta: AttemptMetadata = (catScores.metadata ??
+            {}) as AttemptMetadata;
         const correctCount = meta.correct_count || 0;
         const total = meta.total_questions || loadedQuestions.length;
-        const percentage = total > 0 ? Math.round((correctCount / total) * 100) : 0;
+        const percentage =
+            total > 0 ? Math.round((correctCount / total) * 100) : 0;
         const wrongCount = total - correctCount - (meta.skipped_count || 0);
 
         const isTimedSaved = meta.is_timed !== false;
@@ -104,8 +115,12 @@ return;
                 : EXAM_CONSTANTS.PROFESSIONAL_TIME_LIMIT_SECS
             : 0;
 
-        const storedDuration = Number(meta.duration_secs ?? (catScores as any).duration_secs ?? 0);
-        const elapsedSecs = isTimedSaved ? Math.min(limitSecs, Math.max(0, storedDuration)) : storedDuration;
+        const storedDuration = Number(
+            meta.duration_secs ?? (catScores as any).duration_secs ?? 0,
+        );
+        const elapsedSecs = isTimedSaved
+            ? Math.min(limitSecs, Math.max(0, storedDuration))
+            : storedDuration;
 
         const computedCatMap: Record<string, CategoryScore> = {};
 
@@ -114,8 +129,8 @@ return;
             const isCorrect = chosen === q.correct_option;
 
             if (isDemographicQuestion(q)) {
-return;
-}
+                return;
+            }
 
             const catName = q.category || 'General Information';
             const subcatName = q.subcategory || 'General Concepts';
@@ -125,7 +140,10 @@ return;
             }
 
             if (!computedCatMap[catName].subcats[subcatName]) {
-                computedCatMap[catName].subcats[subcatName] = { correct: 0, total: 0 };
+                computedCatMap[catName].subcats[subcatName] = {
+                    correct: 0,
+                    total: 0,
+                };
             }
 
             computedCatMap[catName].total += 1;
@@ -150,7 +168,12 @@ return;
             elapsedSecs,
         };
 
-        const resolvedTrackId = meta.track === 'Subprofessional' ? 2 : meta.track === 'Drill' ? null : 1;
+        const resolvedTrackId =
+            meta.track === 'Subprofessional'
+                ? 2
+                : meta.track === 'Drill'
+                  ? null
+                  : 1;
 
         setSelectedExamId(resolvedTrackId);
         setActiveQuestions(loadedQuestions);
@@ -181,7 +204,18 @@ return;
                 { title: attemptTitle, href: '#' },
             ],
         });
-    }, [savedAttempt, questions]);
+    }, [
+        savedAttempt,
+        questions,
+        setSelectedExamId,
+        setActiveQuestions,
+        setAnswers,
+        setIsExamActive,
+        setIsExamSubmitted,
+        setResults,
+        setSubmittedByTimer,
+        setDrillCategoryName,
+    ]);
 
     // 2. Auto-start deep links (?start= & ?drill=)
     useEffect(() => {
@@ -210,8 +244,11 @@ return;
             setSelectedExamId(examId);
             beginExamSession(buildFreshExamPool(examId), examId);
         } else if (isDrillStart && !savedAttempt && !isExamActive) {
-            const catName = params.get('category_name') || 'General Information';
-            const catId = params.get('category_id') ? Number(params.get('category_id')) : null;
+            const catName =
+                params.get('category_name') || 'General Information';
+            const catId = params.get('category_id')
+                ? Number(params.get('category_id'))
+                : null;
             const qCountParam = params.get('question_count') || '30';
             const lang = params.get('language') || 'English';
             const isTimedParam = params.get('timed') !== 'false';
@@ -230,7 +267,8 @@ return;
             url.pathname = '/drills';
             window.history.replaceState({}, '', url.toString());
 
-            const sourcePool = questions.length > 0 ? questions : fallbackQuestions;
+            const sourcePool =
+                questions.length > 0 ? questions : fallbackQuestions;
             const customIdsParam = params.get('custom_question_ids');
             let pool: Question[] = [];
 
@@ -247,14 +285,22 @@ return;
             if (pool.length === 0) {
                 pool = sourcePool.filter((q) => {
                     const catMatch =
-                        q.category.toLowerCase().includes(catName.toLowerCase()) ||
-                        catName.toLowerCase().includes(q.category.toLowerCase());
+                        q.category
+                            .toLowerCase()
+                            .includes(catName.toLowerCase()) ||
+                        catName
+                            .toLowerCase()
+                            .includes(q.category.toLowerCase());
                     const subcatMatch =
                         subcats.length === 0 ||
                         subcats.some(
                             (subName) =>
-                                q.subcategory.toLowerCase().includes(subName.toLowerCase()) ||
-                                subName.toLowerCase().includes(q.subcategory.toLowerCase()),
+                                q.subcategory
+                                    .toLowerCase()
+                                    .includes(subName.toLowerCase()) ||
+                                subName
+                                    .toLowerCase()
+                                    .includes(q.subcategory.toLowerCase()),
                         );
 
                     let langMatch = true;
@@ -273,15 +319,24 @@ return;
                 pool = sourcePool.slice(0, 30);
             }
 
-            const countLimit = qCountParam === 'all' ? pool.length : Number(qCountParam);
-            const finalPool = pool.slice(0, Math.min(countLimit, pool.length)).map(shuffleOptionsForQuestion);
+            const countLimit =
+                qCountParam === 'all' ? pool.length : Number(qCountParam);
+            const finalPool = pool
+                .slice(0, Math.min(countLimit, pool.length))
+                .map(shuffleOptionsForQuestion);
             const limitSecs = isTimedParam ? finalPool.length * 60 : 0;
 
             setDrillCategoryId(catId);
-            setDrillCategoryName(catName.endsWith('Practice') || catName.endsWith('Drill') ? catName : `${catName} Practice`);
+            setDrillCategoryName(
+                catName.endsWith('Practice') || catName.endsWith('Drill')
+                    ? catName
+                    : `${catName} Practice`,
+            );
             setDrillSubcategories(subcats);
             setDrillLanguage(lang);
-            setDrillQuestionCount(qCountParam === 'all' ? 'all' : Number(qCountParam));
+            setDrillQuestionCount(
+                qCountParam === 'all' ? 'all' : Number(qCountParam),
+            );
 
             setSelectedExamId(null);
             setIsTimed(isTimedParam);
@@ -300,8 +355,14 @@ return;
             setSubmittedByTimer(false);
 
             const sessionOrigin = getSessionOrigin() || fromParam;
-            const originTitle = sessionOrigin ? getOriginTitle(sessionOrigin) : 'Practice';
-            const originHref = sessionOrigin ? (sessionOrigin.startsWith('/') ? sessionOrigin : `/${sessionOrigin}`) : '/drills';
+            const originTitle = sessionOrigin
+                ? getOriginTitle(sessionOrigin)
+                : 'Practice';
+            const originHref = sessionOrigin
+                ? sessionOrigin.startsWith('/')
+                    ? sessionOrigin
+                    : `/${sessionOrigin}`
+                : '/drills';
 
             setLayoutProps({
                 breadcrumbs: [
@@ -310,19 +371,52 @@ return;
                 ],
             });
         }
-    }, [questions, savedAttempt, isExamActive, beginExamSession, buildFreshExamPool]);
+    }, [
+        questions,
+        fallbackQuestions,
+        savedAttempt,
+        isExamActive,
+        beginExamSession,
+        buildFreshExamPool,
+        setIsFreeAttempt,
+        setSelectedExamId,
+        setDrillCategoryId,
+        setDrillCategoryName,
+        setDrillSubcategories,
+        setDrillLanguage,
+        setDrillQuestionCount,
+        setIsTimed,
+        setActiveQuestions,
+        setCurrentIdx,
+        setAnswers,
+        setQuestionTimes,
+        setAnswerChanges,
+        setFlagged,
+        setSessionTimeLimitSecs,
+        setTimeLeft,
+        setIsExamActive,
+        setIsExamSubmitted,
+        setReviewScreenActive,
+        setResults,
+        setSubmittedByTimer,
+    ]);
 
     // 3. Restore guest free exam after registration
     useEffect(() => {
-        if (!auth?.user || questions.length === 0 || isExamActive || isExamSubmitted) {
-return;
-}
+        if (
+            !auth?.user ||
+            questions.length === 0 ||
+            isExamActive ||
+            isExamSubmitted
+        ) {
+            return;
+        }
 
         const savedState = localStorage.getItem('pending_free_exam');
 
         if (!savedState) {
-return;
-}
+            return;
+        }
 
         try {
             const state = JSON.parse(savedState);
@@ -332,13 +426,15 @@ return;
             const pool: Question[] =
                 state.activeQuestions ||
                 state.questionIds
-                    .map((id: number) => sourcePool.find((q: Question) => q.id === id))
+                    .map((id: number) =>
+                        sourcePool.find((q: Question) => q.id === id),
+                    )
                     .filter(Boolean)
                     .map(shuffleOptionsForQuestion);
 
             if (pool.length === 0) {
-return;
-}
+                return;
+            }
 
             setSelectedExamId(state.selectedExamId);
             setIsTimed(state.isTimed);
@@ -359,5 +455,26 @@ return;
         } catch {
             localStorage.removeItem('pending_free_exam');
         }
-    }, [auth?.user, questions, isExamActive, isExamSubmitted]);
+    }, [
+        auth?.user,
+        questions,
+        isExamActive,
+        isExamSubmitted,
+        setSelectedExamId,
+        setIsTimed,
+        setActiveQuestions,
+        setCurrentIdx,
+        setAnswers,
+        setQuestionTimes,
+        setAnswerChanges,
+        setFlagged,
+        setSessionTimeLimitSecs,
+        setTimeLeft,
+        setIsFreeAttempt,
+        setIsExamActive,
+        setIsExamSubmitted,
+        setReviewScreenActive,
+        setResults,
+        setSubmittedByTimer,
+    ]);
 }

@@ -41,10 +41,20 @@ export function AppModal({
 }: AppModalProps) {
     return (
         <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-            <DialogContent className={cn(sizeClasses[size], 'max-h-[90vh] overflow-y-auto', className)}>
+            <DialogContent
+                className={cn(
+                    sizeClasses[size],
+                    'max-h-[90vh] overflow-y-auto',
+                    className,
+                )}
+            >
                 {(title || description) && (
                     <DialogHeader>
-                        {title && <DialogTitle className="font-heading text-lg font-black">{title}</DialogTitle>}
+                        {title && (
+                            <DialogTitle className="font-heading text-lg font-black">
+                                {title}
+                            </DialogTitle>
+                        )}
                         {description && (
                             <DialogDescription className="text-xs text-muted-foreground">
                                 {description}

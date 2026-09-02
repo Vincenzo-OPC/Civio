@@ -1,5 +1,11 @@
 import { Link, router } from '@inertiajs/react';
-import { BookOpen, Trash2, Clock, ChevronDown, ChevronRight, RotateCcw } from 'lucide-react';
+import {
+    BookOpen,
+    Trash2,
+    Clock,
+    ChevronDown,
+    ChevronRight,
+} from 'lucide-react';
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -43,8 +49,14 @@ export function AttemptsTable({
     selectedTrack,
     selectedDate,
 }: AttemptsTableProps) {
-    const fromItem = pagination.total === 0 ? 0 : (pagination.current_page - 1) * pagination.per_page + 1;
-    const toItem = Math.min(pagination.total, pagination.current_page * pagination.per_page);
+    const fromItem =
+        pagination.total === 0
+            ? 0
+            : (pagination.current_page - 1) * pagination.per_page + 1;
+    const toItem = Math.min(
+        pagination.total,
+        pagination.current_page * pagination.per_page,
+    );
 
     return (
         <Card className="flex min-h-[420px] flex-col justify-between gap-0 overflow-hidden p-0 shadow-2xs">
@@ -95,7 +107,8 @@ export function AttemptsTable({
             {selectedIds.length > 0 && (
                 <div className="flex items-center justify-between border-b border-border bg-blue-50/60 px-4 py-2 sm:px-6 dark:bg-blue-950/20">
                     <span className="text-xs font-bold text-blue-700 dark:text-blue-400">
-                        {selectedIds.length} attempt{selectedIds.length > 1 ? 's' : ''} selected
+                        {selectedIds.length} attempt
+                        {selectedIds.length > 1 ? 's' : ''} selected
                     </span>
                     <Button
                         variant="destructive"
@@ -153,9 +166,15 @@ export function AttemptsTable({
                                             No attempt records found
                                         </h3>
                                         <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                                            We couldn't find any completed tests or drills matching your current filters. Start a new test to begin tracking your performance!
+                                            We couldn't find any completed tests
+                                            or drills matching your current
+                                            filters. Start a new test to begin
+                                            tracking your performance!
                                         </p>
-                                        <Button asChild className="mt-4 bg-blue-600 text-xs font-bold text-white hover:bg-blue-700">
+                                        <Button
+                                            asChild
+                                            className="mt-4 bg-blue-600 text-xs font-bold text-white hover:bg-blue-700"
+                                        >
                                             <Link href="/exams">
                                                 Start New Test
                                             </Link>
@@ -177,7 +196,9 @@ export function AttemptsTable({
                                             <td className="px-4 py-3.5 sm:px-5">
                                                 <Checkbox
                                                     checked={isSelected}
-                                                    onCheckedChange={(checked) =>
+                                                    onCheckedChange={(
+                                                        checked,
+                                                    ) =>
                                                         handleSelectOne(
                                                             att.id,
                                                             !!checked,
@@ -188,7 +209,7 @@ export function AttemptsTable({
                                             </td>
 
                                             {/* ID */}
-                                            <td className="px-4 py-3.5 whitespace-nowrap font-mono text-xs font-bold text-muted-foreground sm:px-5">
+                                            <td className="px-4 py-3.5 font-mono text-xs font-bold whitespace-nowrap text-muted-foreground sm:px-5">
                                                 #{att.id}
                                             </td>
 
@@ -211,7 +232,9 @@ export function AttemptsTable({
                                             <td className="px-4 py-3.5 sm:px-5">
                                                 <button
                                                     type="button"
-                                                    onClick={() => toggleExpandRow(att.id)}
+                                                    onClick={() =>
+                                                        toggleExpandRow(att.id)
+                                                    }
                                                     className="block max-w-[240px] text-left text-xs font-bold text-foreground hover:text-blue-600 hover:underline dark:hover:text-blue-400"
                                                     title={att.category}
                                                 >
@@ -230,7 +253,9 @@ export function AttemptsTable({
 
                                             {/* STATUS */}
                                             <td className="px-4 py-3.5 whitespace-nowrap sm:px-5">
-                                                <StatusBadge status={att.status} />
+                                                <StatusBadge
+                                                    status={att.status}
+                                                />
                                             </td>
 
                                             {/* DURATION */}
@@ -251,11 +276,16 @@ export function AttemptsTable({
                                                                 className="flex size-7 items-center justify-center rounded-lg border border-blue-200 bg-blue-50 text-blue-700 transition hover:bg-blue-100 hover:text-blue-800 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-blue-400 dark:hover:bg-blue-900/40"
                                                             >
                                                                 <BookOpen className="size-3.5" />
-                                                                <span className="sr-only">Review Answers</span>
+                                                                <span className="sr-only">
+                                                                    Review
+                                                                    Answers
+                                                                </span>
                                                             </Link>
                                                         </TooltipTrigger>
                                                         <TooltipContent side="top">
-                                                            <span>Review Answers</span>
+                                                            <span>
+                                                                Review Answers
+                                                            </span>
                                                         </TooltipContent>
                                                     </Tooltip>
 
@@ -264,7 +294,11 @@ export function AttemptsTable({
                                                         <TooltipTrigger asChild>
                                                             <button
                                                                 type="button"
-                                                                onClick={() => toggleExpandRow(att.id)}
+                                                                onClick={() =>
+                                                                    toggleExpandRow(
+                                                                        att.id,
+                                                                    )
+                                                                }
                                                                 className={`flex size-7 items-center justify-center rounded-lg border transition ${
                                                                     isExpanded
                                                                         ? 'border-blue-200 bg-blue-100 text-blue-800 dark:border-blue-800 dark:bg-blue-900/50 dark:text-blue-300'
@@ -277,12 +311,18 @@ export function AttemptsTable({
                                                                     <ChevronRight className="size-3.5" />
                                                                 )}
                                                                 <span className="sr-only">
-                                                                    {isExpanded ? 'Hide Breakdown' : 'View Breakdown'}
+                                                                    {isExpanded
+                                                                        ? 'Hide Breakdown'
+                                                                        : 'View Breakdown'}
                                                                 </span>
                                                             </button>
                                                         </TooltipTrigger>
                                                         <TooltipContent side="top">
-                                                            <span>{isExpanded ? 'Hide Breakdown' : 'View Breakdown'}</span>
+                                                            <span>
+                                                                {isExpanded
+                                                                    ? 'Hide Breakdown'
+                                                                    : 'View Breakdown'}
+                                                            </span>
                                                         </TooltipContent>
                                                     </Tooltip>
 
@@ -291,11 +331,18 @@ export function AttemptsTable({
                                                         <TooltipTrigger asChild>
                                                             <button
                                                                 type="button"
-                                                                onClick={() => handleDeleteAttempt(att.id)}
+                                                                onClick={() =>
+                                                                    handleDeleteAttempt(
+                                                                        att.id,
+                                                                    )
+                                                                }
                                                                 className="flex size-7 items-center justify-center rounded-lg border border-rose-200 bg-rose-50 text-rose-700 transition hover:bg-rose-100 hover:text-rose-800 dark:border-rose-900/40 dark:bg-rose-950/30 dark:text-rose-400 dark:hover:bg-rose-900/40"
                                                             >
                                                                 <Trash2 className="size-3.5" />
-                                                                <span className="sr-only">Delete Attempt</span>
+                                                                <span className="sr-only">
+                                                                    Delete
+                                                                    Attempt
+                                                                </span>
                                                             </button>
                                                         </TooltipTrigger>
                                                         <TooltipContent side="top">
@@ -308,7 +355,9 @@ export function AttemptsTable({
 
                                         {/* Expandable Breakdown sub-row */}
                                         {isExpanded && (
-                                            <AttemptExpandableRow attempt={att} />
+                                            <AttemptExpandableRow
+                                                attempt={att}
+                                            />
                                         )}
                                     </React.Fragment>
                                 );
@@ -322,7 +371,8 @@ export function AttemptsTable({
             {pagination.total > 0 && (
                 <div className="flex flex-col items-center justify-between gap-3 border-t border-border bg-slate-50/40 px-4 py-3 sm:flex-row sm:px-6 dark:bg-slate-900/30">
                     <span className="text-xs font-bold text-muted-foreground">
-                        Showing {fromItem} to {toItem} of {pagination.total} records
+                        Showing {fromItem} to {toItem} of {pagination.total}{' '}
+                        records
                     </span>
 
                     {pagination.last_page > 1 && (
@@ -343,13 +393,16 @@ export function AttemptsTable({
                                 }
 
                                 const pageNum = Number(page);
-                                const isActive = pageNum === pagination.current_page;
+                                const isActive =
+                                    pageNum === pagination.current_page;
 
                                 return (
                                     <Button
                                         key={pageNum}
                                         size="sm"
-                                        variant={isActive ? 'default' : 'outline'}
+                                        variant={
+                                            isActive ? 'default' : 'outline'
+                                        }
                                         className={`size-8 p-0 text-xs font-bold ${
                                             isActive
                                                 ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -362,7 +415,8 @@ export function AttemptsTable({
                                                     search: searchVal,
                                                     track: selectedTrack,
                                                     date: selectedDate,
-                                                    per_page: pagination.per_page,
+                                                    per_page:
+                                                        pagination.per_page,
                                                     page: pageNum,
                                                 },
                                                 {

@@ -93,19 +93,19 @@ export function CalendarStatsBanner({
     const totalOverdueCount = pastPending.length;
 
     return (
-        <div className="rounded-2xl border border-slate-200/80 bg-white/90 shadow-2xs backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/80 overflow-hidden transition-all">
+        <div className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 shadow-2xs backdrop-blur-xl transition-all dark:border-slate-800/80 dark:bg-slate-900/80">
             {/* Header / Summary Bar */}
             <div className="flex items-center justify-between px-4 py-2.5 sm:px-5">
                 <div className="flex items-center gap-2">
                     <div className="flex size-7 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
                         <Sparkles className="size-3.5" />
                     </div>
-                    <span className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-wider">
+                    <span className="text-xs font-black tracking-wider text-slate-900 uppercase dark:text-white">
                         Study Momentum & Goals
                     </span>
                     <Badge
                         variant="outline"
-                        className="text-[10px] font-bold border-indigo-200 text-indigo-700 dark:border-indigo-800 dark:text-indigo-300 ml-1"
+                        className="ml-1 border-indigo-200 text-[10px] font-bold text-indigo-700 dark:border-indigo-800 dark:text-indigo-300"
                     >
                         {weekStats.percent}% Weekly Pace
                     </Badge>
@@ -127,9 +127,9 @@ export function CalendarStatsBanner({
 
             {/* Collapsible Bento Metrics */}
             {!isCollapsed && (
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-slate-100 p-4 sm:p-5 dark:border-slate-800/60 bg-slate-50/40 dark:bg-slate-900/40">
+                <div className="grid grid-cols-1 gap-3 border-t border-slate-100 bg-slate-50/40 p-4 sm:grid-cols-3 sm:p-5 dark:border-slate-800/60 dark:bg-slate-900/40">
                     {/* Card 1: Weekly Progress */}
-                    <div className="rounded-xl border border-slate-200/70 bg-white p-3.5 dark:border-slate-800 dark:bg-slate-900 flex flex-col justify-between">
+                    <div className="flex flex-col justify-between rounded-xl border border-slate-200/70 bg-white p-3.5 dark:border-slate-800 dark:bg-slate-900">
                         <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">
                                 <Target className="size-3.5 text-blue-600 dark:text-blue-400" />
@@ -144,18 +144,26 @@ export function CalendarStatsBanner({
                             <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
                                 <div
                                     className="h-full bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-500"
-                                    style={{ width: `${Math.min(weekStats.percent, 100)}%` }}
+                                    style={{
+                                        width: `${Math.min(weekStats.percent, 100)}%`,
+                                    }}
                                 />
                             </div>
                             <div className="mt-1.5 flex items-center justify-between text-[10px] text-slate-500 dark:text-slate-400">
                                 <span>{weekStats.percent}% completed</span>
-                                <span>{Math.max(0, weekStats.total - weekStats.completed)} remaining</span>
+                                <span>
+                                    {Math.max(
+                                        0,
+                                        weekStats.total - weekStats.completed,
+                                    )}{' '}
+                                    remaining
+                                </span>
                             </div>
                         </div>
                     </div>
 
                     {/* Card 2: Habit Streak */}
-                    <div className="rounded-xl border border-slate-200/70 bg-white p-3.5 dark:border-slate-800 dark:bg-slate-900 flex flex-col justify-between">
+                    <div className="flex flex-col justify-between rounded-xl border border-slate-200/70 bg-white p-3.5 dark:border-slate-800 dark:bg-slate-900">
                         <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">
                                 <Flame className="size-3.5 text-amber-500" />
@@ -183,7 +191,7 @@ export function CalendarStatsBanner({
                     </div>
 
                     {/* Card 3: Milestone & Overdue */}
-                    <div className="rounded-xl border border-slate-200/70 bg-white p-3.5 dark:border-slate-800 dark:bg-slate-900 flex flex-col justify-between">
+                    <div className="flex flex-col justify-between rounded-xl border border-slate-200/70 bg-white p-3.5 dark:border-slate-800 dark:bg-slate-900">
                         <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">
                                 <Calendar className="size-3.5 text-emerald-600 dark:text-emerald-400" />
@@ -213,8 +221,10 @@ export function CalendarStatsBanner({
                             </span>
                         </div>
 
-                        <p className="mt-1 text-[10px] text-slate-500 dark:text-slate-400 truncate">
-                            {nextExam ? nextExam.description : 'Civil Service Exam'}
+                        <p className="mt-1 truncate text-[10px] text-slate-500 dark:text-slate-400">
+                            {nextExam
+                                ? nextExam.description
+                                : 'Civil Service Exam'}
                         </p>
                     </div>
                 </div>

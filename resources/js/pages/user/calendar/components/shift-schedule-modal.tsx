@@ -1,9 +1,4 @@
-import {
-    CalendarDays,
-    FastForward,
-    RotateCw,
-    Sparkles,
-} from 'lucide-react';
+import { CalendarDays, FastForward, RotateCw, Sparkles } from 'lucide-react';
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -26,7 +21,9 @@ export function ShiftScheduleModal({
     onOpenChange,
     onShiftApplied,
 }: ShiftScheduleModalProps) {
-    const [mode, setMode] = useState<'start_today' | 'shift_by_days'>('start_today');
+    const [mode, setMode] = useState<'start_today' | 'shift_by_days'>(
+        'start_today',
+    );
     const [days, setDays] = useState<number>(3);
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -71,7 +68,7 @@ export function ShiftScheduleModal({
                 <DialogHeader>
                     <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
                         <CalendarDays className="size-5" />
-                        <span className="text-xs font-bold uppercase tracking-wider">
+                        <span className="text-xs font-bold tracking-wider uppercase">
                             Schedule Catch-Up & Rebalance
                         </span>
                     </div>
@@ -79,7 +76,8 @@ export function ShiftScheduleModal({
                         Shift Study Schedule
                     </DialogTitle>
                     <DialogDescription className="text-xs text-slate-500 dark:text-slate-400">
-                        Easily rebalance missed days or push incomplete study sessions forward while preserving your curriculum order.
+                        Easily rebalance missed days or push incomplete study
+                        sessions forward while preserving your curriculum order.
                     </DialogDescription>
                 </DialogHeader>
 
@@ -104,7 +102,7 @@ export function ShiftScheduleModal({
                             <div className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white shadow-2xs">
                                 <RotateCw className="size-4" />
                             </div>
-                            <div className="flex-1 min-w-0">
+                            <div className="min-w-0 flex-1">
                                 <div className="flex items-center justify-between gap-2">
                                     <h4 className="text-xs font-black text-slate-900 dark:text-white">
                                         Auto Catch-Up (Restart from Today)
@@ -114,7 +112,9 @@ export function ShiftScheduleModal({
                                     </span>
                                 </div>
                                 <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
-                                    Shifts your earliest overdue task to today and automatically adjusts all subsequent sessions forward sequentially.
+                                    Shifts your earliest overdue task to today
+                                    and automatically adjusts all subsequent
+                                    sessions forward sequentially.
                                 </p>
                             </div>
                         </div>
@@ -134,17 +134,18 @@ export function ShiftScheduleModal({
                             <div className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-2xs">
                                 <FastForward className="size-4" />
                             </div>
-                            <div className="flex-1 min-w-0">
+                            <div className="min-w-0 flex-1">
                                 <h4 className="text-xs font-black text-slate-900 dark:text-white">
                                     Push Forward by Fixed Days
                                 </h4>
                                 <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
-                                    Postpone all upcoming incomplete tasks by a specific number of days.
+                                    Postpone all upcoming incomplete tasks by a
+                                    specific number of days.
                                 </p>
 
                                 {mode === 'shift_by_days' && (
                                     <div className="mt-3 flex items-center gap-2">
-                                        <label className="text-xs font-bold text-slate-700 dark:text-slate-300 shrink-0">
+                                        <label className="shrink-0 text-xs font-bold text-slate-700 dark:text-slate-300">
                                             Push forward by:
                                         </label>
                                         <Input
@@ -152,8 +153,17 @@ export function ShiftScheduleModal({
                                             min={1}
                                             max={60}
                                             value={days}
-                                            onChange={(e) => setDays(Math.max(1, parseInt(e.target.value) || 1))}
-                                            className="h-8 w-20 text-xs text-center"
+                                            onChange={(e) =>
+                                                setDays(
+                                                    Math.max(
+                                                        1,
+                                                        parseInt(
+                                                            e.target.value,
+                                                        ) || 1,
+                                                    ),
+                                                )
+                                            }
+                                            className="h-8 w-20 text-center text-xs"
                                         />
                                         <span className="text-xs font-semibold text-slate-500">
                                             days
@@ -180,7 +190,7 @@ export function ShiftScheduleModal({
                         type="button"
                         onClick={handleShift}
                         disabled={isLoading}
-                        className="h-9 gap-1.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-2xs"
+                        className="h-9 gap-1.5 bg-blue-600 text-xs font-bold text-white shadow-2xs hover:bg-blue-700"
                     >
                         <Sparkles className="size-3.5" />
                         <span>{isLoading ? 'Shifting...' : 'Apply Shift'}</span>

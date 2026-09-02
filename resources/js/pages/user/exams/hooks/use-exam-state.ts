@@ -1,34 +1,62 @@
-import { router, setLayoutProps, usePage } from '@inertiajs/react';
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { router, usePage } from '@inertiajs/react';
+import {
+    useState,
+    useEffect,
+    useCallback,
+    useMemo,
+    useRef,
+    useSyncExternalStore,
+} from 'react';
 import { toast } from 'sonner';
 import { triggerPdfExport } from '@/components/shared/global-pdf-exporter';
 import { getSessionOrigin, clearSessionOrigin } from '@/lib/smart-back';
 import type { Auth } from '@/types';
-import type { Question, ExamResults, ExamIndexProps, SimulationDetails } from '../types';
-import { isDemographicQuestion, EXAM_CONSTANTS, apiPost } from '../utils/exam-utils';
+import type {
+    Question,
+    ExamResults,
+    ExamIndexProps,
+    SimulationDetails,
+} from '../types';
+import {
+    isDemographicQuestion,
+    EXAM_CONSTANTS,
+    apiPost,
+} from '../utils/exam-utils';
 import { useExamHydration } from './use-exam-hydration';
 import { useExamPersistence } from './use-exam-persistence';
 import { useExamPoolBuilder } from './use-exam-pool-builder';
 import { useExamSubmission } from './use-exam-submission';
 import { useExamTimer } from './use-exam-timer';
 
+const emptySubscribe = () => () => {};
+
 export function useExamState(props: ExamIndexProps) {
-    const { questions = [], savedAttempt, seenQuestionIdsByTrack, wrongQuestionIdsByTrack } = props;
+    const {
+        questions = [],
+        savedAttempt,
+        seenQuestionIdsByTrack,
+        wrongQuestionIdsByTrack,
+    } = props;
     const { auth } = usePage<{ auth: Auth }>().props;
 
-    const [errorMessage, setErrorMessage] = useState<string | null>(null);
-    const [mounted, setMounted] = useState(false);
+    const mounted = useSyncExternalStore(
+        emptySubscribe,
+        () => true,
+        () => false,
+    );
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     const [selectedExamId, setSelectedExamId] = useState<number | null>(1);
     const [drillCategoryId, setDrillCategoryId] = useState<number | null>(null);
-    const [drillCategoryName, setDrillCategoryName] = useState<string | null>(null);
+    const [drillCategoryName, setDrillCategoryName] = useState<string | null>(
+        null,
+    );
     const [drillSubcategories, setDrillSubcategories] = useState<string[]>([]);
     const [drillLanguage, setDrillLanguage] = useState<string>('English');
-    const [drillQuestionCount, setDrillQuestionCount] = useState<number | 'all'>(30);
+    const [drillQuestionCount, setDrillQuestionCount] = useState<
+        number | 'all'
+    >(30);
 
     const [isExamActive, setIsExamActive] = useState(false);
     const [isExamSubmitted, setIsExamSubmitted] = useState(false);
@@ -36,7 +64,9 @@ export function useExamState(props: ExamIndexProps) {
     const [activeQuestions, setActiveQuestions] = useState<Question[]>([]);
     const [currentIdx, setCurrentIdx] = useState(0);
     const [answers, setAnswers] = useState<Record<number, number>>({});
-    const [answerChanges, setAnswerChanges] = useState<Record<number, number>>({});
+    const [answerChanges, setAnswerChanges] = useState<Record<number, number>>(
+        {},
+    );
     const [flagged, setFlagged] = useState<Record<number, boolean>>({});
     const [scratchpads, setScratchpads] = useState<Record<number, string>>({});
 
@@ -52,10 +82,15 @@ export function useExamState(props: ExamIndexProps) {
     const [submittedByTimer, setSubmittedByTimer] = useState(false);
     const [results, setResults] = useState<ExamResults | null>(null);
 
-    const [reviewStatusFilter, setReviewStatusFilter] = useState<'all' | 'correct' | 'incorrect' | 'flagged'>('all');
-    const [reviewCategoryFilter, setReviewCategoryFilter] = useState('All Categories');
-    const [reviewSubcategoryFilter, setReviewSubcategoryFilter] = useState('All Subcategories');
-    const [selectedPaletteCategory, setSelectedPaletteCategory] = useState('All Categories');
+    const [reviewStatusFilter, setReviewStatusFilter] = useState<
+        'all' | 'correct' | 'incorrect' | 'flagged'
+    >('all');
+    const [reviewCategoryFilter, setReviewCategoryFilter] =
+        useState('All Categories');
+    const [reviewSubcategoryFilter, setReviewSubcategoryFilter] =
+        useState('All Subcategories');
+    const [selectedPaletteCategory, setSelectedPaletteCategory] =
+        useState('All Categories');
 
     const [printPool, setPrintPool] = useState<Question[] | null>(null);
     const [isPrinting, setIsPrinting] = useState(() => {
@@ -81,8 +116,12 @@ export function useExamState(props: ExamIndexProps) {
                 title: drillTitle,
                 totalItems: activeQuestions.length || 30,
                 scoredItems: activeQuestions.length || 30,
-                timeLimit: isTimed ? `${Math.round((activeQuestions.length || 30))} Mins` : 'Untimed',
-                timeLimitSecs: isTimed ? (activeQuestions.length || 30) * 60 : 0,
+                timeLimit: isTimed
+                    ? `${Math.round(activeQuestions.length || 30)} Mins`
+                    : 'Untimed',
+                timeLimitSecs: isTimed
+                    ? (activeQuestions.length || 30) * 60
+                    : 0,
                 targetPace: '60 sec / item',
                 allowedCategories: [
                     'Demographic Profile',
@@ -146,6 +185,10 @@ export function useExamState(props: ExamIndexProps) {
         activeQuestions,
     });
 
+    const submitHandlerRef = useRef<((isAutoSubmit?: boolean) => void) | null>(
+        null,
+    );
+
     // Submission handler forwarding
     const onTimerExpiredCallback = useCallback(() => {
         if (isFreeAttempt) {
@@ -174,37 +217,33 @@ export function useExamState(props: ExamIndexProps) {
     });
 
     // Sub-hook 3: Submission
-    const {
-        executeSubmit,
-        handleSubmitExam,
-        confirmModal,
-        setConfirmModal,
-        lastStoredAttemptId,
-    } = useExamSubmission({
-        activeQuestions,
-        answers,
-        flagged,
-        questionTimes,
-        answerChanges,
-        selectedExamId,
-        isTimed,
-        sessionTimeLimitSecs,
-        timeLeft,
-        drillCategoryId,
-        drillCategoryName,
-        drillSubcategories,
-        drillLanguage,
-        drillQuestionCount,
-        isFreeAttempt,
-        setShowRegisterModal,
-        setIsExamSubmitted,
-        setIsExamActive,
-        setResults,
-        setSubmittedByTimer,
-    });
+    const { handleSubmitExam, confirmModal, setConfirmModal } =
+        useExamSubmission({
+            activeQuestions,
+            answers,
+            flagged,
+            questionTimes,
+            answerChanges,
+            selectedExamId,
+            isTimed,
+            sessionTimeLimitSecs,
+            timeLeft,
+            drillCategoryId,
+            drillCategoryName,
+            drillSubcategories,
+            drillLanguage,
+            drillQuestionCount,
+            isFreeAttempt,
+            setShowRegisterModal,
+            setIsExamSubmitted,
+            setIsExamActive,
+            setResults,
+            setSubmittedByTimer,
+        });
 
-    const submitHandlerRef = { current: handleSubmitExam };
-    submitHandlerRef.current = handleSubmitExam;
+    useEffect(() => {
+        submitHandlerRef.current = handleSubmitExam;
+    }, [handleSubmitExam]);
 
     const beginExamSession = useCallback(
         (examPool: Question[], examId: number | null) => {
@@ -234,7 +273,24 @@ export function useExamState(props: ExamIndexProps) {
             setResults(null);
             setSubmittedByTimer(false);
         },
-        [resetTimer],
+        [
+            resetTimer,
+            setSelectedExamId,
+            setIsTimed,
+            setActiveQuestions,
+            setCurrentIdx,
+            setAnswers,
+            setQuestionTimes,
+            setAnswerChanges,
+            setFlagged,
+            setSelectedPaletteCategory,
+            setSessionTimeLimitSecs,
+            setIsExamActive,
+            setIsExamSubmitted,
+            setReviewScreenActive,
+            setResults,
+            setSubmittedByTimer,
+        ],
     );
 
     // Sub-hook 4: Hydration & Deep Links
@@ -285,22 +341,39 @@ export function useExamState(props: ExamIndexProps) {
         sessionTimeLimitSecs,
         timeLeft,
         isTimed,
-        onRestoreSession: useCallback((restoredData) => {
-            setSelectedExamId(restoredData.selectedExamId);
-            setActiveQuestions(restoredData.activeQuestions);
-            setCurrentIdx(restoredData.currentIdx);
-            setAnswers(restoredData.answers || {});
-            setQuestionTimes(restoredData.questionTimes || {});
-            setAnswerChanges(restoredData.answerChanges || {});
-            setFlagged(restoredData.flagged || {});
-            setScratchpads(restoredData.scratchpads || {});
-            setSessionTimeLimitSecs(restoredData.sessionTimeLimitSecs);
-            setTimeLeft(restoredData.timeLeft);
-            setIsTimed(restoredData.isTimed);
-            setIsExamActive(true);
-            setIsExamSubmitted(false);
-            toast.info('Restored your previous active exam session.');
-        }, [setTimeLeft]),
+        onRestoreSession: useCallback(
+            (restoredData) => {
+                setSelectedExamId(restoredData.selectedExamId);
+                setActiveQuestions(restoredData.activeQuestions);
+                setCurrentIdx(restoredData.currentIdx);
+                setAnswers(restoredData.answers || {});
+                setQuestionTimes(restoredData.questionTimes || {});
+                setAnswerChanges(restoredData.answerChanges || {});
+                setFlagged(restoredData.flagged || {});
+                setScratchpads(restoredData.scratchpads || {});
+                setSessionTimeLimitSecs(restoredData.sessionTimeLimitSecs);
+                setTimeLeft(restoredData.timeLeft);
+                setIsTimed(restoredData.isTimed);
+                setIsExamActive(true);
+                setIsExamSubmitted(false);
+                toast.info('Restored your previous active exam session.');
+            },
+            [
+                setSelectedExamId,
+                setActiveQuestions,
+                setCurrentIdx,
+                setAnswers,
+                setQuestionTimes,
+                setAnswerChanges,
+                setFlagged,
+                setScratchpads,
+                setSessionTimeLimitSecs,
+                setTimeLeft,
+                setIsTimed,
+                setIsExamActive,
+                setIsExamSubmitted,
+            ],
+        ),
     });
 
     // Event listeners
@@ -323,33 +396,39 @@ export function useExamState(props: ExamIndexProps) {
     // Prevent unload warning
     useEffect(() => {
         if (!isExamActive || isExamSubmitted) {
-return;
-}
+            return;
+        }
 
         const handleBeforeUnload = (e: BeforeUnloadEvent) => {
             e.preventDefault();
-            e.returnValue = 'Active exam session in progress. Progress will be lost if you leave.';
+            e.returnValue =
+                'Active exam session in progress. Progress will be lost if you leave.';
 
             return e.returnValue;
         };
 
         window.addEventListener('beforeunload', handleBeforeUnload);
 
-        return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+        return () =>
+            window.removeEventListener('beforeunload', handleBeforeUnload);
     }, [isExamActive, isExamSubmitted]);
 
     const reviewSubcategories = useMemo(() => {
         if (!activeQuestions) {
-return [];
-}
+            return [];
+        }
 
         let filtered = activeQuestions.filter((q) => !isDemographicQuestion(q));
 
         if (reviewCategoryFilter !== 'All Categories') {
-            filtered = filtered.filter((q) => q.category === reviewCategoryFilter);
+            filtered = filtered.filter(
+                (q) => q.category === reviewCategoryFilter,
+            );
         }
 
-        const subcats = Array.from(new Set(filtered.map((q) => q.subcategory || 'General Concepts')));
+        const subcats = Array.from(
+            new Set(filtered.map((q) => q.subcategory || 'General Concepts')),
+        );
 
         return ['All Subcategories', ...subcats];
     }, [activeQuestions, reviewCategoryFilter]);
@@ -358,30 +437,33 @@ return [];
         beginExamSession(buildFreshExamPool(selectedExamId), selectedExamId);
     }, [beginExamSession, buildFreshExamPool, selectedExamId]);
 
-    const handleSelectOption = useCallback((optionIndex: number) => {
-        setAnswers((prev) => {
-            const previousAnswer = prev[currentIdx];
+    const handleSelectOption = useCallback(
+        (optionIndex: number) => {
+            setAnswers((prev) => {
+                const previousAnswer = prev[currentIdx];
 
-            if (previousAnswer === optionIndex) {
-                const nextAnswers = { ...prev };
-                delete nextAnswers[currentIdx];
+                if (previousAnswer === optionIndex) {
+                    const nextAnswers = { ...prev };
+                    delete nextAnswers[currentIdx];
 
-                return nextAnswers;
-            }
+                    return nextAnswers;
+                }
 
-            if (previousAnswer !== undefined && previousAnswer !== null) {
-                setAnswerChanges((changes) => ({
-                    ...changes,
-                    [currentIdx]: (changes[currentIdx] || 0) + 1,
-                }));
-            }
+                if (previousAnswer !== undefined && previousAnswer !== null) {
+                    setAnswerChanges((changes) => ({
+                        ...changes,
+                        [currentIdx]: (changes[currentIdx] || 0) + 1,
+                    }));
+                }
 
-            return {
-                ...prev,
-                [currentIdx]: optionIndex,
-            };
-        });
-    }, [currentIdx]);
+                return {
+                    ...prev,
+                    [currentIdx]: optionIndex,
+                };
+            });
+        },
+        [currentIdx],
+    );
 
     const toggleFlag = useCallback((qIndex: number) => {
         setFlagged((prev) => ({
@@ -399,7 +481,9 @@ return [];
             setSelectedPaletteCategory(category);
 
             if (category !== 'All Categories') {
-                const firstIdx = activeQuestions.findIndex((q) => q.category === category);
+                const firstIdx = activeQuestions.findIndex(
+                    (q) => q.category === category,
+                );
 
                 if (firstIdx !== -1) {
                     handleQuestionNavigate(firstIdx);
@@ -423,7 +507,15 @@ return [];
         localStorage.setItem('pending_free_exam', JSON.stringify(state));
         setShowRegisterModal(false);
         router.visit('/register');
-    }, [selectedExamId, activeQuestions, answers, currentIdx, timeLeft, isTimed, sessionTimeLimitSecs]);
+    }, [
+        selectedExamId,
+        activeQuestions,
+        answers,
+        currentIdx,
+        timeLeft,
+        isTimed,
+        sessionTimeLimitSecs,
+    ]);
 
     const handleCancelFreeExam = useCallback(() => {
         setShowRegisterModal(false);
@@ -433,8 +525,11 @@ return [];
     const handleExitExam = useCallback(() => {
         setConfirmModal({
             isOpen: true,
-            title: isDrillSession ? 'Exit Practice Drill?' : 'Exit Exam Session?',
-            message: 'Are you sure you want to exit? Your current progress will be lost.',
+            title: isDrillSession
+                ? 'Exit Practice Drill?'
+                : 'Exit Exam Session?',
+            message:
+                'Are you sure you want to exit? Your current progress will be lost.',
             confirmLabel: 'Exit Session',
             variant: 'danger',
             onConfirm: () => {
@@ -465,7 +560,9 @@ return [];
         const pool = buildFreshExamPool(selectedExamId);
 
         if (!pool || pool.length === 0) {
-            toast.error('Unable to generate exam pool for export. Please try again.');
+            toast.error(
+                'Unable to generate exam pool for export. Please try again.',
+            );
             setIsPrinting(false);
 
             if (typeof window !== 'undefined') {
@@ -499,14 +596,18 @@ return [];
                 return;
             }
 
-            toast.loading('Preparing PDF Examination Booklet...', { id: 'pdf-export-toast' });
+            toast.loading('Preparing PDF Examination Booklet...', {
+                id: 'pdf-export-toast',
+            });
             triggerPdfExport({
                 questions: pool,
                 title: details.title || 'Civil Service Examination',
                 exportToken: data.export_token,
             });
         } catch {
-            toast.error('Failed to verify export limits. Please try again.', { id: 'pdf-export-toast' });
+            toast.error('Failed to verify export limits. Please try again.', {
+                id: 'pdf-export-toast',
+            });
             setIsPrinting(false);
 
             if (typeof window !== 'undefined') {

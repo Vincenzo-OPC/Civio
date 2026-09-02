@@ -48,7 +48,9 @@ export function useExamSubmission({
     setResults,
     setSubmittedByTimer,
 }: UseExamSubmissionProps) {
-    const [lastStoredAttemptId, setLastStoredAttemptId] = useState<number | null>(null);
+    const [lastStoredAttemptId, setLastStoredAttemptId] = useState<
+        number | null
+    >(null);
 
     const [confirmModal, setConfirmModal] = useState<{
         isOpen: boolean;
@@ -95,7 +97,10 @@ export function useExamSubmission({
                 }
 
                 if (!catMap[catName].subcats[subcatName]) {
-                    catMap[catName].subcats[subcatName] = { correct: 0, total: 0 };
+                    catMap[catName].subcats[subcatName] = {
+                        correct: 0,
+                        total: 0,
+                    };
                 }
 
                 catMap[catName].total += 1;
@@ -115,10 +120,15 @@ export function useExamSubmission({
                 }
             });
 
-            const totalScoredQuestions = correctCount + wrongCount + skippedCount;
+            const totalScoredQuestions =
+                correctCount + wrongCount + skippedCount;
             const scorePercentage =
-                totalScoredQuestions > 0 ? Math.round((correctCount / totalScoredQuestions) * 100) : 0;
-            const elapsedSecs = isTimed ? Math.max(0, sessionTimeLimitSecs - timeLeft) : timeLeft;
+                totalScoredQuestions > 0
+                    ? Math.round((correctCount / totalScoredQuestions) * 100)
+                    : 0;
+            const elapsedSecs = isTimed
+                ? Math.max(0, sessionTimeLimitSecs - timeLeft)
+                : timeLeft;
 
             const computedResults: ExamResults = {
                 score: scorePercentage,
@@ -149,8 +159,14 @@ export function useExamSubmission({
                 cat_scores: {
                     categoryScoreMap: catMap,
                     metadata: {
-                        track: selectedExamId === 1 ? 'Professional' : selectedExamId === 2 ? 'Subprofessional' : 'Drill',
-                        category_name: drillCategoryName || 'Civil Service Examination',
+                        track:
+                            selectedExamId === 1
+                                ? 'Professional'
+                                : selectedExamId === 2
+                                  ? 'Subprofessional'
+                                  : 'Drill',
+                        category_name:
+                            drillCategoryName || 'Civil Service Examination',
                         score: scorePercentage,
                         total_questions: totalScoredQuestions,
                         correct_count: correctCount,
@@ -175,7 +191,9 @@ export function useExamSubmission({
                     }
                 })
                 .catch(() => {
-                    toast.error('Session finished locally, but server sync failed. Progress saved.');
+                    toast.error(
+                        'Session finished locally, but server sync failed. Progress saved.',
+                    );
                 });
         },
         [
@@ -231,8 +249,11 @@ export function useExamSubmission({
 
             const unansweredCount = Math.max(0, scoredTotal - answeredCount);
 
-            const title = unansweredCount > 0 ? 'Submit Exam with Unanswered Questions?' : 'Submit Examination?';
-            
+            const title =
+                unansweredCount > 0
+                    ? 'Submit Exam with Unanswered Questions?'
+                    : 'Submit Examination?';
+
             let message = `You have answered ${answeredCount} of ${scoredTotal} graded questions.`;
 
             if (unansweredCount > 0) {
@@ -243,13 +264,15 @@ export function useExamSubmission({
                 message += ` You also have ${flaggedCount} item${flaggedCount > 1 ? 's' : ''} flagged for review.`;
             }
 
-            message += ' Once submitted, your exam will be finalized and graded immediately.';
+            message +=
+                ' Once submitted, your exam will be finalized and graded immediately.';
 
             setConfirmModal({
                 isOpen: true,
                 title,
                 message,
-                confirmLabel: unansweredCount > 0 ? 'Submit Anyway' : 'Submit Exam',
+                confirmLabel:
+                    unansweredCount > 0 ? 'Submit Anyway' : 'Submit Exam',
                 variant: unansweredCount > 0 ? 'danger' : 'success',
                 onConfirm: () => executeSubmit(false),
             });

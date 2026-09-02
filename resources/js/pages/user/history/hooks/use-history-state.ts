@@ -32,7 +32,9 @@ export function useHistoryState({ attempts = [], filters }: HistoryPageProps) {
 
     const toggleExpandRow = (id: number) => {
         setExpandedIds((prev) =>
-            prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
+            prev.includes(id)
+                ? prev.filter((item) => item !== id)
+                : [...prev, id],
         );
     };
 

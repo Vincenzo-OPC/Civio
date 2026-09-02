@@ -42,6 +42,7 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
         }
 
         const validItems = data.filter((d) => d.secondsPerQuestion > 0);
+
         if (validItems.length === 0) {
             return null;
         }
@@ -70,6 +71,7 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
         }
 
         const sec = latestPacing.avg;
+
         if (sec <= 38) {
             return {
                 label: 'Rushing Risk (<38s/item)',
@@ -78,6 +80,7 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
                 tip: 'You are answering very quickly. Double-check for tricky wording in word problems and reading comprehension.',
             };
         }
+
         if (sec <= 56) {
             return {
                 label: 'Optimal CSE Pace (45-55s)',
@@ -232,4 +235,3 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
         </Card>
     );
 }
-

@@ -15,7 +15,7 @@ import {
     Eye,
     Trash2,
 } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { PageContainer } from '@/components/layout/page-container';
 import { Button } from '@/components/ui/button';
 import { generatePaginationLinks } from '@/lib/utils';
@@ -153,41 +153,54 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
     // Filtering & Pagination States
     const [viewMode, setViewMode] = useState<'cards' | 'table'>('table');
     const [filterSearch, setFilterSearch] = useState(filters.search || '');
-    const [debouncedFilterSearch, setDebouncedFilterSearch] = useState(filters.search || '');
+    const [debouncedFilterSearch, setDebouncedFilterSearch] = useState(
+        filters.search || '',
+    );
     const [filterStatus, setFilterStatus] = useState<
         'all' | 'approved' | 'pending'
     >(filters.status || 'all');
-    const [filterCategory, setFilterCategory] = useState<string>(filters.category || 'all');
-    const [filterSubcategory, setFilterSubcategory] = useState<string>(filters.subcategory || 'all');
-    const [filterLanguage, setFilterLanguage] = useState<string>(filters.language || 'all');
-    const [perPage, setPerPage] = useState<number>(pagination?.per_page || filters.per_page || 10);
+    const [filterCategory, setFilterCategory] = useState<string>(
+        filters.category || 'all',
+    );
+    const [filterSubcategory, setFilterSubcategory] = useState<string>(
+        filters.subcategory || 'all',
+    );
+    const [filterLanguage, setFilterLanguage] = useState<string>(
+        filters.language || 'all',
+    );
     const [clientPage, setClientPage] = useState(1);
     const tableRef = React.useRef<HTMLDivElement>(null);
 
-    // Sync state when props change
-    useEffect(() => {
-        if (filters.search !== undefined) setFilterSearch(filters.search);
-        if (filters.category !== undefined) setFilterCategory(filters.category);
-        if (filters.subcategory !== undefined) setFilterSubcategory(filters.subcategory);
-        if (filters.language !== undefined) setFilterLanguage(filters.language);
-        if (filters.status !== undefined) setFilterStatus(filters.status);
-        if (pagination?.per_page !== undefined) setPerPage(pagination.per_page);
-    }, [filters.search, filters.category, filters.subcategory, filters.language, filters.status, pagination?.per_page]);
+    const activeFilterCategory = isServerDriven
+        ? filters.category || filterCategory
+        : filterCategory;
+    const activeFilterSubcategory = isServerDriven
+        ? filters.subcategory || filterSubcategory
+        : filterSubcategory;
+    const activeFilterLanguage = isServerDriven
+        ? filters.language || filterLanguage
+        : filterLanguage;
+    const activeFilterStatus = isServerDriven
+        ? filters.status || filterStatus
+        : filterStatus;
+    const activePerPage = pagination?.per_page || filters.per_page || 10;
+    const perPage = activePerPage;
 
     const handlePageChange = (page: number) => {
         if (isServerDriven) {
             onFilterChange?.({
                 search: filterSearch,
-                category: filterCategory,
-                subcategory: filterSubcategory,
-                language: filterLanguage,
-                status: filterStatus,
-                per_page: perPage,
+                category: activeFilterCategory,
+                subcategory: activeFilterSubcategory,
+                language: activeFilterLanguage,
+                status: activeFilterStatus,
+                per_page: activePerPage,
                 page,
             });
         } else {
             setClientPage(page);
         }
+
         setTimeout(() => {
             if (tableRef.current) {
                 tableRef.current.scrollIntoView({
@@ -198,37 +211,68 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
         }, 50);
     };
 
-    const triggerServerFilter = (newFilters: {
-        search?: string;
-        category?: string;
-        subcategory?: string;
-        language?: string;
-        status?: 'all' | 'approved' | 'pending';
-        per_page?: number;
-    }) => {
-        if (isServerDriven) {
-            onFilterChange?.({
-                search: newFilters.search !== undefined ? newFilters.search : filterSearch,
-                category: newFilters.category !== undefined ? newFilters.category : filterCategory,
-                subcategory: newFilters.subcategory !== undefined ? newFilters.subcategory : filterSubcategory,
-                language: newFilters.language !== undefined ? newFilters.language : filterLanguage,
-                status: newFilters.status !== undefined ? newFilters.status : filterStatus,
-                per_page: newFilters.per_page !== undefined ? newFilters.per_page : perPage,
-                page: 1,
-            });
-        }
-    };
+    const triggerServerFilter = useCallback(
+        (newFilters: {
+            search?: string;
+            category?: string;
+            subcategory?: string;
+            language?: string;
+            status?: 'all' | 'approved' | 'pending';
+            per_page?: number;
+        }) => {
+            if (isServerDriven) {
+                onFilterChange?.({
+                    search:
+                        newFilters.search !== undefined
+                            ? newFilters.search
+                            : filterSearch,
+                    category:
+                        newFilters.category !== undefined
+                            ? newFilters.category
+                            : activeFilterCategory,
+                    subcategory:
+                        newFilters.subcategory !== undefined
+                            ? newFilters.subcategory
+                            : activeFilterSubcategory,
+                    language:
+                        newFilters.language !== undefined
+                            ? newFilters.language
+                            : activeFilterLanguage,
+                    status:
+                        newFilters.status !== undefined
+                            ? newFilters.status
+                            : activeFilterStatus,
+                    per_page:
+                        newFilters.per_page !== undefined
+                            ? newFilters.per_page
+                            : activePerPage,
+                    page: 1,
+                });
+            }
+        },
+        [
+            isServerDriven,
+            onFilterChange,
+            filterSearch,
+            activeFilterCategory,
+            activeFilterSubcategory,
+            activeFilterLanguage,
+            activeFilterStatus,
+            activePerPage,
+        ],
+    );
 
     useEffect(() => {
         const handler = setTimeout(() => {
             setDebouncedFilterSearch(filterSearch);
+
             if (isServerDriven && filterSearch !== (filters.search || '')) {
                 triggerServerFilter({ search: filterSearch });
             }
         }, 400);
 
         return () => clearTimeout(handler);
-    }, [filterSearch]);
+    }, [filterSearch, isServerDriven, filters.search, triggerServerFilter]);
 
     const filteredDrafts = isServerDriven
         ? items
@@ -265,15 +309,22 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
               );
           });
 
-    const currentPage = isServerDriven ? (pagination?.current_page || 1) : clientPage;
+    const currentPage = isServerDriven
+        ? pagination?.current_page || 1
+        : clientPage;
     const totalPages = isServerDriven
-        ? (pagination?.last_page || 1)
+        ? pagination?.last_page || 1
         : Math.ceil(filteredDrafts.length / perPage);
-    const totalResults = isServerDriven ? (pagination?.total || 0) : filteredDrafts.length;
+    const totalResults = isServerDriven
+        ? pagination?.total || 0
+        : filteredDrafts.length;
 
     const displayDrafts = isServerDriven
         ? filteredDrafts
-        : filteredDrafts.slice((currentPage - 1) * perPage, currentPage * perPage);
+        : filteredDrafts.slice(
+              (currentPage - 1) * perPage,
+              currentPage * perPage,
+          );
 
     const approvedCount = items.filter((item) => item.approved).length;
 
@@ -348,7 +399,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                             value={filterSearch}
                             onChange={(e) => {
                                 setFilterSearch(e.target.value);
-                                setCurrentPage(1);
+                                setClientPage(1);
                             }}
                             placeholder={searchPlaceholder}
                             className="w-full rounded-lg border border-border bg-muted px-3 py-1.5 text-xs font-semibold text-foreground transition placeholder:text-muted-foreground focus:border-blue-500 focus:outline-none"
@@ -359,11 +410,12 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                         {/* Category Filter */}
                         <div className="relative min-w-[120px]">
                             <select
-                                value={filterCategory}
+                                value={activeFilterCategory}
                                 onChange={(e) => {
                                     const val = e.target.value;
                                     setFilterCategory(val);
                                     setFilterSubcategory('all');
+
                                     if (isServerDriven) {
                                         triggerServerFilter({
                                             category: val,
@@ -397,10 +449,10 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                         {/* Subcategory Filter */}
                         <div className="relative min-w-[130px]">
                             <select
-                                value={filterSubcategory}
+                                value={activeFilterSubcategory}
                                 onChange={(e) => {
                                     const val = e.target.value;
-                                    let newCat = filterCategory;
+                                    let newCat = activeFilterCategory;
                                     setFilterSubcategory(val);
 
                                     if (val !== 'all') {
@@ -435,19 +487,19 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                                 >
                                     All Subcategories
                                 </option>
-                                {filterCategory !== 'all' &&
-                                    cseCategoriesTree[filterCategory]?.map(
-                                        (sub) => (
-                                            <option
-                                                key={sub}
-                                                value={sub}
-                                                className="dark:bg-slate-950"
-                                            >
-                                                {sub}
-                                            </option>
-                                        ),
-                                    )}
-                                {filterCategory === 'all' &&
+                                {activeFilterCategory !== 'all' &&
+                                    cseCategoriesTree[
+                                        activeFilterCategory
+                                    ]?.map((sub) => (
+                                        <option
+                                            key={sub}
+                                            value={sub}
+                                            className="dark:bg-slate-950"
+                                        >
+                                            {sub}
+                                        </option>
+                                    ))}
+                                {activeFilterCategory === 'all' &&
                                     Object.values(cseCategoriesTree)
                                         .flat()
                                         .map((sub, idx) => (
@@ -466,10 +518,14 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                         {/* Status Filter */}
                         <div className="relative w-28">
                             <select
-                                value={filterStatus}
+                                value={activeFilterStatus}
                                 onChange={(e) => {
-                                    const val = e.target.value as 'all' | 'approved' | 'pending';
+                                    const val = e.target.value as
+                                        | 'all'
+                                        | 'approved'
+                                        | 'pending';
                                     setFilterStatus(val);
+
                                     if (isServerDriven) {
                                         triggerServerFilter({ status: val });
                                     } else {
@@ -501,16 +557,19 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                         </div>
 
                         {/* Language Filter (Only for Verbal Ability and Word Analogy) */}
-                        {(filterCategory === 'Verbal Ability' ||
-                            filterSubcategory === 'Word analogy') && (
+                        {(activeFilterCategory === 'Verbal Ability' ||
+                            activeFilterSubcategory === 'Word analogy') && (
                             <div className="relative w-32">
                                 <select
-                                    value={filterLanguage}
+                                    value={activeFilterLanguage}
                                     onChange={(e) => {
                                         const val = e.target.value;
                                         setFilterLanguage(val);
+
                                         if (isServerDriven) {
-                                            triggerServerFilter({ language: val });
+                                            triggerServerFilter({
+                                                language: val,
+                                            });
                                         } else {
                                             setClientPage(1);
                                         }
@@ -554,6 +613,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                                     setFilterSubcategory('all');
                                     setFilterStatus('all');
                                     setFilterLanguage('all');
+
                                     if (isServerDriven) {
                                         onFilterChange?.({
                                             search: '',
@@ -661,7 +721,10 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                 ref={tableRef}
                 className="mt-6 flex scroll-m-24 flex-col gap-3 sm:gap-6"
             >
-                {items.length === 0 && (!filters.search && (!filters.category || filters.category === 'all') && (!filters.subcategory || filters.subcategory === 'all')) ? (
+                {items.length === 0 &&
+                !filters.search &&
+                (!filters.category || filters.category === 'all') &&
+                (!filters.subcategory || filters.subcategory === 'all') ? (
                     /* COMPLETELY EMPTY SYSTEM-WIDE DRAFTS STATE */
                     <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-16 text-center">
                         <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-muted text-muted-foreground">
@@ -703,6 +766,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                                 setFilterCategory('all');
                                 setFilterSubcategory('all');
                                 setFilterLanguage('all');
+
                                 if (isServerDriven) {
                                     onFilterChange?.({
                                         search: '',
@@ -725,9 +789,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                     <div className="flex flex-col gap-3 sm:gap-6">
                         {viewMode === 'cards' || !renderTableView ? (
                             <div className="flex flex-col gap-3 sm:gap-6">
-                                {displayDrafts.map((item) =>
-                                    renderItem(item),
-                                )}
+                                {displayDrafts.map((item) => renderItem(item))}
                             </div>
                         ) : (
                             renderTableView(displayDrafts)
@@ -739,7 +801,9 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                                 <span className="text-xs font-bold text-muted-foreground">
                                     Showing{' '}
                                     <strong className="text-foreground">
-                                        {totalResults === 0 ? 0 : (currentPage - 1) * perPage + 1}
+                                        {totalResults === 0
+                                            ? 0
+                                            : (currentPage - 1) * perPage + 1}
                                     </strong>{' '}
                                     to{' '}
                                     <strong className="text-foreground">

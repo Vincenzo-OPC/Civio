@@ -39,7 +39,7 @@ export function useConfirmModal() {
             cancelLabel?: string;
             verificationText?: string;
             hideCancel?: boolean;
-        }
+        },
     ) => {
         setModal({
             isOpen: true,

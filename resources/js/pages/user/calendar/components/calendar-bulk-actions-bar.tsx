@@ -30,10 +30,10 @@ export function CalendarBulkActionsBar({
     }
 
     return (
-        <div className="fixed bottom-6 inset-x-0 z-50 flex justify-center px-4 pointer-events-none animate-in fade-in slide-in-from-bottom-4 duration-300">
-            <div className="pointer-events-auto flex flex-wrap items-center gap-2 sm:gap-3 rounded-2xl border border-slate-700/80 bg-slate-900/95 px-4 py-3 text-white shadow-2xl backdrop-blur-xl dark:border-slate-700 dark:bg-slate-950/95 max-w-full sm:max-w-2xl">
+        <div className="pointer-events-none fixed inset-x-0 bottom-6 z-50 flex animate-in justify-center px-4 duration-300 fade-in slide-in-from-bottom-4">
+            <div className="pointer-events-auto flex max-w-full flex-wrap items-center gap-2 rounded-2xl border border-slate-700/80 bg-slate-900/95 px-4 py-3 text-white shadow-2xl backdrop-blur-xl sm:max-w-2xl sm:gap-3 dark:border-slate-700 dark:bg-slate-950/95">
                 {/* Count Badge */}
-                <div className="flex items-center gap-2 pr-2 border-r border-slate-700">
+                <div className="flex items-center gap-2 border-r border-slate-700 pr-2">
                     <div className="flex size-6 items-center justify-center rounded-md bg-blue-500/20 text-blue-400">
                         <CheckSquare className="size-3.5" />
                     </div>
@@ -49,7 +49,7 @@ export function CalendarBulkActionsBar({
                         variant="ghost"
                         disabled={isLoading}
                         onClick={onMarkDone}
-                        className="h-8 gap-1.5 bg-emerald-500/15 text-emerald-400 hover:bg-emerald-500/25 hover:text-emerald-300 text-xs font-bold"
+                        className="h-8 gap-1.5 bg-emerald-500/15 text-xs font-bold text-emerald-400 hover:bg-emerald-500/25 hover:text-emerald-300"
                     >
                         <CheckCircle2 className="size-3.5" />
                         <span className="hidden sm:inline">Mark Done</span>
@@ -61,7 +61,7 @@ export function CalendarBulkActionsBar({
                         variant="ghost"
                         disabled={isLoading}
                         onClick={onRescheduleToday}
-                        className="h-8 gap-1.5 bg-blue-500/15 text-blue-400 hover:bg-blue-500/25 hover:text-blue-300 text-xs font-bold"
+                        className="h-8 gap-1.5 bg-blue-500/15 text-xs font-bold text-blue-400 hover:bg-blue-500/25 hover:text-blue-300"
                     >
                         <CalendarDays className="size-3.5" />
                         <span className="hidden sm:inline">To Today</span>
@@ -73,7 +73,7 @@ export function CalendarBulkActionsBar({
                         variant="ghost"
                         disabled={isLoading}
                         onClick={onDelete}
-                        className="h-8 gap-1.5 bg-rose-500/20 text-rose-300 hover:bg-rose-500/30 hover:text-rose-200 text-xs font-bold"
+                        className="h-8 gap-1.5 bg-rose-500/20 text-xs font-bold text-rose-300 hover:bg-rose-500/30 hover:text-rose-200"
                     >
                         <Trash2 className="size-3.5" />
                         <span>Delete</span>

@@ -192,7 +192,7 @@ export default function Calendar() {
                 {/* Empty State Template Starter Banner (shown when no study sessions exist) */}
                 {totalScheduleCount === 0 && (
                     <div className="mb-4 rounded-2xl border border-indigo-200/80 bg-gradient-to-r from-indigo-50/80 via-blue-50/50 to-indigo-50/80 p-4 sm:p-5 dark:border-indigo-900/40 dark:from-indigo-950/30 dark:via-blue-950/20 dark:to-indigo-950/30">
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
                             <div className="flex items-start gap-3">
                                 <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-2xs">
                                     <Sparkles className="size-4.5" />
@@ -202,13 +202,16 @@ export default function Calendar() {
                                         Start with a Ready-Made Study Plan
                                     </h3>
                                     <p className="text-xs text-slate-600 dark:text-slate-400">
-                                        No need to schedule manually. Choose from our 60-Day, 30-Day Sprint, or Subject Booster tracks to populate your calendar instantly.
+                                        No need to schedule manually. Choose
+                                        from our 60-Day, 30-Day Sprint, or
+                                        Subject Booster tracks to populate your
+                                        calendar instantly.
                                     </p>
                                 </div>
                             </div>
                             <Button
                                 onClick={() => setIsTemplatesModalOpen(true)}
-                                className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shrink-0 self-start sm:self-auto shadow-2xs gap-1.5"
+                                className="shrink-0 gap-1.5 self-start bg-indigo-600 text-xs font-bold text-white shadow-2xs hover:bg-indigo-700 sm:self-auto"
                             >
                                 <Sparkles className="size-3.5" />
                                 <span>Explore Templates</span>
@@ -233,7 +236,9 @@ export default function Calendar() {
                         jumpToTodayWeek={jumpToTodayWeek}
                         weekRangeLabel={weekRangeLabel}
                         onOpenAddModal={() => openModal(todayStr)}
-                        onOpenTemplatesModal={() => setIsTemplatesModalOpen(true)}
+                        onOpenTemplatesModal={() =>
+                            setIsTemplatesModalOpen(true)
+                        }
                         onOpenBulkTimeModal={() => setIsBulkModalOpen(true)}
                         onOpenShiftModal={() => setIsShiftModalOpen(true)}
                         onResetAll={handleResetAll}
@@ -241,7 +246,7 @@ export default function Calendar() {
                 </div>
 
                 {/* Main Calendar Views */}
-                <Card className="border-slate-200/80 bg-white/90 p-4 sm:p-6 shadow-2xs backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/70">
+                <Card className="border-slate-200/80 bg-white/90 p-4 shadow-2xs backdrop-blur-xl sm:p-6 dark:border-slate-800/80 dark:bg-slate-900/70">
                     {activeView === 'month' ? (
                         <>
                             {/* Calendar grid swipe tip on mobile */}
@@ -450,7 +455,9 @@ export default function Calendar() {
                 <CalendarBulkActionsBar
                     selectedCount={selectedScheduleIds.length}
                     isLoading={isLoading}
-                    onMarkDone={() => handleBulkMarkAllDone(selectedScheduleIds)}
+                    onMarkDone={() =>
+                        handleBulkMarkAllDone(selectedScheduleIds)
+                    }
                     onRescheduleToday={() =>
                         handleBulkRescheduleAllToToday(selectedScheduleIds)
                     }

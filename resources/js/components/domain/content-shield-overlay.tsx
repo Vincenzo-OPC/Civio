@@ -35,7 +35,8 @@ export function ContentShieldOverlay({
                     </p>
                     {isResumeLocked && (
                         <p className="text-[11px] font-bold text-amber-600 dark:text-amber-400">
-                            Content stays locked while the exam window is not focused. Click back into this window, then resume.
+                            Content stays locked while the exam window is not
+                            focused. Click back into this window, then resume.
                         </p>
                     )}
                 </div>

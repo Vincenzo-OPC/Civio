@@ -80,7 +80,6 @@ export default function QuestionPalettePanel({
         return questions.some((q) => isDemographicQuestion(q));
     }, [questions]);
 
-
     const content = (
         <>
             {isMobile ? (

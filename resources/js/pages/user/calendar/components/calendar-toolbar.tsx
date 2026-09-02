@@ -115,12 +115,12 @@ export function CalendarToolbar({
               'All Subjects';
 
     return (
-        <div className="flex flex-col gap-3 rounded-2xl border border-slate-200/80 bg-white/90 p-3 shadow-2xs backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/80 sm:p-4">
-            <div className="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-4">
+        <div className="flex flex-col gap-3 rounded-2xl border border-slate-200/80 bg-white/90 p-3 shadow-2xs backdrop-blur-xl sm:p-4 dark:border-slate-800/80 dark:bg-slate-900/80">
+            <div className="flex flex-col items-stretch justify-between gap-4 xl:flex-row xl:items-center">
                 {/* Left: View Switcher & Category Filter */}
-                <div className="flex flex-wrap items-center justify-between sm:justify-start gap-2">
+                <div className="flex flex-wrap items-center justify-between gap-2 sm:justify-start">
                     {/* View Switcher Tabs */}
-                    <div className="flex items-center rounded-xl bg-slate-100 p-1 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60">
+                    <div className="flex items-center rounded-xl border border-slate-200/60 bg-slate-100 p-1 dark:border-slate-700/60 dark:bg-slate-800/70">
                         <button
                             type="button"
                             onClick={() => setActiveView('month')}
@@ -167,10 +167,10 @@ export function CalendarToolbar({
                             <Button
                                 variant="outline"
                                 size="sm"
-                                className="h-9 gap-1.5 border-slate-200 bg-white font-bold text-xs text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300"
+                                className="h-9 gap-1.5 border-slate-200 bg-white text-xs font-bold text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300"
                             >
                                 <Filter className="size-3.5 text-slate-400" />
-                                <span className="max-w-[120px] sm:max-w-none truncate">
+                                <span className="max-w-[120px] truncate sm:max-w-none">
                                     {selectedCategoryLabel}
                                 </span>
                             </Button>
@@ -178,9 +178,9 @@ export function CalendarToolbar({
                         <DropdownMenuContent align="start" className="w-52">
                             <DropdownMenuItem
                                 onClick={() => setSelectedCategory('all')}
-                                className={`text-xs font-semibold cursor-pointer ${
+                                className={`cursor-pointer text-xs font-semibold ${
                                     selectedCategory === 'all'
-                                        ? 'bg-blue-50 text-blue-700 font-bold dark:bg-blue-950/50 dark:text-blue-300'
+                                        ? 'bg-blue-50 font-bold text-blue-700 dark:bg-blue-950/50 dark:text-blue-300'
                                         : ''
                                 }`}
                             >
@@ -190,9 +190,9 @@ export function CalendarToolbar({
                                 <DropdownMenuItem
                                     key={cat.id}
                                     onClick={() => setSelectedCategory(cat.id)}
-                                    className={`text-xs font-semibold cursor-pointer ${
+                                    className={`cursor-pointer text-xs font-semibold ${
                                         selectedCategory === cat.id
-                                            ? 'bg-blue-50 text-blue-700 font-bold dark:bg-blue-950/50 dark:text-blue-300'
+                                            ? 'bg-blue-50 font-bold text-blue-700 dark:bg-blue-950/50 dark:text-blue-300'
                                             : ''
                                     }`}
                                 >
@@ -204,19 +204,23 @@ export function CalendarToolbar({
                 </div>
 
                 {/* Center: Date Navigation */}
-                <div className="flex items-center justify-center gap-2 self-center sm:self-auto w-full sm:w-auto">
+                <div className="flex w-full items-center justify-center gap-2 self-center sm:w-auto sm:self-auto">
                     <Button
                         variant="outline"
                         size="icon"
                         onClick={handlePrevious}
                         className="size-8 rounded-lg border-slate-200 dark:border-slate-800"
-                        title={activeView === 'week' ? 'Previous Week' : 'Previous Month'}
+                        title={
+                            activeView === 'week'
+                                ? 'Previous Week'
+                                : 'Previous Month'
+                        }
                     >
                         <ChevronLeft className="size-4" />
                     </Button>
 
                     <div className="flex items-center gap-2 px-1">
-                        <span className="text-sm sm:text-base font-black text-slate-900 dark:text-white min-w-[140px] sm:min-w-[170px] text-center">
+                        <span className="min-w-[140px] text-center text-sm font-black text-slate-900 sm:min-w-[170px] sm:text-base dark:text-white">
                             {activeView === 'week'
                                 ? weekRangeLabel
                                 : `${currentMonthName} ${currentYear}`}
@@ -238,23 +242,27 @@ export function CalendarToolbar({
                         size="icon"
                         onClick={handleNext}
                         className="size-8 rounded-lg border-slate-200 dark:border-slate-800"
-                        title={activeView === 'week' ? 'Next Week' : 'Next Month'}
+                        title={
+                            activeView === 'week' ? 'Next Week' : 'Next Month'
+                        }
                     >
                         <ChevronRight className="size-4" />
                     </Button>
                 </div>
 
                 {/* Right: Primary Actions & Clean Dropdown */}
-                <div className="flex flex-wrap items-center gap-2 justify-end">
+                <div className="flex flex-wrap items-center justify-end gap-2">
                     {/* Ready-Made Study Templates Button */}
                     <Button
                         size="sm"
                         variant="outline"
                         onClick={onOpenTemplatesModal}
-                        className="h-9 gap-1.5 border-indigo-200 bg-indigo-50/70 font-bold text-xs text-indigo-700 hover:bg-indigo-100 hover:border-indigo-300 dark:border-indigo-900/50 dark:bg-indigo-950/40 dark:text-indigo-300 dark:hover:bg-indigo-900/60"
+                        className="h-9 gap-1.5 border-indigo-200 bg-indigo-50/70 text-xs font-bold text-indigo-700 hover:border-indigo-300 hover:bg-indigo-100 dark:border-indigo-900/50 dark:bg-indigo-950/40 dark:text-indigo-300 dark:hover:bg-indigo-900/60"
                     >
                         <Sparkles className="size-3.5 text-indigo-600 dark:text-indigo-400" />
-                        <span className="hidden sm:inline">Study Templates</span>
+                        <span className="hidden sm:inline">
+                            Study Templates
+                        </span>
                         <span className="sm:hidden">Templates</span>
                     </Button>
 
@@ -262,7 +270,7 @@ export function CalendarToolbar({
                     <Button
                         size="sm"
                         onClick={onOpenAddModal}
-                        className="h-9 gap-1.5 bg-blue-600 font-bold text-xs text-white shadow-2xs transition-all hover:bg-blue-700 active:scale-95"
+                        className="h-9 gap-1.5 bg-blue-600 text-xs font-bold text-white shadow-2xs transition-all hover:bg-blue-700 active:scale-95"
                     >
                         <Plus className="size-3.5" />
                         <span>Add Task</span>
@@ -283,21 +291,21 @@ export function CalendarToolbar({
                         <DropdownMenuContent align="end" className="w-52">
                             <DropdownMenuItem
                                 onClick={onOpenTemplatesModal}
-                                className="text-xs font-semibold cursor-pointer gap-2 py-2 text-indigo-700 dark:text-indigo-300"
+                                className="cursor-pointer gap-2 py-2 text-xs font-semibold text-indigo-700 dark:text-indigo-300"
                             >
                                 <Sparkles className="size-3.5" />
                                 <span>Choose Study Template</span>
                             </DropdownMenuItem>
                             <DropdownMenuItem
                                 onClick={onOpenShiftModal}
-                                className="text-xs font-semibold cursor-pointer gap-2 py-2 text-blue-600 dark:text-blue-400"
+                                className="cursor-pointer gap-2 py-2 text-xs font-semibold text-blue-600 dark:text-blue-400"
                             >
                                 <RotateCw className="size-3.5 text-blue-600 dark:text-blue-400" />
                                 <span>Shift / Auto Catch-Up</span>
                             </DropdownMenuItem>
                             <DropdownMenuItem
                                 onClick={onOpenBulkTimeModal}
-                                className="text-xs font-semibold cursor-pointer gap-2 py-2"
+                                className="cursor-pointer gap-2 py-2 text-xs font-semibold"
                             >
                                 <Clock className="size-3.5 text-slate-500" />
                                 <span>Bulk Update Time</span>
@@ -305,7 +313,7 @@ export function CalendarToolbar({
                             <DropdownMenuSeparator />
                             <DropdownMenuItem
                                 onClick={onResetAll}
-                                className="text-xs font-semibold cursor-pointer gap-2 py-2 text-rose-600 focus:text-rose-600 dark:text-rose-400"
+                                className="cursor-pointer gap-2 py-2 text-xs font-semibold text-rose-600 focus:text-rose-600 dark:text-rose-400"
                             >
                                 <Trash2 className="size-3.5" />
                                 <span>Reset Entire Calendar</span>

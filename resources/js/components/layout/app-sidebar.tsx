@@ -19,7 +19,6 @@ import {
     Eye,
     Megaphone,
     MessageSquareWarning,
-    Brain,
 } from 'lucide-react';
 import React from 'react';
 import AppLogo from '@/components/layout/app-logo';

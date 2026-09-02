@@ -70,13 +70,13 @@ export function DayDetailsSheet({
         <Sheet open={isOpen} onOpenChange={onOpenChange}>
             <SheetContent
                 side="right"
-                className="w-full sm:max-w-md md:max-w-lg p-0 flex flex-col justify-between overflow-y-auto"
+                className="flex w-full flex-col justify-between overflow-y-auto p-0 sm:max-w-md md:max-w-lg"
             >
                 <div>
                     {/* Header */}
-                    <SheetHeader className="p-6 border-b border-slate-200/80 bg-slate-50/50 dark:border-slate-800/80 dark:bg-slate-900/50">
+                    <SheetHeader className="border-b border-slate-200/80 bg-slate-50/50 p-6 dark:border-slate-800/80 dark:bg-slate-900/50">
                         <div className="flex items-center justify-between gap-2">
-                            <div className="flex items-center gap-1.5 text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+                            <div className="flex items-center gap-1.5 text-xs font-bold tracking-wider text-blue-600 uppercase dark:text-blue-400">
                                 <Calendar className="size-4" />
                                 <span>Day Inspector</span>
                             </div>
@@ -86,34 +86,37 @@ export function DayDetailsSheet({
                                     onAddNew(dateStr);
                                     onOpenChange(false);
                                 }}
-                                className="h-8 gap-1.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-2xs"
+                                className="h-8 gap-1.5 bg-blue-600 text-xs font-bold text-white shadow-2xs hover:bg-blue-700"
                             >
                                 <Plus className="size-3.5" />
                                 <span>Add Task</span>
                             </Button>
                         </div>
 
-                        <SheetTitle className="text-lg font-black text-slate-900 dark:text-white mt-2">
+                        <SheetTitle className="mt-2 text-lg font-black text-slate-900 dark:text-white">
                             {formattedDate}
                         </SheetTitle>
 
                         <SheetDescription className="text-xs text-slate-500 dark:text-slate-400">
-                            {schedules.length} session{schedules.length === 1 ? '' : 's'} scheduled for this date
+                            {schedules.length} session
+                            {schedules.length === 1 ? '' : 's'} scheduled for
+                            this date
                         </SheetDescription>
                     </SheetHeader>
 
                     {/* Task List */}
-                    <div className="p-6 space-y-3">
+                    <div className="space-y-3 p-6">
                         {schedules.length === 0 ? (
                             <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-200 p-8 text-center dark:border-slate-800">
-                                <div className="flex size-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-400 mb-3">
+                                <div className="mb-3 flex size-10 items-center justify-center rounded-xl bg-slate-100 text-slate-400 dark:bg-slate-800">
                                     <Calendar className="size-5" />
                                 </div>
                                 <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">
                                     No Tasks Scheduled
                                 </h4>
-                                <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 max-w-xs">
-                                    You have nothing planned for this date yet. Create a session or apply a study template.
+                                <p className="mt-1 max-w-xs text-xs text-slate-500 dark:text-slate-400">
+                                    You have nothing planned for this date yet.
+                                    Create a session or apply a study template.
                                 </p>
                                 <Button
                                     variant="outline"
@@ -131,10 +134,13 @@ export function DayDetailsSheet({
                         ) : (
                             schedules.map((task) => {
                                 const subcat = task.subcategory_id
-                                    ? subcategories.find((s) => s.id === task.subcategory_id)
+                                    ? subcategories.find(
+                                          (s) => s.id === task.subcategory_id,
+                                      )
                                     : null;
                                 const catName = subcat?.category_id
-                                    ? categoryNames[subcat.category_id] || 'General'
+                                    ? categoryNames[subcat.category_id] ||
+                                      'General'
                                     : 'General';
 
                                 return (
@@ -148,10 +154,15 @@ export function DayDetailsSheet({
                                     >
                                         <div className="flex items-start justify-between gap-3">
                                             {/* Completion Checkbox & Title */}
-                                            <div className="flex items-start gap-3 flex-1 min-w-0">
+                                            <div className="flex min-w-0 flex-1 items-start gap-3">
                                                 <button
                                                     type="button"
-                                                    onClick={() => onToggleDone(task, dateStr)}
+                                                    onClick={() =>
+                                                        onToggleDone(
+                                                            task,
+                                                            dateStr,
+                                                        )
+                                                    }
                                                     className="mt-0.5 shrink-0 transition-transform active:scale-90"
                                                     aria-label={
                                                         task.is_done
@@ -166,11 +177,11 @@ export function DayDetailsSheet({
                                                     )}
                                                 </button>
 
-                                                <div className="flex-1 min-w-0">
+                                                <div className="min-w-0 flex-1">
                                                     <h4
-                                                        className={`text-xs font-bold truncate ${
+                                                        className={`truncate text-xs font-bold ${
                                                             task.is_done
-                                                                ? 'line-through text-slate-400 dark:text-slate-500'
+                                                                ? 'text-slate-400 line-through dark:text-slate-500'
                                                                 : 'text-slate-900 dark:text-white'
                                                         }`}
                                                     >
@@ -180,14 +191,17 @@ export function DayDetailsSheet({
                                                     <div className="mt-1 flex flex-wrap items-center gap-2">
                                                         <Badge
                                                             variant="outline"
-                                                            className="text-[10px] font-bold border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300"
+                                                            className="border-blue-200 bg-blue-50 text-[10px] font-bold text-blue-700 dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300"
                                                         >
                                                             {catName}
                                                         </Badge>
                                                         {task.study_time && (
                                                             <span className="flex items-center gap-1 text-[10px] text-slate-500 dark:text-slate-400">
                                                                 <Clock className="size-3" />
-                                                                {task.study_time.slice(0, 5)}
+                                                                {task.study_time.slice(
+                                                                    0,
+                                                                    5,
+                                                                )}
                                                             </span>
                                                         )}
                                                     </div>
@@ -204,10 +218,12 @@ export function DayDetailsSheet({
                                                     onSelectTask(task);
                                                     onOpenChange(false);
                                                 }}
-                                                className="h-7 gap-1 text-[11px] font-bold text-indigo-600 hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-950/40 px-2"
+                                                className="h-7 gap-1 px-2 text-[11px] font-bold text-indigo-600 hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-950/40"
                                             >
                                                 <Sparkles className="size-3" />
-                                                <span>Study & Practice Drill</span>
+                                                <span>
+                                                    Study & Practice Drill
+                                                </span>
                                             </Button>
 
                                             <div className="flex items-center gap-1">
@@ -215,7 +231,10 @@ export function DayDetailsSheet({
                                                     variant="ghost"
                                                     size="icon"
                                                     onClick={() => {
-                                                        onEditTask(task, dateStr);
+                                                        onEditTask(
+                                                            task,
+                                                            dateStr,
+                                                        );
                                                         onOpenChange(false);
                                                     }}
                                                     className="size-7 text-slate-500 hover:text-slate-900 dark:hover:text-white"
@@ -226,8 +245,13 @@ export function DayDetailsSheet({
                                                 <Button
                                                     variant="ghost"
                                                     size="icon"
-                                                    onClick={() => onDeleteTask(task.id, dateStr)}
-                                                    className="size-7 text-rose-500 hover:text-rose-700 hover:bg-rose-50 dark:hover:bg-rose-950/30"
+                                                    onClick={() =>
+                                                        onDeleteTask(
+                                                            task.id,
+                                                            dateStr,
+                                                        )
+                                                    }
+                                                    className="size-7 text-rose-500 hover:bg-rose-50 hover:text-rose-700 dark:hover:bg-rose-950/30"
                                                     title="Delete"
                                                 >
                                                     <Trash2 className="size-3.5" />
@@ -242,12 +266,12 @@ export function DayDetailsSheet({
                 </div>
 
                 {/* Footer */}
-                <div className="p-4 border-t border-slate-200 bg-slate-50/60 dark:border-slate-800 dark:bg-slate-900/60 flex items-center justify-end">
+                <div className="flex items-center justify-end border-t border-slate-200 bg-slate-50/60 p-4 dark:border-slate-800 dark:bg-slate-900/60">
                     <Button
                         type="button"
                         size="sm"
                         onClick={() => onOpenChange(false)}
-                        className="h-8.5 text-xs font-bold bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900"
+                        className="h-8.5 bg-slate-900 text-xs font-bold text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900"
                     >
                         Close
                     </Button>

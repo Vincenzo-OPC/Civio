@@ -89,7 +89,9 @@ const PageLayoutWrapper = ({
         pageBreadcrumbs[0] = { title: 'History', href: '/history' };
     } else if (fromParam && pageBreadcrumbs.length > 1) {
         const originTitle = getOriginTitle(fromParam);
-        const originHref = fromParam.startsWith('/') ? fromParam : `/${fromParam}`;
+        const originHref = fromParam.startsWith('/')
+            ? fromParam
+            : `/${fromParam}`;
         pageBreadcrumbs[0] = { title: originTitle, href: originHref };
     }
 

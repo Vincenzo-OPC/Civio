@@ -105,4 +105,3 @@ export interface ExamResults {
     elapsedSecs: number;
     cat_scores?: SavedAttempt['cat_scores'];
 }
-

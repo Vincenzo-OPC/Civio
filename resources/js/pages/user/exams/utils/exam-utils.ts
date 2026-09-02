@@ -15,16 +15,16 @@ export const EXAM_CONSTANTS = {
 
 export function isDemographicQuestion(q?: Partial<Question> | null): boolean {
     if (!q) {
-return false;
-}
+        return false;
+    }
 
     if (q.isDemographic) {
-return true;
-}
+        return true;
+    }
 
     if (!q.category) {
-return false;
-}
+        return false;
+    }
 
     const cat = q.category.toLowerCase();
 
@@ -45,7 +45,11 @@ export function fisherYatesShuffle<T>(array: T[]): T[] {
 export async function apiPost<T = any>(url: string, payload: any): Promise<T> {
     const csrfToken =
         typeof document !== 'undefined'
-            ? (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || ''
+            ? (
+                  document.querySelector(
+                      'meta[name="csrf-token"]',
+                  ) as HTMLMetaElement
+              )?.content || ''
             : '';
 
     const res = await fetch(url, {
@@ -59,7 +63,9 @@ export async function apiPost<T = any>(url: string, payload: any): Promise<T> {
     });
 
     if (!res.ok) {
-        throw new Error(`API request to ${url} failed with status ${res.status}`);
+        throw new Error(
+            `API request to ${url} failed with status ${res.status}`,
+        );
     }
 
     return res.json();

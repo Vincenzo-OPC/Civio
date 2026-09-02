@@ -1,21 +1,14 @@
-import { Head, router, Link } from '@inertiajs/react';
-import {
-    Check,
-    X,
-    Edit3,
-    ListChecks,
-    Save,
-    Eye,
-    FileImage,
-    Trash2,
-    HelpCircle,
-} from 'lucide-react';
+import { Head, router } from '@inertiajs/react';
+import { Edit3, ListChecks, FileImage, Trash2, HelpCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { DraftsReviewShell } from '@/components/domain/drafts-review-shell';
 import type { CategoryItem } from '@/components/domain/drafts-review-shell';
+import type {
+    PaginationData,
+    DraftFilters,
+} from '@/components/domain/drafts-review-shell';
 import { ConfirmModal } from '@/components/shared/confirm-modal';
 import { Button } from '@/components/ui/button';
-import { QuickEditModal } from './components/quick-edit-modal';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
     Dialog,
@@ -24,26 +17,26 @@ import {
     DialogTitle,
     DialogFooter,
 } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { renderFormattedText, extractPropositions } from '@/lib/exam-formatters';
+import {
+    renderFormattedText,
+    extractPropositions,
+} from '@/lib/exam-formatters';
 import {
     index as questionsIndex,
     drafts as questionsDrafts,
-    show as questionsShow,
     store as questionsStore,
     create as questionsCreate,
     destroy as questionsDestroy,
     bulkDestroy as questionsBulkDestroy,
     bulkEdit as questionsBulkEdit,
-    update as questionsUpdate,
 } from '@/routes/questions';
-import type { PaginationData, DraftFilters } from '@/components/domain/drafts-review-shell';
+import { QuickEditModal } from './components/quick-edit-modal';
 
 interface DraftQuestion {
     id: number;
@@ -79,7 +72,8 @@ export default function DraftsQuestionList({
     }>({ isOpen: false, type: 'single', id: null });
     const [previewQuestion, setPreviewQuestion] =
         useState<DraftQuestion | null>(null);
-    const [editModalQuestion, setEditModalQuestion] = useState<DraftQuestion | null>(null);
+    const [editModalQuestion, setEditModalQuestion] =
+        useState<DraftQuestion | null>(null);
 
     const getCleanStemText = (stem: string) => {
         if (!stem) {
@@ -165,8 +159,6 @@ export default function DraftsQuestionList({
         }
     };
 
-
-
     const handleCommitApproved = () => {
         const approvedQuestions = draftQuestions.filter((q) => q.approved);
 
@@ -218,15 +210,32 @@ export default function DraftsQuestionList({
         });
     };
 
-    const handleFilterChange = (newFilters: DraftFilters & { page?: number }) => {
+    const handleFilterChange = (
+        newFilters: DraftFilters & { page?: number },
+    ) => {
         router.get(
             questionsDrafts().url,
             {
-                search: newFilters.search !== undefined ? newFilters.search : (filters.search || ''),
-                category: newFilters.category !== undefined ? newFilters.category : (filters.category || 'all'),
-                subcategory: newFilters.subcategory !== undefined ? newFilters.subcategory : (filters.subcategory || 'all'),
-                language: newFilters.language !== undefined ? newFilters.language : (filters.language || 'all'),
-                per_page: newFilters.per_page !== undefined ? newFilters.per_page : (pagination.per_page || 10),
+                search:
+                    newFilters.search !== undefined
+                        ? newFilters.search
+                        : filters.search || '',
+                category:
+                    newFilters.category !== undefined
+                        ? newFilters.category
+                        : filters.category || 'all',
+                subcategory:
+                    newFilters.subcategory !== undefined
+                        ? newFilters.subcategory
+                        : filters.subcategory || 'all',
+                language:
+                    newFilters.language !== undefined
+                        ? newFilters.language
+                        : filters.language || 'all',
+                per_page:
+                    newFilters.per_page !== undefined
+                        ? newFilters.per_page
+                        : pagination.per_page || 10,
                 page: newFilters.page !== undefined ? newFilters.page : 1,
             },
             {
@@ -397,8 +406,7 @@ export default function DraftsQuestionList({
                                                         </div>
                                                         <div className="mt-1 line-clamp-1 text-[11px] text-muted-foreground">
                                                             {q.options &&
-                                                            q.options
-                                                                .length >
+                                                            q.options.length >
                                                                 0 ? (
                                                                 (() => {
                                                                     const choicesStr =
@@ -431,14 +439,12 @@ export default function DraftsQuestionList({
                                                                 })()
                                                             ) : (
                                                                 <span className="text-red-400 italic">
-                                                                    No
-                                                                    options
-                                                                    found
-                                                                    for this
+                                                                    No options
+                                                                    found for
+                                                                    this
                                                                     question
                                                                     (Possible
-                                                                    cache
-                                                                    issue)
+                                                                    cache issue)
                                                                 </span>
                                                             )}
                                                         </div>
@@ -487,7 +493,11 @@ export default function DraftsQuestionList({
                                                     <div className="flex items-center justify-end gap-1">
                                                         <button
                                                             type="button"
-                                                            onClick={() => setPreviewQuestion(q)}
+                                                            onClick={() =>
+                                                                setPreviewQuestion(
+                                                                    q,
+                                                                )
+                                                            }
                                                             title="Quick Preview"
                                                             className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
                                                         >
@@ -495,7 +505,11 @@ export default function DraftsQuestionList({
                                                         </button>
                                                         <button
                                                             type="button"
-                                                            onClick={() => setEditModalQuestion(q)}
+                                                            onClick={() =>
+                                                                setEditModalQuestion(
+                                                                    q,
+                                                                )
+                                                            }
                                                             title="Edit"
                                                             className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
                                                         >
@@ -503,7 +517,11 @@ export default function DraftsQuestionList({
                                                         </button>
                                                         <button
                                                             type="button"
-                                                            onClick={() => promptDeleteDraft(q.id)}
+                                                            onClick={() =>
+                                                                promptDeleteDraft(
+                                                                    q.id,
+                                                                )
+                                                            }
                                                             title="Delete Draft"
                                                             className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-red-600"
                                                         >
@@ -569,20 +587,26 @@ export default function DraftsQuestionList({
                                         <TooltipTrigger asChild>
                                             <button
                                                 type="button"
-                                                onClick={() => setPreviewQuestion(q)}
+                                                onClick={() =>
+                                                    setPreviewQuestion(q)
+                                                }
                                                 className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
                                             >
                                                 <FileImage className="size-4" />
                                             </button>
                                         </TooltipTrigger>
-                                        <TooltipContent>Quick Preview</TooltipContent>
+                                        <TooltipContent>
+                                            Quick Preview
+                                        </TooltipContent>
                                     </Tooltip>
 
                                     <Tooltip>
                                         <TooltipTrigger asChild>
                                             <button
                                                 type="button"
-                                                onClick={() => setEditModalQuestion(q)}
+                                                onClick={() =>
+                                                    setEditModalQuestion(q)
+                                                }
                                                 className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
                                             >
                                                 <Edit3 className="size-4" />
@@ -595,13 +619,17 @@ export default function DraftsQuestionList({
                                         <TooltipTrigger asChild>
                                             <button
                                                 type="button"
-                                                onClick={() => promptDeleteDraft(q.id)}
+                                                onClick={() =>
+                                                    promptDeleteDraft(q.id)
+                                                }
                                                 className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-red-600"
                                             >
                                                 <Trash2 className="size-4" />
                                             </button>
                                         </TooltipTrigger>
-                                        <TooltipContent>Delete Draft</TooltipContent>
+                                        <TooltipContent>
+                                            Delete Draft
+                                        </TooltipContent>
                                     </Tooltip>
                                 </TooltipProvider>
                             </div>
@@ -750,7 +778,10 @@ export default function DraftsQuestionList({
                                                         const isCorrect =
                                                             previewQuestion.correct_option ===
                                                             idx;
-                                                        const label = String.fromCharCode(65 + idx);
+                                                        const label =
+                                                            String.fromCharCode(
+                                                                65 + idx,
+                                                            );
 
                                                         return (
                                                             <div
@@ -782,7 +813,7 @@ export default function DraftsQuestionList({
                                                                             opt,
                                                                             false,
                                                                             undefined,
-                                                                            true
+                                                                            true,
                                                                         )}
                                                                     </p>
                                                                 </div>
@@ -803,38 +834,72 @@ export default function DraftsQuestionList({
                                     <div className="shadow-3xs mt-2 overflow-hidden rounded-2xl border border-border bg-card text-sm leading-relaxed text-muted-foreground transition-all">
                                         <div className="flex w-full items-center gap-2 p-4 font-bold text-foreground sm:p-5">
                                             <HelpCircle className="size-4 text-blue-600 dark:text-blue-400" />
-                                            <span>Explanation &amp; Rationale</span>
+                                            <span>
+                                                Explanation &amp; Rationale
+                                            </span>
                                         </div>
                                         <div className="border-t border-border/60 bg-muted/30 p-5">
                                             {(() => {
-                                                const propositions = extractPropositions(previewQuestion.stem);
-                                                const letterMap: Record<string, string> = {};
-                                                propositions.forEach((prop, idx) => {
-                                                    letterMap[prop.letter] = String.fromCharCode(65 + idx);
-                                                });
+                                                const propositions =
+                                                    extractPropositions(
+                                                        previewQuestion.stem,
+                                                    );
+                                                const letterMap: Record<
+                                                    string,
+                                                    string
+                                                > = {};
+                                                propositions.forEach(
+                                                    (prop, idx) => {
+                                                        letterMap[prop.letter] =
+                                                            String.fromCharCode(
+                                                                65 + idx,
+                                                            );
+                                                    },
+                                                );
 
                                                 return (
                                                     <>
-                                                        {propositions.length > 0 && (
+                                                        {propositions.length >
+                                                            0 && (
                                                             <div className="shadow-3xs mb-4 rounded-xl border border-border bg-background p-4">
                                                                 <span className="mb-2 block font-heading text-[10px] font-black tracking-wider text-muted-foreground uppercase">
-                                                                    Proposition Key:
+                                                                    Proposition
+                                                                    Key:
                                                                 </span>
                                                                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                                                                    {propositions.map((prop, idx) => (
-                                                                        <div key={idx} className="flex items-center gap-2 text-xs">
-                                                                            <span className="inline-flex size-5 items-center justify-center rounded border border-blue-100/60 bg-blue-50 font-mono text-[10px] font-black text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-400">
-                                                                                {String.fromCharCode(65 + idx)}
-                                                                            </span>
-                                                                            <span className="font-medium text-foreground">
-                                                                                {prop.phrase}
-                                                                            </span>
-                                                                        </div>
-                                                                    ))}
+                                                                    {propositions.map(
+                                                                        (
+                                                                            prop,
+                                                                            idx,
+                                                                        ) => (
+                                                                            <div
+                                                                                key={
+                                                                                    idx
+                                                                                }
+                                                                                className="flex items-center gap-2 text-xs"
+                                                                            >
+                                                                                <span className="inline-flex size-5 items-center justify-center rounded border border-blue-100/60 bg-blue-50 font-mono text-[10px] font-black text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-400">
+                                                                                    {String.fromCharCode(
+                                                                                        65 +
+                                                                                            idx,
+                                                                                    )}
+                                                                                </span>
+                                                                                <span className="font-medium text-foreground">
+                                                                                    {
+                                                                                        prop.phrase
+                                                                                    }
+                                                                                </span>
+                                                                            </div>
+                                                                        ),
+                                                                    )}
                                                                 </div>
                                                             </div>
                                                         )}
-                                                        {renderFormattedText(previewQuestion.explanation, false, letterMap)}
+                                                        {renderFormattedText(
+                                                            previewQuestion.explanation,
+                                                            false,
+                                                            letterMap,
+                                                        )}
                                                     </>
                                                 );
                                             })()}

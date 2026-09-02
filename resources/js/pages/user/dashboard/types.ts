@@ -115,4 +115,3 @@ export interface DashboardProps {
     recentAttempts?: RecentAttemptItem[];
     nextModule?: NextModuleItem | null;
 }
-

@@ -90,4 +90,3 @@ export interface AnalyticsProps {
         data: any | null;
     };
 }
-

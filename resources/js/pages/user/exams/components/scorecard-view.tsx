@@ -73,13 +73,19 @@ export function ScorecardView({
         setShowGuestPrompt(false);
     };
 
-    const isDrill = isDrillSession || savedAttempt?.cat_scores?.metadata?.category_name != null;
-    const isActuallyTimed = isTimed && (savedAttempt ? savedAttempt.cat_scores?.metadata?.is_timed !== false : true);
+    const isDrill =
+        isDrillSession ||
+        savedAttempt?.cat_scores?.metadata?.category_name != null;
+    const isActuallyTimed =
+        isTimed &&
+        (savedAttempt
+            ? savedAttempt.cat_scores?.metadata?.is_timed !== false
+            : true);
 
     const activeTimeLimitSecs = useMemo(() => {
         if (!isActuallyTimed) {
-return 0;
-}
+            return 0;
+        }
 
         if (isDrill) {
             const qCount = results?.total || activeQuestions?.length || 10;
@@ -88,19 +94,26 @@ return 0;
         }
 
         return getActiveTimeLimitSecs();
-    }, [isActuallyTimed, isDrill, results?.total, activeQuestions?.length, getActiveTimeLimitSecs]);
+    }, [
+        isActuallyTimed,
+        isDrill,
+        results?.total,
+        activeQuestions?.length,
+        getActiveTimeLimitSecs,
+    ]);
 
     const elapsedSecs = results?.elapsedSecs ?? 0;
-    const remainingSecs = isActuallyTimed && activeTimeLimitSecs > 0
-        ? Math.max(0, activeTimeLimitSecs - elapsedSecs)
-        : 0;
+    const remainingSecs =
+        isActuallyTimed && activeTimeLimitSecs > 0
+            ? Math.max(0, activeTimeLimitSecs - elapsedSecs)
+            : 0;
 
     const elapsedText = formatDuration(elapsedSecs);
     const underLimitText = !isActuallyTimed
         ? 'Self-paced (Untimed)'
         : remainingSecs > 0
-        ? `${formatDuration(remainingSecs, false)} under limit`
-        : 'Used full time limit';
+          ? `${formatDuration(remainingSecs, false)} under limit`
+          : 'Used full time limit';
 
     const radius = 40;
     const circumference = 2 * Math.PI * radius;
@@ -139,8 +152,8 @@ return 0;
                     q.category === 'Demographic Profile' || q.isDemographic;
 
                 if (isDemographic) {
-return false;
-}
+                    return false;
+                }
 
                 const chosen = answers[idx];
 
@@ -193,14 +206,14 @@ return false;
 
     const wrongQuestionIds = useMemo(() => {
         if (!activeQuestions || !answers) {
-return [];
-}
+            return [];
+        }
 
         return activeQuestions
             .filter((q, idx) => {
                 if (q.category === 'Demographic Profile' || q.isDemographic) {
-return false;
-}
+                    return false;
+                }
 
                 const chosen = answers[idx];
 
@@ -253,7 +266,9 @@ return false;
 
             {(() => {
                 const origin = resolveOriginFromUrl(
-                    typeof window !== 'undefined' ? window.location.href : undefined,
+                    typeof window !== 'undefined'
+                        ? window.location.href
+                        : undefined,
                 );
                 const activeDrillTab =
                     typeof window !== 'undefined'
@@ -266,18 +281,18 @@ return false;
                 const originTitle = origin
                     ? origin.title
                     : isDrill
-                    ? 'Practice Drills'
-                    : savedAttempt
-                    ? 'History'
-                    : 'Mock Exams';
+                      ? 'Practice Drills'
+                      : savedAttempt
+                        ? 'History'
+                        : 'Mock Exams';
 
                 const originHref = origin
                     ? origin.href
                     : isDrill
-                    ? defaultDrillHref
-                    : savedAttempt
-                    ? '/history'
-                    : '/exams';
+                      ? defaultDrillHref
+                      : savedAttempt
+                        ? '/history'
+                        : '/exams';
 
                 return (
                     <Link
@@ -338,7 +353,8 @@ return false;
                                         >
                                             sign in
                                         </Link>{' '}
-                                        to save past attempts and take more mock exams.
+                                        to save past attempts and take more mock
+                                        exams.
                                     </p>
                                 </div>
                             </div>
@@ -397,7 +413,8 @@ return false;
 
             {submittedByTimer && (
                 <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs font-semibold text-amber-800 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-300">
-                    Time expired — your exam was submitted automatically and your graded scorecard is shown below.
+                    Time expired — your exam was submitted automatically and
+                    your graded scorecard is shown below.
                 </div>
             )}
 
@@ -463,10 +480,13 @@ return false;
                                                 <span
                                                     className={`inline-flex rounded-full px-3 py-1 text-xs font-black tracking-wider uppercase ${isPassed ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-400'}`}
                                                 >
-                                                    {isPassed ? 'PASSED' : 'FAILED'}
+                                                    {isPassed
+                                                        ? 'PASSED'
+                                                        : 'FAILED'}
                                                 </span>
                                                 <p className="text-center text-xs font-medium text-muted-foreground">
-                                                    Official Civil Service Target
+                                                    Official Civil Service
+                                                    Target
                                                 </p>
                                             </div>
                                         </div>
@@ -498,12 +518,17 @@ return false;
                                                             catExactPct * 100,
                                                         ) / 100
                                                     ).toFixed(2);
-                                                    const isCatPassed = catExactPct >= 80;
+                                                    const isCatPassed =
+                                                        catExactPct >= 80;
 
                                                     return (
                                                         <div
                                                             key={cat}
-                                                            onClick={() => handleCategoryClick(cat)}
+                                                            onClick={() =>
+                                                                handleCategoryClick(
+                                                                    cat,
+                                                                )
+                                                            }
                                                             title={`Click to review questions for "${cat}"`}
                                                             className="group flex cursor-pointer flex-col rounded-xl border border-border bg-card p-3 transition-all duration-200 hover:border-blue-500/50 hover:bg-muted/40"
                                                         >
@@ -515,7 +540,10 @@ return false;
                                                                     <span
                                                                         className={`rounded-md px-1.5 py-0.5 text-[11px] font-black ${isCatPassed ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-400'}`}
                                                                     >
-                                                                        {catFormattedPct}%
+                                                                        {
+                                                                            catFormattedPct
+                                                                        }
+                                                                        %
                                                                     </span>
                                                                     <span className="text-[10px] font-bold text-blue-600 opacity-0 transition group-hover:opacity-100 dark:text-blue-400">
                                                                         Review →
@@ -532,7 +560,10 @@ return false;
                                                                     />
                                                                 </div>
                                                                 <span className="w-10 text-right text-[11px] font-bold text-muted-foreground">
-                                                                    {val.correct}/{val.total}
+                                                                    {
+                                                                        val.correct
+                                                                    }
+                                                                    /{val.total}
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -603,7 +634,8 @@ return false;
                                             Recommended Next Steps
                                         </h3>
                                         <p className="text-xs font-medium text-muted-foreground">
-                                            Turn your test results into immediate score improvements.
+                                            Turn your test results into
+                                            immediate score improvements.
                                         </p>
                                     </div>
                                 </div>
@@ -611,7 +643,11 @@ return false;
                                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                                     {/* Action 1: Deep Dive Mistakes */}
                                     <div
-                                        onClick={results.wrongCount > 0 ? handleReviewMistakes : handleReviewAll}
+                                        onClick={
+                                            results.wrongCount > 0
+                                                ? handleReviewMistakes
+                                                : handleReviewAll
+                                        }
                                         className="group relative flex cursor-pointer flex-col justify-between rounded-xl border border-border bg-background p-4 transition-all duration-200 hover:border-blue-500 hover:shadow-md"
                                     >
                                         <div>
@@ -621,7 +657,8 @@ return false;
                                                 </span>
                                                 {results.wrongCount > 0 ? (
                                                     <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-black text-rose-700 dark:bg-rose-950 dark:text-rose-300">
-                                                        {results.wrongCount} Mistakes
+                                                        {results.wrongCount}{' '}
+                                                        Mistakes
                                                     </span>
                                                 ) : (
                                                     <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-black text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300">
@@ -658,27 +695,42 @@ return false;
                                                 </span>
                                                 {wrongQuestionIds.length > 0 ? (
                                                     <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-black text-rose-700 dark:bg-rose-950 dark:text-rose-300">
-                                                        {wrongQuestionIds.length} Mistake Drill Qs
+                                                        {
+                                                            wrongQuestionIds.length
+                                                        }{' '}
+                                                        Mistake Drill Qs
                                                     </span>
-                                                ) : weakCategories.length > 0 ? (
+                                                ) : weakCategories.length >
+                                                  0 ? (
                                                     <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-black text-amber-700 dark:bg-amber-950 dark:text-amber-300">
-                                                        {weakCategories.length} Weak Area{weakCategories.length > 1 ? 's' : ''}
+                                                        {weakCategories.length}{' '}
+                                                        Weak Area
+                                                        {weakCategories.length >
+                                                        1
+                                                            ? 's'
+                                                            : ''}
                                                     </span>
                                                 ) : null}
                                             </div>
                                             <h4 className="font-heading text-sm font-bold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                                                {wrongQuestionIds.length > 0 ? 'Drill Mistake Questions' : 'Practice Weak Areas'}
+                                                {wrongQuestionIds.length > 0
+                                                    ? 'Drill Mistake Questions'
+                                                    : 'Practice Weak Areas'}
                                             </h4>
                                             <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
                                                 {wrongQuestionIds.length > 0
                                                     ? `Instantly launch a focused drill with the ${wrongQuestionIds.length} questions you missed.`
                                                     : weakCategories.length > 0
-                                                    ? `Launch a targeted practice session on ${weakCategories.map((w) => w.name).join(', ')}.`
-                                                    : 'Launch targeted practice drills to sharpen your speed.'}
+                                                      ? `Launch a targeted practice session on ${weakCategories.map((w) => w.name).join(', ')}.`
+                                                      : 'Launch targeted practice drills to sharpen your speed.'}
                                             </p>
                                         </div>
                                         <div className="mt-4 flex items-center text-xs font-bold text-blue-600 dark:text-blue-400">
-                                            <span>{wrongQuestionIds.length > 0 ? 'Start Mistake Drill' : 'Launch Weak Area Drill'}</span>
+                                            <span>
+                                                {wrongQuestionIds.length > 0
+                                                    ? 'Start Mistake Drill'
+                                                    : 'Launch Weak Area Drill'}
+                                            </span>
                                             <ArrowRight className="ml-1 size-3.5 transition-transform group-hover:translate-x-1" />
                                         </div>
                                     </div>
@@ -701,7 +753,9 @@ return false;
                                                 Retake Simulation
                                             </h4>
                                             <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                                                Start a fresh exam attempt with newly shuffled, prioritized questions.
+                                                Start a fresh exam attempt with
+                                                newly shuffled, prioritized
+                                                questions.
                                             </p>
                                         </div>
                                         <div className="mt-4 flex items-center text-xs font-bold text-blue-600 dark:text-blue-400">
@@ -722,7 +776,11 @@ return false;
                                         Don't Lose Your Mock Exam Score!
                                     </h3>
                                     <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                                        Register a free account now to permanently save this attempt to your history, track your category mastery over time, and unlock AI diagnostic analysis.
+                                        Register a free account now to
+                                        permanently save this attempt to your
+                                        history, track your category mastery
+                                        over time, and unlock AI diagnostic
+                                        analysis.
                                     </p>
                                     <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                                         <Link
@@ -749,7 +807,8 @@ return false;
                                     </span>
                                 </div>
                                 <span className="text-[10px] font-bold text-muted-foreground">
-                                    hirayareview.com • Civil Service Exam Simulator
+                                    hirayareview.com • Civil Service Exam
+                                    Simulator
                                 </span>
                             </div>
                         </div>
@@ -771,10 +830,13 @@ return false;
                                 Mock Exam Completed!
                             </h3>
                             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                                Great job on finishing the exam! Your score and category breakdown are ready.
+                                Great job on finishing the exam! Your score and
+                                category breakdown are ready.
                             </p>
                             <p className="mt-3 text-xs font-bold text-amber-600 dark:text-amber-400">
-                                ⚠️ Create a free account to save this attempt permanently in your progress history and review your mistake rationales anytime.
+                                ⚠️ Create a free account to save this attempt
+                                permanently in your progress history and review
+                                your mistake rationales anytime.
                             </p>
                         </div>
                         <div className="mt-6 flex flex-col gap-2.5">

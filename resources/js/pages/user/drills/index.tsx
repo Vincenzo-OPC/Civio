@@ -24,13 +24,21 @@ export default function Drills(props: DrillsProps) {
             const params = new URLSearchParams(window.location.search);
             const tabParam = params.get('tab');
 
-            if (tabParam === 'custom' || tabParam === 'saved' || tabParam === 'categories') {
+            if (
+                tabParam === 'custom' ||
+                tabParam === 'saved' ||
+                tabParam === 'categories'
+            ) {
                 return tabParam;
             }
 
             const storedTab = localStorage.getItem('hiraya_drills_active_tab');
 
-            if (storedTab === 'custom' || storedTab === 'saved' || storedTab === 'categories') {
+            if (
+                storedTab === 'custom' ||
+                storedTab === 'saved' ||
+                storedTab === 'categories'
+            ) {
                 return storedTab;
             }
         }
@@ -38,7 +46,9 @@ export default function Drills(props: DrillsProps) {
         return 'categories';
     };
 
-    const [activeTab, setActiveTabState] = useState<'categories' | 'custom' | 'saved'>(getInitialTab);
+    const [activeTab, setActiveTabState] = useState<
+        'categories' | 'custom' | 'saved'
+    >(getInitialTab);
 
     const setActiveTab = (tab: 'categories' | 'custom' | 'saved') => {
         setActiveTabState(tab);
@@ -67,7 +77,11 @@ export default function Drills(props: DrillsProps) {
                 const params = new URLSearchParams(window.location.search);
                 const tabParam = params.get('tab');
 
-                if (tabParam === 'custom' || tabParam === 'saved' || tabParam === 'categories') {
+                if (
+                    tabParam === 'custom' ||
+                    tabParam === 'saved' ||
+                    tabParam === 'categories'
+                ) {
                     setActiveTabState(tabParam);
                 }
             };
@@ -114,7 +128,9 @@ export default function Drills(props: DrillsProps) {
             category_name: sessionTitle,
             question_count: String(customQuestions.length),
             timed: String(timed),
-            custom_question_ids: JSON.stringify(customQuestions.map((q) => q.id)),
+            custom_question_ids: JSON.stringify(
+                customQuestions.map((q) => q.id),
+            ),
             from: originInfo ? originInfo.href : '/drills?tab=custom',
         });
 
@@ -143,7 +159,9 @@ export default function Drills(props: DrillsProps) {
                 category_name: data.set?.name || 'Saved Practice Set',
                 question_count: String(setQuestions.length),
                 timed: 'false',
-                custom_question_ids: JSON.stringify(setQuestions.map((q: Question) => q.id)),
+                custom_question_ids: JSON.stringify(
+                    setQuestions.map((q: Question) => q.id),
+                ),
                 from: originInfo ? originInfo.href : '/drills?tab=saved',
             });
 

@@ -8,7 +8,11 @@ import {
 } from 'lucide-react';
 import type React from 'react';
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { resolveOriginFromUrl, setSessionOrigin, setBackAnchor } from '@/lib/smart-back';
+import {
+    resolveOriginFromUrl,
+    setSessionOrigin,
+    setBackAnchor,
+} from '@/lib/smart-back';
 import type { Category, DrillsProps } from '../types';
 
 export const categoryMeta: Record<
@@ -287,13 +291,20 @@ export function useDrillsState({
     // Pre-select category, subcategories, language, and question count on deep link or retake
     useEffect(() => {
         if (categories && categories.length > 0) {
-            const searchStr = url.includes('?') ? url.split('?')[1] : (typeof window !== 'undefined' ? window.location.search.replace(/^\?/, '') : '');
+            const searchStr = url.includes('?')
+                ? url.split('?')[1]
+                : typeof window !== 'undefined'
+                  ? window.location.search.replace(/^\?/, '')
+                  : '';
             const params = new URLSearchParams(searchStr);
             let catParam = params.get('category') || params.get('cat');
             const totalParam = params.get('total') || params.get('count');
             const langParam = params.get('language') || params.get('lang');
             const subcatsParam = params.get('subcategories');
-            const singleSubcatParam = params.get('subcategory') || params.get('subcat') || params.get('search');
+            const singleSubcatParam =
+                params.get('subcategory') ||
+                params.get('subcat') ||
+                params.get('search');
             const timedParam = params.get('timed');
 
             let parsedSubcats: string[] | null = null;
@@ -306,7 +317,9 @@ export function useDrillsState({
                         parsedSubcats = parsed;
                     }
                 } catch {
-                    parsedSubcats = subcatsParam.split(',').map((s) => s.trim());
+                    parsedSubcats = subcatsParam
+                        .split(',')
+                        .map((s) => s.trim());
                 }
             } else if (singleSubcatParam) {
                 parsedSubcats = [singleSubcatParam.trim()];
@@ -316,9 +329,10 @@ export function useDrillsState({
             if (!catParam && parsedSubcats && parsedSubcats.length > 0) {
                 const targetSub = parsedSubcats[0].toLowerCase();
                 const matchedCat = categories.find((c: Category) =>
-                    c.subcategory?.some((s) =>
-                        s.name.toLowerCase().includes(targetSub) ||
-                        targetSub.includes(s.name.toLowerCase()),
+                    c.subcategory?.some(
+                        (s) =>
+                            s.name.toLowerCase().includes(targetSub) ||
+                            targetSub.includes(s.name.toLowerCase()),
                     ),
                 );
 

@@ -76,7 +76,9 @@ export function CustomBuilderView({
     const [builderMode, setBuilderMode] = useState<'auto' | 'manual'>('auto');
 
     // User-created questions state merged purely with initial questions
-    const [userCreatedQuestions, setUserCreatedQuestions] = useState<Question[]>([]);
+    const [userCreatedQuestions, setUserCreatedQuestions] = useState<
+        Question[]
+    >([]);
     const allQuestions = useMemo(
         () => [...userCreatedQuestions, ...initialQuestions],
         [userCreatedQuestions, initialQuestions],
@@ -90,7 +92,9 @@ export function CustomBuilderView({
     );
 
     // 2. Pool Filter Mode
-    const [poolFilter, setPoolFilter] = useState<'all' | 'mistakes' | 'unseen'>('all');
+    const [poolFilter, setPoolFilter] = useState<'all' | 'mistakes' | 'unseen'>(
+        'all',
+    );
 
     // 3. Question Count ('all' or number) for Auto Mode
     const [questionCount, setQuestionCount] = useState<number | 'all'>(15);
@@ -101,19 +105,30 @@ export function CustomBuilderView({
     const [isTimed, setIsTimed] = useState<boolean>(true);
 
     // 5. Language
-    const [language, setLanguage] = useState<'Both' | 'English' | 'Filipino'>('Both');
+    const [language, setLanguage] = useState<'Both' | 'English' | 'Filipino'>(
+        'Both',
+    );
 
     // 6. Manual Selection State
     const [selectedManualIds, setSelectedManualIds] = useState<number[]>([]);
     const [manualSearchQuery, setManualSearchQuery] = useState<string>('');
-    const [manualSubcategoryFilter, setManualSubcategoryFilter] = useState<string>('All');
-    const [manualStatusFilter, setManualStatusFilter] = useState<'all' | 'mistakes' | 'unseen' | 'custom'>('all');
+    const [manualSubcategoryFilter, setManualSubcategoryFilter] =
+        useState<string>('All');
+    const [manualStatusFilter, setManualStatusFilter] = useState<
+        'all' | 'mistakes' | 'unseen' | 'custom'
+    >('all');
     const [showSelectedOnly, setShowSelectedOnly] = useState<boolean>(false);
 
     // Accordion expand/collapse states
-    const [collapsedCategories, setCollapsedCategories] = useState<Record<string, boolean>>({});
-    const [collapsedSubcategories, setCollapsedSubcategories] = useState<Record<string, boolean>>({});
-    const [expandedQuestionIds, setExpandedQuestionIds] = useState<Record<number, boolean>>({});
+    const [collapsedCategories, setCollapsedCategories] = useState<
+        Record<string, boolean>
+    >({});
+    const [collapsedSubcategories, setCollapsedSubcategories] = useState<
+        Record<string, boolean>
+    >({});
+    const [expandedQuestionIds, setExpandedQuestionIds] = useState<
+        Record<number, boolean>
+    >({});
 
     // 7. Modals State
     const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
@@ -136,7 +151,10 @@ export function CustomBuilderView({
         onCopyAttempt: (msg) => toast.error(msg),
     });
 
-    const wrongSet = useMemo(() => new Set(wrongQuestionIds), [wrongQuestionIds]);
+    const wrongSet = useMemo(
+        () => new Set(wrongQuestionIds),
+        [wrongQuestionIds],
+    );
     const seenSet = useMemo(() => new Set(seenQuestionIds), [seenQuestionIds]);
 
     // Toggle category
@@ -237,13 +255,17 @@ export function CustomBuilderView({
                     q.stem.toLowerCase().includes(query) ||
                     (q.subcategory || '').toLowerCase().includes(query) ||
                     q.category.toLowerCase().includes(query) ||
-                    (q.options || []).some((opt) => opt.toLowerCase().includes(query)),
+                    (q.options || []).some((opt) =>
+                        opt.toLowerCase().includes(query),
+                    ),
             );
         }
 
         // Subcategory Filter
         if (manualSubcategoryFilter !== 'All') {
-            result = result.filter((q) => q.subcategory === manualSubcategoryFilter);
+            result = result.filter(
+                (q) => q.subcategory === manualSubcategoryFilter,
+            );
         }
 
         // Status Filter inside Manual Picker
@@ -304,7 +326,9 @@ export function CustomBuilderView({
 
             subMap.forEach((qList, subcategoryName) => {
                 const totalCount = qList.length;
-                const selectedCount = qList.filter((q) => selectedSet.has(q.id)).length;
+                const selectedCount = qList.filter((q) =>
+                    selectedSet.has(q.id),
+                ).length;
                 catTotal += totalCount;
                 catSelected += selectedCount;
 
@@ -390,15 +414,25 @@ export function CustomBuilderView({
 
         // Auto mode default slice
         return matchingQuestions.slice(0, effectiveAutoCount);
-    }, [builderMode, selectedManualIds, allQuestions, matchingQuestions, effectiveAutoCount]);
+    }, [
+        builderMode,
+        selectedManualIds,
+        allQuestions,
+        matchingQuestions,
+        effectiveAutoCount,
+    ]);
 
     const totalSelectedCount =
-        builderMode === 'manual' ? selectedManualIds.length : effectiveAutoCount;
+        builderMode === 'manual'
+            ? selectedManualIds.length
+            : effectiveAutoCount;
 
     // Manual Selection Toggle
     const toggleManualQuestion = (id: number) => {
         setSelectedManualIds((prev) =>
-            prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
+            prev.includes(id)
+                ? prev.filter((item) => item !== id)
+                : [...prev, id],
         );
     };
 
@@ -419,15 +453,24 @@ export function CustomBuilderView({
 
     const clearInSubcategory = (subGroup: SubcategoryGroup) => {
         const idsToRemove = new Set(subGroup.questions.map((q) => q.id));
-        setSelectedManualIds((prev) => prev.filter((id) => !idsToRemove.has(id)));
+        setSelectedManualIds((prev) =>
+            prev.filter((id) => !idsToRemove.has(id)),
+        );
     };
 
-    const pickRandomInSubcategory = (subGroup: SubcategoryGroup, count: number) => {
+    const pickRandomInSubcategory = (
+        subGroup: SubcategoryGroup,
+        count: number,
+    ) => {
         const pool = subGroup.questions;
         const shuffled = [...pool].sort(() => 0.5 - Math.random());
         const picked = shuffled.slice(0, count).map((q) => q.id);
-        setSelectedManualIds((prev) => Array.from(new Set([...prev, ...picked])));
-        toast.success(`Selected ${Math.min(count, pool.length)} random questions from ${subGroup.subcategoryName}`);
+        setSelectedManualIds((prev) =>
+            Array.from(new Set([...prev, ...picked])),
+        );
+        toast.success(
+            `Selected ${Math.min(count, pool.length)} random questions from ${subGroup.subcategoryName}`,
+        );
     };
 
     // Category bulk selection
@@ -444,7 +487,9 @@ export function CustomBuilderView({
         catGroup.subcategories.forEach((s) => {
             s.questions.forEach((q) => idsToRemove.add(q.id));
         });
-        setSelectedManualIds((prev) => prev.filter((id) => !idsToRemove.has(id)));
+        setSelectedManualIds((prev) =>
+            prev.filter((id) => !idsToRemove.has(id)),
+        );
     };
 
     // Expand/collapse helpers
@@ -512,7 +557,9 @@ export function CustomBuilderView({
         const questionsToLaunch =
             builderMode === 'manual'
                 ? activeSelectedQuestions
-                : [...matchingQuestions].sort(() => 0.5 - Math.random()).slice(0, effectiveAutoCount);
+                : [...matchingQuestions]
+                      .sort(() => 0.5 - Math.random())
+                      .slice(0, effectiveAutoCount);
 
         onLaunchCustomDrill(questionsToLaunch, isTimed, title);
     };
@@ -527,7 +574,9 @@ export function CustomBuilderView({
 
         const catSummary = selectedCategories.slice(0, 2).join(' & ');
         setSavedSetName(`Custom Drill - ${catSummary || 'Practice Set'}`);
-        setSavedSetDescription(`Curated practice set containing ${totalSelectedCount} items.`);
+        setSavedSetDescription(
+            `Curated practice set containing ${totalSelectedCount} items.`,
+        );
         setIsSaveModalOpen(true);
     };
 
@@ -542,7 +591,11 @@ export function CustomBuilderView({
 
         try {
             const csrfToken =
-                (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '';
+                (
+                    document.querySelector(
+                        'meta[name="csrf-token"]',
+                    ) as HTMLMetaElement
+                )?.content || '';
 
             const questionIds = activeSelectedQuestions.map((q) => q.id);
 
@@ -562,7 +615,9 @@ export function CustomBuilderView({
             });
 
             if (res.ok) {
-                toast.success('Practice set saved! Accessible anytime in the Saved Sets tab.');
+                toast.success(
+                    'Practice set saved! Accessible anytime in the Saved Sets tab.',
+                );
                 setIsSaveModalOpen(false);
                 router.reload();
             } else {
@@ -619,7 +674,9 @@ export function CustomBuilderView({
                                     Custom Drill Builder
                                 </h2>
                                 <p className="text-xs text-muted-foreground sm:text-sm">
-                                    Create a custom practice session or pick specific questions to practice and save to your sets.
+                                    Create a custom practice session or pick
+                                    specific questions to practice and save to
+                                    your sets.
                                 </p>
                             </div>
                         </div>
@@ -630,7 +687,9 @@ export function CustomBuilderView({
                                 description="Craft targeted practice sessions matched to your exact study goals:"
                                 tips={[
                                     {
-                                        icon: <SlidersHorizontal className="size-4" />,
+                                        icon: (
+                                            <SlidersHorizontal className="size-4" />
+                                        ),
                                         title: 'Target Multi-Category Combinations',
                                         text: 'Combine any subjects (e.g. Numerical + Verbal) and filter specifically for your past mistakes, unseen items, or flagged questions.',
                                     },
@@ -687,7 +746,9 @@ export function CustomBuilderView({
                                 }`}
                             >
                                 <ListFilter className="size-4" />
-                                <span>Manual Pick ({selectedManualIds.length})</span>
+                                <span>
+                                    Manual Pick ({selectedManualIds.length})
+                                </span>
                             </button>
                         </div>
 
@@ -713,19 +774,36 @@ export function CustomBuilderView({
 
                             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                                 {categories
-                                    .filter((c) => c.name.toLowerCase() !== 'demographic')
+                                    .filter(
+                                        (c) =>
+                                            c.name.toLowerCase() !==
+                                            'demographic',
+                                    )
                                     .map((cat) => {
-                                        const isSelected = selectedCategories.includes(cat.name);
+                                        const isSelected =
+                                            selectedCategories.includes(
+                                                cat.name,
+                                            );
                                         const totalQ = allQuestions.filter(
                                             (q) =>
-                                                q.category.toLowerCase().includes(cat.name.toLowerCase()) ||
-                                                cat.name.toLowerCase().includes(q.category.toLowerCase()),
+                                                q.category
+                                                    .toLowerCase()
+                                                    .includes(
+                                                        cat.name.toLowerCase(),
+                                                    ) ||
+                                                cat.name
+                                                    .toLowerCase()
+                                                    .includes(
+                                                        q.category.toLowerCase(),
+                                                    ),
                                         ).length;
 
                                         return (
                                             <div
                                                 key={cat.id}
-                                                onClick={() => toggleCategory(cat.name)}
+                                                onClick={() =>
+                                                    toggleCategory(cat.name)
+                                                }
                                                 className={`flex cursor-pointer items-center justify-between rounded-xl border p-3 transition-all ${
                                                     isSelected
                                                         ? 'border-blue-500 bg-blue-50/50 dark:border-blue-500/80 dark:bg-blue-950/20'
@@ -789,7 +867,8 @@ export function CustomBuilderView({
                                             All Questions
                                         </h4>
                                         <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
-                                            Draw from all available questions in the selected categories.
+                                            Draw from all available questions in
+                                            the selected categories.
                                         </p>
                                     </div>
                                 </div>
@@ -807,14 +886,16 @@ export function CustomBuilderView({
                                         <div className="mb-2 flex items-center justify-between">
                                             <RotateCcw className="size-4 text-rose-600 dark:text-rose-400" />
                                             <span className="rounded-full bg-rose-100 px-1.5 py-0.5 text-[9px] font-black text-rose-700 dark:bg-rose-950 dark:text-rose-300">
-                                                {wrongQuestionIds.length} Mistakes
+                                                {wrongQuestionIds.length}{' '}
+                                                Mistakes
                                             </span>
                                         </div>
                                         <h4 className="text-xs font-bold text-foreground">
                                             Past Mistakes Only
                                         </h4>
                                         <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
-                                            Target questions you previously failed in past exams or drills.
+                                            Target questions you previously
+                                            failed in past exams or drills.
                                         </p>
                                     </div>
                                 </div>
@@ -839,7 +920,8 @@ export function CustomBuilderView({
                                             Fresh / Unseen Only
                                         </h4>
                                         <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
-                                            Practice only questions you haven&apos;t encountered yet.
+                                            Practice only questions you
+                                            haven&apos;t encountered yet.
                                         </p>
                                     </div>
                                 </div>
@@ -857,11 +939,15 @@ export function CustomBuilderView({
                                                 3
                                             </span>
                                             <h3 className="font-heading text-sm font-bold text-foreground">
-                                                Curate Practice Questions ({selectedManualIds.length} Selected)
+                                                Curate Practice Questions (
+                                                {selectedManualIds.length}{' '}
+                                                Selected)
                                             </h3>
                                         </div>
                                         <p className="mt-0.5 text-xs text-muted-foreground">
-                                            Organized by subject and topic. Inspect choices, select subsets, or add custom study items.
+                                            Organized by subject and topic.
+                                            Inspect choices, select subsets, or
+                                            add custom study items.
                                         </p>
                                     </div>
 
@@ -871,7 +957,9 @@ export function CustomBuilderView({
                                             type="button"
                                             variant="outline"
                                             size="sm"
-                                            onClick={() => setIsCreateModalOpen(true)}
+                                            onClick={() =>
+                                                setIsCreateModalOpen(true)
+                                            }
                                             className="h-8 gap-1.5 border-blue-200 bg-blue-50/50 text-xs font-bold text-blue-700 hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-blue-300"
                                         >
                                             <Plus className="size-3.5" />
@@ -885,7 +973,8 @@ export function CustomBuilderView({
                                             onClick={selectAllManual}
                                             className="h-8 text-xs font-bold"
                                         >
-                                            Select All ({displayedManualQuestions.length})
+                                            Select All (
+                                            {displayedManualQuestions.length})
                                         </Button>
 
                                         {selectedManualIds.length > 0 && (
@@ -907,18 +996,24 @@ export function CustomBuilderView({
                                     {/* Row 1: Search bar + Subcategory Dropdown */}
                                     <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
                                         <div className="relative sm:col-span-2">
-                                            <Search className="absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground" />
+                                            <Search className="absolute top-1/2 left-3 size-3.5 -translate-y-1/2 text-muted-foreground" />
                                             <Input
                                                 value={manualSearchQuery}
-                                                onChange={(e) => setManualSearchQuery(e.target.value)}
+                                                onChange={(e) =>
+                                                    setManualSearchQuery(
+                                                        e.target.value,
+                                                    )
+                                                }
                                                 placeholder="Search question stem, choices, or topic keyword..."
                                                 className="h-9 pl-8 text-xs"
                                             />
                                             {manualSearchQuery && (
                                                 <button
                                                     type="button"
-                                                    onClick={() => setManualSearchQuery('')}
-                                                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                                                    onClick={() =>
+                                                        setManualSearchQuery('')
+                                                    }
+                                                    className="absolute top-1/2 right-2.5 -translate-y-1/2 text-muted-foreground hover:text-foreground"
                                                 >
                                                     <X className="size-3.5" />
                                                 </button>
@@ -928,15 +1023,30 @@ export function CustomBuilderView({
                                         <div>
                                             <select
                                                 value={manualSubcategoryFilter}
-                                                onChange={(e) => setManualSubcategoryFilter(e.target.value)}
+                                                onChange={(e) =>
+                                                    setManualSubcategoryFilter(
+                                                        e.target.value,
+                                                    )
+                                                }
                                                 className="h-9 w-full rounded-xl border border-border bg-background px-3 text-xs font-semibold text-foreground focus:border-blue-500 focus:outline-none"
                                             >
-                                                <option value="All">All Subcategories ({availableSubcategories.length})</option>
-                                                {availableSubcategories.map((sub) => (
-                                                    <option key={sub} value={sub}>
-                                                        {sub}
-                                                    </option>
-                                                ))}
+                                                <option value="All">
+                                                    All Subcategories (
+                                                    {
+                                                        availableSubcategories.length
+                                                    }
+                                                    )
+                                                </option>
+                                                {availableSubcategories.map(
+                                                    (sub) => (
+                                                        <option
+                                                            key={sub}
+                                                            value={sub}
+                                                        >
+                                                            {sub}
+                                                        </option>
+                                                    ),
+                                                )}
                                             </select>
                                         </div>
                                     </div>
@@ -947,18 +1057,35 @@ export function CustomBuilderView({
                                         <div className="flex flex-wrap items-center gap-1.5">
                                             {(
                                                 [
-                                                    { id: 'all', label: 'All Matching' },
-                                                    { id: 'mistakes', label: 'Past Mistakes' },
-                                                    { id: 'unseen', label: 'Fresh / Unseen' },
-                                                    { id: 'custom', label: 'Custom Notes' },
+                                                    {
+                                                        id: 'all',
+                                                        label: 'All Matching',
+                                                    },
+                                                    {
+                                                        id: 'mistakes',
+                                                        label: 'Past Mistakes',
+                                                    },
+                                                    {
+                                                        id: 'unseen',
+                                                        label: 'Fresh / Unseen',
+                                                    },
+                                                    {
+                                                        id: 'custom',
+                                                        label: 'Custom Notes',
+                                                    },
                                                 ] as const
                                             ).map((st) => (
                                                 <button
                                                     key={st.id}
                                                     type="button"
-                                                    onClick={() => setManualStatusFilter(st.id)}
+                                                    onClick={() =>
+                                                        setManualStatusFilter(
+                                                            st.id,
+                                                        )
+                                                    }
                                                     className={`rounded-lg px-2.5 py-1 text-[11px] font-bold transition ${
-                                                        manualStatusFilter === st.id
+                                                        manualStatusFilter ===
+                                                        st.id
                                                             ? 'bg-foreground text-background shadow-2xs'
                                                             : 'border border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground'
                                                     }`}
@@ -972,7 +1099,11 @@ export function CustomBuilderView({
                                         <div className="flex items-center gap-2">
                                             <button
                                                 type="button"
-                                                onClick={() => setShowSelectedOnly((prev) => !prev)}
+                                                onClick={() =>
+                                                    setShowSelectedOnly(
+                                                        (prev) => !prev,
+                                                    )
+                                                }
                                                 className={`flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-[11px] font-bold transition ${
                                                     showSelectedOnly
                                                         ? 'bg-blue-600 text-white shadow-xs'
@@ -980,13 +1111,18 @@ export function CustomBuilderView({
                                                 }`}
                                             >
                                                 <CheckSquare className="size-3.5" />
-                                                <span>Selected Only ({selectedManualIds.length})</span>
+                                                <span>
+                                                    Selected Only (
+                                                    {selectedManualIds.length})
+                                                </span>
                                             </button>
 
                                             <button
                                                 type="button"
                                                 onClick={
-                                                    Object.keys(expandedQuestionIds).length > 0
+                                                    Object.keys(
+                                                        expandedQuestionIds,
+                                                    ).length > 0
                                                         ? collapseAllPreviews
                                                         : expandAllPreviews
                                                 }
@@ -994,7 +1130,9 @@ export function CustomBuilderView({
                                             >
                                                 <ChevronsUpDown className="size-3.5" />
                                                 <span>
-                                                    {Object.keys(expandedQuestionIds).length > 0
+                                                    {Object.keys(
+                                                        expandedQuestionIds,
+                                                    ).length > 0
                                                         ? 'Collapse Previews'
                                                         : 'Expand Previews'}
                                                 </span>
@@ -1007,17 +1145,24 @@ export function CustomBuilderView({
                                 <div className="max-h-[550px] space-y-4 overflow-y-auto pr-1">
                                     {hierarchicalGroups.length > 0 ? (
                                         hierarchicalGroups.map((catGroup) => {
-                                            const isCatCollapsed = !!collapsedCategories[catGroup.categoryName];
+                                            const isCatCollapsed =
+                                                !!collapsedCategories[
+                                                    catGroup.categoryName
+                                                ];
 
                                             return (
                                                 <div
                                                     key={catGroup.categoryName}
-                                                    className="overflow-hidden rounded-xl border border-border bg-card shadow-3xs"
+                                                    className="shadow-3xs overflow-hidden rounded-xl border border-border bg-card"
                                                 >
                                                     {/* Category Header */}
                                                     <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/80 bg-muted/40 px-4 py-3">
                                                         <div
-                                                            onClick={() => toggleCategoryCollapse(catGroup.categoryName)}
+                                                            onClick={() =>
+                                                                toggleCategoryCollapse(
+                                                                    catGroup.categoryName,
+                                                                )
+                                                            }
                                                             className="flex cursor-pointer items-center gap-2.5"
                                                         >
                                                             <div className="flex size-6 items-center justify-center rounded-md bg-background text-muted-foreground shadow-2xs">
@@ -1029,10 +1174,19 @@ export function CustomBuilderView({
                                                             </div>
                                                             <div>
                                                                 <h4 className="font-heading text-xs font-bold text-foreground sm:text-sm">
-                                                                    {catGroup.categoryName}
+                                                                    {
+                                                                        catGroup.categoryName
+                                                                    }
                                                                 </h4>
                                                                 <p className="text-[10px] font-semibold text-muted-foreground">
-                                                                    {catGroup.selectedCount} of {catGroup.totalCount} selected
+                                                                    {
+                                                                        catGroup.selectedCount
+                                                                    }{' '}
+                                                                    of{' '}
+                                                                    {
+                                                                        catGroup.totalCount
+                                                                    }{' '}
+                                                                    selected
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -1043,17 +1197,31 @@ export function CustomBuilderView({
                                                                 type="button"
                                                                 variant="outline"
                                                                 size="sm"
-                                                                onClick={() => selectAllInCategory(catGroup)}
+                                                                onClick={() =>
+                                                                    selectAllInCategory(
+                                                                        catGroup,
+                                                                    )
+                                                                }
                                                                 className="h-7 px-2 text-[11px] font-bold"
                                                             >
-                                                                Select Category ({catGroup.totalCount})
+                                                                Select Category
+                                                                (
+                                                                {
+                                                                    catGroup.totalCount
+                                                                }
+                                                                )
                                                             </Button>
-                                                            {catGroup.selectedCount > 0 && (
+                                                            {catGroup.selectedCount >
+                                                                0 && (
                                                                 <Button
                                                                     type="button"
                                                                     variant="ghost"
                                                                     size="sm"
-                                                                    onClick={() => clearInCategory(catGroup)}
+                                                                    onClick={() =>
+                                                                        clearInCategory(
+                                                                            catGroup,
+                                                                        )
+                                                                    }
                                                                     className="h-7 px-2 text-[11px] font-bold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30"
                                                                 >
                                                                     Clear
@@ -1065,112 +1233,187 @@ export function CustomBuilderView({
                                                     {/* Subcategories & Questions List */}
                                                     {!isCatCollapsed && (
                                                         <div className="space-y-3 p-3">
-                                                            {catGroup.subcategories.map((subGroup) => {
-                                                                const subKey = `${catGroup.categoryName}-${subGroup.subcategoryName}`;
-                                                                const isSubCollapsed = !!collapsedSubcategories[subKey];
+                                                            {catGroup.subcategories.map(
+                                                                (subGroup) => {
+                                                                    const subKey = `${catGroup.categoryName}-${subGroup.subcategoryName}`;
+                                                                    const isSubCollapsed =
+                                                                        !!collapsedSubcategories[
+                                                                            subKey
+                                                                        ];
 
-                                                                return (
-                                                                    <div
-                                                                        key={subKey}
-                                                                        className="rounded-xl border border-border/70 bg-background/60 p-3"
-                                                                    >
-                                                                        {/* Subcategory Header */}
-                                                                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/50 pb-2">
-                                                                            <div
-                                                                                onClick={() => toggleSubcategoryCollapse(subKey)}
-                                                                                className="flex cursor-pointer items-center gap-2"
-                                                                            >
-                                                                                <div className="text-muted-foreground">
-                                                                                    {isSubCollapsed ? (
-                                                                                        <ChevronDown className="size-3.5" />
-                                                                                    ) : (
-                                                                                        <ChevronUp className="size-3.5" />
-                                                                                    )}
-                                                                                </div>
-                                                                                <span className="text-xs font-bold text-foreground">
-                                                                                    {subGroup.subcategoryName}
-                                                                                </span>
-                                                                                <span className="rounded-md bg-muted px-1.5 py-0.5 text-[10px] font-bold text-muted-foreground">
-                                                                                    {subGroup.selectedCount} / {subGroup.totalCount}
-                                                                                </span>
-                                                                            </div>
-
-                                                                            {/* Subcategory Action Tools */}
-                                                                            <div className="flex items-center gap-1.5">
-                                                                                {/* Random Pick Tool */}
-                                                                                <button
-                                                                                    type="button"
+                                                                    return (
+                                                                        <div
+                                                                            key={
+                                                                                subKey
+                                                                            }
+                                                                            className="rounded-xl border border-border/70 bg-background/60 p-3"
+                                                                        >
+                                                                            {/* Subcategory Header */}
+                                                                            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/50 pb-2">
+                                                                                <div
                                                                                     onClick={() =>
-                                                                                        pickRandomInSubcategory(
-                                                                                            subGroup,
-                                                                                            Math.min(5, subGroup.totalCount),
+                                                                                        toggleSubcategoryCollapse(
+                                                                                            subKey,
                                                                                         )
                                                                                     }
-                                                                                    title="Pick 5 random questions from this topic"
-                                                                                    className="flex items-center gap-1 rounded-lg border border-border bg-card px-2 py-1 text-[10px] font-bold text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                                                                                    className="flex cursor-pointer items-center gap-2"
                                                                                 >
-                                                                                    <Shuffle className="size-3" />
-                                                                                    <span>Pick 5 Random</span>
-                                                                                </button>
+                                                                                    <div className="text-muted-foreground">
+                                                                                        {isSubCollapsed ? (
+                                                                                            <ChevronDown className="size-3.5" />
+                                                                                        ) : (
+                                                                                            <ChevronUp className="size-3.5" />
+                                                                                        )}
+                                                                                    </div>
+                                                                                    <span className="text-xs font-bold text-foreground">
+                                                                                        {
+                                                                                            subGroup.subcategoryName
+                                                                                        }
+                                                                                    </span>
+                                                                                    <span className="rounded-md bg-muted px-1.5 py-0.5 text-[10px] font-bold text-muted-foreground">
+                                                                                        {
+                                                                                            subGroup.selectedCount
+                                                                                        }{' '}
+                                                                                        /{' '}
+                                                                                        {
+                                                                                            subGroup.totalCount
+                                                                                        }
+                                                                                    </span>
+                                                                                </div>
 
-                                                                                <button
-                                                                                    type="button"
-                                                                                    onClick={() => selectAllInSubcategory(subGroup)}
-                                                                                    className="rounded-lg border border-blue-200 bg-blue-50/50 px-2 py-1 text-[10px] font-bold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-blue-300"
-                                                                                >
-                                                                                    Select All
-                                                                                </button>
-
-                                                                                {subGroup.selectedCount > 0 && (
+                                                                                {/* Subcategory Action Tools */}
+                                                                                <div className="flex items-center gap-1.5">
+                                                                                    {/* Random Pick Tool */}
                                                                                     <button
                                                                                         type="button"
-                                                                                        onClick={() => clearInSubcategory(subGroup)}
-                                                                                        className="rounded-lg px-2 py-1 text-[10px] font-bold text-rose-600 transition hover:bg-rose-50 dark:hover:bg-rose-950/30"
+                                                                                        onClick={() =>
+                                                                                            pickRandomInSubcategory(
+                                                                                                subGroup,
+                                                                                                Math.min(
+                                                                                                    5,
+                                                                                                    subGroup.totalCount,
+                                                                                                ),
+                                                                                            )
+                                                                                        }
+                                                                                        title="Pick 5 random questions from this topic"
+                                                                                        className="flex items-center gap-1 rounded-lg border border-border bg-card px-2 py-1 text-[10px] font-bold text-muted-foreground transition hover:bg-muted hover:text-foreground"
                                                                                     >
-                                                                                        Clear
+                                                                                        <Shuffle className="size-3" />
+                                                                                        <span>
+                                                                                            Pick
+                                                                                            5
+                                                                                            Random
+                                                                                        </span>
                                                                                     </button>
-                                                                                )}
+
+                                                                                    <button
+                                                                                        type="button"
+                                                                                        onClick={() =>
+                                                                                            selectAllInSubcategory(
+                                                                                                subGroup,
+                                                                                            )
+                                                                                        }
+                                                                                        className="rounded-lg border border-blue-200 bg-blue-50/50 px-2 py-1 text-[10px] font-bold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-blue-300"
+                                                                                    >
+                                                                                        Select
+                                                                                        All
+                                                                                    </button>
+
+                                                                                    {subGroup.selectedCount >
+                                                                                        0 && (
+                                                                                        <button
+                                                                                            type="button"
+                                                                                            onClick={() =>
+                                                                                                clearInSubcategory(
+                                                                                                    subGroup,
+                                                                                                )
+                                                                                            }
+                                                                                            className="rounded-lg px-2 py-1 text-[10px] font-bold text-rose-600 transition hover:bg-rose-50 dark:hover:bg-rose-950/30"
+                                                                                        >
+                                                                                            Clear
+                                                                                        </button>
+                                                                                    )}
+                                                                                </div>
                                                                             </div>
+
+                                                                            {/* Questions Cards */}
+                                                                            {!isSubCollapsed && (
+                                                                                <div className="mt-2.5 space-y-2">
+                                                                                    {subGroup.questions.map(
+                                                                                        (
+                                                                                            q,
+                                                                                        ) => {
+                                                                                            const isSelected =
+                                                                                                selectedManualIds.includes(
+                                                                                                    q.id,
+                                                                                                );
+                                                                                            const isMistake =
+                                                                                                wrongSet.has(
+                                                                                                    q.id,
+                                                                                                );
+                                                                                            const isUnseen =
+                                                                                                !seenSet.has(
+                                                                                                    q.id,
+                                                                                                );
+
+                                                                                            const cardData: QuestionPreviewData =
+                                                                                                {
+                                                                                                    id: q.id,
+                                                                                                    stem: q.stem,
+                                                                                                    options:
+                                                                                                        q.options ||
+                                                                                                        [],
+                                                                                                    correct_option:
+                                                                                                        q.correct_option,
+                                                                                                    explanation:
+                                                                                                        q.explanation,
+                                                                                                    category:
+                                                                                                        q.category,
+                                                                                                    subcategory:
+                                                                                                        q.subcategory,
+                                                                                                    language:
+                                                                                                        q.language,
+                                                                                                    isCustom:
+                                                                                                        q.isCustom,
+                                                                                                    isMistake,
+                                                                                                    isUnseen,
+                                                                                                };
+
+                                                                                            return (
+                                                                                                <QuestionPreviewCard
+                                                                                                    key={
+                                                                                                        q.id
+                                                                                                    }
+                                                                                                    question={
+                                                                                                        cardData
+                                                                                                    }
+                                                                                                    isSelected={
+                                                                                                        isSelected
+                                                                                                    }
+                                                                                                    onToggleSelect={
+                                                                                                        toggleManualQuestion
+                                                                                                    }
+                                                                                                    expanded={
+                                                                                                        !!expandedQuestionIds[
+                                                                                                            q
+                                                                                                                .id
+                                                                                                        ]
+                                                                                                    }
+                                                                                                    onToggleExpand={() =>
+                                                                                                        toggleQuestionExpand(
+                                                                                                            q.id,
+                                                                                                        )
+                                                                                                    }
+                                                                                                />
+                                                                                            );
+                                                                                        },
+                                                                                    )}
+                                                                                </div>
+                                                                            )}
                                                                         </div>
-
-                                                                        {/* Questions Cards */}
-                                                                        {!isSubCollapsed && (
-                                                                            <div className="mt-2.5 space-y-2">
-                                                                                {subGroup.questions.map((q) => {
-                                                                                    const isSelected = selectedManualIds.includes(q.id);
-                                                                                    const isMistake = wrongSet.has(q.id);
-                                                                                    const isUnseen = !seenSet.has(q.id);
-
-                                                                                    const cardData: QuestionPreviewData = {
-                                                                                        id: q.id,
-                                                                                        stem: q.stem,
-                                                                                        options: q.options || [],
-                                                                                        correct_option: q.correct_option,
-                                                                                        explanation: q.explanation,
-                                                                                        category: q.category,
-                                                                                        subcategory: q.subcategory,
-                                                                                        language: q.language,
-                                                                                        isCustom: q.isCustom,
-                                                                                        isMistake,
-                                                                                        isUnseen,
-                                                                                    };
-
-                                                                                    return (
-                                                                                        <QuestionPreviewCard
-                                                                                            key={q.id}
-                                                                                            question={cardData}
-                                                                                            isSelected={isSelected}
-                                                                                            onToggleSelect={toggleManualQuestion}
-                                                                                            expanded={!!expandedQuestionIds[q.id]}
-                                                                                            onToggleExpand={() => toggleQuestionExpand(q.id)}
-                                                                                        />
-                                                                                    );
-                                                                                })}
-                                                                            </div>
-                                                                        )}
-                                                                    </div>
-                                                                );
-                                                            })}
+                                                                    );
+                                                                },
+                                                            )}
                                                         </div>
                                                     )}
                                                 </div>
@@ -1178,7 +1421,8 @@ export function CustomBuilderView({
                                         })
                                     ) : (
                                         <div className="rounded-2xl border border-dashed border-border py-12 text-center text-xs text-muted-foreground">
-                                            No questions match your search or filter settings.
+                                            No questions match your search or
+                                            filter settings.
                                         </div>
                                     )}
                                 </div>
@@ -1207,39 +1451,58 @@ export function CustomBuilderView({
                                                 Number of Questions
                                             </label>
                                             <span className="text-[11px] font-semibold text-muted-foreground">
-                                                {poolSize > 0 ? `${poolSize} Available` : 'None Available'}
+                                                {poolSize > 0
+                                                    ? `${poolSize} Available`
+                                                    : 'None Available'}
                                             </span>
                                         </div>
 
                                         {dynamicCountOptions.length > 0 ? (
                                             <div className="space-y-2">
                                                 <div className="flex flex-wrap gap-1.5">
-                                                    {dynamicCountOptions.map((cnt) => {
-                                                        const isSelected =
-                                                            !isCustomCount &&
-                                                            (cnt === 'all'
-                                                                ? questionCount === 'all' || effectiveAutoCount === poolSize
-                                                                : questionCount === cnt);
+                                                    {dynamicCountOptions.map(
+                                                        (cnt) => {
+                                                            const isSelected =
+                                                                !isCustomCount &&
+                                                                (cnt === 'all'
+                                                                    ? questionCount ===
+                                                                          'all' ||
+                                                                      effectiveAutoCount ===
+                                                                          poolSize
+                                                                    : questionCount ===
+                                                                      cnt);
 
-                                                        return (
-                                                            <button
-                                                                key={String(cnt)}
-                                                                type="button"
-                                                                onClick={() => {
-                                                                    setIsCustomCount(false);
-                                                                    setQuestionCount(cnt);
-                                                                    setCustomCountInput('');
-                                                                }}
-                                                                className={`flex-1 min-w-[54px] rounded-lg py-2 text-xs font-black transition ${
-                                                                    isSelected
-                                                                        ? 'bg-blue-600 text-white shadow-xs'
-                                                                        : 'border border-border bg-background text-muted-foreground hover:bg-muted'
-                                                                }`}
-                                                            >
-                                                                {cnt === 'all' ? `All (${poolSize})` : `${cnt} Qs`}
-                                                            </button>
-                                                        );
-                                                    })}
+                                                            return (
+                                                                <button
+                                                                    key={String(
+                                                                        cnt,
+                                                                    )}
+                                                                    type="button"
+                                                                    onClick={() => {
+                                                                        setIsCustomCount(
+                                                                            false,
+                                                                        );
+                                                                        setQuestionCount(
+                                                                            cnt,
+                                                                        );
+                                                                        setCustomCountInput(
+                                                                            '',
+                                                                        );
+                                                                    }}
+                                                                    className={`min-w-[54px] flex-1 rounded-lg py-2 text-xs font-black transition ${
+                                                                        isSelected
+                                                                            ? 'bg-blue-600 text-white shadow-xs'
+                                                                            : 'border border-border bg-background text-muted-foreground hover:bg-muted'
+                                                                    }`}
+                                                                >
+                                                                    {cnt ===
+                                                                    'all'
+                                                                        ? `All (${poolSize})`
+                                                                        : `${cnt} Qs`}
+                                                                </button>
+                                                            );
+                                                        },
+                                                    )}
                                                 </div>
 
                                                 {/* Custom number input */}
@@ -1261,47 +1524,115 @@ export function CustomBuilderView({
                                                             value={
                                                                 isCustomCount
                                                                     ? customCountInput
-                                                                    : typeof questionCount === 'number' &&
-                                                                      !dynamicCountOptions.includes(questionCount)
-                                                                    ? String(questionCount)
-                                                                    : ''
+                                                                    : typeof questionCount ===
+                                                                            'number' &&
+                                                                        !dynamicCountOptions.includes(
+                                                                            questionCount,
+                                                                        )
+                                                                      ? String(
+                                                                            questionCount,
+                                                                        )
+                                                                      : ''
                                                             }
                                                             placeholder={`1 - ${poolSize}`}
                                                             onFocus={() => {
-                                                                setIsCustomCount(true);
+                                                                setIsCustomCount(
+                                                                    true,
+                                                                );
 
-                                                                if (typeof questionCount === 'number' && questionCount > 0) {
-                                                                    setCustomCountInput(String(questionCount));
+                                                                if (
+                                                                    typeof questionCount ===
+                                                                        'number' &&
+                                                                    questionCount >
+                                                                        0
+                                                                ) {
+                                                                    setCustomCountInput(
+                                                                        String(
+                                                                            questionCount,
+                                                                        ),
+                                                                    );
                                                                 }
                                                             }}
                                                             onChange={(e) => {
-                                                                const raw = e.target.value;
-                                                                setIsCustomCount(true);
-                                                                setCustomCountInput(raw);
+                                                                const raw =
+                                                                    e.target
+                                                                        .value;
+                                                                setIsCustomCount(
+                                                                    true,
+                                                                );
+                                                                setCustomCountInput(
+                                                                    raw,
+                                                                );
 
-                                                                if (raw === '') {
-                                                                    setQuestionCount(0);
+                                                                if (
+                                                                    raw === ''
+                                                                ) {
+                                                                    setQuestionCount(
+                                                                        0,
+                                                                    );
                                                                 } else {
-                                                                    const parsed = parseInt(raw, 10);
+                                                                    const parsed =
+                                                                        parseInt(
+                                                                            raw,
+                                                                            10,
+                                                                        );
 
-                                                                    if (!isNaN(parsed) && parsed > 0) {
-                                                                        const clamped = Math.min(poolSize, parsed);
-                                                                        setQuestionCount(clamped);
+                                                                    if (
+                                                                        !isNaN(
+                                                                            parsed,
+                                                                        ) &&
+                                                                        parsed >
+                                                                            0
+                                                                    ) {
+                                                                        const clamped =
+                                                                            Math.min(
+                                                                                poolSize,
+                                                                                parsed,
+                                                                            );
+                                                                        setQuestionCount(
+                                                                            clamped,
+                                                                        );
                                                                     }
                                                                 }
                                                             }}
                                                             onBlur={() => {
-                                                                if (isCustomCount) {
+                                                                if (
+                                                                    isCustomCount
+                                                                ) {
                                                                     if (
-                                                                        customCountInput === '' ||
-                                                                        Number(customCountInput) <= 0
+                                                                        customCountInput ===
+                                                                            '' ||
+                                                                        Number(
+                                                                            customCountInput,
+                                                                        ) <= 0
                                                                     ) {
-                                                                        const fallback = Math.min(10, poolSize);
-                                                                        setQuestionCount(fallback);
-                                                                        setCustomCountInput(String(fallback));
-                                                                    } else if (Number(customCountInput) > poolSize) {
-                                                                        setQuestionCount(poolSize);
-                                                                        setCustomCountInput(String(poolSize));
+                                                                        const fallback =
+                                                                            Math.min(
+                                                                                10,
+                                                                                poolSize,
+                                                                            );
+                                                                        setQuestionCount(
+                                                                            fallback,
+                                                                        );
+                                                                        setCustomCountInput(
+                                                                            String(
+                                                                                fallback,
+                                                                            ),
+                                                                        );
+                                                                    } else if (
+                                                                        Number(
+                                                                            customCountInput,
+                                                                        ) >
+                                                                        poolSize
+                                                                    ) {
+                                                                        setQuestionCount(
+                                                                            poolSize,
+                                                                        );
+                                                                        setCustomCountInput(
+                                                                            String(
+                                                                                poolSize,
+                                                                            ),
+                                                                        );
                                                                     }
                                                                 }
                                                             }}
@@ -1315,7 +1646,8 @@ export function CustomBuilderView({
                                             </div>
                                         ) : (
                                             <div className="rounded-lg border border-dashed border-border p-2 text-center text-xs text-muted-foreground">
-                                                No questions match current filters
+                                                No questions match current
+                                                filters
                                             </div>
                                         )}
                                     </div>
@@ -1337,8 +1669,12 @@ export function CustomBuilderView({
                                         >
                                             <Clock className="size-4 text-blue-600 dark:text-blue-400" />
                                             <div>
-                                                <p className="text-xs font-bold text-foreground">Timed</p>
-                                                <p className="text-[10px] text-muted-foreground">Paced speed</p>
+                                                <p className="text-xs font-bold text-foreground">
+                                                    Timed
+                                                </p>
+                                                <p className="text-[10px] text-muted-foreground">
+                                                    Paced speed
+                                                </p>
                                             </div>
                                         </div>
                                         <div
@@ -1351,8 +1687,12 @@ export function CustomBuilderView({
                                         >
                                             <Zap className="size-4 text-emerald-600 dark:text-emerald-400" />
                                             <div>
-                                                <p className="text-xs font-bold text-foreground">Untimed</p>
-                                                <p className="text-[10px] text-muted-foreground">Self-paced</p>
+                                                <p className="text-xs font-bold text-foreground">
+                                                    Untimed
+                                                </p>
+                                                <p className="text-[10px] text-muted-foreground">
+                                                    Self-paced
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1364,14 +1704,22 @@ export function CustomBuilderView({
                                         Language Filter
                                     </label>
                                     <div className="grid grid-cols-3 gap-1.5">
-                                        {(['Both', 'English', 'Filipino'] as const).map((lang) => (
+                                        {(
+                                            [
+                                                'Both',
+                                                'English',
+                                                'Filipino',
+                                            ] as const
+                                        ).map((lang) => (
                                             <button
                                                 key={lang}
                                                 type="button"
-                                                onClick={() => setLanguage(lang)}
+                                                onClick={() =>
+                                                    setLanguage(lang)
+                                                }
                                                 className={`rounded-lg py-1.5 text-xs font-bold transition ${
                                                     language === lang
-                                                        ? 'bg-foreground text-background font-black'
+                                                        ? 'bg-foreground font-black text-background'
                                                         : 'border border-border bg-background text-muted-foreground hover:bg-muted'
                                                 }`}
                                             >
@@ -1386,10 +1734,13 @@ export function CustomBuilderView({
                             <div className="mt-6 space-y-3 border-t border-border pt-4">
                                 <div className="flex items-center justify-between text-xs">
                                     <span className="font-semibold text-muted-foreground">
-                                        {builderMode === 'manual' ? 'Manually Picked:' : 'Questions in Session:'}
+                                        {builderMode === 'manual'
+                                            ? 'Manually Picked:'
+                                            : 'Questions in Session:'}
                                     </span>
                                     <span className="font-black text-foreground">
-                                        {totalSelectedCount} of {poolSize} available
+                                        {totalSelectedCount} of {poolSize}{' '}
+                                        available
                                     </span>
                                 </div>
 
@@ -1399,7 +1750,10 @@ export function CustomBuilderView({
                                     onClick={handleStart}
                                     className="group flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-xs font-bold text-white shadow-sm transition hover:bg-blue-700 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
                                 >
-                                    <span>Start Custom Drill ({totalSelectedCount})</span>
+                                    <span>
+                                        Start Custom Drill ({totalSelectedCount}
+                                        )
+                                    </span>
                                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                                 </button>
 
@@ -1419,7 +1773,7 @@ export function CustomBuilderView({
 
                 {/* Sticky Bottom Dock for Quick Launch in Manual Mode */}
                 {builderMode === 'manual' && selectedManualIds.length > 0 && (
-                    <div className="fixed bottom-4 left-4 right-4 z-40 mx-auto max-w-4xl rounded-2xl border border-blue-500/30 bg-card/95 p-3 shadow-xl backdrop-blur-md dark:border-blue-500/40">
+                    <div className="fixed right-4 bottom-4 left-4 z-40 mx-auto max-w-4xl rounded-2xl border border-blue-500/30 bg-card/95 p-3 shadow-xl backdrop-blur-md dark:border-blue-500/40">
                         <div className="flex flex-col items-center justify-between gap-3 sm:flex-row">
                             <div className="flex items-center gap-3">
                                 <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-xs font-black text-white">
@@ -1439,8 +1793,13 @@ export function CustomBuilderView({
                                         </button>
                                     </div>
                                     <div className="flex flex-wrap items-center gap-1.5 text-[10px] text-muted-foreground">
-                                        {Object.entries(selectedCategoryBreakdown).map(([cat, cnt]) => (
-                                            <span key={cat} className="rounded bg-muted px-1.5 py-0.5 font-semibold">
+                                        {Object.entries(
+                                            selectedCategoryBreakdown,
+                                        ).map(([cat, cnt]) => (
+                                            <span
+                                                key={cat}
+                                                className="rounded bg-muted px-1.5 py-0.5 font-semibold"
+                                            >
                                                 {cat}: {cnt}
                                             </span>
                                         ))}
@@ -1495,13 +1854,17 @@ export function CustomBuilderView({
                                     Save as Practice Set
                                 </DialogTitle>
                                 <p className="text-xs text-muted-foreground">
-                                    Save {totalSelectedCount} questions into a reusable set in your practice hub.
+                                    Save {totalSelectedCount} questions into a
+                                    reusable set in your practice hub.
                                 </p>
                             </div>
                         </div>
                     </DialogHeader>
 
-                    <form onSubmit={handleSavePracticeSet} className="space-y-4 pt-2">
+                    <form
+                        onSubmit={handleSavePracticeSet}
+                        className="space-y-4 pt-2"
+                    >
                         <div>
                             <label className="mb-1 block text-xs font-bold text-foreground">
                                 Practice Set Name
@@ -1509,7 +1872,9 @@ export function CustomBuilderView({
                             <Input
                                 required
                                 value={savedSetName}
-                                onChange={(e) => setSavedSetName(e.target.value)}
+                                onChange={(e) =>
+                                    setSavedSetName(e.target.value)
+                                }
                                 placeholder="e.g. Challenging Math Word Problems"
                                 className="text-xs font-semibold"
                             />
@@ -1522,7 +1887,9 @@ export function CustomBuilderView({
                             <textarea
                                 rows={2}
                                 value={savedSetDescription}
-                                onChange={(e) => setSavedSetDescription(e.target.value)}
+                                onChange={(e) =>
+                                    setSavedSetDescription(e.target.value)
+                                }
                                 placeholder="Brief note about the focus of this set..."
                                 className="w-full rounded-xl border border-border bg-background p-3 text-xs font-medium text-foreground focus:border-blue-500 focus:outline-none"
                             />
@@ -1544,7 +1911,9 @@ export function CustomBuilderView({
                                 disabled={isSavingSet || !savedSetName.trim()}
                                 className="gap-1.5 bg-blue-600 text-xs text-white hover:bg-blue-700"
                             >
-                                {isSavingSet && <Loader2 className="size-3.5 animate-spin" />}
+                                {isSavingSet && (
+                                    <Loader2 className="size-3.5 animate-spin" />
+                                )}
                                 <span>Save Practice Set</span>
                             </Button>
                         </div>

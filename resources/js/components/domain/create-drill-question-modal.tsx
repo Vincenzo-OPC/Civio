@@ -124,7 +124,11 @@ export function CreateDrillQuestionModal({
 
         try {
             const csrfToken =
-                (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '';
+                (
+                    document.querySelector(
+                        'meta[name="csrf-token"]',
+                    ) as HTMLMetaElement
+                )?.content || '';
 
             const res = await fetch('/drills/custom-questions', {
                 method: 'POST',
@@ -146,7 +150,9 @@ export function CreateDrillQuestionModal({
             const data = await res.json();
 
             if (res.ok && data.question) {
-                toast.success('Custom question created and added to your drill pool!');
+                toast.success(
+                    'Custom question created and added to your drill pool!',
+                );
                 onQuestionCreated(data.question);
                 onOpenChange(false);
                 // Reset form
@@ -156,7 +162,9 @@ export function CreateDrillQuestionModal({
                 setExplanation('');
                 setModalTab('edit');
             } else {
-                toast.error(data.message || 'Failed to create custom question.');
+                toast.error(
+                    data.message || 'Failed to create custom question.',
+                );
             }
         } catch {
             toast.error('An unexpected error occurred.');
@@ -181,7 +189,8 @@ export function CreateDrillQuestionModal({
                                     Add Custom Practice Question
                                 </DialogTitle>
                                 <p className="text-xs text-muted-foreground">
-                                    Create a custom practice item with full CSE exam-standard formatting.
+                                    Create a custom practice item with full CSE
+                                    exam-standard formatting.
                                 </p>
                             </div>
                         </div>
@@ -223,18 +232,29 @@ export function CreateDrillQuestionModal({
                             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                                 <div>
                                     <label className="mb-1 block text-xs font-bold text-foreground">
-                                        Target Subcategory / Topic <span className="text-rose-500">*</span>
+                                        Target Subcategory / Topic{' '}
+                                        <span className="text-rose-500">*</span>
                                     </label>
                                     <select
                                         required
                                         value={effectiveSubcatId}
-                                        onChange={(e) => setSubcategoryId(Number(e.target.value))}
+                                        onChange={(e) =>
+                                            setSubcategoryId(
+                                                Number(e.target.value),
+                                            )
+                                        }
                                         className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs font-semibold text-foreground focus:border-blue-500 focus:outline-none"
                                     >
                                         {validCategories.map((cat) => (
-                                            <optgroup key={cat.id} label={cat.name}>
+                                            <optgroup
+                                                key={cat.id}
+                                                label={cat.name}
+                                            >
                                                 {cat.subcategory.map((sub) => (
-                                                    <option key={sub.id} value={sub.id}>
+                                                    <option
+                                                        key={sub.id}
+                                                        value={sub.id}
+                                                    >
                                                         {sub.name}
                                                     </option>
                                                 ))}
@@ -248,20 +268,24 @@ export function CreateDrillQuestionModal({
                                         Language
                                     </label>
                                     <div className="grid grid-cols-2 gap-2">
-                                        {(['English', 'Filipino'] as const).map((lang) => (
-                                            <button
-                                                key={lang}
-                                                type="button"
-                                                onClick={() => setLanguage(lang)}
-                                                className={`rounded-xl border py-2 text-xs font-bold transition ${
-                                                    language === lang
-                                                        ? 'border-blue-600 bg-blue-600 text-white shadow-xs'
-                                                        : 'border-border bg-background text-muted-foreground hover:bg-muted'
-                                                }`}
-                                            >
-                                                {lang}
-                                            </button>
-                                        ))}
+                                        {(['English', 'Filipino'] as const).map(
+                                            (lang) => (
+                                                <button
+                                                    key={lang}
+                                                    type="button"
+                                                    onClick={() =>
+                                                        setLanguage(lang)
+                                                    }
+                                                    className={`rounded-xl border py-2 text-xs font-bold transition ${
+                                                        language === lang
+                                                            ? 'border-blue-600 bg-blue-600 text-white shadow-xs'
+                                                            : 'border-border bg-background text-muted-foreground hover:bg-muted'
+                                                    }`}
+                                                >
+                                                    {lang}
+                                                </button>
+                                            ),
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -269,7 +293,8 @@ export function CreateDrillQuestionModal({
                             {/* Question Stem */}
                             <div>
                                 <label className="mb-1 block text-xs font-bold text-foreground">
-                                    Question Stem / Body <span className="text-rose-500">*</span>
+                                    Question Stem / Body{' '}
+                                    <span className="text-rose-500">*</span>
                                 </label>
                                 <textarea
                                     rows={3}
@@ -285,10 +310,12 @@ export function CreateDrillQuestionModal({
                             <div>
                                 <div className="mb-2 flex items-center justify-between">
                                     <label className="text-xs font-bold text-foreground">
-                                        Answer Options <span className="text-rose-500">*</span>
+                                        Answer Options{' '}
+                                        <span className="text-rose-500">*</span>
                                     </label>
                                     <span className="text-[11px] font-semibold text-muted-foreground">
-                                        Select circular letter for correct answer
+                                        Select circular letter for correct
+                                        answer
                                     </span>
                                 </div>
 
@@ -308,11 +335,13 @@ export function CreateDrillQuestionModal({
                                                 {/* Correct Radio Toggle */}
                                                 <button
                                                     type="button"
-                                                    onClick={() => setCorrectOption(idx)}
+                                                    onClick={() =>
+                                                        setCorrectOption(idx)
+                                                    }
                                                     aria-label={`Mark Option ${optionLetters[idx]} as correct`}
                                                     className={`flex size-7 shrink-0 items-center justify-center rounded-full border text-xs font-black transition ${
                                                         isCorrect
-                                                            ? 'border-emerald-600 bg-emerald-600 text-white dark:border-emerald-500 dark:bg-emerald-500 shadow-xs'
+                                                            ? 'border-emerald-600 bg-emerald-600 text-white shadow-xs dark:border-emerald-500 dark:bg-emerald-500'
                                                             : 'border-border bg-background text-muted-foreground hover:border-emerald-500 hover:text-foreground'
                                                     }`}
                                                 >
@@ -323,7 +352,12 @@ export function CreateDrillQuestionModal({
                                                 <Input
                                                     required
                                                     value={opt}
-                                                    onChange={(e) => handleOptionChange(idx, e.target.value)}
+                                                    onChange={(e) =>
+                                                        handleOptionChange(
+                                                            idx,
+                                                            e.target.value,
+                                                        )
+                                                    }
                                                     placeholder={`Option ${optionLetters[idx]} choice text...`}
                                                     className="h-9 text-xs font-medium"
                                                 />
@@ -332,7 +366,9 @@ export function CreateDrillQuestionModal({
                                                 {options.length > 2 && (
                                                     <button
                                                         type="button"
-                                                        onClick={() => removeOption(idx)}
+                                                        onClick={() =>
+                                                            removeOption(idx)
+                                                        }
                                                         aria-label="Remove option"
                                                         className="shrink-0 p-1.5 text-muted-foreground/60 transition hover:text-rose-600"
                                                     >
@@ -367,7 +403,9 @@ export function CreateDrillQuestionModal({
                                 <textarea
                                     rows={2}
                                     value={explanation}
-                                    onChange={(e) => setExplanation(e.target.value)}
+                                    onChange={(e) =>
+                                        setExplanation(e.target.value)
+                                    }
                                     placeholder="Provide study tips, step-by-step solutions, or reasoning for this question..."
                                     className="w-full rounded-xl border border-border bg-background p-3 text-xs font-medium text-foreground placeholder:text-muted-foreground/60 focus:border-blue-500 focus:outline-none"
                                 />
@@ -379,12 +417,18 @@ export function CreateDrillQuestionModal({
                             <QuestionPreviewCard
                                 question={{
                                     id: 0,
-                                    stem: stem || 'Type your question stem in the edit tab to see live preview...',
+                                    stem:
+                                        stem ||
+                                        'Type your question stem in the edit tab to see live preview...',
                                     options: options.map(
-                                        (opt, i) => opt || `Choice ${String.fromCharCode(65 + i)} text`,
+                                        (opt, i) =>
+                                            opt ||
+                                            `Choice ${String.fromCharCode(65 + i)} text`,
                                     ),
                                     correct_option: correctOption,
-                                    explanation: explanation || 'No explanation provided.',
+                                    explanation:
+                                        explanation ||
+                                        'No explanation provided.',
                                     category: selectedCategoryName,
                                     subcategory: selectedSubcategoryName,
                                     language,
@@ -412,7 +456,7 @@ export function CreateDrillQuestionModal({
                             type="submit"
                             size="sm"
                             disabled={isSubmitting}
-                            className="bg-blue-600 text-xs font-bold text-white hover:bg-blue-700 shadow-xs"
+                            className="bg-blue-600 text-xs font-bold text-white shadow-xs hover:bg-blue-700"
                         >
                             {isSubmitting ? (
                                 <Loader2 className="mr-1 size-3.5 animate-spin" />

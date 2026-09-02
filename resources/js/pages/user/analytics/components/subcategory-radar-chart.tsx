@@ -138,7 +138,12 @@ export function SubcategoryRadarChart({
                             <BarChart
                                 layout="vertical"
                                 data={rawSubs}
-                                margin={{ top: 0, right: 30, left: 10, bottom: 0 }}
+                                margin={{
+                                    top: 0,
+                                    right: 30,
+                                    left: 10,
+                                    bottom: 0,
+                                }}
                             >
                                 <CartesianGrid
                                     strokeDasharray="3 3"
@@ -209,23 +214,28 @@ export function SubcategoryRadarChart({
             <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-border pt-3">
                 <div className="flex flex-wrap items-center gap-2 text-[10px] font-bold text-muted-foreground">
                     <span className="flex items-center gap-1">
-                        <span className="size-2 rounded-full bg-rose-500" /> &lt;40%
+                        <span className="size-2 rounded-full bg-rose-500" />{' '}
+                        &lt;40%
                     </span>
                     <span className="flex items-center gap-1">
-                        <span className="size-2 rounded-full bg-amber-500" /> 40–59%
+                        <span className="size-2 rounded-full bg-amber-500" />{' '}
+                        40–59%
                     </span>
                     <span className="flex items-center gap-1">
-                        <span className="size-2 rounded-full bg-blue-500" /> 60–79%
+                        <span className="size-2 rounded-full bg-blue-500" />{' '}
+                        60–79%
                     </span>
                     <span className="flex items-center gap-1">
-                        <span className="size-2 rounded-full bg-emerald-500" /> 80%+
+                        <span className="size-2 rounded-full bg-emerald-500" />{' '}
+                        80%+
                     </span>
                 </div>
 
                 <Link
                     href={drillsIndex({
                         query: {
-                            category: topWeakest?.categoryName || 'Verbal Ability',
+                            category:
+                                topWeakest?.categoryName || 'Verbal Ability',
                             subcategories: JSON.stringify(
                                 rawSubs.map((s) => s.fullName),
                             ),
@@ -234,10 +244,10 @@ export function SubcategoryRadarChart({
                     })}
                     className="inline-flex items-center gap-1 text-xs font-bold text-primary transition hover:underline"
                 >
-                    Practice weak areas setup <Play className="size-3 fill-current" />
+                    Practice weak areas setup{' '}
+                    <Play className="size-3 fill-current" />
                 </Link>
             </div>
         </Card>
     );
 }
-

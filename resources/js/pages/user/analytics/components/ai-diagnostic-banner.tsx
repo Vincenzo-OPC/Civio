@@ -1,5 +1,5 @@
 import { Link } from '@inertiajs/react';
-import { Sparkles, ArrowRight, Brain, CheckCircle2, Clock } from 'lucide-react';
+import { Sparkles, ArrowRight, CheckCircle2, Clock } from 'lucide-react';
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { aiAnalysis as aiAnalysisRoute } from '@/routes/analytics';
@@ -19,7 +19,7 @@ export function AiDiagnosticBanner({ aiAnalysis }: AiDiagnosticBannerProps) {
     const topWeakness = data?.critical_weaknesses?.[0]?.name;
 
     return (
-        <Card className="relative overflow-hidden border border-indigo-200/80 bg-gradient-to-r from-indigo-50/70 via-blue-50/50 to-purple-50/40 p-4 shadow-2xs dark:border-indigo-950/80 dark:from-indigo-950/30 dark:via-slate-900 dark:to-purple-950/20 sm:p-5">
+        <Card className="relative overflow-hidden border border-indigo-200/80 bg-gradient-to-r from-indigo-50/70 via-blue-50/50 to-purple-50/40 p-4 shadow-2xs sm:p-5 dark:border-indigo-950/80 dark:from-indigo-950/30 dark:via-slate-900 dark:to-purple-950/20">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-start gap-3.5">
                     <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-blue-600 text-white shadow-sm">
@@ -27,7 +27,7 @@ export function AiDiagnosticBanner({ aiAnalysis }: AiDiagnosticBannerProps) {
                     </div>
                     <div>
                         <div className="flex items-center gap-2">
-                            <h4 className="text-sm font-black text-slate-900 dark:text-white sm:text-base">
+                            <h4 className="text-sm font-black text-slate-900 sm:text-base dark:text-white">
                                 AI Diagnostic Report & Personalized Strategy
                             </h4>
                             {status === 'ready' && (
@@ -55,7 +55,9 @@ export function AiDiagnosticBanner({ aiAnalysis }: AiDiagnosticBannerProps) {
 
                 <div className="shrink-0">
                     <Link
-                        href={aiAnalysisRoute({ query: { from: '/analytics' } })}
+                        href={aiAnalysisRoute({
+                            query: { from: '/analytics' },
+                        })}
                         className="inline-flex items-center gap-1.5 rounded-xl border border-indigo-200 bg-white px-4 py-2.5 text-xs font-bold text-indigo-700 shadow-2xs transition hover:bg-indigo-50 active:scale-95 dark:border-indigo-800 dark:bg-slate-900 dark:text-indigo-300 dark:hover:bg-slate-800"
                     >
                         <span>Open AI Diagnostic</span>

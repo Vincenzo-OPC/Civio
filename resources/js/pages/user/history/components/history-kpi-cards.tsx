@@ -1,4 +1,12 @@
-import { Trophy, Clock, Flame, BookCheck, TrendingUp, TrendingDown, Minus } from 'lucide-react';
+import {
+    Trophy,
+    Clock,
+    Flame,
+    BookCheck,
+    TrendingUp,
+    TrendingDown,
+    Minus,
+} from 'lucide-react';
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import type { HistoryStats } from '../types';
@@ -39,7 +47,9 @@ export function HistoryKpiCards({ stats }: HistoryKpiCardsProps) {
                         {total_attempts}
                     </span>
                     <div className="flex items-center gap-1.5 text-[11px] font-bold text-muted-foreground">
-                        <span className="text-blue-600 dark:text-blue-400">{total_exams} exams</span>
+                        <span className="text-blue-600 dark:text-blue-400">
+                            {total_exams} exams
+                        </span>
                         <span>•</span>
                         <span>{total_drills} drills</span>
                     </div>
@@ -68,7 +78,9 @@ export function HistoryKpiCards({ stats }: HistoryKpiCardsProps) {
                         </span>
                     </div>
                     <div className="flex items-center gap-1.5 text-[11px] font-bold text-muted-foreground">
-                        <span className="text-emerald-700 dark:text-emerald-400">{stats?.exam_avg_score ?? 0}% exams</span>
+                        <span className="text-emerald-700 dark:text-emerald-400">
+                            {stats?.exam_avg_score ?? 0}% exams
+                        </span>
                         <span>•</span>
                         <span>{stats?.drill_avg_score ?? 0}% drills</span>
                     </div>
@@ -90,7 +102,9 @@ export function HistoryKpiCards({ stats }: HistoryKpiCardsProps) {
                         {total_duration}
                     </span>
                     <div className="flex items-center gap-1.5 text-[11px] font-bold text-muted-foreground">
-                        <span className="text-amber-600 dark:text-amber-400">{stats?.exam_duration || '0m'} exams</span>
+                        <span className="text-amber-600 dark:text-amber-400">
+                            {stats?.exam_duration || '0m'} exams
+                        </span>
                         <span>•</span>
                         <span>{stats?.drill_duration || '0m'} drills</span>
                     </div>
@@ -119,8 +133,7 @@ export function HistoryKpiCards({ stats }: HistoryKpiCardsProps) {
                     <div className="flex items-center gap-1 text-[11px] font-bold">
                         {isTrendPositive ? (
                             <span className="inline-flex items-center gap-0.5 text-emerald-600 dark:text-emerald-400">
-                                <TrendingUp className="size-3.5" />
-                                +{trend}%
+                                <TrendingUp className="size-3.5" />+{trend}%
                             </span>
                         ) : isTrendNegative ? (
                             <span className="inline-flex items-center gap-0.5 text-rose-600 dark:text-rose-400">

@@ -25,12 +25,15 @@ function getSubjectIcon(name: string) {
     if (name.includes('Verbal')) {
         return <BookOpen className="size-4.5 text-blue-500" />;
     }
+
     if (name.includes('Numerical')) {
         return <Calculator className="size-4.5 text-rose-500" />;
     }
+
     if (name.includes('Analytical')) {
         return <BrainCircuit className="size-4.5 text-amber-500" />;
     }
+
     if (name.includes('Clerical')) {
         return <FolderCheck className="size-4.5 text-emerald-500" />;
     }
@@ -47,6 +50,7 @@ function getMasteryBadge(percentage: number) {
             icon: <CheckCircle2 className="size-3 text-emerald-600" />,
         };
     }
+
     if (percentage >= 65) {
         return {
             label: 'Proficient',
@@ -55,6 +59,7 @@ function getMasteryBadge(percentage: number) {
             icon: <CheckCircle2 className="size-3 text-blue-600" />,
         };
     }
+
     if (percentage >= 50) {
         return {
             label: 'Review Needed',
@@ -102,10 +107,10 @@ export function SubjectBreakdownAccordion({
     };
 
     return (
-        <Card className="border border-slate-200/80 bg-slate-50/50 p-5 dark:border-slate-800 dark:bg-slate-950/40 sm:p-6">
+        <Card className="border border-slate-200/80 bg-slate-50/50 p-5 sm:p-6 dark:border-slate-800 dark:bg-slate-950/40">
             <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                    <h3 className="text-base font-black text-slate-900 dark:text-white sm:text-lg">
+                    <h3 className="text-base font-black text-slate-900 sm:text-lg dark:text-white">
                         Subject & Subtopic Diagnostics
                     </h3>
                     <p className="text-xs font-medium text-muted-foreground sm:text-sm">
@@ -197,9 +202,7 @@ export function SubjectBreakdownAccordion({
                                     {subcats.length > 0 ? (
                                         <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                                             {subcats.map(
-                                                (
-                                                    sub: SubcategoryAnalytics,
-                                                ) => {
+                                                (sub: SubcategoryAnalytics) => {
                                                     const subMastery =
                                                         getMasteryBadge(
                                                             sub.percentage,
@@ -230,7 +233,7 @@ export function SubjectBreakdownAccordion({
                                                                         %)
                                                                     </span>
                                                                     <span
-                                                                        className={`inline-flex items-center rounded border px-1.5 py-0.2 text-[9px] font-bold ${subMastery.className}`}
+                                                                        className={`py-0.2 inline-flex items-center rounded border px-1.5 text-[9px] font-bold ${subMastery.className}`}
                                                                     >
                                                                         {
                                                                             subMastery.label

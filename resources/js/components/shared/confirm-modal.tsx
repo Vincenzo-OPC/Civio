@@ -1,4 +1,10 @@
-import { AlertTriangle, CheckCircle2, Info, Loader2, ShieldAlert } from 'lucide-react';
+import {
+    AlertTriangle,
+    CheckCircle2,
+    Info,
+    Loader2,
+    ShieldAlert,
+} from 'lucide-react';
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -57,25 +63,34 @@ export function ConfirmModal({
         switch (variant) {
             case 'danger':
                 return {
-                    icon: <ShieldAlert className="size-5 text-rose-650 dark:text-rose-500" />,
+                    icon: (
+                        <ShieldAlert className="text-rose-650 size-5 dark:text-rose-500" />
+                    ),
                     buttonVariant: 'destructive' as const,
                     buttonClass: '',
                 };
             case 'warning':
                 return {
-                    icon: <AlertTriangle className="size-5 text-amber-600 dark:text-amber-400" />,
+                    icon: (
+                        <AlertTriangle className="size-5 text-amber-600 dark:text-amber-400" />
+                    ),
                     buttonVariant: 'default' as const,
-                    buttonClass: 'bg-amber-600 hover:bg-amber-700 text-white font-semibold',
+                    buttonClass:
+                        'bg-amber-600 hover:bg-amber-700 text-white font-semibold',
                 };
             case 'info':
                 return {
-                    icon: <Info className="size-5 text-blue-650 dark:text-blue-500" />,
+                    icon: (
+                        <Info className="text-blue-650 size-5 dark:text-blue-500" />
+                    ),
                     buttonVariant: 'default' as const,
                     buttonClass: '',
                 };
             default: // success
                 return {
-                    icon: <CheckCircle2 className="size-5 text-emerald-650 dark:text-emerald-500" />,
+                    icon: (
+                        <CheckCircle2 className="text-emerald-650 size-5 dark:text-emerald-500" />
+                    ),
                     buttonVariant: 'default' as const,
                     buttonClass: '',
                 };
@@ -90,10 +105,12 @@ export function ConfirmModal({
                 <DialogHeader>
                     <div className="flex items-center gap-2">
                         {customIcon ?? config.icon}
-                        <DialogTitle className="text-base font-bold text-foreground">{title}</DialogTitle>
+                        <DialogTitle className="text-base font-bold text-foreground">
+                            {title}
+                        </DialogTitle>
                     </div>
                     {message && (
-                        <DialogDescription className="mt-2.5 text-left whitespace-pre-line text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
+                        <DialogDescription className="mt-2.5 text-left text-xs whitespace-pre-line text-slate-600 sm:text-sm dark:text-slate-400">
                             {message}
                         </DialogDescription>
                     )}
@@ -102,7 +119,7 @@ export function ConfirmModal({
 
                     {verificationText && (
                         <div className="mt-4 flex flex-col gap-2 border-t border-border pt-4 text-left">
-                            <label className="text-xs sm:text-sm font-semibold text-foreground">
+                            <label className="text-xs font-semibold text-foreground sm:text-sm">
                                 To confirm, type{' '}
                                 <span className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-xs font-bold text-foreground select-all">
                                     {verificationText}
@@ -137,17 +154,25 @@ export function ConfirmModal({
                     )}
                     <Button
                         variant={config.buttonVariant}
-                        className={config.buttonClass ? `${config.buttonClass} text-xs gap-1.5` : 'text-xs gap-1.5'}
+                        className={
+                            config.buttonClass
+                                ? `${config.buttonClass} gap-1.5 text-xs`
+                                : 'gap-1.5 text-xs'
+                        }
                         size="sm"
                         disabled={
                             isLoading ||
-                            (verificationText ? verifyInput !== verificationText : false)
+                            (verificationText
+                                ? verifyInput !== verificationText
+                                : false)
                         }
                         onClick={async () => {
                             await onConfirm();
                         }}
                     >
-                        {isLoading && <Loader2 className="size-3.5 animate-spin" />}
+                        {isLoading && (
+                            <Loader2 className="size-3.5 animate-spin" />
+                        )}
                         {confirmLabel}
                     </Button>
                 </DialogFooter>

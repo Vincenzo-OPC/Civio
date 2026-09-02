@@ -32,7 +32,9 @@ export function StudyScheduleActivityCard({
         // Optimistic UI update
         const newStatus = !currentStatus;
         setTasks((prev) =>
-            prev.map((t) => (t.id === taskId ? { ...t, is_done: newStatus } : t)),
+            prev.map((t) =>
+                t.id === taskId ? { ...t, is_done: newStatus } : t,
+            ),
         );
 
         try {
@@ -65,7 +67,7 @@ export function StudyScheduleActivityCard({
     };
 
     return (
-        <Card className="relative flex min-h-[460px] h-full flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700 sm:p-6">
+        <Card className="relative flex h-full min-h-[460px] flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md sm:p-6 dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700">
             {/* Header */}
             <div className="flex shrink-0 items-center justify-between">
                 <div className="flex items-center gap-2.5">
@@ -84,14 +86,15 @@ export function StudyScheduleActivityCard({
             </div>
 
             {/* Split Body (Scrollable) */}
-            <div className="my-3.5 flex-1 min-h-0 space-y-4 overflow-y-auto pr-1.5">
+            <div className="my-3.5 min-h-0 flex-1 space-y-4 overflow-y-auto pr-1.5">
                 {/* Overdue Alert Banner if any */}
                 {overdueTasksCount > 0 && (
                     <div className="flex items-center justify-between rounded-xl border border-amber-200/80 bg-amber-50/70 px-3 py-2 text-xs dark:border-amber-900/40 dark:bg-amber-950/20">
                         <div className="flex items-center gap-2">
-                            <span className="size-2 rounded-full bg-amber-500 animate-pulse" />
+                            <span className="size-2 animate-pulse rounded-full bg-amber-500" />
                             <span className="font-bold text-amber-900 dark:text-amber-300">
-                                {overdueTasksCount} overdue {overdueTasksCount === 1 ? 'task' : 'tasks'}
+                                {overdueTasksCount} overdue{' '}
+                                {overdueTasksCount === 1 ? 'task' : 'tasks'}
                             </span>
                         </div>
                         <Link
@@ -106,7 +109,7 @@ export function StudyScheduleActivityCard({
                 {/* Top Section: Today's Tasks */}
                 <div>
                     <div className="mb-2 flex items-center justify-between">
-                        <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                        <span className="text-[11px] font-extrabold tracking-wider text-slate-500 uppercase dark:text-slate-400">
                             Today&apos;s Study Tasks
                         </span>
                         <Link
@@ -133,7 +136,10 @@ export function StudyScheduleActivityCard({
                                         <button
                                             type="button"
                                             onClick={() =>
-                                                toggleTask(task.id, task.is_done)
+                                                toggleTask(
+                                                    task.id,
+                                                    task.is_done,
+                                                )
                                             }
                                             className="mt-0.5 text-slate-400 hover:text-purple-600 dark:hover:text-purple-400"
                                             aria-label={
@@ -150,7 +156,7 @@ export function StudyScheduleActivityCard({
                                         </button>
                                         <div>
                                             <p
-                                                className={`text-xs font-bold leading-tight ${
+                                                className={`text-xs leading-tight font-bold ${
                                                     task.is_done
                                                         ? 'text-slate-500 line-through dark:text-slate-400'
                                                         : 'text-slate-900 dark:text-white'
@@ -193,7 +199,7 @@ export function StudyScheduleActivityCard({
                 {/* Bottom Section: Recent Attempts */}
                 <div className="border-t border-slate-100 pt-3 dark:border-slate-800/80">
                     <div className="mb-2 flex items-center justify-between">
-                        <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                        <span className="text-[11px] font-extrabold tracking-wider text-slate-500 uppercase dark:text-slate-400">
                             Recent Exam Runs
                         </span>
                         <Link
@@ -241,7 +247,7 @@ export function StudyScheduleActivityCard({
 
                                     <Badge
                                         variant="outline"
-                                        className={`font-black text-xs ${
+                                        className={`text-xs font-black ${
                                             attempt.passed
                                                 ? 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/60 dark:bg-emerald-950/40 dark:text-emerald-300'
                                                 : 'border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-900/60 dark:bg-rose-950/40 dark:text-rose-300'

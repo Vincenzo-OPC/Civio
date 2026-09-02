@@ -10,7 +10,7 @@ import {
     LayoutGrid,
     List,
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { getCategoryStyles } from '@/components/domain/curation-index-shell';
 import type { CategoryItem } from '@/components/domain/drafts-review-shell';
 import { PageContainer } from '@/components/layout/page-container';
@@ -68,12 +68,17 @@ export default function AdminLearnIndex({
     };
 }) {
     const [filterSearch, setFilterSearch] = useState(filters.search || '');
-    const [filterStatus, setFilterStatus] = useState<string>(filters.status || 'all');
-    const [filterCategory, setFilterCategory] = useState<string>(filters.category || 'all');
-    const [filterSubcategory, setFilterSubcategory] = useState<string>(filters.subcategory || 'all');
+    const [filterStatus, setFilterStatus] = useState<string>(
+        filters.status || 'all',
+    );
+    const [filterCategory, setFilterCategory] = useState<string>(
+        filters.category || 'all',
+    );
+    const [filterSubcategory, setFilterSubcategory] = useState<string>(
+        filters.subcategory || 'all',
+    );
     const [perPage, setPerPage] = useState<number>(filters.per_page || 10);
     const currentPage = pagination.current_page;
-    const totalPages = pagination.last_page;
     const [deleteModal, setDeleteModal] = useState<{
         isOpen: boolean;
         id: number | null;
@@ -135,11 +140,20 @@ export default function AdminLearnIndex({
         router.get(
             adminLearnIndex().url,
             {
-                search: params.search !== undefined ? params.search : filterSearch,
-                status: params.status !== undefined ? params.status : filterStatus,
-                category: params.category !== undefined ? params.category : filterCategory,
-                subcategory: params.subcategory !== undefined ? params.subcategory : filterSubcategory,
-                per_page: params.per_page !== undefined ? params.per_page : perPage,
+                search:
+                    params.search !== undefined ? params.search : filterSearch,
+                status:
+                    params.status !== undefined ? params.status : filterStatus,
+                category:
+                    params.category !== undefined
+                        ? params.category
+                        : filterCategory,
+                subcategory:
+                    params.subcategory !== undefined
+                        ? params.subcategory
+                        : filterSubcategory,
+                per_page:
+                    params.per_page !== undefined ? params.per_page : perPage,
                 page: params.page !== undefined ? params.page : 1,
             },
             {
@@ -281,12 +295,17 @@ export default function AdminLearnIndex({
 
                 {/* Search & Filters */}
                 <div className="mb-6 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border bg-card p-4 shadow-xs">
-                    <form onSubmit={handleSearchSubmit} className="flex min-w-[260px] flex-1 items-center gap-2">
+                    <form
+                        onSubmit={handleSearchSubmit}
+                        className="flex min-w-[260px] flex-1 items-center gap-2"
+                    >
                         <input
                             type="text"
                             value={filterSearch}
                             onChange={(e) => setFilterSearch(e.target.value)}
-                            onBlur={() => updateFilters({ search: filterSearch, page: 1 })}
+                            onBlur={() =>
+                                updateFilters({ search: filterSearch, page: 1 })
+                            }
                             placeholder="Search modules (title, summary, topic)..."
                             className="w-full rounded-lg border border-border bg-muted px-3 py-1.5 text-xs font-semibold text-foreground transition placeholder:text-muted-foreground focus:border-blue-500 focus:outline-none"
                         />
@@ -301,7 +320,11 @@ export default function AdminLearnIndex({
                                     const val = e.target.value;
                                     setFilterCategory(val);
                                     setFilterSubcategory('all');
-                                    updateFilters({ category: val, subcategory: 'all', page: 1 });
+                                    updateFilters({
+                                        category: val,
+                                        subcategory: 'all',
+                                        page: 1,
+                                    });
                                 }}
                                 className="w-full appearance-none rounded-lg border border-border bg-background py-1.5 pr-8 pl-2.5 text-xs font-bold text-foreground transition focus:border-blue-500 focus:outline-none"
                             >
@@ -348,7 +371,11 @@ export default function AdminLearnIndex({
                                         }
                                     }
 
-                                    updateFilters({ subcategory: val, category: newCat, page: 1 });
+                                    updateFilters({
+                                        subcategory: val,
+                                        category: newCat,
+                                        page: 1,
+                                    });
                                 }}
                                 className="w-full appearance-none rounded-lg border border-border bg-background py-1.5 pr-8 pl-2.5 text-xs font-bold text-foreground transition focus:border-blue-500 focus:outline-none"
                             >
@@ -912,12 +939,15 @@ export default function AdminLearnIndex({
                                 <span className="text-xs font-bold text-muted-foreground">
                                     Showing{' '}
                                     <strong className="text-foreground">
-                                        {(pagination.current_page - 1) * pagination.per_page + 1}
+                                        {(pagination.current_page - 1) *
+                                            pagination.per_page +
+                                            1}
                                     </strong>{' '}
                                     to{' '}
                                     <strong className="text-foreground">
                                         {Math.min(
-                                            pagination.current_page * pagination.per_page,
+                                            pagination.current_page *
+                                                pagination.per_page,
                                             pagination.total,
                                         )}
                                     </strong>{' '}
@@ -934,7 +964,10 @@ export default function AdminLearnIndex({
                                         disabled={pagination.current_page === 1}
                                         onClick={() =>
                                             handlePageChange(
-                                                Math.max(1, pagination.current_page - 1),
+                                                Math.max(
+                                                    1,
+                                                    pagination.current_page - 1,
+                                                ),
                                             )
                                         }
                                         className="cursor-pointer rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-bold text-foreground transition hover:bg-muted focus:outline-none disabled:cursor-not-allowed disabled:opacity-40"
@@ -948,14 +981,19 @@ export default function AdminLearnIndex({
                                     ).map((pageNum) => {
                                         if (
                                             pagination.last_page > 7 &&
-                                            Math.abs(pageNum - pagination.current_page) >
-                                                2 &&
+                                            Math.abs(
+                                                pageNum -
+                                                    pagination.current_page,
+                                            ) > 2 &&
                                             pageNum !== 1 &&
                                             pageNum !== pagination.last_page
                                         ) {
                                             if (
-                                                pageNum === pagination.current_page - 3 ||
-                                                pageNum === pagination.current_page + 3
+                                                pageNum ===
+                                                    pagination.current_page -
+                                                        3 ||
+                                                pageNum ===
+                                                    pagination.current_page + 3
                                             ) {
                                                 return (
                                                     <span
@@ -993,7 +1031,10 @@ export default function AdminLearnIndex({
 
                                     <button
                                         type="button"
-                                        disabled={pagination.current_page === pagination.last_page}
+                                        disabled={
+                                            pagination.current_page ===
+                                            pagination.last_page
+                                        }
                                         onClick={() =>
                                             handlePageChange(
                                                 Math.min(

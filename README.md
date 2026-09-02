@@ -1,665 +1,266 @@
-# Hiraya Review — Civil Service Exam Reviewer
+# Hiraya Review — Civil Service Exam Reviewer & AI Study Platform
 
-A full-stack, AI-powered study platform for the Philippine Civil Service Examination (CSE). Built with **Laravel 13**, **Inertia.js v3**, **React 19**, and **Tailwind CSS v4**. Features AI-generated questions, learning modules, diagnostic analytics, and personalized study planning.
-
-> **Hiraya** — a Filipino word meaning "the fruit of one's hopes, dreams, and aspirations."
+Hiraya Review is a full-stack, AI-powered web platform built for Philippine Civil Service Examination (CSE) aspirants (Professional & Subprofessional tracks). It helps users practice with realistic mock exams and targeted category drills, generate custom study schedules, track predictive mastery analytics, and study interactive learn modules with automated AI-assisted explanations and diagrams.
 
 ---
 
-## Table of Contents
+## What It Does
 
-- [System Overview](#system-overview)
-- [Architecture](#architecture)
-- [Tech Stack](#tech-stack)
-- [Features](#features)
-- [Database Schema](#database-schema)
-- [AI Integration](#ai-integration)
-- [Security](#security)
-- [Project Structure](#project-structure)
-- [Environment Setup](#environment-setup)
-- [Development](#development)
-- [Deployment](#deployment)
-- [Testing](#testing)
+Traditional Civil Service Exam review materials rely on static PDFs, outdated question banks, and generic scoring without personalized diagnostic feedback. Hiraya Review solves this by combining:
 
----
-
-## System Overview
-
-Hiraya Review is a single-page application (SPA) that serves as a comprehensive reviewer for the Philippine Civil Service Exam. It supports two user roles — **Admin** and **User** — with distinct dashboards and capabilities.
-
-### How It Works
-
-```
-┌─────────────┐     Inertia.js      ┌──────────────┐     Eloquent     ┌────────────┐
-│  React SPA  │ ◄──── SSR/CSR ────► │  Laravel 13  │ ◄─────────────►  │ PostgreSQL │
-│  (Frontend) │                     │  (Backend)   │                  │ (Database) │
-└─────────────┘                     └──────┬───────┘                  └────────────┘
-                                           │
-                              ┌────────────┼────────────┐
-                              ▼            ▼            ▼
-                        ┌──────────┐ ┌──────────┐ ┌──────────┐
-                        │  Gemini  │ │   Groq   │ │  Pusher  │
-                        │   API    │ │   API    │ │ WebSocket│
-                        └──────────┘ └──────────┘ └──────────┘
-```
-
-1. **Users** sign up via email/password or OAuth (Google), then take mock exams or category drills.
-2. **Exam attempts** are stored with per-question answers and category score breakdowns.
-3. **AI Jobs** run asynchronously via Laravel Queues to generate questions, learning modules, and diagnostic reports.
-4. **Real-time events** notify users via Pusher when AI generation completes or fails.
-5. **Admins** manage questions, learning modules, users, announcements, and system settings from a dedicated panel.
-
----
-
-## Architecture
-
-### Monolithic SPA (Inertia.js Pattern)
-
-The application follows the **Inertia.js monolith** pattern — Laravel handles routing, controllers, and validation on the server; React renders the UI on the client. There is no separate API layer; Inertia bridges server and client seamlessly.
-
-### Design Patterns
-
-| Pattern | Implementation |
-|---|---|
-| **MVC + Inertia** | Controllers return `Inertia::render()` with typed props instead of Blade views |
-| **Form Requests** | All input validation uses dedicated `FormRequest` classes (22 total) |
-| **Service Layer** | `StudyPlanAnalyzer`, `ExamAttemptFormatter`, `TurnstileService` encapsulate business logic |
-| **Job Queue** | AI-heavy operations dispatched as async jobs (`GenerateQuestionsJob`, `GenerateLearnModuleJob`, `GenerateUserAnalysisJob`) |
-| **Event Broadcasting** | `AiGenerationCompleted` / `AiGenerationFailed` events broadcast via Pusher for real-time UI updates |
-| **Observer Pattern** | Model observers on `Category`, `Subcategory`, `Question`, `LearnModule`, `ExamDate` for cache invalidation |
-| **Role-Based Access** | `EnsureUserIsAdmin` middleware + `RolePermission` model for granular view-level access control |
-| **Repository Caching** | Aggressive `Cache::remember()` on shared data (permissions, announcements, feedback counts) |
-
-### Request Lifecycle
-
-```
-HTTP Request
-  → Global Middleware (Appearance, Active Check, Maintenance, CSRF, Cache Headers, Compression)
-    → Route Middleware (auth, admin, throttle, turnstile, free.attempt)
-      → Form Request Validation
-        → Controller Logic
-          → Inertia::render() / redirect / JSON
-            → React Component (client-side hydration)
-```
-
-### Middleware Stack
-
-| Middleware | Purpose |
-|---|---|
-| `HandleAppearance` | Persists light/dark mode preference |
-| `CheckUserActive` | Blocks deactivated accounts |
-| `CheckMaintenanceMode` | Custom maintenance mode with admin bypass |
-| `HandleInertiaRequests` | Shares global props (auth, permissions, announcements, Pusher config) |
-| `SetCacheHeaders` | Content-hashed ETags and Cache-Control for static pages |
-| `CompressResponse` | Gzip response compression |
-| `TransactionMiddleware` | Wraps mutations in DB transactions |
-| `CheckViewAccess` | Role-based page visibility via `RolePermission` table |
-| `EnsureUserIsAdmin` | Admin-only route guard |
-| `AllowFreeAttempt` | Enables guest users to access a free exam attempt |
-| `VerifyTurnstile` | Cloudflare Turnstile bot protection |
+- **Dual-Track Mock Exams & Focused Drills:** Realistic timed mock exams for CSE Professional and Subprofessional levels with official category weightings, question palettes, instant scoring, and granular post-exam answer reviews with SVG diagrams.
+- **AI-Powered Question & Visual Generation:** On-demand batch generation of high-quality exam questions with Google Gemini API, complete with subcategory-specific prompt engineering, bilingual support (English & Filipino/Tagalog), custom SVG visuals for Abstract Reasoning, and SVG charts for Data Interpretation.
+- **Interactive Learn Modules & Curriculum:** Comprehensive study tutorials featuring a 5-step pedagogy (Core Concepts, Key Rules, Mental Shortcuts, Example Scenarios, and Check Your Understanding MCQs) with embedded SVG visual aids.
+- **AI Diagnostic Analytics & Predictive Readiness:** Evaluates historical exam performance to predict CSE pass probability, categorize subject mastery (Mastered, Needs Practice, Critical Concern), estimate time to readiness, and output a personalized 7-day remediation plan.
+- **Interactive Study Schedule & Weakness Suggestions:** Visual study calendar with drag-and-drop planning, bulk rescheduling, task completion tracking, and algorithm-driven recommendations auto-generated from weak subcategories.
+- **Custom & Saved Drill Sets:** Create custom questions, save drill setups, and bookmark targeted question collections for focused repetition.
+- **Syllabus & Exam Dates Management:** Dynamic reference viewer for the official Civil Service Commission (CSC) category/subcategory syllabus and countdown trackers for upcoming nationwide exam dates.
+- **Polymorphic Issue Reporting & Triage:** Flag inaccurate questions or learn modules with user-driven feedback workflows and an administrative triage dashboard.
+- **Granular Role-Based Access & Admin Control:** Comprehensive admin suite for managing questions, drafts, modules, users, announcements, legal documents, cache flushing, and dynamic view-level role permissions.
+- **Guest Free Mock Exam:** Low-barrier, single free mock exam for unauthenticated visitors with frictionless onboarding.
+- **Real-Time WebSocket Feedback:** Pusher-powered live updates for asynchronous AI generation jobs and platform alerts.
+- **Modern Aesthetic & Theme Customization:** Dark/light mode support built with React 19, Tailwind CSS v4, Lucide icons, and 30+ accessible shadcn/ui primitives.
 
 ---
 
 ## Tech Stack
 
-### Backend
-
-| Technology | Version | Purpose |
-|---|---|---|
-| PHP | 8.4 | Runtime |
-| Laravel | 13 | Framework |
-| Inertia.js (Server) | 3.0 | SPA bridge |
-| Laravel Fortify | 1.x | Authentication (email/password, 2FA, passkeys) |
-| Laravel Socialite | 5.x | OAuth (Google, Facebook) |
-| Laravel Wayfinder | 0.1 | TypeScript route generation |
-| Pusher | 7.x | WebSocket broadcasting |
-| Pest | 4.x | Testing framework |
-| Laravel Pint | 1.x | PHP code formatter |
-
-### Frontend
-
-| Technology | Version | Purpose |
-|---|---|---|
-| React | 19 | UI framework |
-| TypeScript | 5.7 | Type safety |
-| Inertia.js (Client) | 3.0 | SPA bridge |
-| Tailwind CSS | 4.0 | Utility-first styling |
-| shadcn/ui + Radix UI | Latest | Component library (30 UI primitives) |
-| Recharts | 3.8 | Data visualization charts |
-| Lucide React | 0.475 | Icon library |
-| Sonner | 2.0 | Toast notifications |
-| DOMPurify | 3.x | XSS sanitization for AI-generated HTML/SVG |
-| React Compiler | 1.0 | Automatic memoization via Babel plugin |
-
-### Infrastructure
-
-| Technology | Purpose |
-|---|---|
-| PostgreSQL | Primary database |
-| Docker (ServerSideUp PHP 8.4 + Nginx) | Container deployment |
-| GitHub Actions | CI/CD (lint + test workflows) |
-| Cloudflare Turnstile | Bot protection |
-| Pusher / Laravel Echo | Real-time event broadcasting |
-| Vite 8 | Frontend bundler with SSR support |
-
-### AI Services
-
-| Provider | Models | Use Case |
-|---|---|---|
-| Google Gemini | `gemini-3.5-flash`, thinking models | Question generation, learn module generation, user analysis |
-| Groq | `llama-3.3-70b-versatile` | Fallback AI provider for analysis |
+- **Backend:** PHP 8.4, Laravel 13, Inertia.js v3 (Server), Laravel Fortify v1 (2FA, Passkeys), Laravel Socialite v5, Laravel Wayfinder v0
+- **Frontend:** React 19, TypeScript 5.7, Inertia.js v3 (Client), Tailwind CSS v4, shadcn/ui + Radix UI (30+ primitives), Recharts 3.8, Lucide React, Sonner, DOMPurify, React Compiler
+- **Database:** PostgreSQL (Neon / Supabase / Local) with strict Eloquent models & transactions
+- **AI Generation & Diagnostics:** Google Gemini API (`gemini-3.7-flash`, `gemini-2.5-flash`, `gemini-1.5-pro`, `gemini-1.5-flash`)
+- **Real-time:** Pusher WebSockets + Laravel Echo
+- **Security & Bot Protection:** Cloudflare Turnstile, Content Security Policy, DOMPurify SVG sanitization, custom input filters (`NoProfanity`, `NoHtml`, `NoUrls`, `NoEmojis`)
+- **Infrastructure & Deployment:** Docker (`serversideup/php:8.4-fpm-nginx`), GitHub Actions CI/CD (Pint, ESLint, Prettier, Pest PHP)
 
 ---
 
-## Features
+## Architecture & Code Highlights
 
-### Public
-
-- **Landing Page** — Marketing page with exam info and platform overview
-- **Learn Modules** — Publicly browsable study tutorials (no login required)
-- **Free Exam Attempt** — One free mock exam for unauthenticated visitors
-- **About / Privacy / Terms / Support** — Static informational pages
-- **SEO Sitemap** — Auto-generated `sitemap.xml` from published learn modules
-- **User Guide** — Interactive onboarding guide with tabbed content
-
-### User (Authenticated)
-
-- **Dashboard** — At-a-glance stats: total attempts, average score, passing rate, recent activity
-- **Mock Exams** — Full-length timed exams (Professional / Subprofessional tracks) with configurable scope
-- **Category Drills** — Focused practice sessions filtered by category/subcategory
-- **Live Exam Interface** — Question navigation palette, timer, auto-submit, answer review
-- **Scorecard** — Immediate results with per-category breakdown and score visualization
-- **Exam Review** — Post-exam answer review with explanations and SVG visual rendering
-- **Exam History** — Historical attempts list with bulk delete capability
-- **Analytics Dashboard** — Performance charts (accuracy trends, category breakdowns) via Recharts
-- **AI Diagnostic Report** — Comprehensive AI-generated analysis including:
-  - Pass probability prediction
-  - Subject mastery ratings (Mastered / Needs Practice / Critical Concern)
-  - Predictive metrics (estimated score, days to readiness)
-  - Remediation matrix with coaching tips
-  - Personalized 7-day study plan with linked learn modules
-- **Learn Modules** — Rich markdown tutorials with "Check Your Understanding" quizzes, completion tracking
-- **Study Calendar** — Visual study schedule with drag-and-drop, CRUD operations, subcategory linking
-- **AI Study Suggestions** — Algorithm-driven study recommendations based on weak areas, auto-applied to calendar
-- **Report Issue** — Flag questions or modules for admin review (polymorphic feedback system)
-- **Support Widget** — Contextual support prompt with daily-dismiss logic
-- **Theme Toggle** — Light/dark mode with system preference detection
-
-### Admin
-
-- **Admin Dashboard** — Platform-wide stats: user count, question count, active modules, recent activity
-- **Question Management** — Full CRUD for questions with category/subcategory taxonomy
-- **AI Question Generator** — Generate questions via Gemini/Groq with subcategory-specific prompt engineering (supports abstract reasoning with SVG visuals, data interpretation with charts, bilingual Filipino/English)
-- **Question Drafts** — Review and publish AI-generated questions with inline editing
-- **Learn Module Management** — Full CRUD + AI generation for study tutorials
-- **Module Drafts** — Review, edit, and publish AI-generated learning modules
-- **User Management** — View, update roles, activate/deactivate, delete users
-- **Exam Date Management** — Configure upcoming CSE exam dates
-- **Syllabus Viewer** — Reference view of the official CSE category/subcategory schema
-- **Announcement System** — Global banner announcements with expiration dates
-- **Feedback Management** — Triage user-reported issues with bulk actions and status workflow
-- **Legal Content Editor** — Edit Privacy Policy and Terms of Service content
-- **View Management** — Toggle page visibility per role via `RolePermission` table
-- **System Tools** — Cache clearing, route/view optimization, migration runner, maintenance mode toggle
+- **Monolithic SPA (Inertia.js v3):** Eliminates API glue code by seamlessly rendering React components from Laravel controllers with typed props and server-side validation.
+- **Asynchronous AI Queue Pipeline:** Heavy AI jobs (`GenerateQuestionsJob`, `GenerateLearnModuleJob`, `GenerateUserAnalysisJob`) run asynchronously in queues with real-time websocket updates via Pusher (`AiGenerationCompleted`, `AiGenerationFailed`).
+- **Dynamic Role-View Visibility Matrix:** Granular permission system stored in database (`RolePermission`), cached and verified via `CheckViewAccess` middleware for role-based view gating.
+- **Global Mutation Transactions:** Relational writes (exam attempts, question banks, study schedules) wrapped in database transactions via `TransactionMiddleware` for ACID integrity.
+- **Strict Eloquent & Caching Observers:** Strict mode enabled to eliminate lazy loading (N+1 queries); model observers on `Category`, `Subcategory`, `Question`, `LearnModule`, and `ExamDate` automate cache invalidation.
+- **Strict Typing & Automated Code Quality:** `declare(strict_types=1)` across PHP files, formatted with Laravel Pint, and verified via Pest PHP v4 feature and unit test suites.
 
 ---
 
-## Database Schema
+## Full Feature Breakdown
 
-### Entity Relationship Diagram
+### 1. Full Mock Exams, Category Drills & Saved Sets
+- **Timed Exam Engine:** Full-length CSE Professional (170 items, 3 hours 10 mins) and Subprofessional (165 items, 2 hours 40 mins) mock exams with realistic timers and auto-submission on expiration.
+- **Exam Navigation Palette:** Interactive grid palette indicating answered, unanswered, and flagged questions with instant jump capability.
+- **Targeted Category Drills:** Practice specific subject areas (General Information, Verbal Ability, Analytical Ability, Numerical Ability, Clerical Ability) with customizable question counts.
+- **Smart Weakness Drills:** 1-click drill generation targeting the user's lowest-scoring subcategories based on historical attempt data.
+- **Custom Questions & Saved Drill Sets:** Add personal practice items and bookmark custom question sets for focused revision.
+- **Post-Exam Review & Scorecards:** Immediate scoring against the 80% passing benchmark, category breakdown radar, and full question rationales with sanitized SVG diagrams.
+- **PDF Export Protection:** Export exam answer sheets to PDF with rate-limited checks (`exams/export-pdf-check`).
 
-```mermaid
-erDiagram
-    users ||--o{ exam_attempts : takes
-    users ||--o{ study_schedules : plans
-    users ||--o{ feedbacks : submits
-    users ||--o{ user_ai_analyses : has
-    
-    categories ||--o{ subcategories : contains
-    categories ||--o{ exam_attempts : scopes
-    
-    subcategories ||--o{ questions : contains
-    subcategories ||--o{ learn_modules : teaches
-    subcategories ||--o{ study_schedules : targets
-    
-    categories ||--o{ learn_modules : groups
-    categories ||--o{ track_configs : configures
+### 2. AI Question Generator & Draft Review Pipeline
+- **Admin Batch Generation:** Generate syllabus-aligned questions on demand using Google Gemini API (`gemini-3.7-flash` / `gemini-2.5-flash`).
+- **Subcategory-Specific Prompting:** 13 dedicated prompt rule sets covering official CSE scopes (e.g. Philippine Constitution, RA 6713, Word Analogy, Number Sequence, Logic).
+- **Procedural SVG Visual Generation:** Generates valid, self-contained SVG diagrams for Abstract Reasoning (grid matrices, sequences, analogies, rotations, odd-one-out, cube folding, dot placement, mirror reflections).
+- **SVG Chart Generation:** Generates data charts (bar, line, pie, comparative tables) for Data Interpretation questions.
+- **Bilingual Support:** Strict language-specific prompt enforcement for Filipino/Tagalog (Wastong Gamit, Pagkilala sa Mali) and English subcategories.
+- **Draft Staging & Inline Review:** AI-generated questions are saved in `draft` status for admin verification, inline correction, and bulk activation.
 
-    users {
-        bigint id PK
-        string name
-        string email UK
-        string password
-        string role "user | admin"
-        string provider "google | facebook | null"
-        string provider_id
-        boolean is_active
-        timestamp terms_accepted_at
-        timestamp last_login_at
-        timestamp email_verified_at
-    }
+### 3. AI Interactive Learn Modules & Study Curriculum
+- **5-Part Pedagogical Structure:** Each module includes Core Concepts, Key Rules, Mental Shortcuts, Real-World Exam Scenarios, and Check Your Understanding (3 interactive MCQs with instant feedback).
+- **AI Module Synthesizer:** Admin generator (`GenerateLearnModuleJob`) creates complete study guides with embedded SVG illustrations via Gemini.
+- **Public Study Hub:** Unauthenticated visitors can browse published study tutorials (`/learn` and `/learn/{slug}`) with automatic XML sitemap generation (`/sitemap.xml`).
+- **User Progress Tracking:** Authenticated users track completed lessons with interactive checkboxes and completion timestamps.
 
-    categories {
-        bigint id PK
-        string name
-        string slug UK
-        boolean is_demographic
-        integer sort_order
-    }
+### 4. AI Diagnostic Engine & Predictive Analytics
+- **Automated Post-Exam Analysis:** Background job (`GenerateUserAnalysisJob`) evaluates attempt histories to generate deep diagnostic reports.
+- **Pass Probability Prediction:** Estimates the statistical likelihood of passing the official CSE based on weighted category performance.
+- **Subject Mastery Classification:** Categorizes subcategories into **Mastered**, **Needs Practice**, and **Critical Concern**.
+- **Predictive Metrics:** Calculates estimated CSE scaled score and remaining days required to reach exam readiness.
+- **Personalized 7-Day Remediation Plan:** Provides daily actionable study tasks with direct links to corresponding Learn Modules and weak subcategories.
 
-    subcategories {
-        bigint id PK
-        bigint category_id FK
-        string name
-        string slug
-        string language "English | Filipino/Tagalog"
-    }
+### 5. Interactive Study Calendar & Weakness Recommender
+- **Visual Schedule Planner:** Drag-and-drop calendar interface with day, week, and month views.
+- **Bulk Schedule Controls:** 1-click actions to reschedule overdue tasks to today (`bulk-reschedule-today`), update session times, mark completed, or clear tasks.
+- **Algorithmic Study Suggestions:** Analyzes weak subcategories and generates tailored study sessions ready to apply with one click.
+- **Preset Curriculum Templates:** Quick-apply structured 30-day and 60-day review roadmaps.
 
-    questions {
-        bigint id PK
-        bigint subcategory_id FK
-        string language
-        text stem
-        json options "array of 5 strings"
-        integer correct_option "0-4"
-        text explanation
-        bigint created_by FK
-        string status "draft | active"
-    }
+### 6. Performance Dashboard & Historical Scorecards
+- **Interactive Visualizations:** Score trends, attempt frequency, and category accuracy breakdowns powered by Recharts.
+- **Attempt History Archive:** Searchable log of all past exam attempts with scorecards, duration tracking, and single or bulk deletion.
 
-    exam_attempts {
-        bigint id PK
-        bigint user_id FK
-        bigint category_id FK "null for mock exams"
-        json question_ids
-        json answers "map of question_id to selected_option"
-        json cat_scores "category breakdown + metadata"
-    }
+### 7. User Management & Dynamic View Permissions
+- **User Administration:** Admin directory to search users, toggle admin/user roles, activate/deactivate accounts, and delete records.
+- **Granular View Permissions:** Configure page-level visibility per role dynamically in the database via the `RolePermission` matrix (`/admin/view-management`).
 
-    learn_modules {
-        bigint id PK
-        bigint category_id FK
-        bigint subcategory_id FK
-        string title
-        string slug UK
-        string topic
-        text summary
-        longtext content "markdown with embedded SVG"
-        integer estimated_minutes
-        boolean is_published
-        bigint created_by FK
-        json completed_by_user_ids
-    }
+### 8. Community Support & Issue Feedback System
+- **Polymorphic Issue Reporting:** Users can flag questions or learn modules directly from the review interface with specific reasons and notes.
+- **Admin Feedback Triage:** Dedicated feedback queue (`/admin/feedbacks`) with status management (`pending`, `reviewed`, `resolved`) and bulk actions.
+- **Contextual Support Widget:** Support modal with daily-dismiss local state and direct email dispatch.
 
-    study_schedules {
-        bigint id PK
-        bigint user_id FK
-        date study_date
-        time study_time
-        string title
-        text description
-        bigint subcategory_id FK
-        boolean is_done
-    }
+### 9. Syllabus Reference, Exam Dates & Announcements
+- **Official Syllabus Browser:** Interactive reference hierarchy of CSC categories, subcategories, language tags, and demographic items.
+- **Exam Date Countdown:** Admin-configurable exam dates displayed as live countdown banners on user dashboards.
+- **Global Announcements:** System-wide broadcast alerts with customizable types and expiration dates.
+- **Legal Content Editor:** Admin markdown editor for the Terms of Service and Privacy Policy.
 
-    track_configs {
-        bigint id PK
-        string track "Professional | Subprofessional"
-        bigint category_id FK
-        integer item_count
-        integer time_limit_secs
-    }
-
-    user_ai_analyses {
-        bigint id PK
-        bigint user_id FK
-        bigint last_exam_attempt_id FK
-        json analysis_json "full AI diagnostic report"
-    }
-
-    announcements {
-        bigint id PK
-        string title
-        text message
-        string type
-        boolean is_active
-        timestamp expires_at
-    }
-
-    feedbacks {
-        bigint id PK
-        bigint user_id FK
-        bigint flaggable_id
-        string flaggable_type "Question | LearnModule"
-        string reason
-        text details
-        string status "pending | reviewed | resolved"
-    }
-
-    role_permissions {
-        bigint id PK
-        string role
-        string view_name
-        boolean is_visible
-    }
-
-    legal_contents {
-        bigint id PK
-        string key UK
-        longtext content
-    }
-
-    exam_dates {
-        bigint id PK
-        date date
-        boolean is_active
-    }
-```
+### 10. Authentication, Security & Bot Protection
+- **Multi-Factor Authentication:** Laravel Fortify integration supporting email/password, Two-Factor Authentication (2FA), and WebAuthn / Passkeys.
+- **Social Login:** Single-click sign-in with **Google** OAuth via Laravel Socialite.
+- **Cloudflare Turnstile:** Bot defense on registration, login, support, and guest exam submissions.
+- **Tiered Rate Limiting:** Dedicated throttle buckets for views (`global-views`), mutations (`global-mutations`), AI operations (`ai-generation`), and PDF exports (`pdf-export`).
+- **Content Sanitization:** Strict XSS prevention using `DOMPurify` for SVG/HTML rendering and custom validation rules (`NoProfanity`, `NoHtml`, `NoUrls`, `NoEmojis`).
 
 ---
 
-## AI Integration
+## 🔌 Third-Party API Integrations
 
-The platform uses three asynchronous queue jobs for AI-powered content generation, all dispatched via Laravel's queue system and broadcasting results in real-time via Pusher.
+### 1. Google Gemini AI API
+- **Batch Question Generation (`app/Jobs/GenerateQuestionsJob.php`):** Formats subcategory prompt schemas and visual constraints, querying Gemini (`gemini-3.7-flash`, `gemini-2.5-flash`) with structured JSON schemas (`responseSchema`) for schema validation. Triggered via `app/Http/Controllers/Admin/QuestionController.php`.
+- **Learn Module Generation (`app/Jobs/GenerateLearnModuleJob.php`):** Prompts Gemini to synthesize 5-part curriculum guides with embedded SVG illustrations. Triggered via `app/Http/Controllers/Admin/LearnController.php`.
+- **User Exam Diagnostic Analysis (`app/Jobs/GenerateUserAnalysisJob.php`):** Evaluates user attempt history, category score breakdowns, and exam schedules to produce mastery ratings and remedial study plans. Dispatched via `app/Http/Controllers/User/ExamController.php`.
 
-### 1. Question Generation (`GenerateQuestionsJob`)
+### 2. Pusher & Laravel Echo (Real-Time WebSockets)
+- **Event Broadcasting (`app/Events/AiGenerationCompleted.php`, `AiGenerationFailed.php`, `NewFeedbackSubmitted.php`, `LearnModulePublished.php`):** Broadcasts real-time events over private user channels to notify the React frontend when background AI jobs finish.
 
-- **Trigger**: Admin clicks "Generate" on the question management page
-- **AI Provider**: Gemini (primary) or Groq (configurable per request)
-- **Features**:
-  - Subcategory-specific prompt engineering (13 distinct subcategory rule sets)
-  - Bilingual support (English + Filipino/Tagalog) with language-specific rules
-  - SVG visual generation for abstract reasoning (8 puzzle formats: grid matrix, sequence, analogy, rotation, odd-one-out, cube folding, dot placement, mirror reflection)
-  - SVG chart generation for data interpretation (bar, line, pie, table, combined)
-  - Structured JSON output with Gemini's `responseSchema` for type safety
-  - Concurrency lock per subcategory to prevent duplicate generation
-  - Questions created in `draft` status for admin review before publishing
+### 3. Google OAuth (Laravel Socialite)
+- **OAuth Controller (`app/Http/Controllers/AuthController.php`):** Handles Google OAuth authentication flow with automatic account provisioning and email verification.
 
-### 2. Learn Module Generation (`GenerateLearnModuleJob`)
-
-- **Trigger**: Admin clicks "Generate" on the learn module management page
-- **Output Structure**: Title, Summary, Markdown Content (with 5 sections), Estimated Reading Time
-- **Content Sections**: Core Concept → Key Rules → Mental Shortcuts → Example Scenario → Check Your Understanding (3 MCQs)
-- **Visual Content**: Same SVG generation capabilities as question generation for abstract reasoning and data interpretation topics
-
-### 3. User Analysis Generation (`GenerateUserAnalysisJob`)
-
-- **Trigger**: Automatically dispatched after a user completes an exam attempt
-- **Input Data**: All historical attempts, per-category accuracy, per-subtopic breakdown, days until exam
-- **Output**: Comprehensive diagnostic JSON including pass probability, subject mastery ratings, predictive metrics, remediation matrix, and a personalized 7-day study plan with subcategory IDs linked to learn modules
-
-### AI Fallback Strategy
-
-```
-Primary Model (user-selected: Gemini or Groq)
-  → If fails → Log error + broadcast AiGenerationFailed event
-```
+### 4. Cloudflare Turnstile (Bot Protection)
+- **Turnstile Service (`app/Services/TurnstileService.php`, `app/Http/Middleware/VerifyTurnstile.php`):** Validates Turnstile challenge tokens on authentication, guest exam submission, and support request endpoints.
 
 ---
 
-## Security
+## Local Development Setup
 
-| Layer | Implementation |
-|---|---|
-| **Input Validation** | 22 dedicated `FormRequest` classes; no inline validation in controllers |
-| **Mass Assignment** | Explicit `#[Fillable]` attributes on all 14 models |
-| **Authentication** | Laravel Fortify (email/password + 2FA + passkeys) + Socialite (Google) |
-| **Authorization** | Role-based (`admin` middleware) + view-level (`RolePermission` + `CheckViewAccess` middleware) |
-| **CSRF** | `VerifyCsrfToken` middleware on all web routes |
-| **Bot Protection** | Cloudflare Turnstile verification via `TurnstileService` + `VerifyTurnstile` middleware |
-| **Rate Limiting** | Separate throttle groups: `global-views`, `global-mutations`, `ai-generation` |
-| **XSS Prevention** | `DOMPurify` for AI-generated HTML/SVG rendering; custom validation rules (`NoHtml`, `NoUrls`, `NoProfanity`, `NoEmojis`) |
-| **DB Transactions** | `TransactionMiddleware` wraps all mutation requests |
-| **Model Strictness** | Laravel strict mode enabled (prevents lazy loading, silently discarded attributes) |
-| **Session Security** | Database-backed sessions with configurable encryption |
-| **Account Control** | `CheckUserActive` middleware blocks deactivated accounts; `AuthOrFail` for hard auth checks |
-
----
-
-## Project Structure
-
-```
-cse_reviewer/
-├── app/
-│   ├── Actions/Fortify/          # Fortify authentication actions
-│   ├── Console/Commands/         # Artisan commands
-│   ├── Concerns/                 # Shared traits
-│   ├── Events/                   # Broadcast events (AI generation, feedback, module published)
-│   ├── Http/
-│   │   ├── Controllers/
-│   │   │   ├── Admin/            # 11 admin controllers
-│   │   │   ├── User/             # 8 user controllers
-│   │   │   ├── Settings/         # Settings controllers
-│   │   │   ├── AuthController    # OAuth (Google/Facebook)
-│   │   │   ├── PublicController  # Static pages
-│   │   │   ├── SitemapController # XML sitemap
-│   │   │   └── SupportController # Support form
-│   │   ├── Middleware/           # 13 custom middleware classes
-│   │   └── Requests/            # 22 form request validators
-│   ├── Jobs/                     # 3 AI generation queue jobs
-│   ├── Mail/                     # Support email mailable
-│   ├── Models/                   # 14 Eloquent models
-│   ├── Observers/                # 5 model observers (cache invalidation)
-│   ├── Policies/                 # Authorization policies
-│   ├── Providers/                # Service providers
-│   ├── Rules/                    # 5 custom validation rules
-│   └── Services/                 # Business logic (StudyPlanAnalyzer, ExamAttemptFormatter, TurnstileService)
-├── resources/js/
-│   ├── components/
-│   │   ├── ui/                   # 30 shadcn/ui primitives
-│   │   ├── domain/               # 11 business-specific components
-│   │   ├── layout/               # 19 layout components (sidebar, header, nav, footer)
-│   │   ├── shared/               # 13 cross-cutting components (modals, guards, widgets)
-│   │   └── auth/                 # Authentication form components
-│   ├── hooks/                    # 10 custom React hooks
-│   ├── layouts/                  # App, Auth, Settings layout wrappers
-│   ├── pages/
-│   │   ├── admin/                # 11 admin page modules
-│   │   ├── user/                 # 7 user page modules (each with components/, hooks/, types.ts)
-│   │   ├── public/               # 5 public pages + components
-│   │   ├── auth/                 # Authentication pages
-│   │   └── settings/             # User settings pages
-│   ├── types/                    # Global TypeScript type definitions
-│   ├── services/                 # Frontend service utilities
-│   ├── wayfinder/                # Auto-generated route helpers (via Wayfinder)
-│   └── data/                     # Static data constants
-├── database/
-│   └── migrations/               # 24 migration files
-├── tests/
-│   ├── Feature/                  # 10+ feature tests (Dashboard, Exams, Auth, Study, Support)
-│   └── Unit/                     # Unit tests
-├── config/                       # 13 config files (app, auth, services, fortify, etc.)
-├── routes/
-│   ├── web.php                   # 80+ web routes (public, user, admin)
-│   ├── settings.php              # Settings routes
-│   ├── channels.php              # Broadcast channels
-│   └── console.php               # Console routes
-├── scripts/                      # Deployment entrypoint script
-├── conf/nginx/                   # Nginx server configuration
-├── .github/workflows/            # CI: lint.yml + tests.yml
-├── Dockerfile                    # Production Docker image (PHP 8.4 FPM + Nginx)
-└── vite.config.ts                # Vite 8 + React Compiler + Wayfinder + TailwindCSS
-```
-
----
-
-## Environment Setup
-
-### Prerequisites
-
-- PHP 8.4+
+### 1. Requirements
+- PHP 8.4 or higher (with `pdo_pgsql`, `mbstring`, `bcmath`, `fileinfo`, `gd`, `zip`)
 - Composer 2.x
 - Node.js 20+ & npm
 - PostgreSQL 15+
-- A queue worker (database driver works out-of-box)
 
-### Installation
+### 2. Install
 
 ```bash
 # Clone the repository
 git clone https://github.com/codebykenth/hiraya-review.git
 cd hiraya-review
 
-# Run the automated setup script
+# Run automated setup
 composer setup
 ```
 
-The `composer setup` script handles:
-1. `composer install` — PHP dependencies
-2. `.env` file creation from `.env.example`
-3. Application key generation
-4. Database migrations
-5. `npm install` — Node dependencies
-6. `npm run build` — Frontend asset compilation
-
-### Manual Setup
+Or install manually:
 
 ```bash
 composer install
+npm install
 cp .env.example .env
 php artisan key:generate
 ```
 
-Configure `.env` with your database and service credentials:
+### 3. Environment Config
+
+Update your `.env` file with database credentials and API keys:
 
 ```env
+# Application
+APP_NAME="Hiraya Review"
+APP_ENV=local
+APP_URL=http://localhost:8000
+
 # Database
 DB_CONNECTION=pgsql
-DB_URL=postgresql://user:pass@host:5432/dbname
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=cse_reviewer
+DB_USERNAME=postgres
+DB_PASSWORD=your_password
 
 # AI Services
-GEMINI_API_KEY=your_gemini_api_key
-GROQ_API_KEY=your_groq_api_key
+GEMINI_API_KEY=your_gemini_api_key_here
 
-# OAuth
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-GOOGLE_REDIRECT=https://yourdomain.com/auth/google/callback
-
-FACEBOOK_CLIENT_ID=
-FACEBOOK_CLIENT_SECRET=
-FACEBOOK_REDIRECT=https://yourdomain.com/auth/facebook/callback
-
-# Real-time Broadcasting
-PUSHER_APP_ID=
-PUSHER_APP_KEY=
-PUSHER_APP_SECRET=
+# Real-time WebSockets
+BROADCAST_CONNECTION=pusher
+PUSHER_APP_ID=your_pusher_app_id
+PUSHER_APP_KEY=your_pusher_app_key
+PUSHER_APP_SECRET=your_pusher_app_secret
 PUSHER_APP_CLUSTER=ap1
+VITE_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
-# Bot Protection
-TURNSTILE_SITE_KEY=
-TURNSTILE_SECRET_KEY=
+# Google OAuth (Optional)
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+GOOGLE_REDIRECT=http://localhost:8000/auth/google/callback
 
-# Queue
-QUEUE_CONNECTION=database
+# Cloudflare Turnstile (Optional for local dev)
+TURNSTILE_SITE_KEY=your_turnstile_site_key
+TURNSTILE_SECRET_KEY=your_turnstile_secret_key
 ```
 
-Then run:
+### 4. Database Setup & Seed
 
 ```bash
-php artisan migrate
-npm install
+php artisan migrate:fresh --seed
 ```
+
+This sets up the database schema and seeds the official Civil Service Examination scope (categories & subcategories).
+
+### 5. Run the Application
+
+```bash
+composer run dev
+```
+
+This concurrently starts:
+- Laravel local server (`http://127.0.0.1:8000`)
+- Queue worker (`php artisan queue:listen`)
+- Vite dev server with Hot Module Replacement (HMR)
 
 ---
 
-## Development
+## Automated Tests & Code Quality
 
 ```bash
-# Start all services concurrently (server + queue + vite)
-composer run dev
+# Run feature & unit test suite (Pest PHP)
+php artisan test --compact
 
-# Or run individually:
-php artisan serve          # Laravel dev server
-php artisan queue:listen   # Queue worker
-npm run dev                # Vite dev server with HMR
-```
+# Run specific test suite or filter
+php artisan test --compact --filter=DashboardTest
 
-### Code Quality
-
-```bash
-# PHP formatting (Pint)
+# Run PHP code style fixer (Laravel Pint)
 vendor/bin/pint --dirty --format agent
 
-# Frontend linting
-npm run lint          # ESLint auto-fix
-npm run lint:check    # ESLint check only
-npm run format        # Prettier format
-npm run format:check  # Prettier check only
-npm run types:check   # TypeScript type checking
+# Run frontend linting & formatting checks
+npm run lint
+npm run format
+npm run types:check
 
-# Full CI check
+# Run complete CI verification suite
 composer ci:check
 ```
 
-### Vite Build Optimization
-
-The `vite.config.ts` includes manual chunk splitting for optimal caching:
-
-| Chunk | Contents |
-|---|---|
-| `vendor-react` | React, ReactDOM, Scheduler |
-| `vendor-ui` | Radix UI, CVA, clsx |
-| `vendor-inertia` | Inertia.js client |
-
 ---
 
-## Deployment
+## Deployment (Docker)
 
-### Docker
+The project includes a production-ready Dockerfile based on `serversideup/php:8.4-fpm-nginx`:
 
 ```bash
+# Build the Docker image
 docker build -t hiraya-review .
+
+# Run the container
 docker run -p 8080:8080 --env-file .env hiraya-review
 ```
 
-The `Dockerfile` uses `serversideup/php:8.4-fpm-nginx` and:
-1. Installs PHP extensions (`pdo_mysql`, `gd`, `zip`, `bcmath`, `opcache`)
-2. Runs `composer install --no-dev --optimize-autoloader`
-3. Runs `npm ci && npm run build`
-4. Cleans up Node.js to minimize image size
-5. Executes the `scripts/00-laravel-deploy.sh` entrypoint (config cache, route cache, view cache, migrations)
-
-### CI/CD
-
-Two GitHub Actions workflows:
-- **`lint.yml`** — Runs PHP Pint + ESLint + Prettier + TypeScript checks
-- **`tests.yml`** — Runs Pest test suite
+Deployment features:
+- **Optimized Multi-Stage Assets:** Pre-compiles frontend assets via Vite and strips development dependencies.
+- **Automated Entrypoint (`scripts/00-laravel-deploy.sh`):** Handles `config:cache`, `route:cache`, `view:cache`, and `migrate --force` on container startup.
+- **Continuous Integration:** GitHub Actions workflows (`.github/workflows/lint.yml` and `tests.yml`) enforce code style, type checking, and automated tests on every push.
 
 ---
 
-## Testing
+## Author
 
-```bash
-# Run all tests
-php artisan test --compact
-
-# Run specific test
-php artisan test --compact --filter=DashboardTest
-
-# Create a new feature test
-php artisan make:test --pest MyNewFeatureTest
-```
-
-### Test Coverage Areas
-
-| Test File | Coverage |
-|---|---|
-| `DashboardTest` | Dashboard data loading, stats calculation |
-| `ExamAttemptTest` | Exam submission, score calculation, attempt storage |
-| `GenerateUserAnalysisJobTest` | AI analysis job dispatch, JSON parsing, model storage |
-| `GuestFreeExamTest` | Unauthenticated free exam access |
-| `InactiveAccountTest` | Deactivated account blocking |
-| `SetCacheHeadersTest` | Cache-Control and ETag header verification |
-| `StudyScheduleControllerTest` | CRUD operations for study calendar |
-| `StudySuggestionTest` | AI-driven study suggestion algorithm |
-| `SupportTest` | Support form submission and validation |
-| `Auth/*` | Registration, login, password reset, email verification |
-| `Admin/*` | Admin panel operations |
-| `Settings/*` | User settings updates |
-
----
-
-## License
-
-This project is proprietary software. All rights reserved.
+Built by [Kenth](https://github.com/codebykenth).

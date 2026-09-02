@@ -130,4 +130,3 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
         </div>
     );
 }
-

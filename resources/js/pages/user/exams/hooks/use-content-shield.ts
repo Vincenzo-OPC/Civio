@@ -427,7 +427,9 @@ export function useContentShield(
                 instantBlurContent();
                 wipeClipboard();
                 activateShield();
-                onCopyAttemptRef.current?.('Screenshot capture is blocked. Practice content is protected.');
+                onCopyAttemptRef.current?.(
+                    'Screenshot capture is blocked. Practice content is protected.',
+                );
 
                 return;
             }
@@ -531,7 +533,9 @@ export function useContentShield(
             document.removeEventListener('keydown', handleKeyDown, {
                 capture: true,
             });
-            document.removeEventListener('keyup', handleKeyUp, { capture: true });
+            document.removeEventListener('keyup', handleKeyUp, {
+                capture: true,
+            });
         };
     }, [activateShield, instantBlurContent, wipeClipboard]);
 

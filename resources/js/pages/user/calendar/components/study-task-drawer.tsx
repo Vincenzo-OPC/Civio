@@ -111,15 +111,15 @@ export function StudyTaskDrawer({
         <Sheet open={isOpen} onOpenChange={onOpenChange}>
             <SheetContent
                 side="right"
-                className="w-full sm:max-w-md md:max-w-lg p-0 flex flex-col justify-between overflow-y-auto"
+                className="flex w-full flex-col justify-between overflow-y-auto p-0 sm:max-w-md md:max-w-lg"
             >
                 <div>
                     {/* Header */}
-                    <SheetHeader className="p-6 border-b border-slate-200/80 bg-slate-50/50 dark:border-slate-800/80 dark:bg-slate-900/50">
+                    <SheetHeader className="border-b border-slate-200/80 bg-slate-50/50 p-6 dark:border-slate-800/80 dark:bg-slate-900/50">
                         <div className="flex items-center justify-between gap-2">
                             <Badge
                                 variant="outline"
-                                className="text-xs font-bold border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300"
+                                className="border-blue-200 bg-blue-50 text-xs font-bold text-blue-700 dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300"
                             >
                                 <Tag className="mr-1 size-3" />
                                 {catName}
@@ -146,11 +146,11 @@ export function StudyTaskDrawer({
                             </button>
                         </div>
 
-                        <SheetTitle className="text-lg font-black text-slate-900 dark:text-white mt-3">
+                        <SheetTitle className="mt-3 text-lg font-black text-slate-900 dark:text-white">
                             {task.title}
                         </SheetTitle>
 
-                        <SheetDescription className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mt-1">
+                        <SheetDescription className="mt-1 flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
                             <span className="flex items-center gap-1">
                                 <Calendar className="size-3.5" />
                                 {dateStr}
@@ -165,9 +165,9 @@ export function StudyTaskDrawer({
                     </SheetHeader>
 
                     {/* Body */}
-                    <div className="p-6 space-y-5">
+                    <div className="space-y-5 p-6">
                         {/* 1-Click Drill Launcher Card */}
-                        <div className="rounded-2xl border border-indigo-200/80 bg-gradient-to-br from-indigo-50/80 via-blue-50/40 to-indigo-50/80 p-4.5 dark:border-indigo-900/50 dark:from-indigo-950/40 dark:via-blue-950/20 dark:to-indigo-950/40 shadow-2xs">
+                        <div className="rounded-2xl border border-indigo-200/80 bg-gradient-to-br from-indigo-50/80 via-blue-50/40 to-indigo-50/80 p-4.5 shadow-2xs dark:border-indigo-900/50 dark:from-indigo-950/40 dark:via-blue-950/20 dark:to-indigo-950/40">
                             <div className="flex items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
                                     <div className="flex size-8 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-2xs">
@@ -178,7 +178,8 @@ export function StudyTaskDrawer({
                                             Targeted Practice Drill
                                         </h4>
                                         <p className="text-[11px] text-slate-600 dark:text-slate-400">
-                                            15 High-Yield Questions with Rationales
+                                            15 High-Yield Questions with
+                                            Rationales
                                         </p>
                                     </div>
                                 </div>
@@ -186,7 +187,7 @@ export function StudyTaskDrawer({
                                 <Button
                                     asChild
                                     size="sm"
-                                    className="h-8.5 gap-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-2xs shrink-0"
+                                    className="h-8.5 shrink-0 gap-1.5 bg-indigo-600 text-xs font-bold text-white shadow-2xs hover:bg-indigo-700"
                                 >
                                     <Link href={drillUrl}>
                                         <Play className="size-3.5 fill-current" />
@@ -199,7 +200,7 @@ export function StudyTaskDrawer({
                         {/* Description / Study Notes */}
                         {cleanDescription && (
                             <div className="space-y-2">
-                                <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
+                                <h4 className="text-xs font-bold tracking-wider text-slate-700 uppercase dark:text-slate-300">
                                     Study Notes & Objectives
                                 </h4>
                                 <div className="rounded-xl border border-slate-200/80 bg-white p-3.5 text-xs leading-relaxed text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
@@ -211,7 +212,7 @@ export function StudyTaskDrawer({
                         {/* Attached Learning Modules */}
                         {attachedModuleList.length > 0 && (
                             <div className="space-y-2">
-                                <h4 className="flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
+                                <h4 className="flex items-center gap-1.5 text-xs font-bold tracking-wider text-slate-700 uppercase dark:text-slate-300">
                                     <BookOpen className="size-3.5 text-blue-500" />
                                     <span>Learning Modules & References</span>
                                 </h4>
@@ -220,15 +221,15 @@ export function StudyTaskDrawer({
                                         <Link
                                             key={i}
                                             href={mod.url}
-                                            className="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 text-xs font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50/50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-blue-700 dark:hover:bg-blue-950/30 shadow-2xs"
+                                            className="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 text-xs font-semibold text-slate-800 shadow-2xs transition hover:border-blue-300 hover:bg-blue-50/50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-blue-700 dark:hover:bg-blue-950/30"
                                         >
                                             <div className="flex items-center gap-2 truncate pr-2">
-                                                <BookOpen className="size-4 text-blue-600 shrink-0 dark:text-blue-400" />
+                                                <BookOpen className="size-4 shrink-0 text-blue-600 dark:text-blue-400" />
                                                 <span className="truncate">
                                                     {mod.title}
                                                 </span>
                                             </div>
-                                            <ExternalLink className="size-3.5 text-slate-400 shrink-0" />
+                                            <ExternalLink className="size-3.5 shrink-0 text-slate-400" />
                                         </Link>
                                     ))}
                                 </div>
@@ -238,7 +239,7 @@ export function StudyTaskDrawer({
                 </div>
 
                 {/* Footer Controls */}
-                <div className="p-4 border-t border-slate-200 bg-slate-50/60 dark:border-slate-800 dark:bg-slate-900/60 flex items-center justify-between gap-2">
+                <div className="flex items-center justify-between gap-2 border-t border-slate-200 bg-slate-50/60 p-4 dark:border-slate-800 dark:bg-slate-900/60">
                     <Button
                         type="button"
                         variant="outline"
@@ -247,9 +248,9 @@ export function StudyTaskDrawer({
                             onDelete(task.id, dateStr);
                             onOpenChange(false);
                         }}
-                        className="h-8.5 text-xs font-bold border-rose-200 text-rose-600 hover:bg-rose-50 hover:text-rose-700 dark:border-rose-900/40 dark:text-rose-400 dark:hover:bg-rose-950/30"
+                        className="h-8.5 border-rose-200 text-xs font-bold text-rose-600 hover:bg-rose-50 hover:text-rose-700 dark:border-rose-900/40 dark:text-rose-400 dark:hover:bg-rose-950/30"
                     >
-                        <Trash2 className="size-3.5 mr-1" />
+                        <Trash2 className="mr-1 size-3.5" />
                         Delete
                     </Button>
 
@@ -264,14 +265,14 @@ export function StudyTaskDrawer({
                             }}
                             className="h-8.5 text-xs font-bold"
                         >
-                            <Edit3 className="size-3.5 mr-1" />
+                            <Edit3 className="mr-1 size-3.5" />
                             Edit Task
                         </Button>
                         <Button
                             type="button"
                             size="sm"
                             onClick={() => onOpenChange(false)}
-                            className="h-8.5 text-xs font-bold bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900"
+                            className="h-8.5 bg-slate-900 text-xs font-bold text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900"
                         >
                             Close
                         </Button>

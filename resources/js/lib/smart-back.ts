@@ -34,6 +34,7 @@ export function getOriginTitle(pathOrName: string): string {
             if (base) {
                 return base.charAt(0).toUpperCase() + base.slice(1);
             }
+
             return 'Home';
     }
 }
@@ -42,38 +43,52 @@ export function getOriginTitle(pathOrName: string): string {
  * Resolves the referring origin href and title from URL query params (?from=)
  * or previous in-app navigation history.
  */
-export function resolveOriginFromUrl(currentUrl?: string): { href: string; title: string } | null {
+export function resolveOriginFromUrl(
+    currentUrl?: string,
+): { href: string; title: string } | null {
     if (typeof window === 'undefined') {
         return null;
     }
 
-    const search = currentUrl && currentUrl.includes('?')
-        ? currentUrl.split('?')[1]
-        : window.location.search;
+    const search =
+        currentUrl && currentUrl.includes('?')
+            ? currentUrl.split('?')[1]
+            : window.location.search;
 
     const params = new URLSearchParams(search);
-    const fromParam = params.get('from') || params.get('return_to') || params.get('origin');
+    const fromParam =
+        params.get('from') || params.get('return_to') || params.get('origin');
 
     if (fromParam) {
         const href = fromParam.startsWith('/') ? fromParam : `/${fromParam}`;
         const title = getOriginTitle(fromParam);
+
         return { href, title };
     }
 
     const sessionOrigin = getSessionOrigin();
+
     if (sessionOrigin) {
-        const href = sessionOrigin.startsWith('/') ? sessionOrigin : `/${sessionOrigin}`;
+        const href = sessionOrigin.startsWith('/')
+            ? sessionOrigin
+            : `/${sessionOrigin}`;
         const title = getOriginTitle(sessionOrigin);
+
         return { href, title };
     }
 
     const backLocation = getBackLocation();
+
     if (backLocation) {
         const currentPath = window.location.pathname;
         const backPath = backLocation.split('?')[0];
 
         // Only treat as origin if it was a distinct base page
-        if (backPath !== currentPath && !backPath.includes('/login') && !backPath.includes('/register')) {
+        if (
+            backPath !== currentPath &&
+            !backPath.includes('/login') &&
+            !backPath.includes('/register')
+        ) {
             return {
                 href: backLocation,
                 title: getOriginTitle(backLocation),

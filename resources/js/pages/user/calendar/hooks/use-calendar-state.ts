@@ -119,11 +119,13 @@ export function useCalendarState(initialProps: CalendarPageProps) {
 
     const isSnoozed = useCallback(() => {
         if (typeof window === 'undefined') {
-return false;
-}
+            return false;
+        }
 
         try {
-            const snoozedUntil = localStorage.getItem('study_plan_reminder_snoozed_until');
+            const snoozedUntil = localStorage.getItem(
+                'study_plan_reminder_snoozed_until',
+            );
 
             if (snoozedUntil && new Date(snoozedUntil).getTime() > Date.now()) {
                 return true;
@@ -427,12 +429,7 @@ return false;
         }
 
         return days;
-    }, [
-        selectedWeekDate,
-        schedules,
-        filterScheduleByCategory,
-        currentDate,
-    ]);
+    }, [selectedWeekDate, schedules, filterScheduleByCategory, currentDate]);
 
     const weekRangeLabel = useMemo(() => {
         if (currentWeekDays.length < 7) {
@@ -442,7 +439,9 @@ return false;
         const start = new Date(currentWeekDays[0].date + 'T00:00:00');
         const end = new Date(currentWeekDays[6].date + 'T00:00:00');
 
-        const startMonth = start.toLocaleDateString('en-US', { month: 'short' });
+        const startMonth = start.toLocaleDateString('en-US', {
+            month: 'short',
+        });
         const endMonth = end.toLocaleDateString('en-US', { month: 'short' });
 
         if (startMonth === endMonth) {
@@ -790,7 +789,8 @@ return false;
             } else {
                 const data = await response.json().catch(() => ({}));
                 setErrorMessage(
-                    data.message || 'Failed to update study item. Please try again.',
+                    data.message ||
+                        'Failed to update study item. Please try again.',
                 );
             }
         } catch {
@@ -960,7 +960,9 @@ return false;
 
     const toggleSelectSchedule = useCallback((id: number) => {
         setSelectedScheduleIds((prev) =>
-            prev.includes(id) ? prev.filter((itemId) => itemId !== id) : [...prev, id],
+            prev.includes(id)
+                ? prev.filter((itemId) => itemId !== id)
+                : [...prev, id],
         );
     }, []);
 
@@ -984,7 +986,11 @@ return false;
             date?: string;
             title?: string;
         }) => {
-            const count = ids ? ids.length : scope === 'overdue' ? pastPending.length : 0;
+            const count = ids
+                ? ids.length
+                : scope === 'overdue'
+                  ? pastPending.length
+                  : 0;
             const countText =
                 count > 0
                     ? `${count} study session${count > 1 ? 's' : ''}`

@@ -588,14 +588,21 @@ export function AIGeneratorPanel({
                                                             </td>
                                                             <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
                                                                 Google Gemini
-                                                                3.7 Flash / 3.7 Pro
+                                                                3.7 Flash / 3.7
+                                                                Pro
                                                             </td>
                                                             <td className="p-3 text-muted-foreground">
-                                                                Unmatched spatial-visual
-                                                                awareness for generating
-                                                                precise, error-free raw SVG
-                                                                coordinates and complex
-                                                                geometric rotation patterns.
+                                                                Unmatched
+                                                                spatial-visual
+                                                                awareness for
+                                                                generating
+                                                                precise,
+                                                                error-free raw
+                                                                SVG coordinates
+                                                                and complex
+                                                                geometric
+                                                                rotation
+                                                                patterns.
                                                             </td>
                                                         </tr>
                                                         <tr className="bg-blue-500/5">
@@ -605,15 +612,17 @@ export function AIGeneratorPanel({
                                                             </td>
                                                             <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
                                                                 Google Gemini
-                                                                3.7 Flash / 3.7 Pro
+                                                                3.7 Flash / 3.7
+                                                                Pro
                                                             </td>
                                                             <td className="p-3 text-muted-foreground">
                                                                 Renders clean,
                                                                 proportional
                                                                 coordinate axes,
-                                                                labels, tables, bar
-                                                                charts, and pie
-                                                                charts via accurate SVG
+                                                                labels, tables,
+                                                                bar charts, and
+                                                                pie charts via
+                                                                accurate SVG
                                                                 code.
                                                             </td>
                                                         </tr>
@@ -623,14 +632,17 @@ export function AIGeneratorPanel({
                                                             </td>
                                                             <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
                                                                 Google Gemini
-                                                                3.7 Flash / 3.7 Pro
+                                                                3.7 Flash / 3.7
+                                                                Pro
                                                             </td>
                                                             <td className="p-3 text-muted-foreground">
                                                                 Superb semantic
                                                                 understanding of
-                                                                word relationship
-                                                                pairs, nuances, and
-                                                                distractor choices.
+                                                                word
+                                                                relationship
+                                                                pairs, nuances,
+                                                                and distractor
+                                                                choices.
                                                             </td>
                                                         </tr>
                                                         <tr className="bg-blue-500/5">
@@ -641,13 +653,16 @@ export function AIGeneratorPanel({
                                                             </td>
                                                             <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
                                                                 Google Gemini
-                                                                3.7 Pro / 3.7 Flash
+                                                                3.7 Pro / 3.7
+                                                                Flash
                                                             </td>
                                                             <td className="p-3 text-muted-foreground">
                                                                 Superior
                                                                 deductive and
-                                                                syllogistic logic for
-                                                                detecting unstated
+                                                                syllogistic
+                                                                logic for
+                                                                detecting
+                                                                unstated
                                                                 premises and
                                                                 drawing valid
                                                                 inferences.
@@ -692,9 +707,10 @@ export function AIGeneratorPanel({
                                                                 mathematical
                                                                 patterns (+3,
                                                                 x2, fibonacci,
-                                                                alternating series)
-                                                                and explains
-                                                                them clearly.
+                                                                alternating
+                                                                series) and
+                                                                explains them
+                                                                clearly.
                                                             </td>
                                                         </tr>
                                                         <tr className="bg-amber-500/5">
@@ -703,16 +719,18 @@ export function AIGeneratorPanel({
                                                             </td>
                                                             <td className="p-3 font-bold text-amber-600 dark:text-amber-400">
                                                                 Google Gemini
-                                                                3.7 Pro / 3.7 Flash
+                                                                3.7 Pro / 3.7
+                                                                Flash
                                                             </td>
                                                             <td className="p-3 text-muted-foreground">
                                                                 Superb at
                                                                 interpreting
                                                                 multi-variable
-                                                                word scenarios (work
-                                                                rates, age
-                                                                problems, mixtures)
-                                                                into clear equations.
+                                                                word scenarios
+                                                                (work rates, age
+                                                                problems,
+                                                                mixtures) into
+                                                                clear equations.
                                                             </td>
                                                         </tr>
                                                         {/* General Information */}
@@ -906,7 +924,8 @@ export function AIGeneratorPanel({
                                                             </td>
                                                             <td className="p-3 font-bold text-purple-600 dark:text-purple-400">
                                                                 Google Gemini
-                                                                3.7 Pro / 3.7 Flash
+                                                                3.7 Pro / 3.7
+                                                                Flash
                                                             </td>
                                                             <td className="p-3 text-muted-foreground">
                                                                 Can synthesize

@@ -1,4 +1,4 @@
-import { Head, Link, usePage, router } from '@inertiajs/react';
+import { Head, usePage, router } from '@inertiajs/react';
 import {
     ChevronLeft,
     ChevronRight,
@@ -13,12 +13,9 @@ import {
     RotateCcw,
     CheckCircle2,
     Lock,
-    Brain,
     Check,
     Target,
     Lightbulb,
-    Sparkles,
-    ArrowRight,
     Bookmark,
 } from 'lucide-react';
 import React, {
@@ -29,7 +26,10 @@ import React, {
     useRef,
 } from 'react';
 import { ReportIssueModal } from '@/components/domain/report-issue-modal';
-import { renderFormattedText, extractPropositions } from '@/lib/exam-formatters';
+import {
+    renderFormattedText,
+    extractPropositions,
+} from '@/lib/exam-formatters';
 import { makeBackOnClick } from '@/lib/smart-back';
 import { useContentShield } from '../hooks/use-content-shield';
 import type {
@@ -86,50 +86,63 @@ export function ReviewExamView({
     setIsMobilePaletteOpen,
     setReviewScreenActive,
 }: ReviewExamViewProps) {
-    const isCurrentMatch = (q: Question | undefined, idx: number) => {
-        if (!q) {
-            return false;
-        }
+    const isCurrentMatch = useCallback(
+        (q: Question | undefined, idx: number) => {
+            if (!q) {
+                return false;
+            }
 
-        if (
-            reviewCategoryFilter !== 'All Categories' &&
-            q.category !== reviewCategoryFilter
-        ) {
-            return false;
-        }
+            if (
+                reviewCategoryFilter !== 'All Categories' &&
+                q.category !== reviewCategoryFilter
+            ) {
+                return false;
+            }
 
-        if (
-            reviewSubcategoryFilter !== 'All Subcategories' &&
-            (q.subcategory || 'General Concepts') !== reviewSubcategoryFilter
-        ) {
-            return false;
-        }
+            if (
+                reviewSubcategoryFilter !== 'All Subcategories' &&
+                (q.subcategory || 'General Concepts') !==
+                    reviewSubcategoryFilter
+            ) {
+                return false;
+            }
 
-        const chosen = answers[idx];
-        const isCorrect =
-            chosen !== undefined &&
-            chosen !== null &&
-            Number(chosen) === Number(q.correct_option);
-        const isDemographic =
-            q.category === 'Demographic Profile' || q.isDemographic;
+            const chosen = answers[idx];
+            const isCorrect =
+                chosen !== undefined &&
+                chosen !== null &&
+                Number(chosen) === Number(q.correct_option);
+            const isDemographic =
+                q.category === 'Demographic Profile' || q.isDemographic;
 
-        if (reviewStatusFilter === 'correct' && (isDemographic || !isCorrect)) {
-            return false;
-        }
+            if (
+                reviewStatusFilter === 'correct' &&
+                (isDemographic || !isCorrect)
+            ) {
+                return false;
+            }
 
-        if (
-            reviewStatusFilter === 'incorrect' &&
-            (isDemographic || isCorrect)
-        ) {
-            return false;
-        }
+            if (
+                reviewStatusFilter === 'incorrect' &&
+                (isDemographic || isCorrect)
+            ) {
+                return false;
+            }
 
-        if (reviewStatusFilter === 'flagged' && !flagged[idx]) {
-            return false;
-        }
+            if (reviewStatusFilter === 'flagged' && !flagged[idx]) {
+                return false;
+            }
 
-        return true;
-    };
+            return true;
+        },
+        [
+            reviewCategoryFilter,
+            reviewSubcategoryFilter,
+            answers,
+            reviewStatusFilter,
+            flagged,
+        ],
+    );
 
     const rawQuestion = activeQuestions[currentIdx];
     const currentQuestion = isCurrentMatch(rawQuestion, currentIdx)
@@ -215,15 +228,17 @@ export function ReviewExamView({
         };
     }, []);
 
-    const [savedBookmarks, setSavedBookmarks] = useState<Record<number, boolean>>({});
+    const [savedBookmarks, setSavedBookmarks] = useState<
+        Record<number, boolean>
+    >({});
     const [isBookmarkDialogOpen, setIsBookmarkDialogOpen] = useState(false);
 
     const wrongQuestionIds = useMemo(() => {
         return activeQuestions
             .filter((q, idx) => {
                 if (q.category === 'Demographic Profile' || q.isDemographic) {
-return false;
-}
+                    return false;
+                }
 
                 const chosen = answers[idx];
 
@@ -238,8 +253,8 @@ return false;
 
     const handleDrillCurrentTopic = (q: Question | undefined) => {
         if (!q) {
-return;
-}
+            return;
+        }
 
         const params = new URLSearchParams();
         params.set('drill', 'true');
@@ -256,8 +271,8 @@ return;
 
     const handleDrillAllMistakes = () => {
         if (wrongQuestionIds.length === 0) {
-return;
-}
+            return;
+        }
 
         const params = new URLSearchParams();
         params.set('drill', 'true');
@@ -491,11 +506,7 @@ return;
     }, []);
 
     const findFirstMatchingIndex = useCallback(
-        (
-            category: string,
-            subcategory: string,
-            status: ReviewStatusFilter,
-        ) => {
+        (category: string, subcategory: string, status: ReviewStatusFilter) => {
             return activeQuestions.findIndex((q, idx) => {
                 if (category !== 'All Categories' && q.category !== category) {
                     return false;
@@ -621,6 +632,7 @@ return;
         reviewSubcategoryFilter,
         reviewStatusFilter,
         findFirstMatchingIndex,
+        isCurrentMatch,
         activeQuestions,
         currentIdx,
         setCurrentIdx,
@@ -871,10 +883,13 @@ return;
                                     type="button"
                                     onClick={handleDrillAllMistakes}
                                     title={`Start an instant practice session targeting the ${wrongQuestionIds.length} questions you missed`}
-                                    className="hidden sm:inline-flex cursor-pointer items-center gap-1.5 rounded-lg bg-rose-600 px-3 py-1.5 text-xs font-bold text-white shadow-xs transition hover:bg-rose-700 active:scale-95"
+                                    className="hidden cursor-pointer items-center gap-1.5 rounded-lg bg-rose-600 px-3 py-1.5 text-xs font-bold text-white shadow-xs transition hover:bg-rose-700 active:scale-95 sm:inline-flex"
                                 >
                                     <RotateCcw className="size-3.5" />
-                                    <span>Drill Mistakes ({wrongQuestionIds.length})</span>
+                                    <span>
+                                        Drill Mistakes (
+                                        {wrongQuestionIds.length})
+                                    </span>
                                 </button>
                             )}
 
@@ -1217,7 +1232,8 @@ return;
                                                                     title="Report is currently under admin review"
                                                                 >
                                                                     <Clock className="size-3.5 text-amber-600 dark:text-amber-400" />
-                                                                    Report Pending
+                                                                    Report
+                                                                    Pending
                                                                 </span>
                                                             );
                                                         }
@@ -1225,29 +1241,47 @@ return;
                                                         return (
                                                             <div className="flex flex-wrap items-center gap-1.5">
                                                                 <button
-                                                                    onClick={() => setIsBookmarkDialogOpen(true)}
-                                                                    className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] font-bold text-blue-600 transition hover:bg-blue-50 hover:border-blue-200 focus:outline-none dark:text-blue-400 dark:hover:bg-blue-950/20 dark:hover:border-blue-900/50"
+                                                                    onClick={() =>
+                                                                        setIsBookmarkDialogOpen(
+                                                                            true,
+                                                                        )
+                                                                    }
+                                                                    className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] font-bold text-blue-600 transition hover:border-blue-200 hover:bg-blue-50 focus:outline-none dark:text-blue-400 dark:hover:border-blue-900/50 dark:hover:bg-blue-950/20"
                                                                 >
-                                                                    {savedBookmarks[currentQuestion.id] ? (
+                                                                    {savedBookmarks[
+                                                                        currentQuestion
+                                                                            .id
+                                                                    ] ? (
                                                                         <>
                                                                             <Check className="size-3.5 text-emerald-600" />
-                                                                            <span>Bookmarked</span>
+                                                                            <span>
+                                                                                Bookmarked
+                                                                            </span>
                                                                         </>
                                                                     ) : (
                                                                         <>
                                                                             <Bookmark className="size-3.5" />
-                                                                            <span>Bookmark</span>
+                                                                            <span>
+                                                                                Bookmark
+                                                                            </span>
                                                                         </>
                                                                     )}
                                                                 </button>
                                                                 <button
                                                                     type="button"
-                                                                    onClick={() => handleDrillCurrentTopic(currentQuestion)}
-                                                                    className="hidden sm:inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-amber-200 bg-amber-50/60 px-2.5 py-1.5 text-[11px] font-bold text-amber-800 transition hover:bg-amber-100 hover:border-amber-300 focus:outline-none dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-300 dark:hover:bg-amber-950/60"
+                                                                    onClick={() =>
+                                                                        handleDrillCurrentTopic(
+                                                                            currentQuestion,
+                                                                        )
+                                                                    }
+                                                                    className="hidden cursor-pointer items-center gap-1.5 rounded-lg border border-amber-200 bg-amber-50/60 px-2.5 py-1.5 text-[11px] font-bold text-amber-800 transition hover:border-amber-300 hover:bg-amber-100 focus:outline-none sm:inline-flex dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-300 dark:hover:bg-amber-950/60"
                                                                     title={`Launch 10-question practice drill on ${currentQuestion.subcategory || currentQuestion.category}`}
                                                                 >
                                                                     <Target className="size-3.5 text-amber-600 dark:text-amber-400" />
-                                                                    <span>Drill Topic</span>
+                                                                    <span>
+                                                                        Drill
+                                                                        Topic
+                                                                    </span>
                                                                 </button>
                                                                 <button
                                                                     onClick={() =>
@@ -1258,7 +1292,9 @@ return;
                                                                     className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg px-2 py-1.5 text-[11px] font-bold text-muted-foreground transition hover:bg-muted hover:text-amber-600 focus:outline-none dark:hover:text-amber-400"
                                                                 >
                                                                     <Flag className="size-3.5" />
-                                                                    <span className="hidden sm:inline">Report</span>
+                                                                    <span className="hidden sm:inline">
+                                                                        Report
+                                                                    </span>
                                                                 </button>
                                                             </div>
                                                         );
@@ -1336,7 +1372,7 @@ return;
                                                             {letter}
                                                         </span>
                                                         <div className="flex flex-1 items-center justify-between gap-3">
-                                                            <p className="text-sm sm:text-base leading-relaxed font-bold transition">
+                                                            <p className="text-sm leading-relaxed font-bold transition sm:text-base">
                                                                 {renderFormattedText(
                                                                     opt,
                                                                     false,
@@ -1349,11 +1385,14 @@ return;
                                                                     <div className="flex shrink-0 items-center gap-1.5 pl-2">
                                                                         {isChosen ? (
                                                                             <span className="hidden rounded-full bg-emerald-100 px-2 py-0.5 text-[9px] font-black tracking-wider text-emerald-800 uppercase sm:inline-block dark:bg-emerald-950 dark:text-emerald-300">
-                                                                                Your Answer (Correct)
+                                                                                Your
+                                                                                Answer
+                                                                                (Correct)
                                                                             </span>
                                                                         ) : (
                                                                             <span className="hidden rounded-full bg-emerald-100 px-2 py-0.5 text-[9px] font-black tracking-wider text-emerald-800 uppercase sm:inline-block dark:bg-emerald-950 dark:text-emerald-300">
-                                                                                Correct Answer
+                                                                                Correct
+                                                                                Answer
                                                                             </span>
                                                                         )}
                                                                         <CheckCircle2 className="size-5 text-emerald-600 dark:text-emerald-400" />
@@ -1364,7 +1403,9 @@ return;
                                                                 !isCorrectOption && (
                                                                     <div className="flex shrink-0 items-center gap-1.5 pl-2">
                                                                         <span className="hidden rounded-full bg-rose-100 px-2 py-0.5 text-[9px] font-black tracking-wider text-rose-800 uppercase sm:inline-block dark:bg-rose-950 dark:text-rose-300">
-                                                                            Your Answer (Incorrect)
+                                                                            Your
+                                                                            Answer
+                                                                            (Incorrect)
                                                                         </span>
                                                                         <X className="size-5 text-rose-600 dark:text-rose-400" />
                                                                     </div>
@@ -1409,7 +1450,10 @@ return;
                                                             <div className="flex items-center gap-2">
                                                                 <Lightbulb className="size-4 text-amber-500" />
                                                                 <span className="font-heading text-sm font-bold">
-                                                                    Explanation &amp; Concept Rationale
+                                                                    Explanation
+                                                                    &amp;
+                                                                    Concept
+                                                                    Rationale
                                                                 </span>
                                                             </div>
                                                             <div className="flex items-center gap-2">
@@ -1432,7 +1476,8 @@ return;
                                                                     0 && (
                                                                     <div className="shadow-3xs mb-4 rounded-xl border border-border bg-background p-4">
                                                                         <span className="mb-2 block font-heading text-[10px] font-black tracking-wider text-muted-foreground uppercase">
-                                                                            Proposition Key:
+                                                                            Proposition
+                                                                            Key:
                                                                         </span>
                                                                         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                                                                             {propositions.map(
@@ -1471,7 +1516,7 @@ return;
                                                                     </div>
                                                                 )}
 
-                                                                <div className="text-foreground leading-relaxed">
+                                                                <div className="leading-relaxed text-foreground">
                                                                     {renderFormattedText(
                                                                         currentQuestion.explanation,
                                                                         false,
@@ -1493,7 +1538,8 @@ return;
                                         No questions match filters
                                     </h3>
                                     <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                                        Try switching to a different category or status filter.
+                                        Try switching to a different category or
+                                        status filter.
                                     </p>
                                 </div>
                             )}
@@ -1554,7 +1600,9 @@ return;
                         reviewStatusFilter={reviewStatusFilter}
                         reviewSubcategoryFilter={reviewSubcategoryFilter}
                         onReviewStatusChange={handleStatusFilterChange}
-                        onReviewSubcategoryChange={handleSubcategoryFilterChange}
+                        onReviewSubcategoryChange={
+                            handleSubcategoryFilterChange
+                        }
                         reviewSubcategories={reviewSubcategories}
                         isMobile={false}
                         isCollapsed={isPaletteCollapsed}
@@ -1579,7 +1627,9 @@ return;
                         reviewStatusFilter={reviewStatusFilter}
                         reviewSubcategoryFilter={reviewSubcategoryFilter}
                         onReviewStatusChange={handleStatusFilterChange}
-                        onReviewSubcategoryChange={handleSubcategoryFilterChange}
+                        onReviewSubcategoryChange={
+                            handleSubcategoryFilterChange
+                        }
                         reviewSubcategories={reviewSubcategories}
                         isMobile={true}
                         onCloseMobile={() => setIsMobilePaletteOpen(false)}
@@ -1600,7 +1650,10 @@ return;
                     onOpenChange={setIsBookmarkDialogOpen}
                     question={currentQuestion ?? null}
                     onSaved={(questionId) => {
-                        setSavedBookmarks((prev) => ({ ...prev, [questionId]: true }));
+                        setSavedBookmarks((prev) => ({
+                            ...prev,
+                            [questionId]: true,
+                        }));
                     }}
                 />
             </div>

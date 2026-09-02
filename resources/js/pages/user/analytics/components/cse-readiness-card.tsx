@@ -39,8 +39,10 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
     const coveredCount = stats.coveredCategoriesCount ?? 0;
 
     // Determine readiness level
-    const isPassing = !isIncompleteSyllabus && readinessIndex >= 80 && !hasSubtestRisk;
-    const isMarginal = !isIncompleteSyllabus && readinessIndex >= 70 && !hasSubtestRisk;
+    const isPassing =
+        !isIncompleteSyllabus && readinessIndex >= 80 && !hasSubtestRisk;
+    const isMarginal =
+        !isIncompleteSyllabus && readinessIndex >= 70 && !hasSubtestRisk;
 
     const statusBadge = isIncompleteSyllabus
         ? {
@@ -73,17 +75,17 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                 };
 
     return (
-        <Card className="relative overflow-hidden border border-slate-200/80 bg-gradient-to-br from-white via-slate-50/50 to-blue-50/30 p-5 shadow-sm dark:border-slate-800 dark:from-slate-900 dark:via-slate-900/90 dark:to-indigo-950/20 sm:p-6">
+        <Card className="relative overflow-hidden border border-slate-200/80 bg-gradient-to-br from-white via-slate-50/50 to-blue-50/30 p-5 shadow-sm sm:p-6 dark:border-slate-800 dark:from-slate-900 dark:via-slate-900/90 dark:to-indigo-950/20">
             {/* Top Row: Readiness Index, Status, Percentile, Countdown */}
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 {/* Left: Overall Readiness Gauge & Core Status */}
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
                     {/* Score Circle / Metric */}
                     <div className="relative flex size-24 shrink-0 flex-col items-center justify-center rounded-2xl border-2 border-primary/20 bg-primary/5 shadow-inner sm:size-28">
-                        <span className="font-heading text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+                        <span className="font-heading text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
                             {readinessIndex}%
                         </span>
-                        <span className="text-[10px] font-extrabold uppercase tracking-wider text-muted-foreground">
+                        <span className="text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
                             Readiness
                         </span>
                     </div>
@@ -109,7 +111,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                         </div>
 
                         <div>
-                            <h2 className="text-base font-black text-slate-900 dark:text-white sm:text-lg">
+                            <h2 className="text-base font-black text-slate-900 sm:text-lg dark:text-white">
                                 Civil Service Exam Passing Readiness
                             </h2>
                             <p className="text-xs font-medium text-muted-foreground sm:text-sm">

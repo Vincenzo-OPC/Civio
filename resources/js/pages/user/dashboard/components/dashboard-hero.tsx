@@ -43,7 +43,7 @@ export function DashboardHero({
         <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-slate-50/50 to-blue-50/40 p-5 shadow-sm sm:p-7 dark:border-slate-800/80 dark:from-slate-900/90 dark:via-slate-900/50 dark:to-blue-950/20">
             {/* Background Decorative Glow Elements */}
             <div
-                className="pointer-events-none absolute -right-16 -top-16 size-64 rounded-full bg-blue-500/10 blur-3xl dark:bg-blue-500/15"
+                className="pointer-events-none absolute -top-16 -right-16 size-64 rounded-full bg-blue-500/10 blur-3xl dark:bg-blue-500/15"
                 aria-hidden="true"
             />
             <div
@@ -75,7 +75,7 @@ export function DashboardHero({
                                 {firstName}
                             </span>
                         </h1>
-                        <p className="mt-1.5 max-w-2xl text-sm font-medium leading-relaxed text-slate-600 sm:text-base dark:text-slate-300">
+                        <p className="mt-1.5 max-w-2xl text-sm leading-relaxed font-medium text-slate-600 sm:text-base dark:text-slate-300">
                             {motivation}
                         </p>
                     </div>
@@ -90,7 +90,7 @@ export function DashboardHero({
                             </div>
                             <div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                                    <span className="text-xs font-bold tracking-wider text-slate-500 uppercase dark:text-slate-400">
                                         Civil Service Exam
                                     </span>
                                     <span className="inline-flex items-center rounded-md bg-blue-100 px-1.5 py-0.5 text-[10px] font-extrabold text-blue-800 dark:bg-blue-950 dark:text-blue-300">
