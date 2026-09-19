@@ -5,6 +5,7 @@ use App\DTOs\Feedback\SubmitFeedbackData;
 use App\DTOs\Feedback\UpdateFeedbackStatusData;
 use App\DTOs\Support\SupportMessageData;
 use App\DTOs\User\UpdateUserData;
+use App\Enums\UserRole;
 use App\Mail\SupportSubmittedMail;
 use App\Models\Feedback;
 use App\Models\Question;
@@ -121,7 +122,7 @@ test('user service prevents self-demotion, self-deactivation, and self-deletion'
     );
 
     $student->refresh();
-    expect($student->role)->toBe('admin')
+    expect($student->role)->toBe(UserRole::Admin)
         ->and($student->is_active)->toBeFalse();
 
     $service->deleteUser($student->id, $admin->id);

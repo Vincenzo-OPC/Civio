@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Resources;
 
+use App\Enums\QuestionLanguage;
 use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -27,10 +28,11 @@ class DrillQuestionResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        $languageRaw = strtolower((string) ($this->language ?? ''));
-        $language = (str_contains($languageRaw, 'tagalog') || str_contains($languageRaw, 'filipino'))
-            ? 'Filipino'
-            : 'English';
+        $rawLang = $this->language instanceof QuestionLanguage
+            ? $this->language->value
+            : (string) ($this->language ?? '');
+
+        $language = QuestionLanguage::fromRaw($rawLang)->value;
 
         $data = [
             'id' => $this->id,

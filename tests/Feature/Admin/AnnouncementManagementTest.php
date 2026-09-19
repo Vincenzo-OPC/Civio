@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 beforeEach(function () {
     Route::middleware(['auth', 'verified'])->group(function () {
         $checkAdmin = function () {
-            if (auth()->user()->role !== 'admin') {
+            if (! auth()->user()->isAdmin()) {
                 abort(403);
             }
         };

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Resources;
 
+use App\Enums\UserRole;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -24,7 +25,7 @@ class AdminUserResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'email' => $this->email,
-            'role' => $this->role ?? 'student',
+            'role' => $this->role instanceof UserRole ? $this->role->value : ($this->role ?? 'user'),
             'created_at' => $this->created_at ? $this->created_at->format('Y-m-d H:i') : 'N/A',
             'last_login_at' => $this->last_login_at ? $this->last_login_at->format('Y-m-d H:i') : 'Never',
             'is_active' => (bool) $this->is_active,

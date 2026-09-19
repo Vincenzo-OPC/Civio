@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Enums\UserRole;
 use App\Models\RolePermission;
 use Closure;
 use Illuminate\Http\Request;
@@ -40,7 +41,7 @@ class CheckViewAccess
             })->toArray();
         });
 
-        $userRole = $user->role ?? 'user';
+        $userRole = $user->role instanceof UserRole ? $user->role->value : ($user->role ?? 'user');
         $rolePermissions = $permissions[$userRole] ?? [];
 
         // Check if the current route matches any of the managed views

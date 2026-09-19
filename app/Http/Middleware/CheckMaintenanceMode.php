@@ -34,7 +34,7 @@ class CheckMaintenanceMode extends BaseMiddleware
         if ($this->app->maintenanceMode()->active()) {
 
             // 1. Allow if user is already authenticated as an Admin
-            if ($request->user() && $request->user()->role === 'admin') {
+            if ($request->user() && $request->user()->isAdmin()) {
                 return $next($request);
             }
 

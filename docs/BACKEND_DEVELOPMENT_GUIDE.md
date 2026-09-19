@@ -618,25 +618,42 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
 
 ---
 
-### ⏳ 8. Controller Query Eradication & Filter Standardization (Status: AUDITED / IN PROGRESS)
+### ✅ 8. Controller Query Eradication & Filter Standardization (Status: COMPLETED)
 *Target: Eliminate all remaining raw Eloquent database queries and ad-hoc loose `$filters` arrays in controllers.*
 
-#### Audit Findings in `app/Http/Controllers`:
-1. **`Admin/LearnController.php`**:
-   - `create()` & `edit()`: Direct `Category::with('subcategory')->orderBy('sort_order')->get()` -> Move to `CategoryService::getCategoriesWithSubcategories()`.
-   - `edit()`, `update()`, `destroy()`: Direct `LearnModule::findOrFail($id)` -> Use `$this->service->getModule($id)`.
-   - `index()` & `drafts()`: Manual loose `$filters = [...]` arrays -> Introduce `LearnFilterData::fromRequest($request)`.
-   - `edit()`: Inline array transformation for `$module` -> Use `AdminLearnModuleResource`.
-2. **`Admin/DashboardController.php`**:
-   - Multiple raw Eloquent queries (`Question::where(...)`, `ExamAttempt::where(...)`, `User::where(...)`, `Subcategory::where(...)`, `TrackConfig::with(...)`) -> Extract into `AdminDashboardService`.
-3. **`Admin/SyllabusController.php`**:
-   - Direct `Category::with('subcategory')->orderBy('name')->get()` -> Use `CategoryService`.
-4. **`Admin/QuestionController.php`**:
-   - Direct `Category::with(...)` and `Subcategory::where(...)` in question curation -> Use `CategoryRepositoryInterface`.
-5. **`Settings/PreferencesController.php`**:
-   - `ExamAttempt::where(...)`, `UserAiAnalysis::where(...)` -> Extract to `UserPreferencesService`.
-6. **`Public/PublicController.php` & `Admin/LegalContentController.php`**:
-   - Direct `LegalContent::where(...)` -> Extract to `LegalContentRepositoryInterface`.
-7. **`Public/SitemapController.php`**:
-   - Direct `LearnModule::where('is_published', true)` -> Move to `LearnModuleRepositoryInterface::getPublishedSitemapList()`.
+#### Accomplishments:
+1. **`App\DTOs\Exam\ExamSessionQueryData` & `App\DTOs\Learn\LearnFilterData`**:
+   - Encapsulated GET query parameters into strictly typed, immutable DTOs with `fromRequest()`.
+2. **`App\Http\Resources\ExamQuestionResource`**:
+   - Standardized question transformation for active simulation, replacing duplicate inline array mapping across controllers.
+3. **`App\Services\ExamService`**:
+   - Extracted all exam initialization orchestration (`index`), question pool preparation, attempt deep-linking, retake hydration, track stats calculation, and PDF tracking from `ExamController`.
+4. **`App\Services\AdminDashboardService`**:
+   - Centralized all dashboard metrics, question distribution aggregations, and attempt tracking out of `Admin\DashboardController`.
+5. **`App\Services\CategoryService` & `CategoryRepository`**:
+   - Extracted all category and subcategory queries (`getCategoriesWithSubcategories`, `getCategoryTree`, `getSyllabusTree`) across `Admin\LearnController`, `Admin\SyllabusController`, and `User\ExamController`.
+6. **`App\Services\UserPreferenceService`**:
+   - Extracted analysis mode switching and deterministic analysis regeneration from `Settings\PreferencesController`.
+7. **`LegalContentRepository` & `LegalContentController` / `PublicController`**:
+   - Replaced direct `LegalContent::where()` calls with repository interface binding.
+8. **`SitemapController`**:
+   - Replaced direct `LearnModule::where('is_published', true)` query with `LearnModuleRepositoryInterface::getPublishedCatalog()`.
+9. **Zero-Query Controller Principle**:
+   - Eradicated all direct Eloquent queries and inline `new` service instantiations across all target controllers. All 180 tests passing.
+
+---
+
+### ✅ 9. Domain Enum Standardization (Status: COMPLETED)
+*Target: Introduce PHP 8.4 Backed Enums (`string`) with TitleCase keys to eliminate magic strings, provide compile-time safety, cast Eloquent models, and establish 1:1 parity with frontend TypeScript union types.*
+
+#### Introduced Enums (`app/Enums/`):
+1. **`UserRole`**: `Admin = 'admin'`, `User = 'user'` (with helper `isAdmin()`). Cast in `User` model.
+2. **`ExamTrack`**: `Professional = 'Professional'`, `Subprofessional = 'Subprofessional'`, `Drill = 'Drill'`. Cast in `TrackConfig` model.
+3. **`QuestionStatus`**: `Active = 'active'`, `Draft = 'draft'` (with helper `isActive()`). Cast in `Question` model.
+4. **`QuestionLanguage`**: `English = 'English'`, `Filipino = 'Filipino'` (with helper `fromRaw()`). Cast in `Question` model.
+5. **`AnalysisMode`**: `Ai = 'ai'`, `Instant = 'instant'`. Bound in `UpdatePreferencesRequest` via `new Enum(AnalysisMode::class)` and `UserPreferenceService`.
+6. **`RetakeMode`**: `Same = 'same'`, `Fresh = 'fresh'`.
+7. **`LegalContentType`**: `Privacy = 'privacy'`, `Terms = 'terms'`. Bound in `LegalContentRepositoryInterface`, `Admin\LegalContentController`, and `Public\PublicController`.
+
+
 

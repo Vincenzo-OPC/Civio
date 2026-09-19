@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\QuestionStatus;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -18,6 +19,7 @@ class Question extends Model
             'options' => 'array',
             'correct_option' => 'integer',
             'created_by' => 'integer',
+            'status' => QuestionStatus::class,
         ];
     }
 

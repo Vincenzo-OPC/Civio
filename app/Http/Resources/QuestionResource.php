@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Resources;
 
+use App\Enums\QuestionStatus;
 use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -29,8 +30,9 @@ class QuestionResource extends JsonResource
             'correct_option' => (int) $this->correct_option,
             'explanation' => $this->explanation,
             'language' => $this->language ?? 'English',
-            'status' => strtoupper((string) $this->status),
+            'status' => strtoupper($this->status instanceof QuestionStatus ? $this->status->value : (string) $this->status),
             'updated_at' => $this->updated_at?->format('Y-m-d H:i:s'),
+
         ];
     }
 }

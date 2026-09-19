@@ -44,7 +44,7 @@ class AnalyticsController extends Controller
     public function aiAnalysisReport(Request $request): Response|RedirectResponse
     {
         $userId = $this->requireUser()->id;
-        $isAdminOrLocal = app()->environment('local') || $request->user()?->role === 'admin';
+        $isAdminOrLocal = app()->environment('local') || (bool) $request->user()?->isAdmin();
 
         if ($isAdminOrLocal && $request->has('delete')) {
             $this->aiOrchestrator->deleteAnalysis($userId);

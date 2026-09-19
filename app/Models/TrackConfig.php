@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\ExamTrack;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +12,7 @@ class TrackConfig extends Model
     protected function casts(): array
     {
         return [
+            'track' => ExamTrack::class,
             'category_id' => 'integer',
             'item_count' => 'integer',
             'time_limit_secs' => 'integer',

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\DTOs\User\UpdateUserData;
+use App\Enums\UserRole;
 use App\Models\User;
 use App\Repositories\UserRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
@@ -35,7 +36,9 @@ class UserService
      */
     public function updateUser(int $targetUserId, UpdateUserData $data, int $actingUserId): void
     {
-        if ($targetUserId === $actingUserId && $data->hasRole && $data->role !== 'admin') {
+        $isDemotion = $data->role instanceof UserRole ? ! $data->role->isAdmin() : $data->role !== 'admin';
+        if ($targetUserId === $actingUserId && $data->hasRole && $isDemotion) {
+
             throw ValidationException::withMessages([
                 'role' => 'You cannot demote yourself to maintain administrative access.',
             ]);

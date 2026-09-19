@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\LegalContentType;
 use Illuminate\Database\Eloquent\Model;
 
 class LegalContent extends Model
@@ -12,6 +13,7 @@ class LegalContent extends Model
     ];
 
     protected $casts = [
+        'type' => LegalContentType::class,
         'updated_at' => 'datetime',
     ];
 }

@@ -29,8 +29,8 @@ class LearnController extends Controller
 
     public function show(string $slug): Response
     {
-        $isAdmin = auth()->user() && auth()->user()->role === 'admin';
-        $data = $this->service->getModuleDetail($slug, (bool) $isAdmin, auth()->id());
+        $isAdmin = (bool) auth()->user()?->isAdmin();
+        $data = $this->service->getModuleDetail($slug, $isAdmin, auth()->id());
 
         return $this->render('user/learn/show', [
             'module' => $data['module'],

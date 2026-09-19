@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Enums\UserRole;
 use Database\Factories\UserFactory;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
@@ -30,6 +31,7 @@ class User extends Authenticatable implements MustVerifyEmail, PasskeyUser
     protected function casts(): array
     {
         return [
+            'role' => UserRole::class,
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
             'terms_accepted_at' => 'datetime',
@@ -42,6 +44,10 @@ class User extends Authenticatable implements MustVerifyEmail, PasskeyUser
 
     public function isAdmin(): bool
     {
+        if ($this->role instanceof UserRole) {
+            return $this->role->isAdmin();
+        }
+
         return $this->role === 'admin';
     }
 
