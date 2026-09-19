@@ -15,7 +15,7 @@ import { PageContainer } from '@/components/layout/page-container';
 import { PageHeader } from '@/components/layout/page-header';
 import { ConfirmModal } from '@/components/shared/confirm-modal';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog } from '@/components/ui/dialog';
 import { Switch } from '@/components/ui/switch';
 import { AnnouncementForm } from './components/announcement-form';
 import { useAnnouncementsState } from './hooks/use-announcements-state';
@@ -72,7 +72,7 @@ export default function AnnouncementsIndex({
             className: 'w-[45%]',
             render: (ann) => (
                 <div className="flex items-start gap-3">
-                    <div className="mt-0.5 flex-shrink-0">
+                    <div className="mt-0.5 shrink-0">
                         {ann.type === 'warning' && (
                             <AlertCircle className="size-5 text-amber-500" />
                         )}
@@ -174,17 +174,15 @@ export default function AnnouncementsIndex({
                             <Plus className="mr-2 size-4" />
                             Create Announcement
                         </Button>
-                        <DialogContent>
-                            <AnnouncementForm
-                                data={data}
-                                errors={errors}
-                                processing={processing}
-                                isEdit={false}
-                                setData={setData}
-                                onSubmit={handleCreate}
-                                onCancel={closeCreateModal}
-                            />
-                        </DialogContent>
+                        <AnnouncementForm
+                            data={data}
+                            errors={errors}
+                            processing={processing}
+                            isEdit={false}
+                            setData={setData}
+                            onSubmit={handleCreate}
+                            onCancel={closeCreateModal}
+                        />
                     </Dialog>
                 </div>
 
@@ -226,17 +224,15 @@ export default function AnnouncementsIndex({
             />
 
             <Dialog open={isEditModalOpen} onOpenChange={setIsEditModalOpen}>
-                <DialogContent>
-                    <AnnouncementForm
-                        data={data}
-                        errors={errors}
-                        processing={processing}
-                        isEdit={true}
-                        setData={setData}
-                        onSubmit={handleUpdate}
-                        onCancel={closeEditModal}
-                    />
-                </DialogContent>
+                <AnnouncementForm
+                    data={data}
+                    errors={errors}
+                    processing={processing}
+                    isEdit={true}
+                    setData={setData}
+                    onSubmit={handleUpdate}
+                    onCancel={closeEditModal}
+                />
             </Dialog>
         </>
     );

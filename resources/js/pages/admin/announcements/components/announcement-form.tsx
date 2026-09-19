@@ -44,7 +44,7 @@ export function AnnouncementForm({
     onCancel,
 }: AnnouncementFormProps) {
     return (
-        <DialogContent className="sm:max-w-2xl">
+        <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-2xl">
             <form onSubmit={onSubmit}>
                 <DialogHeader>
                     <DialogTitle>
@@ -56,7 +56,7 @@ export function AnnouncementForm({
                             : 'Create a banner notification that will appear on user dashboards.'}
                     </DialogDescription>
                 </DialogHeader>
-                <div className="mt-6 flex max-h-[70vh] flex-col gap-5 overflow-y-auto pr-2">
+                <div className="mt-6 flex flex-col gap-5">
                     <div className="space-y-2">
                         <Label htmlFor={isEdit ? 'edit-title' : 'title'}>
                             Title
@@ -83,7 +83,7 @@ export function AnnouncementForm({
                             value={data.message}
                             onChange={(e) => setData('message', e.target.value)}
                             placeholder="Enter the full announcement text..."
-                            className="min-h-[100px]"
+                            className="min-h-25"
                         />
                         {errors.message && (
                             <p className="text-sm font-medium text-destructive">
