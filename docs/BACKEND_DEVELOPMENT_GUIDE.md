@@ -243,6 +243,45 @@ readonly class UpsertYourEntityData
 }
 ```
 
+#### 3.3 Query Filter & Pagination DTO (`app/DTOs/YourEntity/YourEntityFilterData.php`):
+When handling `GET` requests with query parameters (filters, search, pagination), never construct loose associative arrays in controllers. Encapsulate query parameters in a typed readonly Filter DTO.
+
+```php
+namespace App\DTOs\YourEntity;
+
+use Illuminate\Http\Request;
+
+readonly class YourEntityFilterData
+{
+    public function __construct(
+        public ?string $search = null,
+        public string $status = 'all',
+        public int $perPage = 10,
+    ) {}
+
+    public static function fromRequest(Request $request): self
+    {
+        return new self(
+            search: $request->filled('search') ? (string) $request->input('search') : null,
+            status: (string) $request->input('status', 'all'),
+            perPage: min(50, max(5, $request->integer('per_page', 10))),
+        );
+    }
+
+    public function toArray(): array
+    {
+        return [
+            'search' => $this->search ?? '',
+            'status' => $this->status,
+            'per_page' => $this->perPage,
+        ];
+    }
+}
+```
+
+> [!TIP]
+> For complex query strings with security implications (e.g. dynamic sorting, date ranges, permissions), prefer a dedicated `FilterYourEntityRequest` FormRequest to validate rules before instantiating the DTO.
+
 ---
 
 ### Step 4: Output Boundary (Laravel JsonResource)
@@ -327,17 +366,25 @@ class YourEntityService
 
 ### Step 6: HTTP Transport (Thin Controller & Routes)
 
-Controllers only orchestrate: `FormRequest -> DTO -> Service/Action -> JsonResource`.
+Controllers only orchestrate: `FormRequest / Filter DTO -> Service / Action -> JsonResource`.
+
+> [!IMPORTANT]
+> **The Zero-Query Controller Rule:**
+> Controllers must **never** contain Eloquent query builder calls (`Model::where()`, `Model::with()`, `Model::findOrFail()`, `DB::...`). All data retrieval must go through a Domain Service or Repository.
+> Furthermore, query parameters (filters, pagination) must never be parsed into ad-hoc untyped arrays inside controllers. Always use a typed **Filter DTO** or **Filter FormRequest**.
 
 ```php
 namespace App\Http\Controllers\Admin;
 
 use App\DTOs\YourEntity\UpsertYourEntityData;
+use App\DTOs\YourEntity\YourEntityFilterData;
 use App\Http\Requests\StoreYourEntityRequest;
 use App\Http\Resources\YourEntityResource;
 use App\Services\YourEntityService;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class YourEntityController
 {
@@ -345,10 +392,10 @@ class YourEntityController
         protected YourEntityService $service
     ) {}
 
-    public function index(Request $request)
+    public function index(Request $request): Response
     {
-        $perPage = min(50, max(5, (int) $request->input('per_page', 10)));
-        $paginator = $this->service->getPaginatedEntities($request->all(), $perPage);
+        $filters = YourEntityFilterData::fromRequest($request);
+        $paginator = $this->service->getPaginatedEntities($filters);
 
         return Inertia::render('admin/entity/index', [
             'entities' => YourEntityResource::collection($paginator)->resolve(),
@@ -358,12 +405,13 @@ class YourEntityController
                 'total' => $paginator->total(),
                 'last_page' => $paginator->lastPage(),
             ],
-            'filters' => $request->only(['search', 'status']),
+            'filters' => $filters->toArray(),
         ]);
     }
 
-    public function show(string $id)
+    public function show(string $id): Response
     {
+        // NO YourEntity::findOrFail($id) in controllers!
         $entity = $this->service->getEntity($id);
 
         return Inertia::render('admin/entity/show', [
@@ -371,7 +419,7 @@ class YourEntityController
         ]);
     }
 
-    public function store(StoreYourEntityRequest $request)
+    public function store(StoreYourEntityRequest $request): RedirectResponse
     {
         $dto = UpsertYourEntityData::fromStoreRequest($request);
         $entity = $this->service->createEntity($dto);
@@ -420,12 +468,37 @@ When refactoring an existing module from legacy code into the **Action-Repositor
 
 ## 4. Architecture Rules & Anti-Patterns to Avoid
 
+### 4.1 The "Zero-Query Controller" Principle
+
+#### Q: Is it acceptable to have queries inside controllers?
+
+**A: Absolutely NO.** Direct database queries should **never** exist in controllers.
+
+Controllers in Hiraya Review are strictly **HTTP Orchestrators**. They must abide by two ironclad rules regarding "queries":
+
+1. **Database Queries (`Model::where()`, `Model::with()`, `Model::findOrFail()`, `DB::table()`):**
+   - ❌ **Anti-Pattern**: Writing Eloquent queries, eager loading relations, executing aggregates (`count()`), or model mutations inside a controller.
+   - ✅ **Correct Way**: Encapsulate queries inside a **Repository** method (`$this->repository->paginateFiltered(...)`) and call via a **Domain Service** (`$this->service->getEntity($id)`).
+   - **Why?**: Database calls in controllers tightly couple HTTP routing to the SQL database schema, cause N+1 leaks, duplicate query conditions across actions, bypass caching layers, and make controllers difficult to test without extensive database state setup.
+
+2. **HTTP Request Query Parameters (`$request->query(...)`, `$request->input(...)`):**
+   - ❌ **Anti-Pattern**: Hand-crafting loose associative `$filters = [...]` arrays, calling `$request->query('per_page', 10)` (which triggers static analysis type errors because `query()` only accepts `string|array|null` as the default), or accepting unvalidated query params.
+   - ✅ **Correct Way**: Parse incoming query strings into a typed **Filter DTO** (e.g., `LearnFilterData`, `AnalyticsFilterData`) or validate them using a dedicated **Filter FormRequest**. When reading query primitives directly, use `$request->integer('per_page', 10)` or `$request->string('search')->toString()`.
+   - **Why?**: FormRequests and DTOs prevent parameter injection, enforce pagination boundaries (`min/max`), ensure strict scalar typing, and eliminate repeated filter array reconstruction across Inertia responses.
+
+---
+
+### 4.2 Architecture Anti-Patterns Matrix
+
 | ❌ Anti-Pattern | ✅ Correct Way |
 |---|---|
 | Inline validation in controllers (`$request->validate(...)`) | Dedicated `FormRequest` class |
 | Passing a `FormRequest` into a Service or Action | Pass a strongly typed **Input DTO** |
-| Writing Eloquent queries (`Model::where(...)`) in Controllers | Write query methods in a **Repository** |
+| Writing Eloquent queries (`Model::where(...)`, `Model::with(...)`, `Model::findOrFail(...)`) in Controllers | Write query methods in a **Repository** and invoke via a **Domain Service** |
+| Manually constructing loose `$filters = [...]` arrays from `$request->input(...)` | Encapsulate into a typed **Filter DTO** (`EntityFilterData`) or **Filter FormRequest** |
+| Passing integers as default to `$request->query('key', 1)` (triggers type errors) | Use `$request->integer('key', 1)` or pass string `'1'` |
 | Duplicating array transformations across `show()`, `edit()`, and `index()` | Use a single **Laravel `JsonResource`** |
+| Querying lookup tables (`Category::with(...)`) directly inside controllers | Fetch via a centralized **Lookup Service / Repository** (e.g. `CategoryService`) |
 | Splitting a fat class into arbitrary traits | Use **Single-Responsibility Actions** |
 | Using empty constructors or untyped parameters | Constructor promotion and explicit PHP 8.4 scalar types |
 | Leaving unused or superseded legacy files after refactoring | Safely delete obsolete files once their logic is absorbed and verified with zero usages |
@@ -529,15 +602,41 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
 
 ---
 
-### ⏳ 7. Admin Operations & Platform Communications (Priority: Low-Medium)
+### ✅ 7. Admin Operations & Platform Communications (Status: COMPLETED)
 *Target: Standardize announcements, user feedback triage, user administration, and support.*
-- [ ] **Repositories**: `AnnouncementRepository.php`, `FeedbackRepository.php`, `UserRepository.php`
-- [ ] **Input DTOs**: `UpsertAnnouncementData.php`, `UpdateUserData.php`, `SupportMessageData.php`
-- [ ] **JsonResources**: `AnnouncementResource.php`, `FeedbackResource.php`, `AdminUserResource.php`
-- [ ] **Services**: `AnnouncementService.php`, `FeedbackService.php`, `UserService.php`, `SupportService.php`
-- [ ] **Controllers to Refactor**:
-  - `app/Http/Controllers/Admin/AnnouncementController.php`
-  - `app/Http/Controllers/Admin/FeedbackController.php`
-  - `app/Http/Controllers/Admin/UserController.php`
-  - `app/Http/Controllers/Public/SupportController.php`
-- [ ] **Obsolete Files Cleaned Up**: (List any removed legacy files or "None")
+- [x] **Repositories**: `AnnouncementRepository.php`, `FeedbackRepository.php`, `UserRepository.php` (and their interfaces registered in `RepositoryServiceProvider`)
+- [x] **Input DTOs**: `UpsertAnnouncementData.php`, `SubmitFeedbackData.php`, `UpdateFeedbackStatusData.php`, `BulkUpdateFeedbackData.php`, `UpdateUserData.php`, `SupportMessageData.php`
+- [x] **JsonResources**: `AnnouncementResource.php`, `FeedbackResource.php`, `AdminUserResource.php`
+- [x] **Services**: `AnnouncementService.php`, `FeedbackService.php`, `UserService.php`, `SupportService.php`
+- [x] **Controllers Refactored**:
+  - `app/Http/Controllers/Admin/AnnouncementController.php` (thin coordinator)
+  - `app/Http/Controllers/Admin/FeedbackController.php` (thin coordinator)
+  - `app/Http/Controllers/Admin/UserController.php` (thin coordinator)
+  - `app/Http/Controllers/Public/SupportController.php` (thin coordinator)
+- [x] **Tests Verified**: `tests/Feature/Admin/AdminOperationsServicesTest.php` (4/4 passing, 28/28 admin operations suite)
+- [x] **Obsolete Files Cleaned Up**: None (Eliminated raw inline queries, manual model mutation in feedback triage, and unbounded attribute queries in user admin)
+
+---
+
+### ⏳ 8. Controller Query Eradication & Filter Standardization (Status: AUDITED / IN PROGRESS)
+*Target: Eliminate all remaining raw Eloquent database queries and ad-hoc loose `$filters` arrays in controllers.*
+
+#### Audit Findings in `app/Http/Controllers`:
+1. **`Admin/LearnController.php`**:
+   - `create()` & `edit()`: Direct `Category::with('subcategory')->orderBy('sort_order')->get()` -> Move to `CategoryService::getCategoriesWithSubcategories()`.
+   - `edit()`, `update()`, `destroy()`: Direct `LearnModule::findOrFail($id)` -> Use `$this->service->getModule($id)`.
+   - `index()` & `drafts()`: Manual loose `$filters = [...]` arrays -> Introduce `LearnFilterData::fromRequest($request)`.
+   - `edit()`: Inline array transformation for `$module` -> Use `AdminLearnModuleResource`.
+2. **`Admin/DashboardController.php`**:
+   - Multiple raw Eloquent queries (`Question::where(...)`, `ExamAttempt::where(...)`, `User::where(...)`, `Subcategory::where(...)`, `TrackConfig::with(...)`) -> Extract into `AdminDashboardService`.
+3. **`Admin/SyllabusController.php`**:
+   - Direct `Category::with('subcategory')->orderBy('name')->get()` -> Use `CategoryService`.
+4. **`Admin/QuestionController.php`**:
+   - Direct `Category::with(...)` and `Subcategory::where(...)` in question curation -> Use `CategoryRepositoryInterface`.
+5. **`Settings/PreferencesController.php`**:
+   - `ExamAttempt::where(...)`, `UserAiAnalysis::where(...)` -> Extract to `UserPreferencesService`.
+6. **`Public/PublicController.php` & `Admin/LegalContentController.php`**:
+   - Direct `LegalContent::where(...)` -> Extract to `LegalContentRepositoryInterface`.
+7. **`Public/SitemapController.php`**:
+   - Direct `LearnModule::where('is_published', true)` -> Move to `LearnModuleRepositoryInterface::getPublishedSitemapList()`.
+
