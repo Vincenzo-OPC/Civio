@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use App\Jobs\GenerateUserAnalysisJob;
 use App\Models\ExamAttempt;
 use App\Models\ExamDate;
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Schema;
 use Inertia\Inertia;
 
-class DashboardController
+class DashboardController extends Controller
 {
     public function __construct(
         protected ExamAttemptFormatter $formatter

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Actions\Exam\SubmitExamAttemptAction;
 use App\DTOs\Exam\SubmitExamAttemptData;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Exam\StoreExamAttemptRequest;
 use App\Http\Resources\ExamScorecardResource;
 use App\Models\Category;
@@ -19,7 +20,7 @@ use Illuminate\Support\Str;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class ExamController
+class ExamController extends Controller
 {
     public function __construct(
         protected ExamAttemptFormatter $formatter,
@@ -200,6 +201,6 @@ class ExamController
             $user->increment('pdf_downloads_count');
         }
 
-        return response()->json(['success' => true]);
+        return $this->jsonSuccess();
     }
 }

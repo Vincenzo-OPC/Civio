@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use App\Jobs\GenerateUserAnalysisJob;
 use App\Models\ExamAttempt;
 use App\Models\StudySchedule;
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Cache;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class AnalyticsController
+class AnalyticsController extends Controller
 {
     public function __construct(
         protected AnalyticsService $analyticsService,

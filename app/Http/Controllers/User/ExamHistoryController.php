@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Exam\BulkDestroyAttemptsRequest;
 use App\Models\ExamAttempt;
 use App\Services\ExamAttemptService;
@@ -11,7 +12,7 @@ use Illuminate\Support\Facades\Gate;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class ExamHistoryController
+class ExamHistoryController extends Controller
 {
     public function __construct(
         protected ExamAttemptService $attemptService
@@ -59,7 +60,7 @@ class ExamHistoryController
 
         $this->attemptService->deleteUserAttempt($attempt);
 
-        return redirect()->back()->with('success', 'Attempt record deleted successfully!');
+        return $this->backWithSuccess('Attempt record deleted successfully!');
     }
 
     /**
@@ -71,6 +72,6 @@ class ExamHistoryController
 
         $this->attemptService->bulkDeleteUserAttempts((int) auth()->id(), (array) $validated['ids']);
 
-        return redirect()->back()->with('success', 'Selected attempt records deleted successfully!');
+        return $this->backWithSuccess('Selected attempt records deleted successfully!');
     }
 }

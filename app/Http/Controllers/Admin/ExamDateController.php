@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ExamDate\StoreExamDateRequest;
 use App\Http\Requests\Admin\ExamDate\UpdateExamDateRequest;
 use App\Models\ExamDate;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
 use Inertia\Inertia;
 
-class ExamDateController
+class ExamDateController extends Controller
 {
     public function index()
     {
@@ -34,7 +35,7 @@ class ExamDateController
 
         Cache::forget('exam_dates.active');
 
-        return redirect()->back()->with('success', 'Exam date added successfully.');
+        return $this->backWithSuccess('Exam date added successfully.');
     }
 
     public function update(UpdateExamDateRequest $request, ExamDate $examDate)
@@ -51,7 +52,7 @@ class ExamDateController
 
         Cache::forget('exam_dates.active');
 
-        return redirect()->back()->with('success', 'Exam date updated successfully.');
+        return $this->backWithSuccess('Exam date updated successfully.');
     }
 
     public function destroy(ExamDate $examDate)
@@ -61,6 +62,6 @@ class ExamDateController
         $examDate->delete();
         Cache::forget('exam_dates.active');
 
-        return redirect()->back()->with('success', 'Exam date deleted successfully.');
+        return $this->backWithSuccess('Exam date deleted successfully.');
     }
 }

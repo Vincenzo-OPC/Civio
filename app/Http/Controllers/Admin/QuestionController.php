@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Actions\Question\BulkUpdateQuestionsAction;
 use App\DTOs\Question\UpsertQuestionData;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Question\BulkDestroyQuestionsRequest;
 use App\Http\Requests\Admin\Question\BulkUpdateQuestionsRequest;
 use App\Http\Requests\Admin\Question\BulkUpdateQuestionStatusRequest;
@@ -30,7 +31,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
 
-class QuestionController
+class QuestionController extends Controller
 {
     public function __construct(
         protected QuestionService $questionService,
@@ -188,7 +189,7 @@ class QuestionController
 
             $this->clearCache();
 
-            return redirect()->route('questions.drafts')->with('success', "{$savedCount} approved questions committed successfully!");
+            return $this->redirectWithSuccess('questions.drafts', "{$savedCount} approved questions committed successfully!");
         }
 
         try {
@@ -196,11 +197,11 @@ class QuestionController
             $this->questionService->createQuestion($dto);
             $this->clearCache();
 
-            return back()->with('success', 'Question created successfully!');
+            return $this->backWithSuccess('Question created successfully!');
         } catch (\Throwable) {
             $this->clearCache();
 
-            return back()->with('success', 'Question simulation saved successfully!');
+            return $this->backWithSuccess('Question simulation saved successfully!');
         }
     }
 
@@ -237,7 +238,7 @@ class QuestionController
         $ids = array_filter(explode(',', (string) $request->query('ids', '')));
 
         if (empty($ids)) {
-            return redirect()->route('questions.index')->with('error', 'No questions selected for bulk edit.');
+            return $this->redirectWithError('questions.index', 'No questions selected for bulk edit.');
         }
 
         $questions = Question::with(['subcategory.category'])
@@ -281,10 +282,10 @@ class QuestionController
         }
 
         if (str_contains(request()->header('Referer', ''), '/questions/drafts')) {
-            return redirect()->route('questions.drafts')->with('success', 'Question draft updated successfully!');
+            return $this->redirectWithSuccess('questions.drafts', 'Question draft updated successfully!');
         }
 
-        return redirect()->route('questions.index')->with('success', 'Question updated successfully!');
+        return $this->redirectWithSuccess('questions.index', 'Question updated successfully!');
     }
 
     /**
@@ -302,7 +303,7 @@ class QuestionController
             return response()->json(['success' => true]);
         }
 
-        return redirect()->route('questions.index')->with('success', 'Question deleted successfully!');
+        return $this->redirectWithSuccess('questions.index', 'Question deleted successfully!');
     }
 
     /**
@@ -319,7 +320,7 @@ class QuestionController
             return response()->json(['success' => true]);
         }
 
-        return redirect()->route('questions.index')->with('success', 'Selected questions deleted successfully!');
+        return $this->redirectWithSuccess('questions.index', 'Selected questions deleted successfully!');
     }
 
     /**
@@ -334,7 +335,7 @@ class QuestionController
             return response()->json(['success' => true]);
         }
 
-        return redirect()->route('questions.index')->with('success', 'Selected questions updated successfully!');
+        return $this->redirectWithSuccess('questions.index', 'Selected questions updated successfully!');
     }
 
     /**
@@ -352,7 +353,7 @@ class QuestionController
         ]);
         $this->clearCache();
 
-        return redirect()->back()->with('success', "Category '{$category->name}' has been created successfully!");
+        return $this->backWithSuccess("Category '{$category->name}' has been created successfully!");
     }
 
     /**
@@ -368,7 +369,7 @@ class QuestionController
         ]);
         $this->clearCache();
 
-        return redirect()->back()->with('success', 'Category updated successfully!');
+        return $this->backWithSuccess('Category updated successfully!');
     }
 
     /**
@@ -380,7 +381,7 @@ class QuestionController
         $category->delete();
         $this->clearCache();
 
-        return redirect()->back()->with('success', 'Category and all its subcategories have been removed.');
+        return $this->backWithSuccess('Category and all its subcategories have been removed.');
     }
 
     /**
@@ -399,7 +400,7 @@ class QuestionController
         ]);
         $this->clearCache();
 
-        return redirect()->back()->with('success', "Subcategory '{$subcategory->name}' has been added successfully!");
+        return $this->backWithSuccess("Subcategory '{$subcategory->name}' has been added successfully!");
     }
 
     /**
@@ -415,7 +416,7 @@ class QuestionController
         ]);
         $this->clearCache();
 
-        return redirect()->back()->with('success', 'Subcategory updated successfully!');
+        return $this->backWithSuccess('Subcategory updated successfully!');
     }
 
     /**
@@ -426,7 +427,7 @@ class QuestionController
         $subcategory->delete();
         $this->clearCache();
 
-        return redirect()->back()->with('success', 'Subcategory has been removed successfully.');
+        return $this->backWithSuccess('Subcategory has been removed successfully.');
     }
 
     /**

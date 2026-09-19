@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Public;
 
+use App\Http\Controllers\Controller;
 use App\Models\LearnModule;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;

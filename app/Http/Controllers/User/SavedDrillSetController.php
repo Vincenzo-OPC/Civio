@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Drill\SavedDrillSets\AddQuestionToSavedSetRequest;
 use App\Http\Requests\User\Drill\SavedDrillSets\StoreSavedDrillSetRequest;
 use App\Http\Requests\User\Drill\SavedDrillSets\UpdateSavedDrillSetRequest;
@@ -13,7 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 
-class SavedDrillSetController
+class SavedDrillSetController extends Controller
 {
     /**
      * List user's saved drill sets with question counts.
@@ -77,7 +78,7 @@ class SavedDrillSetController
             ]);
         }
 
-        return redirect()->back()->with('success', 'Practice set created successfully.');
+        return $this->backWithSuccess('Practice set created successfully.');
     }
 
     /**
@@ -102,7 +103,7 @@ class SavedDrillSetController
             ]);
         }
 
-        return redirect()->back()->with('success', 'Practice set updated successfully.');
+        return $this->backWithSuccess('Practice set updated successfully.');
     }
 
     /**
@@ -118,7 +119,7 @@ class SavedDrillSetController
             return response()->json(['status' => 'success', 'message' => 'Practice set deleted.']);
         }
 
-        return redirect()->back()->with('success', 'Practice set deleted.');
+        return $this->backWithSuccess('Practice set deleted.');
     }
 
     /**

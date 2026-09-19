@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\User\StudySchedule\BulkDeleteStudyScheduleRequest;
 use App\Http\Requests\User\StudySchedule\BulkMarkDoneRequest;
 use App\Http\Requests\User\StudySchedule\BulkRescheduleTodayRequest;
@@ -22,7 +23,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
 use Inertia\Inertia;
 
-class StudyScheduleController
+class StudyScheduleController extends Controller
 {
     private function formatScheduleForCalendar(StudySchedule|\stdClass $schedule): array
     {

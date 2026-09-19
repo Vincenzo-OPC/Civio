@@ -24,14 +24,14 @@ class SystemController extends Controller
     {
         Artisan::call('optimize:clear');
 
-        return back()->with('success', 'System cache cleared successfully.');
+        return $this->backWithSuccess('System cache cleared successfully.');
     }
 
     public function optimize()
     {
         Artisan::call('optimize');
 
-        return back()->with('success', 'System optimized successfully.');
+        return $this->backWithSuccess('System optimized successfully.');
     }
 
     public function runMigrations()
@@ -40,9 +40,9 @@ class SystemController extends Controller
             Artisan::call('migrate', ['--force' => true]);
             $output = Artisan::output();
 
-            return back()->with('success', 'Migrations ran successfully: '.$output);
+            return $this->backWithSuccess('Migrations ran successfully: '.$output);
         } catch (\Exception $e) {
-            return back()->with('error', 'Migration failed: '.$e->getMessage());
+            return $this->backWithError('Migration failed: '.$e->getMessage());
         }
     }
 
@@ -53,9 +53,9 @@ class SystemController extends Controller
             Artisan::call('migrate:rollback', ['--force' => true]);
             $output = Artisan::output();
 
-            return back()->with('success', 'Database rolled back successfully: '.$output);
+            return $this->backWithSuccess('Database rolled back successfully: '.$output);
         } catch (\Exception $e) {
-            return back()->with('error', 'Rollback failed: '.$e->getMessage());
+            return $this->backWithError('Rollback failed: '.$e->getMessage());
         }
     }
 
@@ -64,13 +64,13 @@ class SystemController extends Controller
         if (App::isDownForMaintenance()) {
             Artisan::call('up');
 
-            return back()->with('success', 'Application is now LIVE.');
+            return $this->backWithSuccess('Application is now LIVE.');
         } else {
             // Note: Custom CheckMaintenanceMode middleware allows Admins to automatically bypass
             // and allows access to the /login route.
             Artisan::call('down');
 
-            return back()->with('success', 'Application is now in Maintenance Mode. You have automatic Admin bypass privileges.');
+            return $this->backWithSuccess('Application is now in Maintenance Mode. You have automatic Admin bypass privileges.');
         }
     }
 }

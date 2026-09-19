@@ -31,6 +31,6 @@ class LegalContentController extends Controller
             );
         }
 
-        return back()->with('success', 'Legal content updated successfully.');
+        return $this->backWithSuccess('Legal content updated successfully.');
     }
 }

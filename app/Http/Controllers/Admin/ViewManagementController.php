@@ -56,6 +56,6 @@ class ViewManagementController extends Controller
 
         Cache::forget('role_permissions');
 
-        return redirect()->back()->with('success', 'View permissions updated successfully.');
+        return $this->backWithSuccess('View permissions updated successfully.');
     }
 }

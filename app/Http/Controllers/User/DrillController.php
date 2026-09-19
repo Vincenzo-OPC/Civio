@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Drill\StoreCustomDrillQuestionRequest;
 use App\Models\Category;
 use App\Models\ExamAttempt;
@@ -11,7 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Inertia\Inertia;
 
-class DrillController
+class DrillController extends Controller
 {
     /**
      * Render the dynamic diagnostic drills interface.

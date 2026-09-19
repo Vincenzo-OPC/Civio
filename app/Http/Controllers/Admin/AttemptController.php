@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Resources\AdminExamAttemptResource;
 use App\Models\User;
 use App\Repositories\ExamAttemptRepositoryInterface;
@@ -9,7 +10,7 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class AttemptController
+class AttemptController extends Controller
 {
     public function __construct(
         protected ExamAttemptRepositoryInterface $repository

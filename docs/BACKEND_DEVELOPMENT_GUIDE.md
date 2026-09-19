@@ -533,5 +533,5 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
   - `app/Http/Controllers/Admin/AnnouncementController.php`
   - `app/Http/Controllers/Admin/FeedbackController.php`
   - `app/Http/Controllers/Admin/UserController.php`
-  - `app/Http/Controllers/SupportController.php`
+  - `app/Http/Controllers/Public/SupportController.php`
 - [ ] **Obsolete Files Cleaned Up**: (List any removed legacy files or "None")

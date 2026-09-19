@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\User\AdminUserUpdateRequest;
 use App\Models\ExamAttempt;
 use App\Models\User;
@@ -11,7 +12,7 @@ use Illuminate\Support\Facades\Gate;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class UserController
+class UserController extends Controller
 {
     /**
      * Show all users with their statistics for the admin dashboard.

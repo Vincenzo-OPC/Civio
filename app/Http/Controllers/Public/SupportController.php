@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Public;
 
-use App\Http\Requests\Support\SupportRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Public\SupportRequest;
 use App\Mail\SupportSubmittedMail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;

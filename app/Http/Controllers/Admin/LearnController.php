@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Actions\Learn\BulkUpdateLearnModulesAction;
 use App\DTOs\Learn\UpsertLearnModuleData;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Learn\BulkDestroyLearnModulesRequest;
 use App\Http\Requests\Admin\Learn\BulkUpdateLearnModuleStatusRequest;
 use App\Http\Requests\Admin\Learn\GenerateLearnModuleRequest;
@@ -22,7 +23,7 @@ use Illuminate\Support\Str;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class LearnController
+class LearnController extends Controller
 {
     public function __construct(
         protected LearnModuleService $service,
@@ -90,7 +91,7 @@ class LearnController
         $dto = UpsertLearnModuleData::fromStoreRequest($request);
         $this->service->createModule($dto, (int) auth()->id());
 
-        return back()->with('success', 'Learning module created successfully!');
+        return $this->backWithSuccess('Learning module created successfully!');
     }
 
     /**
@@ -136,10 +137,10 @@ class LearnController
         }
 
         if (str_contains(request()->header('Referer', ''), '/learn/drafts')) {
-            return redirect()->route('admin.learn.drafts')->with('success', 'Learning module draft updated successfully!');
+            return $this->redirectWithSuccess('admin.learn.drafts', 'Learning module draft updated successfully!');
         }
 
-        return redirect()->route('admin.learn.index')->with('success', 'Learning module updated successfully!');
+        return $this->redirectWithSuccess('admin.learn.index', 'Learning module updated successfully!');
     }
 
     /**
@@ -152,7 +153,7 @@ class LearnController
 
         $this->service->deleteModule($module);
 
-        return redirect()->route('admin.learn.index')->with('success', 'Learning module deleted successfully!');
+        return $this->redirectWithSuccess('admin.learn.index', 'Learning module deleted successfully!');
     }
 
     /**
@@ -165,7 +166,7 @@ class LearnController
         $validated = $request->validated();
         $this->bulkAction->bulkDelete($validated['ids']);
 
-        return redirect()->route('admin.learn.index')->with('success', 'Selected learning modules deleted successfully!');
+        return $this->redirectWithSuccess('admin.learn.index', 'Selected learning modules deleted successfully!');
     }
 
     /**
@@ -176,7 +177,7 @@ class LearnController
         $validated = $request->validated();
         $this->bulkAction->bulkUpdateStatus($validated['ids'], (bool) $validated['is_published']);
 
-        return redirect()->route('admin.learn.index')->with('success', 'Selected learning modules updated successfully!');
+        return $this->redirectWithSuccess('admin.learn.index', 'Selected learning modules updated successfully!');
     }
 
     public function generate(GenerateLearnModuleRequest $request): JsonResponse

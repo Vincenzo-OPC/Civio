@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Support;
+namespace App\Http\Requests\Public;
 
 use App\Rules\NoEmojis;
 use App\Rules\NoHtml;

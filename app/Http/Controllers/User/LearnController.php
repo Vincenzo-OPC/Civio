@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use App\Services\LearnModuleService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class LearnController
+class LearnController extends Controller
 {
     public function __construct(
         protected LearnModuleService $service

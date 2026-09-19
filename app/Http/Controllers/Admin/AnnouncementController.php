@@ -29,7 +29,7 @@ class AnnouncementController extends Controller
         Announcement::create($request->validated());
         Cache::forget('active_announcements');
 
-        return back()->with('success', 'Announcement created successfully.');
+        return $this->backWithSuccess('Announcement created successfully.');
     }
 
     public function update(StoreAnnouncementRequest $request, Announcement $announcement): RedirectResponse
@@ -39,7 +39,7 @@ class AnnouncementController extends Controller
         $announcement->update($request->validated());
         Cache::forget('active_announcements');
 
-        return back()->with('success', 'Announcement updated successfully.');
+        return $this->backWithSuccess('Announcement updated successfully.');
     }
 
     public function destroy(Announcement $announcement): RedirectResponse
@@ -49,6 +49,6 @@ class AnnouncementController extends Controller
         $announcement->delete();
         Cache::forget('active_announcements');
 
-        return back()->with('success', 'Announcement deleted successfully.');
+        return $this->backWithSuccess('Announcement deleted successfully.');
     }
 }

@@ -59,7 +59,7 @@ class FeedbackController extends Controller
         // Broadcast new feedback event for real-time admin notifications
         NewFeedbackSubmitted::dispatch($feedback);
 
-        return back()->with('success', 'Feedback submitted successfully.');
+        return $this->backWithSuccess('Feedback submitted successfully.');
     }
 
     public function updateStatus(UpdateFeedbackStatusRequest $request, Feedback $feedback): RedirectResponse
@@ -77,7 +77,7 @@ class FeedbackController extends Controller
 
         Cache::forget('pending_feedback_count');
 
-        return back()->with('success', 'Feedback status updated for this item and all related reports.');
+        return $this->backWithSuccess('Feedback status updated for this item and all related reports.');
     }
 
     public function destroy(Feedback $feedback): RedirectResponse
@@ -87,7 +87,7 @@ class FeedbackController extends Controller
         $feedback->delete();
         Cache::forget('pending_feedback_count');
 
-        return back()->with('success', 'Feedback deleted.');
+        return $this->backWithSuccess('Feedback deleted.');
     }
 
     public function bulkUpdate(BulkUpdateFeedbackRequest $request): RedirectResponse
@@ -111,7 +111,7 @@ class FeedbackController extends Controller
 
         Cache::forget('pending_feedback_count');
 
-        return back()->with('success', 'Feedback status updated.');
+        return $this->backWithSuccess('Feedback status updated.');
     }
 
     public function bulkDestroy(BulkDestroyFeedbackRequest $request): RedirectResponse
@@ -121,6 +121,6 @@ class FeedbackController extends Controller
         Feedback::whereIn('id', $request->validated('ids'))->delete();
         Cache::forget('pending_feedback_count');
 
-        return back()->with('success', 'Feedback deleted.');
+        return $this->backWithSuccess('Feedback deleted.');
     }
 }
