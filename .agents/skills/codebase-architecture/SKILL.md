@@ -388,64 +388,63 @@ pages/{role}/{module}/
 
 ---
 
-## Backend Architecture (Already Correct — Maintain This)
+## Backend Architecture (Action-Repository-DTO + JsonResource Pattern)
+
+> Complete step-by-step developer guide: [BACKEND_DEVELOPMENT_GUIDE.md](file:///c:/Dev/laravel/cse_reviewer/docs/BACKEND_DEVELOPMENT_GUIDE.md)
+
+The backend follows a clean, modern CQRS-inspired layered pattern separating queries and mutations:
 
 ```
 app/
 ├── Http/
-│   ├── Controllers/
-│   │   ├── Admin/           # Admin role controllers
-│   │   │   ├── DashboardController.php
-│   │   │   ├── QuestionController.php
-│   │   │   ├── LearnController.php
-│   │   │   ├── UserController.php
-│   │   │   ├── ExamDateController.php
-│   │   │   ├── SyllabusController.php
-│   │   │   ├── AnnouncementController.php
-│   │   │   ├── FeedbackController.php
-│   │   │   ├── SystemController.php
-│   │   │   ├── ViewManagementController.php
-│   │   │   └── LegalContentController.php
-│   │   ├── User/            # User role controllers
-│   │   │   ├── AnalyticsController.php
-│   │   │   ├── DashboardController.php
-│   │   │   ├── DrillController.php
-│   │   │   ├── ExamController.php
-│   │   │   ├── ExamHistoryController.php
-│   │   │   ├── LearnController.php
-│   │   │   ├── StudyScheduleController.php
-│   │   │   └── StudySuggestionController.php
-│   │   ├── PublicController.php
-│   │   ├── AuthController.php
-│   │   ├── SitemapController.php
-│   │   ├── SupportController.php
-│   │   └── Settings/
-│   └── Requests/            # Mirror controller structure
-│       ├── Admin/
-│       │   └── LegalContentRequest.php
-│       └── User/
-├── Models/                  # Models
-│   ├── User.php
-│   ├── Question.php
-│   ├── Category.php
-│   ├── Subcategory.php
-│   ├── LearnModule.php
-│   ├── ExamAttempt.php
-│   ├── ExamDate.php
-│   ├── Feedback.php
-│   ├── Announcement.php
-│   └── LegalContent.php
-├── Policies/                # Authorization policies
-│   ├── QuestionPolicy.php
-│   ├── LearnModulePolicy.php
-│   ├── ExamDatePolicy.php
-│   ├── FeedbackPolicy.php
-│   ├── AnnouncementPolicy.php
-│   └── LegalContentPolicy.php
-└── ...
+│   ├── Controllers/             # Thin HTTP adapters (FormRequest -> DTO -> Action/Service -> Resource -> Inertia)
+│   │   ├── Admin/               # Admin role controllers (QuestionController, LearnController, etc.)
+│   │   └── User/                # User role controllers (ExamController, AnalyticsController, etc.)
+│   ├── Requests/                # Form Requests for incoming data validation (mirror controllers)
+│   └── Resources/               # Laravel JsonResources for outgoing model presentation to Inertia
+│       ├── QuestionResource.php
+│       ├── LearnModuleResource.php
+│       └── ExamAttemptResource.php
+│
+├── DTOs/                        # Strongly typed, immutable PHP 8.4 Input Data Transfer Objects
+│   ├── Question/                # UpsertQuestionData, BulkQuestionStatusData
+│   ├── Exam/                    # SubmitExamAttemptData
+│   ├── Learn/                   # UpsertLearnModuleData
+│   └── StudySchedule/           # UpsertStudyScheduleData, ShiftScheduleData
+│
+├── Actions/                     # Single-responsibility business mutations (1 class = 1 mutation)
+│   ├── Question/                # BulkUpdateQuestionsAction, GenerateQuestionsAction
+│   ├── Exam/                    # SubmitExamAttemptAction
+│   ├── StudySchedule/           # ShiftStudyScheduleAction, BulkUpdateScheduleAction
+│   └── Fortify/                 # CreateNewUser, ResetUserPassword (built-in)
+│
+├── Services/                    # Domain coordination services (orchestrating queries, business rules, & actions)
+│   ├── QuestionService.php      # Resolves categories/subcategories, delegates question CRUD
+│   ├── ExamAttemptService.php   # Coordinates attempts, scoring strategies, and calls SubmitExamAttemptAction
+│   ├── LearnModuleService.php   # Handles learning module publishing, syllabus coordination
+│   ├── StudyScheduleService.php # Coordinates calendar dates, past pendings, and schedule updates
+│   └── AnalyticsService.php     # Computes analytics metrics, radar mastery, and pass rates
+│
+├── Repositories/                # Data access abstraction (Reads, queries, eager loading, caching)
+│   ├── BaseRepositoryInterface.php     # Common CRUD contract (all, find, create, update, delete, paginate)
+│   ├── BaseRepository.php              # Abstract Eloquent implementation inherited by all repos
+│   ├── QuestionRepositoryInterface.php # Domain repository contracts extending BaseRepositoryInterface
+│   ├── QuestionRepository.php          # Concrete repository extending BaseRepository
+│   └── ...
+│
+├── Models/                      # Strict Eloquent models (relations, casts, scopes only)
+├── Policies/                    # Authorization policies
+└── Providers/
+    └── RepositoryServiceProvider.php   # Binds Repository interfaces as singletons in IoC container
 ```
 
-The backend already follows proper PSR-4 role-based structure. **Do not change it.**
+### Backend Design Rules
+1. **Thin Controllers**: Controllers authorize via FormRequest, instantiate an Input DTO, delegate to an Action or Service, and wrap results in a `JsonResource`.
+2. **Actions for Complex Mutations**: Multi-step business workflows (e.g. `SubmitExamAttemptAction`, `ShiftStudyScheduleAction`, `BulkUpdateQuestionsAction`) have their own single-responsibility Action class.
+3. **Repositories for Queries & Persistence**: All data queries, eager loading (`with()`), cache tags, and search logic live in Repositories extending `BaseRepository`.
+4. **Input DTOs for Incoming Data**: FormRequests map to typed, immutable Input DTOs (`UpsertQuestionData::fromRequest($request)`), keeping Actions and Services decoupled from HTTP requests.
+5. **Laravel `JsonResource` for Outgoing Data**: Models/paginators are wrapped in `JsonResource` (`QuestionResource`) for Inertia props and API payloads.
+6. **IoC Singleton Bindings**: All repository interfaces are registered as singletons in `RepositoryServiceProvider`.
 
 ---
 

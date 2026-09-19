@@ -41,7 +41,7 @@ Traditional Civil Service Exam review materials rely on static PDFs, outdated qu
 - **Asynchronous AI Queue Pipeline:** Heavy AI jobs (`GenerateQuestionsJob`, `GenerateLearnModuleJob`, `GenerateUserAnalysisJob`) run asynchronously in queues with real-time websocket updates via Pusher (`AiGenerationCompleted`, `AiGenerationFailed`).
 - **Dynamic Role-View Visibility Matrix:** Granular permission system stored in database (`RolePermission`), cached and verified via `CheckViewAccess` middleware for role-based view gating.
 - **Global Mutation Transactions:** Relational writes (exam attempts, question banks, study schedules) wrapped in database transactions via `TransactionMiddleware` for ACID integrity.
-- **Strict Eloquent & Caching Observers:** Strict mode enabled to eliminate lazy loading (N+1 queries); model observers on `Category`, `Subcategory`, `Question`, `LearnModule`, and `ExamDate` automate cache invalidation.
+- **Action-Repository-DTO + JsonResource Pattern:** Modern layered backend architecture separating HTTP validation (FormRequests), typed data transport (PHP 8.4 Input DTOs), business mutations (Single-responsibility Actions), query isolation (BaseRepository), and output presentation (Laravel JsonResources). See [`docs/BACKEND_DEVELOPMENT_GUIDE.md`](docs/BACKEND_DEVELOPMENT_GUIDE.md).
 - **Strict Typing & Automated Code Quality:** `declare(strict_types=1)` across PHP files, formatted with Laravel Pint, and verified via Pest PHP v4 feature and unit test suites.
 
 ---
