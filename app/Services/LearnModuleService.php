@@ -37,7 +37,7 @@ class LearnModuleService
         $categories = Category::with('subcategory')->orderBy('sort_order')->get();
 
         return [
-            'modules' => AdminLearnModuleResource::collection($paginator->getCollection())->resolve(),
+            'modules' => AdminLearnModuleResource::collection($paginator->items())->resolve(),
             'pagination' => [
                 'current_page' => $paginator->currentPage(),
                 'per_page' => $paginator->perPage(),
@@ -62,7 +62,7 @@ class LearnModuleService
         $categories = Category::with('subcategory')->orderBy('sort_order')->get();
 
         return [
-            'drafts' => AdminDraftModuleResource::collection($paginator->getCollection())->resolve(),
+            'drafts' => AdminDraftModuleResource::collection($paginator->items())->resolve(),
             'pagination' => [
                 'current_page' => $paginator->currentPage(),
                 'per_page' => $paginator->perPage(),

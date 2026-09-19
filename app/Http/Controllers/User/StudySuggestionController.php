@@ -47,7 +47,7 @@ class StudySuggestionController extends Controller
     {
         $track = (string) $request->query('track', 'All');
         $timeOfDay = (string) $request->query('time_of_day', 'Evening');
-        $topicsPerDay = (int) $request->query('topics_per_day', 1);
+        $topicsPerDay = (int) $request->query('topics_per_day', '1');
         $suggestions = $this->analyzer->generateSuggestions($this->requireUser(), $track, $timeOfDay, $topicsPerDay);
 
         return response()->json($suggestions);

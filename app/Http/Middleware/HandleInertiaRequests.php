@@ -2,9 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\Announcement;
 use App\Models\Feedback;
 use App\Models\RolePermission;
+use App\Repositories\AnnouncementRepositoryInterface;
+use App\Repositories\FeedbackRepositoryInterface;
 use App\Services\TurnstileService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -69,17 +70,8 @@ class HandleInertiaRequests extends Middleware
                 'enabled' => app(TurnstileService::class)->isConfigured(),
             ],
             'sidebarOpen' => ! $request->hasCookie('sidebar_state') || $request->cookie('sidebar_state') === 'true',
-            'global_announcements' => Cache::remember('active_announcements', 300, function () {
-                return Announcement::where('is_active', true)
-                    ->where(function ($q) {
-                        $q->whereNull('expires_at')
-                            ->orWhere('expires_at', '>', now());
-                    })
-                    ->get();
-            }),
-            'pending_feedback_count' => Cache::remember('pending_feedback_count', 60, function () {
-                return Feedback::where('status', 'pending')->count();
-            }),
+            'global_announcements' => app(AnnouncementRepositoryInterface::class)->getActiveAnnouncements(),
+            'pending_feedback_count' => app(FeedbackRepositoryInterface::class)->getPendingCount(),
             'user_reported_ids' => $request->user() ? Feedback::where('user_id', $request->user()->id)
                 ->pluck('flaggable_id')
                 ->unique()
