@@ -104,13 +104,20 @@ class LearnModuleRepository extends BaseRepository implements LearnModuleReposit
      */
     public function getPublishedCatalog(): Collection
     {
-        return Cache::rememberForever('learn.modules.published', function () {
-            return $this->model->newQuery()
-                ->with(['category', 'subcategory'])
-                ->where('is_published', true)
-                ->latest()
-                ->get();
-        });
+        $cached = Cache::get('learn.modules.published');
+        if ($cached instanceof Collection && ! $cached->contains(fn ($item) => $item instanceof \__PHP_Incomplete_Class)) {
+            return $cached;
+        }
+
+        $modules = $this->model->newQuery()
+            ->with(['category', 'subcategory'])
+            ->where('is_published', true)
+            ->latest()
+            ->get();
+
+        Cache::forever('learn.modules.published', $modules);
+
+        return $modules;
     }
 
     public function findBySlug(string $slug, bool $publishedOnly = true): ?LearnModule
@@ -131,14 +138,22 @@ class LearnModuleRepository extends BaseRepository implements LearnModuleReposit
      */
     public function getRecommendedModules(int $categoryId, int $excludeModuleId, int $limit = 3): Collection
     {
-        return Cache::rememberForever("learn.module.recommended.{$excludeModuleId}", function () use ($categoryId, $excludeModuleId, $limit) {
-            return $this->model->newQuery()
-                ->where('category_id', $categoryId)
-                ->where('id', '!=', $excludeModuleId)
-                ->where('is_published', true)
-                ->take($limit)
-                ->get();
-        });
+        $key = "learn.module.recommended.{$excludeModuleId}";
+        $cached = Cache::get($key);
+        if ($cached instanceof Collection && ! $cached->contains(fn ($item) => $item instanceof \__PHP_Incomplete_Class)) {
+            return $cached;
+        }
+
+        $recommended = $this->model->newQuery()
+            ->where('category_id', $categoryId)
+            ->where('id', '!=', $excludeModuleId)
+            ->where('is_published', true)
+            ->take($limit)
+            ->get();
+
+        Cache::forever($key, $recommended);
+
+        return $recommended;
     }
 
     /**

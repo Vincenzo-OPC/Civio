@@ -7,13 +7,17 @@ use App\DTOs\Support\SupportMessageData;
 use App\DTOs\User\UpdateUserData;
 use App\Enums\UserRole;
 use App\Mail\SupportSubmittedMail;
+use App\Models\Announcement;
 use App\Models\Feedback;
 use App\Models\Question;
 use App\Models\User;
+use App\Repositories\AnnouncementRepositoryInterface;
 use App\Services\AnnouncementService;
 use App\Services\FeedbackService;
 use App\Services\SupportService;
 use App\Services\UserService;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\ValidationException;
 
@@ -48,6 +52,26 @@ test('announcement service handles CRUD and cache invalidation', function () {
     $service->deleteAnnouncement($announcement);
     $activeAfterDelete = $service->getActiveAnnouncements();
     expect($activeAfterDelete)->toBeEmpty();
+});
+
+test('announcement repository gracefully recovers if cache contains corrupted incomplete class data', function () {
+    $repo = app(AnnouncementRepositoryInterface::class);
+
+    Announcement::create([
+        'title' => 'Important Update',
+        'message' => 'Please read.',
+        'type' => 'info',
+        'is_active' => true,
+    ]);
+
+    // Simulate corrupted cache payload that resolves to __PHP_Incomplete_Class
+    Cache::put('active_announcements', unserialize('O:28:"NonExistentAnnouncementClass":0:{}'));
+
+    $announcements = $repo->getActiveAnnouncements();
+
+    expect($announcements)->toBeInstanceOf(Collection::class)
+        ->and($announcements)->toHaveCount(1)
+        ->and($announcements->first()->title)->toBe('Important Update');
 });
 
 test('feedback service handles submissions, relations, report counts, and bulk updates', function () {

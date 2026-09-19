@@ -53,12 +53,19 @@ class QuestionRepository extends BaseRepository implements QuestionRepositoryInt
 
     public function getActivePool(): Collection
     {
-        return Cache::rememberForever('questions.active', function () {
-            return $this->model->newQuery()
-                ->where('status', 'active')
-                ->with(['subcategory.category'])
-                ->get();
-        });
+        $cached = Cache::get('questions.active');
+        if ($cached instanceof Collection && ! $cached->contains(fn ($item) => $item instanceof \__PHP_Incomplete_Class)) {
+            return $cached;
+        }
+
+        $questions = $this->model->newQuery()
+            ->where('status', 'active')
+            ->with(['subcategory.category'])
+            ->get();
+
+        Cache::forever('questions.active', $questions);
+
+        return $questions;
     }
 
     /**

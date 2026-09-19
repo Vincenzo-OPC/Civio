@@ -21,16 +21,23 @@ class AnnouncementRepository extends BaseRepository implements AnnouncementRepos
      */
     public function getActiveAnnouncements(): Collection
     {
-        return Cache::remember('active_announcements', 300, function () {
-            return $this->model->newQuery()
-                ->where('is_active', true)
-                ->where(function ($q) {
-                    $q->whereNull('expires_at')
-                        ->orWhere('expires_at', '>', now());
-                })
-                ->latest()
-                ->get();
-        });
+        $cached = Cache::get('active_announcements');
+        if ($cached instanceof Collection && ! $cached->contains(fn ($item) => $item instanceof \__PHP_Incomplete_Class)) {
+            return $cached;
+        }
+
+        $announcements = $this->model->newQuery()
+            ->where('is_active', true)
+            ->where(function ($q) {
+                $q->whereNull('expires_at')
+                    ->orWhere('expires_at', '>', now());
+            })
+            ->latest()
+            ->get();
+
+        Cache::put('active_announcements', $announcements, 300);
+
+        return $announcements;
     }
 
     public function paginateLatest(int $perPage = 15): LengthAwarePaginator
