@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Requests\User\SavedDrillSets\AddQuestionToSavedSetRequest;
-use App\Http\Requests\User\SavedDrillSets\StoreSavedDrillSetRequest;
-use App\Http\Requests\User\SavedDrillSets\UpdateSavedDrillSetRequest;
+use App\Http\Requests\User\Drill\SavedDrillSets\AddQuestionToSavedSetRequest;
+use App\Http\Requests\User\Drill\SavedDrillSets\StoreSavedDrillSetRequest;
+use App\Http\Requests\User\Drill\SavedDrillSets\UpdateSavedDrillSetRequest;
 use App\Models\Question;
 use App\Models\SavedDrillSet;
 use Illuminate\Http\JsonResponse;

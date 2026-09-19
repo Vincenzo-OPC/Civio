@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SupportRequest;
+use App\Http\Requests\Support\SupportRequest;
 use App\Mail\SupportSubmittedMail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;

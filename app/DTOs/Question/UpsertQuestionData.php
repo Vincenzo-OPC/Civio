@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\DTOs\Question;
 
-use App\Http\Requests\StoreQuestionRequest;
-use App\Http\Requests\UpdateQuestionRequest;
+use App\Http\Requests\Admin\Question\StoreQuestionRequest;
+use App\Http\Requests\Admin\Question\UpdateQuestionRequest;
 
 readonly class UpsertQuestionData
 {

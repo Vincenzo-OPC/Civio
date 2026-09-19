@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\AdminUserUpdateRequest;
+use App\Http\Requests\Admin\User\AdminUserUpdateRequest;
 use App\Models\ExamAttempt;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;

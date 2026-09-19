@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\DTOs\Exam;
 
-use App\Http\Requests\StoreExamAttemptRequest;
+use App\Http\Requests\User\Exam\StoreExamAttemptRequest;
 
 readonly class SubmitExamAttemptData
 {

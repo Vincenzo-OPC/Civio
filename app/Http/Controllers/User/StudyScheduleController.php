@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Requests\BulkDeleteStudyScheduleRequest;
-use App\Http\Requests\BulkMarkDoneRequest;
-use App\Http\Requests\BulkRescheduleTodayRequest;
-use App\Http\Requests\BulkUpdateStudyTimeRequest;
-use App\Http\Requests\ShiftStudyScheduleRequest;
-use App\Http\Requests\StoreStudyScheduleRequest;
-use App\Http\Requests\UpdateStudyScheduleRequest;
+use App\Http\Requests\User\StudySchedule\BulkDeleteStudyScheduleRequest;
+use App\Http\Requests\User\StudySchedule\BulkMarkDoneRequest;
+use App\Http\Requests\User\StudySchedule\BulkRescheduleTodayRequest;
+use App\Http\Requests\User\StudySchedule\BulkUpdateStudyTimeRequest;
+use App\Http\Requests\User\StudySchedule\ShiftStudyScheduleRequest;
+use App\Http\Requests\User\StudySchedule\StoreStudyScheduleRequest;
+use App\Http\Requests\User\StudySchedule\UpdateStudyScheduleRequest;
 use App\Models\ExamDate;
 use App\Models\LearnModule;
 use App\Models\StudySchedule;

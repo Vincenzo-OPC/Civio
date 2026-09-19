@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\DTOs\Learn;
 
-use App\Http\Requests\StoreLearnModuleRequest;
-use App\Http\Requests\UpdateLearnModuleRequest;
+use App\Http\Requests\Admin\Learn\StoreLearnModuleRequest;
+use App\Http\Requests\Admin\Learn\UpdateLearnModuleRequest;
 
 readonly class UpsertLearnModuleData
 {

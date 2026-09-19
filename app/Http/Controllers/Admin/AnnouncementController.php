@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\StoreAnnouncementRequest;
+use App\Http\Requests\Admin\Announcement\StoreAnnouncementRequest;
 use App\Models\Announcement;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Cache;

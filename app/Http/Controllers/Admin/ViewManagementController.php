@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\UpdateViewManagementRequest;
+use App\Http\Requests\Admin\ViewManagement\UpdateViewManagementRequest;
 use App\Models\RolePermission;
 use Illuminate\Support\Facades\Cache;
 use Inertia\Inertia;

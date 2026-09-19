@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Actions\Learn\BulkUpdateLearnModulesAction;
 use App\DTOs\Learn\UpsertLearnModuleData;
-use App\Http\Requests\Admin\BulkUpdateLearnModuleStatusRequest;
-use App\Http\Requests\BulkDestroyLearnModulesRequest;
-use App\Http\Requests\GenerateLearnModuleRequest;
-use App\Http\Requests\StoreLearnModuleRequest;
-use App\Http\Requests\UpdateLearnModuleRequest;
+use App\Http\Requests\Admin\Learn\BulkDestroyLearnModulesRequest;
+use App\Http\Requests\Admin\Learn\BulkUpdateLearnModuleStatusRequest;
+use App\Http\Requests\Admin\Learn\GenerateLearnModuleRequest;
+use App\Http\Requests\Admin\Learn\StoreLearnModuleRequest;
+use App\Http\Requests\Admin\Learn\UpdateLearnModuleRequest;
 use App\Jobs\GenerateLearnModuleJob;
 use App\Models\Category;
 use App\Models\LearnModule;

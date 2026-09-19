@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\LegalContentRequest;
+use App\Http\Requests\Admin\Legal\LegalContentRequest;
 use App\Models\LegalContent;
 use Inertia\Inertia;
 

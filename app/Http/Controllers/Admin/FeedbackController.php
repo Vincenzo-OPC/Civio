@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Events\NewFeedbackSubmitted;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\BulkDestroyFeedbackRequest;
-use App\Http\Requests\Admin\BulkUpdateFeedbackRequest;
-use App\Http\Requests\Admin\StoreFeedbackRequest;
-use App\Http\Requests\Admin\UpdateFeedbackStatusRequest;
+use App\Http\Requests\Admin\Feedback\BulkDestroyFeedbackRequest;
+use App\Http\Requests\Admin\Feedback\BulkUpdateFeedbackRequest;
+use App\Http\Requests\Admin\Feedback\StoreFeedbackRequest;
+use App\Http\Requests\Admin\Feedback\UpdateFeedbackStatusRequest;
 use App\Models\Feedback;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Cache;

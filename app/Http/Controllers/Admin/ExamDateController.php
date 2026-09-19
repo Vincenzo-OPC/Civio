@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\StoreExamDateRequest;
-use App\Http\Requests\UpdateExamDateRequest;
+use App\Http\Requests\Admin\ExamDate\StoreExamDateRequest;
+use App\Http\Requests\Admin\ExamDate\UpdateExamDateRequest;
 use App\Models\ExamDate;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;

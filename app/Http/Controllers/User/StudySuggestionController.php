@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Requests\ApplySuggestionsRequest;
-use App\Http\Requests\ApplyTemplateRequest;
+use App\Http\Requests\User\StudySchedule\ApplySuggestionsRequest;
+use App\Http\Requests\User\StudySchedule\ApplyTemplateRequest;
 use App\Models\StudySchedule;
 use App\Services\StudyPlanAnalyzer;
 use App\Services\StudyPlanTemplateService;

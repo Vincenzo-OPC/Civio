@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Requests\User\StoreCustomDrillQuestionRequest;
+use App\Http\Requests\User\Drill\StoreCustomDrillQuestionRequest;
 use App\Models\Category;
 use App\Models\ExamAttempt;
 use App\Models\Question;

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Requests\BulkDestroyAttemptsRequest;
+use App\Http\Requests\User\Exam\BulkDestroyAttemptsRequest;
 use App\Models\ExamAttempt;
 use App\Services\ExamAttemptService;
 use Illuminate\Http\RedirectResponse;

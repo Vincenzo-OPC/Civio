@@ -4,7 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Actions\Exam\SubmitExamAttemptAction;
 use App\DTOs\Exam\SubmitExamAttemptData;
-use App\Http\Requests\StoreExamAttemptRequest;
+use App\Http\Requests\User\Exam\StoreExamAttemptRequest;
 use App\Http\Resources\ExamScorecardResource;
 use App\Models\Category;
 use App\Models\Question;
@@ -15,6 +15,7 @@ use App\Services\ExamAttemptService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 use Inertia\Inertia;
 use Inertia\Response;
 
