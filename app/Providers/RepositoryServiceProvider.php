@@ -6,12 +6,16 @@ namespace App\Providers;
 
 use App\Repositories\AnnouncementRepository;
 use App\Repositories\AnnouncementRepositoryInterface;
+use App\Repositories\CategoryRepository;
+use App\Repositories\CategoryRepositoryInterface;
 use App\Repositories\ExamAttemptRepository;
 use App\Repositories\ExamAttemptRepositoryInterface;
 use App\Repositories\FeedbackRepository;
 use App\Repositories\FeedbackRepositoryInterface;
 use App\Repositories\LearnModuleRepository;
 use App\Repositories\LearnModuleRepositoryInterface;
+use App\Repositories\LegalContentRepository;
+use App\Repositories\LegalContentRepositoryInterface;
 use App\Repositories\QuestionRepository;
 use App\Repositories\QuestionRepositoryInterface;
 use App\Repositories\SavedDrillSetRepository;
@@ -67,6 +71,16 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->singleton(
             UserRepositoryInterface::class,
             UserRepository::class
+        );
+
+        $this->app->singleton(
+            CategoryRepositoryInterface::class,
+            CategoryRepository::class
+        );
+
+        $this->app->singleton(
+            LegalContentRepositoryInterface::class,
+            LegalContentRepository::class
         );
     }
 }

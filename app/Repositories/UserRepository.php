@@ -71,4 +71,9 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
 
         return $user ? (bool) $user->delete() : false;
     }
+
+    public function incrementPdfDownloads(int $id): void
+    {
+        $this->model->newQuery()->where('id', $id)->increment('pdf_downloads_count');
+    }
 }

@@ -30,4 +30,6 @@ interface UserRepositoryInterface extends BaseRepositoryInterface
     public function updateUser(int $id, array $attributes): bool;
 
     public function deleteUser(int $id): bool;
+
+    public function incrementPdfDownloads(int $id): void;
 }
