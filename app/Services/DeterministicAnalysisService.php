@@ -21,67 +21,188 @@ class DeterministicAnalysisService
         'Analytical Ability',
     ];
 
+    /**
+     * Generate deterministic analysis for a user's exam attempts.
+     *
+     * @return array<string, mixed>
+     */
     public function generate(int $userId, int $latestAttemptId, bool $singleAttemptOnly = false): array
+    {
+        $attempts = $this->resolveAttempts($userId, $latestAttemptId, $singleAttemptOnly);
+        if (! $attempts) {
+            return $this->getEmptyAnalysis();
+        }
+
+        $metrics = $this->aggregateAttemptMetrics($attempts);
+        $totalAttempts = $attempts->count();
+
+        // Volume-weighted overall average calculation
+        if ($metrics['mockTotalQuestions'] > 0) {
+            $avgScore = (int) round(($metrics['mockTotalCorrect'] / $metrics['mockTotalQuestions']) * 100);
+            $trendScores = ! empty($metrics['mockScores']) ? $metrics['mockScores'] : $metrics['scores'];
+        } else {
+            $avgScore = $metrics['allTotalQuestions'] > 0 ? (int) round(($metrics['allTotalCorrect'] / $metrics['allTotalQuestions']) * 100) : 0;
+            $trendScores = ! empty($metrics['scores']) ? $metrics['scores'] : $metrics['mockScores'];
+        }
+        $passingRate = $metrics['mockExamCount'] > 0 ? round(($metrics['passCount'] / $metrics['mockExamCount']) * 100) : 0;
+
+        $subtopicStats = $this->calculateSubtopicStats($attempts);
+        $mastery = $this->evaluateSubjectMastery($metrics['categoryTotals']);
+        $trend = $this->calculateTrend($trendScores);
+        $examDate = $this->resolveExamDate();
+
+        $prediction = $this->calculatePassPrediction(
+            $metrics['mockExamCount'],
+            $metrics['mockTotalCorrect'],
+            $metrics['mockTotalQuestions'],
+            $trend,
+            $examDate['daysUntilExam'],
+            $examDate['examDateStr']
+        );
+
+        $completionPace = $this->pickTemplate('completion_pace_'.$trend, compact('totalAttempts'));
+        $remediation = $this->buildRemediationMatrix($subtopicStats, $mastery['criticalWeaknesses']);
+        $studyPlan = $this->buildPersonalizedStudyPlan($remediation['recommendedSubcatIds'], $remediation['recommendedModules']);
+
+        // Context-aware personalized text
+        $scoreTier = $avgScore >= 80 ? 'high' : ($avgScore >= 60 ? 'mid' : 'low');
+        $strengthsList = implode(' and ', array_slice($mastery['strengths'], 0, 2)) ?: 'none identified yet';
+        $weakList = implode(' and ', array_slice($mastery['criticalWeaknesses'], 0, 2)) ?: 'none identified yet';
+        $topModule = $remediation['recommendedModules'][0] ?? 'General Review';
+
+        $daysUntilExam = $examDate['daysUntilExam'];
+        $examDateStr = $examDate['examDateStr'];
+        $passProbability = $prediction['passProbability'];
+        $mockExamCount = $metrics['mockExamCount'];
+
+        $templateVars = compact(
+            'totalAttempts', 'avgScore', 'passProbability', 'daysUntilExam',
+            'examDateStr', 'strengthsList', 'weakList', 'topModule',
+            'mockExamCount', 'passingRate', 'trend'
+        );
+
+        if ($mockExamCount === 0) {
+            $verdict = $metrics['allTotalQuestions'] > 0
+                ? $this->pickTemplate('verdict_no_mock', $templateVars)
+                : $this->pickTemplate('verdict_empty', []);
+        } else {
+            $verdict = $this->pickTemplate("verdict_{$scoreTier}", $templateVars);
+        }
+
+        $encouragement = $this->pickTemplate("encouragement_{$scoreTier}_{$trend}", $templateVars)
+            ?? $this->pickTemplate("encouragement_{$scoreTier}", $templateVars);
+        $priorityAction = count($remediation['recommendedModules']) > 0
+            ? $this->pickTemplate('priority_action', $templateVars)
+            : $this->pickTemplate('priority_action_none', $templateVars);
+
+        return [
+            'pass_probability' => $passProbability,
+            'verdict' => $verdict,
+            'trend' => $trend,
+            'strengths' => $mastery['strengths'],
+            'critical_weaknesses' => array_slice($mastery['criticalWeaknesses'], 0, 3),
+            'priority_action' => $priorityAction,
+            'recommended_modules' => array_slice($remediation['recommendedModules'], 0, 3),
+            'encouragement' => $encouragement,
+            'predictive_metrics' => [
+                'estimated_exam_score' => $prediction['estimatedExamScore'],
+                'days_to_readiness' => $prediction['daysToReadiness'],
+                'completion_pace' => $completionPace,
+                'mock_pass_confidence' => $prediction['mockPassConfidence'],
+            ],
+            'subject_mastery' => $mastery['subjectMastery'],
+            'timeline_prediction' => [
+                'current_stage' => $this->resolveCurrentStage($avgScore),
+                'milestone_prediction' => $this->pickTemplate("milestone_{$scoreTier}", $templateVars),
+                'potential_score_improvement' => $this->pickTemplate("improvement_{$scoreTier}", $templateVars),
+            ],
+            'remediation_matrix' => $remediation['remediationMatrix'],
+            'personalized_study_plan' => $studyPlan,
+        ];
+    }
+
+    /**
+     * Resolve the collection of attempts to evaluate.
+     *
+     * @return Collection<int, ExamAttempt>|null
+     */
+    protected function resolveAttempts(int $userId, int $latestAttemptId, bool $singleAttemptOnly): ?Collection
     {
         // Limit evaluation to the latest 10 attempts to reflect current readiness rather than stale historical scores
         $allAttempts = ExamAttempt::where('user_id', $userId)->latest()->take(10)->get()->reverse()->values();
 
         if ($allAttempts->isEmpty()) {
-            return $this->getEmptyAnalysis();
+            return null;
         }
 
         $latestAttempt = $allAttempts->firstWhere('id', $latestAttemptId) ?? ExamAttempt::find($latestAttemptId);
         if (! $latestAttempt) {
-            return $this->getEmptyAnalysis();
+            return null;
         }
 
         if ($singleAttemptOnly) {
-            $filteredAttempts = collect([$latestAttempt]);
-        } else {
-            $latestMeta = $latestAttempt->cat_scores['metadata'] ?? [];
-            $latestTrack = $latestMeta['track'] ?? 'Drill';
-            if ($latestAttempt->category_id !== null && ! isset($latestMeta['track'])) {
-                $latestTrack = 'Drill';
-            }
+            return collect([$latestAttempt]);
+        }
 
-            if ($latestTrack === 'Drill') {
-                $mostRecentMock = $allAttempts->reverse()->first(function ($attempt) {
-                    $meta = $attempt->cat_scores['metadata'] ?? [];
-                    $track = $meta['track'] ?? 'Drill';
-                    if ($attempt->category_id !== null && ! isset($meta['track'])) {
-                        $track = 'Drill';
-                    }
+        $latestMeta = $latestAttempt->cat_scores['metadata'] ?? [];
+        $latestTrack = $latestMeta['track'] ?? 'Drill';
+        if ($latestAttempt->category_id !== null && ! isset($latestMeta['track'])) {
+            $latestTrack = 'Drill';
+        }
 
-                    return $track !== 'Drill';
-                });
-                if ($mostRecentMock) {
-                    $mockMeta = $mostRecentMock->cat_scores['metadata'] ?? [];
-                    $latestTrack = $mockMeta['track'] ?? 'Professional';
-                } else {
-                    $latestTrack = 'Professional';
-                }
-            }
-
-            $filteredAttempts = $allAttempts->filter(function ($attempt) use ($latestTrack) {
+        if ($latestTrack === 'Drill') {
+            $mostRecentMock = $allAttempts->reverse()->first(function (ExamAttempt $attempt): bool {
                 $meta = $attempt->cat_scores['metadata'] ?? [];
                 $track = $meta['track'] ?? 'Drill';
                 if ($attempt->category_id !== null && ! isset($meta['track'])) {
                     $track = 'Drill';
                 }
 
-                return $track === $latestTrack || $track === 'Drill';
+                return $track !== 'Drill';
             });
+            if ($mostRecentMock) {
+                $mockMeta = $mostRecentMock->cat_scores['metadata'] ?? [];
+                $latestTrack = $mockMeta['track'] ?? 'Professional';
+            } else {
+                $latestTrack = 'Professional';
+            }
         }
 
-        $totalAttempts = $filteredAttempts->count();
-        if ($totalAttempts === 0) {
-            return $this->getEmptyAnalysis();
+        $filteredAttempts = $allAttempts->filter(function (ExamAttempt $attempt) use ($latestTrack): bool {
+            $meta = $attempt->cat_scores['metadata'] ?? [];
+            $track = $meta['track'] ?? 'Drill';
+            if ($attempt->category_id !== null && ! isset($meta['track'])) {
+                $track = 'Drill';
+            }
+
+            return $track === $latestTrack || $track === 'Drill';
+        });
+
+        if ($filteredAttempts->count() === 0) {
+            return null;
         }
 
-        // Replace references to $allAttempts with $filteredAttempts for calculations
-        $allAttempts = $filteredAttempts;
+        return $filteredAttempts;
+    }
 
-        // Calculate scores and trends with volume-weighted metrics
+    /**
+     * Aggregate volume-weighted scores, pass counts, and category totals.
+     *
+     * @param  Collection<int, ExamAttempt>  $attempts
+     * @return array{
+     *     scores: array<int, int>,
+     *     mockScores: array<int, int>,
+     *     mockExamCount: int,
+     *     passCount: int,
+     *     allTotalCorrect: int,
+     *     allTotalQuestions: int,
+     *     mockTotalCorrect: int,
+     *     mockTotalQuestions: int,
+     *     categoryTotals: array<string, array{correct: int, total: int}>
+     * }
+     */
+    protected function aggregateAttemptMetrics(Collection $attempts): array
+    {
         $scores = [];
         $mockScores = [];
         $mockExamCount = 0;
@@ -98,10 +219,10 @@ class DeterministicAnalysisService
             $categoryTotals[$cat] = ['correct' => 0, 'total' => 0];
         }
 
-        foreach ($allAttempts as $attempt) {
+        foreach ($attempts as $attempt) {
             $meta = $attempt->cat_scores['metadata'] ?? [];
             $correct = $meta['correct_count'] ?? 0;
-            $total = $meta['total_questions'] ?? count($attempt->question_ids);
+            $total = $meta['total_questions'] ?? count($attempt->question_ids ?? []);
             $percentage = $total > 0 ? round(($correct / $total) * 100) : 0;
 
             $track = $meta['track'] ?? 'Drill';
@@ -152,30 +273,30 @@ class DeterministicAnalysisService
             }
         }
 
-        // Volume-weighted overall average calculation
-        if ($mockTotalQuestions > 0) {
-            $avgScore = (int) round(($mockTotalCorrect / $mockTotalQuestions) * 100);
-            $trendScores = ! empty($mockScores) ? $mockScores : $scores;
-        } else {
-            $avgScore = $allTotalQuestions > 0 ? (int) round(($allTotalCorrect / $allTotalQuestions) * 100) : 0;
-            $trendScores = ! empty($scores) ? $scores : $mockScores;
-        }
-        $passingRate = $mockExamCount > 0 ? round(($passCount / $mockExamCount) * 100) : 0;
+        return [
+            'scores' => $scores,
+            'mockScores' => $mockScores,
+            'mockExamCount' => $mockExamCount,
+            'passCount' => $passCount,
+            'allTotalCorrect' => $allTotalCorrect,
+            'allTotalQuestions' => $allTotalQuestions,
+            'mockTotalCorrect' => $mockTotalCorrect,
+            'mockTotalQuestions' => $mockTotalQuestions,
+            'categoryTotals' => $categoryTotals,
+        ];
+    }
 
-        // Category breakdown
-        $categoryBreakdown = [];
-        foreach ($categoryTotals as $catName => $data) {
-            $categoryBreakdown[$catName] = [
-                'correct' => $data['correct'],
-                'total' => $data['total'],
-                'percentage' => $data['total'] > 0 ? round(($data['correct'] / $data['total']) * 100) : 0,
-            ];
-        }
-
-        // Subtopic breakdown
+    /**
+     * Compute correctness counts per subtopic from attempt answers.
+     *
+     * @param  Collection<int, ExamAttempt>  $attempts
+     * @return array<string, array{correct: int, total: int}>
+     */
+    protected function calculateSubtopicStats(Collection $attempts): array
+    {
         $subtopicStats = [];
         $allQuestionIds = [];
-        foreach ($allAttempts as $attempt) {
+        foreach ($attempts as $attempt) {
             if ($attempt->question_ids) {
                 $allQuestionIds = array_merge($allQuestionIds, $attempt->question_ids);
             }
@@ -190,9 +311,9 @@ class DeterministicAnalysisService
                 ->keyBy('id');
         }
 
-        foreach ($allAttempts as $attempt) {
+        foreach ($attempts as $attempt) {
             $answers = $attempt->answers ?? [];
-            if (empty($answers)) {
+            if (empty($answers) || empty($attempt->question_ids)) {
                 continue;
             }
             foreach ($attempt->question_ids as $qId) {
@@ -214,7 +335,31 @@ class DeterministicAnalysisService
             }
         }
 
-        // Classify strengths, weaknesses, and subject mastery
+        return $subtopicStats;
+    }
+
+    /**
+     * Evaluate subject mastery, strengths, and critical weaknesses.
+     *
+     * @param  array<string, array{correct: int, total: int}>  $categoryTotals
+     * @return array{
+     *     categoryBreakdown: array<string, array{correct: int, total: int, percentage: float|int}>,
+     *     strengths: array<int, string>,
+     *     criticalWeaknesses: array<int, string>,
+     *     subjectMastery: array<int, array{subject: string, rating: string, color: string, insight: string, recommended_action: string}>
+     * }
+     */
+    protected function evaluateSubjectMastery(array $categoryTotals): array
+    {
+        $categoryBreakdown = [];
+        foreach ($categoryTotals as $catName => $data) {
+            $categoryBreakdown[$catName] = [
+                'correct' => $data['correct'],
+                'total' => $data['total'],
+                'percentage' => $data['total'] > 0 ? round(($data['correct'] / $data['total']) * 100) : 0,
+            ];
+        }
+
         $strengths = [];
         $weaknesses = [];
         $subjectMastery = [];
@@ -257,31 +402,57 @@ class DeterministicAnalysisService
             ];
         }
 
-        // Sort weaknesses by lowest percentage first
         asort($weaknesses);
         $criticalWeaknesses = array_keys($weaknesses);
 
-        // If no strengths/weaknesses found because of insufficient data
         if (empty($strengths) && empty($criticalWeaknesses)) {
             $criticalWeaknesses = [$this->categories[0]];
         }
 
-        // Calculate trend direction
-        $trend = 'stable';
+        return [
+            'categoryBreakdown' => $categoryBreakdown,
+            'strengths' => $strengths,
+            'criticalWeaknesses' => $criticalWeaknesses,
+            'subjectMastery' => $subjectMastery,
+        ];
+    }
+
+    /**
+     * Determine trend direction based on historical score progression.
+     *
+     * @param  array<int, int>  $trendScores
+     */
+    protected function calculateTrend(array $trendScores): string
+    {
         if (count($trendScores) >= 3) {
             $recent = array_slice($trendScores, -3);
             if ($recent[2] > $recent[0] + 5) {
-                $trend = 'improving';
-            } elseif ($recent[2] < $recent[0] - 5) {
-                $trend = 'declining';
+                return 'improving';
             }
-        } elseif (count($trendScores) < 2) {
-            $trend = 'insufficient_data';
+            if ($recent[2] < $recent[0] - 5) {
+                return 'declining';
+            }
+
+            return 'stable';
         }
 
-        // Days until exam
+        if (count($trendScores) < 2) {
+            return 'insufficient_data';
+        }
+
+        return 'stable';
+    }
+
+    /**
+     * Resolve days until exam and formatted exam date string.
+     *
+     * @return array{daysUntilExam: int, examDateStr: string}
+     */
+    protected function resolveExamDate(): array
+    {
         $daysUntilExam = null;
         $examDateStr = 'Not set';
+
         if (Schema::hasTable('exam_dates')) {
             $examDate = ExamDate::where('is_active', true)
                 ->where('date', '>', now())
@@ -293,55 +464,98 @@ class DeterministicAnalysisService
                 $examDateStr = $examDateCarbon->format('F j, Y');
             }
         }
+
         if ($daysUntilExam === null) {
             $daysUntilExam = (int) ceil(now()->diffInDays(Carbon::parse('2026-08-09'), false));
             $examDateStr = 'August 9, 2026';
         }
 
-        // Calculate pass probability (simple heuristic) - strictly based on Mock Exams (Professional/Subprofessional)
-        if ($mockExamCount > 0 && $mockTotalQuestions > 0) {
-            $mockAvg = (int) round(($mockTotalCorrect / $mockTotalQuestions) * 100);
-            $passProbability = (int) round($mockAvg * 0.9);
-            if ($trend === 'improving') {
-                $passProbability = min(98, $passProbability + 5);
-            } elseif ($trend === 'declining') {
-                $passProbability = max(5, $passProbability - 8);
-            }
-            $passProbability = max(0, min(100, $passProbability));
+        return [
+            'daysUntilExam' => $daysUntilExam,
+            'examDateStr' => $examDateStr,
+        ];
+    }
 
-            $estimatedMin = max(0, $mockAvg - 4);
-            $estimatedMax = min(100, $mockAvg + 4);
-            $estimatedExamScore = "{$estimatedMin}% - {$estimatedMax}% predicted actual score";
+    /**
+     * Calculate pass probability and mock predictive metrics.
+     *
+     * @return array{
+     *     passProbability: int,
+     *     estimatedExamScore: string,
+     *     daysToReadiness: string,
+     *     mockPassConfidence: string
+     * }
+     */
+    protected function calculatePassPrediction(
+        int $mockExamCount,
+        int $mockTotalCorrect,
+        int $mockTotalQuestions,
+        string $trend,
+        int $daysUntilExam,
+        string $examDateStr
+    ): array {
+        if ($mockExamCount <= 0 || $mockTotalQuestions <= 0) {
+            return [
+                'passProbability' => 0,
+                'estimatedExamScore' => 'Complete a Mock Exam to unlock score prediction',
+                'daysToReadiness' => 'Complete a Mock Exam to estimate readiness timeline',
+                'mockPassConfidence' => 'low',
+            ];
+        }
 
-            if ($daysUntilExam !== null && $daysUntilExam <= 7) {
-                if ($daysUntilExam <= 1) {
-                    $daysToReadiness = "Final 24-hour crunch review before exam day ({$examDateStr}).";
-                } else {
-                    $daysToReadiness = "Urgent {$daysUntilExam}-day final sprint review before exam day ({$examDateStr}).";
-                }
+        $mockAvg = (int) round(($mockTotalCorrect / $mockTotalQuestions) * 100);
+        $passProbability = (int) round($mockAvg * 0.9);
+        if ($trend === 'improving') {
+            $passProbability = min(98, $passProbability + 5);
+        } elseif ($trend === 'declining') {
+            $passProbability = max(5, $passProbability - 8);
+        }
+        $passProbability = max(0, min(100, $passProbability));
+
+        $estimatedMin = max(0, $mockAvg - 4);
+        $estimatedMax = min(100, $mockAvg + 4);
+        $estimatedExamScore = "{$estimatedMin}% - {$estimatedMax}% predicted actual score";
+
+        if ($daysUntilExam <= 7) {
+            if ($daysUntilExam <= 1) {
+                $daysToReadiness = "Final 24-hour crunch review before exam day ({$examDateStr}).";
             } else {
-                $daysToReadiness = $this->pickTemplate($mockAvg < 60 ? 'readiness_low' : ($mockAvg >= 80 ? 'readiness_high' : 'readiness_mid'), []);
-            }
-
-            $mockPassConfidence = 'moderate';
-            if ($mockAvg >= 80) {
-                $mockPassConfidence = 'high';
-            } elseif ($mockAvg < 60) {
-                $mockPassConfidence = 'low';
+                $daysToReadiness = "Urgent {$daysUntilExam}-day final sprint review before exam day ({$examDateStr}).";
             }
         } else {
-            $passProbability = 0;
-            $estimatedExamScore = 'Complete a Mock Exam to unlock score prediction';
-            $daysToReadiness = 'Complete a Mock Exam to estimate readiness timeline';
+            $daysToReadiness = $this->pickTemplate($mockAvg < 60 ? 'readiness_low' : ($mockAvg >= 80 ? 'readiness_high' : 'readiness_mid'), []);
+        }
+
+        $mockPassConfidence = 'moderate';
+        if ($mockAvg >= 80) {
+            $mockPassConfidence = 'high';
+        } elseif ($mockAvg < 60) {
             $mockPassConfidence = 'low';
         }
 
-        $completionPace = $this->pickTemplate('completion_pace_'.$trend, compact('totalAttempts'));
+        return [
+            'passProbability' => $passProbability,
+            'estimatedExamScore' => $estimatedExamScore,
+            'daysToReadiness' => $daysToReadiness,
+            'mockPassConfidence' => $mockPassConfidence,
+        ];
+    }
 
-        // Remediation matrix & recommendations
+    /**
+     * Build remediation matrix and recommended subcategories/modules based on weak subtopics.
+     *
+     * @param  array<string, array{correct: int, total: int}>  $subtopicStats
+     * @param  array<int, string>  $criticalWeaknesses
+     * @return array{
+     *     remediationMatrix: array<int, array{subtopic: string, difficulty_level: string, reason_for_struggle: string, coaching_tip: string}>,
+     *     recommendedSubcatIds: array<int, int>,
+     *     recommendedModules: array<int, string>
+     * }
+     */
+    protected function buildRemediationMatrix(array $subtopicStats, array $criticalWeaknesses): array
+    {
         $subcategories = Subcategory::with('category')->get();
 
-        // Find worst subtopics from performance
         $worstSubtopics = [];
         foreach ($subtopicStats as $subcatName => $data) {
             $pct = round(($data['correct'] / $data['total']) * 100);
@@ -351,7 +565,6 @@ class DeterministicAnalysisService
         }
         asort($worstSubtopics);
 
-        // Match with database subcategories
         $primaryWeakSubject = $criticalWeaknesses[0] ?? null;
         $remediationMatrix = [];
         $recommendedSubcatIds = [];
@@ -367,7 +580,7 @@ class DeterministicAnalysisService
             foreach (array_keys($worstSubtopics) as $worstName) {
                 if (isset($availableSubcatMap[$worstName])) {
                     $sub = $availableSubcatMap[$worstName];
-                    if ($sub->category?->name === $primaryWeakSubject && ! in_array($sub->name, $recommendedModules)) {
+                    if ($sub->category?->name === $primaryWeakSubject && ! in_array($sub->name, $recommendedModules, true)) {
                         $remediationMatrix[] = [
                             'subtopic' => $sub->name,
                             'difficulty_level' => 'Hard',
@@ -389,7 +602,7 @@ class DeterministicAnalysisService
             foreach (array_keys($worstSubtopics) as $worstName) {
                 if (isset($availableSubcatMap[$worstName])) {
                     $sub = $availableSubcatMap[$worstName];
-                    if (! in_array($sub->name, $recommendedModules)) {
+                    if (! in_array($sub->name, $recommendedModules, true)) {
                         $remediationMatrix[] = [
                             'subtopic' => $sub->name,
                             'difficulty_level' => 'Hard',
@@ -410,7 +623,7 @@ class DeterministicAnalysisService
         if (count($recommendedModules) < 3) {
             foreach ($criticalWeaknesses as $weakSubject) {
                 foreach ($subcategories as $sub) {
-                    if ($sub->category?->name === $weakSubject && ! in_array($sub->name, $recommendedModules)) {
+                    if ($sub->category?->name === $weakSubject && ! in_array($sub->name, $recommendedModules, true)) {
                         $remediationMatrix[] = [
                             'subtopic' => $sub->name,
                             'difficulty_level' => 'Medium',
@@ -427,94 +640,62 @@ class DeterministicAnalysisService
             }
         }
 
-        // Timeline Predictions
-        $currentStage = 'Foundation Building';
-        if ($avgScore >= 85) {
-            $currentStage = 'Exam-Day Simulation';
-        } elseif ($avgScore >= 80) {
-            $currentStage = 'Final Polish & Speed Drills';
-        } elseif ($avgScore >= 70) {
-            $currentStage = 'Core Strengthening';
-        } elseif ($avgScore >= 60) {
-            $currentStage = 'Concept Reinforcement';
-        }
+        return [
+            'remediationMatrix' => $remediationMatrix,
+            'recommendedSubcatIds' => $recommendedSubcatIds,
+            'recommendedModules' => $recommendedModules,
+        ];
+    }
 
-        // 7-day study plan
+    /**
+     * Build 7-day personalized study schedule tasks.
+     *
+     * @param  array<int, int>  $recommendedSubcatIds
+     * @param  array<int, string>  $recommendedModules
+     * @return array<int, array{day: string, tasks: array<int, array{focus_topic: string, activity: string, subcategory_id: int|null}>}>
+     */
+    protected function buildPersonalizedStudyPlan(array $recommendedSubcatIds, array $recommendedModules): array
+    {
         $personalizedStudyPlan = [];
         for ($day = 1; $day <= 7; $day++) {
-            $tasks = [];
-            // Assign subtopics sequentially
             $subcatIndex = ($day - 1) % max(1, count($recommendedSubcatIds));
             $subcatId = ! empty($recommendedSubcatIds) ? $recommendedSubcatIds[$subcatIndex] : null;
             $subcatName = ! empty($recommendedModules) ? $recommendedModules[$subcatIndex] : 'General Info';
 
-            $tasks[] = [
-                'focus_topic' => "Targeted study: {$subcatName}",
-                'activity' => "Spend 30 minutes reading the modules for {$subcatName} and complete 10 topic drills.",
-                'subcategory_id' => $subcatId,
-            ];
-
             $personalizedStudyPlan[] = [
                 'day' => "Day {$day}",
-                'tasks' => $tasks,
+                'tasks' => [
+                    [
+                        'focus_topic' => "Targeted study: {$subcatName}",
+                        'activity' => "Spend 30 minutes reading the modules for {$subcatName} and complete 10 topic drills.",
+                        'subcategory_id' => $subcatId,
+                    ],
+                ],
             ];
         }
 
-        // Context-aware personalized text
-        $scoreTier = $avgScore >= 80 ? 'high' : ($avgScore >= 60 ? 'mid' : 'low');
-        $strengthsList = implode(' and ', array_slice($strengths, 0, 2)) ?: 'none identified yet';
-        $weakList = implode(' and ', array_slice($criticalWeaknesses, 0, 2)) ?: 'none identified yet';
-        $topModule = $recommendedModules[0] ?? 'General Review';
+        return $personalizedStudyPlan;
+    }
 
-        $templateVars = compact(
-            'totalAttempts', 'avgScore', 'passProbability', 'daysUntilExam',
-            'examDateStr', 'strengthsList', 'weakList', 'topModule',
-            'mockExamCount', 'passingRate', 'trend'
-        );
-
-        if ($mockExamCount === 0) {
-            if ($allTotalQuestions > 0) {
-                $verdict = $this->pickTemplate('verdict_no_mock', $templateVars);
-            } else {
-                $verdict = $this->pickTemplate('verdict_empty', []);
-            }
-        } else {
-            $verdict = $this->pickTemplate("verdict_{$scoreTier}", $templateVars);
+    /**
+     * Resolve the current learning and readiness stage based on volume-weighted score.
+     */
+    protected function resolveCurrentStage(int $avgScore): string
+    {
+        if ($avgScore >= 85) {
+            return 'Exam-Day Simulation';
+        }
+        if ($avgScore >= 80) {
+            return 'Final Polish & Speed Drills';
+        }
+        if ($avgScore >= 70) {
+            return 'Core Strengthening';
+        }
+        if ($avgScore >= 60) {
+            return 'Concept Reinforcement';
         }
 
-        $encouragement = $this->pickTemplate("encouragement_{$scoreTier}_{$trend}", $templateVars)
-            ?? $this->pickTemplate("encouragement_{$scoreTier}", $templateVars);
-        $priorityAction = count($recommendedModules) > 0
-            ? $this->pickTemplate('priority_action', $templateVars)
-            : $this->pickTemplate('priority_action_none', $templateVars);
-
-        $milestoneKey = "milestone_{$scoreTier}";
-        $improvementKey = "improvement_{$scoreTier}";
-
-        return [
-            'pass_probability' => $passProbability,
-            'verdict' => $verdict,
-            'trend' => $trend,
-            'strengths' => $strengths,
-            'critical_weaknesses' => array_slice($criticalWeaknesses, 0, 3),
-            'priority_action' => $priorityAction,
-            'recommended_modules' => array_slice($recommendedModules, 0, 3),
-            'encouragement' => $encouragement,
-            'predictive_metrics' => [
-                'estimated_exam_score' => $estimatedExamScore,
-                'days_to_readiness' => $daysToReadiness,
-                'completion_pace' => $completionPace,
-                'mock_pass_confidence' => $mockPassConfidence,
-            ],
-            'subject_mastery' => $subjectMastery,
-            'timeline_prediction' => [
-                'current_stage' => $currentStage,
-                'milestone_prediction' => $this->pickTemplate($milestoneKey, $templateVars),
-                'potential_score_improvement' => $this->pickTemplate($improvementKey, $templateVars),
-            ],
-            'remediation_matrix' => $remediationMatrix,
-            'personalized_study_plan' => $personalizedStudyPlan,
-        ];
+        return 'Foundation Building';
     }
 
     protected function normalizeCategory(string $catName): string
