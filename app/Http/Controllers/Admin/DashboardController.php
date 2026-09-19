@@ -11,7 +11,6 @@ use App\Models\TrackConfig;
 use App\Models\User;
 use App\Services\ExamAttemptFormatter;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
 use Inertia\Response;
 
 class DashboardController extends Controller
@@ -119,7 +118,7 @@ class DashboardController extends Controller
             ];
         });
 
-        return Inertia::render('admin/dashboard/index', [
+        return $this->render('admin/dashboard/index', [
             'metrics' => $metrics,
             'recentAttempts' => $recentAttempts,
             'categoriesStats' => $categoriesStats,

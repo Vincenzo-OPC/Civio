@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Legal\LegalContentRequest;
 use App\Models\LegalContent;
-use Inertia\Inertia;
 
 class LegalContentController extends Controller
 {
@@ -14,7 +13,7 @@ class LegalContentController extends Controller
         $privacy = LegalContent::where('type', 'privacy')->first();
         $terms = LegalContent::where('type', 'terms')->first();
 
-        return Inertia::render('admin/legal-content/edit', [
+        return $this->render('admin/legal-content/edit', [
             'privacy' => $privacy,
             'terms' => $terms,
         ]);

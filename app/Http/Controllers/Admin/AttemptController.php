@@ -7,7 +7,6 @@ use App\Http\Resources\AdminExamAttemptResource;
 use App\Models\User;
 use App\Repositories\ExamAttemptRepositoryInterface;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
 use Inertia\Response;
 
 class AttemptController extends Controller
@@ -29,7 +28,7 @@ class AttemptController extends Controller
 
         $users = User::orderBy('name')->get(['id', 'name', 'email']);
 
-        return Inertia::render('admin/attempts/index', [
+        return $this->render('admin/attempts/index', [
             'attempts' => $attempts,
             'filters' => $filters,
             'users' => $users,

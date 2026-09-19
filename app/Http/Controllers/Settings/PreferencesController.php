@@ -28,7 +28,7 @@ class PreferencesController extends Controller
             $analysisMode = 'instant';
         }
 
-        return Inertia::render('settings/preferences', [
+        return $this->render('settings/preferences', [
             'analysisMode' => $analysisMode,
             'aiAvailable' => $aiAvailable,
         ]);

@@ -14,7 +14,6 @@ use App\Services\ExamAttemptFormatter;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use Inertia\Inertia;
 use Inertia\Response;
 
 class AnalyticsController extends Controller
@@ -53,7 +52,7 @@ class AnalyticsController extends Controller
 
         $isIncompleteSyllabus = ($metrics['mockExamCount'] === 0 && $metrics['coveredCategoriesCount'] < 3);
 
-        return Inertia::render('user/analytics/index', [
+        return $this->render('user/analytics/index', [
             'stats' => [
                 'filters' => [
                     'track' => $trackFilter,
@@ -109,7 +108,7 @@ class AnalyticsController extends Controller
                         'subcategory_id' => $s->subcategory_id,
                     ]);
 
-                return Inertia::render('user/dashboard/ai-analysis', [
+                return $this->render('user/dashboard/ai-analysis', [
                     'status' => 'ready',
                     'data' => $data,
                     'isLocal' => app()->environment('local'),
@@ -215,7 +214,7 @@ class AnalyticsController extends Controller
 
         $lastUpdated = $analysis?->updated_at ? $analysis->updated_at->diffForHumans() : null;
 
-        return Inertia::render('user/dashboard/ai-analysis', [
+        return $this->render('user/dashboard/ai-analysis', [
             'status' => $status,
             'data' => $data,
             'isLocal' => app()->environment('local'),

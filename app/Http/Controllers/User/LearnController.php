@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Services\LearnModuleService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
 use Inertia\Response;
 
 class LearnController extends Controller
@@ -22,7 +21,7 @@ class LearnController extends Controller
     {
         $data = $this->service->getPublishedCatalog(auth()->id());
 
-        return Inertia::render('user/learn/index', [
+        return $this->render('user/learn/index', [
             'modules' => $data['modules'],
             'categories' => $data['categories'],
         ]);
@@ -33,7 +32,7 @@ class LearnController extends Controller
         $isAdmin = auth()->user() && auth()->user()->role === 'admin';
         $data = $this->service->getModuleDetail($slug, (bool) $isAdmin, auth()->id());
 
-        return Inertia::render('user/learn/show', [
+        return $this->render('user/learn/show', [
             'module' => $data['module'],
             'recommended' => $data['recommended'],
         ]);

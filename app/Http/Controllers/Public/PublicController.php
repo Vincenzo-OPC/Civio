@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Public;
 
 use App\Http\Controllers\Controller;
 use App\Models\LegalContent;
-use Inertia\Inertia;
 
 class PublicController extends Controller
 {
@@ -12,29 +11,29 @@ class PublicController extends Controller
     {
         session()->forget('is_free_attempt_active');
 
-        return Inertia::render('public/welcome');
+        return $this->render('public/welcome');
     }
 
     public function about()
     {
-        return Inertia::render('public/about');
+        return $this->render('public/about');
     }
 
     public function support()
     {
-        return Inertia::render('public/support');
+        return $this->render('public/support');
     }
 
     public function guide()
     {
-        return Inertia::render('guide');
+        return $this->render('guide');
     }
 
     public function privacy()
     {
         $privacy = LegalContent::where('type', 'privacy')->first();
 
-        return Inertia::render('public/privacy', [
+        return $this->render('public/privacy', [
             'privacy' => $privacy,
         ]);
     }
@@ -43,7 +42,7 @@ class PublicController extends Controller
     {
         $terms = LegalContent::where('type', 'terms')->first();
 
-        return Inertia::render('public/terms', [
+        return $this->render('public/terms', [
             'terms' => $terms,
         ]);
     }

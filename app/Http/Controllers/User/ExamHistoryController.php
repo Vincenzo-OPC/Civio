@@ -9,7 +9,6 @@ use App\Services\ExamAttemptService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
-use Inertia\Inertia;
 use Inertia\Response;
 
 class ExamHistoryController extends Controller
@@ -38,7 +37,7 @@ class ExamHistoryController extends Controller
             return redirect()->route('history.index', array_merge($request->query(), ['page' => $historyData['redirect_page']]));
         }
 
-        return Inertia::render('user/history/index', [
+        return $this->render('user/history/index', [
             'attempts' => $historyData['attempts'],
             'stats' => $historyData['stats'],
             'pagination' => $historyData['pagination'],

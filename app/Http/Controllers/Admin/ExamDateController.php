@@ -8,7 +8,6 @@ use App\Http\Requests\Admin\ExamDate\UpdateExamDateRequest;
 use App\Models\ExamDate;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
-use Inertia\Inertia;
 
 class ExamDateController extends Controller
 {
@@ -16,7 +15,7 @@ class ExamDateController extends Controller
     {
         $examDates = ExamDate::orderBy('date', 'desc')->get();
 
-        return Inertia::render('admin/exam-dates/index', [
+        return $this->render('admin/exam-dates/index', [
             'examDates' => $examDates,
         ]);
     }

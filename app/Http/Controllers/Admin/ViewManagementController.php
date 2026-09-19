@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ViewManagement\UpdateViewManagementRequest;
 use App\Models\RolePermission;
 use Illuminate\Support\Facades\Cache;
-use Inertia\Inertia;
 
 class ViewManagementController extends Controller
 {
@@ -38,7 +37,7 @@ class ViewManagementController extends Controller
 
         $permissions = RolePermission::orderBy('role')->orderBy('view_name')->get();
 
-        return Inertia::render('admin/view-management/index', [
+        return $this->render('admin/view-management/index', [
             'permissions' => $permissions,
             'availableViews' => $availableViews,
         ]);

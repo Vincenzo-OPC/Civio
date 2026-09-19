@@ -10,7 +10,6 @@ use App\Models\Question;
 use App\Models\SavedDrillSet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use Inertia\Inertia;
 
 class DrillController extends Controller
 {
@@ -98,7 +97,7 @@ class DrillController extends Controller
             $wrongQuestionIds = array_values(array_unique($wrongQuestionIds));
         }
 
-        return Inertia::render('user/drills/index', [
+        return $this->render('user/drills/index', [
             'questions' => $questions,
             'categories' => $categories,
             'savedDrillSets' => $savedDrillSets,

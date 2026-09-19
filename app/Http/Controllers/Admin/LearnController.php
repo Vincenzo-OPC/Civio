@@ -20,7 +20,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
-use Inertia\Inertia;
 use Inertia\Response;
 
 class LearnController extends Controller
@@ -45,7 +44,7 @@ class LearnController extends Controller
 
         $data = $this->service->getAdminModules($filters, $filters['per_page']);
 
-        return Inertia::render('admin/learn/index', [
+        return $this->render('admin/learn/index', [
             'modules' => $data['modules'],
             'pagination' => $data['pagination'],
             'filters' => [
@@ -66,7 +65,7 @@ class LearnController extends Controller
     {
         $categories = Category::with('subcategory')->orderBy('sort_order')->get();
 
-        return Inertia::render('admin/learn/create', [
+        return $this->render('admin/learn/create', [
             'categories' => $categories,
             'initialTopic' => $request->query('topic', ''),
         ]);
@@ -102,7 +101,7 @@ class LearnController extends Controller
         $module = LearnModule::findOrFail($id);
         $categories = Category::with('subcategory')->orderBy('sort_order')->get();
 
-        return Inertia::render('admin/learn/edit', [
+        return $this->render('admin/learn/edit', [
             'module' => [
                 'id' => $module->id,
                 'category_id' => $module->category_id,
@@ -222,7 +221,7 @@ class LearnController extends Controller
 
         $data = $this->service->getAdminDrafts($filters, $filters['per_page']);
 
-        return Inertia::render('admin/learn/drafts', [
+        return $this->render('admin/learn/drafts', [
             'initialDrafts' => $data['drafts'],
             'pagination' => $data['pagination'],
             'filters' => [

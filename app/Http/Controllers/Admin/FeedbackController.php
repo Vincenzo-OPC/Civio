@@ -12,7 +12,6 @@ use App\Models\Feedback;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
-use Inertia\Inertia;
 use Inertia\Response;
 
 class FeedbackController extends Controller
@@ -46,7 +45,7 @@ class FeedbackController extends Controller
 
         $pendingCount = Feedback::where('status', 'pending')->count();
 
-        return Inertia::render('admin/feedbacks/index', [
+        return $this->render('admin/feedbacks/index', [
             'feedbacks' => $feedbacks,
             'pending_count' => $pendingCount,
         ]);

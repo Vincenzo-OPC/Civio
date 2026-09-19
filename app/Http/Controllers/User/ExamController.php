@@ -17,7 +17,6 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
-use Inertia\Inertia;
 use Inertia\Response;
 
 class ExamController extends Controller
@@ -119,7 +118,7 @@ class ExamController extends Controller
             }
         }
 
-        return Inertia::render('user/exams/index', [
+        return $this->render('user/exams/index', [
             'questions' => $questions,
             'categories' => $categories,
             'tracks' => $tracks,

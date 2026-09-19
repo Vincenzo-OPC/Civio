@@ -29,7 +29,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
-use Inertia\Inertia;
 
 class QuestionController extends Controller
 {
@@ -76,7 +75,7 @@ class QuestionController extends Controller
         $perPage = min(50, max(5, (int) $request->input('per_page', 10)));
         $paginator = $this->questionService->getPaginatedQuestions($request->all(), $perPage);
 
-        return Inertia::render('admin/questions/index', [
+        return $this->render('admin/questions/index', [
             'questions' => QuestionResource::collection($paginator)->resolve(),
             'pagination' => [
                 'current_page' => $paginator->currentPage(),
@@ -111,7 +110,7 @@ class QuestionController extends Controller
             ->map(fn ($item) => array_merge($item, ['approved' => true]))
             ->all();
 
-        return Inertia::render('admin/questions/drafts', [
+        return $this->render('admin/questions/drafts', [
             'initialDrafts' => $draftItems,
             'pagination' => [
                 'current_page' => $paginator->currentPage(),
@@ -137,7 +136,7 @@ class QuestionController extends Controller
     {
         $this->ensureCategoriesSeeded();
 
-        return Inertia::render('admin/questions/create', [
+        return $this->render('admin/questions/create', [
             'type' => $request->query('type', 'ai'),
             'categories' => $this->getCategoriesTree(),
         ]);
@@ -212,7 +211,7 @@ class QuestionController extends Controller
     {
         $question = $this->questionService->getQuestion($id);
 
-        return Inertia::render('admin/questions/show', [
+        return $this->render('admin/questions/show', [
             'question' => (new QuestionResource($question))->resolve(),
         ]);
     }
@@ -224,7 +223,7 @@ class QuestionController extends Controller
     {
         $question = $this->questionService->getQuestion($id);
 
-        return Inertia::render('admin/questions/edit', [
+        return $this->render('admin/questions/edit', [
             'question' => (new QuestionResource($question))->resolve(),
             'categories' => $this->getCategoriesTree(),
         ]);
@@ -245,7 +244,7 @@ class QuestionController extends Controller
             ->whereIn('id', $ids)
             ->get();
 
-        return Inertia::render('admin/questions/bulk-edit', [
+        return $this->render('admin/questions/bulk-edit', [
             'questions' => QuestionResource::collection($questions)->resolve(),
             'categories' => $this->getCategoriesTree(),
         ]);

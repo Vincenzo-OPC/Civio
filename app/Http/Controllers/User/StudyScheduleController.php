@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
-use Inertia\Inertia;
 
 class StudyScheduleController extends Controller
 {
@@ -100,7 +99,7 @@ class StudyScheduleController extends Controller
             }
         }
 
-        return Inertia::render('user/calendar/index', [
+        return $this->render('user/calendar/index', [
             'schedules' => $schedules,
             'examDates' => $examDates,
             'pastPending' => $pastPending,

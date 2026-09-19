@@ -8,7 +8,6 @@ use App\Models\Announcement;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
-use Inertia\Inertia;
 use Inertia\Response;
 
 class AnnouncementController extends Controller
@@ -17,7 +16,7 @@ class AnnouncementController extends Controller
     {
         $announcements = Announcement::latest()->paginate(15);
 
-        return Inertia::render('admin/announcements/index', [
+        return $this->render('admin/announcements/index', [
             'announcements' => $announcements,
         ]);
     }

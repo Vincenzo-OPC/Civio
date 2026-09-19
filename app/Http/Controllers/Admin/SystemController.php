@@ -6,13 +6,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Artisan;
-use Inertia\Inertia;
 
 class SystemController extends Controller
 {
     public function index()
     {
-        return Inertia::render('admin/system/index', [
+        return $this->render('admin/system/index', [
             'isMaintenanceMode' => App::isDownForMaintenance(),
             'environment' => App::environment(),
             'laravelVersion' => app()->version(),

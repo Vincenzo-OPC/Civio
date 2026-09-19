@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
+use Inertia\Response as InertiaResponse;
 
 abstract class Controller
 {
@@ -92,5 +95,15 @@ abstract class Controller
             'message' => $message,
             'errors' => $errors,
         ], $status);
+    }
+
+    /**
+     * Render an Inertia page component.
+     *
+     * @param  array<string, mixed>|Arrayable  $props
+     */
+    protected function render(string $component, array|Arrayable $props = []): InertiaResponse
+    {
+        return Inertia::render($component, $props);
     }
 }

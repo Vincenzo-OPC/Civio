@@ -9,7 +9,6 @@ use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
-use Inertia\Inertia;
 use Inertia\Response;
 
 class UserController extends Controller
@@ -61,7 +60,7 @@ class UserController extends Controller
             'total_pdf_downloads' => (int) User::sum('pdf_downloads_count'),
         ];
 
-        return Inertia::render('admin/users/index', [
+        return $this->render('admin/users/index', [
             'users' => $users,
             'stats' => $stats,
         ]);
