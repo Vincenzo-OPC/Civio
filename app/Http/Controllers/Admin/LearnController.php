@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Actions\Learn\BulkUpdateLearnModulesAction;
+use App\DTOs\Learn\LearnFilterData;
 use App\DTOs\Learn\UpsertLearnModuleData;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Learn\BulkDestroyLearnModulesRequest;
@@ -10,9 +11,10 @@ use App\Http\Requests\Admin\Learn\BulkUpdateLearnModuleStatusRequest;
 use App\Http\Requests\Admin\Learn\GenerateLearnModuleRequest;
 use App\Http\Requests\Admin\Learn\StoreLearnModuleRequest;
 use App\Http\Requests\Admin\Learn\UpdateLearnModuleRequest;
+use App\Http\Resources\AdminLearnModuleResource;
 use App\Jobs\GenerateLearnModuleJob;
-use App\Models\Category;
 use App\Models\LearnModule;
+use App\Services\CategoryService;
 use App\Services\LearnModuleService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -26,7 +28,8 @@ class LearnController extends Controller
 {
     public function __construct(
         protected LearnModuleService $service,
-        protected BulkUpdateLearnModulesAction $bulkAction
+        protected BulkUpdateLearnModulesAction $bulkAction,
+        protected CategoryService $categoryService
     ) {}
 
     /**
@@ -34,26 +37,13 @@ class LearnController extends Controller
      */
     public function index(Request $request): Response
     {
-        $filters = [
-            'search' => $request->input('search'),
-            'status' => $request->input('status', 'all'),
-            'category' => $request->input('category', 'all'),
-            'subcategory' => $request->input('subcategory', 'all'),
-            'per_page' => min(50, max(5, (int) $request->input('per_page', 10))),
-        ];
-
-        $data = $this->service->getAdminModules($filters, $filters['per_page']);
+        $filters = LearnFilterData::fromRequest($request);
+        $data = $this->service->getAdminModules($filters);
 
         return $this->render('admin/learn/index', [
             'modules' => $data['modules'],
             'pagination' => $data['pagination'],
-            'filters' => [
-                'search' => $filters['search'] ?? '',
-                'status' => $filters['status'],
-                'category' => $filters['category'],
-                'subcategory' => $filters['subcategory'],
-                'per_page' => $filters['per_page'],
-            ],
+            'filters' => $filters->toArray(),
             'categories' => $data['categories'],
         ]);
     }
@@ -63,7 +53,7 @@ class LearnController extends Controller
      */
     public function create(Request $request): Response
     {
-        $categories = Category::with('subcategory')->orderBy('sort_order')->get();
+        $categories = $this->categoryService->getCategoriesWithSubcategories();
 
         return $this->render('admin/learn/create', [
             'categories' => $categories,
@@ -98,20 +88,14 @@ class LearnController extends Controller
      */
     public function edit(string $id): Response
     {
-        $module = LearnModule::findOrFail($id);
-        $categories = Category::with('subcategory')->orderBy('sort_order')->get();
+        $module = $this->service->getModule($id);
+        $categories = $this->categoryService->getCategoriesWithSubcategories();
 
         return $this->render('admin/learn/edit', [
-            'module' => [
-                'id' => $module->id,
+            'module' => (new AdminLearnModuleResource($module))->resolve() + [
                 'category_id' => $module->category_id,
                 'subcategory_id' => $module->subcategory_id,
-                'title' => $module->title,
-                'topic' => $module->topic,
-                'summary' => $module->summary,
                 'content' => $module->content,
-                'estimated_minutes' => $module->estimated_minutes,
-                'is_published' => (bool) $module->is_published,
             ],
             'categories' => $categories,
         ]);
@@ -122,7 +106,7 @@ class LearnController extends Controller
      */
     public function update(UpdateLearnModuleRequest $request, string $id): RedirectResponse|JsonResponse
     {
-        $module = LearnModule::findOrFail($id);
+        $module = $this->service->getModule($id);
         Gate::authorize('update', $module);
 
         $dto = UpsertLearnModuleData::fromUpdateRequest($request);
@@ -147,7 +131,7 @@ class LearnController extends Controller
      */
     public function destroy(string $id): RedirectResponse
     {
-        $module = LearnModule::findOrFail($id);
+        $module = $this->service->getModule($id);
         Gate::authorize('delete', $module);
 
         $this->service->deleteModule($module);
@@ -212,24 +196,13 @@ class LearnController extends Controller
      */
     public function drafts(Request $request): Response
     {
-        $filters = [
-            'search' => $request->input('search'),
-            'category' => $request->input('category', 'all'),
-            'subcategory' => $request->input('subcategory', 'all'),
-            'per_page' => min(50, max(5, (int) $request->input('per_page', 10))),
-        ];
-
-        $data = $this->service->getAdminDrafts($filters, $filters['per_page']);
+        $filters = LearnFilterData::fromRequest($request);
+        $data = $this->service->getAdminDrafts($filters);
 
         return $this->render('admin/learn/drafts', [
             'initialDrafts' => $data['drafts'],
             'pagination' => $data['pagination'],
-            'filters' => [
-                'search' => $filters['search'] ?? '',
-                'category' => $filters['category'],
-                'subcategory' => $filters['subcategory'],
-                'per_page' => $filters['per_page'],
-            ],
+            'filters' => $filters->toArray(),
             'categories' => $data['categories'],
         ]);
     }

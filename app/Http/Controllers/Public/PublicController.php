@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers\Public;
 
+use App\Enums\LegalContentType;
 use App\Http\Controllers\Controller;
-use App\Models\LegalContent;
+use App\Repositories\LegalContentRepositoryInterface;
 
 class PublicController extends Controller
 {
+    public function __construct(
+        protected LegalContentRepositoryInterface $legalContentRepository
+    ) {}
+
     public function welcome()
     {
         session()->forget('is_free_attempt_active');
@@ -31,7 +36,7 @@ class PublicController extends Controller
 
     public function privacy()
     {
-        $privacy = LegalContent::where('type', 'privacy')->first();
+        $privacy = $this->legalContentRepository->findByType(LegalContentType::Privacy);
 
         return $this->render('public/privacy', [
             'privacy' => $privacy,
@@ -40,7 +45,7 @@ class PublicController extends Controller
 
     public function terms()
     {
-        $terms = LegalContent::where('type', 'terms')->first();
+        $terms = $this->legalContentRepository->findByType(LegalContentType::Terms);
 
         return $this->render('public/terms', [
             'terms' => $terms,

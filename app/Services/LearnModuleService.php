@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services;
 
+use App\DTOs\Learn\LearnFilterData;
 use App\DTOs\Learn\UpsertLearnModuleData;
 use App\Http\Resources\AdminDraftModuleResource;
 use App\Http\Resources\AdminLearnModuleResource;
@@ -20,21 +21,25 @@ class LearnModuleService
 {
     public function __construct(
         protected LearnModuleRepositoryInterface $repository,
-        protected StudyPlanAnalyzer $studyPlanAnalyzer
+        protected StudyPlanAnalyzer $studyPlanAnalyzer,
+        protected CategoryService $categoryService
     ) {}
 
     /**
-     * @param  array<string, mixed>  $filters
+     * @param  LearnFilterData|array<string, mixed>  $filters
      * @return array{
      *     modules: array<int, mixed>,
      *     pagination: array{current_page: int, per_page: int, total: int, last_page: int},
      *     categories: Collection<int, Category>
      * }
      */
-    public function getAdminModules(array $filters, int $perPage = 10): array
+    public function getAdminModules(LearnFilterData|array $filters, ?int $perPage = null): array
     {
-        $paginator = $this->repository->paginateAdminFiltered($filters, $perPage);
-        $categories = Category::with('subcategory')->orderBy('sort_order')->get();
+        $filterArray = $filters instanceof LearnFilterData ? $filters->toArray() : $filters;
+        $resolvedPerPage = $perPage ?? ($filters instanceof LearnFilterData ? $filters->perPage : 10);
+
+        $paginator = $this->repository->paginateAdminFiltered($filterArray, $resolvedPerPage);
+        $categories = $this->categoryService->getCategoriesWithSubcategories();
 
         return [
             'modules' => AdminLearnModuleResource::collection($paginator->items())->resolve(),
@@ -49,17 +54,20 @@ class LearnModuleService
     }
 
     /**
-     * @param  array<string, mixed>  $filters
+     * @param  LearnFilterData|array<string, mixed>  $filters
      * @return array{
      *     drafts: array<int, mixed>,
      *     pagination: array{current_page: int, per_page: int, total: int, last_page: int},
      *     categories: Collection<int, Category>
      * }
      */
-    public function getAdminDrafts(array $filters, int $perPage = 10): array
+    public function getAdminDrafts(LearnFilterData|array $filters, ?int $perPage = null): array
     {
-        $paginator = $this->repository->paginateDrafts($filters, $perPage);
-        $categories = Category::with('subcategory')->orderBy('sort_order')->get();
+        $filterArray = $filters instanceof LearnFilterData ? $filters->toArray() : $filters;
+        $resolvedPerPage = $perPage ?? ($filters instanceof LearnFilterData ? $filters->perPage : 10);
+
+        $paginator = $this->repository->paginateDrafts($filterArray, $resolvedPerPage);
+        $categories = $this->categoryService->getCategoriesWithSubcategories();
 
         return [
             'drafts' => AdminDraftModuleResource::collection($paginator->items())->resolve(),
@@ -79,12 +87,7 @@ class LearnModuleService
     public function getPublishedCatalog(?int $userId): array
     {
         $modulesCollection = $this->repository->getPublishedCatalog();
-
-        $categories = Cache::rememberForever('categories.tree', function () {
-            return Category::with(['subcategory' => function ($query) {
-                $query->orderBy('sort_order');
-            }])->orderBy('sort_order')->get()->toArray();
-        });
+        $categories = $this->categoryService->getCategoryTree();
 
         $completedModuleIds = [];
         if ($userId) {
@@ -310,6 +313,12 @@ class LearnModuleService
         $module->refresh();
 
         return $module;
+    }
+
+    public function getModule(int|string $id): LearnModule
+    {
+        /** @var LearnModule */
+        return $this->repository->findOrFail($id, relations: ['category', 'subcategory']);
     }
 
     public function deleteModule(LearnModule $module): bool

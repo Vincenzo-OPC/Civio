@@ -2,16 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\LegalContentType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Legal\LegalContentRequest;
-use App\Models\LegalContent;
+use App\Repositories\LegalContentRepositoryInterface;
 
 class LegalContentController extends Controller
 {
+    public function __construct(
+        protected LegalContentRepositoryInterface $legalContentRepository
+    ) {}
+
     public function edit()
     {
-        $privacy = LegalContent::where('type', 'privacy')->first();
-        $terms = LegalContent::where('type', 'terms')->first();
+        $privacy = $this->legalContentRepository->findByType(LegalContentType::Privacy);
+        $terms = $this->legalContentRepository->findByType(LegalContentType::Terms);
 
         return $this->render('admin/legal-content/edit', [
             'privacy' => $privacy,
@@ -23,12 +28,7 @@ class LegalContentController extends Controller
     {
         $validated = $request->validated();
 
-        foreach ($validated['content'] as $type => $content) {
-            LegalContent::updateOrCreate(
-                ['type' => $type],
-                ['content' => $content]
-            );
-        }
+        $this->legalContentRepository->updateAllContents($validated['content']);
 
         return $this->backWithSuccess('Legal content updated successfully.');
     }

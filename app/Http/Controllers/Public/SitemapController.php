@@ -3,12 +3,16 @@
 namespace App\Http\Controllers\Public;
 
 use App\Http\Controllers\Controller;
-use App\Models\LearnModule;
+use App\Repositories\LearnModuleRepositoryInterface;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
 
 class SitemapController extends Controller
 {
+    public function __construct(
+        protected LearnModuleRepositoryInterface $learnModuleRepository
+    ) {}
+
     /**
      * Generate dynamic XML sitemap for Google Search Console.
      */
@@ -38,10 +42,8 @@ class SitemapController extends Controller
                 ];
             }
 
-            // Dynamic published learn modules
-            $modules = LearnModule::where('is_published', true)
-                ->latest('updated_at')
-                ->get();
+            // Dynamic published learn modules via repository
+            $modules = $this->learnModuleRepository->getPublishedCatalog();
 
             foreach ($modules as $module) {
                 $urls[] = [
