@@ -31,7 +31,25 @@ flowchart TD
 
 ---
 
-## 2. The 7-Step Implementation Sequence
+## 2. Artisan Generator Commands (Cheat Sheet)
+
+Use Laravel 13's built-in `make` commands to scaffold each layer quickly. Laravel automatically handles namespaces and creates subdirectories when you include the folder path:
+
+| Layer | Built-in Artisan Command | Example Command |
+|---|---|---|
+| **Model & Migration** | `php artisan make:model -m` | `php artisan make:model ExamAttempt -m` |
+| **Interface** | `php artisan make:interface` | `php artisan make:interface Repositories/ExamAttemptRepositoryInterface` |
+| **Repository** | `php artisan make:class` | `php artisan make:class Repositories/ExamAttemptRepository` |
+| **Input DTO** | `php artisan make:class` | `php artisan make:class DTOs/Exam/SubmitExamAttemptData` |
+| **Domain Service** | `php artisan make:class` | `php artisan make:class Services/ExamAttemptService` |
+| **Single Action** | `php artisan make:class` | `php artisan make:class Actions/Exam/SubmitExamAttemptAction` |
+| **FormRequest** | `php artisan make:request` | `php artisan make:request StoreExamAttemptRequest` |
+| **JsonResource** | `php artisan make:resource` | `php artisan make:resource ExamAttemptResource` |
+| **Feature Test** | `php artisan make:test --pest` | `php artisan make:test --pest ExamAttemptTest` |
+
+---
+
+## 3. The 7-Step Implementation Sequence
 
 ```
 1. Model & Migration ──► 2. Repository ──► 3. FormRequest & DTO ──► 4. JsonResource
@@ -383,7 +401,7 @@ class YourEntityController
 
 ---
 
-## 3. Architecture Rules & Anti-Patterns to Avoid
+## 4. Architecture Rules & Anti-Patterns to Avoid
 
 | ❌ Anti-Pattern | ✅ Correct Way |
 |---|---|
@@ -393,3 +411,100 @@ class YourEntityController
 | Duplicating array transformations across `show()`, `edit()`, and `index()` | Use a single **Laravel `JsonResource`** |
 | Splitting a fat class into arbitrary traits | Use **Single-Responsibility Actions** |
 | Using empty constructors or untyped parameters | Constructor promotion and explicit PHP 8.4 scalar types |
+
+---
+
+## 5. Module Modernization Progress & Checklist
+
+Track the application of the **Action-Repository-DTO + JsonResource** pattern across the codebase:
+
+### ✅ 1. Question Module (Status: COMPLETED)
+- [x] `app/Repositories/BaseRepositoryInterface.php` & `BaseRepository.php`
+- [x] `app/Repositories/QuestionRepositoryInterface.php` & `QuestionRepository.php`
+- [x] `app/DTOs/Question/UpsertQuestionData.php`
+- [x] `app/Http/Resources/QuestionResource.php`
+- [x] `app/Actions/Question/BulkUpdateQuestionsAction.php`
+- [x] `app/Services/QuestionService.php`
+- [x] `app/Providers/RepositoryServiceProvider.php` (IoC binding)
+- [x] `app/Http/Controllers/Admin/QuestionController.php` (Refactored)
+- [x] `tests/Feature/Admin/QuestionManagementTest.php` (Verified)
+
+---
+
+### ✅ 2. Exam & Attempt Module (Status: COMPLETED)
+*Target: Refactor attempt submissions, scorecard views, and retake logic.*
+- [x] **Repositories**: `ExamAttemptRepositoryInterface.php` & `ExamAttemptRepository.php`
+- [x] **Input DTOs**: `app/DTOs/Exam/SubmitExamAttemptData.php`, `SubmitExamAttemptResult.php`
+- [x] **JsonResources**: `app/Http/Resources/ExamAttemptResource.php`, `ExamScorecardResource.php`, `AdminExamAttemptResource.php`
+- [x] **Actions**: `app/Actions/Exam/SubmitExamAttemptAction.php` (concurrency lock + guest check + DB transaction)
+- [x] **Services**: `app/Services/ExamAttemptService.php`
+- [x] **Controllers Refactored**: 
+  - `app/Http/Controllers/User/ExamController.php`
+  - `app/Http/Controllers/User/ExamHistoryController.php`
+  - `app/Http/Controllers/Admin/AttemptController.php`
+- [x] **Tests Verified**: `tests/Feature/ExamAttemptTest.php` & `GuestFreeExamTest.php` (14/14 passing)
+
+---
+
+### ⏳ 3. Learn Curriculum Module (Priority: High)
+*Target: Refactor learning tutorials, drafts, syllabus viewer, and module publishing.*
+- [ ] **Repositories**: `LearnModuleRepositoryInterface.php` & `LearnModuleRepository.php`
+- [ ] **Input DTOs**: `app/DTOs/Learn/UpsertLearnModuleData.php`
+- [ ] **JsonResources**: `app/Http/Resources/LearnModuleResource.php`
+- [ ] **Actions**: `app/Actions/Learn/BulkUpdateLearnModulesAction.php`
+- [ ] **Services**: `app/Services/LearnModuleService.php`
+- [ ] **Controllers to Refactor**:
+  - `app/Http/Controllers/Admin/LearnController.php`
+  - `app/Http/Controllers/User/LearnController.php`
+
+---
+
+### ⏳ 4. Study Schedule & Calendar Module (Priority: Medium-High)
+*Target: Refactor study calendar, shift date arithmetic, and bulk task updates.*
+- [ ] **Repositories**: `StudyScheduleRepositoryInterface.php` & `StudyScheduleRepository.php`
+- [ ] **Input DTOs**: `app/DTOs/StudySchedule/UpsertStudyScheduleData.php`, `ShiftScheduleData.php`
+- [ ] **JsonResources**: `app/Http/Resources/StudyScheduleResource.php`
+- [ ] **Actions**: 
+  - `app/Actions/StudySchedule/ShiftStudyScheduleAction.php`
+  - `app/Actions/StudySchedule/BulkUpdateStudyScheduleAction.php`
+- [ ] **Services**: `app/Services/StudyScheduleService.php`
+- [ ] **Controllers to Refactor**:
+  - `app/Http/Controllers/User/StudyScheduleController.php`
+  - `app/Http/Controllers/User/StudySuggestionController.php`
+
+---
+
+### ⏳ 5. Drills & Custom Practice Sets (Priority: Medium)
+*Target: Refactor smart weakness drills, saved practice sets, and custom items.*
+- [ ] **Repositories**: `SavedDrillSetRepositoryInterface.php` & `SavedDrillSetRepository.php`
+- [ ] **Input DTOs**: `app/DTOs/Drill/UpsertSavedDrillSetData.php`, `StoreCustomQuestionData.php`
+- [ ] **JsonResources**: `app/Http/Resources/SavedDrillSetResource.php`
+- [ ] **Services**: `app/Services/DrillService.php`
+- [ ] **Controllers to Refactor**:
+  - `app/Http/Controllers/User/DrillController.php`
+  - `app/Http/Controllers/User/SavedDrillSetController.php`
+
+---
+
+### ⏳ 6. Analytics & Readiness Engine (Priority: Medium)
+*Target: Isolate analytics metrics calculation, eliminate memory hazards, and decouple diagnostic engine.*
+- [ ] **Input DTOs**: `app/DTOs/Analytics/AnalyticsFilterData.php`
+- [ ] **JsonResources**: `app/Http/Resources/AnalyticsMetricsResource.php`, `ReadinessReportResource.php`
+- [ ] **Services**: Refactor `app/Services/AnalyticsService.php` & decompose `DeterministicAnalysisService.php`
+- [ ] **Controllers to Refactor**:
+  - `app/Http/Controllers/User/AnalyticsController.php`
+  - `app/Http/Controllers/User/DashboardController.php`
+
+---
+
+### ⏳ 7. Admin Operations & Platform Communications (Priority: Low-Medium)
+*Target: Standardize announcements, user feedback triage, user administration, and support.*
+- [ ] **Repositories**: `AnnouncementRepository.php`, `FeedbackRepository.php`, `UserRepository.php`
+- [ ] **Input DTOs**: `UpsertAnnouncementData.php`, `UpdateUserData.php`, `SupportMessageData.php`
+- [ ] **JsonResources**: `AnnouncementResource.php`, `FeedbackResource.php`, `AdminUserResource.php`
+- [ ] **Services**: `AnnouncementService.php`, `FeedbackService.php`, `UserService.php`, `SupportService.php`
+- [ ] **Controllers to Refactor**:
+  - `app/Http/Controllers/Admin/AnnouncementController.php`
+  - `app/Http/Controllers/Admin/FeedbackController.php`
+  - `app/Http/Controllers/Admin/UserController.php`
+  - `app/Http/Controllers/SupportController.php`

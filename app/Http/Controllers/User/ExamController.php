@@ -2,29 +2,34 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Actions\Exam\SubmitExamAttemptAction;
+use App\DTOs\Exam\SubmitExamAttemptData;
 use App\Http\Requests\StoreExamAttemptRequest;
+use App\Http\Resources\ExamScorecardResource;
 use App\Models\Category;
-use App\Models\ExamAttempt;
 use App\Models\Question;
 use App\Models\TrackConfig;
 use App\Services\DeterministicAnalysisService;
 use App\Services\ExamAttemptFormatter;
+use App\Services\ExamAttemptService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class ExamController
 {
     public function __construct(
-        protected ExamAttemptFormatter $formatter
+        protected ExamAttemptFormatter $formatter,
+        protected ExamAttemptService $attemptService,
+        protected SubmitExamAttemptAction $submitAttemptAction
     ) {}
 
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index(Request $request): Response
     {
         // 1. Fetch verified active questions from cached pool (fast in-memory processing)
         $activeQuestionsPool = Cache::rememberForever('questions.active', function () {
@@ -49,53 +54,29 @@ class ExamController
         $questions = collect($activeQuestionsPool);
         $savedAttempt = null;
         $retakeSource = null;
+        $attempt = null;
 
         if ($request->has('attempt_id')) {
-            if (! auth()->check()) {
-                $pendingId = $request->session()->get('pending_guest_attempt_id');
-                if (! $pendingId || $pendingId != $request->attempt_id) {
-                    abort(403, 'Unauthorized access to scorecard.');
-                }
-                $attempt = ExamAttempt::whereNull('user_id')
-                    ->with('category')
-                    ->findOrFail($request->attempt_id);
-            } else {
-                $attempt = ExamAttempt::where('user_id', auth()->id())
-                    ->with('category')
-                    ->findOrFail($request->attempt_id);
-            }
+            $pendingId = $request->session()->get('pending_guest_attempt_id');
+            $attempt = $this->attemptService->getScorecardAttempt(
+                attemptId: (int) $request->attempt_id,
+                userId: auth()->id(),
+                pendingGuestId: $pendingId ? (int) $pendingId : null
+            );
 
-            if ($attempt) {
-                // In-memory filter of cached pool
-                $questions = $questions->whereIn('id', $attempt->question_ids);
-
-                $savedAttempt = [
-                    'id' => $attempt->id,
-                    'category_id' => $attempt->category_id,
-                    'question_ids' => $attempt->question_ids,
-                    'answers' => $attempt->answers,
-                    'cat_scores' => $attempt->cat_scores,
-                    'created_at' => $attempt->created_at?->toIso8601String(),
-                ];
-            }
+            // In-memory filter of cached pool
+            $questions = $questions->whereIn('id', $attempt->question_ids);
+            $savedAttempt = (new ExamScorecardResource($attempt))->resolve();
         } elseif ($request->filled('retake_same') || $request->filled('retake_fresh')) {
-            $attemptId = $request->input('retake_same') ?? $request->input('retake_fresh');
-            $attempt = ExamAttempt::where('user_id', auth()->id())
-                ->findOrFail($attemptId);
+            $attemptId = (int) ($request->input('retake_same') ?? $request->input('retake_fresh'));
+            $mode = $request->has('retake_same') ? 'same' : 'fresh';
 
-            if ($attempt) {
-                $meta = $attempt->cat_scores['metadata'] ?? [];
-                $retakeSource = [
-                    'attempt_id' => $attempt->id,
-                    'question_ids' => $attempt->question_ids,
-                    'track' => $meta['track'] ?? 'Professional',
-                    'mode' => $request->has('retake_same') ? 'same' : 'fresh',
-                ];
-            }
+            $retakeSource = $this->attemptService->getRetakeSource($attemptId, (int) auth()->id(), $mode);
+            $attempt = $this->attemptService->getScorecardAttempt($attemptId, (int) auth()->id(), null);
         }
 
         // Eagerly sort by attempt questions order if loaded via deep-link
-        if (($savedAttempt || $retakeSource) && isset($attempt)) {
+        if (($savedAttempt || $retakeSource) && $attempt) {
             $questions = $questions->sortBy(function ($q) use ($attempt) {
                 return array_search($q['id'], $attempt->question_ids);
             })->values();
@@ -121,14 +102,14 @@ class ExamController
         ];
 
         if (auth()->check()) {
-            $targetAttemptId = $request->query('attempt_id');
+            $targetAttemptId = $request->query('attempt_id') ? (int) $request->query('attempt_id') : null;
             if (! $targetAttemptId) {
-                $targetAttemptId = ExamAttempt::where('user_id', auth()->id())->latest()->value('id');
+                $targetAttemptId = $this->attemptService->getLatestUserAttemptId((int) auth()->id());
             }
 
             if ($targetAttemptId) {
                 $deterministicService = new DeterministicAnalysisService;
-                $analysisData = $deterministicService->generate(auth()->id(), $targetAttemptId, true);
+                $analysisData = $deterministicService->generate((int) auth()->id(), $targetAttemptId, true);
                 $aiAnalysis = [
                     'status' => 'ready',
                     'data' => $analysisData,
@@ -155,79 +136,25 @@ class ExamController
     /**
      * Store a newly created exam attempt.
      */
-    public function storeAttempt(StoreExamAttemptRequest $request)
+    public function storeAttempt(StoreExamAttemptRequest $request): JsonResponse
     {
-        $validated = $request->validated();
-
-        $answers = $validated['answers'];
-        $answeredCount = count(array_filter($answers, function ($answer) {
-            return $answer !== null && $answer !== '';
-        }));
-
-        $totalQuestions = count($validated['question_ids']);
-        $completionRate = $totalQuestions > 0 ? ($answeredCount / $totalQuestions) * 100 : 0;
-
-        if (! auth()->check()) {
-            if ($request->session()->has('pending_guest_attempt_id')) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'You have already completed your free guest attempt.',
-                ], 403);
-            }
-
-            if ($answeredCount < $totalQuestions) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Guest attempt must be complete (all questions answered).',
-                ], 422);
-            }
-        } else {
-            // Ignore empty or dummy attempts (less than 50% answered)
-            if ($completionRate < 50) {
-                return response()->json([
-                    'success' => true,
-                    'attempt_id' => null,
-                    'message' => 'Dummy attempt ignored.',
-                ]);
-            }
-        }
-
+        $dto = SubmitExamAttemptData::fromRequest($request);
         $userId = auth()->id();
-        $lockKey = $userId ? "user-exam-attempt-submission-{$userId}" : "guest-exam-attempt-submission-{$request->ip()}";
-        $lock = Cache::lock($lockKey, 5);
+        $hasPendingGuest = $request->session()->has('pending_guest_attempt_id');
 
-        if (! $lock->get()) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Attempt submission already in progress. Please wait.',
-            ], 429);
+        $result = $this->submitAttemptAction->execute(
+            data: $dto,
+            userId: $userId,
+            clientIp: $request->ip(),
+            hasPendingGuestAttempt: $hasPendingGuest
+        );
+
+        if (! auth()->check() && $result->attemptId) {
+            $request->session()->put('pending_guest_attempt_id', $result->attemptId);
+            $request->session()->forget('is_free_attempt_active');
         }
 
-        try {
-            $attempt = DB::transaction(function () use ($validated, $userId) {
-                $attempt = ExamAttempt::create([
-                    'user_id' => $userId,
-                    'category_id' => $validated['category_id'] ?? null,
-                    'question_ids' => $validated['question_ids'],
-                    'answers' => $validated['answers'],
-                    'cat_scores' => $validated['cat_scores'],
-                ]);
-
-                if (! auth()->check()) {
-                    session(['pending_guest_attempt_id' => $attempt->id]);
-                    session()->forget('is_free_attempt_active');
-                }
-
-                return $attempt;
-            });
-
-            return response()->json([
-                'success' => true,
-                'attempt_id' => $attempt->id,
-            ]);
-        } finally {
-            $lock->release();
-        }
+        return response()->json($result->toResponseArray(), $result->statusCode);
     }
 
     /**
