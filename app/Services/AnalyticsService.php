@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\DTOs\Analytics\AnalyticsFilterData;
+use App\Http\Resources\AnalyticsMetricsResource;
 use App\Models\ExamAttempt;
 use App\Models\ExamDate;
 use App\Models\Subcategory;
@@ -17,25 +19,33 @@ class AnalyticsService
     /**
      * Compute full statistical metrics and breakdowns for a user's analytics view.
      */
-    public function getAnalyticsMetrics(int $userId, string $trackFilter = 'Professional', string $runsFilter = 'all'): array
+    public function getAnalyticsMetrics(int $userId, AnalyticsFilterData|string $trackFilter = 'Professional', string $runsFilter = 'all'): array
     {
+        if ($trackFilter instanceof AnalyticsFilterData) {
+            $runs = $trackFilter->runs;
+            $track = $trackFilter->track;
+        } else {
+            $track = $trackFilter;
+            $runs = $runsFilter;
+        }
+
         $allAttempts = ExamAttempt::where('user_id', $userId)->latest()->get();
 
         $filteredAttempts = collect();
         foreach ($allAttempts as $attempt) {
             $meta = $attempt->cat_scores['metadata'] ?? [];
-            $track = $meta['track'] ?? 'Drill';
+            $attemptTrack = $meta['track'] ?? 'Drill';
             if ($attempt->category_id !== null && ! isset($meta['track'])) {
-                $track = 'Drill';
+                $attemptTrack = 'Drill';
             }
 
-            if ($trackFilter === 'All' || $track === $trackFilter) {
+            if ($track === 'All' || $attemptTrack === $track) {
                 $filteredAttempts->push($attempt);
             }
         }
 
-        if ($runsFilter !== 'all') {
-            $filteredAttempts = $filteredAttempts->take((int) $runsFilter);
+        if ($runs !== 'all') {
+            $filteredAttempts = $filteredAttempts->take((int) $runs);
         }
 
         $attempts = $filteredAttempts;
@@ -313,6 +323,47 @@ class AnalyticsService
             'subtestThresholds' => $subtestThresholds,
             'hasSubtestRisk' => $hasSubtestRisk,
             'coveredCategoriesCount' => $coveredCategoriesCount,
+            'filters' => [
+                'track' => $track,
+                'runs' => $runs,
+            ],
+            'percentileRank' => $this->calculatePercentileRank((float) $avgScore),
         ];
+    }
+
+    /**
+     * Compute global percentile rank against all system attempts safely using chunked queries.
+     */
+    public function calculatePercentileRank(float $avgScore): int
+    {
+        $totalSystemAttempts = ExamAttempt::count();
+        if ($totalSystemAttempts <= 5 || $avgScore <= 0) {
+            return 50;
+        }
+
+        $lowerCount = 0;
+        ExamAttempt::query()
+            ->select(['id', 'cat_scores'])
+            ->chunkById(250, function ($attempts) use (&$lowerCount, $avgScore) {
+                foreach ($attempts as $att) {
+                    $pct = $this->formatter->calculateWeightedPercentage($att->cat_scores ?? []);
+                    if ($pct < $avgScore) {
+                        $lowerCount++;
+                    }
+                }
+            });
+
+        return (int) round(($lowerCount / $totalSystemAttempts) * 100);
+    }
+
+    /**
+     * Format raw metrics array into the presentation Resource payload.
+     *
+     * @param  array<string, mixed>  $metrics
+     * @return array<string, mixed>
+     */
+    public function formatMetrics(array $metrics): array
+    {
+        return (new AnalyticsMetricsResource($metrics))->resolve();
     }
 }

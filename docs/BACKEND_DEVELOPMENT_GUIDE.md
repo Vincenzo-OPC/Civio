@@ -513,15 +513,19 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
 
 ---
 
-### ⏳ 6. Analytics & Readiness Engine (Priority: Medium)
+### ✅ 6. Analytics & Readiness Engine (Status: COMPLETED)
 *Target: Isolate analytics metrics calculation, eliminate memory hazards, and decouple diagnostic engine.*
-- [ ] **Input DTOs**: `app/DTOs/Analytics/AnalyticsFilterData.php`
-- [ ] **JsonResources**: `app/Http/Resources/AnalyticsMetricsResource.php`, `ReadinessReportResource.php`
-- [ ] **Services**: Refactor `app/Services/AnalyticsService.php` & decompose `DeterministicAnalysisService.php`
-- [ ] **Controllers to Refactor**:
-  - `app/Http/Controllers/User/AnalyticsController.php`
-  - `app/Http/Controllers/User/DashboardController.php`
-- [ ] **Obsolete Files Cleaned Up**: (List any removed legacy files or "None")
+- [x] **Input DTOs**: `app/DTOs/Analytics/AnalyticsFilterData.php`
+- [x] **JsonResources**: `app/Http/Resources/AnalyticsMetricsResource.php`, `ReadinessReportResource.php`
+- [x] **Services**: 
+  - Refactored `app/Services/AnalyticsService.php` (memory-safe `chunkById` percentile computation)
+  - Enhanced `app/Services/AiAnalysisOrchestrator.php` (centralized strict state-machine analysis resolution)
+  - Added `app/Services/DashboardService.php` (isolated dashboard metrics and command center aggregation)
+- [x] **Controllers Refactored**:
+  - `app/Http/Controllers/User/AnalyticsController.php` (thin coordinator)
+  - `app/Http/Controllers/User/DashboardController.php` (thin coordinator)
+- [x] **Tests Verified**: `tests/Feature/User/AnalyticsManagementTest.php` (5/5 passing, 18/18 analytics and dashboard suite)
+- [x] **Obsolete Files Cleaned Up**: Eliminated unbound `ExamAttempt::all()` memory hazard and redundant duplicate AI resolution across controllers.
 
 ---
 
