@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Repositories\AnnouncementRepository;
+use App\Repositories\AnnouncementRepositoryInterface;
 use App\Repositories\ExamAttemptRepository;
 use App\Repositories\ExamAttemptRepositoryInterface;
+use App\Repositories\FeedbackRepository;
+use App\Repositories\FeedbackRepositoryInterface;
 use App\Repositories\LearnModuleRepository;
 use App\Repositories\LearnModuleRepositoryInterface;
 use App\Repositories\QuestionRepository;
@@ -14,6 +18,8 @@ use App\Repositories\SavedDrillSetRepository;
 use App\Repositories\SavedDrillSetRepositoryInterface;
 use App\Repositories\StudyScheduleRepository;
 use App\Repositories\StudyScheduleRepositoryInterface;
+use App\Repositories\UserRepository;
+use App\Repositories\UserRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -46,6 +52,21 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->singleton(
             SavedDrillSetRepositoryInterface::class,
             SavedDrillSetRepository::class
+        );
+
+        $this->app->singleton(
+            AnnouncementRepositoryInterface::class,
+            AnnouncementRepository::class
+        );
+
+        $this->app->singleton(
+            FeedbackRepositoryInterface::class,
+            FeedbackRepository::class
+        );
+
+        $this->app->singleton(
+            UserRepositoryInterface::class,
+            UserRepository::class
         );
     }
 }

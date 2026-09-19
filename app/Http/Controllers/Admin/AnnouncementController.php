@@ -2,22 +2,28 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\DTOs\Announcement\UpsertAnnouncementData;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Announcement\StoreAnnouncementRequest;
+use App\Http\Resources\AnnouncementResource;
 use App\Models\Announcement;
+use App\Services\AnnouncementService;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
 use Inertia\Response;
 
 class AnnouncementController extends Controller
 {
+    public function __construct(
+        protected AnnouncementService $service
+    ) {}
+
     public function index(): Response
     {
-        $announcements = Announcement::latest()->paginate(15);
+        $paginator = $this->service->getPaginatedAnnouncements(15);
 
         return $this->render('admin/announcements/index', [
-            'announcements' => $announcements,
+            'announcements' => AnnouncementResource::collection($paginator),
         ]);
     }
 
@@ -25,8 +31,8 @@ class AnnouncementController extends Controller
     {
         Gate::authorize('create', Announcement::class);
 
-        Announcement::create($request->validated());
-        Cache::forget('active_announcements');
+        $dto = UpsertAnnouncementData::fromRequest($request);
+        $this->service->createAnnouncement($dto);
 
         return $this->backWithSuccess('Announcement created successfully.');
     }
@@ -35,8 +41,8 @@ class AnnouncementController extends Controller
     {
         Gate::authorize('update', $announcement);
 
-        $announcement->update($request->validated());
-        Cache::forget('active_announcements');
+        $dto = UpsertAnnouncementData::fromRequest($request);
+        $this->service->updateAnnouncement($announcement, $dto);
 
         return $this->backWithSuccess('Announcement updated successfully.');
     }
@@ -45,8 +51,7 @@ class AnnouncementController extends Controller
     {
         Gate::authorize('delete', $announcement);
 
-        $announcement->delete();
-        Cache::forget('active_announcements');
+        $this->service->deleteAnnouncement($announcement);
 
         return $this->backWithSuccess('Announcement deleted successfully.');
     }
