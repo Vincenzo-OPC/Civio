@@ -401,6 +401,23 @@ class YourEntityController
 
 ---
 
+### Step 8: Legacy Code Cleanup & Safe File Deletion
+
+When refactoring an existing module from legacy code into the **Action-Repository-DTO + JsonResource** architecture:
+
+1. **Identify Superseded Files**: Look for old controllers, redundant traits, obsolete service providers, deprecated helper classes, or custom query wrappers whose responsibilities were completely absorbed by new Actions, Services, DTOs, or Repositories.
+2. **Audit Workspace Usages**: Before deleting, search the entire project to verify no other classes, background jobs, console commands, or tests reference the old file:
+   ```powershell
+   git grep "OldClassName"
+   ```
+3. **Safely Delete Obsolete Files**: Remove the dead file so the codebase stays clean and no unused code or conflicting logic lingers:
+   ```powershell
+   Remove-Item app/Services/LegacyOldService.php
+   ```
+4. **Document in Module Checklist & Git Commit**: Explicitly record removed files in the module checklist (`Obsolete Files Cleaned Up`) and in git commit descriptions so team members and reviewers clearly see there are no unused files left behind.
+
+---
+
 ## 4. Architecture Rules & Anti-Patterns to Avoid
 
 | ❌ Anti-Pattern | ✅ Correct Way |
@@ -411,6 +428,8 @@ class YourEntityController
 | Duplicating array transformations across `show()`, `edit()`, and `index()` | Use a single **Laravel `JsonResource`** |
 | Splitting a fat class into arbitrary traits | Use **Single-Responsibility Actions** |
 | Using empty constructors or untyped parameters | Constructor promotion and explicit PHP 8.4 scalar types |
+| Leaving unused or superseded legacy files after refactoring | Safely delete obsolete files once their logic is absorbed and verified with zero usages |
+| Keeping dead imports or orphaned service providers | Unregister from `bootstrap/providers.php` and delete orphaned classes |
 
 ---
 
@@ -428,6 +447,7 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
 - [x] `app/Providers/RepositoryServiceProvider.php` (IoC binding)
 - [x] `app/Http/Controllers/Admin/QuestionController.php` (Refactored)
 - [x] `tests/Feature/Admin/QuestionManagementTest.php` (Verified)
+- [x] **Obsolete Files Cleaned Up**: None (Clean migration)
 
 ---
 
@@ -443,19 +463,22 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
   - `app/Http/Controllers/User/ExamHistoryController.php`
   - `app/Http/Controllers/Admin/AttemptController.php`
 - [x] **Tests Verified**: `tests/Feature/ExamAttemptTest.php` & `GuestFreeExamTest.php` (14/14 passing)
+- [x] **Obsolete Files Cleaned Up**: Removed redundant provider registration in `bootstrap/providers.php`
 
 ---
 
-### ⏳ 3. Learn Curriculum Module (Priority: High)
+### ✅ 3. Learn Curriculum Module (Status: COMPLETED)
 *Target: Refactor learning tutorials, drafts, syllabus viewer, and module publishing.*
-- [ ] **Repositories**: `LearnModuleRepositoryInterface.php` & `LearnModuleRepository.php`
-- [ ] **Input DTOs**: `app/DTOs/Learn/UpsertLearnModuleData.php`
-- [ ] **JsonResources**: `app/Http/Resources/LearnModuleResource.php`
-- [ ] **Actions**: `app/Actions/Learn/BulkUpdateLearnModulesAction.php`
-- [ ] **Services**: `app/Services/LearnModuleService.php`
-- [ ] **Controllers to Refactor**:
+- [x] **Repositories**: `LearnModuleRepositoryInterface.php` & `LearnModuleRepository.php`
+- [x] **Input DTOs**: `app/DTOs/Learn/UpsertLearnModuleData.php`
+- [x] **JsonResources**: `app/Http/Resources/LearnModuleResource.php`, `AdminLearnModuleResource.php`, `AdminDraftModuleResource.php`
+- [x] **Actions**: `app/Actions/Learn/BulkUpdateLearnModulesAction.php`
+- [x] **Services**: `app/Services/LearnModuleService.php`
+- [x] **Controllers Refactored**:
   - `app/Http/Controllers/Admin/LearnController.php`
   - `app/Http/Controllers/User/LearnController.php`
+- [x] **Tests Verified**: `tests/Feature/Admin/LearnModuleManagementTest.php` (7/7 passing)
+- [x] **Obsolete Files Cleaned Up**: None (Clean architectural migration)
 
 ---
 
@@ -471,6 +494,7 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
 - [ ] **Controllers to Refactor**:
   - `app/Http/Controllers/User/StudyScheduleController.php`
   - `app/Http/Controllers/User/StudySuggestionController.php`
+- [ ] **Obsolete Files Cleaned Up**: (List any removed legacy files or "None")
 
 ---
 
@@ -483,6 +507,7 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
 - [ ] **Controllers to Refactor**:
   - `app/Http/Controllers/User/DrillController.php`
   - `app/Http/Controllers/User/SavedDrillSetController.php`
+- [ ] **Obsolete Files Cleaned Up**: (List any removed legacy files or "None")
 
 ---
 
@@ -494,6 +519,7 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
 - [ ] **Controllers to Refactor**:
   - `app/Http/Controllers/User/AnalyticsController.php`
   - `app/Http/Controllers/User/DashboardController.php`
+- [ ] **Obsolete Files Cleaned Up**: (List any removed legacy files or "None")
 
 ---
 
@@ -508,3 +534,4 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
   - `app/Http/Controllers/Admin/FeedbackController.php`
   - `app/Http/Controllers/Admin/UserController.php`
   - `app/Http/Controllers/SupportController.php`
+- [ ] **Obsolete Files Cleaned Up**: (List any removed legacy files or "None")
