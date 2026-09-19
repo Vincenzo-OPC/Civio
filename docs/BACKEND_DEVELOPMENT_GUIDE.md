@@ -482,19 +482,20 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
 
 ---
 
-### ⏳ 4. Study Schedule & Calendar Module (Priority: Medium-High)
+### ✅ 4. Study Schedule & Calendar Module (COMPLETED)
 *Target: Refactor study calendar, shift date arithmetic, and bulk task updates.*
-- [ ] **Repositories**: `StudyScheduleRepositoryInterface.php` & `StudyScheduleRepository.php`
-- [ ] **Input DTOs**: `app/DTOs/StudySchedule/UpsertStudyScheduleData.php`, `ShiftScheduleData.php`
-- [ ] **JsonResources**: `app/Http/Resources/StudyScheduleResource.php`
-- [ ] **Actions**: 
+- [x] **Repositories**: `StudyScheduleRepositoryInterface.php` & `StudyScheduleRepository.php`
+- [x] **Input DTOs**: `app/DTOs/StudySchedule/UpsertStudyScheduleData.php`, `ShiftScheduleData.php`
+- [x] **JsonResources**: `app/Http/Resources/StudyScheduleResource.php`
+- [x] **Actions**: 
   - `app/Actions/StudySchedule/ShiftStudyScheduleAction.php`
   - `app/Actions/StudySchedule/BulkUpdateStudyScheduleAction.php`
-- [ ] **Services**: `app/Services/StudyScheduleService.php`
-- [ ] **Controllers to Refactor**:
+- [x] **Services**: `app/Services/StudyScheduleService.php`
+- [x] **Controllers to Refactor**:
   - `app/Http/Controllers/User/StudyScheduleController.php`
   - `app/Http/Controllers/User/StudySuggestionController.php`
-- [ ] **Obsolete Files Cleaned Up**: (List any removed legacy files or "None")
+- [x] **Tests Verified**: `tests/Feature/User/StudyScheduleManagementTest.php` (5/5 passing, 26/26 feature suite)
+- [x] **Obsolete Files Cleaned Up**: None (Replaced controller private formatters with StudyScheduleResource)
 
 ---
 

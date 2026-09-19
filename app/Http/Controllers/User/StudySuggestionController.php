@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
@@ -8,24 +10,24 @@ use App\Http\Requests\User\StudySchedule\ApplyTemplateRequest;
 use App\Models\StudySchedule;
 use App\Services\StudyPlanAnalyzer;
 use App\Services\StudyPlanTemplateService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class StudySuggestionController extends Controller
 {
     public function __construct(
-        private StudyPlanAnalyzer $analyzer,
-        private StudyPlanTemplateService $templateService
+        protected StudyPlanAnalyzer $analyzer,
+        protected StudyPlanTemplateService $templateService
     ) {}
 
-    public function getTemplates()
+    public function getTemplates(): JsonResponse
     {
         return response()->json([
             'templates' => array_values($this->templateService->getTemplates()),
         ]);
     }
 
-    public function applyTemplate(ApplyTemplateRequest $request)
+    public function applyTemplate(ApplyTemplateRequest $request): JsonResponse
     {
         $validated = $request->validated();
         $count = $this->templateService->applyTemplate(
@@ -41,19 +43,20 @@ class StudySuggestionController extends Controller
         ], 201);
     }
 
-    public function getSuggestions(Request $request)
+    public function getSuggestions(Request $request): JsonResponse
     {
-        $track = $request->query('track', 'All');
-        $timeOfDay = $request->query('time_of_day', 'Evening');
+        $track = (string) $request->query('track', 'All');
+        $timeOfDay = (string) $request->query('time_of_day', 'Evening');
         $topicsPerDay = (int) $request->query('topics_per_day', 1);
-        $suggestions = $this->analyzer->generateSuggestions(Auth::user(), $track, $timeOfDay, $topicsPerDay);
+        $suggestions = $this->analyzer->generateSuggestions($this->requireUser(), $track, $timeOfDay, $topicsPerDay);
 
         return response()->json($suggestions);
     }
 
-    public function applySuggestions(ApplySuggestionsRequest $request)
+    public function applySuggestions(ApplySuggestionsRequest $request): JsonResponse
     {
         $validated = $request->validated();
+        $user = $this->requireUser();
 
         $created = [];
 
@@ -68,7 +71,7 @@ class StudySuggestionController extends Controller
             }
 
             $schedule = StudySchedule::firstOrCreate([
-                'user_id' => Auth::id(),
+                'user_id' => $user->id,
                 'study_date' => $suggestion['study_date'],
                 'study_time' => $suggestion['study_time'] ?? null,
                 'title' => $suggestion['title'],

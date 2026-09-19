@@ -1,7 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\User;
 
+use App\DTOs\StudySchedule\ShiftScheduleData;
+use App\DTOs\StudySchedule\UpsertStudyScheduleData;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\StudySchedule\BulkDeleteStudyScheduleRequest;
 use App\Http\Requests\User\StudySchedule\BulkMarkDoneRequest;
@@ -10,268 +14,91 @@ use App\Http\Requests\User\StudySchedule\BulkUpdateStudyTimeRequest;
 use App\Http\Requests\User\StudySchedule\ShiftStudyScheduleRequest;
 use App\Http\Requests\User\StudySchedule\StoreStudyScheduleRequest;
 use App\Http\Requests\User\StudySchedule\UpdateStudyScheduleRequest;
-use App\Models\ExamDate;
-use App\Models\LearnModule;
+use App\Http\Resources\StudyScheduleResource;
 use App\Models\StudySchedule;
-use App\Models\Subcategory;
-use Carbon\Carbon;
+use App\Services\StudyScheduleService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\Facades\Schema;
+use Inertia\Response;
 
 class StudyScheduleController extends Controller
 {
-    private function formatScheduleForCalendar(StudySchedule|\stdClass $schedule): array
-    {
-        $scheduleArray = $schedule instanceof StudySchedule
-            ? $schedule->toArray()
-            : (array) $schedule;
+    public function __construct(
+        protected StudyScheduleService $scheduleService
+    ) {}
 
-        return [
-            ...$scheduleArray,
-            'study_date' => $schedule->study_date instanceof \DateTime
-                ? $schedule->study_date->format('Y-m-d')
-                : (is_string($schedule->study_date) ? $schedule->study_date : $schedule->study_date?->format('Y-m-d')),
-        ];
+    public function index(Request $request): Response
+    {
+        $year = (int) $request->query('year', (string) now()->year);
+        $month = (int) $request->query('month', (string) now()->month);
+
+        $calendarData = $this->scheduleService->getCalendarData($this->requireUser()->id, $year, $month);
+
+        return $this->render('user/calendar/index', $calendarData);
     }
 
-    public function index(Request $request)
+    public function data(Request $request): JsonResponse
     {
-        $year = $request->query('year', now()->year);
-        $month = $request->query('month', now()->month);
+        $year = (int) $request->query('year', (string) now()->year);
+        $month = (int) $request->query('month', (string) now()->month);
 
-        $startDate = now()->setDate($year, $month, 1)->startOfDay();
-        $endDate = $startDate->copy()->endOfMonth();
+        $calendarData = $this->scheduleService->getCalendarData($this->requireUser()->id, $year, $month);
 
-        $schedules = StudySchedule::where('user_id', Auth::id())
-            ->with(['subcategory.category'])
-            ->whereBetween('study_date', [$startDate, $endDate])
-            ->get()
-            ->groupBy(function ($schedule) {
-                return $schedule->study_date->format('Y-m-d');
-            })
-            ->map(fn ($items) => $items->map(fn ($schedule) => $this->formatScheduleForCalendar($schedule))->values());
-
-        $examDates = [];
-        if (Schema::hasTable('exam_dates')) {
-            $allExamDates = Cache::rememberForever('exam_dates.active', function () {
-                return ExamDate::where('is_active', true)
-                    ->get()
-                    ->pluck('date')
-                    ->map(fn ($date) => Carbon::parse($date)->format('Y-m-d'))
-                    ->toArray();
-            });
-
-            // Filter for the requested month, though returning all is also fine
-            $examDates = array_filter($allExamDates, function ($date) use ($startDate, $endDate) {
-                return $date >= $startDate->format('Y-m-d') && $date <= $endDate->format('Y-m-d');
-            });
-
-            // Re-index array for JSON response
-            $examDates = array_values($examDates);
-        }
-
-        // Fetch past pending uncompleted tasks
-        $pastPending = StudySchedule::where('user_id', Auth::id())
-            ->with(['subcategory.category'])
-            ->where('study_date', '<', Carbon::today())
-            ->where('is_done', false)
-            ->orderBy('study_date', 'asc')
-            ->get()
-            ->map(fn ($schedule) => $this->formatScheduleForCalendar($schedule));
-
-        $nextExam = null;
-        if (Schema::hasTable('exam_dates')) {
-            $nextExamModel = ExamDate::where('is_active', true)
-                ->where('date', '>=', Carbon::today())
-                ->orderBy('date', 'asc')
-                ->first();
-
-            if ($nextExamModel) {
-                $nextExam = [
-                    'date' => $nextExamModel->date->format('Y-m-d'),
-                    'description' => $nextExamModel->description,
-                    'days_remaining' => Carbon::today()->diffInDays($nextExamModel->date, false),
-                ];
-            }
-        }
-
-        return $this->render('user/calendar/index', [
-            'schedules' => $schedules,
-            'examDates' => $examDates,
-            'pastPending' => $pastPending,
-            'nextExam' => $nextExam,
-        ]);
+        return response()->json($calendarData);
     }
 
-    public function data(Request $request)
+    public function store(StoreStudyScheduleRequest $request): JsonResponse
     {
-        $year = $request->query('year', now()->year);
-        $month = $request->query('month', now()->month);
+        $dto = UpsertStudyScheduleData::fromStoreRequest($request);
+        $result = $this->scheduleService->createSchedule($this->requireUser()->id, $dto);
 
-        $startDate = now()->setDate($year, $month, 1)->startOfDay();
-        $endDate = $startDate->copy()->endOfMonth();
-
-        $schedules = StudySchedule::where('user_id', Auth::id())
-            ->with(['subcategory.category'])
-            ->whereBetween('study_date', [$startDate, $endDate])
-            ->get()
-            ->groupBy(function ($schedule) {
-                return $schedule->study_date->format('Y-m-d');
-            })
-            ->map(fn ($items) => $items->map(fn ($schedule) => $this->formatScheduleForCalendar($schedule))->values());
-
-        $examDates = [];
-        if (Schema::hasTable('exam_dates')) {
-            $allExamDates = Cache::rememberForever('exam_dates.active', function () {
-                return ExamDate::where('is_active', true)
-                    ->get()
-                    ->pluck('date')
-                    ->map(fn ($date) => Carbon::parse($date)->format('Y-m-d'))
-                    ->toArray();
-            });
-
-            $examDates = array_values(array_filter($allExamDates, function ($date) use ($startDate, $endDate) {
-                return $date >= $startDate->format('Y-m-d') && $date <= $endDate->format('Y-m-d');
-            }));
-        }
-
-        $pastPending = StudySchedule::where('user_id', Auth::id())
-            ->with(['subcategory.category'])
-            ->where('study_date', '<', Carbon::today())
-            ->where('is_done', false)
-            ->orderBy('study_date', 'asc')
-            ->get()
-            ->map(fn ($schedule) => $this->formatScheduleForCalendar($schedule));
-
-        $nextExam = null;
-        if (Schema::hasTable('exam_dates')) {
-            $nextExamModel = ExamDate::where('is_active', true)
-                ->where('date', '>=', Carbon::today())
-                ->orderBy('date', 'asc')
-                ->first();
-
-            if ($nextExamModel) {
-                $nextExam = [
-                    'date' => $nextExamModel->date->format('Y-m-d'),
-                    'description' => $nextExamModel->description,
-                    'days_remaining' => Carbon::today()->diffInDays($nextExamModel->date, false),
-                ];
-            }
-        }
-
-        return response()->json([
-            'schedules' => $schedules,
-            'examDates' => $examDates,
-            'pastPending' => $pastPending,
-            'nextExam' => $nextExam,
-        ]);
-    }
-
-    public function store(StoreStudyScheduleRequest $request)
-    {
-        $validated = $request->validated();
-
-        $existing = StudySchedule::where('user_id', Auth::id())
-            ->whereDate('study_date', $validated['study_date'])
-            ->where('title', $validated['title'])
-            ->first();
-
-        if ($existing) {
+        if ($result['is_duplicate']) {
             return response()->json([
                 'message' => 'A study item with the same title already exists on this date.',
-                'duplicate' => $this->formatScheduleForCalendar($existing),
+                'duplicate' => new StudyScheduleResource($result['duplicate']),
             ], 409);
         }
 
-        $schedule = StudySchedule::create([
-            'user_id' => Auth::id(),
-            ...$validated,
-        ]);
-
-        return response()->json($this->formatScheduleForCalendar($schedule), 201);
+        return response()->json(new StudyScheduleResource($result['schedule']), 201);
     }
 
-    public function update(UpdateStudyScheduleRequest $request, StudySchedule $studySchedule)
+    public function update(UpdateStudyScheduleRequest $request, StudySchedule $studySchedule): JsonResponse
     {
         Gate::authorize('update', $studySchedule);
 
-        $validated = $request->validated();
+        $dto = UpsertStudyScheduleData::fromUpdateRequest($request);
+        $updated = $this->scheduleService->updateSchedule($studySchedule, $dto);
 
-        // Fix time format validation edge cases depending on H:i:s or H:i input
-        if (isset($validated['study_time']) && strlen($validated['study_time']) === 5) {
-            $validated['study_time'] .= ':00';
-        }
-
-        $studySchedule->update($validated);
-
-        return response()->json($this->formatScheduleForCalendar($studySchedule));
+        return response()->json(new StudyScheduleResource($updated));
     }
 
-    public function getSubcategories()
+    public function getSubcategories(): JsonResponse
     {
-        $subcategories = Subcategory::whereHas('category', function ($query) {
-            $query->where('is_demographic', false);
-        })->orderBy('name')->get(['id', 'name', 'category_id']);
-        $modules = LearnModule::where('is_published', true)
-            ->with(['subcategory:id,name', 'category:id,name'])
-            ->get(['id', 'title', 'slug', 'topic', 'subcategory_id', 'category_id']);
-
-        return response()->json([
-            'subcategories' => $subcategories,
-            'modules' => $modules->map(fn ($m) => [
-                'title' => $m->title,
-                'slug' => $m->slug,
-                'topic' => $m->topic,
-                'subcategory_name' => $m->subcategory?->name,
-                'category_name' => $m->category?->name,
-            ]),
-        ]);
+        return response()->json($this->scheduleService->getAvailableSubcategoriesAndModules());
     }
 
-    public function bulkUpdateTime(BulkUpdateStudyTimeRequest $request)
+    public function bulkUpdateTime(BulkUpdateStudyTimeRequest $request): JsonResponse
     {
         $validated = $request->validated();
-        $query = StudySchedule::where('user_id', Auth::id());
 
-        if (! empty($validated['start_date'])) {
-            $query->whereDate('study_date', '>=', $validated['start_date']);
-        }
-        if (! empty($validated['end_date'])) {
-            $query->whereDate('study_date', '<=', $validated['end_date']);
-        }
-
-        if (! empty($validated['category_id'])) {
-            $query->whereHas('subcategory', function ($q) use ($validated) {
-                $q->where('category_id', $validated['category_id']);
-            });
-        }
-
-        $query->update([
-            'study_time' => $validated['study_time'] ?: null,
-        ]);
+        $this->scheduleService->bulkUpdateStudyTime(
+            $this->requireUser()->id,
+            $validated['study_time'] ?? null,
+            $validated['start_date'] ?? null,
+            $validated['end_date'] ?? null,
+            isset($validated['category_id']) ? (int) $validated['category_id'] : null
+        );
 
         return response()->json(['message' => 'Study times updated successfully.']);
     }
 
-    public function bulkRescheduleToday(BulkRescheduleTodayRequest $request)
+    public function bulkRescheduleToday(BulkRescheduleTodayRequest $request): JsonResponse
     {
-        $validated = $request->validated();
-        $query = StudySchedule::where('user_id', Auth::id())
-            ->where('is_done', false);
-
-        if (! empty($validated['ids'])) {
-            $query->whereIn('id', $validated['ids']);
-        } else {
-            $query->where('study_date', '<', Carbon::today());
-        }
-
-        $count = $query->update([
-            'study_date' => Carbon::today()->toDateString(),
-        ]);
+        $count = $this->scheduleService->bulkRescheduleToday(
+            $this->requireUser()->id,
+            $request->validated('ids') ?? []
+        );
 
         return response()->json([
             'message' => "Successfully rescheduled {$count} study sessions to today.",
@@ -279,21 +106,12 @@ class StudyScheduleController extends Controller
         ]);
     }
 
-    public function bulkMarkDone(BulkMarkDoneRequest $request)
+    public function bulkMarkDone(BulkMarkDoneRequest $request): JsonResponse
     {
-        $validated = $request->validated();
-        $query = StudySchedule::where('user_id', Auth::id());
-
-        if (! empty($validated['ids'])) {
-            $query->whereIn('id', $validated['ids']);
-        } else {
-            $query->where('study_date', '<', Carbon::today())
-                ->where('is_done', false);
-        }
-
-        $count = $query->update([
-            'is_done' => true,
-        ]);
+        $count = $this->scheduleService->bulkMarkDone(
+            $this->requireUser()->id,
+            $request->validated('ids') ?? []
+        );
 
         return response()->json([
             'message' => "Successfully marked {$count} study sessions as completed.",
@@ -301,24 +119,16 @@ class StudyScheduleController extends Controller
         ]);
     }
 
-    public function bulkDelete(BulkDeleteStudyScheduleRequest $request)
+    public function bulkDelete(BulkDeleteStudyScheduleRequest $request): JsonResponse
     {
         $validated = $request->validated();
-        $query = StudySchedule::where('user_id', Auth::id());
 
-        if (! empty($validated['ids'])) {
-            $query->whereIn('id', $validated['ids']);
-        } elseif (! empty($validated['scope'])) {
-            if ($validated['scope'] === 'overdue') {
-                $query->where('study_date', '<', Carbon::today())->where('is_done', false);
-            } elseif ($validated['scope'] === 'completed') {
-                $query->where('is_done', true);
-            } elseif ($validated['scope'] === 'date' && ! empty($validated['date'])) {
-                $query->whereDate('study_date', $validated['date']);
-            }
-        }
-
-        $count = $query->delete();
+        $count = $this->scheduleService->bulkDelete(
+            $this->requireUser()->id,
+            $validated['ids'] ?? [],
+            $validated['scope'] ?? null,
+            $validated['date'] ?? null
+        );
 
         return response()->json([
             'message' => "Successfully deleted {$count} study sessions.",
@@ -326,68 +136,24 @@ class StudyScheduleController extends Controller
         ]);
     }
 
-    public function destroyAll()
+    public function destroyAll(): JsonResponse
     {
-        StudySchedule::where('user_id', Auth::id())->delete();
+        $this->scheduleService->destroyAll($this->requireUser()->id);
 
         return response()->json(null, 204);
     }
 
-    public function shiftSchedule(ShiftStudyScheduleRequest $request)
+    public function shiftSchedule(ShiftStudyScheduleRequest $request): JsonResponse
     {
-        $validated = $request->validated();
-        $mode = $validated['mode'];
-        $userId = Auth::id();
+        $dto = ShiftScheduleData::fromRequest($request);
+        $count = $this->scheduleService->shiftSchedule($this->requireUser()->id, $dto);
 
-        $incompleteSchedules = StudySchedule::where('user_id', $userId)
-            ->where('is_done', false)
-            ->orderBy('study_date', 'asc')
-            ->orderBy('id', 'asc')
-            ->get();
-
-        if ($incompleteSchedules->isEmpty()) {
+        if ($count === 0) {
             return response()->json([
                 'message' => 'No incomplete study sessions to shift.',
                 'count' => 0,
             ]);
         }
-
-        $today = Carbon::today();
-
-        $count = DB::transaction(function () use ($mode, $incompleteSchedules, $today, $validated) {
-            $count = 0;
-
-            if ($mode === 'start_today') {
-                $earliest = Carbon::parse($incompleteSchedules->first()->study_date)->startOfDay();
-                $dayDifference = $earliest->diffInDays($today, false);
-
-                if ($dayDifference > 0) {
-                    foreach ($incompleteSchedules as $schedule) {
-                        $originalDate = Carbon::parse($schedule->study_date);
-                        $newDate = $originalDate->copy()->addDays($dayDifference);
-                        $schedule->update(['study_date' => $newDate->toDateString()]);
-                        $count++;
-                    }
-                }
-            } elseif ($mode === 'shift_by_days') {
-                $days = (int) ($validated['days'] ?? 1);
-                $fromDate = ! empty($validated['from_date']) ? Carbon::parse($validated['from_date'])->startOfDay() : null;
-
-                foreach ($incompleteSchedules as $schedule) {
-                    $schedDate = Carbon::parse($schedule->study_date)->startOfDay();
-
-                    if ($fromDate && $schedDate->lt($fromDate)) {
-                        continue;
-                    }
-
-                    $newDate = $schedDate->copy()->addDays($days);
-                    $schedule->update(['study_date' => $newDate->toDateString()]);
-                    $count++;
-                }
-            }
-
-            return $count;
-        });
 
         return response()->json([
             'message' => "Successfully shifted {$count} study sessions.",
@@ -395,11 +161,11 @@ class StudyScheduleController extends Controller
         ]);
     }
 
-    public function destroy(StudySchedule $studySchedule)
+    public function destroy(StudySchedule $studySchedule): JsonResponse
     {
         Gate::authorize('delete', $studySchedule);
 
-        $studySchedule->delete();
+        $this->scheduleService->deleteSchedule($studySchedule);
 
         return response()->json(null, 204);
     }
