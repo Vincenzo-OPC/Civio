@@ -10,6 +10,8 @@ use App\Repositories\LearnModuleRepository;
 use App\Repositories\LearnModuleRepositoryInterface;
 use App\Repositories\QuestionRepository;
 use App\Repositories\QuestionRepositoryInterface;
+use App\Repositories\SavedDrillSetRepository;
+use App\Repositories\SavedDrillSetRepositoryInterface;
 use App\Repositories\StudyScheduleRepository;
 use App\Repositories\StudyScheduleRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
@@ -39,6 +41,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->singleton(
             StudyScheduleRepositoryInterface::class,
             StudyScheduleRepository::class
+        );
+
+        $this->app->singleton(
+            SavedDrillSetRepositoryInterface::class,
+            SavedDrillSetRepository::class
         );
     }
 }

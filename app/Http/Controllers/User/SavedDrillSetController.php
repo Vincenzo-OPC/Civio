@@ -1,46 +1,40 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\User;
 
+use App\DTOs\Drill\BookmarkQuestionData;
+use App\DTOs\Drill\UpsertSavedDrillSetData;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Drill\SavedDrillSets\AddQuestionToSavedSetRequest;
 use App\Http\Requests\User\Drill\SavedDrillSets\StoreSavedDrillSetRequest;
 use App\Http\Requests\User\Drill\SavedDrillSets\UpdateSavedDrillSetRequest;
+use App\Http\Resources\SavedDrillSetResource;
 use App\Models\Question;
 use App\Models\SavedDrillSet;
+use App\Repositories\SavedDrillSetRepositoryInterface;
+use App\Services\DrillService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Gate;
 
 class SavedDrillSetController extends Controller
 {
+    public function __construct(
+        protected DrillService $drillService,
+        protected SavedDrillSetRepositoryInterface $drillSetRepository,
+    ) {}
+
     /**
      * List user's saved drill sets with question counts.
      */
     public function index(Request $request): JsonResponse
     {
-        $userId = auth()->id();
+        $userId = $this->requireUser()->id;
+        $sets = $this->drillSetRepository->getUserSets($userId);
 
-        $sets = SavedDrillSet::where('user_id', $userId)
-            ->withCount('questions')
-            ->with(['questions.subcategory.category'])
-            ->orderBy('id', 'desc')
-            ->get()
-            ->map(function ($set) {
-                return [
-                    'id' => $set->id,
-                    'name' => $set->name,
-                    'description' => $set->description,
-                    'color' => $set->color,
-                    'questions_count' => $set->questions_count,
-                    'sample_categories' => $set->questions->map(fn ($q) => $q->subcategory?->category?->name)->filter()->unique()->values()->all(),
-                    'created_at' => $set->created_at?->toIso8601String(),
-                ];
-            });
-
-        return response()->json(['sets' => $sets]);
+        return response()->json(['sets' => SavedDrillSetResource::collection($sets)]);
     }
 
     /**
@@ -48,33 +42,15 @@ class SavedDrillSetController extends Controller
      */
     public function store(StoreSavedDrillSetRequest $request): JsonResponse|RedirectResponse
     {
-        $validated = $request->validated();
+        $userId = $this->requireUser()->id;
+        $dto = UpsertSavedDrillSetData::fromStoreRequest($request);
 
-        $set = DB::transaction(function () use ($validated) {
-            $set = SavedDrillSet::create([
-                'user_id' => auth()->id(),
-                'name' => trim($validated['name']),
-                'description' => $validated['description'] ?? null,
-                'color' => $validated['color'] ?? 'blue',
-            ]);
-
-            if (! empty($validated['question_ids'])) {
-                $set->questions()->sync($validated['question_ids']);
-            }
-
-            return $set;
-        });
+        $set = $this->drillService->createSavedSet($userId, $dto);
 
         if ($request->wantsJson()) {
             return response()->json([
                 'status' => 'success',
-                'set' => [
-                    'id' => $set->id,
-                    'name' => $set->name,
-                    'description' => $set->description,
-                    'color' => $set->color,
-                    'questions_count' => count($validated['question_ids'] ?? []),
-                ],
+                'set' => (new SavedDrillSetResource($set))->resolve(),
             ]);
         }
 
@@ -86,20 +62,15 @@ class SavedDrillSetController extends Controller
      */
     public function update(UpdateSavedDrillSetRequest $request, SavedDrillSet $savedDrillSet): JsonResponse|RedirectResponse
     {
-        Gate::authorize('update', $savedDrillSet);
+        $this->authorize('update', $savedDrillSet);
 
-        $validated = $request->validated();
-
-        $savedDrillSet->update([
-            'name' => trim($validated['name']),
-            'description' => $validated['description'] ?? $savedDrillSet->description,
-            'color' => $validated['color'] ?? $savedDrillSet->color,
-        ]);
+        $dto = UpsertSavedDrillSetData::fromUpdateRequest($request, $savedDrillSet->color);
+        $this->drillService->updateSavedSet($savedDrillSet, $dto);
 
         if ($request->wantsJson()) {
             return response()->json([
                 'status' => 'success',
-                'set' => $savedDrillSet,
+                'set' => (new SavedDrillSetResource($savedDrillSet->fresh()))->resolve(),
             ]);
         }
 
@@ -111,9 +82,9 @@ class SavedDrillSetController extends Controller
      */
     public function destroy(SavedDrillSet $savedDrillSet): JsonResponse|RedirectResponse
     {
-        Gate::authorize('delete', $savedDrillSet);
+        $this->authorize('delete', $savedDrillSet);
 
-        $savedDrillSet->delete();
+        $this->drillService->deleteSavedSet($savedDrillSet);
 
         if (request()->wantsJson()) {
             return response()->json(['status' => 'success', 'message' => 'Practice set deleted.']);
@@ -127,38 +98,12 @@ class SavedDrillSetController extends Controller
      */
     public function addQuestion(AddQuestionToSavedSetRequest $request): JsonResponse
     {
-        $validated = $request->validated();
-        $userId = auth()->id();
+        $userId = $this->requireUser()->id;
+        $dto = BookmarkQuestionData::fromRequest($request);
 
-        $question = Question::findOrFail($validated['question_id']);
+        $result = $this->drillService->bookmarkQuestion($userId, $dto);
 
-        if (! empty($validated['saved_drill_set_id'])) {
-            $set = SavedDrillSet::where('id', $validated['saved_drill_set_id'])
-                ->where('user_id', $userId)
-                ->firstOrFail();
-        } elseif (! empty($validated['new_set_name'])) {
-            $set = SavedDrillSet::create([
-                'user_id' => $userId,
-                'name' => trim($validated['new_set_name']),
-                'description' => 'Custom practice set created from review items.',
-                'color' => 'indigo',
-            ]);
-        } else {
-            // Default "Bookmarked Exam Items" set
-            $set = SavedDrillSet::firstOrCreate(
-                ['user_id' => $userId, 'name' => 'Bookmarked Items'],
-                ['description' => 'Questions bookmarked from past exams and drills.', 'color' => 'blue']
-            );
-        }
-
-        $set->questions()->syncWithoutDetaching([$question->id]);
-
-        return response()->json([
-            'status' => 'success',
-            'set_id' => $set->id,
-            'set_name' => $set->name,
-            'question_id' => $question->id,
-        ]);
+        return response()->json($result);
     }
 
     /**
@@ -166,16 +111,14 @@ class SavedDrillSetController extends Controller
      */
     public function removeQuestion(SavedDrillSet $savedDrillSet, Question $question): JsonResponse
     {
-        if ($savedDrillSet->user_id !== auth()->id()) {
-            abort(403);
-        }
+        $this->authorize('update', $savedDrillSet);
 
-        $savedDrillSet->questions()->detach($question->id);
+        $remainingCount = $this->drillService->removeQuestionFromSet($savedDrillSet, (int) $question->id);
 
         return response()->json([
             'status' => 'success',
             'message' => 'Question removed from practice set.',
-            'remaining_count' => $savedDrillSet->questions()->count(),
+            'remaining_count' => $remainingCount,
         ]);
     }
 
@@ -184,37 +127,10 @@ class SavedDrillSetController extends Controller
      */
     public function getSetQuestions(SavedDrillSet $savedDrillSet): JsonResponse
     {
-        if ($savedDrillSet->user_id !== auth()->id()) {
-            abort(403);
-        }
+        $this->authorize('view', $savedDrillSet);
 
-        $questions = $savedDrillSet->questions()
-            ->where('status', 'active')
-            ->with(['subcategory.category'])
-            ->get()
-            ->map(function ($q) {
-                return [
-                    'id' => $q->id,
-                    'stem' => $q->stem,
-                    'options' => $q->options ?? [],
-                    'correct_option' => $q->correct_option,
-                    'explanation' => $q->explanation ?? '',
-                    'category' => $q->subcategory?->category?->name ?? 'General Information',
-                    'subcategory' => $q->subcategory?->name ?? '',
-                    'language' => (str_contains(strtolower($q->language ?? ''), 'tagalog') || str_contains(strtolower($q->language ?? ''), 'filipino')) ? 'Filipino' : 'English',
-                    'isDemographic' => $q->subcategory?->category?->is_demographic ?? false,
-                ];
-            });
+        $data = $this->drillService->getSetQuestions($savedDrillSet);
 
-        return response()->json([
-            'set' => [
-                'id' => $savedDrillSet->id,
-                'name' => $savedDrillSet->name,
-                'description' => $savedDrillSet->description,
-                'color' => $savedDrillSet->color,
-                'total_items' => count($questions),
-            ],
-            'questions' => $questions,
-        ]);
+        return response()->json($data);
     }
 }

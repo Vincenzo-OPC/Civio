@@ -499,16 +499,17 @@ Track the application of the **Action-Repository-DTO + JsonResource** pattern ac
 
 ---
 
-### ⏳ 5. Drills & Custom Practice Sets (Priority: Medium)
+### ✅ 5. Drills & Custom Practice Sets (Status: COMPLETED)
 *Target: Refactor smart weakness drills, saved practice sets, and custom items.*
-- [ ] **Repositories**: `SavedDrillSetRepositoryInterface.php` & `SavedDrillSetRepository.php`
-- [ ] **Input DTOs**: `app/DTOs/Drill/UpsertSavedDrillSetData.php`, `StoreCustomQuestionData.php`
-- [ ] **JsonResources**: `app/Http/Resources/SavedDrillSetResource.php`
-- [ ] **Services**: `app/Services/DrillService.php`
-- [ ] **Controllers to Refactor**:
+- [x] **Repositories**: `SavedDrillSetRepositoryInterface.php` & `SavedDrillSetRepository.php`
+- [x] **Input DTOs**: `app/DTOs/Drill/UpsertSavedDrillSetData.php`, `StoreCustomQuestionData.php`, `BookmarkQuestionData.php`
+- [x] **JsonResources**: `app/Http/Resources/SavedDrillSetResource.php`, `DrillQuestionResource.php`
+- [x] **Services**: `app/Services/DrillService.php`
+- [x] **Controllers Refactored**:
   - `app/Http/Controllers/User/DrillController.php`
   - `app/Http/Controllers/User/SavedDrillSetController.php`
-- [ ] **Obsolete Files Cleaned Up**: (List any removed legacy files or "None")
+- [x] **Tests Verified**: `tests/Feature/User/DrillManagementTest.php` (5/5 passing, 12/12 drill suite)
+- [x] **Obsolete Files Cleaned Up**: None (Unified inline duplicate question formatting across 4 controllers into DrillQuestionResource)
 
 ---
 
