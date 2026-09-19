@@ -40,7 +40,7 @@ export function DashboardHero({
     const motivation = motivationText || defaultMotivation;
 
     return (
-        <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-slate-50/50 to-blue-50/40 p-5 shadow-sm sm:p-7 dark:border-slate-800/80 dark:from-slate-900/90 dark:via-slate-900/50 dark:to-blue-950/20">
+        <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-linear-to-br from-white via-slate-50/50 to-blue-50/40 p-5 shadow-sm sm:p-7 dark:border-slate-800/80 dark:from-slate-900/90 dark:via-slate-900/50 dark:to-blue-950/20">
             {/* Background Decorative Glow Elements */}
             <div
                 className="pointer-events-none absolute -top-16 -right-16 size-64 rounded-full bg-blue-500/10 blur-3xl dark:bg-blue-500/15"
@@ -71,7 +71,7 @@ export function DashboardHero({
                     <div>
                         <h1 className="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl lg:text-4xl dark:text-white">
                             Welcome back,{' '}
-                            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-indigo-300">
+                            <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-indigo-300">
                                 {firstName}
                             </span>
                         </h1>

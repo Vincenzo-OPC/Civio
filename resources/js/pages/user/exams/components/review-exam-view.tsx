@@ -752,7 +752,7 @@ export function ReviewExamView({
             <Head title={`Answer Review: ${details.title}`} />
             <style>{styleBlock}</style>
             {isShielded && (
-                <div className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-card p-6 text-center opacity-100 select-none">
+                <div className="fixed inset-0 z-99999 flex flex-col items-center justify-center bg-card p-6 text-center opacity-100 select-none">
                     <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 rounded-2xl border border-border/80 bg-background p-8 shadow-2xl">
                         <div className="flex size-14 items-center justify-center rounded-full bg-amber-500/10 text-amber-600 dark:bg-amber-500/20 dark:text-amber-400">
                             <Lock className="size-7" />
@@ -800,7 +800,7 @@ export function ReviewExamView({
                 }`}
             >
                 {/* TOP NAVBAR HEADER: RESPONSIVE MULTI-ROW MICRO-LAYOUT */}
-                <div className="shadow-3xs flex w-full flex-col justify-center gap-2 border-b border-border bg-card px-3 py-3 sm:px-5 lg:h-[84px]">
+                <div className="shadow-3xs flex w-full flex-col justify-center gap-2 border-b border-border bg-card px-3 py-3 sm:px-5 lg:h-21">
                     {/* ROW 1: Back, Title, Topic Performance & Palette */}
                     <div className="flex w-full items-center justify-between gap-1.5 text-sm font-bold">
                         {/* Left: Back & Exam Title */}
@@ -932,7 +932,7 @@ export function ReviewExamView({
                 {/* HORIZONTAL REVIEW PROGRESS BAR */}
                 <div className="relative h-1.5 w-full overflow-hidden bg-muted/60">
                     <div
-                        className="h-full bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300"
+                        className="h-full bg-linear-to-r from-blue-600 to-indigo-600 transition-all duration-300"
                         style={{
                             width: `${((currentIdx + 1) / (activeQuestions.length || 1)) * 100}%`,
                         }}

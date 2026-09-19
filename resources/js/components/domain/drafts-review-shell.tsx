@@ -335,7 +335,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                 <div>
                     <Link
                         href={backUrl}
-                        className="group flex w-fit cursor-pointer items-center gap-1 text-xs font-black text-foreground transition transition-all duration-300 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                        className="group flex w-fit cursor-pointer items-center gap-1 text-xs font-black text-foreground transition-all duration-300 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
                     >
                         <ChevronLeft className="size-4" />
                         {backLabel}
@@ -393,7 +393,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
             {/* 2. DRAFT SEARCH & FILTER CONTROLS */}
             {items.length > 0 && (
                 <div className="shadow-3xs mt-6 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border bg-card p-4">
-                    <div className="flex min-w-[260px] flex-1 items-center gap-2">
+                    <div className="flex min-w-65 flex-1 items-center gap-2">
                         <input
                             type="text"
                             value={filterSearch}
@@ -408,7 +408,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
 
                     <div className="flex flex-wrap items-center gap-2">
                         {/* Category Filter */}
-                        <div className="relative min-w-[120px]">
+                        <div className="relative min-w-30">
                             <select
                                 value={activeFilterCategory}
                                 onChange={(e) => {
@@ -447,7 +447,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                         </div>
 
                         {/* Subcategory Filter */}
-                        <div className="relative min-w-[130px]">
+                        <div className="relative min-w-32.5">
                             <select
                                 value={activeFilterSubcategory}
                                 onChange={(e) => {
@@ -689,7 +689,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                             Approve / Unapprove
                         </span>
                     </div>
-                    <div className="flex items-center gap-1.5 rounded-lg border border-slate-100 bg-slate-50 px-2 py-1 dark:border-slate-800 dark:bg-slate-900/50 dark:bg-slate-950/30">
+                    <div className="flex items-center gap-1.5 rounded-lg border border-slate-100 bg-slate-50 px-2 py-1 dark:border-slate-800 dark:bg-slate-950/30">
                         <span className="flex size-5.5 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400">
                             <Eye className="size-3" />
                         </span>
@@ -738,7 +738,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                         </p>
                         <Link
                             href={emptyStateActionUrl}
-                            className="group mt-6 inline-flex cursor-pointer items-center gap-1.5 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-md transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                            className="group mt-6 inline-flex cursor-pointer items-center gap-1.5 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-md transition duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                         >
                             <EmptyStateActionIcon className="size-4 transition-transform group-hover:scale-110" />
                             {emptyStateActionLabel}

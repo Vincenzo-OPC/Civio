@@ -170,7 +170,7 @@ export function CalendarToolbar({
                                 className="h-9 gap-1.5 border-slate-200 bg-white text-xs font-bold text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300"
                             >
                                 <Filter className="size-3.5 text-slate-400" />
-                                <span className="max-w-[120px] truncate sm:max-w-none">
+                                <span className="max-w-30 truncate sm:max-w-none">
                                     {selectedCategoryLabel}
                                 </span>
                             </Button>
@@ -220,7 +220,7 @@ export function CalendarToolbar({
                     </Button>
 
                     <div className="flex items-center gap-2 px-1">
-                        <span className="min-w-[140px] text-center text-sm font-black text-slate-900 sm:min-w-[170px] sm:text-base dark:text-white">
+                        <span className="min-w-35 text-center text-sm font-black text-slate-900 sm:min-w-42.5 sm:text-base dark:text-white">
                             {activeView === 'week'
                                 ? weekRangeLabel
                                 : `${currentMonthName} ${currentYear}`}

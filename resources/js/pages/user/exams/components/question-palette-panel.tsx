@@ -89,7 +89,7 @@ export default function QuestionPalettePanel({
                     </span>
                     <button
                         onClick={onCloseMobile}
-                        className="group rounded-lg p-1.5 text-muted-foreground transition transition-all duration-300 hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                        className="group rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                     >
                         <X className="size-5" />
                     </button>
@@ -422,11 +422,11 @@ export default function QuestionPalettePanel({
                                         isFilteredOut
                                             ? 'cursor-not-allowed border-border bg-background text-muted-foreground opacity-20 grayscale'
                                             : isActive
-                                              ? 'border-blue-600 bg-blue-50 bg-card font-black text-blue-600 ring-2 ring-blue-600 ring-offset-1 dark:bg-blue-950/30 dark:text-blue-400 dark:ring-offset-background'
+                                              ? 'border-blue-600 bg-card font-black text-blue-600 ring-2 ring-blue-600 ring-offset-1 dark:bg-blue-950/30 dark:text-blue-400 dark:ring-offset-background'
                                               : isAnswered
                                                 ? 'border-blue-600 bg-blue-600 text-white hover:bg-blue-700'
                                                 : isFlagged
-                                                  ? 'border-rose-300 bg-rose-50 font-extrabold text-rose-700 dark:border-rose-900/40 dark:bg-rose-950/20 dark:bg-rose-950/30 dark:text-rose-400'
+                                                  ? 'border-rose-300 bg-rose-50 font-extrabold text-rose-700 dark:border-rose-900/40 dark:bg-rose-950/30 dark:text-rose-400'
                                                   : 'border-border bg-background text-foreground hover:bg-muted'
                                     }`}
                                 >
@@ -497,7 +497,7 @@ export default function QuestionPalettePanel({
                 <div className="shrink-0 border-t border-border bg-card p-4">
                     <button
                         onClick={onSubmitExam}
-                        className="group flex w-full items-center justify-center gap-1.5 rounded-lg bg-emerald-600 py-3 text-xs font-bold text-white shadow-xs transition transition-all duration-300 hover:bg-emerald-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                        className="group flex w-full items-center justify-center gap-1.5 rounded-lg bg-emerald-600 py-3 text-xs font-bold text-white shadow-xs transition-all duration-300 hover:bg-emerald-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                     >
                         <CheckCircle2 className="size-4" />
                         Submit Exam
@@ -510,7 +510,7 @@ export default function QuestionPalettePanel({
     if (isMobile) {
         return (
             <div
-                className="fixed inset-0 z-[100] flex justify-end bg-slate-900/60 backdrop-blur-xs lg:hidden"
+                className="fixed inset-0 z-100 flex justify-end bg-slate-900/60 backdrop-blur-xs lg:hidden"
                 onClick={onCloseMobile}
             >
                 <div

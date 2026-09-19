@@ -143,7 +143,7 @@ export function CalendarStatsBanner({
                         <div className="mt-3">
                             <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
                                 <div
-                                    className="h-full bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-500"
+                                    className="h-full bg-linear-to-r from-blue-600 to-indigo-600 transition-all duration-500"
                                     style={{
                                         width: `${Math.min(weekStats.percent, 100)}%`,
                                     }}

@@ -167,7 +167,7 @@ export function StudyTaskDrawer({
                     {/* Body */}
                     <div className="space-y-5 p-6">
                         {/* 1-Click Drill Launcher Card */}
-                        <div className="rounded-2xl border border-indigo-200/80 bg-gradient-to-br from-indigo-50/80 via-blue-50/40 to-indigo-50/80 p-4.5 shadow-2xs dark:border-indigo-900/50 dark:from-indigo-950/40 dark:via-blue-950/20 dark:to-indigo-950/40">
+                        <div className="rounded-2xl border border-indigo-200/80 bg-linear-to-br from-indigo-50/80 via-blue-50/40 to-indigo-50/80 p-4.5 shadow-2xs dark:border-indigo-900/50 dark:from-indigo-950/40 dark:via-blue-950/20 dark:to-indigo-950/40">
                             <div className="flex items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
                                     <div className="flex size-8 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-2xs">

@@ -346,7 +346,7 @@ export default function Welcome() {
                                     Questions
                                 </p>
                             </div>
-                            <div className="hidden h-12 w-full max-w-[1px] bg-slate-300/60 md:block dark:bg-slate-800" />
+                            <div className="hidden h-12 w-full max-w-px bg-slate-300/60 md:block dark:bg-slate-800" />
                             <div className="flex flex-1 flex-col items-center">
                                 <p className="text-2xl font-black text-primary sm:text-4xl">
                                     2
@@ -355,7 +355,7 @@ export default function Welcome() {
                                     Study Tracks
                                 </p>
                             </div>
-                            <div className="hidden h-12 w-full max-w-[1px] bg-slate-300/60 md:block dark:bg-slate-800" />
+                            <div className="hidden h-12 w-full max-w-px bg-slate-300/60 md:block dark:bg-slate-800" />
                             <div className="flex flex-1 flex-col items-center">
                                 <p className="text-2xl font-black text-primary sm:text-4xl">
                                     6
@@ -364,7 +364,7 @@ export default function Welcome() {
                                     Categories
                                 </p>
                             </div>
-                            <div className="hidden h-12 w-full max-w-[1px] bg-slate-300/60 md:block dark:bg-slate-800" />
+                            <div className="hidden h-12 w-full max-w-px bg-slate-300/60 md:block dark:bg-slate-800" />
                             <div className="flex flex-1 flex-col items-center">
                                 <p className="text-2xl font-black text-primary sm:text-4xl">
                                     Free
@@ -396,7 +396,7 @@ export default function Welcome() {
                                 cardOneTitle="Realistic Mock Exams"
                                 cardOneDescription="Experience the exact timing, format, and pressure of the actual civil service exam. Build stamina and confidence in our distraction-free testing interface."
                                 cardTwoIcon={
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 dark:bg-indigo-950/30 dark:bg-indigo-950/40 dark:text-indigo-400">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 dark:bg-indigo-950/30 dark:text-indigo-400">
                                         <BookOpen className="h-6 w-6" />
                                     </div>
                                 }
@@ -408,7 +408,7 @@ export default function Welcome() {
                             <FeatureGrid
                                 reversed={true}
                                 cardOneIcon={
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-blue-400">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
                                         <Dumbbell className="h-6 w-6" />
                                     </div>
                                 }
@@ -432,7 +432,7 @@ export default function Welcome() {
                                     </div>
                                 }
                                 cardTwoIcon={
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-amber-600 dark:bg-amber-950/30 dark:bg-amber-950/40 dark:text-amber-400">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400">
                                         <History className="h-6 w-6" />
                                     </div>
                                 }
@@ -451,7 +451,7 @@ export default function Welcome() {
                                 cardOneTitle="Smart Study Plan"
                                 cardOneDescription="Generate a dynamic, customizable study schedule that maps out your topics day by day, preventing burnout and ensuring you cover the entire syllabus before exam day."
                                 cardTwoIcon={
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-950/30 dark:bg-emerald-950/40 dark:text-emerald-400">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-950/30 dark:text-emerald-400">
                                         <BrainCircuit className="h-6 w-6" />
                                     </div>
                                 }
@@ -473,7 +473,7 @@ export default function Welcome() {
 
                         <div className="relative w-full">
                             {/* Horizontal connecting line behind cards - z-0 puts it behind cards but in front of section background */}
-                            <div className="absolute top-[170px] right-[16%] left-[16%] z-0 hidden h-[2.5px] bg-primary md:block" />
+                            <div className="absolute top-42.5 right-[16%] left-[16%] z-0 hidden h-[2.5px] bg-primary md:block" />
 
                             <div className="relative z-10 grid w-full grid-cols-1 gap-4 sm:gap-8 md:grid-cols-3">
                                 {/* Step 1 */}
@@ -555,7 +555,7 @@ export default function Welcome() {
                                     <h3 className="mt-6 font-heading text-2xl font-black tracking-tight text-slate-900 sm:text-3xl dark:text-white">
                                         Review & Improve
                                     </h3>
-                                    <p className="mt-3 max-w-[260px] text-[14px] leading-relaxed font-normal text-slate-600 dark:text-slate-400">
+                                    <p className="mt-3 max-w-65 text-[14px] leading-relaxed font-normal text-slate-600 dark:text-slate-400">
                                         Analyze your results, read detailed
                                         explanations, and focus on weak areas.
                                     </p>
@@ -592,7 +592,7 @@ export default function Welcome() {
                                 return (
                                     <div
                                         key={index}
-                                        className="overflow-hidden rounded-2xl border border-slate-200/50 bg-white/70 shadow-sm backdrop-blur-xl transition-all duration-300 dark:border-slate-800 dark:border-slate-800/50 dark:bg-slate-900/40 dark:bg-slate-950/50"
+                                        className="overflow-hidden rounded-2xl border border-slate-200/50 bg-white/70 shadow-sm backdrop-blur-xl transition-all duration-300 dark:border-slate-800/50 dark:bg-slate-950/50"
                                     >
                                         <button
                                             onClick={() =>
@@ -616,7 +616,7 @@ export default function Welcome() {
                                         <div
                                             className={`transition-all duration-300 ease-in-out ${
                                                 isOpen
-                                                    ? 'max-h-[250px] border-t border-slate-100 dark:border-slate-800'
+                                                    ? 'max-h-62.5 border-t border-slate-100 dark:border-slate-800'
                                                     : 'max-h-0'
                                             } overflow-hidden`}
                                         >

@@ -143,7 +143,7 @@ function QuickEditForm({
     }
 
     return (
-        <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-[700px]">
+        <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-175">
             <DialogHeader>
                 <DialogTitle>Edit Question #{question.id}</DialogTitle>
             </DialogHeader>

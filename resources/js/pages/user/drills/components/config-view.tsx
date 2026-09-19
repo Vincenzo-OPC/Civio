@@ -98,7 +98,7 @@ export function ConfigView({
 
             {/* Retake Mode Status Banner */}
             {isRetakeConfig && (
-                <div className="dark:bg-amber-950/30/50 flex flex-col justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs font-semibold text-amber-800 shadow-2xs sm:flex-row sm:items-center dark:border-amber-900/30 dark:border-amber-900/50 dark:bg-amber-950/10 dark:text-amber-400">
+                <div className="dark:bg-amber-950/30/50 flex flex-col justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs font-semibold text-amber-800 shadow-2xs sm:flex-row sm:items-center dark:border-amber-900/50 dark:bg-amber-950/10 dark:text-amber-400">
                     <div className="flex items-center gap-2">
                         <RefreshCcw className="size-4 shrink-0" />
                         <span>
@@ -156,7 +156,7 @@ export function ConfigView({
                                                 : ''
                                         } ${
                                             isSelected
-                                                ? 'border-blue-600 bg-blue-50 text-blue-700 dark:border-blue-500 dark:bg-blue-500/15 dark:bg-blue-950/30 dark:text-blue-400'
+                                                ? 'border-blue-600 bg-blue-50 text-blue-700 dark:border-blue-500 dark:bg-blue-950/30 dark:text-blue-400'
                                                 : 'border-border bg-white text-muted-foreground hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-400 dark:hover:bg-slate-800'
                                         }`}
                                     >
@@ -508,7 +508,7 @@ export function ConfigView({
                         <div className="mt-8">
                             <button
                                 onClick={startDrill}
-                                className="group flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 py-3 text-sm font-bold text-white shadow-md transition transition-all duration-300 hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                className="group flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 py-3 text-sm font-bold text-white shadow-md transition duration-300 hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                             >
                                 Start Drill
                                 <ChevronRight className="size-4" />

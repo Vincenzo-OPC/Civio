@@ -146,7 +146,7 @@ export function AiReadinessBentoCard({
         : circumference - (prob / 100) * circumference;
 
     return (
-        <Card className="relative flex flex-col justify-between overflow-hidden border border-slate-200/80 bg-gradient-to-br from-white via-indigo-50/20 to-blue-50/30 p-5 shadow-2xs sm:p-6 dark:border-slate-800 dark:from-slate-900 dark:via-indigo-950/20 dark:to-slate-900/90">
+        <Card className="relative flex flex-col justify-between overflow-hidden border border-slate-200/80 bg-linear-to-br from-white via-indigo-50/20 to-blue-50/30 p-5 shadow-2xs sm:p-6 dark:border-slate-800 dark:from-slate-900 dark:via-indigo-950/20 dark:to-slate-900/90">
             {/* Header */}
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">

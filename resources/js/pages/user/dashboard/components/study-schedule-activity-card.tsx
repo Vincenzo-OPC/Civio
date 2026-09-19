@@ -67,7 +67,7 @@ export function StudyScheduleActivityCard({
     };
 
     return (
-        <Card className="relative flex h-full min-h-[460px] flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md sm:p-6 dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700">
+        <Card className="relative flex h-full min-h-115 flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md sm:p-6 dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700">
             {/* Header */}
             <div className="flex shrink-0 items-center justify-between">
                 <div className="flex items-center gap-2.5">

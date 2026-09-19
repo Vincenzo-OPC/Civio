@@ -25,7 +25,7 @@ export function SmartStudyLaunchers({
     primaryWeakness,
 }: SmartStudyLaunchersProps) {
     return (
-        <Card className="relative flex h-full min-h-[460px] flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md sm:p-6 dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700">
+        <Card className="relative flex h-full min-h-115 flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md sm:p-6 dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700">
             {/* Header */}
             <div className="flex shrink-0 items-center justify-between">
                 <div className="flex items-center gap-2.5">
@@ -52,7 +52,7 @@ export function SmartStudyLaunchers({
                             ? '/drills/smart-weakness?from=/dashboard'
                             : drillsIndex({ query: { from: '/dashboard' } })
                     }
-                    className="group relative flex flex-col justify-between rounded-xl border border-indigo-100 bg-gradient-to-br from-indigo-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-md dark:border-indigo-950/60 dark:from-indigo-950/30 dark:to-slate-900/60 dark:hover:border-indigo-800"
+                    className="group relative flex flex-col justify-between rounded-xl border border-indigo-100 bg-linear-to-br from-indigo-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-md dark:border-indigo-950/60 dark:from-indigo-950/30 dark:to-slate-900/60 dark:hover:border-indigo-800"
                 >
                     <div>
                         <div className="flex items-center justify-between">
@@ -82,7 +82,7 @@ export function SmartStudyLaunchers({
                 {/* Tile 2: Custom Drill Builder */}
                 <Link
                     href="/drills?tab=custom&from=/dashboard"
-                    className="group relative flex flex-col justify-between rounded-xl border border-violet-100 bg-gradient-to-br from-violet-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-300 hover:shadow-md dark:border-violet-950/60 dark:from-violet-950/30 dark:to-slate-900/60 dark:hover:border-violet-800"
+                    className="group relative flex flex-col justify-between rounded-xl border border-violet-100 bg-linear-to-br from-violet-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-300 hover:shadow-md dark:border-violet-950/60 dark:from-violet-950/30 dark:to-slate-900/60 dark:hover:border-violet-800"
                 >
                     <div>
                         <div className="flex items-center justify-between">
@@ -111,7 +111,7 @@ export function SmartStudyLaunchers({
                     href={
                         nextModule ? `/learn/${nextModule.slug}` : learnIndex()
                     }
-                    className="group relative flex flex-col justify-between rounded-xl border border-sky-100 bg-gradient-to-br from-sky-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md dark:border-sky-950/60 dark:from-sky-950/30 dark:to-slate-900/60 dark:hover:border-sky-800"
+                    className="group relative flex flex-col justify-between rounded-xl border border-sky-100 bg-linear-to-br from-sky-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md dark:border-sky-950/60 dark:from-sky-950/30 dark:to-slate-900/60 dark:hover:border-sky-800"
                 >
                     <div>
                         <div className="flex items-center justify-between">
@@ -143,7 +143,7 @@ export function SmartStudyLaunchers({
                 {/* Tile 4: Mock Exams */}
                 <Link
                     href={examsIndex({ query: { from: '/dashboard' } })}
-                    className="group relative flex flex-col justify-between rounded-xl border border-emerald-100 bg-gradient-to-br from-emerald-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md dark:border-emerald-950/60 dark:from-emerald-950/30 dark:to-slate-900/60 dark:hover:border-emerald-800"
+                    className="group relative flex flex-col justify-between rounded-xl border border-emerald-100 bg-linear-to-br from-emerald-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md dark:border-emerald-950/60 dark:from-emerald-950/30 dark:to-slate-900/60 dark:hover:border-emerald-800"
                 >
                     <div>
                         <div className="flex items-center justify-between">

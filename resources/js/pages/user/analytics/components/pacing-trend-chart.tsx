@@ -123,7 +123,7 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
                     </span>
                 </div>
 
-                <div className="h-[210px] w-full">
+                <div className="h-52.5 w-full">
                     <ChartContainer config={config} className="h-full w-full">
                         <ResponsiveContainer width="100%" height="100%">
                             <ComposedChart
@@ -196,7 +196,7 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
                                 />
                                 <ChartLegend
                                     content={<ChartLegendContent />}
-                                    className="-translate-y-2 flex-wrap gap-2 text-xs [&>*]:justify-center"
+                                    className="-translate-y-2 flex-wrap gap-2 text-xs *:justify-center"
                                 />
 
                                 {/* Bar for Time, Line for Accuracy */}

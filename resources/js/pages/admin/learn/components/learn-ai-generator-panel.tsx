@@ -149,7 +149,7 @@ export function LearnAIGeneratorPanel({
                                     <DialogTrigger asChild>
                                         <button
                                             type="button"
-                                            className="group inline-flex cursor-pointer items-center gap-1 text-[10px] font-bold tracking-wider text-blue-500 uppercase underline transition-all transition-colors duration-300 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                            className="group inline-flex cursor-pointer items-center gap-1 text-[10px] font-bold tracking-wider text-blue-500 uppercase underline transition-colors duration-300 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                         >
                                             <HelpCircle className="size-3" />
                                             Which model to use?
@@ -167,7 +167,7 @@ export function LearnAIGeneratorPanel({
                                             </DialogDescription>
                                         </DialogHeader>
                                         <div className="mt-4 space-y-4 text-xs leading-relaxed font-semibold">
-                                            <div className="max-h-[400px] overflow-hidden overflow-y-auto rounded-xl border border-border">
+                                            <div className="max-h-100 overflow-hidden overflow-y-auto rounded-xl border border-border">
                                                 <table className="w-full border-collapse text-left">
                                                     <thead className="sticky top-0 z-10 border-b border-border bg-muted font-bold">
                                                         <tr>
@@ -636,7 +636,7 @@ export function LearnAIGeneratorPanel({
                                     </span>
                                     <Link
                                         href={adminLearnDrafts().url}
-                                        className="group mt-1 inline-flex items-center gap-1 font-extrabold text-emerald-700 underline transition transition-all duration-300 hover:text-emerald-900 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                        className="group mt-1 inline-flex items-center gap-1 font-extrabold text-emerald-700 underline transition duration-300 hover:text-emerald-900 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                     >
                                         Review Drafts &rarr;
                                     </Link>
@@ -699,7 +699,7 @@ export function LearnAIGeneratorPanel({
             </div>
 
             <div className="flex flex-col gap-3 sm:gap-6 lg:col-span-5">
-                <div className="border-slate-250 relative overflow-hidden rounded-2xl border bg-gradient-to-br from-blue-950 to-slate-900 p-4 text-white shadow-md sm:p-6">
+                <div className="border-slate-250 relative overflow-hidden rounded-2xl border bg-linear-to-br from-blue-950 to-slate-900 p-4 text-white shadow-md sm:p-6">
                     <div className="pointer-events-none absolute -top-12 -right-12 h-48 w-48 rounded-full bg-blue-600/10 blur-2xl" />
                     <div className="pointer-events-none absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-emerald-600/5 blur-3xl" />
 

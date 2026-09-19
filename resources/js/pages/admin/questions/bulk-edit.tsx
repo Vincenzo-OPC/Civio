@@ -829,7 +829,7 @@ export default function BulkEditQuestions({
                                     triggerClassName="h-8 px-3 py-1.5 text-xs rounded-lg"
                                 />
                             </div>
-                            <div className="w-full min-w-[140px] sm:w-auto">
+                            <div className="w-full min-w-35 sm:w-auto">
                                 <button
                                     type="button"
                                     disabled={

@@ -109,7 +109,7 @@ export function AIGeneratorPanel({
                                     How it works
                                 </button>
                             </DialogTrigger>
-                            <DialogContent className="max-w-2xl border-blue-200 bg-gradient-to-br from-blue-50 to-slate-50 dark:border-blue-900/40 dark:from-slate-950 dark:to-slate-900">
+                            <DialogContent className="max-w-2xl border-blue-200 bg-linear-to-br from-blue-50 to-slate-50 dark:border-blue-900/40 dark:from-slate-950 dark:to-slate-900">
                                 <DialogHeader>
                                     <DialogTitle className="inline-flex items-center gap-2">
                                         <Cpu className="size-5 text-blue-500" />
@@ -535,7 +535,7 @@ export function AIGeneratorPanel({
                                     <DialogTrigger asChild>
                                         <button
                                             type="button"
-                                            className="group inline-flex cursor-pointer items-center gap-1 text-[10px] font-bold tracking-wider text-blue-500 uppercase underline transition-all transition-colors duration-300 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                            className="group inline-flex cursor-pointer items-center gap-1 text-[10px] font-bold tracking-wider text-blue-500 uppercase underline transition-colors duration-300 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                         >
                                             <HelpCircle className="size-3" />
                                             Which model to use?
@@ -553,7 +553,7 @@ export function AIGeneratorPanel({
                                             </DialogDescription>
                                         </DialogHeader>
                                         <div className="mt-4 space-y-4 text-xs leading-relaxed font-semibold">
-                                            <div className="max-h-[400px] overflow-hidden overflow-y-auto rounded-xl border border-border">
+                                            <div className="max-h-100 overflow-hidden overflow-y-auto rounded-xl border border-border">
                                                 <table className="w-full border-collapse text-left">
                                                     <thead className="sticky top-0 z-10 border-b border-border bg-muted font-bold">
                                                         <tr>
@@ -1059,7 +1059,7 @@ export function AIGeneratorPanel({
                                     </span>
                                     <Link
                                         href={questionsDrafts().url}
-                                        className="group mt-1 inline-flex items-center gap-1 font-extrabold text-emerald-700 underline transition transition-all duration-300 hover:text-emerald-900 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                        className="group mt-1 inline-flex items-center gap-1 font-extrabold text-emerald-700 underline transition-all duration-300 hover:text-emerald-900 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                     >
                                         Go to Drafts Review &rarr;
                                     </Link>

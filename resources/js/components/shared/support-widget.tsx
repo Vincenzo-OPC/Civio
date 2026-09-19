@@ -146,9 +146,9 @@ export function SupportWidget() {
     return (
         <div className="fixed right-6 bottom-6 z-50 flex items-end gap-4">
             {showBubble && (
-                <div className="relative mb-1 flex max-w-[220px] animate-in items-start gap-2 rounded-2xl border border-border bg-card p-3 shadow-xl duration-500 fade-in slide-in-from-bottom-4">
+                <div className="relative mb-1 flex max-w-55 animate-in items-start gap-2 rounded-2xl border border-border bg-card p-3 shadow-xl duration-500 fade-in slide-in-from-bottom-4">
                     <div className="flex-1">
-                        <p className="text-base leading-relaxed leading-tight font-bold text-foreground">
+                        <p className="text-base leading-tight font-bold text-foreground">
                             Find{' '}
                             <span className="text-blue-600 dark:text-blue-400">
                                 {appName}
@@ -161,7 +161,7 @@ export function SupportWidget() {
                     </div>
                     <button
                         onClick={dismissBubble}
-                        className="group -mt-1 -mr-1 rounded-full p-1 text-muted-foreground transition-all transition-colors duration-300 hover:bg-muted hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                        className="group -mt-1 -mr-1 rounded-full p-1 text-muted-foreground transition-colors duration-300 hover:bg-muted hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                     >
                         <X className="size-3.5" />
                     </button>
@@ -267,7 +267,7 @@ export function SupportWidget() {
                                 href="https://www.buymeacoffee.com/kenthalexisosila"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group inline-flex h-10 w-full items-center justify-center rounded-md bg-[#FFDD00] px-4 py-2 text-sm font-medium text-black ring-offset-background transition-all transition-colors duration-300 hover:bg-[#FFDD00]/90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95 disabled:pointer-events-none disabled:opacity-50"
+                                className="group inline-flex h-10 w-full items-center justify-center rounded-md bg-[#FFDD00] px-4 py-2 text-sm font-medium text-black ring-offset-background transition-colors duration-300 hover:bg-[#FFDD00]/90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95 disabled:pointer-events-none disabled:opacity-50"
                             >
                                 <Coffee className="mr-2 h-4 w-4" />
                                 Buy me a coffee
