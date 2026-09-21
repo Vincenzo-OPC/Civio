@@ -14,6 +14,7 @@ use App\Http\Requests\Admin\Learn\UpdateLearnModuleRequest;
 use App\Http\Resources\AdminLearnModuleResource;
 use App\Jobs\GenerateLearnModuleJob;
 use App\Models\LearnModule;
+use App\Services\Ai\AiGatewayService;
 use App\Services\CategoryService;
 use App\Services\LearnModuleService;
 use Illuminate\Http\JsonResponse;
@@ -180,7 +181,7 @@ class LearnController extends Controller
         GenerateLearnModuleJob::dispatchAfterResponse(
             $validated,
             (int) (auth()->id() ?: 1),
-            $validated['primary_model'] ?? 'llama-3.3-70b-versatile',
+            $validated['primary_model'] ?? AiGatewayService::DEFAULT_GEMINI_MODEL,
             $lock->owner()
         );
 

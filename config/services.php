@@ -64,8 +64,10 @@ return [
         'secret_key' => env('TURNSTILE_SECRET_KEY'),
     ],
 
-    'ai' => [
-        'analysis_enabled' => env('AI_ANALYSIS_ENABLED', false),
+    'cloudflare' => [
+        'account_id' => env('CLOUDFLARE_ACCOUNT_ID'),
+        'api_token' => env('CLOUDFLARE_API_TOKEN'),
+        'ai_gateway_id' => env('CLOUDFLARE_AI_GATEWAY_ID'),
     ],
 
 ];

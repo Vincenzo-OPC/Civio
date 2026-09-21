@@ -7,13 +7,13 @@ use App\Events\AiGenerationFailed;
 use App\Models\Category;
 use App\Models\Question;
 use App\Models\Subcategory;
+use App\Services\Ai\AiGatewayService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
@@ -33,7 +33,7 @@ class GenerateQuestionsJob implements ShouldQueue
 
     protected ?string $lockOwner;
 
-    public function __construct(array $validated, int $userId, string $primaryModel = 'gemini-3.7-flash', ?string $lockOwner = null)
+    public function __construct(array $validated, int $userId, string $primaryModel = AiGatewayService::DEFAULT_GEMINI_MODEL, ?string $lockOwner = null)
     {
         $this->validated = $validated;
         $this->userId = $userId;
@@ -47,8 +47,17 @@ class GenerateQuestionsJob implements ShouldQueue
             set_time_limit(300);
             $validated = $this->validated;
 
-            $apiKey = config('services.gemini.key') ?: env('GEMINI_API_KEY');
-            if (! $apiKey) {
+            $aiGateway = app(AiGatewayService::class);
+            $isWorkersAi = $aiGateway->isWorkersAiModel($this->primaryModel);
+
+            if ($isWorkersAi && ! $aiGateway->isWorkersAiConfigured()) {
+                Log::error('GenerateQuestionsJob: Cloudflare Workers AI credentials missing.');
+                AiGenerationFailed::dispatch($this->userId, 'Cloudflare credentials missing.', 'questions');
+
+                return;
+            }
+
+            if (! $isWorkersAi && ! $aiGateway->isGeminiConfigured()) {
                 Log::error('GenerateQuestionsJob: GEMINI_API_KEY is missing.');
                 AiGenerationFailed::dispatch($this->userId, 'API Key is missing.', 'questions');
 
@@ -353,124 +362,45 @@ class GenerateQuestionsJob implements ShouldQueue
         ".(! empty($validated['prompt']) ? "Additional Context/Directives: {$validated['prompt']}" : '');
 
             try {
-                $resultText = null;
-                $errorMsg = null;
-                $firstAttemptFailed = false;
-
-                // Define closures for both API calls
-                $attemptGemini = function ($model = 'gemini-3.6-flash') use ($apiKey, $systemPrompt, $userPrompt, $subcategory, &$resultText, &$errorMsg) {
-                    if (! $apiKey) {
-                        $errorMsg = 'GEMINI_API_KEY is missing.';
-
-                        return false;
-                    }
-                    try {
-                        $payload = [
-                            'system_instruction' => [
-                                'parts' => [['text' => $systemPrompt]],
+                $responseSchema = [
+                    'type' => 'ARRAY',
+                    'items' => [
+                        'type' => 'OBJECT',
+                        'properties' => [
+                            'stem' => [
+                                'type' => 'STRING',
+                                'description' => 'The question stem or scenario. If it includes a data table, represent it beautifully as a formatted text/markdown table. If it requires data interpretation, embed raw SVG charts directly.',
                             ],
-                            'contents' => [
-                                [
-                                    'parts' => [['text' => $userPrompt]],
-                                ],
+                            'category' => ['type' => 'STRING'],
+                            'subcategory' => ['type' => 'STRING'],
+                            'options' => [
+                                'type' => 'ARRAY',
+                                'minItems' => 5,
+                                'maxItems' => 5,
+                                'items' => ['type' => 'STRING'],
                             ],
-                            'generationConfig' => [
-                                'temperature' => 0.7,
-                                'topP' => 0.9,
-                                'maxOutputTokens' => in_array($subcategory, ['Symbolic logic / abstract reasoning', 'Data interpretation']) ? 16384 : 8192,
-                                'responseMimeType' => 'application/json',
-                                'responseSchema' => [
-                                    'type' => 'ARRAY',
-                                    'items' => [
-                                        'type' => 'OBJECT',
-                                        'properties' => [
-                                            'stem' => [
-                                                'type' => 'STRING',
-                                                'description' => 'The question stem or scenario. If it includes a data table, represent it beautifully as a formatted text/markdown table. If it requires data interpretation, embed raw SVG charts directly.',
-                                            ],
-                                            'category' => ['type' => 'STRING'],
-                                            'subcategory' => ['type' => 'STRING'],
-                                            'options' => [
-                                                'type' => 'ARRAY',
-                                                'minItems' => 5,
-                                                'maxItems' => 5,
-                                                'items' => ['type' => 'STRING'],
-                                            ],
-                                            'correct_option' => ['type' => 'INTEGER'],
-                                            'explanation' => [
-                                                'type' => 'STRING',
-                                                'description' => 'A detailed explanation of the steps leading to the correct option.',
-                                            ],
-                                        ],
-                                        'required' => ['stem', 'category', 'subcategory', 'options', 'correct_option', 'explanation'],
-                                    ],
-                                ],
+                            'correct_option' => ['type' => 'INTEGER'],
+                            'explanation' => [
+                                'type' => 'STRING',
+                                'description' => 'A detailed explanation of the steps leading to the correct option.',
                             ],
-                        ];
+                        ],
+                        'required' => ['stem', 'category', 'subcategory', 'options', 'correct_option', 'explanation'],
+                    ],
+                ];
 
-                        if (str_contains($model, 'thinking')) {
-                            $payload['generationConfig']['thinkingConfig'] = ['thinkingLevel' => 'high'];
-                        }
+                Log::info("GenerateQuestionsJob: Attempting model: {$this->primaryModel}");
+                $genResult = $aiGateway->generateStructuredJson($this->primaryModel, $systemPrompt, $userPrompt, $responseSchema);
 
-                        $response = Http::withHeaders([
-                            'x-goog-api-key' => $apiKey,
-                            'Content-Type' => 'application/json',
-                        ])->timeout(300)->post(
-                            'https://generativelanguage.googleapis.com/v1beta/models/'.$model.':generateContent',
-                            $payload
-                        );
-
-                        if ($response->successful()) {
-                            $result = $response->json();
-                            $resultText = $result['candidates'][0]['content']['parts'][0]['text'] ?? '';
-
-                            if (isset($result['usageMetadata'])) {
-                                Log::info("GenerateQuestionsJob Token Usage for {$subcategory}:", $result['usageMetadata']);
-                            }
-
-                            return true;
-                        } else {
-                            $body = $response->json();
-                            $errorMsg = $body['error']['message'] ?? $response->body();
-
-                            return false;
-                        }
-                    } catch (\Exception $e) {
-                        $errorMsg = 'Gemini Exception: '.$e->getMessage();
-
-                        return false;
-                    }
-                };
-
-                Log::info('GenerateQuestionsJob: Attempting Gemini model: '.$this->primaryModel);
-                if (! $attemptGemini($this->primaryModel)) {
-                    $success = false;
-                } else {
-                    $success = true;
-                }
-
-                if (! $success) {
-                    Log::error('GenerateQuestionsJob: AI generation failed using model: '.$this->primaryModel.'. Error: '.$errorMsg);
-                    AiGenerationFailed::dispatch($this->userId, $errorMsg ?: 'AI Generation failed using the selected model.', 'questions');
+                if (! $genResult['success'] || ! is_array($genResult['data'] ?? null)) {
+                    $errorMsg = $genResult['error'] ?? 'AI Generation failed using the selected model.';
+                    Log::error("GenerateQuestionsJob: AI generation failed using model: {$this->primaryModel}. Error: {$errorMsg}");
+                    AiGenerationFailed::dispatch($this->userId, $errorMsg, 'questions');
 
                     return;
                 }
 
-                $text = $resultText;
-
-                $text = trim($text);
-                if (str_starts_with($text, '```')) {
-                    $text = preg_replace('/^```(?:json)?\n?|```$/', '', $text);
-                }
-                $text = trim($text);
-
-                $questions = json_decode($text, true);
-                if (! $questions || ! is_array($questions)) {
-                    Log::error('GenerateQuestionsJob: Invalid JSON structure. Raw output: '.$text);
-                    AiGenerationFailed::dispatch($this->userId, 'AI Generation failed. Invalid response format.', 'questions');
-
-                    return;
-                }
+                $questions = $genResult['data'];
 
                 foreach ($questions as $q) {
                     $category = Category::firstOrCreate(

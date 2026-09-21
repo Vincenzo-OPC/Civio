@@ -7,13 +7,13 @@ use App\Events\AiGenerationFailed;
 use App\Models\Category;
 use App\Models\LearnModule;
 use App\Models\Subcategory;
+use App\Services\Ai\AiGatewayService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
@@ -33,7 +33,7 @@ class GenerateLearnModuleJob implements ShouldQueue
 
     protected ?string $lockOwner;
 
-    public function __construct(array $validated, int $userId, string $primaryModel = 'gemini-3.7-flash', ?string $lockOwner = null)
+    public function __construct(array $validated, int $userId, string $primaryModel = AiGatewayService::DEFAULT_GEMINI_MODEL, ?string $lockOwner = null)
     {
         $this->validated = $validated;
         $this->userId = $userId;
@@ -47,8 +47,17 @@ class GenerateLearnModuleJob implements ShouldQueue
             set_time_limit(300);
             $validated = $this->validated;
 
-            $apiKey = config('services.gemini.key') ?: env('GEMINI_API_KEY');
-            if (! $apiKey) {
+            $aiGateway = app(AiGatewayService::class);
+            $isWorkersAi = $aiGateway->isWorkersAiModel($this->primaryModel);
+
+            if ($isWorkersAi && ! $aiGateway->isWorkersAiConfigured()) {
+                Log::error('GenerateLearnModuleJob: Cloudflare Workers AI credentials missing.');
+                AiGenerationFailed::dispatch($this->userId, 'Cloudflare credentials missing.', 'module');
+
+                return;
+            }
+
+            if (! $isWorkersAi && ! $aiGateway->isGeminiConfigured()) {
                 Log::error('GenerateLearnModuleJob: GEMINI_API_KEY is missing.');
                 AiGenerationFailed::dispatch($this->userId, 'API Key is missing.', 'module');
 
@@ -145,95 +154,29 @@ Topic: {$validated['topic']}
 ".(! empty($validated['prompt']) ? "Additional Directives: {$validated['prompt']}" : '');
 
             try {
-                $resultText = null;
-                $errorMsg = null;
-                $firstAttemptFailed = false;
+                $responseSchema = [
+                    'type' => 'OBJECT',
+                    'properties' => [
+                        'title' => ['type' => 'STRING'],
+                        'summary' => ['type' => 'STRING'],
+                        'content' => ['type' => 'STRING'],
+                        'estimated_minutes' => ['type' => 'INTEGER'],
+                    ],
+                    'required' => ['title', 'summary', 'content', 'estimated_minutes'],
+                ];
 
-                $attemptGemini = function ($model = 'gemini-3.5-flash') use ($apiKey, $systemPrompt, $userPrompt, &$resultText, &$errorMsg) {
-                    if (! $apiKey) {
-                        $errorMsg = 'GEMINI_API_KEY is missing.';
+                Log::info("GenerateLearnModuleJob: Attempting model: {$this->primaryModel}");
+                $genResult = $aiGateway->generateStructuredJson($this->primaryModel, $systemPrompt, $userPrompt, $responseSchema);
 
-                        return false;
-                    }
-                    try {
-                        $response = Http::withHeaders([
-                            'x-goog-api-key' => $apiKey,
-                            'Content-Type' => 'application/json',
-                        ])->timeout(300)->post(
-                            'https://generativelanguage.googleapis.com/v1beta/models/'.$model.':generateContent',
-                            [
-                                'system_instruction' => [
-                                    'parts' => [['text' => $systemPrompt]],
-                                ],
-                                'contents' => [
-                                    [
-                                        'parts' => [['text' => $userPrompt]],
-                                    ],
-                                ],
-                                'generationConfig' => [
-                                    'temperature' => 0.7,
-                                    'topP' => 0.9,
-                                    'responseMimeType' => 'application/json',
-                                    'responseSchema' => [
-                                        'type' => 'OBJECT',
-                                        'properties' => [
-                                            'title' => ['type' => 'STRING'],
-                                            'summary' => ['type' => 'STRING'],
-                                            'content' => ['type' => 'STRING'],
-                                            'estimated_minutes' => ['type' => 'INTEGER'],
-                                        ],
-                                        'required' => ['title', 'summary', 'content', 'estimated_minutes'],
-                                    ],
-                                ],
-                            ]
-                        );
-
-                        if ($response->successful()) {
-                            $result = $response->json();
-                            $resultText = $result['candidates'][0]['content']['parts'][0]['text'] ?? '';
-
-                            return true;
-                        } else {
-                            $body = $response->json();
-                            $errorMsg = $body['error']['message'] ?? $response->body();
-
-                            return false;
-                        }
-                    } catch (\Exception $e) {
-                        $errorMsg = 'Gemini Exception: '.$e->getMessage();
-
-                        return false;
-                    }
-                };
-                Log::info('GenerateLearnModuleJob: Attempting Gemini model: '.$this->primaryModel);
-                if (! $attemptGemini($this->primaryModel)) {
-                    $success = false;
-                } else {
-                    $success = true;
-                }
-
-                if (! $success) {
-                    Log::error('GenerateLearnModuleJob: AI generation failed using model: '.$this->primaryModel.'. Error: '.$errorMsg);
-                    AiGenerationFailed::dispatch($this->userId, $errorMsg ?: 'AI Generation failed using the selected model.', 'module');
+                if (! $genResult['success'] || ! is_array($genResult['data'] ?? null) || ! isset($genResult['data']['content'])) {
+                    $errorMsg = $genResult['error'] ?? 'AI Generation failed using the selected model.';
+                    Log::error("GenerateLearnModuleJob: AI generation failed using model: {$this->primaryModel}. Error: {$errorMsg}");
+                    AiGenerationFailed::dispatch($this->userId, $errorMsg, 'module');
 
                     return;
                 }
 
-                $text = $resultText;
-
-                $text = trim($text);
-                if (str_starts_with($text, '```')) {
-                    $text = preg_replace('/^```(?:json)?\n?|```$/', '', $text);
-                }
-                $text = trim($text);
-
-                $moduleData = json_decode($text, true);
-                if (! $moduleData || ! isset($moduleData['content'])) {
-                    Log::error('GenerateLearnModuleJob: Invalid JSON structure: '.$text);
-                    AiGenerationFailed::dispatch($this->userId, 'AI Generation failed. Invalid response format.', 'module');
-
-                    return;
-                }
+                $moduleData = $genResult['data'];
 
                 $category = Category::firstOrCreate(
                     ['slug' => Str::slug($validated['category'])],

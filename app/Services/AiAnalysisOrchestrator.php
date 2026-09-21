@@ -8,12 +8,14 @@ use App\Jobs\GenerateUserAnalysisJob;
 use App\Models\ExamAttempt;
 use App\Models\StudySchedule;
 use App\Models\UserAiAnalysis;
+use App\Services\Ai\AiGatewayService;
 use Illuminate\Support\Facades\Cache;
 
 class AiAnalysisOrchestrator
 {
     public function __construct(
-        protected DeterministicAnalysisService $deterministicService
+        protected DeterministicAnalysisService $deterministicService,
+        protected AiGatewayService $aiGateway
     ) {}
 
     /**
@@ -32,7 +34,7 @@ class AiAnalysisOrchestrator
         }
 
         $userMode = Cache::get("user-analysis-mode-{$userId}", 'ai');
-        $useAi = $userMode === 'ai' && config('services.ai.analysis_enabled') && $latestMockAttemptId;
+        $useAi = $userMode === 'ai' && $this->aiGateway->isAiConfigured() && $latestMockAttemptId;
 
         // If user is in instant mode or only has drills, immediately generate reactive analysis for the latest attempt
         if (! $useAi) {
@@ -59,6 +61,23 @@ class AiAnalysisOrchestrator
         }
 
         if ($analysis->last_exam_attempt_id !== $targetAttemptId) {
+            $isCooldownActive = $analysis->updated_at && $analysis->updated_at->gt(now()->subHours(24));
+            if ($isCooldownActive) {
+                $analysisData = $analysis->analysis_json;
+                if ($latestAttemptId !== $latestMockAttemptId) {
+                    $freshDrillAnalysis = $this->deterministicService->generate($userId, $latestAttemptId);
+                    $analysisData['subject_breakdowns'] = $freshDrillAnalysis['subject_breakdowns'] ?? ($analysisData['subject_breakdowns'] ?? []);
+                    $analysisData['critical_weaknesses'] = $freshDrillAnalysis['critical_weaknesses'] ?? ($analysisData['critical_weaknesses'] ?? []);
+                    $analysisData['top_strengths'] = $freshDrillAnalysis['top_strengths'] ?? ($analysisData['top_strengths'] ?? []);
+                    $analysisData['readiness_index'] = $freshDrillAnalysis['readiness_index'] ?? ($analysisData['readiness_index'] ?? 0);
+                }
+
+                return [
+                    'status' => 'ready',
+                    'data' => $analysisData,
+                ];
+            }
+
             if (! Cache::has($failKey)) {
                 if (! Cache::has($cacheKey)) {
                     Cache::put($cacheKey, true, 60);
@@ -106,7 +125,7 @@ class AiAnalysisOrchestrator
         }
 
         $userMode = Cache::get("user-analysis-mode-{$userId}", 'ai');
-        $useAi = $userMode === 'ai' && config('services.ai.analysis_enabled') && $latestMockAttemptId;
+        $useAi = $userMode === 'ai' && $this->aiGateway->isAiConfigured() && $latestMockAttemptId;
 
         $targetAttemptId = $useAi ? $latestMockAttemptId : $latestAttemptId;
         $cacheKey = "ai-analysis-generating-{$userId}";
@@ -137,6 +156,11 @@ class AiAnalysisOrchestrator
         }
 
         if ($analysis->last_exam_attempt_id !== $targetAttemptId) {
+            $isCooldownActive = $analysis->updated_at && $analysis->updated_at->gt(now()->subHours(24));
+            if ($isCooldownActive) {
+                return ['status' => 'ready', 'data' => $analysis->analysis_json];
+            }
+
             if (! Cache::has($failKey)) {
                 if (! Cache::has($cacheKey)) {
                     Cache::put($cacheKey, true, 60);

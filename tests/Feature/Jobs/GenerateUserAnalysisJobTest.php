@@ -135,8 +135,9 @@ test('GenerateUserAnalysisJob calculates subtopic stats and maps subcategory IDs
 
     // Set temporary environment keys so model attempts do not skip
     config([
+        'services.cloudflare.account_id' => null,
+        'services.cloudflare.api_token' => null,
         'services.gemini.key' => 'fake-gemini-key',
-        'services.ai.analysis_enabled' => true,
     ]);
 
     // 5. Dispatch and run the job synchronously
@@ -191,8 +192,12 @@ test('GenerateUserAnalysisJob falls back to deterministic generation when keys a
     ]);
 
     // Ensure API keys are null
-    config(['services.groq.key' => null]);
-    config(['services.gemini.key' => null]);
+    config([
+        'services.cloudflare.account_id' => null,
+        'services.cloudflare.api_token' => null,
+        'services.groq.key' => null,
+        'services.gemini.key' => null,
+    ]);
 
     $job = new GenerateUserAnalysisJob($user->id, $attempt->id);
     $job->handle();
@@ -236,8 +241,12 @@ test('GenerateUserAnalysisJob sets pass_probability to 0 when user has only comp
         ],
     ]);
 
-    config(['services.groq.key' => null]);
-    config(['services.gemini.key' => null]);
+    config([
+        'services.cloudflare.account_id' => null,
+        'services.cloudflare.api_token' => null,
+        'services.groq.key' => null,
+        'services.gemini.key' => null,
+    ]);
 
     $job = new GenerateUserAnalysisJob($user->id, $attempt->id);
     $job->handle();
@@ -247,4 +256,77 @@ test('GenerateUserAnalysisJob sets pass_probability to 0 when user has only comp
 
     expect($analysis['pass_probability'])->toBe(0);
     expect($analysis['verdict'])->not->toBeEmpty();
+});
+
+test('GenerateUserAnalysisJob uses Cloudflare Workers AI first and falls back to Gemini on 429 rate limit', function () {
+    $user = User::factory()->create();
+
+    $category = Category::create([
+        'name' => 'General Information',
+        'slug' => 'general-information',
+    ]);
+
+    $attempt = ExamAttempt::create([
+        'user_id' => $user->id,
+        'category_id' => $category->id,
+        'question_ids' => [1],
+        'answers' => [1 => 0],
+        'cat_scores' => [
+            'categoryScoreMap' => [
+                'General Information' => ['correct' => 1, 'total' => 1],
+            ],
+            'metadata' => [
+                'track' => 'Drill',
+                'category_name' => 'General Information',
+                'correct_count' => 1,
+                'total_questions' => 1,
+                'duration_secs' => 45,
+            ],
+        ],
+    ]);
+
+    // Mock CF returning 429 rate limit and Gemini returning valid response
+    Http::fake([
+        'https://api.cloudflare.com/client/v4/accounts/test-acc/ai/run/*' => Http::response([
+            'success' => false,
+            'errors' => [['message' => 'Rate limit exceeded']],
+        ], 429),
+        'https://generativelanguage.googleapis.com/*' => Http::response([
+            'candidates' => [
+                [
+                    'content' => [
+                        'parts' => [
+                            [
+                                'text' => json_encode([
+                                    'pass_probability' => 88,
+                                    'verdict' => 'Gemini fallback coaching verdict!',
+                                    'trend' => 'improving',
+                                    'strengths' => ['General Information'],
+                                    'critical_weaknesses' => [],
+                                    'priority_action' => 'Maintain steady review.',
+                                    'recommended_modules' => ['General Information'],
+                                    'encouragement' => 'Great resilience!',
+                                ]),
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ], 200),
+    ]);
+
+    config([
+        'services.cloudflare.account_id' => 'test-acc',
+        'services.cloudflare.api_token' => 'test-token',
+        'services.gemini.key' => 'fake-gemini-key',
+    ]);
+
+    $job = new GenerateUserAnalysisJob($user->id, $attempt->id);
+    $job->handle();
+
+    $cached = UserAiAnalysis::where('user_id', $user->id)->first();
+    $analysis = $cached->analysis_json;
+
+    expect($analysis['pass_probability'])->toBe(88);
+    expect($analysis['verdict'])->toBe('Gemini fallback coaching verdict!');
 });

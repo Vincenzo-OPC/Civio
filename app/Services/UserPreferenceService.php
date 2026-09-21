@@ -8,12 +8,14 @@ use App\Enums\AnalysisMode;
 use App\Jobs\GenerateUserAnalysisJob;
 use App\Models\ExamAttempt;
 use App\Models\UserAiAnalysis;
+use App\Services\Ai\AiGatewayService;
 use Illuminate\Support\Facades\Cache;
 
 class UserPreferenceService
 {
     public function __construct(
-        protected DeterministicAnalysisService $deterministicService
+        protected DeterministicAnalysisService $deterministicService,
+        protected AiGatewayService $aiGateway
     ) {}
 
     /**
@@ -21,7 +23,7 @@ class UserPreferenceService
      */
     public function getAnalysisMode(int $userId): string
     {
-        $aiAvailable = (bool) config('services.ai.analysis_enabled');
+        $aiAvailable = $this->isAiAvailable();
         $mode = Cache::get("user-analysis-mode-{$userId}", 'ai');
 
         if (! $aiAvailable && $mode === 'ai') {
@@ -33,7 +35,7 @@ class UserPreferenceService
 
     public function isAiAvailable(): bool
     {
-        return (bool) config('services.ai.analysis_enabled');
+        return $this->aiGateway->isAiConfigured();
     }
 
     /**
@@ -75,7 +77,7 @@ class UserPreferenceService
             ->latest()
             ->value('id');
 
-        if (! $latestMockAttemptId || ! config('services.ai.analysis_enabled')) {
+        if (! $latestMockAttemptId || ! $this->isAiAvailable()) {
             return;
         }
 

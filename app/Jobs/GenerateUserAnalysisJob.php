@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\Events\AiGenerationCompleted;
 use App\Models\UserAiAnalysis;
+use App\Services\Ai\AiGatewayService;
 use App\Services\DeterministicAnalysisService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -11,7 +12,6 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
 class GenerateUserAnalysisJob implements ShouldQueue
@@ -25,7 +25,7 @@ class GenerateUserAnalysisJob implements ShouldQueue
     public function __construct(
         protected int $userId,
         protected int $latestAttemptId,
-        protected string $primaryModel = 'llama-3.3-70b-versatile'
+        protected string $primaryModel = AiGatewayService::DEFAULT_WORKERS_AI_MODEL
     ) {}
 
     public function handle(): void
@@ -37,12 +37,12 @@ class GenerateUserAnalysisJob implements ShouldQueue
             $deterministicService = new DeterministicAnalysisService;
             $deterministicData = $deterministicService->generate($this->userId, $this->latestAttemptId);
 
-            $groqKey = config('services.groq.key') ?: env('GROQ_API_KEY');
-            $geminiKey = config('services.gemini.key') ?: env('GEMINI_API_KEY');
-            $aiAnalysisEnabled = config('services.ai.analysis_enabled');
+            $aiGateway = app(AiGatewayService::class);
+            $cfConfigured = $aiGateway->isWorkersAiConfigured();
+            $geminiConfigured = $aiGateway->isGeminiConfigured();
 
-            if (! $aiAnalysisEnabled || (! $groqKey && ! $geminiKey)) {
-                Log::info('GenerateUserAnalysisJob: AI analysis is disabled or API keys are missing. Saving deterministic analysis directly.');
+            if (! $cfConfigured && ! $geminiConfigured) {
+                Log::info('GenerateUserAnalysisJob: No AI credentials configured. Saving deterministic analysis directly.');
                 UserAiAnalysis::updateOrCreate(
                     ['user_id' => $this->userId],
                     [
@@ -55,161 +55,84 @@ class GenerateUserAnalysisJob implements ShouldQueue
                 return;
             }
 
-            $systemPrompt = "
-        Your task is to rewrite the verbal commentary fields to make them highly personalized, coaching-oriented, professional, and natural.
-        
-        CRITICAL RULES:
-        1. Rewrite only the following text fields: `verdict`, `encouragement`, `priority_action`, the `insight` and `recommended_action` in `subject_mastery`, and the `reason_for_struggle` and `coaching_tip` in `remediation_matrix`.
-        2. STRICT THEMATIC CONSISTENCY: Your `priority_action` and `encouragement` MUST strictly align with the student's top weakness in `critical_weaknesses[0]` and top remediation topic in `recommended_modules[0]`. If `critical_weaknesses[0]` is 'General Information', your advice must strictly refer to 'General Information' (or its subtopics like Philippine Constitution, RA 6713, etc.). NEVER recommend a drill or topic from an unrelated category (e.g., do NOT recommend Word Meaning if the weakness is General Information).
-        3. Keep the mathematical values, percentages, category/subject names, and study plan structure EXACTLY as provided. Do not invent new subjects or category names.
-        4. Every subject name in `subject_mastery`, `strengths`, and `critical_weaknesses` must strictly use the exact spelling of the 5 standard categories: 'Verbal Ability', 'Clerical Ability', 'General Information', 'Numerical Ability', and 'Analytical Ability'.
-        5. You must respond ONLY with a valid JSON object matching the provided schema.";
+            $passProb = $deterministicData['pass_probability'] ?? 0;
+            $scoreTier = $passProb >= 80 ? 'High (80%+)' : ($passProb >= 60 ? 'Moderate (60-79%)' : 'Needs Improvement (<60%)');
+            $topStrengths = array_slice($deterministicData['strengths'] ?? [], 0, 2);
+            $topWeaknesses = array_slice($deterministicData['critical_weaknesses'] ?? [], 0, 2);
+            $topModule = ($deterministicData['recommended_modules'] ?? [])[0] ?? 'General Review';
 
-            $userPrompt = 'Here is the computed deterministic analysis data for the student:
-        '.json_encode($deterministicData).'
-        
-        Please rewrite the verbal fields to make them sound like a highly supportive, professional, and personalized Philippines CSE coach. Make sure all numerical facts and structure are strictly preserved.';
+            $normalizedProfile = [
+                'score_tier' => $scoreTier,
+                'pass_probability' => $passProb,
+                'strengths' => $topStrengths,
+                'critical_weaknesses' => $topWeaknesses,
+                'priority_focus' => $topModule,
+                'draft_verdict' => $deterministicData['verdict'] ?? '',
+                'draft_encouragement' => $deterministicData['encouragement'] ?? '',
+                'draft_priority_action' => $deterministicData['priority_action'] ?? '',
+            ];
 
-            $resultText = null;
+            $systemPrompt = "You are an encouraging and expert Philippine Civil Service Examination coach.
+Rewrite the coaching commentary fields to make them highly personalized, professional, and natural.
+
+CRITICAL RULES:
+1. Rewrite only the following text fields: `verdict`, `encouragement`, `priority_action`.
+2. STRICT THEMATIC CONSISTENCY: Your `priority_action` and `encouragement` MUST strictly align with the student's top weakness in `critical_weaknesses` and top focus in `priority_focus`.
+3. Keep the tone empathetic, practical, motivating, and culturally attuned to Philippine civil service examinees.
+4. You must respond ONLY with a valid JSON object matching the provided schema.";
+
+            $userPrompt = "Here is the student's performance profile:\n".json_encode($normalizedProfile)."\n\nPlease rewrite the verbal coaching fields (`verdict`, `encouragement`, `priority_action`).";
+
+            $responseSchema = [
+                'type' => 'OBJECT',
+                'properties' => [
+                    'verdict' => ['type' => 'STRING'],
+                    'encouragement' => ['type' => 'STRING'],
+                    'priority_action' => ['type' => 'STRING'],
+                ],
+                'required' => [
+                    'verdict', 'encouragement', 'priority_action',
+                ],
+            ];
+
+            $finalData = null;
             $errorMsg = null;
 
-            $attemptGemini = function ($model = 'gemini-3.5-flash') use ($geminiKey, $systemPrompt, $userPrompt, &$resultText, &$errorMsg) {
-                if (! $geminiKey) {
-                    $errorMsg = 'GEMINI_API_KEY is missing.';
+            // 1. Try Cloudflare Workers AI first as default
+            if ($cfConfigured) {
+                $cfModel = $aiGateway->isWorkersAiModel($this->primaryModel)
+                    ? $this->primaryModel
+                    : AiGatewayService::DEFAULT_WORKERS_AI_MODEL;
 
-                    return false;
+                Log::info("GenerateUserAnalysisJob: Calling Cloudflare Workers AI with model: {$cfModel}");
+                $cfRes = $aiGateway->generateStructuredJson($cfModel, $systemPrompt, $userPrompt, $responseSchema);
+
+                if ($cfRes['success'] && isset($cfRes['data']['verdict'])) {
+                    $finalData = array_merge($deterministicData, array_filter($cfRes['data'], fn ($v) => ! is_null($v)));
+                } else {
+                    $errorMsg = $cfRes['error'] ?? 'Invalid response from Cloudflare Workers AI';
+                    Log::warning("GenerateUserAnalysisJob: Cloudflare Workers AI failed or hit limit ({$errorMsg}), falling back to Gemini.");
                 }
-                try {
-                    $response = Http::withHeaders([
-                        'x-goog-api-key' => $geminiKey,
-                        'Content-Type' => 'application/json',
-                    ])->timeout(300)->post(
-                        'https://generativelanguage.googleapis.com/v1beta/models/'.$model.':generateContent',
-                        [
-                            'system_instruction' => [
-                                'parts' => [['text' => $systemPrompt]],
-                            ],
-                            'contents' => [
-                                [
-                                    'parts' => [['text' => $userPrompt]],
-                                ],
-                            ],
-                            'generationConfig' => [
-                                'temperature' => 0.7,
-                                'topP' => 0.9,
-                                'responseMimeType' => 'application/json',
-                                'responseSchema' => [
-                                    'type' => 'OBJECT',
-                                    'properties' => [
-                                        'pass_probability' => ['type' => 'INTEGER'],
-                                        'verdict' => ['type' => 'STRING'],
-                                        'trend' => ['type' => 'STRING'],
-                                        'strengths' => ['type' => 'ARRAY', 'items' => ['type' => 'STRING']],
-                                        'critical_weaknesses' => ['type' => 'ARRAY', 'items' => ['type' => 'STRING']],
-                                        'priority_action' => ['type' => 'STRING'],
-                                        'recommended_modules' => ['type' => 'ARRAY', 'items' => ['type' => 'STRING']],
-                                        'encouragement' => ['type' => 'STRING'],
-                                        'predictive_metrics' => [
-                                            'type' => 'OBJECT',
-                                            'properties' => [
-                                                'estimated_exam_score' => ['type' => 'STRING'],
-                                                'days_to_readiness' => ['type' => 'STRING'],
-                                                'completion_pace' => ['type' => 'STRING'],
-                                                'mock_pass_confidence' => ['type' => 'STRING'],
-                                            ],
-                                            'required' => ['estimated_exam_score', 'days_to_readiness', 'completion_pace', 'mock_pass_confidence'],
-                                        ],
-                                        'subject_mastery' => [
-                                            'type' => 'ARRAY',
-                                            'items' => [
-                                                'type' => 'OBJECT',
-                                                'properties' => [
-                                                    'subject' => ['type' => 'STRING'],
-                                                    'rating' => ['type' => 'STRING'],
-                                                    'color' => ['type' => 'STRING'],
-                                                    'insight' => ['type' => 'STRING'],
-                                                    'recommended_action' => ['type' => 'STRING'],
-                                                ],
-                                                'required' => ['subject', 'rating', 'color', 'insight', 'recommended_action'],
-                                            ],
-                                        ],
-                                        'timeline_prediction' => [
-                                            'type' => 'OBJECT',
-                                            'properties' => [
-                                                'current_stage' => ['type' => 'STRING'],
-                                                'milestone_prediction' => ['type' => 'STRING'],
-                                                'potential_score_improvement' => ['type' => 'STRING'],
-                                            ],
-                                            'required' => ['current_stage', 'milestone_prediction', 'potential_score_improvement'],
-                                        ],
-                                        'remediation_matrix' => [
-                                            'type' => 'ARRAY',
-                                            'items' => [
-                                                'type' => 'OBJECT',
-                                                'properties' => [
-                                                    'subtopic' => ['type' => 'STRING'],
-                                                    'difficulty_level' => ['type' => 'STRING'],
-                                                    'reason_for_struggle' => ['type' => 'STRING'],
-                                                    'coaching_tip' => ['type' => 'STRING'],
-                                                ],
-                                                'required' => ['subtopic', 'difficulty_level', 'reason_for_struggle', 'coaching_tip'],
-                                            ],
-                                        ],
-                                        'personalized_study_plan' => [
-                                            'type' => 'ARRAY',
-                                            'items' => [
-                                                'type' => 'OBJECT',
-                                                'properties' => [
-                                                    'day' => ['type' => 'STRING'],
-                                                    'tasks' => [
-                                                        'type' => 'ARRAY',
-                                                        'items' => [
-                                                            'type' => 'OBJECT',
-                                                            'properties' => [
-                                                                'focus_topic' => ['type' => 'STRING'],
-                                                                'activity' => ['type' => 'STRING'],
-                                                                'subcategory_id' => ['type' => 'INTEGER'],
-                                                            ],
-                                                            'required' => ['focus_topic', 'activity'],
-                                                        ],
-                                                    ],
-                                                ],
-                                                'required' => ['day', 'tasks'],
-                                            ],
-                                        ],
-                                    ],
-                                    'required' => [
-                                        'pass_probability', 'verdict', 'trend', 'strengths',
-                                        'critical_weaknesses', 'priority_action', 'recommended_modules',
-                                        'encouragement',
-                                    ],
-                                ],
-                            ],
-                        ]
-                    );
+            }
 
-                    if ($response->successful()) {
-                        $result = $response->json();
-                        $resultText = $result['candidates'][0]['content']['parts'][0]['text'] ?? '';
+            // 2. Fallback to Gemini if CF failed or wasn't configured
+            if ($finalData === null && $geminiConfigured) {
+                $geminiModel = ! $aiGateway->isWorkersAiModel($this->primaryModel)
+                    ? $this->primaryModel
+                    : AiGatewayService::FALLBACK_GEMINI_MODEL;
 
-                        return true;
-                    } else {
-                        $errorMsg = 'Gemini API failed with status '.$response->status().': '.$response->body();
+                Log::info("GenerateUserAnalysisJob: Calling Gemini API with model: {$geminiModel}");
+                $geminiRes = $aiGateway->generateStructuredJson($geminiModel, $systemPrompt, $userPrompt, $responseSchema);
 
-                        return false;
-                    }
-                } catch (\Exception $e) {
-                    $errorMsg = 'Gemini Exception: '.$e->getMessage();
-
-                    return false;
+                if ($geminiRes['success'] && isset($geminiRes['data']['verdict'])) {
+                    $finalData = array_merge($deterministicData, array_filter($geminiRes['data'], fn ($v) => ! is_null($v)));
+                } else {
+                    $errorMsg = $geminiRes['error'] ?? 'Invalid response from Gemini API';
+                    Log::warning("GenerateUserAnalysisJob: Gemini API failed: {$errorMsg}");
                 }
-            };
+            }
 
-            Log::info("GenerateUserAnalysisJob: Calling Gemini API with model: {$this->primaryModel}");
-            $success = $attemptGemini($this->primaryModel);
-            Log::info('GenerateUserAnalysisJob: Gemini API responded. Success: '.($success ? 'true' : 'false'));
-
-            if (! $success) {
+            if ($finalData === null) {
                 Log::warning('GenerateUserAnalysisJob: AI generation model failed, falling back to deterministic data: '.$errorMsg);
                 UserAiAnalysis::updateOrCreate(
                     ['user_id' => $this->userId],
@@ -223,37 +146,15 @@ class GenerateUserAnalysisJob implements ShouldQueue
                 return;
             }
 
-            $text = trim($resultText);
-            if (str_starts_with($text, '```')) {
-                $text = preg_replace('/^```(?:json)?\n?|```$/', '', $text);
-            }
-            $text = trim($text);
-
-            $decoded = json_decode($text, true);
-
-            if ($decoded && isset($decoded['pass_probability'], $decoded['verdict'])) {
-                UserAiAnalysis::updateOrCreate(
-                    ['user_id' => $this->userId],
-                    [
-                        'last_exam_attempt_id' => $this->latestAttemptId,
-                        'analysis_json' => $decoded,
-                    ]
-                );
-
-                Log::info("GenerateUserAnalysisJob: Successfully saved analysis and dispatched event for user {$this->userId}.");
-                event(new AiGenerationCompleted($this->userId, 'analysis', 'analysis'));
-
-                return;
-            }
-
-            Log::warning('GenerateUserAnalysisJob: AI returned invalid JSON structure, falling back to deterministic data.');
             UserAiAnalysis::updateOrCreate(
                 ['user_id' => $this->userId],
                 [
                     'last_exam_attempt_id' => $this->latestAttemptId,
-                    'analysis_json' => $deterministicData,
+                    'analysis_json' => $finalData,
                 ]
             );
+
+            Log::info("GenerateUserAnalysisJob: Successfully saved analysis and dispatched event for user {$this->userId}.");
             event(new AiGenerationCompleted($this->userId, 'analysis', 'analysis'));
 
         } catch (\Exception $e) {

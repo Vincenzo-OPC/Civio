@@ -23,6 +23,7 @@ use App\Models\Category;
 use App\Models\Question;
 use App\Models\Subcategory;
 use App\Models\User;
+use App\Services\Ai\AiGatewayService;
 use App\Services\QuestionService;
 use Database\Seeders\DatabaseSeeder;
 use Illuminate\Http\Request;
@@ -162,7 +163,7 @@ class QuestionController extends Controller
         GenerateQuestionsJob::dispatchAfterResponse(
             $validated,
             auth()->id() ?: (User::first()?->id ?: 1),
-            $validated['primary_model'] ?? 'llama-3.3-70b-versatile',
+            $validated['primary_model'] ?? AiGatewayService::DEFAULT_GEMINI_MODEL,
             $lock->owner()
         );
 
