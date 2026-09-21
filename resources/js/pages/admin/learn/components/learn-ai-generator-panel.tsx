@@ -9,6 +9,7 @@ import {
     Sparkle,
     Sparkles,
 } from 'lucide-react';
+import { AiModelSelect } from '@/components/domain/ai-model-select';
 import { Button } from '@/components/ui/button';
 import {
     Dialog,
@@ -19,38 +20,9 @@ import {
     DialogDescription,
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
-import { SelectField } from '@/components/ui/select';
 import { drafts as adminLearnDrafts } from '@/routes/admin/learn';
 import type { Category, Subcategory } from '../types';
-
-const aiModelOptions = [
-    {
-        value: 'gemini-3.7-flash',
-        label: 'Google Gemini 3.7 Flash (Recommended — Best for CSE & SVGs)',
-    },
-    {
-        value: 'gemini-3.7-pro',
-        label: 'Google Gemini 3.7 Pro (Advanced Reasoning & Multi-step Problems)',
-    },
-    {
-        value: 'gemini-3.6-flash',
-        label: 'Google Gemini 3.6 Flash (Stable High Performance)',
-    },
-    {
-        value: 'gemini-3.5-flash',
-        label: 'Google Gemini 3.5 Flash (Standard Fast)',
-    },
-    {
-        value: 'gemini-2.5-flash',
-        label: 'Google Gemini 2.5 Flash',
-    },
-    {
-        value: 'gemini-1.5-pro',
-        label: 'Google Gemini 1.5 Pro (High Reasoning)',
-    },
-    { value: 'gemini-1.5-flash', label: 'Google Gemini 1.5 Flash (Fast)' },
-    { value: 'gemini-1.5-flash-8b', label: 'Google Gemini 1.5 Flash-8B' },
-];
+import { SelectField } from '@/components/ui/select';
 
 interface LearnAIGeneratorPanelProps {
     categories: Category[];
@@ -600,11 +572,10 @@ export function LearnAIGeneratorPanel({
                                     </DialogContent>
                                 </Dialog>
                             </div>
-                            <SelectField
+                            <AiModelSelect
                                 value={aiPrimaryModel}
                                 disabled={isGenerating}
                                 onValueChange={setAiPrimaryModel}
-                                options={aiModelOptions}
                             />
                         </div>
 
