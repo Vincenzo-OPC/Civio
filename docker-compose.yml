@@ -1,0 +1,45 @@
+# Local Docker stack for Hiraya Review on MSI.
+# Does NOT bind :8642 (Hermes). App on host :8080, Postgres on host :5433.
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: hiraya-review-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cse_reviewer
+      POSTGRES_USER: hiraya
+      POSTGRES_PASSWORD: hiraya_local_dev
+    ports:
+      - "5433:5432"
+    volumes:
+      - hiraya_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hiraya -d cse_reviewer"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    container_name: hiraya-review-app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      APP_URL: http://localhost:8080
+      SESSION_LIFETIME: 43200
+      SESSION_DRIVER: database
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: cse_reviewer
+      DB_USERNAME: hiraya
+      DB_PASSWORD: hiraya_local_dev
+
+volumes:
+  hiraya_pgdata:

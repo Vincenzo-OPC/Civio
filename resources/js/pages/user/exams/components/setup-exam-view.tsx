@@ -232,8 +232,8 @@ export function SetupExamView({
                                     Begin Exam
                                     <ArrowRight className="size-4" />
                                 </button>
-                                {(auth.user.role === 'admin' ||
-                                    auth.user.can_download_pdf) && (
+                                {(auth.user?.role === 'admin' ||
+                                    auth.user?.can_download_pdf) && (
                                     <button
                                         onClick={onPrint}
                                         disabled={isPrinting}

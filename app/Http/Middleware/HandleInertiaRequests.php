@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\Http\Middleware;
 
@@ -71,7 +71,8 @@ class HandleInertiaRequests extends Middleware
                 'enabled' => app(TurnstileService::class)->isConfigured(),
             ],
             'sidebarOpen' => ! $request->hasCookie('sidebar_state') || $request->cookie('sidebar_state') === 'true',
-            'global_announcements' => app(AnnouncementRepositoryInterface::class)->getActiveAnnouncements(),
+            // LOCAL: force plain arrays so Inertia never gets PHP Incomplete_Class announcements
+            'global_announcements' => collect(app(AnnouncementRepositoryInterface::class)->getActiveAnnouncements())->values()->all(),
             'pending_feedback_count' => app(FeedbackRepositoryInterface::class)->getPendingCount(),
             'user_reported_ids' => $request->user() ? Feedback::where('user_id', $request->user()->id)
                 ->pluck('flaggable_id')

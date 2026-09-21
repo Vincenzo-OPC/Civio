@@ -229,6 +229,27 @@ export function useExamHydration({
         }
 
         if (startType && !savedAttempt) {
+            // Prefer crash/shutdown resume over starting a brand-new exam
+            try {
+                const rawSaved = localStorage.getItem('active_exam_session_v1');
+                if (rawSaved) {
+                    const saved = JSON.parse(rawSaved);
+                    const maxAgeMs = 30 * 24 * 60 * 60 * 1000;
+                    if (
+                        saved?.activeQuestions?.length > 0 &&
+                        Date.now() - (saved.timestamp || 0) < maxAgeMs
+                    ) {
+                        const urlKeep = new URL(window.location.href);
+                        urlKeep.searchParams.delete('start');
+                        // keep free_attempt so guest middleware stays open
+                        window.history.replaceState({}, '', urlKeep.toString());
+                        return;
+                    }
+                }
+            } catch {
+                /* ignore and fall through to fresh start */
+            }
+
             const examId = startType === 'subprofessional' ? 2 : 1;
             const isFree = params.get('free_attempt') === '1';
 

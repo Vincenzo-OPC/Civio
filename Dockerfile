@@ -8,7 +8,7 @@ USER root
 
 # Install Node.js, NPM, and essential PHP extensions for Laravel 13
 RUN apt-get update && apt-get install -y --no-install-recommends nodejs npm \
-    && install-php-extensions pdo_mysql gd zip bcmath opcache \
+    && install-php-extensions pdo_pgsql gd zip bcmath opcache \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy application files with correct ownership

@@ -110,8 +110,8 @@ export function useExamPersistence({
             }
 
             const data: ActiveSessionData = JSON.parse(rawData);
-            // Expire sessions older than 12 hours
-            const maxAgeMs = 12 * 60 * 60 * 1000;
+            // LOCAL study: keep crash/shutdown resume for 30 days (was 12 hours)
+            const maxAgeMs = 30 * 24 * 60 * 60 * 1000;
 
             if (Date.now() - data.timestamp > maxAgeMs) {
                 clearSession();
@@ -152,6 +152,31 @@ export function useExamPersistence({
         }, 30000);
 
         return () => clearInterval(interval);
+    }, [isExamActive, isExamSubmitted, saveSession]);
+
+
+    // Flush to localStorage on tab close / PC sleep so progress survives shutdown
+    useEffect(() => {
+        if (!isExamActive || isExamSubmitted) {
+            return;
+        }
+
+        const flush = () => {
+            saveSession();
+        };
+
+        window.addEventListener('pagehide', flush);
+        window.addEventListener('beforeunload', flush);
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') {
+                flush();
+            }
+        });
+
+        return () => {
+            window.removeEventListener('pagehide', flush);
+            window.removeEventListener('beforeunload', flush);
+        };
     }, [isExamActive, isExamSubmitted, saveSession]);
 
     return {
