@@ -32,7 +32,7 @@ test('dashboard status is no_data if user has no exam attempts even without acti
     $response->assertInertia(fn (Assert $page) => $page
         ->component('user/dashboard/index')
         ->has('aiAnalysis', fn (Assert $page) => $page
-            ->where('status', 'no_data')
+            ->where('status', fn ($status) => $status === 'no_data')
             ->where('data', null)
         )
     );
@@ -48,14 +48,14 @@ test('dashboard status is no_data if user has no exam attempts with active exam 
     $response->assertInertia(fn (Assert $page) => $page
         ->component('user/dashboard/index')
         ->has('aiAnalysis', fn (Assert $page) => $page
-            ->where('status', 'no_data')
+            ->where('status', fn ($status) => $status === 'no_data')
             ->where('data', null)
         )
     );
 });
 
 test('dashboard dispatches GenerateUserAnalysisJob if user has exam attempts but no analysis', function () {
-    config(['services.ai.analysis_enabled' => true]);
+    config(['services.gemini.key' => 'fake-gemini-key']);
     Bus::fake();
 
     $user = User::factory()->create();
@@ -90,14 +90,14 @@ test('dashboard dispatches GenerateUserAnalysisJob if user has exam attempts but
     $response->assertInertia(fn (Assert $page) => $page
         ->component('user/dashboard/index')
         ->has('aiAnalysis', fn (Assert $page) => $page
-            ->where('status', 'generating')
+            ->where('status', fn ($status) => $status === 'generating')
             ->where('data', null)
         )
     );
 });
 
 test('dashboard serves cached analysis if generated today', function () {
-    config(['services.ai.analysis_enabled' => true]);
+    config(['services.gemini.key' => 'fake-gemini-key']);
     $user = User::factory()->create();
     ExamDate::create(['date' => now()->addDays(30), 'is_active' => true]);
     Cache::put("user-analysis-mode-{$user->id}", 'ai');
@@ -145,7 +145,7 @@ test('dashboard serves cached analysis if generated today', function () {
     $response->assertInertia(fn (Assert $page) => $page
         ->component('user/dashboard/index')
         ->has('aiAnalysis', fn (Assert $page) => $page
-            ->where('status', 'ready')
+            ->where('status', fn ($status) => $status === 'ready')
             ->where('data', $analysisData)
         )
         ->has('dailyGoal')
