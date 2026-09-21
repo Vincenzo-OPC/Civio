@@ -47,7 +47,7 @@ class FortifyServiceProvider extends ServiceProvider
 
         // Handle post-login redirect based on user role
         Event::listen(Login::class, function ($event) {
-            if ($event->user->role === 'admin' && ! session()->has('url.intended')) {
+            if ($event->user->isAdmin() && ! session()->has('url.intended')) {
                 session()->put('url.intended', route('admin.dashboard'));
             }
         });
