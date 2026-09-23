@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 namespace App\Http\Middleware;
 
@@ -85,6 +85,12 @@ class HandleInertiaRequests extends Middleware
                 ->unique(fn ($item) => $item->flaggable_type.':'.$item->flaggable_id)
                 ->mapWithKeys(fn ($item) => [$item->flaggable_type.':'.$item->flaggable_id => $item->status])
                 ->toArray() : (object) [],
+            'civio' => [
+                'guestUnlimited' => (bool) config('civio.guest_unlimited'),
+                'contentShield' => (bool) config('civio.content_shield'),
+                'tutorName' => (string) config('civio.tutor_name', 'Dexter'),
+                'domain' => (string) config('civio.domain', 'civio.ph'),
+            ],
         ];
     }
 }

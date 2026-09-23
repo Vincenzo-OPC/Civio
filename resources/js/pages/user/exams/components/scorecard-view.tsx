@@ -10,7 +10,7 @@ import {
     Target,
     ArrowRight,
 } from 'lucide-react';
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import {
     formatDuration,
     calculateWeightedPercentage,
@@ -61,17 +61,12 @@ export function ScorecardView({
     setReviewStatusFilter,
     handleBeginExam,
 }: ScorecardViewProps) {
-    const { auth } = usePage<{ auth: any }>().props;
+    const { auth, civio } = usePage<{
+        auth: any;
+        civio?: { guestUnlimited?: boolean };
+    }>().props;
     const isGuest = !auth?.user;
-    const GUEST_PROMPT_KEY = 'guest_prompt_dismissed';
-    const [showGuestPrompt, setShowGuestPrompt] = useState(
-        () => isGuest && sessionStorage.getItem(GUEST_PROMPT_KEY) !== '1',
-    );
-
-    const dismissGuestPrompt = () => {
-        sessionStorage.setItem(GUEST_PROMPT_KEY, '1');
-        setShowGuestPrompt(false);
-    };
+    const guestUnlimited = civio?.guestUnlimited !== false;
 
     const isDrill =
         isDrillSession ||
@@ -314,7 +309,7 @@ export function ScorecardView({
                 );
                 const limitReached = params.get('limit') === '1';
 
-                if (limitReached) {
+                if (limitReached && !guestUnlimited) {
                     return (
                         <div className="mb-6 rounded-2xl border border-blue-200 bg-blue-50/80 p-4 dark:border-blue-900/40 dark:bg-blue-950/20">
                             <div className="flex items-start gap-3">
@@ -770,25 +765,25 @@ export function ScorecardView({
                             {isGuest && (
                                 <div className="overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50/80 via-background to-blue-50/30 p-6 text-center shadow-lg dark:border-blue-950/40 dark:from-slate-900 dark:to-slate-950">
                                     <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-md shadow-blue-500/20 dark:bg-blue-500">
-                                        <Trophy className="size-6 animate-pulse" />
+                                        <Trophy className="size-6" />
                                     </div>
                                     <h3 className="font-heading text-lg font-black tracking-tight text-foreground sm:text-xl">
-                                        Don't Lose Your Mock Exam Score!
+                                        Sign in to sync
                                     </h3>
                                     <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                                        Register a free account now to
-                                        permanently save this attempt to your
-                                        history, track your category mastery
-                                        over time, and unlock AI diagnostic
-                                        analysis.
+                                        This scorecard and the answer review
+                                        stay available as a guest. Sign in only
+                                        if you want this attempt saved across
+                                        devices. You can start another mock
+                                        without an account.
                                     </p>
                                     <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                                         <Link
-                                            href="/register"
-                                            className="group flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-lg active:scale-95 sm:w-auto"
+                                            href="/login"
+                                            className="group flex w-full items-center justify-center gap-2 rounded-xl border border-blue-600 px-6 py-3 text-sm font-bold text-blue-700 transition-all hover:bg-blue-50 active:scale-95 sm:w-auto dark:text-blue-300 dark:hover:bg-blue-950/40"
                                         >
-                                            <LogIn className="size-4 transition-transform group-hover:translate-x-0.5" />
-                                            Register Free Account & Save Score
+                                            <LogIn className="size-4" />
+                                            Sign in to sync
                                         </Link>
                                     </div>
                                 </div>
@@ -799,15 +794,15 @@ export function ScorecardView({
                                 <div className="flex items-center gap-2">
                                     <img
                                         src="/images/hiraya_logo_cropped.png"
-                                        alt="Hiraya Review Logo"
+                                        alt="CIVIO Logo"
                                         className="size-5 shrink-0 object-contain dark:brightness-110"
                                     />
                                     <span className="font-heading text-xs font-black tracking-widest text-foreground uppercase">
-                                        Hiraya Review
+                                        CIVIO
                                     </span>
                                 </div>
                                 <span className="text-[10px] font-bold text-muted-foreground">
-                                    hirayareview.com • Civil Service Exam
+                                    civio.ph • Civil Service Exam
                                     Simulator
                                 </span>
                             </div>
@@ -815,49 +810,6 @@ export function ScorecardView({
                     );
                 })()}
 
-            {/* Guest Completion Modal */}
-            {showGuestPrompt && (
-                <div className="fixed inset-0 z-[100] flex animate-in items-center justify-center bg-slate-900/60 p-4 backdrop-blur-xs duration-200 fade-in">
-                    <div
-                        className="relative flex max-h-[85dvh] w-[calc(100vw-2rem)] max-w-2xl animate-in flex-col overflow-y-auto rounded-2xl border border-border bg-card p-6 shadow-xl duration-200 zoom-in-95 sm:w-full"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <div className="mb-4 flex flex-col items-center text-center">
-                            <div className="mb-3 rounded-full bg-blue-50 p-3 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400">
-                                <Trophy className="size-8" />
-                            </div>
-                            <h3 className="font-heading text-xl font-black tracking-tight text-foreground">
-                                Mock Exam Completed!
-                            </h3>
-                            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                                Great job on finishing the exam! Your score and
-                                category breakdown are ready.
-                            </p>
-                            <p className="mt-3 text-xs font-bold text-amber-600 dark:text-amber-400">
-                                ⚠️ Create a free account to save this attempt
-                                permanently in your progress history and review
-                                your mistake rationales anytime.
-                            </p>
-                        </div>
-                        <div className="mt-6 flex flex-col gap-2.5">
-                            <Link
-                                href="/register"
-                                className="group flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-xs font-bold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none active:scale-95"
-                            >
-                                <LogIn className="size-4" />
-                                Create a Free Account
-                            </Link>
-                            <button
-                                type="button"
-                                onClick={dismissGuestPrompt}
-                                className="group flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-background py-2.5 text-xs font-bold text-foreground transition hover:bg-muted active:scale-95"
-                            >
-                                View Scorecard
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            )}
         </div>
     );
 }

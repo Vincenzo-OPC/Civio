@@ -30,7 +30,7 @@ class SubmitExamAttemptAction
         $completionRate = $totalQuestions > 0 ? ($answeredCount / $totalQuestions) * 100 : 0;
 
         if ($userId === null) {
-            if ($hasPendingGuestAttempt) {
+            if ($hasPendingGuestAttempt && ! config('civio.guest_unlimited')) {
                 return new SubmitExamAttemptResult(
                     success: false,
                     statusCode: 403,

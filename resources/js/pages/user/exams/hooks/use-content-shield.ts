@@ -1,3 +1,4 @@
+import { usePage } from '@inertiajs/react';
 import type React from 'react';
 import { useEffect, useRef, useCallback, useState } from 'react';
 import { flushSync } from 'react-dom';
@@ -31,6 +32,8 @@ interface UseContentShieldOptions {
     onCopyAttempt?: (msg: string) => void;
     onShieldActivate?: () => void;
     contentLabel?: 'Exam' | 'Review' | 'Drill' | 'Custom Drill' | string;
+    /** When false, the shield stays off even if CIVIO_CONTENT_SHIELD is true. */
+    enabled?: boolean;
 }
 
 interface UseContentShieldReturn {
@@ -104,13 +107,20 @@ function isInteractiveElement(el: EventTarget | null): boolean {
 export function useContentShield(
     options: UseContentShieldOptions = {},
 ): UseContentShieldReturn {
-    // LOCAL_SHIELD_OFF — allow screenshots/study on Docker localhost
+    const page = usePage<{ civio?: { contentShield?: boolean } }>();
+    // LOCAL_SHIELD_OFF — allow screenshots/study on Docker localhost.
+    // CIVIO_CONTENT_SHIELD=false keeps the shield off everywhere else too.
     const isLocalHost =
         typeof window !== 'undefined' &&
         (window.location.hostname === 'localhost' ||
             window.location.hostname === '127.0.0.1');
+    const shieldEnabled =
+        options.enabled !== false &&
+        page.props.civio?.contentShield === true &&
+        !isLocalHost;
     const localContentRef = useRef<HTMLDivElement | null>(null);
-    if (isLocalHost) {
+
+    if (!shieldEnabled) {
         return {
             isShielded: false,
             isResumeLocked: false,
@@ -125,6 +135,7 @@ export function useContentShield(
             },
         };
     }
+
     const { onCopyAttempt, onShieldActivate, contentLabel = 'Exam' } = options;
 
     // Keep latest callbacks in refs so listener effects never re-run on every

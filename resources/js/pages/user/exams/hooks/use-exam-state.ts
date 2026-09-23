@@ -72,6 +72,10 @@ export function useExamState(props: ExamIndexProps) {
 
     const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState(false);
     const [isFreeAttempt, setIsFreeAttempt] = useState(false);
+    const guestUnlimited = Boolean(
+        (usePage().props as { civio?: { guestUnlimited?: boolean } }).civio
+            ?.guestUnlimited,
+    );
     const [showRegisterModal, setShowRegisterModal] = useState(false);
     const [showLockedModal, setShowLockedModal] = useState(false);
 
@@ -191,13 +195,13 @@ export function useExamState(props: ExamIndexProps) {
 
     // Submission handler forwarding
     const onTimerExpiredCallback = useCallback(() => {
-        if (isFreeAttempt) {
+        if (isFreeAttempt && !guestUnlimited) {
             setShowRegisterModal(true);
         } else {
             // Auto submit trigger
             submitHandlerRef.current?.(true);
         }
-    }, [isFreeAttempt]);
+    }, [isFreeAttempt, guestUnlimited]);
 
     // Sub-hook 2: Timer
     const {

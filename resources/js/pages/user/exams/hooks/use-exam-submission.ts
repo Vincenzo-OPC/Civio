@@ -1,3 +1,4 @@
+import { usePage } from '@inertiajs/react';
 import { useState, useCallback } from 'react';
 import { toast } from 'sonner';
 import type { Question, ExamResults, CategoryScore } from '../types';
@@ -51,6 +52,10 @@ export function useExamSubmission({
     const [lastStoredAttemptId, setLastStoredAttemptId] = useState<
         number | null
     >(null);
+    const guestUnlimited = Boolean(
+        (usePage().props as { civio?: { guestUnlimited?: boolean } }).civio
+            ?.guestUnlimited,
+    );
 
     const [confirmModal, setConfirmModal] = useState<{
         isOpen: boolean;
@@ -70,7 +75,7 @@ export function useExamSubmission({
 
     const executeSubmit = useCallback(
         (autoByTimer = false) => {
-            if (isFreeAttempt) {
+            if (isFreeAttempt && !guestUnlimited) {
                 setShowRegisterModal(true);
 
                 return;
@@ -211,6 +216,7 @@ export function useExamSubmission({
             drillLanguage,
             drillQuestionCount,
             isFreeAttempt,
+            guestUnlimited,
             setShowRegisterModal,
             setIsExamSubmitted,
             setIsExamActive,

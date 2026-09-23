@@ -118,9 +118,8 @@ test('incomplete guest attempt is rejected', function () {
     $response->assertJson(['success' => false]);
 });
 
-test('guest can only submit one complete attempt and second is blocked', function () {
-    // 1st attempt (complete)
-    $response1 = $this->postJson(route('exams.attempts.store'), [
+test('guest can submit another mock when practice is unlimited', function () {
+    $payload = [
         'category_id' => null,
         'question_ids' => [1, 2, 3],
         'answers' => [1 => 0, 2 => 2, 3 => 1],
@@ -136,40 +135,66 @@ test('guest can only submit one complete attempt and second is blocked', functio
                 'is_timed' => true,
             ],
         ],
-    ]);
+    ];
 
-    $response1->assertOk();
-    $attemptId = $response1->json('attempt_id');
-
-    // Try 2nd attempt
-    $response2 = $this->postJson(route('exams.attempts.store'), [
-        'category_id' => null,
-        'question_ids' => [1, 2, 3],
-        'answers' => [1 => 0, 2 => 2, 3 => 1],
-        'cat_scores' => [
-            'categoryScoreMap' => [],
-            'metadata' => [
-                'track' => 'Professional',
-                'category_name' => 'Professional Level Reviewer',
-                'correct_count' => 2,
-                'total_questions' => 3,
-                'skipped_count' => 0,
-                'duration_secs' => 180,
-                'is_timed' => true,
-            ],
-        ],
-    ]);
-
-    $response2->assertStatus(403);
-    $response2->assertJson(['success' => false]);
+    $this->postJson(route('exams.attempts.store'), $payload)->assertOk();
+    $this->postJson(route('exams.attempts.store'), $payload)->assertOk()->assertJson(['success' => true]);
 });
 
-test('guest is redirected to scorecard when trying to start a new exam after completing one', function () {
-    // Simulate already having a completed guest attempt in session
-    $sessionData = ['pending_guest_attempt_id' => 123];
+test('guest is not locked on the scorecard when practice is unlimited', function () {
+    $this->postJson(route('exams.attempts.store'), [
+        'category_id' => null,
+        'question_ids' => [1, 2, 3],
+        'answers' => [1 => 0, 2 => 2, 3 => 1],
+        'cat_scores' => [
+            'categoryScoreMap' => [],
+            'metadata' => [
+                'track' => 'Professional',
+                'category_name' => 'Professional Level Reviewer',
+                'correct_count' => 2,
+                'total_questions' => 3,
+                'skipped_count' => 0,
+                'duration_secs' => 180,
+                'is_timed' => true,
+            ],
+        ],
+    ])->assertOk();
 
-    $response = $this->withSession($sessionData)
-        ->get(route('exams.index', ['free_attempt' => '1']));
+    $this->get(route('exams.index', ['free_attempt' => '1']))->assertOk();
+});
 
-    $response->assertRedirect(route('exams.index', ['attempt_id' => 123, 'limit' => '1']));
+test('guest second mock is blocked when unlimited practice is off', function () {
+    config(['civio.guest_unlimited' => false]);
+
+    $payload = [
+        'category_id' => null,
+        'question_ids' => [1, 2, 3],
+        'answers' => [1 => 0, 2 => 2, 3 => 1],
+        'cat_scores' => [
+            'categoryScoreMap' => [],
+            'metadata' => [
+                'track' => 'Professional',
+                'category_name' => 'Professional Level Reviewer',
+                'correct_count' => 2,
+                'total_questions' => 3,
+                'skipped_count' => 0,
+                'duration_secs' => 180,
+                'is_timed' => true,
+            ],
+        ],
+    ];
+
+    $this->postJson(route('exams.attempts.store'), $payload)->assertOk();
+
+    $this->postJson(route('exams.attempts.store'), $payload)
+        ->assertStatus(403)
+        ->assertJson(['success' => false]);
+});
+
+test('guest is redirected to the scorecard when unlimited practice is off', function () {
+    config(['civio.guest_unlimited' => false]);
+
+    $this->withSession(['pending_guest_attempt_id' => 123])
+        ->get(route('exams.index', ['free_attempt' => '1']))
+        ->assertRedirect(route('exams.index', ['attempt_id' => 123, 'limit' => '1']));
 });

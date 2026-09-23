@@ -16,8 +16,10 @@ class AllowFreeAttempt
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // If they already have a completed guest attempt, redirect them to its scorecard
-        if (! Auth::check() && $request->session()->has('pending_guest_attempt_id')) {
+        // A finished guest mock used to lock the exams page on that scorecard.
+        // Unlimited guest practice keeps the scorecard available and still lets
+        // the same browser start another mock.
+        if (! Auth::check() && $request->session()->has('pending_guest_attempt_id') && ! config('civio.guest_unlimited')) {
             $pendingId = $request->session()->get('pending_guest_attempt_id');
             if ($request->query('attempt_id') != $pendingId) {
                 return redirect()->route('exams.index', ['attempt_id' => $pendingId, 'limit' => '1']);
