@@ -529,7 +529,7 @@ export function PrintableExam({
                 const cleanTitle = (title || 'Professional_Level_Reviewer')
                     .replace(/[^a-zA-Z0-9_-]/g, '_')
                     .replace(/_+/g, '_');
-                const filename = `Hiraya_Review_${cleanTitle}`;
+                const filename = `CIVIO_${cleanTitle}`;
                 originalTitle = document.title;
                 document.title = filename;
 

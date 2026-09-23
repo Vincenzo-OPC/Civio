@@ -440,7 +440,7 @@ cse_reviewer/
 ```bash
 # Clone the repository
 git clone https://github.com/Vincenzo-OPC/Civio.git
-cd hiraya-review
+cd civio
 
 # Run the automated bootstrap script
 composer setup
@@ -503,8 +503,8 @@ composer ci:check
 The project builds as a self-contained container via `Dockerfile` on `serversideup/php:8.4-fpm-nginx`:
 
 ```bash
-docker build -t hiraya-review .
-docker run -p 8080:8080 --env-file .env hiraya-review
+docker build -t civio .
+docker run -p 8080:8080 --env-file .env civio
 ```
 
 - Automated database migrations and cache optimizations run on boot via `scripts/00-laravel-deploy.sh`.

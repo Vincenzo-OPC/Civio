@@ -141,8 +141,8 @@ export default function About() {
                                 Core Values
                             </h2>
                             <p className="text-lg text-slate-600 dark:text-slate-400">
-                                The principles that guide everything at Hiraya
-                                Review.
+                                The principles that guide everything at
+                                CIVIO.
                             </p>
                         </div>
 

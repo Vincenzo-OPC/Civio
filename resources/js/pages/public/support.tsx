@@ -112,8 +112,8 @@ export default function Support() {
                                             </h2>
                                             <p className="animate-fade-in mt-2 max-w-2xl text-base leading-relaxed text-muted-foreground">
                                                 Thanks for reaching out,{' '}
-                                                {submittedData?.name}. Hiraya
-                                                Review will review your message
+                                                {submittedData?.name}. CIVIO
+                                                will review your message
                                                 and reply via email at{' '}
                                                 {submittedData?.email} within 24
                                                 hours.

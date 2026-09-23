@@ -78,8 +78,8 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
                                             To provide mock exams, custom study
-                                            logs, and AI analytics, Hiraya
-                                            Review collects:
+                                            logs, and study analytics, CIVIO
+                                            collects:
                                         </p>
                                         <ul className="list-disc space-y-2 pl-5 text-sm text-muted-foreground">
                                             <li>

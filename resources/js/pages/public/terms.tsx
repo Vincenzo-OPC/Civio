@@ -60,8 +60,8 @@ export default function Terms({ terms }: TermsProps) {
                                             1. Acceptance of Terms
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            By accessing or using the Hiraya
-                                            Review portal, you agree to comply
+                                            By accessing or using CIVIO,
+                                            you agree to comply
                                             with and be bound by these Terms of
                                             Service. If you do not agree with
                                             any part of these terms, you must
@@ -142,8 +142,8 @@ export default function Terms({ terms }: TermsProps) {
                                             intellectual property guidelines.
                                             You are prohibited from using
                                             web-scrapers, spiders, or automated
-                                            scripts to download or clone Hiraya
-                                            Review's practice sets for
+                                            scripts to download or clone CIVIO
+                                            practice sets for
                                             commercial use. Standard manual
                                             study and personal mock testing are
                                             fully permitted.

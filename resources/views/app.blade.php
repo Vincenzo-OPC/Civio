@@ -46,7 +46,7 @@
 
     <!-- Global SEO & Social Sharing Fallbacks -->
     <meta name="description" content="Ace the Philippine Civil Service Exam with confidence. CIVIO offers realistic Professional & Subprofessional mock exams, smart study plans, high-yield learning modules, and targeted drills. Free forever base access!">
-    <meta name="keywords" content="civil service exam reviewer, civil service exam reviewer {{ date('Y') }}, free civil service exam reviewer, cse reviewer professional, cse reviewer subprofessional, csc reviewer, civil service reviewer, hiraya review, hiraya cse reviewer, civil service mock exam">
+    <meta name="keywords" content="civil service exam reviewer, civil service exam reviewer {{ date('Y') }}, free civil service exam reviewer, cse reviewer professional, cse reviewer subprofessional, csc reviewer, civil service reviewer, CIVIO, Dexter, civil service mock exam">
     <meta name="author" content="CIVIO">
     <meta name="robots" content="index, follow">
 
