@@ -316,34 +316,110 @@ export function useExamPoolBuilder({
                 );
             }
 
-            let finalDemographics = [...demographicQuestions];
+            // CIVIO local mock: demographics OPTIONAL — omit EDQ block so mocks
 
-            if (
-                finalDemographics.length <
-                EXAM_CONSTANTS.DEMOGRAPHIC_QUESTION_COUNT
-            ) {
-                const needed =
-                    EXAM_CONSTANTS.DEMOGRAPHIC_QUESTION_COUNT -
-                    finalDemographics.length;
-                const shuffledFallbacks = fisherYatesShuffle(
-                    fallbackDemographicQuestions,
-                );
-                finalDemographics = [
-                    ...finalDemographics,
-                    ...shuffledFallbacks.slice(0, needed),
-                ];
-            } else if (
-                finalDemographics.length >
-                EXAM_CONSTANTS.DEMOGRAPHIC_QUESTION_COUNT
-            ) {
-                finalDemographics = fisherYatesShuffle(finalDemographics).slice(
-                    0,
-                    EXAM_CONSTANTS.DEMOGRAPHIC_QUESTION_COUNT,
-                );
+
+            // go straight into scored items. Skip button remains in live view for
+
+
+            // resumed sessions that still contain demographics.
+
+
+            const includeDemographics = false;
+
+
+            let finalDemographics: Question[] = [];
+
+
+            if (includeDemographics) {
+
+
+                finalDemographics = [...demographicQuestions];
+
+
+                if (
+
+
+                    finalDemographics.length <
+
+
+                    EXAM_CONSTANTS.DEMOGRAPHIC_QUESTION_COUNT
+
+
+                ) {
+
+
+                    const needed =
+
+
+                        EXAM_CONSTANTS.DEMOGRAPHIC_QUESTION_COUNT -
+
+
+                        finalDemographics.length;
+
+
+                    const shuffledFallbacks = fisherYatesShuffle(
+
+
+                        fallbackDemographicQuestions,
+
+
+                    );
+
+
+                    finalDemographics = [
+
+
+                        ...finalDemographics,
+
+
+                        ...shuffledFallbacks.slice(0, needed),
+
+
+                    ];
+
+
+                } else if (
+
+
+                    finalDemographics.length >
+
+
+                    EXAM_CONSTANTS.DEMOGRAPHIC_QUESTION_COUNT
+
+
+                ) {
+
+
+                    finalDemographics = fisherYatesShuffle(finalDemographics).slice(
+
+
+                        0,
+
+
+                        EXAM_CONSTANTS.DEMOGRAPHIC_QUESTION_COUNT,
+
+
+                    );
+
+
+                }
+
+
+                finalDemographics = fisherYatesShuffle(finalDemographics);
+
+
             }
 
-            finalDemographics = fisherYatesShuffle(finalDemographics);
+
+            
+
+
             const finalPool = [...finalDemographics, ...scoredPool];
+
+
+            
+
 
             return finalPool.map(shuffleOptionsForQuestion);
         },

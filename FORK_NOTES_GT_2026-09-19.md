@@ -1,9 +1,9 @@
-# Hiraya Review — Local Fork Notes (GT / Cover)
+﻿# Hiraya Review â€” Local Fork Notes (GT / Cover)
 Dated: 19 Sep 2026 (Asia/Manila)
 
 Upstream: https://github.com/codebykenth/hiraya-review
-Local path: `C:\Users\GT\Desktop\Grok\Hiraya-Review`
-Purpose of upstream: self-hosted CSE (Civil Service Exam) mock reviewer (Laravel + Inertia/React + Postgres). There is no public hosted demo — GitHub is so people can run it themselves (Docker preferred).
+Local path: `C:\Users\GT\Desktop\Grok\CSE\CSE-Micro`
+Purpose of upstream: self-hosted CSE (Civil Service Exam) mock reviewer (Laravel + Inertia/React + Postgres). There is no public hosted demo â€” GitHub is so people can run it themselves (Docker preferred).
 
 Live local stack (MSI):
 - App: http://localhost:8080
@@ -17,12 +17,12 @@ Live local stack (MSI):
 
 Upstream works as a product idea but the local install hit many rough edges for study use:
 1. Guest / free-attempt exam crashed (auth.user null).
-2. Announcements serialized as PHP Incomplete_Class → blank/broken Inertia page.
+2. Announcements serialized as PHP Incomplete_Class â†’ blank/broken Inertia page.
 3. Empty / thin question bank after migrate+seed (needed custom seeder).
-4. Aggressive anti-cheat (no screenshot, no copy, blur on focus loss) — hostile for local studying/Google-checking.
+4. Aggressive anti-cheat (no screenshot, no copy, blur on focus loss) â€” hostile for local studying/Google-checking.
 5. Stale Vite assets + service worker / localStorage kept serving broken exam sessions ("Which option is correct?" with no stem/options).
 6. Docker ports collided with Hermes; frontend npm run build timed out during compose (prebuilt assets still served).
-7. Schema quirks (e.g. no is_active column on questions — status flags differ from what we guessed).
+7. Schema quirks (e.g. no is_active column on questions â€” status flags differ from what we guessed).
 
 Goal of a future fork: keep the mock-exam UX, harden guest mode, ship a real practice bank, make anti-cheat optional/dev-off, and document one-command Docker for Windows.
 
@@ -33,11 +33,11 @@ Goal of a future fork: keep the mock-exam UX, harden guest mode, ship a real pra
 Do NOT push these to upstream. Keep them for your fork.
 
 ### 1. app/Http/Middleware/HandleInertiaRequests.php
-Bug: global_announcements shared as Eloquent collection → sometimes JSON'd as PHP_Incomplete_Class, crashing the exams page.
+Bug: global_announcements shared as Eloquent collection â†’ sometimes JSON'd as PHP_Incomplete_Class, crashing the exams page.
 Fix: chain ->values()->toArray() after ->get().
 
 ### 2. resources/js/pages/user/exams/components/setup-exam-view.tsx
-Bug: Guest free attempt (auth.user === null) → Cannot read properties of null (reading 'can_download_pdf').
+Bug: Guest free attempt (auth.user === null) â†’ Cannot read properties of null (reading 'can_download_pdf').
 Fix: optional chaining: auth.user?.role, auth.user?.can_download_pdf.
 
 ### 3. resources/js/pages/user/exams/hooks/use-content-shield.ts
@@ -45,7 +45,7 @@ Change: early-return no-op shield when hostname is localhost or 127.0.0.1 (study
 Marked with comment LOCAL_SHIELD_OFF. Production / non-local host still shields.
 
 ### 4. Dockerfile
-Minor local tweak (1-line diff) — review before fork; may be build-path related.
+Minor local tweak (1-line diff) â€” review before fork; may be build-path related.
 
 ---
 
@@ -58,14 +58,14 @@ Minor local tweak (1-line diff) — review before fork; may be build-path relate
 | seed_real_practice.php | Replaces dummy stems with ~440 readable practice Qs + options/explanations |
 | seed_sample_questions.php / seed_topup_questions.php | Earlier/extra seed attempts |
 | _pw/ | Playwright probes used while debugging (omit from fork or keep as scripts/debug) |
-| compose-build.log | Build log noise — omit from fork |
-| _*debug*.png, _debug_*.html | Debug artifacts — omit |
+| compose-build.log | Build log noise â€” omit from fork |
+| _*debug*.png, _debug_*.html | Debug artifacts â€” omit |
 
-.env is local-only — never commit.
+.env is local-only â€” never commit.
 
 ---
 
-## Container-only patches (NOT in host git — rebuild loses them)
+## Container-only patches (NOT in host git â€” rebuild loses them)
 
 These live inside the running hiraya-review-app filesystem. Re-apply after recreate, or bake into fork properly.
 
@@ -90,8 +90,8 @@ Proper fork approach: apply the TS/PHP source fixes, run a real npm run build, d
 ## Runtime / data notes
 
 - After php artisan db:seed --force, categories exist; question count was raised to 440 via seed_real_practice.php.
-- Stale exam UX was often browser localStorage, not DB — always try /clear-exam.html first.
-- Incognito worked when normal Chrome didn't → cache / SW / old session.
+- Stale exam UX was often browser localStorage, not DB â€” always try /clear-exam.html first.
+- Incognito worked when normal Chrome didn't â†’ cache / SW / old session.
 - Hermes on MSI: leave port 8642 alone.
 
 ---
@@ -100,7 +100,7 @@ Proper fork approach: apply the TS/PHP source fixes, run a real npm run build, d
 
 1. Guest-safe exam path (null auth.user everywhere, not just setup view).
 2. Config flag EXAM_CONTENT_SHIELD=false for local/study builds.
-3. Official seed of real CSE-style practice items (or import pipeline) — replace placeholders.
+3. Official seed of real CSE-style practice items (or import pipeline) â€” replace placeholders.
 4. Harden Inertia shared props (always arrays/DTOs, never raw incomplete models).
 5. Document Windows Docker Desktop one-shot: ports, .env, seed, healthcheck.
 6. Disable or scope SW in local; version assets aggressively.
@@ -113,7 +113,7 @@ Proper fork approach: apply the TS/PHP source fixes, run a real npm run build, d
 
 ## Quick local ops (MSI)
 
-cd C:\Users\GT\Desktop\Grok\Hiraya-Review
+cd C:\Users\GT\Desktop\Grok\CSE\CSE-Micro
 docker compose ps
 start http://localhost:8080/clear-exam.html
 
@@ -137,3 +137,4 @@ docker exec hiraya-review-app php artisan cache:clear
 - Use `http://localhost:8080/resume-exam.html` after reboot (keeps progress).
 - `clear-exam.html` still wipes progress for a brand-new mock.
 - Docker `restart: unless-stopped` + Postgres volume `hiraya_pgdata` survive PC reboot if Docker Desktop starts with Windows.
+

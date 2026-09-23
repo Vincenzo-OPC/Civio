@@ -911,7 +911,41 @@ export function LiveExamView({
                                 Previous Question
                             </button>
 
-                            {currentIdx < activeQuestions.length - 1 ? (
+                            {(() => {
+                                const cur = activeQuestions[currentIdx];
+                                const curIsDemo =
+                                    !!cur &&
+                                    (cur.isDemographic ||
+                                        cur.category === 'Demographic Profile' ||
+                                        (cur.category || '')
+                                            .toLowerCase()
+                                            .includes('demographic'));
+                                const firstScored = activeQuestions.findIndex(
+                                    (q) =>
+                                        !(
+                                            q.isDemographic ||
+                                            q.category === 'Demographic Profile' ||
+                                            (q.category || '')
+                                                .toLowerCase()
+                                                .includes('demographic')
+                                        ),
+                                );
+                                if (curIsDemo && firstScored >= 0 && firstScored !== currentIdx) {
+                                    return (
+                                        <button
+                                            type="button"
+                                            onClick={() => handleQuestionNavigate(firstScored)}
+                                            className="shadow-3xs flex items-center gap-1.5 rounded-lg border border-amber-500 bg-amber-50 px-5 py-2.5 text-xs font-bold text-amber-900 transition hover:bg-amber-100 focus:outline-none dark:border-amber-400 dark:bg-amber-950/40 dark:text-amber-100"
+                                        >
+                                            Skip Demographics
+                                            <ChevronRight className="size-4" />
+                                        </button>
+                                    );
+                                }
+                                return null;
+                            })()}
+
+                                                        {currentIdx < activeQuestions.length - 1 ? (
                                 <button
                                     onClick={() =>
                                         handleQuestionNavigate(currentIdx + 1)
