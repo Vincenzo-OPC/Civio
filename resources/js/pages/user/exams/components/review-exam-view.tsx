@@ -39,6 +39,7 @@ import type {
     ReviewStatusFilter,
 } from '../types';
 import { BookmarkToDrillSetDialog } from './bookmark-to-drill-set-dialog';
+import { ExplainWithDexter } from './explain-with-dexter';
 import QuestionPalettePanel from './question-palette-panel';
 
 interface ReviewExamViewProps {
@@ -1530,6 +1531,21 @@ export function ReviewExamView({
                                             </>
                                         );
                                     })()}
+
+                                    {!(
+                                        currentQuestion.isDemographic ||
+                                        currentQuestion.category ===
+                                            'Demographic Profile'
+                                    ) && (
+                                        <>
+                                            <ExplainWithDexter
+                                                question={currentQuestion}
+                                                chosenIndex={
+                                                    answers[currentIdx]
+                                                }
+                                            />
+                                        </>
+                                    )}
                                 </div>
                             ) : (
                                 <div className="flex flex-col items-center justify-center py-20 text-center">

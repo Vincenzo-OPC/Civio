@@ -12,13 +12,13 @@ use App\Http\Controllers\Admin\SyllabusController;
 use App\Http\Controllers\Admin\SystemController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ViewManagementController;
-use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Public\PublicController;
 use App\Http\Controllers\Public\SitemapController;
 use App\Http\Controllers\Public\SupportController;
 use App\Http\Controllers\Settings\AcceptTermsController;
 use App\Http\Controllers\User\AnalyticsController;
 use App\Http\Controllers\User\DashboardController as UserDashboardController;
+use App\Http\Controllers\User\DexterExplainController;
 use App\Http\Controllers\User\DrillController;
 use App\Http\Controllers\User\ExamController;
 use App\Http\Controllers\User\ExamHistoryController;
@@ -58,6 +58,10 @@ Route::middleware('throttle:global-views')->group(function () {
 
     Route::post('exams/attempts', [ExamController::class, 'storeAttempt'])
         ->name('exams.attempts.store')
+        ->middleware('throttle:global-mutations');
+
+    Route::post('exams/explain', [DexterExplainController::class, 'store'])
+        ->name('exams.explain')
         ->middleware('throttle:global-mutations');
 
     // Utilities
