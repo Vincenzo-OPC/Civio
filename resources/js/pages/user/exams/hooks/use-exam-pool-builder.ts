@@ -5,6 +5,8 @@ import {
     fisherYatesShuffle,
     isDemographicQuestion,
     EXAM_CONSTANTS,
+    preferUniqueStems,
+    normalizeQuestionStem,
 } from '../utils/exam-utils';
 
 export function shuffleOptionsForQuestion(q: Question): Question {
@@ -111,8 +113,9 @@ export function useExamPoolBuilder({
 
     const buildFreshExamPool = useCallback(
         (examId: number | null) => {
-            const sourcePool =
-                questions.length > 0 ? questions : fallbackQuestions;
+            const sourcePool = preferUniqueStems(
+                questions.length > 0 ? questions : fallbackQuestions,
+            );
 
             const verbalPool = sourcePool.filter(
                 (q) => q.category === 'Verbal Ability',
@@ -155,7 +158,14 @@ export function useExamPoolBuilder({
                             break;
                         }
 
-                        if (picked.some((p) => p.id === q.id)) {
+                        if (
+                            picked.some(
+                                (p) =>
+                                    p.id === q.id ||
+                                    normalizeQuestionStem(p.stem) ===
+                                        normalizeQuestionStem(q.stem),
+                            )
+                        ) {
                             continue;
                         }
 
@@ -198,12 +208,6 @@ export function useExamPoolBuilder({
                     pushWithLimit(
                         fisherYatesShuffle(fbPool),
                         count - picked.length,
-                    );
-                }
-
-                while (picked.length < count && picked.length > 0) {
-                    picked.push(
-                        picked[Math.floor(Math.random() * picked.length)],
                     );
                 }
 

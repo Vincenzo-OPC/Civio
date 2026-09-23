@@ -70,3 +70,45 @@ export async function apiPost<T = any>(url: string, payload: any): Promise<T> {
 
     return res.json();
 }
+
+const VARIANT_SUFFIX = /\s*\(variant\s+\d+\)\s*$/i;
+
+/** Keep in sync with App\Support\QuestionStem. */
+export function normalizeQuestionStem(stem: string | null | undefined): string {
+    return (stem || '')
+        .replace(VARIANT_SUFFIX, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .toLowerCase();
+}
+
+export function isVariantStem(stem: string | null | undefined): boolean {
+    return VARIANT_SUFFIX.test(stem || '');
+}
+
+export function preferUniqueStems<T extends { stem?: string | null }>(
+    pool: T[],
+): T[] {
+    const byStem = new Map<string, T>();
+
+    for (const question of pool) {
+        const key = normalizeQuestionStem(question.stem);
+
+        if (!key) {
+            continue;
+        }
+
+        const existing = byStem.get(key);
+
+        if (!existing) {
+            byStem.set(key, question);
+            continue;
+        }
+
+        if (isVariantStem(existing.stem) && !isVariantStem(question.stem)) {
+            byStem.set(key, question);
+        }
+    }
+
+    return [...byStem.values()];
+}
