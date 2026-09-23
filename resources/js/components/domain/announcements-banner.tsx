@@ -109,12 +109,19 @@ export function AnnouncementsBanner() {
                     className={`relative flex items-start gap-3 rounded-lg border p-3.5 pr-10 shadow-xs sm:items-center ${getColors(announcement.type)}`}
                 >
                     {getIcon(announcement.type)}
-                    <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-2">
-                        <span className="font-semibold">
-                            {announcement.title}:
-                        </span>
-                        <span className="text-sm opacity-90">
-                            {announcement.message}
+                    <div className="flex flex-col gap-1">
+                        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-2">
+                            <span className="font-semibold">
+                                {announcement.title}:
+                            </span>
+                            <span className="text-sm opacity-90">
+                                {announcement.message}
+                            </span>
+                        </div>
+                        <span className="text-xs opacity-75">
+                            {announcement.last_checked_at
+                                ? `Last checked ${new Date(announcement.last_checked_at).toLocaleDateString('en-PH', { year: 'numeric', month: 'short', day: 'numeric' })}`
+                                : 'Last checked: not recorded'}
                         </span>
                     </div>
                     <button

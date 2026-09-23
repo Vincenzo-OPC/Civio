@@ -25,6 +25,7 @@ interface AnnouncementFormProps {
         type: 'info' | 'warning' | 'success';
         is_active: boolean;
         expires_at: string;
+        last_checked_at: string;
     };
     errors: Record<string, string>;
     processing: boolean;
@@ -144,6 +145,40 @@ export function AnnouncementForm({
                         {errors.expires_at && (
                             <p className="text-sm font-medium text-destructive">
                                 {errors.expires_at}
+                            </p>
+                        )}
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label
+                            htmlFor={
+                                isEdit
+                                    ? 'edit-last_checked_at'
+                                    : 'last_checked_at'
+                            }
+                        >
+                            Last checked
+                        </Label>
+                        <Input
+                            id={
+                                isEdit
+                                    ? 'edit-last_checked_at'
+                                    : 'last_checked_at'
+                            }
+                            type="datetime-local"
+                            value={data.last_checked_at}
+                            onChange={(e) =>
+                                setData('last_checked_at', e.target.value)
+                            }
+                        />
+                        <p className="text-xs text-muted-foreground">
+                            When you last verified this note. Leave blank only
+                            if you have not checked it — the banner will say
+                            so.
+                        </p>
+                        {errors.last_checked_at && (
+                            <p className="text-sm font-medium text-destructive">
+                                {errors.last_checked_at}
                             </p>
                         )}
                     </div>

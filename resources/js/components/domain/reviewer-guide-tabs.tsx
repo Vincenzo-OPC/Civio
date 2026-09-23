@@ -17,6 +17,7 @@ import {
     Sparkles,
 } from 'lucide-react';
 import { useState } from 'react';
+import { CsePathsGuide } from '@/components/domain/cse-paths-guide';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
@@ -32,8 +33,8 @@ export function ReviewerGuideTabs({
     tabsClassName = 'flex border-b border-border overflow-x-auto',
 }: ReviewerGuideTabsProps) {
     const [activeTab, setActiveTab] = useState<
-        'features' | 'flow' | 'structure' | 'tips'
-    >('features');
+        'paths' | 'features' | 'flow' | 'structure' | 'tips'
+    >('paths');
 
     const appFeatures = [
         {
@@ -113,7 +114,7 @@ export function ReviewerGuideTabs({
             summary:
                 'Realistic exam simulations matching the exact question count, subtest distribution, and strict time limits.',
             steps: [
-                'Select Professional (170 items, 3h 10m) or Subprofessional (165 items, 2h 40m).',
+                'Select Professional (about 150 scored items, 3h 10m) or Subprofessional (about 145 scored items, 2h 40m). Official booklets also include 20 personal-data items that CIVIO mocks skip.',
                 'Use the interactive Question Palette on the right to track answered, skipped, and flagged items.',
                 'Use the "Flag for Review" feature to mark difficult items and revisit them before final submission.',
             ],
@@ -206,7 +207,7 @@ export function ReviewerGuideTabs({
             icon: Clock,
             color: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30',
             description:
-                'Take full-length simulated Mock Exams under real time limits (170 items in 3h 10m for Professional, 165 items in 2h 40m for Subprofessional) to build test-day stamina and achieve the 80% passing mark.',
+                'Take a full CIVIO mock under the official clock (about 150 scored Professional items in 3h 10m, or about 145 Subprofessional items in 2h 40m). The paper booklet is longer only because it adds 20 personal-data items.',
             actionLabel: 'Take Mock Exam',
             actionUrl: '/exams',
             tips: [
@@ -353,6 +354,16 @@ export function ReviewerGuideTabs({
             {/* Navigation Tabs */}
             <div className={tabsClassName}>
                 <button
+                    onClick={() => setActiveTab('paths')}
+                    className={`shrink-0 border-b-2 px-5 py-3 text-sm font-semibold transition-all ${
+                        activeTab === 'paths'
+                            ? 'border-primary font-bold text-primary'
+                            : 'border-transparent text-muted-foreground hover:text-foreground'
+                    }`}
+                >
+                    Exam paths
+                </button>
+                <button
                     onClick={() => setActiveTab('features')}
                     className={`shrink-0 border-b-2 px-5 py-3 text-sm font-semibold transition-all ${
                         activeTab === 'features'
@@ -393,6 +404,8 @@ export function ReviewerGuideTabs({
                     Smart Study Tips
                 </button>
             </div>
+
+            {activeTab === 'paths' && <CsePathsGuide />}
 
             {/* Tab: App Features & How-To */}
             {activeTab === 'features' && (
@@ -594,6 +607,13 @@ export function ReviewerGuideTabs({
             {/* Tab: CSE Exam Structure */}
             {activeTab === 'structure' && (
                 <div className="space-y-6">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                        Official CSE-PPT booklet totals from the July 2026
+                        examinee guide: Professional 170 (150 scored + 20
+                        personal-data items) and Subprofessional 165 (145 +
+                        20). CIVIO mocks are the scored portion only. Last
+                        checked 23 September 2026.
+                    </p>
                     <div className="grid grid-cols-1 gap-4 sm:gap-8 lg:grid-cols-2">
                         {/* Professional Section */}
                         <Card className="space-y-6 border border-border bg-card p-4 sm:p-6">

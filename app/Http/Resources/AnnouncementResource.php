@@ -27,6 +27,7 @@ class AnnouncementResource extends JsonResource
             'type' => $this->type,
             'is_active' => (bool) $this->is_active,
             'expires_at' => $this->expires_at?->toIso8601String() ?? (is_string($this->expires_at) ? $this->expires_at : null),
+            'last_checked_at' => $this->last_checked_at?->toIso8601String() ?? (is_string($this->last_checked_at) ? $this->last_checked_at : null),
             'created_at' => $this->created_at?->toIso8601String() ?? '',
         ];
     }

@@ -20,6 +20,7 @@ class StoreAnnouncementRequest extends FormRequest
             'type' => ['required', Rule::in(['info', 'warning', 'success'])],
             'is_active' => ['boolean'],
             'expires_at' => ['nullable', 'date', 'after:today'],
+            'last_checked_at' => ['nullable', 'date'],
         ];
     }
 }

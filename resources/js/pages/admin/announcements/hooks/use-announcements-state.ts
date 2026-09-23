@@ -13,6 +13,7 @@ interface Announcement {
     type: 'info' | 'warning' | 'success';
     is_active: boolean;
     expires_at: string | null;
+    last_checked_at: string | null;
     created_at: string;
 }
 
@@ -33,6 +34,7 @@ export function useAnnouncementsState() {
             type: 'info' as 'info' | 'warning' | 'success',
             is_active: true,
             expires_at: '',
+            last_checked_at: '',
         });
 
     const handleCreate = (e: React.FormEvent) => {
@@ -51,7 +53,11 @@ export function useAnnouncementsState() {
         const expiresAt = announcement.expires_at
             ? new Date(announcement.expires_at)
             : null;
+        const checkedAt = announcement.last_checked_at
+            ? new Date(announcement.last_checked_at)
+            : null;
         let formattedDate = '';
+        let formattedChecked = '';
 
         if (expiresAt) {
             const year = expiresAt.getFullYear();
@@ -62,12 +68,22 @@ export function useAnnouncementsState() {
             formattedDate = `${year}-${month}-${day}T${hours}:${minutes}`;
         }
 
+        if (checkedAt && !Number.isNaN(checkedAt.getTime())) {
+            const year = checkedAt.getFullYear();
+            const month = String(checkedAt.getMonth() + 1).padStart(2, '0');
+            const day = String(checkedAt.getDate()).padStart(2, '0');
+            const hours = String(checkedAt.getHours()).padStart(2, '0');
+            const minutes = String(checkedAt.getMinutes()).padStart(2, '0');
+            formattedChecked = `${year}-${month}-${day}T${hours}:${minutes}`;
+        }
+
         setData({
             title: announcement.title,
             message: announcement.message,
             type: announcement.type,
             is_active: announcement.is_active,
             expires_at: formattedDate,
+            last_checked_at: formattedChecked,
         });
         setIsEditModalOpen(true);
     };

@@ -17,6 +17,7 @@ interface Announcement {
     type: 'info' | 'warning' | 'success';
     is_active: boolean;
     expires_at: string | null;
+    last_checked_at: string | null;
     created_at: string;
 }
 
@@ -95,9 +96,16 @@ export function AnnouncementCard({
                 </p>
             </CardContent>
             <CardFooter className="flex items-center justify-between border-t border-black/5 bg-black/5 pt-3 dark:border-white/5 dark:bg-white/5">
-                <div className="flex items-center gap-1.5 text-xs font-medium opacity-70">
-                    <Calendar className="size-3.5" />
-                    {new Date(announcement.created_at).toLocaleDateString()}
+                <div className="flex flex-col gap-1 text-xs font-medium opacity-70">
+                    <div className="flex items-center gap-1.5">
+                        <Calendar className="size-3.5" />
+                        {new Date(announcement.created_at).toLocaleDateString()}
+                    </div>
+                    <span>
+                        {announcement.last_checked_at
+                            ? `Last checked ${new Date(announcement.last_checked_at).toLocaleDateString('en-PH', { year: 'numeric', month: 'short', day: 'numeric' })}`
+                            : 'Last checked: not recorded'}
+                    </span>
                 </div>
                 <div className="flex items-center gap-1">
                     <Button

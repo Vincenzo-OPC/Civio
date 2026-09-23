@@ -51,7 +51,7 @@ Traditional Civil Service Exam review materials rely on static PDFs, outdated qu
 ## Full Feature Breakdown
 
 ### 1. Full Mock Exams, Category Drills & Saved Sets
-- **Timed Exam Engine:** Full-length CSE Professional (170 items, 3 hours 10 mins) and Subprofessional (165 items, 2 hours 40 mins) mock exams with realistic timers and auto-submission on expiration.
+- **Timed Exam Engine:** Scored-only CSE mocks — Professional about 150 items and Subprofessional about 145 — on the official clocks (3 hours 10 minutes and 2 hours 40 minutes). Personal-data items are not prepended. Auto-submits when time expires.
 - **Exam Navigation Palette:** Interactive grid palette indicating answered, unanswered, and flagged questions with instant jump capability.
 - **Targeted Category Drills:** Practice specific subject areas (General Information, Verbal Ability, Analytical Ability, Numerical Ability, Clerical Ability) with customizable question counts.
 - **Smart Weakness Drills:** 1-click drill generation targeting the user's lowest-scoring subcategories based on historical attempt data.

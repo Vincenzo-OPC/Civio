@@ -63,10 +63,10 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
     const pacingAssessment = useMemo(() => {
         if (!latestPacing) {
             return {
-                label: 'Benchmark: 54s/item',
+                label: 'Benchmark: ~67s/item',
                 color: 'border-slate-200 bg-slate-50 text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300',
                 icon: <Clock className="size-3 text-slate-500" />,
-                tip: 'CSE Professional gives 170 items in 3h 10m (~54s per question including shading).',
+                tip: 'The official Professional booklet is 170 items in 3h 10m, about 67 seconds each. A CIVIO scored mock is about 150 items on that same clock, about 76 seconds each.',
             };
         }
 
@@ -86,7 +86,7 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
                 label: 'Optimal CSE Pace (45-55s)',
                 color: 'border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300',
                 icon: <CheckCircle2 className="size-3 text-emerald-600" />,
-                tip: 'Excellent pacing! You are comfortably inside the official CSE time limit of ~54s per question.',
+                tip: 'Comfortable pace against the official booklet mark of about 67 seconds per item.',
             };
         }
 
@@ -94,7 +94,7 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
             label: 'Time Crunch Risk (>56s/item)',
             color: 'border-rose-200 bg-rose-50 text-rose-800 dark:border-rose-800 dark:bg-rose-950/40 dark:text-rose-300',
             icon: <AlertCircle className="size-3 text-rose-600" />,
-            tip: 'Average speed exceeds the 54s target. Practice skipping and flagging hard math/logic problems to avoid leaving unanswered items.',
+            tip: 'Average speed is slower than the official booklet mark of about 67 seconds. Flag hard items and move on so you do not leave a block blank.',
         };
     }, [latestPacing]);
 
@@ -109,8 +109,7 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
                                 Pacing vs Accuracy
                             </h3>
                             <p className="text-[10px] font-semibold text-slate-500 dark:text-slate-400">
-                                Average time per question with official ~54s
-                                target
+                                Average time per question. Official booklet mark is about 67s.
                             </p>
                         </div>
                     </div>
@@ -178,11 +177,11 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
                                 />
                                 <ReferenceLine
                                     yAxisId="left"
-                                    y={54}
+                                    y={67}
                                     stroke="hsl(var(--destructive))"
                                     strokeDasharray="3 3"
                                     label={{
-                                        value: '54s Target',
+                                        value: '67s booklet',
                                         position: 'insideTopRight',
                                         fill: 'hsl(var(--destructive))',
                                         fontSize: 10,

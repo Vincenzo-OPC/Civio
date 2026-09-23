@@ -14,6 +14,7 @@ readonly class UpsertAnnouncementData
         public string $type,
         public bool $isActive = true,
         public ?string $expiresAt = null,
+        public ?string $lastCheckedAt = null,
     ) {}
 
     public static function fromRequest(StoreAnnouncementRequest $request): self
@@ -26,6 +27,7 @@ readonly class UpsertAnnouncementData
             type: (string) $v['type'],
             isActive: (bool) ($v['is_active'] ?? true),
             expiresAt: ! empty($v['expires_at']) ? (string) $v['expires_at'] : null,
+            lastCheckedAt: ! empty($v['last_checked_at']) ? (string) $v['last_checked_at'] : null,
         );
     }
 
@@ -40,6 +42,7 @@ readonly class UpsertAnnouncementData
             'type' => $this->type,
             'is_active' => $this->isActive,
             'expires_at' => $this->expiresAt,
+            'last_checked_at' => $this->lastCheckedAt,
         ];
     }
 }

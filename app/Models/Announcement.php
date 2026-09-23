@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-#[Fillable(['title', 'message', 'type', 'is_active', 'expires_at'])]
+#[Fillable(['title', 'message', 'type', 'is_active', 'expires_at', 'last_checked_at'])]
 class Announcement extends Model
 {
     use HasFactory;
@@ -16,6 +16,7 @@ class Announcement extends Model
         return [
             'is_active' => 'boolean',
             'expires_at' => 'datetime',
+            'last_checked_at' => 'datetime',
         ];
     }
 }
