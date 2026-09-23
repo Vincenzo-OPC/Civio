@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\SyllabusController;
 use App\Http\Controllers\Admin\SystemController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ViewManagementController;
+use App\Http\Controllers\Community\RecalledQuestionController;
 use App\Http\Controllers\Public\PublicController;
 use App\Http\Controllers\Public\SitemapController;
 use App\Http\Controllers\Public\SupportController;
@@ -76,6 +77,10 @@ Route::middleware('throttle:global-views')->group(function () {
 });
 
 Route::post('support', [SupportController::class, 'store'])->name('support.store');
+
+Route::post('community/recalled-questions', [RecalledQuestionController::class, 'store'])
+    ->name('community.recalled.store')
+    ->middleware('throttle:global-mutations');
 
 // OAuth Login
 Route::middleware('throttle:10,1')->controller(AuthController::class)->prefix('auth')->group(function () {
@@ -208,6 +213,8 @@ Route::middleware(['auth.or.fail', 'verified'])->group(function () {
                 Route::get('/', 'index')->name('index');
             });
 
+            Route::get('recalled-questions', [RecalledQuestionController::class, 'index'])->name('recalled-questions.index');
+
             Route::controller(AnnouncementController::class)->prefix('announcements')->name('announcements.')->group(function () {
                 Route::get('/', 'index')->name('index');
             });
@@ -256,6 +263,9 @@ Route::middleware(['auth.or.fail', 'verified'])->group(function () {
                 Route::put('{feedback}/status', 'updateStatus')->name('updateStatus');
                 Route::delete('{feedback}', 'destroy')->name('destroy');
             });
+
+            Route::put('admin/recalled-questions/{recalled}/status', [RecalledQuestionController::class, 'updateStatus'])
+                ->name('admin.recalled-questions.updateStatus');
 
             Route::controller(AnnouncementController::class)->prefix('admin/announcements')->name('admin.announcements.')->group(function () {
                 Route::post('/', 'store')->name('store');

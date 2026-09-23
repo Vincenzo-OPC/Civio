@@ -19,6 +19,7 @@ import {
     Eye,
     Megaphone,
     MessageSquareWarning,
+    NotebookPen,
 } from 'lucide-react';
 import React from 'react';
 import AppLogo from '@/components/layout/app-logo';
@@ -119,6 +120,11 @@ const adminCoreItems: NavItem[] = [
         href: '/admin/feedbacks',
         icon: MessageSquareWarning,
         badge: 0, // Will be set dynamically
+    },
+    {
+        title: 'Practice queue',
+        href: '/admin/recalled-questions',
+        icon: NotebookPen,
     },
     {
         title: 'Legal Content',

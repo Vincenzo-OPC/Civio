@@ -41,6 +41,7 @@ import type {
 import { BookmarkToDrillSetDialog } from './bookmark-to-drill-set-dialog';
 import { ExplainWithDexter } from './explain-with-dexter';
 import QuestionPalettePanel from './question-palette-panel';
+import { RememberQuestionForm } from './remember-question-form';
 
 interface ReviewExamViewProps {
     details: SimulationDetails;
@@ -1543,6 +1544,9 @@ export function ReviewExamView({
                                                 chosenIndex={
                                                     answers[currentIdx]
                                                 }
+                                            />
+                                            <RememberQuestionForm
+                                                question={currentQuestion}
                                             />
                                         </>
                                     )}
