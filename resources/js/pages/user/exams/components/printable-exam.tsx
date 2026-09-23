@@ -1285,12 +1285,12 @@ export function PrintableExam({
                         <div>
                             <img
                                 src="/images/hiraya_logo_cropped.png"
-                                alt="Hiraya Review"
+                                alt="CIVIO"
                                 className="print-header-logo"
                             />
                             <h1>{title}</h1>
                         </div>
-                        <p>Mock Examination Booklet &bull; Hiraya Review</p>
+                        <p>Mock Examination Booklet &bull; CIVIO</p>
                         <div className="print-not-for-sale">NOT FOR SALE</div>
                     </div>
 
@@ -1333,7 +1333,7 @@ export function PrintableExam({
                     </div>
 
                     <div className="print-running-footer">
-                        Hiraya Review &bull; Mock Examination &bull; NOT FOR
+                        CIVIO &bull; Mock Examination &bull; NOT FOR
                         SALE &bull; Unauthorized reproduction is strictly
                         prohibited
                     </div>
@@ -1375,7 +1375,7 @@ export function PrintableExam({
                             </div>
 
                             <div className="print-running-footer">
-                                Hiraya Review &bull; Mock Examination &bull; NOT
+                                CIVIO &bull; Mock Examination &bull; NOT
                                 FOR SALE &bull; Unauthorized reproduction is
                                 strictly prohibited
                             </div>
@@ -1482,7 +1482,7 @@ export function PrintableExam({
                     </div>
 
                     <div className="print-running-footer">
-                        Hiraya Review &bull; Mock Examination &bull; NOT FOR
+                        CIVIO &bull; Mock Examination &bull; NOT FOR
                         SALE &bull; Unauthorized reproduction is strictly
                         prohibited
                     </div>
@@ -1528,7 +1528,7 @@ export function PrintableExam({
                     </div>
 
                     <div className="print-running-footer">
-                        Hiraya Review &bull; Mock Examination &bull; NOT FOR
+                        CIVIO &bull; Mock Examination &bull; NOT FOR
                         SALE &bull; Unauthorized reproduction is strictly
                         prohibited
                     </div>

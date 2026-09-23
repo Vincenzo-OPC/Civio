@@ -33,7 +33,7 @@ export default function Guide() {
             <AppLayout breadcrumbs={Guide.layout.breadcrumbs}>
                 <Head>
                     <title>
-                        Ultimate CSE Preparation Guide | Hiraya Review
+                        Ultimate CSE Preparation Guide | CIVIO
                     </title>
                     <meta
                         name="description"
@@ -41,7 +41,7 @@ export default function Guide() {
                     />
                     <meta
                         property="og:title"
-                        content="Ultimate CSE Preparation Guide | Hiraya Review"
+                        content="Ultimate CSE Preparation Guide | CIVIO"
                     />
                     <meta
                         property="og:description"
@@ -56,14 +56,14 @@ export default function Guide() {
     return (
         <>
             <Head>
-                <title>Ultimate CSE Preparation Guide | Hiraya Review</title>
+                <title>Ultimate CSE Preparation Guide | CIVIO</title>
                 <meta
                     name="description"
                     content="Discover the best study strategies, time-management tips, and subject coverage breakdowns for the Professional and Subprofessional Civil Service Examinations."
                 />
                 <meta
                     property="og:title"
-                    content="Ultimate CSE Preparation Guide | Hiraya Review"
+                    content="Ultimate CSE Preparation Guide | CIVIO"
                 />
                 <meta
                     property="og:description"

@@ -11,7 +11,7 @@ import {
     DialogTrigger,
 } from '@/components/ui/dialog';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Hiraya Review';
+const appName = import.meta.env.VITE_APP_NAME || 'CIVIO';
 const SUPPORT_BUBBLE_KEY = 'support_bubble_dismissal';
 
 export function SupportWidget() {

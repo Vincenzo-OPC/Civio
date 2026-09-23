@@ -107,7 +107,7 @@ export default function LearnIndex(props: LearnIndexProps) {
         <>
             <Head>
                 <title>
-                    Civil Service Study Hub & Syllabus Guides | Hiraya Review
+                    Civil Service Study Hub & Syllabus Guides | CIVIO
                 </title>
                 <meta
                     name="description"
@@ -115,7 +115,7 @@ export default function LearnIndex(props: LearnIndexProps) {
                 />
                 <meta
                     property="og:title"
-                    content="Civil Service Study Hub & Syllabus Guides | Hiraya Review"
+                    content="Civil Service Study Hub & Syllabus Guides | CIVIO"
                 />
                 <meta
                     property="og:description"

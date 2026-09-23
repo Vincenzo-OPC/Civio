@@ -127,7 +127,7 @@ export function HubView({
                         No Practice Drills Available
                     </h3>
                     <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                        Practice drill modules are coming soon! Hiraya Review is
+                        Practice drill modules are coming soon! CIVIO is
                         currently compiling comprehensive exam question banks.
                     </p>
                 </div>

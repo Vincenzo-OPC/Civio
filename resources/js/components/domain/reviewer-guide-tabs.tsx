@@ -404,7 +404,7 @@ export function ReviewerGuideTabs({
                                 Feature-by-Feature User Manual
                             </h3>
                             <p className="text-sm leading-relaxed text-blue-800/90 dark:text-blue-300/80">
-                                Don't feel overwhelmed! Hiraya Review is
+                                Don't feel overwhelmed! CIVIO is
                                 designed with modular tools so you can practice
                                 at your own pace. Here is how each tool works
                                 and when to use it during your preparation

@@ -55,7 +55,7 @@ export default function Support() {
                                     Contact Support
                                 </h1>
                                 <p className="mt-1.5 text-base leading-relaxed text-muted-foreground">
-                                    Have a question or feedback? Hiraya Review
+                                    Have a question or feedback? CIVIO
                                     is here to help you succeed.
                                 </p>
                             </div>
@@ -75,7 +75,7 @@ export default function Support() {
                                         <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                                             Found a buggy question or want to
                                             suggest an explanation improvement?
-                                            Contact Hiraya Review directly.
+                                            Contact CIVIO directly.
                                         </p>
                                     </div>
                                 </Card>
@@ -89,7 +89,7 @@ export default function Support() {
                                             Unofficial Portal Note
                                         </h3>
                                         <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                                            Please note that Hiraya Review
+                                            Please note that CIVIO
                                             cannot answer official Civil Service
                                             Commission schedule or processing
                                             questions. Contact the CSC directly
@@ -223,7 +223,7 @@ export default function Support() {
                                                             e.target.value,
                                                         )
                                                     }
-                                                    placeholder="How can Hiraya Review help you? Please describe your request or question in detail..."
+                                                    placeholder="How can CIVIO help you? Please describe your request or question in detail..."
                                                     className={`w-full rounded-lg border bg-white px-4 py-2.5 text-sm text-foreground transition focus:border-blue-500 focus:outline-none dark:bg-slate-900 ${
                                                         errors.message
                                                             ? 'border-red-500'

@@ -30,7 +30,7 @@ export default function ErrorPage({ status }: ErrorPageProps) {
 
     const description =
         {
-            503: 'Sorry, Hiraya Review is undergoing maintenance. Please check back soon.',
+            503: 'Sorry, CIVIO is undergoing maintenance. Please check back soon.',
             500: 'Whoops, something went wrong on the server.',
             404: 'Sorry, the page you are looking for could not be found.',
             403: 'Sorry, you are forbidden from accessing this page.',

@@ -13,7 +13,7 @@ test('pwa assets exist in public folder', function () {
     $manifestJson = json_decode($manifestContent, true);
 
     expect($manifestJson)->toBeArray();
-    expect($manifestJson['short_name'])->toBe('Hiraya Review');
+    expect($manifestJson['short_name'])->toBe('CIVIO');
     expect($manifestJson['display'])->toBe('standalone');
     expect($manifestJson)->toHaveKey('id');
 });

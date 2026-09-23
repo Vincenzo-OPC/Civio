@@ -6,7 +6,7 @@ import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
 import SettingsLayout from '@/layouts/settings/layout';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Hiraya Review';
+const appName = import.meta.env.VITE_APP_NAME || 'CIVIO';
 
 createServer((page) =>
     createInertiaApp({

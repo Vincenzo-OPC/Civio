@@ -13,7 +13,7 @@ import { initSmartBackTracking, getOriginTitle } from '@/lib/smart-back';
 import type { Auth } from './types/auth';
 // Echo initialization moved to specific components to save connections
 
-const appName = import.meta.env.VITE_APP_NAME || 'Hiraya Review';
+const appName = import.meta.env.VITE_APP_NAME || 'CIVIO';
 
 const componentCache = new Map<string, any>();
 

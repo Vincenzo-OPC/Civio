@@ -1,12 +1,12 @@
 ---
 name: codebase-architecture
 description: >
-  Enforces the Hiraya Review project's file structure, import conventions, and component placement rules.
+  Enforces the CIVIO project's file structure, import conventions, and component placement rules.
   Activate when creating new files, moving existing files, refactoring imports, or reviewing architecture.
   This skill contains a concrete file-by-file migration manifest — follow it exactly.
 ---
 
-# Hiraya Review — Codebase Architecture
+# CIVIO — Codebase Architecture
 
 ## Golden Rule
 

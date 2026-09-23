@@ -74,13 +74,13 @@ export default function Terms({ terms }: TermsProps) {
                                             2. Description of Service
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Hiraya Review provides practice
+                                            CIVIO provides practice
                                             exams, category-specific drills,
                                             AI-assisted question generation, and
                                             score analytics tailored for the
                                             Philippine Civil Service Exam
                                             (Professional and Sub-Professional
-                                            levels). Hiraya Review provides both
+                                            levels). CIVIO provides both
                                             free base resources and customizable
                                             exam simulators.
                                         </p>
@@ -92,11 +92,11 @@ export default function Terms({ terms }: TermsProps) {
                                         </h2>
                                         <p className="text-rose-650 text-base leading-relaxed font-semibold text-foreground text-muted-foreground dark:text-rose-400">
                                             This platform is an independent
-                                            study resource. Hiraya Review is not
+                                            study resource. CIVIO is not
                                             officially connected to, endorsed
                                             by, or affiliated with the Civil
                                             Service Commission (CSC) of the
-                                            Philippines. Hiraya Review does not
+                                            Philippines. CIVIO does not
                                             guarantee passing scores on actual
                                             CSC examinations; all material is
                                             intended for practice and education
@@ -124,7 +124,7 @@ export default function Terms({ terms }: TermsProps) {
                                                 your login credentials secure.
                                             </li>
                                             <li>
-                                                Hiraya Review reserves the right
+                                                CIVIO reserves the right
                                                 to suspend accounts that show
                                                 signs of automated bot abuse,
                                                 scraping, or commercial resale.
@@ -137,7 +137,7 @@ export default function Terms({ terms }: TermsProps) {
                                             5. Fair Use & Prohibited Acts
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Hiraya Review's question bank and
+                                            CIVIO's question bank and
                                             study materials are protected by
                                             intellectual property guidelines.
                                             You are prohibited from using
@@ -156,7 +156,7 @@ export default function Terms({ terms }: TermsProps) {
                                             Service
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Hiraya Review reserves the right to
+                                            CIVIO reserves the right to
                                             modify, suspend, discontinue, or
                                             completely close this project and
                                             terminate the service (or any
@@ -165,7 +165,7 @@ export default function Terms({ terms }: TermsProps) {
                                             notice, and without any form of
                                             liability to you. As a free
                                             educational platform, you agree that
-                                            Hiraya Review has no obligation to
+                                            CIVIO has no obligation to
                                             maintain, host, or guarantee
                                             continuous availability of the
                                             platform or your historical practice

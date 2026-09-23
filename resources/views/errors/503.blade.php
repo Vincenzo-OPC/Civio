@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintenance Mode - Hiraya Review</title>
+    <title>Maintenance Mode - CIVIO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -21,7 +21,7 @@
         </div>
         <h1 class="text-3xl font-black tracking-tight text-slate-900 mb-4">Under Maintenance</h1>
         <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-            Hiraya Review is currently undergoing scheduled maintenance to improve the platform. We'll be back online shortly. Thank you for your patience!
+            CIVIO is currently undergoing scheduled maintenance to improve the platform. We'll be back online shortly. Thank you for your patience!
         </p>
         <div class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-50">
             Check back in a few minutes

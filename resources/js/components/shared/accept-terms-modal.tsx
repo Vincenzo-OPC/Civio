@@ -60,7 +60,7 @@ export default function AcceptTermsModal({ isOpen }: Props) {
                                     Terms of Service
                                 </h3>
                                 <p className="text-sm leading-relaxed">
-                                    By using Hiraya Review, you agree to comply
+                                    By using CIVIO, you agree to comply
                                     with the terms and policies. You are
                                     responsible for maintaining account
                                     confidentiality and all activities under
@@ -79,7 +79,7 @@ export default function AcceptTermsModal({ isOpen }: Props) {
                                     Privacy Policy
                                 </h3>
                                 <p className="text-sm leading-relaxed">
-                                    Hiraya Review collects and processes
+                                    CIVIO collects and processes
                                     personal data to provide and improve the
                                     services. Your data is protected and will
                                     not be shared with third parties without

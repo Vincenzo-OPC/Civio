@@ -1,4 +1,4 @@
-# Local Docker stack for Hiraya Review on MSI.
+# Local Docker stack for CIVIO on MSI.
 # Does NOT bind :8642 (Hermes). App on host :8080, Postgres on host :5433.
 services:
   db:

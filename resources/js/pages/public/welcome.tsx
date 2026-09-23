@@ -105,11 +105,11 @@ export default function Welcome() {
         },
         {
             question: `Is the question bank updated for the ${new Date().getFullYear()} exam syllabus?`,
-            answer: 'Yes! Hiraya Review continuously updates its question database to align with the latest CSC announcements, coverage patterns, and historical question profiles.',
+            answer: 'Yes! CIVIO continuously updates its question database to align with the latest CSC announcements, coverage patterns, and historical question profiles.',
         },
         {
             question: 'Can I use the platform for free?',
-            answer: 'Absolutely. Hiraya Review offers free access to its foundation study tracks and basic question pools.',
+            answer: 'Yes. Guests can take mocks, open the scorecard, read rationales, and start another mock. Sign in only to sync attempts across devices.',
         },
         {
             question: 'Where do the questions come from?',
@@ -120,14 +120,14 @@ export default function Welcome() {
     const websiteSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        name: 'Hiraya Review',
+        name: 'CIVIO',
         alternateName: 'Civil Service Exam Reviewer',
-        url: 'https://hirayareview.com',
+        url: 'https://civio.ph',
         description:
             'Ace the Philippine Civil Service Exam with confidence. Real mock tests, custom study plans, high-yield lessons, and targeted drills.',
         potentialAction: {
             '@type': 'SearchAction',
-            target: 'https://hirayareview.com/learn?search={search_term_string}',
+            target: 'https://civio.ph/learn?search={search_term_string}',
             'query-input': 'required name=search_term_string',
         },
     };
@@ -140,8 +140,8 @@ export default function Welcome() {
             'Ace the Philippine Civil Service Exam (Professional & Subprofessional levels) with interactive mock tests, smart study plans, and targeted drills.',
         provider: {
             '@type': 'EducationalOrganization',
-            name: 'Hiraya Review',
-            sameAs: 'https://hirayareview.com',
+            name: 'CIVIO',
+            sameAs: 'https://civio.ph',
         },
     };
 
@@ -164,11 +164,11 @@ export default function Welcome() {
                 <title>{`Civil Service Exam Reviewer ${new Date().getFullYear()}`}</title>
                 <meta
                     name="description"
-                    content="Ace the Philippine Civil Service Exam with confidence. Hiraya Review offers realistic Professional & Subprofessional mock exams, smart study plans, high-yield learning modules, and targeted drills. Free forever base access!"
+                    content="Ace the Philippine Civil Service Exam with confidence. CIVIO offers realistic Professional & Subprofessional mock exams, smart study plans, high-yield learning modules, and targeted drills. Free forever base access!"
                 />
                 <meta
                     property="og:title"
-                    content={`Civil Service Exam Reviewer ${new Date().getFullYear()} | Hiraya Review`}
+                    content={`Civil Service Exam Reviewer ${new Date().getFullYear()} | CIVIO`}
                 />
                 <meta
                     property="og:description"
@@ -203,16 +203,13 @@ export default function Welcome() {
 
                                 <h1 className="text-2xl leading-tight font-bold text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
                                     Master the Civil Service Exam with{' '}
-                                    <span className="text-primary">
-                                        Confidence
-                                    </span>
+                                    <span className="text-primary">CIVIO</span>
                                 </h1>
                                 <p className="text-lg leading-relaxed text-muted-foreground">
-                                    Accelerate your preparation with an
-                                    AI-assisted question bank, realistic timed
-                                    mock exams, and performance analytics
-                                    designed to support structured Civil Service
-                                    Exam review.
+                                    Study with Dexter. Take a guest mock, read
+                                    every rationale, and ask Dexter why an
+                                    answer is right or wrong. Sign in only if
+                                    you want scores synced.
                                 </p>
 
                                 <div className="flex flex-wrap gap-4 pt-2">
@@ -633,10 +630,10 @@ export default function Welcome() {
                             <span className="font-semibold text-foreground">
                                 Disclaimer:
                             </span>{' '}
-                            Hiraya Review is an independent learning platform.
-                            Test questions and study modules are AI-assisted
-                            practice items structured around official Civil
-                            Service Commission (CSC) syllabus guidelines.
+                            CIVIO is an independent study platform. Dexter
+                            explains practice items only. CIVIO is not
+                            affiliated with the Civil Service Commission (CSC)
+                            and is not official CSDEx software.
                         </p>
                     </Section>
                 </main>

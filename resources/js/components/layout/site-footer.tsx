@@ -47,7 +47,7 @@ export default function Footer() {
                                 </span>
 
                                 <p className="text-sm leading-relaxed font-medium text-amber-950/80 dark:text-slate-300">
-                                    Hiraya Review is an independent educational
+                                    CIVIO is an independent educational
                                     learning platform created solely for
                                     examination preparation and reviewer
                                     practice simulation.
@@ -65,8 +65,9 @@ export default function Footer() {
                                     All mock examinations, reviewer materials,
                                     explanations, and practice content are
                                     independently created for educational
-                                    purposes only. Some questions and learning
-                                    modules may be AI-assisted or AI-generated.
+                                    purposes only. CIVIO is not official CSDEx
+                                    software. Dexter is the study tutor inside
+                                    CIVIO and does not speak for the CSC.
                                 </p>
                             </div>
                         </div>
@@ -80,7 +81,7 @@ export default function Footer() {
                 <div className="flex flex-col items-center justify-between gap-5 text-xs font-semibold text-muted-foreground md:flex-row">
                     {/* Copyright */}
                     <div className="order-3 text-center md:order-1 md:text-left">
-                        © {currentYear} Hiraya Review
+                        © {currentYear} CIVIO
                     </div>
 
                     {/* Footer Navigation */}

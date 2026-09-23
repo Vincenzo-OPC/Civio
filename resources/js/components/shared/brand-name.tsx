@@ -3,9 +3,5 @@ interface BrandNameProps {
 }
 
 export default function BrandName({ className = '' }: BrandNameProps) {
-    return (
-        <span className={className}>
-            Hiraya <span className="font-black text-primary">Review</span>
-        </span>
-    );
+    return <span className={className}>CIVIO</span>;
 }

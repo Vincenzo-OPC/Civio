@@ -124,7 +124,7 @@ export function ModulesGrid({
                     No Learning Modules Available
                 </h3>
                 <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                    Hiraya Review is currently designing bite-sized conceptual
+                    CIVIO is currently designing bite-sized conceptual
                     lessons, strategy guides, and detailed category rationales.
                 </p>
             </div>

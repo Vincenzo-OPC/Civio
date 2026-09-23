@@ -5,7 +5,7 @@ description: >
   Activate when implementing forms, controllers, models, authentication, or rendering user-generated content.
 ---
 
-# Hiraya Review — Comprehensive Security Guidelines
+# CIVIO — Comprehensive Security Guidelines
 
 This document outlines the strict security standards that MUST be adhered to when developing both the backend (Laravel) and frontend (React/Inertia) of the application. Security is a top priority to protect user data and maintain platform integrity.
 

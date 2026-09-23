@@ -1,6 +1,6 @@
-# Hiraya Review — Architecture & Technical Reference (Archived)
+# CIVIO — Architecture & Technical Reference (Archived)
 
-> **Archive Notice:** This document serves as the extended technical reference and architecture manual for Hiraya Review. For the primary user-facing documentation, quick-start guide, and feature highlights, refer to [README.md](file:///c:/Dev/laravel/cse_reviewer/README.md).
+> **Archive Notice:** This document serves as the extended technical reference and architecture manual for CIVIO. For the primary user-facing documentation, quick-start guide, and feature highlights, refer to [README.md](file:///c:/Dev/laravel/cse_reviewer/README.md).
 
 ---
 
@@ -23,7 +23,7 @@
 
 ## System Overview
 
-Hiraya Review is a single-page application (SPA) designed as an AI-augmented preparation platform for the Philippine Civil Service Examination (CSE). It provides role-based workspaces for both **Students/Users** and **Platform Administrators**.
+CIVIO is a single-page application (SPA) designed as an AI-augmented preparation platform for the Philippine Civil Service Examination (CSE). It provides role-based workspaces for both **Students/Users** and **Platform Administrators**.
 
 ### High-Level Architecture Diagram
 
@@ -439,7 +439,7 @@ cse_reviewer/
 
 ```bash
 # Clone the repository
-git clone https://github.com/codebykenth/hiraya-review.git
+git clone https://github.com/Vincenzo-OPC/Civio.git
 cd hiraya-review
 
 # Run the automated bootstrap script
@@ -449,7 +449,7 @@ composer setup
 ### Environment Configuration (`.env`)
 
 ```env
-APP_NAME="Hiraya Review"
+APP_NAME="CIVIO"
 APP_ENV=local
 APP_URL=http://localhost:8000
 

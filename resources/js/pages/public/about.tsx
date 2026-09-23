@@ -18,7 +18,7 @@ export default function About() {
         {
             title: 'Excellence in Education',
             description:
-                'Hiraya Review believes in providing the highest quality review materials tailored strictly to the Philippine Civil Service Commission scope.',
+                'CIVIO believes in providing the highest quality review materials tailored strictly to the Philippine Civil Service Commission scope.',
             icon: (
                 <Target className="size-6 text-blue-600 dark:text-blue-400" />
             ),
@@ -27,14 +27,14 @@ export default function About() {
         {
             title: 'Radical Accessibility',
             description:
-                'Education should not be a luxury. Hiraya Review provides powerful, AI-driven study tools completely free to help every Filipino succeed.',
+                'Education should not be a luxury. CIVIO provides powerful, AI-driven study tools completely free to help every Filipino succeed.',
             icon: <Heart className="size-6 text-rose-600 dark:text-rose-400" />,
             bg: 'bg-rose-100 dark:bg-rose-900/30',
         },
         {
             title: 'Continuous Innovation',
             description:
-                'By leveraging modern technology, Hiraya Review adapts the learning engine to target your specific weaknesses dynamically.',
+                'By leveraging modern technology, CIVIO adapts the learning engine to target your specific weaknesses dynamically.',
             icon: (
                 <Sparkles className="size-6 text-amber-600 dark:text-amber-400" />
             ),
@@ -43,7 +43,7 @@ export default function About() {
         {
             title: 'Data Privacy',
             description:
-                'Hiraya Review respects your data. The platform runs securely without selling your information to third-party brokers.',
+                'CIVIO respects your data. The platform runs securely without selling your information to third-party brokers.',
             icon: (
                 <ShieldCheck className="size-6 text-emerald-600 dark:text-emerald-400" />
             ),
@@ -53,7 +53,7 @@ export default function About() {
 
     return (
         <div className="flex min-h-screen flex-col bg-slate-50 dark:bg-[#0a0a0a]">
-            <Head title="About - Hiraya Review" />
+            <Head title="About - CIVIO" />
             <SiteHeader activeNav="home" />
 
             <main className="flex-1">
@@ -66,7 +66,7 @@ export default function About() {
                                 Empowering Filipinos to Serve the Nation
                             </h1>
                             <p className="mb-8 text-lg leading-relaxed text-slate-600 sm:text-xl dark:text-slate-400">
-                                Hiraya Review was built with a single vision: to
+                                CIVIO was built with a single vision: to
                                 democratize access to high-quality Civil Service
                                 Exam preparation for every aspiring public
                                 servant in the Philippines.
@@ -94,7 +94,7 @@ export default function About() {
                                 <p>
                                     I created{' '}
                                     <strong className="text-slate-900 dark:text-white">
-                                        Hiraya Review
+                                        CIVIO
                                     </strong>{' '}
                                     to break down these barriers. By combining
                                     modern web technologies, artificial

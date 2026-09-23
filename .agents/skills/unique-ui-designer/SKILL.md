@@ -1,11 +1,11 @@
 ---
 name: unique-ui-designer
 description: >
-  Enforces the Hiraya Review brand identity and prevents generic AI-generated UI patterns.
+  Enforces the CIVIO brand identity and prevents generic AI-generated UI patterns.
   Activate when building, refactoring, or reviewing any frontend component to ensure premium design.
 ---
 
-# Hiraya Review — Premium UI Design System & Refactoring Guide
+# CIVIO — Premium UI Design System & Refactoring Guide
 
 ## Golden Rule
 
@@ -13,7 +13,7 @@ description: >
 
 ## Brand Identity & Aesthetics
 
-- **App Name:** Hiraya Review
+- **App Name:** CIVIO
 - **Theme:** Deep navy/slate dark mode with luminous accent colors. Vibrant, high-contrast, and clean in light mode.
 - **Personality:** Professional, modern, engaging study platform.
 - **Aesthetics:** Glassmorphism, subtle micro-animations, rich typography, depth through borders and strategic glows (not just basic drop shadows).

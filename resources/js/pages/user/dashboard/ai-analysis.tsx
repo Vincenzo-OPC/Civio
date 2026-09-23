@@ -500,8 +500,8 @@ export default function AiAnalysisReport({
             <Head>
                 <title>
                     {isAiMode
-                        ? 'AI Readiness Diagnostic & Prediction Report | Hiraya Review'
-                        : 'Readiness Diagnostic & Prediction Report | Hiraya Review'}
+                        ? 'AI Readiness Diagnostic & Prediction Report | CIVIO'
+                        : 'Readiness Diagnostic & Prediction Report | CIVIO'}
                 </title>
                 <meta
                     name="description"
@@ -617,7 +617,7 @@ export default function AiAnalysisReport({
                                 </h3>
                                 <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-500 dark:text-slate-400">
                                     {isAiMode
-                                        ? 'Hiraya AI is evaluating your historical exam responses, calculating subtopic performance, and scheduling your personalized study pathway...'
+                                        ? 'Dexter is evaluating your historical exam responses, calculating subtopic performance, and scheduling your personalized study pathway...'
                                         : 'Our system is evaluating your historical exam responses, calculating subtopic performance, and scheduling your personalized study pathway...'}
                                 </p>
                             </Card>

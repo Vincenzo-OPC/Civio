@@ -7,7 +7,7 @@ export default function AppLogoIcon({
     return (
         <img
             src="/images/hiraya_logo_cropped.png"
-            alt="Hiraya Review Logo"
+            alt="CIVIO Logo"
             className={className}
             {...props}
         />

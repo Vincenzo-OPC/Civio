@@ -1,12 +1,14 @@
-# Hiraya Review — Civil Service Exam Reviewer & AI Study Platform
+# CIVIO — Civil Service Intelligence OS
 
-Hiraya Review is a full-stack, AI-powered web platform built for Philippine Civil Service Examination (CSE) aspirants (Professional & Subprofessional tracks). It helps users practice with realistic mock exams and targeted category drills, generate custom study schedules, track predictive mastery analytics, and study interactive learn modules with automated AI-assisted explanations and diagrams.
+CIVIO is the study platform for Philippine Civil Service Examination aspirants (Professional and Subprofessional). Dexter is the tutor inside it: plain-language explanations on review, not a generic assistant and not official exam software.
+
+CIVIO is an independent study tool. It is not affiliated with the Civil Service Commission (CSC) and it is not official CSDEx software.
 
 ---
 
 ## What It Does
 
-Traditional Civil Service Exam review materials rely on static PDFs, outdated question banks, and generic scoring without personalized diagnostic feedback. Hiraya Review solves this by combining:
+Traditional Civil Service Exam review materials rely on static PDFs, outdated question banks, and generic scoring without personalized diagnostic feedback. CIVIO solves this by combining:
 
 - **Dual-Track Mock Exams & Focused Drills:** Realistic timed mock exams for CSE Professional and Subprofessional levels with official category weightings, question palettes, instant scoring, and granular post-exam answer reviews with SVG diagrams.
 - **AI-Powered Question & Visual Generation:** On-demand batch generation of high-quality exam questions with Google Gemini API, complete with subcategory-specific prompt engineering, bilingual support (English & Filipino/Tagalog), custom SVG visuals for Abstract Reasoning, and SVG charts for Data Interpretation.
@@ -17,7 +19,7 @@ Traditional Civil Service Exam review materials rely on static PDFs, outdated qu
 - **Syllabus & Exam Dates Management:** Dynamic reference viewer for the official Civil Service Commission (CSC) category/subcategory syllabus and countdown trackers for upcoming nationwide exam dates.
 - **Polymorphic Issue Reporting & Triage:** Flag inaccurate questions or learn modules with user-driven feedback workflows and an administrative triage dashboard.
 - **Granular Role-Based Access & Admin Control:** Comprehensive admin suite for managing questions, drafts, modules, users, announcements, legal documents, cache flushing, and dynamic view-level role permissions.
-- **Guest Free Mock Exam:** Low-barrier, single free mock exam for unauthenticated visitors with frictionless onboarding.
+- **Guest practice:** Guests can finish a mock, open the scorecard, read rationales, and start another mock. Sign-in only syncs history. Set `CIVIO_GUEST_UNLIMITED=true` (default for local and testing).
 - **Real-Time WebSocket Feedback:** Pusher-powered live updates for asynchronous AI generation jobs and platform alerts.
 - **Modern Aesthetic & Theme Customization:** Dark/light mode support built with React 19, Tailwind CSS v4, Lucide icons, and 30+ accessible shadcn/ui primitives.
 
@@ -142,8 +144,8 @@ Traditional Civil Service Exam review materials rely on static PDFs, outdated qu
 
 ```bash
 # Clone the repository
-git clone https://github.com/codebykenth/hiraya-review.git
-cd hiraya-review
+git clone https://github.com/Vincenzo-OPC/Civio.git
+cd Civio
 
 # Run automated setup
 composer setup
@@ -164,7 +166,7 @@ Update your `.env` file with database credentials and API keys:
 
 ```env
 # Application
-APP_NAME="Hiraya Review"
+APP_NAME="CIVIO"
 APP_ENV=local
 APP_URL=http://localhost:8000
 
@@ -175,6 +177,17 @@ DB_PORT=5432
 DB_DATABASE=cse_reviewer
 DB_USERNAME=postgres
 DB_PASSWORD=your_password
+
+# Dexter — Explain with Dexter on review. stub works offline.
+# openai, groq, gemini, xai, or an OpenAI-compatible base URL.
+CIVIO_GUEST_UNLIMITED=true
+CIVIO_EXPLAIN_PROVIDER=stub
+CIVIO_EXPLAIN_API_KEY=
+CIVIO_EXPLAIN_MODEL=
+CIVIO_EXPLAIN_BASE_URL=
+CIVIO_CONTENT_SHIELD=false
+CIVIO_TUTOR_NAME=Dexter
+CIVIO_DOMAIN=civio.ph
 
 # AI Services
 GEMINI_API_KEY=your_gemini_api_key_here
@@ -248,10 +261,10 @@ The project includes a production-ready Dockerfile based on `serversideup/php:8.
 
 ```bash
 # Build the Docker image
-docker build -t hiraya-review .
+docker build -t civio .
 
 # Run the container
-docker run -p 8080:8080 --env-file .env hiraya-review
+docker run -p 8080:8080 --env-file .env civio
 ```
 
 Deployment features:
