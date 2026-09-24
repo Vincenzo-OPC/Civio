@@ -14,10 +14,9 @@ from Hiraya (see "How to keep this current" below).
 | Civio baseline | `d3f0368` (5 Oct 2026, "Civio baseline from desktop Hiraya"), tag `hiraya-baseline`: upstream `e91c26d` plus GT's desktop study patches (`718763a` → `d3f0368`) |
 | Civio versions | `v0.1.0-phase0` (`647e484`), `v0.1.5-phase0.5` (Phase 0.5 + Copy for AI + clone removal) |
 
-**Upstream changes not in Civio:** one. `7b9f6bb` makes
-`app/Services/AiAnalysisOrchestrator.php` treat a non-array `analysis_json` as
-`[]` and default missing keys. Civio still has the pre-fix lines. It is a small,
-safe bug fix; cherry-picking it is a decision for GT.
+**Upstream changes not in Civio:** none as of `7b9f6bb`. That last upstream
+commit was **pulled in** on 7 Oct 2026 with `git cherry-pick -x` (see "Upstream
+fixes pulled in" below).
 
 **Diff size, upstream tip → Civio** (at `ba8c622`, before this doc and the changelog
 tooling): 182 files, +20,040 / −10,936 lines. 84 added, 90 modified, 8 deleted.
@@ -102,6 +101,12 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Inertia pages lazy-loaded (no eager `import.meta.glob`), so routes split into chunks. | The main bundle was ~3 MB eager. | `6277c17` |
 | Hand-written `public/sw.js` replaced by vite-plugin-pwa `injectManifest` (`resources/js/sw.ts`): exams, auth, dashboard and other sensitive routes are NetworkOnly; prompt-to-update. | Old SW risked caching exam payloads. | `9fe51a4`, `647e484` |
 | Sentry Laravel installed but inactive unless `SENTRY_LARAVEL_DSN` is set. | Opt-in error reporting. | `9fe51a4` |
+
+### Upstream fixes pulled in
+
+| Upstream commit | What | Civio commit |
+| --- | --- | --- |
+| `7b9f6bb` (25 Sep 2026) | `AiAnalysisOrchestrator::resolveAnalysis` treats a non-array `analysis_json` as `[]` and defaults missing `subject_breakdowns`, `critical_weaknesses`, `top_strengths` (`[]`) and `readiness_index` (`0`) when merging fresh drill results. Applied cleanly; Pest coverage added in `tests/Feature/Services/AiAnalysisOrchestratorTest.php`. | the `fix(analytics)` cherry-pick (message ends "cherry picked from commit 7b9f6bb…") |
 
 ### Docs, tests and agent setup
 
