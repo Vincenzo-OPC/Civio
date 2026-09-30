@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+﻿import { useCallback, useMemo } from 'react';
 import { fallbackDemographicQuestions } from '@/data/fallback-demographics';
 import type { Question } from '../types';
 import {
@@ -7,6 +7,8 @@ import {
     EXAM_CONSTANTS,
     shuffleHardBiased,
     dedupeNearDuplicateStems,
+    stemDedupeKey,
+    preferUniqueStemsFirst,
 } from '../utils/exam-utils';
 
 export function shuffleOptionsForQuestion(q: Question): Question {
@@ -149,12 +151,24 @@ export function useExamPoolBuilder({
 
                 const picked: Question[] = [];
 
-                const pushWithLimit = (items: Question[], quota: number) => {
+                /**
+                 * Phase A (unique): skip near-duplicate stems.
+                 * Phase B (fill): allow variants / near-dups so quota can reach count.
+                 */
+                const pushWithLimit = (
+                    items: Question[],
+                    quota: number,
+                    allowNearDup = false,
+                ) => {
                     let added = 0;
-                    const candidates = dedupeNearDuplicateStems([
-                        ...picked,
-                        ...items,
-                    ]).filter((q) => !picked.some((p) => p.id === q.id));
+                    const candidates = allowNearDup
+                        ? items.filter(
+                              (q) => !picked.some((p) => p.id === q.id),
+                          )
+                        : dedupeNearDuplicateStems([
+                              ...picked,
+                              ...items,
+                          ]).filter((q) => !picked.some((p) => p.id === q.id));
 
                     for (const q of candidates) {
                         if (added >= quota) {
@@ -165,26 +179,23 @@ export function useExamPoolBuilder({
                             continue;
                         }
 
-                        // Near-dup against already picked stems
-                        const prefix =
-                            EXAM_CONSTANTS.STEM_DEDUP_PREFIX_LEN;
-                        const key = (q.stem || '')
-                            .toLowerCase()
-                            .replace(/\s+/g, ' ')
-                            .trim()
-                            .slice(0, prefix);
-                        if (
-                            key &&
-                            picked.some(
-                                (p) =>
-                                    (p.stem || '')
-                                        .toLowerCase()
-                                        .replace(/\s+/g, ' ')
-                                        .trim()
-                                        .slice(0, prefix) === key,
-                            )
-                        ) {
-                            continue;
+                        if (!allowNearDup) {
+                            const key = stemDedupeKey(
+                                q.stem || '',
+                                EXAM_CONSTANTS.STEM_DEDUP_PREFIX_LEN,
+                            );
+                            if (
+                                key &&
+                                picked.some(
+                                    (p) =>
+                                        stemDedupeKey(
+                                            p.stem || '',
+                                            EXAM_CONSTANTS.STEM_DEDUP_PREFIX_LEN,
+                                        ) === key,
+                                )
+                            ) {
+                                continue;
+                            }
                         }
 
                         picked.push(q);
@@ -195,23 +206,31 @@ export function useExamPoolBuilder({
                 const wrongQuota = Math.ceil(
                     count * EXAM_CONSTANTS.WRONG_PRIORITY_PERCENTAGE,
                 );
-                // Wrong retries: shuffle then hard-bias so tough misses come back more
+
+                // Prefer unique stems first within each priority band
                 const wrongPicked = shuffleHardBiased(
-                    fisherYatesShuffle(wrongFromSeen),
+                    preferUniqueStemsFirst(fisherYatesShuffle(wrongFromSeen)),
                 );
-                pushWithLimit(wrongPicked, wrongQuota);
+                pushWithLimit(wrongPicked, wrongQuota, false);
 
                 let remaining = count - picked.length;
 
                 if (remaining > 0) {
-                    // Unseen: hard-biased sample (prefer Analytical/Numerical/long stems)
-                    pushWithLimit(shuffleHardBiased(unseen), remaining);
+                    pushWithLimit(
+                        shuffleHardBiased(preferUniqueStemsFirst(unseen)),
+                        remaining,
+                        false,
+                    );
                 }
 
                 remaining = count - picked.length;
 
                 if (remaining > 0) {
-                    pushWithLimit(shuffleHardBiased(seenCorrect), remaining);
+                    pushWithLimit(
+                        shuffleHardBiased(preferUniqueStemsFirst(seenCorrect)),
+                        remaining,
+                        false,
+                    );
                 }
 
                 remaining = count - picked.length;
@@ -220,6 +239,7 @@ export function useExamPoolBuilder({
                     pushWithLimit(
                         shuffleHardBiased(fisherYatesShuffle(wrongPicked)),
                         remaining,
+                        false,
                     );
                 }
 
@@ -231,26 +251,33 @@ export function useExamPoolBuilder({
                             !picked.some((p) => p.id === q.id),
                     );
                     pushWithLimit(
-                        shuffleHardBiased(fbPool),
+                        shuffleHardBiased(preferUniqueStemsFirst(fbPool)),
                         count - picked.length,
+                        false,
                     );
                 }
 
-                while (picked.length < count && picked.length > 0) {
-                    picked.push(
-                        picked[
-                            Math.floor(
-                                (typeof crypto !== 'undefined' &&
-                                crypto.getRandomValues
-                                    ? crypto.getRandomValues(
-                                          new Uint32Array(1),
-                                      )[0] / (0xffffffff + 1)
-                                    : Math.random()) * picked.length,
-                            )
-                        ],
+                // FILL-TO-QUOTA: after unique stems exhausted, use shuffled variants
+                remaining = count - picked.length;
+                if (
+                    remaining > 0 &&
+                    EXAM_CONSTANTS.FILL_VARIANTS_AFTER_UNIQUE
+                ) {
+                    const leftover = preferUniqueStemsFirst(
+                        pool.filter(
+                            (q) => !picked.some((p) => p.id === q.id),
+                        ),
+                    );
+                    // Hard-bias still applies; variants allowed (allowNearDup=true)
+                    pushWithLimit(
+                        shuffleHardBiased(fisherYatesShuffle(leftover)),
+                        remaining,
+                        true,
                     );
                 }
 
+                // Absolute last resort: still short and pool fully used — stop short
+                // rather than cloning the same Question object (breaks scorecard).
                 return fisherYatesShuffle(picked.slice(0, count));
             };
 
@@ -326,10 +353,28 @@ export function useExamPoolBuilder({
                     }
                 }
 
+                // Category-level fill if subcategory splits left a shortfall
+                if (
+                    picked.length < targetCount &&
+                    EXAM_CONSTANTS.FILL_VARIANTS_AFTER_UNIQUE
+                ) {
+                    const need = targetCount - picked.length;
+                    const leftover = pool.filter(
+                        (q) => !picked.some((p) => p.id === q.id),
+                    );
+                    picked.push(
+                        ...pickFlat(leftover, need, catName),
+                    );
+                }
+
                 return fisherYatesShuffle(picked.slice(0, targetCount));
             };
 
             const scoredPool: Question[] = [];
+            const scoredTarget =
+                examId === 1
+                    ? EXAM_CONSTANTS.PROFESSIONAL_SCORED_ITEMS
+                    : EXAM_CONSTANTS.SUBPROFESSIONAL_SCORED_ITEMS;
 
             if (examId === 1) {
                 // Professional: 150 scored
@@ -359,6 +404,62 @@ export function useExamPoolBuilder({
                 scoredPool.push(
                     ...pickBalanced(generalPool, 8, 'General Information'),
                 );
+            }
+
+            // Exam-level safety net: if category pools still left us short, fill
+            // from remaining non-demographic items (variants OK). Prefer same
+            // Professional / Subprofessional category set.
+            if (
+                scoredPool.length < scoredTarget &&
+                EXAM_CONSTANTS.FILL_VARIANTS_AFTER_UNIQUE
+            ) {
+                const used = new Set(scoredPool.map((q) => q.id));
+                const preferredCats =
+                    examId === 1
+                        ? new Set([
+                              'Verbal Ability',
+                              'Analytical Ability',
+                              'Numerical Ability',
+                              'General Information',
+                          ])
+                        : new Set([
+                              'Verbal Ability',
+                              'Clerical Ability',
+                              'Numerical Ability',
+                              'General Information',
+                          ]);
+                const leftoverPreferred = shuffleHardBiased(
+                    fisherYatesShuffle(
+                        sourcePool.filter(
+                            (q) =>
+                                !used.has(q.id) &&
+                                !isDemographicQuestion(q) &&
+                                preferredCats.has(q.category || ''),
+                        ),
+                    ),
+                );
+                for (const q of leftoverPreferred) {
+                    if (scoredPool.length >= scoredTarget) {
+                        break;
+                    }
+                    scoredPool.push(q);
+                    used.add(q.id);
+                }
+                if (scoredPool.length < scoredTarget) {
+                    const anyLeftover = fisherYatesShuffle(
+                        sourcePool.filter(
+                            (q) =>
+                                !used.has(q.id) &&
+                                !isDemographicQuestion(q),
+                        ),
+                    );
+                    for (const q of anyLeftover) {
+                        if (scoredPool.length >= scoredTarget) {
+                            break;
+                        }
+                        scoredPool.push(q);
+                    }
+                }
             }
 
             // CIVIO local mock: demographics OPTIONAL — omit EDQ block so mocks
