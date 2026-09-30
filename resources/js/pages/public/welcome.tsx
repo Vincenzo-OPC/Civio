@@ -1,4 +1,4 @@
-import { Head, Link, router, usePage } from '@inertiajs/react';
+﻿import { Head, Link, router, usePage } from '@inertiajs/react';
 import {
     ArrowRight,
     Sparkles,
@@ -30,7 +30,6 @@ import {
     DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog';
-import { register } from '@/routes';
 import type { Auth } from '@/types';
 import FeatureGrid from './components/feature-grid';
 
@@ -216,14 +215,15 @@ export default function Welcome() {
                                 </p>
 
                                 <div className="flex flex-wrap gap-4 pt-2">
-                                    <Button size="lg" asChild>
-                                        <Link
-                                            href={register()}
-                                            className="group flex items-center gap-2 font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
-                                        >
-                                            Get Started Free
-                                            <ArrowRight className="h-5 w-5" />
-                                        </Link>
+                                    <Button
+                                        size="lg"
+                                        onClick={() =>
+                                            setIsFreeExamModalOpen(true)
+                                        }
+                                        className="group flex items-center gap-2 font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                    >
+                                        Get Started Free
+                                        <ArrowRight className="h-5 w-5" />
                                     </Button>
                                     <Button
                                         variant="secondary"
@@ -646,3 +646,5 @@ export default function Welcome() {
         </>
     );
 }
+
+

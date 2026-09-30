@@ -1,4 +1,4 @@
-import { Head, Link, usePage, router } from '@inertiajs/react';
+﻿import { Head, Link, usePage, router } from '@inertiajs/react';
 import {
     Award,
     BookOpen,
@@ -16,6 +16,7 @@ import {
     calculateWeightedPercentage,
 } from '@/lib/exam-formatters';
 import { makeBackOnClick, resolveOriginFromUrl } from '@/lib/smart-back';
+import { useGuestUnlimited } from '@/lib/civio-study';
 import type {
     SimulationDetails,
     SavedAttempt,
@@ -62,10 +63,14 @@ export function ScorecardView({
     handleBeginExam,
 }: ScorecardViewProps) {
     const { auth } = usePage<{ auth: any }>().props;
+    const guestUnlimited = useGuestUnlimited();
     const isGuest = !auth?.user;
     const GUEST_PROMPT_KEY = 'guest_prompt_dismissed';
     const [showGuestPrompt, setShowGuestPrompt] = useState(
-        () => isGuest && sessionStorage.getItem(GUEST_PROMPT_KEY) !== '1',
+        () =>
+            isGuest &&
+            !guestUnlimited &&
+            sessionStorage.getItem(GUEST_PROMPT_KEY) !== '1',
     );
 
     const dismissGuestPrompt = () => {
@@ -312,7 +317,8 @@ export function ScorecardView({
                 const params = new URLSearchParams(
                     typeof window !== 'undefined' ? window.location.search : '',
                 );
-                const limitReached = params.get('limit') === '1';
+                const limitReached =
+                    params.get('limit') === '1' && !guestUnlimited;
 
                 if (limitReached) {
                     return (
@@ -413,7 +419,7 @@ export function ScorecardView({
 
             {submittedByTimer && (
                 <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs font-semibold text-amber-800 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-300">
-                    Time expired — your exam was submitted automatically and
+                    Time expired â€” your exam was submitted automatically and
                     your graded scorecard is shown below.
                 </div>
             )}
@@ -546,7 +552,7 @@ export function ScorecardView({
                                                                         %
                                                                     </span>
                                                                     <span className="text-[10px] font-bold text-blue-600 opacity-0 transition group-hover:opacity-100 dark:text-blue-400">
-                                                                        Review →
+                                                                        Review â†’
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -773,14 +779,14 @@ export function ScorecardView({
                                         <Trophy className="size-6 animate-pulse" />
                                     </div>
                                     <h3 className="font-heading text-lg font-black tracking-tight text-foreground sm:text-xl">
-                                        Don't Lose Your Mock Exam Score!
+                                        {guestUnlimited
+                                            ? 'Optional: Save Progress With an Account'
+                                            : "Don't Lose Your Mock Exam Score!"}
                                     </h3>
                                     <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                                        Register a free account now to
-                                        permanently save this attempt to your
-                                        history, track your category mastery
-                                        over time, and unlock AI diagnostic
-                                        analysis.
+                                        {guestUnlimited
+                                            ? 'You can keep practicing as a guest. Sign in only if you want history sync and AI extras — never required for mocks, scorecard, or review explanations.'
+                                            : 'Register a free account now to permanently save this attempt to your history, track your category mastery over time, and unlock AI diagnostic analysis.'}
                                     </p>
                                     <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                                         <Link
@@ -788,7 +794,9 @@ export function ScorecardView({
                                             className="group flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-lg active:scale-95 sm:w-auto"
                                         >
                                             <LogIn className="size-4 transition-transform group-hover:translate-x-0.5" />
-                                            Register Free Account & Save Score
+                                            {guestUnlimited
+                                                ? 'Create Account (Optional)'
+                                                : 'Register Free Account & Save Score'}
                                         </Link>
                                     </div>
                                 </div>
@@ -807,7 +815,7 @@ export function ScorecardView({
                                     </span>
                                 </div>
                                 <span className="text-[10px] font-bold text-muted-foreground">
-                                    hirayareview.com • Civil Service Exam
+                                    hirayareview.com â€¢ Civil Service Exam
                                     Simulator
                                 </span>
                             </div>
@@ -834,7 +842,7 @@ export function ScorecardView({
                                 category breakdown are ready.
                             </p>
                             <p className="mt-3 text-xs font-bold text-amber-600 dark:text-amber-400">
-                                ⚠️ Create a free account to save this attempt
+                                âš ï¸ Create a free account to save this attempt
                                 permanently in your progress history and review
                                 your mistake rationales anytime.
                             </p>
@@ -861,3 +869,4 @@ export function ScorecardView({
         </div>
     );
 }
+

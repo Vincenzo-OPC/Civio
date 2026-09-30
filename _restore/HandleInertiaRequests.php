@@ -6,7 +6,6 @@ use App\Models\Announcement;
 use App\Models\Feedback;
 use App\Models\RolePermission;
 use App\Services\TurnstileService;
-use App\Services\UserPreferenceService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Inertia\Middleware;
@@ -41,25 +40,6 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
-        // Container image may lack App\Repositories bindings — use Eloquent directly.
-        $announcements = Cache::remember('active_announcements_array', 300, function () {
-            return Announcement::query()
-                ->where('is_active', true)
-                ->where(function ($q) {
-                    $q->whereNull('expires_at')
-                        ->orWhere('expires_at', '>', now());
-                })
-                ->latest()
-                ->get()
-                ->map(fn ($a) => $a->toArray())
-                ->values()
-                ->all();
-        });
-
-        $pendingFeedbackCount = Cache::remember('pending_feedback_count', 60, function () {
-            return Feedback::query()->where('status', 'pending')->count();
-        });
-
         return [
             ...parent::share($request),
             'name' => config('app.name'),
@@ -68,7 +48,7 @@ class HandleInertiaRequests extends Middleware
                     $request->user()->only(['id', 'name', 'email', 'email_verified_at', 'role', 'created_at', 'updated_at', 'terms_accepted_at', 'is_active']),
                     [
                         'two_factor_enabled' => ! is_null($request->user()->two_factor_secret),
-                        'analysis_mode' => app(UserPreferenceService::class)->getAnalysisMode($request->user()->id),
+                        'analysis_mode' => (! config('services.ai.analysis_enabled') || Cache::get("user-analysis-mode-{$request->user()->id}", 'ai') === 'instant') ? 'instant' : 'ai',
                     ]
                 ) : null,
                 'permissions' => Cache::remember('role_permissions', 3600, function () {
@@ -89,13 +69,17 @@ class HandleInertiaRequests extends Middleware
                 'enabled' => app(TurnstileService::class)->isConfigured(),
             ],
             'sidebarOpen' => ! $request->hasCookie('sidebar_state') || $request->cookie('sidebar_state') === 'true',
-            // LOCAL: plain arrays so Inertia never gets PHP Incomplete_Class announcements
-            'global_announcements' => $announcements,
-            'civio' => [
-                'guestUnlimited' => (bool) config('civio.guest_unlimited'),
-                'contentShield' => (bool) config('civio.content_shield'),
-            ],
-            'pending_feedback_count' => $pendingFeedbackCount,
+            'global_announcements' => Cache::remember('active_announcements', 300, function () {
+                return Announcement::where('is_active', true)
+                    ->where(function ($q) {
+                        $q->whereNull('expires_at')
+                            ->orWhere('expires_at', '>', now());
+                    })
+                    ->get();
+            }),
+            'pending_feedback_count' => Cache::remember('pending_feedback_count', 60, function () {
+                return Feedback::where('status', 'pending')->count();
+            }),
             'user_reported_ids' => $request->user() ? Feedback::where('user_id', $request->user()->id)
                 ->pluck('flaggable_id')
                 ->unique()

@@ -51,7 +51,12 @@ class ExamController extends Controller
 
         if (! auth()->check() && $result->attemptId) {
             $request->session()->put('pending_guest_attempt_id', $result->attemptId);
-            $request->session()->forget('is_free_attempt_active');
+            // Local study: keep free-attempt session open so guests can start another mock.
+            if (config('civio.guest_unlimited')) {
+                $request->session()->put('is_free_attempt_active', true);
+            } else {
+                $request->session()->forget('is_free_attempt_active');
+            }
         }
 
         return response()->json($result->toResponseArray(), $result->statusCode);
@@ -101,3 +106,4 @@ class ExamController extends Controller
         return $this->jsonSuccess();
     }
 }
+

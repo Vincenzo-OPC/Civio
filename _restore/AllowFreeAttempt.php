@@ -16,26 +16,8 @@ class AllowFreeAttempt
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Starting a new track/mock should not reuse a stale guest scorecard redirect.
-        $startingFresh = $request->has('start')
-            || ($request->query('free_attempt') == '1' && ! $request->has('attempt_id'));
-
-        if ($startingFresh) {
-            $request->session()->forget('pending_guest_attempt_id');
-            $request->session()->put('is_free_attempt_active', true);
-        }
-
-        // Local study / CIVIO: guests get full exam access (no one-shot wall).
-        if (config('civio.guest_unlimited')) {
-            if (! Auth::check()) {
-                $request->session()->put('is_free_attempt_active', true);
-            }
-
-            return $next($request);
-        }
-
         // If they already have a completed guest attempt, redirect them to its scorecard
-        if (! Auth::check() && $request->session()->has('pending_guest_attempt_id') && ! $startingFresh) {
+        if (! Auth::check() && $request->session()->has('pending_guest_attempt_id')) {
             $pendingId = $request->session()->get('pending_guest_attempt_id');
             if ($request->query('attempt_id') != $pendingId) {
                 return redirect()->route('exams.index', ['attempt_id' => $pendingId, 'limit' => '1']);

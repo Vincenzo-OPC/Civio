@@ -30,7 +30,8 @@ class SubmitExamAttemptAction
         $completionRate = $totalQuestions > 0 ? ($answeredCount / $totalQuestions) * 100 : 0;
 
         if ($userId === null) {
-            if ($hasPendingGuestAttempt) {
+            // Local study: allow unlimited guest submissions when enabled.
+            if ($hasPendingGuestAttempt && ! config('civio.guest_unlimited')) {
                 return new SubmitExamAttemptResult(
                     success: false,
                     statusCode: 403,
@@ -89,3 +90,4 @@ class SubmitExamAttemptAction
         }
     }
 }
+

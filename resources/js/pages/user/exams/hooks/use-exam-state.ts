@@ -1,4 +1,4 @@
-import { router, usePage } from '@inertiajs/react';
+﻿import { router, usePage } from '@inertiajs/react';
 import {
     useState,
     useEffect,
@@ -10,6 +10,7 @@ import {
 import { toast } from 'sonner';
 import { triggerPdfExport } from '@/components/shared/global-pdf-exporter';
 import { getSessionOrigin, clearSessionOrigin } from '@/lib/smart-back';
+import { useGuestUnlimited } from '@/lib/civio-study';
 import type { Auth } from '@/types';
 import type {
     Question,
@@ -71,6 +72,7 @@ export function useExamState(props: ExamIndexProps) {
     const [scratchpads, setScratchpads] = useState<Record<number, string>>({});
 
     const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState(false);
+    const guestUnlimited = useGuestUnlimited();
     const [isFreeAttempt, setIsFreeAttempt] = useState(false);
     const [showRegisterModal, setShowRegisterModal] = useState(false);
     const [showLockedModal, setShowLockedModal] = useState(false);
@@ -191,13 +193,14 @@ export function useExamState(props: ExamIndexProps) {
 
     // Submission handler forwarding
     const onTimerExpiredCallback = useCallback(() => {
-        if (isFreeAttempt) {
+        // Local study: auto-submit even for free/guest attempts when unlimited.
+        if (isFreeAttempt && !guestUnlimited) {
             setShowRegisterModal(true);
         } else {
             // Auto submit trigger
             submitHandlerRef.current?.(true);
         }
-    }, [isFreeAttempt]);
+    }, [isFreeAttempt, guestUnlimited]);
 
     // Sub-hook 2: Timer
     const {
@@ -703,3 +706,5 @@ export function useExamState(props: ExamIndexProps) {
         getActiveTimeLimitSecs,
     };
 }
+
+

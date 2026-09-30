@@ -1,6 +1,7 @@
 import type React from 'react';
 import { useEffect, useRef, useCallback, useState } from 'react';
 import { flushSync } from 'react-dom';
+import { useContentShieldEnabled } from '@/lib/civio-study';
 
 /**
  * Production-grade content protection hook.
@@ -9,7 +10,7 @@ import { flushSync } from 'react-dom';
  * BEFORE the browser compositor paints the next frame. This ensures that
  * screenshot tools (Snipping Tool, PrtSc) capture a blurred/blank frame
  * because the CSS filter + opacity change happens in the same event task
- * as the blur/visibilitychange handler — before the screenshot is composited.
+ * as the blur/visibilitychange handler â€” before the screenshot is composited.
  *
  * React state is updated synchronously via flushSync to show the overlay
  * immediately.
@@ -35,7 +36,7 @@ interface UseContentShieldOptions {
 
 interface UseContentShieldReturn {
     isShielded: boolean;
-    /** True while the shield is "locked" — window is not genuinely focused/visible,
+    /** True while the shield is "locked" â€” window is not genuinely focused/visible,
      *  so content must stay sealed regardless of click attempts. */
     isResumeLocked: boolean;
     dismissShield: () => void;
@@ -104,13 +105,15 @@ function isInteractiveElement(el: EventTarget | null): boolean {
 export function useContentShield(
     options: UseContentShieldOptions = {},
 ): UseContentShieldReturn {
-    // LOCAL_SHIELD_OFF — allow screenshots/study on Docker localhost
+    // Honor CIVIO_CONTENT_SHIELD=false via Inertia shared props.
+    const contentShieldEnabled = useContentShieldEnabled();
+    // LOCAL_SHIELD_OFF â€” allow screenshots/study on Docker localhost
     const isLocalHost =
         typeof window !== 'undefined' &&
         (window.location.hostname === 'localhost' ||
             window.location.hostname === '127.0.0.1');
     const localContentRef = useRef<HTMLDivElement | null>(null);
-    if (isLocalHost) {
+    if (isLocalHost || !contentShieldEnabled) {
         return {
             isShielded: false,
             isResumeLocked: false,
@@ -153,7 +156,7 @@ export function useContentShield(
     // Cooldown lock: after a shield activation the user must wait before the Resume button unlocks
     const lockUntilRef = useRef(0);
 
-    // ── INSTANT DOM blur — runs synchronously, bypasses React render cycle ──
+    // â”€â”€ INSTANT DOM blur â€” runs synchronously, bypasses React render cycle â”€â”€
     const instantBlurContent = useCallback(() => {
         const el = contentRef.current;
 
@@ -190,7 +193,7 @@ export function useContentShield(
     }, []);
 
     const activateShield = useCallback(() => {
-        // 1. Instant DOM manipulation (synchronous — before next paint)
+        // 1. Instant DOM manipulation (synchronous â€” before next paint)
         instantBlurContent();
         // 2. Wipe clipboard so any copied screenshot data is cleared
         wipeClipboard();
@@ -234,7 +237,7 @@ export function useContentShield(
         setIsShielded(false);
     }, [clearInstantBlur, instantBlurContent]);
 
-    // ── Core event listeners ────────────────────────────────────
+    // â”€â”€ Core event listeners â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     useEffect(() => {
         // 1. Visibility API (tab switch, minimize, snipping tool)
         const handleVisibility = () => {
@@ -244,7 +247,7 @@ export function useContentShield(
             }
         };
 
-        // 2. Window blur — Instant blur immediately, activate shield synchronously
+        // 2. Window blur â€” Instant blur immediately, activate shield synchronously
         const handleBlur = () => {
             instantBlurContent();
             activateShield();
@@ -309,7 +312,7 @@ export function useContentShield(
             activateShield();
         };
 
-        // ── API overrides ────────────────────────────────────────
+        // â”€â”€ API overrides â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         if (navigator.clipboard?.writeText) {
             origWriteTextRef.current = navigator.clipboard.writeText.bind(
                 navigator.clipboard,
@@ -350,7 +353,7 @@ export function useContentShield(
             };
         }
 
-        // ── Register listeners ───────────────────────────────────
+        // â”€â”€ Register listeners â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         document.addEventListener('visibilitychange', handleVisibility);
         window.addEventListener('blur', handleBlur);
         window.addEventListener('focus', handleFocus);
@@ -365,7 +368,7 @@ export function useContentShield(
         document.addEventListener('selectionchange', handleSelectionChange);
         window.addEventListener('beforeprint', handleBeforePrint);
 
-        // ── Shield watchdog ───────────────────────────────────────
+        // â”€â”€ Shield watchdog â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         const watchdogId = window.setInterval(() => {
             const compromised = document.hidden || !document.hasFocus();
 
@@ -424,7 +427,7 @@ export function useContentShield(
         };
     }, [activateShield, instantBlurContent]);
 
-    // ── Keyboard security ────────────────────────────────────────
+    // â”€â”€ Keyboard security â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             const isInput =
@@ -560,7 +563,7 @@ export function useContentShield(
         };
     }, [activateShield, instantBlurContent, wipeClipboard]);
 
-    // ── Wrapper props ────────────────────────────────────────────
+    // â”€â”€ Wrapper props â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const wrapperProps = {
         onCopy: (e: React.ClipboardEvent) => {
             if (!isInputElement(e.target)) {
@@ -594,3 +597,4 @@ export function useContentShield(
         wrapperProps,
     };
 }
+

@@ -1,4 +1,4 @@
-# Local Docker stack for Hiraya Review on MSI.
+﻿# Local Docker stack for Hiraya Review on MSI.
 # Does NOT bind :8642 (Hermes). App on host :8080, Postgres on host :5433.
 services:
   db:
@@ -40,6 +40,9 @@ services:
       DB_DATABASE: cse_reviewer
       DB_USERNAME: hiraya
       DB_PASSWORD: hiraya_local_dev
+      CIVIO_GUEST_UNLIMITED: "true"
+      CIVIO_CONTENT_SHIELD: "false"
 
 volumes:
   hiraya_pgdata:
+

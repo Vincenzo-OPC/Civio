@@ -1,5 +1,6 @@
-import { useState, useCallback } from 'react';
+﻿import { useState, useCallback } from 'react';
 import { toast } from 'sonner';
+import { useGuestUnlimited } from '@/lib/civio-study';
 import type { Question, ExamResults, CategoryScore } from '../types';
 import { isDemographicQuestion, apiPost } from '../utils/exam-utils';
 
@@ -48,6 +49,7 @@ export function useExamSubmission({
     setResults,
     setSubmittedByTimer,
 }: UseExamSubmissionProps) {
+    const guestUnlimited = useGuestUnlimited();
     const [lastStoredAttemptId, setLastStoredAttemptId] = useState<
         number | null
     >(null);
@@ -70,7 +72,8 @@ export function useExamSubmission({
 
     const executeSubmit = useCallback(
         (autoByTimer = false) => {
-            if (isFreeAttempt) {
+            // Local study / CIVIO: guests may submit & see scorecard when unlimited.
+            if (isFreeAttempt && !guestUnlimited) {
                 setShowRegisterModal(true);
 
                 return;
@@ -211,6 +214,7 @@ export function useExamSubmission({
             drillLanguage,
             drillQuestionCount,
             isFreeAttempt,
+            guestUnlimited,
             setShowRegisterModal,
             setIsExamSubmitted,
             setIsExamActive,
@@ -257,7 +261,7 @@ export function useExamSubmission({
             let message = `You have answered ${answeredCount} of ${scoredTotal} graded questions.`;
 
             if (unansweredCount > 0) {
-                message += ` ⚠️ ${unansweredCount} question${unansweredCount > 1 ? 's are' : ' is'} left unanswered.`;
+                message += ` âš ï¸ ${unansweredCount} question${unansweredCount > 1 ? 's are' : ' is'} left unanswered.`;
             }
 
             if (flaggedCount > 0) {
@@ -288,3 +292,4 @@ export function useExamSubmission({
         lastStoredAttemptId,
     };
 }
+

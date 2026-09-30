@@ -1,0 +1,283 @@
+<?php
+
+namespace App\Http\Controllers\User;
+
+use App\Http\Requests\StoreExamAttemptRequest;
+use App\Models\Category;
+use App\Models\ExamAttempt;
+use App\Models\Question;
+use App\Models\TrackConfig;
+use App\Services\DeterministicAnalysisService;
+use App\Services\ExamAttemptFormatter;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Inertia\Inertia;
+
+class ExamController
+{
+    public function __construct(
+        protected ExamAttemptFormatter $formatter
+    ) {}
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function index(Request $request)
+    {
+        // 1. Fetch verified active questions from cached pool (fast in-memory processing)
+        $activeQuestionsPool = Cache::rememberForever('questions.active', function () {
+            return Question::where('status', 'active')
+                ->with(['subcategory.category'])
+                ->get()
+                ->map(function ($q) {
+                    return [
+                        'id' => $q->id,
+                        'stem' => $q->stem,
+                        'options' => $q->options ?? [],
+                        'correct_option' => $q->correct_option,
+                        'explanation' => $q->explanation ?? '',
+                        'category' => $q->subcategory?->category?->name ?? 'General Information',
+                        'subcategory' => $q->subcategory?->name ?? '',
+                        'language' => (str_contains(strtolower($q->language ?? ''), 'tagalog') || str_contains(strtolower($q->language ?? ''), 'filipino')) ? 'Filipino' : 'English',
+                        'isDemographic' => $q->subcategory?->category?->is_demographic ?? false,
+                    ];
+                })->toArray();
+        });
+
+        $questions = collect($activeQuestionsPool);
+        $savedAttempt = null;
+        $retakeSource = null;
+
+        if ($request->has('attempt_id')) {
+            if (! auth()->check()) {
+                $pendingId = $request->session()->get('pending_guest_attempt_id');
+                if (! $pendingId || $pendingId != $request->attempt_id) {
+                    abort(403, 'Unauthorized access to scorecard.');
+                }
+                $attempt = ExamAttempt::whereNull('user_id')
+                    ->with('category')
+                    ->findOrFail($request->attempt_id);
+            } else {
+                $attempt = ExamAttempt::where('user_id', auth()->id())
+                    ->with('category')
+                    ->findOrFail($request->attempt_id);
+            }
+
+            if ($attempt) {
+                // In-memory filter of cached pool
+                $questions = $questions->whereIn('id', $attempt->question_ids);
+
+                $savedAttempt = [
+                    'id' => $attempt->id,
+                    'category_id' => $attempt->category_id,
+                    'question_ids' => $attempt->question_ids,
+                    'answers' => $attempt->answers,
+                    'cat_scores' => $attempt->cat_scores,
+                    'created_at' => $attempt->created_at?->toIso8601String(),
+                ];
+            }
+        } elseif ($request->filled('retake_same') || $request->filled('retake_fresh')) {
+            $attemptId = $request->input('retake_same') ?? $request->input('retake_fresh');
+            $attempt = ExamAttempt::where('user_id', auth()->id())
+                ->findOrFail($attemptId);
+
+            if ($attempt) {
+                $meta = $attempt->cat_scores['metadata'] ?? [];
+                $retakeSource = [
+                    'attempt_id' => $attempt->id,
+                    'question_ids' => $attempt->question_ids,
+                    'track' => $meta['track'] ?? 'Professional',
+                    'mode' => $request->has('retake_same') ? 'same' : 'fresh',
+                ];
+            }
+        }
+
+        // Eagerly sort by attempt questions order if loaded via deep-link
+        if (($savedAttempt || $retakeSource) && isset($attempt)) {
+            $questions = $questions->sortBy(function ($q) use ($attempt) {
+                return array_search($q['id'], $attempt->question_ids);
+            })->values();
+        } else {
+            $questions = $questions->values();
+        }
+
+        // 2. Fetch categories and tracks configurations
+        $categories = Cache::rememberForever('categories.tree', function () {
+            return Category::with(['subcategory' => function ($query) {
+                $query->orderBy('sort_order');
+            }])->orderBy('sort_order')->get()->toArray();
+        });
+
+        $tracks = TrackConfig::all();
+
+        $seenQuestionIdsByTrack = $this->formatter->seenQuestionIdsByTrack(auth()->id());
+        $wrongQuestionIdsByTrack = $this->formatter->wrongQuestionIdsByTrack(auth()->id());
+
+        $aiAnalysis = [
+            'status' => 'no_data',
+            'data' => null,
+        ];
+
+        if (auth()->check()) {
+            $targetAttemptId = $request->query('attempt_id');
+            if (! $targetAttemptId) {
+                $targetAttemptId = ExamAttempt::where('user_id', auth()->id())->latest()->value('id');
+            }
+
+            if ($targetAttemptId) {
+                $deterministicService = new DeterministicAnalysisService;
+                $analysisData = $deterministicService->generate(auth()->id(), $targetAttemptId, true);
+                $aiAnalysis = [
+                    'status' => 'ready',
+                    'data' => $analysisData,
+                ];
+            }
+        }
+
+        return Inertia::render('user/exams/index', [
+            'questions' => $questions,
+            'categories' => $categories,
+            'tracks' => $tracks,
+            'savedAttempt' => $savedAttempt,
+            'retakeSource' => $retakeSource,
+            'seenQuestionIdsByTrack' => $seenQuestionIdsByTrack,
+            'wrongQuestionIdsByTrack' => $wrongQuestionIdsByTrack,
+            'exams' => [
+                ['id' => 1, 'title' => 'Professional Level Reviewer', 'questions' => 170],
+                ['id' => 2, 'title' => 'Sub-Professional Level Reviewer', 'questions' => 150],
+            ],
+            'aiAnalysis' => $aiAnalysis,
+        ]);
+    }
+
+    /**
+     * Store a newly created exam attempt.
+     */
+    public function storeAttempt(StoreExamAttemptRequest $request)
+    {
+        $validated = $request->validated();
+
+        $answers = $validated['answers'];
+        $answeredCount = count(array_filter($answers, function ($answer) {
+            return $answer !== null && $answer !== '';
+        }));
+
+        $totalQuestions = count($validated['question_ids']);
+        $completionRate = $totalQuestions > 0 ? ($answeredCount / $totalQuestions) * 100 : 0;
+
+        if (! auth()->check()) {
+            // Local study: allow unlimited guest submissions when enabled.
+            if ($request->session()->has('pending_guest_attempt_id') && ! config('civio.guest_unlimited')) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'You have already completed your free guest attempt.',
+                ], 403);
+            }
+
+            if ($answeredCount < $totalQuestions) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Guest attempt must be complete (all questions answered).',
+                ], 422);
+            }
+        } else {
+            // Ignore empty or dummy attempts (less than 50% answered)
+            if ($completionRate < 50) {
+                return response()->json([
+                    'success' => true,
+                    'attempt_id' => null,
+                    'message' => 'Dummy attempt ignored.',
+                ]);
+            }
+        }
+
+        $userId = auth()->id();
+        $lockKey = $userId ? "user-exam-attempt-submission-{$userId}" : "guest-exam-attempt-submission-{$request->ip()}";
+        $lock = Cache::lock($lockKey, 5);
+
+        if (! $lock->get()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Attempt submission already in progress. Please wait.',
+            ], 429);
+        }
+
+        try {
+            $attempt = DB::transaction(function () use ($validated, $userId) {
+                $attempt = ExamAttempt::create([
+                    'user_id' => $userId,
+                    'category_id' => $validated['category_id'] ?? null,
+                    'question_ids' => $validated['question_ids'],
+                    'answers' => $validated['answers'],
+                    'cat_scores' => $validated['cat_scores'],
+                ]);
+
+                if (! auth()->check()) {
+                    session(['pending_guest_attempt_id' => $attempt->id]);
+                    // Local study: keep free-attempt session open for another mock.
+                    if (config('civio.guest_unlimited')) {
+                        session(['is_free_attempt_active' => true]);
+                    } else {
+                        session()->forget('is_free_attempt_active');
+                    }
+                }
+
+                return $attempt;
+            });
+
+            return response()->json([
+                'success' => true,
+                'attempt_id' => $attempt->id,
+            ]);
+        } finally {
+            $lock->release();
+        }
+    }
+
+    /**
+     * Issue export authorization token for PDF examination booklet export.
+     * Rate limiting (1 per day for normal users, unlimited for admins) is handled via route middleware.
+     */
+    public function checkPdfExportLimit(Request $request)
+    {
+        $user = $request->user();
+
+        if (! $user) {
+            return response()->json([
+                'success' => false,
+                'message' => 'You must be logged in to download PDF examination booklets.',
+            ], 401);
+        }
+
+        if (! $user->can_download_pdf && $user->role !== 'admin') {
+            return response()->json([
+                'success' => false,
+                'message' => 'Your account is not authorized to download PDF examination booklets.',
+            ], 403);
+        }
+
+        $token = Str::random(40);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'PDF export authorized.',
+            'export_token' => $token,
+        ]);
+    }
+
+    /**
+     * Track a successful PDF download.
+     */
+    public function trackPdfDownload(Request $request)
+    {
+        $user = $request->user();
+
+        if ($user) {
+            $user->increment('pdf_downloads_count');
+        }
+
+        return response()->json(['success' => true]);
+    }
+}
