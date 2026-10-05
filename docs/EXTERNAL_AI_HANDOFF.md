@@ -265,3 +265,117 @@ This should use scoped, explicit permissions. Do not expose the full question ba
 - copied source/rule is clearly separated from AI-generated discussion
 - app still works if all AI services are unavailable
 - external handoff never changes canonical Civio answers
+
+
+---
+
+## Critical implementation rule: never copy rendered page text
+
+The button must **not** copy the DOM, selected page text, `innerText`, or accessibility/rendered labels from the exam screen.
+
+Bad output looks like this:
+
+```text
+Multiple Choice
+svgReport IssuesvgFlag for ReviewReveal
+A run-on sentence is best corrected by:
+A
+Removing all verbs
+svg
+B
+Using proper punctuation...
+svgPrevious QuestionNext Question
+```
+
+That is UI noise, not study context.
+
+### Build the export from structured question data
+
+Generate the clipboard payload directly from the application's question object / attempt state:
+
+- question type
+- category / skill
+- clean question stem
+- clean option labels and option text
+- learner's selected answer, when applicable
+- correctness/result, only when allowed
+- canonical explanation, only after Reveal/submission
+- verified source/rule, when available
+- optional learner note
+- optional tutor instruction
+
+Do not include:
+- SVG labels
+- icon alt text
+- Report Issue
+- Flag for Review
+- Previous / Next buttons
+- navigation
+- timer
+- progress widgets
+- accessibility-only UI strings
+- hidden DOM
+- CSS-generated text
+- provider/model UI
+
+### Default clipboard format should be plain, human-readable text
+
+Markdown is fine internally, but the copied result should look clean when pasted into any chat box.
+
+Example:
+
+```text
+Philippine Civil Service Exam — Subprofessional
+Category: Verbal Ability
+Topic: Sentence Structure
+
+Question:
+A run-on sentence is best corrected by:
+
+A. Removing all verbs
+B. Using proper punctuation or conjunctions to separate independent clauses
+C. Writing only fragments
+D. Adding more unrelated clauses without punctuation
+
+My answer: B
+Result: Correct
+
+Civio explanation:
+A run-on sentence joins two or more independent clauses without proper punctuation or a coordinating/subordinating conjunction. Separate the clauses correctly or connect them with an appropriate conjunction.
+
+Please explain the rule simply, tell me what to remember for the CSE, and give me one similar question.
+```
+
+Before Reveal/submission, omit the correct answer and explanation:
+
+```text
+Philippine Civil Service Exam — Subprofessional
+Category: Verbal Ability
+Topic: Sentence Structure
+
+Question:
+A run-on sentence is best corrected by:
+
+A. Removing all verbs
+B. Using proper punctuation or conjunctions to separate independent clauses
+C. Writing only fragments
+D. Adding more unrelated clauses without punctuation
+
+My current answer: B
+
+Do not reveal the correct answer yet. Give me one useful hint and help me reason it out.
+```
+
+### Product behavior
+
+Default action: **Copy for AI**
+
+Toast:
+
+> Copied clean question context.
+
+Optional secondary action, when a preferred assistant is configured:
+
+> Discuss in ChatGPT
+
+The copied payload remains provider-neutral and should paste cleanly into ChatGPT, Claude, Gemini, Grok, email, Notes, or any plain-text field.
