@@ -7,6 +7,8 @@
 
 Civio should feel like a modern learning product, not a static reviewer with an AI button bolted onto it. The core product is the practice engine. AI behaves like a teacher sitting beside the learner when useful, while Live Simulation stays clean and exam-like.
 
+**Companion benchmark:** `docs/2026_AI_PRODUCT_STANDARD.md` defines the broader 2026 AI/product standard, Gemini Notebook-inspired Study Studio, local competitor benchmark, agentic roadmap, provider strategy, and optional Focus Toolkit.
+
 ---
 
 ## 1. Product principles
@@ -15,7 +17,7 @@ Civio should feel like a modern learning product, not a static reviewer with an 
 2. **Study Mode and Live Simulation are different products.**
    - Study Mode teaches.
    - Live Simulation measures.
-3. **Do not make AI decorative.** Replace static "Reveal Answer" behavior with a contextual tutor that can explain, question, retry, generate practice, and remember weak concepts.
+3. **Do not make AI decorative.** Keep **Reveal Answer** as the fast, deterministic baseline, then offer a contextual tutor that can explain, question, retry, generate practice, and remember weak concepts. AI is optional enhancement, never a gate to the answer.
 4. **Free-first.** Core study features work without a paid AI provider. AI degrades gracefully to deterministic explanations and local/static features.
 5. **Fast first.** No AI request should block ordinary question navigation, scoring, pausing, or review.
 6. **Accessible visual language.** Mostly white / very light neutral surfaces, near-black text, restrained violet as the primary brand/action color, and neon-lime only for success, active progress, pause/resume, or mastery. No loud gradients, glassmorphism, gaming-dashboard clutter, or unnecessary neon.
@@ -170,9 +172,11 @@ The user should never have to understand which model/provider is active to learn
 
 ---
 
-## 5. Replace "Reveal Answer" with a teaching flow
+## 5. Keep Reveal, then add a teaching flow
 
-Static Reveal is too weak.
+**Static Reveal stays.** It is the zero-token, always-available path for learners who do not want AI, do not have an eligible AI plan, are offline, or have exhausted provider limits.
+
+Reveal should show the verified answer, concise canonical explanation, shortcut/rule, and source citation when relevant. AI sits beside Reveal as optional deeper help.
 
 After the learner commits an answer in Study Mode, Civio should show a compact result state:
 
@@ -180,9 +184,12 @@ After the learner commits an answer in Study Mode, Civio should show a compact r
 or
 **Not quite**
 
-Then the learner gets one primary action:
+Then the learner sees two clear paths:
 
-**Ask Tutor ✦**
+- **Reveal Answer** — instant, deterministic, no AI required
+- **Ask Tutor ✦** — conversational teaching when AI is available
+
+Ask Tutor may be visually emphasized after a wrong answer, but Reveal must remain directly accessible.
 
 Suggested quick actions:
 - Give me a hint
