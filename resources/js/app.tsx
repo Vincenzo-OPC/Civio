@@ -6,6 +6,7 @@ import { TrafficOverloadGuard } from '@/components/shared/traffic-overload-guard
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { initializeTheme } from '@/hooks/use-appearance';
+import { migrateHirayaLocalStorage } from '@/lib/civio-study';
 import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
 import SettingsLayout from '@/layouts/settings/layout';
@@ -13,7 +14,7 @@ import { initSmartBackTracking, getOriginTitle } from '@/lib/smart-back';
 import type { Auth } from './types/auth';
 // Echo initialization moved to specific components to save connections
 
-const appName = import.meta.env.VITE_APP_NAME || 'Hiraya Review';
+const appName = import.meta.env.VITE_APP_NAME || 'Civio';
 
 const componentCache = new Map<string, any>();
 
@@ -100,14 +101,14 @@ const PageLayoutWrapper = ({
 
 createInertiaApp({
     title: (title) => (title ? `${title} - ${appName}` : appName),
-    resolve: (name) => {
+    resolve: async (name) => {
         if (componentCache.has(name)) {
             return componentCache.get(name);
         }
 
-        const pages = import.meta.glob('./pages/**/*.tsx', { eager: true });
+        // Lazy page graph — do not eager-load every Inertia page into the main chunk.
+        const pages = import.meta.glob('./pages/**/*.tsx');
 
-        // Find the matching page case-insensitively to prevent Windows/Linux case mismatch issues
         const targetPath = `./pages/${name}.tsx`.toLowerCase();
         const actualPath = Object.keys(pages).find(
             (key) => key.toLowerCase() === targetPath,
@@ -117,7 +118,8 @@ createInertiaApp({
             throw new Error(`Page component not found: ${name}`);
         }
 
-        const OriginalComponent = (pages[actualPath] as any).default;
+        const mod = (await pages[actualPath]()) as { default: any };
+        const OriginalComponent = mod.default;
 
         const WrappedComponent: any = (props: any) => (
             <OriginalComponent {...props} />
@@ -196,14 +198,29 @@ createInertiaApp({
 });
 // This will set light / dark mode on load...
 initializeTheme();
+migrateHirayaLocalStorage();
 // Track previous in-app location so "back" returns to where the user came from
 initSmartBackTracking();
 
-// Register PWA Service Worker
-if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').catch(() => {
-            // SW registration failed silently — HTTPS required in production
+// PWA: vite-plugin-pwa register (prompt-to-update). No-op in SSR.
+if (typeof window !== 'undefined') {
+    void import('virtual:pwa-register')
+        .then(({ registerSW }) => {
+            registerSW({
+                immediate: true,
+                onNeedRefresh() {
+                    // Prompt-style update: ask once, then reload into new SW.
+                    if (
+                        window.confirm(
+                            'A new Civio version is available. Reload to update?',
+                        )
+                    ) {
+                        window.location.reload();
+                    }
+                },
+            });
+        })
+        .catch(() => {
+            /* SW unavailable in some local/dev contexts */
         });
-    });
 }
