@@ -37,6 +37,7 @@ vendor/bin/pint --test
 - `docs/CIVIO_CODEX_BUILD_BRIEF.md` · `docs/DESKTOP_PATCHES_TO_PORT.md`
 - AI study UX, tutor, pause/resume, adaptive review, ChatGPT/Gemini readiness, and Spelling Coach: `docs/AI_STUDY_AND_SPELLING_SYSTEM.md`
 - 2026 AI/product benchmark, Gemini Notebook-inspired Study Studio, local competitor gap analysis, Focus Toolkit, and agentic roadmap: `docs/2026_AI_PRODUCT_STANDARD.md`
+- External AI handoff / Copy for AI workflow for ChatGPT, Claude, Gemini, and Grok: `docs/EXTERNAL_AI_HANDOFF.md`
 - Question design: `docs/CSE-Question-Design-Spec.md` (do not add bank items without approval)
 
 ## Acknowledgements
