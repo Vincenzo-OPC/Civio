@@ -108,6 +108,7 @@ export function estimateDifficulty(q: Question): number {
     ) {
         score += 8;
     }
+
     if (/word analogy|synonym|antonym|vocabulary|spelling/.test(sub)) {
         score -= 4;
     }
@@ -115,6 +116,7 @@ export function estimateDifficulty(q: Question): number {
     // Stem length / density
     const stemLen = stem.length;
     score += Math.min(22, Math.floor(stemLen / 40));
+
     if (stemLen < 60) {
         score -= 10; // easy short Verbal clones
     } else if (stemLen > 220) {
@@ -124,8 +126,10 @@ export function estimateDifficulty(q: Question): number {
     // Options density
     const optChars = options.reduce((n, o) => n + String(o || '').length, 0);
     score += Math.min(12, Math.floor(optChars / 80));
+
     if (options.length >= 4) {
         const avgOpt = optChars / Math.max(1, options.length);
+
         if (avgOpt > 40) {
             score += 4;
         }
@@ -136,6 +140,7 @@ export function estimateDifficulty(q: Question): number {
 
     // Math-ish / quantitative cues in stem or options
     const mathBlob = `${stem} ${options.join(' ')}`;
+
     if (
         /\d/.test(mathBlob) &&
         /[%₱$]|ratio|percent|average|fraction|equation|solve|how many|what is \d/i.test(
@@ -144,6 +149,7 @@ export function estimateDifficulty(q: Question): number {
     ) {
         score += 10;
     }
+
     if (/[÷×√∑]|\\frac|\^|\d+\s*[+\-*/]\s*\d+/.test(mathBlob)) {
         score += 6;
     }

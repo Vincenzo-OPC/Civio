@@ -9,8 +9,8 @@ import {
 } from 'react';
 import { toast } from 'sonner';
 import { triggerPdfExport } from '@/components/shared/global-pdf-exporter';
-import { getSessionOrigin, clearSessionOrigin } from '@/lib/smart-back';
 import { useGuestUnlimited } from '@/lib/civio-study';
+import { getSessionOrigin, clearSessionOrigin } from '@/lib/smart-back';
 import type { Auth } from '@/types';
 import type {
     Question,
@@ -446,6 +446,7 @@ export function useExamState(props: ExamIndexProps) {
                 >;
                 answers?: Record<string, number | null>;
             };
+
             if (!detail?.keys) {
                 return;
             }
@@ -453,9 +454,11 @@ export function useExamState(props: ExamIndexProps) {
             setActiveQuestions((prev) =>
                 prev.map((q) => {
                     const key = detail.keys?.[q.id];
+
                     if (!key) {
                         return q;
                     }
+
                     const originalCorrect = Number(key.correct_option);
                     const displayCorrect =
                         q.originalOptionIndices?.indexOf(originalCorrect) ??
@@ -474,6 +477,7 @@ export function useExamState(props: ExamIndexProps) {
         };
 
         window.addEventListener('civio:exam-answer-keys', handler);
+
         return () =>
             window.removeEventListener('civio:exam-answer-keys', handler);
     }, []);

@@ -104,6 +104,9 @@ export default [
     },
     {
         ignores: [
+        'scripts/**',
+        'tests/Js/**',
+        
             'vendor',
             'node_modules',
             'public',

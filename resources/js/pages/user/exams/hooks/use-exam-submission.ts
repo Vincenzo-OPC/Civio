@@ -1,4 +1,4 @@
-﻿import { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { toast } from 'sonner';
 import { useGuestUnlimited } from '@/lib/civio-study';
 import { recordGuestStudyBias } from '@/lib/guest-study-bias';
@@ -84,9 +84,11 @@ export function useExamSubmission({
             const answersByQuestionId: Record<number, number> = {};
             activeQuestions.forEach((q, idx) => {
                 const chosen = answers[idx];
+
                 if (chosen === undefined || chosen === null) {
                     return;
                 }
+
                 const originalIndex =
                     q.originalOptionIndices?.[Number(chosen)] ?? Number(chosen);
                 answersByQuestionId[q.id] = originalIndex;
@@ -146,8 +148,6 @@ export function useExamSubmission({
                 } else if (keysAvailable) {
                     wrongCount += 1;
                     wrongQuestionIds.push(q.id);
-                } else if (chosenOriginal === undefined) {
-                    skippedCount += 1;
                 } else {
                     // Keys withheld — leave counts for server fill-in.
                     wrongQuestionIds.push(q.id);
@@ -183,12 +183,14 @@ export function useExamSubmission({
                     : selectedExamId === 1
                       ? 'Professional'
                       : 'Drill';
+
             if (studyTrack !== 'Drill') {
                 recordGuestStudyBias(studyTrack, {
                     wrongIds: wrongQuestionIds,
                     categoryScoreMap: catMap,
                 });
             }
+
             setIsExamSubmitted(true);
             setIsExamActive(false);
             setSubmittedByTimer(autoByTimer);
@@ -227,6 +229,7 @@ export function useExamSubmission({
                     if (data?.attempt_id) {
                         setLastStoredAttemptId(data.attempt_id);
                     }
+
                     if (data?.success && typeof data.score === 'number') {
                         const serverMap = data.cat_scores?.categoryScoreMap ?? catMap;
                         setResults({
@@ -240,6 +243,7 @@ export function useExamSubmission({
                             elapsedSecs,
                         });
                     }
+
                     if (Array.isArray(data?.answer_keys)) {
                         // Merge withheld keys into in-memory questions for review UI.
                         const keyById = new Map<
@@ -260,6 +264,7 @@ export function useExamSubmission({
                                 ],
                             ),
                         );
+
                         // Notify via custom event — exam state listens and patches activeQuestions.
                         if (typeof window !== 'undefined') {
                             window.dispatchEvent(
@@ -341,7 +346,7 @@ export function useExamSubmission({
             let message = `You have answered ${answeredCount} of ${scoredTotal} graded questions.`;
 
             if (unansweredCount > 0) {
-                message += ` âš ï¸ ${unansweredCount} question${unansweredCount > 1 ? 's are' : ' is'} left unanswered.`;
+                message += ` âš ï¸ ${unansweredCount} question${unansweredCount > 1 ? 's are' : ' is'} left unanswered.`;
             }
 
             if (flaggedCount > 0) {

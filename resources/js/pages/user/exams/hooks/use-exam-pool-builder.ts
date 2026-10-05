@@ -15,7 +15,7 @@ import {
 export function shuffleOptionsForQuestion(q: Question): Question {
     let options = q.options;
     const hasKey = typeof q.correct_option === 'number';
-    let correctOption = hasKey ? q.correct_option : 0;
+    let correctOption = hasKey ? (q.correct_option as number) : 0;
 
     if (options.length > 5) {
         options = options.slice(0, 5);
@@ -30,7 +30,7 @@ export function shuffleOptionsForQuestion(q: Question): Question {
 
     const shuffledOptions = shuffledIndices.map((i) => options[i]);
     // When answer keys are withheld, omit remapped correct_option (Reveal uses /exams/reveal).
-    const remapped: Partial<Question> = {
+    const remapped: Question = {
         ...q,
         options: shuffledOptions,
         originalOptionIndices: shuffledIndices,
@@ -39,11 +39,11 @@ export function shuffleOptionsForQuestion(q: Question): Question {
     if (hasKey) {
         remapped.correct_option = shuffledIndices.indexOf(correctOption);
     } else {
-        delete (remapped as { correct_option?: number }).correct_option;
-        delete (remapped as { explanation?: string }).explanation;
+        delete remapped.correct_option;
+        delete remapped.explanation;
     }
 
-    return remapped as Question;
+    return remapped;
 }
 
 function quotasForSubcats(
@@ -68,9 +68,11 @@ function quotasForSubcats(
 
         for (const name of bucket) {
             const want = base + (rem > 0 ? 1 : 0);
+
             if (rem > 0) {
                 rem--;
             }
+
             const give = Math.min(groups[name]?.length ?? 0, want);
             quotas[name] += give;
             left -= give;
@@ -81,6 +83,7 @@ function quotasForSubcats(
                 if (left <= 0) {
                     break;
                 }
+
                 const room = (groups[name]?.length ?? 0) - quotas[name];
                 const add = Math.min(Math.max(0, room), left);
                 quotas[name] += add;
@@ -108,8 +111,10 @@ function quotasForSubcats(
     } else {
         const baseQuota = Math.floor(targetCount / names.length);
         let remainder = targetCount % names.length;
+
         for (const name of names) {
             quotas[name] = baseQuota + (remainder > 0 ? 1 : 0);
+
             if (remainder > 0) {
                 remainder--;
             }
@@ -331,6 +336,7 @@ export function useExamPoolBuilder({
                                 q.stem || '',
                                 EXAM_CONSTANTS.STEM_DEDUP_PREFIX_LEN,
                             );
+
                             if (
                                 key &&
                                 picked.some(
@@ -406,6 +412,7 @@ export function useExamPoolBuilder({
 
                 // FILL-TO-QUOTA: after unique stems exhausted, use shuffled variants
                 remaining = count - picked.length;
+
                 if (
                     remaining > 0 &&
                     EXAM_CONSTANTS.FILL_VARIANTS_AFTER_UNIQUE
@@ -589,13 +596,16 @@ export function useExamPoolBuilder({
                         ),
                     ),
                 );
+
                 for (const q of leftoverPreferred) {
                     if (scoredPool.length >= scoredTarget) {
                         break;
                     }
+
                     scoredPool.push(q);
                     used.add(q.id);
                 }
+
                 if (scoredPool.length < scoredTarget) {
                     const anyLeftover = fisherYatesShuffle(
                         sourcePool.filter(
@@ -604,10 +614,12 @@ export function useExamPoolBuilder({
                                 !isDemographicQuestion(q),
                         ),
                     );
+
                     for (const q of anyLeftover) {
                         if (scoredPool.length >= scoredTarget) {
                             break;
                         }
+
                         scoredPool.push(q);
                     }
                 }

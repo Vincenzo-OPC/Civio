@@ -130,9 +130,9 @@ export function useExamHydration({
 
         if (looksLikeQuestionIds) {
             loadedQuestions.forEach((question, newIdx) => {
-                const byId =
-                    rawAnswers[question.id as keyof typeof rawAnswers] ??
-                    rawAnswers[String(question.id) as keyof typeof rawAnswers];
+                const raw = rawAnswers as Record<string, number | string>;
+                const byId = raw[String(question.id)] ?? raw[question.id];
+
                 if (byId !== undefined && byId !== null) {
                     restoredAnswers[newIdx] = Number(byId);
                 }
@@ -147,6 +147,7 @@ export function useExamHydration({
                 ),
             );
         }
+
         const catScores = savedAttempt.cat_scores ?? {};
         const meta: AttemptMetadata = (catScores.metadata ??
             {}) as AttemptMetadata;

@@ -35,10 +35,12 @@ export function useExamTimer({
     // Visible per-item clock. Resets on next, previous, or palette.
     // questionTimes stays cumulative for submit analytics.
     const itemIdxRef = useRef(currentIdx);
-    if (itemIdxRef.current !== currentIdx) {
-        itemIdxRef.current = currentIdx;
-        setItemElapsed(0);
-    }
+    useEffect(() => {
+        if (itemIdxRef.current !== currentIdx) {
+            itemIdxRef.current = currentIdx;
+            setItemElapsed(0);
+        }
+    }, [currentIdx]);
 
     const resetTimer = useCallback((newLimitSecs: number) => {
         setTimeLeft(newLimitSecs);

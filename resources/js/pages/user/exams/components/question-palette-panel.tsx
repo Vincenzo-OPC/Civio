@@ -6,7 +6,7 @@ import {
     PanelRightOpen,
     LayoutGrid,
 } from 'lucide-react';
-import React, { useMemo } from 'react';
+import React from 'react';
 import type { Question, ReviewStatusFilter, LiveStatusFilter } from '../types';
 import { isDemographicQuestion } from '../utils/exam-utils';
 

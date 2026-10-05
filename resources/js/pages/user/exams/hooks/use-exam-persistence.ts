@@ -146,10 +146,13 @@ export function useExamPersistence({
                 const scoredOnly = data.activeQuestions.filter(
                     (q) => !isDemographicQuestion(q),
                 );
+
                 if (scoredOnly.length === 0) {
                     localStorage.removeItem(PERSISTENCE_KEY);
+
                     return;
                 }
+
                 const remappedAnswers: Record<number, number> = {};
                 const remappedTimes: Record<number, number> = {};
                 const remappedChanges: Record<number, number> = {};
@@ -158,19 +161,27 @@ export function useExamPersistence({
                 const oldQs = data.activeQuestions;
                 scoredOnly.forEach((q, newIdx) => {
                     const oldIdx = oldQs.findIndex((oq) => oq.id === q.id);
-                    if (oldIdx < 0) return;
+
+                    if (oldIdx < 0) {
+return;
+}
+
                     if (data.answers?.[oldIdx] !== undefined) {
                         remappedAnswers[newIdx] = data.answers[oldIdx];
                     }
+
                     if (data.questionTimes?.[oldIdx] !== undefined) {
                         remappedTimes[newIdx] = data.questionTimes[oldIdx];
                     }
+
                     if (data.answerChanges?.[oldIdx] !== undefined) {
                         remappedChanges[newIdx] = data.answerChanges[oldIdx];
                     }
+
                     if (data.flagged?.[oldIdx]) {
                         remappedFlagged[newIdx] = true;
                     }
+
                     if (data.scratchpads?.[oldIdx] !== undefined) {
                         remappedScratch[newIdx] = data.scratchpads[oldIdx];
                     }
