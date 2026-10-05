@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "absolute_git_hook_path": true,
+  "telemetry": false,
+  "checkpoints": {
+    "primary": {
+      "type": "git-refs"
+    }
+  },
+  "redaction": {
+    "custom_redactions": {
+      "github_classic_pat": "gh[pousr]_[A-Za-z0-9]{20,}",
+      "github_fine_grained_pat": "github_pat_[A-Za-z0-9_]{20,}",
+      "google_api_key": "AIza[0-9A-Za-z_\\-]{35}",
+      "openai_api_key": "sk-[A-Za-z0-9]{20,}",
+      "anthropic_api_key": "sk-ant-[A-Za-z0-9_\\-]{20,}",
+      "xai_api_key": "xai-[A-Za-z0-9]{20,}"
+    }
+  }
+}
