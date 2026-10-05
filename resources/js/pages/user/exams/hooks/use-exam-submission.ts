@@ -80,12 +80,29 @@ export function useExamSubmission({
                 return;
             }
 
+            // Build ID-keyed answers using original (bank) option indexes, not shuffled positions.
+            const answersByQuestionId: Record<number, number> = {};
+            activeQuestions.forEach((q, idx) => {
+                const chosen = answers[idx];
+                if (chosen === undefined || chosen === null) {
+                    return;
+                }
+                const originalIndex =
+                    q.originalOptionIndices?.[Number(chosen)] ?? Number(chosen);
+                answersByQuestionId[q.id] = originalIndex;
+            });
+
+            // Optimistic local tally only when keys are present (scorecard reload / review).
+            // Authoritative score always comes from the server response.
             let correctCount = 0;
             let wrongCount = 0;
             let skippedCount = 0;
             const catMap: Record<string, CategoryScore> = {};
-
             const wrongQuestionIds: number[] = [];
+            const keysAvailable = activeQuestions.some(
+                (q) => typeof q.correct_option === 'number',
+            );
+
             activeQuestions.forEach((q, idx) => {
                 const isDemographic = isDemographicQuestion(q);
 
@@ -110,24 +127,38 @@ export function useExamSubmission({
                 catMap[catName].total += 1;
                 catMap[catName].subcats[subcatName].total += 1;
 
-                const chosen = answers[idx];
+                const chosenShuffled = answers[idx];
+                const chosenOriginal =
+                    chosenShuffled === undefined || chosenShuffled === null
+                        ? undefined
+                        : (q.originalOptionIndices?.[Number(chosenShuffled)] ??
+                          Number(chosenShuffled));
 
-                if (chosen === undefined || chosen === null) {
+                if (chosenOriginal === undefined) {
                     skippedCount += 1;
-                } else if (Number(chosen) === Number(q.correct_option)) {
+                } else if (
+                    keysAvailable &&
+                    Number(chosenOriginal) === Number(q.correct_option)
+                ) {
                     correctCount += 1;
                     catMap[catName].correct += 1;
                     catMap[catName].subcats[subcatName].correct += 1;
-                } else {
+                } else if (keysAvailable) {
                     wrongCount += 1;
+                    wrongQuestionIds.push(q.id);
+                } else if (chosenOriginal === undefined) {
+                    skippedCount += 1;
+                } else {
+                    // Keys withheld — leave counts for server fill-in.
                     wrongQuestionIds.push(q.id);
                 }
             });
 
             const totalScoredQuestions =
-                correctCount + wrongCount + skippedCount;
+                correctCount + wrongCount + skippedCount ||
+                activeQuestions.filter((q) => !isDemographicQuestion(q)).length;
             const scorePercentage =
-                totalScoredQuestions > 0
+                keysAvailable && totalScoredQuestions > 0
                     ? Math.round((correctCount / totalScoredQuestions) * 100)
                     : 0;
             const elapsedSecs = isTimed
@@ -165,45 +196,81 @@ export function useExamSubmission({
             // Save active session cleanup
             if (typeof window !== 'undefined') {
                 localStorage.removeItem('active_exam_session');
+                localStorage.removeItem('active_exam_session_v1');
             }
 
-            // Post attempt payload with full cat_scores structure
             const payload = {
                 category_id: drillCategoryId ?? selectedExamId,
                 question_ids: activeQuestions.map((q) => q.id),
-                answers,
-                cat_scores: {
-                    categoryScoreMap: catMap,
-                    metadata: {
-                        track:
-                            selectedExamId === 1
-                                ? 'Professional'
-                                : selectedExamId === 2
-                                  ? 'Subprofessional'
-                                  : 'Drill',
-                        category_name:
-                            drillCategoryName || 'Civil Service Examination',
-                        score: scorePercentage,
-                        total_questions: totalScoredQuestions,
-                        correct_count: correctCount,
-                        wrong_count: wrongCount,
-                        skipped_count: skippedCount,
-                        wrong_question_ids: wrongQuestionIds,
-                        duration_secs: elapsedSecs,
-                        is_timed: isTimed,
-                        question_times: questionTimes,
-                        answer_changes: answerChanges,
-                        selected_subcategories: drillSubcategories,
-                        language: drillLanguage,
-                        question_count: drillQuestionCount,
-                    },
+                answers: answersByQuestionId,
+                metadata: {
+                    track:
+                        selectedExamId === 1
+                            ? 'Professional'
+                            : selectedExamId === 2
+                              ? 'Subprofessional'
+                              : 'Drill',
+                    category_name:
+                        drillCategoryName || 'Civil Service Examination',
+                    duration_secs: elapsedSecs,
+                    is_timed: isTimed,
+                    question_times: questionTimes,
+                    answer_changes: answerChanges,
+                    selected_subcategories: drillSubcategories,
+                    language: drillLanguage,
+                    question_count: drillQuestionCount,
                 },
             };
 
-            apiPost('/exams/attempts', payload)
+                        apiPost('/exams/attempts', payload)
                 .then((data: any) => {
                     if (data?.attempt_id) {
                         setLastStoredAttemptId(data.attempt_id);
+                    }
+                    if (data?.success && typeof data.score === 'number') {
+                        const serverMap = data.cat_scores?.categoryScoreMap ?? catMap;
+                        setResults({
+                            score: data.score,
+                            total: data.total_questions ?? totalScoredQuestions,
+                            percentage: data.score,
+                            correctCount: data.correct_count ?? correctCount,
+                            wrongCount: data.wrong_count ?? wrongCount,
+                            skippedCount: data.skipped_count ?? skippedCount,
+                            categoryScoreMap: serverMap,
+                            elapsedSecs,
+                        });
+                    }
+                    if (Array.isArray(data?.answer_keys)) {
+                        // Merge withheld keys into in-memory questions for review UI.
+                        const keyById = new Map<
+                            number,
+                            { correct_option: number; explanation: string }
+                        >(
+                            data.answer_keys.map(
+                                (k: {
+                                    id: number;
+                                    correct_option: number;
+                                    explanation: string;
+                                }) => [
+                                    k.id,
+                                    {
+                                        correct_option: k.correct_option,
+                                        explanation: k.explanation ?? '',
+                                    },
+                                ],
+                            ),
+                        );
+                        // Notify via custom event — exam state listens and patches activeQuestions.
+                        if (typeof window !== 'undefined') {
+                            window.dispatchEvent(
+                                new CustomEvent('civio:exam-answer-keys', {
+                                    detail: {
+                                        keys: Object.fromEntries(keyById),
+                                        answers: data.answers ?? answersByQuestionId,
+                                    },
+                                }),
+                            );
+                        }
                     }
                 })
                 .catch(() => {

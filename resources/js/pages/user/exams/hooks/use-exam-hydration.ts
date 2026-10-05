@@ -120,11 +120,33 @@ export function useExamHydration({
         }
 
         const loadedQuestions = scoredOnly(rawLoadedQuestions);
-        const restoredAnswers = remapIndexedRecord(
-            savedAttempt.answers,
-            rawLoadedQuestions,
-            loadedQuestions,
+        // Prefer question-ID-keyed answers (Phase 0+). Fall back to legacy position keys.
+        const restoredAnswers: Record<number, number> = {};
+        const rawAnswers = savedAttempt.answers ?? {};
+        const answerKeys = Object.keys(rawAnswers);
+        const looksLikeQuestionIds = answerKeys.some((k) =>
+            loadedQuestions.some((q) => String(q.id) === String(k)),
         );
+
+        if (looksLikeQuestionIds) {
+            loadedQuestions.forEach((question, newIdx) => {
+                const byId =
+                    rawAnswers[question.id as keyof typeof rawAnswers] ??
+                    rawAnswers[String(question.id) as keyof typeof rawAnswers];
+                if (byId !== undefined && byId !== null) {
+                    restoredAnswers[newIdx] = Number(byId);
+                }
+            });
+        } else {
+            Object.assign(
+                restoredAnswers,
+                remapIndexedRecord(
+                    rawAnswers as Record<number, number>,
+                    rawLoadedQuestions,
+                    loadedQuestions,
+                ),
+            );
+        }
         const catScores = savedAttempt.cat_scores ?? {};
         const meta: AttemptMetadata = (catScores.metadata ??
             {}) as AttemptMetadata;

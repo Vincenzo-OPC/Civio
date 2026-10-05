@@ -7,13 +7,15 @@ namespace App\Actions\Exam;
 use App\DTOs\Exam\SubmitExamAttemptData;
 use App\DTOs\Exam\SubmitExamAttemptResult;
 use App\Repositories\ExamAttemptRepositoryInterface;
+use App\Services\ExamGradingService;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
 class SubmitExamAttemptAction
 {
     public function __construct(
-        protected ExamAttemptRepositoryInterface $repository
+        protected ExamAttemptRepositoryInterface $repository,
+        protected ExamGradingService $gradingService,
     ) {}
 
     public function execute(
@@ -70,24 +72,38 @@ class SubmitExamAttemptAction
         }
 
         try {
-            $attempt = DB::transaction(function () use ($data, $userId) {
+            $clientMeta = (array) ($data->clientMetadata ?? []);
+            $graded = $this->gradingService->grade(
+                $data->questionIds,
+                $data->answers,
+                $clientMeta
+            );
+
+            $attempt = DB::transaction(function () use ($data, $userId, $graded) {
                 return $this->repository->create([
                     'user_id' => $userId,
                     'category_id' => $data->categoryId,
                     'question_ids' => $data->questionIds,
-                    'answers' => $data->answers,
-                    'cat_scores' => $data->catScores,
+                    'answers' => $graded['answers'],
+                    'cat_scores' => $graded['cat_scores'],
                 ]);
             });
 
             return new SubmitExamAttemptResult(
                 success: true,
                 statusCode: 200,
-                attemptId: $attempt->id
+                attemptId: $attempt->id,
+                score: $graded['score'],
+                correctCount: $graded['correct_count'],
+                wrongCount: $graded['wrong_count'],
+                skippedCount: $graded['skipped_count'],
+                totalQuestions: $graded['total_questions'],
+                catScores: $graded['cat_scores'],
+                answerKeys: $graded['answer_keys'],
+                answers: $graded['answers'],
             );
         } finally {
             $lock->release();
         }
     }
 }
-

@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\ExamAttempt;
 use App\Models\Question;
+use App\Services\ExamGradingService;
 
 class ExamAttemptFormatter
 {
@@ -218,6 +219,7 @@ class ExamAttemptFormatter
         }
 
         $questions = Question::whereIn('id', $allQuestionIds)->pluck('correct_option', 'id');
+        $grading = app(ExamGradingService::class);
 
         foreach ($attempts as $attempt) {
             $meta = $attempt->cat_scores['metadata'] ?? [];
@@ -226,11 +228,11 @@ class ExamAttemptFormatter
                 $track = 'Professional';
             }
 
-            $qIds = $attempt->question_ids ?? [];
+            $qIds = array_values(array_map('intval', $attempt->question_ids ?? []));
             $answers = $attempt->answers ?? [];
 
-            foreach ($qIds as $idx => $qId) {
-                $chosen = $answers[$idx] ?? null;
+            foreach ($qIds as $qId) {
+                $chosen = $grading->chosenForQuestion($answers, $qIds, $qId);
                 $correct = $questions[$qId] ?? null;
 
                 if ($chosen === null || (string) $chosen !== (string) $correct) {

@@ -13,27 +13,26 @@ class StoreExamAttemptRequest extends FormRequest
 
     protected function prepareForValidation(): void
     {
-        if (! $this->has('cat_scores') && ($this->has('score') || $this->has('categoryScoreMap'))) {
+        // Flatten legacy cat_scores.metadata into metadata for validation / DTO.
+        if (! $this->has('metadata') && $this->has('cat_scores')) {
+            $catScores = $this->input('cat_scores', []);
+            if (is_array($catScores) && isset($catScores['metadata']) && is_array($catScores['metadata'])) {
+                $this->merge(['metadata' => $catScores['metadata']]);
+            }
+        }
+
+        if (! $this->has('metadata') && ($this->has('score') || $this->has('track'))) {
             $this->merge([
-                'cat_scores' => [
-                    'categoryScoreMap' => $this->input('categoryScoreMap', []),
-                    'metadata' => [
-                        'track' => $this->input('track', 'Drill'),
-                        'category_name' => $this->input('category_name', 'Practice Drill'),
-                        'score' => $this->input('score', 0),
-                        'total_questions' => $this->input('total_questions', count($this->input('question_ids', []))),
-                        'correct_count' => $this->input('correct_count', 0),
-                        'wrong_count' => $this->input('wrong_count', 0),
-                        'skipped_count' => $this->input('skipped_count', 0),
-                        'wrong_question_ids' => $this->input('wrong_question_ids', []),
-                        'duration_secs' => $this->input('duration_secs', 0),
-                        'is_timed' => $this->boolean('is_timed', true),
-                        'question_times' => $this->input('question_times', []),
-                        'answer_changes' => $this->input('answer_changes', []),
-                        'selected_subcategories' => $this->input('selected_subcategories', []),
-                        'language' => $this->input('language', 'English'),
-                        'question_count' => $this->input('question_count', 30),
-                    ],
+                'metadata' => [
+                    'track' => $this->input('track', 'Drill'),
+                    'category_name' => $this->input('category_name', 'Practice Drill'),
+                    'duration_secs' => $this->input('duration_secs', 0),
+                    'is_timed' => $this->boolean('is_timed', true),
+                    'question_times' => $this->input('question_times', []),
+                    'answer_changes' => $this->input('answer_changes', []),
+                    'selected_subcategories' => $this->input('selected_subcategories', []),
+                    'language' => $this->input('language', 'English'),
+                    'question_count' => $this->input('question_count', 30),
                 ],
             ]);
         }
@@ -43,9 +42,21 @@ class StoreExamAttemptRequest extends FormRequest
     {
         return [
             'category_id' => ['nullable', 'integer'],
-            'question_ids' => ['required', 'array'],
+            'question_ids' => ['required', 'array', 'min:1'],
+            'question_ids.*' => ['integer'],
             'answers' => ['required', 'array'],
-            'cat_scores' => ['required', 'array'],
+            // Client may still send cat_scores for backward-compatible clients; ignored for scoring.
+            'cat_scores' => ['sometimes', 'array'],
+            'metadata' => ['sometimes', 'array'],
+            'metadata.track' => ['sometimes', 'string'],
+            'metadata.category_name' => ['sometimes', 'nullable', 'string'],
+            'metadata.duration_secs' => ['sometimes', 'numeric'],
+            'metadata.is_timed' => ['sometimes', 'boolean'],
+            'metadata.question_times' => ['sometimes', 'array'],
+            'metadata.answer_changes' => ['sometimes', 'array'],
+            'metadata.selected_subcategories' => ['sometimes', 'array'],
+            'metadata.language' => ['sometimes', 'string'],
+            'metadata.question_count' => ['sometimes'],
         ];
     }
 }

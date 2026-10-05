@@ -436,7 +436,50 @@ export function useExamState(props: ExamIndexProps) {
         return ['All Subcategories', ...subcats];
     }, [activeQuestions, reviewCategoryFilter]);
 
+    // Merge server answer keys after submit (keys were withheld during live play).
+    useEffect(() => {
+        const handler = (event: Event) => {
+            const detail = (event as CustomEvent).detail as {
+                keys?: Record<
+                    number,
+                    { correct_option: number; explanation: string }
+                >;
+                answers?: Record<string, number | null>;
+            };
+            if (!detail?.keys) {
+                return;
+            }
+
+            setActiveQuestions((prev) =>
+                prev.map((q) => {
+                    const key = detail.keys?.[q.id];
+                    if (!key) {
+                        return q;
+                    }
+                    const originalCorrect = Number(key.correct_option);
+                    const displayCorrect =
+                        q.originalOptionIndices?.indexOf(originalCorrect) ??
+                        originalCorrect;
+
+                    return {
+                        ...q,
+                        correct_option:
+                            displayCorrect >= 0
+                                ? displayCorrect
+                                : originalCorrect,
+                        explanation: key.explanation ?? '',
+                    };
+                }),
+            );
+        };
+
+        window.addEventListener('civio:exam-answer-keys', handler);
+        return () =>
+            window.removeEventListener('civio:exam-answer-keys', handler);
+    }, []);
+
     const handleBeginExam = useCallback(() => {
+
         beginExamSession(buildFreshExamPool(selectedExamId), selectedExamId);
     }, [beginExamSession, buildFreshExamPool, selectedExamId]);
 

@@ -316,14 +316,16 @@ class DeterministicAnalysisService
             if (empty($answers) || empty($attempt->question_ids)) {
                 continue;
             }
-            foreach ($attempt->question_ids as $qId) {
+            $qIds = array_values(array_map('intval', $attempt->question_ids));
+            $grading = app(\App\Services\ExamGradingService::class);
+            foreach ($qIds as $qId) {
                 if (! isset($questionsMap[$qId])) {
                     continue;
                 }
                 $q = $questionsMap[$qId];
                 $subcatName = $q->subcategory?->name ?? 'General Info';
-                $userAns = $answers[$qId] ?? null;
-                $isCorrect = ($userAns === $q->correct_option);
+                $userAns = $grading->chosenForQuestion($answers, $qIds, $qId);
+                $isCorrect = ($userAns !== null && (int) $userAns === (int) $q->correct_option);
 
                 if (! isset($subtopicStats[$subcatName])) {
                     $subtopicStats[$subcatName] = ['correct' => 0, 'total' => 0];

@@ -37,12 +37,10 @@ class ExamService
     public function getExamSessionData(ExamSessionQueryData $query, ?int $userId): array
     {
         $activeQuestions = $this->questionRepository->getActivePool();
-        $formattedQuestions = ExamQuestionResource::collection($activeQuestions)->resolve();
-        $questions = collect($formattedQuestions);
-
         $savedAttempt = null;
         $retakeSource = null;
         $attempt = null;
+        $includeAnswerKey = false;
 
         if ($query->attemptId !== null) {
             $attempt = $this->attemptService->getScorecardAttempt(
@@ -51,7 +49,7 @@ class ExamService
                 pendingGuestId: $query->pendingGuestAttemptId
             );
 
-            $questions = $questions->whereIn('id', $attempt->question_ids);
+            $includeAnswerKey = true;
             $savedAttempt = (new ExamScorecardResource($attempt))->resolve();
         } elseif ($query->retakeSame !== null || $query->retakeFresh !== null) {
             $retakeId = $query->retakeSame ?? $query->retakeFresh;
@@ -61,6 +59,16 @@ class ExamService
                 $retakeSource = $this->attemptService->getRetakeSource($retakeId, $userId, $mode);
                 $attempt = $this->attemptService->getScorecardAttempt($retakeId, $userId, null);
             }
+        }
+
+        $formattedQuestions = ExamQuestionResource::collectionForExam(
+            $activeQuestions,
+            $includeAnswerKey
+        );
+        $questions = collect($formattedQuestions);
+
+        if ($attempt !== null) {
+            $questions = $questions->whereIn('id', $attempt->question_ids);
         }
 
         if (($savedAttempt || $retakeSource) && $attempt) {

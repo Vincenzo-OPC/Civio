@@ -2,8 +2,9 @@ export interface Question {
     id: number;
     stem: string;
     options: string[];
-    correct_option: number;
-    explanation: string;
+    /** Present after submit / scorecard / reveal — withheld during live play. */
+    correct_option?: number;
+    explanation?: string;
     category: string;
     subcategory: string;
     originalOptionIndices?: number[];
