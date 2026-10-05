@@ -17,6 +17,10 @@ import {
 } from '@/lib/exam-formatters';
 import { makeBackOnClick, resolveOriginFromUrl } from '@/lib/smart-back';
 import { useGuestUnlimited } from '@/lib/civio-study';
+import {
+    summarizeAttemptStrengths,
+    type StrengthRow,
+} from '@/lib/guest-study-bias';
 import type {
     SimulationDetails,
     SavedAttempt,
@@ -61,6 +65,7 @@ export function ScorecardView({
     setReviewCategoryFilter,
     setReviewStatusFilter,
     handleBeginExam,
+    aiAnalysis,
 }: ScorecardViewProps) {
     const { auth } = usePage<{ auth: any }>().props;
     const guestUnlimited = useGuestUnlimited();
@@ -208,6 +213,26 @@ export function ScorecardView({
             percentage: val.total > 0 ? (val.correct / val.total) * 100 : 0,
         }))
         .filter((c) => c.percentage < 80);
+
+    const attemptSplit = useMemo(
+        () => summarizeAttemptStrengths(results?.categoryScoreMap),
+        [results?.categoryScoreMap],
+    );
+    const savedProfile =
+        aiAnalysis?.status === 'ready' && aiAnalysis.data
+            ? (aiAnalysis.data as {
+                  strengths?: unknown;
+                  critical_weaknesses?: unknown;
+              })
+            : null;
+    const savedStrengths = Array.isArray(savedProfile?.strengths)
+        ? savedProfile.strengths.filter((name) => typeof name === 'string')
+        : [];
+    const savedWeaknesses = Array.isArray(savedProfile?.critical_weaknesses)
+        ? savedProfile.critical_weaknesses.filter(
+              (name) => typeof name === 'string',
+          )
+        : [];
 
     const wrongQuestionIds = useMemo(() => {
         if (!activeQuestions || !answers) {
@@ -629,6 +654,53 @@ export function ScorecardView({
                                 </div>
                             </div>
 
+
+                            {/* Strength vs weakness from this attempt */}
+                            <div
+                                data-study-tutor="strength-weakness"
+                                className="rounded-2xl border border-border bg-card p-5 shadow-xs sm:p-6"
+                            >
+                                <div className="mb-4">
+                                    <h3 className="font-heading text-base font-black text-foreground">
+                                        Strengths and weaknesses
+                                    </h3>
+                                    <p className="text-xs font-medium text-muted-foreground">
+                                        From this attempt. Strength is 80% or
+                                        better. Missed counts wrong answers and
+                                        unanswered items. No AI call.
+                                    </p>
+                                </div>
+                                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                                    <StrengthList
+                                        title="Strengths"
+                                        tone="strength"
+                                        rows={attemptSplit.strengths}
+                                        emptyLabel="No category at 80% yet."
+                                    />
+                                    <StrengthList
+                                        title="Weaknesses"
+                                        tone="weakness"
+                                        rows={attemptSplit.weaknesses}
+                                        emptyLabel="No weak category on this attempt."
+                                    />
+                                </div>
+                                {(savedStrengths.length > 0 ||
+                                    savedWeaknesses.length > 0) && (
+                                    <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground">
+                                        Saved-account profile
+                                        (DeterministicAnalysis, not this
+                                        browser session):{' '}
+                                        {savedStrengths.length > 0
+                                            ? `strengths ${savedStrengths.join(', ')}`
+                                            : 'no saved strengths'}
+                                        {savedWeaknesses.length > 0
+                                            ? `; weaknesses ${savedWeaknesses.join(', ')}`
+                                            : ''}
+                                        .
+                                    </p>
+                                )}
+                            </div>
+
                             {/* POST-EXAM ACTION HUB */}
                             <div className="rounded-2xl border border-border bg-card p-5 shadow-xs sm:p-6">
                                 <div className="mb-4 flex items-center gap-2">
@@ -865,6 +937,59 @@ export function ScorecardView({
                         </div>
                     </div>
                 </div>
+            )}
+        </div>
+    );
+}
+
+function StrengthList({
+    title,
+    tone,
+    rows,
+    emptyLabel,
+}: {
+    title: string;
+    tone: 'strength' | 'weakness';
+    rows: StrengthRow[];
+    emptyLabel: string;
+}) {
+    const toneClass =
+        tone === 'strength'
+            ? 'text-emerald-700 dark:text-emerald-400'
+            : 'text-rose-700 dark:text-rose-400';
+
+    return (
+        <div>
+            <h4 className={`mb-2 text-xs font-black tracking-wider uppercase ${toneClass}`}>
+                {title}
+            </h4>
+            {rows.length === 0 ? (
+                <p className="text-xs text-muted-foreground">{emptyLabel}</p>
+            ) : (
+                <ul className="flex flex-col gap-1.5">
+                    {rows.map((row) => (
+                        <li
+                            key={`${row.kind}-${row.parent || ''}-${row.name}`}
+                            className="flex items-center justify-between gap-2 rounded-lg border border-border px-3 py-2 text-xs"
+                        >
+                            <span className="min-w-0">
+                                <span className="font-bold text-foreground">
+                                    {row.name}
+                                </span>
+                                <span className="mt-0.5 block text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
+                                    {row.kind}
+                                    {row.parent ? ` · ${row.parent}` : ''}
+                                </span>
+                            </span>
+                            <span className="shrink-0 text-right font-bold text-muted-foreground">
+                                {row.correct} correct
+                                <span className="block">
+                                    {row.missed} missed / {row.total}
+                                </span>
+                            </span>
+                        </li>
+                    ))}
+                </ul>
             )}
         </div>
     );

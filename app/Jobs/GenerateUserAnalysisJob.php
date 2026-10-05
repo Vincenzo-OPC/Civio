@@ -76,10 +76,12 @@ class GenerateUserAnalysisJob implements ShouldQueue
 Rewrite the coaching commentary fields to make them highly personalized, professional, and natural.
 
 CRITICAL RULES:
-1. Rewrite only the following text fields: `verdict`, `encouragement`, `priority_action`.
-2. STRICT THEMATIC CONSISTENCY: Your `priority_action` and `encouragement` MUST strictly align with the student's top weakness in `critical_weaknesses` and top focus in `priority_focus`.
-3. Keep the tone empathetic, practical, motivating, and culturally attuned to Philippine civil service examinees.
-4. You must respond ONLY with a valid JSON object matching the provided schema.";
+1. Rewrite ONLY the following text fields: `verdict`, `encouragement`, `priority_action`.
+2. STRICT THEMATIC CONSISTENCY: `priority_action` and `encouragement` MUST directly reference the student's top weakness from `critical_weaknesses` and top focus from `priority_focus`. Never use generic corporate phrases.
+3. Use realistic Philippine context: pesos (₱), local cities (Manila, Cebu, Davao), common Filipino names, and agencies (CSC, BIR, DENR, etc.).
+4. Tone: empathetic, practical, motivating, concise (1-2 sentences per field), culturally attuned to Filipino examinees preparing for government service.
+5. Avoid overly formal English or Western self-help clichés. Sound like a supportive Filipino mentor.
+6. Respond ONLY with a valid JSON object matching the schema. No extra text.";
 
             $userPrompt = "Here is the student's performance profile:\n".json_encode($normalizedProfile)."\n\nPlease rewrite the verbal coaching fields (`verdict`, `encouragement`, `priority_action`).";
 

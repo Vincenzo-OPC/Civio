@@ -47,6 +47,7 @@ export default function ExamIndex(props: ExamIndexProps) {
         showLockedModal,
         setShowLockedModal,
         timeLeft,
+        itemElapsed,
         isTimed,
         submittedByTimer,
         results,
@@ -140,13 +141,13 @@ export default function ExamIndex(props: ExamIndexProps) {
                     currentIdx={currentIdx}
                     isTimed={isTimed}
                     timeLeft={timeLeft}
+                    itemElapsed={itemElapsed}
                     formatTime={formatTime}
                     handleExitExam={handleExitExam}
                     setIsMobilePaletteOpen={setIsMobilePaletteOpen}
                     toggleFlag={toggleFlag}
                     flagged={flagged}
                     answers={answers}
-                    questionTimes={questionTimes}
                     handleSelectOption={handleSelectOption}
                     handleQuestionNavigate={handleQuestionNavigate}
                     isFreeAttempt={isFreeAttempt}

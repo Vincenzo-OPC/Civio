@@ -105,29 +105,21 @@ function isInteractiveElement(el: EventTarget | null): boolean {
 export function useContentShield(
     options: UseContentShieldOptions = {},
 ): UseContentShieldReturn {
-    // Honor CIVIO_CONTENT_SHIELD=false via Inertia shared props.
-    const contentShieldEnabled = useContentShieldEnabled();
-    // LOCAL_SHIELD_OFF â€” allow screenshots/study on Docker localhost
-    const isLocalHost =
-        typeof window !== 'undefined' &&
-        (window.location.hostname === 'localhost' ||
-            window.location.hostname === '127.0.0.1');
+    // SHIELD COMPLETELY REMOVED per user request (copy-paste now works everywhere)
     const localContentRef = useRef<HTMLDivElement | null>(null);
-    if (isLocalHost || !contentShieldEnabled) {
-        return {
-            isShielded: false,
-            isResumeLocked: false,
-            dismissShield: () => {},
-            styleBlock: '',
-            contentRef: localContentRef,
-            wrapperProps: {
-                onCopy: () => {},
-                onContextMenu: () => {},
-                onMouseDown: () => {},
-                onDragStart: () => {},
-            },
-        };
-    }
+    return {
+        isShielded: false,
+        isResumeLocked: false,
+        dismissShield: () => {},
+        styleBlock: '',
+        contentRef: localContentRef,
+        wrapperProps: {
+            onCopy: () => {},
+            onContextMenu: () => {},
+            onMouseDown: () => {},
+            onDragStart: () => {},
+        },
+    };
     const { onCopyAttempt, onShieldActivate, contentLabel = 'Exam' } = options;
 
     // Keep latest callbacks in refs so listener effects never re-run on every

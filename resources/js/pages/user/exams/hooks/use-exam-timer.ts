@@ -22,6 +22,7 @@ export function useExamTimer({
     const [questionTimes, setQuestionTimes] = useState<Record<number, number>>(
         {},
     );
+    const [itemElapsed, setItemElapsed] = useState(0);
     const timeLeftRef = useRef(sessionTimeLimitSecs);
     const currentIdxRef = useRef(currentIdx);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -31,11 +32,20 @@ export function useExamTimer({
         currentIdxRef.current = currentIdx;
     }, [currentIdx]);
 
+    // Visible per-item clock. Resets on next, previous, or palette.
+    // questionTimes stays cumulative for submit analytics.
+    const itemIdxRef = useRef(currentIdx);
+    if (itemIdxRef.current !== currentIdx) {
+        itemIdxRef.current = currentIdx;
+        setItemElapsed(0);
+    }
+
     const resetTimer = useCallback((newLimitSecs: number) => {
         setTimeLeft(newLimitSecs);
         timeLeftRef.current = newLimitSecs;
         warned10MinRef.current = false;
         warned1MinRef.current = false;
+        setItemElapsed(0);
     }, []);
 
     // Live countdown timer & per-question time tracking
@@ -48,6 +58,7 @@ export function useExamTimer({
                     ...prev,
                     [activeIdx]: (prev[activeIdx] || 0) + 1,
                 }));
+                setItemElapsed((prev) => prev + 1);
 
                 if (isTimed) {
                     setTimeLeft((prev) => {
@@ -118,6 +129,7 @@ export function useExamTimer({
         setTimeLeft,
         questionTimes,
         setQuestionTimes,
+        itemElapsed,
         formatTime,
         resetTimer,
         timeLeftRef,

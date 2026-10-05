@@ -1,7 +1,26 @@
 import { useEffect, useCallback } from 'react';
 import type { Question } from '../types';
+import { isDemographicQuestion } from '../utils/exam-utils';
 
 const PERSISTENCE_KEY = 'active_exam_session_v1';
+
+function remapIndexedRecord<T>(
+    record: Record<number, T> | undefined,
+    oldQuestions: Question[],
+    newQuestions: Question[],
+): Record<number, T> {
+    const remapped: Record<number, T> = {};
+
+    newQuestions.forEach((question, newIdx) => {
+        const oldIdx = oldQuestions.findIndex((q) => q.id === question.id);
+
+        if (oldIdx >= 0 && record?.[oldIdx] !== undefined) {
+            remapped[newIdx] = record[oldIdx];
+        }
+    });
+
+    return remapped;
+}
 
 export interface ActiveSessionData {
     selectedExamId: number | null;
@@ -56,15 +75,18 @@ export function useExamPersistence({
             return;
         }
 
+        const scoredQuestions = activeQuestions.filter(
+            (q) => !isDemographicQuestion(q),
+        );
         const sessionData: ActiveSessionData = {
             selectedExamId,
-            activeQuestions,
-            currentIdx,
-            answers,
-            questionTimes,
-            answerChanges,
-            flagged,
-            scratchpads,
+            activeQuestions: scoredQuestions,
+            currentIdx: Math.min(currentIdx, Math.max(0, scoredQuestions.length - 1)),
+            answers: remapIndexedRecord(answers, activeQuestions, scoredQuestions),
+            questionTimes: remapIndexedRecord(questionTimes, activeQuestions, scoredQuestions),
+            answerChanges: remapIndexedRecord(answerChanges, activeQuestions, scoredQuestions),
+            flagged: remapIndexedRecord(flagged, activeQuestions, scoredQuestions),
+            scratchpads: remapIndexedRecord(scratchpads, activeQuestions, scoredQuestions),
             sessionTimeLimitSecs,
             timeLeft,
             isTimed,
@@ -120,7 +142,58 @@ export function useExamPersistence({
             }
 
             if (data.activeQuestions && data.activeQuestions.length > 0) {
-                onRestoreSession(data);
+                // Local CIVIO study: never resume Demographic Profile / EDQ items.
+                const scoredOnly = data.activeQuestions.filter(
+                    (q) => !isDemographicQuestion(q),
+                );
+                if (scoredOnly.length === 0) {
+                    localStorage.removeItem(PERSISTENCE_KEY);
+                    return;
+                }
+                const remappedAnswers: Record<number, number> = {};
+                const remappedTimes: Record<number, number> = {};
+                const remappedChanges: Record<number, number> = {};
+                const remappedFlagged: Record<number, boolean> = {};
+                const remappedScratch: Record<number, string> = {};
+                const oldQs = data.activeQuestions;
+                scoredOnly.forEach((q, newIdx) => {
+                    const oldIdx = oldQs.findIndex((oq) => oq.id === q.id);
+                    if (oldIdx < 0) return;
+                    if (data.answers?.[oldIdx] !== undefined) {
+                        remappedAnswers[newIdx] = data.answers[oldIdx];
+                    }
+                    if (data.questionTimes?.[oldIdx] !== undefined) {
+                        remappedTimes[newIdx] = data.questionTimes[oldIdx];
+                    }
+                    if (data.answerChanges?.[oldIdx] !== undefined) {
+                        remappedChanges[newIdx] = data.answerChanges[oldIdx];
+                    }
+                    if (data.flagged?.[oldIdx]) {
+                        remappedFlagged[newIdx] = true;
+                    }
+                    if (data.scratchpads?.[oldIdx] !== undefined) {
+                        remappedScratch[newIdx] = data.scratchpads[oldIdx];
+                    }
+                });
+                const firstUnanswered = scoredOnly.findIndex(
+                    (_, i) => remappedAnswers[i] === undefined,
+                );
+                onRestoreSession({
+                    ...data,
+                    activeQuestions: scoredOnly,
+                    answers: remappedAnswers,
+                    questionTimes: remappedTimes,
+                    answerChanges: remappedChanges,
+                    flagged: remappedFlagged,
+                    scratchpads: remappedScratch,
+                    currentIdx:
+                        firstUnanswered >= 0
+                            ? firstUnanswered
+                            : Math.min(
+                                  data.currentIdx || 0,
+                                  scoredOnly.length - 1,
+                              ),
+                });
             }
         } catch {
             clearSession();

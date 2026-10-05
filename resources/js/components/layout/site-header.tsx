@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { home, login, register } from '@/routes';
 import { index as dashboardIndex } from '@/routes/dashboard';
 
+import { useGuestUnlimited } from '@/lib/civio-study';
 import type { Auth } from '@/types';
 
 // Declare expected page props to satisfy TypeScript strict compiler checks
@@ -25,6 +26,7 @@ export default function SiteHeader({
 }: SiteHeaderProps) {
     const { auth } = usePage<PageProps>().props;
     const { url } = usePage();
+    const guestUnlimited = useGuestUnlimited();
     const [scrollProgress, setScrollProgress] = useState(0);
     const [showHeader, setShowHeader] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -61,15 +63,25 @@ export default function SiteHeader({
         return () => window.removeEventListener('scroll', handleScroll);
     }, [lastScrollY, showHeader]);
 
-    const navLinks = [
-        { id: 'home', label: 'Home', href: '#' },
-        { id: 'about', label: 'About', href: '/about' },
-        { id: 'features', label: 'Features', href: '#features' },
-        { id: 'path', label: 'Process', href: '#path' },
-        { id: 'learn', label: 'Study Hub', href: '/learn' },
-        { id: 'guide', label: 'Reviewer Guide', href: '#guide' },
-        { id: 'faq', label: 'FAQ', href: '#faq' },
-    ];
+    const navLinks = guestUnlimited
+        ? [
+              { id: 'home', label: 'Home', href: '#' },
+              { id: 'exams', label: 'Exams', href: '/exams' },
+              { id: 'drills', label: 'Drills', href: '/drills' },
+              { id: 'learn', label: 'Study Hub', href: '/learn' },
+              { id: 'history', label: 'History', href: '/history' },
+              { id: 'analytics', label: 'Analytics', href: '/analytics' },
+              { id: 'about', label: 'About', href: '/about' },
+          ]
+        : [
+              { id: 'home', label: 'Home', href: '#' },
+              { id: 'about', label: 'About', href: '/about' },
+              { id: 'features', label: 'Features', href: '#features' },
+              { id: 'path', label: 'Process', href: '#path' },
+              { id: 'learn', label: 'Study Hub', href: '/learn' },
+              { id: 'guide', label: 'Reviewer Guide', href: '#guide' },
+              { id: 'faq', label: 'FAQ', href: '#faq' },
+          ];
 
     // Compute navigation hrefs dynamically to handle cross-page anchoring correctly
     const getHref = (id: string, href: string) => {
@@ -130,14 +142,30 @@ export default function SiteHeader({
                                         (link.id === 'learn' &&
                                             url.startsWith('/learn')) ||
                                         (link.id === 'about' &&
-                                            url.startsWith('/about'));
+                                            url.startsWith('/about') ||
+                                        (link.id === 'exams' &&
+                                            url.startsWith('/exams')) ||
+                                        (link.id === 'drills' &&
+                                            url.startsWith('/drills')) ||
+                                        (link.id === 'history' &&
+                                            url.startsWith('/history')) ||
+                                        (link.id === 'analytics' &&
+                                            url.startsWith('/analytics')));
                                     const isHomePage =
                                         url === '/' || url === '';
                                     const isHomeActive =
                                         (link.id === 'learn' &&
                                             url.startsWith('/learn')) ||
                                         (link.id === 'about' &&
-                                            url.startsWith('/about')) ||
+                                            url.startsWith('/about') ||
+                                        (link.id === 'exams' &&
+                                            url.startsWith('/exams')) ||
+                                        (link.id === 'drills' &&
+                                            url.startsWith('/drills')) ||
+                                        (link.id === 'history' &&
+                                            url.startsWith('/history')) ||
+                                        (link.id === 'analytics' &&
+                                            url.startsWith('/analytics'))) ||
                                         (isHomePage && isLinkActive);
 
                                     return (
@@ -175,22 +203,45 @@ export default function SiteHeader({
                             </Link>
                         ) : (
                             <>
-                                <Button variant="ghost" asChild>
-                                    <Link
-                                        href={login()}
-                                        className="group font-bold text-primary transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
-                                    >
-                                        Log in
-                                    </Link>
-                                </Button>
-                                <Button asChild>
-                                    <Link
-                                        href={register()}
-                                        className="group font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
-                                    >
-                                        Register
-                                    </Link>
-                                </Button>
+                                {guestUnlimited ? (
+                                    <>
+                                        <Button variant="ghost" asChild>
+                                            <Link
+                                                href="/drills"
+                                                className="group font-bold text-primary transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                            >
+                                                Drills
+                                            </Link>
+                                        </Button>
+                                        <Button asChild>
+                                            <Link
+                                                href="/exams?start=professional&free_attempt=1"
+                                                className="group font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                            >
+                                                Start Pro
+                                            </Link>
+                                        </Button>
+                                    </>
+                                ) : (
+                                    <>
+                                        <Button variant="ghost" asChild>
+                                            <Link
+                                                href={login()}
+                                                className="group font-bold text-primary transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                            >
+                                                Log in
+                                            </Link>
+                                        </Button>
+                                        <Button asChild>
+                                            <Link
+                                                href={register()}
+                                                className="group font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                            >
+                                                Register
+                                            </Link>
+                                        </Button>
+                                    </>
+                                )}
                             </>
                         )}
                         <ThemeToggle />
@@ -229,14 +280,30 @@ export default function SiteHeader({
                                             (link.id === 'learn' &&
                                                 url.startsWith('/learn')) ||
                                             (link.id === 'about' &&
-                                                url.startsWith('/about'));
+                                                url.startsWith('/about') ||
+                                        (link.id === 'exams' &&
+                                            url.startsWith('/exams')) ||
+                                        (link.id === 'drills' &&
+                                            url.startsWith('/drills')) ||
+                                        (link.id === 'history' &&
+                                            url.startsWith('/history')) ||
+                                        (link.id === 'analytics' &&
+                                            url.startsWith('/analytics')));
                                         const isHomePage =
                                             url === '/' || url === '';
                                         const isHomeActive =
                                             (link.id === 'learn' &&
                                                 url.startsWith('/learn')) ||
                                             (link.id === 'about' &&
-                                                url.startsWith('/about')) ||
+                                                url.startsWith('/about') ||
+                                        (link.id === 'exams' &&
+                                            url.startsWith('/exams')) ||
+                                        (link.id === 'drills' &&
+                                            url.startsWith('/drills')) ||
+                                        (link.id === 'history' &&
+                                            url.startsWith('/history')) ||
+                                        (link.id === 'analytics' &&
+                                            url.startsWith('/analytics'))) ||
                                             (isHomePage && isLinkActive);
 
                                         return (
@@ -277,29 +344,81 @@ export default function SiteHeader({
                                 </Link>
                             ) : (
                                 <>
-                                    <Button
-                                        variant="ghost"
-                                        className="w-full rounded-xl py-4 text-base font-bold text-primary sm:py-6"
-                                        asChild
-                                    >
-                                        <Link
-                                            href={login()}
-                                            onClick={() => setIsMenuOpen(false)}
-                                        >
-                                            Log in
-                                        </Link>
-                                    </Button>
-                                    <Button
-                                        className="w-full rounded-xl py-4 text-base font-bold sm:py-6"
-                                        asChild
-                                    >
-                                        <Link
-                                            href={register()}
-                                            onClick={() => setIsMenuOpen(false)}
-                                        >
-                                            Register
-                                        </Link>
-                                    </Button>
+                                    {guestUnlimited ? (
+                                        <>
+                                            <Button
+                                                variant="ghost"
+                                                className="w-full rounded-xl py-4 text-base font-bold text-primary sm:py-6"
+                                                asChild
+                                            >
+                                                <Link
+                                                    href="/drills"
+                                                    onClick={() =>
+                                                        setIsMenuOpen(false)
+                                                    }
+                                                >
+                                                    Practice Drills
+                                                </Link>
+                                            </Button>
+                                            <Button
+                                                className="w-full rounded-xl py-4 text-base font-bold sm:py-6"
+                                                asChild
+                                            >
+                                                <Link
+                                                    href="/exams?start=professional&free_attempt=1"
+                                                    onClick={() =>
+                                                        setIsMenuOpen(false)
+                                                    }
+                                                >
+                                                    Start Pro
+                                                </Link>
+                                            </Button>
+                                            <Button
+                                                variant="secondary"
+                                                className="w-full rounded-xl py-4 text-base font-bold sm:py-6"
+                                                asChild
+                                            >
+                                                <Link
+                                                    href="/exams?start=subprofessional&free_attempt=1"
+                                                    onClick={() =>
+                                                        setIsMenuOpen(false)
+                                                    }
+                                                >
+                                                    Start Sub Pro
+                                                </Link>
+                                            </Button>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Button
+                                                variant="ghost"
+                                                className="w-full rounded-xl py-4 text-base font-bold text-primary sm:py-6"
+                                                asChild
+                                            >
+                                                <Link
+                                                    href={login()}
+                                                    onClick={() =>
+                                                        setIsMenuOpen(false)
+                                                    }
+                                                >
+                                                    Log in
+                                                </Link>
+                                            </Button>
+                                            <Button
+                                                className="w-full rounded-xl py-4 text-base font-bold sm:py-6"
+                                                asChild
+                                            >
+                                                <Link
+                                                    href={register()}
+                                                    onClick={() =>
+                                                        setIsMenuOpen(false)
+                                                    }
+                                                >
+                                                    Register
+                                                </Link>
+                                            </Button>
+                                        </>
+                                    )}
                                 </>
                             )}
                         </div>

@@ -70,16 +70,6 @@ export default function QuestionPalettePanel({
     isCollapsed = false,
     onToggleCollapse,
 }: QuestionPalettePanelProps) {
-    const demographicCategoryName = useMemo(() => {
-        const cat = questions.find((q) => isDemographicQuestion(q));
-
-        return cat ? cat.category : 'Demographic Profile';
-    }, [questions]);
-
-    const hasDemographics = useMemo(() => {
-        return questions.some((q) => isDemographicQuestion(q));
-    }, [questions]);
-
     const content = (
         <>
             {isMobile ? (
@@ -125,11 +115,6 @@ export default function QuestionPalettePanel({
                             <option value="All Categories">
                                 All Categories
                             </option>
-                            {hasDemographics && (
-                                <option value={demographicCategoryName}>
-                                    {demographicCategoryName}
-                                </option>
-                            )}
                             {allowedCategories.map((cat) => (
                                 <option key={cat} value={cat}>
                                     {cat}
@@ -331,14 +316,15 @@ export default function QuestionPalettePanel({
                     {questions.map((q, idx) => {
                         const isDemographic = isDemographicQuestion(q);
 
+                        // Demographics are never exam/review items in the local app.
+                        if (isDemographic) {
+                            return null;
+                        }
+
                         let isFilteredOut = false;
 
                         if (selectedCategory !== 'All Categories') {
-                            if (selectedCategory === demographicCategoryName) {
-                                if (!isDemographic) {
-                                    isFilteredOut = true;
-                                }
-                            } else if (q.category !== selectedCategory) {
+                            if (q.category !== selectedCategory) {
                                 isFilteredOut = true;
                             }
                         }

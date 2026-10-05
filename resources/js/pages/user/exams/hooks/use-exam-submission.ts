@@ -1,6 +1,7 @@
 ﻿import { useState, useCallback } from 'react';
 import { toast } from 'sonner';
 import { useGuestUnlimited } from '@/lib/civio-study';
+import { recordGuestStudyBias } from '@/lib/guest-study-bias';
 import type { Question, ExamResults, CategoryScore } from '../types';
 import { isDemographicQuestion, apiPost } from '../utils/exam-utils';
 
@@ -145,6 +146,18 @@ export function useExamSubmission({
             };
 
             setResults(computedResults);
+            const studyTrack =
+                selectedExamId === 2
+                    ? 'Subprofessional'
+                    : selectedExamId === 1
+                      ? 'Professional'
+                      : 'Drill';
+            if (studyTrack !== 'Drill') {
+                recordGuestStudyBias(studyTrack, {
+                    wrongIds: wrongQuestionIds,
+                    categoryScoreMap: catMap,
+                });
+            }
             setIsExamSubmitted(true);
             setIsExamActive(false);
             setSubmittedByTimer(autoByTimer);

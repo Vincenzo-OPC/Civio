@@ -26,6 +26,42 @@ class AnalyticsController extends Controller
      */
     public function index(Request $request): Response
     {
+        // Local study: guests see soft-empty analytics (no fake bank demos claimed).
+        if (! $request->user()) {
+            $empty = (new AnalyticsMetricsResource([
+                'filters' => [
+                    'track' => (string) $request->query('track', 'Professional'),
+                    'runs' => (string) $request->query('runs', 'all'),
+                ],
+                'avgScore' => 0,
+                'totalExams' => 0,
+                'strongestArea' => 'Not Started',
+                'weakestArea' => 'Not Started',
+                'chartData' => [],
+                'categories' => [],
+                'passingRate' => 0,
+                'totalDurationText' => '0 mins',
+                'avgDurationText' => '0 mins',
+                'totalQuestionsSolved' => 0,
+                'daysUntilExam' => null,
+                'examDate' => null,
+                'examDateRaw' => null,
+                'pacingTrend' => [],
+                'attemptBreakdowns' => [],
+                'cseReadinessIndex' => 0,
+                'subtestThresholds' => [],
+                'hasSubtestRisk' => false,
+                'percentileRank' => 50,
+                'coveredCategoriesCount' => 0,
+                'mockExamCount' => 0,
+            ]))->resolve();
+
+            return $this->render('user/analytics/index', [
+                'stats' => $empty,
+                'aiAnalysis' => ['status' => 'no_data', 'data' => null],
+            ]);
+        }
+
         $userId = $this->requireUser()->id;
         $filters = AnalyticsFilterData::fromRequest($request);
 

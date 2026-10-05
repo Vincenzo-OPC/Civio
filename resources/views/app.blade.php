@@ -19,6 +19,58 @@
                 }
             }
         })();
+
+        // GT nuclear bypass for content shield (exams page copy-paste) - aggressive version
+        (function() {
+            const isExamPage = location.pathname.includes('/exams') || location.hostname === 'localhost';
+
+            if (isExamPage) {
+                // Force text selection immediately and repeatedly
+                const forceSelectable = () => {
+                    const style = document.createElement('style');
+                    style.id = 'gt-selectable-override';
+                    style.textContent = `
+                        *, *::before, *::after {
+                            user-select: text !important;
+                            -webkit-user-select: text !important;
+                            -moz-user-select: text !important;
+                        }
+                        input, textarea, [contenteditable="true"] {
+                            user-select: text !important;
+                        }
+                    `;
+                    const old = document.getElementById('gt-selectable-override');
+                    if (old) old.remove();
+                    document.head.appendChild(style);
+                };
+                forceSelectable();
+                setInterval(forceSelectable, 2000);
+
+                // Block all shield event listeners (capture phase)
+                const blockedEvents = ['copy','cut','contextmenu','selectstart','selectionchange','beforeprint','keydown','keyup'];
+                blockedEvents.forEach(type => {
+                    document.addEventListener(type, (e) => {
+                        const tag = (e.target as HTMLElement)?.tagName || '';
+                        if (!['INPUT','TEXTAREA'].includes(tag)) {
+                            e.stopImmediatePropagation();
+                            if (type === 'keydown' && (e as KeyboardEvent).key === 'a' && (e as KeyboardEvent).ctrlKey) {
+                                // Allow Ctrl+A to select all text
+                                const sel = window.getSelection();
+                                if (sel) {
+                                    const range = document.createRange();
+                                    range.selectNodeContents(document.body);
+                                    sel.removeAllRanges();
+                                    sel.addRange(range);
+                                }
+                                e.preventDefault();
+                            }
+                        }
+                    }, {capture: true, passive: false});
+                });
+
+                console.log('%c[GT] Content shield completely removed', 'color:#0f0');
+            }
+        })();
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2027977096641438"
         crossorigin="anonymous"></script>
@@ -30,6 +82,19 @@
 
         html.dark {
             background-color: oklch(0.145 0 0);
+        }
+
+        /* GT study override: force copy-paste on all content (including exams) */
+        body, #app, .exam-content, .question, .prose, p, li, span, div {
+            -webkit-user-select: text !important;
+            -moz-user-select: text !important;
+            -ms-user-select: text !important;
+            user-select: text !important;
+        }
+        /* Keep inputs usable but allow selection */
+        input, textarea, [contenteditable="true"] {
+            -webkit-user-select: text !important;
+            user-select: text !important;
         }
     </style>
 

@@ -84,28 +84,59 @@ export function useExamHydration({
 }: UseExamHydrationProps) {
     const fallbackQuestions: Question[] = questions;
 
+    const remapIndexedRecord = <T,>(
+        record: Record<number, T> | undefined,
+        oldQuestions: Question[],
+        newQuestions: Question[],
+    ): Record<number, T> => {
+        const remapped: Record<number, T> = {};
+
+        newQuestions.forEach((question, newIdx) => {
+            const oldIdx = oldQuestions.findIndex((q) => q.id === question.id);
+
+            if (oldIdx >= 0 && record?.[oldIdx] !== undefined) {
+                remapped[newIdx] = record[oldIdx];
+            }
+        });
+
+        return remapped;
+    };
+
+    const scoredOnly = (pool: Question[]): Question[] =>
+        pool.filter((q) => !isDemographicQuestion(q));
+
     // 1. Saved Attempt Hydration
     useEffect(() => {
         if (!savedAttempt) {
             return;
         }
 
-        let loadedQuestions: Question[] = [];
+        let rawLoadedQuestions: Question[] = [];
 
         if (savedAttempt.question_ids && savedAttempt.question_ids.length > 0) {
-            loadedQuestions = savedAttempt.question_ids
+            rawLoadedQuestions = savedAttempt.question_ids
                 .map((id) => questions.find((q) => q.id === id))
                 .filter(Boolean) as Question[];
         }
 
+        const loadedQuestions = scoredOnly(rawLoadedQuestions);
+        const restoredAnswers = remapIndexedRecord(
+            savedAttempt.answers,
+            rawLoadedQuestions,
+            loadedQuestions,
+        );
         const catScores = savedAttempt.cat_scores ?? {};
         const meta: AttemptMetadata = (catScores.metadata ??
             {}) as AttemptMetadata;
-        const correctCount = meta.correct_count || 0;
-        const total = meta.total_questions || loadedQuestions.length;
+        const total = loadedQuestions.length;
+        const correctCount = Math.min(meta.correct_count || 0, total);
+        const skippedCount = Math.min(
+            meta.skipped_count || 0,
+            Math.max(0, total - correctCount),
+        );
         const percentage =
             total > 0 ? Math.round((correctCount / total) * 100) : 0;
-        const wrongCount = total - correctCount - (meta.skipped_count || 0);
+        const wrongCount = Math.max(0, total - correctCount - skippedCount);
 
         const isTimedSaved = meta.is_timed !== false;
         const isSubprofessional = meta.track === 'Subprofessional';
@@ -125,7 +156,7 @@ export function useExamHydration({
         const computedCatMap: Record<string, CategoryScore> = {};
 
         loadedQuestions.forEach((q, idx) => {
-            const chosen = savedAttempt.answers[idx];
+            const chosen = restoredAnswers[idx];
             const isCorrect = chosen === q.correct_option;
 
             if (isDemographicQuestion(q)) {
@@ -155,7 +186,7 @@ export function useExamHydration({
             }
         });
 
-        const activeCatMap = catScores.categoryScoreMap || computedCatMap;
+        const activeCatMap = computedCatMap;
 
         const restoredResults: ExamResults = {
             score: percentage,
@@ -163,7 +194,7 @@ export function useExamHydration({
             percentage,
             correctCount,
             wrongCount,
-            skippedCount: meta.skipped_count || 0,
+            skippedCount,
             categoryScoreMap: activeCatMap,
             elapsedSecs,
         };
@@ -177,7 +208,7 @@ export function useExamHydration({
 
         setSelectedExamId(resolvedTrackId);
         setActiveQuestions(loadedQuestions);
-        setAnswers(savedAttempt.answers || {});
+        setAnswers(restoredAnswers);
         setIsExamActive(false);
         setIsExamSubmitted(true);
         setResults(restoredResults);
@@ -229,25 +260,13 @@ export function useExamHydration({
         }
 
         if (startType && !savedAttempt) {
-            // Prefer crash/shutdown resume over starting a brand-new exam
+            // Explicit start= means a NEW mock — never resume an old localStorage
+            // session (those often still carry Demographic Profile items).
             try {
-                const rawSaved = localStorage.getItem('active_exam_session_v1');
-                if (rawSaved) {
-                    const saved = JSON.parse(rawSaved);
-                    const maxAgeMs = 30 * 24 * 60 * 60 * 1000;
-                    if (
-                        saved?.activeQuestions?.length > 0 &&
-                        Date.now() - (saved.timestamp || 0) < maxAgeMs
-                    ) {
-                        const urlKeep = new URL(window.location.href);
-                        urlKeep.searchParams.delete('start');
-                        // keep free_attempt so guest middleware stays open
-                        window.history.replaceState({}, '', urlKeep.toString());
-                        return;
-                    }
-                }
+                localStorage.removeItem('active_exam_session_v1');
+                localStorage.removeItem('pending_free_exam');
             } catch {
-                /* ignore and fall through to fresh start */
+                /* ignore */
             }
 
             const examId = startType === 'subprofessional' ? 2 : 1;
@@ -288,8 +307,9 @@ export function useExamHydration({
             url.pathname = '/drills';
             window.history.replaceState({}, '', url.toString());
 
-            const sourcePool =
-                questions.length > 0 ? questions : fallbackQuestions;
+            const sourcePool = scoredOnly(
+                questions.length > 0 ? questions : fallbackQuestions,
+            );
             const customIdsParam = params.get('custom_question_ids');
             let pool: Question[] = [];
 
@@ -444,14 +464,30 @@ export function useExamHydration({
             localStorage.removeItem('pending_free_exam');
 
             const sourcePool = [...questions];
-            const pool: Question[] =
+            const rawPool: Question[] =
                 state.activeQuestions ||
-                state.questionIds
+                (state.questionIds || [])
                     .map((id: number) =>
                         sourcePool.find((q: Question) => q.id === id),
                     )
                     .filter(Boolean)
                     .map(shuffleOptionsForQuestion);
+            const pool = scoredOnly(rawPool);
+            const restoredAnswers = remapIndexedRecord<number>(
+                state.answers as Record<number, number> | undefined,
+                rawPool,
+                pool,
+            );
+            const restoredTimes = remapIndexedRecord<number>(
+                state.questionTimes as Record<number, number> | undefined,
+                rawPool,
+                pool,
+            );
+            const restoredChanges = remapIndexedRecord<number>(
+                state.answerChanges as Record<number, number> | undefined,
+                rawPool,
+                pool,
+            );
 
             if (pool.length === 0) {
                 return;
@@ -460,10 +496,10 @@ export function useExamHydration({
             setSelectedExamId(state.selectedExamId);
             setIsTimed(state.isTimed);
             setActiveQuestions(pool);
-            setCurrentIdx(state.currentIdx);
-            setAnswers(state.answers || {});
-            setQuestionTimes(state.questionTimes || {});
-            setAnswerChanges(state.answerChanges || {});
+            setCurrentIdx(Math.min(state.currentIdx || 0, pool.length - 1));
+            setAnswers(restoredAnswers);
+            setQuestionTimes(restoredTimes);
+            setAnswerChanges(restoredChanges);
             setFlagged({});
             setSessionTimeLimitSecs(state.sessionTimeLimitSecs);
             setTimeLeft(state.timeLeft);

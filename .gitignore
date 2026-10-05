@@ -27,3 +27,23 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+# --- Civio baseline hardening (2026-10-05) ---
+node_modules/
+.env.*
+!.env.example
+*.key
+auth.json
+*.pem
+*.log
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+!/storage/framework/**/.gitignore
+*.dump
+*.sql.gz
+*.dump.gz
+*.backup
+*.bak

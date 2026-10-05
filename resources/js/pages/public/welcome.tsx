@@ -1,4 +1,4 @@
-﻿import { Head, Link, router, usePage } from '@inertiajs/react';
+import { Head, Link, router, usePage } from '@inertiajs/react';
 import {
     ArrowRight,
     Sparkles,
@@ -9,8 +9,6 @@ import {
     BookOpen,
     History,
     Target,
-    Award,
-    ClipboardList,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { ReviewerGuideTabs } from '@/components/domain/reviewer-guide-tabs';
@@ -22,25 +20,16 @@ import SiteHeader from '@/components/layout/site-header';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { useGuestUnlimited } from '@/lib/civio-study';
 import type { Auth } from '@/types';
 import FeatureGrid from './components/feature-grid';
 
 export default function Welcome() {
     const { auth } = usePage<{ auth: Auth }>().props;
-    const [isFreeExamModalOpen, setIsFreeExamModalOpen] = useState(false);
+    const guestUnlimited = useGuestUnlimited();
     const [hoveredStep, setHoveredStep] = useState<number | null>(null);
 
-    const handleFreeExamStart = (track: 'professional' | 'subprofessional') => {
-        setIsFreeExamModalOpen(false);
-
+    const startExam = (track: 'professional' | 'subprofessional') => {
         if (auth?.user) {
             router.visit(`/exams?start=${track}`);
         } else {
@@ -108,7 +97,7 @@ export default function Welcome() {
         },
         {
             question: 'Can I use the platform for free?',
-            answer: 'Absolutely. Hiraya Review offers free access to its foundation study tracks and basic question pools.',
+            answer: 'Yes — on this local study build, Professional/Subprofessional mocks, drills, learn modules, history, and analytics are available without registering. Dexter AI explanations still need API keys; bank (DB) explanations show without login.',
         },
         {
             question: 'Where do the questions come from?',
@@ -214,115 +203,36 @@ export default function Welcome() {
                                     Exam review.
                                 </p>
 
-                                <div className="flex flex-wrap gap-4 pt-2">
+                                <div className="flex flex-wrap gap-3 pt-2">
                                     <Button
                                         size="lg"
-                                        onClick={() =>
-                                            setIsFreeExamModalOpen(true)
-                                        }
+                                        onClick={() => startExam('professional')}
                                         className="group flex items-center gap-2 font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                     >
-                                        Get Started Free
+                                        Start Pro
                                         <ArrowRight className="h-5 w-5" />
                                     </Button>
                                     <Button
-                                        variant="secondary"
                                         size="lg"
+                                        variant="secondary"
                                         onClick={() =>
-                                            setIsFreeExamModalOpen(true)
+                                            startExam('subprofessional')
                                         }
-                                        className="flex items-center gap-2 font-bold"
+                                        className="group flex items-center gap-2 font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                     >
-                                        <FileQuestion className="h-5 w-5" />
-                                        Try Mock Test
+                                        Start Sub Pro
+                                        <ArrowRight className="h-5 w-5" />
                                     </Button>
                                     <Button variant="outline" size="lg" asChild>
                                         <Link
-                                            href={'#features'}
+                                            href="/drills"
                                             className="group font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                         >
-                                            Learn More
+                                            Practice Drills
                                         </Link>
                                     </Button>
                                 </div>
-
-                                {/* Free Exam Level Selection Modal */}
-                                <Dialog
-                                    open={isFreeExamModalOpen}
-                                    onOpenChange={setIsFreeExamModalOpen}
-                                >
-                                    <DialogContent className="sm:max-w-2xl">
-                                        <DialogHeader>
-                                            <DialogTitle>
-                                                Choose Your Exam Level
-                                            </DialogTitle>
-                                            <DialogDescription>
-                                                Try a free mock exam. Experience
-                                                the full simulator and view your
-                                                scorecard upon completion.
-                                            </DialogDescription>
-                                        </DialogHeader>
-                                        <div className="grid gap-3 py-4">
-                                            <button
-                                                onClick={() =>
-                                                    handleFreeExamStart(
-                                                        'professional',
-                                                    )
-                                                }
-                                                className="group flex items-center gap-4 rounded-xl border border-border bg-card p-4 text-left transition hover:border-primary hover:bg-primary/5"
-                                            >
-                                                <div className="flex size-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
-                                                    <Award className="size-6" />
-                                                </div>
-                                                <div>
-                                                    <p className="font-bold text-foreground">
-                                                        Professional Level
-                                                    </p>
-                                                    <p className="text-base leading-relaxed text-muted-foreground">
-                                                        170 questions &bull; 3
-                                                        hrs 10 mins
-                                                    </p>
-                                                </div>
-                                                <ArrowRight className="ml-auto size-5 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-primary" />
-                                            </button>
-                                            <button
-                                                onClick={() =>
-                                                    handleFreeExamStart(
-                                                        'subprofessional',
-                                                    )
-                                                }
-                                                className="group flex items-center gap-4 rounded-xl border border-border bg-card p-4 text-left transition hover:border-primary hover:bg-primary/5"
-                                            >
-                                                <div className="flex size-12 items-center justify-center rounded-lg bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400">
-                                                    <ClipboardList className="size-6" />
-                                                </div>
-                                                <div>
-                                                    <p className="font-bold text-foreground">
-                                                        Subprofessional Level
-                                                    </p>
-                                                    <p className="text-base leading-relaxed text-muted-foreground">
-                                                        165 questions &bull; 2
-                                                        hrs 40 mins
-                                                    </p>
-                                                </div>
-                                                <ArrowRight className="ml-auto size-5 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-primary" />
-                                            </button>
-                                        </div>
-                                        <DialogFooter>
-                                            <Button
-                                                variant="ghost"
-                                                onClick={() =>
-                                                    setIsFreeExamModalOpen(
-                                                        false,
-                                                    )
-                                                }
-                                            >
-                                                Cancel
-                                            </Button>
-                                        </DialogFooter>
-                                    </DialogContent>
-                                </Dialog>
-                            </div>
+</div>
                             {/* Right Column */}
                             <div className="relative flex items-center justify-center p-4">
                                 {/* Decorative background glow */}
@@ -395,6 +305,27 @@ export default function Welcome() {
                                 }
                                 cardOneTitle="Realistic Mock Exams"
                                 cardOneDescription="Experience the exact timing, format, and pressure of the actual civil service exam. Build stamina and confidence in our distraction-free testing interface."
+                                cardOneFooter={
+                                    <div className="flex flex-wrap gap-2">
+                                        <Button
+                                            size="sm"
+                                            onClick={() =>
+                                                startExam('professional')
+                                            }
+                                        >
+                                            Start Pro
+                                        </Button>
+                                        <Button
+                                            size="sm"
+                                            variant="secondary"
+                                            onClick={() =>
+                                                startExam('subprofessional')
+                                            }
+                                        >
+                                            Start Sub Pro
+                                        </Button>
+                                    </div>
+                                }
                                 cardTwoIcon={
                                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 dark:bg-indigo-950/30 dark:text-indigo-400">
                                         <BookOpen className="h-6 w-6" />
@@ -402,6 +333,11 @@ export default function Welcome() {
                                 }
                                 cardTwoTitle="Conceptual Study Hub (Learn)"
                                 cardTwoDescription="Access concise, high-yield syllabus modules generated from core civil service subjects to lock in key concepts and terms."
+                                cardTwoFooter={
+                                    <Button size="sm" variant="outline" asChild>
+                                        <Link href="/learn">Open Study Hub</Link>
+                                    </Button>
+                                }
                             />
 
                             {/* Row 2: Category Drills & Analytics (History) */}
@@ -415,20 +351,27 @@ export default function Welcome() {
                                 cardOneTitle="Targeted Practice Drills"
                                 cardOneDescription="Struggling with quantitative logic? Focus your efforts with specific drill sets designed to turn weak points into strengths."
                                 cardOneFooter={
-                                    <div className="flex flex-wrap gap-2">
-                                        {[
-                                            'Logic',
-                                            'Ethics',
-                                            'Math',
-                                            'Reading',
-                                        ].map((tag) => (
-                                            <span
-                                                key={tag}
-                                                className="rounded-full border border-blue-100/50 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-600 dark:border-blue-900/50 dark:bg-blue-950/30 dark:text-blue-400"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
+                                    <div className="flex flex-col gap-3">
+                                        <div className="flex flex-wrap gap-2">
+                                            {[
+                                                'Logic',
+                                                'Ethics',
+                                                'Math',
+                                                'Reading',
+                                            ].map((tag) => (
+                                                <span
+                                                    key={tag}
+                                                    className="rounded-full border border-blue-100/50 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-600 dark:border-blue-900/50 dark:bg-blue-950/30 dark:text-blue-400"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+                                        <Button size="sm" asChild>
+                                            <Link href="/drills">
+                                                Open Drills
+                                            </Link>
+                                        </Button>
                                     </div>
                                 }
                                 cardTwoIcon={
@@ -438,6 +381,18 @@ export default function Welcome() {
                                 }
                                 cardTwoTitle="Attempt History & Analytics"
                                 cardTwoDescription="Pinpoint your weaknesses with granular reports detailing performance by category, time-spent, and review every single incorrect response."
+                                cardTwoFooter={
+                                    <div className="flex flex-wrap gap-2">
+                                        <Button size="sm" variant="outline" asChild>
+                                            <Link href="/history">History</Link>
+                                        </Button>
+                                        <Button size="sm" variant="outline" asChild>
+                                            <Link href="/analytics">
+                                                Analytics
+                                            </Link>
+                                        </Button>
+                                    </div>
+                                }
                             />
 
                             {/* Row 3: Study Plan & AI Questions */}
@@ -572,7 +527,7 @@ export default function Welcome() {
                                 className="flex-1"
                             />
                         </div>
-                        <ReviewerGuideTabs showActions={!!auth?.user} />
+                        <ReviewerGuideTabs showActions={!!auth?.user || guestUnlimited} />
                     </Section>
 
                     <Section

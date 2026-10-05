@@ -105,5 +105,64 @@ class ExamController extends Controller
 
         return $this->jsonSuccess();
     }
+
+    /**
+     * Reveal the correct answer (Sirit / Reveal mode).
+     */
+    public function revealAnswer(Request $request): JsonResponse
+    {
+        $request->validate([
+            'question_id' => 'required|integer|exists:questions,id',
+        ]);
+
+        $question = \App\Models\Question::find($request->question_id);
+
+        if (! $question) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Question not found',
+            ], 404);
+        }
+
+        // Use Dexter for independent evaluation + conflict detection
+        $dexter = app(\App\Services\Dexter\DexterEvaluationService::class);
+        $evaluation = $dexter->evaluate($question);
+
+        return response()->json([
+            'success' => true,
+            'question_id' => $question->id,
+            'correct_option' => $question->correct_option,
+            'explanation' => $question->explanation ?? null,
+            'dexter_evaluation' => $evaluation,
+            'has_conflict' => $evaluation['answerKeyConflict'] ?? false,
+        ]);
+    }
+
+    /**
+     * Provide expanded explanation (Expound).
+     */
+    public function expoundAnswer(Request $request): JsonResponse
+    {
+        $request->validate([
+            'question_id' => 'required|integer|exists:questions,id',
+        ]);
+
+        $question = \App\Models\Question::find($request->question_id);
+
+        if (! $question) {
+            return response()->json(['success' => false, 'message' => 'Question not found'], 404);
+        }
+
+        // For now, return the existing explanation or a placeholder.
+        // Full AI-powered expound will use DexterEvaluationService later.
+        $explanation = $question->explanation
+            ?? 'No detailed explanation available for this item yet.';
+
+        return response()->json([
+            'success' => true,
+            'question_id' => $question->id,
+            'explanation' => $explanation,
+        ]);
+    }
 }
 

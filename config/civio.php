@@ -14,7 +14,8 @@ return [
         FILTER_VALIDATE_BOOLEAN
     ),
 
-    // When false: content shield is disabled (also bypassed on localhost in JS).
+    // When false: content shield is disabled (copy/paste allowed for study).
+    // Set CIVIO_CONTENT_SHIELD=true only for real production exams.
     'content_shield' => filter_var(
         env('CIVIO_CONTENT_SHIELD', false),
         FILTER_VALIDATE_BOOLEAN

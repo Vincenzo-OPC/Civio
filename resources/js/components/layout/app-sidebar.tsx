@@ -279,6 +279,11 @@ export function AppSidebar({ feedbackCount }: AppSidebarProps) {
 
             <SidebarFooter>
                 <NavUser />
+                {!auth.user && (
+                    <div className="px-2 pb-2 text-[11px] leading-snug text-muted-foreground">
+                        Guest study — mocks, drills, and learn are unlocked locally.
+                    </div>
+                )}
             </SidebarFooter>
         </Sidebar>
     );

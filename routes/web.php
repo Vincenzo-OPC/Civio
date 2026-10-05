@@ -60,6 +60,23 @@ Route::middleware('throttle:global-views')->group(function () {
         ->name('exams.attempts.store')
         ->middleware('throttle:global-mutations');
 
+    Route::post('exams/reveal', [ExamController::class, 'revealAnswer'])
+        ->name('exams.reveal')
+        ->middleware('throttle:global-views');
+
+    Route::post('exams/expound', [ExamController::class, 'expoundAnswer'])
+        ->name('exams.expound')
+        ->middleware('throttle:global-views');
+
+    // Local study: guest-readable study pages (empty OK) when CIVIO_GUEST_UNLIMITED
+    Route::middleware('guest.study')->group(function () {
+        Route::get('drills', [DrillController::class, 'index'])->name('drills.index');
+        Route::get('history', [ExamHistoryController::class, 'index'])->name('history.index');
+        Route::get('analytics', [AnalyticsController::class, 'index'])->name('analytics.index');
+        Route::get('dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
+    });
+
+
     // Utilities
     Route::get('sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
     Route::get('ping', fn () => response()->json(['status' => 'alive', 'timestamp' => now()->toIso8601String()]));
@@ -94,8 +111,6 @@ Route::middleware(['auth.or.fail', 'verified'])->group(function () {
 
     // --- USER DASHBOARD & ANALYTICS ---
     Route::middleware('throttle:global-views')->group(function () {
-        Route::get('dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
-        Route::get('drills', [DrillController::class, 'index'])->name('drills.index');
         Route::get('drills/smart-weakness', [DrillController::class, 'smartWeakness'])->name('drills.smartWeakness');
         Route::post('drills/custom-questions', [DrillController::class, 'storeCustomQuestion'])->name('drills.custom-questions.store')->middleware('throttle:global-mutations');
 
@@ -110,7 +125,6 @@ Route::middleware(['auth.or.fail', 'verified'])->group(function () {
         });
 
         Route::controller(AnalyticsController::class)->prefix('analytics')->name('analytics.')->group(function () {
-            Route::get('/', 'index')->name('index');
             Route::get('ai-analysis', 'aiAnalysisReport')->name('ai-analysis');
         });
     });
@@ -125,7 +139,6 @@ Route::middleware(['auth.or.fail', 'verified'])->group(function () {
         ->middleware('throttle:global-mutations');
 
     Route::controller(ExamHistoryController::class)->group(function () {
-        Route::get('history', 'index')->name('history.index')->middleware('throttle:global-views');
         Route::post('exams/attempts/bulk-delete', 'bulkDestroy')->name('exams.attempts.bulkDestroy')->middleware('throttle:global-mutations');
         Route::delete('exams/attempts/{attempt}', 'destroy')->name('exams.attempts.destroy')->middleware('throttle:global-mutations');
     });

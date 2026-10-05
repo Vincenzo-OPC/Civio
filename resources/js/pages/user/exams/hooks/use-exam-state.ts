@@ -1,4 +1,4 @@
-﻿import { router, usePage } from '@inertiajs/react';
+import { router, usePage } from '@inertiajs/react';
 import {
     useState,
     useEffect,
@@ -126,7 +126,6 @@ export function useExamState(props: ExamIndexProps) {
                     : 0,
                 targetPace: '60 sec / item',
                 allowedCategories: [
-                    'Demographic Profile',
                     'Verbal Ability',
                     'Analytical Ability',
                     'Numerical Ability',
@@ -145,7 +144,6 @@ export function useExamState(props: ExamIndexProps) {
                 timeLimitSecs: EXAM_CONSTANTS.SUBPROFESSIONAL_TIME_LIMIT_SECS,
                 targetPace: '58 sec / item',
                 allowedCategories: [
-                    'Demographic Profile',
                     'Verbal Ability',
                     'Clerical Ability',
                     'Numerical Ability',
@@ -162,7 +160,6 @@ export function useExamState(props: ExamIndexProps) {
             timeLimitSecs: EXAM_CONSTANTS.PROFESSIONAL_TIME_LIMIT_SECS,
             targetPace: '67 sec / item',
             allowedCategories: [
-                'Demographic Profile',
                 'Verbal Ability',
                 'Analytical Ability',
                 'Numerical Ability',
@@ -208,6 +205,7 @@ export function useExamState(props: ExamIndexProps) {
         setTimeLeft,
         questionTimes,
         setQuestionTimes,
+        itemElapsed,
         formatTime,
         resetTimer,
     } = useExamTimer({
@@ -250,16 +248,18 @@ export function useExamState(props: ExamIndexProps) {
 
     const beginExamSession = useCallback(
         (examPool: Question[], examId: number | null) => {
+            // Always drop Demographic Profile / personal EDQs for local study mocks.
+            const cleanedPool = examPool.filter((q) => !isDemographicQuestion(q));
             const isDrill = examId === null || examId > 2;
             const limitSecs = isDrill
-                ? examPool.length * 60
+                ? cleanedPool.length * 60
                 : examId === 2
                   ? EXAM_CONSTANTS.SUBPROFESSIONAL_TIME_LIMIT_SECS
                   : EXAM_CONSTANTS.PROFESSIONAL_TIME_LIMIT_SECS;
 
             setSelectedExamId(examId);
             setIsTimed(true);
-            setActiveQuestions(examPool);
+            setActiveQuestions(cleanedPool);
             setCurrentIdx(0);
             setAnswers({});
             setQuestionTimes({});
@@ -668,6 +668,7 @@ export function useExamState(props: ExamIndexProps) {
         showLockedModal,
         setShowLockedModal,
         timeLeft,
+        itemElapsed,
         isTimed,
         submittedByTimer,
         results,

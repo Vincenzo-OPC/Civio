@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>New Hiraya exam (wipes progress)</title></head>
+<body style="font-family:sans-serif;padding:2rem;max-width:36rem">
+<h1 style="font-size:1.25rem">Starting a fresh exam…</h1>
+<p><strong>This clears saved progress</strong> (including old demographic / personal questions). To continue a scored session after a reboot, use <a href="/resume-exam.html">resume-exam.html</a>.</p>
+<script>
+(function () {
+  try {
+    localStorage.removeItem("active_exam_session_v1");
+    localStorage.removeItem("pending_free_exam");
+    sessionStorage.clear();
+  } catch (e) {}
+  var params = new URLSearchParams(location.search);
+  var track = (params.get("track") || params.get("start") || "professional").toLowerCase();
+  if (track === "sub" || track === "subpro" || track === "subprofessional") {
+    track = "subprofessional";
+  } else {
+    track = "professional";
+  }
+  location.replace("/exams?free_attempt=1&start=" + track + "&v=" + Date.now());
+})();
+</script>
+</body></html>

@@ -187,8 +187,8 @@ export default function About() {
                                     className="h-14 rounded-full bg-white px-4 text-xl font-black tracking-tight text-blue-600 hover:bg-slate-50 sm:px-8 dark:bg-slate-950 dark:text-blue-400"
                                     asChild
                                 >
-                                    <Link href="/register">
-                                        Create Free Account
+                                    <Link href="/exams?start=professional&free_attempt=1">
+                                        Start Pro Mock
                                         <ArrowRight className="ml-2 size-5" />
                                     </Link>
                                 </Button>

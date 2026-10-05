@@ -34,6 +34,15 @@ import type { Question, SimulationDetails } from '../types';
 import { ExamTimerDisplay } from './exam-timer-display';
 import QuestionPalettePanel from './question-palette-panel';
 
+interface RevealedAnswer {
+    questionId: number;
+    letter: string;
+    text: string;
+    explanation?: string | null;
+    expound?: string;
+    hasConflict?: boolean;
+}
+
 interface LiveExamViewProps {
     details: SimulationDetails;
     isDrillSession?: boolean;
@@ -41,13 +50,13 @@ interface LiveExamViewProps {
     currentIdx: number;
     isTimed: boolean;
     timeLeft: number;
+    itemElapsed: number;
     formatTime: (secs: number) => string;
     handleExitExam: () => void;
     setIsMobilePaletteOpen: (val: boolean) => void;
     toggleFlag: (idx: number) => void;
     flagged: Record<number, boolean>;
     answers: Record<number, number>;
-    questionTimes?: Record<number, number>;
     handleSelectOption: (idx: number) => void;
     handleQuestionNavigate: (idx: number) => void;
     isFreeAttempt: boolean;
@@ -71,13 +80,13 @@ export function LiveExamView({
     currentIdx,
     isTimed,
     timeLeft,
+    itemElapsed,
     formatTime,
     handleExitExam,
     setIsMobilePaletteOpen,
     toggleFlag,
     flagged,
     answers,
-    questionTimes = {},
     handleSelectOption,
     handleQuestionNavigate,
     isFreeAttempt,
@@ -100,7 +109,6 @@ export function LiveExamView({
     >('all');
     const [autoAdvance, setAutoAdvance] = useState(false);
     const [showKeyboardModal, setShowKeyboardModal] = useState(false);
-    const timeOnQuestion = questionTimes[currentIdx] || 0;
 
     // Advanced UI/UX feature states
     const [eliminatedOptions, setEliminatedOptions] = useState<
@@ -112,6 +120,8 @@ export function LiveExamView({
     const [isScratchpadOpen, setIsScratchpadOpen] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [isPaletteCollapsed, setIsPaletteCollapsed] = useState(false);
+    const [revealedAnswer, setRevealedAnswer] =
+        useState<RevealedAnswer | null>(null);
 
     const {
         isShielded,
@@ -279,14 +289,6 @@ export function LiveExamView({
             paceStatus,
         };
     }, [activeQuestions, answers, flagged, timeLeft]);
-
-    // Format current question time
-    const formatQuestionTime = (secs: number) => {
-        const m = Math.floor(secs / 60);
-        const s = secs % 60;
-
-        return `${m}:${s < 10 ? '0' : ''}${s}`;
-    };
 
     const onOptionClick = (optIdx: number) => {
         const isCurrentlySelected = answers[currentIdx] === optIdx;
@@ -523,7 +525,7 @@ export function LiveExamView({
                                     title={`Target pace: ~${stats.targetPace}s per question`}
                                     className={`inline-flex h-8 items-center gap-1 rounded-md border px-2 font-bold ${
                                         stats.paceStatus === 'behind'
-                                            ? 'animate-pulse border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-900/50 dark:bg-rose-950/30 dark:text-rose-400'
+                                            ? 'border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-900/50 dark:bg-rose-950/30 dark:text-rose-400'
                                             : stats.paceStatus === 'warn'
                                               ? 'border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-400'
                                               : 'border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/30 dark:text-emerald-400'
@@ -628,6 +630,7 @@ export function LiveExamView({
                             <ExamTimerDisplay
                                 isTimed={isTimed}
                                 timeLeft={timeLeft}
+                                itemElapsed={itemElapsed}
                                 formatTime={formatTime}
                             />
 
@@ -723,12 +726,6 @@ export function LiveExamView({
                                                 <span className="text-[10px] font-black tracking-wider text-blue-600 uppercase dark:text-blue-400">
                                                     Multiple Choice
                                                 </span>
-                                                <span className="rounded-full border border-border bg-muted/60 px-2 py-0.5 text-[10px] font-bold text-muted-foreground">
-                                                    Time on question:{' '}
-                                                    {formatQuestionTime(
-                                                        timeOnQuestion,
-                                                    )}
-                                                </span>
                                             </div>
                                             <div className="flex items-center gap-2">
                                                 <button
@@ -782,6 +779,122 @@ export function LiveExamView({
                                                         ? 'Flagged for Review'
                                                         : 'Flag for Review'}
                                                 </button>
+
+                                                <button
+                                                    onClick={async () => {
+                                                        try {
+                                                            const res = await fetch('/exams/reveal', {
+                                                                method: 'POST',
+                                                                headers: {
+                                                                    'Content-Type': 'application/json',
+                                                                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '',
+                                                                },
+                                                                body: JSON.stringify({ question_id: activeQuestion.id }),
+                                                            });
+                                                            const data = await res.json();
+
+                                                            if (data.success) {
+                                                                // The API key is stored against the original option order, while
+                                                                // the live exam shuffles choices for the learner. Convert the
+                                                                // original index back to the displayed index before rendering
+                                                                // the answer and its explanation.
+                                                                const originalIndex = Number(data.correct_option);
+                                                                const mappedIndex =
+                                                                    activeQuestion.originalOptionIndices?.indexOf(
+                                                                        originalIndex,
+                                                                    ) ?? -1;
+                                                                const displayedIndex =
+                                                                    mappedIndex >= 0
+                                                                        ? mappedIndex
+                                                                        : originalIndex;
+                                                                const letter =
+                                                                    ['A', 'B', 'C', 'D', 'E'][
+                                                                        displayedIndex
+                                                                    ] || String(displayedIndex + 1);
+                                                                setRevealedAnswer({
+                                                                    questionId: activeQuestion.id,
+                                                                    letter,
+                                                                    text: activeQuestion.options?.[displayedIndex] || '',
+                                                                    explanation: data.explanation,
+                                                                    hasConflict: data.has_conflict,
+                                                                });
+                                                            } else {
+                                                                alert(data.message || 'Could not reveal answer');
+                                                            }
+                                                        } catch {
+                                                            alert('Reveal failed');
+                                                        }
+                                                    }}
+                                                    className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground hover:bg-muted"
+                                                >
+                                                    Reveal
+                                                </button>
+
+                                                {revealedAnswer && revealedAnswer.questionId === activeQuestion?.id && (
+                                                    <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm dark:border-amber-900/50 dark:bg-amber-950/30">
+                                                        <div className={`font-bold ${revealedAnswer.hasConflict ? 'text-red-600 dark:text-red-400' : 'text-amber-700 dark:text-amber-400'}`}>
+                                                            {revealedAnswer.hasConflict ? '⚠️ Answer Key Conflict' : 'Reveal'}: {revealedAnswer.letter} — {revealedAnswer.text}
+                                                        </div>
+                                                        {revealedAnswer.hasConflict && (
+                                                            <div className="mt-1 text-xs text-red-600 dark:text-red-400">
+                                                                Dexter detected a possible error in the stored answer.
+                                                            </div>
+                                                        )}
+                                                        {revealedAnswer.explanation && (
+                                                            <div className="mt-1 text-amber-600 dark:text-amber-300">
+                                                                {revealedAnswer.explanation}
+                                                            </div>
+                                                        )}
+
+                                                        {revealedAnswer.expound && (
+                                                            <div className="mt-2 border-t border-amber-200 pt-2 text-amber-700 dark:border-amber-900/50 dark:text-amber-300">
+                                                                {revealedAnswer.expound}
+                                                            </div>
+                                                        )}
+
+                                                        <div className="mt-2 flex gap-2">
+                                                            <button
+                                                                onClick={async () => {
+                                                                    try {
+                                                                        const res = await fetch('/exams/expound', {
+                                                                            method: 'POST',
+                                                                            headers: {
+                                                                                'Content-Type': 'application/json',
+                                                                                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '',
+                                                                            },
+                                                                            body: JSON.stringify({ question_id: activeQuestion.id }),
+                                                                        });
+                                                                        const data = await res.json();
+
+                                                                        if (data.success) {
+                                                                            setRevealedAnswer((prev) =>
+                                                                                prev
+                                                                                    ? {
+                                                                                          ...prev,
+                                                                                          expound:
+                                                                                              data.explanation ||
+                                                                                              'No further explanation available.',
+                                                                                      }
+                                                                                    : null,
+                                                                            );
+                                                                        }
+                                                                    } catch {
+                                                                        alert('Expound failed');
+                                                                    }
+                                                                }}
+                                                                className="text-xs rounded bg-amber-600 px-2 py-0.5 text-white hover:bg-amber-700"
+                                                            >
+                                                                Expound
+                                                            </button>
+                                                            <button
+                                                                onClick={() => setRevealedAnswer(null)}
+                                                                className="text-xs text-amber-600 hover:underline dark:text-amber-400"
+                                                            >
+                                                                Hide
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                         <div className="text-sm leading-relaxed font-semibold text-foreground">
@@ -911,41 +1024,7 @@ export function LiveExamView({
                                 Previous Question
                             </button>
 
-                            {(() => {
-                                const cur = activeQuestions[currentIdx];
-                                const curIsDemo =
-                                    !!cur &&
-                                    (cur.isDemographic ||
-                                        cur.category === 'Demographic Profile' ||
-                                        (cur.category || '')
-                                            .toLowerCase()
-                                            .includes('demographic'));
-                                const firstScored = activeQuestions.findIndex(
-                                    (q) =>
-                                        !(
-                                            q.isDemographic ||
-                                            q.category === 'Demographic Profile' ||
-                                            (q.category || '')
-                                                .toLowerCase()
-                                                .includes('demographic')
-                                        ),
-                                );
-                                if (curIsDemo && firstScored >= 0 && firstScored !== currentIdx) {
-                                    return (
-                                        <button
-                                            type="button"
-                                            onClick={() => handleQuestionNavigate(firstScored)}
-                                            className="shadow-3xs flex items-center gap-1.5 rounded-lg border border-amber-500 bg-amber-50 px-5 py-2.5 text-xs font-bold text-amber-900 transition hover:bg-amber-100 focus:outline-none dark:border-amber-400 dark:bg-amber-950/40 dark:text-amber-100"
-                                        >
-                                            Skip Demographics
-                                            <ChevronRight className="size-4" />
-                                        </button>
-                                    );
-                                }
-                                return null;
-                            })()}
-
-                                                        {currentIdx < activeQuestions.length - 1 ? (
+                            {currentIdx < activeQuestions.length - 1 ? (
                                 <button
                                     onClick={() =>
                                         handleQuestionNavigate(currentIdx + 1)

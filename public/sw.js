@@ -1,5 +1,5 @@
-const CACHE_NAME = 'hiraya-review-v2';
-const STATIC_CACHE_NAME = 'hiraya-review-static-v2';
+﻿const CACHE_NAME = 'hiraya-review-v7';
+const STATIC_CACHE_NAME = 'hiraya-review-static-v7';
 const STATIC_CACHE_LIMIT = 100;
 
 const PRECACHE_ASSETS = [
@@ -40,7 +40,7 @@ const AUTH_ROUTES = [
 ];
 
 // ---------------------------------------------------------------------------
-// Install — pre-cache shell assets
+// Install â€” pre-cache shell assets
 // ---------------------------------------------------------------------------
 self.addEventListener('install', (event) => {
     event.waitUntil(
@@ -58,7 +58,7 @@ self.addEventListener('install', (event) => {
 });
 
 // ---------------------------------------------------------------------------
-// Activate — purge old caches
+// Activate â€” purge old caches
 // ---------------------------------------------------------------------------
 self.addEventListener('activate', (event) => {
     const KEEP = new Set([CACHE_NAME, STATIC_CACHE_NAME]);
@@ -89,7 +89,7 @@ async function trimCache(cacheName, maxItems) {
 }
 
 // ---------------------------------------------------------------------------
-// Fetch — strategy router
+// Fetch â€” strategy router
 // ---------------------------------------------------------------------------
 self.addEventListener('fetch', (event) => {
     // Only handle GET
@@ -103,7 +103,7 @@ self.addEventListener('fetch', (event) => {
     // Skip Vite dev server requests
     if (url.pathname.startsWith('/@vite') || url.pathname.startsWith('/@fs') || url.pathname.startsWith('/resources/')) return;
 
-    // Skip auth / admin / API routes entirely — always go to network
+    // Skip auth / admin / API routes entirely â€” always go to network
     if (isAuthRoute(url.pathname)) return;
 
     // ---- Cache-First: content-hashed build assets only (/build/assets/) ----
@@ -178,5 +178,7 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    // Everything else — network only, no caching
+    // Everything else â€” network only, no caching
 });
+
+

@@ -18,6 +18,7 @@ import { ReportIssueModal } from '@/components/domain/report-issue-modal';
 import { PageContainer } from '@/components/layout/page-container';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { useGuestUnlimited } from '@/lib/civio-study';
 import { makeBackOnClick } from '@/lib/smart-back';
 import { useScrollProgress } from './hooks/use-scroll-progress';
 import type { LearnShowProps } from './types';
@@ -34,6 +35,8 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
         user_reports_map?: Record<string, 'pending' | 'resolved' | 'dismissed'>;
     }>().props;
     const isLoggedIn = !!auth.user;
+    const guestUnlimited = useGuestUnlimited();
+    const canReadFull = isLoggedIn || guestUnlimited;
 
     const [localReportsMap, setLocalReportsMap] =
         useState<Record<string, 'pending' | 'resolved' | 'dismissed'>>(
@@ -198,11 +201,12 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                             </div>
 
                             <div className="relative mt-8 border-t border-border pt-7 text-foreground">
-                                {isLoggedIn ? (
+                                {canReadFull ? (
                                     <>
                                         <LessonMarkdown
                                             content={module.content}
                                         />
+                                        {isLoggedIn && (
                                         <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
                                             {(() => {
                                                 if (
@@ -270,6 +274,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                                                     : 'Mark as Complete'}
                                             </Button>
                                         </div>
+                                        )}
                                     </>
                                 ) : (
                                     <div className="pointer-events-none relative max-h-[320px] overflow-hidden select-none">
@@ -280,7 +285,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                                     </div>
                                 )}
 
-                                {!isLoggedIn && (
+                                {!canReadFull && (
                                     <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-center justify-center bg-gradient-to-t from-white/95 via-white/90 to-transparent p-4 pt-32 text-center sm:p-6 dark:from-slate-950/95 dark:via-slate-950/90">
                                         <div className="max-w-2xl rounded-2xl border border-primary/20 bg-background/80 p-4 shadow-xl backdrop-blur-md sm:p-6 lg:p-8">
                                             <h3 className="font-heading text-xl font-black text-foreground">

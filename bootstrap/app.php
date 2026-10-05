@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\AllowFreeAttempt;
+use App\Http\Middleware\AllowGuestStudy;
 use App\Http\Middleware\AuthOrFail;
 use App\Http\Middleware\CheckMaintenanceMode;
 use App\Http\Middleware\CheckUserActive;
@@ -40,6 +41,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'turnstile.verify' => VerifyTurnstile::class,
             'view.access' => CheckViewAccess::class,
             'free.attempt' => AllowFreeAttempt::class,
+            'guest.study' => AllowGuestStudy::class,
             'auth.or.fail' => AuthOrFail::class,
         ]);
 

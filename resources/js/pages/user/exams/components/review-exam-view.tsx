@@ -178,7 +178,7 @@ export function ReviewExamView({
     const [isReportModalOpen, setIsReportModalOpen] = useState(false);
     const [isBreakdownExpanded, setIsBreakdownExpanded] = useState(false);
     const [isPaletteCollapsed, setIsPaletteCollapsed] = useState(false);
-    const [showPerformanceCard, setShowPerformanceCard] = useState(false);
+    const [showPerformanceCard, setShowPerformanceCard] = useState(true);
     const [isExplanationOpen, setIsExplanationOpen] = useState(true);
     const {
         isShielded,
@@ -654,8 +654,33 @@ export function ReviewExamView({
         let incorrect = 0;
         let skipped = 0;
         let flaggedCount = 0;
-        const topicStats: Record<string, { total: number; correct: number }> =
-            {};
+        const topicStats: Record<
+            string,
+            {
+                total: number;
+                correct: number;
+                kind: 'category' | 'subcategory';
+                topic: string;
+            }
+        > = {};
+
+        const bumpTopic = (
+            kind: 'category' | 'subcategory',
+            topic: string,
+            wasCorrect: boolean,
+        ) => {
+            const key = `${kind}::${topic}`;
+
+            if (!topicStats[key]) {
+                topicStats[key] = { total: 0, correct: 0, kind, topic };
+            }
+
+            topicStats[key].total++;
+
+            if (wasCorrect) {
+                topicStats[key].correct++;
+            }
+        };
 
         (activeQuestions || []).forEach((q, idx) => {
             if (flagged && flagged[idx]) {
@@ -671,36 +696,43 @@ export function ReviewExamView({
                 return;
             }
 
-            const topic = q.subcategory || q.category || 'General';
-
-            if (!topicStats[topic]) {
-                topicStats[topic] = { total: 0, correct: 0 };
-            }
-
-            topicStats[topic].total++;
-
             const chosen = answers ? answers[idx] : undefined;
+            const wasCorrect =
+                chosen !== undefined &&
+                chosen !== null &&
+                Number(chosen) === Number(q.correct_option);
 
             if (chosen === undefined || chosen === null) {
                 skipped++;
-            } else if (Number(chosen) === Number(q.correct_option)) {
+            } else if (wasCorrect) {
                 correct++;
-                topicStats[topic].correct++;
             } else {
                 incorrect++;
             }
+
+            bumpTopic('category', q.category || 'General', wasCorrect);
+            bumpTopic(
+                'subcategory',
+                q.subcategory || q.category || 'General',
+                wasCorrect,
+            );
         });
 
-        const allTopics = Object.entries(topicStats)
-            .map(([topic, data]) => ({
-                topic,
-                accuracy: Math.round((data.correct / data.total) * 100),
+        const allTopics = Object.values(topicStats)
+            .map((data) => ({
+                topic: data.topic,
+                kind: data.kind,
+                accuracy:
+                    data.total > 0
+                        ? Math.round((data.correct / data.total) * 100)
+                        : 0,
                 total: data.total,
                 correct: data.correct,
+                missed: data.total - data.correct,
             }))
-            .sort((a, b) => a.accuracy - b.accuracy);
+            .sort((a, b) => a.accuracy - b.accuracy || a.topic.localeCompare(b.topic));
 
-        const weakTopics = allTopics.filter((t) => t.accuracy < 70);
+        const weakTopics = allTopics.filter((t) => t.accuracy < 80);
 
         return {
             correct,
@@ -970,8 +1002,8 @@ export function ReviewExamView({
                                                                 {stats
                                                                     .weakTopics
                                                                     .length > 0
-                                                                    ? `${stats.weakTopics.length} topic${stats.weakTopics.length > 1 ? 's' : ''} need attention (<70% accuracy)`
-                                                                    : 'Great job! All topics above 70% accuracy.'}
+                                                                    ? `${stats.weakTopics.length} topic${stats.weakTopics.length > 1 ? 's' : ''} below 80% (weakness)`
+                                                                    : 'Strength: every scored category and subcategory is at 80% or better.'}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -1028,7 +1060,7 @@ export function ReviewExamView({
                                                             )
                                                     ).map((t, idx) => {
                                                         const isWeak =
-                                                            t.accuracy < 70;
+                                                            t.accuracy < 80;
                                                         const isCritical =
                                                             t.accuracy < 50;
 
@@ -1051,10 +1083,18 @@ export function ReviewExamView({
                                                             >
                                                                 <div>
                                                                     <div className="flex items-start justify-between gap-2">
-                                                                        <span className="line-clamp-1 text-xs font-bold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                                                                            {
-                                                                                t.topic
-                                                                            }
+                                                                        <span className="line-clamp-2 text-xs font-bold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                                                            {t.topic}
+                                                                            <span className="mt-0.5 block text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
+                                                                                {t.kind ===
+                                                                                'category'
+                                                                                    ? isWeak
+                                                                                        ? 'Category · Weakness'
+                                                                                        : 'Category · Strength'
+                                                                                    : isWeak
+                                                                                      ? 'Subcategory · Weakness'
+                                                                                      : 'Subcategory · Strength'}
+                                                                            </span>
                                                                         </span>
                                                                         <span
                                                                             className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-black ${
@@ -1094,11 +1134,16 @@ export function ReviewExamView({
                                                                         {
                                                                             t.correct
                                                                         }{' '}
-                                                                        of{' '}
+                                                                        correct
+                                                                        ·{' '}
+                                                                        {
+                                                                            t.missed
+                                                                        }{' '}
+                                                                        missed
+                                                                        /{' '}
                                                                         {
                                                                             t.total
-                                                                        }{' '}
-                                                                        correct
+                                                                        }
                                                                     </span>
                                                                     <span className="text-blue-600 opacity-0 transition group-hover:opacity-100 dark:text-blue-400">
                                                                         Filter →
@@ -1434,9 +1479,39 @@ export function ReviewExamView({
                                             letterMap[prop.letter] = newLetter;
                                         });
 
+                                        const isDemographicItem =
+                                            currentQuestion.category ===
+                                                'Demographic Profile' ||
+                                            currentQuestion.isDemographic;
+                                        const isWrongItem =
+                                            !isDemographicItem &&
+                                            chosenOption !== undefined &&
+                                            chosenOption !== null &&
+                                            Number(chosenOption) !==
+                                                Number(
+                                                    currentQuestion.correct_option,
+                                                );
+                                        const dbExplanation = (
+                                            currentQuestion.explanation || ''
+                                        ).trim();
+                                        const skillName =
+                                            (
+                                                currentQuestion.subcategory ||
+                                                ''
+                                            ).trim() ||
+                                            (
+                                                currentQuestion.category || ''
+                                            ).trim() ||
+                                            'this topic';
+                                        const explanationText =
+                                            dbExplanation ||
+                                            (isWrongItem
+                                                ? `Practice the ${skillName} skill: compare each choice with the stem and keep the one that follows that subcategory rule.`
+                                                : '');
+
                                         return (
                                             <>
-                                                {currentQuestion.explanation && (
+                                                {explanationText && (
                                                     <div className="shadow-3xs mt-2 overflow-hidden rounded-2xl border border-border bg-card text-sm leading-relaxed text-muted-foreground transition-all">
                                                         <button
                                                             type="button"
@@ -1518,7 +1593,7 @@ export function ReviewExamView({
 
                                                                 <div className="leading-relaxed text-foreground">
                                                                     {renderFormattedText(
-                                                                        currentQuestion.explanation,
+                                                                        explanationText,
                                                                         false,
                                                                         letterMap,
                                                                     )}

@@ -1,0 +1,5 @@
+﻿const fs=require('fs'); const p='scripts/generate-cse-pack-200-2026-10-03.cjs'; let t=fs.readFileSync(p,'utf8'); const marker='if (Q.length !== 233) throw new Error(`expected 200 items, got ${Q.length}`);'; const extra=`
+add(3,'A mediator should keep a peace dialogue credible by:', ['Applying agreed ground rules to every participant','Allowing threats from the strongest party','Publishing private testimony without consent','Ending discussion after one accusation'],0,'Consistent ground rules protect participation and trust in a dialogue','the other choices reward coercion, breach privacy, or end a process unfairly');
+add(19,'Which spelling is correct?', ['Calendar','Calender','Calandar','Callendar'],0,'Calendar is the standard spelling for a schedule of dates','the other choices change the vowel pattern or add an extra consonant');
+`;
+if(!t.includes(marker)) throw new Error('marker not found'); t=t.replace(marker,extra+'if (Q.length !== 200) throw new Error(`expected 200 items, got ${Q.length}`);'); fs.writeFileSync(p,t);

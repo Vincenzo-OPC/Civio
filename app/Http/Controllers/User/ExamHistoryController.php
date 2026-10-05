@@ -22,7 +22,7 @@ class ExamHistoryController extends Controller
      */
     public function index(Request $request): Response|RedirectResponse
     {
-        $userId = (int) auth()->id();
+        $userId = (int) (auth()->id() ?? 0);
         $perPage = min(50, max(5, (int) $request->input('per_page', 10)));
         $filters = [
             'search' => $request->input('search'),

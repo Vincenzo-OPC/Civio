@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Resume Hiraya exam</title></head>
+<body style="font-family:sans-serif;padding:2rem;max-width:36rem">
+<h1 style="font-size:1.25rem">Resuming your exam…</h1>
+<p>Progress is kept in this browser (survives shutdown and closed tabs). Opening the exam without wiping it.</p>
+<p style="color:#666;font-size:0.9rem">Only use <a href="/clear-exam.html">clear-exam.html</a> when you want a brand-new mock.</p>
+<script>
+(function () {
+  // Keep free_attempt so guest access works after PHP session expired overnight
+  var q = "free_attempt=1";
+  // If a saved session exists, do NOT pass start= (would rebuild a fresh pool)
+  var has = false;
+  try {
+    var raw = localStorage.getItem("active_exam_session_v1");
+    if (raw) {
+      var d = JSON.parse(raw);
+      has = !!(d && d.activeQuestions && d.activeQuestions.length);
+    }
+  } catch (e) {}
+  if (!has) {
+    q += "&start=professional";
+  }
+  location.replace("/exams?" + q + "&resume=1&v=" + Date.now());
+})();
+</script>
+</body></html>

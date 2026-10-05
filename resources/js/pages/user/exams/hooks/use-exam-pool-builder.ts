@@ -1,5 +1,6 @@
 ﻿import { useCallback, useMemo } from 'react';
 import { fallbackDemographicQuestions } from '@/data/fallback-demographics';
+import { readGuestStudyBias } from '@/lib/guest-study-bias';
 import type { Question } from '../types';
 import {
     fisherYatesShuffle,
@@ -35,6 +36,129 @@ export function shuffleOptionsForQuestion(q: Question): Question {
         correct_option: newCorrect,
         originalOptionIndices: shuffledIndices,
     };
+}
+
+function quotasForSubcats(
+    names: string[],
+    groups: Record<string, Question[]>,
+    targetCount: number,
+    weakSubSet: Set<string>,
+): Record<string, number> {
+    const quotas: Record<string, number> = {};
+    names.forEach((name) => {
+        quotas[name] = 0;
+    });
+
+    const place = (bucket: string[], share: number): number => {
+        if (bucket.length === 0 || share <= 0) {
+            return 0;
+        }
+
+        let left = share;
+        const base = Math.floor(share / bucket.length);
+        let rem = share % bucket.length;
+
+        for (const name of bucket) {
+            const want = base + (rem > 0 ? 1 : 0);
+            if (rem > 0) {
+                rem--;
+            }
+            const give = Math.min(groups[name]?.length ?? 0, want);
+            quotas[name] += give;
+            left -= give;
+        }
+
+        if (left > 0) {
+            for (const name of bucket) {
+                if (left <= 0) {
+                    break;
+                }
+                const room = (groups[name]?.length ?? 0) - quotas[name];
+                const add = Math.min(Math.max(0, room), left);
+                quotas[name] += add;
+                left -= add;
+            }
+        }
+
+        return share - left;
+    };
+
+    const weakNames = names.filter((name) => weakSubSet.has(name));
+    const otherNames = names.filter((name) => !weakSubSet.has(name));
+
+    if (weakNames.length > 0 && otherNames.length > 0) {
+        const weakAvailable = weakNames.reduce(
+            (sum, name) => sum + (groups[name]?.length ?? 0),
+            0,
+        );
+        const weakShare = Math.min(
+            weakAvailable,
+            Math.round(targetCount * EXAM_CONSTANTS.WRONG_PRIORITY_PERCENTAGE),
+        );
+        const placedWeak = place(weakNames, weakShare);
+        place(otherNames, Math.max(0, targetCount - placedWeak));
+    } else {
+        const baseQuota = Math.floor(targetCount / names.length);
+        let remainder = targetCount % names.length;
+        for (const name of names) {
+            quotas[name] = baseQuota + (remainder > 0 ? 1 : 0);
+            if (remainder > 0) {
+                remainder--;
+            }
+        }
+    }
+
+    return quotas;
+}
+
+/**
+ * About half the scored fill should come from previously-weak categories
+ * when that browser still has unused items in those categories.
+ * Does not add demographic items.
+ */
+function raiseWeakCategoryShare(
+    scoredPool: Question[],
+    sourcePool: Question[],
+    weakCategories: string[],
+    targetCount: number,
+): Question[] {
+    if (weakCategories.length === 0 || scoredPool.length === 0) {
+        return scoredPool;
+    }
+
+    const weakSet = new Set(weakCategories);
+    const isWeak = (q: Question) => weakSet.has(q.category || '');
+    const weakTarget = Math.min(
+        targetCount,
+        Math.round(targetCount * EXAM_CONSTANTS.WRONG_PRIORITY_PERCENTAGE),
+    );
+    const result = [...scoredPool];
+    let weakCount = result.filter(isWeak).length;
+
+    if (weakCount >= weakTarget) {
+        return result;
+    }
+
+    const used = new Set(result.map((q) => q.id));
+    const extras = fisherYatesShuffle(
+        sourcePool.filter(
+            (q) => !used.has(q.id) && !isDemographicQuestion(q) && isWeak(q),
+        ),
+    );
+    let extraIdx = 0;
+
+    for (
+        let i = result.length - 1;
+        i >= 0 && weakCount < weakTarget && extraIdx < extras.length;
+        i--
+    ) {
+        if (!isWeak(result[i])) {
+            result[i] = extras[extraIdx++];
+            weakCount++;
+        }
+    }
+
+    return result;
 }
 
 interface UseExamPoolBuilderProps {
@@ -107,8 +231,14 @@ export function useExamPoolBuilder({
                 wrongQuestionIdsByTrack[
                     track as keyof typeof wrongQuestionIdsByTrack
                 ] ?? [];
+            const fromBrowser =
+                examId === 1 || examId === 2
+                    ? (readGuestStudyBias()[
+                          track as 'Professional' | 'Subprofessional'
+                      ]?.wrongIds ?? [])
+                    : [];
 
-            return [...new Set(fromServer)];
+            return [...new Set([...fromServer, ...fromBrowser])];
         },
         [wrongQuestionIdsByTrack, getTrackNameForExam],
     );
@@ -136,6 +266,15 @@ export function useExamPoolBuilder({
 
             const seenSet = new Set(getSeenIdsForExam(examId));
             const wrongSet = new Set(getWrongIdsForExam(examId));
+            const weakSubSet = new Set(
+                examId === 1 || examId === 2
+                    ? (readGuestStudyBias()[
+                          getTrackNameForExam(examId) as
+                              | 'Professional'
+                              | 'Subprofessional'
+                      ]?.weakSubcategories ?? [])
+                    : [],
+            );
 
             const pickFlat = (
                 pool: Question[],
@@ -305,15 +444,19 @@ export function useExamPoolBuilder({
                     return pickFlat(pool, targetCount, catName);
                 }
 
-                const baseQuota = Math.floor(targetCount / subcatNames.length);
-                let remainder = targetCount % subcatNames.length;
+                const quotas = quotasForSubcats(
+                    subcatNames,
+                    groups,
+                    targetCount,
+                    weakSubSet,
+                );
                 const picked: Question[] = [];
 
                 for (const subName of subcatNames) {
-                    const quota = baseQuota + (remainder > 0 ? 1 : 0);
+                    const quota = quotas[subName] ?? 0;
 
-                    if (remainder > 0) {
-                        remainder--;
+                    if (quota <= 0) {
+                        continue;
                     }
 
                     const subPool = groups[subName];
@@ -498,8 +641,23 @@ export function useExamPoolBuilder({
                 finalDemographics = fisherYatesShuffle(finalDemographics);
             }
 
+            const guestWeakCategories =
+                examId === 1 || examId === 2
+                    ? (readGuestStudyBias()[
+                          getTrackNameForExam(examId) as
+                              | 'Professional'
+                              | 'Subprofessional'
+                      ]?.weakCategories ?? [])
+                    : [];
+            const biasedScored = raiseWeakCategoryShare(
+                scoredPool,
+                sourcePool,
+                guestWeakCategories,
+                scoredTarget,
+            );
+
             // Extra full Fisher-Yates on final scored pool (crypto-backed when available)
-            const shuffledScored = fisherYatesShuffle(scoredPool);
+            const shuffledScored = fisherYatesShuffle(biasedScored);
             const finalPool = [...finalDemographics, ...shuffledScored];
 
             return finalPool.map(shuffleOptionsForQuestion);
