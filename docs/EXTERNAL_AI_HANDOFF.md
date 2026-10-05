@@ -379,3 +379,75 @@ Optional secondary action, when a preferred assistant is configured:
 > Discuss in ChatGPT
 
 The copied payload remains provider-neutral and should paste cleanly into ChatGPT, Claude, Gemini, Grok, email, Notes, or any plain-text field.
+
+
+---
+
+## MVP implementation proposal for Grok/Codex
+
+Implement this as a small, provider-neutral utility first.
+
+### Suggested action
+Add a `Copy for AI` button in Study Mode beside `Reveal Answer` and `Ask Tutor`.
+
+### Suggested data source
+Build the clipboard payload from the same structured question/attempt state already used by the exam UI. Do **not** scrape rendered text from the DOM.
+
+Suggested fields:
+- exam level
+- category
+- subcategory/topic
+- question number / total
+- question stem
+- option labels + option text
+- selected answer
+- result, only when permitted
+- canonical explanation, only after Reveal/submission
+- verified source/rule, when available
+- optional note
+- mode-aware tutor instruction
+
+### Suggested implementation shape
+Create one reusable formatter, e.g.:
+- `buildAiHandoffText(question, attemptState, options)`
+- `copyAiHandoff(...)`
+
+Keep formatting logic separate from React presentation so the same exporter can later power:
+- Copy for AI
+- Discuss in ChatGPT
+- export to Markdown/plain text
+- mobile share sheet
+- future plugin/app handoff
+
+### UX
+Primary button:
+**Copy for AI**
+
+Success toast:
+**Copied clean question context.**
+
+If the user has a preferred assistant configured, an optional adjacent/dropdown action may say:
+- Discuss in ChatGPT
+- Discuss in Claude
+- Discuss in Gemini
+- Discuss in Grok
+
+But the copied text itself remains provider-neutral.
+
+### Guardrails
+- strict Live Simulation: hidden/disabled until submission
+- before Reveal: never include answer key/explanation
+- after Reveal: include verified answer/explanation
+- never copy SVG/icon/navigation noise
+- never copy personal account data by default
+- preserve plain-text readability in any chat app
+
+### Tests
+Add unit tests for:
+1. clean question-only export
+2. pre-Reveal export does not leak answer
+3. post-Reveal export includes canonical explanation
+4. selected answer is represented correctly after option shuffle
+5. no UI strings such as `Report Issue`, `Previous Question`, or `svg`
+6. multiline/special-character questions remain readable
+7. Filipino/Taglish text preserves Unicode correctly
