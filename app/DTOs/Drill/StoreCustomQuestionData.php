@@ -47,7 +47,7 @@ readonly class StoreCustomQuestionData
             'correct_option' => $this->correctOption,
             'explanation' => $this->explanation ?? '',
             'created_by' => $userId,
-            'status' => 'active',
+            'status' => 'draft',
         ];
     }
 }

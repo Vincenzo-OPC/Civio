@@ -26,7 +26,6 @@ use App\Http\Controllers\User\LearnController as UserLearnController;
 use App\Http\Controllers\User\SavedDrillSetController;
 use App\Http\Controllers\User\StudyScheduleController;
 use App\Http\Controllers\User\StudySuggestionController;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -80,12 +79,6 @@ Route::middleware('throttle:global-views')->group(function () {
     // Utilities
     Route::get('sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
     Route::get('ping', fn () => response()->json(['status' => 'alive', 'timestamp' => now()->toIso8601String()]));
-    Route::get('clear-cache-temp-route', function () {
-        Artisan::call('cache:clear');
-        Artisan::call('optimize:clear');
-
-        return response()->json(['status' => 'success', 'message' => 'Caches cleared!']);
-    });
 });
 
 Route::post('support', [SupportController::class, 'store'])->name('support.store');

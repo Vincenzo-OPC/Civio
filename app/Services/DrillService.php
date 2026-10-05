@@ -149,7 +149,7 @@ class DrillService
         /** @var Question $question */
         $question = $this->questionRepository->create($dto->toAttributes($userId));
 
-        Cache::forget('questions.active');
+        // User-authored items default to draft/private — do not bust the shared active pool.
 
         $question->load('subcategory.category');
 

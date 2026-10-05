@@ -20,4 +20,6 @@ return [
         env('CIVIO_CONTENT_SHIELD', false),
         FILTER_VALIDATE_BOOLEAN
     ),
+
+    'allow_browser_migrations' => (bool) env('CIVIO_ALLOW_BROWSER_MIGRATIONS', false),
 ];

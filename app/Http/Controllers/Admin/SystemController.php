@@ -16,6 +16,7 @@ class SystemController extends Controller
             'environment' => App::environment(),
             'laravelVersion' => app()->version(),
             'phpVersion' => PHP_VERSION,
+            'browserMigrationsEnabled' => $this->browserMigrationsEnabled(),
         ]);
     }
 
@@ -35,6 +36,10 @@ class SystemController extends Controller
 
     public function runMigrations()
     {
+        if (! $this->browserMigrationsEnabled()) {
+            return $this->backWithError('Browser migrations are disabled. Use CLI: php artisan migrate');
+        }
+
         try {
             Artisan::call('migrate', ['--force' => true]);
             $output = Artisan::output();
@@ -47,8 +52,11 @@ class SystemController extends Controller
 
     public function rollbackMigrations()
     {
+        if (! $this->browserMigrationsEnabled()) {
+            return $this->backWithError('Browser rollbacks are disabled. Use CLI: php artisan migrate:rollback');
+        }
+
         try {
-            // Note: rolling back migrations can cause massive data loss.
             Artisan::call('migrate:rollback', ['--force' => true]);
             $output = Artisan::output();
 
@@ -65,11 +73,21 @@ class SystemController extends Controller
 
             return $this->backWithSuccess('Application is now LIVE.');
         } else {
-            // Note: Custom CheckMaintenanceMode middleware allows Admins to automatically bypass
-            // and allows access to the /login route.
             Artisan::call('down');
 
             return $this->backWithSuccess('Application is now in Maintenance Mode. You have automatic Admin bypass privileges.');
         }
+    }
+
+    /**
+     * Browser migrate/rollback only when explicitly enabled AND not production.
+     */
+    protected function browserMigrationsEnabled(): bool
+    {
+        if (App::environment('production')) {
+            return false;
+        }
+
+        return (bool) config('civio.allow_browser_migrations', false);
     }
 }
