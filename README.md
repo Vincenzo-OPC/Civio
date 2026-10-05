@@ -35,6 +35,7 @@ vendor/bin/pint --test
 - `AGENTS.md` — agent / Codex rules
 - `docs/ARCHITECTURE.md` · `docs/DEPLOY.md` · `docs/LIBRARIES.md`
 - `docs/CIVIO_CODEX_BUILD_BRIEF.md` · `docs/DESKTOP_PATCHES_TO_PORT.md`
+- AI study UX, tutor, pause/resume, adaptive review, ChatGPT/Gemini readiness, and Spelling Coach: `docs/AI_STUDY_AND_SPELLING_SYSTEM.md`
 - Question design: `docs/CSE-Question-Design-Spec.md` (do not add bank items without approval)
 
 ## Acknowledgements
