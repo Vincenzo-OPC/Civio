@@ -11,7 +11,7 @@ import {
     DialogTrigger,
 } from '@/components/ui/dialog';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Hiraya Review';
+const appName = import.meta.env.VITE_APP_NAME || 'Civio';
 const SUPPORT_BUBBLE_KEY = 'support_bubble_dismissal';
 
 export function SupportWidget() {
@@ -194,85 +194,14 @@ export function SupportWidget() {
                         </DialogDescription>
                     </DialogHeader>
                     <div className="grid gap-3 py-4 sm:gap-6">
-                        <div className="grid grid-cols-3 gap-2 sm:gap-4">
-                            <div className="flex flex-col items-center gap-1 sm:gap-2">
-                                <div className="text-center text-xs leading-tight font-semibold sm:text-sm">
-                                    GCash
-                                </div>
-                                <div className="flex aspect-square w-full items-center justify-center rounded-md border bg-muted p-1 sm:p-2">
-                                    <img
-                                        src="/images/gcash-qr.png"
-                                        alt="GCash QR Code"
-                                        className="h-auto w-full object-contain"
-                                        onError={(e) => {
-                                            e.currentTarget.style.display =
-                                                'none';
-                                            e.currentTarget.nextElementSibling?.classList.remove(
-                                                'hidden',
-                                            );
-                                        }}
-                                    />
-                                    <span className="hidden text-[10px] text-muted-foreground sm:text-xs">
-                                        QR Code
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="flex flex-col items-center gap-1 sm:gap-2">
-                                <div className="text-center text-xs leading-tight font-semibold sm:text-sm">
-                                    Maya
-                                </div>
-                                <div className="flex aspect-square w-full items-center justify-center rounded-md border bg-muted p-1 sm:p-2">
-                                    <img
-                                        src="/images/maya-qr.png"
-                                        alt="Maya QR Code"
-                                        className="h-auto w-full object-contain"
-                                        onError={(e) => {
-                                            e.currentTarget.style.display =
-                                                'none';
-                                            e.currentTarget.nextElementSibling?.classList.remove(
-                                                'hidden',
-                                            );
-                                        }}
-                                    />
-                                    <span className="hidden text-[10px] text-muted-foreground sm:text-xs">
-                                        QR Code
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="flex flex-col items-center gap-1 sm:gap-2">
-                                <div className="text-center text-xs leading-tight font-semibold sm:text-sm">
-                                    Buy me a coffee
-                                </div>
-                                <div className="flex aspect-square w-full items-center justify-center rounded-md border bg-muted p-1 sm:p-2">
-                                    <img
-                                        src="/images/bmc-qr.png"
-                                        alt="Buy Me A Coffee QR Code"
-                                        className="h-auto w-full object-contain"
-                                        onError={(e) => {
-                                            e.currentTarget.style.display =
-                                                'none';
-                                            e.currentTarget.nextElementSibling?.classList.remove(
-                                                'hidden',
-                                            );
-                                        }}
-                                    />
-                                    <span className="hidden text-[10px] text-muted-foreground sm:text-xs">
-                                        QR Code
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex justify-center pt-2">
-                            <a
-                                href="https://www.buymeacoffee.com/kenthalexisosila"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group inline-flex h-10 w-full items-center justify-center rounded-md bg-[#FFDD00] px-4 py-2 text-sm font-medium text-black ring-offset-background transition-colors duration-300 hover:bg-[#FFDD00]/90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95 disabled:pointer-events-none disabled:opacity-50"
-                            >
-                                <Coffee className="mr-2 h-4 w-4" />
-                                Buy me a coffee
-                            </a>
-                        </div>
+                        <p className="text-sm text-muted-foreground">
+                            Civio is free for study. Optional support channels
+                            will be listed here when available. Nothing here is
+                            required to use mocks, drills, or Dexter.
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                            Not an official Civil Service Commission product.
+                        </p>
                     </div>
                 </DialogContent>
             </Dialog>
