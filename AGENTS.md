@@ -91,3 +91,16 @@ Cloudflare (DNS/CDN, Turnstile, analytics). See `docs/DEPLOY.md`.
 
 - Entire CLI: see `ENTIRE.md` and `.entire/README.md`.
 - Laravel Boost guidelines remain in `GEMINI.md` for framework conventions.
+
+## Libraries (Phase 0 extras)
+
+See `docs/LIBRARIES.md` for researched options and verdicts.
+
+Adopted now:
+
+- **vite-plugin-pwa** — generated SW (`resources/js/sw.ts`), NetworkOnly for `/exams`, prompt update
+- **ts-fsrs** — `resources/js/lib/review/fsrs.ts` (scheduler only; UI later); `npm run test:js`
+- **prism-php/prism** — installed; `App\Ai\Contracts\TutorProvider` + `NullTutorProvider` default
+- **sentry/sentry-laravel** — no-op unless `SENTRY_LARAVEL_DSN` is set
+
+Never put provider keys in `VITE_*`.

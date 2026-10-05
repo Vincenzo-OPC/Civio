@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
 import { bunny } from 'laravel-vite-plugin/fonts';
 import { defineConfig } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
     plugins: [
@@ -27,6 +28,27 @@ export default defineConfig({
         tailwindcss(),
         wayfinder({
             formVariants: true,
+        }),
+        VitePWA({
+            strategies: 'injectManifest',
+            srcDir: 'resources/js',
+            filename: 'sw.ts',
+            registerType: 'prompt',
+            injectRegister: false,
+            manifest: false, // keep public/manifest.json (Civio)
+            includeAssets: [
+                'favicon.ico',
+                'favicon.svg',
+                'icons/*.png',
+                'images/civio_logo*.png',
+            ],
+            injectManifest: {
+                globPatterns: ['**/*.{js,css,ico,png,svg,woff2,webp}'],
+                maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
+            },
+            devOptions: {
+                enabled: false,
+            },
         }),
     ],
 

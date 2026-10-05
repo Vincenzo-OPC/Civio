@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Ai\Contracts\TutorProvider;
+use App\Ai\Providers\NullTutorProvider;
 use App\Models\Category;
 use App\Models\ExamAttempt;
 use App\Models\ExamDate;
@@ -35,6 +37,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        $this->app->singleton(TutorProvider::class, function () {
+            // Future: resolve Gemini/OpenAI/xAI via Prism when CIVIO_TUTOR_PROVIDER != null
+            return new NullTutorProvider;
+        });
+
         //
     }
 
