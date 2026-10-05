@@ -7,7 +7,7 @@ export function CookieConsentBanner() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        const consent = localStorage.getItem('hiraya_cookie_consent');
+        const consent = localStorage.getItem('civio_cookie_consent');
 
         if (!consent) {
             // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -16,7 +16,7 @@ export function CookieConsentBanner() {
     }, []);
 
     const handleAccept = () => {
-        localStorage.setItem('hiraya_cookie_consent', 'true');
+        localStorage.setItem('civio_cookie_consent', 'true');
         setIsVisible(false);
     };
 

@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 import AppLogo from '@/components/layout/app-logo';
 import { ThemeToggle } from '@/components/shared/theme-toggle';
 import { Button } from '@/components/ui/button';
+import { useGuestUnlimited } from '@/lib/civio-study';
 import { home, login, register } from '@/routes';
 import { index as dashboardIndex } from '@/routes/dashboard';
 
-import { useGuestUnlimited } from '@/lib/civio-study';
 import type { Auth } from '@/types';
 
 // Declare expected page props to satisfy TypeScript strict compiler checks

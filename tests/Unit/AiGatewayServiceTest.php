@@ -24,7 +24,7 @@ test('AiGatewayService attaches cf-aig-gateway-id header when gateway id is conf
     config([
         'services.cloudflare.account_id' => 'test-account-id',
         'services.cloudflare.api_token' => 'test-token',
-        'services.cloudflare.ai_gateway_id' => 'hiraya-gateway',
+        'services.cloudflare.ai_gateway_id' => 'civio-gateway',
     ]);
 
     Http::fake([
@@ -38,7 +38,7 @@ test('AiGatewayService attaches cf-aig-gateway-id header when gateway id is conf
     $service->runWorkersAi('@cf/meta/llama-3.2-1b-instruct', ['messages' => []]);
 
     Http::assertSent(function (Request $request) {
-        return $request->hasHeader('cf-aig-gateway-id', 'hiraya-gateway')
+        return $request->hasHeader('cf-aig-gateway-id', 'civio-gateway')
             && $request->hasHeader('Authorization', 'Bearer test-token');
     });
 

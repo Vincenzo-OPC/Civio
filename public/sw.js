@@ -1,12 +1,12 @@
-﻿const CACHE_NAME = 'hiraya-review-v7';
-const STATIC_CACHE_NAME = 'hiraya-review-static-v7';
+﻿const CACHE_NAME = 'civio-v7';
+const STATIC_CACHE_NAME = 'civio-static-v7';
 const STATIC_CACHE_LIMIT = 100;
 
 const PRECACHE_ASSETS = [
     '/',
     '/manifest.json',
-    '/images/hiraya_logo_cropped.png',
-    '/images/hiraya_logo.png',
+    '/images/civio_logo_cropped.png',
+    '/images/civio_logo.png',
     '/favicon.ico',
     '/icons/icon-72x72.png',
     '/icons/icon-96x96.png',

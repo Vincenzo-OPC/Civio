@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends nodejs npm \
 COPY --chown=www-data:www-data . .
 
 # Set environment variables for build and runtime
-ENV APP_NAME "Civil Service Exam Reviewer"
+ENV APP_NAME "Civio"
 
 # 1. Install production PHP dependencies (required for Wayfinder to boot Laravel)
 RUN composer install --no-dev --optimize-autoloader

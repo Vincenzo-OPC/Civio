@@ -12,7 +12,7 @@ export interface PdfExportPayload {
 export function triggerPdfExport(payload: PdfExportPayload) {
     if (typeof window !== 'undefined') {
         window.dispatchEvent(
-            new CustomEvent('hiraya:export-pdf', { detail: payload }),
+            new CustomEvent('civio:export-pdf', { detail: payload }),
         );
     }
 }
@@ -31,7 +31,7 @@ export function GlobalPdfExporter() {
 
                 if (typeof window !== 'undefined') {
                     window.dispatchEvent(
-                        new CustomEvent('hiraya:export-pdf-done'),
+                        new CustomEvent('civio:export-pdf-done'),
                     );
                 }
 
@@ -48,10 +48,10 @@ export function GlobalPdfExporter() {
             setPayload(detail);
         };
 
-        window.addEventListener('hiraya:export-pdf', handleExport);
+        window.addEventListener('civio:export-pdf', handleExport);
 
         return () =>
-            window.removeEventListener('hiraya:export-pdf', handleExport);
+            window.removeEventListener('civio:export-pdf', handleExport);
     }, []);
 
     if (!payload) {
@@ -67,7 +67,7 @@ export function GlobalPdfExporter() {
 
                 if (typeof window !== 'undefined') {
                     window.dispatchEvent(
-                        new CustomEvent('hiraya:export-pdf-done'),
+                        new CustomEvent('civio:export-pdf-done'),
                     );
                 }
             }}

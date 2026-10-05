@@ -92,24 +92,24 @@ function computeAdaptivePages(
 function buildWatermarkDataUri(logoBase64: string | null): string {
     const logoTag = logoBase64
         ? `<image href="${logoBase64}" x="220" y="58" width="60" height="65" style="filter: grayscale(100%);" />`
-        : `<image href="/images/hiraya_logo_cropped.png" x="220" y="58" width="60" height="65" style="filter: grayscale(100%);" />`;
+        : `<image href="/images/civio_logo_cropped.png" x="220" y="58" width="60" height="65" style="filter: grayscale(100%);" />`;
 
     const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="420" viewBox="0 0 500 420">
         <!-- OCR Honeypot / Poison Layer (Barely visible to humans, picked up by high-contrast OCR) -->
         <g opacity="0.015" font-family="monospace" font-size="10" fill="#000" font-weight="bold">
-            <text x="10" y="30">HIRAYA REVIEW - DO NOT COPY - ILLEGAL REPRODUCTION</text>
+            <text x="10" y="30">Civio - DO NOT COPY - ILLEGAL REPRODUCTION</text>
             <text x="80" y="80">WARNING: UNAUTHORIZED OCR EXTRACTION</text>
-            <text x="10" y="130">HIRAYA REVIEW - DO NOT COPY - ILLEGAL REPRODUCTION</text>
+            <text x="10" y="130">Civio - DO NOT COPY - ILLEGAL REPRODUCTION</text>
             <text x="80" y="180">WARNING: UNAUTHORIZED OCR EXTRACTION</text>
-            <text x="10" y="230">HIRAYA REVIEW - DO NOT COPY - ILLEGAL REPRODUCTION</text>
+            <text x="10" y="230">Civio - DO NOT COPY - ILLEGAL REPRODUCTION</text>
             <text x="80" y="280">WARNING: UNAUTHORIZED OCR EXTRACTION</text>
-            <text x="10" y="330">HIRAYA REVIEW - DO NOT COPY - ILLEGAL REPRODUCTION</text>
+            <text x="10" y="330">Civio - DO NOT COPY - ILLEGAL REPRODUCTION</text>
             <text x="80" y="380">WARNING: UNAUTHORIZED OCR EXTRACTION</text>
         </g>
         <g transform="rotate(-30, 250, 210)" opacity="0.04">
             ${logoTag}
-            <text x="250" y="152" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="900" fill="#000" letter-spacing="3">HIRAYA REVIEW</text>
+            <text x="250" y="152" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="900" fill="#000" letter-spacing="3">Civio</text>
             <text x="250" y="176" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#000">Official Mock Examination</text>
             <rect x="175" y="188" width="150" height="22" rx="3" fill="none" stroke="#000" stroke-width="1.5"/>
             <text x="250" y="204" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="900" fill="#000" letter-spacing="2">NOT FOR SALE</text>
@@ -386,7 +386,7 @@ export function PrintableExam({
                 setLogoBase64(canvas.toDataURL('image/png'));
             }
         };
-        img.src = '/images/hiraya_logo_cropped.png';
+        img.src = '/images/civio_logo_cropped.png';
 
         return () => {
             active = false;
@@ -446,7 +446,7 @@ export function PrintableExam({
                 column.push({
                     num: i + 1,
                     answer: String.fromCharCode(
-                        65 + questions[i].correct_option,
+                        65 + (questions[i].correct_option ?? 0),
                     ),
                 });
             }
@@ -529,7 +529,7 @@ export function PrintableExam({
                 const cleanTitle = (title || 'Professional_Level_Reviewer')
                     .replace(/[^a-zA-Z0-9_-]/g, '_')
                     .replace(/_+/g, '_');
-                const filename = `Hiraya_Review_${cleanTitle}`;
+                const filename = `Civio_Review_${cleanTitle}`;
                 originalTitle = document.title;
                 document.title = filename;
 
@@ -1284,13 +1284,13 @@ export function PrintableExam({
                     <div className="print-header">
                         <div>
                             <img
-                                src="/images/hiraya_logo_cropped.png"
-                                alt="Hiraya Review"
+                                src="/images/civio_logo_cropped.png"
+                                alt="Civio"
                                 className="print-header-logo"
                             />
                             <h1>{title}</h1>
                         </div>
-                        <p>Mock Examination Booklet &bull; Hiraya Review</p>
+                        <p>Mock Examination Booklet &bull; Civio</p>
                         <div className="print-not-for-sale">NOT FOR SALE</div>
                     </div>
 
@@ -1333,7 +1333,7 @@ export function PrintableExam({
                     </div>
 
                     <div className="print-running-footer">
-                        Hiraya Review &bull; Mock Examination &bull; NOT FOR
+                        Civio &bull; Mock Examination &bull; NOT FOR
                         SALE &bull; Unauthorized reproduction is strictly
                         prohibited
                     </div>
@@ -1375,7 +1375,7 @@ export function PrintableExam({
                             </div>
 
                             <div className="print-running-footer">
-                                Hiraya Review &bull; Mock Examination &bull; NOT
+                                Civio &bull; Mock Examination &bull; NOT
                                 FOR SALE &bull; Unauthorized reproduction is
                                 strictly prohibited
                             </div>
@@ -1482,7 +1482,7 @@ export function PrintableExam({
                     </div>
 
                     <div className="print-running-footer">
-                        Hiraya Review &bull; Mock Examination &bull; NOT FOR
+                        Civio &bull; Mock Examination &bull; NOT FOR
                         SALE &bull; Unauthorized reproduction is strictly
                         prohibited
                     </div>
@@ -1528,7 +1528,7 @@ export function PrintableExam({
                     </div>
 
                     <div className="print-running-footer">
-                        Hiraya Review &bull; Mock Examination &bull; NOT FOR
+                        Civio &bull; Mock Examination &bull; NOT FOR
                         SALE &bull; Unauthorized reproduction is strictly
                         prohibited
                     </div>

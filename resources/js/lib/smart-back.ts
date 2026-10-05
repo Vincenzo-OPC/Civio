@@ -1,6 +1,6 @@
-const STORAGE_KEY = 'hiraya_previous_location';
-const ANCHOR_KEY = 'hiraya_back_anchor';
-const SESSION_ORIGIN_KEY = 'hiraya_exam_origin';
+const STORAGE_KEY = 'civio_previous_location';
+const ANCHOR_KEY = 'civio_back_anchor';
+const SESSION_ORIGIN_KEY = 'civio_exam_origin';
 
 let initialized = false;
 

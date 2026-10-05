@@ -32,7 +32,7 @@ export default function Drills(props: DrillsProps) {
                 return tabParam;
             }
 
-            const storedTab = localStorage.getItem('hiraya_drills_active_tab');
+            const storedTab = localStorage.getItem('civio_drills_active_tab');
 
             if (
                 storedTab === 'custom' ||
@@ -54,7 +54,7 @@ export default function Drills(props: DrillsProps) {
         setActiveTabState(tab);
 
         if (typeof window !== 'undefined') {
-            localStorage.setItem('hiraya_drills_active_tab', tab);
+            localStorage.setItem('civio_drills_active_tab', tab);
             const url = new URL(window.location.href);
             url.searchParams.set('tab', tab);
             window.history.replaceState({}, '', url.toString());
@@ -71,7 +71,7 @@ export default function Drills(props: DrillsProps) {
                 window.history.replaceState({}, '', url.toString());
             }
 
-            localStorage.setItem('hiraya_drills_active_tab', activeTab);
+            localStorage.setItem('civio_drills_active_tab', activeTab);
 
             const handlePopState = () => {
                 const params = new URLSearchParams(window.location.search);

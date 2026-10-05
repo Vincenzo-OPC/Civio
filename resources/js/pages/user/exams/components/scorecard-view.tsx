@@ -1,4 +1,4 @@
-﻿import { Head, Link, usePage, router } from '@inertiajs/react';
+import { Head, Link, usePage, router } from '@inertiajs/react';
 import {
     Award,
     BookOpen,
@@ -11,16 +11,17 @@ import {
     ArrowRight,
 } from 'lucide-react';
 import { useState, useMemo } from 'react';
+import { useGuestUnlimited } from '@/lib/civio-study';
 import {
     formatDuration,
     calculateWeightedPercentage,
 } from '@/lib/exam-formatters';
-import { makeBackOnClick, resolveOriginFromUrl } from '@/lib/smart-back';
-import { useGuestUnlimited } from '@/lib/civio-study';
 import {
-    summarizeAttemptStrengths,
-    type StrengthRow,
+    summarizeAttemptStrengths
+    
 } from '@/lib/guest-study-bias';
+import type {StrengthRow} from '@/lib/guest-study-bias';
+import { makeBackOnClick, resolveOriginFromUrl } from '@/lib/smart-back';
 import type {
     SimulationDetails,
     SavedAttempt,
@@ -302,7 +303,7 @@ export function ScorecardView({
                 );
                 const activeDrillTab =
                     typeof window !== 'undefined'
-                        ? localStorage.getItem('hiraya_drills_active_tab')
+                        ? localStorage.getItem('civio_drills_active_tab')
                         : null;
                 const defaultDrillHref = activeDrillTab
                     ? `/drills?tab=${activeDrillTab}`
@@ -878,16 +879,16 @@ export function ScorecardView({
                             <div className="flex flex-col items-center justify-between gap-3 border-t border-border pt-4 sm:flex-row">
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/images/hiraya_logo_cropped.png"
-                                        alt="Hiraya Review Logo"
+                                        src="/images/civio_logo_cropped.png"
+                                        alt="Civio Logo"
                                         className="size-5 shrink-0 object-contain dark:brightness-110"
                                     />
                                     <span className="font-heading text-xs font-black tracking-widest text-foreground uppercase">
-                                        Hiraya Review
+                                        Civio
                                     </span>
                                 </div>
                                 <span className="text-[10px] font-bold text-muted-foreground">
-                                    hirayareview.com â€¢ Civil Service Exam
+                                    civio.ph â€¢ Civil Service Exam
                                     Simulator
                                 </span>
                             </div>
@@ -914,7 +915,7 @@ export function ScorecardView({
                                 category breakdown are ready.
                             </p>
                             <p className="mt-3 text-xs font-bold text-amber-600 dark:text-amber-400">
-                                âš ï¸ Create a free account to save this attempt
+                                âš ï¸ Create a free account to save this attempt
                                 permanently in your progress history and review
                                 your mistake rationales anytime.
                             </p>

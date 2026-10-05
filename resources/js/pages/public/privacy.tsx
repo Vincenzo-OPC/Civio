@@ -60,11 +60,11 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                             1. Introduction
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Welcome to the Hiraya Review portal.
-                                            Hiraya Review values your privacy
+                                            Welcome to the Civio portal.
+                                            Civio values your privacy
                                             and is committed to protecting your
                                             personal data. This Privacy Policy
-                                            outlines how Hiraya Review collects,
+                                            outlines how Civio collects,
                                             uses, and safeguards your
                                             information when you use the
                                             platform for your CSE preparation.
@@ -73,12 +73,12 @@ export default function Privacy({ privacy }: PrivacyProps) {
 
                                     <section className="space-y-3">
                                         <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
-                                            2. Information Hiraya Review
+                                            2. Information Civio
                                             Collects
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
                                             To provide mock exams, custom study
-                                            logs, and AI analytics, Hiraya
+                                            logs, and AI analytics, Civio
                                             Review collects:
                                         </p>
                                         <ul className="list-disc space-y-2 pl-5 text-sm text-muted-foreground">
@@ -94,15 +94,15 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                                 <strong>
                                                     Social Sign-In Data:
                                                 </strong>{' '}
-                                                Hiraya Review offers third-party
+                                                Civio offers third-party
                                                 authentication via Google. When
                                                 you use Google to sign in,
-                                                Hiraya Review receives and
+                                                Civio receives and
                                                 securely stores basic profile
                                                 details (such as your name and
                                                 email address) to personalize
                                                 your account and metrics
-                                                dashboard. Hiraya Review will
+                                                dashboard. Civio will
                                                 never post or publish to your
                                                 social feed.
                                             </li>
@@ -141,11 +141,11 @@ export default function Privacy({ privacy }: PrivacyProps) {
 
                                     <section className="space-y-3">
                                         <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
-                                            3. How Hiraya Review Uses Your
+                                            3. How Civio Uses Your
                                             Information
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Hiraya Review uses the gathered
+                                            Civio uses the gathered
                                             information to:
                                         </p>
                                         <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
@@ -178,11 +178,11 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                             4. Data Sharing & Security
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Hiraya Review does not sell, rent,
+                                            Civio does not sell, rent,
                                             or trade your personal data with
                                             third parties. Your account records
                                             and score history are fully
-                                            confidential. Hiraya Review utilizes
+                                            confidential. Civio utilizes
                                             standard SSL/TLS encryption and
                                             strict Laravel Sanctum sessions to
                                             guarantee that your profile remains

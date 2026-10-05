@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/react-starter-kit",
+    "name": "civio/app",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Civio — Philippine Civil Service Exam study app",
     "keywords": [
         "laravel",
         "framework"
@@ -17,7 +17,9 @@
         "laravel/socialite": "^5.27",
         "laravel/tinker": "^3.0",
         "laravel/wayfinder": "^0.1.14",
-        "pusher/pusher-php-server": "^7.2"
+        "prism-php/prism": "^0.99",
+        "pusher/pusher-php-server": "^7.2",
+        "sentry/sentry-laravel": "^4.28"
     },
     "require-dev": {
         "fakerphp/faker": "^1.24",

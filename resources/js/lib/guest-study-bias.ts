@@ -1,6 +1,6 @@
 import type { CategoryScore } from '@/pages/user/exams/types';
 
-export const GUEST_STUDY_BIAS_KEY = 'hiraya_guest_study_bias_v1';
+export const GUEST_STUDY_BIAS_KEY = 'civio_guest_study_bias_v1';
 
 export type StudyTrack = 'Professional' | 'Subprofessional' | 'Drill';
 

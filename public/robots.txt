@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://hirayareview.com/sitemap.xml
+Sitemap: https://civio.ph/sitemap.xml

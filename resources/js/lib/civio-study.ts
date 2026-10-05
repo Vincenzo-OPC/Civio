@@ -9,8 +9,10 @@ function isLocalStudyHost(): boolean {
     if (typeof window === 'undefined') {
         return false;
     }
+
     const host = window.location.hostname;
     const port = window.location.port;
+
     // Covers localhost, 127.0.0.1, ::1, and common Docker/internal hosts on any port (including :8080)
     return (
         host === 'localhost' ||
@@ -18,7 +20,7 @@ function isLocalStudyHost(): boolean {
         host === '[::1]' ||
         host.endsWith('.local') ||
         host.includes('docker') ||
-        host.includes('hiraya') ||
+        host.includes('civio') ||
         port === '8080' ||
         port === '3000' ||
         port === '5173'
@@ -43,6 +45,7 @@ export function isGuestUnlimitedFromProps(civio?: CivioShared | null): boolean {
 
 export function useGuestUnlimited(): boolean {
     const props = usePage().props as { civio?: CivioShared };
+
     return isGuestUnlimitedFromProps(props?.civio);
 }
 
@@ -56,17 +59,47 @@ export function isContentShieldEnabledFromProps(
     if (isLocalStudyHost()) {
         return false;
     }
+
     if (civio?.contentShield === false) {
         return false;
     }
+
     if (civio?.contentShield === true) {
         return true;
     }
+
     // Missing prop on non-local: default OFF for study (copy/paste allowed). Production can force true via env.
     return false;
 }
 
 export function useContentShieldEnabled(): boolean {
     const props = usePage().props as { civio?: CivioShared };
+
     return isContentShieldEnabledFromProps(props?.civio);
+}
+
+/** One-time migrate legacy Hiraya localStorage keys to Civio. */
+export function migrateHirayaLocalStorage(): void {
+    if (typeof window === 'undefined') {
+        return;
+    }
+
+    try {
+        const map: Record<string, string> = {
+            hiraya_guest_study_bias_v1: 'civio_guest_study_bias_v1',
+        };
+
+        for (const [from, to] of Object.entries(map)) {
+            if (localStorage.getItem(to) == null) {
+                const value = localStorage.getItem(from);
+
+                if (value != null) {
+                    localStorage.setItem(to, value);
+                    localStorage.removeItem(from);
+                }
+            }
+        }
+    } catch {
+        /* ignore quota / private mode */
+    }
 }

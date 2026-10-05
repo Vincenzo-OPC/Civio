@@ -20,7 +20,7 @@ class SitemapController extends Controller
     {
         $xml = Cache::remember('sitemap_xml', now()->addDay(), function () {
             $urls = [];
-            $baseUrl = 'https://hirayareview.com';
+            $baseUrl = 'https://civio.ph';
 
             // Static routes
             $staticRoutes = [

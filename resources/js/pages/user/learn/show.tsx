@@ -115,11 +115,11 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
     return (
         <>
             <Head>
-                <title>{`${module.title} | Hiraya Review`}</title>
+                <title>{`${module.title} | Civio`}</title>
                 <meta name="description" content={module.summary} />
                 <meta
                     property="og:title"
-                    content={`${module.title} | Hiraya Review`}
+                    content={`${module.title} | Civio`}
                 />
                 <meta property="og:description" content={module.summary} />
                 <meta property="og:type" content="article" />

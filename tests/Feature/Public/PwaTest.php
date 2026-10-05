@@ -2,34 +2,34 @@
 
 use Illuminate\Support\Facades\File;
 
-test('pwa assets exist in public folder', function () {
+test('pwa manifest exists and is branded Civio', function () {
     $manifestPath = public_path('manifest.json');
-    $swPath = public_path('sw.js');
 
     expect(File::exists($manifestPath))->toBeTrue();
-    expect(File::exists($swPath))->toBeTrue();
 
-    $manifestContent = File::get($manifestPath);
-    $manifestJson = json_decode($manifestContent, true);
+    $manifestJson = json_decode(File::get($manifestPath), true);
 
     expect($manifestJson)->toBeArray();
-    expect($manifestJson['short_name'])->toBe('Hiraya Review');
+    expect($manifestJson['name'])->toBe('Civio');
+    expect($manifestJson['short_name'])->toBe('Civio');
     expect($manifestJson['display'])->toBe('standalone');
     expect($manifestJson)->toHaveKey('id');
 });
 
-test('service worker excludes authenticated routes from caching', function () {
-    $swContent = File::get(public_path('sw.js'));
+test('service worker source excludes exam and auth routes from caching', function () {
+    $swSource = File::get(resource_path('js/sw.ts'));
 
-    expect($swContent)->toContain('/dashboard');
-    expect($swContent)->toContain('/settings');
-    expect($swContent)->toContain('/admin');
-    expect($swContent)->toContain('/sanctum');
-    expect($swContent)->toContain("credentials: 'same-origin'");
+    expect($swSource)->toContain('/exams');
+    expect($swSource)->toContain('/dashboard');
+    expect($swSource)->toContain('/settings');
+    expect($swSource)->toContain('/admin');
+    expect($swSource)->toContain('/sanctum');
+    expect($swSource)->toContain('NetworkOnly');
+    expect($swSource)->toContain('NetworkFirst');
 });
 
 test('pwa meta tags are present in the app layout html', function () {
-    $response = $this->get(route('home'));
+    $response = $this->withoutVite()->get(route('home'));
 
     $response->assertOk();
     $response->assertSee('link rel="manifest" href="/manifest.json"', false);

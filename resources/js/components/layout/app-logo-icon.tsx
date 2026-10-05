@@ -6,8 +6,8 @@ export default function AppLogoIcon({
 }: ImgHTMLAttributes<HTMLImageElement>) {
     return (
         <img
-            src="/images/hiraya_logo_cropped.png"
-            alt="Hiraya Review Logo"
+            src="/images/civio_logo_cropped.png"
+            alt="Civio Logo"
             className={className}
             {...props}
         />
