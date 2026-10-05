@@ -80,7 +80,7 @@ test('authenticated user can store a custom drill question', function () {
     $this->assertDatabaseHas('questions', [
         'stem' => 'What comes next in the sequence: 2, 4, 8, 16, ?',
         'created_by' => $user->id,
-        'status' => 'active',
+        'status' => 'draft',
     ]);
 });
 

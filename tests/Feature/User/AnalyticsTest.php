@@ -6,9 +6,10 @@ use App\Models\Subcategory;
 use App\Models\User;
 use Inertia\Testing\AssertableInertia as Assert;
 
-test('guests are redirected when visiting analytics', function () {
-    $response = $this->get(route('analytics.index'));
-    $response->assertStatus(404);
+test('guests can visit analytics when guest study is enabled', function () {
+    config(['civio.guest_unlimited' => true]);
+    $response = $this->withoutVite()->get(route('analytics.index'));
+    $response->assertOk();
 });
 
 test('authenticated users can view analytics index with default stats', function () {

@@ -10,9 +10,10 @@ use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Cache;
 use Inertia\Testing\AssertableInertia as Assert;
 
-test('guests are redirected to the login page', function () {
-    $response = $this->get(route('dashboard.index'));
-    $response->assertStatus(404);
+test('guests can visit the dashboard when guest study is enabled', function () {
+    config(['civio.guest_unlimited' => true]);
+    $response = $this->withoutVite()->get(route('dashboard.index'));
+    $response->assertOk();
 });
 
 test('authenticated users can visit the dashboard', function () {

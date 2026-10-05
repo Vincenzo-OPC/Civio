@@ -119,6 +119,8 @@ test('incomplete guest attempt is rejected', function () {
 });
 
 test('guest can only submit one complete attempt and second is blocked', function () {
+    config(['civio.guest_unlimited' => false]);
+
     // 1st attempt (complete)
     $response1 = $this->postJson(route('exams.attempts.store'), [
         'category_id' => null,
@@ -164,12 +166,14 @@ test('guest can only submit one complete attempt and second is blocked', functio
     $response2->assertJson(['success' => false]);
 });
 
-test('guest is redirected to scorecard when trying to start a new exam after completing one', function () {
+test('guest without free_attempt is redirected to scorecard after completing one', function () {
+    config(['civio.guest_unlimited' => false]);
+
     // Simulate already having a completed guest attempt in session
     $sessionData = ['pending_guest_attempt_id' => 123];
 
     $response = $this->withSession($sessionData)
-        ->get(route('exams.index', ['free_attempt' => '1']));
+        ->get(route('exams.index'));
 
     $response->assertRedirect(route('exams.index', ['attempt_id' => 123, 'limit' => '1']));
 });
