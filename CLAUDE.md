@@ -7,7 +7,7 @@
 ## Provenance
 
 Civio reuses the Hiraya Review codebase (CSE mocks, drills, Dexter tutor). Work
-continues across Codex, Claude, Cursor, Copilot, Gemini, and human contributors.
+continues across Codex, Grok Build, Grok Bot, Claude and human contributors.
 GitHub `Vincenzo-OPC/Civio` is the durable record — not any one chat history.
 
 ## Read order before acting

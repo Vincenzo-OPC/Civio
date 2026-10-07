@@ -1,7 +1,8 @@
 # Civio repository rules
 
-Codex, Copilot, Cursor, and Grok CLI read this file. Claude Code reads `CLAUDE.md`
-and often skips this one. Keep both aligned.
+Codex, Grok Build and Grok Bot read this file. Claude Code reads `CLAUDE.md`
+and often skips this one. Keep both aligned. Cursor is not used for Civio: there
+is no `.cursor/` folder (hooks or rules); do not add one.
 
 ## Read first, every session
 

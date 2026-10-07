@@ -47,9 +47,10 @@ Entire fails on purpose when it detects a privacy-critical problem (for example
 a diverged checkpoint ref on the remote). A transient checkpoint upload failure
 is only logged and does not stop the push.
 
-Cursor is not wired. Entire supports it, but the old `.cursor/hooks.json` used
-`sh -c` wrappers, and GT's agents for Civio are Codex and Claude Code. Add it
-later on a machine that uses Cursor with `entire agent add cursor`.
+Cursor is not used for Civio, so the old `.cursor/hooks.json` was removed and
+there is no `.cursor/` folder (no hooks, no rules). GT works with Codex, Grok
+Build and Grok Bot. Only Codex (and Claude Code, if used) has Entire hooks; Grok
+Build and Grok Bot sessions are not captured by Entire.
 
 ## Activate on GT's MSI (GT does these steps)
 
