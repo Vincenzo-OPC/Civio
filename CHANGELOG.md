@@ -5,6 +5,28 @@ All notable changes to Civio since the desktop Hiraya baseline
 [git-cliff](https://git-cliff.org); do not edit by hand, run `npm run changelog`.
 For what differs from the original Hiraya, see `docs/CHANGES_FROM_HIRAYA.md`.
 
+## [Unreleased]
+
+### Features
+
+- *(lite)* L1 server-picked mocks, Lite mode flag and text-first exam screen ([c825fe9](https://github.com/Vincenzo-OPC/Civio/commit/c825fe973bd1cc44791d87758139a6c825f40316))
+
+### Fixes
+
+- *(analytics)* Safely handle missing keys in ai analysis orchestrator ([c6a173f](https://github.com/Vincenzo-OPC/Civio/commit/c6a173f1386a7d1d6e60b1d598ed5d93fc814228))
+
+### Performance
+
+- *(lite)* L0 quick wins — on-demand PDF and realtime, light images, no unused fonts, slim precache ([5ea1cd5](https://github.com/Vincenzo-OPC/Civio/commit/5ea1cd57dae46bf009cc68d2f83afc668e87ff9f))
+
+### Style
+
+- Pint formatting for exam controller, Inertia middleware, routes and scoring test (no behaviour change) ([476a65a](https://github.com/Vincenzo-OPC/Civio/commit/476a65a95afe45be51c20002cf3f7c04037737e4))
+
+### Chores
+
+- *(entire)* Codex and Claude Code hooks, committed .githooks, git-refs settings; drop Cursor hooks ([3fe931b](https://github.com/Vincenzo-OPC/Civio/commit/3fe931b0dc622c9d17aff88a873e411ced4f576b))
+
 ## [0.1.5-phase0.5] - 2026-10-07
 
 ### Features
