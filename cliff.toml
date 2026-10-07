@@ -1,0 +1,53 @@
+# git-cliff config for Civio. Regenerate with: npm run changelog
+# Docs: https://git-cliff.org/docs/configuration
+# History before d3f0368 is upstream Hiraya plus GT's desktop patches; see
+# docs/CHANGES_FROM_HIRAYA.md. The changelog covers Civio commits only.
+
+[changelog]
+header = """
+# Changelog
+
+All notable changes to Civio since the desktop Hiraya baseline
+(`hiraya-baseline`, d3f0368). Generated from Conventional Commits by
+[git-cliff](https://git-cliff.org); do not edit by hand, run `npm run changelog`.
+For what differs from the original Hiraya, see `docs/CHANGES_FROM_HIRAYA.md`.\n
+"""
+body = """
+{% if version %}\
+## [{{ version | trim_start_matches(pat="v") }}] - {{ timestamp | date(format="%Y-%m-%d", timezone="Asia/Manila") }}
+{% else %}\
+## [Unreleased]
+{% endif %}\
+{% for group, commits in commits | group_by(attribute="group") %}
+### {{ group | striptags | trim | upper_first }}
+{% for commit in commits %}
+- {% if commit.scope %}*({{ commit.scope }})* {% endif %}\
+{{ commit.message | split(pat="\n") | first | upper_first | trim }} \
+([{{ commit.id | truncate(length=7, end="") }}](https://github.com/Vincenzo-OPC/Civio/commit/{{ commit.id }}))\
+{% endfor %}
+{% endfor %}\n
+"""
+footer = ""
+trim = true
+
+[git]
+conventional_commits = true
+filter_unconventional = false
+split_commits = false
+protect_breaking_commits = true
+filter_commits = false
+tag_pattern = "v[0-9].*"
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^docs\\(changelog\\)", skip = true },
+  { message = "^security", group = "<!-- 0 -->Security" },
+  { message = "^feat", group = "<!-- 1 -->Features" },
+  { message = "^fix", group = "<!-- 2 -->Fixes" },
+  { message = "^perf", group = "<!-- 3 -->Performance" },
+  { message = "^refactor", group = "<!-- 4 -->Refactoring" },
+  { message = "^test", group = "<!-- 5 -->Tests" },
+  { message = "^docs", group = "<!-- 6 -->Docs" },
+  { message = "^style", group = "<!-- 7 -->Style" },
+  { message = "^(chore|build|ci)", group = "<!-- 8 -->Chores" },
+  { message = ".*", group = "<!-- 9 -->Other" },
+]
