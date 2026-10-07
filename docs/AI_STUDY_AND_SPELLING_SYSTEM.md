@@ -885,3 +885,14 @@ It should become a **Civil Service learning operating system**:
 **diagnose → teach → practice → test → remember → retest**
 
 The AI layer should make that loop feel personal and conversational. The deterministic learning engine should make it reliable even when AI is unavailable.
+
+## Item authoring (approved 7 Oct 2026)
+
+GT approved the Civio CSE Question Design Spec v0.1 on 7 Oct 2026 (canonical copy
+in GT's Obsidian vault; decisions recorded in `docs/CSE-Question-Design-Spec.md`
+Section 10). In short: GI term-match stems are allowed (plain-English description,
+article and section in `source`, sibling-term distractors); practice mixes are
+Civio choices, not CSC weights; filing items cite Civio Filing Rules v1; the first
+release is text only; items are reviewed by the Chief of Staff (Codex as
+alternate) and approved by GT one by one, starting with a 10-item batch. AI or
+human drafts are saved as `source_group = civio`, `status = draft` until approved.

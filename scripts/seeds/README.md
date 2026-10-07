@@ -48,3 +48,9 @@ feedback are set to `draft`, so they leave the active pool. For a database whose
 app lacks the command, `remove_variant_clones.sql` does the same in Postgres
 (see `docs/DESKTOP_PATCHES_TO_PORT.md`).
 
+
+## Source groups
+
+Items from these seeds are `questions.source_group = baseline`. The PHP seed
+scripts set it; for the raw SQL files run `php artisan civio:tag-source-groups`
+after importing. See `docs/QUESTION_SOURCE_GROUPS.md`.

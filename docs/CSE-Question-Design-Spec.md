@@ -1,9 +1,10 @@
 # Civio CSE Question Design Spec
 
-Version: 0.1 (draft for approval)
-Date: 5 Oct 2026 (Asia/Manila)
+Version: 0.1
+Date: 5 Oct 2026 (Asia/Manila); approved 7 Oct 2026
 Owner: GT
-Status: **DRAFT. Not approved.** Nothing in this spec has been put into any database or question bank.
+Status: **Approved by GT on 7 Oct 2026.** The canonical copy lives in GT's Obsidian vault; this repo copy
+records the Section 10 decisions below. No item has been written under it yet.
 
 ---
 
@@ -603,12 +604,38 @@ The schedule for the vaccination teams in the two districts ______ updated every
 
 ---
 
-## 10. Open questions for GT
+## 10. Decisions (approved by GT, 7 Oct 2026)
 
-1. Confirm the reading of rule 4.1 (GI term-match stems allowed).
-2. Approve or edit the practice mixes in Section 3 (they are Civio choices, not CSC weights).
-3. Approve Civio Filing Rules v1 content before any filing items are written.
-4. Confirm whether figure-based items (abstract figures, charts) are in scope for the first release.
-5. Name the reviewer(s) for the first 10-item batch.
+1. **GI term-match stems are allowed:** a plain-English description of the provision,
+   the article and section cited in `source`, and sibling-term distractors. The
+   no-teaching-in-stems rule still applies to every other subtest.
+2. **Practice mixes are Civio choices, never CSC weights,** and will be recalibrated
+   with data:
+
+   | Subtest | Mix (%) |
+   | --- | --- |
+   | Numerical | operations 30 / sequence 20 / word problems 50 |
+   | Verbal (English) | meaning 15 / completion 20 / error 20 / structure 10 / paragraph organization 15 / reading 20 |
+   | Verbal (Filipino) | synonym 25 / antonym 20 / idiom 15 / grammar 15 / reading 15 / paragraph order 10 |
+   | Analytical | analogy 30 / symbolic logic 20 / assumptions and conclusions 25 / data interpretation 25 |
+   | Clerical | filing 55 / spelling 45 |
+   | General Information | Constitution 40 / RA 6713 35 / peace and human rights 15 / environment 10 |
+
+3. **Civio Filing Rules v1.** Every filing item cites its rule number; disputed
+   cases wait for v1.1.
+   1. Surname first.
+   2. Letter by letter.
+   3. Prefixes are part of the surname.
+   4. Titles and suffixes only break ties.
+   5. A leading "The" is ignored.
+4. **The first release is text only.** Text tables are fine. Figures and charts wait
+   for an image pipeline with alt text and a text fallback.
+5. **Item review:** the CSE author writes; the Chief of Staff reviews against the
+   Section 7 checklist (Codex as alternate); GT approves item by item, then
+   spot-checks 1 in 5. The first batch is 10 items: 3 Numerical, 3 Verbal, 2 GI,
+   1 Analytical, 1 Clerical (spelling).
+
+New items get `questions.source_group = civio` and `status = draft` until GT approves
+them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 
 *End of spec.*

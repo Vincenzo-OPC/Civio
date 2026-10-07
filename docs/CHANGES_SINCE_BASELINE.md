@@ -89,6 +89,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Local practice seeds and ~495 original CSE-style practice items (`scripts/seed_unique_cse_batch_2026-09-30.sql`, `…2026-10-03.sql`, `seed_cse_pack_200_2026-10-03.sql`) plus generators. Not official CSC items. | The baseline shipped no practice bank for local use. | Desktop `718763a`, `f807222`, `d3f0368` |
 | Seed scripts moved to `scripts/seeds/` with a README. | Root was cluttered. | `e21d94c` |
 | `??` lost math symbols: root cause (PowerShell 5.1 pipe), `client_encoding` in seed SQL, `scripts/import-sql-utf8.ps1`, and `php artisan civio:repair-bank-encoding`. | Stems showed `??` instead of × ÷ ₱ etc. | `22fc855` |
+| `questions.source_group` (nullable, indexed; `App\Enums\QuestionSourceGroup`): existing rows tagged `baseline`, except post-baseline drafts (`civio`); questions created by the app default to `civio`; PHP seed scripts set `baseline`; `php artisan civio:tag-source-groups [--dry-run]` tags raw SQL seed rows. Never sent to the browser. Spec v0.1 Section 10 decisions recorded; re-parameterize workflow documented (`docs/QUESTION_SOURCE_GROUPS.md`). No question text changed. | Keep baseline items grouped for later re-parameterizing; new authored items stay drafts until approved. | `feat(bank)` source_group commit |
 | Seeder saves one copy per item; `php artisan civio:remove-variant-clones` deletes or archives old "(variant N)" clones; Postgres SQL for desktop DBs. | Clone filler questions removed (GT approved). | `d8406d8`, `4bce08e` |
 
 ### Branding

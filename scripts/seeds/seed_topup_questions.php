@@ -36,6 +36,7 @@ foreach ($targets as $catName => $extraPerSub) {
                 'explanation' => 'Local sample for Docker mock exam.',
                 'created_by' => $user->id,
                 'status' => 'active',
+                'source_group' => 'baseline',
             ]);
             $n++;
         }

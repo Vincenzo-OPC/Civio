@@ -146,6 +146,7 @@ foreach ($bank as $subName => $items) {
             'explanation' => 'Local practice item for Docker study.',
             'created_by' => $user->id,
             'status' => 'active',
+            'source_group' => 'baseline',
         ]);
         $n++;
     }

@@ -33,6 +33,7 @@ foreach ($subs as $sub) {
             'explanation' => 'Local Docker sample question. Replace later via Gemini admin generator.',
             'created_by' => $user->id,
             'status' => 'active',
+            'source_group' => 'baseline',
         ]);
         $n++;
     }
