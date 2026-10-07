@@ -6,70 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    {{-- Inline script to detect system dark mode preference and apply it immediately --}}
+    {{-- Inline scripts are plain JavaScript (no TypeScript): browsers run them as-is. tests/Feature/Views/AppInlineScriptTest.php checks this. --}}
+    {{-- Detect system dark mode preference and apply it immediately --}}
     <script>
         (function () {
-            const appearance = '{{ $appearance ?? "system" }}';
+            var appearance = '{{ $appearance ?? "system" }}';
 
             if (appearance === 'system') {
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
                 if (prefersDark) {
                     document.documentElement.classList.add('dark');
                 }
             }
         })();
+    </script>
+    {{-- GT study override: keep text selectable and copyable on exam pages (and on localhost). --}}
+    {{-- Only the copy/selection events are intercepted; keyboard events are left alone so dialogs, shortcuts and forms keep working. --}}
+    <script>
+        (function () {
+            var isExamPage = location.pathname.indexOf('/exams') !== -1 || location.hostname === 'localhost';
 
-        // GT nuclear bypass for content shield (exams page copy-paste) - aggressive version
-        (function() {
-            const isExamPage = location.pathname.includes('/exams') || location.hostname === 'localhost';
-
-            if (isExamPage) {
-                // Force text selection immediately and repeatedly
-                const forceSelectable = () => {
-                    const style = document.createElement('style');
-                    style.id = 'gt-selectable-override';
-                    style.textContent = `
-                        *, *::before, *::after {
-                            user-select: text !important;
-                            -webkit-user-select: text !important;
-                            -moz-user-select: text !important;
-                        }
-                        input, textarea, [contenteditable="true"] {
-                            user-select: text !important;
-                        }
-                    `;
-                    const old = document.getElementById('gt-selectable-override');
-                    if (old) old.remove();
-                    document.head.appendChild(style);
-                };
-                forceSelectable();
-                setInterval(forceSelectable, 2000);
-
-                // Block all shield event listeners (capture phase)
-                const blockedEvents = ['copy','cut','contextmenu','selectstart','selectionchange','beforeprint','keydown','keyup'];
-                blockedEvents.forEach(type => {
-                    document.addEventListener(type, (e) => {
-                        const tag = (e.target as HTMLElement)?.tagName || '';
-                        if (!['INPUT','TEXTAREA'].includes(tag)) {
-                            e.stopImmediatePropagation();
-                            if (type === 'keydown' && (e as KeyboardEvent).key === 'a' && (e as KeyboardEvent).ctrlKey) {
-                                // Allow Ctrl+A to select all text
-                                const sel = window.getSelection();
-                                if (sel) {
-                                    const range = document.createRange();
-                                    range.selectNodeContents(document.body);
-                                    sel.removeAllRanges();
-                                    sel.addRange(range);
-                                }
-                                e.preventDefault();
-                            }
-                        }
-                    }, {capture: true, passive: false});
-                });
-
-                console.log('%c[GT] Content shield completely removed', 'color:#0f0');
+            if (!isExamPage) {
+                return;
             }
+
+            var forceSelectable = function () {
+                if (!document.head) {
+                    return;
+                }
+
+                var old = document.getElementById('gt-selectable-override');
+
+                if (old) {
+                    old.remove();
+                }
+
+                var style = document.createElement('style');
+                style.id = 'gt-selectable-override';
+                style.textContent =
+                    '*, *::before, *::after { user-select: text !important; -webkit-user-select: text !important; -moz-user-select: text !important; }' +
+                    ' input, textarea, [contenteditable="true"] { user-select: text !important; }';
+                document.head.appendChild(style);
+            };
+            forceSelectable();
+            setInterval(forceSelectable, 2000);
+
+            // Stop copy-blocking listeners (capture phase) everywhere except form fields.
+            ['copy', 'cut', 'contextmenu', 'selectstart'].forEach(function (type) {
+                document.addEventListener(type, function (e) {
+                    var target = e.target;
+                    var tag = target && target.tagName ? target.tagName : '';
+
+                    if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+                        e.stopImmediatePropagation();
+                    }
+                }, { capture: true });
+            });
         })();
     </script>
     {{-- Inline style to set the HTML background color based on our theme in app.css --}}
