@@ -451,3 +451,17 @@ Add unit tests for:
 5. no UI strings such as `Report Issue`, `Previous Question`, or `svg`
 6. multiline/special-character questions remain readable
 7. Filipino/Taglish text preserves Unicode correctly
+
+---
+
+## Status (7 Oct 2026, Asia/Manila)
+
+**Copy for AI shipped (MVP).**
+
+- Formatter: `resources/js/lib/ai-handoff.ts` (`buildAiHandoffText`, `copyAiHandoff`), tests in `tests/Js/ai-handoff.test.ts`.
+- Button: `resources/js/pages/user/exams/components/copy-for-ai-button.tsx`, toast "Copied clean question for AI."
+- Live exam: beside Reveal in drills; hidden during strict Live Simulation (Professional / Subprofessional mocks). Answer, result and explanation are copied only after the learner reveals that question. The button never calls `/exams/reveal`.
+- Review: same button with the verified answer and Civio explanation.
+- Output is the plain-text format above. Letters follow the learner's shuffled display order. No `Source/rule:` line yet because the bank has no source field. Learner notes are supported by the formatter (`includeLearnerNote`) but the UI does not send them yet.
+
+**Ask Tutor is still a stub** (`NullTutorProvider`; no in-app Ask Tutor UI). Preferred-assistant labels ("Discuss in ChatGPT"), Settings, copy variants and share sheet are not built.
