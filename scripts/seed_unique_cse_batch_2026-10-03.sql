@@ -1,5 +1,5 @@
 SET client_encoding = 'UTF8'; -- UTF-8 file: import with psql -f, never through a PowerShell pipe (see scripts/seeds/README.md)
--- Hiraya local bank expansion — 80 original CSE-style practice items; NOT official CSC items
+-- Civio local bank expansion — 80 original CSE-style practice items; NOT official CSC items
 -- Append-only with exact active-stem protection; generated 2026-10-03T14:52:50.447Z
 BEGIN;
 INSERT INTO questions (subcategory_id, language, stem, options, correct_option, explanation, status, created_by, created_at, updated_at) SELECT 18, 'English', 'Which file order is correct when arranging surnames alphabetically?', '["Cruz, Ana; Cruz, Ben; Cruz, Carlo; Cruz, Dina","Cruz, Carlo; Cruz, Ana; Cruz, Dina; Cruz, Ben","Cruz, Ben; Cruz, Dina; Cruz, Ana; Cruz, Carlo","Cruz, Dina; Cruz, Carlo; Cruz, Ben; Cruz, Ana"]'::jsonb, 0, 'Compare the given names after the identical surname; Ana, Ben, Carlo, Dina are in alphabetical order.', 'active', 1, NOW(), NOW() WHERE NOT EXISTS (SELECT 1 FROM questions WHERE status='active' AND lower(btrim(stem))=lower(btrim('Which file order is correct when arranging surnames alphabetically?')));

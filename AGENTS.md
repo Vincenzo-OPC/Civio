@@ -12,7 +12,7 @@ is no `.cursor/` folder (hooks or rules); do not add one.
 4. `docs/DESKTOP_PATCHES_TO_PORT.md` — MSI UX patches still to port.
 4a. `docs/CHANGES_SINCE_BASELINE.md` — every difference from the baseline (`d3f0368`), with commits.
 4b. `CHANGELOG.md` — release notes generated from commits (`npm run changelog`).
-5. `docs/CIVIO_AUDIT_AND_PLAN.md` — audit map (paths may have shifted; re-verify in tree).
+5. `docs/CODE_STANDARD.md` — coding standard and the modernization backlog.
 6. Durable notes: Obsidian Intersect vault (GT). Question design spec also lives at
    `Projects\CIVIO\CSE-Question-Design-Spec.md` in Intersect; a copy is in
    `docs/CSE-Question-Design-Spec.md`.

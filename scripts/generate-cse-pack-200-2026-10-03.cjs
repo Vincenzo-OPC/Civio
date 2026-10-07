@@ -226,7 +226,7 @@ if (Q.length !== 200) throw new Error(`expected 200 items, got ${Q.length}`);
 const norm = Q.map(q => q.stem.toLowerCase().replace(/\s+/g,' ').trim());
 if (new Set(norm).size !== norm.length) throw new Error('duplicate stem in batch');
 function esc(s){ return String(s).replace(/\x27/g, "\x27\x27"); }
-const lines = ['-- Hiraya CSE-Pack: 200 original local-study items; not official CSC questions','-- Exact active-stem protection; generated '+new Date().toISOString(),"SET client_encoding = 'UTF8';",'BEGIN;'];
+const lines = ['-- Civio CSE-Pack: 200 original local-study items; not official CSC questions','-- Exact active-stem protection; generated '+new Date().toISOString(),"SET client_encoding = 'UTF8';",'BEGIN;'];
 for (const q of Q) {
   lines.push(`INSERT INTO questions (subcategory_id, language, stem, options, correct_option, explanation, status, created_by, created_at, updated_at) SELECT ${q.sub}, '${esc(q.lang)}', '${esc(q.stem)}', '${esc(JSON.stringify(q.options))}'::jsonb, ${q.correct}, '${esc(q.explanation)}', 'active', ${CREATED_BY}, NOW(), NOW() WHERE NOT EXISTS (SELECT 1 FROM questions WHERE status='active' AND lower(btrim(stem))=lower(btrim('${esc(q.stem)}')));`);
 }

@@ -7,7 +7,7 @@
 ## For GT (plain language)
 
 1. Civio is your Philippine Civil Service Exam study app (tutor: Dexter). Not official CSC.
-2. Codex must rebuild from the newer MSI desktop tree (`C:\Users\GT\Desktop\Grok\CSE\Hiraya-Review`) after it replaces GitHub `main` — not from today's audited snapshot.
+2. Codex builds from the MSI desktop tree, which replaced GitHub `main` as the baseline `d3f0368` (done; tag `baseline`).
 3. First: fix cheating/scoring bugs, remove dangerous routes, rebrand to Civio, green the linters.
 4. Then: port the MSI-only UX (timers, tutor loop, remove Mock button), then lay the adaptive-learning foundation.
 5. Keep the MSI local study app on `localhost:8080` working; never touch Hermes on port 8642.
@@ -17,13 +17,12 @@
 ## Hard decisions (do not reopen)
 
 - **Brand:** `Civio` (Title Case). Lowercase only in identifiers (`civio`, `civio.ph`, env prefixes). Tutor name: **Dexter**. Disclaimer: not official CSC.
-- **Code reuse:** Civio may reuse **all** Hiraya code, questions, and features. Do not add license or permission caveats. Rebrand freely.
 - **Starting tree:** GitHub `main` will be replaced by the MSI desktop tree. **Begin only from that tree.** If `main` has not been replaced yet, **STOP** and say so — do not commit on the old audited snapshot (`1302608`).
-- **Protect local study:** Desktop Hiraya on the MSI (Docker, `localhost:8080`) stays the stable study app. Do not break it. **Never touch Hermes on port 8642.**
+- **Protect local study:** The desktop study app on the MSI (Docker, `localhost:8080`) stays the stable study app. Do not break it. **Never touch Hermes on port 8642.**
 - **Hosting (free-first):** Keep Laravel. Target: Google Cloud Run (scale to zero, instance cap, budget alert) + Neon free Postgres + Cloudflare (DNS/CDN, Turnstile, analytics, optional AI gateway).
 - **AI:** Optional. Server-side provider abstraction (Gemini, OpenAI, Grok/xAI, Claude, local/stub). **Never** expose API keys client-side (`VITE_` secrets forbidden).
 
-**Repo:** `Vincenzo-OPC/Civio`. **Audit map:** `/workspace/civio-audit-report/CIVIO_AUDIT_AND_PLAN.md`. **Desktop patch list:** `/workspace/civio-audit-report/DESKTOP_PATCHES_TO_PORT.md` (also copy into `docs/DESKTOP_PATCHES_TO_PORT.md`).
+**Repo:** `Vincenzo-OPC/Civio`. **Audit map:** historical only, in git history (`912d318:docs/CIVIO_AUDIT_AND_PLAN.md`); current state is `docs/CODEX_HANDOFF_PLAN.md`. **Desktop patch list:** `/workspace/civio-audit-report/DESKTOP_PATCHES_TO_PORT.md` (also copy into `docs/DESKTOP_PATCHES_TO_PORT.md`).
 
 ---
 
@@ -119,7 +118,7 @@ Address `composer audit` / `npm audit` **high** advisories with safe upgrades. P
 
 ## P0.11 Rebrand to Civio
 
-Replace Hiraya / all-caps CIVIO leftovers. Priority list:
+Replace leftover old-brand and all-caps CIVIO strings (done; see `docs/CHANGES_SINCE_BASELINE.md`). Priority list:
 
 | Area | Paths |
 | --- | --- |
@@ -128,7 +127,7 @@ Replace Hiraya / all-caps CIVIO leftovers. Priority list:
 | Logos | `public/images/*`, `resources/js/components/layout/app-logo-icon.tsx`, scorecard/printable watermarks |
 | PDF / print | `resources/js/pages/user/exams/components/printable-exam.tsx`, `scorecard-view.tsx` |
 | robots | `public/robots.txt` → `https://civio.ph/sitemap.xml` |
-| localStorage keys | migrate `hiraya_*` → `civio_*` with one-time read of old keys |
+| localStorage keys | migrate legacy keys → `civio_*` with one-time read of old keys (`lib/legacy-storage.ts`) |
 | Docker / seeds | `docker-compose.yml`, `env.docker.example`, `seed_sample_questions.php` (`admin@civio.local`) |
 | Tests / composer | `tests/Unit/AiGatewayServiceTest.php`, `composer.json` name → `civio/app` (or similar) |
 | Dockerfile | `APP_NAME` → `"Civio"` |
@@ -202,7 +201,7 @@ Source of truth: MSI tree + `docs/DESKTOP_PATCHES_TO_PORT.md`. Do not mark PORTE
 - `public/manifest.json` — Civio name, icons, theme.
 - Icons under `public/icons/` (Civio art).
 - Safe service worker: **versioned cache**, update prompt, **no stale questions** (never cache exam JSON/answer keys as immutable forever; bump cache on deploy).
-- Network-first HTML; skip auth routes; do not precache Hiraya assets.
+- Network-first HTML; skip auth routes; precache only Civio assets.
 
 ## P1.4 Learning event table
 
@@ -272,7 +271,7 @@ Wire to learner state + schedules; no fake client scores.
 
 # PHASE BANK — Question bank export / import
 
-1. Export **all** existing questions (Hiraya pool + GT-added items) to a portable JSON with **stable IDs**, stem, options, correct key, explanation, category/subcategory (and new taxonomy IDs when ready), status, provenance.
+1. Export **all** existing questions (baseline pool + GT-added items, told apart by `questions.source_group`) to a portable JSON with **stable IDs**, stem, options, correct key, explanation, category/subcategory (and new taxonomy IDs when ready), status, provenance.
 2. Import into the new taxonomy without losing items.
 3. **Known bug flag:** some explanations show `'??'` where math operators (`÷ × −`) were lost — detect, fix, and add a content QA check so re-import does not reintroduce mangling.
 4. Preserve Unicode currency/operators through seed, API, Dexter `plain()`, and React render.
@@ -308,7 +307,7 @@ Wire to learner state + schedules; no fake client scores.
 6. chore: remove legacy ads/donations  
 7. chore: green tsc/eslint/prettier/pint + audit highs  
 8. perf: lazy Inertia pages / code-split  
-9. chore: rebrand Hiraya → Civio + docs  
+9. chore: rebrand to Civio + docs  
 10. feat: port MSI mock-button / tutor-loop / per-item clock  
 11. feat: learning_events + learner_states foundation  
 12. feat: knowledge taxonomy migrations (compat)  
@@ -324,7 +323,7 @@ Wire to learner state + schedules; no fake client scores.
 - Rewriting off Laravel to a static SPA  
 - Touching Hermes (port 8642)  
 - Force-pushing history after desktop lands  
-- Reopening brand, license, or hosting stack decisions  
+- Reopening brand or hosting stack decisions  
 
 ---
 

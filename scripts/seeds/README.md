@@ -1,7 +1,7 @@
 # Legacy / one-off seed scripts
 
-These scripts and SQL dumps came from the Hiraya → Civio desktop baseline.
-They are kept for provenance and local bank rebuilds.
+These scripts and SQL dumps came with the desktop baseline (`d3f0368`).
+They are kept for local bank rebuilds.
 
 **Do not run against production without review.**
 **Do not add new question stems here without an approved pass of**

@@ -131,6 +131,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | GCash / Maya / Buy Me a Coffee QR images and donation links in the support widget. | The baseline's donation channels don't belong in Civio. | `e21d94c` |
 | Desktop debug junk: `_pw/` Playwright bundles, `_restore/` patch copies, debug PNG/HTML, `_php-shim`, `public/clear-exam.html` and `resume-exam.html`, `.bak-demo` files, pnpm lockfiles. | Not source code. | `e21d94c`, `ba8c622` |
 | Hand-written `public/sw.js`. | Replaced by the generated SW. | `647e484` |
+| Old fork notes, the archived README, the local patch log (folded into `docs/DESKTOP_PATCHES_TO_PORT.md`) and the pre-Phase-0 audit doc. README rewritten for Civio only; agent skills, build brief, backend guide, seed READMEs, SQL header comments and generator comments say Civio or baseline. The placeholder explanation in `seed_real_practice.php` no longer names another app or says to replace the items. | No other app names in the repo; the files stay in git history. | `docs(baseline)` cleanup commit |
 
 ## Desktop-only patches that came in through `d3f0368`
 

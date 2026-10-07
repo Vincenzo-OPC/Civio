@@ -20,7 +20,7 @@ docker compose up --build
 # app :8080, Postgres :5433
 ```
 
-Never touch Hermes `:8642` or break the MSI `hiraya-review-app` study container.
+Never touch Hermes `:8642` or break the MSI Docker study container (`:8080`).
 
 ## Env
 

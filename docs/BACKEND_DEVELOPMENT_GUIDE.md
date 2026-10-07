@@ -1,6 +1,6 @@
-# Hiraya Review — Backend Architecture & Development Guide
+# Civio — Backend Architecture & Development Guide
 
-This guide establishes the official backend architectural pattern for Hiraya Review: **Action-Repository-DTO + JsonResource**.
+This guide establishes the official backend architectural pattern for Civio: **Action-Repository-DTO + JsonResource**.
 
 Whenever you are creating a new feature or refactoring an existing module, follow this 7-step sequence from start to finish.
 
@@ -474,7 +474,7 @@ When refactoring an existing module from legacy code into the **Action-Repositor
 
 **A: Absolutely NO.** Direct database queries should **never** exist in controllers.
 
-Controllers in Hiraya Review are strictly **HTTP Orchestrators**. They must abide by two ironclad rules regarding "queries":
+Controllers in Civio are strictly **HTTP Orchestrators**. They must abide by two ironclad rules regarding "queries":
 
 1. **Database Queries (`Model::where()`, `Model::with()`, `Model::findOrFail()`, `DB::table()`):**
    - ❌ **Anti-Pattern**: Writing Eloquent queries, eager loading relations, executing aggregates (`count()`), or model mutations inside a controller.

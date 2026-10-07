@@ -133,7 +133,7 @@ foreach ($bank as $subName => $items) {
       'stem' => $stem,
       'options' => $options,
       'correct_option' => $correct,
-      'explanation' => 'Local practice item for Docker Hiraya. Replace with Gemini/admin bank later.',
+      'explanation' => 'Local practice item for Docker study.',
       'created_by' => $user->id,
       'status' => 'active',
     ]);

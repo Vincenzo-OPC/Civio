@@ -10,7 +10,7 @@ use App\Services\DeterministicAnalysisService;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Upstream Hiraya fix 7b9f6bb: a stored AI analysis with missing keys (or a
+ * Upstream fix 7b9f6bb (cherry-picked as c6a173f): a stored AI analysis with missing keys (or a
  * non-array payload) must not throw when fresh drill results are merged in.
  */
 function orchestratorWithDrillAfterMock(User $user): AiAnalysisOrchestrator

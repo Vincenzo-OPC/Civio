@@ -1,5 +1,5 @@
 /**
- * Local Hiraya bank expansion — original CSE-style practice only.
+ * Local Civio bank expansion — original CSE-style practice only.
  * Adds 80 new items (clerical priority, then analytical and numerical).
  * Generates an append-only SQL seed with exact-stem protection.
  */
@@ -282,7 +282,7 @@ function sqlEscape(s) { return String(s).replace(/'/g, "''"); }
 function jsonSql(value) { return sqlEscape(JSON.stringify(value)); }
 
 const lines = [
-  '-- Hiraya local bank expansion — 80 original CSE-style practice items; NOT official CSC items',
+  '-- Civio local bank expansion — 80 original CSE-style practice items; NOT official CSC items',
   '-- Append-only with exact active-stem protection; generated ' + new Date().toISOString(),
   "SET client_encoding = 'UTF8';",
   'BEGIN;'

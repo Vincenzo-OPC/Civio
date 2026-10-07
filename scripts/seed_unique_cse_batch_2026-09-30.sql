@@ -1,5 +1,5 @@
 SET client_encoding = 'UTF8'; -- UTF-8 file: import with psql -f, never through a PowerShell pipe (see scripts/seeds/README.md)
--- CIVIO/Hiraya local bank expansion — CSE-style practice (NOT official CSC exam items)
+-- Civio local bank expansion — CSE-style practice (NOT official CSC exam items)
 -- Append-only; generated 2026-09-30T07:12:02.702Z
 BEGIN;
 INSERT INTO questions (subcategory_id, language, stem, options, correct_option, explanation, status, created_by, created_at, updated_at) VALUES (1, 'English', 'Under the 1987 Constitution, sovereignty resides in the people and all government authority emanates from them. This principle is primarily found in:', '["Article II (Declaration of Principles and State Policies)","Article III (Bill of Rights)","Article VI (Legislative Department)","Article VII (Executive Department)"]'::jsonb, 0, 'Article II, Section 1 affirms that the Philippines is a democratic and republican State; sovereignty resides in the people.', 'active', 1, NOW(), NOW());

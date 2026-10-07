@@ -1,5 +1,5 @@
 ﻿/**
- * Local CIVIO/Hiraya bank expansion — CSE Professional-style practice (NOT official CSC items).
+ * Local Civio bank expansion — CSE Professional-style practice (NOT official CSC items).
  * Append-only INSERT into questions. Run: node scripts/generate-unique-cse-seed.mjs
  */
 const fs = require('fs');
@@ -821,7 +821,7 @@ function sqlEscape(s) {
 }
 
 const lines = [];
-lines.push('-- CIVIO/Hiraya local bank expansion — CSE-style practice (NOT official CSC exam items)');
+lines.push('-- Civio local bank expansion — CSE-style practice (NOT official CSC exam items)');
 lines.push('-- Append-only; generated ' + new Date().toISOString());
 lines.push("SET client_encoding = 'UTF8';");
 lines.push('BEGIN;');

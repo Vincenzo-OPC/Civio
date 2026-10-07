@@ -1,5 +1,5 @@
 SET client_encoding = 'UTF8'; -- UTF-8 file: import with psql -f, never through a PowerShell pipe (see scripts/seeds/README.md)
--- Hiraya CSE-Pack: 200 original local-study items; not official CSC questions
+-- Civio CSE-Pack: 200 original local-study items; not official CSC questions
 -- Exact active-stem protection; generated 2026-10-03T15:04:45.889Z
 BEGIN;
 INSERT INTO questions (subcategory_id, language, stem, options, correct_option, explanation, status, created_by, created_at, updated_at) SELECT 1, 'English', 'Which constitutional principle requires government authority to remain answerable to the people?', '["Public accountability","Private ownership of agencies","Hereditary succession","Military supremacy"]'::jsonb, 0, 'Public accountability makes officials answerable for the exercise of public power Therefore, the correct option is "Public accountability." The other choices fail because the other choices replace democratic accountability with private, hereditary, or military control.', 'active', 1, NOW(), NOW() WHERE NOT EXISTS (SELECT 1 FROM questions WHERE status='active' AND lower(btrim(stem))=lower(btrim('Which constitutional principle requires government authority to remain answerable to the people?')));

@@ -1021,4 +1021,4 @@ Local CSE benchmark:
 - Ph Civil Service Reviewer CSE (Google Play)
 - CSE Reviewer 2026 (Gaspar Labs, Google Play)
 - CSE Buddy
-- public CSE reviewer projects including Hiraya and other GitHub reviewers
+- public CSE reviewer projects on GitHub

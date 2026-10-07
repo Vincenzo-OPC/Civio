@@ -1,8 +1,7 @@
 # Desktop patches to port (MSI → GitHub)
 
 Source of truth for study UX is GT's MSI local Docker tree (`localhost:8080`).
-GitHub `main` tip `d3f0368` ("Civio baseline from desktop Hiraya") **is** that
-desktop tree. Phase 0.5 (7 Oct 2026, Asia/Manila) re-checked each item against
+The baseline commit `d3f0368` (tag `baseline`) **is** that desktop tree. Phase 0.5 (7 Oct 2026, Asia/Manila) re-checked each item against
 the desktop sources copied to the box on 5 Oct (`desktop-live-exam-view.tsx`,
 `desktop-use-exam-timer.ts`, `desktop-guest-study-bias.ts`,
 `desktop-setup-exam-view.tsx`, `desktop-civio-study.ts`) and the MSI note
@@ -23,10 +22,42 @@ container and the compiled `app-CpqM_WR8.js` bundle were not diffed.
 
 Do not mark PORTED until re-verified from MSI sources and covered by automated tests.
 
+## Desktop paths and containers (desktop ops only)
+
+These are real names on GT's MSI and are only used in the commands below. Never
+stop, rebuild or edit them from an agent; GT runs these himself.
+
+| What | Name |
+| --- | --- |
+| Desktop study tree | `C:\Users\GT\Desktop\Grok\CSE\Hiraya-Review` |
+| Civio clone for agents and Entire | `C:\Users\GT\Desktop\Claude\Civio` |
+| App container (`:8080`) | `hiraya-review-app` |
+| Postgres container (`:5433`) | `hiraya-review-db`, database `cse_reviewer`, user `hiraya` |
+
+## Desktop study log, 3 Oct 2026 (folded in from the old local patch log)
+
+Done directly on the MSI containers (not in git except where noted):
+
+- **Reveal ("sirit") fix:** the live exam shuffles options but `/exams/reveal`
+  returned the key for the original order, so the shown answer could be wrong.
+  The desktop fix mapped the index back through `originalOptionIndices` and was
+  copied into the running container's `public/build` (service-worker cache v7).
+  GitHub has the tested fix since Phase 0 (`d19afda`).
+- **Bank expansion on the MSI DB:** 197 of the 200-item pack inserted (3 exact
+  active-stem duplicates skipped by the seed guard); active total 722 → 919.
+  Coverage: Constitution 30, RA 6713 23, peace/human rights 9, environment 15,
+  verbal (English/Filipino) 54, analytical 22, numerical 17, clerical 27. Checks
+  on inserted rows: 4 options each, valid 0-based `correct_option`, the answer
+  text present in every explanation, no `??` artifacts; 0 items rejected in
+  fact-check. The pack is `scripts/seed_cse_pack_200_2026-10-03.sql`.
+- **Row repairs on the MSI DB:** broken `??`/quote-marker text and explanations in
+  the newest rows, plus wrong numeric choices in two items (the 10% discount item
+  and the 6, 10, 18, 34 sequence). These were ID-specific desktop edits; recount and
+  re-check after `civio:repair-bank-encoding` runs there.
+
 ## MSI: remove variant clones
 
-The MSI desktop DB (`hiraya-review-db`, port 5433, database `cse_reviewer`,
-user `hiraya`) still has the clones. Its mocks keep padding with them until this
+The MSI desktop DB (Postgres container above, port 5433) still has the clones. Its mocks keep padding with them until this
 runs once. Nothing has been run on the MSI; GT runs it when the MSI is online.
 
 Rules (same for the command and the SQL):

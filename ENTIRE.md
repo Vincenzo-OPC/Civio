@@ -58,9 +58,10 @@ Entire 0.10.5 is installed with Scoop at
 `C:\Users\GT\scoop\apps\entire\current\entire.exe`.
 
 ```powershell
-# 1. Clone Civio, or pull an existing clone
-git clone https://github.com/Vincenzo-OPC/Civio.git    # or: git -C <your Civio clone> pull --ff-only
-cd Civio
+# 1. The Civio clone on the MSI is C:\Users\GT\Desktop\Claude\Civio
+cd C:\Users\GT\Desktop\Claude\Civio
+git pull --ff-only origin main
+#    (first time only: git clone https://github.com/Vincenzo-OPC/Civio.git C:\Users\GT\Desktop\Claude\Civio)
 
 # 2. Use the committed git hooks (local git config, once per clone)
 git config core.hooksPath .githooks
