@@ -77,29 +77,3 @@ export function useContentShieldEnabled(): boolean {
 
     return isContentShieldEnabledFromProps(props?.civio);
 }
-
-/** One-time migrate legacy Hiraya localStorage keys to Civio. */
-export function migrateHirayaLocalStorage(): void {
-    if (typeof window === 'undefined') {
-        return;
-    }
-
-    try {
-        const map: Record<string, string> = {
-            hiraya_guest_study_bias_v1: 'civio_guest_study_bias_v1',
-        };
-
-        for (const [from, to] of Object.entries(map)) {
-            if (localStorage.getItem(to) == null) {
-                const value = localStorage.getItem(from);
-
-                if (value != null) {
-                    localStorage.setItem(to, value);
-                    localStorage.removeItem(from);
-                }
-            }
-        }
-    } catch {
-        /* ignore quota / private mode */
-    }
-}

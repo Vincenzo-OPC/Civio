@@ -96,6 +96,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | What changed | Why | Commits |
 | --- | --- | --- |
 | Rebrand to **Civio** (Title Case) in UI, manifest, Blade SEO, README, Docker/env defaults, legal seeder; `civio_logo*.png`; one-time migration of legacy localStorage keys to `civio_*`. Not-official-CSC disclaimer kept; tutor stays Dexter. | Civio is GT's product. | `5fe2d40`, `6277c17` |
+| Neutral Civio mark (violet tile, lime "C" and dot) replaces the inherited sun-and-shield art everywhere: `public/favicon.svg` and `images/civio-mark.svg` (under 300 bytes), PWA icons, maskable icons, apple-touch icon, `favicon.ico`, print/PDF logo. Old logo files deleted. Footer "Made with ♥ by …" author credit and link removed; footer split into small typed components. Legacy storage migration moved to `lib/legacy-storage.ts` and now also carries cookie consent, the drills tab and the in-tab back/exam-origin keys (sessionStorage), with JS tests. | One Civio identity; returning users keep their progress and choices. | `chore(brand)` mark commit |
 
 ### Performance and PWA
 

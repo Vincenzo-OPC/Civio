@@ -89,7 +89,8 @@
         }
     </style>
 
-    <link rel="icon" href="/images/civio_logo_mark.png" type="image/png">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png">

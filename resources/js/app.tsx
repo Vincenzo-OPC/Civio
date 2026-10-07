@@ -9,7 +9,7 @@ import { initializeTheme } from '@/hooks/use-appearance';
 import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
 import SettingsLayout from '@/layouts/settings/layout';
-import { migrateHirayaLocalStorage } from '@/lib/civio-study';
+import { migrateLegacyStorageKeys } from '@/lib/legacy-storage';
 import {
     initializeLiteMode,
     isLiteActive,
@@ -208,7 +208,7 @@ createInertiaApp({
 });
 // This will set light / dark mode on load...
 initializeTheme();
-migrateHirayaLocalStorage();
+migrateLegacyStorageKeys();
 // Track previous in-app location so "back" returns to where the user came from
 initSmartBackTracking();
 

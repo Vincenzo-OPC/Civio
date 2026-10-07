@@ -1,14 +1,18 @@
 import type { ImgHTMLAttributes } from 'react';
 
+type AppLogoIconProps = Omit<ImgHTMLAttributes<HTMLImageElement>, 'src'>;
+
+/** Civio mark (neutral placeholder): violet tile, lime "C" and dot. */
 export default function AppLogoIcon({
-    className,
+    alt = 'Civio logo',
     ...props
-}: ImgHTMLAttributes<HTMLImageElement>) {
+}: AppLogoIconProps) {
     return (
         <img
-            src="/images/civio_logo_mark.png"
-            alt="Civio Logo"
-            className={className}
+            src="/images/civio-mark.svg"
+            alt={alt}
+            width={512}
+            height={512}
             {...props}
         />
     );
