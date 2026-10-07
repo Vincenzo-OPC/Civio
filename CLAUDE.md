@@ -12,6 +12,7 @@ GitHub `Vincenzo-OPC/Civio` is the durable record — not any one chat history.
 
 ## Read order before acting
 
+0. `docs/CODEX_HANDOFF_PLAN.md` — start here: record by phase, invariants, gaps, next phases.
 1. `AGENTS.md` — product locks, MSI Docker protection, branch/push rules, phase status.
 2. This file.
 3. `docs/CIVIO_CODEX_BUILD_BRIEF.md` — phased execution order.

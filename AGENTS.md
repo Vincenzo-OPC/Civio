@@ -1,11 +1,16 @@
 # Civio repository rules
 
+> **Codex: read [`docs/CODEX_HANDOFF_PLAN.md`](docs/CODEX_HANDOFF_PLAN.md) first.**
+> It has the full record, the security invariants, open decisions and the ranked
+> next phases.
+
 Codex, Grok Build and Grok Bot read this file. Claude Code reads `CLAUDE.md`
 and often skips this one. Keep both aligned. Cursor is not used for Civio: there
 is no `.cursor/` folder (hooks or rules); do not add one.
 
 ## Read first, every session
 
+0. `docs/CODEX_HANDOFF_PLAN.md` — start here: record, invariants, gaps, next phases.
 1. This file (`AGENTS.md`) — locked product and workflow rules.
 2. `docs/CIVIO_CODEX_BUILD_BRIEF.md` — phased build plan (Gate 0 → Phase 0 → 0.5 → 1 → Bank).
 3. `docs/ARCHITECTURE.md` — system shape (create/update if missing; do not invent hosting).

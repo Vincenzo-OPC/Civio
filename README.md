@@ -47,6 +47,7 @@ npm run format:check
 
 ## Docs
 
+- `docs/CODEX_HANDOFF_PLAN.md` — start here: what is built, what must not break, what is next
 - `AGENTS.md` / `CLAUDE.md` — rules for agents and contributors
 - `docs/CODE_STANDARD.md` — coding standard and modernization backlog
 - `docs/ARCHITECTURE.md` · `docs/DEPLOY.md` · `docs/LIBRARIES.md`
