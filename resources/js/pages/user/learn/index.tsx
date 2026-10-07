@@ -1,12 +1,11 @@
 import { Head, usePage, router } from '@inertiajs/react';
-import Echo from 'laravel-echo';
 import { BookOpen, CheckCircle, BarChart } from 'lucide-react';
-import Pusher from 'pusher-js';
 import React from 'react';
 import { toast } from 'sonner';
 import { PageContainer } from '@/components/layout/page-container';
 import { PageHeader } from '@/components/layout/page-header';
 import { HowItWorksModal } from '@/components/shared/how-it-works-modal';
+import { connectRealtime } from '@/lib/realtime';
 import type { Auth } from '@/types';
 import { ModulesGrid } from './components/modules-grid';
 import { SearchFilterRow } from './components/search-filter-row';
@@ -32,40 +31,28 @@ export default function LearnIndex(props: LearnIndexProps) {
             return;
         }
 
-        (window as any).Pusher = Pusher;
-        const echo = new Echo({
-            broadcaster: 'pusher',
-            key: pusher.key,
-            cluster: pusher.cluster ?? 'ap1',
-            wsHost: pusher.host
-                ? pusher.host
-                : `ws-${pusher.cluster}.pusher.com`,
-            wsPort: pusher.port ?? 80,
-            wssPort: pusher.port ?? 443,
-            forceTLS: (pusher.scheme ?? 'https') === 'https',
-            enabledTransports: ['ws', 'wss'],
+        return connectRealtime(pusher, (echo) => {
+            echo.channel('learn-modules').listen(
+                'LearnModulePublished',
+                (e: any) => {
+                    router.reload({
+                        only: ['modules'],
+                        onSuccess: () => {
+                            toast.success(
+                                `New study module available: ${e.module.title}`,
+                                {
+                                    duration: 8000,
+                                },
+                            );
+                        },
+                    });
+                },
+            );
+
+            return () => {
+                echo.disconnect();
+            };
         });
-
-        echo.channel('learn-modules').listen(
-            'LearnModulePublished',
-            (e: any) => {
-                router.reload({
-                    only: ['modules'],
-                    onSuccess: () => {
-                        toast.success(
-                            `New study module available: ${e.module.title}`,
-                            {
-                                duration: 8000,
-                            },
-                        );
-                    },
-                });
-            },
-        );
-
-        return () => {
-            echo.disconnect();
-        };
     }, [pusher]);
 
     const activeCategories = React.useMemo(() => {

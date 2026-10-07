@@ -1,8 +1,9 @@
 /// <reference lib="webworker" />
 import { clientsClaim } from 'workbox-core';
+import { ExpirationPlugin } from 'workbox-expiration';
 import { cleanupOutdatedCaches, precacheAndRoute } from 'workbox-precaching';
 import { NavigationRoute, registerRoute } from 'workbox-routing';
-import { NetworkFirst, NetworkOnly } from 'workbox-strategies';
+import { CacheFirst, NetworkFirst, NetworkOnly } from 'workbox-strategies';
 
 declare let self: ServiceWorkerGlobalScope;
 
@@ -60,4 +61,24 @@ registerRoute(
             ),
         },
     ),
+);
+
+// Lite L0: only the app shell is precached. Other hashed build chunks (admin,
+// charts, PDF export, rarely used pages) are cached the first time they load.
+// Filenames are content-hashed, so a cached copy is never stale.
+registerRoute(
+    ({ url, request }) =>
+        request.method === 'GET' &&
+        url.origin === self.location.origin &&
+        url.pathname.startsWith('/build/assets/'),
+    new CacheFirst({
+        cacheName: 'civio-assets',
+        plugins: [
+            new ExpirationPlugin({
+                maxEntries: 150,
+                maxAgeSeconds: 30 * 24 * 60 * 60,
+                purgeOnQuotaError: true,
+            }),
+        ],
+    }),
 );

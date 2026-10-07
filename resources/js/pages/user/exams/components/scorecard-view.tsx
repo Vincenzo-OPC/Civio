@@ -885,7 +885,7 @@ export function ScorecardView({
                             <div className="flex flex-col items-center justify-between gap-3 border-t border-border pt-4 sm:flex-row">
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/images/civio_logo_cropped.png"
+                                        src="/images/civio_logo_mark.png"
                                         alt="Civio Logo"
                                         className="size-5 shrink-0 object-contain dark:brightness-110"
                                     />

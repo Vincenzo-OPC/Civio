@@ -96,7 +96,7 @@
         }
     </style>
 
-    <link rel="icon" href="{{ asset('images/civio_logo_cropped.png') }}" type="image/png">
+    <link rel="icon" href="/images/civio_logo_mark.png" type="image/png">
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
@@ -126,8 +126,6 @@
     <meta property="twitter:title" content="Civio - Civil Service Exam Reviewer">
     <meta property="twitter:description" content="Ace the Philippine Civil Service Exam with confidence. Real mock tests, custom study plans, high-yield lessons, and targeted drills. Pass the CSE on your first attempt!">
     <meta property="twitter:image" content="{{ asset('images/hero_image.png') }}">
-
-    @fonts
 
     @viteReactRefresh
     @vite(['resources/css/app.css', 'resources/js/app.tsx'])

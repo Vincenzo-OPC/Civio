@@ -2,7 +2,7 @@
     {
         "name": "Main entry JS, loaded on every page (brotli)",
         "path": "public/build/assets/app-*.js",
-        "limit": "230 kB"
+        "limit": "50 kB"
     },
     {
         "name": "Vendor JS: React, Inertia, Radix (brotli)",
@@ -20,7 +20,7 @@
         "limit": "12 kB"
     },
     {
-        "name": "All JS, roughly the PWA precache (brotli)",
+        "name": "All JS chunks, lazy ones included (brotli)",
         "path": "public/build/assets/*.js",
         "limit": "1060 kB"
     }

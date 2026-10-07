@@ -1,6 +1,4 @@
 import DOMPurify from 'dompurify';
-import html2canvas from 'html2canvas-pro';
-import { jsPDF } from 'jspdf';
 import React, { useEffect, useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { toast } from 'sonner';
@@ -516,6 +514,16 @@ export function PrintableExam({
             let originalTitle = document.title;
 
             try {
+                if (cancelled) {
+                    return;
+                }
+
+                // Lite L0: the PDF libraries (~180 KB gzip) load only when exporting.
+                const [{ jsPDF }, { default: html2canvas }] = await Promise.all([
+                    import('jspdf'),
+                    import('html2canvas-pro'),
+                ]);
+
                 if (cancelled) {
                     return;
                 }

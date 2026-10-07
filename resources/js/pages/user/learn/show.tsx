@@ -1,5 +1,4 @@
 import { Head, Link, usePage, router } from '@inertiajs/react';
-import Echo from 'laravel-echo';
 import {
     BookMarked,
     Calendar,
@@ -9,7 +8,6 @@ import {
     Flag,
     CheckCircle2,
 } from 'lucide-react';
-import Pusher from 'pusher-js';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 import { getCategoryStyles } from '@/components/domain/curation-index-shell';
@@ -19,6 +17,7 @@ import { PageContainer } from '@/components/layout/page-container';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useGuestUnlimited } from '@/lib/civio-study';
+import { connectRealtime } from '@/lib/realtime';
 import { makeBackOnClick } from '@/lib/smart-back';
 import { useScrollProgress } from './hooks/use-scroll-progress';
 import type { LearnShowProps } from './types';
@@ -78,38 +77,26 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
             return;
         }
 
-        (window as any).Pusher = Pusher;
-        const echo = new Echo({
-            broadcaster: 'pusher',
-            key: pusher.key,
-            cluster: pusher.cluster ?? 'ap1',
-            wsHost: pusher.host
-                ? pusher.host
-                : `ws-${pusher.cluster}.pusher.com`,
-            wsPort: pusher.port ?? 80,
-            wssPort: pusher.port ?? 443,
-            forceTLS: (pusher.scheme ?? 'https') === 'https',
-            enabledTransports: ['ws', 'wss'],
-        });
-
-        echo.channel('learn-modules').listen(
-            'LearnModulePublished',
-            (e: any) => {
-                toast.success(`New study module available: ${e.module.title}`, {
-                    duration: 10000,
-                    action: {
-                        label: 'Go to module',
-                        onClick: () => {
-                            router.visit(`/learn/${e.module.slug}`);
+        return connectRealtime(pusher, (echo) => {
+            echo.channel('learn-modules').listen(
+                'LearnModulePublished',
+                (e: any) => {
+                    toast.success(`New study module available: ${e.module.title}`, {
+                        duration: 10000,
+                        action: {
+                            label: 'Go to module',
+                            onClick: () => {
+                                router.visit(`/learn/${e.module.slug}`);
+                            },
                         },
-                    },
-                });
-            },
-        );
+                    });
+                },
+            );
 
-        return () => {
-            echo.disconnect();
-        };
+            return () => {
+                echo.disconnect();
+            };
+        });
     }, [pusher]);
 
     return (

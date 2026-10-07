@@ -1,5 +1,4 @@
 import { Link, router, usePage } from '@inertiajs/react';
-import Echo from 'laravel-echo';
 import {
     Brain,
     Sparkles,
@@ -11,13 +10,13 @@ import {
     Minus,
     Settings,
 } from 'lucide-react';
-import Pusher from 'pusher-js';
 import { useEffect, useState } from 'react';
 import {
     Tooltip,
     TooltipTrigger,
     TooltipContent,
 } from '@/components/ui/tooltip';
+import { connectRealtime } from '@/lib/realtime';
 import type { Auth } from '@/types';
 
 interface AiReadinessCardProps {
@@ -88,40 +87,28 @@ export default function AiReadinessCard({
             return;
         }
 
-        (window as any).Pusher = Pusher;
-        const echo = new Echo({
-            broadcaster: 'pusher',
-            key: pusher.key,
-            cluster: pusher.cluster ?? 'ap1',
-            wsHost: pusher.host
-                ? pusher.host
-                : `ws-${pusher.cluster}.pusher.com`,
-            wsPort: pusher.port ?? 80,
-            wssPort: pusher.port ?? 443,
-            forceTLS: (pusher.scheme ?? 'https') === 'https',
-            enabledTransports: ['ws', 'wss'],
+        return connectRealtime(pusher, (echo) => {
+            const channel = echo.private(`App.Models.User.${auth.user.id}`);
+
+            channel.listen('.ai-analysis-ready', () => {
+                setProgress(100);
+                router.reload({ only: ['aiAnalysis'] });
+            });
+
+            channel.listen('.ai-analysis-failed', (e: any) => {
+                setLocalStatus('failed');
+                setErrorMessage(
+                    e?.message ||
+                        'AI coach is currently busy. Please try again later.',
+                );
+            });
+
+            return () => {
+                channel.stopListening('.ai-analysis-ready');
+                channel.stopListening('.ai-analysis-failed');
+                echo.disconnect();
+            };
         });
-
-        const channel = echo.private(`App.Models.User.${auth.user.id}`);
-
-        channel.listen('.ai-analysis-ready', () => {
-            setProgress(100);
-            router.reload({ only: ['aiAnalysis'] });
-        });
-
-        channel.listen('.ai-analysis-failed', (e: any) => {
-            setLocalStatus('failed');
-            setErrorMessage(
-                e?.message ||
-                    'AI coach is currently busy. Please try again later.',
-            );
-        });
-
-        return () => {
-            channel.stopListening('.ai-analysis-ready');
-            channel.stopListening('.ai-analysis-failed');
-            echo.disconnect();
-        };
     }, [localStatus, auth?.user?.id, pusher]);
 
     // Container style sharing across all states to guarantee consistent glassmorphism

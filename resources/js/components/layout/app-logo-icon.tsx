@@ -6,7 +6,7 @@ export default function AppLogoIcon({
 }: ImgHTMLAttributes<HTMLImageElement>) {
     return (
         <img
-            src="/images/civio_logo_cropped.png"
+            src="/images/civio_logo_mark.png"
             alt="Civio Logo"
             className={className}
             {...props}

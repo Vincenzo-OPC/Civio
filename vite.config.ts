@@ -1,11 +1,41 @@
+import { existsSync, readFileSync } from 'node:fs';
 import inertia from '@inertiajs/vite';
 import { wayfinder } from '@laravel/vite-plugin-wayfinder';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
-import { bunny } from 'laravel-vite-plugin/fonts';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import {
+    collectCriticalFiles,
+    keepPrecacheEntry,
+} from './resources/js/lib/pwa-precache';
+import type { ViteManifest } from './resources/js/lib/pwa-precache';
+
+/**
+ * Lite L0: precache only the app shell + critical routes (see
+ * resources/js/lib/pwa-precache.ts). Falls back to the full list if the Vite
+ * manifest is missing.
+ */
+function trimPrecache<T extends { url: string }>(entries: T[]) {
+    const manifestPath = 'public/build/manifest.json';
+
+    if (!existsSync(manifestPath)) {
+        return { manifest: entries, warnings: [] };
+    }
+
+    const manifest = JSON.parse(
+        readFileSync(manifestPath, 'utf8'),
+    ) as ViteManifest;
+    const critical = collectCriticalFiles(manifest);
+
+    return {
+        manifest: entries.filter((entry) =>
+            keepPrecacheEntry(entry.url, critical),
+        ),
+        warnings: [],
+    };
+}
 
 export default defineConfig({
     plugins: [
@@ -13,11 +43,8 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
             ssr: 'resources/js/ssr.tsx',
             refresh: true,
-            fonts: [
-                bunny('Instrument Sans', {
-                    weights: [400, 500, 600],
-                }),
-            ],
+            // No web fonts: the CSS stacks (Inter/Outfit → system-ui) never used
+            // the previously preloaded Instrument Sans files (Lite L0).
         }),
         inertia(),
         react({
@@ -36,15 +63,12 @@ export default defineConfig({
             registerType: 'prompt',
             injectRegister: false,
             manifest: false, // keep public/manifest.json (Civio)
-            includeAssets: [
-                'favicon.ico',
-                'favicon.svg',
-                'icons/*.png',
-                'images/civio_logo*.png',
-            ],
+            // public/ files (icons, logo) are not globbed: the Laravel build has no
+            // Vite publicDir. They load from the network like before.
             injectManifest: {
-                globPatterns: ['**/*.{js,css,ico,png,svg,woff2,webp}'],
+                globPatterns: ['**/*.{js,css,png,svg}'],
                 maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
+                manifestTransforms: [async (entries) => trimPrecache(entries)],
             },
             devOptions: {
                 enabled: false,

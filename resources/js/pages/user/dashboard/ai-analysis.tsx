@@ -1,5 +1,4 @@
 import { Head, Link, router, usePage } from '@inertiajs/react';
-import Echo from 'laravel-echo';
 import {
     Brain,
     Sparkles,
@@ -20,11 +19,11 @@ import {
     CalendarMinus,
     Lightbulb,
 } from 'lucide-react';
-import Pusher from 'pusher-js';
 import { useEffect, useState } from 'react';
 import { PageContainer } from '@/components/layout/page-container';
 import { ConfirmModal } from '@/components/shared/confirm-modal';
 import { Card } from '@/components/ui/card';
+import { connectRealtime } from '@/lib/realtime';
 import { makeBackOnClick, resolveOriginFromUrl } from '@/lib/smart-back';
 import type { Auth } from '@/types';
 
@@ -454,40 +453,28 @@ export default function AiAnalysisReport({
             return;
         }
 
-        (window as any).Pusher = Pusher;
-        const echo = new Echo({
-            broadcaster: 'pusher',
-            key: pusher.key,
-            cluster: pusher.cluster ?? 'ap1',
-            wsHost: pusher.host
-                ? pusher.host
-                : `ws-${pusher.cluster}.pusher.com`,
-            wsPort: pusher.port ?? 80,
-            wssPort: pusher.port ?? 443,
-            forceTLS: (pusher.scheme ?? 'https') === 'https',
-            enabledTransports: ['ws', 'wss'],
+        return connectRealtime(pusher, (echo) => {
+            const channel = echo.private(`App.Models.User.${auth.user.id}`);
+
+            channel.listen('.ai-analysis-ready', () => {
+                setProgress(100);
+                router.reload({ only: ['data', 'status'] });
+            });
+
+            channel.listen('.ai-analysis-failed', (e: any) => {
+                setLocalStatus('failed');
+                setErrorMessage(
+                    e.message ||
+                        'All AI models are currently busy or rate-limited. Please try again.',
+                );
+            });
+
+            return () => {
+                channel.stopListening('.ai-analysis-ready');
+                channel.stopListening('.ai-analysis-failed');
+                echo.disconnect();
+            };
         });
-
-        const channel = echo.private(`App.Models.User.${auth.user.id}`);
-
-        channel.listen('.ai-analysis-ready', () => {
-            setProgress(100);
-            router.reload({ only: ['data', 'status'] });
-        });
-
-        channel.listen('.ai-analysis-failed', (e: any) => {
-            setLocalStatus('failed');
-            setErrorMessage(
-                e.message ||
-                    'All AI models are currently busy or rate-limited. Please try again.',
-            );
-        });
-
-        return () => {
-            channel.stopListening('.ai-analysis-ready');
-            channel.stopListening('.ai-analysis-failed');
-            echo.disconnect();
-        };
     }, [localStatus, auth?.user?.id, pusher]);
 
     const allScheduled =

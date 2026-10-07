@@ -1,3 +1,4 @@
+import { Suspense, lazy } from 'react';
 import { PageContainer } from '@/components/layout/page-container';
 import { ConfirmModal } from '@/components/shared/confirm-modal';
 import { Button } from '@/components/ui/button';
@@ -10,13 +11,19 @@ import {
 } from '@/components/ui/dialog';
 import { index as examsIndex } from '@/routes/exams';
 import { LiveExamView } from './components/live-exam-view';
-import { PrintableExam } from './components/printable-exam';
 import { ReviewExamView } from './components/review-exam-view';
 import { ScorecardView } from './components/scorecard-view';
 import { SetupExamView } from './components/setup-exam-view';
 import { ExamSessionProvider } from './context/exam-context';
 import { useExamState } from './hooks/use-exam-state';
 import type { ExamIndexProps } from './types';
+
+// Lite L0: the printable booklet (and jspdf/html2canvas) loads only when printing.
+const PrintableExam = lazy(() =>
+    import('./components/printable-exam').then((m) => ({
+        default: m.PrintableExam,
+    })),
+);
 
 export default function ExamIndex(props: ExamIndexProps) {
     const { savedAttempt } = props;
@@ -241,14 +248,16 @@ export default function ExamIndex(props: ExamIndexProps) {
             />
 
             {printPool && (
-                <PrintableExam
-                    questions={printPool}
-                    title={details.title}
-                    onComplete={() => {
-                        setPrintPool(null);
-                        setIsPrinting(false);
-                    }}
-                />
+                <Suspense fallback={null}>
+                    <PrintableExam
+                        questions={printPool}
+                        title={details.title}
+                        onComplete={() => {
+                            setPrintPool(null);
+                            setIsPrinting(false);
+                        }}
+                    />
+                </Suspense>
             )}
 
             {/* Error Modal */}

@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { toast } from 'sonner';
-import { PrintableExam } from '@/pages/user/exams/components/printable-exam';
 import type { Question } from '@/pages/user/exams/types';
+
+// Lite L0: the printable booklet and its PDF libraries stay out of the main bundle.
+const PrintableExam = lazy(() =>
+    import('@/pages/user/exams/components/printable-exam').then((m) => ({
+        default: m.PrintableExam,
+    })),
+);
 
 export interface PdfExportPayload {
     questions: Question[];
@@ -59,7 +65,8 @@ export function GlobalPdfExporter() {
     }
 
     return (
-        <PrintableExam
+        <Suspense fallback={null}>
+            <PrintableExam
             questions={payload.questions}
             title={payload.title}
             onComplete={() => {
@@ -71,6 +78,7 @@ export function GlobalPdfExporter() {
                     );
                 }
             }}
-        />
+            />
+        </Suspense>
     );
 }

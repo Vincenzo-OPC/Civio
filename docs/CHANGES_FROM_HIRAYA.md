@@ -100,6 +100,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | --- | --- | --- |
 | Inertia pages lazy-loaded (no eager `import.meta.glob`), so routes split into chunks. | The main bundle was ~3 MB eager. | `6277c17` |
 | Hand-written `public/sw.js` replaced by vite-plugin-pwa `injectManifest` (`resources/js/sw.ts`): exams, auth, dashboard and other sensitive routes are NetworkOnly; prompt-to-update. | Old SW risked caching exam payloads. | `9fe51a4`, `647e484` |
+| Lite L0: PDF export (jspdf, html2canvas-pro) and the printable booklet load only when exporting/printing; realtime (Echo + Pusher) loads on demand via `lib/realtime.ts`; hero served as AVIF/WebP with PNG fallback; 3.5 KB logo mark for header and favicon; unused Instrument Sans web fonts and their 6 preloads removed; PWA precache trimmed to the app shell + critical routes, other hashed chunks cached on first use. | First-load JS was 436–496 KB gzip on every page; now 213–284 KB. Lighthouse mobile landing 70 → 85, exam 61 → 77. | `perf(lite)` L0 commit |
 | Sentry Laravel installed but inactive unless `SENTRY_LARAVEL_DSN` is set. | Opt-in error reporting. | `9fe51a4` |
 
 ### Upstream fixes pulled in

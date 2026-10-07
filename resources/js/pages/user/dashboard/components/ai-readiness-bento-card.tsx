@@ -1,5 +1,4 @@
 import { Link, router, usePage } from '@inertiajs/react';
-import Echo from 'laravel-echo';
 import {
     Brain,
     Sparkles,
@@ -9,11 +8,11 @@ import {
     AlertCircle,
     Target,
 } from 'lucide-react';
-import Pusher from 'pusher-js';
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import { connectRealtime } from '@/lib/realtime';
 import { index as examsIndex } from '@/routes/exams';
 import type { Auth } from '@/types';
 import type { AiAnalysisData } from '../types';
@@ -68,36 +67,24 @@ export function AiReadinessBentoCard({
             return;
         }
 
-        (window as any).Pusher = Pusher;
-        const echo = new Echo({
-            broadcaster: 'pusher',
-            key: pusher.key,
-            cluster: pusher.cluster ?? 'ap1',
-            wsHost: pusher.host
-                ? pusher.host
-                : `ws-${pusher.cluster}.pusher.com`,
-            wsPort: pusher.port ?? 80,
-            wssPort: pusher.port ?? 443,
-            forceTLS: (pusher.scheme ?? 'https') === 'https',
-            enabledTransports: ['ws', 'wss'],
+        return connectRealtime(pusher, (echo) => {
+            const channel = echo.private(`App.Models.User.${auth.user.id}`);
+
+            channel.listen('.ai-analysis-ready', () => {
+                setProgress(100);
+                router.reload({ only: ['aiAnalysis'] });
+            });
+
+            channel.listen('.ai-analysis-failed', () => {
+                setLocalStatus('failed');
+            });
+
+            return () => {
+                channel.stopListening('.ai-analysis-ready');
+                channel.stopListening('.ai-analysis-failed');
+                echo.leave(`App.Models.User.${auth.user.id}`);
+            };
         });
-
-        const channel = echo.private(`App.Models.User.${auth.user.id}`);
-
-        channel.listen('.ai-analysis-ready', () => {
-            setProgress(100);
-            router.reload({ only: ['aiAnalysis'] });
-        });
-
-        channel.listen('.ai-analysis-failed', () => {
-            setLocalStatus('failed');
-        });
-
-        return () => {
-            channel.stopListening('.ai-analysis-ready');
-            channel.stopListening('.ai-analysis-failed');
-            echo.leave(`App.Models.User.${auth.user.id}`);
-        };
     }, [localStatus, auth?.user?.id, pusher]);
 
     const prob = Math.round(data?.pass_probability ?? 0);

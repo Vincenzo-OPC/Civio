@@ -1,7 +1,7 @@
 # Lite mode plan: cheap phones and slow internet
 
-Status: **plan only** (7 Oct 2026). The only tooling added so far is size-limit
-budgets (`npm run size`). Nothing in the app changed.
+Status (7 Oct 2026): **L0 items 1–5 done**; L0 item 6 (nginx/deploy cache
+config) **pending**. L1 and L2 not started. See "L0 results" below.
 
 Goal: a Civio that works on a ₱3,000 Android phone on prepaid 3G/2G data. The
 first exam screen must load fast, a mock must not burn megabytes, and practice
@@ -95,6 +95,39 @@ CPU time on a slow phone comes on top of that.
   SW now lives at `/build/sw.js`.
 - No long-lived `immutable` caching is set for the hashed `/build/assets/*` files.
 - `php artisan serve` (MSI-style local use) sends everything uncompressed.
+
+### L0 results (7 Oct 2026)
+
+Same method as above, measured after L0 items 1–5 (production build, local
+server behind a gzip proxy, Lighthouse 12.8.2 mobile, simulated Slow 4G, 4× CPU).
+
+| Page | First-load JS gzip before → after | brotli before → after |
+| --- | ---: | ---: |
+| Landing `/` | 443 → **221 KB** | 372 → 186 KB |
+| Login `/login` | 436 → **213 KB** | 366 → 180 KB |
+| Dashboard `/dashboard` | 444 → **221 KB** | 373 → 187 KB |
+| Exam `/exams` (Pro start) | 496 → **284 KB** | 419 → 243 KB |
+
+| Lighthouse mobile | Perf | FCP | LCP | TBT | Transfer |
+| --- | --- | --- | --- | --- | --- |
+| Landing before → after | 70 → **85** | 2.7 → 2.1 s | 6.1 → **3.5 s** | 150 → 150 ms | 1452 → **365 KiB** |
+| Exam before → after | 61 → **77** | 3.4 → 2.7 s | 6.9 → **4.5 s** | 360 → 190 ms | 831 → **421 KiB** |
+
+- Main entry `app-*.js`: 261 → 57 KB gzip (229 KB raw).
+- Fonts: 6 preloaded woff2 files (71 KB) → **0**. They were Instrument Sans, but the
+  CSS font stacks are `Inter`/`Outfit` → `system-ui` and never used it.
+- Hero: 718 KB PNG → AVIF 26–53 KB / WebP 43–85 KB (`<picture>`, 640/1024 widths)
+  with a 161 KB 640 px PNG fallback. The original PNG stays only for `og:image`.
+- Logo: 65 KB PNG → 3.5 KB `civio_logo_mark.png` (96 px). It is still requested
+  twice on a cold load (Chrome fetches the favicon separately from the header
+  `<img>`), but that is now 7 KB instead of 130 KB.
+- PWA precache: 261 entries (~1.27 MB gzip) → 100 entries (~408 KB gzip): the app
+  shell plus the static import graph of landing, login, dashboard, exams and drills
+  (`resources/js/lib/pwa-precache.ts`). Other hashed chunks are cached at runtime
+  on first use (`civio-assets`, CacheFirst, 150 entries / 30 days).
+- Realtime (laravel-echo + pusher-js) is loaded on demand by `lib/realtime.ts`
+  only when a screen subscribes: admins (feedback badge, AI generation), or a user
+  waiting for an AI analysis or on Learn.
 
 ## 2. Budgets
 
@@ -217,12 +250,12 @@ then returns only the chosen 150/145 items, keys still withheld:
 
 | # | Change | Files | Expected effect | Risk |
 | --- | --- | --- | --- | --- |
-| 1 | Dynamic `import()` for jspdf + html2canvas-pro inside the PDF export | `resources/js/pages/user/exams/components/printable-exam.tsx` | −184 KB gzip on every page (measured) | First PDF export waits for a download; test print/export |
-| 2 | Load laravel-echo / pusher-js only for admins, via dynamic import | `resources/js/layouts/app/app-sidebar-layout.tsx` | ≈ −20 KB gzip everywhere | Admin feedback badge must still update |
-| 3 | Convert `hero_image.png` → AVIF/WebP (~80 KB) with width/height + `fetchpriority`; one small logo; fix the double logo fetch | `public/images/*`, `resources/js/pages/public/welcome.tsx`, `resources/views/app.blade.php`, header logo component | Landing −650 KB | Visual check only |
-| 4 | Preload only latin 400 (and 600); drop latin-ext preloads; consider 2 weights | `vite.config.ts` (bunny weights), `resources/views/app.blade.php` | −45 KB, fewer requests | Slight font swap |
-| 5 | Precache diet: `globIgnores` for admin, PDF, charts and dev-docs chunks | `vite.config.ts` (`injectManifest`) | Precache ~1.27 MB → ~400 KB | Those pages need the network (they already do) |
-| 6 | nginx `custom.conf` with immutable caching for `/build/assets`; delete or fix the unused `conf/nginx/nginx-site.conf` | `Dockerfile`, new `conf/nginx/custom.conf` | Repeat visits ≈ 0 KB JS | Wrong rule could cache HTML; review carefully |
+| 1 | **Done.** Dynamic `import()` for jspdf + html2canvas-pro inside the PDF export | `resources/js/pages/user/exams/components/printable-exam.tsx` | −184 KB gzip on every page (measured) | First PDF export waits for a download; test print/export |
+| 2 | **Done** (on demand via `lib/realtime.ts`: admins in the layout; users only on Learn or while an AI analysis is pending). Load laravel-echo / pusher-js only for admins, via dynamic import | `resources/js/layouts/app/app-sidebar-layout.tsx` | ≈ −20 KB gzip everywhere | Admin feedback badge must still update |
+| 3 | **Done** (AVIF/WebP 640/1024 + PNG fallback, no `fetchpriority`; logo still 2 requests but 3.5 KB each). Convert `hero_image.png` → AVIF/WebP (~80 KB) with width/height + `fetchpriority`; one small logo; fix the double logo fetch | `public/images/*`, `resources/js/pages/public/welcome.tsx`, `resources/views/app.blade.php`, header logo component | Landing −650 KB | Visual check only |
+| 4 | **Done** (all 6 font files removed: Instrument Sans was preloaded but never used by the CSS). Preload only latin 400 (and 600); drop latin-ext preloads; consider 2 weights | `vite.config.ts` (bunny weights), `resources/views/app.blade.php` | −45 KB, fewer requests | Slight font swap |
+| 5 | **Done** (allow-list from the Vite import graph of critical routes instead of `globIgnores`, plus runtime caching of other chunks). Precache diet: `globIgnores` for admin, PDF, charts and dev-docs chunks | `vite.config.ts` (`injectManifest`) | Precache ~1.27 MB → ~400 KB | Those pages need the network (they already do) |
+| 6 | **Pending.** nginx `custom.conf` with immutable caching for `/build/assets`; delete or fix the unused `conf/nginx/nginx-site.conf` | `Dockerfile`, new `conf/nginx/custom.conf` | Repeat visits ≈ 0 KB JS | Wrong rule could cache HTML; review carefully |
 | 7 | Tighten `.size-limit.json` after each item; optional `npm run size` step in CI | `.size-limit.json`, `.github/workflows/tests.yml` | Prevents regressions | None |
 
 ### L1: Lite toggle and text-first screens (days)

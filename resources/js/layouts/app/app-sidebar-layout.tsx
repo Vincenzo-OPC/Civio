@@ -1,7 +1,5 @@
 import { usePage } from '@inertiajs/react';
-import Echo from 'laravel-echo';
-import Pusher from 'pusher-js';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useMemo, useState, useRef } from 'react';
 import { toast } from 'sonner';
 import { AnnouncementsBanner } from '@/components/domain/announcements-banner';
 import { AppContent } from '@/components/layout/app-content';
@@ -12,6 +10,8 @@ import SiteFooter from '@/components/layout/site-footer';
 import SiteHeader from '@/components/layout/site-header';
 import { CookieConsentBanner } from '@/components/shared/cookie-consent-banner';
 import TermsAcceptanceGuard from '@/components/shared/terms-acceptance-guard';
+import { connectRealtime } from '@/lib/realtime';
+import type { RealtimeConfig } from '@/lib/realtime';
 import type { AppLayoutProps } from '@/types';
 
 export default function AppSidebarLayout({
@@ -31,6 +31,26 @@ export default function AppSidebarLayout({
         pending_feedback_count || 0,
     );
     const isAdmin = auth.user?.role === 'admin';
+    // Realtime (Echo + Pusher) is loaded on demand: only for admins (feedback
+    // badge) or while an admin AI generation is pending. See lib/realtime.ts.
+    const pusherKey: string | undefined = pusher?.key;
+    const pusherCluster: string | undefined = pusher?.cluster;
+    const pusherHost: string | undefined = pusher?.host;
+    const pusherPort: number | undefined = pusher?.port;
+    const pusherScheme: string | undefined = pusher?.scheme;
+    const realtimeConfig = useMemo<RealtimeConfig | null>(
+        () =>
+            pusherKey
+                ? {
+                      key: pusherKey,
+                      cluster: pusherCluster,
+                      host: pusherHost,
+                      port: pusherPort,
+                      scheme: pusherScheme,
+                  }
+                : null,
+        [pusherKey, pusherCluster, pusherHost, pusherPort, pusherScheme],
+    );
     const prevPendingCountRef = useRef(pending_feedback_count);
 
     // Reset feedback count when page props change (after Inertia requests)
@@ -52,65 +72,47 @@ export default function AppSidebarLayout({
 
     // Listen for new feedback submissions (admin only)
     useEffect(() => {
-        if (!auth.user || !isAdmin || !pusher?.key) {
+        if (!auth.user || !isAdmin || !realtimeConfig) {
             return;
         }
 
-        (window as any).Pusher = Pusher;
-        const echo = new Echo({
-            broadcaster: 'pusher',
-            key: pusher.key,
-            cluster: pusher.cluster ?? 'ap1',
-            wsHost: pusher.host
-                ? pusher.host
-                : `ws-${pusher.cluster}.pusher.com`,
-            wsPort: pusher.port ?? 80,
-            wssPort: pusher.port ?? 443,
-            forceTLS: (pusher.scheme ?? 'https') === 'https',
-            enabledTransports: ['ws', 'wss'],
-        });
-
-        echo.channel('admin-notifications').listen(
-            'NewFeedbackSubmitted',
-            (e: any) => {
-                // Do not show the admin notification toast to the user who just submitted it
-                if (!e.feedback || e.feedback.user_id != auth.user.id) {
-                    toast.success('New feedback submitted', {
-                        duration: 8000,
-                        description:
-                            'A user has reported content that needs review.',
-                        action: {
-                            label: 'View',
-                            onClick: () => {
-                                window.location.href = '/admin/feedbacks';
+        return connectRealtime(realtimeConfig, (echo) => {
+            echo.channel('admin-notifications').listen(
+                'NewFeedbackSubmitted',
+                (e: any) => {
+                    // Do not show the admin notification toast to the user who just submitted it
+                    if (!e.feedback || e.feedback.user_id != auth.user.id) {
+                        toast.success('New feedback submitted', {
+                            duration: 8000,
+                            description:
+                                'A user has reported content that needs review.',
+                            action: {
+                                label: 'View',
+                                onClick: () => {
+                                    window.location.href = '/admin/feedbacks';
+                                },
                             },
-                        },
-                    });
-                }
+                        });
+                    }
 
-                // Update feedback count
-                setFeedbackCount((prev: number) => prev + 1);
+                    // Update feedback count
+                    setFeedbackCount((prev: number) => prev + 1);
 
-                // Dispatch event for sidebar to update
-                window.dispatchEvent(
-                    new CustomEvent('new_feedback_submitted', { detail: e }),
-                );
-            },
-        );
+                    // Dispatch event for sidebar to update
+                    window.dispatchEvent(
+                        new CustomEvent('new_feedback_submitted', {
+                            detail: e,
+                        }),
+                    );
+                },
+            );
 
-        return () => {
-            echo.leaveChannel('admin-notifications');
-            echo.disconnect();
-        };
-    }, [
-        auth.user,
-        isAdmin,
-        pusher?.cluster,
-        pusher?.host,
-        pusher?.key,
-        pusher?.port,
-        pusher?.scheme,
-    ]);
+            return () => {
+                echo.leaveChannel('admin-notifications');
+                echo.disconnect();
+            };
+        });
+    }, [auth.user, isAdmin, realtimeConfig]);
 
     // Listen for feedback status changes to update count
     useEffect(() => {
@@ -153,74 +155,54 @@ export default function AppSidebarLayout({
     }, []);
 
     useEffect(() => {
-        if (!auth.user || !isWaitingForAi || !pusher?.key) {
+        if (!auth.user || !isWaitingForAi || !realtimeConfig) {
             return;
         }
 
         // Only instantiate and connect when actually waiting for AI
-        (window as any).Pusher = Pusher;
-        const echo = new Echo({
-            broadcaster: 'pusher',
-            key: pusher.key,
-            cluster: pusher.cluster ?? 'ap1',
-            wsHost: pusher.host
-                ? pusher.host
-                : `ws-${pusher.cluster}.pusher.com`,
-            wsPort: pusher.port ?? 80,
-            wssPort: pusher.port ?? 443,
-            forceTLS: (pusher.scheme ?? 'https') === 'https',
-            enabledTransports: ['ws', 'wss'],
-        });
-
-        echo.private(`App.Models.User.${auth.user.id}`)
-            .listen('AiGenerationCompleted', (e: any) => {
-                toast.success(e.message, {
-                    duration: 8000,
-                    action: {
-                        label: 'View Drafts',
-                        onClick: () => {
-                            window.location.href =
-                                e.type === 'module'
-                                    ? '/admin/learn/drafts'
-                                    : '/admin/questions/drafts';
+        return connectRealtime(realtimeConfig, (echo) => {
+            echo.private(`App.Models.User.${auth.user.id}`)
+                .listen('AiGenerationCompleted', (e: any) => {
+                    toast.success(e.message, {
+                        duration: 8000,
+                        action: {
+                            label: 'View Drafts',
+                            onClick: () => {
+                                window.location.href =
+                                    e.type === 'module'
+                                        ? '/admin/learn/drafts'
+                                        : '/admin/questions/drafts';
+                            },
                         },
-                    },
+                    });
+
+                    // Disconnect and clean up once received
+                    localStorage.removeItem('waiting_for_ai');
+                    setIsWaitingForAi(false);
+                    echo.disconnect();
+
+                    // Notify forms that AI is done so they can update their loading state
+                    window.dispatchEvent(new Event('ai_generation_completed'));
+                })
+                .listen('AiGenerationFailed', (e: any) => {
+                    toast.error(e.message, {
+                        duration: 8000,
+                    });
+
+                    // Disconnect and clean up on error
+                    localStorage.removeItem('waiting_for_ai');
+                    setIsWaitingForAi(false);
+                    echo.disconnect();
+
+                    // Dispatch failure event
+                    window.dispatchEvent(new Event('ai_generation_failed'));
                 });
 
-                // Disconnect and clean up once received
-                localStorage.removeItem('waiting_for_ai');
-                setIsWaitingForAi(false);
+            return () => {
                 echo.disconnect();
-
-                // Notify forms that AI is done so they can update their loading state
-                window.dispatchEvent(new Event('ai_generation_completed'));
-            })
-            .listen('AiGenerationFailed', (e: any) => {
-                toast.error(e.message, {
-                    duration: 8000,
-                });
-
-                // Disconnect and clean up on error
-                localStorage.removeItem('waiting_for_ai');
-                setIsWaitingForAi(false);
-                echo.disconnect();
-
-                // Dispatch failure event
-                window.dispatchEvent(new Event('ai_generation_failed'));
-            });
-
-        return () => {
-            echo.disconnect();
-        };
-    }, [
-        auth.user,
-        isWaitingForAi,
-        pusher?.cluster,
-        pusher?.host,
-        pusher?.key,
-        pusher?.port,
-        pusher?.scheme,
-    ]);
+            };
+        });
+    }, [auth.user, isWaitingForAi, realtimeConfig]);
 
     if (!auth.user) {
         const activeNav = url.startsWith('/learn')
