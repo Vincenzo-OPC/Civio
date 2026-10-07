@@ -89,11 +89,19 @@ export default defineConfig({
             output: {
                 manualChunks(id) {
                     // Split React into its own chunk
-                    if (id.includes('node_modules/react') || id.includes('node_modules/react-dom') || id.includes('node_modules/scheduler')) {
+                    if (
+                        id.includes('node_modules/react') ||
+                        id.includes('node_modules/react-dom') ||
+                        id.includes('node_modules/scheduler')
+                    ) {
                         return 'vendor-react';
                     }
                     // Split UI libraries (radix, shadcn dependencies)
-                    if (id.includes('node_modules/@radix-ui') || id.includes('node_modules/class-variance-authority') || id.includes('node_modules/clsx')) {
+                    if (
+                        id.includes('node_modules/@radix-ui') ||
+                        id.includes('node_modules/class-variance-authority') ||
+                        id.includes('node_modules/clsx')
+                    ) {
                         return 'vendor-ui';
                     }
                     // Split Inertia into its own chunk
