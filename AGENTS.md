@@ -74,6 +74,14 @@ Formatting fixes go in a **separate commit** from functional changes.
 `docs/CSE-Question-Design-Spec.md` (Intersect canonical copy). Seed/move scripts may
 exist for existing content; do not invent new stems.
 
+**No filler clones.** Never pad the bank or a mock with "(variant N)" copies or
+other repeats. Mocks draw unique items only (`resources/js/pages/user/exams/utils/mock-pool.ts`);
+if the bank is short, the mock is shorter and the user is told the real count.
+Old clones are removed with `php artisan civio:remove-variant-clones [--dry-run]`
+(deletes unreferenced clones, sets referenced ones to `draft`). The MSI desktop DB
+still needs this run once: see `docs/DESKTOP_PATCHES_TO_PORT.md` for the command and
+the equivalent Postgres SQL (`scripts/seeds/remove_variant_clones.sql`).
+
 ## Current phase status (update as you finish)
 
 - **Done:** Gate 0 — `main` tip is desktop baseline `d3f0368`.
@@ -84,6 +92,9 @@ exist for existing content; do not invent new stems.
   tutor loop + weak-topic study bias (server-graded), no redundant Mock button,
   `??` math-symbol root cause fixed (`php artisan civio:repair-bank-encoding`).
   See `docs/DESKTOP_PATCHES_TO_PORT.md`.
+- **Done:** "(variant N)" clones removed: seeder makes one copy per item, mocks
+  use unique items only (no variant fill), `civio:remove-variant-clones` cleans
+  existing rows. MSI DB cleanup still pending (desktop patches doc).
 - **In progress:** Copy for AI MVP (`docs/EXTERNAL_AI_HANDOFF.md`).
 - **Then:** Phase 1 foundation → Phase Bank.
 
