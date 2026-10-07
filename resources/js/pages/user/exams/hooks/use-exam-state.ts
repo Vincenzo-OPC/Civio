@@ -23,6 +23,7 @@ import {
     EXAM_CONSTANTS,
     apiPost,
 } from '../utils/exam-utils';
+import { shortMockNotice } from '../utils/mock-pool';
 import { useExamHydration } from './use-exam-hydration';
 import { useExamPersistence } from './use-exam-persistence';
 import { useExamPoolBuilder } from './use-exam-pool-builder';
@@ -251,6 +252,22 @@ export function useExamState(props: ExamIndexProps) {
             // Always drop Demographic Profile / personal EDQs for local study mocks.
             const cleanedPool = examPool.filter((q) => !isDemographicQuestion(q));
             const isDrill = examId === null || examId > 2;
+            // Full mocks use unique items only. If the bank is short, the mock
+            // is shorter (never padded with repeats), and we say so up front.
+            const notice = isDrill
+                ? null
+                : shortMockNotice(examId, cleanedPool.length);
+
+            if (notice && cleanedPool.length === 0) {
+                toast.error(notice);
+
+                return;
+            }
+
+            if (notice) {
+                toast.warning(notice, { duration: 10000 });
+            }
+
             const limitSecs = isDrill
                 ? cleanedPool.length * 60
                 : examId === 2

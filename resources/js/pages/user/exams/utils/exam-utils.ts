@@ -14,11 +14,6 @@ export const EXAM_CONSTANTS = {
     HARD_BIAS_PERCENTAGE: 0.6,
     /** Near-duplicate stem skip: compare first N chars (normalized). */
     STEM_DEDUP_PREFIX_LEN: 48,
-    /**
-     * After unique stems are exhausted, still fill remaining quota with shuffled
-     * variants (same stem family, different ids) so Professional can reach ~150.
-     */
-    FILL_VARIANTS_AFTER_UNIQUE: true,
     TIMER_RED_ZONE_SECS: 600,
     SHIELD_COOLDOWN_MS: 3000,
 } as const;
@@ -76,7 +71,7 @@ export function fisherYatesShuffle<T>(array: T[]): T[] {
 /**
  * Heuristic difficulty (no DB column). Higher = harder.
  * Biases Analytical/Numerical, longer stems, denser options/explanations, math-ish content.
- * Deprioritizes short Verbal clone-style stems.
+ * Deprioritizes very short stems.
  */
 export function estimateDifficulty(q: Question): number {
     const stem = (q.stem || '').trim();
@@ -159,11 +154,6 @@ export function estimateDifficulty(q: Question): number {
         score += 8;
     }
 
-    // Slight deprioritize explicit (variant N) clones when unique stems remain
-    if (/\(variant\s*\d+\)/i.test(stem)) {
-        score -= 8;
-    }
-
     return score;
 }
 
@@ -222,55 +212,9 @@ export function stemDedupeKey(
 ): string {
     return (stem || '')
         .toLowerCase()
-        .replace(/\s*\(variant\s*\d+\)\s*/gi, ' ')
         .replace(/\s+/g, ' ')
         .trim()
         .slice(0, prefixLen);
-}
-
-/** Skip near-duplicate stems when assembling a picked list (keeps first occurrence). */
-export function dedupeNearDuplicateStems<T extends Question>(
-    items: T[],
-    prefixLen: number = EXAM_CONSTANTS.STEM_DEDUP_PREFIX_LEN,
-): T[] {
-    const seen = new Set<string>();
-    const out: T[] = [];
-
-    for (const q of items) {
-        const key = stemDedupeKey(q.stem, prefixLen);
-
-        if (!key) {
-            out.push(q);
-            continue;
-        }
-
-        if (seen.has(key)) {
-            continue;
-        }
-
-        seen.add(key);
-        out.push(q);
-    }
-
-    return out;
-}
-
-/**
- * Prefer non-variant / unique-stem items first; keep variants for fill-to-quota.
- */
-export function preferUniqueStemsFirst<T extends Question>(pool: T[]): T[] {
-    const unique: T[] = [];
-    const variants: T[] = [];
-
-    for (const q of pool) {
-        if (/\(variant\s*\d+\)/i.test(q.stem || '')) {
-            variants.push(q);
-        } else {
-            unique.push(q);
-        }
-    }
-
-    return [...unique, ...variants];
 }
 
 export async function apiPost<T = any>(url: string, payload: any): Promise<T> {
