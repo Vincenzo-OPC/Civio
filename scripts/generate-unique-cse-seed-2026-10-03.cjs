@@ -284,6 +284,7 @@ function jsonSql(value) { return sqlEscape(JSON.stringify(value)); }
 const lines = [
   '-- Hiraya local bank expansion — 80 original CSE-style practice items; NOT official CSC items',
   '-- Append-only with exact active-stem protection; generated ' + new Date().toISOString(),
+  "SET client_encoding = 'UTF8';",
   'BEGIN;'
 ];
 for (const q of Q) {

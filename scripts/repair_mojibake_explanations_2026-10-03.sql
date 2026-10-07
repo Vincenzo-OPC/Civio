@@ -1,4 +1,5 @@
-﻿BEGIN;
+SET client_encoding = 'UTF8'; -- UTF-8 file: import with psql -f, never through a PowerShell pipe (see scripts/seeds/README.md)
+BEGIN;
 -- Repair mojibake-style quote markers and possessive apostrophes in the older local batch.
 UPDATE questions
 SET stem = replace(replace(stem, '???s', chr(39) || 's'), '???', chr(34)),

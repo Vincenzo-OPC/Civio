@@ -1,3 +1,4 @@
+SET client_encoding = 'UTF8'; -- UTF-8 file: import with psql -f, never through a PowerShell pipe (see scripts/seeds/README.md)
 -- CIVIO/Hiraya local bank expansion — CSE-style practice (NOT official CSC exam items)
 -- Append-only; generated 2026-09-30T07:12:02.702Z
 BEGIN;

@@ -1,3 +1,4 @@
+SET client_encoding = 'UTF8'; -- UTF-8 file: import with psql -f, never through a PowerShell pipe (see scripts/seeds/README.md)
 -- Hiraya local bank expansion — 80 original CSE-style practice items; NOT official CSC items
 -- Append-only with exact active-stem protection; generated 2026-10-03T14:52:50.447Z
 BEGIN;

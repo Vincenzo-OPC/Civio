@@ -1,3 +1,4 @@
+SET client_encoding = 'UTF8'; -- UTF-8 file: import with psql -f, never through a PowerShell pipe (see scripts/seeds/README.md)
 -- Hiraya CSE-Pack: 200 original local-study items; not official CSC questions
 -- Exact active-stem protection; generated 2026-10-03T15:04:45.889Z
 BEGIN;

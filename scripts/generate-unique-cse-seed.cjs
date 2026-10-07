@@ -823,6 +823,7 @@ function sqlEscape(s) {
 const lines = [];
 lines.push('-- CIVIO/Hiraya local bank expansion — CSE-style practice (NOT official CSC exam items)');
 lines.push('-- Append-only; generated ' + new Date().toISOString());
+lines.push("SET client_encoding = 'UTF8';");
 lines.push('BEGIN;');
 for (const q of unique) {
   const opts = JSON.stringify(q.options);
