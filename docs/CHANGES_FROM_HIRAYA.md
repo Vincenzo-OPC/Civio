@@ -115,7 +115,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 
 | What changed | Why | Commits |
 | --- | --- | --- |
-| `AGENTS.md`, `CLAUDE.md`, `ENTIRE.md`, `.entire/`, `.cursor/hooks.json`; docs for architecture, deploy, libraries, audit plan, build brief, question design spec, AI study system, AI product standard, external AI handoff, desktop patches. | Repeatable agent work and decisions on record. | `d66d2aa`, `5fe2d40`, `9fe51a4`, `e4e3d4c`…`1d4c96d`, `9ab859c`, `9f3891c`, `9bf7508` |
+| `AGENTS.md`, `CLAUDE.md`, `ENTIRE.md`, `.entire/`; Entire hooks for Codex (`.codex/hooks.json`) and Claude Code (`.claude/settings.json`) plus committed git hooks in `.githooks/` (the earlier `.cursor/hooks.json` was dropped); docs for architecture, deploy, libraries, audit plan, build brief, question design spec, AI study system, AI product standard, external AI handoff, desktop patches. | Repeatable agent work and decisions on record. | `d66d2aa`, `5fe2d40`, `9fe51a4`, `e4e3d4c`…`1d4c96d`, `9ab859c`, `9f3891c`, `9bf7508` |
 | Pest coverage for server scoring, Unicode round-trip, bank repair, clone removal, tutor stub; JS tests (`npm run test:js`) for clocks, study bias, home launchers, AI handoff, FSRS, mock pools, Lite mode. Pest for the server mock selector, mock sessions and Lite prop trimming. tsc/eslint green. | Hiraya had no tests for these paths. | `d19afda`, `22fc855`, `4bce08e`, `ed5aa64`, `acedd26`, others above |
 | `CHANGELOG.md` via git-cliff (`npm run changelog`), bundle budgets via size-limit (`npm run size`), `docs/LITE_MODE_PLAN.md`. | Track releases and page weight. | this doc's commit series |
 

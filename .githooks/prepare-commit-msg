@@ -1,0 +1,17 @@
+#!/bin/sh
+# Entire CLI hooks
+# Civio: committed git hook. Enable once per clone with
+#   git config core.hooksPath .githooks
+# Uses `entire` from PATH, else the Windows Scoop install. Exits 0 quietly when
+# Entire is not installed, so the box, CI and other machines are unaffected.
+entire_bin=$(command -v entire 2>/dev/null)
+if [ -z "$entire_bin" ]; then
+    for candidate in "${SCOOP:-$HOME/scoop}/apps/entire/current/entire.exe" "${SCOOP:-$HOME/scoop}/shims/entire.exe"; do
+        if [ -f "$candidate" ]; then
+            entire_bin=$candidate
+            break
+        fi
+    done
+fi
+[ -n "$entire_bin" ] || exit 0
+"$entire_bin" hooks git prepare-commit-msg "$1" "$2" 2>/dev/null || true

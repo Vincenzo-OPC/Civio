@@ -1,87 +1,108 @@
-# Entire.io on this repo
+# Entire on Civio
 
-Entire follows the GitHub repo, not the Windows folder name.
+Entire ([entire.io](https://entire.io), `entireio/cli`) is a standalone CLI that
+links AI agent sessions (prompts, transcripts) to the commits they produced. It
+is not a plugin or MCP server; see `.entire/README.md`.
 
-- GitHub: `Vincenzo-OPC/Civio`
-- Web: https://entire.io (sign in Vincenzo-OPC, open Civio)
-- Checkpoints: git-refs strategy (`refs/entire/checkpoints/...`)
-- Canonical MSI study app: Docker `hiraya-review-app` on `localhost:8080` (do not break; never touch Hermes `:8642`)
-- Box build tree: `/workspace/civio-build` (agents). Do not reuse `/workspace/civio-audit`.
+- GitHub repo: `Vincenzo-OPC/Civio` (Entire follows the repo, not the folder name)
+- Checkpoints: **git-refs** strategy, `refs/entire/checkpoints/...`, pushed to `origin`
+- Agents wired: **Codex** and **Claude Code**
+- Telemetry: off. Secret redaction: `.entire/settings.json`
+- Canonical MSI study app: Docker `hiraya-review-app` on `localhost:8080` (do not
+  break it; never touch Hermes on `:8642`). Box build tree: `/workspace/civio-build`.
 
-## Enable (once per clone)
+## How a checkpoint gets recorded
 
-```bash
-# Linux / box
-curl -fsSL https://entire.io/install.sh | bash
-cd /path/to/Civio
-entire enable --agent cursor --project --telemetry=false --absolute-git-hook-path
-entire status
-```
+1. A supported agent (Codex or Claude Code) works in a clone of Civio. Its
+   committed hooks (`.codex/hooks.json`, `.claude/settings.json`) call
+   `entire hooks <agent> <event>`, and Entire keeps the session in local shadow
+   branches (`entire/<hash>`) and `.entire/metadata/` (never committed).
+2. A commit is made in that clone. The git hooks in `.githooks/` add an
+   `Entire-Checkpoint:` trailer and condense the session into a checkpoint ref
+   `refs/entire/checkpoints/...`.
+3. `git push` runs `.githooks/pre-push`, which pushes the checkpoint refs to
+   `origin` next to your branch.
 
-```powershell
-# GT MSI
-irm https://entire.io/install.ps1 | iex
-cd C:\Users\GT\Desktop\Grok\CSE\Hiraya-Review   # or the Civio clone path
-entire enable --agent cursor --project --telemetry=false --absolute-git-hook-path
-entire status
-```
+All three are needed. Without agent hooks there is no session; without the git
+hooks there is no trailer and nothing is pushed.
 
-Committed: `.entire/settings.json`, `.entire/.gitignore`, `.entire/README.md`, `.cursor/hooks.json`.
-Never commit `.entire/metadata/`, logs, or `settings.local.json`.
+**No login is needed for git-refs checkpoints.** They are ordinary git refs on
+GitHub. `entire login` is only for the entire.io web view.
 
-## Notes
+## Committed files
 
-- Telemetry off in this repo.
-- Redaction rules cover common API key / PAT shapes (best-effort).
-- If `entire enable` cannot run in a headless cloud session, commit the settings
-  files (already done) and run enable on the MSI so local git hooks install.
+| File                    | What it does                                                                                                                                                                                                                                                                                                                                                                                        |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.entire/settings.json` | `enabled`, `absolute_git_hook_path`, `telemetry: false`, git-refs checkpoints, redaction for GitHub classic and fine-grained PATs, Google API keys and Telegram bot tokens                                                                                                                                                                                                                          |
+| `.entire/.gitignore`    | ignores `tmp/`, `settings.local.json`, `metadata/`, `logs/`, `redactors/local/`                                                                                                                                                                                                                                                                                                                     |
+| `.codex/hooks.json`     | 7 Codex hooks: SessionStart, UserPromptSubmit, PostToolUse, Stop, SubagentStart, SubagentStop, SessionEnd. Each is a `cmd.exe` wrapper that runs `entire hooks codex <event>` only if `where.exe entire` finds it, and otherwise exits 0 quietly                                                                                                                                                    |
+| `.claude/settings.json` | Claude Code hooks: SessionStart, UserPromptSubmit, Stop, SubagentStop, SessionEnd, PreToolUse(Agent) → pre-task, PostToolUse(Agent) → post-task, PostToolUse(TaskCreate\|TaskUpdate) → post-todo. Each is an `sh -c` wrapper that exits quietly if `entire` is not on PATH. Also denies `Read(./.entire/metadata/**)`                                                                               |
+| `.githooks/`            | `commit-msg`, `prepare-commit-msg`, `post-commit`, `post-rewrite`, `pre-push`. They use `entire` from PATH, else `%USERPROFILE%\scoop\apps\entire\current\entire.exe` (or `$SCOOP`), and exit 0 quietly when Entire is missing, so the box, CI and other machines never break. `pre-push` runs `entire hooks git pre-push "$1"`, then chains to `.githooks/pre-push.pre-entire` if that file exists |
 
-## Status (checked 7 Oct 2026, Asia/Manila)
+`.githooks/` only runs in a clone that has `core.hooksPath` set to it. That is
+local git config, so it is a one-time step per clone (below).
 
-**Entire is set up as config and docs only. It is not capturing any Civio
-sessions yet.**
+A failing `entire hooks git pre-push` stops the push, as in Entire's own hook:
+Entire fails on purpose when it detects a privacy-critical problem (for example
+a diverged checkpoint ref on the remote). A transient checkpoint upload failure
+is only logged and does not stop the push.
 
-What exists:
+Cursor is not wired. Entire supports it, but the old `.cursor/hooks.json` used
+`sh -c` wrappers, and GT's agents for Civio are Codex and Claude Code. Add it
+later on a machine that uses Cursor with `entire agent add cursor`.
 
-- Committed config: `.entire/settings.json` (enabled, telemetry off, git-refs
-  checkpoints, PAT/API-key redaction) and `.cursor/hooks.json` (Cursor agent hooks
-  that call `entire hooks cursor …` only if the CLI is installed).
-- On the box (`/workspace/civio-build`): `entire` CLI 0.11.3, installed through
-  the npm wrapper `@yossydev/entire` 0.5.0 rather than the official install script.
-  `entire status` says "Enabled · Agents: Cursor", and the box clone has Entire git
-  hooks (`prepare-commit-msg`, `commit-msg`, `post-commit`, `post-rewrite`, `pre-push`).
+## Activate on GT's MSI (GT does these steps)
 
-What it has recorded: nothing. `entire session list` → no sessions;
-`entire checkpoint list` → 0 checkpoints; no `refs/entire/*` locally or on
-`origin`; no `Entire-Checkpoint` trailers in history; the CLI is not logged in.
-`.entire/logs/entire.log` only shows "redaction configured" on each commit.
-
-Why: Entire records a session only when a supported agent (Cursor, Claude Code,
-Codex, Copilot CLI, OpenCode…) runs with its hooks in a clone where Entire is
-enabled. Only the Cursor integration is installed, and the box agent sessions
-that made recent commits are not one of those agents, so commits have no session
-to attach. Whether the MSI clone has Entire enabled was not checked (the MSI is
-read-only for agents).
-
-To turn it on (GT, on the machine where an agent edits Civio, e.g. the MSI clone
-or the Codex environment):
+Entire 0.10.5 is installed with Scoop at
+`C:\Users\GT\scoop\apps\entire\current\entire.exe`.
 
 ```powershell
-irm https://entire.io/install.ps1 | iex          # official CLI (Windows)
-cd <your Civio clone>                            # a git clone of Vincenzo-OPC/Civio
-entire login                                     # for the entire.io web view
-entire enable --agent cursor --project --telemetry=false --absolute-git-hook-path
-entire agent add codex                           # and/or: entire agent add claude-code
-entire status                                    # expect the agents listed
+# 1. Clone Civio, or pull an existing clone
+git clone https://github.com/Vincenzo-OPC/Civio.git    # or: git -C <your Civio clone> pull --ff-only
+cd Civio
+
+# 2. Use the committed git hooks (local git config, once per clone)
+git config core.hooksPath .githooks
+
+# 3. Check Entire sees the repo
+entire status        # expect: Enabled, checkpoints sync to origin
 ```
 
-Commit any hook config files `entire agent add` creates, work through that agent,
-and push normally (the `pre-push` hook pushes checkpoints). Check with
-`entire session list`, `entire checkpoint list`, and
-`git ls-remote origin "refs/entire/*"`. Optionally swap the box's npm wrapper for
-the official `curl -fsSL https://entire.io/install.sh | bash`.
+4. Open the Civio folder in **Codex** and **approve the project hooks** when the
+   Codex UI asks. Codex does not run project hooks until they are trusted.
+
+Then work through Codex (or Claude Code), commit, and push as usual. Check:
+
+```powershell
+git log -1 --format=%B                 # the commit ends with an Entire-Checkpoint: trailer
+entire checkpoint list                 # the checkpoint is listed
+git ls-remote origin "refs/entire/*"   # after git push: the checkpoint refs are on GitHub
+```
+
+Notes:
+
+- Do **not** run `entire enable` again in this clone. It rewrites the committed
+  hooks with machine-specific paths. If it happens, restore them with
+  `git checkout -- .githooks .codex .claude .entire`.
+- Known CLI bug: `entire doctor` shows **REVIEW NEEDED** for the Codex hooks
+  (entireio/cli#1803, Codex hook-trust detection). Ignore it. Do **not** run
+  `entire doctor --force`.
+- Optional web view: `entire login` opens a browser. On a machine without a
+  browser it switches to a device code by itself (`entire login --device` forces
+  it); without an OS keyring use `ENTIRE_TOKEN_STORE=file entire login`. Not
+  needed for checkpoints.
+- Optional upgrade: `scoop update entire` (the box runs 0.11.4).
+
+## Box status (7 Oct 2026, Asia/Manila)
+
+- Official CLI 0.11.4 at `~/.local/bin/entire` (release archive from
+  `github.com/entireio/cli`, checksum verified), replacing the old npm wrapper.
+- The box clone does not set `core.hooksPath`: the box agent is not a supported
+  Entire agent, so there is nothing to capture there.
+- Recorded so far: nothing (no sessions, no `refs/entire/*` on `origin`). Capture
+  starts once the MSI steps above are done and Codex or Claude Code commits.
 
 ## Related
 
-- `docs/CHANGES_FROM_HIRAYA.md` — every difference from the original Hiraya.
-- `CHANGELOG.md` — generated with `npm run changelog` (git-cliff).
+- `docs/CHANGES_FROM_HIRAYA.md`: every difference from the original Hiraya.
+- `CHANGELOG.md`: generated with `npm run changelog` (git-cliff).

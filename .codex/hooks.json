@@ -1,0 +1,88 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": null,
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd.exe /d /s /c \"where.exe entire >nul 2>nul & if errorlevel 1 (ver>nul) else (entire hooks codex session-start)\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": null,
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd.exe /d /s /c \"where.exe entire >nul 2>nul & if errorlevel 1 (ver>nul) else (entire hooks codex user-prompt-submit)\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": null,
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd.exe /d /s /c \"where.exe entire >nul 2>nul & if errorlevel 1 (ver>nul) else (entire hooks codex post-tool-use)\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": null,
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd.exe /d /s /c \"where.exe entire >nul 2>nul & if errorlevel 1 (ver>nul) else (entire hooks codex stop)\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": null,
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd.exe /d /s /c \"where.exe entire >nul 2>nul & if errorlevel 1 (ver>nul) else (entire hooks codex subagent-start)\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": null,
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd.exe /d /s /c \"where.exe entire >nul 2>nul & if errorlevel 1 (ver>nul) else (entire hooks codex subagent-stop)\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": null,
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd.exe /d /s /c \"where.exe entire >nul 2>nul & if errorlevel 1 (ver>nul) else (entire hooks codex session-end)\"",
+            "timeout": 3
+          }
+        ]
+      }
+    ]
+  }
+}

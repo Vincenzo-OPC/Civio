@@ -1,32 +1,34 @@
-# What "Entire" actually is (read this before asking again)
+# What "Entire" is (read this before searching for it)
 
-If you are an AI session reading this because you searched for "Entire" in enabled
-plugins, skills, or MCP servers and found nothing: that is correct and expected.
-**Entire is not a Claude plugin, skill, or MCP server.** It will never show up in
-any of those lists, in any session, on any surface.
+If you are an AI session that looked for "Entire" among plugins, skills or MCP
+servers and found nothing: that is expected. **Entire is not a plugin, skill or
+MCP server**, and it never shows up in those lists.
 
-## What it actually is
+Entire ([entire.io](https://entire.io), `entireio/cli`) is a **standalone CLI**.
+It records which agent prompts and transcripts led to which commits:
 
-Entire (entire.io / `entireio/cli`) is a standalone command-line program that:
+1. **Agent hooks** call `entire hooks <agent> <event>` while an agent works.
+   In Civio these are committed for **Codex** (`.codex/hooks.json`) and
+   **Claude Code** (`.claude/settings.json`). Every hook exits quietly when the
+   `entire` binary is not installed.
+2. **Git hooks** (`.githooks/`, enabled per clone with
+   `git config core.hooksPath .githooks`) add the `Entire-Checkpoint` trailer on
+   commit and push checkpoints on `git push`.
+3. **Checkpoints** are stored as git refs (`refs/entire/checkpoints/...`, the
+   `git-refs` strategy), pushed to `origin` next to your normal push. No cloud
+   login is needed for this; `entire login` only adds the entire.io web view.
 
-1. Installs hook files for AI coding tools (`.cursor/hooks.json` for Cursor,
-   Codex / Claude Code hooks when those agents are enabled).
-2. Installs git hooks that capture AI session transcripts as checkpoints under
-   `refs/entire/checkpoints/...` (git-refs strategy).
-3. Stays outside Claude's plugin / skill / MCP system.
+## Files
 
-## What it's for
+| File                                 | Committed | Purpose                                                                                  |
+| ------------------------------------ | --------- | ---------------------------------------------------------------------------------------- |
+| `.entire/settings.json`              | yes       | enabled, telemetry off, git-refs checkpoints, secret redaction patterns                  |
+| `.entire/.gitignore`                 | yes       | keeps `tmp/`, `settings.local.json`, `metadata/`, `logs/`, `redactors/local/` out of git |
+| `.codex/hooks.json`                  | yes       | 7 Codex hooks (Windows `cmd.exe` wrappers)                                               |
+| `.claude/settings.json`              | yes       | Claude Code hooks (`sh -c` wrappers) + deny reading `.entire/metadata/**`                |
+| `.githooks/*`                        | yes       | commit-msg, prepare-commit-msg, post-commit, post-rewrite, pre-push                      |
+| `.entire/metadata/`, `logs/`, `tmp/` | **never** | local session data                                                                       |
 
-Reviewability of AI-written code: later you can inspect which prompts produced
-which diffs. It does **not** sync WSL, cloud sandboxes, and Codex trees.
+Setup and activation steps: see `ENTIRE.md` in the repo root.
 
-## This repo
-
-- Source of truth: `.entire/settings.json` (`enabled: true`, `telemetry: false`,
-  `checkpoints.primary.type: "git-refs"`).
-- Local-only (gitignored): `metadata/`, `logs/`, `tmp/`, `settings.local.json`.
-- On a new clone (especially GT's MSI), run: `entire enable --agent cursor --project --telemetry=false --absolute-git-hook-path`
-- Install: `curl -fsSL https://entire.io/install.sh | bash` (Linux/macOS) or
-  `irm https://entire.io/install.ps1 | iex` (Windows / Scoop).
-
-Do not commit secrets into checkpoints. Redaction is best-effort.
+Redaction is best-effort. Do not paste secrets into agent sessions.

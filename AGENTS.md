@@ -123,7 +123,7 @@ Cloudflare (DNS/CDN, Turnstile, analytics). See `docs/DEPLOY.md`.
 
 ## Agent tooling
 
-- Entire CLI: see `ENTIRE.md` and `.entire/README.md` (status: config only, not capturing yet).
+- Entire CLI: see `ENTIRE.md` and `.entire/README.md`. Codex + Claude Code hooks and `.githooks/` are committed; capture starts after the one-time MSI steps in `ENTIRE.md` (`git config core.hooksPath .githooks`, approve Codex hooks).
 - Changelog: `npm run changelog` (git-cliff). Hiraya diff: `docs/CHANGES_FROM_HIRAYA.md`.
 - Lite mode plan for cheap phones / slow data: `docs/LITE_MODE_PLAN.md`.
 - Laravel Boost guidelines remain in `GEMINI.md` for framework conventions.
