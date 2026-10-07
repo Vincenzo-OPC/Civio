@@ -113,27 +113,34 @@ $bank = [
 ];
 
 $n = 0;
+$skipped = 0;
 foreach ($bank as $subName => $items) {
   $sub = Subcategory::where('name', $subName)->first();
   if (!$sub) { echo "MISSING_SUB $subName\n"; continue; }
   foreach ($items as [$stem, $options, $correct]) {
-    // create multiple copies so pool builder quotas can be met
-    for ($copy = 1; $copy <= 8; $copy++) {
-      Question::create([
-        'subcategory_id' => $sub->id,
-        'language' => 'English',
-        'stem' => $copy === 1 ? $stem : ($stem . " (variant $copy)"),
-        'options' => $options,
-        'correct_option' => $correct,
-        'explanation' => 'Local practice item for Docker Hiraya. Replace with Gemini/admin bank later.',
-        'created_by' => $user->id,
-        'status' => 'active',
-      ]);
-      $n++;
-    }
+    // One copy per item. Never create "(variant N)" clones: they padded mock
+    // quotas with duplicates. Short pools now produce shorter mocks instead.
+    // Re-running is safe: an identical item (same subcategory, stem, options) is skipped.
+    $exists = Question::where('subcategory_id', $sub->id)
+      ->where('stem', $stem)
+      ->get(['id', 'options'])
+      ->contains(fn ($q) => $q->options === $options);
+    if ($exists) { $skipped++; continue; }
+
+    Question::create([
+      'subcategory_id' => $sub->id,
+      'language' => 'English',
+      'stem' => $stem,
+      'options' => $options,
+      'correct_option' => $correct,
+      'explanation' => 'Local practice item for Docker Hiraya. Replace with Gemini/admin bank later.',
+      'created_by' => $user->id,
+      'status' => 'active',
+    ]);
+    $n++;
   }
 }
 
 Cache::forget('questions.active');
 Cache::forget('categories.tree');
-echo "CREATED=$n ACTIVE=" . Question::where('status','active')->count() . "\n";
+echo "CREATED=$n SKIPPED_EXISTING=$skipped ACTIVE=" . Question::where('status','active')->count() . "\n";
