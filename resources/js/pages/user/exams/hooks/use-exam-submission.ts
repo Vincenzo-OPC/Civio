@@ -345,7 +345,7 @@ export function useExamSubmission({
             let message = `You have answered ${answeredCount} of ${scoredTotal} graded questions.`;
 
             if (unansweredCount > 0) {
-                message += ` âš ï¸ ${unansweredCount} question${unansweredCount > 1 ? 's are' : ' is'} left unanswered.`;
+                message += ` ⚠️ ${unansweredCount} question${unansweredCount > 1 ? 's are' : ' is'} left unanswered.`;
             }
 
             if (flaggedCount > 0) {

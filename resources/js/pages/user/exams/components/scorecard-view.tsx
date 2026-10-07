@@ -451,7 +451,7 @@ export function ScorecardView({
 
             {submittedByTimer && (
                 <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs font-semibold text-amber-800 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-300">
-                    Time expired â€” your exam was submitted automatically and
+                    Time expired — your exam was submitted automatically and
                     your graded scorecard is shown below.
                 </div>
             )}
@@ -584,7 +584,7 @@ export function ScorecardView({
                                                                         %
                                                                     </span>
                                                                     <span className="text-[10px] font-bold text-blue-600 opacity-0 transition group-hover:opacity-100 dark:text-blue-400">
-                                                                        Review â†’
+                                                                        Review →
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -894,7 +894,7 @@ export function ScorecardView({
                                     </span>
                                 </div>
                                 <span className="text-[10px] font-bold text-muted-foreground">
-                                    civio.ph â€¢ Civil Service Exam
+                                    civio.ph • Civil Service Exam
                                     Simulator
                                 </span>
                             </div>
@@ -921,7 +921,7 @@ export function ScorecardView({
                                 category breakdown are ready.
                             </p>
                             <p className="mt-3 text-xs font-bold text-amber-600 dark:text-amber-400">
-                                âš ï¸ Create a free account to save this attempt
+                                ⚠️ Create a free account to save this attempt
                                 permanently in your progress history and review
                                 your mistake rationales anytime.
                             </p>
