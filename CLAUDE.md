@@ -15,7 +15,8 @@ GitHub `Vincenzo-OPC/Civio` is the durable record — not any one chat history.
 1. `AGENTS.md` — product locks, MSI Docker protection, branch/push rules, phase status.
 2. This file.
 3. `docs/CIVIO_CODEX_BUILD_BRIEF.md` — phased execution order.
-4. `docs/ARCHITECTURE.md`, `docs/DEPLOY.md`, `docs/DESKTOP_PATCHES_TO_PORT.md`.
+4. `docs/ARCHITECTURE.md`, `docs/DEPLOY.md`, `docs/DESKTOP_PATCHES_TO_PORT.md`,
+   `docs/CHANGES_FROM_HIRAYA.md` (what differs from Hiraya), `CHANGELOG.md`.
 5. `docs/CSE-Question-Design-Spec.md` before any bank content work.
 6. Obsidian Intersect vault for GT durable notes (`Projects\CIVIO\...`).
 
@@ -34,6 +35,7 @@ Philippine Civil Service Exam study app. Brand **Civio** (Title Case). Tutor
 - Server grades exam attempts; do not trust client `cat_scores`.
 - Do not ship `correct_option` / `explanation` in live exam JSON before submit.
 - No secrets in commits.
+- Behaviour change vs Hiraya → update `docs/CHANGES_FROM_HIRAYA.md` in the same commit.
 
 ## Stack one-liner
 

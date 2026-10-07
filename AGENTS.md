@@ -9,6 +9,8 @@ and often skips this one. Keep both aligned.
 2. `docs/CIVIO_CODEX_BUILD_BRIEF.md` — phased build plan (Gate 0 → Phase 0 → 0.5 → 1 → Bank).
 3. `docs/ARCHITECTURE.md` — system shape (create/update if missing; do not invent hosting).
 4. `docs/DESKTOP_PATCHES_TO_PORT.md` — MSI UX patches still to port.
+4a. `docs/CHANGES_FROM_HIRAYA.md` — every difference from the original Hiraya, with commits.
+4b. `CHANGELOG.md` — release notes generated from commits (`npm run changelog`).
 5. `docs/CIVIO_AUDIT_AND_PLAN.md` — audit map (paths may have shifted; re-verify in tree).
 6. Durable notes: Obsidian Intersect vault (GT). Question design spec also lives at
    `Projects\CIVIO\CSE-Question-Design-Spec.md` in Intersect; a copy is in
@@ -67,6 +69,16 @@ Formatting fixes go in a **separate commit** from functional changes.
 - Small logical commits (one concern each). Suggested Phase 0 sequence is in the build brief.
 - Push periodically after green checkpoints, not every commit.
 - No secrets in commits. Spot-check built assets for leaked keys.
+- Conventional Commits (`feat`, `fix`, `perf`, `refactor`, `test`, `docs`, `style`,
+  `chore`, `security`, optional scope). `CHANGELOG.md` is generated from them with
+  git-cliff (`cliff.toml`); do not hand-edit it.
+- **Hiraya diff rule:** every commit or PR that changes behaviour compared with the
+  original Hiraya (`codebykenth/hiraya-review`) must update
+  `docs/CHANGES_FROM_HIRAYA.md` in the same change.
+- Release tags are annotated, pushed with `git push origin <tag>` (never forced).
+  Never push to the local read-only `hiraya-upstream` remote.
+- Bundle budgets: `npm run build && npm run size` (size-limit, brotli). Raise a
+  budget only on purpose, and say why in the commit.
 
 ## Question bank rule
 
@@ -105,7 +117,9 @@ Cloudflare (DNS/CDN, Turnstile, analytics). See `docs/DEPLOY.md`.
 
 ## Agent tooling
 
-- Entire CLI: see `ENTIRE.md` and `.entire/README.md`.
+- Entire CLI: see `ENTIRE.md` and `.entire/README.md` (status: config only, not capturing yet).
+- Changelog: `npm run changelog` (git-cliff). Hiraya diff: `docs/CHANGES_FROM_HIRAYA.md`.
+- Lite mode plan for cheap phones / slow data: `docs/LITE_MODE_PLAN.md`.
 - Laravel Boost guidelines remain in `GEMINI.md` for framework conventions.
 
 ## Libraries (Phase 0 extras)
