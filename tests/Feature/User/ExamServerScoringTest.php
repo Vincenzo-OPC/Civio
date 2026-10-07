@@ -6,7 +6,6 @@ use App\Models\Question;
 use App\Models\Subcategory;
 use App\Models\User;
 use App\Services\ExamGradingService;
-use Illuminate\Http\Request;
 use Inertia\Testing\AssertableInertia as Assert;
 
 function seedExamQuestions(int $count = 3): array

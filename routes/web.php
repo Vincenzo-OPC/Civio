@@ -75,7 +75,6 @@ Route::middleware('throttle:global-views')->group(function () {
         Route::get('dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
     });
 
-
     // Utilities
     Route::get('sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
     Route::get('ping', fn () => response()->json(['status' => 'alive', 'timestamp' => now()->toIso8601String()]));

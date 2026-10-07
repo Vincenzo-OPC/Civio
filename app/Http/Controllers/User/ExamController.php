@@ -9,6 +9,8 @@ use App\DTOs\Exam\ExamSessionQueryData;
 use App\DTOs\Exam\SubmitExamAttemptData;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Exam\StoreExamAttemptRequest;
+use App\Models\Question;
+use App\Services\Dexter\DexterEvaluationService;
 use App\Services\ExamService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -115,7 +117,7 @@ class ExamController extends Controller
             'question_id' => 'required|integer|exists:questions,id',
         ]);
 
-        $question = \App\Models\Question::find($request->question_id);
+        $question = Question::find($request->question_id);
 
         if (! $question) {
             return response()->json([
@@ -125,7 +127,7 @@ class ExamController extends Controller
         }
 
         // Use Dexter for independent evaluation + conflict detection
-        $dexter = app(\App\Services\Dexter\DexterEvaluationService::class);
+        $dexter = app(DexterEvaluationService::class);
         $evaluation = $dexter->evaluate($question);
 
         return response()->json([
@@ -147,7 +149,7 @@ class ExamController extends Controller
             'question_id' => 'required|integer|exists:questions,id',
         ]);
 
-        $question = \App\Models\Question::find($request->question_id);
+        $question = Question::find($request->question_id);
 
         if (! $question) {
             return response()->json(['success' => false, 'message' => 'Question not found'], 404);
@@ -165,4 +167,3 @@ class ExamController extends Controller
         ]);
     }
 }
-
