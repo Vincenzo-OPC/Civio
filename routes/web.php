@@ -16,6 +16,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Public\PublicController;
 use App\Http\Controllers\Public\SitemapController;
 use App\Http\Controllers\Public\SupportController;
+use App\Http\Controllers\ServiceWorkerController;
 use App\Http\Controllers\Settings\AcceptTermsController;
 use App\Http\Controllers\User\AnalyticsController;
 use App\Http\Controllers\User\DashboardController as UserDashboardController;
@@ -24,6 +25,8 @@ use App\Http\Controllers\User\ExamController;
 use App\Http\Controllers\User\ExamHistoryController;
 use App\Http\Controllers\User\ExamSessionController;
 use App\Http\Controllers\User\LearnController as UserLearnController;
+use App\Http\Controllers\User\OfflinePackController;
+use App\Http\Controllers\User\OfflinePracticeController;
 use App\Http\Controllers\User\SavedDrillSetController;
 use App\Http\Controllers\User\StudyScheduleController;
 use App\Http\Controllers\User\StudySuggestionController;
@@ -73,6 +76,19 @@ Route::middleware('throttle:global-views')->group(function () {
         ->name('exams.expound')
         ->middleware('throttle:global-views');
 
+    // Lite L2: offline drill packs (offline-eligible items only; never in mocks)
+    Route::get('offline', [OfflinePackController::class, 'page'])->name('offline.index');
+    Route::get('offline/packs', [OfflinePackController::class, 'index'])
+        ->name('offline.packs.index')
+        ->middleware('throttle:offline-packs');
+    Route::get('offline/packs/{category}', [OfflinePackController::class, 'show'])
+        ->whereNumber('category')
+        ->name('offline.packs.show')
+        ->middleware('throttle:offline-packs');
+    Route::post('offline/attempts', [OfflinePracticeController::class, 'store'])
+        ->name('offline.attempts.store')
+        ->middleware('throttle:offline-sync');
+
     // Local study: guest-readable study pages (empty OK) when CIVIO_GUEST_UNLIMITED
     Route::middleware('guest.study')->group(function () {
         Route::get('drills', [DrillController::class, 'index'])->name('drills.index');
@@ -82,6 +98,7 @@ Route::middleware('throttle:global-views')->group(function () {
     });
 
     // Utilities
+    Route::get('sw.js', ServiceWorkerController::class)->name('service-worker');
     Route::get('sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
     Route::get('ping', fn () => response()->json(['status' => 'alive', 'timestamp' => now()->toIso8601String()]));
 });

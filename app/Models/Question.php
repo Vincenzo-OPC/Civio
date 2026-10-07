@@ -33,6 +33,7 @@ class Question extends Model
             'created_by' => 'integer',
             'status' => QuestionStatus::class,
             'source_group' => QuestionSourceGroup::class,
+            'offline_eligible' => 'boolean',
         ];
     }
 

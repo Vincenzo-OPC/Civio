@@ -143,3 +143,30 @@ test('the same seed gives the same mock', function () {
 
     expect($a)->toBe($b);
 });
+
+test('offline-eligible items and exact copies of them never enter the mock source', function () {
+    $id = 1;
+    $rows = selectorBank(['General Information' => ['Constitution' => 5]], $id);
+    $rows[0]['offlineEligible'] = true;
+    $rows[] = [...$rows[0], 'id' => 99, 'offlineEligible' => false];
+
+    $sourceIds = array_column(MockPoolSelector::uniqueSource($rows), 'id');
+
+    expect($sourceIds)->toBe([2, 3, 4, 5]);
+});
+
+test('a mock never serves an offline-eligible item', function () {
+    $bank = fullProBank();
+    $offline = [];
+
+    foreach ($bank as $i => $row) {
+        if ($row['id'] % 10 === 0) {
+            $bank[$i]['offlineEligible'] = true;
+            $offline[$row['id']] = true;
+        }
+    }
+
+    $items = seededSelector(11)->select($bank, MockPoolSelector::PROFESSIONAL)['items'];
+
+    expect(array_filter(array_column($items, 'id'), fn (int $i) => isset($offline[$i])))->toBe([]);
+});

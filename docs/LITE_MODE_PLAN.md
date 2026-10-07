@@ -2,8 +2,8 @@
 
 Status (7 Oct 2026): **L0 done except item 6** (nginx/deploy cache config,
 pending). **L1 done** (server-picked mocks, Lite toggle, text-first exam and
-drill screens, server-side prop trimming). **L2 pending** (offline drill packs,
-needs GT decisions). See "L0 results" and "L1 results" below.
+drill screens, server-side prop trimming). **L2 done** (offline drill packs).
+See "L0 results", "L1 results" and "L2 results" below.
 
 Goal: a Civio that works on a ₱3,000 Android phone on prepaid 3G/2G data. The
 first exam screen must load fast, a mock must not burn megabytes, and practice
@@ -164,6 +164,74 @@ localStorage and the connection, and Lighthouse's throttling doesn't set
 `effectiveType`), so there is no separate Lite run. In Lite the landing page
 also skips the hero (26–53 KB).
 
+### L2 results (7 Oct 2026)
+
+Offline drill packs are live. What GT approved, and what was built:
+
+- **Which items go offline.** `questions.offline_eligible` (boolean, default
+  false). `php artisan civio:mark-offline-eligible [--dry-run]` marks, per
+  category, up to `max(0, unique active items - ceil(1.5 x max mock quota))`,
+  with max quotas Verbal 45, Analytical 52, Numerical 45, Clerical 47, General
+  Information 8 (from `MockPoolSelector::BLUEPRINT`). Never demographics,
+  "(variant N)" clones, or items with an exact copy under another ID. Picks are
+  deterministic (the subcategory with the most candidates left gives next,
+  lowest ID first) and monotonic (already marked items stay marked). Planner:
+  `app/Services/Offline/OfflineEligibilityPlanner.php`.
+- **Mock exclusion.** `MockPoolSelector::uniqueSource` drops offline items and
+  any exact copy of one, so a downloaded key never helps on a strict mock.
+- **Pack sizes on the 550-item seed bank:**
+
+  | Category | Unique | Reserve (1.5x quota) | Offline pack | Left for mocks |
+  | --- | --- | --- | --- | --- |
+  | Verbal Ability | 130 | 68 | 62 | 68 |
+  | Analytical Ability | 114 | 78 | 36 | 78 |
+  | Numerical Ability | 91 | 68 | 23 | 68 |
+  | Clerical Ability | 81 | 71 | 10 | 71 |
+  | General Information | 134 | 12 | 122 | 12 |
+
+  253 items in total. With them marked, 50 seeded runs each still give full
+  150-item Professional and 145-item Subprofessional mocks with zero offline
+  items.
+- **Endpoints** (guests allowed, always throttled: `offline-packs` 60/min,
+  `offline-sync` 20/min, see `config/civio.php`):
+  - `GET /offline` – the offline runner page.
+  - `GET /offline/packs` – manifest: per category (with subcategory slices)
+    item count, pages, version, approximate bytes.
+  - `GET /offline/packs/{category}?subcategory=&page=` – 40 items per page
+    with options, `correct_option` and explanation. `ETag` (version hash of
+    ids + `updated_at`), `Cache-Control: public, max-age=300`, 304 on match.
+  - `POST /offline/attempts` – up to 200 queued answers. The server re-grades
+    each with its own key and stores it in `offline_practice_results`
+    (`source = offline_practice`). Items that are not offline-eligible are
+    rejected as `not_offline` without saying whether the answer was right (no
+    answer oracle for mock items). A claimed key that differs from the server
+    key is rejected as `key_mismatch`. Idempotent per owner and `client_id`.
+- **Client.** "Download for offline" panel at the bottom of the Practice Drills
+  hub (Lite and normal; lazy chunk) shows each pack's size in KB, then the
+  downloaded version with Update pack and Remove, and an Online/Offline badge.
+  Packs and the answer queue live in IndexedDB (`idb-keyval`, database
+  `civio-offline`). The `/offline` page reuses the Lite drill screen
+  (`LiteExamBody`): local grading, Reveal with the explanation, Copy for AI.
+  Finished drills queue their answers; the page syncs on open, after each
+  drill and when the browser comes back online. Weak-topic stats update only
+  from the server's verdicts.
+- **Service worker.** `/offline` is NetworkFirst in its own
+  `civio-offline-shell` cache, refreshed after each download; its chunks
+  (runner, idb-keyval) are precached. Exams, drills, auth and the pack/sync
+  endpoints are not cached by the worker. The worker is now served at
+  `/sw.js` with scope `/` (it used to register at `/build/sw.js` with scope
+  `/build/`, so it never controlled a page). Lite users get the worker the
+  first time they download a pack.
+- **Checked end to end** in headless Chrome: download a pack, stop the server,
+  open `/offline`, run a 10-item drill with Reveal, restart the server; the
+  queue syncs and the server's verdicts come back.
+- **Sizes** (brotli): offline page 2.3 kB + runner 1.7 kB + picker 0.9 kB +
+  pack store 1.3 kB + idb-keyval 0.7 kB; drills hub panel 1.7 kB, lazy. Main
+  entry 46.9 kB (budget 48).
+- **Not used:** `workbox-background-sync`. iOS Safari has no Background Sync;
+  syncing on page open, after a drill and on the `online` event works everywhere
+  and is unit-tested.
+
 ## 2. Budgets
 
 Enforced with size-limit (`.size-limit.json`, brotli) and later Lighthouse CI.
@@ -218,6 +286,10 @@ reuses all of it and only swaps presentation and payload size.
   in Lite, with no font preloads.
 
 ## 4. Offline practice without leaking mock keys
+
+> Built in L2 with `offline_eligible` items rather than admin-published pack
+> tables, under `/offline/*` instead of `/packs/*`. See "L2 results" for what
+> shipped; the plan below is kept for history.
 
 Today `resources/js/sw.ts` makes `/exams`, `/drills`, auth, dashboard and others
 NetworkOnly, and live exam JSON never contains keys. Keep both.
@@ -326,14 +398,17 @@ What shipped (see "L1 results" below for numbers):
 | Register the SW only after opt-in when Lite/Save-Data is on | `resources/js/app.tsx` | Fewer users get updates early |
 | Lighthouse CI budgets (optional) | `.github/workflows/`, `lighthouserc.json` | Flaky timings; assert on bytes, not ms |
 
-### L2: offline drill packs (a week+, needs GT decisions)
+### L2: offline drill packs — **Done** (7 Oct 2026)
+
+Built as `offline_eligible` items instead of separate pack tables (see "L2
+results"). The original table is kept below for history.
 
 | Change | Files | Risk |
 | --- | --- | --- |
-| `drill_packs` / `drill_pack_items` tables; pack items excluded from strict mock pools | new migration + model, `app/Repositories/QuestionRepository.php`, admin pages | Shrinks the mock pool; Clerical and Analytical are tight |
-| `GET /packs/{pack}/download` (keys included, versioned), `POST /packs/{pack}/attempts` (server re-grades, `offline_practice`) | `routes/web.php`, new controller + Pest tests | Key exposure for pack items by design |
-| SW route + cache for packs; background sync queue | `resources/js/sw.ts`, `vite.config.ts` | SW bugs are sticky; ship behind a flag |
-| IndexedDB store + local grading + download UI | new `resources/js/lib/offline-packs.ts`, drills hub | Storage quota and eviction on cheap phones |
+| Offline-eligible items excluded from strict mock pools | migration, `OfflineEligibilityPlanner`, `MockPoolSelector::uniqueSource` | Shrinks the mock pool; the cap keeps 1.5x the largest quota per category |
+| `GET /offline/packs[/{category}]` (keys included, versioned), `POST /offline/attempts` (server re-grades, `offline_practice`) | `routes/web.php`, `OfflinePackController`, `OfflinePracticeController`, `SyncOfflinePracticeAction`, Pest tests | Key exposure for offline items by design |
+| SW route for the offline page; worker served at `/sw.js` | `resources/js/sw.ts`, `vite.config.ts`, `ServiceWorkerController` | SW bugs are sticky |
+| IndexedDB store + local grading + download UI | `resources/js/lib/offline/*`, drills hub panel, `pages/offline` | Storage quota and eviction on cheap phones |
 
 ## 8. Libraries
 
@@ -342,11 +417,12 @@ Only where they clearly help:
 - **size-limit** (`ai/size-limit`, ~7k ★): **added** (v12, Node 20+). Budgets in
   `.size-limit.json`, run with `npm run size` after `npm run build`.
 - **Workbox** (`GoogleChrome/workbox`, ~13k ★) via **vite-plugin-pwa** (already
-  installed). Use `workbox-background-sync` for L2.
+  installed). L2 syncs on page open, after a drill and on `online` instead of
+  `workbox-background-sync` (no Background Sync on iOS).
 - **Lighthouse CI** (`GoogleChrome/lighthouse-ci`, ~7k ★): optional in L1 for
   byte budgets and score floors in CI. It's heavier than size-limit, so add it only when there's a
   staging URL.
-- **idb-keyval** (`jakearchibald/idb-keyval`, ~600 B): for L2 pack storage.
+- **idb-keyval** (`jakearchibald/idb-keyval`, ~600 B): **added** for L2 pack storage.
 - **Preact compat** (`preactjs/preact`): **not recommended now.** It would save ~30–40 KB
   gzip at best. Radix UI, Headless UI, recharts and the React Compiler make compat risky.
   L0 #1 alone saves ~5× more.
@@ -358,7 +434,9 @@ Only where they clearly help:
    decision because it touches deploy config.
 2. ~~Lite as a mode flag vs a `/lite` layout~~ Mode flag, done in L1.
 3. ~~Server-built mock pools~~ Done in L1.
-4. Which items may ever be downloadable offline (they leave strict mocks), and how many per category.
+4. ~~Which items may ever be downloadable offline~~ Decided: up to
+   `unique - ceil(1.5 x max mock quota)` per category, via
+   `civio:mark-offline-eligible` (see "L2 results").
 
 ## How these numbers were measured
 

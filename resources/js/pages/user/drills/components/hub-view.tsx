@@ -1,10 +1,13 @@
 import { Brain, Zap, Clock, Lightbulb, FileText } from 'lucide-react';
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { PageHeader } from '@/components/layout/page-header';
 import { HowItWorksModal } from '@/components/shared/how-it-works-modal';
 import { Card } from '@/components/ui/card';
 import { categoryMeta } from '../hooks/use-drills-state';
 import type { Category, Question } from '../types';
+
+// Lite L2: offline packs panel (and idb-keyval) load only when the hub shows.
+const OfflinePacksPanel = lazy(() => import('./offline-packs-panel'));
 
 interface HubViewProps {
     categories: Category[];
@@ -132,6 +135,10 @@ export function HubView({
                     </p>
                 </div>
             )}
+
+            <Suspense fallback={null}>
+                <OfflinePacksPanel />
+            </Suspense>
         </div>
     );
 }

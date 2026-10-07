@@ -16,6 +16,7 @@ import {
     readOfflineOptIn,
     shouldRegisterServiceWorker,
 } from '@/lib/lite-mode';
+import { registerServiceWorker } from '@/lib/pwa-register';
 import { initSmartBackTracking, getOriginTitle } from '@/lib/smart-back';
 import type { Auth } from './types/auth';
 // Echo initialization moved to specific components to save connections
@@ -151,7 +152,9 @@ createInertiaApp({
             name === 'about' ||
             name === 'guide' ||
             name === 'error' ||
-            name.startsWith('public/');
+            name.startsWith('public/') ||
+            // Lite L2: the offline drill runner opens with no network.
+            name.startsWith('offline/');
 
         let pageLayout: any = undefined;
 
@@ -218,23 +221,5 @@ if (
     typeof window !== 'undefined' &&
     shouldRegisterServiceWorker(isLiteActive(), readOfflineOptIn())
 ) {
-    void import('virtual:pwa-register')
-        .then(({ registerSW }) => {
-            registerSW({
-                immediate: true,
-                onNeedRefresh() {
-                    // Prompt-style update: ask once, then reload into new SW.
-                    if (
-                        window.confirm(
-                            'A new Civio version is available. Reload to update?',
-                        )
-                    ) {
-                        window.location.reload();
-                    }
-                },
-            });
-        })
-        .catch(() => {
-            /* SW unavailable in some local/dev contexts */
-        });
+    registerServiceWorker();
 }

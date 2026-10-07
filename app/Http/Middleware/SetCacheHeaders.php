@@ -43,6 +43,11 @@ class SetCacheHeaders
 
         $path = $request->getPathInfo();
 
+        // The service worker must be re-checked on every visit (not immutable).
+        if ($path === '/sw.js') {
+            return $response;
+        }
+
         // Vite build assets (hashed filenames = immutable)
         if (str_starts_with($path, '/build/')) {
             return $this->applyImmutableHeaders($response);
@@ -66,6 +71,11 @@ class SetCacheHeaders
         // Other static assets by extension
         if ($this->hasExtension($path, self::MEDIA_EXTENSIONS)) {
             return $this->applyStaticHeaders($response, 2592000); // 30 days
+        }
+
+        // Offline drill pack JSON (Lite L2) sets its own ETag and Cache-Control.
+        if (str_starts_with($path, '/offline/packs') && $response->headers->has('ETag')) {
+            return $response;
         }
 
         // Dynamic Inertia pages: private, no CDN cache, short browser cache

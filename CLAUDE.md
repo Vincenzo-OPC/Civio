@@ -35,6 +35,8 @@ Philippine Civil Service Exam study app. Brand **Civio** (Title Case). Tutor
 - Never add bank questions without an approved design-spec pass.
 - Server grades exam attempts; do not trust client `cat_scores`.
 - Do not ship `correct_option` / `explanation` in live exam JSON before submit.
+- Offline drill packs carry keys, so they only contain `offline_eligible` items, which
+  strict mocks never use. The sync endpoint re-grades with server keys.
 - No secrets in commits.
 - Behaviour change vs the baseline → update `docs/CHANGES_SINCE_BASELINE.md` in the same commit.
 

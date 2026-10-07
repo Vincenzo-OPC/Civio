@@ -9,6 +9,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 import {
     collectCriticalFiles,
     keepPrecacheEntry,
+    toBuildUrl,
 } from './resources/js/lib/pwa-precache';
 import type { ViteManifest } from './resources/js/lib/pwa-precache';
 
@@ -30,9 +31,9 @@ function trimPrecache<T extends { url: string }>(entries: T[]) {
     const critical = collectCriticalFiles(manifest);
 
     return {
-        manifest: entries.filter((entry) =>
-            keepPrecacheEntry(entry.url, critical),
-        ),
+        manifest: entries
+            .filter((entry) => keepPrecacheEntry(entry.url, critical))
+            .map((entry) => ({ ...entry, url: toBuildUrl(entry.url) })),
         warnings: [],
     };
 }
@@ -62,6 +63,12 @@ export default defineConfig({
             filename: 'sw.ts',
             registerType: 'prompt',
             injectRegister: false,
+            // The file is built to public/build/sw.js but served by Laravel at
+            // /sw.js (ServiceWorkerController), so it controls every page.
+            // Registered at /build/sw.js its scope was /build/ and it never
+            // controlled a page, so nothing worked offline.
+            buildBase: '/',
+            scope: '/',
             manifest: false, // keep public/manifest.json (Civio)
             // public/ files (icons, logo) are not globbed: the Laravel build has no
             // Vite publicDir. They load from the network like before.

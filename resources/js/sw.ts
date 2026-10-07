@@ -48,6 +48,22 @@ registerRoute(({ url, request }) => {
     return isSensitive(url);
 }, new NetworkOnly());
 
+// Lite L2: the offline drill page. Network-first, with its own cache so it is
+// never evicted with other pages; the drills hub refreshes it after a pack
+// download. Pack JSON (/offline/packs) and sync (/offline/attempts) are not
+// cached here: packs live in IndexedDB and POSTs are NetworkOnly above.
+registerRoute(
+    ({ url, request }) =>
+        request.method === 'GET' &&
+        url.origin === self.location.origin &&
+        url.pathname === '/offline' &&
+        request.mode === 'navigate',
+    new NetworkFirst({
+        cacheName: 'civio-offline-shell',
+        networkTimeoutSeconds: 4,
+    }),
+);
+
 // HTML navigations: network-first (never serve stale exam shells forever)
 registerRoute(
     new NavigationRoute(

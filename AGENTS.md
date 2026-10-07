@@ -91,6 +91,10 @@ exist for existing content; do not invent new stems.
 **No filler clones.** Never pad the bank or a mock with "(variant N)" copies or
 other repeats. Mocks draw unique items only (`resources/js/pages/user/exams/utils/mock-pool.ts`);
 if the bank is short, the mock is shorter and the user is told the real count.
+Strict mocks are picked on the server (`app/Services/Exam/MockPoolSelector.php`) and
+never include `offline_eligible` items or exact copies of them: those keys ship in
+offline drill packs. Only `php artisan civio:mark-offline-eligible` marks items;
+never mark by hand without re-checking that full 150/145 mocks still fill.
 Old clones are removed with `php artisan civio:remove-variant-clones [--dry-run]`
 (deletes unreferenced clones, sets referenced ones to `draft`). The MSI desktop DB
 still needs this run once: see `docs/DESKTOP_PATCHES_TO_PORT.md` for the command and
@@ -115,7 +119,11 @@ the equivalent Postgres SQL (`scripts/seeds/remove_variant_clones.sql`).
   `exam_sessions`), Lite mode flag (`lib/lite-mode.ts`, `useLiteMode()`,
   `civio_lite` cookie), text-first exam/drill screens, server-side prop
   trimming. See `docs/LITE_MODE_PLAN.md`.
-- **Next:** Lite L2 (offline drill packs, needs GT decisions) → Phase 1
+- **Done:** Lite L2, offline drill packs: `questions.offline_eligible`,
+  `civio:mark-offline-eligible`, `/offline/packs` + `/offline/attempts`
+  (server re-grade, `offline_practice_results`), drills hub download panel,
+  `/offline` runner, worker served at `/sw.js`. See `docs/LITE_MODE_PLAN.md`.
+- **Next:** modernization backlog (`docs/CODE_STANDARD.md`) → Phase 1
   foundation → Phase Bank.
 
 ## Hosting intent (not yet executed)

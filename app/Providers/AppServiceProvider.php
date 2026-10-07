@@ -121,6 +121,18 @@ class AppServiceProvider extends ServiceProvider
             });
         });
 
+        // Lite L2 offline packs: always on (also outside production) so the
+        // limits are tested; sizes in config/civio.php.
+        RateLimiter::for('offline-packs', function (Request $request) {
+            return Limit::perMinute((int) config('civio.offline.packs_per_minute', 60))
+                ->by('offline-packs:'.($request->user()?->id ?: $request->ip()));
+        });
+
+        RateLimiter::for('offline-sync', function (Request $request) {
+            return Limit::perMinute((int) config('civio.offline.sync_per_minute', 20))
+                ->by('offline-sync:'.($request->user()?->id ?: $request->ip()));
+        });
+
         RateLimiter::for('pdf-export', function (Request $request) {
             $user = $request->user();
 

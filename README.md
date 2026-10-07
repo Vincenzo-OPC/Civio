@@ -10,6 +10,9 @@ Subprofessional mocks, practice drills, learn modules, and the Dexter tutor.
   the server; answer keys stay on the server until Reveal or submit.
 - Practice drills by topic, with Reveal, explanations and Copy for AI.
 - Lite mode for cheap phones and slow data (auto on Save-Data / 2G / 3G).
+- Offline drill packs: download a topic, practise with no connection, sync
+  when back online (the server re-checks every answer; offline items never
+  appear in mocks).
 - Guest study without an account (`CIVIO_GUEST_UNLIMITED`).
 
 ## Stack

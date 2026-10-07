@@ -3,6 +3,8 @@ import { test } from 'node:test';
 import {
     collectCriticalFiles,
     keepPrecacheEntry,
+    PRECACHE_ROOTS,
+    toBuildUrl,
 } from '../../resources/js/lib/pwa-precache';
 import type { ViteManifest } from '../../resources/js/lib/pwa-precache';
 
@@ -58,4 +60,17 @@ test('normalises url prefixes; files outside the critical graph are dropped', ()
     assert.equal(keepPrecacheEntry('./assets/app-1.js', files), true);
     assert.equal(keepPrecacheEntry('icons/icon-512x512.png', files), false);
     assert.equal(keepPrecacheEntry('images/hero_image.png', files), false);
+});
+
+test('precache urls are absolute under /build/ (the worker is served from /sw.js)', () => {
+    assert.equal(toBuildUrl('assets/app-1.js'), '/build/assets/app-1.js');
+    assert.equal(toBuildUrl('./assets/app-1.js'), '/build/assets/app-1.js');
+    assert.equal(
+        toBuildUrl('/build/assets/app-1.js'),
+        '/build/assets/app-1.js',
+    );
+});
+
+test('the offline drill page is precached so it opens with no network', () => {
+    assert.ok(PRECACHE_ROOTS.includes('resources/js/pages/offline/index.tsx'));
 });

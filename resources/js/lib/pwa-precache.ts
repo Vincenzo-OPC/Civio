@@ -26,6 +26,8 @@ export const PRECACHE_ROOTS: readonly string[] = [
     'resources/js/pages/user/dashboard/index.tsx',
     'resources/js/pages/user/exams/index.tsx',
     'resources/js/pages/user/drills/index.tsx',
+    // Lite L2: the offline drill runner must open with no network.
+    'resources/js/pages/offline/index.tsx',
 ];
 
 /** Files (relative to the build dir) reachable through static imports from the roots. */
@@ -71,4 +73,13 @@ export function keepPrecacheEntry(
     const path = normalise(url);
 
     return critical.has(path);
+}
+
+/**
+ * Absolute URL for a precache entry. The service worker is served from /sw.js,
+ * so a relative entry like `assets/app.js` would resolve to /assets/app.js;
+ * build files live under /build/.
+ */
+export function toBuildUrl(url: string): string {
+    return `/build/${normalise(url)}`;
 }

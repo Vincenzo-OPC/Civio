@@ -117,6 +117,7 @@ class MockSessionService
             'subcategory' => $question->subcategory?->name ?? '',
             'language' => QuestionLanguage::fromRaw($rawLang)->value,
             'isDemographic' => (bool) ($question->subcategory?->category?->is_demographic ?? false),
+            'offlineEligible' => (bool) ($question->offline_eligible ?? false),
             'explanation' => (string) ($question->explanation ?? ''),
         ];
     }

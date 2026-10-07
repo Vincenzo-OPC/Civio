@@ -20,12 +20,13 @@ use Random\Randomizer;
  *   then unseen, then seen-correct; about half of the mock leans to weak
  *   subcategories / categories when unused items exist;
  * - harder-biased shuffle (heuristic difficulty, no DB column);
- * - no padding: a short bank gives a shorter mock and a clear notice.
+ * - no padding: a short bank gives a shorter mock and a clear notice;
+ * - offline-eligible items (Lite L2 drill packs) never enter a mock.
  *
  * Items are plain arrays shaped like `ExamQuestionResource` (id, stem, options,
  * category, subcategory, language, isDemographic, optional explanation).
  *
- * @phpstan-type Item array{id: int, stem: string, options: array<int, string>, category: string, subcategory: string, language: string, isDemographic: bool, explanation?: string}
+ * @phpstan-type Item array{id: int, stem: string, options: array<int, string>, category: string, subcategory: string, language: string, isDemographic: bool, offlineEligible?: bool, explanation?: string}
  * @phpstan-type Bias array{seenIds?: array<int, int>, wrongIds?: array<int, int>, weakSubcategories?: array<int, string>, weakCategories?: array<int, string>}
  */
 final class MockPoolSelector
@@ -118,7 +119,10 @@ final class MockPoolSelector
     }
 
     /**
-     * Items a mock may draw from: no demographics, no clones, no exact duplicates.
+     * Items a mock may draw from: no demographics, no clones, no exact duplicates,
+     * and nothing offline-eligible (Lite L2). Offline items' keys can be on a
+     * learner's phone, so neither they nor an exact copy under another ID may
+     * ever appear in a strict mock.
      *
      * @param  array<int, array<string, mixed>>  $questions
      * @return array<int, array<string, mixed>>
@@ -128,17 +132,24 @@ final class MockPoolSelector
         $seenIds = [];
         $seenKeys = [];
         $out = [];
+        $offlineKeys = [];
+
+        foreach ($questions as $q) {
+            if (! empty($q['offlineEligible'])) {
+                $offlineKeys[self::exactItemKey($q)] = true;
+            }
+        }
 
         foreach ($questions as $q) {
             $id = (int) $q['id'];
 
-            if (self::isDemographic($q) || self::isVariantClone((string) $q['stem']) || isset($seenIds[$id])) {
+            if (! empty($q['offlineEligible']) || self::isDemographic($q) || self::isVariantClone((string) $q['stem']) || isset($seenIds[$id])) {
                 continue;
             }
 
             $key = self::exactItemKey($q);
 
-            if (isset($seenKeys[$key])) {
+            if (isset($seenKeys[$key]) || isset($offlineKeys[$key])) {
                 continue;
             }
 
