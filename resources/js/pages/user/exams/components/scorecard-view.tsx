@@ -168,7 +168,10 @@ export function ScorecardView({
 
                 const chosen = answers[idx];
 
+                // Keys arrive from the server after submit; until then no
+                // item can be called a miss.
                 return (
+                    typeof q.correct_option === 'number' &&
                     chosen !== undefined &&
                     chosen !== null &&
                     Number(chosen) !== Number(q.correct_option)
@@ -248,7 +251,10 @@ export function ScorecardView({
 
                 const chosen = answers[idx];
 
+                // Keys arrive from the server after submit; until then no
+                // item can be called a miss.
                 return (
+                    typeof q.correct_option === 'number' &&
                     chosen !== undefined &&
                     chosen !== null &&
                     Number(chosen) !== Number(q.correct_option)

@@ -1,6 +1,10 @@
 import { setLayoutProps } from '@inertiajs/react';
 import { useEffect } from 'react';
 import {
+    combinedStudyBias,
+    pickDrillItemsWithBias,
+} from '@/lib/guest-study-bias';
+import {
     resolveOriginFromUrl,
     setSessionOrigin,
     getSessionOrigin,
@@ -385,9 +389,17 @@ export function useExamHydration({
 
             const countLimit =
                 qCountParam === 'all' ? pool.length : Number(qCountParam);
-            const finalPool = pool
-                .slice(0, Math.min(countLimit, pool.length))
-                .map(shuffleOptionsForQuestion);
+            // Hand-picked sets (mistakes drill, saved sets) keep their items;
+            // topic drills lean toward this browser's past misses and weak
+            // topics instead of always serving the first N bank rows.
+            const chosen = customIdsParam
+                ? pool.slice(0, Math.min(countLimit, pool.length))
+                : pickDrillItemsWithBias(
+                      pool,
+                      combinedStudyBias(),
+                      Number.isFinite(countLimit) ? countLimit : pool.length,
+                  );
+            const finalPool = chosen.map(shuffleOptionsForQuestion);
             const limitSecs = isTimedParam ? finalPool.length * 60 : 0;
 
             setDrillCategoryId(catId);

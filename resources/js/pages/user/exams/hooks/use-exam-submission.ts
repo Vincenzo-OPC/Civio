@@ -1,7 +1,11 @@
 import { useState, useCallback } from 'react';
 import { toast } from 'sonner';
 import { useGuestUnlimited } from '@/lib/civio-study';
-import { recordGuestStudyBias } from '@/lib/guest-study-bias';
+import {
+    recordGuestStudyBias,
+    studyBiasInputFromServer,
+    studyTrackForExam,
+} from '@/lib/guest-study-bias';
 import type { Question, ExamResults, CategoryScore } from '../types';
 import { isDemographicQuestion, apiPost } from '../utils/exam-utils';
 
@@ -100,7 +104,6 @@ export function useExamSubmission({
             let wrongCount = 0;
             let skippedCount = 0;
             const catMap: Record<string, CategoryScore> = {};
-            const wrongQuestionIds: number[] = [];
             const keysAvailable = activeQuestions.some(
                 (q) => typeof q.correct_option === 'number',
             );
@@ -147,11 +150,8 @@ export function useExamSubmission({
                     catMap[catName].subcats[subcatName].correct += 1;
                 } else if (keysAvailable) {
                     wrongCount += 1;
-                    wrongQuestionIds.push(q.id);
-                } else {
-                    // Keys withheld — leave counts for server fill-in.
-                    wrongQuestionIds.push(q.id);
                 }
+                // Keys withheld: leave counts for the server to fill in.
             });
 
             const totalScoredQuestions =
@@ -177,19 +177,10 @@ export function useExamSubmission({
             };
 
             setResults(computedResults);
-            const studyTrack =
-                selectedExamId === 2
-                    ? 'Subprofessional'
-                    : selectedExamId === 1
-                      ? 'Professional'
-                      : 'Drill';
-
-            if (studyTrack !== 'Drill') {
-                recordGuestStudyBias(studyTrack, {
-                    wrongIds: wrongQuestionIds,
-                    categoryScoreMap: catMap,
-                });
-            }
+            // Study bias is recorded only from the server's grading below:
+            // answer keys are withheld in live play, so a local tally here
+            // would mark every answered item as a miss.
+            const studyTrack = studyTrackForExam(selectedExamId);
 
             setIsExamSubmitted(true);
             setIsExamActive(false);
@@ -228,6 +219,14 @@ export function useExamSubmission({
                 .then((data: any) => {
                     if (data?.attempt_id) {
                         setLastStoredAttemptId(data.attempt_id);
+                    }
+
+                    const biasInput = studyBiasInputFromServer(data);
+
+                    if (biasInput) {
+                        // Tutor loop: misses and weak topics feed the next
+                        // mock / drill pool (stored per track in this browser).
+                        recordGuestStudyBias(studyTrack, biasInput);
                     }
 
                     if (data?.success && typeof data.score === 'number') {
