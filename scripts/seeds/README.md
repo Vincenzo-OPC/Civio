@@ -31,3 +31,20 @@ php artisan civio:repair-bank-encoding             # apply (idempotent)
 It restores text only from an exact match against these UTF-8 seed files (or
 `--reference=<file.sql|.php|.json>`), or when arithmetic such as `12 ?? 3 = 36`
 allows exactly one operator. Rows it cannot repair safely are listed by ID.
+
+## Removing "(variant N)" clones
+
+Older copies of `seed_real_practice.php` saved each item 8 times with
+" (variant N)" on the stem. The script now saves one copy per item. To clean a
+bank that already has clones:
+
+```bash
+php artisan civio:remove-variant-clones --dry-run   # report only
+php artisan civio:remove-variant-clones             # delete or archive (idempotent)
+```
+
+Unreferenced clones are deleted. Clones used by attempts, saved drills or
+feedback are set to `draft`, so they leave the active pool. For a database whose
+app lacks the command, `remove_variant_clones.sql` does the same in Postgres
+(see `docs/DESKTOP_PATCHES_TO_PORT.md`).
+
