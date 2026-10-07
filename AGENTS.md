@@ -46,6 +46,7 @@ php artisan test       # Pest, sqlite memory via phpunit.xml
 npm run types:check    # tsc --noEmit
 npm run lint:check     # eslint
 npm run format:check   # prettier
+npm run test:js        # tsx --test tests/Js/*.test.ts
 vendor/bin/pint --test
 ```
 
@@ -76,10 +77,14 @@ exist for existing content; do not invent new stems.
 ## Current phase status (update as you finish)
 
 - **Done:** Gate 0 — `main` tip is desktop baseline `d3f0368`.
-- **In progress:** Phase 0 — security scoring, withhold keys, shuffle fix, remove
+- **Done:** Phase 0 — security scoring, withhold keys, shuffle fix, remove
   dangerous routes, draft custom questions, nullOnDelete, remove ads, CI green,
   code-split, Civio rebrand, repo junk cleanup, docs, agent setup (Entire + AGENTS).
-- **Next:** Phase 0.5 — port remaining MSI UX (mock button, tutor loop, per-item clock).
+- **Done:** Phase 0.5 — MSI UX ported: exam/item clocks with urgency colours,
+  tutor loop + weak-topic study bias (server-graded), no redundant Mock button,
+  `??` math-symbol root cause fixed (`php artisan civio:repair-bank-encoding`).
+  See `docs/DESKTOP_PATCHES_TO_PORT.md`.
+- **In progress:** Copy for AI MVP (`docs/EXTERNAL_AI_HANDOFF.md`).
 - **Then:** Phase 1 foundation → Phase Bank.
 
 ## Hosting intent (not yet executed)
