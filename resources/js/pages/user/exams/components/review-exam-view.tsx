@@ -26,6 +26,7 @@ import React, {
     useRef,
 } from 'react';
 import { ReportIssueModal } from '@/components/domain/report-issue-modal';
+import type { AiHandoffExamLevel } from '@/lib/ai-handoff';
 import {
     renderFormattedText,
     extractPropositions,
@@ -39,6 +40,7 @@ import type {
     ReviewStatusFilter,
 } from '../types';
 import { BookmarkToDrillSetDialog } from './bookmark-to-drill-set-dialog';
+import { CopyForAiButton } from './copy-for-ai-button';
 import QuestionPalettePanel from './question-palette-panel';
 
 interface ReviewExamViewProps {
@@ -62,6 +64,8 @@ interface ReviewExamViewProps {
     isMobilePaletteOpen: boolean;
     setIsMobilePaletteOpen: (val: boolean) => void;
     setReviewScreenActive: (val: boolean) => void;
+    /** Header level for Copy for AI (Practice for drills). */
+    examLevel?: AiHandoffExamLevel;
 }
 
 export function ReviewExamView({
@@ -85,6 +89,7 @@ export function ReviewExamView({
     isMobilePaletteOpen,
     setIsMobilePaletteOpen,
     setReviewScreenActive,
+    examLevel = 'Practice',
 }: ReviewExamViewProps) {
     const isCurrentMatch = useCallback(
         (q: Question | undefined, idx: number) => {
@@ -1266,6 +1271,42 @@ export function ReviewExamView({
                                                     {activeQuestions.length}
                                                 </span>
                                                 <div className="flex items-center gap-2">
+                                                    {!currentQuestion.isDemographic &&
+                                                        currentQuestion.category !==
+                                                            'Demographic Profile' && (
+                                                            <CopyForAiButton
+                                                                question={
+                                                                    currentQuestion
+                                                                }
+                                                                attempt={{
+                                                                    mode: 'review',
+                                                                    revealed: true,
+                                                                    selectedDisplayIndex:
+                                                                        chosenOption ===
+                                                                            undefined ||
+                                                                        chosenOption ===
+                                                                            null
+                                                                            ? undefined
+                                                                            : Number(
+                                                                                  chosenOption,
+                                                                              ),
+                                                                    verifiedCorrectDisplayIndex:
+                                                                        typeof currentQuestion.correct_option ===
+                                                                        'number'
+                                                                            ? currentQuestion.correct_option
+                                                                            : undefined,
+                                                                    verifiedExplanation:
+                                                                        currentQuestion.explanation,
+                                                                    questionNumber:
+                                                                        currentIdx +
+                                                                        1,
+                                                                    totalQuestions:
+                                                                        activeQuestions.length,
+                                                                    examLevel,
+                                                                }}
+                                                                className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground transition hover:bg-muted focus:outline-none"
+                                                            />
+                                                        )}
                                                     {(() => {
                                                         if (
                                                             reportStatus ===

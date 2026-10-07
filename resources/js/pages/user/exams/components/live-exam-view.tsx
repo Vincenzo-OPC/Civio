@@ -28,9 +28,11 @@ import {
     DialogDescription,
 } from '@/components/ui/dialog';
 
+import type { AiHandoffAttemptState } from '@/lib/ai-handoff';
 import { renderFormattedText } from '@/lib/exam-formatters';
 import { useContentShield } from '../hooks/use-content-shield';
 import type { Question, SimulationDetails } from '../types';
+import { CopyForAiButton } from './copy-for-ai-button';
 import { ExamTimerDisplay } from './exam-timer-display';
 import QuestionPalettePanel from './question-palette-panel';
 
@@ -38,6 +40,8 @@ interface RevealedAnswer {
     questionId: number;
     letter: string;
     text: string;
+    /** Correct option as an index into the displayed (shuffled) options. */
+    displayIndex: number;
     explanation?: string | null;
     expound?: string;
     hasConflict?: boolean;
@@ -122,6 +126,28 @@ export function LiveExamView({
     const [isPaletteCollapsed, setIsPaletteCollapsed] = useState(false);
     const [revealedAnswer, setRevealedAnswer] =
         useState<RevealedAnswer | null>(null);
+
+    // Structured state for Copy for AI. The answer key is only passed once
+    // the learner has revealed this question; it is never fetched to copy.
+    const liveHandoffAttempt = (questionId: number): AiHandoffAttemptState => {
+        const revealed =
+            revealedAnswer !== null && revealedAnswer.questionId === questionId;
+
+        return {
+            selectedDisplayIndex: answers[currentIdx],
+            mode: isDrillSession ? 'study' : 'live',
+            revealed,
+            verifiedCorrectDisplayIndex: revealed
+                ? revealedAnswer.displayIndex
+                : undefined,
+            verifiedExplanation: revealed
+                ? revealedAnswer.explanation
+                : undefined,
+            questionNumber: currentIdx + 1,
+            totalQuestions: activeQuestions.length,
+            examLevel: 'Practice',
+        };
+    };
 
     const {
         isShielded,
@@ -814,6 +840,7 @@ export function LiveExamView({
                                                                 setRevealedAnswer({
                                                                     questionId: activeQuestion.id,
                                                                     letter,
+                                                                    displayIndex: displayedIndex,
                                                                     text: activeQuestion.options?.[displayedIndex] || '',
                                                                     explanation: data.explanation,
                                                                     hasConflict: data.has_conflict,
@@ -829,6 +856,16 @@ export function LiveExamView({
                                                 >
                                                     Reveal
                                                 </button>
+
+                                                {/* Copy for AI: always in drills; hidden during a strict Live Simulation (exams 1 and 2). */}
+                                                {isDrillSession && (
+                                                    <CopyForAiButton
+                                                        question={activeQuestion}
+                                                        attempt={liveHandoffAttempt(
+                                                            activeQuestion.id,
+                                                        )}
+                                                    />
+                                                )}
 
                                                 {revealedAnswer && revealedAnswer.questionId === activeQuestion?.id && (
                                                     <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm dark:border-amber-900/50 dark:bg-amber-950/30">

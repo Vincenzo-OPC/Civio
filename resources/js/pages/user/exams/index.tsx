@@ -192,6 +192,13 @@ export default function ExamIndex(props: ExamIndexProps) {
                     isMobilePaletteOpen={isMobilePaletteOpen}
                     setIsMobilePaletteOpen={setIsMobilePaletteOpen}
                     setReviewScreenActive={setReviewScreenActive}
+                    examLevel={
+                        isDrillSession
+                            ? 'Practice'
+                            : selectedExamId === 2
+                              ? 'Subprofessional'
+                              : 'Professional'
+                    }
                 />
             );
         }
