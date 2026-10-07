@@ -8,7 +8,7 @@ is not a plugin or MCP server; see `.entire/README.md`.
 - Checkpoints: **git-refs** strategy, `refs/entire/checkpoints/...`, pushed to `origin`
 - Agents wired: **Codex** and **Claude Code**
 - Telemetry: off. Secret redaction: `.entire/settings.json`
-- Canonical MSI study app: Docker `hiraya-review-app` on `localhost:8080` (do not
+- Canonical MSI study app: the Docker study container on `localhost:8080` (do not
   break it; never touch Hermes on `:8642`). Box build tree: `/workspace/civio-build`.
 
 ## How a checkpoint gets recorded
@@ -105,5 +105,5 @@ Notes:
 
 ## Related
 
-- `docs/CHANGES_FROM_HIRAYA.md`: every difference from the original Hiraya.
+- `docs/CHANGES_SINCE_BASELINE.md`: every difference from the baseline (`d3f0368`).
 - `CHANGELOG.md`: generated with `npm run changelog` (git-cliff).

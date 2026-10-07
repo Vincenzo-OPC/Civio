@@ -1,16 +1,16 @@
 # git-cliff config for Civio. Regenerate with: npm run changelog
 # Docs: https://git-cliff.org/docs/configuration
-# History before d3f0368 is upstream Hiraya plus GT's desktop patches; see
-# docs/CHANGES_FROM_HIRAYA.md. The changelog covers Civio commits only.
+# History before d3f0368 (tag `baseline`) is the upstream code plus GT's desktop
+# patches; see docs/CHANGES_SINCE_BASELINE.md. The changelog covers Civio commits only.
 
 [changelog]
 header = """
 # Changelog
 
-All notable changes to Civio since the desktop Hiraya baseline
-(`hiraya-baseline`, d3f0368). Generated from Conventional Commits by
-[git-cliff](https://git-cliff.org); do not edit by hand, run `npm run changelog`.
-For what differs from the original Hiraya, see `docs/CHANGES_FROM_HIRAYA.md`.\n
+All notable changes to Civio since the baseline (tag `baseline`, d3f0368).
+Generated from Conventional Commits by [git-cliff](https://git-cliff.org); do not
+edit by hand, run `npm run changelog`. For everything that differs from the
+baseline, see `docs/CHANGES_SINCE_BASELINE.md`.\n
 """
 body = """
 {% if version %}\
@@ -38,6 +38,12 @@ protect_breaking_commits = true
 filter_commits = false
 tag_pattern = "v[0-9].*"
 sort_commits = "oldest"
+# Two pushed commit subjects (5fe2d40, f28f717) named the upstream app; pushed
+# history is never rewritten, so their changelog lines are reworded here.
+commit_preprocessors = [
+  { pattern = '^docs: track every difference from \w+; honest Entire status', replace = "docs: track every difference from the baseline; honest Entire status" },
+  { pattern = '^chore: rebrand \w+ to Civio across UI, meta, and docs', replace = "chore: rebrand to Civio across UI, meta, and docs" },
+]
 commit_parsers = [
   { message = "^docs\\(changelog\\)", skip = true },
   { message = "^security", group = "<!-- 0 -->Security" },

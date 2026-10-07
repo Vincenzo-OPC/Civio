@@ -6,8 +6,8 @@
 
 ## Provenance
 
-Civio reuses the Hiraya Review codebase (CSE mocks, drills, Dexter tutor). Work
-continues across Codex, Grok Build, Grok Bot, Claude and human contributors.
+Civio builds on the baseline codebase at `d3f0368` (CSE mocks, drills, Dexter tutor).
+Work continues across Codex, Grok Build, Grok Bot, Claude and human contributors.
 GitHub `Vincenzo-OPC/Civio` is the durable record — not any one chat history.
 
 ## Read order before acting
@@ -16,7 +16,7 @@ GitHub `Vincenzo-OPC/Civio` is the durable record — not any one chat history.
 2. This file.
 3. `docs/CIVIO_CODEX_BUILD_BRIEF.md` — phased execution order.
 4. `docs/ARCHITECTURE.md`, `docs/DEPLOY.md`, `docs/DESKTOP_PATCHES_TO_PORT.md`,
-   `docs/CHANGES_FROM_HIRAYA.md` (what differs from Hiraya), `CHANGELOG.md`.
+   `docs/CHANGES_SINCE_BASELINE.md` (what differs from the baseline), `CHANGELOG.md`.
 5. `docs/CSE-Question-Design-Spec.md` before any bank content work.
 6. Obsidian Intersect vault for GT durable notes (`Projects\CIVIO\...`).
 
@@ -29,13 +29,14 @@ Philippine Civil Service Exam study app. Brand **Civio** (Title Case). Tutor
 
 ## Non-negotiable
 
-- Never force-push `main`. Never touch Hermes `:8642` or MSI `hiraya-review-*` containers.
+- Never force-push `main`. Never touch Hermes `:8642` or the MSI Docker study
+  containers (app `:8080`, Postgres `:5433`).
 - Never expose API keys client-side (`VITE_*` secrets forbidden).
 - Never add bank questions without an approved design-spec pass.
 - Server grades exam attempts; do not trust client `cat_scores`.
 - Do not ship `correct_option` / `explanation` in live exam JSON before submit.
 - No secrets in commits.
-- Behaviour change vs Hiraya → update `docs/CHANGES_FROM_HIRAYA.md` in the same commit.
+- Behaviour change vs the baseline → update `docs/CHANGES_SINCE_BASELINE.md` in the same commit.
 
 ## Stack one-liner
 

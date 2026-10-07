@@ -10,7 +10,7 @@ is no `.cursor/` folder (hooks or rules); do not add one.
 2. `docs/CIVIO_CODEX_BUILD_BRIEF.md` — phased build plan (Gate 0 → Phase 0 → 0.5 → 1 → Bank).
 3. `docs/ARCHITECTURE.md` — system shape (create/update if missing; do not invent hosting).
 4. `docs/DESKTOP_PATCHES_TO_PORT.md` — MSI UX patches still to port.
-4a. `docs/CHANGES_FROM_HIRAYA.md` — every difference from the original Hiraya, with commits.
+4a. `docs/CHANGES_SINCE_BASELINE.md` — every difference from the baseline (`d3f0368`), with commits.
 4b. `CHANGELOG.md` — release notes generated from commits (`npm run changelog`).
 5. `docs/CIVIO_AUDIT_AND_PLAN.md` — audit map (paths may have shifted; re-verify in tree).
 6. Durable notes: Obsidian Intersect vault (GT). Question design spec also lives at
@@ -26,7 +26,7 @@ Do not treat old chat handoffs as operating instructions.
 
 - Lowercase `civio` / `civio.ph` only in identifiers, URLs, package names, env prefixes.
 - Avoid all-caps **CIVIO** in UI, metadata, README, and docs.
-- Rebrand from Hiraya is allowed; credit original author in README acknowledgements.
+- The product is Civio everywhere: no other app names in code, UI, docs or seeds.
 
 ## Stack
 
@@ -58,7 +58,8 @@ Formatting fixes go in a **separate commit** from functional changes.
 
 ## Docker / MSI protection (non-negotiable)
 
-- Never touch GT's MSI Docker containers `hiraya-review-app` / `hiraya-review-db`.
+- Never touch GT's MSI Docker study containers (app `:8080`, Postgres `:5433`; names
+  in `docs/DESKTOP_PATCHES_TO_PORT.md`).
 - Never touch Hermes on port **8642**.
 - Local MSI study app on `localhost:8080` stays the stable study surface.
 - Do not break guest unlimited study (`CIVIO_GUEST_UNLIMITED`) without GT approval.
@@ -73,11 +74,11 @@ Formatting fixes go in a **separate commit** from functional changes.
 - Conventional Commits (`feat`, `fix`, `perf`, `refactor`, `test`, `docs`, `style`,
   `chore`, `security`, optional scope). `CHANGELOG.md` is generated from them with
   git-cliff (`cliff.toml`); do not hand-edit it.
-- **Hiraya diff rule:** every commit or PR that changes behaviour compared with the
-  original Hiraya (`codebykenth/hiraya-review`) must update
-  `docs/CHANGES_FROM_HIRAYA.md` in the same change.
+- **Baseline diff rule:** every commit or PR that changes behaviour compared with the
+  baseline (`d3f0368`, tag `baseline`) must update
+  `docs/CHANGES_SINCE_BASELINE.md` in the same change.
 - Release tags are annotated, pushed with `git push origin <tag>` (never forced).
-  Never push to the local read-only `hiraya-upstream` remote.
+  Never push to the local read-only `upstream-baseline` remote.
 - Bundle budgets: `npm run build && npm run size` (size-limit, brotli). Raise a
   budget only on purpose, and say why in the commit.
 
@@ -125,7 +126,7 @@ Cloudflare (DNS/CDN, Turnstile, analytics). See `docs/DEPLOY.md`.
 ## Agent tooling
 
 - Entire CLI: see `ENTIRE.md` and `.entire/README.md`. Codex + Claude Code hooks and `.githooks/` are committed; capture starts after the one-time MSI steps in `ENTIRE.md` (`git config core.hooksPath .githooks`, approve Codex hooks).
-- Changelog: `npm run changelog` (git-cliff). Hiraya diff: `docs/CHANGES_FROM_HIRAYA.md`.
+- Changelog: `npm run changelog` (git-cliff). Baseline diff: `docs/CHANGES_SINCE_BASELINE.md`.
 - Lite mode plan for cheap phones / slow data: `docs/LITE_MODE_PLAN.md`.
 - Laravel Boost guidelines remain in `GEMINI.md` for framework conventions.
 

@@ -1,17 +1,18 @@
-# Changes from the original Hiraya
+# Changes since baseline
 
-The living record of how Civio differs from the original Hiraya Review app.
-Update it in the same commit as any change that makes Civio behave differently
-from Hiraya (see "How to keep this current" below).
+The living record of how Civio differs from the baseline (commit `d3f0368`, tag
+`baseline`) and the upstream code it was built from. Update it in the same commit
+as any change that makes Civio behave differently from the baseline (see "How to
+keep this current" below).
 
 ## Baseline
 
 | | |
 | --- | --- |
-| Upstream repo | [`codebykenth/hiraya-review`](https://github.com/codebykenth/hiraya-review), default branch `main` |
+| Upstream repo | local fetch-only remote `upstream-baseline`, default branch `main` |
 | Upstream tip checked | `7b9f6bbb638938f7ab8f75688bc3976ed1ce4c7c`, 25 Sep 2026 00:09 PHT, "fix(analytics): safely handle missing keys in ai analysis orchestrator" (checked 7 Oct 2026) |
 | Where Civio forked | `e91c26d` (21 Sep 2026, "feat(ui): extract reusable AiModelSelect component…"). Civio's git history contains upstream history up to this commit. |
-| Civio baseline | `d3f0368` (5 Oct 2026, "Civio baseline from desktop Hiraya"), tag `hiraya-baseline`: upstream `e91c26d` plus GT's desktop study patches (`718763a` → `d3f0368`) |
+| Civio baseline | `d3f0368` (5 Oct 2026), tag `baseline`: upstream `e91c26d` plus GT's desktop study patches (`718763a` → `d3f0368`) |
 | Civio versions | `v0.1.0-phase0` (`647e484`), `v0.1.5-phase0.5` (Phase 0.5 + Copy for AI + clone removal) |
 
 **Upstream changes not in Civio:** none as of `7b9f6bb`. That last upstream
@@ -25,13 +26,13 @@ Biggest areas by file count: `scripts/` (bank seeds), `app/`, `resources/js/page
 To see it yourself:
 
 ```bash
-git remote add hiraya-upstream https://github.com/codebykenth/hiraya-review.git  # local only
-git remote set-url --push hiraya-upstream DISABLED_read_only
-git config remote.hiraya-upstream.tagOpt --no-tags
-git fetch hiraya-upstream
-git diff --stat hiraya-upstream/main HEAD
-git log --oneline hiraya-upstream/main..HEAD     # Civio + desktop commits
-git log --oneline HEAD..hiraya-upstream/main     # upstream commits Civio lacks
+git remote add upstream-baseline <upstream repo URL>   # local only, ask GT for the URL
+git remote set-url --push upstream-baseline DISABLED_read_only
+git config remote.upstream-baseline.tagOpt --no-tags
+git fetch upstream-baseline
+git diff --stat upstream-baseline/main HEAD
+git log --oneline upstream-baseline/main..HEAD     # Civio + desktop commits
+git log --oneline HEAD..upstream-baseline/main     # upstream commits Civio lacks
 ```
 
 ## Summary by area
@@ -43,7 +44,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 
 | What changed | Why | Commits |
 | --- | --- | --- |
-| Scores are recomputed on the server from the bank (`ExamGradingService`); client `cat_scores` are ignored. | Hiraya trusted the browser's score, so results could be forged. | `d19afda` |
+| Scores are recomputed on the server from the bank (`ExamGradingService`); client `cat_scores` are ignored. | The baseline trusted the browser's score, so results could be forged. | `d19afda` |
 | Live exam JSON no longer carries `correct_option` or `explanation` (`ExamQuestionResource` `$includeAnswerKey`). Keys come back only from `/exams/reveal` or after submit. | Answer keys were readable in page props during a mock. | `d19afda` |
 | Answers are stored by question ID and original option index (`originalOptionIndices`); legacy position-keyed attempts still read. | Option shuffle made position keys and Reveal ("sirit") mark the wrong choice. | `d19afda` |
 | Open `/clear-cache-temp-route` removed; browser migrate/rollback only with `CIVIO_ALLOW_BROWSER_MIGRATIONS` outside production. | Anyone could clear cache or run migrations from a URL. | `761a3bd` |
@@ -62,7 +63,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Reveal and Expound endpoints (`POST /exams/reveal`, `/exams/expound`); Reveal maps the original key index back to the shuffled option. | Learn after answering; fix wrong-choice Reveal. | Desktop `d3f0368`, `d19afda` |
 | Home shows Start Pro · Start Sub Pro · Practice Drills; no "Try Mock Test" button or picker. | Fewer taps to start. | Desktop, guarded by `76f0542` |
 | Content shield (blur/copy/print blocking) off when `CIVIO_CONTENT_SHIELD=false`, then reduced to a safe stub API (`use-content-shield.ts`). | It blocked study use, and its early return broke React's rules of hooks. | Desktop `095ef1b`, `acedd26` |
-| Inline scripts in `app.blade.php` are plain JavaScript again. The desktop copy override had TypeScript casts (`as HTMLElement`, `as KeyboardEvent`), so browsers threw a SyntaxError and skipped the whole block, including the pre-paint system dark-mode check. Dark-mode detection now has its own `<script>`; the copy override runs as intended on exam pages and localhost but only intercepts copy, cut, contextmenu and selectstart (the old version would also have swallowed every keydown/keyup, breaking dialogs, forms and React key handlers). Pest checks the rendered scripts with `node --check` and runs the dark-mode logic. | Dark pages flashed light before the app loaded, and the copy override never ran. | `fix(view)` dark-mode commit |
+| Inline scripts in `app.blade.php` are plain JavaScript again. The desktop copy override had TypeScript casts (`as HTMLElement`, `as KeyboardEvent`), so browsers threw a SyntaxError and skipped the whole block, including the pre-paint system dark-mode check. Dark-mode detection now has its own `<script>`; the copy override runs as intended on exam pages and localhost but only intercepts copy, cut, contextmenu and selectstart (the old version would also have swallowed every keydown/keyup, breaking dialogs, forms and React key handlers). Pest checks the rendered scripts with `node --check` and runs the dark-mode logic. | Dark pages flashed light before the app loaded, and the copy override never ran. | `51c429b` |
 | Mojibake punctuation fixed on the scorecard and submit dialog. | Garbled characters from a bad encoding pass. | `4f4eb21` |
 
 ### Study and tutor
@@ -85,7 +86,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 
 | What changed | Why | Commits |
 | --- | --- | --- |
-| Local practice seeds and ~495 original CSE-style practice items (`scripts/seed_unique_cse_batch_2026-09-30.sql`, `…2026-10-03.sql`, `seed_cse_pack_200_2026-10-03.sql`) plus generators. Not official CSC items. | Hiraya shipped no practice bank for local use. | Desktop `718763a`, `f807222`, `d3f0368` |
+| Local practice seeds and ~495 original CSE-style practice items (`scripts/seed_unique_cse_batch_2026-09-30.sql`, `…2026-10-03.sql`, `seed_cse_pack_200_2026-10-03.sql`) plus generators. Not official CSC items. | The baseline shipped no practice bank for local use. | Desktop `718763a`, `f807222`, `d3f0368` |
 | Seed scripts moved to `scripts/seeds/` with a README. | Root was cluttered. | `e21d94c` |
 | `??` lost math symbols: root cause (PowerShell 5.1 pipe), `client_encoding` in seed SQL, `scripts/import-sql-utf8.ps1`, and `php artisan civio:repair-bank-encoding`. | Stems showed `??` instead of × ÷ ₱ etc. | `22fc855` |
 | Seeder saves one copy per item; `php artisan civio:remove-variant-clones` deletes or archives old "(variant N)" clones; Postgres SQL for desktop DBs. | Clone filler questions removed (GT approved). | `d8406d8`, `4bce08e` |
@@ -94,7 +95,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 
 | What changed | Why | Commits |
 | --- | --- | --- |
-| Hiraya → **Civio** (Title Case) in UI, manifest, Blade SEO, README, Docker/env defaults, legal seeder; `civio_logo*.png`; one-time migration of `hiraya_*` localStorage keys. Not-official-CSC disclaimer kept; tutor stays Dexter. | Civio is GT's product built on Hiraya. | `5fe2d40`, `6277c17` |
+| Rebrand to **Civio** (Title Case) in UI, manifest, Blade SEO, README, Docker/env defaults, legal seeder; `civio_logo*.png`; one-time migration of legacy localStorage keys to `civio_*`. Not-official-CSC disclaimer kept; tutor stays Dexter. | Civio is GT's product. | `5fe2d40`, `6277c17` |
 
 ### Performance and PWA
 
@@ -110,32 +111,33 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 
 | Upstream commit | What | Civio commit |
 | --- | --- | --- |
-| `7b9f6bb` (25 Sep 2026) | `AiAnalysisOrchestrator::resolveAnalysis` treats a non-array `analysis_json` as `[]` and defaults missing `subject_breakdowns`, `critical_weaknesses`, `top_strengths` (`[]`) and `readiness_index` (`0`) when merging fresh drill results. Applied cleanly; Pest coverage added in `tests/Feature/Services/AiAnalysisOrchestratorTest.php`. | the `fix(analytics)` cherry-pick (message ends "cherry picked from commit 7b9f6bb…") |
+| `7b9f6bb` (25 Sep 2026) | `AiAnalysisOrchestrator::resolveAnalysis` treats a non-array `analysis_json` as `[]` and defaults missing `subject_breakdowns`, `critical_weaknesses`, `top_strengths` (`[]`) and `readiness_index` (`0`) when merging fresh drill results. Applied cleanly; Pest coverage added in `tests/Feature/Services/AiAnalysisOrchestratorTest.php`. | `c6a173f` (message ends "cherry picked from commit 7b9f6bb…") |
 
 ### Docs, tests and agent setup
 
 | What changed | Why | Commits |
 | --- | --- | --- |
 | `AGENTS.md`, `CLAUDE.md`, `ENTIRE.md`, `.entire/`; Entire hooks for Codex (`.codex/hooks.json`) and Claude Code (`.claude/settings.json`) plus committed git hooks in `.githooks/` (the earlier `.cursor/hooks.json` was dropped); docs for architecture, deploy, libraries, audit plan, build brief, question design spec, AI study system, AI product standard, external AI handoff, desktop patches. | Repeatable agent work and decisions on record. | `d66d2aa`, `5fe2d40`, `9fe51a4`, `e4e3d4c`…`1d4c96d`, `9ab859c`, `9f3891c`, `9bf7508` |
-| Pest coverage for server scoring, Unicode round-trip, bank repair, clone removal, tutor stub; JS tests (`npm run test:js`) for clocks, study bias, home launchers, AI handoff, FSRS, mock pools, Lite mode. Pest for the server mock selector, mock sessions and Lite prop trimming. tsc/eslint green. | Hiraya had no tests for these paths. | `d19afda`, `22fc855`, `4bce08e`, `ed5aa64`, `acedd26`, others above |
+| Pest coverage for server scoring, Unicode round-trip, bank repair, clone removal, tutor stub; JS tests (`npm run test:js`) for clocks, study bias, home launchers, AI handoff, FSRS, mock pools, Lite mode. Pest for the server mock selector, mock sessions and Lite prop trimming. tsc/eslint green. | The baseline had no tests for these paths. | `d19afda`, `22fc855`, `4bce08e`, `ed5aa64`, `acedd26`, others above |
 | `CHANGELOG.md` via git-cliff (`npm run changelog`), bundle budgets via size-limit (`npm run size`), `docs/LITE_MODE_PLAN.md`. | Track releases and page weight. | this doc's commit series |
+| This file renamed to `docs/CHANGES_SINCE_BASELINE.md` ("Changes since baseline"); tag `baseline` added on `d3f0368` (the older baseline tag is left as is); the local read-only remote is now `upstream-baseline`. | One neutral name for the baseline everywhere. | `docs(baseline)` rename commit |
 
 ### Removed
 
 | What | Why | Commits |
 | --- | --- | --- |
 | AdSense script, `public/ads.txt`, Search Console verify file. | No ads in Civio. | `e21d94c` |
-| GCash / Maya / Buy Me a Coffee QR images and donation links in the support widget. | Hiraya's donation channels don't belong in Civio. | `e21d94c` |
+| GCash / Maya / Buy Me a Coffee QR images and donation links in the support widget. | The baseline's donation channels don't belong in Civio. | `e21d94c` |
 | Desktop debug junk: `_pw/` Playwright bundles, `_restore/` patch copies, debug PNG/HTML, `_php-shim`, `public/clear-exam.html` and `resume-exam.html`, `.bak-demo` files, pnpm lockfiles. | Not source code. | `e21d94c`, `ba8c622` |
 | Hand-written `public/sw.js`. | Replaced by the generated SW. | `647e484` |
 
 ## Desktop-only patches that came in through `d3f0368`
 
-These were made on GT's MSI tree (`C:\Users\GT\Desktop\Grok\CSE\Hiraya-Review`,
-Docker `hiraya-review-app` :8080 / `hiraya-review-db` :5433) between 21 Sep and
-5 Oct 2026, then pushed as the Civio baseline. Sources: `git log e91c26d..d3f0368`,
-`FORK_NOTES_GT_2026-09-19.md`, `LOCAL_STUDY_PATCHES_LOG.md`, the MSI note
-`Local-Study-Patches.md` (copy on the box), and `docs/DESKTOP_PATCHES_TO_PORT.md`.
+These were made on GT's MSI desktop tree (Docker app :8080 / db :5433; paths and
+container names in `docs/DESKTOP_PATCHES_TO_PORT.md`) between 21 Sep and 5 Oct 2026,
+then pushed as the Civio baseline. Sources: `git log e91c26d..d3f0368`, the MSI note
+`Local-Study-Patches.md`, and `docs/DESKTOP_PATCHES_TO_PORT.md` (the older fork notes
+and patch log were folded in there and removed; they remain in git history).
 
 | Commit | Date (PHT) | Patch | Status in Civio now |
 | --- | --- | --- | --- |
@@ -148,20 +150,20 @@ Docker `hiraya-review-app` :8080 / `hiraya-review-db` :5433) between 21 Sep and
 
 Container-only and data-only changes on the MSI are **not** in git and are not
 reproduced by Civio: `replace_first_20.sql` applied to IDs 457–476 in the desktop DB,
-the Docker autostart task, the desktop "Start Hiraya" shortcut, and any files
+the Docker autostart task, the desktop start shortcut, and any files
 `docker cp`'d into the running container. The MSI DB still needs
 `civio:repair-bank-encoding` and `civio:remove-variant-clones` (or the SQL in
 `docs/DESKTOP_PATCHES_TO_PORT.md`).
 
 ## How to keep this current
 
-1. Any commit or PR that makes Civio behave differently from Hiraya updates this
+1. Any commit or PR that makes Civio behave differently from the baseline updates this
    file in the same change: add or edit the row in the right area with what, why
    and the commit (use the short SHA after merging, or "this PR").
-2. Before a release tag: `git fetch hiraya-upstream`, then
-   `git log --oneline HEAD..hiraya-upstream/main` to list new upstream commits.
+2. Before a release tag: `git fetch upstream-baseline`, then
+   `git log --oneline HEAD..upstream-baseline/main` to list new upstream commits.
    Note each one under "Upstream changes not in Civio" or cherry-pick it.
 3. Bump the "Upstream tip checked" row with the SHA and date you compared against.
 4. Regenerate the changelog with `npm run changelog` (add `-- --tag vX.Y.Z` when
    cutting a release), then tag with an annotated tag and `git push origin <tag>`.
-5. Never push to `hiraya-upstream`; it is a local, read-only remote.
+5. Never push to `upstream-baseline`; it is a local, read-only remote.
