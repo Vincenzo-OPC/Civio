@@ -1,54 +1,18 @@
 import { Timer } from 'lucide-react';
 import React from 'react';
+import {
+    examClockTone,
+    formatExamLeft,
+    formatItemElapsed,
+    itemClockTone,
+} from '@/lib/exam-clock';
+import type { ClockTone } from '@/lib/exam-clock';
 
 interface ExamTimerDisplayProps {
     isTimed: boolean;
     timeLeft: number;
     itemElapsed: number;
     formatTime: (secs: number) => string;
-}
-
-type ClockTone = 'calm' | 'amber' | 'red';
-
-function formatExamLeft(secs: number): string {
-    const safe = Math.max(0, Math.floor(secs));
-    const h = Math.floor(safe / 3600);
-    const m = Math.floor((safe % 3600) / 60);
-    const s = safe % 60;
-
-    return `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-}
-
-function formatItemElapsed(secs: number): string {
-    const safe = Math.max(0, Math.floor(secs));
-    const m = Math.floor(safe / 60);
-    const s = safe % 60;
-
-    return `${m}:${String(s).padStart(2, '0')}`;
-}
-
-function examTone(timeLeft: number): ClockTone {
-    if (timeLeft <= 120) {
-        return 'red';
-    }
-
-    if (timeLeft <= 600) {
-        return 'amber';
-    }
-
-    return 'calm';
-}
-
-function itemTone(elapsed: number): ClockTone {
-    if (elapsed > 75) {
-        return 'red';
-    }
-
-    if (elapsed >= 45) {
-        return 'amber';
-    }
-
-    return 'calm';
 }
 
 function toneClass(tone: ClockTone): string {
@@ -98,7 +62,7 @@ export const ExamTimerDisplay = React.memo(function ExamTimerDisplay({
                 <ClockChip
                     label="Exam left"
                     value={formatExamLeft(timeLeft)}
-                    tone={examTone(timeLeft)}
+                    tone={examClockTone(timeLeft)}
                     title="Time left for the whole mock. Amber in the last 10 minutes, red in the last 2."
                 />
             ) : (
@@ -110,7 +74,7 @@ export const ExamTimerDisplay = React.memo(function ExamTimerDisplay({
             <ClockChip
                 label="This item"
                 value={formatItemElapsed(itemElapsed)}
-                tone={itemTone(itemElapsed)}
+                tone={itemClockTone(itemElapsed)}
                 title="Time on this item only. Resets when you move. Amber from 45s, red after 75s."
             />
         </div>
