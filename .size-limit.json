@@ -2,12 +2,12 @@
     {
         "name": "Main entry JS, loaded on every page (brotli)",
         "path": "public/build/assets/app-*.js",
-        "limit": "50 kB"
+        "limit": "48 kB"
     },
     {
         "name": "Vendor JS: React, Inertia, Radix (brotli)",
         "path": "public/build/assets/vendor-*.js",
-        "limit": "125 kB"
+        "limit": "122 kB"
     },
     {
         "name": "App CSS (brotli)",
@@ -17,11 +17,11 @@
     {
         "name": "Exam page chunk (brotli)",
         "path": "public/build/assets/exams-*.js",
-        "limit": "12 kB"
+        "limit": "10 kB"
     },
     {
         "name": "All JS chunks, lazy ones included (brotli)",
         "path": "public/build/assets/*.js",
-        "limit": "1060 kB"
+        "limit": "1040 kB"
     }
 ]

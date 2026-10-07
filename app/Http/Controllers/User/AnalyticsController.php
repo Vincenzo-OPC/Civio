@@ -10,8 +10,10 @@ use App\Http\Resources\AnalyticsMetricsResource;
 use App\Http\Resources\ReadinessReportResource;
 use App\Services\AiAnalysisOrchestrator;
 use App\Services\AnalyticsService;
+use App\Support\LiteMode;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 use Inertia\Response;
 
 class AnalyticsController extends Controller
@@ -66,11 +68,20 @@ class AnalyticsController extends Controller
         $filters = AnalyticsFilterData::fromRequest($request);
 
         $metrics = $this->analyticsService->getAnalyticsMetrics($userId, $filters);
-        $aiAnalysis = $this->aiOrchestrator->resolveAnalysis($userId);
+        $stats = (new AnalyticsMetricsResource($metrics))->resolve();
+
+        if (LiteMode::enabled($request)) {
+            // Lite: text tables instead of charts, and the AI analysis arrives
+            // after first paint as a deferred prop.
+            return $this->render('user/analytics/index', [
+                'stats' => LiteMode::trimAnalyticsStats($stats),
+                'aiAnalysis' => Inertia::defer(fn () => $this->aiOrchestrator->resolveAnalysis($userId)),
+            ]);
+        }
 
         return $this->render('user/analytics/index', [
-            'stats' => (new AnalyticsMetricsResource($metrics))->resolve(),
-            'aiAnalysis' => $aiAnalysis,
+            'stats' => $stats,
+            'aiAnalysis' => $this->aiOrchestrator->resolveAnalysis($userId),
         ]);
     }
 

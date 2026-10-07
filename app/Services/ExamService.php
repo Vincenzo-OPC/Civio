@@ -7,8 +7,12 @@ namespace App\Services;
 use App\DTOs\Exam\ExamSessionQueryData;
 use App\Http\Resources\ExamQuestionResource;
 use App\Http\Resources\ExamScorecardResource;
+use App\Models\Question;
 use App\Repositories\QuestionRepositoryInterface;
 use App\Repositories\UserRepositoryInterface;
+use Illuminate\Support\Collection;
+use Inertia\DeferProp;
+use Inertia\Inertia;
 
 class ExamService
 {
@@ -16,7 +20,6 @@ class ExamService
         protected QuestionRepositoryInterface $questionRepository,
         protected ExamAttemptService $attemptService,
         protected CategoryService $categoryService,
-        protected ExamAttemptFormatter $formatter,
         protected DeterministicAnalysisService $deterministicService,
         protected UserRepositoryInterface $userRepository
     ) {}
@@ -29,12 +32,10 @@ class ExamService
      *     categories: array<int, mixed>,
      *     savedAttempt: array<string, mixed>|null,
      *     retakeSource: array{attempt_id: int, question_ids: array<int, int>, track: string, mode: string}|null,
-     *     seenQuestionIdsByTrack: array<string, array<int, int>>,
-     *     wrongQuestionIdsByTrack: array<string, array<int, int>>,
-     *     aiAnalysis: array{status: string, data: array<string, mixed>|null}
+     *     aiAnalysis: array{status: string, data: array<string, mixed>|null}|DeferProp
      * }
      */
-    public function getExamSessionData(ExamSessionQueryData $query, ?int $userId): array
+    public function getExamSessionData(ExamSessionQueryData $query, ?int $userId, bool $lite = false): array
     {
         $activeQuestions = $this->questionRepository->getActivePool();
         $savedAttempt = null;
@@ -61,15 +62,19 @@ class ExamService
             }
         }
 
-        $formattedQuestions = ExamQuestionResource::collectionForExam(
-            $activeQuestions,
-            $includeAnswerKey
-        );
-        $questions = collect($formattedQuestions);
-
+        // Lite L1: never ship the whole bank. Full mocks are picked on the
+        // server (POST /exams/sessions); this page only carries the items a
+        // scorecard, retake or drill actually needs.
         if ($attempt !== null) {
-            $questions = $questions->whereIn('id', $attempt->question_ids);
+            $wanted = array_map('intval', (array) $attempt->question_ids);
+            $selected = $activeQuestions->whereIn('id', $wanted);
+        } elseif ($query->isDrill) {
+            $selected = $this->drillCandidates($activeQuestions, $query);
+        } else {
+            $selected = $activeQuestions->take(0);
         }
+
+        $questions = collect(ExamQuestionResource::collectionForExam($selected, $includeAnswerKey));
 
         if (($savedAttempt || $retakeSource) && $attempt) {
             $questions = $questions->sortBy(function ($q) use ($attempt) {
@@ -81,35 +86,69 @@ class ExamService
 
         $categories = $this->categoryService->getCategoryTree();
 
-        $seenQuestionIdsByTrack = $this->formatter->seenQuestionIdsByTrack($userId);
-        $wrongQuestionIdsByTrack = $this->formatter->wrongQuestionIdsByTrack($userId);
+        $resolveAnalysis = function () use ($userId, $query): array {
+            if ($userId === null) {
+                return ['status' => 'no_data', 'data' => null];
+            }
 
-        $aiAnalysis = [
-            'status' => 'no_data',
-            'data' => null,
-        ];
-
-        if ($userId !== null) {
             $targetAttemptId = $query->attemptId ?? $this->attemptService->getLatestUserAttemptId($userId);
 
-            if ($targetAttemptId) {
-                $analysisData = $this->deterministicService->generate($userId, $targetAttemptId, true);
-                $aiAnalysis = [
-                    'status' => 'ready',
-                    'data' => $analysisData,
-                ];
+            if (! $targetAttemptId) {
+                return ['status' => 'no_data', 'data' => null];
             }
-        }
+
+            return [
+                'status' => 'ready',
+                'data' => $this->deterministicService->generate($userId, $targetAttemptId, true),
+            ];
+        };
 
         return [
             'questions' => $questions->all(),
             'categories' => $categories,
             'savedAttempt' => $savedAttempt,
             'retakeSource' => $retakeSource,
-            'seenQuestionIdsByTrack' => $seenQuestionIdsByTrack,
-            'wrongQuestionIdsByTrack' => $wrongQuestionIdsByTrack,
-            'aiAnalysis' => $aiAnalysis,
+            // Lite: the scorecard analysis follows after first paint.
+            'aiAnalysis' => $lite ? Inertia::defer($resolveAnalysis) : $resolveAnalysis(),
         ];
+    }
+
+    /**
+     * Items a drill launch may draw from: hand-picked IDs, else the requested
+     * category (by ID, then by name like the client used to match), else the
+     * first 30 scored items (the client's old fallback). Keys stay withheld.
+     *
+     * @param  Collection<int, Question>  $pool
+     * @return Collection<int, Question>
+     */
+    protected function drillCandidates(Collection $pool, ExamSessionQueryData $query): Collection
+    {
+        $scored = $pool->reject(fn (Question $q) => (bool) ($q->subcategory?->category?->is_demographic ?? false));
+
+        if ($query->customQuestionIds !== []) {
+            $custom = $scored->whereIn('id', $query->customQuestionIds);
+
+            if ($custom->isNotEmpty()) {
+                return $custom;
+            }
+        }
+
+        $matches = collect();
+
+        if ($query->drillCategoryId !== null) {
+            $matches = $scored->filter(fn (Question $q) => (int) ($q->subcategory?->category_id ?? 0) === $query->drillCategoryId);
+        }
+
+        if ($matches->isEmpty() && $query->drillCategoryName !== null && $query->drillCategoryName !== '') {
+            $name = mb_strtolower($query->drillCategoryName);
+            $matches = $scored->filter(function (Question $q) use ($name) {
+                $category = mb_strtolower($q->subcategory?->category?->name ?? 'General Information');
+
+                return str_contains($category, $name) || str_contains($name, $category);
+            });
+        }
+
+        return $matches->isNotEmpty() ? $matches : $scored->take(30);
     }
 
     /**

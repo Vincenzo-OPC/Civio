@@ -1,22 +1,22 @@
-import { Head } from '@inertiajs/react';
+import { Deferred, Head } from '@inertiajs/react';
 import { BarChart, TrendingUp, Target, Printer } from 'lucide-react';
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { PageContainer } from '@/components/layout/page-container';
 import { PageHeader } from '@/components/layout/page-header';
 import { HowItWorksModal } from '@/components/shared/how-it-works-modal';
 import { Button } from '@/components/ui/button';
+import { useLiteMode } from '@/hooks/use-lite-mode';
 import { AiDiagnosticBanner } from './components/ai-diagnostic-banner';
 import { AnalyticsFilters } from './components/analytics-filters';
 import { CseReadinessCard } from './components/cse-readiness-card';
+import { LiteAnalyticsTables } from './components/lite-analytics-tables';
 import { MetricsGrid } from './components/metrics-grid';
-import { PacingTrendChart } from './components/pacing-trend-chart';
-import { QuestionVolumeChart } from './components/question-volume-chart';
-import { ScoreHistoryChart } from './components/score-history-chart';
-import { SubcategoryRadarChart } from './components/subcategory-radar-chart';
 import { SubjectBreakdownAccordion } from './components/subject-breakdown-accordion';
-import { SubjectMasteryChart } from './components/subject-mastery-chart';
 import { useAnalyticsState } from './hooks/use-analytics-state';
 import type { AnalyticsProps } from './types';
+
+// recharts only loads when charts are shown (never in Lite mode).
+const AnalyticsCharts = lazy(() => import('./components/analytics-charts'));
 
 export default function AnalyticsIndex({ stats, aiAnalysis }: AnalyticsProps) {
     const {
@@ -29,6 +29,7 @@ export default function AnalyticsIndex({ stats, aiAnalysis }: AnalyticsProps) {
         filteredChartData,
         categories,
     } = useAnalyticsState({ stats, aiAnalysis });
+    const { lite } = useLiteMode();
 
     const handlePrint = () => {
         window.print();
@@ -87,28 +88,42 @@ export default function AnalyticsIndex({ stats, aiAnalysis }: AnalyticsProps) {
             {/* Performance KPI Metrics Grid */}
             <MetricsGrid activeStats={activeStats} />
 
-            {/* AI Diagnostic Report Banner */}
-            <AiDiagnosticBanner aiAnalysis={aiAnalysis} />
+            {/* AI Diagnostic Report Banner (deferred in Lite) */}
+            <Deferred
+                data="aiAnalysis"
+                fallback={
+                    <p className="text-sm text-muted-foreground">
+                        Loading your diagnostic report...
+                    </p>
+                }
+            >
+                <AiDiagnosticBanner aiAnalysis={aiAnalysis} />
+            </Deferred>
 
-            {/* Charts Section */}
+            {/* Charts Section (text tables in Lite) */}
             <div className="flex flex-col gap-4 sm:gap-6">
-                {/* Row 1: Score History (Full Width) */}
-                <ScoreHistoryChart
-                    chartData={filteredChartData}
-                    isDemoMode={isDemoMode}
-                />
-
-                {/* Row 2: Subject Mastery (Radial) + Question Volume (Donut) */}
-                <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
-                    <SubjectMasteryChart categories={categories} />
-                    <QuestionVolumeChart categories={categories} />
-                </div>
-
-                {/* Row 3: Weakest Subcategories (with inline drills) + Pacing Trend (with 54s benchmark) */}
-                <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
-                    <SubcategoryRadarChart categories={categories} />
-                    <PacingTrendChart data={activeStats.pacingTrend || []} />
-                </div>
+                {lite ? (
+                    <LiteAnalyticsTables
+                        chartData={filteredChartData}
+                        categories={categories}
+                        pacingTrend={activeStats.pacingTrend || []}
+                    />
+                ) : (
+                    <Suspense
+                        fallback={
+                            <p className="text-sm text-muted-foreground">
+                                Loading charts...
+                            </p>
+                        }
+                    >
+                        <AnalyticsCharts
+                            chartData={filteredChartData}
+                            categories={categories}
+                            pacingTrend={activeStats.pacingTrend || []}
+                            isDemoMode={isDemoMode}
+                        />
+                    </Suspense>
+                )}
 
                 {/* Row 4: Detailed Subject & Subcategory Breakdown Accordion */}
                 <SubjectBreakdownAccordion categories={categories} />

@@ -32,21 +32,34 @@ class DashboardService
      *     nextModule: array<string, mixed>|null
      * }
      */
-    public function getDashboardData(int $userId): array
+    public function getDashboardData(int $userId, bool $includeAnalysis = true): array
     {
-        $aiAnalysis = $this->aiOrchestrator->resolveStrictStatusAndData($userId);
-
-        return [
+        $data = [
             'stats' => $this->getExamDateStats(),
-            'aiAnalysis' => [
-                'status' => $aiAnalysis['status'],
-                'data' => $aiAnalysis['data'],
-            ],
             'dailyGoal' => $this->getDailyGoalStats($userId),
             'todayTasks' => $this->getTodayTasks($userId),
             'overdueTasksCount' => $this->getOverdueTasksCount($userId),
             'recentAttempts' => $this->getRecentAttempts($userId),
             'nextModule' => $this->getNextModule($userId),
+        ];
+
+        if ($includeAnalysis) {
+            $data = ['aiAnalysis' => $this->getAiAnalysis($userId), ...$data];
+        }
+
+        return $data;
+    }
+
+    /**
+     * @return array{status: string, data: mixed}
+     */
+    public function getAiAnalysis(int $userId): array
+    {
+        $aiAnalysis = $this->aiOrchestrator->resolveStrictStatusAndData($userId);
+
+        return [
+            'status' => $aiAnalysis['status'],
+            'data' => $aiAnalysis['data'],
         ];
     }
 

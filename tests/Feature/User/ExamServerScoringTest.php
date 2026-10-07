@@ -100,7 +100,19 @@ test('server grades perfect answers as 100 regardless of client metadata', funct
 test('live exam inertia props withhold correct_option and explanation', function () {
     seedExamQuestions(2);
 
-    $response = $this->withoutVite()->get(route('exams.index'));
+    // Lite L1: the plain exam page no longer ships the bank at all.
+    $this->withoutVite()->get(route('exams.index'))
+        ->assertOk()
+        ->assertInertia(fn (Assert $page) => $page
+            ->component('user/exams/index')
+            ->where('questions', fn ($questions) => collect($questions)->isEmpty())
+        );
+
+    // A drill launch carries only that drill's items, still without keys.
+    $response = $this->withoutVite()->get(route('exams.index', [
+        'drill' => 'true',
+        'category_name' => 'Verbal Ability',
+    ]));
     $response->assertOk();
 
     $response->assertInertia(fn (Assert $page) => $page

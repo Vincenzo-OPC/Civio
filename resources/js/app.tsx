@@ -10,11 +10,21 @@ import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
 import SettingsLayout from '@/layouts/settings/layout';
 import { migrateHirayaLocalStorage } from '@/lib/civio-study';
+import {
+    initializeLiteMode,
+    isLiteActive,
+    readOfflineOptIn,
+    shouldRegisterServiceWorker,
+} from '@/lib/lite-mode';
 import { initSmartBackTracking, getOriginTitle } from '@/lib/smart-back';
 import type { Auth } from './types/auth';
 // Echo initialization moved to specific components to save connections
 
 const appName = import.meta.env.VITE_APP_NAME || 'Civio';
+
+// Lite mode first, so the first render already knows (html.lite class +
+// civio_lite cookie; auto-on for slow / Save-Data connections).
+initializeLiteMode();
 
 const componentCache = new Map<string, any>();
 
@@ -203,7 +213,11 @@ migrateHirayaLocalStorage();
 initSmartBackTracking();
 
 // PWA: vite-plugin-pwa register (prompt-to-update). No-op in SSR.
-if (typeof window !== 'undefined') {
+// Lite skips the precache download unless the user opted into offline use.
+if (
+    typeof window !== 'undefined' &&
+    shouldRegisterServiceWorker(isLiteActive(), readOfflineOptIn())
+) {
     void import('virtual:pwa-register')
         .then(({ registerSW }) => {
             registerSW({

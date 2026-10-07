@@ -82,16 +82,6 @@ export interface ExamIndexProps {
     categories?: CategoryItem[];
     savedAttempt?: SavedAttempt | null;
     retakeSource?: RetakeSource | null;
-    seenQuestionIdsByTrack?: {
-        Professional: number[];
-        Subprofessional: number[];
-        Drill: number[];
-    };
-    wrongQuestionIdsByTrack?: {
-        Professional: number[];
-        Subprofessional: number[];
-        Drill: number[];
-    };
     aiAnalysis?: AiAnalysisResult;
 }
 

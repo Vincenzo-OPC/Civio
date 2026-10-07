@@ -24,21 +24,16 @@ import {
     apiPost,
 } from '../utils/exam-utils';
 import { shortMockNotice } from '../utils/mock-pool';
+import { startMockSession } from '../utils/mock-session';
 import { useExamHydration } from './use-exam-hydration';
 import { useExamPersistence } from './use-exam-persistence';
-import { useExamPoolBuilder } from './use-exam-pool-builder';
 import { useExamSubmission } from './use-exam-submission';
 import { useExamTimer } from './use-exam-timer';
 
 const emptySubscribe = () => () => {};
 
 export function useExamState(props: ExamIndexProps) {
-    const {
-        questions = [],
-        savedAttempt,
-        seenQuestionIdsByTrack,
-        wrongQuestionIdsByTrack,
-    } = props;
+    const { questions = [], savedAttempt } = props;
     const { auth } = usePage<{ auth: Auth }>().props;
 
     const mounted = useSyncExternalStore(
@@ -64,6 +59,8 @@ export function useExamState(props: ExamIndexProps) {
     const [isExamSubmitted, setIsExamSubmitted] = useState(false);
     const [reviewScreenActive, setReviewScreenActive] = useState(false);
     const [activeQuestions, setActiveQuestions] = useState<Question[]>([]);
+    /** Server-side mock session (Lite L1). Null for drills and retakes. */
+    const [examSessionId, setExamSessionId] = useState<string | null>(null);
     const [currentIdx, setCurrentIdx] = useState(0);
     const [answers, setAnswers] = useState<Record<number, number>>({});
     const [answerChanges, setAnswerChanges] = useState<Record<number, number>>(
@@ -176,15 +173,6 @@ export function useExamState(props: ExamIndexProps) {
         selectedExamId,
     ]);
 
-    // Sub-hook 1: Pool Builder
-    const { buildFreshExamPool } = useExamPoolBuilder({
-        questions,
-        seenQuestionIdsByTrack,
-        wrongQuestionIdsByTrack,
-        selectedExamId,
-        activeQuestions,
-    });
-
     const submitHandlerRef = useRef<((isAutoSubmit?: boolean) => void) | null>(
         null,
     );
@@ -227,6 +215,7 @@ export function useExamState(props: ExamIndexProps) {
             questionTimes,
             answerChanges,
             selectedExamId,
+            examSessionId,
             isTimed,
             sessionTimeLimitSecs,
             timeLeft,
@@ -248,7 +237,11 @@ export function useExamState(props: ExamIndexProps) {
     }, [handleSubmitExam]);
 
     const beginExamSession = useCallback(
-        (examPool: Question[], examId: number | null) => {
+        (
+            examPool: Question[],
+            examId: number | null,
+            sessionId: string | null = null,
+        ) => {
             // Always drop Demographic Profile / personal EDQs for local study mocks.
             const cleanedPool = examPool.filter((q) => !isDemographicQuestion(q));
             const isDrill = examId === null || examId > 2;
@@ -275,6 +268,7 @@ export function useExamState(props: ExamIndexProps) {
                   : EXAM_CONSTANTS.PROFESSIONAL_TIME_LIMIT_SECS;
 
             setSelectedExamId(examId);
+            setExamSessionId(sessionId);
             setIsTimed(true);
             setActiveQuestions(cleanedPool);
             setCurrentIdx(0);
@@ -313,6 +307,25 @@ export function useExamState(props: ExamIndexProps) {
         ],
     );
 
+    /** Ask the server for a fresh mock (only its items, keys withheld). */
+    const startServerMock = useCallback(
+        async (examId: number | null) => {
+            toast.loading('Picking your mock items...', { id: 'mock-start' });
+
+            try {
+                const mock = await startMockSession(examId);
+                toast.dismiss('mock-start');
+                beginExamSession(mock.questions, examId, mock.sessionId);
+            } catch {
+                toast.error(
+                    "Couldn't start the mock. Check your connection and try again.",
+                    { id: 'mock-start' },
+                );
+            }
+        },
+        [beginExamSession],
+    );
+
     // Sub-hook 4: Hydration & Deep Links
     useExamHydration({
         questions,
@@ -342,8 +355,8 @@ export function useExamState(props: ExamIndexProps) {
         setDrillLanguage,
         setDrillQuestionCount,
         setIsTimed,
-        buildFreshExamPool,
-        beginExamSession,
+        setExamSessionId,
+        startServerMock,
     });
 
     // Sub-hook 5: Session Persistence (Crash Recovery)
@@ -351,6 +364,7 @@ export function useExamState(props: ExamIndexProps) {
         isExamActive,
         isExamSubmitted,
         selectedExamId,
+        examSessionId,
         activeQuestions,
         currentIdx,
         answers,
@@ -364,6 +378,7 @@ export function useExamState(props: ExamIndexProps) {
         onRestoreSession: useCallback(
             (restoredData) => {
                 setSelectedExamId(restoredData.selectedExamId);
+                setExamSessionId(restoredData.examSessionId ?? null);
                 setActiveQuestions(restoredData.activeQuestions);
                 setCurrentIdx(restoredData.currentIdx);
                 setAnswers(restoredData.answers || {});
@@ -380,6 +395,7 @@ export function useExamState(props: ExamIndexProps) {
             },
             [
                 setSelectedExamId,
+                setExamSessionId,
                 setActiveQuestions,
                 setCurrentIdx,
                 setAnswers,
@@ -500,9 +516,8 @@ export function useExamState(props: ExamIndexProps) {
     }, []);
 
     const handleBeginExam = useCallback(() => {
-
-        beginExamSession(buildFreshExamPool(selectedExamId), selectedExamId);
-    }, [beginExamSession, buildFreshExamPool, selectedExamId]);
+        void startServerMock(selectedExamId);
+    }, [startServerMock, selectedExamId]);
 
     const handleSelectOption = useCallback(
         (optionIndex: number) => {
@@ -563,6 +578,7 @@ export function useExamState(props: ExamIndexProps) {
     const handleRegisterFromFreeExam = useCallback(() => {
         const state = {
             selectedExamId,
+            examSessionId,
             questionIds: activeQuestions.map((q) => q.id),
             activeQuestions,
             answers,
@@ -576,6 +592,7 @@ export function useExamState(props: ExamIndexProps) {
         router.visit('/register');
     }, [
         selectedExamId,
+        examSessionId,
         activeQuestions,
         answers,
         currentIdx,
@@ -624,7 +641,13 @@ export function useExamState(props: ExamIndexProps) {
     }, [isDrillSession, setConfirmModal]);
 
     const handlePrintExam = useCallback(async () => {
-        const pool = buildFreshExamPool(selectedExamId);
+        let pool: Question[] = [];
+
+        try {
+            pool = (await startMockSession(selectedExamId)).questions;
+        } catch {
+            pool = [];
+        }
 
         if (!pool || pool.length === 0) {
             toast.error(
@@ -681,7 +704,7 @@ export function useExamState(props: ExamIndexProps) {
                 window.sessionStorage.removeItem('isPdfExporting');
             }
         }
-    }, [buildFreshExamPool, details.title, selectedExamId]);
+    }, [details.title, selectedExamId]);
 
     const getActiveTimeLimitSecs = useCallback(() => {
         if (!isTimed) {

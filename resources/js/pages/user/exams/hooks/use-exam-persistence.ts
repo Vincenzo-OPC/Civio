@@ -24,6 +24,8 @@ function remapIndexedRecord<T>(
 
 export interface ActiveSessionData {
     selectedExamId: number | null;
+    /** Server-side mock session (Lite L1), so a resumed mock still submits. */
+    examSessionId?: string | null;
     activeQuestions: Question[];
     currentIdx: number;
     answers: Record<number, number>;
@@ -41,6 +43,7 @@ interface UseExamPersistenceProps {
     isExamActive: boolean;
     isExamSubmitted: boolean;
     selectedExamId: number | null;
+    examSessionId?: string | null;
     activeQuestions: Question[];
     currentIdx: number;
     answers: Record<number, number>;
@@ -58,6 +61,7 @@ export function useExamPersistence({
     isExamActive,
     isExamSubmitted,
     selectedExamId,
+    examSessionId = null,
     activeQuestions,
     currentIdx,
     answers,
@@ -80,6 +84,7 @@ export function useExamPersistence({
         );
         const sessionData: ActiveSessionData = {
             selectedExamId,
+            examSessionId,
             activeQuestions: scoredQuestions,
             currentIdx: Math.min(currentIdx, Math.max(0, scoredQuestions.length - 1)),
             answers: remapIndexedRecord(answers, activeQuestions, scoredQuestions),
@@ -102,6 +107,7 @@ export function useExamPersistence({
         isExamActive,
         isExamSubmitted,
         selectedExamId,
+        examSessionId,
         activeQuestions,
         currentIdx,
         answers,

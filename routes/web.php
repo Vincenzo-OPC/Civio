@@ -22,6 +22,7 @@ use App\Http\Controllers\User\DashboardController as UserDashboardController;
 use App\Http\Controllers\User\DrillController;
 use App\Http\Controllers\User\ExamController;
 use App\Http\Controllers\User\ExamHistoryController;
+use App\Http\Controllers\User\ExamSessionController;
 use App\Http\Controllers\User\LearnController as UserLearnController;
 use App\Http\Controllers\User\SavedDrillSetController;
 use App\Http\Controllers\User\StudyScheduleController;
@@ -57,6 +58,11 @@ Route::middleware('throttle:global-views')->group(function () {
 
     Route::post('exams/attempts', [ExamController::class, 'storeAttempt'])
         ->name('exams.attempts.store')
+        ->middleware('throttle:global-mutations');
+
+    // Lite L1: server-picked mocks (only the chosen items, keys withheld)
+    Route::post('exams/sessions', [ExamSessionController::class, 'store'])
+        ->name('exams.sessions.store')
         ->middleware('throttle:global-mutations');
 
     Route::post('exams/reveal', [ExamController::class, 'revealAnswer'])

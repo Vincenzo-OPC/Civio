@@ -47,7 +47,7 @@ return Application::configure(basePath: dirname(__DIR__))
 
         $middleware->remove(PreventRequestsDuringMaintenance::class);
 
-        $middleware->encryptCookies(except: ['appearance', 'sidebar_state']);
+        $middleware->encryptCookies(except: ['appearance', 'sidebar_state', 'civio_lite']);
 
         $middleware->web(append: [
             HandleAppearance::class,

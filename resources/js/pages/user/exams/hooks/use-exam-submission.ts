@@ -16,6 +16,8 @@ interface UseExamSubmissionProps {
     questionTimes: Record<number, number>;
     answerChanges: Record<number, number>;
     selectedExamId: number | null;
+    /** Server-side mock session (Lite L1); null for drills and retakes. */
+    examSessionId?: string | null;
     isTimed: boolean;
     sessionTimeLimitSecs: number;
     timeLeft: number;
@@ -39,6 +41,7 @@ export function useExamSubmission({
     questionTimes,
     answerChanges,
     selectedExamId,
+    examSessionId = null,
     isTimed,
     sessionTimeLimitSecs,
     timeLeft,
@@ -194,6 +197,7 @@ export function useExamSubmission({
 
             const payload = {
                 category_id: drillCategoryId ?? selectedExamId,
+                exam_session_id: examSessionId,
                 question_ids: activeQuestions.map((q) => q.id),
                 answers: answersByQuestionId,
                 metadata: {
@@ -289,6 +293,7 @@ export function useExamSubmission({
             questionTimes,
             answerChanges,
             selectedExamId,
+            examSessionId,
             isTimed,
             sessionTimeLimitSecs,
             timeLeft,

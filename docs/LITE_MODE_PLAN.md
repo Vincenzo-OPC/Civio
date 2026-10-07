@@ -1,7 +1,9 @@
 # Lite mode plan: cheap phones and slow internet
 
-Status (7 Oct 2026): **L0 items 1–5 done**; L0 item 6 (nginx/deploy cache
-config) **pending**. L1 and L2 not started. See "L0 results" below.
+Status (7 Oct 2026): **L0 done except item 6** (nginx/deploy cache config,
+pending). **L1 done** (server-picked mocks, Lite toggle, text-first exam and
+drill screens, server-side prop trimming). **L2 pending** (offline drill packs,
+needs GT decisions). See "L0 results" and "L1 results" below.
 
 Goal: a Civio that works on a ₱3,000 Android phone on prepaid 3G/2G data. The
 first exam screen must load fast, a mock must not burn megabytes, and practice
@@ -128,6 +130,39 @@ server behind a gzip proxy, Lighthouse 12.8.2 mobile, simulated Slow 4G, 4× CPU
 - Realtime (laravel-echo + pusher-js) is loaded on demand by `lib/realtime.ts`
   only when a screen subscribes: admins (feedback badge, AI generation), or a user
   waiting for an AI analysis or on Learn.
+
+### L1 results (7 Oct 2026)
+
+Same method as L0, measured after L1 on a 550-item local bank.
+
+| Payload | Before L1 | After L1 |
+| --- | ---: | ---: |
+| `/exams` page props (guest, setup screen) | 168 KB raw / 38.8 KB gzip / 29.7 KB brotli (whole bank) | **5.7 KB / 1.2 KB / 1.0 KB** (no bank) |
+| Pro mock items (`POST /exams/sessions`) | (part of the bank above) | 150 items: 41.0 KB / **10.2 KB gzip** / 8.2 KB brotli |
+| Sub mock items | (part of the bank above) | 145 items: 38.2 KB / 9.0 KB gzip / 7.2 KB brotli |
+| Drill page (`?drill=true&category_name=Numerical Ability`) | whole bank | that category only (91 items locally) |
+
+Keys stay withheld in all of these (`correct_option` and `explanation` absent).
+
+| First-load JS gzip | L0 | L1 |
+| --- | ---: | ---: |
+| Landing | 221 KB | 222 KB |
+| Login | 213 KB | 214 KB |
+| Dashboard | 221 KB | 223 KB |
+| Exam | 284 KB | 286 KB |
+| Analytics, Lite on | (recharts included) | **223 KB**; the charts chunk (150 KB gzip) loads only when charts are shown |
+
+The +1–2 KB is the Lite mode store, toggle and settings.
+
+| Lighthouse mobile (Lite off) | Perf | FCP | LCP | TBT | Transfer |
+| --- | --- | --- | --- | --- | --- |
+| Landing L0 → L1 | 85 → **86** | 2.1 → 2.1 s | 3.5 → 3.5 s | 150 → 130 ms | 365 → 367 KiB |
+| Exam L0 → L1 | 77 → **79** | 2.7 → 2.6 s | 4.5 → 4.5 s | 190 → 120 ms | 421 → **387 KiB** |
+
+Lighthouse can't switch Lite on by itself (the client re-derives Lite from
+localStorage and the connection, and Lighthouse's throttling doesn't set
+`effectiveType`), so there is no separate Lite run. In Lite the landing page
+also skips the hero (26–53 KB).
 
 ## 2. Budgets
 
@@ -258,7 +293,27 @@ then returns only the chosen 150/145 items, keys still withheld:
 | 6 | **Pending.** nginx `custom.conf` with immutable caching for `/build/assets`; delete or fix the unused `conf/nginx/nginx-site.conf` | `Dockerfile`, new `conf/nginx/custom.conf` | Repeat visits ≈ 0 KB JS | Wrong rule could cache HTML; review carefully |
 | 7 | Tighten `.size-limit.json` after each item; optional `npm run size` step in CI | `.size-limit.json`, `.github/workflows/tests.yml` | Prevents regressions | None |
 
-### L1: Lite toggle and text-first screens (days)
+### L1: Lite toggle and text-first screens (days) — **Done** (7 Oct 2026)
+
+What shipped (see "L1 results" below for numbers):
+
+- Server-picked mocks: `POST /exams/sessions` → `MockPoolSelector` (PHP port
+  of the client rules) → only the 150 / 145 items, keys withheld, IDs stored in
+  `exam_sessions` and checked on submit. `/exams` no longer sends the bank.
+- `lib/lite-mode.ts` + `useLiteMode()`: auto (Save-Data, slow-2g/2g/3g), manual
+  Auto/On/Off in Settings → Appearance, "Lite" switch on the dashboard and exam
+  headers; `civio_lite` cookie + `html.lite` class (also set server-side in
+  `app.blade.php`, so no flash).
+- Lite CSS (no animation/transition/blur/shadow, system fonts), no landing
+  hero, analytics text tables with recharts lazy-loaded, realtime skipped, SW
+  precache skipped unless the user opts into offline.
+- Text-first exam/drill body (`lite-exam-body.tsx`) inside the same
+  `LiveExamView` (same state, Reveal, Copy for AI, grading).
+- Server: shared `pusher` config nulled, `civio.lite` shared, analytics
+  chart-only fields stripped, `aiAnalysis` deferred on dashboard, analytics
+  and exams.
+- Not done in L1: Lighthouse CI budgets (optional), Lite-only prefetch rules.
+
 
 | Change | Files | Risk |
 | --- | --- | --- |
@@ -299,9 +354,10 @@ Only where they clearly help:
 
 ## 9. Decisions for GT
 
-1. Ship L0 now (items 1–5 are small and contained; item 6 touches deploy config)?
-2. Lite as a mode flag (recommended) vs a `/lite` layout.
-3. Server-built mock pools (smaller payload, no whole-bank download) as part of L1.
+1. ~~Ship L0 now~~ Done (items 1–5); item 6 (nginx cache config) still needs a
+   decision because it touches deploy config.
+2. ~~Lite as a mode flag vs a `/lite` layout~~ Mode flag, done in L1.
+3. ~~Server-built mock pools~~ Done in L1.
 4. Which items may ever be downloadable offline (they leave strict mocks), and how many per category.
 
 ## How these numbers were measured

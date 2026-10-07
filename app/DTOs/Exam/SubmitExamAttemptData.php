@@ -18,6 +18,7 @@ readonly class SubmitExamAttemptData
         public array $questionIds,
         public array $answers,
         public array $clientMetadata = [],
+        public ?string $examSessionId = null,
     ) {}
 
     public static function fromRequest(StoreExamAttemptRequest $request): self
@@ -50,6 +51,7 @@ readonly class SubmitExamAttemptData
             questionIds: array_values(array_map('intval', (array) ($v['question_ids'] ?? []))),
             answers: (array) ($v['answers'] ?? []),
             clientMetadata: $clientMetadata,
+            examSessionId: isset($v['exam_session_id']) && $v['exam_session_id'] !== '' ? (string) $v['exam_session_id'] : null,
         );
     }
 

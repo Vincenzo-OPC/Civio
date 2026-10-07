@@ -107,8 +107,14 @@ the equivalent Postgres SQL (`scripts/seeds/remove_variant_clones.sql`).
 - **Done:** "(variant N)" clones removed: seeder makes one copy per item, mocks
   use unique items only (no variant fill), `civio:remove-variant-clones` cleans
   existing rows. MSI DB cleanup still pending (desktop patches doc).
-- **In progress:** Copy for AI MVP (`docs/EXTERNAL_AI_HANDOFF.md`).
-- **Then:** Phase 1 foundation → Phase Bank.
+- **Done:** Copy for AI MVP (`docs/EXTERNAL_AI_HANDOFF.md`).
+- **Done:** Lite L0 (items 1–5; item 6 nginx cache config pending) and Lite L1:
+  server-picked mocks (`POST /exams/sessions`, `MockPoolSelector`,
+  `exam_sessions`), Lite mode flag (`lib/lite-mode.ts`, `useLiteMode()`,
+  `civio_lite` cookie), text-first exam/drill screens, server-side prop
+  trimming. See `docs/LITE_MODE_PLAN.md`.
+- **Next:** Lite L2 (offline drill packs, needs GT decisions) → Phase 1
+  foundation → Phase Bank.
 
 ## Hosting intent (not yet executed)
 

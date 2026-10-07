@@ -42,6 +42,8 @@ class StoreExamAttemptRequest extends FormRequest
     {
         return [
             'category_id' => ['nullable', 'integer'],
+            // Lite L1: server-picked mock this attempt belongs to (full mocks only).
+            'exam_session_id' => ['sometimes', 'nullable', 'string', 'size:26'],
             'question_ids' => ['required', 'array', 'min:1'],
             'question_ids.*' => ['integer'],
             'answers' => ['required', 'array'],

@@ -18,7 +18,7 @@ import type {
     AttemptMetadata,
 } from '../types';
 import { isDemographicQuestion, EXAM_CONSTANTS } from '../utils/exam-utils';
-import { shuffleOptionsForQuestion } from './use-exam-pool-builder';
+import { shuffleOptionsForQuestion } from '../utils/mock-pool';
 
 interface UseExamHydrationProps {
     questions: Question[];
@@ -52,8 +52,9 @@ interface UseExamHydrationProps {
     setDrillLanguage: (lang: string) => void;
     setDrillQuestionCount: (count: number | 'all') => void;
     setIsTimed: (val: boolean) => void;
-    buildFreshExamPool: (examId: number | null) => Question[];
-    beginExamSession: (pool: Question[], examId: number | null) => void;
+    setExamSessionId: (id: string | null) => void;
+    /** Lite L1: fetch a server-picked mock and start it. */
+    startServerMock: (examId: number | null) => Promise<void>;
 }
 
 export function useExamHydration({
@@ -83,8 +84,8 @@ export function useExamHydration({
     setDrillLanguage,
     setDrillQuestionCount,
     setIsTimed,
-    buildFreshExamPool,
-    beginExamSession,
+    setExamSessionId,
+    startServerMock,
 }: UseExamHydrationProps) {
     const fallbackQuestions: Question[] = questions;
 
@@ -309,7 +310,7 @@ export function useExamHydration({
             }
 
             setSelectedExamId(examId);
-            beginExamSession(buildFreshExamPool(examId), examId);
+            void startServerMock(examId);
         } else if (isDrillStart && !savedAttempt && !isExamActive) {
             const catName =
                 params.get('category_name') || 'General Information';
@@ -415,6 +416,7 @@ export function useExamHydration({
             );
 
             setSelectedExamId(null);
+            setExamSessionId(null);
             setIsTimed(isTimedParam);
             setActiveQuestions(finalPool);
             setCurrentIdx(0);
@@ -452,8 +454,7 @@ export function useExamHydration({
         fallbackQuestions,
         savedAttempt,
         isExamActive,
-        beginExamSession,
-        buildFreshExamPool,
+        startServerMock,
         setIsFreeAttempt,
         setSelectedExamId,
         setDrillCategoryId,
@@ -462,6 +463,7 @@ export function useExamHydration({
         setDrillLanguage,
         setDrillQuestionCount,
         setIsTimed,
+        setExamSessionId,
         setActiveQuestions,
         setCurrentIdx,
         setAnswers,
@@ -479,12 +481,9 @@ export function useExamHydration({
 
     // 3. Restore guest free exam after registration
     useEffect(() => {
-        if (
-            !auth?.user ||
-            questions.length === 0 ||
-            isExamActive ||
-            isExamSubmitted
-        ) {
+        // Lite L1: the page no longer carries the bank, so restore from the
+        // items saved with the pending exam (not from `questions`).
+        if (!auth?.user || isExamActive || isExamSubmitted) {
             return;
         }
 
@@ -529,6 +528,11 @@ export function useExamHydration({
             }
 
             setSelectedExamId(state.selectedExamId);
+            setExamSessionId(
+                typeof state.examSessionId === 'string'
+                    ? state.examSessionId
+                    : null,
+            );
             setIsTimed(state.isTimed);
             setActiveQuestions(pool);
             setCurrentIdx(Math.min(state.currentIdx || 0, pool.length - 1));
@@ -568,5 +572,6 @@ export function useExamHydration({
         setReviewScreenActive,
         setResults,
         setSubmittedByTimer,
+        setExamSessionId,
     ]);
 }

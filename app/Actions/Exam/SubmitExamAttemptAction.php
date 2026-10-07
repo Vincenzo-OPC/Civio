@@ -6,6 +6,7 @@ namespace App\Actions\Exam;
 
 use App\DTOs\Exam\SubmitExamAttemptData;
 use App\DTOs\Exam\SubmitExamAttemptResult;
+use App\Models\ExamSession;
 use App\Repositories\ExamAttemptRepositoryInterface;
 use App\Services\ExamGradingService;
 use Illuminate\Support\Facades\Cache;
@@ -22,8 +23,31 @@ class SubmitExamAttemptAction
         SubmitExamAttemptData $data,
         ?int $userId,
         ?string $clientIp = null,
-        bool $hasPendingGuestAttempt = false
+        bool $hasPendingGuestAttempt = false,
+        ?ExamSession $examSession = null,
     ): SubmitExamAttemptResult {
+        // Lite L1: a server-picked mock must be submitted with exactly the
+        // items the server served (order may differ), and only once.
+        if ($examSession !== null) {
+            if ($examSession->exam_attempt_id !== null) {
+                return new SubmitExamAttemptResult(
+                    success: false,
+                    statusCode: 409,
+                    message: 'This mock was already submitted.'
+                );
+            }
+
+            $served = array_map('intval', (array) $examSession->question_ids);
+
+            if (array_diff($data->questionIds, $served) !== []) {
+                return new SubmitExamAttemptResult(
+                    success: false,
+                    statusCode: 422,
+                    message: 'These answers do not match the items the server picked for this mock.'
+                );
+            }
+        }
+
         $answeredCount = count(array_filter($data->answers, function ($answer) {
             return $answer !== null && $answer !== '';
         }));
@@ -79,14 +103,18 @@ class SubmitExamAttemptAction
                 $clientMeta
             );
 
-            $attempt = DB::transaction(function () use ($data, $userId, $graded) {
-                return $this->repository->create([
+            $attempt = DB::transaction(function () use ($data, $userId, $graded, $examSession) {
+                $attempt = $this->repository->create([
                     'user_id' => $userId,
                     'category_id' => $data->categoryId,
                     'question_ids' => $data->questionIds,
                     'answers' => $graded['answers'],
                     'cat_scores' => $graded['cat_scores'],
                 ]);
+
+                $examSession?->forceFill(['exam_attempt_id' => $attempt->id])->save();
+
+                return $attempt;
             });
 
             return new SubmitExamAttemptResult(

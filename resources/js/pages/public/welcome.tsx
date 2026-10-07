@@ -20,6 +20,7 @@ import SiteHeader from '@/components/layout/site-header';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { useLiteMode } from '@/hooks/use-lite-mode';
 import { useGuestUnlimited } from '@/lib/civio-study';
 import type { Auth } from '@/types';
 import FeatureGrid from './components/feature-grid';
@@ -27,6 +28,7 @@ import FeatureGrid from './components/feature-grid';
 export default function Welcome() {
     const { auth } = usePage<{ auth: Auth }>().props;
     const guestUnlimited = useGuestUnlimited();
+    const { lite } = useLiteMode();
     const [hoveredStep, setHoveredStep] = useState<number | null>(null);
 
     const startExam = (track: 'professional' | 'subprofessional') => {
@@ -233,33 +235,35 @@ export default function Welcome() {
                                     </Button>
                                 </div>
 </div>
-                            {/* Right Column */}
-                            <div className="relative flex items-center justify-center p-4">
-                                {/* Decorative background glow */}
-                                <div className="pointer-events-none absolute top-1/2 left-1/2 h-2/3 w-2/3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-[80px]"></div>
+                            {/* Right Column (decorative; not rendered or downloaded in Lite mode) */}
+                            {!lite && (
+                                <div className="relative flex items-center justify-center p-4">
+                                    {/* Decorative background glow */}
+                                    <div className="pointer-events-none absolute top-1/2 left-1/2 h-2/3 w-2/3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-[80px]"></div>
 
-                                {/* Lite L0: AVIF/WebP (27–85 KB) instead of the 718 KB PNG; PNG fallback for old browsers. */}
-                                <picture className="relative">
-                                    <source
-                                        type="image/avif"
-                                        srcSet="/images/hero_image-640.avif 640w, /images/hero_image-1024.avif 1024w"
-                                        sizes="(min-width: 1024px) 560px, 90vw"
-                                    />
-                                    <source
-                                        type="image/webp"
-                                        srcSet="/images/hero_image-640.webp 640w, /images/hero_image-1024.webp 1024w"
-                                        sizes="(min-width: 1024px) 560px, 90vw"
-                                    />
-                                    <img
-                                        src="/images/hero_image-640.png"
-                                        alt="Academic Precision Platform"
-                                        width={640}
-                                        height={640}
-                                        decoding="async"
-                                        className="relative h-auto w-full transform rounded-2xl object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-transform duration-500 ease-out hover:-translate-y-2"
-                                    />
-                                </picture>
-                            </div>
+                                    {/* Lite L0: AVIF/WebP (27–85 KB) instead of the 718 KB PNG; PNG fallback for old browsers. */}
+                                    <picture className="relative">
+                                        <source
+                                            type="image/avif"
+                                            srcSet="/images/hero_image-640.avif 640w, /images/hero_image-1024.avif 1024w"
+                                            sizes="(min-width: 1024px) 560px, 90vw"
+                                        />
+                                        <source
+                                            type="image/webp"
+                                            srcSet="/images/hero_image-640.webp 640w, /images/hero_image-1024.webp 1024w"
+                                            sizes="(min-width: 1024px) 560px, 90vw"
+                                        />
+                                        <img
+                                            src="/images/hero_image-640.png"
+                                            alt="Academic Precision Platform"
+                                            width={640}
+                                            height={640}
+                                            decoding="async"
+                                            className="relative h-auto w-full transform rounded-2xl object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-transform duration-500 ease-out hover:-translate-y-2"
+                                        />
+                                    </picture>
+                                </div>
+                            )}
                         </div>
                     </Section>
                     <div className="container mx-auto border-y border-gray-400 px-4 py-10 sm:px-6">

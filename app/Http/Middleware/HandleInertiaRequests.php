@@ -7,6 +7,7 @@ use App\Models\Feedback;
 use App\Models\RolePermission;
 use App\Services\TurnstileService;
 use App\Services\UserPreferenceService;
+use App\Support\LiteMode;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Inertia\Middleware;
@@ -56,6 +57,8 @@ class HandleInertiaRequests extends Middleware
                 ->all();
         });
 
+        $lite = LiteMode::enabled($request);
+
         $pendingFeedbackCount = Cache::remember('pending_feedback_count', 60, function () {
             return Feedback::query()->where('status', 'pending')->count();
         });
@@ -77,7 +80,8 @@ class HandleInertiaRequests extends Middleware
                     })->toArray();
                 }),
             ],
-            'pusher' => [
+            // Lite: no realtime config, so no websocket code or connection.
+            'pusher' => $lite ? ['key' => null, 'cluster' => null, 'host' => null, 'port' => null, 'scheme' => null] : [
                 'key' => config('broadcasting.connections.pusher.key'),
                 'cluster' => config('broadcasting.connections.pusher.options.cluster'),
                 'host' => env('PUSHER_HOST'),
@@ -94,6 +98,7 @@ class HandleInertiaRequests extends Middleware
             'civio' => [
                 'guestUnlimited' => (bool) config('civio.guest_unlimited'),
                 'contentShield' => (bool) config('civio.content_shield'),
+                'lite' => $lite,
             ],
             'pending_feedback_count' => $pendingFeedbackCount,
             'user_reported_ids' => $request->user() ? Feedback::where('user_id', $request->user()->id)

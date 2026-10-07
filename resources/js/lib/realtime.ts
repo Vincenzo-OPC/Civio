@@ -1,4 +1,5 @@
 import type Echo from 'laravel-echo';
+import { isLiteActive } from '@/lib/lite-mode';
 
 /** Pusher/Reverb settings shared by the server as the `pusher` Inertia prop. */
 export interface RealtimeConfig {
@@ -22,7 +23,8 @@ export function connectRealtime(
     config: RealtimeConfig | null | undefined,
     setup: (echo: RealtimeEcho) => void | (() => void),
 ): () => void {
-    if (!config?.key || typeof window === 'undefined') {
+    // Lite: no websocket code or connection at all.
+    if (!config?.key || typeof window === 'undefined' || isLiteActive()) {
         return () => {};
     }
 

@@ -9,9 +9,12 @@ use App\DTOs\Exam\ExamSessionQueryData;
 use App\DTOs\Exam\SubmitExamAttemptData;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Exam\StoreExamAttemptRequest;
+use App\Models\ExamSession;
 use App\Models\Question;
 use App\Services\Dexter\DexterEvaluationService;
+use App\Services\Exam\MockSessionService;
 use App\Services\ExamService;
+use App\Support\LiteMode;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -21,7 +24,8 @@ class ExamController extends Controller
 {
     public function __construct(
         protected ExamService $examService,
-        protected SubmitExamAttemptAction $submitAttemptAction
+        protected SubmitExamAttemptAction $submitAttemptAction,
+        protected MockSessionService $mockSessionService,
     ) {}
 
     /**
@@ -30,7 +34,7 @@ class ExamController extends Controller
     public function index(Request $request): Response
     {
         $query = ExamSessionQueryData::fromRequest($request);
-        $data = $this->examService->getExamSessionData($query, auth()->id());
+        $data = $this->examService->getExamSessionData($query, auth()->id(), LiteMode::enabled($request));
 
         return $this->render('user/exams/index', $data);
     }
@@ -44,11 +48,25 @@ class ExamController extends Controller
         $userId = auth()->id();
         $hasPendingGuest = $request->session()->has('pending_guest_attempt_id');
 
+        $examSession = null;
+
+        if ($dto->examSessionId !== null) {
+            $examSession = ExamSession::find($dto->examSessionId);
+
+            if (! $examSession || ! $this->mockSessionService->owns($examSession, $userId, $request->session())) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'This mock session was not found for you. Start a new mock.',
+                ], 422);
+            }
+        }
+
         $result = $this->submitAttemptAction->execute(
             data: $dto,
             userId: $userId,
             clientIp: $request->ip(),
-            hasPendingGuestAttempt: $hasPendingGuest
+            hasPendingGuestAttempt: $hasPendingGuest,
+            examSession: $examSession,
         );
 
         if (! auth()->check() && $result->attemptId) {
