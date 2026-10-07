@@ -413,7 +413,10 @@ export function summarizeAttemptStrengths(
                 name: sub,
                 parent: cat,
                 correct: subVal.correct ?? 0,
-                missed: Math.max(0, (subVal.total ?? 0) - (subVal.correct ?? 0)),
+                missed: Math.max(
+                    0,
+                    (subVal.total ?? 0) - (subVal.correct ?? 0),
+                ),
                 total: subVal.total ?? 0,
             });
         }
