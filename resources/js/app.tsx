@@ -6,10 +6,10 @@ import { TrafficOverloadGuard } from '@/components/shared/traffic-overload-guard
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { initializeTheme } from '@/hooks/use-appearance';
-import { migrateHirayaLocalStorage } from '@/lib/civio-study';
 import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
 import SettingsLayout from '@/layouts/settings/layout';
+import { migrateHirayaLocalStorage } from '@/lib/civio-study';
 import { initSmartBackTracking, getOriginTitle } from '@/lib/smart-back';
 import type { Auth } from './types/auth';
 // Echo initialization moved to specific components to save connections

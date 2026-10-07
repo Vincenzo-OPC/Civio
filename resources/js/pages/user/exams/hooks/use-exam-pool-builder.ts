@@ -688,6 +688,7 @@ export function useExamPoolBuilder({
             demographicQuestions,
             getSeenIdsForExam,
             getWrongIdsForExam,
+            getTrackNameForExam,
         ],
     );
 
