@@ -1,5 +1,10 @@
 # Civio repository rules
 
+## Future self-improvement experiments (2026-10-08)
+
+When working on agent-assisted coding quality or Dexter tutor experimentation, read [`docs/AI_SELF_IMPROVEMENT.md`](docs/AI_SELF_IMPROVEMENT.md). Civio is an opt-in **evaluation target**, not an independent RSI engine. THE-MACHINE owns agent/meta-agent evolution; keep grading, questions, answer keys, Lite/offline safeguards and held-out evaluations independent. First deliver the current product roadmap; do not launch autonomous mutations or deployments based on this note. Claude agents must read the matching note in `CLAUDE.md`.
+
+
 > **Codex: read [`docs/CODEX_HANDOFF_PLAN.md`](docs/CODEX_HANDOFF_PLAN.md) first.**
 > It has the full record, the security invariants, open decisions and the ranked
 > next phases.
