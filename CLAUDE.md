@@ -1,5 +1,7 @@
 # Claude instructions for Civio
 
+> **Future AI research:** Also read [`docs/AI_SELF_IMPROVEMENT.md`](docs/AI_SELF_IMPROVEMENT.md) when proposing agent/tutor optimization. Civio is an opt-in held-out evaluation target of THE-MACHINE, not a separate self-editing agent. Do not begin autonomous mutation loops or change grading, question-bank or deployment approvals.
+
 > Substantive entry for Claude (Claude Code CLI, Claude.ai projects, Claude Cowork).
 > Pair with `AGENTS.md`. Claude Code often loads this file and skips `AGENTS.md` —
 > keep the locked rules duplicated here.
