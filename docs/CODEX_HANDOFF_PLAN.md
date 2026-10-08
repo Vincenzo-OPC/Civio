@@ -1,5 +1,7 @@
 # Codex handoff plan
 
+> **Long-range AI research (2026-10-08):** `docs/AI_SELF_IMPROVEMENT.md` defines a future opt-in, independently benchmarked Civio testbed for THE-MACHINE's evolutionary agents. It does not change the current ranked product phases, security rules, or authorization gates.
+
 Read this first. It says what Civio is, what has been built (with commits), what
 must never break, what is still open, and what to build next, in order.
 
