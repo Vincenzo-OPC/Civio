@@ -6,6 +6,8 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 |---|---|---|---|---|---|---|
 | 01 | 2026-10-13 | ChatGPT supplements 001: 150 (VFIL 80, GI 30, CLR 40) | 0 release-ready (140 content-pass) | 140 | 10 | audit/round-01.md |
 | 01 fixes | 2026-10-13 | All 150 supplement items fixed (still draft); gap-fill-001 23 | gap-fill: 20 CoS PASS + 3 fixed → approved | 150 fixed | 0 open | audit/round-01-fixes.md |
+| 02 | 2026-10-13 | Batches 001-011, Subprofessional domains: 759 (CLR 151, VEN 203, GI 102, NUM 303) | 759 key-correct | ~27 proposed (CoS) + 58 metadata applied | 0 | audit/round-02.md |
+| 02 gap | 2026-10-13 | gap-fill-002: 14 new drafts (VEN error 5, NUM frac/dec 6, CLR business filing 3) | pending review | – | – | audit/round-02-review-request.md |
 
 ## Round 01
 
@@ -46,3 +48,17 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **Next:**
   - round 02: batches 001-011 Subprofessional parts (clerical, then Verbal English, GI, Numerical)
   - gap-fill 002: English error recognition, fractions and decimals, business-name filing
+
+## Round 02 (2026-10-13)
+
+- **Issues:**
+  - About 25 typo-style misspellings, and the same misspelled words reused across batches.
+  - Filing covers only ARMA Rules 1, 5 and 6, with one stem frame.
+  - Frame repetition in Verbal (89 of 203 share one frame) and Numerical (30 share one frame).
+  - 2 spelling Reveal labels describe the wrong error type.
+- **Decisions:** the content of approved items is untouched; proposals went to CoS. I applied the §10.4 ARMA note to 58 filing items and re-rendered the batch `.md` files.
+- **Gap fill 002:** 14 drafts written.
+- **Next:**
+  - round 03: baseline bank (550), Subprofessional domains first, starting with clerical and GI
+  - CoS rulings on the round 02 proposals
+  - gap fill 003: Filipino idioms and grammar beyond the supplements, and ARMA Rules 4 and 8

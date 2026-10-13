@@ -4898,7 +4898,7 @@
       "reveal": {
         "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
         "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Felipe R. Cruz → CRUZ, Felipe; Dr. Victoria T. Dela Cruz → DELACRUZ, Victoria; Mario P. Lim → LIM, Mario; Engr. Elena G. Navarro → NAVARRO, Elena.",
-        "why_correct": "\"Felipe R. Cruz\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_correct": "\"Felipe R. Cruz\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
           "o1": "\"Engr. Elena G. Navarro\" sorts by the given name. Personal names file by surname first.",
           "o2": "\"Mario P. Lim\" files as LIM, which comes after CRUZ.",
@@ -4965,7 +4965,7 @@
       "reveal": {
         "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
         "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Liza L. Delos Reyes → DELOSREYES, Liza; Felipe V. Dizon → DIZON, Felipe; Ernesto B. Lim → LIM, Ernesto; Danilo G. San Pedro → SANPEDRO, Danilo.",
-        "why_correct": "\"Liza L. Delos Reyes\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_correct": "\"Liza L. Delos Reyes\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
           "o1": "\"Danilo G. San Pedro\" sorts by the given name. Personal names file by surname first.",
           "o2": "\"Felipe V. Dizon\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",
@@ -5094,7 +5094,7 @@
       "reveal": {
         "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
         "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Teresita N. Delos Reyes → DELOSREYES, Teresita; Victoria L. Flores → FLORES, Victoria; Corazon N. San Pedro → SANPEDRO, Corazon; Rafael A. Santos → SANTOS, Rafael.",
-        "why_correct": "\"Teresita N. Delos Reyes\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_correct": "\"Teresita N. Delos Reyes\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
           "o2": "\"Victoria L. Flores\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",
           "o3": "\"Rafael A. Santos\" files as SANTOS, which comes after DELOSREYES.",
@@ -5223,7 +5223,7 @@
       "reveal": {
         "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
         "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Rosario V. Cruz-Manalo → CRUZMANALO, Rosario; Dr. Corazon F. De Guzman → DEGUZMAN, Corazon; Mario M. Dela Cruz → DELACRUZ, Mario; Andres B. Lim → LIM, Andres.",
-        "why_correct": "\"Andres B. Lim\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_correct": "\"Andres B. Lim\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
           "o1": "\"Rosario V. Cruz-Manalo\" sorts by the given name. Personal names file by surname first.",
           "o3": "\"Dr. Corazon F. De Guzman\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.",
@@ -5352,7 +5352,7 @@
       "reveal": {
         "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
         "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Mario M. Dela Torre → DELATORRE, Mario; Rodrigo D. De los Santos → DELOSSANTOS, Rodrigo; Ramon T. Pascual → PASCUAL, Ramon; Eduardo T. Rivera → RIVERA, Eduardo.",
-        "why_correct": "\"Mario M. Dela Torre\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_correct": "\"Mario M. Dela Torre\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
           "o1": "\"Rodrigo D. De los Santos\" files as DELOSSANTOS, which comes after DELATORRE.",
           "o2": "\"Ramon T. Pascual\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",

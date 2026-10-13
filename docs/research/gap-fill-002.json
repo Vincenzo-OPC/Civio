@@ -1,0 +1,876 @@
+{
+  "batch": "gap-fill-002",
+  "spec_version": "0.1.5",
+  "status": "draft (gap fill; for independent review)",
+  "items": [
+    {
+      "id": "CIVIO-GAP2-VEN-ERROR-0001",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "error recognition",
+      "micro_skill": "",
+      "archetype": "VEN-ERROR",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Which sentence correctly matches its verb to both the subject and the time?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The list of applicant were posted on the board yesterday."
+        },
+        {
+          "option_id": "o2",
+          "text": "The list of applicants were posted on the board yesterday."
+        },
+        {
+          "option_id": "o3",
+          "text": "The list of applicants was posted on the board yesterday."
+        },
+        {
+          "option_id": "o4",
+          "text": "The list of applicants is posted on the board yesterday."
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Error recognition: find the sentence with no error in agreement, tense, pronoun, preposition or word form.",
+        "shortcut": "Check the subject-verb pair first, then tense words, then pronouns and prepositions.",
+        "why_correct": "The subject is \"list\" (singular), so the verb is \"was\"; \"yesterday\" needs past tense.",
+        "why_wrong": {
+          "o2": "\"were\" agrees with \"applicants\", the nearest noun, not the subject \"list\".",
+          "o4": "\"is\" is present tense, but \"yesterday\" needs the past.",
+          "o1": "\"applicant\" must be plural after \"list of\", and \"were\" still mismatches \"list\"."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "VEN-NEAREST-NOUN",
+        "o4": "VEN-TENSE",
+        "o1": "VEN-FORM"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-VEN-ERROR-0002",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "error recognition",
+      "micro_skill": "",
+      "archetype": "VEN-ERROR",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Which sentence is written correctly?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The office will release its report since Monday."
+        },
+        {
+          "option_id": "o2",
+          "text": "The office will released its report on Monday."
+        },
+        {
+          "option_id": "o3",
+          "text": "The office will release it's report on Monday."
+        },
+        {
+          "option_id": "o4",
+          "text": "The office will release its report on Monday."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Error recognition: find the sentence with no error in agreement, tense, pronoun, preposition or word form.",
+        "shortcut": "Check the subject-verb pair first, then tense words, then pronouns and prepositions.",
+        "why_correct": "\"its\" is the possessive; \"will\" takes the base verb; \"on Monday\" names a day.",
+        "why_wrong": {
+          "o3": "\"it's\" means \"it is\", not the possessive.",
+          "o2": "After \"will\", use the base form \"release\".",
+          "o1": "\"since\" needs a past starting point and a perfect tense, not a future plan."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "VEN-HOMOPHONE",
+        "o2": "VEN-FORM",
+        "o1": "VEN-PARTICLE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-VEN-ERROR-0003",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "error recognition",
+      "micro_skill": "",
+      "archetype": "VEN-ERROR",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Which sentence uses the correct pronoun after a preposition?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Between you and me, the memo is unclear."
+        },
+        {
+          "option_id": "o2",
+          "text": "Between you and myself, the memo is unclear."
+        },
+        {
+          "option_id": "o3",
+          "text": "Between you and I, the memo is unclear."
+        },
+        {
+          "option_id": "o4",
+          "text": "Among you and me, the memo is unclear."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Error recognition: find the sentence with no error in agreement, tense, pronoun, preposition or word form.",
+        "shortcut": "Check the subject-verb pair first, then tense words, then pronouns and prepositions.",
+        "why_correct": "After a preposition (\"between\"), use the object pronoun \"me\".",
+        "why_wrong": {
+          "o3": "\"I\" is a subject pronoun; a preposition needs \"me\".",
+          "o4": "\"Among\" is for three or more; two people take \"between\".",
+          "o2": "\"myself\" is reflexive and needs \"I\" earlier in the sentence."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "VEN-FORM",
+        "o4": "VEN-PARTICLE",
+        "o2": "VEN-REGISTER"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-VEN-ERROR-0004",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "error recognition",
+      "micro_skill": "",
+      "archetype": "VEN-ERROR",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Which sentence uses verb tenses correctly?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "When the auditor arrived, the clerk had already filed the vouchers."
+        },
+        {
+          "option_id": "o2",
+          "text": "When the auditor arrived, the clerk has already filed the vouchers."
+        },
+        {
+          "option_id": "o3",
+          "text": "When the auditor arrived, the clerk had already file the vouchers."
+        },
+        {
+          "option_id": "o4",
+          "text": "When the auditor arrives, the clerk had already filed the vouchers."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Error recognition: find the sentence with no error in agreement, tense, pronoun, preposition or word form.",
+        "shortcut": "Check the subject-verb pair first, then tense words, then pronouns and prepositions.",
+        "why_correct": "The earlier past action (filing) takes the past perfect \"had filed\" beside the simple past \"arrived\".",
+        "why_wrong": {
+          "o2": "\"has filed\" (present perfect) clashes with the past \"arrived\".",
+          "o4": "\"arrives\" (present) clashes with \"had filed\" (past perfect).",
+          "o3": "\"had\" needs the past participle \"filed\"."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "VEN-TENSE",
+        "o4": "VEN-TENSE",
+        "o3": "VEN-FORM"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-VEN-ERROR-0005",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "error recognition",
+      "micro_skill": "",
+      "archetype": "VEN-ERROR",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Which sentence is written correctly?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "She is responsible of encoding, checking, and filing the records."
+        },
+        {
+          "option_id": "o2",
+          "text": "She is responsible for encoding, checking, and filing the records."
+        },
+        {
+          "option_id": "o3",
+          "text": "She is responsible for encoding, checking, and to file the records."
+        },
+        {
+          "option_id": "o4",
+          "text": "She are responsible for encoding, checking, and filing the records."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Error recognition: find the sentence with no error in agreement, tense, pronoun, preposition or word form.",
+        "shortcut": "Check the subject-verb pair first, then tense words, then pronouns and prepositions.",
+        "why_correct": "Items in a series take the same form (encoding, checking, filing), and \"responsible\" takes \"for\".",
+        "why_wrong": {
+          "o3": "\"to file\" breaks the parallel -ing series.",
+          "o1": "\"responsible\" takes the preposition \"for\", not \"of\".",
+          "o4": "\"She\" takes \"is\", not \"are\"."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "VEN-FORM",
+        "o1": "VEN-PARTICLE",
+        "o4": "VEN-NEAREST-NOUN"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0006",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Numerical Ability",
+      "concept": "fractions",
+      "micro_skill": "",
+      "archetype": "NUM-OPS-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "What is 3/4 + 5/6?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "8/10"
+        },
+        {
+          "option_id": "o2",
+          "text": "15/24"
+        },
+        {
+          "option_id": "o3",
+          "text": "1 5/12"
+        },
+        {
+          "option_id": "o4",
+          "text": "1 7/12"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Fractions and decimals without a calculator: use a common denominator, or count decimal places.",
+        "shortcut": "Convert to the same form (all fractions or all decimals) before comparing.",
+        "why_correct": "LCD 12: 9/12 + 10/12 = 19/12 = 1 7/12.",
+        "why_wrong": {
+          "o1": "Adds tops and bottoms separately (3+5)/(4+6), which is not fraction addition.",
+          "o3": "Arithmetic slip: 19/12 is 1 7/12, not 1 5/12.",
+          "o2": "Multiplies the fractions instead of adding."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o3": "NUM-PARTIAL",
+        "o2": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0007",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Numerical Ability",
+      "concept": "decimals",
+      "micro_skill": "",
+      "archetype": "NUM-OPS-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "What is 2.5 × 0.04?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "1.0"
+        },
+        {
+          "option_id": "o2",
+          "text": "2.54"
+        },
+        {
+          "option_id": "o3",
+          "text": "0.01"
+        },
+        {
+          "option_id": "o4",
+          "text": "0.1"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Fractions and decimals without a calculator: use a common denominator, or count decimal places.",
+        "shortcut": "Convert to the same form (all fractions or all decimals) before comparing.",
+        "why_correct": "25 × 4 = 100; there are 1 + 2 = 3 decimal places, so 0.100 = 0.1.",
+        "why_wrong": {
+          "o1": "Decimal point placed 1 place only.",
+          "o3": "Decimal point placed 4 places.",
+          "o2": "Joins the numbers instead of multiplying."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-DECIMAL",
+        "o3": "NUM-DECIMAL",
+        "o2": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0008",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Numerical Ability",
+      "concept": "decimals",
+      "micro_skill": "",
+      "archetype": "NUM-OPS-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "What is 7.2 ÷ 0.08?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "90"
+        },
+        {
+          "option_id": "o2",
+          "text": "9"
+        },
+        {
+          "option_id": "o3",
+          "text": "0.9"
+        },
+        {
+          "option_id": "o4",
+          "text": "900"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Fractions and decimals without a calculator: use a common denominator, or count decimal places.",
+        "shortcut": "Convert to the same form (all fractions or all decimals) before comparing.",
+        "why_correct": "Multiply both by 100: 720 ÷ 8 = 90.",
+        "why_wrong": {
+          "o2": "Shifts the decimal one place too few.",
+          "o4": "Shifts the decimal one place too many.",
+          "o3": "Divides the wrong way round in place value."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-DECIMAL",
+        "o4": "NUM-DECIMAL",
+        "o3": "NUM-DECIMAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0009",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Numerical Ability",
+      "concept": "fractions",
+      "micro_skill": "",
+      "archetype": "NUM-OPS-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Which number is the greatest? 0.6, 5/8, 0.58, 3/5",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "0.58"
+        },
+        {
+          "option_id": "o2",
+          "text": "3/5"
+        },
+        {
+          "option_id": "o3",
+          "text": "0.6"
+        },
+        {
+          "option_id": "o4",
+          "text": "5/8"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Fractions and decimals without a calculator: use a common denominator, or count decimal places.",
+        "shortcut": "Convert to the same form (all fractions or all decimals) before comparing.",
+        "why_correct": "5/8 = 0.625, which beats 0.6 = 3/5 and 0.58.",
+        "why_wrong": {
+          "o3": "0.6 = 0.600, less than 0.625.",
+          "o1": "0.58 looks bigger only if you compare 58 with 6.",
+          "o2": "3/5 = 0.6, less than 0.625."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "NUM-PARTIAL",
+        "o1": "NUM-DECIMAL",
+        "o2": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0010",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Numerical Ability",
+      "concept": "fractions",
+      "micro_skill": "",
+      "archetype": "NUM-OPS-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "A clerk used 2/5 of a 500-sheet ream on Monday and 1/4 of the same ream on Tuesday. How many sheets are left?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "125"
+        },
+        {
+          "option_id": "o2",
+          "text": "300"
+        },
+        {
+          "option_id": "o3",
+          "text": "325"
+        },
+        {
+          "option_id": "o4",
+          "text": "175"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Fractions and decimals without a calculator: use a common denominator, or count decimal places.",
+        "shortcut": "Convert to the same form (all fractions or all decimals) before comparing.",
+        "why_correct": "Used 200 + 125 = 325 sheets, so 500 − 325 = 175 remain.",
+        "why_wrong": {
+          "o3": "325 is what was used, not what is left.",
+          "o2": "Subtracts only Monday's 200.",
+          "o1": "125 is Tuesday's use only."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "NUM-OTHER-SHARE",
+        "o2": "NUM-PARTIAL",
+        "o1": "NUM-GIVEN-REUSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0011",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Numerical Ability",
+      "concept": "fractions",
+      "micro_skill": "",
+      "archetype": "NUM-OPS-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "What is 1 2/3 × 3/5?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "1"
+        },
+        {
+          "option_id": "o2",
+          "text": "1 2/5"
+        },
+        {
+          "option_id": "o3",
+          "text": "25/9"
+        },
+        {
+          "option_id": "o4",
+          "text": "3/5"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Fractions and decimals without a calculator: use a common denominator, or count decimal places.",
+        "shortcut": "Convert to the same form (all fractions or all decimals) before comparing.",
+        "why_correct": "1 2/3 = 5/3, and 5/3 × 3/5 = 15/15 = 1.",
+        "why_wrong": {
+          "o3": "Divides instead of multiplies (5/3 ÷ 3/5).",
+          "o2": "Multiplies only the fraction part: 1 + 2/3 × 3/5.",
+          "o4": "Drops the mixed number's whole part."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "NUM-OP-SWAP",
+        "o2": "NUM-PARTIAL",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP2-CLR-FILE-ORDER-0012",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business-name filing (ARMA rules)",
+      "micro_skill": "",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing for business names, which name is filed FIRST?\nThe Bayanihan Store | Carino Bakery | Dagupan Hardware | Ermita Printing",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Ermita Printing"
+        },
+        {
+          "option_id": "o2",
+          "text": "Carino Bakery"
+        },
+        {
+          "option_id": "o3",
+          "text": "The Bayanihan Store"
+        },
+        {
+          "option_id": "o4",
+          "text": "Dagupan Hardware"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Index each business name into units (\"The\" last, symbols spelled out, digits first), then compare unit by unit.",
+        "shortcut": "Apply ARMA Rule 2 first.",
+        "why_correct": "\"The\" as the first word becomes the last unit: Bayanihan Store The, which files under B, first. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 2), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o2": "Files first only if \"The\" is counted as the first unit (T).",
+          "o4": "D comes after B and C.",
+          "o1": "E comes after B, C and D."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER",
+        "o1": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 2",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review.",
+      "distractor_subreason": {
+        "o2": "CLR-ARTICLE-COUNTED: breaks ARMA Rule 2",
+        "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      }
+    },
+    {
+      "id": "CIVIO-GAP2-CLR-FILE-ORDER-0013",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business-name filing (ARMA rules)",
+      "micro_skill": "",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing for business names, which name is filed FIRST?\n21st Century Printing | 5 Star Bakery | Ace Trading | Five Brothers Hardware",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "21st Century Printing"
+        },
+        {
+          "option_id": "o2",
+          "text": "Five Brothers Hardware"
+        },
+        {
+          "option_id": "o3",
+          "text": "Ace Trading"
+        },
+        {
+          "option_id": "o4",
+          "text": "5 Star Bakery"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Index each business name into units (\"The\" last, symbols spelled out, digits first), then compare unit by unit.",
+        "shortcut": "Apply ARMA Rule 7 first.",
+        "why_correct": "Digits file before letters in ascending order, so 5 comes before 21 (ordinal \"st\" ignored). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 7), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o1": "Numerically 21 is greater than 5. Comparing the digits as text (\"2\" before \"5\") would wrongly put it first.",
+          "o3": "Names that begin with letters file after names that begin with digits.",
+          "o2": "A spelled-out number files alphabetically under F."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 7",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review.",
+      "distractor_subreason": {
+        "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 7",
+        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 7",
+        "o2": "CLR-WORD-BY-WORD: breaks ARMA Rule 7"
+      }
+    },
+    {
+      "id": "CIVIO-GAP2-CLR-FILE-ORDER-0014",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business-name filing (ARMA rules)",
+      "micro_skill": "",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing for business names, which name is filed LAST?\nTan-Go Grocery | Tan Lee Bakery | Tanauan Hardware | Tang Printing",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Tan Lee Bakery"
+        },
+        {
+          "option_id": "o2",
+          "text": "Tan-Go Grocery"
+        },
+        {
+          "option_id": "o3",
+          "text": "Tanauan Hardware"
+        },
+        {
+          "option_id": "o4",
+          "text": "Tang Printing"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Index each business name into units (\"The\" last, symbols spelled out, digits first), then compare unit by unit.",
+        "shortcut": "Apply ARMA Rule 3 first.",
+        "why_correct": "A hyphenated name is one unit: TanGo. Order: Tan Lee (Tan alone, nothing before something), Tanauan, Tang, TanGo. TanGo is last. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 3), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o1": "\"Tan\" as a short first unit files first, not last.",
+          "o3": "Tana… comes before Tang….",
+          "o4": "Last only if Tan-Go is split into two units (Tan, Go), which puts it at the front."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 3",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 02; needs independent review.",
+      "distractor_subreason": {
+        "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o4": "CLR-WORD-BY-WORD: breaks ARMA Rule 3"
+      }
+    }
+  ]
+}
