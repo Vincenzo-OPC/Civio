@@ -320,6 +320,10 @@ Each task: tick it only when the acceptance line is true and checks pass.
       vendor ≤ 122 kB (119), exam chunk ≤ 10 kB (9.5), all JS ≤ 1.04 MB (1.03).
       Tighten each budget when a phase lowers the number.
 
+## Frontend redesign
+
+See `docs/DESIGN_IMPLEMENTATION_BRIEF.md` (mockup: `docs/design/focused-learning-canvas-mockup.png`). Deliver the section 17 analysis first, then implement in small verified commits; no question bank edits; no deploy.
+
 ## 10. Rules (short version)
 
 - Normal pushes to `main`; never force-push; never `--no-verify`; no branches.
