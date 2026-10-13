@@ -1,0 +1,4731 @@
+{
+  "batch": "filipino-supplement-001",
+  "spec_version": "0.1.4",
+  "status": "draft - editorial review required",
+  "level": "Subprofessional / Professional",
+  "scope": "Verbal Ability in Filipino, per official CSC Examination Announcement No. 03 s. 2026",
+  "note": "These are independently authored practice items, not CSC exam questions. The 80 items pass schema, unique key, choice count, and exact stem duplicate checks. Human Filipino linguistic QA is required, and they are not authorized for active mocks.",
+  "source": "https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2026/ExamAnn_2026_03_Conduct%20of%2009%20Aug%202026%20CSE-PPT_orig%20signed.pdf",
+  "items": [
+    {
+      "id": "CIVIO-VFIL-20261013-0001",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Sa ulat, inilalarawan ang kawani bilang MASIGASIG sa pag-asikaso ng mga kahilingan.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "pabaya"
+        },
+        {
+          "option_id": "b",
+          "text": "malungkutin"
+        },
+        {
+          "option_id": "c",
+          "text": "marahas"
+        },
+        {
+          "option_id": "d",
+          "text": "masipag"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Kasingkahulugan ng masigasig ang masipag.",
+        "why_correct": "Kasingkahulugan ng masigasig ang masipag.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0002",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Naging SALAT sa pondo ang programa matapos bawasan ang badyet.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "sagana"
+        },
+        {
+          "option_id": "b",
+          "text": "sikat"
+        },
+        {
+          "option_id": "c",
+          "text": "malinaw"
+        },
+        {
+          "option_id": "d",
+          "text": "kulang"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang salat sa pondo ay kulang sa salapi.",
+        "why_correct": "Ang salat sa pondo ay kulang sa salapi.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0003",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Hiniling ng opisina ang isang PAYAK na paliwanag.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "paligoy-ligoy"
+        },
+        {
+          "option_id": "b",
+          "text": "masalimuot"
+        },
+        {
+          "option_id": "c",
+          "text": "mahaba"
+        },
+        {
+          "option_id": "d",
+          "text": "simple"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang payak ay simple at madaling unawain.",
+        "why_correct": "Ang payak ay simple at madaling unawain.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0004",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Nananatiling MAHINAHON ang tagapamagitan sa gitna ng pagtatalo.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "padalos-dalos"
+        },
+        {
+          "option_id": "b",
+          "text": "maingay"
+        },
+        {
+          "option_id": "c",
+          "text": "marupok"
+        },
+        {
+          "option_id": "d",
+          "text": "kalmado"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang mahinahon ay kalmado at hindi bugso ng damdamin.",
+        "why_correct": "Ang mahinahon ay kalmado at hindi bugso ng damdamin.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0005",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "MASALIMUOT ang proseso dahil maraming kailangang sundin.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "madali"
+        },
+        {
+          "option_id": "b",
+          "text": "payak"
+        },
+        {
+          "option_id": "c",
+          "text": "maikli"
+        },
+        {
+          "option_id": "d",
+          "text": "komplikado"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang masalimuot ay maraming bahagi o komplikasyon.",
+        "why_correct": "Ang masalimuot ay maraming bahagi o komplikasyon.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0006",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "MAPANURI ang auditor bago pumirma sa ulat.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "madaling maniwala"
+        },
+        {
+          "option_id": "b",
+          "text": "palaging magmadali"
+        },
+        {
+          "option_id": "c",
+          "text": "umiwas sa detalye"
+        },
+        {
+          "option_id": "d",
+          "text": "masusing magsuri"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang mapanuri ay nag-iisip at nagsusuri nang mabuti.",
+        "why_correct": "Ang mapanuri ay nag-iisip at nagsusuri nang mabuti.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0007",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "May PAG-AALINLANGAN ang grupo sa hindi pa nasusuring datos.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "katiyakan"
+        },
+        {
+          "option_id": "b",
+          "text": "kasiyahan"
+        },
+        {
+          "option_id": "c",
+          "text": "pagmamadali"
+        },
+        {
+          "option_id": "d",
+          "text": "pagdududa"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang pag-aalinlangan ay pagdududa.",
+        "why_correct": "Ang pag-aalinlangan ay pagdududa.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0008",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "MAKABULUHAN ang mungkahi dahil tumutugon ito sa tunay na problema.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "walang kaugnayan"
+        },
+        {
+          "option_id": "b",
+          "text": "paulit-ulit"
+        },
+        {
+          "option_id": "c",
+          "text": "maingay"
+        },
+        {
+          "option_id": "d",
+          "text": "may saysay"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang makabuluhan ay may saysay o kabuluhan.",
+        "why_correct": "Ang makabuluhan ay may saysay o kabuluhan.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0009",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Ipinahayag ng pinuno ang MARUBDOB niyang hangaring makatulong.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "mababaw"
+        },
+        {
+          "option_id": "b",
+          "text": "malamig"
+        },
+        {
+          "option_id": "c",
+          "text": "walang pakialam"
+        },
+        {
+          "option_id": "d",
+          "text": "matindi"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang marubdob na hangarin ay matindi at taos-puso.",
+        "why_correct": "Ang marubdob na hangarin ay matindi at taos-puso.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0010",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Nais ng pangkat ng WASTONG talaan bago mag-ulat.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "kulang"
+        },
+        {
+          "option_id": "b",
+          "text": "palihim"
+        },
+        {
+          "option_id": "c",
+          "text": "hindi kumpleto"
+        },
+        {
+          "option_id": "d",
+          "text": "tama"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang wasto ay tama o nararapat.",
+        "why_correct": "Ang wasto ay tama o nararapat.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0011",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang KASALUNGAT ng MATATAG sa pangungusap: Matatag ang tulay matapos ang pagkukumpuni?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "matibay"
+        },
+        {
+          "option_id": "b",
+          "text": "matatagalan"
+        },
+        {
+          "option_id": "c",
+          "text": "matiyaga"
+        },
+        {
+          "option_id": "d",
+          "text": "marupok"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Kasalungat ng matatag sa tibay ang marupok.",
+        "why_correct": "Kasalungat ng matatag sa tibay ang marupok.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0012",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang KASALUNGAT ng PANANDALIAN sa pangungusap: Panandalian lamang ang pagsasara?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "sandali"
+        },
+        {
+          "option_id": "b",
+          "text": "mabilis"
+        },
+        {
+          "option_id": "c",
+          "text": "pansamantala"
+        },
+        {
+          "option_id": "d",
+          "text": "pangmatagalan"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Kasalungat ng panandalian ang pangmatagalan.",
+        "why_correct": "Kasalungat ng panandalian ang pangmatagalan.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0013",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang KASALUNGAT ng MASIGLA sa pangungusap: Masigla ang talakayan?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "masaya"
+        },
+        {
+          "option_id": "b",
+          "text": "aktibo"
+        },
+        {
+          "option_id": "c",
+          "text": "masigabo"
+        },
+        {
+          "option_id": "d",
+          "text": "matamlay"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang matamlay ay kabaligtaran ng masigla.",
+        "why_correct": "Ang matamlay ay kabaligtaran ng masigla.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0014",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang KASALUNGAT ng MADALAS sa pangungusap: Madalas siyang dumalo sa pulong?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "palagi"
+        },
+        {
+          "option_id": "b",
+          "text": "lagi"
+        },
+        {
+          "option_id": "c",
+          "text": "paulit-ulit"
+        },
+        {
+          "option_id": "d",
+          "text": "bihira"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang bihira ay hindi madalas mangyari.",
+        "why_correct": "Ang bihira ay hindi madalas mangyari.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0015",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang KASALUNGAT ng LUBOS sa pangungusap: Lubos ang kanyang suporta?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "ganap"
+        },
+        {
+          "option_id": "b",
+          "text": "buo"
+        },
+        {
+          "option_id": "c",
+          "text": "taos-puso"
+        },
+        {
+          "option_id": "d",
+          "text": "bahagya"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang bahagya ay hindi buo o lubos.",
+        "why_correct": "Ang bahagya ay hindi buo o lubos.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0016",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang KASALUNGAT ng MAINGAT sa pangungusap: Maingat niyang binasa ang dokumento?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "masusi"
+        },
+        {
+          "option_id": "b",
+          "text": "mahinahon"
+        },
+        {
+          "option_id": "c",
+          "text": "mapanuri"
+        },
+        {
+          "option_id": "d",
+          "text": "padalos-dalos"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang padalos-dalos ay walang sapat na pag-iingat.",
+        "why_correct": "Ang padalos-dalos ay walang sapat na pag-iingat.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0017",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang KASALUNGAT ng MALINAW sa pangungusap: Malinaw ang ibinigay na tagubilin?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "tiyak"
+        },
+        {
+          "option_id": "b",
+          "text": "hayag"
+        },
+        {
+          "option_id": "c",
+          "text": "tuwiran"
+        },
+        {
+          "option_id": "d",
+          "text": "malabo"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang malabo ay hindi malinaw.",
+        "why_correct": "Ang malabo ay hindi malinaw.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0018",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang KASALUNGAT ng MATIYAGA sa pangungusap: Matiyaga niyang inayos ang mga rekord?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "matiisin"
+        },
+        {
+          "option_id": "b",
+          "text": "masipag"
+        },
+        {
+          "option_id": "c",
+          "text": "matatag"
+        },
+        {
+          "option_id": "d",
+          "text": "mainipin"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang mainipin ay madaling mawalan ng tiyaga.",
+        "why_correct": "Ang mainipin ay madaling mawalan ng tiyaga.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0019",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang KASALUNGAT ng MATIBAY sa pangungusap: Matibay ang kahong pinaglagyan ng rekord?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "matatag"
+        },
+        {
+          "option_id": "b",
+          "text": "matigas"
+        },
+        {
+          "option_id": "c",
+          "text": "matibay-tibay"
+        },
+        {
+          "option_id": "d",
+          "text": "marupok"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang marupok ay madaling masira, kabaligtaran ng matibay.",
+        "why_correct": "Ang marupok ay madaling masira, kabaligtaran ng matibay.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0020",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang KASALUNGAT ng TAHIMIK sa pangungusap: Tahimik ang silid-aklatan?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "payapa"
+        },
+        {
+          "option_id": "b",
+          "text": "kalma"
+        },
+        {
+          "option_id": "c",
+          "text": "banayad"
+        },
+        {
+          "option_id": "d",
+          "text": "maingay"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang maingay ay kabaligtaran ng tahimik.",
+        "why_correct": "Ang maingay ay kabaligtaran ng tahimik.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0021",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Ang salitang PANGUNAHIN sa pariralang pangunahing layunin ay pinakamalapit sa:",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "pinakahuli"
+        },
+        {
+          "option_id": "b",
+          "text": "pinakamaliit"
+        },
+        {
+          "option_id": "c",
+          "text": "hindi kailangan"
+        },
+        {
+          "option_id": "d",
+          "text": "pinakamahalaga"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang pangunahin ay pinakamahalaga o una sa prayoridad.",
+        "why_correct": "Ang pangunahin ay pinakamahalaga o una sa prayoridad.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0022",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Kapag sinabi ng guro na MALAWAK ang saklaw ng aralin, ang ibig sabihin ay:",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "napakaliit"
+        },
+        {
+          "option_id": "b",
+          "text": "walang hangganan sa batas"
+        },
+        {
+          "option_id": "c",
+          "text": "walang paksa"
+        },
+        {
+          "option_id": "d",
+          "text": "maraming bahagi"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang malawak na saklaw ay marami o sari-saring bahagi.",
+        "why_correct": "Ang malawak na saklaw ay marami o sari-saring bahagi.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0023",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Ang KAPAKI-PAKINABANG na impormasyon ay:",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "mahirap hanapin"
+        },
+        {
+          "option_id": "b",
+          "text": "laging mahaba"
+        },
+        {
+          "option_id": "c",
+          "text": "walang pinagmulan"
+        },
+        {
+          "option_id": "d",
+          "text": "may praktikal na gamit"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Kapaki-pakinabang ang impormasyong may gamit o pakinabang.",
+        "why_correct": "Kapaki-pakinabang ang impormasyong may gamit o pakinabang.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0024",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Sa pangungusap na Sinuri ang datos nang MASUSI, ang masusi ay nangangahulugang:",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "pahapyaw"
+        },
+        {
+          "option_id": "b",
+          "text": "pabaya"
+        },
+        {
+          "option_id": "c",
+          "text": "walang ayos"
+        },
+        {
+          "option_id": "d",
+          "text": "detalyado at maingat"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang masusing pagsusuri ay detalyado at maingat.",
+        "why_correct": "Ang masusing pagsusuri ay detalyado at maingat.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0025",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Upang maiwasan ang pagkalito, dapat _____ ang mga tagubilin bago magsimula ang gawain.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "itago"
+        },
+        {
+          "option_id": "b",
+          "text": "ipagpaliban"
+        },
+        {
+          "option_id": "c",
+          "text": "kaligtaan"
+        },
+        {
+          "option_id": "d",
+          "text": "linawin"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang linawin ay angkop dahil layunin ang pag-iwas sa pagkalito.",
+        "why_correct": "Ang linawin ay angkop dahil layunin ang pag-iwas sa pagkalito.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0026",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Bagaman limitado ang oras, _____ ng pangkat ang pagsumite sa takdang araw.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "nakalimutan"
+        },
+        {
+          "option_id": "b",
+          "text": "iniwasan"
+        },
+        {
+          "option_id": "c",
+          "text": "ipinagwalang-bahala"
+        },
+        {
+          "option_id": "d",
+          "text": "naipagtagumpay"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Naipagtagumpay ang akma sa positibong resulta sa kabila ng limitadong oras.",
+        "why_correct": "Naipagtagumpay ang akma sa positibong resulta sa kabila ng limitadong oras.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0027",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Hindi tinanggap ang tala dahil _____ ang ilang mahahalagang detalye.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "ganap"
+        },
+        {
+          "option_id": "b",
+          "text": "masusi"
+        },
+        {
+          "option_id": "c",
+          "text": "tumpak"
+        },
+        {
+          "option_id": "d",
+          "text": "kulang"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Tumutukoy ang kulang sa nawawalang impormasyon.",
+        "why_correct": "Tumutukoy ang kulang sa nawawalang impormasyon.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0028",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "_____ sa mga nakasaad na patakaran ang pagsusuri ng mga aplikasyon.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Salungat"
+        },
+        {
+          "option_id": "b",
+          "text": "Malayo"
+        },
+        {
+          "option_id": "c",
+          "text": "Hiwalay"
+        },
+        {
+          "option_id": "d",
+          "text": "Alinsunod"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang alinsunod ay nangangahulugang ayon sa patakaran.",
+        "why_correct": "Ang alinsunod ay nangangahulugang ayon sa patakaran.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0029",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Naglatag ang opisina ng malinaw na iskedyul _____ malaman ng lahat ang kanilang tungkulin.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "bagaman"
+        },
+        {
+          "option_id": "b",
+          "text": "samantala"
+        },
+        {
+          "option_id": "c",
+          "text": "ngunit"
+        },
+        {
+          "option_id": "d",
+          "text": "upang"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ginagamit ang upang sa pagpapahayag ng layunin.",
+        "why_correct": "Ginagamit ang upang sa pagpapahayag ng layunin.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0030",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Nagtanim ng mga puno ang mga residente _____ mabawasan ang init sa kanilang lugar.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "subalit"
+        },
+        {
+          "option_id": "b",
+          "text": "dahil dito"
+        },
+        {
+          "option_id": "c",
+          "text": "gayunman"
+        },
+        {
+          "option_id": "d",
+          "text": "upang"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang pangalawang sugnay ay nagsasaad ng layunin.",
+        "why_correct": "Ang pangalawang sugnay ay nagsasaad ng layunin.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0031",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Maagang dumating ang mga boluntaryo; _____, natapos ang paghahanda bago dumating ang mga bisita.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "sa kabila nito"
+        },
+        {
+          "option_id": "b",
+          "text": "gayunman"
+        },
+        {
+          "option_id": "c",
+          "text": "sa halip"
+        },
+        {
+          "option_id": "d",
+          "text": "bunga nito"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang bunga nito ay nagpapakita ng naging resulta.",
+        "why_correct": "Ang bunga nito ay nagpapakita ng naging resulta.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0032",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "_____ malakas ang ulan, nagpatuloy ang serbisyong pangkalusugan.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Dahil"
+        },
+        {
+          "option_id": "b",
+          "text": "Upang"
+        },
+        {
+          "option_id": "c",
+          "text": "Samakatuwid"
+        },
+        {
+          "option_id": "d",
+          "text": "Kahit"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang kahit ay nagpapakita ng pagsalungat sa inaasahang epekto ng ulan.",
+        "why_correct": "Ang kahit ay nagpapakita ng pagsalungat sa inaasahang epekto ng ulan.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0033",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Pinag-aralan muna ang mga reklamo _____ gumawa ng pasiya.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "sapagkat"
+        },
+        {
+          "option_id": "b",
+          "text": "dahil dito"
+        },
+        {
+          "option_id": "c",
+          "text": "samantala"
+        },
+        {
+          "option_id": "d",
+          "text": "bago"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang bago ang tamang pang-ugnay sa pagkakasunod ng dalawang gawain.",
+        "why_correct": "Ang bago ang tamang pang-ugnay sa pagkakasunod ng dalawang gawain.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0034",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Kailangan ng sapat na ebidensiya _____ makagawa ng makatarungang pasiya.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "ngunit"
+        },
+        {
+          "option_id": "b",
+          "text": "maliban"
+        },
+        {
+          "option_id": "c",
+          "text": "kahit"
+        },
+        {
+          "option_id": "d",
+          "text": "upang"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang upang ay nagpapahayag ng layunin ng pagkalap ng ebidensiya.",
+        "why_correct": "Ang upang ay nagpapahayag ng layunin ng pagkalap ng ebidensiya.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0035",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Mahalagang _____ ang natanggap na dokumento upang madaling mahanap sa susunod.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "itapon"
+        },
+        {
+          "option_id": "b",
+          "text": "ibalewala"
+        },
+        {
+          "option_id": "c",
+          "text": "itago nang walang rekord"
+        },
+        {
+          "option_id": "d",
+          "text": "itala"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang pagtatala ay tumutulong sa maayos na paghahanap ng dokumento.",
+        "why_correct": "Ang pagtatala ay tumutulong sa maayos na paghahanap ng dokumento.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0036",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Sinuri ang bilang ng mga nakatanggap ng serbisyo _____ ihambing ang resulta sa nakaraang buwan.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "bagaman"
+        },
+        {
+          "option_id": "b",
+          "text": "gayunman"
+        },
+        {
+          "option_id": "c",
+          "text": "subalit"
+        },
+        {
+          "option_id": "d",
+          "text": "upang"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang upang ay nagpapakita ng dahilan o layunin ng pagsusuri.",
+        "why_correct": "Ang upang ay nagpapakita ng dahilan o layunin ng pagsusuri.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0037",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Hindi sapat ang mabilis na pagtugon kung _____ naman ang impormasyong ibinibigay.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "wasto"
+        },
+        {
+          "option_id": "b",
+          "text": "kumpleto"
+        },
+        {
+          "option_id": "c",
+          "text": "napapanahon"
+        },
+        {
+          "option_id": "d",
+          "text": "mali"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Sinasalungat ng mali ang pagiging kapaki-pakinabang ng mabilis na tugon.",
+        "why_correct": "Sinasalungat ng mali ang pagiging kapaki-pakinabang ng mabilis na tugon.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0038",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "_____ sa maikling abiso, maagang nakahanda ang mga kawani.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Dahil"
+        },
+        {
+          "option_id": "b",
+          "text": "Alinsunod"
+        },
+        {
+          "option_id": "c",
+          "text": "Kasama"
+        },
+        {
+          "option_id": "d",
+          "text": "Sa kabila"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang sa kabila ay angkop sa hindi inaasahang paghahanda kahit maikli ang abiso.",
+        "why_correct": "Ang sa kabila ay angkop sa hindi inaasahang paghahanda kahit maikli ang abiso.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0039",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Ang datos ay kailangang _____ bago gamitin sa opisyal na ulat.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "hulaan"
+        },
+        {
+          "option_id": "b",
+          "text": "palitan nang basta-basta"
+        },
+        {
+          "option_id": "c",
+          "text": "burahin kaagad"
+        },
+        {
+          "option_id": "d",
+          "text": "beripikahin"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Kailangang beripikahin o tiyakin ang kawastuhan ng datos.",
+        "why_correct": "Kailangang beripikahin o tiyakin ang kawastuhan ng datos.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0040",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Iba-iba ang panukala, _____ iisa ang layunin ng mga kasapi.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "kaya"
+        },
+        {
+          "option_id": "b",
+          "text": "upang"
+        },
+        {
+          "option_id": "c",
+          "text": "dahil"
+        },
+        {
+          "option_id": "d",
+          "text": "ngunit"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang ngunit ay nagpapakita ng pagkakaiba ng panukala at pagkakapareho ng layunin.",
+        "why_correct": "Ang ngunit ay nagpapakita ng pagkakaiba ng panukala at pagkakapareho ng layunin.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0041",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Pinili ng lupon ang mungkahing _____ sa kanilang badyet.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "labis"
+        },
+        {
+          "option_id": "b",
+          "text": "salungat"
+        },
+        {
+          "option_id": "c",
+          "text": "wala"
+        },
+        {
+          "option_id": "d",
+          "text": "akma"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Akma ang mungkahing naaayon sa takdang badyet.",
+        "why_correct": "Akma ang mungkahing naaayon sa takdang badyet.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0042",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Nagbigay ang guro ng halimbawa _____ mas maunawaan ng mga mag-aaral ang aralin.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "ngunit"
+        },
+        {
+          "option_id": "b",
+          "text": "bagaman"
+        },
+        {
+          "option_id": "c",
+          "text": "samantala"
+        },
+        {
+          "option_id": "d",
+          "text": "upang"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang upang ay angkop sa layunin ng pagbibigay ng halimbawa.",
+        "why_correct": "Ang upang ay angkop sa layunin ng pagbibigay ng halimbawa.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0043",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "_____ ang lahat ng pahina ng dokumento bago ito pirmahan.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Ipagwalang-bahala"
+        },
+        {
+          "option_id": "b",
+          "text": "Itapon"
+        },
+        {
+          "option_id": "c",
+          "text": "Takpan"
+        },
+        {
+          "option_id": "d",
+          "text": "Basahin"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang basahin ay angkop upang masuri ang kabuuan bago pumirma.",
+        "why_correct": "Ang basahin ay angkop upang masuri ang kabuuan bago pumirma.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0044",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence completion",
+      "concept": "completion",
+      "micro_skill": "sentence completion",
+      "archetype": "VFIL-COMP",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Naglaan ng karagdagang oras sa pagsasanay _____ dumami ang mga bagong kawani.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "gayunman"
+        },
+        {
+          "option_id": "b",
+          "text": "subalit"
+        },
+        {
+          "option_id": "c",
+          "text": "sa halip"
+        },
+        {
+          "option_id": "d",
+          "text": "dahil"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang dahil ay nagpapakita ng sanhi ng karagdagang pagsasanay.",
+        "why_correct": "Ang dahil ay nagpapakita ng sanhi ng karagdagang pagsasanay.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0045",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence structure",
+      "concept": "grammar",
+      "micro_skill": "sentence structure",
+      "archetype": "VFIL-GRAM",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Piliin ang pangungusap na may wastong gamit ng ng at nang.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Nagsumite siya nang ulat ng maaga."
+        },
+        {
+          "option_id": "b",
+          "text": "Nagsumite siya ng ulat ng maaga."
+        },
+        {
+          "option_id": "c",
+          "text": "Nagsumite siya nang ulat nang maaga."
+        },
+        {
+          "option_id": "d",
+          "text": "Nagsumite siya ng ulat nang maaga."
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ginagamit ang ng para sa layon na ulat at nang para sa paraan o oras na maaga.",
+        "why_correct": "Ginagamit ang ng para sa layon na ulat at nang para sa paraan o oras na maaga.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0046",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence structure",
+      "concept": "grammar",
+      "micro_skill": "sentence structure",
+      "archetype": "VFIL-GRAM",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Piliin ang wastong pangungusap.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Bawat kawani ay may mga tungkuling dapat gampanan nilang lahat."
+        },
+        {
+          "option_id": "b",
+          "text": "Bawat kawani ay may tungkulin na dapat gampanan nila bawat isa."
+        },
+        {
+          "option_id": "c",
+          "text": "Bawat kawani ay may tungkuling dapat gampanan ng lahat nilang bawat isa."
+        },
+        {
+          "option_id": "d",
+          "text": "Bawat kawani ay may tungkuling dapat gampanan."
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Maikli, malinaw, at wastong pangungusap ang unang pagpipilian.",
+        "why_correct": "Maikli, malinaw, at wastong pangungusap ang unang pagpipilian.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0047",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence structure",
+      "concept": "grammar",
+      "micro_skill": "sentence structure",
+      "archetype": "VFIL-GRAM",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang wastong pagsulat ng pangungusap?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Dahil umulan ipinagpaliban ang palaro."
+        },
+        {
+          "option_id": "b",
+          "text": "Dahil umulan; ipinagpaliban ang palaro."
+        },
+        {
+          "option_id": "c",
+          "text": "Dahil, umulan ipinagpaliban ang palaro."
+        },
+        {
+          "option_id": "d",
+          "text": "Dahil umulan, ipinagpaliban ang palaro."
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang kuwit ay naghihiwalay sa panimulang sugnay na Dahil umulan.",
+        "why_correct": "Ang kuwit ay naghihiwalay sa panimulang sugnay na Dahil umulan.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0048",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence structure",
+      "concept": "grammar",
+      "micro_skill": "sentence structure",
+      "archetype": "VFIL-GRAM",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang wastong pangungusap?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Ang ulat ay sinuri muna ngunit bago inilathala."
+        },
+        {
+          "option_id": "b",
+          "text": "Ang ulat ay sinuri muna sa bago inilathala."
+        },
+        {
+          "option_id": "c",
+          "text": "Ang ulat ay sinuri muna habang bago inilathala."
+        },
+        {
+          "option_id": "d",
+          "text": "Ang ulat ay sinuri muna bago inilathala."
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang bago ay malinaw na nagpapakita ng pagkakasunod ng gawain.",
+        "why_correct": "Ang bago ay malinaw na nagpapakita ng pagkakasunod ng gawain.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0049",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence structure",
+      "concept": "grammar",
+      "micro_skill": "sentence structure",
+      "archetype": "VFIL-GRAM",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Piliin ang wastong gamit ng na at ng.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Maayos ng naitala na kawani ang mga kahilingan."
+        },
+        {
+          "option_id": "b",
+          "text": "Maayos na naitala na kawani ang mga kahilingan."
+        },
+        {
+          "option_id": "c",
+          "text": "Maayos ng naitala ng kawani ang mga kahilingan."
+        },
+        {
+          "option_id": "d",
+          "text": "Maayos na naitala ng kawani ang mga kahilingan."
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Na ang pang-ugnay pagkatapos ng maayos at ng ang pananda sa kawani.",
+        "why_correct": "Na ang pang-ugnay pagkatapos ng maayos at ng ang pananda sa kawani.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0050",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence structure",
+      "concept": "grammar",
+      "micro_skill": "sentence structure",
+      "archetype": "VFIL-GRAM",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang may pinakamalinaw na pagkakabuo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Ipinadala ang paalala ng kahapon sa opisina ng mga aplikante."
+        },
+        {
+          "option_id": "b",
+          "text": "Kahapon sa paalala ay ipinadala ng opisina ang mga aplikante."
+        },
+        {
+          "option_id": "c",
+          "text": "Mga aplikante kahapon ipinadala sa paalala ang opisina."
+        },
+        {
+          "option_id": "d",
+          "text": "Ipinadala ng opisina ang paalala sa mga aplikante kahapon."
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Malinaw ang simuno, pandiwa, at layon sa unang pangungusap.",
+        "why_correct": "Malinaw ang simuno, pandiwa, at layon sa unang pangungusap.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0051",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence structure",
+      "concept": "grammar",
+      "micro_skill": "sentence structure",
+      "archetype": "VFIL-GRAM",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang wastong pangungusap na nagsasaad ng layunin?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Nagsagawa ng pagsasanay ngunit mapabuti ang serbisyo."
+        },
+        {
+          "option_id": "b",
+          "text": "Nagsagawa ng pagsasanay gayunman mapabuti ang serbisyo."
+        },
+        {
+          "option_id": "c",
+          "text": "Nagsagawa ng pagsasanay samantala mapabuti ang serbisyo."
+        },
+        {
+          "option_id": "d",
+          "text": "Nagsagawa ng pagsasanay upang mapabuti ang serbisyo."
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang upang ang tamang pang-ugnay para sa layunin.",
+        "why_correct": "Ang upang ang tamang pang-ugnay para sa layunin.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0052",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence structure",
+      "concept": "grammar",
+      "micro_skill": "sentence structure",
+      "archetype": "VFIL-GRAM",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang pangungusap na may wastong paghahambing?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mas mahaba ang pila ngayon kaysa sa noon kahapon bukas."
+        },
+        {
+          "option_id": "b",
+          "text": "Mas mahaba ang pila ngayon ng kahapon."
+        },
+        {
+          "option_id": "c",
+          "text": "Mas mahaba ang pila ngayon pero kaysa kahapon."
+        },
+        {
+          "option_id": "d",
+          "text": "Mas mahaba ang pila ngayon kaysa kahapon."
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Kaysa ang karaniwang panandang panghambing.",
+        "why_correct": "Kaysa ang karaniwang panandang panghambing.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0053",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence structure",
+      "concept": "grammar",
+      "micro_skill": "sentence structure",
+      "archetype": "VFIL-GRAM",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Piliin ang pangungusap na may wastong gamit ng mayroon.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mayroon kami sapat na upuan sa mga bisita."
+        },
+        {
+          "option_id": "b",
+          "text": "Mayroon ng kaming sapat na upuan para sa mga bisita."
+        },
+        {
+          "option_id": "c",
+          "text": "Mayroon kaming sa sapat na upuan ng mga bisita."
+        },
+        {
+          "option_id": "d",
+          "text": "Mayroon kaming sapat na upuan para sa mga bisita."
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang mayroon kaming ay wastong anyo sa pangungusap.",
+        "why_correct": "Ang mayroon kaming ay wastong anyo sa pangungusap.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0054",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Sentence structure",
+      "concept": "grammar",
+      "micro_skill": "sentence structure",
+      "archetype": "VFIL-GRAM",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Alin ang pangungusap na may malinaw na sanhi at bunga?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Nasira ang tubo ngunit pansamantalang nawalan ng tubig kaya."
+        },
+        {
+          "option_id": "b",
+          "text": "Nasira ang tubo upang pansamantalang nawalan ng tubig."
+        },
+        {
+          "option_id": "c",
+          "text": "Nasira ang tubo samantala kaya nawalan ng tubig."
+        },
+        {
+          "option_id": "d",
+          "text": "Nasira ang tubo kaya pansamantalang nawalan ng tubig."
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang kaya ay nag-uugnay ng sanhi at bunga.",
+        "why_correct": "Ang kaya ay nag-uugnay ng sanhi at bunga.",
+        "why_wrong": {
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0055",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa isang barangay, naglagay ng kahon para sa mga lumang baterya sa tabi ng tanggapan. Tuwing Biyernes, kinukuha ito ng awtorisadong tagapangalap. Ipinaliwanag ng mga opisyal na hindi dapat ihalo ang mga baterya sa karaniwang basura dahil may mga sangkap itong maaaring makapinsala.\n\nTanong: Ano ang pangunahing layunin ng kahon?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mangalap ng donasyong pera"
+        },
+        {
+          "option_id": "b",
+          "text": "Mag-imbak ng pagkain"
+        },
+        {
+          "option_id": "c",
+          "text": "Magsilbing dekorasyon"
+        },
+        {
+          "option_id": "d",
+          "text": "Maghiwalay ng lumang baterya mula sa karaniwang basura"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Itinatabi ang lumang baterya upang hindi mahalo sa karaniwang basura.",
+        "why_correct": "Itinatabi ang lumang baterya upang hindi mahalo sa karaniwang basura.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0056",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa isang barangay, naglagay ng kahon para sa mga lumang baterya sa tabi ng tanggapan. Tuwing Biyernes, kinukuha ito ng awtorisadong tagapangalap. Ipinaliwanag ng mga opisyal na hindi dapat ihalo ang mga baterya sa karaniwang basura dahil may mga sangkap itong maaaring makapinsala.\n\nTanong: Kailan kinukuha ang mga baterya?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Tuwing Lunes"
+        },
+        {
+          "option_id": "b",
+          "text": "Araw-araw"
+        },
+        {
+          "option_id": "c",
+          "text": "Isang beses sa isang taon"
+        },
+        {
+          "option_id": "d",
+          "text": "Tuwing Biyernes"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Tuwirang nakasaad ang Biyernes.",
+        "why_correct": "Tuwirang nakasaad ang Biyernes.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0057",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa isang barangay, naglagay ng kahon para sa mga lumang baterya sa tabi ng tanggapan. Tuwing Biyernes, kinukuha ito ng awtorisadong tagapangalap. Ipinaliwanag ng mga opisyal na hindi dapat ihalo ang mga baterya sa karaniwang basura dahil may mga sangkap itong maaaring makapinsala.\n\nTanong: Bakit hindi dapat ihalo ang baterya sa ordinaryong basura?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mas mahal itong itapon kapag magkahiwalay"
+        },
+        {
+          "option_id": "b",
+          "text": "Lahat ng baterya ay nabubulok"
+        },
+        {
+          "option_id": "c",
+          "text": "Mas magaan ang karaniwang basura"
+        },
+        {
+          "option_id": "d",
+          "text": "Maaaring makapinsala ang ilang sangkap nito"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "May binanggit na mga sangkap na maaaring makapinsala.",
+        "why_correct": "May binanggit na mga sangkap na maaaring makapinsala.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0058",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa isang barangay, naglagay ng kahon para sa mga lumang baterya sa tabi ng tanggapan. Tuwing Biyernes, kinukuha ito ng awtorisadong tagapangalap. Ipinaliwanag ng mga opisyal na hindi dapat ihalo ang mga baterya sa karaniwang basura dahil may mga sangkap itong maaaring makapinsala.\n\nTanong: Alin ang hindi binanggit sa talata?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Ang lokasyon ng kahon"
+        },
+        {
+          "option_id": "b",
+          "text": "Ang araw ng koleksiyon"
+        },
+        {
+          "option_id": "c",
+          "text": "Ang uri ng basurang ihihiwalay"
+        },
+        {
+          "option_id": "d",
+          "text": "Ang kabuuang timbang ng nakolektang baterya"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Walang numerong nagsasabi ng timbang sa talata.",
+        "why_correct": "Walang numerong nagsasabi ng timbang sa talata.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0059",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagbukas ang munisipyo ng dagdag na pila para sa matatanda at mga taong may kapansanan. Sa unang linggo, mas umikli ang paghihintay ng mga kabilang sa grupong ito. Gayunman, sinusukat pa ng opisina kung nakatulong din ang pagbabago sa kabuuang daloy ng mga aplikante.\n\nTanong: Ano ang ginawa ng munisipyo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Isinara ang lahat ng tanggapan"
+        },
+        {
+          "option_id": "b",
+          "text": "Kinansela ang lahat ng aplikasyon"
+        },
+        {
+          "option_id": "c",
+          "text": "Nagtaas agad ng bayarin"
+        },
+        {
+          "option_id": "d",
+          "text": "Nagbukas ng dagdag na pila para sa ilang aplikante"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Dagdag na pila ang pangunahing pagbabago.",
+        "why_correct": "Dagdag na pila ang pangunahing pagbabago.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0060",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagbukas ang munisipyo ng dagdag na pila para sa matatanda at mga taong may kapansanan. Sa unang linggo, mas umikli ang paghihintay ng mga kabilang sa grupong ito. Gayunman, sinusukat pa ng opisina kung nakatulong din ang pagbabago sa kabuuang daloy ng mga aplikante.\n\nTanong: Ano ang naobserbahan sa unang linggo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Nawala ang lahat ng pila"
+        },
+        {
+          "option_id": "b",
+          "text": "Dumoble ang bilang ng kawani"
+        },
+        {
+          "option_id": "c",
+          "text": "Bumaba ang lahat ng bayarin"
+        },
+        {
+          "option_id": "d",
+          "text": "Mas umikli ang paghihintay ng partikular na grupo"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Mas maikli ang paghihintay para sa inilaanang grupo.",
+        "why_correct": "Mas maikli ang paghihintay para sa inilaanang grupo.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0061",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagbukas ang munisipyo ng dagdag na pila para sa matatanda at mga taong may kapansanan. Sa unang linggo, mas umikli ang paghihintay ng mga kabilang sa grupong ito. Gayunman, sinusukat pa ng opisina kung nakatulong din ang pagbabago sa kabuuang daloy ng mga aplikante.\n\nTanong: Bakit patuloy pa rin ang pagsukat ng opisina?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Hindi nagbukas ang dagdag na pila"
+        },
+        {
+          "option_id": "b",
+          "text": "Walang dumating na aplikante"
+        },
+        {
+          "option_id": "c",
+          "text": "Ipinagbawal ang pagtatala"
+        },
+        {
+          "option_id": "d",
+          "text": "Hindi pa tiyak ang epekto sa kabuuang daloy"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Inaalam pa nila ang pangkalahatang epekto.",
+        "why_correct": "Inaalam pa nila ang pangkalahatang epekto.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0062",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagbukas ang munisipyo ng dagdag na pila para sa matatanda at mga taong may kapansanan. Sa unang linggo, mas umikli ang paghihintay ng mga kabilang sa grupong ito. Gayunman, sinusukat pa ng opisina kung nakatulong din ang pagbabago sa kabuuang daloy ng mga aplikante.\n\nTanong: Aling konklusyon ang HINDI pa suportado ng talata?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "May bagong pila para sa ilang aplikante"
+        },
+        {
+          "option_id": "b",
+          "text": "May nasukat na pagbabago sa unang linggo"
+        },
+        {
+          "option_id": "c",
+          "text": "Patuloy ang pagsusuri ng opisina"
+        },
+        {
+          "option_id": "d",
+          "text": "Bumilis na ang serbisyo para sa lahat ng aplikante"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Walang patunay na ang lahat ng aplikante ay mas mabilis nang napagsilbihan.",
+        "why_correct": "Walang patunay na ang lahat ng aplikante ay mas mabilis nang napagsilbihan.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0063",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagplano ang paaralan ng reading corner sa lumang silid. Nag-ambag ng mga aklat ang mga magulang at inayos ng mga guro ang mga estante. Bago ito buksan, sinuri ng tagapangasiwa kung ligtas ang mga upuan at maayos ang bentilasyon. Itinakda ang pagbubukas sa susunod na buwan.\n\nTanong: Ano ang pangunahing proyekto?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Pagtatayo ng bagong palaruan"
+        },
+        {
+          "option_id": "b",
+          "text": "Pagpapalit ng lahat ng silid-aralan"
+        },
+        {
+          "option_id": "c",
+          "text": "Pagbili ng mga sasakyan"
+        },
+        {
+          "option_id": "d",
+          "text": "Paggawa ng reading corner"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Reading corner ang paksa ng buong talata.",
+        "why_correct": "Reading corner ang paksa ng buong talata.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0064",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagplano ang paaralan ng reading corner sa lumang silid. Nag-ambag ng mga aklat ang mga magulang at inayos ng mga guro ang mga estante. Bago ito buksan, sinuri ng tagapangasiwa kung ligtas ang mga upuan at maayos ang bentilasyon. Itinakda ang pagbubukas sa susunod na buwan.\n\nTanong: Sino ang nag-ayos ng mga estante?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mga magulang"
+        },
+        {
+          "option_id": "b",
+          "text": "Mga mag-aaral"
+        },
+        {
+          "option_id": "c",
+          "text": "Mga bisita"
+        },
+        {
+          "option_id": "d",
+          "text": "Mga guro"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Nabanggit na inayos ng mga guro ang estante.",
+        "why_correct": "Nabanggit na inayos ng mga guro ang estante.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0065",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagplano ang paaralan ng reading corner sa lumang silid. Nag-ambag ng mga aklat ang mga magulang at inayos ng mga guro ang mga estante. Bago ito buksan, sinuri ng tagapangasiwa kung ligtas ang mga upuan at maayos ang bentilasyon. Itinakda ang pagbubukas sa susunod na buwan.\n\nTanong: Ano ang ginawa bago ang pagbubukas?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Ipinagbili ang mga aklat"
+        },
+        {
+          "option_id": "b",
+          "text": "Giniba ang silid"
+        },
+        {
+          "option_id": "c",
+          "text": "Inilipat ang paaralan"
+        },
+        {
+          "option_id": "d",
+          "text": "Sinuri ang kaligtasan at bentilasyon"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Kaligtasan ng upuan at bentilasyon ang sinuri.",
+        "why_correct": "Kaligtasan ng upuan at bentilasyon ang sinuri.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0066",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagplano ang paaralan ng reading corner sa lumang silid. Nag-ambag ng mga aklat ang mga magulang at inayos ng mga guro ang mga estante. Bago ito buksan, sinuri ng tagapangasiwa kung ligtas ang mga upuan at maayos ang bentilasyon. Itinakda ang pagbubukas sa susunod na buwan.\n\nTanong: Kailan inaasahang buksan ang reading corner?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Ngayong araw"
+        },
+        {
+          "option_id": "b",
+          "text": "Noong nakaraang taon"
+        },
+        {
+          "option_id": "c",
+          "text": "Walang itinakdang panahon"
+        },
+        {
+          "option_id": "d",
+          "text": "Sa susunod na buwan"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Itinakda ang pagbubukas sa susunod na buwan.",
+        "why_correct": "Itinakda ang pagbubukas sa susunod na buwan.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0067",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nUpang mabawasan ang mga maling impormasyon sa isang tanggapan, gumawa ang pangkat ng iisang talaan para sa mga anunsiyo. Isang itinalagang kawani lamang ang maaaring magpalit ng opisyal na bersiyon. Maaari pa ring magmungkahi ang lahat, ngunit sinusuri muna ang mungkahi bago ito ilathala.\n\nTanong: Ano ang layunin ng iisang talaan?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Madagdagan ang magkakaibang bersiyon"
+        },
+        {
+          "option_id": "b",
+          "text": "Maitago ang lahat ng anunsiyo"
+        },
+        {
+          "option_id": "c",
+          "text": "Matanggal ang bawat mungkahi"
+        },
+        {
+          "option_id": "d",
+          "text": "Mabawasan ang maling impormasyon"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang iisang talaan ay ginawa upang mabawasan ang maling impormasyon.",
+        "why_correct": "Ang iisang talaan ay ginawa upang mabawasan ang maling impormasyon.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0068",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nUpang mabawasan ang mga maling impormasyon sa isang tanggapan, gumawa ang pangkat ng iisang talaan para sa mga anunsiyo. Isang itinalagang kawani lamang ang maaaring magpalit ng opisyal na bersiyon. Maaari pa ring magmungkahi ang lahat, ngunit sinusuri muna ang mungkahi bago ito ilathala.\n\nTanong: Sino ang maaaring magpalit ng opisyal na bersiyon?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Sinumang bisita"
+        },
+        {
+          "option_id": "b",
+          "text": "Lahat nang walang pagsusuri"
+        },
+        {
+          "option_id": "c",
+          "text": "Tanging dating empleyado"
+        },
+        {
+          "option_id": "d",
+          "text": "Isang itinalagang kawani"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Iisa lamang na itinalagang kawani ang may kapangyarihan.",
+        "why_correct": "Iisa lamang na itinalagang kawani ang may kapangyarihan.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0069",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nUpang mabawasan ang mga maling impormasyon sa isang tanggapan, gumawa ang pangkat ng iisang talaan para sa mga anunsiyo. Isang itinalagang kawani lamang ang maaaring magpalit ng opisyal na bersiyon. Maaari pa ring magmungkahi ang lahat, ngunit sinusuri muna ang mungkahi bago ito ilathala.\n\nTanong: Ano ang nangyayari sa mga mungkahi?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Awtomatikong nilalathala"
+        },
+        {
+          "option_id": "b",
+          "text": "Agad itinatapon"
+        },
+        {
+          "option_id": "c",
+          "text": "Hindi kailanman tinatanggap"
+        },
+        {
+          "option_id": "d",
+          "text": "Sinusuri muna bago ilathala"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Pinapayagan ang mungkahi ngunit sinusuri muna.",
+        "why_correct": "Pinapayagan ang mungkahi ngunit sinusuri muna.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0070",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nUpang mabawasan ang mga maling impormasyon sa isang tanggapan, gumawa ang pangkat ng iisang talaan para sa mga anunsiyo. Isang itinalagang kawani lamang ang maaaring magpalit ng opisyal na bersiyon. Maaari pa ring magmungkahi ang lahat, ngunit sinusuri muna ang mungkahi bago ito ilathala.\n\nTanong: Aling gawain ang salungat sa proseso?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Pagsusuri sa mungkahi"
+        },
+        {
+          "option_id": "b",
+          "text": "Pagtatalaga ng responsable sa bersiyon"
+        },
+        {
+          "option_id": "c",
+          "text": "Paggamit ng iisang talaan"
+        },
+        {
+          "option_id": "d",
+          "text": "Pagbabago ng opisyal na bersiyon ng sinumang kawani"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Hindi lahat ng kawani ang maaaring magpalit ng opisyal na bersiyon.",
+        "why_correct": "Hindi lahat ng kawani ang maaaring magpalit ng opisyal na bersiyon.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0071",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nTuwing umaga, binibilang ng kooperatiba ang natitirang ani bago magtakda ng dami ng ibebenta. Kapag may sobra, inuuna nilang ibigay ito sa mga kasaping may naunang order. Hindi nila agad binabaan ang presyo sapagkat maaari pang may dumating na karagdagang kahilingan sa hapon.\n\nTanong: Ano ang unang ginagawa tuwing umaga?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Binabaan agad ang presyo"
+        },
+        {
+          "option_id": "b",
+          "text": "Isinasara ang pamilihan"
+        },
+        {
+          "option_id": "c",
+          "text": "Kinakansela ang mga order"
+        },
+        {
+          "option_id": "d",
+          "text": "Binibilang ang natitirang ani"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Pagbibilang ng ani ang unang hakbang.",
+        "why_correct": "Pagbibilang ng ani ang unang hakbang.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0072",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nTuwing umaga, binibilang ng kooperatiba ang natitirang ani bago magtakda ng dami ng ibebenta. Kapag may sobra, inuuna nilang ibigay ito sa mga kasaping may naunang order. Hindi nila agad binabaan ang presyo sapagkat maaari pang may dumating na karagdagang kahilingan sa hapon.\n\nTanong: Sino ang inuuna kapag may sobrang ani?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mga kasaping nahuling umorder"
+        },
+        {
+          "option_id": "b",
+          "text": "Mga hindi pa nag-oorder"
+        },
+        {
+          "option_id": "c",
+          "text": "Mga mamimiling walang tala"
+        },
+        {
+          "option_id": "d",
+          "text": "Mga kasaping may naunang order"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Mga kasaping may naunang order ang inuuna.",
+        "why_correct": "Mga kasaping may naunang order ang inuuna.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0073",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nTuwing umaga, binibilang ng kooperatiba ang natitirang ani bago magtakda ng dami ng ibebenta. Kapag may sobra, inuuna nilang ibigay ito sa mga kasaping may naunang order. Hindi nila agad binabaan ang presyo sapagkat maaari pang may dumating na karagdagang kahilingan sa hapon.\n\nTanong: Bakit hindi agad ibinababa ang presyo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Walang ani sa umaga"
+        },
+        {
+          "option_id": "b",
+          "text": "Ipinagbawal ang pagtitinda"
+        },
+        {
+          "option_id": "c",
+          "text": "Hindi nila binibilang ang ani"
+        },
+        {
+          "option_id": "d",
+          "text": "Maaaring may bagong kahilingan sa hapon"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Posibleng madagdagan ang demand sa hapon.",
+        "why_correct": "Posibleng madagdagan ang demand sa hapon.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0074",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nTuwing umaga, binibilang ng kooperatiba ang natitirang ani bago magtakda ng dami ng ibebenta. Kapag may sobra, inuuna nilang ibigay ito sa mga kasaping may naunang order. Hindi nila agad binabaan ang presyo sapagkat maaari pang may dumating na karagdagang kahilingan sa hapon.\n\nTanong: Ano ang pinakamainam na paglalarawan sa proseso?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Laging pareho ang dami ng ibinebenta"
+        },
+        {
+          "option_id": "b",
+          "text": "Walang sinusunod na prayoridad"
+        },
+        {
+          "option_id": "c",
+          "text": "Awtomatikong inuubos lahat ng ani"
+        },
+        {
+          "option_id": "d",
+          "text": "Nakasalalay sa tala ng ani at order ang pasiya"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Binibilang ang ani at inuuna ang dating order bago magpasya.",
+        "why_correct": "Binibilang ang ani at inuuna ang dating order bago magpasya.",
+        "why_wrong": {
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0075",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Paragraph organization",
+      "concept": "organization",
+      "micro_skill": "paragraph organization",
+      "archetype": "VFIL-PARA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Unang itinakda ng grupo ang layunin ng proyekto.\n2. Pagkatapos ay inilista nila ang mga kailangang kagamitan.\n3. Nang makumpleto ang listahan, nagsimula ang pagbili.\n4. Sa huli, sinuri nila ang mga resibo.\nAlin ang wastong pagkakasunod?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "2-3-1-4"
+        },
+        {
+          "option_id": "b",
+          "text": "2-1-3-4"
+        },
+        {
+          "option_id": "c",
+          "text": "1-2-3-4"
+        },
+        {
+          "option_id": "d",
+          "text": "4-1-2-3"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Nagsisimula sa layunin, sinusundan ng listahan, pagbili at pagsusuri.",
+        "why_correct": "Nagsisimula sa layunin, sinusundan ng listahan, pagbili at pagsusuri.",
+        "why_wrong": {
+          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0076",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Paragraph organization",
+      "concept": "organization",
+      "micro_skill": "paragraph organization",
+      "archetype": "VFIL-PARA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Nakatanggap ang opisina ng bagong reklamo.\n2. Itinala muna ang mahahalagang detalye nito.\n3. Pagkatapos ay ipinasa ang tala sa kaukulang yunit.\n4. Sa wakas, ipinaalam sa nagreklamo ang susunod na hakbang.\nAlin ang wastong pagkakasunod?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "4-1-2-3"
+        },
+        {
+          "option_id": "b",
+          "text": "2-3-1-4"
+        },
+        {
+          "option_id": "c",
+          "text": "1-3-2-4"
+        },
+        {
+          "option_id": "d",
+          "text": "1-2-3-4"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Magkakasunod ang pagtanggap, pagtatala, pagpapasa at pagtugon.",
+        "why_correct": "Magkakasunod ang pagtanggap, pagtatala, pagpapasa at pagtugon.",
+        "why_wrong": {
+          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0077",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Paragraph organization",
+      "concept": "organization",
+      "micro_skill": "paragraph organization",
+      "archetype": "VFIL-PARA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Nagpasya ang paaralan na magtanim ng mga gulay.\n2. Pinili nila ang bakanteng bahagi ng bakuran.\n3. Inihanda ng mga mag-aaral ang lupa at mga punla.\n4. Pagkaraan ng ilang linggo, inani nila ang mga gulay.\nAlin ang wastong pagkakasunod?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "1-2-3-4"
+        },
+        {
+          "option_id": "b",
+          "text": "4-1-2-3"
+        },
+        {
+          "option_id": "c",
+          "text": "2-3-1-4"
+        },
+        {
+          "option_id": "d",
+          "text": "1-2-4-3"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Ang pasiya at pagpili ng lugar ay nauuna sa pagtatanim at pag-aani.",
+        "why_correct": "Ang pasiya at pagpili ng lugar ay nauuna sa pagtatanim at pag-aani.",
+        "why_wrong": {
+          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0078",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Paragraph organization",
+      "concept": "organization",
+      "micro_skill": "paragraph organization",
+      "archetype": "VFIL-PARA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. May napansing tagas sa silid-aklatan.\n2. Agad na iniulat ito sa tagapangasiwa.\n3. Sinuri ng tagapag-ayos ang tubo at inayos ang sira.\n4. Matapos ang pagkukumpuni, muling binuksan ang silid.\nAlin ang wastong pagkakasunod?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "3-1-2-4"
+        },
+        {
+          "option_id": "b",
+          "text": "1-2-3-4"
+        },
+        {
+          "option_id": "c",
+          "text": "4-1-2-3"
+        },
+        {
+          "option_id": "d",
+          "text": "2-3-1-4"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Tamang panahon ang pagkatuklas, pag-uulat, pagkukumpuni at pagbubukas.",
+        "why_correct": "Tamang panahon ang pagkatuklas, pag-uulat, pagkukumpuni at pagbubukas.",
+        "why_wrong": {
+          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0079",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Paragraph organization",
+      "concept": "organization",
+      "micro_skill": "paragraph organization",
+      "archetype": "VFIL-PARA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Nalaman ng pangkat na kulang ang mga datos.\n2. Humingi sila ng karagdagang tala mula sa iba pang yunit.\n3. Pinagsama at sinuri nila ang mga natanggap na datos.\n4. Doon lamang nila isinulat ang pinal na ulat.\nAlin ang wastong pagkakasunod?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "2-3-1-4"
+        },
+        {
+          "option_id": "b",
+          "text": "2-1-3-4"
+        },
+        {
+          "option_id": "c",
+          "text": "1-2-3-4"
+        },
+        {
+          "option_id": "d",
+          "text": "4-1-2-3"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Kailangang makumpleto at masuri ang datos bago magsulat ng pinal na ulat.",
+        "why_correct": "Kailangang makumpleto at masuri ang datos bago magsulat ng pinal na ulat.",
+        "why_wrong": {
+          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0080",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Paragraph organization",
+      "concept": "organization",
+      "micro_skill": "paragraph organization",
+      "archetype": "VFIL-PARA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Nag-anunsiyo ang barangay ng libreng seminar.\n2. Nagparehistro ang mga nais dumalo.\n3. Sa araw ng seminar, pinatunayan ang pagdalo ng mga kalahok.\n4. Pagkatapos, nangalap ng puna ang mga tagapag-ayos.\nAlin ang wastong pagkakasunod?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "4-1-2-3"
+        },
+        {
+          "option_id": "b",
+          "text": "2-3-1-4"
+        },
+        {
+          "option_id": "c",
+          "text": "1-3-2-4"
+        },
+        {
+          "option_id": "d",
+          "text": "1-2-3-4"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Sunod-sunod ang anunsiyo, rehistrasyon, pagdalo at feedback.",
+        "why_correct": "Sunod-sunod ang anunsiyo, rehistrasyon, pagdalo at feedback.",
+        "why_wrong": {
+          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+    }
+  ]
+}
