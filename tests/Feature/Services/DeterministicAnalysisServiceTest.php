@@ -132,7 +132,7 @@ test('it handles drill attempts and singleAttemptOnly option correctly', functio
     // Normal multi-attempt evaluation
     $resultMulti = $service->generate($user->id, $attempt2->id, singleAttemptOnly: false);
     expect($resultMulti['verdict'])->toBeString()
-        ->and($resultMulti['predictive_metrics']['estimated_exam_score'])->toBe('Complete a Mock Exam to unlock score prediction');
+        ->and($resultMulti['predictive_metrics']['estimated_exam_score'])->toBe('No mock yet. A mock score is not a forecast.');
 
     // Single attempt evaluation
     $resultSingle = $service->generate($user->id, $attempt1->id, singleAttemptOnly: true);

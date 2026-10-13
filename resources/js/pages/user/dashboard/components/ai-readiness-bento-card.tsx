@@ -308,9 +308,8 @@ export function AiReadinessBentoCard({
                     <div className="flex items-center gap-3 rounded-xl border border-amber-200/60 bg-amber-50/40 p-3.5 text-xs text-amber-800 dark:border-amber-900/40 dark:bg-amber-950/20 dark:text-amber-300">
                         <AlertCircle className="size-4 shrink-0" />
                         <span>
-                            No upcoming Civil Service Exam date is active. AI
-                            timeline readiness will activate once an exam date
-                            is set.
+                            Set an exam date if you want a countdown. The
+                            countdown is not a forecast.
                         </span>
                     </div>
                 )}

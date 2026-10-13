@@ -48,7 +48,7 @@ export default function HistoryPage(props: HistoryPageProps) {
                 <div className="mb-6 flex items-start gap-3">
                     <PageHeader
                         title="History & Results"
-                        description="Review past performance, inspect section score breakdowns, and retake drills or mock tests to improve your readiness."
+                        description="Past mocks and drills, with the items you missed."
                         tooltip="A log of all your previous exam attempts, section performance reports, and historical stats."
                     />
                     <div className="mt-1">

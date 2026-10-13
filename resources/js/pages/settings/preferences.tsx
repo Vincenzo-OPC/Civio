@@ -29,7 +29,7 @@ const modes = [
             },
             {
                 icon: Cpu,
-                text: 'Uses smart algorithms to calculate your readiness score',
+                text: 'Scores the answers you already submitted. It does not forecast a pass.',
             },
             {
                 icon: Shield,

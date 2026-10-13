@@ -45,32 +45,32 @@ export interface StudyPlanTemplate {
 const DEFAULT_TEMPLATES: StudyPlanTemplate[] = [
     {
         id: '60_day_deep_mastery',
-        title: '60-Day Deep Mastery Track',
-        subtitle: 'Thorough 2-month pace covering all syllabus concepts',
+        title: '60-day plan',
+        subtitle: 'Two months of notes, drills, and mocks',
         category: 'comprehensive',
         duration_days: 60,
-        badge: 'Complete Mastery',
+        badge: '60 days',
         description:
-            'A relaxed, in-depth daily pace (1 topic per day) with foundational reviews, weekly skill checkpoints, and bi-weekly full mock exams.',
+            'One topic a day, a check each week, and a mock every two weeks. Not a CSC syllabus.',
         topics: [
             'Days 1-15: Verbal Ability & English Mechanics (Grammar, Vocab, Reading)',
             'Days 16-30: Numerical Ability & Problem Solving (Fractions, Algebra, Word Problems)',
             'Days 31-45: Analytical Ability & Deductive Logic (Analogies, Syllogisms, Series)',
             'Days 46-52: General Information, Philippine Constitution & RA 6713 Ethics',
-            'Days 53-60: Comprehensive Mock Exam Marathon & Weakness Targeted Drills',
+            'Days 53-60: Mocks and drills on missed subjects',
         ],
     },
     {
         id: '30_day_comprehensive',
-        title: '30-Day Complete CSE Sprint',
-        subtitle: 'Full syllabus coverage with weekly mock checkpoints',
+        title: '30-day plan',
+        subtitle: 'Thirty days, with a mock each week',
         category: 'comprehensive',
         duration_days: 30,
-        badge: 'Most Popular',
+        badge: '30 days',
         description:
-            'A balanced daily study regimen covering Verbal, Numerical, Analytical, and General Information with built-in review checkpoints.',
+            'Verbal, numerical, analytical, and general information, with a review day each week.',
         topics: [
-            'Days 1-7: Verbal Ability & Grammar Mastery',
+            'Days 1-7: Verbal',
             'Days 8-14: Numerical Ability & Problem Solving',
             'Days 15-21: Analytical Ability & Logical Reasoning',
             'Days 22-26: Philippine Constitution & RA 6713',
@@ -79,29 +79,29 @@ const DEFAULT_TEMPLATES: StudyPlanTemplate[] = [
     },
     {
         id: '14_day_crash_course',
-        title: '14-Day High-Yield Crash Course',
-        subtitle: 'Accelerated high-frequency exam topics',
+        title: '14-day plan',
+        subtitle: 'Fourteen days of notes and one mock',
         category: 'comprehensive',
         duration_days: 14,
-        badge: 'Fast Track',
+        badge: '14 days',
         description:
-            'Designed for busy examinees to quickly review top-tested formulas, vocabulary, logic patterns, and constitution essentials.',
+            'Grammar, vocabulary, arithmetic, logic, and general information. Civio does not know which topics the exam will emphasize.',
         topics: [
-            'Day 1-4: High-frequency Grammar, Vocabulary & Analogy',
-            'Day 5-8: Math Shortcuts, Percentage, Ratio & Word Problems',
+            'Day 1-4: Grammar, vocabulary, and analogy',
+            'Day 5-8: Percentage, ratio, and word problems',
             'Day 9-11: Deductive Logic, Series & Data Interpretation',
             'Day 12-14: General Info, RA 6713 & Final Full Mock',
         ],
     },
     {
         id: '7_day_final_cram',
-        title: '7-Day Final Cram & Mocks',
-        subtitle: 'Intensive final week timed practice runs',
+        title: '7-day mocks',
+        subtitle: 'A week of timed mocks',
         category: 'comprehensive',
         duration_days: 7,
-        badge: 'Exam Week',
+        badge: '7 days',
         description:
-            'Sharpen speed and accuracy with daily timed drills, full simulation tests, and rapid error analysis before exam day.',
+            'Timed drills and full mocks. A score here is not an official result.',
         topics: [
             'Daily timed mock (150 scored items)',
             'Instant Review & Diagnostic Weak Area Drills',
@@ -111,8 +111,8 @@ const DEFAULT_TEMPLATES: StudyPlanTemplate[] = [
     },
     {
         id: 'verbal_mastery',
-        title: 'Verbal Ability & Grammar Mastery',
-        subtitle: '14-day mastery of grammar, vocabulary & reading',
+        title: 'Verbal practice',
+        subtitle: '14 days of grammar, vocabulary, and reading',
         category: 'verbal',
         duration_days: 14,
         badge: 'Subject Track',
@@ -120,7 +120,7 @@ const DEFAULT_TEMPLATES: StudyPlanTemplate[] = [
             'Deep dive into English grammar, word meanings, contextual vocabulary, paragraph sequencing, and reading comprehension techniques.',
         topics: [
             'Days 1-3: Subject-Verb Agreement, Pronouns & Verb Tenses',
-            'Days 4-6: High-Frequency Vocabulary, Synonyms & Antonyms',
+            'Days 4-6: Vocabulary, synonyms, and antonyms',
             'Days 7-9: Identifying Sentence Errors & Idioms',
             'Days 10-12: Paragraph Organization & Logical Transitions',
             'Days 13-14: Reading Comprehension Speed Drills & Final Verbal Test',
@@ -128,30 +128,30 @@ const DEFAULT_TEMPLATES: StudyPlanTemplate[] = [
     },
     {
         id: 'math_mastery',
-        title: 'Numerical & Math Mastery Track',
-        subtitle: '15-day step-by-step arithmetic & word problem mastery',
+        title: 'Numerical practice',
+        subtitle: '15 days of arithmetic and word problems',
         category: 'numerical',
         duration_days: 15,
         badge: 'Subject Track',
         description:
-            'Overcome math anxiety with guided practice on fractions, percentages, age/work problems, ratios, and number sequences.',
+            'Practice on fractions, percentages, age and work problems, ratios, and sequences.',
         topics: [
             'Days 1-3: Fractions, Decimals & Order of Operations (PEMDAS)',
             'Days 4-6: Percentages, Ratios & Partitive Proportions',
             'Days 7-10: Word Problems (Age, Distance, Work & Financial Math)',
-            'Days 11-13: Basic Algebra & Number Series Shortcuts',
+            'Days 11-13: Basic algebra and number series',
             'Days 14-15: Data Interpretation & Numerical Final Drill',
         ],
     },
     {
         id: 'analytical_mastery',
         title: 'Analytical Ability & Logic Track',
-        subtitle: '14-day deductive logic, analogy & series mastery',
+        subtitle: '14 days of analogies, series, and deductions',
         category: 'analytical',
         duration_days: 14,
         badge: 'Subject Track',
         description:
-            'Master logical patterns, word analogies, categorical syllogisms, Venn diagrams, assumptions, and data analysis.',
+            'Practice word analogies, syllogisms, assumptions, and charts.',
         topics: [
             'Days 1-3: Word Analogy Patterns & Relationship Types',
             'Days 4-6: Number, Letter & Figural Sequences',
@@ -163,12 +163,13 @@ const DEFAULT_TEMPLATES: StudyPlanTemplate[] = [
     {
         id: 'gen_info_fast_track',
         title: 'General Information & Constitution',
-        subtitle: '10-day mastery of civil service legal essentials',
+        subtitle:
+            '10 days on the Constitution, RA 6713, rights, and environment',
         category: 'gen_info',
         duration_days: 10,
         badge: 'Subject Track',
         description:
-            'Targeted study plan for the 1987 Philippine Constitution, RA 6713 (Code of Conduct), Human Rights, and Environmental Protection.',
+            'Notes on the 1987 Constitution, RA 6713, human rights, and environmental laws. Not a CSC syllabus.',
         topics: [
             'Days 1-3: Philippine Constitution: Preamble, State Policies & Bill of Rights',
             'Days 4-6: Legislative, Executive, Judiciary & Constitutional Commissions',
@@ -182,9 +183,9 @@ const DEFAULT_TEMPLATES: StudyPlanTemplate[] = [
         subtitle: '7-day filing rules & clerical accuracy track',
         category: 'clerical',
         duration_days: 7,
-        badge: 'SubProf Track',
+        badge: 'Subprofessional',
         description:
-            'Tailored for SubProfessional examinees covering standard alphabetical filing rules, numerical indexing, spelling, and error detection.',
+            'Alphabetical filing, numerical indexing, spelling, and error checks for the Subprofessional mock.',
         topics: [
             'Day 1-2: Alphabetical Filing Rules & Indexing Orders',
             'Day 3-4: Numerical, Geographic & Subject Filing Procedures',

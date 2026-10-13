@@ -499,8 +499,8 @@ class DeterministicAnalysisService
         if ($mockExamCount <= 0 || $mockTotalQuestions <= 0) {
             return [
                 'passProbability' => 0,
-                'estimatedExamScore' => 'Complete a Mock Exam to unlock score prediction',
-                'daysToReadiness' => 'Complete a Mock Exam to estimate readiness timeline',
+                'estimatedExamScore' => 'No mock yet. A mock score is not a forecast.',
+                'daysToReadiness' => 'No mock yet. Days until your date are not a forecast.',
                 'mockPassConfidence' => 'low',
             ];
         }
@@ -516,13 +516,13 @@ class DeterministicAnalysisService
 
         $estimatedMin = max(0, $mockAvg - 4);
         $estimatedMax = min(100, $mockAvg + 4);
-        $estimatedExamScore = "{$estimatedMin}% - {$estimatedMax}% predicted actual score";
+        $estimatedExamScore = "Practice range {$estimatedMin}%–{$estimatedMax}% around a {$mockAvg}% mock average. Not an official score.";
 
         if ($daysUntilExam <= 7) {
             if ($daysUntilExam <= 1) {
-                $daysToReadiness = "Final 24-hour crunch review before exam day ({$examDateStr}).";
+                $daysToReadiness = "The date you set is {$examDateStr}. That countdown is not a forecast.";
             } else {
-                $daysToReadiness = "Urgent {$daysUntilExam}-day final sprint review before exam day ({$examDateStr}).";
+                $daysToReadiness = "{$daysUntilExam} days until {$examDateStr}. That countdown is not a forecast.";
             }
         } else {
             $daysToReadiness = $this->pickTemplate($mockAvg < 60 ? 'readiness_low' : ($mockAvg >= 80 ? 'readiness_high' : 'readiness_mid'), []);
@@ -798,16 +798,16 @@ class DeterministicAnalysisService
                 'Practice average {avgScore}%. A higher score on {weakList} here is still not an official rating.',
             ],
             'verdict_low' => [
-                'Your current {avgScore}% average across {totalAttempts} attempts indicates foundational gaps — but that\'s exactly what structured study fixes.',
-                'At {avgScore}% after {totalAttempts} sessions, building strong basics in {weakList} is your top priority before {examDateStr}.',
-                '{totalAttempts} attempts have mapped your weak spots clearly. Dedicate the next {daysUntilExam} days to core concepts in {weakList}.',
-                'Your {avgScore}% baseline gives us a clear starting point. Focus on fundamentals and watch the numbers climb.',
-                'Every expert was once a beginner — at {avgScore}% with {daysUntilExam} days left, a disciplined study plan can transform your scores.',
+                'Practice average {avgScore}% after {totalAttempts} attempts. The subjects with more misses: {weakList}.',
+                'Practice average {avgScore}%. {daysUntilExam} days remain until the date you set. That is not a forecast.',
+                '{totalAttempts} attempts, practice average {avgScore}%. The published general passing rating is at least 80.00. This average is not that rating.',
+                'Practice average {avgScore}% before {examDateStr}. Misses are concentrated in {weakList}.',
+                'Practice average {avgScore}%. A higher score here is still not an official rating.',
             ],
             'verdict_empty' => [
-                'No exam attempts recorded yet. Complete your first mock exam or drill to unlock personalized analytics.',
-                'Your performance dashboard is waiting for data — take a practice exam to get started.',
-                'Start your first review session to unlock detailed readiness insights and study recommendations.',
+                'No attempts yet. A mock or a drill will show a practice score.',
+                'There is no practice score until you finish a mock or a drill.',
+                'Finish one mock or one drill. The score is a practice score, not a forecast.',
             ],
             'verdict_no_mock' => [
                 'You have drill scores and no full mock yet. A mock is 150 or 145 scored items. Civio does not calculate an official pass probability.',
@@ -817,164 +817,164 @@ class DeterministicAnalysisService
 
             // ── Encouragement (by score tier + trend) ─────────────
             'encouragement_high' => [
-                'You\'re doing outstanding work — maintain momentum and trust the process!',
-                'Your dedication is paying off. Stay consistent and the exam will feel routine.',
-                'Excellence is a habit, and yours is well-formed. Keep at it!',
-                'The finish line is near and you\'re well-prepared. Confidence is earned — you\'ve earned it.',
+                'Practice average is in the high band. It is not an official rating.',
+                'Recent practice is in the high band. The next mock is a separate score.',
+                'A high practice average is still a practice score.',
+                'The published general passing rating is at least 80.00. This band is not that rating.',
             ],
             'encouragement_high_improving' => [
-                'Your scores are climbing and you\'re already in the top tier — that\'s remarkable momentum!',
-                'Upward trend at this level is impressive. You\'re sharpening an already strong edge.',
+                'The last mocks are higher than the ones before them. That is a practice trend, not a forecast.',
+                'Practice scores moved up. The next mock can still move either way.',
             ],
             'encouragement_high_declining' => [
-                'A slight dip at high levels is normal fatigue — rest, reset, and you\'ll bounce right back.',
-                'Don\'t let a small downtick shake your confidence. Your foundation is solid.',
+                'The last mocks are lower than the ones before them. That is a practice trend, not a forecast.',
+                'A lower recent mock is one result. It does not change the published passing rating.',
             ],
             'encouragement_mid' => [
-                'You\'re building real competence. Every drill moves you closer to passing.',
-                'Steady progress adds up — keep your daily habit and you\'ll see the results compound.',
-                'The gap between where you are and where you need to be is very closeable. Keep going!',
-                'You\'re in the growth zone. This is where consistent practice creates breakthroughs.',
+                'Practice average is in the middle band. It is not a prediction you will pass.',
+                'Middle-band practice. The published general passing rating is at least 80.00.',
+                'More items in the subjects you missed will change this average. It will still be a practice score.',
+                'This band is a practice average, not an official result.',
             ],
             'encouragement_mid_improving' => [
-                'Your scores are trending up — this is exactly the momentum you need before exam day!',
-                'Great trajectory! Each session is visibly improving your results.',
+                'Recent practice scores are higher than earlier ones. That is not a pass forecast.',
+                'The practice trend is up. The next mock is a separate score.',
             ],
             'encouragement_mid_declining' => [
-                'Scores may have dipped, but that often signals you\'re tackling harder material. That\'s growth.',
-                'A temporary plateau is just a setup for a breakthrough. Refocus on weak spots and push through.',
+                'Recent practice scores are lower than earlier ones. Check the subjects you missed.',
+                'The practice trend is down. A drill on the missed subjects is the next step, not a forecast.',
             ],
             'encouragement_low' => [
-                'The first step is always the hardest, and you\'ve already taken it. Build from here.',
-                'Every high scorer once started where you are. Structured daily study will close the gap.',
-                'Focus on one subject at a time and celebrate small wins. Progress compounds.',
-                'Your weak areas are clearly identified — that\'s an advantage most test-takers don\'t have.',
+                'Practice average is in the low band. The missed subjects are listed on this page.',
+                'A low practice average is a count of misses. It is not an official rating.',
+                'One subject at a time is enough. The score after that drill is still a practice score.',
+                'The subjects with more misses are named above. That list is from your attempts, not from CSC.',
             ],
             'encouragement_low_improving' => [
-                'Your scores are moving in the right direction — proof that your effort is working!',
-                'Improvement from a low base is the most impactful kind. Keep this momentum going!',
+                'Recent practice scores are higher than earlier ones. The average is still a practice score.',
+                'The practice trend is up from a low average. It is not a forecast.',
             ],
             'encouragement_low_declining' => [
-                'It\'s okay to struggle — it means you\'re challenging yourself. Slow down and rebuild the basics.',
-                'A downtrend now just means you need to refocus. Go back to fundamentals and rebuild.',
+                'Recent practice scores are lower than earlier ones. Start with the subject you missed most.',
+                'The practice trend is down. A short drill is a practice score, not a forecast.',
             ],
             'encouragement_empty' => [
-                'Take the first step — one practice exam unlocks your entire study roadmap!',
-                'Your journey begins with a single drill. Jump in and let the data guide you!',
-                'Ready to find out where you stand? A quick mock exam gets things moving.',
+                'Finish a mock or a drill to see a practice score.',
+                'There is no score until an attempt is submitted.',
+                'A mock is 150 or 145 scored items. A drill is one subject.',
             ],
 
             // ── Priority Actions ──────────────────────────────────
             'priority_action' => [
-                'Complete a focused 30-minute study session on {topModule} today.',
-                'Tackle a {topModule} drill right now to reinforce your weakest area.',
-                'Open the {topModule} module and work through at least 10 practice questions.',
-                'Your biggest score unlock: spend today\'s session drilling {topModule}.',
+                'A 30-minute drill on {topModule} covers the subject with more misses.',
+                'Open a {topModule} drill if you want more items from that subject.',
+                'Ten {topModule} items is one way to add practice there.',
+                'Today\'s misses are concentrated in {topModule}.',
             ],
             'priority_action_none' => [
-                'Take a quick practice drill to unlock detailed analytics.',
-                'Start any drill session to generate your first performance insights.',
-                'Complete a mock exam to identify your strengths and focus areas.',
+                'A drill adds a practice score. It does not forecast a pass.',
+                'Finish a drill to see which items you missed.',
+                'A mock is the timed 150-item or 145-item set.',
             ],
             'priority_action_empty' => [
-                'Take your first mock exam or drill today.',
-                'Jump into a practice session — it only takes a few minutes to get started.',
-                'Pick any subject and complete a short drill to kickstart your analytics.',
+                'Finish a mock or a drill to see a practice score.',
+                'A short drill is enough to start a practice record.',
+                'Pick one subject and finish a drill.',
             ],
 
             // ── Subject Mastery Insights ──────────────────────────
             'insight_no_data' => [
-                'No practice questions have been completed for {subject} yet.',
-                '{subject} hasn\'t been explored yet — take a diagnostic drill to establish your baseline.',
-                'Awaiting your first {subject} attempt to generate performance insights.',
+                'No {subject} items yet.',
+                '{subject} has no submitted items.',
+                'A {subject} drill would add the first score for this subject.',
             ],
             'insight_mastered' => [
-                'Strong performance in {subject} with {pct}% accuracy — this is a reliable strength.',
-                'You\'ve mastered {subject} at {pct}%. This subject is exam-ready.',
-                '{pct}% accuracy in {subject} shows deep understanding. Well done!',
-                '{subject} is one of your strongest areas at {pct}%. Focus your energy elsewhere.',
+                '{subject} practice accuracy is {pct}%. That is not an official rating.',
+                '{pct}% of your {subject} items were correct. This is a practice count.',
+                'You can spend the next session on another subject. {subject} is at {pct}% in practice.',
+                '{subject} is the higher practice score at {pct}%.',
             ],
             'insight_moderate' => [
-                'Moderate understanding of {subject} at {pct}% — close to mastery with focused effort.',
-                '{subject} accuracy is {pct}%, showing good foundations that need reinforcement.',
-                'You\'re scoring {pct}% in {subject} — a targeted drill push can tip this into mastery.',
-                '{pct}% in {subject} is solid but leaves points on the table. Polish your weak subtopics.',
+                '{subject} practice accuracy is {pct}%.',
+                '{pct}% of your {subject} items were correct.',
+                'A {subject} drill adds items to this {pct}% practice score.',
+                '{pct}% in {subject} is a practice count, not a point total on the exam.',
             ],
             'insight_critical' => [
-                '{pct}% accuracy in {subject} reveals foundational gaps that need priority attention.',
-                '{subject} at {pct}% is your biggest opportunity for score improvement.',
-                'Low accuracy of {pct}% in {subject} — building core concepts here will have outsized impact.',
-                '{subject} is currently at {pct}%. Dedicated study can move this significantly.',
+                '{subject} practice accuracy is {pct}%. More of these items were missed.',
+                '{subject} is at {pct}% in practice. That is the lower score on this page.',
+                '{pct}% of your {subject} items were correct.',
+                '{subject} is at {pct}%. A drill there changes this practice count only.',
             ],
 
             // ── Subject Mastery Recommended Actions ───────────────
             'action_no_data' => [
-                'Begin with a basic diagnostic drill in {subject} to establish your initial score.',
-                'Try a short {subject} quiz to discover your starting level.',
-                'Take 10 minutes to complete a {subject} drill and get your first data point.',
+                'Start with a short {subject} drill.',
+                'A {subject} drill records the first score for this subject.',
+                'Ten {subject} items is enough for a first count.',
             ],
             'action_mastered' => [
-                'Maintain your edge with occasional timed review drills in {subject}.',
-                'Focus on speed optimization — try {subject} drills under exam-time pressure.',
-                'Keep {subject} sharp with one review session per week.',
-                'Consider helping solidify this by attempting the hardest {subject} drills available.',
+                'A timed {subject} drill checks pace. The Professional mock allows about 76 seconds an item.',
+                'One {subject} review a week keeps the practice count current.',
+                'Harder {subject} items are in the drill filters.',
+                'A short timed {subject} set is optional. It is not required by CSC.',
             ],
             'action_moderate' => [
-                'Review core subtopics and practice targeted medium-difficulty {subject} drills.',
-                'Spend 20 minutes on {subject} study guides, then attempt a timed drill.',
-                'Identify and drill your weakest {subject} subtopics to push past 80%.',
-                'Complete 2-3 focused {subject} sessions this week to cross into mastery.',
+                'A medium {subject} drill adds items to this practice count.',
+                'Twenty minutes on the {subject} notes, then a drill, is one session.',
+                'The {subject} subtopics you missed are the ones to drill.',
+                'Two or three {subject} drills this week change this practice count only.',
             ],
             'action_critical' => [
-                'Pause mock exams and dedicate study time to {subject} fundamentals.',
-                'Start with the {subject} study guide, then tackle easy-level drills.',
-                'Break {subject} into subtopics and master them one at a time.',
-                'Prioritize {subject} in your next 5 study sessions for maximum impact.',
+                'A {subject} drill is a smaller set than a full mock.',
+                'Read the {subject} notes, then a short drill.',
+                'Split {subject} into subtopics and drill one.',
+                'The next few sessions can stay on {subject}. The score is still a practice score.',
             ],
 
             // ── Remediation: Struggle Reasons ────────────────────
             'struggle_reason_hard' => [
-                'Consistent errors on {subtopic} suggest gaps in underlying concepts.',
-                'Speed and accuracy both drop on {subtopic}-related questions.',
-                '{subtopic} questions are answered incorrectly more often than average.',
-                'Pattern analysis shows {subtopic} as a recurring stumbling block.',
+                'More {subtopic} items were missed than the other subtopics.',
+                'Both speed and accuracy are lower on {subtopic} items.',
+                '{subtopic} items are missed more often than the rest.',
+                '{subtopic} shows up often among the missed items.',
             ],
             'struggle_reason_medium' => [
-                'Core rules and terminology for {subtopic} need reinforcement.',
-                '{subtopic} concepts are partially understood but not yet reliable under pressure.',
-                'Mixed results on {subtopic} indicate inconsistent knowledge application.',
-                '{subtopic} accuracy fluctuates — a sign that fundamentals need solidifying.',
+                '{subtopic} items are sometimes missed.',
+                '{subtopic} is correct on some items and missed on others.',
+                '{subtopic} results are mixed across attempts.',
+                '{subtopic} accuracy is not stable yet.',
             ],
 
             // ── Remediation: Coaching Tips ───────────────────────
             'coaching_hard' => [
-                'Practice at least 10 drills of {subtopic} focusing on accuracy before speed.',
-                'Review the {subtopic} study module, then drill until you hit 80%+ accuracy.',
-                'Break {subtopic} into smaller concepts and tackle them individually.',
-                'Spend 15 minutes reading {subtopic} theory, then do 10 practice questions.',
+                'Ten {subtopic} items, accuracy before speed.',
+                'Read the {subtopic} notes, then drill. 80% here is a practice target, not an official cutoff.',
+                'Split {subtopic} into smaller sets.',
+                'Fifteen minutes on the {subtopic} notes, then ten items.',
             ],
             'coaching_medium' => [
-                'Review the study guides and summary sheet for {subtopic} before drilling.',
-                'Complete 5 easy-level {subtopic} drills to rebuild confidence, then move to medium.',
-                'Bookmark key {subtopic} questions into a saved drill set and practice them regularly.',
-                'Do a quick {subtopic} refresher, then test yourself with a timed drill.',
+                'Read the {subtopic} notes, then a drill.',
+                'Five easier {subtopic} items, then a medium set.',
+                'Save missed {subtopic} items and drill them again.',
+                'A short {subtopic} note, then a timed drill. About 76 seconds an item on the Professional mock.',
             ],
 
             // ── Days to Readiness ────────────────────────────────
             'readiness_low' => [
-                '30 days of dedicated foundational study recommended.',
-                'Approximately 4 weeks of structured daily practice to reach exam readiness.',
-                'Plan for 30+ days of focused concept-building before attempting full mocks.',
+                'Practice average is under 60%. That is not a forecast.',
+                'Under 60% on practice mocks. The published general passing rating is at least 80.00.',
+                'The practice average is under 60%. A mock score is not an official rating.',
             ],
             'readiness_mid' => [
-                '15 days of targeted practice on weak areas.',
-                'About 2 weeks of focused drilling should close your performance gaps.',
-                '10-15 days of consistent study on identified weak subjects.',
+                'Practice average is between 60% and 80%. That is not a forecast.',
+                'The practice average is below the published general passing rating of at least 80.00.',
+                'Missed subjects are listed on this page. This is not a timeline.',
             ],
             'readiness_high' => [
-                '5 days of maintenance review and simulation exams.',
-                'A short tune-up period of 3-5 days of timed practice is sufficient.',
-                'Light review for 5-7 days to stay sharp before exam day.',
+                'Practice average is at least 80%. That is not an official rating.',
+                'The practice average meets the published general passing figure. It is still a practice score.',
+                'A timed mock checks pace. This is not a forecast.',
             ],
 
             // ── Completion Pace (by trend) ──────────────────────

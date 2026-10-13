@@ -20,12 +20,12 @@ class StudyPlanTemplateService
         return [
             '60_day_deep_mastery' => [
                 'id' => '60_day_deep_mastery',
-                'title' => '60-Day Deep Mastery Track',
-                'subtitle' => 'Thorough 2-month pace covering all syllabus concepts',
+                'title' => '60-day plan',
+                'subtitle' => 'Two months of notes, drills, and mocks',
                 'category' => 'comprehensive',
                 'duration_days' => 60,
-                'badge' => 'Complete Mastery',
-                'description' => 'A relaxed, in-depth daily pace (1 topic per day) with foundational reviews, weekly skill checkpoints, and bi-weekly full mock exams.',
+                'badge' => '60 days',
+                'description' => 'One topic a day, a check each week, and a mock every two weeks. Not a CSC syllabus.',
                 'topics' => [
                     'Days 1-15: Verbal Ability & English Mechanics (Grammar, Vocab, Reading)',
                     'Days 16-30: Numerical Ability & Problem Solving (Fractions, Algebra, Word Problems)',
@@ -36,14 +36,14 @@ class StudyPlanTemplateService
             ],
             '30_day_comprehensive' => [
                 'id' => '30_day_comprehensive',
-                'title' => '30-Day Complete CSE Sprint',
-                'subtitle' => 'Full syllabus coverage with weekly mock exams',
+                'title' => '30-day plan',
+                'subtitle' => 'Thirty days, with a mock each week',
                 'category' => 'comprehensive',
                 'duration_days' => 30,
-                'badge' => 'Most Popular',
-                'description' => 'A balanced daily study regimen covering Verbal, Numerical, Analytical, and General Information with built-in review checkpoints.',
+                'badge' => '30 days',
+                'description' => 'Verbal, numerical, analytical, and general information, with a review day each week.',
                 'topics' => [
-                    'Days 1-7: Verbal Ability & Grammar Mastery',
+                    'Days 1-7: Verbal',
                     'Days 8-14: Numerical Ability & Problem Solving',
                     'Days 15-21: Analytical Ability & Logical Reasoning',
                     'Days 22-26: Philippine Constitution & RA 6713',
@@ -52,12 +52,12 @@ class StudyPlanTemplateService
             ],
             '14_day_crash_course' => [
                 'id' => '14_day_crash_course',
-                'title' => '14-Day High-Yield Crash Course',
-                'subtitle' => 'Accelerated high-frequency exam topics',
+                'title' => '14-day plan',
+                'subtitle' => 'Fourteen days of notes and one mock',
                 'category' => 'comprehensive',
                 'duration_days' => 14,
-                'badge' => 'Fast Track',
-                'description' => 'Designed for busy examinees to quickly review top-tested formulas, vocabulary, logic patterns, and constitution essentials.',
+                'badge' => '14 days',
+                'description' => 'Grammar, vocabulary, arithmetic, logic, and general information. Civio does not know which topics the exam will emphasize.',
                 'topics' => [
                     'Day 1-4: High-frequency Grammar, Vocabulary & Analogy',
                     'Day 5-8: Math Shortcuts, Percentage, Ratio & Word Problems',
@@ -67,12 +67,12 @@ class StudyPlanTemplateService
             ],
             '7_day_final_cram' => [
                 'id' => '7_day_final_cram',
-                'title' => '7-Day Final Cram & Mocks',
-                'subtitle' => 'Intensive final week timed practice runs',
+                'title' => '7-day mocks',
+                'subtitle' => 'A week of timed mocks',
                 'category' => 'comprehensive',
                 'duration_days' => 7,
-                'badge' => 'Exam Week',
-                'description' => 'Sharpen speed and accuracy with daily timed drills, full simulation tests, and rapid error analysis before exam day.',
+                'badge' => '7 days',
+                'description' => 'Timed drills and full mocks. A score here is not an official result.',
                 'topics' => [
                     'Daily Timed Mock Exam Simulation (150 scored items)',
                     'Instant Review & Diagnostic Weak Area Drills',
@@ -82,8 +82,8 @@ class StudyPlanTemplateService
             ],
             'verbal_mastery' => [
                 'id' => 'verbal_mastery',
-                'title' => 'Verbal Ability & Grammar Mastery',
-                'subtitle' => '14-day mastery of grammar, vocabulary & reading',
+                'title' => 'Verbal practice',
+                'subtitle' => '14 days of grammar, vocabulary, and reading',
                 'category' => 'verbal',
                 'duration_days' => 14,
                 'badge' => 'Subject Track',
@@ -98,12 +98,12 @@ class StudyPlanTemplateService
             ],
             'math_mastery' => [
                 'id' => 'math_mastery',
-                'title' => 'Numerical & Math Mastery Track',
-                'subtitle' => '15-day step-by-step arithmetic & word problem mastery',
+                'title' => 'Numerical practice',
+                'subtitle' => '15 days of arithmetic and word problems',
                 'category' => 'numerical',
                 'duration_days' => 15,
                 'badge' => 'Subject Track',
-                'description' => 'Overcome math anxiety with guided practice on fractions, percentages, age/work problems, ratios, and number sequences.',
+                'description' => 'Practice on fractions, percentages, age and work problems, ratios, and sequences.',
                 'topics' => [
                     'Days 1-3: Fractions, Decimals & Order of Operations (PEMDAS)',
                     'Days 4-6: Percentages, Ratios & Partitive Proportions',
@@ -115,11 +115,11 @@ class StudyPlanTemplateService
             'analytical_mastery' => [
                 'id' => 'analytical_mastery',
                 'title' => 'Analytical Ability & Logic Track',
-                'subtitle' => '14-day deductive logic, analogy & series mastery',
+                'subtitle' => '14 days of analogies, series, and deductions',
                 'category' => 'analytical',
                 'duration_days' => 14,
                 'badge' => 'Subject Track',
-                'description' => 'Master logical patterns, word analogies, categorical syllogisms, Venn diagrams, assumptions, and data analysis.',
+                'description' => 'Practice word analogies, syllogisms, assumptions, and charts.',
                 'topics' => [
                     'Days 1-3: Word Analogy Patterns & Relationship Types',
                     'Days 4-6: Number, Letter & Figural Sequences',
@@ -131,11 +131,11 @@ class StudyPlanTemplateService
             'gen_info_fast_track' => [
                 'id' => 'gen_info_fast_track',
                 'title' => 'General Information & Constitution',
-                'subtitle' => '10-day mastery of civil service legal essentials',
+                'subtitle' => '10 days on the Constitution, RA 6713, rights, and environment',
                 'category' => 'gen_info',
                 'duration_days' => 10,
                 'badge' => 'Subject Track',
-                'description' => 'Targeted study plan for the 1987 Philippine Constitution, RA 6713 (Code of Conduct), Human Rights, and Environmental Protection.',
+                'description' => 'Notes on the 1987 Constitution, RA 6713, human rights, and environmental laws. Not a CSC syllabus.',
                 'topics' => [
                     'Days 1-3: Philippine Constitution: Preamble, State Policies & Bill of Rights',
                     'Days 4-6: Legislative, Executive, Judiciary & Constitutional Commissions',
@@ -149,8 +149,8 @@ class StudyPlanTemplateService
                 'subtitle' => '7-day filing rules & clerical accuracy track',
                 'category' => 'clerical',
                 'duration_days' => 7,
-                'badge' => 'SubProf Track',
-                'description' => 'Tailored for SubProfessional examinees covering standard alphabetical filing rules, numerical indexing, spelling, and error detection.',
+                'badge' => 'Subprofessional',
+                'description' => 'Alphabetical filing, numerical indexing, spelling, and error checks for the Subprofessional mock.',
                 'topics' => [
                     'Day 1-2: Alphabetical Filing Rules & Indexing Orders',
                     'Day 3-4: Numerical, Geographic & Subject Filing Procedures',
@@ -284,7 +284,7 @@ class StudyPlanTemplateService
                 ['title' => 'Day 52: GenInfo - Human Rights & Environmental Laws', 'description' => 'Universal declaration of human rights, Clean Air Act, and waste management.'],
 
                 // Mock Exam & Final Polish (Days 53-60)
-                ['title' => 'Day 53: Comprehensive Full Mock Exam #1 (150 scored items)', 'description' => 'Simulate complete Civil Service Exam with strict 3-hour 10-minute timer.'],
+                ['title' => 'Day 53: Comprehensive Full Mock Exam #1 (150 scored items)', 'description' => 'A Professional practice mock: 150 scored items, 3 hours 10 minutes. Not an official paper.'],
                 ['title' => 'Day 54: Deep-Dive Rationale Review #1', 'description' => 'Review rationales for all missed questions in Mock #1.'],
                 ['title' => 'Day 55: Targeted Weakness Fix - Verbal & Math Drills', 'description' => 'Practice 40 targeted questions on your lowest-scoring subcategories.'],
                 ['title' => 'Day 56: Comprehensive Full Mock Exam #2 (150 scored items)', 'description' => 'Second full mock simulation to benchmark pacing and score consistency.'],
@@ -348,7 +348,7 @@ class StudyPlanTemplateService
                 ['title' => 'General Info: 1987 Philippine Constitution', 'description' => 'Focus on Bill of Rights (Article III), Citizenship, and Executive/Legislative powers.'],
                 ['title' => 'General Info: RA 6713 Code of Conduct', 'description' => 'Review norms of conduct, prohibited acts, and civil service ethics.'],
                 ['title' => 'General Info: Peace, Rights & Environment', 'description' => 'Understand basic human rights provisions, ecological balance, and current state policies.'],
-                ['title' => 'Final Full Mock Exam Simulation', 'description' => 'Take a full 170-item timed mock exam under realistic CSE test conditions.'],
+                ['title' => 'Final Full Mock Exam Simulation', 'description' => 'A full Professional mock is 150 scored items in 3 hours 10 minutes. The score is not an official result.'],
             ],
             '7_day_final_cram' => [
                 ['title' => 'Day 1: Full Diagnostic Mock Exam (150 scored items)', 'description' => 'Take a comprehensive mock exam to identify final weak areas and set focus.'],
@@ -416,7 +416,7 @@ class StudyPlanTemplateService
                 ['title' => 'Day 24: GenInfo - RA 6713 Code of Conduct for Public Officials', 'description' => 'Norms of conduct, system of incentives, duties, and prohibited acts.'],
                 ['title' => 'Day 25: GenInfo - Peace, Human Rights & Current Concepts', 'description' => 'Basic human rights principles, peace education, and environmental protection.'],
                 ['title' => 'Day 26: GenInfo - 30-Item Legal & Ethics Drill', 'description' => 'Fast-paced quiz covering Constitution and civil service laws.'],
-                ['title' => 'Day 27: Full Mock Exam Simulation #1 (150 scored items)', 'description' => 'Simulate complete Civil Service Exam with strict 3-hour 10-minute timer.'],
+                ['title' => 'Day 27: Full Mock Exam Simulation #1 (150 scored items)', 'description' => 'A Professional practice mock: 150 scored items, 3 hours 10 minutes. Not an official paper.'],
                 ['title' => 'Day 28: Deep-Dive Mock Rationale & Weakness Fix', 'description' => 'Review every incorrect question and practice targeted drills.'],
                 ['title' => 'Day 29: Full Mock Exam Simulation #2 (150 scored items)', 'description' => 'Final simulation test to validate confidence and time allocation.'],
                 ['title' => 'Day 30: Final Review, Checklist & Exam Mindset', 'description' => 'Light review of formulas, rules, examination day requirements, and rest.'],

@@ -485,14 +485,10 @@ export default function AiAnalysisReport({
     return (
         <>
             <Head>
-                <title>
-                    {isAiMode
-                        ? 'AI Readiness Diagnostic & Prediction Report | Civio'
-                        : 'Readiness Diagnostic & Prediction Report | Civio'}
-                </title>
+                <title>Practice summary | Civio</title>
                 <meta
                     name="description"
-                    content="Get deep predictive coaching insights, timeline readiness milestones, subtopic gaps, and your personalized daily study plan."
+                    content="Practice scores from your mocks and drills. Not a pass forecast and not an official rating."
                 />
             </Head>
 
@@ -791,8 +787,8 @@ export default function AiAnalysisReport({
                                             >
                                                 {data.pass_probability}%
                                             </span>
-                                            <span className="mt-1 text-[10px] font-bold tracking-widest text-slate-400 uppercase">
-                                                Predictive Rate
+                                            <span className="mt-1 text-[10px] font-medium text-slate-500">
+                                                Practice index
                                             </span>
                                         </div>
                                     </div>
@@ -828,99 +824,95 @@ export default function AiAnalysisReport({
                             {/* Detailed predictive metrics: 8 cols */}
                             <div className="grid grid-cols-1 gap-3 sm:gap-6 md:grid-cols-2 lg:col-span-8">
                                 {/* Estimated Exam Score */}
-                                <Card className="flex flex-col justify-between p-4 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 sm:p-6">
+                                <Card className="flex flex-col justify-between p-4 sm:p-6">
                                     <div className="flex items-center gap-3">
-                                        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 dark:bg-indigo-950/30 dark:bg-indigo-950/40 dark:text-indigo-400">
+                                        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#F4F5F2] text-[#5B35F5] dark:bg-slate-800 dark:text-violet-300">
                                             <Target className="size-5" />
                                         </div>
                                         <div>
-                                            <span className="text-[10px] font-black tracking-wider text-slate-400 uppercase">
-                                                Estimated Exam Score
+                                            <span className="text-xs font-medium text-slate-500">
+                                                Mock range
                                             </span>
-                                            <h4 className="mt-0.5 text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+                                            <h4 className="mt-0.5 text-base font-semibold tracking-tight text-slate-900 dark:text-white">
                                                 {data.predictive_metrics
                                                     ?.estimated_exam_score ||
-                                                    '70% - 75% Projected'}
+                                                    'No mock yet'}
                                             </h4>
                                         </div>
                                     </div>
                                     <p className="mt-4 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                                        Calculated based on your subtopic
-                                        weights and simulated exam durations.
-                                        Philippine CSE passing threshold is 80%.
+                                        A band around the mock average. Not an
+                                        official score. The published general
+                                        passing rating is at least 80.00.
                                     </p>
                                 </Card>
 
-                                {/* Days to Readiness */}
-                                <Card className="flex flex-col justify-between p-4 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 sm:p-6">
+                                <Card className="flex flex-col justify-between p-4 sm:p-6">
                                     <div className="flex items-center gap-3">
-                                        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-950/30 dark:bg-emerald-950/40 dark:text-emerald-400">
+                                        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#F4F5F2] text-[#5B35F5] dark:bg-slate-800 dark:text-violet-300">
                                             <Clock className="size-5" />
                                         </div>
                                         <div>
-                                            <span className="text-[10px] font-black tracking-wider text-slate-400 uppercase">
-                                                Days to Readiness
+                                            <span className="text-xs font-medium text-slate-500">
+                                                Until your date
                                             </span>
-                                            <h4 className="mt-0.5 text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+                                            <h4 className="mt-0.5 text-base font-semibold tracking-tight text-slate-900 dark:text-white">
                                                 {data.predictive_metrics
                                                     ?.days_to_readiness ||
-                                                    '18 Days to Mastery'}
+                                                    'No date yet'}
                                             </h4>
                                         </div>
                                     </div>
                                     <p className="mt-4 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                                        Estimated number of daily study cycles
-                                        and category drills needed to reliably
-                                        hit over 80% accuracy.
+                                        Days until the date you set, or a note
+                                        about the practice average. Not a
+                                        forecast.
                                     </p>
                                 </Card>
 
-                                {/* Completion Pace */}
-                                <Card className="flex flex-col justify-between p-4 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 sm:p-6">
+                                <Card className="flex flex-col justify-between p-4 sm:p-6">
                                     <div className="flex items-center gap-3">
-                                        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-amber-50 text-amber-600 dark:bg-amber-950/30 dark:bg-amber-950/40 dark:text-amber-400">
+                                        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#F4F5F2] text-[#5B35F5] dark:bg-slate-800 dark:text-violet-300">
                                             <Activity className="size-5" />
                                         </div>
                                         <div>
-                                            <span className="text-[10px] font-black tracking-wider text-slate-400 uppercase">
-                                                Completion Pace
+                                            <span className="text-xs font-medium text-slate-500">
+                                                Pace
                                             </span>
-                                            <h4 className="mt-0.5 text-sm font-bold text-slate-900 dark:text-white">
+                                            <h4 className="mt-0.5 text-sm font-semibold text-slate-900 dark:text-white">
                                                 {data.predictive_metrics
                                                     ?.completion_pace ||
-                                                    'Pace is currently balanced.'}
+                                                    'No pace yet'}
                                             </h4>
                                         </div>
                                     </div>
                                     <p className="mt-4 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                                        Analyzes the relationship between
-                                        correct solutions and response times per
-                                        category to catch careless patterns.
+                                        Time against correct answers. The
+                                        Professional mock allows about 76
+                                        seconds an item.
                                     </p>
                                 </Card>
 
-                                {/* Timeline / Milestone */}
-                                <Card className="flex flex-col justify-between p-4 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 sm:p-6">
+                                <Card className="flex flex-col justify-between p-4 sm:p-6">
                                     <div className="flex items-center gap-3">
-                                        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-blue-400">
+                                        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#F4F5F2] text-[#5B35F5] dark:bg-slate-800 dark:text-violet-300">
                                             <Zap className="size-5" />
                                         </div>
                                         <div>
-                                            <span className="text-[10px] font-black tracking-wider text-slate-400 uppercase">
-                                                Current Phase
+                                            <span className="text-xs font-medium text-slate-500">
+                                                Stage
                                             </span>
-                                            <h4 className="mt-0.5 text-sm font-bold text-slate-900 dark:text-white">
+                                            <h4 className="mt-0.5 text-sm font-semibold text-slate-900 dark:text-white">
                                                 {data.timeline_prediction
                                                     ?.current_stage ||
-                                                    'Foundation Phase'}
+                                                    'No stage yet'}
                                             </h4>
                                         </div>
                                     </div>
                                     <p className="mt-4 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                                        Milestone:{' '}
                                         {data.timeline_prediction
                                             ?.milestone_prediction ||
-                                            'Study regularly to predict upcoming milestones.'}
+                                            'A label from your practice so far. Not a forecast.'}
                                     </p>
                                 </Card>
                             </div>
@@ -928,17 +920,12 @@ export default function AiAnalysisReport({
 
                         {/* Honesty Coach Banner */}
                         <div className="border-blue-150 dark:bg-blue-950/30/30 flex items-start gap-4 rounded-2xl border bg-blue-50 p-5 dark:border-slate-800 dark:bg-slate-900/40">
-                            <div className="flex size-10 shrink-0 items-center justify-center rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-600 dark:text-blue-400">
-                                <Sparkles
-                                    className="size-5 animate-spin"
-                                    style={{ animationDuration: '6s' }}
-                                />
+                            <div className="flex size-10 shrink-0 items-center justify-center rounded-full border border-[#E3E5EA] bg-white text-[#5B35F5] dark:border-slate-700 dark:bg-slate-950">
+                                <Target className="size-5" />
                             </div>
                             <div>
-                                <h4 className="text-sm font-black text-slate-900 dark:text-white">
-                                    {isAiMode
-                                        ? 'AI Coach Diagnostic Verdict'
-                                        : 'Coach Diagnostic Verdict'}
+                                <h4 className="text-sm font-semibold text-slate-900 dark:text-white">
+                                    Practice summary
                                 </h4>
                                 <p className="mt-1 text-base leading-relaxed font-medium text-slate-700 dark:text-slate-300">
                                     {data.verdict}
@@ -950,9 +937,9 @@ export default function AiAnalysisReport({
                         {data.subject_mastery &&
                             data.subject_mastery.length > 0 && (
                                 <div>
-                                    <h3 className="mb-4 flex items-center gap-2 text-lg font-black text-slate-900 dark:text-white">
-                                        <Target className="size-5 text-indigo-600 dark:text-indigo-400" />
-                                        Detailed Subject Mastery
+                                    <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-white">
+                                        <Target className="size-5 text-[#5B35F5]" />
+                                        By subject
                                     </h3>
                                     <div className="grid grid-cols-1 gap-3 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
                                         {data.subject_mastery.map((item) => {

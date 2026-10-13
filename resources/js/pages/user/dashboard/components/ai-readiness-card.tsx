@@ -262,15 +262,12 @@ export default function AiReadinessCard({
                         </span>
                     </div>
                     <div>
-                        <h3 className="text-xl font-black tracking-tight text-slate-900 dark:text-white">
-                            {analysisMode === 'ai'
-                                ? 'Analyzing Performance via AI...'
-                                : 'Analyzing Performance...'}
+                        <h3 className="text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
+                            Scoring this attempt
                         </h3>
                         <p className="mt-1.5 max-w-2xl text-base leading-relaxed text-slate-500 dark:text-slate-400">
-                            {analysisMode === 'ai'
-                                ? 'Our AI is evaluating your answers, calculating scores, and crafting your readiness report...'
-                                : 'Our algorithms are evaluating your answers and calculating your readiness report...'}
+                            Counting the answers you submitted. This is not a
+                            pass forecast.
                         </p>
                     </div>
                 </div>

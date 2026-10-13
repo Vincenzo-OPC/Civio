@@ -62,18 +62,18 @@ export function ReviewerGuideTabs({
             summary:
                 'Set your target civil service examination date and schedule manageable daily study blocks.',
             steps: [
-                'Set your Official Target Exam Date to trigger automatic day-by-day countdowns.',
-                'Schedule specific focus categories for individual dates (e.g., Numerical on Mondays, Verbal on Tuesdays).',
-                'Mark daily study milestones as complete to maintain study momentum.',
+                'Set the exam date you are aiming for. The countdown uses that date.',
+                'Put one subject on a day, such as Numerical on Monday.',
+                'Mark a day complete when you finish it.',
             ],
-            proTip: 'Aim for 30–45 focused minutes daily instead of 5-hour weekend cram sessions for superior factual recall.',
+            proTip: 'Thirty to forty-five minutes a day is easier to keep than one long weekend session.',
             actionLabel: 'Open Study Plan',
             actionUrl: '/study-schedules',
         },
         {
             id: 'study-hub',
             title: 'Study Hub (Learn Modules)',
-            badge: 'Concept Mastery',
+            badge: 'Notes',
             icon: BookOpen,
             color: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/40 border-violet-200 dark:border-violet-900/40',
             summary:
@@ -119,7 +119,7 @@ export function ReviewerGuideTabs({
                 'Use the "Flag for Review" feature to mark difficult items and revisit them before final submission.',
             ],
             proTip: 'Train under strict timer discipline: you have about 76 seconds per item on the Professional mock.',
-            actionLabel: 'Open Exam Simulation',
+            actionLabel: 'Open a mock',
             actionUrl: '/exams',
         },
         {
@@ -208,7 +208,7 @@ export function ReviewerGuideTabs({
             color: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30',
             description:
                 'Take a Strict Mock at the real time limit: 150 scored items in 3 hours 10 minutes, or 145 in 2 hours 40 minutes. The clock is practice. It does not mean you will pass.',
-            actionLabel: 'Open Exam Simulation',
+            actionLabel: 'Open a mock',
             actionUrl: '/exams',
             tips: [
                 'Simulate actual exam conditions in a quiet room without notes or calculators.',
@@ -433,15 +433,15 @@ export function ReviewerGuideTabs({
                                                     <IconComponent className="size-5.5" />
                                                 </div>
                                                 <div>
-                                                    <span className="text-[10px] font-black tracking-widest text-muted-foreground uppercase">
-                                                        Feature {idx + 1}
+                                                    <span className="text-xs font-medium text-muted-foreground">
+                                                        {idx + 1}
                                                     </span>
-                                                    <h3 className="font-heading text-lg font-black text-foreground">
+                                                    <h3 className="font-heading text-lg font-semibold text-foreground">
                                                         {feature.title}
                                                     </h3>
                                                 </div>
                                             </div>
-                                            <span className="rounded-full border border-border bg-muted px-2.5 py-0.5 text-[10px] font-bold text-muted-foreground uppercase">
+                                            <span className="rounded-full border border-border bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
                                                 {feature.badge}
                                             </span>
                                         </div>
@@ -453,8 +453,8 @@ export function ReviewerGuideTabs({
 
                                         {/* Steps to Use */}
                                         <div className="space-y-2.5 rounded-xl border border-border/80 bg-muted/40 p-4">
-                                            <span className="block text-xs font-bold tracking-wide text-foreground uppercase">
-                                                How to Use:
+                                            <span className="block text-xs font-medium text-foreground">
+                                                How to use
                                             </span>
                                             <ul className="space-y-2 text-xs leading-relaxed text-muted-foreground">
                                                 {feature.steps.map(
@@ -478,7 +478,7 @@ export function ReviewerGuideTabs({
                                             <Lightbulb className="mt-0.5 size-4 shrink-0 text-amber-600 dark:text-amber-400" />
                                             <div>
                                                 <strong className="font-bold">
-                                                    Pro-Tip:{' '}
+                                                    Note:{' '}
                                                 </strong>
                                                 <span className="leading-relaxed">
                                                     {feature.proTip}
@@ -534,7 +534,7 @@ export function ReviewerGuideTabs({
                             >
                                 <div className="space-y-4 p-4 sm:p-6">
                                     <div className="flex items-center justify-between">
-                                        <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-black tracking-wider text-slate-600 uppercase dark:bg-slate-900 dark:text-slate-400">
+                                        <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-900 dark:text-slate-400">
                                             {step.phase}
                                         </span>
                                         <div
@@ -544,7 +544,7 @@ export function ReviewerGuideTabs({
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="font-heading text-lg font-black text-foreground">
+                                        <h3 className="font-heading text-lg font-semibold text-foreground">
                                             {step.title}
                                         </h3>
                                         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -553,8 +553,8 @@ export function ReviewerGuideTabs({
                                     </div>
 
                                     <div className="border-t border-border pt-4">
-                                        <h4 className="mb-2 text-[10px] font-black tracking-wider text-muted-foreground uppercase">
-                                            Pro study tips:
+                                        <h4 className="mb-2 text-xs font-medium text-muted-foreground">
+                                            Notes
                                         </h4>
                                         <ul className="space-y-1.5">
                                             {step.tips.map((tip, tIdx) => (
@@ -611,7 +611,7 @@ export function ReviewerGuideTabs({
 
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="rounded-xl border border-slate-100 bg-slate-50/50 p-4 dark:border-slate-900/50 dark:bg-slate-900/20">
-                                    <span className="block text-[10px] font-bold text-muted-foreground uppercase">
+                                    <span className="block text-xs font-medium text-muted-foreground">
                                         Number of Items
                                     </span>
                                     <span className="text-2xl font-semibold text-slate-800 dark:text-white">
@@ -626,18 +626,18 @@ export function ReviewerGuideTabs({
                                     </span>
                                 </div>
                                 <div className="rounded-xl border border-slate-100 bg-slate-50/50 p-4 dark:border-slate-900/50 dark:bg-slate-900/20">
-                                    <span className="block text-[10px] font-bold text-muted-foreground uppercase">
+                                    <span className="block text-xs font-medium text-muted-foreground">
                                         Time Limit
                                     </span>
-                                    <span className="text-lg font-black text-slate-800 dark:text-white">
+                                    <span className="text-lg font-semibold text-slate-800 dark:text-white">
                                         {examStructure.professional.time}
                                     </span>
                                 </div>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="text-[10px] font-black tracking-wider text-muted-foreground uppercase">
-                                    Subjects Coverage & Scope:
+                                <h4 className="text-xs font-medium text-muted-foreground">
+                                    Subjects
                                 </h4>
                                 <div className="divide-y divide-border rounded-xl border border-border">
                                     {examStructure.professional.scope.map(
@@ -689,7 +689,7 @@ export function ReviewerGuideTabs({
 
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="rounded-xl border border-slate-100 bg-slate-50/50 p-4 dark:border-slate-900/50 dark:bg-slate-900/20">
-                                    <span className="block text-[10px] font-bold text-muted-foreground uppercase">
+                                    <span className="block text-xs font-medium text-muted-foreground">
                                         Number of Items
                                     </span>
                                     <span className="text-2xl font-semibold text-slate-800 dark:text-white">
@@ -704,18 +704,18 @@ export function ReviewerGuideTabs({
                                     </span>
                                 </div>
                                 <div className="rounded-xl border border-slate-100 bg-slate-50/50 p-4 dark:border-slate-900/50 dark:bg-slate-900/20">
-                                    <span className="block text-[10px] font-bold text-muted-foreground uppercase">
+                                    <span className="block text-xs font-medium text-muted-foreground">
                                         Time Limit
                                     </span>
-                                    <span className="text-lg font-black text-slate-800 dark:text-white">
+                                    <span className="text-lg font-semibold text-slate-800 dark:text-white">
                                         {examStructure.subprofessional.time}
                                     </span>
                                 </div>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="text-[10px] font-black tracking-wider text-muted-foreground uppercase">
-                                    Subjects Coverage & Scope:
+                                <h4 className="text-xs font-medium text-muted-foreground">
+                                    Subjects
                                 </h4>
                                 <div className="divide-y divide-border rounded-xl border border-border">
                                     {examStructure.subprofessional.scope.map(
@@ -767,7 +767,7 @@ export function ReviewerGuideTabs({
                                     <div className="rounded-lg bg-slate-100 p-2 dark:bg-slate-900">
                                         <tip.icon className="size-5 shrink-0" />
                                     </div>
-                                    <h3 className="font-heading text-base leading-tight font-black text-foreground">
+                                    <h3 className="font-heading text-base leading-tight font-semibold text-foreground">
                                         {tip.title}
                                     </h3>
                                 </div>
@@ -779,9 +779,9 @@ export function ReviewerGuideTabs({
                     </div>
 
                     <Card className="space-y-4 border border-border bg-card p-4 sm:p-6">
-                        <h3 className="flex items-center gap-2 font-heading text-lg font-black text-foreground">
+                        <h3 className="flex items-center gap-2 font-heading text-lg font-semibold text-foreground">
                             <HelpCircle className="size-5 text-primary" />
-                            Frequently Asked Reviewer Questions
+                            Questions
                         </h3>
                         <div className="space-y-4 divide-y divide-border">
                             <div className="space-y-1.5 pt-2">
