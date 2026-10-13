@@ -88,6 +88,7 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
   - Shortcut backfill for Clerical, Verbal and GI.
 
 | ChatGPT 001 | 2026-10-13 | `chatgpt-batch-001.json`: 100 original Filipino Verbal drafts (synonym 25, antonym 20, sawikain 15, grammar 15, reading 15, paragraph ordering 10) | 0 approved; 100 unreviewed | independent content and linguistic review pending | 0 structural blockers in connector checks | `chatgpt-batch-001.json` |
+| ChatGPT 002 | 2026-10-13 | `chatgpt-batch-002.json`: 100 English Verbal drafts (RC 25, paragraph order 35, error recognition 40) | 0 approved; 100 unreviewed | Grok Bot + CoS editorial and Python QA pending | 0 static blockers found | `chatgpt-batch-002.json` |
 
 ## ChatGPT batch 001 (2026-10-13)
 
@@ -126,3 +127,10 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **Fixes:** 040005 had two possible keys and is fixed. 040018 marked the wrong word. 040044 had the wrong code. 040047 had a spelling error. 040069 and 040070 were rewritten as applied din/rin and daw/raw items.
 - **Status:** all 100 stay draft. Review request: `audit/round-03-chatgpt-001-review-request.md`.
 - **Next:** CoS verdict, then round 03b on the baseline bank (550).
+
+## ChatGPT batch 002 (2026-10-13)
+
+- **File:** `docs/research/chatgpt-batch-002.json`, all 100 `draft` / `unreviewed`. 25 distinct reading passages (at least 150 words each) with one question each; 35 paragraph-order items with mixed sentence labels and unique keys; 40 grammar/error recognition (15 agreement, 5 tense, 20 modifiers and parallel structure).
+- **Static checks:** all questions have four distinct options, a valid marked answer, nonempty Reveal fields, spec-coded distractors and individualized why-wrong reasons. Every paragraph-order item has three different order-trap codes and a key distinct from its listed order. Internal token Jaccard ≥ 0.65: no collisions. Repository comparisons: 1,277 existing items (batches 001–011 and selected gap-fill/supplements/ChatGPT 001) and 127 accessible baseline seed or prefix stems: no collisions ≥ 0.65. The local development DB may contain additional stems not accessible to this check.
+- **Required before CoS review:** `python scripts/batches/qa.py` and `qa.check_round(items, prior_stems, near=0.65)` must be executed in a fully cloned repo with all existing stems and DB records. The GitHub connector did not expose a Python execution environment, so a passing run is **not yet confirmed**. `_legacy: true` marks manually authored formats not supported by existing deterministic generator-specific solvers; it MUST NOT be interpreted as answer-key verification.
+- **Editorial watchlist:** all RC inferences for unintended second defensible answers; English grammar options that are too easy, especially singular-subject vs nearby-plural disagreement; modifier/parallelism forms; the chronology of every ordering question; and whether RC reading durations are calibrated fairly. Grok Bot should identify `ACCEPT`, `REVISE`, `REJECT` per ID and hand off to Chief of Staff. No activation, import or production deployment.
