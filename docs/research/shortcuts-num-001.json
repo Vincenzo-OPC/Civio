@@ -1,41 +1,71 @@
 {
   "spec_version": "0.1.7",
-  "status": "draft (shortcut backfill; awaiting CoS review; not merged into items, not imported)",
-  "count": 267,
+  "status": "approved (CoS PASS 2026-10-13); merged into the batch items as `shortcut`",
+  "count": 237,
   "skipped_no_real_shortcut": [
     "CIVIO-NUM-WP-ALGEBRA-000014",
     "CIVIO-NUM-WP-ALGEBRA-000025",
     "CIVIO-NUM-WP-ALGEBRA-000026",
+    "CIVIO-NUM-OPS-ORDER-000031",
     "CIVIO-NUM-SEQ-MULT-000035",
+    "CIVIO-NUM-OPS-ORDER-000039",
+    "CIVIO-NUM-OPS-ORDER-000041",
+    "CIVIO-NUM-OPS-ORDER-000118",
     "CIVIO-NUM-SEQ-MULT-000129",
     "CIVIO-NUM-WP-ALGEBRA-000130",
+    "CIVIO-NUM-OPS-ORDER-000131",
+    "CIVIO-NUM-OPS-ORDER-000135",
     "CIVIO-NUM-SEQ-MULT-000137",
     "CIVIO-NUM-SEQ-MULT-000138",
+    "CIVIO-NUM-OPS-ORDER-000213",
     "CIVIO-NUM-SEQ-MULT-000214",
     "CIVIO-NUM-WP-ALGEBRA-000216",
     "CIVIO-NUM-WP-ALGEBRA-000219",
     "CIVIO-NUM-WP-ALGEBRA-000229",
+    "CIVIO-NUM-OPS-ORDER-000235",
+    "CIVIO-NUM-OPS-ORDER-000240",
     "CIVIO-NUM-SEQ-MULT-000241",
+    "CIVIO-NUM-OPS-ORDER-000319",
+    "CIVIO-NUM-OPS-ORDER-000321",
+    "CIVIO-NUM-OPS-ORDER-000322",
     "CIVIO-NUM-SEQ-MULT-000334",
     "CIVIO-NUM-SEQ-MULT-000335",
     "CIVIO-NUM-SEQ-MULT-000337",
+    "CIVIO-NUM-OPS-ORDER-000412",
+    "CIVIO-NUM-OPS-ORDER-000416",
     "CIVIO-NUM-WP-ALGEBRA-000418",
+    "CIVIO-NUM-OPS-ORDER-000433",
     "CIVIO-NUM-WP-ALGEBRA-000435",
     "CIVIO-NUM-SEQ-MULT-000438",
     "CIVIO-NUM-WP-ALGEBRA-000512",
+    "CIVIO-NUM-OPS-ORDER-000520",
+    "CIVIO-NUM-OPS-ORDER-000525",
     "CIVIO-NUM-SEQ-MULT-000529",
+    "CIVIO-NUM-OPS-ORDER-000536",
     "CIVIO-NUM-SEQ-MULT-000538",
     "CIVIO-NUM-SEQ-MULT-000539",
     "CIVIO-NUM-SEQ-MULT-000616",
     "CIVIO-NUM-SEQ-MULT-000617",
+    "CIVIO-NUM-OPS-ORDER-000618",
     "CIVIO-NUM-SEQ-MULT-000619",
     "CIVIO-NUM-WP-ALGEBRA-000624",
+    "CIVIO-NUM-OPS-ORDER-000638",
+    "CIVIO-NUM-OPS-ORDER-000640",
     "CIVIO-NUM-SEQ-MULT-000717",
+    "CIVIO-NUM-OPS-ORDER-000719",
+    "CIVIO-NUM-OPS-ORDER-000720",
+    "CIVIO-NUM-OPS-ORDER-000729",
     "CIVIO-NUM-WP-ALGEBRA-000823",
     "CIVIO-NUM-WP-ALGEBRA-000828",
+    "CIVIO-NUM-OPS-ORDER-000830",
+    "CIVIO-NUM-OPS-ORDER-000833",
     "CIVIO-NUM-WP-ALGEBRA-000835",
+    "CIVIO-NUM-OPS-ORDER-000839",
     "CIVIO-NUM-SEQ-MULT-000840",
+    "CIVIO-NUM-OPS-ORDER-000912",
+    "CIVIO-NUM-OPS-ORDER-000914",
     "CIVIO-NUM-SEQ-MULT-000919",
+    "CIVIO-NUM-OPS-ORDER-000932",
     "CIVIO-NUM-WP-ALGEBRA-000936",
     "CIVIO-NUM-WP-ALGEBRA-000937",
     "CIVIO-NUM-SEQ-MULT-000938"
@@ -163,17 +193,8 @@
       "batch": "batch-002.json",
       "stem": "A pair of school shoes is priced at ₱480. It is sold at 15% off. How much does a buyer pay?",
       "key": "₱408",
-      "shortcut": "15% = 10% + 5%. 10% of ₱480 is ₱48, so 10% is ₱48 and 5% is ₱24. Discount ₱72; price ₱408.",
+      "shortcut": "Split 15% into 10% + 5%: 10% of ₱480 is ₱48, and 5% is half of 10% (₱24). Take off ₱72 to get ₱408.",
       "verified": "shortcut evaluates to ₱408",
-      "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000031",
-      "batch": "batch-002.json",
-      "stem": "What is the value of 4 + 2 × 4 − 10?",
-      "key": "2",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 2",
       "on_round_02_rewrite": false
     },
     {
@@ -208,7 +229,7 @@
       "batch": "batch-002.json",
       "stem": "A backpack is priced at ₱400. It is sold at 15% off. How much does a buyer pay?",
       "key": "₱340",
-      "shortcut": "15% = 10% + 5%. 10% of ₱400 is ₱40, so 10% is ₱40 and 5% is ₱20. Discount ₱60; price ₱340.",
+      "shortcut": "Move the decimal one place for 10% (₱40), halve it for 5% (₱20), and build 15% from those: ₱60 off, so ₱340.",
       "verified": "shortcut evaluates to ₱340",
       "on_round_02_rewrite": false
     },
@@ -231,15 +252,6 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000039",
-      "batch": "batch-002.json",
-      "stem": "What is the value of (4 + 8) × 2 − 5?",
-      "key": "19",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 19",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-RATIO-000040",
       "batch": "batch-002.json",
       "stem": "Aileen and Efren will share ₱21,000 of commission in the ratio 3 : 4. How much is Efren's share?",
@@ -247,15 +259,6 @@
       "shortcut": "The second share is 4 of 7 equal parts: ₱21,000 ÷ 7 × 4 = ₱12,000.",
       "verified": "shortcut evaluates to ₱12,000",
       "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000041",
-      "batch": "batch-002.json",
-      "stem": "What is the value of 9 × 4 − 9 ÷ 3?",
-      "key": "33",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 33",
-      "on_round_02_rewrite": true
     },
     {
       "id": "CIVIO-NUM-WP-RATE-000042",
@@ -357,15 +360,6 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000118",
-      "batch": "batch-003.json",
-      "stem": "What is the value of 3 − 3 × 7 + 2?",
-      "key": "-16",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to -16",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000119",
       "batch": "batch-003.json",
       "stem": "A vendor borrows ₱12,000 at 12% simple interest per year. How much interest is due after 2 years and 6 months?",
@@ -388,7 +382,7 @@
       "batch": "batch-003.json",
       "stem": "A backpack is priced at ₱2,400. It is sold at 25% off. How much does a buyer pay?",
       "key": "₱1,800",
-      "shortcut": "25% = 20% + 5%. 10% of ₱2,400 is ₱240, so 20% is ₱480 and 5% is ₱120. Discount ₱600; price ₱1,800.",
+      "shortcut": "25% = 20% + 5%. 10% of ₱2,400 = ₱240; so the discount is ₱600 and the price is ₱1,800.",
       "verified": "shortcut evaluates to ₱1,800",
       "on_round_02_rewrite": false
     },
@@ -456,15 +450,6 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000131",
-      "batch": "batch-003.json",
-      "stem": "What is the value of 2 + 8 × (7 − 8)?",
-      "key": "-6",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to -6",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-AVERAGE-000132",
       "batch": "batch-003.json",
       "stem": "The average years of service of the 8 staff members in the records section is 13 years. One more person, with 49 years, joins them. What is the new average years of service?",
@@ -492,15 +477,6 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000135",
-      "batch": "batch-003.json",
-      "stem": "What is the value of (14 × 2 + 7) ÷ 7?",
-      "key": "5",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 5",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-RATIO-000136",
       "batch": "batch-003.json",
       "stem": "A ₱7,500 allowance fund is divided between Liza and Kimberly in the ratio 2 : 3. What is Kimberly's share?",
@@ -514,7 +490,7 @@
       "batch": "batch-003.json",
       "stem": "A backpack is priced at ₱2,400. It is sold at 35% off. How much does a buyer pay?",
       "key": "₱1,560",
-      "shortcut": "35% = 30% + 5%. 10% of ₱2,400 is ₱240, so 30% is ₱720 and 5% is ₱120. Discount ₱840; price ₱1,560.",
+      "shortcut": "Split 35% into 30% + 5%: 30% of ₱2,400 is ₱720, and 5% is half of 10% (₱120). Take off ₱840 to get ₱1,560.",
       "verified": "shortcut evaluates to ₱1,560",
       "on_round_02_rewrite": false
     },
@@ -543,15 +519,6 @@
       "key": "2 hours",
       "shortcut": "For two workers, time together = product ÷ sum: (6 × 3) ÷ (6 + 3) = 18 ÷ 9 = 2 hours.",
       "verified": "shortcut evaluates to 2 hours",
-      "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000213",
-      "batch": "batch-004.json",
-      "stem": "What is the value of 7 + 9 × 8 − 9?",
-      "key": "70",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 70",
       "on_round_02_rewrite": false
     },
     {
@@ -595,7 +562,7 @@
       "batch": "batch-004.json",
       "stem": "A office chair is priced at ₱480. It is sold at 15% off. How much does a buyer pay?",
       "key": "₱408",
-      "shortcut": "15% = 10% + 5%. 10% of ₱480 is ₱48, so 10% is ₱48 and 5% is ₱24. Discount ₱72; price ₱408.",
+      "shortcut": "Move the decimal one place for 10% (₱48), halve it for 5% (₱24), and build 15% from those: ₱72 off, so ₱408.",
       "verified": "shortcut evaluates to ₱408",
       "on_round_02_rewrite": false
     },
@@ -622,7 +589,7 @@
       "batch": "batch-004.json",
       "stem": "A rice cooker is priced at ₱960. It is sold at 25% off. How much does a buyer pay?",
       "key": "₱720",
-      "shortcut": "25% = 20% + 5%. 10% of ₱960 is ₱96, so 20% is ₱192 and 5% is ₱48. Discount ₱240; price ₱720.",
+      "shortcut": "25% = 20% + 5%. 10% of ₱960 = ₱96; so the discount is ₱240 and the price is ₱720.",
       "verified": "shortcut evaluates to ₱720",
       "on_round_02_rewrite": false
     },
@@ -667,7 +634,7 @@
       "batch": "batch-004.json",
       "stem": "A backpack is priced at ₱1,800. It is sold at 25% off. How much does a buyer pay?",
       "key": "₱1,350",
-      "shortcut": "25% = 20% + 5%. 10% of ₱1,800 is ₱180, so 20% is ₱360 and 5% is ₱90. Discount ₱450; price ₱1,350.",
+      "shortcut": "Split 25% into 20% + 5%: 20% of ₱1,800 is ₱360, and 5% is half of 10% (₱90). Take off ₱450 to get ₱1,350.",
       "verified": "shortcut evaluates to ₱1,350",
       "on_round_02_rewrite": false
     },
@@ -708,15 +675,6 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000235",
-      "batch": "batch-004.json",
-      "stem": "What is the value of (17 + 6) × 8 − 3?",
-      "key": "181",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 181",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-GEOM-000236",
       "batch": "batch-004.json",
       "stem": "A rectangular parking area is 23 m long and 16 m wide. A lace border costs ₱50 per meter. How much will it cost to put the lace border around the whole parking area?",
@@ -751,15 +709,6 @@
       "shortcut": "For two workers, time together = product ÷ sum: (30 × 60) ÷ (30 + 60) = 1800 ÷ 90 = 20 hours.",
       "verified": "shortcut evaluates to 20 hours",
       "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000240",
-      "batch": "batch-004.json",
-      "stem": "What is the value of 19 × 2 − 10 ÷ 2?",
-      "key": "33",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 33",
-      "on_round_02_rewrite": true
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-000312",
@@ -825,15 +774,6 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000319",
-      "batch": "batch-005.json",
-      "stem": "What is the value of 8 − 5 × 2 + 3?",
-      "key": "1",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 1",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-RATIO-000320",
       "batch": "batch-005.json",
       "stem": "Paolo and Lourdes will share ₱2,500 of allowance fund in the ratio 2 : 3. How much is Lourdes's share?",
@@ -843,29 +783,11 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000321",
-      "batch": "batch-005.json",
-      "stem": "What is the value of 9 + 4 × (5 − 9)?",
-      "key": "-7",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to -7",
-      "on_round_02_rewrite": true
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000322",
-      "batch": "batch-005.json",
-      "stem": "What is the value of (8 × 8 + 16) ÷ 2?",
-      "key": "40",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 40",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000323",
       "batch": "batch-005.json",
       "stem": "A office chair is priced at ₱800. It is sold at 35% off. How much does a buyer pay?",
       "key": "₱520",
-      "shortcut": "35% = 30% + 5%. 10% of ₱800 is ₱80, so 30% is ₱240 and 5% is ₱40. Discount ₱280; price ₱520.",
+      "shortcut": "Move the decimal one place for 10% (₱80), halve it for 5% (₱40), and build 35% from those: ₱280 off, so ₱520.",
       "verified": "shortcut evaluates to ₱520",
       "on_round_02_rewrite": false
     },
@@ -991,7 +913,7 @@
       "batch": "batch-005.json",
       "stem": "A backpack is priced at ₱800. It is sold at 15% off. How much does a buyer pay?",
       "key": "₱680",
-      "shortcut": "15% = 10% + 5%. 10% of ₱800 is ₱80, so 10% is ₱80 and 5% is ₱40. Discount ₱120; price ₱680.",
+      "shortcut": "15% = 10% + 5%. 10% of ₱800 = ₱80; so the discount is ₱120 and the price is ₱680.",
       "verified": "shortcut evaluates to ₱680",
       "on_round_02_rewrite": false
     },
@@ -1000,17 +922,8 @@
       "batch": "batch-005.json",
       "stem": "A backpack is priced at ₱480. It is sold at 35% off. How much does a buyer pay?",
       "key": "₱312",
-      "shortcut": "35% = 30% + 5%. 10% of ₱480 is ₱48, so 30% is ₱144 and 5% is ₱24. Discount ₱168; price ₱312.",
+      "shortcut": "Split 35% into 30% + 5%: 30% of ₱480 is ₱144, and 5% is half of 10% (₱24). Take off ₱168 to get ₱312.",
       "verified": "shortcut evaluates to ₱312",
-      "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000412",
-      "batch": "batch-006.json",
-      "stem": "What is the value of 12 + 3 × 5 − 8?",
-      "key": "19",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 19",
       "on_round_02_rewrite": false
     },
     {
@@ -1041,20 +954,11 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000416",
-      "batch": "batch-006.json",
-      "stem": "What is the value of (14 + 2) × 7 − 6?",
-      "key": "106",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 106",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000417",
       "batch": "batch-006.json",
       "stem": "A rice cooker is priced at ₱800. It is sold at 20% off. How much does a buyer pay?",
       "key": "₱640",
-      "shortcut": "20% off means you pay 80%: ₱800 × 0.8 = ₱640.",
+      "shortcut": "Skip the subtraction step: multiply by what you keep, 80%. ₱800 × 0.8 = ₱640.",
       "verified": "shortcut evaluates to ₱640",
       "on_round_02_rewrite": false
     },
@@ -1081,7 +985,7 @@
       "batch": "batch-006.json",
       "stem": "A rice cooker is priced at ₱480. It is sold at 30% off. How much does a buyer pay?",
       "key": "₱336",
-      "shortcut": "30% off means you pay 70%: ₱480 × 0.7 = ₱336.",
+      "shortcut": "Find 10% by moving the decimal (₱48), then the discount is 3 × that = ₱144. ₱480 − ₱144 = ₱336.",
       "verified": "shortcut evaluates to ₱336",
       "on_round_02_rewrite": false
     },
@@ -1099,7 +1003,7 @@
       "batch": "batch-006.json",
       "stem": "A umbrella set is priced at ₱1,500. It is sold at 15% off. How much does a buyer pay?",
       "key": "₱1,275",
-      "shortcut": "15% = 10% + 5%. 10% of ₱1,500 is ₱150, so 10% is ₱150 and 5% is ₱75. Discount ₱225; price ₱1,275.",
+      "shortcut": "Split 15% into 10% + 5%: 10% of ₱1,500 is ₱150, and 5% is half of 10% (₱75). Take off ₱225 to get ₱1,275.",
       "verified": "shortcut evaluates to ₱1,275",
       "on_round_02_rewrite": false
     },
@@ -1183,15 +1087,6 @@
       "shortcut": "The second share is 7 of 12 equal parts: ₱14,400 ÷ 12 × 7 = ₱8,400.",
       "verified": "shortcut evaluates to ₱8,400",
       "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000433",
-      "batch": "batch-006.json",
-      "stem": "What is the value of 5 × 3 − 18 ÷ 3?",
-      "key": "9",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 9",
-      "on_round_02_rewrite": true
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-000434",
@@ -1288,7 +1183,7 @@
       "batch": "batch-007.json",
       "stem": "A electric fan is priced at ₱640. It is sold at 25% off. How much does a buyer pay?",
       "key": "₱480",
-      "shortcut": "25% = 20% + 5%. 10% of ₱640 is ₱64, so 20% is ₱128 and 5% is ₱32. Discount ₱160; price ₱480.",
+      "shortcut": "Move the decimal one place for 10% (₱64), halve it for 5% (₱32), and build 25% from those: ₱160 off, so ₱480.",
       "verified": "shortcut evaluates to ₱480",
       "on_round_02_rewrite": false
     },
@@ -1309,15 +1204,6 @@
       "shortcut": "The second share is 4 of 7 equal parts: ₱10,500 ÷ 7 × 4 = ₱6,000.",
       "verified": "shortcut evaluates to ₱6,000",
       "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000520",
-      "batch": "batch-007.json",
-      "stem": "What is the value of 6 − 4 × 8 + 7?",
-      "key": "-19",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to -19",
-      "on_round_02_rewrite": true
     },
     {
       "id": "CIVIO-NUM-WP-RATE-000521",
@@ -1356,15 +1242,6 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000525",
-      "batch": "batch-007.json",
-      "stem": "What is the value of 14 + 2 × (5 − 8)?",
-      "key": "8",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 8",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-AVERAGE-000526",
       "batch": "batch-007.json",
       "stem": "The average years of service of the 4 teachers in the engineering office is 16 years. One more person, with 31 years, joins them. What is the new average years of service?",
@@ -1387,7 +1264,7 @@
       "batch": "batch-007.json",
       "stem": "A electric fan is priced at ₱800. It is sold at 10% off. How much does a buyer pay?",
       "key": "₱720",
-      "shortcut": "10% off means you pay 90%: ₱800 × 0.9 = ₱720.",
+      "shortcut": "10% off: move the decimal one place (₱80) and subtract: ₱800 − ₱80 = ₱720.",
       "verified": "shortcut evaluates to ₱720",
       "on_round_02_rewrite": false
     },
@@ -1446,20 +1323,11 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000536",
-      "batch": "batch-007.json",
-      "stem": "What is the value of (14 × 7 + 12) ÷ 2?",
-      "key": "55",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 55",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000537",
       "batch": "batch-007.json",
       "stem": "A electric fan is priced at ₱800. It is sold at 25% off. How much does a buyer pay?",
       "key": "₱600",
-      "shortcut": "25% = 20% + 5%. 10% of ₱800 is ₱80, so 20% is ₱160 and 5% is ₱40. Discount ₱200; price ₱600.",
+      "shortcut": "Split 25% into 20% + 5%: 20% of ₱800 is ₱160, and 5% is half of 10% (₱40). Take off ₱200 to get ₱600.",
       "verified": "shortcut evaluates to ₱600",
       "on_round_02_rewrite": false
     },
@@ -1486,7 +1354,7 @@
       "batch": "batch-008.json",
       "stem": "A pair of school shoes is priced at ₱1,200. It is sold at 30% off. How much does a buyer pay?",
       "key": "₱840",
-      "shortcut": "30% off means you pay 70%: ₱1,200 × 0.7 = ₱840.",
+      "shortcut": "Skip the subtraction step: multiply by what you keep, 70%. ₱1,200 × 0.7 = ₱840.",
       "verified": "shortcut evaluates to ₱840",
       "on_round_02_rewrite": false
     },
@@ -1518,20 +1386,11 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000618",
-      "batch": "batch-008.json",
-      "stem": "What is the value of 14 + 3 × 8 − 7?",
-      "key": "31",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 31",
-      "on_round_02_rewrite": false
-    },
-    {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000620",
       "batch": "batch-008.json",
       "stem": "A backpack is priced at ₱640. It is sold at 35% off. How much does a buyer pay?",
       "key": "₱416",
-      "shortcut": "35% = 30% + 5%. 10% of ₱640 is ₱64, so 30% is ₱192 and 5% is ₱32. Discount ₱224; price ₱416.",
+      "shortcut": "35% = 30% + 5%. 10% of ₱640 = ₱64; so the discount is ₱224 and the price is ₱416.",
       "verified": "shortcut evaluates to ₱416",
       "on_round_02_rewrite": false
     },
@@ -1558,7 +1417,7 @@
       "batch": "batch-008.json",
       "stem": "A electric fan is priced at ₱1,500. It is sold at 15% off. How much does a buyer pay?",
       "key": "₱1,275",
-      "shortcut": "15% = 10% + 5%. 10% of ₱1,500 is ₱150, so 10% is ₱150 and 5% is ₱75. Discount ₱225; price ₱1,275.",
+      "shortcut": "Split 15% into 10% + 5%: 10% of ₱1,500 is ₱150, and 5% is half of 10% (₱75). Take off ₱225 to get ₱1,275.",
       "verified": "shortcut evaluates to ₱1,275",
       "on_round_02_rewrite": false
     },
@@ -1680,15 +1539,6 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000638",
-      "batch": "batch-008.json",
-      "stem": "What is the value of (8 + 4) × 7 − 2?",
-      "key": "82",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 82",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000639",
       "batch": "batch-008.json",
       "stem": "A hardware store sold a bag of cement for ₱800. It raised the price by 30%. Later, it lowered the new price by 20%. What is the final price?",
@@ -1696,15 +1546,6 @@
       "shortcut": "Chain the changes as multipliers: up 30% is × 1.3, down 20% is × 0.8. ₱800 × 1.3 × 0.8 = ₱832.",
       "verified": "shortcut evaluates to ₱832",
       "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000640",
-      "batch": "batch-008.json",
-      "stem": "What is the value of 18 × 3 − 12 ÷ 6?",
-      "key": "52",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 52",
-      "on_round_02_rewrite": true
     },
     {
       "id": "CIVIO-NUM-WP-AVERAGE-000641",
@@ -1770,24 +1611,6 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000719",
-      "batch": "batch-009.json",
-      "stem": "What is the value of 17 − 9 × 3 + 12?",
-      "key": "2",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 2",
-      "on_round_02_rewrite": true
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000720",
-      "batch": "batch-009.json",
-      "stem": "What is the value of 14 + 2 × (9 − 1)?",
-      "key": "30",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 30",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-RATE-000721",
       "batch": "batch-009.json",
       "stem": "Jomar can label the census boxes in 21 hours. Bong can do the same job in 28 hours. Working together, how long will they take?",
@@ -1828,7 +1651,7 @@
       "batch": "batch-009.json",
       "stem": "A umbrella set is priced at ₱2,400. It is sold at 20% off. How much does a buyer pay?",
       "key": "₱1,920",
-      "shortcut": "20% off means you pay 80%: ₱2,400 × 0.8 = ₱1,920.",
+      "shortcut": "Skip the subtraction step: multiply by what you keep, 80%. ₱2,400 × 0.8 = ₱1,920.",
       "verified": "shortcut evaluates to ₱1,920",
       "on_round_02_rewrite": false
     },
@@ -1837,7 +1660,7 @@
       "batch": "batch-009.json",
       "stem": "A backpack is priced at ₱560. It is sold at 25% off. How much does a buyer pay?",
       "key": "₱420",
-      "shortcut": "25% = 20% + 5%. 10% of ₱560 is ₱56, so 20% is ₱112 and 5% is ₱28. Discount ₱140; price ₱420.",
+      "shortcut": "25% = 20% + 5%. 10% of ₱560 = ₱56; so the discount is ₱140 and the price is ₱420.",
       "verified": "shortcut evaluates to ₱420",
       "on_round_02_rewrite": false
     },
@@ -1846,7 +1669,7 @@
       "batch": "batch-009.json",
       "stem": "A umbrella set is priced at ₱1,800. It is sold at 15% off. How much does a buyer pay?",
       "key": "₱1,530",
-      "shortcut": "15% = 10% + 5%. 10% of ₱1,800 is ₱180, so 10% is ₱180 and 5% is ₱90. Discount ₱270; price ₱1,530.",
+      "shortcut": "Split 15% into 10% + 5%: 10% of ₱1,800 is ₱180, and 5% is half of 10% (₱90). Take off ₱270 to get ₱1,530.",
       "verified": "shortcut evaluates to ₱1,530",
       "on_round_02_rewrite": false
     },
@@ -1858,15 +1681,6 @@
       "shortcut": "Find 1% first: 1% of ₱40,000 is ₱400, so 4% is ₱1,600 a year. Times 2.5 years = ₱4,000.",
       "verified": "shortcut evaluates to ₱4,000",
       "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000729",
-      "batch": "batch-009.json",
-      "stem": "What is the value of (15 × 7 + 6) ÷ 3?",
-      "key": "37",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 37",
-      "on_round_02_rewrite": true
     },
     {
       "id": "CIVIO-NUM-WP-AVERAGE-000730",
@@ -2071,7 +1885,7 @@
       "batch": "batch-010.json",
       "stem": "A electric fan is priced at ₱640. It is sold at 20% off. How much does a buyer pay?",
       "key": "₱512",
-      "shortcut": "20% off means you pay 80%: ₱640 × 0.8 = ₱512.",
+      "shortcut": "Skip the subtraction step: multiply by what you keep, 80%. ₱640 × 0.8 = ₱512.",
       "verified": "shortcut evaluates to ₱512",
       "on_round_02_rewrite": false
     },
@@ -2089,7 +1903,7 @@
       "batch": "batch-010.json",
       "stem": "A umbrella set is priced at ₱640. It is sold at 35% off. How much does a buyer pay?",
       "key": "₱416",
-      "shortcut": "35% = 30% + 5%. 10% of ₱640 is ₱64, so 30% is ₱192 and 5% is ₱32. Discount ₱224; price ₱416.",
+      "shortcut": "35% = 30% + 5%. 10% of ₱640 = ₱64; so the discount is ₱224 and the price is ₱416.",
       "verified": "shortcut evaluates to ₱416",
       "on_round_02_rewrite": false
     },
@@ -2116,17 +1930,8 @@
       "batch": "batch-010.json",
       "stem": "A backpack is priced at ₱960. It is sold at 30% off. How much does a buyer pay?",
       "key": "₱672",
-      "shortcut": "30% off means you pay 70%: ₱960 × 0.7 = ₱672.",
+      "shortcut": "Pay the part that is left: 30% off means you pay 70%. ₱960 × 0.7 = ₱672.",
       "verified": "shortcut evaluates to ₱672",
-      "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000830",
-      "batch": "batch-010.json",
-      "stem": "What is the value of 5 + 7 × 6 − 6?",
-      "key": "41",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 41",
       "on_round_02_rewrite": false
     },
     {
@@ -2146,15 +1951,6 @@
       "shortcut": "Find 1% first: 1% of ₱25,000 is ₱250, so 3% is ₱750 a year. Times 3 years = ₱2,250.",
       "verified": "shortcut evaluates to ₱2,250",
       "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000833",
-      "batch": "batch-010.json",
-      "stem": "What is the value of (3 + 8) × 7 − 8?",
-      "key": "69",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 69",
-      "on_round_02_rewrite": true
     },
     {
       "id": "CIVIO-NUM-WP-GEOM-000834",
@@ -2193,15 +1989,6 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000839",
-      "batch": "batch-010.json",
-      "stem": "What is the value of 6 × 6 − 10 ÷ 2?",
-      "key": "31",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 31",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-FRAC-DEC-000841",
       "batch": "batch-010.json",
       "stem": "A barangay had 900 notebooks. It gave out 2/5 of them on Monday and 1/6 of the remaining notebooks on Tuesday. How many are left?",
@@ -2211,31 +1998,13 @@
       "on_round_02_rewrite": false
     },
     {
-      "id": "CIVIO-NUM-OPS-ORDER-000912",
-      "batch": "batch-011.json",
-      "stem": "What is the value of 7 − 3 × 6 + 11?",
-      "key": "0",
-      "shortcut": "Do every × and ÷ first, then + and − from left to right.",
-      "verified": "shortcut evaluates to 0",
-      "on_round_02_rewrite": true
-    },
-    {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000913",
       "batch": "batch-011.json",
       "stem": "A rice cooker is priced at ₱1,800. It is sold at 30% off. How much does a buyer pay?",
       "key": "₱1,260",
-      "shortcut": "30% off means you pay 70%: ₱1,800 × 0.7 = ₱1,260.",
+      "shortcut": "Skip the subtraction step: multiply by what you keep, 70%. ₱1,800 × 0.7 = ₱1,260.",
       "verified": "shortcut evaluates to ₱1,260",
       "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000914",
-      "batch": "batch-011.json",
-      "stem": "What is the value of 10 + 6 × (7 − 6)?",
-      "key": "16",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 16",
-      "on_round_02_rewrite": true
     },
     {
       "id": "CIVIO-NUM-SEQ-DIFF-000915",
@@ -2260,7 +2029,7 @@
       "batch": "batch-011.json",
       "stem": "A office chair is priced at ₱400. It is sold at 35% off. How much does a buyer pay?",
       "key": "₱260",
-      "shortcut": "35% = 30% + 5%. 10% of ₱400 is ₱40, so 30% is ₱120 and 5% is ₱20. Discount ₱140; price ₱260.",
+      "shortcut": "35% = 30% + 5%. 10% of ₱400 = ₱40; so the discount is ₱140 and the price is ₱260.",
       "verified": "shortcut evaluates to ₱260",
       "on_round_02_rewrite": false
     },
@@ -2314,7 +2083,7 @@
       "batch": "batch-011.json",
       "stem": "A umbrella set is priced at ₱1,800. It is sold at 35% off. How much does a buyer pay?",
       "key": "₱1,170",
-      "shortcut": "35% = 30% + 5%. 10% of ₱1,800 is ₱180, so 30% is ₱540 and 5% is ₱90. Discount ₱630; price ₱1,170.",
+      "shortcut": "Split 35% into 30% + 5%: 30% of ₱1,800 is ₱540, and 5% is half of 10% (₱90). Take off ₱630 to get ₱1,170.",
       "verified": "shortcut evaluates to ₱1,170",
       "on_round_02_rewrite": false
     },
@@ -2380,15 +2149,6 @@
       "shortcut": "For two workers, time together = product ÷ sum: (3 × 6) ÷ (3 + 6) = 18 ÷ 9 = 2 hours.",
       "verified": "shortcut evaluates to 2 hours",
       "on_round_02_rewrite": false
-    },
-    {
-      "id": "CIVIO-NUM-OPS-ORDER-000932",
-      "batch": "batch-011.json",
-      "stem": "What is the value of (20 × 5 + 6) ÷ 2?",
-      "key": "53",
-      "shortcut": "Brackets first, then × and ÷, then + and − from left to right.",
-      "verified": "shortcut evaluates to 53",
-      "on_round_02_rewrite": true
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-000933",

@@ -1,7 +1,7 @@
 {
   "batch": "subprofessional-clerical-supplement-001",
   "spec_version": "0.1.4",
-  "status": "draft, editorial review required",
+  "status": "approved (CoS PASS 2026-10-13)",
   "note": "40 Subprofessional-only clerical items: surname-first alphabetic filing, numerical reference filing, chronological filing, and English spelling. Sorting and key uniqueness independently recomputed by deterministic code. Rules are explicitly defined in each item; no claim that CSC mandates a private filing standard.",
   "items": [
     {
@@ -53,8 +53,8 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -66,7 +66,10 @@
         "a": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1",
         "b": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "d": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0002",
@@ -117,8 +120,8 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -130,7 +133,10 @@
         "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "b": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "d": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0003",
@@ -181,8 +187,8 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -194,7 +200,10 @@
         "b": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "c": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "d": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0004",
@@ -245,8 +254,8 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -258,7 +267,10 @@
         "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "b": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "c": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0005",
@@ -309,8 +321,8 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -322,7 +334,10 @@
         "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "c": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1",
         "d": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0006",
@@ -373,8 +388,8 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -386,7 +401,10 @@
         "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "c": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "d": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0007",
@@ -437,8 +455,8 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -450,7 +468,10 @@
         "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "c": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1",
         "d": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0008",
@@ -501,8 +522,8 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -514,7 +535,10 @@
         "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
         "b": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1",
         "d": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0009",
@@ -565,8 +589,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -578,7 +602,10 @@
         "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0010",
@@ -629,8 +656,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -642,7 +669,10 @@
         "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0011",
@@ -693,8 +723,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -706,7 +736,10 @@
         "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0012",
@@ -757,8 +790,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -770,7 +803,10 @@
         "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0013",
@@ -821,8 +857,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -834,7 +870,10 @@
         "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0014",
@@ -885,8 +924,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -898,7 +937,10 @@
         "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0015",
@@ -949,8 +991,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -962,7 +1004,10 @@
         "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0016",
@@ -1013,8 +1058,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -1026,7 +1071,10 @@
         "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0017",
@@ -1077,8 +1125,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -1090,7 +1138,10 @@
         "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0018",
@@ -1141,8 +1192,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -1154,7 +1205,10 @@
         "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0019",
@@ -1205,8 +1259,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -1218,7 +1272,10 @@
         "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0020",
@@ -1269,8 +1326,8 @@
       "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
@@ -1282,7 +1339,10 @@
         "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
         "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
-      }
+      },
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0021",
@@ -1333,15 +1393,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0022",
@@ -1392,15 +1455,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0023",
@@ -1451,15 +1517,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0024",
@@ -1510,15 +1579,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0025",
@@ -1569,15 +1641,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0026",
@@ -1628,15 +1703,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0027",
@@ -1687,15 +1765,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0028",
@@ -1746,15 +1827,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0029",
@@ -1805,15 +1889,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0030",
@@ -1864,15 +1951,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0031",
@@ -1923,15 +2013,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0032",
@@ -1982,15 +2075,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0033",
@@ -2041,15 +2137,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0034",
@@ -2100,15 +2199,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0035",
@@ -2159,15 +2261,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0036",
@@ -2218,15 +2323,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0037",
@@ -2277,15 +2385,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0038",
@@ -2336,15 +2447,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0039",
@@ -2395,15 +2509,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-20261013-0040",
@@ -2454,15 +2571,18 @@
       "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     }
   ]
 }

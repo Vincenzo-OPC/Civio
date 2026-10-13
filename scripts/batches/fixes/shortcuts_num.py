@@ -13,6 +13,9 @@ def peso(x):
     return f"₱{x:,.0f}" if x == int(x) else f"₱{x:,.2f}"
 
 
+DISC = -1
+
+
 def make(it):
     s, a = it["stem"], it["archetype"]
     if "raised the price by" in s:
@@ -30,10 +33,20 @@ def make(it):
     if "% off" in s:
         p = qa.money(re.search(r"₱[\d,.]+", s).group()); d = int(re.search(r"(\d+)% off", s).group(1))
         v = F(p) * (100 - d) / 100
-        if d % 5 == 0 and d % 10 == 5 and d < 50:
-            ten = F(p) / 10
-            return v, f"{d}% = {d // 10 * 10}% + 5%. 10% of {peso(p)} is {peso(ten)}, so {d // 10 * 10}% is {peso(ten * (d // 10))} and 5% is {peso(ten / 2)}. Discount {peso(ten * (d // 10) + ten / 2)}; price {peso(v)}."
-        return v, f"{d}% off means you pay {100 - d}%: {peso(p)} × {(100 - d) / 100:g} = {peso(v)}."
+        global DISC
+        DISC += 1
+        ten = F(p) / 10
+        if d % 10 == 5 and d < 50:
+            t = d // 10 * 10
+            forms = [f"Split {d}% into {t}% + 5%: {t}% of {peso(p)} is {peso(ten * (t // 10))}, and 5% is half of 10% ({peso(ten / 2)}). Take off {peso(ten * (t // 10) + ten / 2)} to get {peso(v)}.",
+                     f"Move the decimal one place for 10% ({peso(ten)}), halve it for 5% ({peso(ten / 2)}), and build {d}% from those: {peso(ten * (t // 10) + ten / 2)} off, so {peso(v)}.",
+                     f"{d}% = {t}% + 5%. 10% of {peso(p)} = {peso(ten)}; so the discount is {peso(ten * (t // 10) + ten / 2)} and the price is {peso(v)}."]
+        else:
+            forms = [f"Pay the part that is left: {d}% off means you pay {100 - d}%. {peso(p)} × {(100 - d) / 100:g} = {peso(v)}.",
+                     f"Skip the subtraction step: multiply by what you keep, {100 - d}%. {peso(p)} × {(100 - d) / 100:g} = {peso(v)}.",
+                     (f"10% off: move the decimal one place ({peso(ten)}) and subtract: {peso(p)} − {peso(ten)} = {peso(v)}." if d == 10 else
+                      f"Find 10% by moving the decimal ({peso(ten)}), then the discount is {d / 10:g} × that = {peso(F(p) * d / 100)}. {peso(p)} − {peso(F(p) * d / 100)} = {peso(v)}.")]
+        return v, forms[DISC % 3]
     if a == "NUM-WP-RATIO":
         tot = qa.money(re.search(r"₱[\d,.]+", s).group()); x, y = map(int, re.search(r"ratio (\d+) : (\d+)", s).groups())
         v = F(tot) * y / (x + y)
@@ -52,9 +65,7 @@ def make(it):
         v = 2 * (L + W) * c
         return v, f"Add length and width once, then double: {L} + {W} = {L + W}, × 2 = {2 * (L + W)} m. × {peso(c)} = {peso(v)}."
     if a == "NUM-OPS-ORDER":
-        v = F(qa.solve_num(it))
-        br = "(" in s
-        return v, ("Brackets first, then × and ÷, then + and − from left to right." if br else "Do every × and ÷ first, then + and − from left to right.")
+        return None, None  # CoS 2026-10-13: restating the order of operations is not a shortcut
     if a == "NUM-FRAC-DEC" and "had" in s:
         tot = int(re.search(r"had (\d+)", s).group(1)); f1, f2 = [F(x) for x in re.findall(r"(\d+/\d+)", s)]
         v = tot * (1 - f1) * (1 - f2)

@@ -8,7 +8,7 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 | 01 fixes | 2026-10-13 | All 150 supplement items fixed (still draft); gap-fill-001 23 | gap-fill: 20 CoS PASS + 3 fixed → approved | 150 fixed | 0 open | audit/round-01-fixes.md |
 | 02 | 2026-10-13 | Batches 001-011, Subprofessional domains: 759 (CLR 151, VEN 203, GI 102, NUM 303) | 759 key-correct | ~27 proposed (CoS) + 58 metadata applied | 0 | audit/round-02.md |
 | 02 gap | 2026-10-13 | gap-fill-002: 14 new drafts (VEN error 5, NUM frac/dec 6, CLR business filing 3) | 14 CoS PASS (4 fixed) → approved, active locally | 4 | 0 | audit/round-02-fixes.md |
-| 02 fixes | 2026-10-13 | CoS round 02 rulings: 178 rewrites of approved items (spelling 93, Verbal lead-in 60, ops shapes 25) + gap-fill-003 10 filing drafts + 267 Numerical shortcuts | pending CoS | 178 changed | 0 | audit/round-02-fixes.md, audit/round-02-fixes-review-request.md |
+| 02 fixes | 2026-10-13 | CoS round 02 rulings: 178 rewrites of approved items (spelling 93, Verbal lead-in 60, ops shapes 25) + gap-fill-003 10 filing drafts + 267 Numerical shortcuts | CoS PASS after fixes → merged + approved | 178 changed | 0 | audit/round-02-fixes.md, audit/round-02-fixes-review-request.md |
 
 ## Round 01
 
@@ -96,3 +96,23 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **Validation limitation:** The actual Python `scripts/batches/qa.py` was not executable in this connector-only environment. The equivalent structural and token-duplicate checks were run, but the new JSON MUST pass the repository's Python QA and independent review before import or approval. No app code, tests, Grok batches or deploy were changed.
 - Review focus: `CIVIO-VFIL-KASINGKAHULUGAN-040009` (mabini), `CIVIO-VFIL-KASINGKAHULUGAN-040013` (kinauukulang), `CIVIO-VFIL-WIKAIN-040054` (assess whether the idiom is suitably standard, and review all idioms), grammar items `CIVIO-VFIL-BALARILA-040069`/`040070` (din/rin, daw/raw; compare DepEd/KWF *Ortograpiyang Pambansa* §8.1) and all 10 ordering items for unique defensibility. Review interpretation and tone as natural Filipino and verify dictionary spelling. Review `RC-TOO-NARROW` choices for code precision. 
 - Never auto-approve, activate or deploy. Reviewers: Grok Bot → Chief of Staff.
+
+## Round 02 merge (CoS PASS on df61273 with fixes, 2026-10-13)
+
+- **Fixes applied, no key changed except the two CoS asked for:**
+  - 000100: dependant → independant (target independent).
+  - 000587: publically → occured (target occurred).
+  - Foils replaced with realistic misspellings: 000787 surprize → suprize, 000395 nayber → neigbor, 000996 eyeland → illand, 000994 dowbt → dought, 000691 siedge → seege.
+  - In the word list, Februrary → Feburary and aighth → eith. These were not shown in any item: 000201 and 000188 are "misspelled" items whose keys are already Febuary and eigth.
+- **gap-fill-003:** the 0023 and 0024 wrong-answer reasons now apply Rule 6 (SanCarlos, SantoTomas, deDavao, deManila). Keys are unchanged.
+- **Shortcuts:**
+  - The 30 OPS-ORDER entries moved to skipped.
+  - Discount wording now rotates through 3 forms per type.
+  - 237 shortcuts are merged into items as `shortcut`.
+- **Merged:**
+  - the 178 rewrites into batches 001-011
+  - gap-fill-003 (10) and ChatGPT's supplements 001 (150)
+  - all marked approved/passed, Chief of Staff, 2026-10-13
+- **Change record:** `round-02-fixes.json` stays, with `replaces` (old stem and key) for each item.
+- **Checks:** `qa_all.py --no-fixes` is GREEN on the committed files. The Bank Pest tests were updated for the approved supplements and the shortcut render.
+- **Local DB:** imported on the MSI. Old-stem rows were set to draft (retired, with history kept).

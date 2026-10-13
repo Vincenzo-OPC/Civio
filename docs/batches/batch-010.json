@@ -79,7 +79,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "Analyn can label the census boxes in 15 hours. Bea can do the same job in 10 hours. Working together, how long will they take?"
+      "gen_sig": "Analyn can label the census boxes in 15 hours. Bea can do the same job in 10 hours. Working together, how long will they take?",
+      "shortcut": "For two workers, time together = product ÷ sum: (15 × 10) ÷ (15 + 10) = 150 ÷ 25 = 6 hours."
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-000813",
@@ -141,7 +142,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A ₱9,600 harvest income is divided between Inday and Aileen in the ratio 3 : 5. What is Aileen's share?"
+      "gen_sig": "A ₱9,600 harvest income is divided between Inday and Aileen in the ratio 3 : 5. What is Aileen's share?",
+      "shortcut": "The second share is 5 of 8 equal parts: ₱9,600 ÷ 8 × 5 = ₱6,000."
     },
     {
       "id": "CIVIO-NUM-WP-RATE-000814",
@@ -203,7 +205,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "Rogelio can sort a sack of mail in 15 hours. Tess can do the same job in 10 hours. Working together, how long will they take?"
+      "gen_sig": "Rogelio can sort a sack of mail in 15 hours. Tess can do the same job in 10 hours. Working together, how long will they take?",
+      "shortcut": "For two workers, time together = product ÷ sum: (15 × 10) ÷ (15 + 10) = 150 ÷ 25 = 6 hours."
     },
     {
       "id": "CIVIO-NUM-WP-RATE-000815",
@@ -265,7 +268,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "Paolo can clean the plaza in 35 hours. Liza can do the same job in 14 hours. Working together, how long will they take?"
+      "gen_sig": "Paolo can clean the plaza in 35 hours. Liza can do the same job in 14 hours. Working together, how long will they take?",
+      "shortcut": "For two workers, time together = product ÷ sum: (35 × 14) ÷ (35 + 14) = 490 ÷ 49 = 10 hours."
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-000816",
@@ -327,7 +331,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "Cora and Kimberly will share ₱3,500 of harvest income in the ratio 3 : 4. How much is Kimberly's share?"
+      "gen_sig": "Cora and Kimberly will share ₱3,500 of harvest income in the ratio 3 : 4. How much is Kimberly's share?",
+      "shortcut": "The second share is 4 of 7 equal parts: ₱3,500 ÷ 7 × 4 = ₱2,000."
     },
     {
       "id": "CIVIO-NUM-SEQ-DIFF-000817",
@@ -389,7 +394,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "Find the next number in the series.  11, 13, 17, 23, 31, ___"
+      "gen_sig": "Find the next number in the series.  11, 13, 17, 23, 31, ___",
+      "shortcut": "Write the gaps (+2, +4, +6, +8); they change by the same amount each time, so the next gap is +10: 31 +10 = 41."
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000818",
@@ -451,7 +457,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A vendor borrows ₱30,000 at 6% simple interest per year. How much interest is due after 3 years?"
+      "gen_sig": "A vendor borrows ₱30,000 at 6% simple interest per year. How much interest is due after 3 years?",
+      "shortcut": "Find 1% first: 1% of ₱30,000 is ₱300, so 6% is ₱1,800 a year. Times 3 years = ₱5,400."
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-000819",
@@ -513,7 +520,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A barangay had 600 vitamin packs. It gave out 2/5 of them on Monday and 1/3 of the remaining vitamin packs on Tuesday. How many are left?"
+      "gen_sig": "A barangay had 600 vitamin packs. It gave out 2/5 of them on Monday and 1/3 of the remaining vitamin packs on Tuesday. How many are left?",
+      "shortcut": "Multiply by what is left each time: 600 × 3/5 × 2/3 = 240."
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000820",
@@ -575,7 +583,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A supplier sold a set of school uniforms for ₱1,200. It raised the price by 20%. Later, it lowered the new price by 10%. What is the final price?"
+      "gen_sig": "A supplier sold a set of school uniforms for ₱1,200. It raised the price by 20%. Later, it lowered the new price by 10%. What is the final price?",
+      "shortcut": "Chain the changes as multipliers: up 20% is × 1.2, down 10% is × 0.9. ₱1,200 × 1.2 × 0.9 = ₱1,296."
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-000821",
@@ -637,7 +646,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "Jun-jun and Joy will share ₱22,500 of allowance fund in the ratio 4 : 5. How much is Joy's share?"
+      "gen_sig": "Jun-jun and Joy will share ₱22,500 of allowance fund in the ratio 4 : 5. How much is Joy's share?",
+      "shortcut": "The second share is 5 of 9 equal parts: ₱22,500 ÷ 9 × 5 = ₱12,500."
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000822",
@@ -699,7 +709,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A electric fan is priced at ₱640. It is sold at 20% off. How much does a buyer pay?"
+      "gen_sig": "A electric fan is priced at ₱640. It is sold at 20% off. How much does a buyer pay?",
+      "shortcut": "Skip the subtraction step: multiply by what you keep, 80%. ₱640 × 0.8 = ₱512."
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-000823",
@@ -823,7 +834,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "What number comes next in the series?  5, 8, 12, 17, 23, ___"
+      "gen_sig": "What number comes next in the series?  5, 8, 12, 17, 23, ___",
+      "shortcut": "Write the gaps (+3, +4, +5, +6); they change by the same amount each time, so the next gap is +7: 23 +7 = 30."
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000825",
@@ -885,7 +897,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A umbrella set is priced at ₱640. It is sold at 35% off. How much does a buyer pay?"
+      "gen_sig": "A umbrella set is priced at ₱640. It is sold at 35% off. How much does a buyer pay?",
+      "shortcut": "35% = 30% + 5%. 10% of ₱640 = ₱64; so the discount is ₱224 and the price is ₱416."
     },
     {
       "id": "CIVIO-NUM-WP-AVERAGE-000826",
@@ -947,7 +960,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "The average years of service of the 8 clerks in the civil registry is 11 years. One more person, with 20 years, joins them. What is the new average years of service?"
+      "gen_sig": "The average years of service of the 8 clerks in the civil registry is 11 years. One more person, with 20 years, joins them. What is the new average years of service?",
+      "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 11 + (20 − 11) ÷ 9 = 12 years."
     },
     {
       "id": "CIVIO-NUM-WP-GEOM-000827",
@@ -1009,7 +1023,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A rectangular school lot is 11 m long and 3 m wide. A chain-link fence costs ₱50 per meter. How much will it cost to put the chain-link fence around the whole school lot?"
+      "gen_sig": "A rectangular school lot is 11 m long and 3 m wide. A chain-link fence costs ₱50 per meter. How much will it cost to put the chain-link fence around the whole school lot?",
+      "shortcut": "Add length and width once, then double: 11 + 3 = 14, × 2 = 28 m. × ₱50 = ₱1,400."
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-000828",
@@ -1133,7 +1148,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A backpack is priced at ₱960. It is sold at 30% off. How much does a buyer pay?"
+      "gen_sig": "A backpack is priced at ₱960. It is sold at 30% off. How much does a buyer pay?",
+      "shortcut": "Pay the part that is left: 30% off means you pay 70%. ₱960 × 0.7 = ₱672."
     },
     {
       "id": "CIVIO-NUM-OPS-ORDER-000830",
@@ -1257,7 +1273,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A supplier sold a set of school uniforms for ₱150. It raised the price by 20%. Later, it lowered the new price by 30%. What is the final price?"
+      "gen_sig": "A supplier sold a set of school uniforms for ₱150. It raised the price by 20%. Later, it lowered the new price by 30%. What is the final price?",
+      "shortcut": "Chain the changes as multipliers: up 20% is × 1.2, down 30% is × 0.7. ₱150 × 1.2 × 0.7 = ₱126."
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000832",
@@ -1319,7 +1336,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A government employee borrows ₱25,000 at 3% simple interest per year. How much interest is due after 3 years?"
+      "gen_sig": "A government employee borrows ₱25,000 at 3% simple interest per year. How much interest is due after 3 years?",
+      "shortcut": "Find 1% first: 1% of ₱25,000 is ₱250, so 3% is ₱750 a year. Times 3 years = ₱2,250."
     },
     {
       "id": "CIVIO-NUM-OPS-ORDER-000833",
@@ -1332,39 +1350,39 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "What is the value of 3 + 8 × 7 − 8?",
+      "stem": "What is the value of (3 + 8) × 7 − 8?",
       "options": [
         {
           "option_id": "o1",
-          "text": "10"
-        },
-        {
-          "option_id": "o2",
           "text": "51"
         },
         {
+          "option_id": "o2",
+          "text": "69"
+        },
+        {
           "option_id": "o3",
-          "text": "-5"
+          "text": "77"
         },
         {
           "option_id": "o4",
-          "text": "69"
+          "text": "-11"
         }
       ],
       "answer_option_id": "o2",
       "reveal": {
         "terms": "\"Order of operations\" is the rule for which step to do first: multiply and divide before you add and subtract.",
-        "shortcut": "Circle the × first: 8 × 7 = 56. Then go left to right: 3 + 56 − 8.",
-        "why_correct": "51 is right: 3 + 56 = 59, and 59 − 8 = 51.",
+        "shortcut": "Brackets first: 3 + 8 = 11. Then multiply: 11 × 7 = 77. Then subtract 8.",
+        "why_correct": "69 is right: (3 + 8) × 7 = 77, and 77 − 8 = 69.",
         "why_wrong": {
-          "o1": "10 adds 8 and 7 instead of multiplying them.",
-          "o3": "-5 subtracts 8 from 7 before multiplying, which the expression does not say.",
-          "o4": "69 works left to right: (3 + 8) × 7. Multiplication comes first."
+          "o1": "51 ignores the brackets and multiplies 8 × 7 first.",
+          "o3": "77 stops before subtracting 8.",
+          "o4": "-11 subtracts 8 from 7 before multiplying."
         }
       },
       "distractor_reasoning": {
-        "o1": "NUM-OP-SWAP",
-        "o3": "NUM-ORDER-OPS",
+        "o1": "NUM-ORDER-OPS",
+        "o3": "NUM-PARTIAL",
         "o4": "NUM-ORDER-OPS"
       },
       "source": "Original, Civio",
@@ -1372,7 +1390,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -1380,8 +1398,18 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "What is the value of 3 + 8 × 7 − 8?"
+      "notes": "Round 02 fix: order-of-operations shape changed (What is the value of 3 + 8 × 7 − 8? -> What is the value of (3 + 8) × 7 − 8?), key recomputed (69). CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "What is the value of (3 + 8) × 7 − 8?",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "What is the value of 3 + 8 × 7 − 8?",
+        "key": "51"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-NUM-WP-GEOM-000834",
@@ -1443,7 +1471,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A rectangular vegetable garden is 30 m long and 13 m wide. A fence costs ₱150 per meter. How much will it cost to put the fence around the whole vegetable garden?"
+      "gen_sig": "A rectangular vegetable garden is 30 m long and 13 m wide. A fence costs ₱150 per meter. How much will it cost to put the fence around the whole vegetable garden?",
+      "shortcut": "Add length and width once, then double: 30 + 13 = 43, × 2 = 86 m. × ₱150 = ₱12,900."
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-000835",
@@ -1567,7 +1596,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "Which number should come next?  8, 13, 21, 32, 46, ___"
+      "gen_sig": "Which number should come next?  8, 13, 21, 32, 46, ___",
+      "shortcut": "Write the gaps (+5, +8, +11, +14); they change by the same amount each time, so the next gap is +17: 46 +17 = 63."
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-000837",
@@ -1629,7 +1659,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A market stall sold a gallon of paint for ₱150. It raised the price by 20%. Later, it lowered the new price by 30%. What is the final price?"
+      "gen_sig": "A market stall sold a gallon of paint for ₱150. It raised the price by 20%. Later, it lowered the new price by 30%. What is the final price?",
+      "shortcut": "Chain the changes as multipliers: up 20% is × 1.2, down 30% is × 0.7. ₱150 × 1.2 × 0.7 = ₱126."
     },
     {
       "id": "CIVIO-NUM-WP-GEOM-000838",
@@ -1691,7 +1722,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A rectangular vegetable garden is 25 m long and 18 m wide. A edging costs ₱120 per meter. How much will it cost to put the edging around the whole vegetable garden?"
+      "gen_sig": "A rectangular vegetable garden is 25 m long and 18 m wide. A edging costs ₱120 per meter. How much will it cost to put the edging around the whole vegetable garden?",
+      "shortcut": "Add length and width once, then double: 25 + 18 = 43, × 2 = 86 m. × ₱120 = ₱10,320."
     },
     {
       "id": "CIVIO-NUM-OPS-ORDER-000839",
@@ -1704,47 +1736,47 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "What is the value of 6 + 6 × 5 − 2?",
+      "stem": "What is the value of 6 × 6 − 10 ÷ 2?",
       "options": [
         {
           "option_id": "o1",
-          "text": "24"
+          "text": "13"
         },
         {
           "option_id": "o2",
-          "text": "15"
+          "text": "26"
         },
         {
           "option_id": "o3",
-          "text": "34"
+          "text": "31"
         },
         {
           "option_id": "o4",
-          "text": "58"
+          "text": "41"
         }
       ],
       "answer_option_id": "o3",
       "reveal": {
         "terms": "\"Order of operations\" is the rule for which step to do first: multiply and divide before you add and subtract.",
-        "shortcut": "Circle the × first: 6 × 5 = 30. Then go left to right: 6 + 30 − 2.",
-        "why_correct": "34 is right: 6 + 30 = 36, and 36 − 2 = 34.",
+        "shortcut": "Do × and ÷ first: 6 × 6 = 36 and 10 ÷ 2 = 5. Then subtract.",
+        "why_correct": "31 is right: 36 − 5 = 31.",
         "why_wrong": {
-          "o1": "24 subtracts 2 from 5 before multiplying, which the expression does not say.",
-          "o2": "15 adds 6 and 5 instead of multiplying them.",
-          "o4": "58 works left to right: (6 + 6) × 5. Multiplication comes first."
+          "o1": "13 works left to right: (6 × 6 − 10) ÷ 2. Division comes before subtraction.",
+          "o2": "26 skips the division and subtracts all of 10.",
+          "o4": "41 adds 5 instead of subtracting it."
         }
       },
       "distractor_reasoning": {
         "o1": "NUM-ORDER-OPS",
-        "o2": "NUM-OP-SWAP",
-        "o4": "NUM-ORDER-OPS"
+        "o2": "NUM-PARTIAL",
+        "o4": "NUM-OP-SWAP"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -1752,8 +1784,18 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "What is the value of 6 + 6 × 5 − 2?"
+      "notes": "Round 02 fix: order-of-operations shape changed (What is the value of 6 + 6 × 5 − 2? -> What is the value of 6 × 6 − 10 ÷ 2?), key recomputed (31). CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "What is the value of 6 × 6 − 10 ÷ 2?",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "What is the value of 6 + 6 × 5 − 2?",
+        "key": "34"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-NUM-SEQ-MULT-000840",
@@ -1877,7 +1919,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "A barangay had 900 notebooks. It gave out 2/5 of them on Monday and 1/6 of the remaining notebooks on Tuesday. How many are left?"
+      "gen_sig": "A barangay had 900 notebooks. It gave out 2/5 of them on Monday and 1/6 of the remaining notebooks on Tuesday. How many are left?",
+      "shortcut": "Multiply by what is left each time: 900 × 3/5 × 5/6 = 450."
     },
     {
       "id": "CIVIO-ANA-CONCLUSION-000842",
@@ -3508,7 +3551,7 @@
       "difficulty": "medium",
       "est_seconds": 20,
       "language": "en",
-      "stem": "Choose the word that best completes the sentence: The new rule is different ____ the old one.",
+      "stem": "Which preposition correctly fills the blank? The new rule is different ____ the old one.",
       "options": [
         {
           "option_id": "o1",
@@ -3548,7 +3591,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -3556,8 +3599,18 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "PRP:The new rule is different ____ the old one."
+      "notes": "Round 02 fix: stem phrasing changed (frame cap); sentence, options and key unchanged. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "PRP:The new rule is different ____ the old one.",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Choose the word that best completes the sentence: The new rule is different ____ the old one.",
+        "key": "from"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VEN-SENT-COMP-WORD-000869",
@@ -3570,7 +3623,7 @@
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "en",
-      "stem": "Choose the word that best completes the sentence: The guard will ____ visitors to sign the logbook.",
+      "stem": "Which word correctly fills the blank? The guard will ____ visitors to sign the logbook.",
       "options": [
         {
           "option_id": "o1",
@@ -3610,7 +3663,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -3618,8 +3671,18 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "Choose the word that best completes the sentence: The guard will ____ visitors to sign the logbook."
+      "notes": "Round 02 fix: stem phrasing changed (frame cap); sentence, options and key unchanged. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "Which word correctly fills the blank? The guard will ____ visitors to sign the logbook.",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Choose the word that best completes the sentence: The guard will ____ visitors to sign the logbook.",
+        "key": "advise"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VEN-WORD-MEANING-000870",
@@ -3818,7 +3881,7 @@
       "difficulty": "medium",
       "est_seconds": 20,
       "language": "en",
-      "stem": "Choose the word that best completes the sentence: The money was split ____ the two schools.",
+      "stem": "Which preposition correctly fills the blank? The money was split ____ the two schools.",
       "options": [
         {
           "option_id": "o1",
@@ -3858,7 +3921,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -3866,8 +3929,18 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "PRP:The money was split ____ the two schools."
+      "notes": "Round 02 fix: stem phrasing changed (frame cap); sentence, options and key unchanged. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "PRP:The money was split ____ the two schools.",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Choose the word that best completes the sentence: The money was split ____ the two schools.",
+        "key": "between"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VEN-ERROR-AGREE-000874",
@@ -3880,7 +3953,7 @@
       "difficulty": "medium",
       "est_seconds": 30,
       "language": "en",
-      "stem": "Choose the word that best completes the sentence: The leader of the volunteers ____ at every barangay assembly.",
+      "stem": "Which verb agrees with the subject of the sentence? The leader of the volunteers ____ at every barangay assembly.",
       "options": [
         {
           "option_id": "o1",
@@ -3920,7 +3993,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -3928,8 +4001,18 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "Choose the word that best completes the sentence: The leader of the volunteers ____ at every barangay assembly."
+      "notes": "Round 02 fix: stem phrasing changed (frame cap); sentence, options and key unchanged. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "Which verb agrees with the subject of the sentence? The leader of the volunteers ____ at every barangay assembly.",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Choose the word that best completes the sentence: The leader of the volunteers ____ at every barangay assembly.",
+        "key": "speaks"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VEN-ERROR-TENSE-000875",
@@ -4066,7 +4149,7 @@
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "en",
-      "stem": "Choose the word that best completes the sentence: Do not ____ the receipt; you will need it for the refund.",
+      "stem": "Which word correctly fills the blank? Do not ____ the receipt; you will need it for the refund.",
       "options": [
         {
           "option_id": "o1",
@@ -4106,7 +4189,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -4114,8 +4197,18 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "Choose the word that best completes the sentence: Do not ____ the receipt; you will need it for the refund."
+      "notes": "Round 02 fix: stem phrasing changed (frame cap); sentence, options and key unchanged. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "Which word correctly fills the blank? Do not ____ the receipt; you will need it for the refund.",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Choose the word that best completes the sentence: Do not ____ the receipt; you will need it for the refund.",
+        "key": "lose"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VEN-WORD-MEANING-000878",
@@ -4190,7 +4283,7 @@
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "en",
-      "stem": "Choose the word that best completes the sentence: The office ran out of ____ for the printer.",
+      "stem": "Which word correctly fills the blank? The office ran out of ____ for the printer.",
       "options": [
         {
           "option_id": "o1",
@@ -4230,7 +4323,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -4238,8 +4331,18 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "Choose the word that best completes the sentence: The office ran out of ____ for the printer."
+      "notes": "Round 02 fix: stem phrasing changed (frame cap); sentence, options and key unchanged. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "Which word correctly fills the blank? The office ran out of ____ for the printer.",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Choose the word that best completes the sentence: The office ran out of ____ for the printer.",
+        "key": "stationery"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VEN-SENT-COMP-WORD-000880",
@@ -4438,7 +4541,7 @@
       "difficulty": "medium",
       "est_seconds": 30,
       "language": "en",
-      "stem": "Choose the word that best completes the sentence: The cost of the repairs ____ doubled since last year.",
+      "stem": "Which verb agrees with the subject of the sentence? The cost of the repairs ____ doubled since last year.",
       "options": [
         {
           "option_id": "o1",
@@ -4478,7 +4581,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -4486,8 +4589,18 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "Choose the word that best completes the sentence: The cost of the repairs ____ doubled since last year."
+      "notes": "Round 02 fix: stem phrasing changed (frame cap); sentence, options and key unchanged. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "Which verb agrees with the subject of the sentence? The cost of the repairs ____ doubled since last year.",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Choose the word that best completes the sentence: The cost of the repairs ____ doubled since last year.",
+        "key": "has"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VEN-ERROR-AGREE-000884",
@@ -4500,7 +4613,7 @@
       "difficulty": "medium",
       "est_seconds": 30,
       "language": "en",
-      "stem": "Choose the word that best completes the sentence: The members of the board ____ given copies of the agenda.",
+      "stem": "Which verb agrees with the subject of the sentence? The members of the board ____ given copies of the agenda.",
       "options": [
         {
           "option_id": "o1",
@@ -4540,7 +4653,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -4548,8 +4661,18 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "Choose the word that best completes the sentence: The members of the board ____ given copies of the agenda."
+      "notes": "Round 02 fix: stem phrasing changed (frame cap); sentence, options and key unchanged. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "Which verb agrees with the subject of the sentence? The members of the board ____ given copies of the agenda.",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Choose the word that best completes the sentence: The members of the board ____ given copies of the agenda.",
+        "key": "were"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VEN-RC-VOCAB-000885",
@@ -4686,39 +4809,39 @@
       "difficulty": "medium",
       "est_seconds": 15,
       "language": "en",
-      "stem": "Which word is spelled correctly?  liaison | liaisson | liison | liason",
+      "stem": "Which word is spelled correctly?  twelfth | twelth | twelvth | twelf",
       "options": [
         {
           "option_id": "o1",
-          "text": "liaison"
+          "text": "twelfth"
         },
         {
           "option_id": "o2",
-          "text": "liaisson"
+          "text": "twelth"
         },
         {
           "option_id": "o3",
-          "text": "liison"
+          "text": "twelvth"
         },
         {
           "option_id": "o4",
-          "text": "liason"
+          "text": "twelf"
         }
       ],
       "answer_option_id": "o1",
       "reveal": {
         "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
-        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
-        "why_correct": "\"liaison\" is the standard spelling.",
+        "shortcut": "Check the usual traps: doubled letters, i before e, silent letters, and sound-alike endings such as -ance/-ence.",
+        "why_correct": "\"twelfth\" is the standard spelling.",
         "why_wrong": {
-          "o2": "\"liaisson\" doubles or undoubles a consonant. The correct spelling is \"liaison\".",
-          "o3": "\"liison\" drops a letter. The correct spelling is \"liaison\".",
-          "o4": "\"liason\" drops a letter. The correct spelling is \"liaison\"."
+          "o2": "\"twelth\" drops a letter. The correct spelling is \"twelfth\".",
+          "o3": "\"twelvth\" is spelled the way the word sounds. The correct spelling is \"twelfth\".",
+          "o4": "\"twelf\" drops a letter. The correct spelling is \"twelfth\"."
         }
       },
       "distractor_reasoning": {
-        "o2": "SPL-DOUBLE",
-        "o3": "SPL-DROP",
+        "o2": "SPL-DROP",
+        "o3": "SPL-SOUND",
         "o4": "SPL-DROP"
       },
       "source": "Original, Civio",
@@ -4726,7 +4849,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -4734,8 +4857,19 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "R:liaison"
+      "notes": "Round 02 fix: target replaced (liaison -> twelfth) per CoS ruling 2026-10-13. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "R:twelfth",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13",
+        "old_target": "liaison"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Which word is spelled correctly?  liaison | liaisson | liison | liason",
+        "key": "liaison"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-FILE-POSITION-000888",
@@ -4815,34 +4949,34 @@
       "difficulty": "medium",
       "est_seconds": 15,
       "language": "en",
-      "stem": "Which word is misspelled?  beginning | embarrass | indpendence | receipt",
+      "stem": "Which word is misspelled?  warranty | affidavit | untill | itemize",
       "options": [
         {
           "option_id": "o1",
-          "text": "beginning"
+          "text": "warranty"
         },
         {
           "option_id": "o2",
-          "text": "embarrass"
+          "text": "affidavit"
         },
         {
           "option_id": "o3",
-          "text": "indpendence"
+          "text": "untill"
         },
         {
           "option_id": "o4",
-          "text": "receipt"
+          "text": "itemize"
         }
       ],
       "answer_option_id": "o3",
       "reveal": {
         "terms": "Exactly one of the words has a spelling mistake. The others are correct.",
-        "shortcut": "Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.",
-        "why_correct": "\"indpendence\" is misspelled: it drops a letter. The correct spelling is \"independence\".",
+        "shortcut": "Check the usual traps: doubled letters, i before e, silent letters, and sound-alike endings such as -ance/-ence.",
+        "why_correct": "\"untill\" is misspelled: it doubles or undoubles a letter. The correct spelling is \"until\".",
         "why_wrong": {
-          "o1": "\"beginning\" is spelled correctly, even if it looks unusual.",
-          "o2": "\"embarrass\" is spelled correctly, even if it looks unusual.",
-          "o4": "\"receipt\" is spelled correctly, even if it looks unusual."
+          "o1": "\"warranty\" is spelled correctly, even if it looks unusual.",
+          "o2": "\"affidavit\" is spelled correctly, even if it looks unusual.",
+          "o4": "\"itemize\" is spelled correctly, even if it looks unusual."
         }
       },
       "distractor_reasoning": {
@@ -4855,7 +4989,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -4863,8 +4997,20 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "W:indpendence"
+      "notes": "Round 02 fix: target replaced (indpendence -> until) per CoS ruling 2026-10-13. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "W:untill",
+      "error_code": "SPL-DOUBLE",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13",
+        "old_target": "indpendence"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Which word is misspelled?  beginning | embarrass | indpendence | receipt",
+        "key": "indpendence"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-FILE-POSITION-000890",
@@ -4944,47 +5090,47 @@
       "difficulty": "medium",
       "est_seconds": 15,
       "language": "en",
-      "stem": "Which word is spelled correctly?  noticeable | noticeible | notticeable | noticable",
+      "stem": "Which of these words is spelled the standard way?  vacuum | vaccum | vacum | vacume",
       "options": [
         {
           "option_id": "o1",
-          "text": "noticeable"
+          "text": "vacuum"
         },
         {
           "option_id": "o2",
-          "text": "noticeible"
+          "text": "vaccum"
         },
         {
           "option_id": "o3",
-          "text": "notticeable"
+          "text": "vacum"
         },
         {
           "option_id": "o4",
-          "text": "noticable"
+          "text": "vacume"
         }
       ],
       "answer_option_id": "o1",
       "reveal": {
         "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
-        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
-        "why_correct": "\"noticeable\" is the standard spelling.",
+        "shortcut": "Check the usual traps: doubled letters, i before e, silent letters, and sound-alike endings such as -ance/-ence.",
+        "why_correct": "\"vacuum\" is the standard spelling.",
         "why_wrong": {
-          "o2": "\"noticeible\" is spelled the way the word sounds. The correct spelling is \"noticeable\".",
-          "o3": "\"notticeable\" doubles or undoubles a consonant. The correct spelling is \"noticeable\".",
-          "o4": "\"noticable\" drops a letter. The correct spelling is \"noticeable\"."
+          "o2": "\"vaccum\" doubles or undoubles a letter. The correct spelling is \"vacuum\".",
+          "o3": "\"vacum\" drops a letter. The correct spelling is \"vacuum\".",
+          "o4": "\"vacume\" is spelled the way the word sounds. The correct spelling is \"vacuum\"."
         }
       },
       "distractor_reasoning": {
-        "o2": "SPL-SOUND",
-        "o3": "SPL-DOUBLE",
-        "o4": "SPL-DROP"
+        "o2": "SPL-DOUBLE",
+        "o3": "SPL-DROP",
+        "o4": "SPL-SOUND"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -4992,8 +5138,19 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "R:noticeable"
+      "notes": "Round 02 fix: target replaced (noticeable -> vacuum) per CoS ruling 2026-10-13. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "R:vacuum",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13",
+        "old_target": "noticeable"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Which word is spelled correctly?  noticeable | noticeible | notticeable | noticable",
+        "key": "noticeable"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-SPELL-WRONG-000892",
@@ -5006,34 +5163,34 @@
       "difficulty": "medium",
       "est_seconds": 15,
       "language": "en",
-      "stem": "Which word is misspelled?  surveillance | occasionally | beleve | definitely",
+      "stem": "Which of these words has a spelling error?  courteous | punctual | viscious | eligible",
       "options": [
         {
           "option_id": "o1",
-          "text": "surveillance"
+          "text": "courteous"
         },
         {
           "option_id": "o2",
-          "text": "occasionally"
+          "text": "punctual"
         },
         {
           "option_id": "o3",
-          "text": "beleve"
+          "text": "viscious"
         },
         {
           "option_id": "o4",
-          "text": "definitely"
+          "text": "eligible"
         }
       ],
       "answer_option_id": "o3",
       "reveal": {
         "terms": "Exactly one of the words has a spelling mistake. The others are correct.",
-        "shortcut": "Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.",
-        "why_correct": "\"beleve\" is misspelled: it drops a letter. The correct spelling is \"believe\".",
+        "shortcut": "Check the usual traps: doubled letters, i before e, silent letters, and sound-alike endings such as -ance/-ence.",
+        "why_correct": "\"viscious\" is misspelled: it is spelled the way the word sounds. The correct spelling is \"vicious\".",
         "why_wrong": {
-          "o1": "\"surveillance\" is spelled correctly, even if it looks unusual.",
-          "o2": "\"occasionally\" is spelled correctly, even if it looks unusual.",
-          "o4": "\"definitely\" is spelled correctly, even if it looks unusual."
+          "o1": "\"courteous\" is spelled correctly, even if it looks unusual.",
+          "o2": "\"punctual\" is spelled correctly, even if it looks unusual.",
+          "o4": "\"eligible\" is spelled correctly, even if it looks unusual."
         }
       },
       "distractor_reasoning": {
@@ -5046,7 +5203,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -5054,8 +5211,20 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "W:beleve"
+      "notes": "Round 02 fix: target replaced (beleve -> vicious) per CoS ruling 2026-10-13. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "W:viscious",
+      "error_code": "SPL-SOUND",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13",
+        "old_target": "beleve"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Which word is misspelled?  surveillance | occasionally | beleve | definitely",
+        "key": "beleve"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-SPELL-WRONG-000893",
@@ -5068,34 +5237,34 @@
       "difficulty": "medium",
       "est_seconds": 15,
       "language": "en",
-      "stem": "Which word is misspelled?  unanimous | appropriation | occrrence | schedule",
+      "stem": "One word below is spelled wrong. Which one?  beneficiary | certificate | Wensday | deposit",
       "options": [
         {
           "option_id": "o1",
-          "text": "unanimous"
+          "text": "beneficiary"
         },
         {
           "option_id": "o2",
-          "text": "appropriation"
+          "text": "certificate"
         },
         {
           "option_id": "o3",
-          "text": "occrrence"
+          "text": "Wensday"
         },
         {
           "option_id": "o4",
-          "text": "schedule"
+          "text": "deposit"
         }
       ],
       "answer_option_id": "o3",
       "reveal": {
         "terms": "Exactly one of the words has a spelling mistake. The others are correct.",
-        "shortcut": "Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.",
-        "why_correct": "\"occrrence\" is misspelled: it drops a letter. The correct spelling is \"occurrence\".",
+        "shortcut": "Check the usual traps: doubled letters, i before e, silent letters, and sound-alike endings such as -ance/-ence.",
+        "why_correct": "\"Wensday\" is misspelled: it drops a silent letter. The correct spelling is \"Wednesday\".",
         "why_wrong": {
-          "o1": "\"unanimous\" is spelled correctly, even if it looks unusual.",
-          "o2": "\"appropriation\" is spelled correctly, even if it looks unusual.",
-          "o4": "\"schedule\" is spelled correctly, even if it looks unusual."
+          "o1": "\"beneficiary\" is spelled correctly, even if it looks unusual.",
+          "o2": "\"certificate\" is spelled correctly, even if it looks unusual.",
+          "o4": "\"deposit\" is spelled correctly, even if it looks unusual."
         }
       },
       "distractor_reasoning": {
@@ -5108,7 +5277,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -5116,8 +5285,20 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "W:occrrence"
+      "notes": "Round 02 fix: target replaced (occrrence -> Wednesday) per CoS ruling 2026-10-13. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "W:Wensday",
+      "error_code": "SPL-SILENT",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13",
+        "old_target": "occrrence"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Which word is misspelled?  unanimous | appropriation | occrrence | schedule",
+        "key": "occrrence"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-FILE-POSITION-000894",
@@ -5398,34 +5579,34 @@
       "difficulty": "medium",
       "est_seconds": 15,
       "language": "en",
-      "stem": "Which word is misspelled?  liaison | acquaintance | correspondance | colleague",
+      "stem": "Which word is misspelled?  allowance | tariff | wierd | official",
       "options": [
         {
           "option_id": "o1",
-          "text": "liaison"
+          "text": "allowance"
         },
         {
           "option_id": "o2",
-          "text": "acquaintance"
+          "text": "tariff"
         },
         {
           "option_id": "o3",
-          "text": "correspondance"
+          "text": "wierd"
         },
         {
           "option_id": "o4",
-          "text": "colleague"
+          "text": "official"
         }
       ],
       "answer_option_id": "o3",
       "reveal": {
         "terms": "Exactly one of the words has a spelling mistake. The others are correct.",
-        "shortcut": "Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.",
-        "why_correct": "\"correspondance\" is misspelled: it is spelled the way the word sounds. The correct spelling is \"correspondence\".",
+        "shortcut": "Check the usual traps: doubled letters, i before e, silent letters, and sound-alike endings such as -ance/-ence.",
+        "why_correct": "\"wierd\" is misspelled: it swaps the order of i and e. The correct spelling is \"weird\".",
         "why_wrong": {
-          "o1": "\"liaison\" is spelled correctly, even if it looks unusual.",
-          "o2": "\"acquaintance\" is spelled correctly, even if it looks unusual.",
-          "o4": "\"colleague\" is spelled correctly, even if it looks unusual."
+          "o1": "\"allowance\" is spelled correctly, even if it looks unusual.",
+          "o2": "\"tariff\" is spelled correctly, even if it looks unusual.",
+          "o4": "\"official\" is spelled correctly, even if it looks unusual."
         }
       },
       "distractor_reasoning": {
@@ -5438,7 +5619,7 @@
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -5446,8 +5627,20 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "W:correspondance"
+      "notes": "Round 02 fix: target replaced (correspondance -> weird) per CoS ruling 2026-10-13. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "W:wierd",
+      "error_code": "SPL-IE-EI",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13",
+        "old_target": "correspondance"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Which word is misspelled?  liaison | acquaintance | correspondance | colleague",
+        "key": "correspondance"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-FILE-POSITION-000899",
@@ -5527,47 +5720,47 @@
       "difficulty": "medium",
       "est_seconds": 15,
       "language": "en",
-      "stem": "Which word is spelled correctly?  cemetery | cemetary | cemettery | cemtery",
+      "stem": "Which word is spelled correctly?  yield | yeild | yeld | yieled",
       "options": [
         {
           "option_id": "o1",
-          "text": "cemetery"
+          "text": "yield"
         },
         {
           "option_id": "o2",
-          "text": "cemetary"
+          "text": "yeild"
         },
         {
           "option_id": "o3",
-          "text": "cemettery"
+          "text": "yeld"
         },
         {
           "option_id": "o4",
-          "text": "cemtery"
+          "text": "yieled"
         }
       ],
       "answer_option_id": "o1",
       "reveal": {
         "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
-        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
-        "why_correct": "\"cemetery\" is the standard spelling.",
+        "shortcut": "Check the usual traps: doubled letters, i before e, silent letters, and sound-alike endings such as -ance/-ence.",
+        "why_correct": "\"yield\" is the standard spelling.",
         "why_wrong": {
-          "o2": "\"cemetary\" is spelled the way the word sounds. The correct spelling is \"cemetery\".",
-          "o3": "\"cemettery\" doubles or undoubles a consonant. The correct spelling is \"cemetery\".",
-          "o4": "\"cemtery\" drops a letter. The correct spelling is \"cemetery\"."
+          "o2": "\"yeild\" swaps the order of i and e. The correct spelling is \"yield\".",
+          "o3": "\"yeld\" drops a letter. The correct spelling is \"yield\".",
+          "o4": "\"yieled\" is spelled the way the word sounds. The correct spelling is \"yield\"."
         }
       },
       "distractor_reasoning": {
-        "o2": "SPL-SOUND",
-        "o3": "SPL-DOUBLE",
-        "o4": "SPL-DROP"
+        "o2": "SPL-IE-EI",
+        "o3": "SPL-DROP",
+        "o4": "SPL-SOUND"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -5575,8 +5768,19 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "R:cemetery"
+      "notes": "Round 02 fix: target replaced (cemetery -> yield) per CoS ruling 2026-10-13. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "R:yield",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13",
+        "old_target": "cemetery"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Which word is spelled correctly?  cemetery | cemetary | cemettery | cemtery",
+        "key": "cemetery"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-CLR-SPELL-RIGHT-000901",
@@ -5589,47 +5793,47 @@
       "difficulty": "medium",
       "est_seconds": 15,
       "language": "en",
-      "stem": "Which word is spelled correctly?  occurence | occrrence | occurrance | occurrence",
+      "stem": "Which of these words is spelled the standard way?  hankerchief | handkercheif | handkerchef | handkerchief",
       "options": [
         {
           "option_id": "o1",
-          "text": "occurence"
+          "text": "hankerchief"
         },
         {
           "option_id": "o2",
-          "text": "occrrence"
+          "text": "handkercheif"
         },
         {
           "option_id": "o3",
-          "text": "occurrance"
+          "text": "handkerchef"
         },
         {
           "option_id": "o4",
-          "text": "occurrence"
+          "text": "handkerchief"
         }
       ],
       "answer_option_id": "o4",
       "reveal": {
         "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
-        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
-        "why_correct": "\"occurrence\" is the standard spelling.",
+        "shortcut": "Check the usual traps: doubled letters, i before e, silent letters, and sound-alike endings such as -ance/-ence.",
+        "why_correct": "\"handkerchief\" is the standard spelling.",
         "why_wrong": {
-          "o1": "\"occurence\" doubles or undoubles a consonant. The correct spelling is \"occurrence\".",
-          "o2": "\"occrrence\" drops a letter. The correct spelling is \"occurrence\".",
-          "o3": "\"occurrance\" is spelled the way the word sounds. The correct spelling is \"occurrence\"."
+          "o1": "\"hankerchief\" drops a silent letter. The correct spelling is \"handkerchief\".",
+          "o2": "\"handkercheif\" swaps the order of i and e. The correct spelling is \"handkerchief\".",
+          "o3": "\"handkerchef\" drops a letter. The correct spelling is \"handkerchief\"."
         }
       },
       "distractor_reasoning": {
-        "o1": "SPL-DOUBLE",
-        "o2": "SPL-DROP",
-        "o3": "SPL-SOUND"
+        "o1": "SPL-SILENT",
+        "o2": "SPL-IE-EI",
+        "o3": "SPL-DROP"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
       "status": "approved",
       "review_status": "passed",
-      "reviewer": "Chief of Staff",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
@@ -5637,8 +5841,19 @@
         "created_at": "2026-10-13T19:30:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
-      "gen_sig": "R:occurrence"
+      "notes": "Round 02 fix: target replaced (occurrence -> handkerchief) per CoS ruling 2026-10-13. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "R:handkerchief",
+      "previous_review": {
+        "reviewer": "Chief of Staff",
+        "reviewed_at": "2026-10-13",
+        "old_target": "occurrence"
+      },
+      "replaces": {
+        "batch": "batch-010.json",
+        "stem": "Which word is spelled correctly?  occurence | occrrence | occurrance | occurrence",
+        "key": "occurrence"
+      },
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-000902",

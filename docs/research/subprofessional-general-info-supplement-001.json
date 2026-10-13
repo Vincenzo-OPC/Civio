@@ -1,7 +1,7 @@
 {
   "batch": "subprofessional-general-info-supplement-001",
   "spec_version": "0.1.4",
-  "status": "draft, primary legal source cited, editorial review required",
+  "status": "approved (CoS PASS 2026-10-13)",
   "note": "30 original General Information items on environment and human rights gaps. Facts referenced to the cited primary law. Remain drafts and must pass legal and editorial review before active import.",
   "items": [
     {
@@ -53,15 +53,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0002",
@@ -112,15 +115,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0003",
@@ -171,15 +177,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0004",
@@ -230,15 +239,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0005",
@@ -289,15 +301,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0006",
@@ -348,15 +363,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0007",
@@ -407,15 +425,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0008",
@@ -466,15 +487,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0009",
@@ -525,15 +549,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0010",
@@ -584,15 +611,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0011",
@@ -643,15 +673,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0012",
@@ -702,15 +735,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0013",
@@ -761,15 +797,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0014",
@@ -820,15 +859,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0015",
@@ -879,15 +921,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0016",
@@ -938,15 +983,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0017",
@@ -997,15 +1045,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0018",
@@ -1056,15 +1107,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0019",
@@ -1115,15 +1169,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0020",
@@ -1174,15 +1231,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0021",
@@ -1233,15 +1293,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0022",
@@ -1292,15 +1355,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0023",
@@ -1351,15 +1417,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0024",
@@ -1410,15 +1479,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0025",
@@ -1469,15 +1541,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0026",
@@ -1528,15 +1603,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0027",
@@ -1587,15 +1665,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0028",
@@ -1646,15 +1727,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0029",
@@ -1705,15 +1789,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GI-20261013-0030",
@@ -1764,15 +1851,18 @@
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted independent composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     }
   ]
 }

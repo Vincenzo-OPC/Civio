@@ -1,7 +1,7 @@
 {
   "batch": "gap-fill-003",
   "spec_version": "0.1.6",
-  "status": "draft (gap fill; for independent review)",
+  "status": "approved (CoS PASS 2026-10-13)",
   "items": [
     {
       "id": "CIVIO-GAP3-CLR-FILE-ORDER-0015",
@@ -63,17 +63,18 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 2",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13",
         "spec_version": "0.1.6"
       },
-      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GAP3-CLR-FILE-ORDER-0016",
@@ -135,17 +136,18 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 2",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13",
         "spec_version": "0.1.6"
       },
-      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GAP3-CLR-FILE-ORDER-0017",
@@ -207,17 +209,18 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 3",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13",
         "spec_version": "0.1.6"
       },
-      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GAP3-CLR-FILE-ORDER-0018",
@@ -279,17 +282,18 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 3",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13",
         "spec_version": "0.1.6"
       },
-      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GAP3-CLR-FILE-ORDER-0019",
@@ -351,17 +355,18 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 4",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13",
         "spec_version": "0.1.6"
       },
-      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GAP3-CLR-FILE-ORDER-0020",
@@ -423,17 +428,18 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 4",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13",
         "spec_version": "0.1.6"
       },
-      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GAP3-CLR-FILE-ORDER-0021",
@@ -495,17 +501,18 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 7",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13",
         "spec_version": "0.1.6"
       },
-      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GAP3-CLR-FILE-ORDER-0022",
@@ -567,17 +574,18 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 7",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13",
         "spec_version": "0.1.6"
       },
-      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GAP3-CLR-FILE-ORDER-0023",
@@ -611,12 +619,12 @@
       ],
       "answer_option_id": "o4",
       "reveal": {
-        "terms": "An organization is indexed as written on its letterhead, minor words included; only a leading \"The\" moves to the end.",
+        "terms": "An organization is indexed as written on its letterhead, prefixes such as San and Santo join the next word (Rule 6); only a leading \"The\" moves to the end.",
         "shortcut": "Do not rearrange a school's name to its key word; read it as written.",
-        "why_correct": "Third units among the University names: San, Santo, the. \"the\" is last, so University of the East is last. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 8), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_correct": "Third units (Rule 6 joins San and Santo to the next word): SanCarlos, SantoTomas, the. \"the\" is last, so University of the East is last. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 8), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "o1": "Files last only if \"the\" is dropped (University of East). The name is indexed as written, so \"the\" is the third unit.",
-          "o2": "\"San\" comes before \"Santo\" and \"the\": nothing comes before something.",
+          "o1": "Files last only if \"the\" is dropped (University of East). Indexed as written, \"the\" is the third unit, and \"the\" comes after SantoTomas (Rule 6 joins Santo Tomas into one unit).",
+          "o2": "Rule 6 joins the prefix: SanCarlos. \"SanCarlos\" comes before \"SantoTomas\" and \"the\" (sanc before sant).",
           "o3": "\"Union\" comes before \"University\"."
         }
       },
@@ -639,17 +647,18 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 8",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13",
         "spec_version": "0.1.6"
       },
-      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-GAP3-CLR-FILE-ORDER-0024",
@@ -683,12 +692,12 @@
       ],
       "answer_option_id": "o1",
       "reveal": {
-        "terms": "An organization is indexed as written on its letterhead; small words such as \"de\" are units in their place.",
+        "terms": "An organization is indexed as written on its letterhead; a prefix such as \"de\" joins the word after it (Rule 6, as in gap-fill-001).",
         "shortcut": "Keep every word of the official name, in order.",
-        "why_correct": "Second units: de, de, Graduate, Law. \"Law\" is last, so Ateneo Law School is last. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 8), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_correct": "Second units (Rule 6 joins de to the next word): deDavao, deManila, Graduate, Law. \"Law\" is last, so Ateneo Law School is last. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 8), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "o2": "\"de Davao\" files first: de, then Davao before Manila.",
-          "o3": "Files last only if \"de\" is dropped (Ateneo Manila). As written, \"de\" is the second unit and comes before Graduate and Law.",
+          "o2": "Rule 6 joins the prefix: deDavao. It files first (deD before deM).",
+          "o3": "Files last only if \"de\" is dropped (Ateneo Manila). Rule 6 joins the prefix: deManila is the second unit, and it comes before Graduate and Law.",
           "o4": "\"Graduate\" comes before \"Law\"."
         }
       },
@@ -711,17 +720,18 @@
       "source": "Civio Filing Rules v2 / ARMA Rule 8",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13",
         "spec_version": "0.1.6"
       },
-      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     }
   ]
 }

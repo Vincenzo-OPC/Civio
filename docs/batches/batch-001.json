@@ -63,7 +63,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "shortcut": "Chain the changes as multipliers: up 20% is × 1.2, down 20% is × 0.8. ₱250 × 1.2 × 0.8 = ₱240."
     },
     {
       "id": "CIVIO-NUM-SEQ-DIFF-000002",
@@ -125,7 +126,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "shortcut": "Write the gaps (+3, +5, +7, +9); they change by the same amount each time, so the next gap is +11: 28 +11 = 39."
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-000003",
@@ -187,7 +189,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "shortcut": "The second share is 5 of 9 equal parts: ₱18,000 ÷ 9 × 5 = ₱10,000."
     },
     {
       "id": "CIVIO-VEN-WORD-MEANING-000004",
@@ -572,40 +575,40 @@
       "difficulty": "easy",
       "est_seconds": 15,
       "language": "en",
-      "stem": "Which word is misspelled?",
+      "stem": "Which word is misspelled?  bookkeeper | stationery | memorandum | aquire",
       "options": [
         {
           "option_id": "c1",
-          "text": "accommodate"
+          "text": "bookkeeper"
         },
         {
           "option_id": "c2",
-          "text": "receive"
+          "text": "stationery"
         },
         {
           "option_id": "c3",
-          "text": "maintenance"
+          "text": "memorandum"
         },
         {
           "option_id": "c4",
-          "text": "ocassion"
+          "text": "aquire"
         }
       ],
       "answer_option_id": "c4",
       "reveal": {
         "terms": "\"Misspelled\" means written with wrong letters. Only one choice is wrong here.",
-        "shortcut": "Check the double letters first, because they cause most errors. \"Occasion\" has a double c and a single s: oc-ca-sion.",
-        "why_correct": "\"Ocassion\" is the misspelled word. The correct spelling is \"occasion\": two c's, one s.",
+        "shortcut": "Check the usual traps: doubled letters, i before e, silent letters, and sound-alike endings such as -ance/-ence.",
+        "why_correct": "\"aquire\" is misspelled: it drops a silent letter. The correct spelling is \"acquire\".",
         "why_wrong": {
-          "c1": "\"Accommodate\" is correct. It has two c's and two m's, which looks odd but is right.",
-          "c2": "\"Receive\" is correct. After c, the e comes before the i.",
-          "c3": "\"Maintenance\" is correct. It is spelled \"main-ten-ance\", not like the verb \"maintain\"."
+          "c1": "\"bookkeeper\" is spelled correctly, even if it looks unusual.",
+          "c2": "\"stationery\" is spelled correctly, even if it looks unusual.",
+          "c3": "\"memorandum\" is spelled correctly, even if it looks unusual."
         }
       },
       "distractor_reasoning": {
-        "c1": "SPL-DOUBLE",
-        "c2": "SPL-IE-EI",
-        "c3": "SPL-SOUND"
+        "c1": "CLR-SPELL-CORRECT-FOIL",
+        "c2": "CLR-SPELL-CORRECT-FOIL",
+        "c3": "CLR-SPELL-CORRECT-FOIL"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -613,14 +616,26 @@
       "status": "approved",
       "review_status": "passed",
       "reviewer": "Chief of Staff (final approval, delegated by GT)",
-      "reviewed_at": "2026-10-13T19:16:00+08:00",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "CSE (Grok Bot)",
         "method": "ai_assisted",
         "created_at": "2026-10-13T19:15:00+08:00",
         "spec_version": "0.1.3"
       },
-      "notes": "",
+      "notes": "Round 02 fix: target replaced (ocassion -> acquire) per CoS ruling 2026-10-13. CoS PASS 2026-10-13 (round 02 fixes).",
+      "gen_sig": "W:aquire",
+      "error_code": "SPL-SILENT",
+      "previous_review": {
+        "reviewer": "Chief of Staff (final approval, delegated by GT)",
+        "reviewed_at": "2026-10-13T19:16:00+08:00",
+        "old_target": "ocassion"
+      },
+      "replaces": {
+        "batch": "batch-001.json",
+        "stem": "Which word is misspelled?",
+        "key": "ocassion"
+      },
       "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     }
   ],

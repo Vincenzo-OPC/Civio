@@ -19,8 +19,8 @@ test('batch 001 imports as active civio items, keyed, and re-running changes not
         ->and($q->subcategory->category->name)->toBe('Numerical Ability')
         ->and($q->explanation)->toContain('Shortcut:')->not->toMatch('/\b[ABCD]\)/');
 
-    $spell = Question::where('stem', 'Which word is misspelled?')->firstOrFail();
-    expect($spell->options[$spell->correct_option])->toBe('ocassion');
+    $spell = Question::where('stem', 'like', 'Which word is misspelled?%')->firstOrFail();
+    expect($spell->options[$spell->correct_option])->toBe('aquire');
 
     $this->artisan('civio:import-batch', ['path' => $path])
         ->expectsOutputToContain('0 created, 10 updated.')
@@ -94,6 +94,7 @@ test('generated unreviewed items cannot be activated even when the operator omit
 test('an optional item-level shortcut leads the Reveal and the worked steps follow as Method', function () {
     $item = json_decode(file_get_contents(base_path('docs/batches/batch-001.json')), true)['items'][0];
     $texts = array_column($item['options'], 'text', 'option_id');
+    unset($item['shortcut']);
 
     $plain = ImportBatchCommand::explanation($item, $texts);
     expect($plain)->toContain('Shortcut: '.$item['reveal']['shortcut'])->not->toContain('Method:');

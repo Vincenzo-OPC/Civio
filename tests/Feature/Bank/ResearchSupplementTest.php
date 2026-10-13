@@ -2,7 +2,7 @@
 
 use App\Console\Commands\ImportBatchCommand;
 
-test('new Subprofessional supplements are unique, import-shaped, and not accidentally approved', function () {
+test('new Subprofessional supplements are unique, import-shaped, and approved only with a recorded CoS review', function () {
     $files = [
         'docs/research/filipino-supplement-001.json' => ['expected' => 80, 'domain' => 'verbal_fil'],
         'docs/research/subprofessional-general-info-supplement-001.json' => ['expected' => 30, 'domain' => 'general_information'],
@@ -22,8 +22,10 @@ test('new Subprofessional supplements are unique, import-shaped, and not acciden
         foreach ($items as $item) {
             expect(ImportBatchCommand::problem($item))->toBeNull()
                 ->and($item['domain'])->toBe($config['domain'])
-                ->and($item['status'])->toBe('draft')
-                ->and($item['review_status'])->toBe('unreviewed')
+                ->and($item['status'])->toBe('approved')
+                ->and($item['review_status'])->toBe('passed')
+                ->and($item['reviewer'])->toStartWith('Chief of Staff')
+                ->and($item['reviewed_at'])->toBe('2026-10-13')
                 ->and($item['source_group'])->toBe('civio');
 
             $ids = array_column($item['options'], 'option_id');

@@ -1,7 +1,7 @@
 {
   "batch": "filipino-supplement-001",
   "spec_version": "0.1.4",
-  "status": "draft - editorial review required",
+  "status": "approved (CoS PASS 2026-10-13)",
   "level": "Subprofessional / Professional",
   "scope": "Verbal Ability in Filipino, per official CSC Examination Announcement No. 03 s. 2026",
   "note": "These are independently authored practice items, not CSC exam questions. The 80 items pass schema, unique key, choice count, and exact stem duplicate checks. Human Filipino linguistic QA is required, and they are not authorized for active mocks.",
@@ -56,15 +56,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0002",
@@ -115,15 +118,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0003",
@@ -174,15 +180,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0004",
@@ -233,15 +242,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0005",
@@ -292,15 +304,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0006",
@@ -351,15 +366,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0007",
@@ -410,15 +428,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0008",
@@ -469,15 +490,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0009",
@@ -528,15 +552,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0010",
@@ -587,15 +614,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0011",
@@ -646,15 +676,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0012",
@@ -705,15 +738,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0013",
@@ -764,15 +800,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0014",
@@ -823,15 +862,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0015",
@@ -882,15 +924,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0016",
@@ -941,15 +986,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0017",
@@ -1000,15 +1048,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0018",
@@ -1059,15 +1110,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0019",
@@ -1118,15 +1172,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0020",
@@ -1177,15 +1234,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0021",
@@ -1236,15 +1296,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0022",
@@ -1295,15 +1358,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0023",
@@ -1354,15 +1420,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0024",
@@ -1413,15 +1482,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0025",
@@ -1472,15 +1544,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0026",
@@ -1531,15 +1606,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0027",
@@ -1590,15 +1668,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0028",
@@ -1649,15 +1730,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0029",
@@ -1708,15 +1792,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0030",
@@ -1767,15 +1854,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0031",
@@ -1826,15 +1916,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0032",
@@ -1885,15 +1978,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0033",
@@ -1944,15 +2040,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0034",
@@ -2003,15 +2102,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0035",
@@ -2062,15 +2164,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0036",
@@ -2121,15 +2226,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0037",
@@ -2180,15 +2288,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0038",
@@ -2239,15 +2350,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0039",
@@ -2298,15 +2412,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0040",
@@ -2357,15 +2474,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0041",
@@ -2416,15 +2536,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0042",
@@ -2475,15 +2598,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0043",
@@ -2534,15 +2660,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0044",
@@ -2593,15 +2722,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0045",
@@ -2652,15 +2784,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0046",
@@ -2711,15 +2846,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0047",
@@ -2770,15 +2908,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0048",
@@ -2829,15 +2970,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0049",
@@ -2888,15 +3032,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0050",
@@ -2947,15 +3094,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0051",
@@ -3006,15 +3156,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0052",
@@ -3065,15 +3218,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0053",
@@ -3124,15 +3280,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0054",
@@ -3183,15 +3342,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0055",
@@ -3242,15 +3404,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0056",
@@ -3301,15 +3466,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0057",
@@ -3360,15 +3528,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0058",
@@ -3419,15 +3590,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0059",
@@ -3478,15 +3652,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0060",
@@ -3537,15 +3714,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0061",
@@ -3596,15 +3776,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0062",
@@ -3655,15 +3838,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0063",
@@ -3714,15 +3900,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0064",
@@ -3773,15 +3962,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0065",
@@ -3832,15 +4024,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0066",
@@ -3891,15 +4086,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0067",
@@ -3950,15 +4148,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0068",
@@ -4009,15 +4210,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0069",
@@ -4068,15 +4272,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0070",
@@ -4127,15 +4334,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0071",
@@ -4186,15 +4396,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0072",
@@ -4245,15 +4458,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0073",
@@ -4304,15 +4520,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0074",
@@ -4363,15 +4582,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0075",
@@ -4422,15 +4644,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0076",
@@ -4481,15 +4706,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0077",
@@ -4540,15 +4768,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0078",
@@ -4599,15 +4830,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0079",
@@ -4658,15 +4892,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-20261013-0080",
@@ -4717,15 +4954,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
+      "status": "approved",
+      "review_status": "passed",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "AI-assisted original composition",
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "New Filipino domain. Independent human language review and QA registration required before activation."
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     }
   ]
 }
