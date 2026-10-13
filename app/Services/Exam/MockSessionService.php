@@ -120,6 +120,8 @@ class MockSessionService
             'id' => (int) $question->id,
             'stem' => (string) $question->stem,
             'options' => array_values((array) ($question->options ?? [])),
+            // Server-only: lets MockPoolState keep a key and the same word used as a trap apart.
+            'correct' => (int) ($question->correct_option ?? -1),
             'category' => $question->subcategory?->category?->name ?? 'General Information',
             'subcategory' => $question->subcategory?->name ?? '',
             'language' => QuestionLanguage::fromRaw($rawLang)->value,

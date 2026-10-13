@@ -1,7 +1,7 @@
 {
   "batch": "chatgpt-batch-001",
   "spec_version": "0.1.5",
-  "status": "draft",
+  "status": "approved (CoS PASS 2026-10-13: 89 pass, 11 fixed)",
   "source_group": "civio",
   "notes": "100 independently authored Filipino Verbal Ability questions, awaiting independent Grok Bot and Chief of Staff review; no import or deployment.",
   "items": [
@@ -54,17 +54,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040002",
@@ -115,17 +116,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040003",
@@ -176,17 +178,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040004",
@@ -237,17 +240,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040005",
@@ -298,17 +302,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040006",
@@ -352,24 +357,25 @@
         }
       },
       "distractor_reasoning": {
-        "o2": "FIL-INTENSITY",
+        "o2": "FIL-SAME-FIELD",
         "o3": "FIL-SAME-FIELD",
         "o4": "FIL-ANTONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040007",
@@ -420,17 +426,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040008",
@@ -469,7 +476,7 @@
         "why_correct": "\"kagalang-galang\" ang tamang sagot. Marangal ang kilos na karapat-dapat igalang.",
         "why_wrong": {
           "o2": "\"makapangyarihan\" — may awtoridad ngunit hindi awtomatikong marangal",
-          "o3": "\"mapanghamak\" — nangmamaliit ng iba",
+          "o3": "\"mapanghamak\" — nagmamaliit ng iba",
           "o4": "\"lubhang mapagbigay\" — pagbibigay ng sobra, iba sa marangal na pakikitungo"
         }
       },
@@ -481,17 +488,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040009",
@@ -542,17 +550,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040010",
@@ -603,17 +612,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040011",
@@ -664,17 +674,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040012",
@@ -687,7 +698,7 @@
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "fil",
-      "stem": "Sa pangungusap na \"MARUBDOB ang pagtatalo sa pulong, kaya hiniling ng tagapangulo na humupa muna ang tensiyon.\" ano ang pinakamalapit na kahulugan ng \"MARUBDOB\"?",
+      "stem": "Sa pangungusap na \"MAALAB ang pagtatalo sa pulong, kaya hiniling ng tagapangulo na humupa muna ang tensiyon.\" ano ang pinakamalapit na kahulugan ng \"MAALAB\"?",
       "options": [
         {
           "option_id": "o1",
@@ -725,17 +736,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040013",
@@ -756,7 +768,7 @@
         },
         {
           "option_id": "o2",
-          "text": "tanging may pananagutan"
+          "text": "nakatataas na tanggapan"
         },
         {
           "option_id": "o3",
@@ -764,39 +776,40 @@
         },
         {
           "option_id": "o4",
-          "text": "may kaugnayan"
+          "text": "may saklaw o pananagutan"
         }
       ],
       "answer_option_id": "o4",
       "reveal": {
         "terms": "Ang kasingkahulugan ay may pinakamalapit na kahulugan sa konteksto.",
         "shortcut": "Ang kaukulang tanggapan ay ang may saklaw sa paksa.",
-        "why_correct": "\"may kaugnayan\" ang tamang sagot. Ang kaukulang tanggapan ay ang may saklaw sa paksa.",
+        "why_correct": "\"may saklaw o pananagutan\" ang tamang sagot. Ang kinauukulang tanggapan ay ang may saklaw o pananagutan sa usapin.",
         "why_wrong": {
           "o1": "\"walang kinalaman\" — hindi saklaw ng usapin",
-          "o2": "\"tanging may pananagutan\" — mas makitid kaysa pagkakaugnay lamang",
+          "o2": "\"nakatataas na tanggapan\" — tumutukoy sa ranggo ng tanggapan, hindi sa saklaw nito sa usapin",
           "o3": "\"nakikinabang\" — tumatanggap ng pakinabang, hindi kinakailangang kasangkot"
         }
       },
       "distractor_reasoning": {
         "o1": "FIL-ANTONYM-TRAP",
-        "o2": "FIL-INTENSITY",
+        "o2": "FIL-SAME-FIELD",
         "o3": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040014",
@@ -847,17 +860,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040015",
@@ -908,17 +922,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040016",
@@ -969,17 +984,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040017",
@@ -1030,17 +1046,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040018",
@@ -1091,17 +1108,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040019",
@@ -1152,17 +1170,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040020",
@@ -1213,17 +1232,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040021",
@@ -1274,17 +1294,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040022",
@@ -1335,17 +1356,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040023",
@@ -1358,7 +1380,7 @@
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "fil",
-      "stem": "Sa pangungusap na \"Nanatiling MATATAG ang paninindigan ng tagapagsalita kahit may tumutol sa kaniya.\" ano ang pinakamalapit na kahulugan ng \"MATATAG\"?",
+      "stem": "Sa pangungusap na \"Nanatiling MATIGAS ang paninindigan ng tagapagsalita kahit may tumutol sa kaniya.\" ano ang pinakamalapit na kahulugan ng \"MATIGAS\"?",
       "options": [
         {
           "option_id": "o1",
@@ -1380,8 +1402,8 @@
       "answer_option_id": "o3",
       "reveal": {
         "terms": "Ang kasingkahulugan ay may pinakamalapit na kahulugan sa konteksto.",
-        "shortcut": "Matatag ang paninindigang hindi basta nababago sa pressure.",
-        "why_correct": "\"hindi madaling matinag\" ang tamang sagot. Matatag ang paninindigang hindi basta nababago sa pressure.",
+        "shortcut": "Matigas ang paninindigang hindi basta nababago sa pressure.",
+        "why_correct": "\"hindi madaling matinag\" ang tamang sagot. Matigas ang paninindigang hindi basta nababago sa pressure.",
         "why_wrong": {
           "o1": "\"marupok\" — madaling sumuko o matinag",
           "o2": "\"walang kakayahang magbago ng isip kailanman\" — mas lubos kaysa karaniwang katatagan",
@@ -1396,17 +1418,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040024",
@@ -1457,17 +1480,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040025",
@@ -1518,17 +1542,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040026",
@@ -1579,17 +1604,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040027",
@@ -1602,11 +1628,11 @@
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "fil",
-      "stem": "Alin ang kasalungat ng \"PAYAPA\" sa pangungusap na \"Naging PAYAPA ang pag-uusap sa pagitan ng dalawang samahan.\"?",
+      "stem": "Alin ang kasalungat ng \"MAAYOS\" sa pangungusap na \"Naging MAAYOS ang pag-uusap sa pagitan ng dalawang samahan.\"?",
       "options": [
         {
           "option_id": "o1",
-          "text": "matiwasay"
+          "text": "organisado"
         },
         {
           "option_id": "o2",
@@ -1624,10 +1650,10 @@
       "answer_option_id": "o3",
       "reveal": {
         "terms": "Ang kasalungat ay salitang nagpapahayag ng kabaligtarang kahulugan.",
-        "shortcut": "Ang magulong pag-uusap ay salungat sa payapang talakayan.",
-        "why_correct": "\"magulo\" ang tamang sagot. Ang magulong pag-uusap ay salungat sa payapang talakayan.",
+        "shortcut": "Ang magulong pag-uusap ay salungat sa maayos na talakayan.",
+        "why_correct": "\"magulo\" ang tamang sagot. Ang magulong pag-uusap ay salungat sa maayos na talakayan.",
         "why_wrong": {
-          "o1": "\"matiwasay\" — kaparehong katahimikan",
+          "o1": "\"organisado\" — kasingkahulugan ng maayos",
           "o2": "\"bahagyang maingay\" — ingay lang at hindi kinakailangang kaguluhan",
           "o4": "\"mahaba\" — tagal ng usapan, hindi kapayapaan"
         }
@@ -1640,17 +1666,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040028",
@@ -1701,17 +1728,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040029",
@@ -1724,7 +1752,7 @@
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "fil",
-      "stem": "Alin ang kasalungat ng \"TUWIRAN\" sa pangungusap na \"Nais niyang TUWIRAN ang kaniyang paliwanag at walang paligoy-ligoy.\"?",
+      "stem": "Alin ang kasalungat ng \"TUWIRAN\" sa pangungusap na \"Nais niyang TUWIRAN ang kaniyang paliwanag.\"?",
       "options": [
         {
           "option_id": "o1",
@@ -1762,17 +1790,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040030",
@@ -1807,8 +1836,8 @@
       "answer_option_id": "o1",
       "reveal": {
         "terms": "Ang kasalungat ay salitang nagpapahayag ng kabaligtarang kahulugan.",
-        "shortcut": "Ang napag-iiwanan ay hindi nakakasabay sa pag-unlad.",
-        "why_correct": "\"napag-iiwanan\" ang tamang sagot. Ang napag-iiwanan ay hindi nakakasabay sa pag-unlad.",
+        "shortcut": "Ang napag-iiwanan ay hindi nakasasabay sa pag-unlad.",
+        "why_correct": "\"napag-iiwanan\" ang tamang sagot. Ang napag-iiwanan ay hindi nakasasabay sa pag-unlad.",
         "why_wrong": {
           "o2": "\"ganap na walang naninirahan\" — mas malayo kaysa pagiging nahuhuli sa pag-unlad",
           "o3": "\"malawak\" — sukat ng lugar, hindi antas ng kaunlaran",
@@ -1823,17 +1852,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040031",
@@ -1884,17 +1914,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040032",
@@ -1907,7 +1938,7 @@
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "fil",
-      "stem": "Alin ang kasalungat ng \"MAYABONG\" sa pangungusap na \"MAYABONG ang mga dahon ng bagong tanim na punongkahoy.\"?",
+      "stem": "Alin ang kasalungat ng \"MALABAY\" sa pangungusap na \"MALABAY ang mga dahon ng bagong tanim na punongkahoy.\"?",
       "options": [
         {
           "option_id": "o1",
@@ -1919,7 +1950,7 @@
         },
         {
           "option_id": "o3",
-          "text": "malago"
+          "text": "madahon"
         },
         {
           "option_id": "o4",
@@ -1929,11 +1960,11 @@
       "answer_option_id": "o1",
       "reveal": {
         "terms": "Ang kasalungat ay salitang nagpapahayag ng kabaligtarang kahulugan.",
-        "shortcut": "Sa usapang dami ng dahon, kalbo ang kasalungat ng mayabong.",
-        "why_correct": "\"kalbo\" ang tamang sagot. Sa usapang dami ng dahon, kalbo ang kasalungat ng mayabong.",
+        "shortcut": "Sa usapang dami ng dahon, kalbo ang kasalungat ng malabay.",
+        "why_correct": "\"kalbo\" ang tamang sagot. Sa usapang dami ng dahon, kalbo ang kasalungat ng malabay.",
         "why_wrong": {
           "o2": "\"mabango\" — tumutukoy sa amoy",
-          "o3": "\"malago\" — kasingkahulugan ng mayabong",
+          "o3": "\"madahon\" — kasingkahulugan ng malabay",
           "o4": "\"lubos na patay\" — mas matindi kaysa halos walang dahon"
         }
       },
@@ -1945,17 +1976,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040033",
@@ -1968,7 +2000,7 @@
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "fil",
-      "stem": "Alin ang kasalungat ng \"MALUWAG\" sa pangungusap na \"MALUWAG ang daanan sa bayan kaya magkasabay na nakakadaan ang dalawang kariton.\"?",
+      "stem": "Alin ang kasalungat ng \"MALUWAG\" sa pangungusap na \"MALUWAG ang daanan sa bayan kaya magkasabay na nakadaraan ang dalawang kariton.\"?",
       "options": [
         {
           "option_id": "o1",
@@ -2006,17 +2038,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040034",
@@ -2067,17 +2100,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040035",
@@ -2128,17 +2162,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040036",
@@ -2189,17 +2224,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040037",
@@ -2250,17 +2286,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040038",
@@ -2311,17 +2348,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040039",
@@ -2372,17 +2410,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040040",
@@ -2433,17 +2472,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040041",
@@ -2494,17 +2534,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040042",
@@ -2555,17 +2596,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040043",
@@ -2610,23 +2652,24 @@
       },
       "distractor_reasoning": {
         "o1": "FIL-INTENSITY",
-        "o3": "FIL-SYNONYM-TRAP",
+        "o3": "FIL-SAME-FIELD",
         "o4": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040044",
@@ -2677,17 +2720,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040045",
@@ -2733,22 +2777,23 @@
       "distractor_reasoning": {
         "o1": "FIL-SYNONYM-TRAP",
         "o2": "FIL-SAME-FIELD",
-        "o3": "FIL-INTENSITY"
+        "o3": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040046",
@@ -2799,17 +2844,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040047",
@@ -2844,7 +2890,7 @@
       "answer_option_id": "o2",
       "reveal": {
         "terms": "Ang sawikain ay may matalinghagang kahulugan, kaya hindi sapat ang literal na pagbasa.",
-        "shortcut": "Naubos ang kanyang magagamit na pera.",
+        "shortcut": "Naubos ang kaniyang magagamit na pera.",
         "why_correct": "\"halos wala nang pera\" ang tamang sagot. Naubos ang kaniyang magagamit na pera.",
         "why_wrong": {
           "o1": "\"may pisikal na sira ang bulsa\" — literal na butas sa damit",
@@ -2860,17 +2906,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040048",
@@ -2921,17 +2968,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040049",
@@ -2982,17 +3030,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040050",
@@ -3043,17 +3092,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040051",
@@ -3104,17 +3154,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040052",
@@ -3165,17 +3216,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040053",
@@ -3188,7 +3240,7 @@
       "difficulty": "medium",
       "est_seconds": 35,
       "language": "fil",
-      "stem": "Basahin: \"MATALAS ANG DILA ng tagapagsalita; nakakapanakit ang bawat puna niyang binibitawan.\" Ano ang ibig sabihin ng sawikaing \"MATALAS ANG DILA\" dito?",
+      "stem": "Basahin: \"MATALAS ANG DILA ng tagapagsalita; nakasasakit ang bawat puna niyang binibitawan.\" Ano ang ibig sabihin ng sawikaing \"MATALAS ANG DILA\" dito?",
       "options": [
         {
           "option_id": "o1",
@@ -3226,17 +3278,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040054",
@@ -3287,17 +3340,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040055",
@@ -3348,17 +3402,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040056",
@@ -3409,17 +3464,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040057",
@@ -3458,7 +3514,7 @@
         "why_correct": "\"walang hiya\" ang tamang sagot. Hindi niya ikinahiya ang sariling maling ginawa.",
         "why_wrong": {
           "o1": "\"may makapal na balat sa pisngi\" — literal na basa sa sawikain",
-          "o2": "\"marunong mahiya\" — kabaligtaran ng kapalaluan",
+          "o2": "\"marunong mahiya\" — kabaligtaran ng kawalang-hiya",
           "o3": "\"matapang sa pakikipag-usap\" — may lakas ng loob ngunit hindi kinakailangang walang hiya"
         }
       },
@@ -3470,17 +3526,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040058",
@@ -3531,17 +3588,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040059",
@@ -3592,17 +3650,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040060",
@@ -3653,17 +3712,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040061",
@@ -3707,24 +3767,25 @@
         }
       },
       "distractor_reasoning": {
-        "o1": "FIL-SAME-FIELD",
+        "o1": "FIL-SPOKEN-FORM",
         "o2": "FIL-SPOKEN-FORM",
         "o3": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040062",
@@ -3768,24 +3829,25 @@
         }
       },
       "distractor_reasoning": {
-        "o2": "FIL-SAME-FIELD",
+        "o2": "FIL-SPOKEN-FORM",
         "o3": "FIL-SPOKEN-FORM",
         "o4": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040063",
@@ -3831,22 +3893,23 @@
       "distractor_reasoning": {
         "o1": "FIL-SPOKEN-FORM",
         "o2": "FIL-SPOKEN-FORM",
-        "o4": "FIL-SAME-FIELD"
+        "o4": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040064",
@@ -3890,24 +3953,25 @@
         }
       },
       "distractor_reasoning": {
-        "o1": "FIL-SAME-FIELD",
+        "o1": "FIL-SPOKEN-FORM",
         "o2": "FIL-SPOKEN-FORM",
         "o4": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040065",
@@ -3920,7 +3984,7 @@
       "difficulty": "medium",
       "est_seconds": 40,
       "language": "fil",
-      "stem": "Kumpletuhin: 'Umusad ___ mabagal ang sasakyan sa daang ___ kabundukan.'",
+      "stem": "Kumpletuhin: 'Umusad ___ mabagal ang sasakyan sa daan ___ kabundukan.'",
       "options": [
         {
           "option_id": "o1",
@@ -3946,29 +4010,30 @@
         "why_correct": "\"nang / ng\" ang tamang sagot. Nang mabagal ang paraan ng pag-usad; ng kabundukan ang ugnayan sa daan.",
         "why_wrong": {
           "o1": "\"ng / nang\" — Baligtad ang paraang mabagal at ang ugnayan sa kabundukan.",
-          "o2": "\"nang / nang\" — Hindi nang ang pananda sa 'daang ng kabundukan'.",
+          "o2": "\"nang / nang\" — Hindi nang ang pananda sa 'daan ng kabundukan'.",
           "o3": "\"ng / ng\" — Mali ang ng para sa mabagal na pag-usad."
         }
       },
       "distractor_reasoning": {
         "o1": "FIL-SPOKEN-FORM",
         "o2": "FIL-SPOKEN-FORM",
-        "o3": "FIL-SAME-FIELD"
+        "o3": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040066",
@@ -4019,17 +4084,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040067",
@@ -4080,17 +4146,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040068",
@@ -4134,24 +4201,25 @@
         }
       },
       "distractor_reasoning": {
-        "o2": "FIL-SAME-FIELD",
+        "o2": "FIL-SPOKEN-FORM",
         "o3": "FIL-SPOKEN-FORM",
         "o4": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040069",
@@ -4202,17 +4270,18 @@
       "source": "Original, Civio; Komisyon sa Wikang Filipino, Ortograpiyang Pambansa (2013), Section 8.1, as published in DepEd Order No. 34, s. 2013.",
       "source_url": "https://www.deped.gov.ph/wp-content/uploads/2013/08/DO_s2013_034.pdf",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040070",
@@ -4263,17 +4332,18 @@
       "source": "Original, Civio; Komisyon sa Wikang Filipino, Ortograpiyang Pambansa (2013), Section 8.1, as published in DepEd Order No. 34, s. 2013.",
       "source_url": "https://www.deped.gov.ph/wp-content/uploads/2013/08/DO_s2013_034.pdf",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040071",
@@ -4324,17 +4394,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040072",
@@ -4385,17 +4456,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040073",
@@ -4439,24 +4511,25 @@
         }
       },
       "distractor_reasoning": {
-        "o1": "FIL-SAME-FIELD",
+        "o1": "FIL-SPOKEN-FORM",
         "o2": "FIL-SAME-FIELD",
         "o3": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040074",
@@ -4495,7 +4568,7 @@
         "why_correct": "\"Ipinadala nila ang paanyaya sa mga magulang.\" ang tamang sagot. Sa ganitong anyo ng pandiwa, 'nila' ang tumutukoy sa mga nagpadala at 'ang' ang nagmamarka sa paanyaya.",
         "why_wrong": {
           "o2": "\"Ipinadala kanila ang paanyaya sa mga magulang.\" — Hindi ginagamit ang kanila rito bilang tagaganap.",
-          "o3": "\"Ipinadala nila ng paanyaya sa mga magulang.\" — Ang ay angkop sa layon na paanyaya, hindi ng sa posisyong ito.",
+          "o3": "\"Ipinadala nila ng paanyaya sa mga magulang.\" — Ang \"ang\" ang angkop na pananda ng layong paanyaya, hindi \"ng\" sa posisyong ito.",
           "o4": "\"Ipinadala sila ang paanyaya sa mga magulang.\" — Ang nila, hindi sila, ang angkop na tagaganap sa 'ipinadala'."
         }
       },
@@ -4507,17 +4580,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040075",
@@ -4568,17 +4642,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040076",
@@ -4629,17 +4704,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040077",
@@ -4690,17 +4766,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040078",
@@ -4751,17 +4828,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040079",
@@ -4812,17 +4890,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040080",
@@ -4868,22 +4947,23 @@
       "distractor_reasoning": {
         "o2": "RC-NOT-IN-TEXT",
         "o3": "RC-OPPOSITE",
-        "o4": "RC-OPPOSITE"
+        "o4": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040081",
@@ -4934,17 +5014,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040082",
@@ -4995,17 +5076,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040083",
@@ -5056,17 +5138,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040084",
@@ -5117,17 +5200,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040085",
@@ -5178,17 +5262,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040086",
@@ -5239,17 +5324,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040087",
@@ -5300,17 +5386,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040088",
@@ -5361,17 +5448,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040089",
@@ -5422,17 +5510,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGBASA-040090",
@@ -5483,17 +5572,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGSUSUNOD-040091",
@@ -5544,17 +5634,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGSUSUNOD-040092",
@@ -5567,7 +5658,7 @@
       "difficulty": "hard",
       "est_seconds": 70,
       "language": "fil",
-      "stem": "Paksa: Paglulunsad ng bagong reading room. Alin ang lohikal na pagkakasunod?\nA. Tiningnan ng guro ang kaligtasan at ang mga kailangang muwebles.\nB. Pinapasok ang mga mag-aaral matapos ang pinal na inspeksiyon.\nC. Nagpasya ang lupon na gawing silid-basa ang bakanteng silid.\nD. Inayos ang upuan at dinala ang mga unang aklat.",
+      "stem": "Paksa: Paglulunsad ng bagong reading room. Alin ang lohikal na pagkakasunod?\nA. Inalam ng guro kung anong muwebles ang kailangan at kung ligtas ang silid bago ito ayusin.\nB. Pinapasok ang mga mag-aaral matapos ang pinal na inspeksiyon.\nC. Nagpasya ang lupon na gawing silid-basa ang bakanteng silid.\nD. Inayos ang upuan at dinala ang mga unang aklat.",
       "options": [
         {
           "option_id": "o1",
@@ -5593,8 +5684,8 @@
         "why_correct": "\"C-A-D-B\" ang tamang sagot. Hindi maaaring magbukas nang ligtas bago matukoy at maihanda ang kailangan. Tamang ayos: C-A-D-B.",
         "why_wrong": {
           "o1": "\"B-D-A-C\" — Sa B-D-A-C, nauna ang \"Pinapasok ang mga mag-aaral matapos ang pinal na inspeksiyon.\" sa \"Inayos ang upuan at dinala ang mga unang aklat.\", bagaman kailangan munang mangyari ang ikalawa.",
-          "o2": "\"C-D-A-B\" — Sa C-D-A-B, nauna ang \"Inayos ang upuan at dinala ang mga unang aklat.\" sa \"Tiningnan ng guro ang kaligtasan at ang mga kailangang muwebles.\", bagaman kailangan munang mangyari ang ikalawa.",
-          "o4": "\"A-D-B-C\" — Sa A-D-B-C, nauna ang \"Tiningnan ng guro ang kaligtasan at ang mga kailangang muwebles.\" sa \"Nagpasya ang lupon na gawing silid-basa ang bakanteng silid.\", bagaman kailangan munang mangyari ang ikalawa."
+          "o2": "\"C-D-A-B\" — Sa C-D-A-B, nauna ang \"Inayos ang upuan at dinala ang mga unang aklat.\" sa \"Inalam ng guro kung anong muwebles ang kailangan at kung ligtas ang silid bago ito ayusin.\", bagaman kailangan munang mangyari ang ikalawa.",
+          "o4": "\"A-D-B-C\" — Sa A-D-B-C, nauna ang \"Inalam ng guro kung anong muwebles ang kailangan at kung ligtas ang silid bago ito ayusin.\" sa \"Nagpasya ang lupon na gawing silid-basa ang bakanteng silid.\", bagaman kailangan munang mangyari ang ikalawa."
         }
       },
       "distractor_reasoning": {
@@ -5605,17 +5696,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGSUSUNOD-040093",
@@ -5666,17 +5758,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGSUSUNOD-040094",
@@ -5727,17 +5820,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGSUSUNOD-040095",
@@ -5788,17 +5882,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGSUSUNOD-040096",
@@ -5849,17 +5944,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGSUSUNOD-040097",
@@ -5910,17 +6006,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGSUSUNOD-040098",
@@ -5971,17 +6068,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGSUSUNOD-040099",
@@ -6032,17 +6130,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     },
     {
       "id": "CIVIO-VFIL-PAGSUSUNOD-040100",
@@ -6093,17 +6192,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-13",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
     }
   ]
 }

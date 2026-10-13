@@ -1,6 +1,6 @@
 # Civio CSE Question Design Spec
 
-Version: 0.1.7 (optional item-level `shortcut` field, see §6 and 10.6; CoS round 02 rulings in 10.5)
+Version: 0.1.8 (CoS round 03 Filipino rulings in 10.7; optional item-level `shortcut` field, see §6 and 10.6; CoS round 02 rulings in 10.5)
 Date: 5 Oct 2026 (Asia/Manila); approved 7 Oct 2026
 Owner: GT
 Status: **Approved by GT on 7 Oct 2026.** The canonical copy lives in GT's Obsidian vault; this repo copy
@@ -266,7 +266,7 @@ Distractor codes:
 - `FIL-SYNONYM-TRAP` (antonym items) gives a synonym instead of an antonym
 - `FIL-LITERAL` idiom taken word-for-word
 - `FIL-INTENSITY` right direction, wrong strength
-- `FIL-SPOKEN-FORM` common spoken usage that breaks the standard rule
+- `FIL-SPOKEN-FORM` common spoken usage that breaks the standard rule. Use it for every ng/nang, din/rin, daw/raw and pang-angkop (-ng/na) error. Keep `FIL-SAME-FIELD` for a wrong word with a different meaning.
 - `FIL-OTHER-TRAIT` (idiom items) a real personality trait or quality that has nothing to do with the idiom (v0.1.6)
 - plus the RC and paragraph codes from 3.2
 
@@ -728,3 +728,10 @@ them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 ## 10.6 Optional shortcut field (v0.1.7, 2026-10-13)
 
 **GT request, 2026-10-13.** Items may carry an optional `shortcut`: one short, honest technique (percent: 15% = 10% + 5%; order of operations: multiply first; spelling: an ie/ei rule; filing: an ARMA rule mnemonic). Omit it when no real shortcut exists. `qa.py` accepts the field and rejects an empty or padded one (over 300 characters). The importer shows it first in the Reveal as "Shortcut: …" and relabels the worked steps "Method: …"; items without the field render as before. Adding a shortcut to an approved item is a content change: it waits for Chief of Staff before it is merged or imported. Numerical is backfilled first in `docs/research/shortcuts-num-001.json`, each shortcut evaluated on the item's own numbers.
+
+### 10.7 CoS round 03 rulings (Filipino, 2026-10-13)
+
+- KWF spelling: reduplicate the first syllable after naka- (nakasasakit, nakadaraan), never "nakaka-"; write kaniya/kaniyang, never kanya/kanyang. `qa.py` flags both in every field.
+- A Filipino vocabulary stem must not contain any of its options, so the stem cannot give the answer away (`qa.py`).
+- `FIL-SPOKEN-FORM` covers every ng/nang, din/rin, daw/raw and pang-angkop error.
+- Targets are unique across the Filipino bank. When one item's key is another item's distractor, the mock builder keeps the two apart (`MockPoolState`, Filipino word options only); `scripts/batches/qa_fil.py` lists such pairs.

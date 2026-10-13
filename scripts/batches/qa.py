@@ -249,6 +249,33 @@ def pronoun_errors(it):
     return out
 
 
+def strings(o):
+    """Every string field of an item, nested."""
+    if isinstance(o, str):
+        yield o
+    elif isinstance(o, dict):
+        for v in o.values():
+            yield from strings(v)
+    elif isinstance(o, list):
+        for v in o:
+            yield from strings(v)
+
+
+def check_key_trap(items):
+    """CoS round 03 rule: within a pool (e.g. all Filipino Verbal), no item's key may be another item's distractor.
+    The mock selector does not check this, so the bank itself must stay clean."""
+    norm = lambda t: re.sub(r"\s+", " ", t.strip().lower())
+    keys = {}
+    for it in items:
+        keys.setdefault(norm(key_text(it)), it["id"])
+    out = []
+    for it in items:
+        for o in it["options"]:
+            if o["option_id"] != it["answer_option_id"] and len(norm(o["text"])) > 3 and norm(o["text"]) in keys and keys[norm(o["text"])] != it["id"]:
+                out.append((it["id"], f"distractor '{o['text']}' is the key of {keys[norm(o['text'])]}"))
+    return out
+
+
 def check_item(it):
     errs = pronoun_errors(it)
     for k in REQ:
@@ -268,6 +295,20 @@ def check_item(it):
     for f in ("terms", "shortcut", "why_correct"):
         if not it["reveal"].get(f):
             errs.append(f"reveal.{f} empty")
+    for t in strings(it):
+        if re.search(r"\bnakaka\w*", t, re.I):
+            errs.append("KWF: use the reduplicated form (naka- + first syllable), not 'nakaka-': " + re.search(r"\bnakaka\w*", t, re.I).group())
+            break
+    for t in strings(it):
+        if re.search(r"\bkanyang?\b", t, re.I):
+            errs.append("KWF: write 'kaniya'/'kaniyang', not 'kanya'/'kanyang'")
+            break
+    if it.get("domain") == "verbal_fil" and it.get("archetype") in ("VFIL-KASINGKAHULUGAN", "VFIL-KASALUNGAT", "VFIL-WIKAIN"):
+        st = it["stem"].lower()
+        for o in it["options"]:
+            t = o["text"].strip().lower()
+            if len(t) >= 4 and re.search(r"(?<!\w)" + re.escape(t) + r"(?!\w)", st):
+                errs.append(f"option '{o['text']}' also appears in the stem")
     if "shortcut" in it:
         sc = it["shortcut"]
         if not isinstance(sc, str) or not sc.strip():
