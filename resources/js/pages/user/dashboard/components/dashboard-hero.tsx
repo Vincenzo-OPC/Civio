@@ -118,7 +118,7 @@ export function DashboardHero({
                                     className="group w-full gap-2 bg-blue-600 font-bold text-white shadow-md shadow-blue-500/20 transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 active:scale-95 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-500"
                                 >
                                     <Play className="size-4 fill-current transition-transform group-hover:scale-110" />
-                                    <span>Take Mock Exam</span>
+                                    <span>Open Exam Simulation</span>
                                     <ChevronDown className="size-3.5 opacity-70 transition-transform group-data-[state=open]:rotate-180" />
                                 </Button>
                             </DropdownMenuTrigger>

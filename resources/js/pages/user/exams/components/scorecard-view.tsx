@@ -16,11 +16,8 @@ import {
     formatDuration,
     calculateWeightedPercentage,
 } from '@/lib/exam-formatters';
-import {
-    summarizeAttemptStrengths
-    
-} from '@/lib/guest-study-bias';
-import type {StrengthRow} from '@/lib/guest-study-bias';
+import { summarizeAttemptStrengths } from '@/lib/guest-study-bias';
+import type { StrengthRow } from '@/lib/guest-study-bias';
 import { makeBackOnClick, resolveOriginFromUrl } from '@/lib/smart-back';
 import type {
     SimulationDetails,
@@ -321,7 +318,7 @@ export function ScorecardView({
                       ? 'Practice Drills'
                       : savedAttempt
                         ? 'History'
-                        : 'Mock Exams';
+                        : 'Exam Simulation';
 
                 const originHref = origin
                     ? origin.href
@@ -410,7 +407,9 @@ export function ScorecardView({
                         <Award className="size-3" /> Performance Scorecard
                     </span>
                     <h1 className="mt-1 font-heading text-2xl font-black tracking-tight text-foreground sm:text-3xl">
-                        {isDrillSession ? 'Drill Results' : 'Mock Exam Results'}
+                        {isDrillSession
+                            ? 'Drill Results'
+                            : 'Exam Simulation Results'}
                     </h1>
                     <p className="mt-0.5 text-xs font-medium text-muted-foreground sm:text-sm">
                         Completed on{' '}
@@ -661,7 +660,6 @@ export function ScorecardView({
                                 </div>
                             </div>
 
-
                             {/* Strength vs weakness from this attempt */}
                             <div
                                 data-study-tutor="strength-weakness"
@@ -695,8 +693,8 @@ export function ScorecardView({
                                     savedWeaknesses.length > 0) && (
                                     <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground">
                                         Saved-account profile
-                                        (DeterministicAnalysis, not this
-                                        browser session):{' '}
+                                        (DeterministicAnalysis, not this browser
+                                        session):{' '}
                                         {savedStrengths.length > 0
                                             ? `strengths ${savedStrengths.join(', ')}`
                                             : 'no saved strengths'}
@@ -894,8 +892,7 @@ export function ScorecardView({
                                     </span>
                                 </div>
                                 <span className="text-[10px] font-bold text-muted-foreground">
-                                    civio.ph • Civil Service Exam
-                                    Simulator
+                                    civio.ph • Civil Service Exam Simulator
                                 </span>
                             </div>
                         </div>
@@ -967,7 +964,9 @@ function StrengthList({
 
     return (
         <div>
-            <h4 className={`mb-2 text-xs font-black tracking-wider uppercase ${toneClass}`}>
+            <h4
+                className={`mb-2 text-xs font-black tracking-wider uppercase ${toneClass}`}
+            >
                 {title}
             </h4>
             {rows.length === 0 ? (
@@ -1001,4 +1000,3 @@ function StrengthList({
         </div>
     );
 }
-

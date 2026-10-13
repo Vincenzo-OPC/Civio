@@ -18,6 +18,8 @@ import type {
     ExamIndexProps,
     SimulationDetails,
 } from '../types';
+import type { ExamMode } from '../utils/exam-mode';
+import { isTimerOn, parseExamMode } from '../utils/exam-mode';
 import {
     isDemographicQuestion,
     EXAM_CONSTANTS,
@@ -76,6 +78,10 @@ export function useExamState(props: ExamIndexProps) {
     const [showLockedModal, setShowLockedModal] = useState(false);
 
     const [isTimed, setIsTimed] = useState(true);
+    /** Exam Simulation mode for full mocks (drills ignore it). */
+    const [examMode, setExamMode] = useState<ExamMode>('study');
+    /** Study Mock timer choice; Strict always times. */
+    const [studyTimed, setStudyTimed] = useState(true);
     const [sessionTimeLimitSecs, setSessionTimeLimitSecs] = useState<number>(
         EXAM_CONSTANTS.PROFESSIONAL_TIME_LIMIT_SECS,
     );
@@ -241,9 +247,13 @@ export function useExamState(props: ExamIndexProps) {
             examPool: Question[],
             examId: number | null,
             sessionId: string | null = null,
+            mode: ExamMode = 'study',
+            serverLimitSecs: number | null = null,
         ) => {
             // Always drop Demographic Profile / personal EDQs for local study mocks.
-            const cleanedPool = examPool.filter((q) => !isDemographicQuestion(q));
+            const cleanedPool = examPool.filter(
+                (q) => !isDemographicQuestion(q),
+            );
             const isDrill = examId === null || examId > 2;
             // Full mocks use unique items only. If the bank is short, the mock
             // is shorter (never padded with repeats), and we say so up front.
@@ -263,13 +273,16 @@ export function useExamState(props: ExamIndexProps) {
 
             const limitSecs = isDrill
                 ? cleanedPool.length * 60
-                : examId === 2
-                  ? EXAM_CONSTANTS.SUBPROFESSIONAL_TIME_LIMIT_SECS
-                  : EXAM_CONSTANTS.PROFESSIONAL_TIME_LIMIT_SECS;
+                : serverLimitSecs
+                  ? serverLimitSecs
+                  : examId === 2
+                    ? EXAM_CONSTANTS.SUBPROFESSIONAL_TIME_LIMIT_SECS
+                    : EXAM_CONSTANTS.PROFESSIONAL_TIME_LIMIT_SECS;
 
             setSelectedExamId(examId);
             setExamSessionId(sessionId);
-            setIsTimed(true);
+            setExamMode(mode);
+            setIsTimed(isDrill ? true : isTimerOn(mode, studyTimed));
             setActiveQuestions(cleanedPool);
             setCurrentIdx(0);
             setAnswers({});
@@ -289,6 +302,7 @@ export function useExamState(props: ExamIndexProps) {
         },
         [
             resetTimer,
+            studyTimed,
             setSelectedExamId,
             setIsTimed,
             setActiveQuestions,
@@ -309,13 +323,19 @@ export function useExamState(props: ExamIndexProps) {
 
     /** Ask the server for a fresh mock (only its items, keys withheld). */
     const startServerMock = useCallback(
-        async (examId: number | null) => {
+        async (examId: number | null, mode: ExamMode = examMode) => {
             toast.loading('Picking your mock items...', { id: 'mock-start' });
 
             try {
-                const mock = await startMockSession(examId);
+                const mock = await startMockSession(examId, mode);
                 toast.dismiss('mock-start');
-                beginExamSession(mock.questions, examId, mock.sessionId);
+                beginExamSession(
+                    mock.questions,
+                    examId,
+                    mock.sessionId,
+                    mock.mode,
+                    mock.timeLimitSecs,
+                );
             } catch {
                 toast.error(
                     "Couldn't start the mock. Check your connection and try again.",
@@ -323,7 +343,7 @@ export function useExamState(props: ExamIndexProps) {
                 );
             }
         },
-        [beginExamSession],
+        [beginExamSession, examMode],
     );
 
     // Sub-hook 4: Hydration & Deep Links
@@ -356,6 +376,7 @@ export function useExamState(props: ExamIndexProps) {
         setDrillQuestionCount,
         setIsTimed,
         setExamSessionId,
+        setExamMode,
         startServerMock,
     });
 
@@ -365,6 +386,7 @@ export function useExamState(props: ExamIndexProps) {
         isExamSubmitted,
         selectedExamId,
         examSessionId,
+        examMode,
         activeQuestions,
         currentIdx,
         answers,
@@ -379,6 +401,7 @@ export function useExamState(props: ExamIndexProps) {
             (restoredData) => {
                 setSelectedExamId(restoredData.selectedExamId);
                 setExamSessionId(restoredData.examSessionId ?? null);
+                setExamMode(parseExamMode(restoredData.examMode));
                 setActiveQuestions(restoredData.activeQuestions);
                 setCurrentIdx(restoredData.currentIdx);
                 setAnswers(restoredData.answers || {});
@@ -579,6 +602,7 @@ export function useExamState(props: ExamIndexProps) {
         const state = {
             selectedExamId,
             examSessionId,
+            examMode,
             questionIds: activeQuestions.map((q) => q.id),
             activeQuestions,
             answers,
@@ -593,6 +617,7 @@ export function useExamState(props: ExamIndexProps) {
     }, [
         selectedExamId,
         examSessionId,
+        examMode,
         activeQuestions,
         answers,
         currentIdx,
@@ -757,6 +782,10 @@ export function useExamState(props: ExamIndexProps) {
         timeLeft,
         itemElapsed,
         isTimed,
+        examMode,
+        setExamMode,
+        studyTimed,
+        setStudyTimed,
         submittedByTimer,
         results,
         details,
@@ -794,5 +823,3 @@ export function useExamState(props: ExamIndexProps) {
         getActiveTimeLimitSecs,
     };
 }
-
-

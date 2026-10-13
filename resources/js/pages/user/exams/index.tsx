@@ -56,6 +56,10 @@ export default function ExamIndex(props: ExamIndexProps) {
         timeLeft,
         itemElapsed,
         isTimed,
+        examMode,
+        setExamMode,
+        studyTimed,
+        setStudyTimed,
         submittedByTimer,
         results,
         details,
@@ -147,6 +151,7 @@ export default function ExamIndex(props: ExamIndexProps) {
                     activeQuestions={activeQuestions}
                     currentIdx={currentIdx}
                     isTimed={isTimed}
+                    examMode={examMode}
                     timeLeft={timeLeft}
                     itemElapsed={itemElapsed}
                     formatTime={formatTime}
@@ -241,6 +246,10 @@ export default function ExamIndex(props: ExamIndexProps) {
                 selectedExamId={selectedExamId}
                 setSelectedExamId={setSelectedExamId}
                 details={details}
+                examMode={examMode}
+                setExamMode={setExamMode}
+                studyTimed={studyTimed}
+                setStudyTimed={setStudyTimed}
                 handleBeginExam={handleBeginExam}
                 handlePrintExam={handlePrintExam}
                 isPrinting={isPrinting}
@@ -292,7 +301,7 @@ export default function ExamIndex(props: ExamIndexProps) {
 ExamIndex.layout = {
     breadcrumbs: [
         {
-            title: 'Mock Exams',
+            title: 'Exam Simulation',
             href: examsIndex(),
         },
     ],

@@ -17,6 +17,8 @@ import type {
     CategoryScore,
     AttemptMetadata,
 } from '../types';
+import type { ExamMode } from '../utils/exam-mode';
+import { parseExamMode } from '../utils/exam-mode';
 import { isDemographicQuestion, EXAM_CONSTANTS } from '../utils/exam-utils';
 import { shuffleOptionsForQuestion } from '../utils/mock-pool';
 
@@ -53,6 +55,7 @@ interface UseExamHydrationProps {
     setDrillQuestionCount: (count: number | 'all') => void;
     setIsTimed: (val: boolean) => void;
     setExamSessionId: (id: string | null) => void;
+    setExamMode: (mode: ExamMode) => void;
     /** Lite L1: fetch a server-picked mock and start it. */
     startServerMock: (examId: number | null) => Promise<void>;
 }
@@ -85,11 +88,12 @@ export function useExamHydration({
     setDrillQuestionCount,
     setIsTimed,
     setExamSessionId,
+    setExamMode,
     startServerMock,
 }: UseExamHydrationProps) {
     const fallbackQuestions: Question[] = questions;
 
-    const remapIndexedRecord = <T,>(
+    const remapIndexedRecord = <T>(
         record: Record<number, T> | undefined,
         oldQuestions: Question[],
         newQuestions: Question[],
@@ -533,6 +537,7 @@ export function useExamHydration({
                     ? state.examSessionId
                     : null,
             );
+            setExamMode(parseExamMode(state.examMode));
             setIsTimed(state.isTimed);
             setActiveQuestions(pool);
             setCurrentIdx(Math.min(state.currentIdx || 0, pool.length - 1));
@@ -573,5 +578,6 @@ export function useExamHydration({
         setResults,
         setSubmittedByTimer,
         setExamSessionId,
+        setExamMode,
     ]);
 }

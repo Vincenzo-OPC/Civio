@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\User;
 
+use App\Enums\ExamMode;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Exam\StartExamSessionRequest;
 use App\Services\Exam\MockSessionService;
@@ -16,6 +17,7 @@ class ExamSessionController extends Controller
     /**
      * Start a full mock: the server picks the items (unique only, blueprint
      * quotas, weak-topic bias) and returns only those, keys withheld.
+     * `mode` is `study` (default) or `strict`.
      */
     public function store(StartExamSessionRequest $request): JsonResponse
     {
@@ -31,6 +33,7 @@ class ExamSessionController extends Controller
                 'weak_categories' => array_values(array_map('strval', (array) ($bias['weak_categories'] ?? []))),
             ],
             session: $request->session(),
+            mode: ExamMode::fromRaw(isset($validated['mode']) ? (string) $validated['mode'] : null),
         );
 
         return response()->json(['success' => true, ...$payload]);

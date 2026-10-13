@@ -1,5 +1,6 @@
 import { useEffect, useCallback } from 'react';
 import type { Question } from '../types';
+import type { ExamMode } from '../utils/exam-mode';
 import { isDemographicQuestion } from '../utils/exam-utils';
 
 const PERSISTENCE_KEY = 'active_exam_session_v1';
@@ -26,6 +27,8 @@ export interface ActiveSessionData {
     selectedExamId: number | null;
     /** Server-side mock session (Lite L1), so a resumed mock still submits. */
     examSessionId?: string | null;
+    /** Exam Simulation mode, so a resumed Strict Mock stays strict. */
+    examMode?: ExamMode;
     activeQuestions: Question[];
     currentIdx: number;
     answers: Record<number, number>;
@@ -44,6 +47,7 @@ interface UseExamPersistenceProps {
     isExamSubmitted: boolean;
     selectedExamId: number | null;
     examSessionId?: string | null;
+    examMode?: ExamMode;
     activeQuestions: Question[];
     currentIdx: number;
     answers: Record<number, number>;
@@ -62,6 +66,7 @@ export function useExamPersistence({
     isExamSubmitted,
     selectedExamId,
     examSessionId = null,
+    examMode = 'study',
     activeQuestions,
     currentIdx,
     answers,
@@ -85,13 +90,37 @@ export function useExamPersistence({
         const sessionData: ActiveSessionData = {
             selectedExamId,
             examSessionId,
+            examMode,
             activeQuestions: scoredQuestions,
-            currentIdx: Math.min(currentIdx, Math.max(0, scoredQuestions.length - 1)),
-            answers: remapIndexedRecord(answers, activeQuestions, scoredQuestions),
-            questionTimes: remapIndexedRecord(questionTimes, activeQuestions, scoredQuestions),
-            answerChanges: remapIndexedRecord(answerChanges, activeQuestions, scoredQuestions),
-            flagged: remapIndexedRecord(flagged, activeQuestions, scoredQuestions),
-            scratchpads: remapIndexedRecord(scratchpads, activeQuestions, scoredQuestions),
+            currentIdx: Math.min(
+                currentIdx,
+                Math.max(0, scoredQuestions.length - 1),
+            ),
+            answers: remapIndexedRecord(
+                answers,
+                activeQuestions,
+                scoredQuestions,
+            ),
+            questionTimes: remapIndexedRecord(
+                questionTimes,
+                activeQuestions,
+                scoredQuestions,
+            ),
+            answerChanges: remapIndexedRecord(
+                answerChanges,
+                activeQuestions,
+                scoredQuestions,
+            ),
+            flagged: remapIndexedRecord(
+                flagged,
+                activeQuestions,
+                scoredQuestions,
+            ),
+            scratchpads: remapIndexedRecord(
+                scratchpads,
+                activeQuestions,
+                scoredQuestions,
+            ),
             sessionTimeLimitSecs,
             timeLeft,
             isTimed,
@@ -108,6 +137,7 @@ export function useExamPersistence({
         isExamSubmitted,
         selectedExamId,
         examSessionId,
+        examMode,
         activeQuestions,
         currentIdx,
         answers,
@@ -169,8 +199,8 @@ export function useExamPersistence({
                     const oldIdx = oldQs.findIndex((oq) => oq.id === q.id);
 
                     if (oldIdx < 0) {
-return;
-}
+                        return;
+                    }
 
                     if (data.answers?.[oldIdx] !== undefined) {
                         remappedAnswers[newIdx] = data.answers[oldIdx];
@@ -243,7 +273,6 @@ return;
 
         return () => clearInterval(interval);
     }, [isExamActive, isExamSubmitted, saveSession]);
-
 
     // Flush to localStorage on tab close / PC sleep so progress survives shutdown
     useEffect(() => {

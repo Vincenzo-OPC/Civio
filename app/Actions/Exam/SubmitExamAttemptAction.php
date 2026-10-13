@@ -6,6 +6,7 @@ namespace App\Actions\Exam;
 
 use App\DTOs\Exam\SubmitExamAttemptData;
 use App\DTOs\Exam\SubmitExamAttemptResult;
+use App\Enums\ExamMode;
 use App\Models\ExamSession;
 use App\Repositories\ExamAttemptRepositoryInterface;
 use App\Services\ExamGradingService;
@@ -107,6 +108,7 @@ class SubmitExamAttemptAction
                 $attempt = $this->repository->create([
                     'user_id' => $userId,
                     'category_id' => $data->categoryId,
+                    'mode' => $examSession !== null ? $examSession->mode : ExamMode::Study,
                     'question_ids' => $data->questionIds,
                     'answers' => $graded['answers'],
                     'cat_scores' => $graded['cat_scores'],

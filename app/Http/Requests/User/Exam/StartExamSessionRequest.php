@@ -21,6 +21,7 @@ class StartExamSessionRequest extends FormRequest
     {
         return [
             'track' => ['required', 'string', 'in:professional,subprofessional,Professional,Subprofessional'],
+            'mode' => ['sometimes', 'string', 'in:study,strict'],
             'bias' => ['sometimes', 'array'],
             'bias.wrong_ids' => ['sometimes', 'array', 'max:2000'],
             'bias.wrong_ids.*' => ['integer'],

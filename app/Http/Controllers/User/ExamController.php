@@ -13,6 +13,7 @@ use App\Models\ExamSession;
 use App\Models\Question;
 use App\Services\Dexter\DexterEvaluationService;
 use App\Services\Exam\MockSessionService;
+use App\Services\Exam\StrictMockLock;
 use App\Services\ExamService;
 use App\Support\LiteMode;
 use Illuminate\Http\JsonResponse;
@@ -26,6 +27,7 @@ class ExamController extends Controller
         protected ExamService $examService,
         protected SubmitExamAttemptAction $submitAttemptAction,
         protected MockSessionService $mockSessionService,
+        protected StrictMockLock $strictMockLock,
     ) {}
 
     /**
@@ -135,6 +137,10 @@ class ExamController extends Controller
             'question_id' => 'required|integer|exists:questions,id',
         ]);
 
+        if ($this->strictMockLock->isLocked((int) $request->question_id, auth()->id(), $request->session())) {
+            return response()->json(['success' => false, 'locked' => true, 'message' => StrictMockLock::MESSAGE], 423);
+        }
+
         $question = Question::find($request->question_id);
 
         if (! $question) {
@@ -166,6 +172,10 @@ class ExamController extends Controller
         $request->validate([
             'question_id' => 'required|integer|exists:questions,id',
         ]);
+
+        if ($this->strictMockLock->isLocked((int) $request->question_id, auth()->id(), $request->session())) {
+            return response()->json(['success' => false, 'locked' => true, 'message' => StrictMockLock::MESSAGE], 423);
+        }
 
         $question = Question::find($request->question_id);
 

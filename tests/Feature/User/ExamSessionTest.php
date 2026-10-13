@@ -151,3 +151,64 @@ test('a guest can submit the mock their own browser session started', function (
         'metadata' => ['track' => 'Professional', 'duration_secs' => 60, 'is_timed' => true],
     ])->assertOk()->assertJson(['score' => 0]);
 });
+
+test('a mock defaults to study mode and reveal works mid-mock', function () {
+    seedMockBank(3);
+    $start = $this->postJson(route('exams.sessions.store'), ['track' => 'Professional'])
+        ->assertOk()->assertJson(['mode' => 'study', 'time_limit_secs' => 11400]);
+    $id = $start->json('questions.0.id');
+
+    expect(ExamSession::findOrFail($start->json('session_id'))->mode->value)->toBe('study');
+    $this->postJson(route('exams.reveal'), ['question_id' => $id])->assertOk()->assertJson(['correct_option' => 2]);
+    $this->postJson(route('exams.expound'), ['question_id' => $id])->assertOk();
+});
+
+test('mode is validated', function () {
+    $this->postJson(route('exams.sessions.store'), ['track' => 'Professional', 'mode' => 'easy'])->assertStatus(422);
+});
+
+test('a strict mock locks reveal and expound on the server until submit', function () {
+    seedMockBank(3);
+    $user = User::factory()->create();
+    $this->actingAs($user);
+
+    $start = $this->postJson(route('exams.sessions.store'), ['track' => 'Subprofessional', 'mode' => 'strict'])
+        ->assertOk()->assertJson(['mode' => 'strict', 'time_limit_secs' => 9600]);
+    $ids = collect($start->json('questions'))->pluck('id')->all();
+
+    $this->postJson(route('exams.reveal'), ['question_id' => $ids[0]])
+        ->assertStatus(423)->assertJsonMissingPath('correct_option')->assertJson(['locked' => true]);
+    $this->postJson(route('exams.expound'), ['question_id' => $ids[0]])
+        ->assertStatus(423)->assertJsonMissingPath('explanation');
+
+    // Another learner is not locked out of the same item.
+    $this->actingAs(User::factory()->create())
+        ->postJson(route('exams.reveal'), ['question_id' => $ids[0]])->assertOk();
+
+    $this->actingAs($user)->postJson(route('exams.attempts.store'), [
+        'exam_session_id' => $start->json('session_id'),
+        'question_ids' => $ids,
+        'answers' => collect($ids)->mapWithKeys(fn ($id) => [(string) $id => 2])->all(),
+        'metadata' => ['track' => 'Subprofessional', 'duration_secs' => 60, 'is_timed' => true],
+    ])->assertOk();
+
+    expect(ExamAttempt::firstOrFail()->mode->value)->toBe('strict');
+    $this->postJson(route('exams.reveal'), ['question_id' => $ids[0]])->assertOk()->assertJson(['correct_option' => 2]);
+});
+
+test('a guest strict mock is locked for that browser session', function () {
+    seedMockBank(3);
+    $start = $this->postJson(route('exams.sessions.store'), ['track' => 'Professional', 'mode' => 'strict'])->assertOk();
+
+    $this->postJson(route('exams.reveal'), ['question_id' => $start->json('questions.0.id')])->assertStatus(423);
+});
+
+test('an abandoned strict mock stops locking after its time limit plus grace', function () {
+    seedMockBank(3);
+    $user = User::factory()->create();
+    $start = $this->actingAs($user)->postJson(route('exams.sessions.store'), ['track' => 'Professional', 'mode' => 'strict'])->assertOk();
+
+    $this->travel(11400 + 601)->seconds();
+
+    $this->postJson(route('exams.reveal'), ['question_id' => $start->json('questions.0.id')])->assertOk();
+});

@@ -2,10 +2,11 @@
 
 namespace App\Models;
 
+use App\Enums\ExamMode;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
 
-#[Fillable(['category_id', 'user_id', 'question_ids', 'answers', 'cat_scores'])]
+#[Fillable(['category_id', 'user_id', 'mode', 'question_ids', 'answers', 'cat_scores'])]
 class ExamAttempt extends Model
 {
     protected function casts(): array
@@ -13,11 +14,17 @@ class ExamAttempt extends Model
         return [
             'category_id' => 'integer',
             'user_id' => 'integer',
+            'mode' => ExamMode::class,
             'question_ids' => 'array',
             'answers' => 'array',
             'cat_scores' => 'array',
         ];
     }
+
+    /** @var array<string, mixed> */
+    protected $attributes = [
+        'mode' => 'study',
+    ];
 
     public function user()
     {

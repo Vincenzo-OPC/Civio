@@ -17,11 +17,22 @@ import { PageHeader } from '@/components/layout/page-header';
 import { HowItWorksModal } from '@/components/shared/how-it-works-modal';
 import type { Auth } from '@/types';
 import type { SimulationDetails } from '../types';
+import type { ExamMode } from '../utils/exam-mode';
+import { EXAM_MODE_LABELS, EXAM_MODES } from '../utils/exam-mode';
+
+const MODE_BLURBS: Record<ExamMode, string> = {
+    study: 'Practice the full mock with Reveal, Dexter and Copy for AI on every item. The timer is your choice.',
+    strict: 'Exam-day rehearsal: always timed, no Reveal, Dexter or Copy for AI. Answers unlock only after you submit.',
+};
 
 interface SetupExamViewProps {
     selectedExamId: number | null;
     setSelectedExamId: (id: number) => void;
     details: SimulationDetails;
+    examMode: ExamMode;
+    setExamMode: (mode: ExamMode) => void;
+    studyTimed: boolean;
+    setStudyTimed: (timed: boolean) => void;
     handleBeginExam: () => void;
     handlePrintExam: () => void;
     isPrinting?: boolean;
@@ -32,6 +43,10 @@ export function SetupExamView({
     selectedExamId,
     setSelectedExamId,
     details,
+    examMode,
+    setExamMode,
+    studyTimed,
+    setStudyTimed,
     handleBeginExam,
     handlePrintExam,
     isPrinting = false,
@@ -45,29 +60,29 @@ export function SetupExamView({
 
     return (
         <>
-            <Head title="Mock Exams" />
+            <Head title="Exam Simulation" />
 
             <PageContainer>
                 {/* Header Information Section */}
                 <div className="mb-8 flex items-start gap-3">
                     <PageHeader
-                        title="Mock Exams"
-                        description="Select your target certification level to configure the simulation parameters."
-                        tooltip="A full-length timed mock examination simulating the official Civil Service Exam environment."
+                        title="Exam Simulation"
+                        description="Pick your level, then choose Study Mock (learn as you go) or Strict Mock (exam-day rehearsal)."
+                        tooltip="A full-length mock built on the Civil Service Exam format. Civio is not affiliated with the CSC."
                     />
                     <div className="mt-1">
                         <HowItWorksModal
-                            title="How Mock Exams Work"
+                            title="How Exam Simulation Works"
                             tips={[
                                 {
                                     icon: <Clock className="size-4" />,
-                                    title: 'Full Simulation',
-                                    text: 'This is a strict simulation of the actual Civil Service Exam. Once started, the timer cannot be paused.',
+                                    title: 'Two Modes',
+                                    text: 'Study Mock keeps Reveal on every item and lets you turn the timer off. Strict Mock is always timed and cannot be paused.',
                                 },
                                 {
                                     icon: <BarChart className="size-4" />,
                                     title: 'Post-Exam Review',
-                                    text: 'You will only see your score and the correct answers after you submit the entire exam. Use the review mode to analyze your mistakes.',
+                                    text: 'In a Strict Mock, answers stay locked until you submit the whole exam. Then use the review to study your mistakes.',
                                 },
                                 {
                                     icon: <Target className="size-4" />,
@@ -158,6 +173,56 @@ export function SetupExamView({
                                 </div>
                             </div>
                         </div>
+
+                        {/* Exam Simulation mode */}
+                        <fieldset className="rounded-xl border-2 border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+                            <legend className="px-1 font-heading text-sm font-black tracking-tight text-slate-900 dark:text-white">
+                                Mode
+                            </legend>
+                            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                                {EXAM_MODES.map((mode) => (
+                                    <label
+                                        key={mode}
+                                        className={`flex cursor-pointer flex-col gap-1 rounded-lg border-2 p-3 ${
+                                            examMode === mode
+                                                ? 'border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-950/10'
+                                                : 'border-slate-200 dark:border-slate-800'
+                                        }`}
+                                    >
+                                        <span className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
+                                            <input
+                                                type="radio"
+                                                name="exam-mode"
+                                                value={mode}
+                                                checked={examMode === mode}
+                                                onChange={() =>
+                                                    setExamMode(mode)
+                                                }
+                                            />
+                                            {EXAM_MODE_LABELS[mode]}
+                                        </span>
+                                        <span className="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+                                            {MODE_BLURBS[mode]}
+                                        </span>
+                                    </label>
+                                ))}
+                            </div>
+                            <label className="mt-3 flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                                <input
+                                    type="checkbox"
+                                    checked={
+                                        examMode === 'strict' || studyTimed
+                                    }
+                                    disabled={examMode === 'strict'}
+                                    onChange={(e) =>
+                                        setStudyTimed(e.target.checked)
+                                    }
+                                />
+                                {examMode === 'strict'
+                                    ? 'Timer on (always on in Strict Mock)'
+                                    : 'Time this Study Mock'}
+                            </label>
+                        </fieldset>
                     </div>
 
                     {/* Right Panel: Simulation Overview */}
@@ -198,7 +263,9 @@ export function SetupExamView({
                                         <span>Time Limit</span>
                                     </div>
                                     <span className="font-bold text-slate-900 dark:text-white">
-                                        {details.timeLimit}
+                                        {examMode === 'study' && !studyTimed
+                                            ? 'Untimed'
+                                            : details.timeLimit}
                                     </span>
                                 </div>
 
@@ -219,8 +286,10 @@ export function SetupExamView({
                         <div className="mt-6 flex flex-col gap-4">
                             {/* Technical check callout to avoid data losses */}
                             <div className="rounded-lg border border-slate-200 bg-white/70 p-3.5 text-center text-[11px] leading-relaxed font-medium text-slate-600 shadow-2xs dark:border-slate-800 dark:bg-slate-900/70 dark:text-slate-400">
-                                Ensure you have a stable connection. The timer
-                                will begin immediately upon confirmation.
+                                Ensure you have a stable connection.{' '}
+                                {examMode === 'strict' || studyTimed
+                                    ? 'The timer will begin immediately upon confirmation.'
+                                    : 'This Study Mock is untimed.'}
                             </div>
 
                             <div className="flex gap-3">
@@ -229,7 +298,7 @@ export function SetupExamView({
                                     onClick={handleBeginExam}
                                     className="group flex flex-1 items-center justify-center gap-2 rounded-lg bg-blue-600 py-3 text-xs font-semibold text-white shadow-sm transition transition-all duration-150 duration-300 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                 >
-                                    Begin Exam
+                                    Begin {EXAM_MODE_LABELS[examMode]}
                                     <ArrowRight className="size-4" />
                                 </button>
                                 {(auth.user?.role === 'admin' ||

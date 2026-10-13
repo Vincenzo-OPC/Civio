@@ -57,6 +57,19 @@ final class MockPoolSelector
         self::SUBPROFESSIONAL => 145,
     ];
 
+    /**
+     * Mock time limits in seconds: the official 3 h 10 min (Professional) and
+     * 2 h 40 min (Subprofessional). Mocks drop the unscored demographic items,
+     * so the pace is 76 s and about 66 s per item. Mirrors EXAM_CONSTANTS in
+     * resources/js/pages/user/exams/utils/exam-utils.ts.
+     *
+     * @var array<string, int>
+     */
+    public const TIME_LIMIT_SECS = [
+        self::PROFESSIONAL => 11400,
+        self::SUBPROFESSIONAL => 9600,
+    ];
+
     public const WRONG_PRIORITY = 0.5;
 
     public const HARD_BIAS = 0.6;
@@ -73,6 +86,11 @@ final class MockPoolSelector
     public static function levelFor(?string $track): string
     {
         return strtolower((string) $track) === 'subprofessional' ? self::SUBPROFESSIONAL : self::PROFESSIONAL;
+    }
+
+    public static function timeLimitFor(string $level): int
+    {
+        return self::TIME_LIMIT_SECS[$level] ?? self::TIME_LIMIT_SECS[self::PROFESSIONAL];
     }
 
     public static function targetFor(string $level): int

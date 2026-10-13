@@ -106,19 +106,20 @@ export function ReviewerGuideTabs({
         },
         {
             id: 'mock-exams',
-            title: 'Full Timed Mock Exams',
-            badge: 'Exam Simulation',
+            title: 'Exam Simulation',
+            badge: 'Study Mock or Strict Mock',
             icon: ClipboardList,
             color: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-900/40',
             summary:
                 'Realistic exam simulations matching the exact question count, subtest distribution, and strict time limits.',
             steps: [
-                'Select Professional (170 items, 3h 10m) or Subprofessional (165 items, 2h 40m).',
+                'Select Professional (150 scored items, 3h 10m) or Subprofessional (145 scored items, 2h 40m). The unscored demographic items of the real exam are left out.',
+                'Choose Study Mock (Reveal on every item, timer optional) or Strict Mock (always timed, answers locked until you submit).',
                 'Use the interactive Question Palette on the right to track answered, skipped, and flagged items.',
                 'Use the "Flag for Review" feature to mark difficult items and revisit them before final submission.',
             ],
-            proTip: 'Train under strict timer discipline: you have roughly 67 seconds per question on the Professional exam.',
-            actionLabel: 'Take Mock Exam',
+            proTip: 'Train under strict timer discipline: you have about 76 seconds per item on the Professional mock.',
+            actionLabel: 'Open Exam Simulation',
             actionUrl: '/exams',
         },
         {
@@ -202,12 +203,12 @@ export function ReviewerGuideTabs({
         },
         {
             phase: 'Phase 4',
-            title: 'Full Timed Mock Examination',
+            title: 'Strict Mock Rehearsal',
             icon: Clock,
             color: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30',
             description:
-                'Take full-length simulated Mock Exams under real time limits (170 items in 3h 10m for Professional, 165 items in 2h 40m for Subprofessional) to build test-day stamina and achieve the 80% passing mark.',
-            actionLabel: 'Take Mock Exam',
+                'Take full-length Strict Mocks under real time limits (150 scored items in 3h 10m for Professional, 145 scored items in 2h 40m for Subprofessional) to build test-day stamina and reach the 80% passing mark.',
+            actionLabel: 'Open Exam Simulation',
             actionUrl: '/exams',
             tips: [
                 'Simulate actual exam conditions in a quiet room without notes or calculators.',
@@ -335,7 +336,7 @@ export function ReviewerGuideTabs({
         {
             title: 'Master Time Management',
             description:
-                'You have roughly 67 seconds per question on the Professional exam, and 58 seconds on the Subprofessional exam. Train your pace under the timer inside the Mock Exam mode.',
+                'In Civio mocks you have about 76 seconds per item on Professional (150 items in 3h 10m) and about 66 seconds on Subprofessional (145 items in 2h 40m). Train your pace in a Strict Mock.',
             icon: Clock,
             color: 'border-l-blue-500 text-blue-600 dark:text-blue-400',
         },
@@ -404,11 +405,10 @@ export function ReviewerGuideTabs({
                                 Feature-by-Feature User Manual
                             </h3>
                             <p className="text-sm leading-relaxed text-blue-800/90 dark:text-blue-300/80">
-                                Don't feel overwhelmed! Civio is
-                                designed with modular tools so you can practice
-                                at your own pace. Here is how each tool works
-                                and when to use it during your preparation
-                                journey.
+                                Don't feel overwhelmed! Civio is designed with
+                                modular tools so you can practice at your own
+                                pace. Here is how each tool works and when to
+                                use it during your preparation journey.
                             </p>
                         </div>
                     </div>

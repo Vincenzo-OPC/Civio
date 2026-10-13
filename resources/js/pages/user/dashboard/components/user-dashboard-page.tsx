@@ -133,7 +133,7 @@ export function UserDashboardPage({ stats, aiAnalysis }: DashboardProps) {
                     </Link>
                 </Card>
 
-                {/* Mock Exams Card */}
+                {/* Exam Simulation Card */}
                 <Card className="flex flex-col justify-between p-4 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 sm:p-6 dark:bg-slate-900/60">
                     <div className="flex items-start gap-4">
                         <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400">
@@ -141,7 +141,7 @@ export function UserDashboardPage({ stats, aiAnalysis }: DashboardProps) {
                         </div>
                         <div>
                             <h4 className="text-sm font-bold text-slate-900 dark:text-white">
-                                Mock Exams
+                                Exam Simulation
                             </h4>
                             <p className="mt-1 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
                                 Simulate the real exam environment with

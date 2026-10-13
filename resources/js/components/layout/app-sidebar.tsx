@@ -82,7 +82,7 @@ const generalNavItems: NavItem[] = [
         icon: Target,
     },
     {
-        title: 'Mock Exams',
+        title: 'Exam Simulation',
         href: examsIndex(),
         icon: ClipboardList,
     },
@@ -192,7 +192,7 @@ const viewMap: Record<string, string> = {
     'Study Hub': 'learn',
     Learn: 'learn',
     'Practice Drills': 'practice-drills',
-    'Mock Exams': 'mock-exams',
+    'Exam Simulation': 'mock-exams',
     History: 'history',
     Analytics: 'analytics',
 };
@@ -281,7 +281,8 @@ export function AppSidebar({ feedbackCount }: AppSidebarProps) {
                 <NavUser />
                 {!auth.user && (
                     <div className="px-2 pb-2 text-[11px] leading-snug text-muted-foreground">
-                        Guest study — mocks, drills, and learn are unlocked locally.
+                        Guest study — mocks, drills, and learn are unlocked
+                        locally.
                     </div>
                 )}
             </SidebarFooter>

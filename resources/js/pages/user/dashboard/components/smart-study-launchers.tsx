@@ -140,7 +140,7 @@ export function SmartStudyLaunchers({
                     </div>
                 </Link>
 
-                {/* Tile 4: Mock Exams */}
+                {/* Tile 4: Exam Simulation */}
                 <Link
                     href={examsIndex({ query: { from: '/dashboard' } })}
                     className="group relative flex flex-col justify-between rounded-xl border border-emerald-100 bg-linear-to-br from-emerald-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md dark:border-emerald-950/60 dark:from-emerald-950/30 dark:to-slate-900/60 dark:hover:border-emerald-800"
@@ -155,10 +155,10 @@ export function SmartStudyLaunchers({
                             </span>
                         </div>
                         <h3 className="mt-2.5 text-xs font-bold text-slate-900 dark:text-white">
-                            Mock Exams
+                            Exam Simulation
                         </h3>
                         <p className="mt-0.5 line-clamp-1 text-[11px] text-slate-500 dark:text-slate-400">
-                            Timed official exam simulation
+                            Study Mock or Strict Mock
                         </p>
                     </div>
                     <div className="mt-3 flex items-center gap-1 text-[11px] font-bold text-emerald-600 transition-transform group-hover:translate-x-0.5 dark:text-emerald-400">

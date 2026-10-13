@@ -101,7 +101,7 @@ exist for existing content; do not invent new stems.
 **No filler clones.** Never pad the bank or a mock with "(variant N)" copies or
 other repeats. Mocks draw unique items only (`resources/js/pages/user/exams/utils/mock-pool.ts`);
 if the bank is short, the mock is shorter and the user is told the real count.
-Strict mocks are picked on the server (`app/Services/Exam/MockPoolSelector.php`) and
+Full mocks (Exam Simulation: Study Mock or Strict Mock, `ExamMode`) are picked on the server (`app/Services/Exam/MockPoolSelector.php`) and
 never include `offline_eligible` items or exact copies of them: those keys ship in
 offline drill packs. Only `php artisan civio:mark-offline-eligible` marks items;
 never mark by hand without re-checking that full 150/145 mocks still fill.

@@ -25,7 +25,7 @@ export function getOriginTitle(pathOrName: string): string {
         case 'drills':
             return 'Practice Drills';
         case 'exams':
-            return 'Mock Exams';
+            return 'Exam Simulation';
         case 'guide':
             return 'Reviewer Guide';
         case 'settings':

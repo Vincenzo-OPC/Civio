@@ -144,10 +144,15 @@ inline script.
 
 - [ ] Formatting leftovers: Pint and Prettier still flag older files (backlog row 1
       in `docs/CODE_STANDARD.md`). Fix in separate `style:` commits.
-- [ ] `/exams/reveal` is not gated during a strict mock (simulation). It returns
-      the key and explanation for any question ID, so it is the one remaining way to
-      read mock keys mid-exam. Gate it to drill items or to questions outside the
-      caller's open mock session.
+- [x] Exam Simulation modes shipped (2026-10-13): `exam_sessions.mode` and
+      `exam_attempts.mode` are `study` or `strict`. While a learner (or a guest
+      browser session) has an open Strict session, `/exams/reveal` and
+      `/exams/expound` answer 423 for its items (`App\Services\Exam\StrictMockLock`).
+      Submit lifts the lock; an abandoned session stops locking after its time
+      limit + 10 min. The Strict UI hides Reveal, Dexter and Copy for AI, and the
+      timer is forced on (optional in Study). Labels read "Exam Simulation";
+      route names are unchanged. Real mock sizes: 150 items in 3h10m (Professional,
+      ~76 s/item), 145 items in 2h40m (Subprofessional, ~66 s/item).
 - [ ] Lite L0 item 6: nginx/deploy cache headers are not set up (needs deploy
       config).
 - [ ] The MSI desktop app is still at the baseline. Ports and the clone cleanup SQL
@@ -161,8 +166,8 @@ inline script.
 
 ## 7. Open decisions for GT
 
-1. Hide Reveal during strict mocks (and gate `/exams/reveal` on the server)?
-2. Remove the sidebar "Mock Exams" link and the dashboard "Take Mock Exam" link?
+1. ~~Hide Reveal during strict mocks?~~ Decided: Study Mock / Strict Mock split (shipped).
+2. ~~Remove the Mock Exams links?~~ Decided: keep them, renamed "Exam Simulation".
 3. Keep the Lite switch in the exam header on phones, or move it to Settings only?
 4. L0 item 6: who owns nginx/deploy cache config, and when?
 5. Copy override on exam pages: only copy, cut, right-click and text selection are

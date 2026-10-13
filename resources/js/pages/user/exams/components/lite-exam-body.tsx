@@ -30,6 +30,8 @@ interface LiteExamBodyProps {
     onToggleFlag: (idx: number) => void;
     onSubmit: () => void;
     onExit: () => void;
+    /** False in a Strict Mock: no Reveal, Dexter or Copy for AI. */
+    showStudyTools?: boolean;
     onReveal: () => void;
     revealed: LiteRevealedAnswer | null;
     onHideReveal: () => void;
@@ -61,6 +63,7 @@ export function LiteExamBody({
     onToggleFlag,
     onSubmit,
     onExit,
+    showStudyTools = true,
     onReveal,
     revealed,
     onHideReveal,
@@ -131,14 +134,16 @@ export function LiteExamBody({
                         </div>
 
                         <div className="flex flex-wrap gap-2">
-                            <button
-                                type="button"
-                                onClick={onReveal}
-                                className={button}
-                            >
-                                Reveal
-                            </button>
-                            {copyAttempt && (
+                            {showStudyTools && (
+                                <button
+                                    type="button"
+                                    onClick={onReveal}
+                                    className={button}
+                                >
+                                    Reveal
+                                </button>
+                            )}
+                            {showStudyTools && copyAttempt && (
                                 <CopyForAiButton
                                     question={question}
                                     attempt={copyAttempt}
@@ -154,7 +159,7 @@ export function LiteExamBody({
                             </button>
                         </div>
 
-                        {revealed && (
+                        {showStudyTools && revealed && (
                             <div className="rounded-lg border border-amber-300 p-3 text-sm">
                                 <p className="font-bold">
                                     {revealed.hasConflict

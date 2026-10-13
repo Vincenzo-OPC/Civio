@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services\Exam;
 
+use App\Enums\ExamMode;
 use App\Enums\QuestionLanguage;
 use App\Http\Resources\ExamQuestionResource;
 use App\Models\ExamSession;
@@ -18,6 +19,9 @@ use Illuminate\Contracts\Session\Session;
  * Answer keys stay withheld (ExamQuestionResource without key). The chosen
  * question IDs are stored in `exam_sessions` so submit can be checked against
  * exactly what the server served.
+ *
+ * Both Exam Simulation modes use the same pick. Study keeps Reveal per item;
+ * Strict is timed and its keys stay locked until submit (StrictMockLock).
  */
 class MockSessionService
 {
@@ -31,9 +35,9 @@ class MockSessionService
 
     /**
      * @param  array{wrong_ids?: array<int, int>, weak_subcategories?: array<int, string>, weak_categories?: array<int, string>}  $clientBias
-     * @return array{session_id: string, track: string, target: int, short: bool, notice: string|null, questions: array<int, array<string, mixed>>}
+     * @return array{session_id: string, track: string, mode: string, time_limit_secs: int, target: int, short: bool, notice: string|null, questions: array<int, array<string, mixed>>}
      */
-    public function start(?int $userId, string $track, array $clientBias, ?Session $session = null): array
+    public function start(?int $userId, string $track, array $clientBias, ?Session $session = null, ExamMode $mode = ExamMode::Study): array
     {
         $level = MockPoolSelector::levelFor($track);
         $pool = $this->questionRepository->getActivePool();
@@ -62,6 +66,7 @@ class MockSessionService
         $examSession = ExamSession::create([
             'user_id' => $userId,
             'track' => $level,
+            'mode' => $mode,
             'question_ids' => $ids,
         ]);
 
@@ -79,6 +84,8 @@ class MockSessionService
         return [
             'session_id' => $examSession->id,
             'track' => $level,
+            'mode' => $mode->value,
+            'time_limit_secs' => MockPoolSelector::timeLimitFor($level),
             'target' => $result['target'],
             'short' => $result['short'],
             'notice' => MockPoolSelector::shortNotice($level, count($ids)),
