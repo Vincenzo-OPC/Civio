@@ -60,7 +60,7 @@ export default function AnalyticsIndex({ stats, aiAnalysis }: AnalyticsProps) {
                             {
                                 icon: <BarChart className="size-4" />,
                                 title: 'CSC Readiness Index',
-                                text: 'Monitors your 80% General Weighted Average requirement alongside the strict 70% subtest cutoff rule.',
+                                text: 'Tracks your practice against the published general passing rating of at least 80.00. Civio does not apply an official per-subtest cutoff.',
                             },
                             {
                                 icon: <TrendingUp className="size-4" />,

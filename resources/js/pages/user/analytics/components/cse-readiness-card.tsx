@@ -52,24 +52,24 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
           }
         : isPassing
           ? {
-                text: 'Exam Ready (Passing Track)',
+                text: 'Practice average 80+',
                 color: 'border-emerald-300 bg-emerald-50 text-emerald-800 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300',
                 dotColor: 'bg-emerald-500',
             }
           : hasSubtestRisk
             ? {
-                  text: 'Subtest Risk (< 70% Cutoff)',
+                  text: 'Uneven subjects',
                   color: 'border-rose-300 bg-rose-50 text-rose-800 dark:border-rose-800 dark:bg-rose-950/40 dark:text-rose-300',
                   dotColor: 'bg-rose-500',
               }
             : isMarginal
               ? {
-                    text: 'Near Passing (70–79%)',
+                    text: 'Practice average 70–79',
                     color: 'border-amber-300 bg-amber-50 text-amber-800 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-300',
                     dotColor: 'bg-amber-500',
                 }
               : {
-                    text: 'Needs Preparation (< 70%)',
+                    text: 'Practice average under 70',
                     color: 'border-blue-300 bg-blue-50 text-blue-800 dark:border-blue-800 dark:bg-blue-950/40 dark:text-blue-300',
                     dotColor: 'bg-blue-500',
                 };
@@ -86,7 +86,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                             {readinessIndex}%
                         </span>
                         <span className="text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
-                            Readiness
+                            Practice
                         </span>
                     </div>
 
@@ -112,16 +112,16 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
 
                         <div>
                             <h2 className="text-base font-black text-slate-900 sm:text-lg dark:text-white">
-                                Civil Service Exam Passing Readiness
+                                Subject practice
                             </h2>
                             <p className="text-xs font-medium text-muted-foreground sm:text-sm">
                                 {isIncompleteSyllabus
-                                    ? `You've only practiced ${coveredCount} of 5 exam subjects so far. Complete a Full Mock Exam to unlock an accurate Civil Service passing prediction.`
+                                    ? `You've practiced ${coveredCount} of 5 exam subjects so far. A full mock gives a wider picture of your practice. It is not a prediction of your exam result.`
                                     : hasSubtestRisk
-                                      ? 'Caution: While your overall average is calculated, one or more core subtests are currently below the official 70% cutoff requirement.'
+                                      ? 'One or more subjects are well below the others. That is a practice signal, not an official subtest cutoff.'
                                       : isPassing
-                                        ? 'Outstanding! Your performance meets both the 80% General Weighted Average and the 70% subtest minimums across all subjects.'
-                                        : 'To pass the CSE, you need at least an 80% general average with no subtest rating falling below 70%.'}
+                                        ? 'Your practice average is at or above 80. Civio does not treat that as an official result.'
+                                        : 'The published general passing rating is at least 80.00. CSC does not publish a separate minimum for each subtest.'}
                             </p>
                         </div>
                     </div>
@@ -171,29 +171,30 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                 </div>
             </div>
 
-            {/* Bottom Row: Official CSC Subtest Cutoff Checklist (70% Rule) */}
+            {/* Subject practice. Not an official CSC subtest cutoff. */}
             <div className="mt-5 border-t border-slate-200/80 pt-4 dark:border-slate-800">
                 <div className="mb-3 flex items-center justify-between">
                     <div className="flex items-center gap-1.5">
                         <ShieldCheck className="size-4 text-primary" />
                         <span className="text-xs font-black tracking-wide text-slate-900 uppercase dark:text-white">
-                            Subtest Cutoff Compliance (Minimum 70%)
+                            Subject practice
                         </span>
                         <TooltipProvider>
                             <Tooltip>
                                 <TooltipTrigger asChild>
                                     <button
                                         type="button"
-                                        aria-label="Subtest cutoff explanation"
+                                        aria-label="Passing rating explanation"
                                         className="text-muted-foreground transition hover:text-foreground"
                                     >
                                         <HelpCircle className="size-3.5" />
                                     </button>
                                 </TooltipTrigger>
                                 <TooltipContent className="max-w-2xl text-xs">
-                                    Benchmark criteria: A candidate must obtain
-                                    a general rating of at least 80.00% AND no
-                                    subtest score below 70.00%.
+                                    The published general passing rating is at
+                                    least 80.00. CSC does not publish a
+                                    per-subtest cutoff. Marks here are a Civio
+                                    practice view, not an official rule.
                                 </TooltipContent>
                             </Tooltip>
                         </TooltipProvider>

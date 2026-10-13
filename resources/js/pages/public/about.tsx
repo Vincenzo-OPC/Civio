@@ -177,9 +177,9 @@ export default function About() {
                                 Ready to Start Your Journey?
                             </h2>
                             <p className="mx-auto mb-10 max-w-2xl text-lg text-blue-100 sm:text-xl">
-                                Join thousands of aspiring civil servants
-                                preparing with the smartest review platform in
-                                the Philippines.
+                                Study the Civil Service Exam with timed mocks
+                                and explanations. Civio is not an official CSC
+                                reviewer.
                             </p>
                             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                 <Button

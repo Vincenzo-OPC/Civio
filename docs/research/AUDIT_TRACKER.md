@@ -10,6 +10,10 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 | 02 gap | 2026-10-13 | gap-fill-002: 14 new drafts (VEN error 5, NUM frac/dec 6, CLR business filing 3) | 14 CoS PASS (4 fixed) → approved, active locally | 4 | 0 | audit/round-02-fixes.md |
 | 02 fixes | 2026-10-13 | CoS round 02 rulings: 178 rewrites of approved items (spelling 93, Verbal lead-in 60, ops shapes 25) + gap-fill-003 10 filing drafts + 267 Numerical shortcuts | CoS PASS after fixes → merged + approved | 178 changed | 0 | audit/round-02-fixes.md, audit/round-02-fixes-review-request.md |
 
+## Open flags (not edited)
+
+- Active item stem `The word 'abate' most nearly means:` (seed `scripts/seed_cse_pack_200_2026-10-03.sql`) uses distractors that are not real mistakes, including "Move alphabetically" and "Multiply instantly". Left unchanged. It needs the bank-review workflow before any rewrite.
+
 ## Round 01
 
 - **Issues:**
