@@ -68,6 +68,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Exam surface uses Civio violet for a selected choice and acid lime only after Reveal. A Strict Mock never shows correctness. Study Mock and drills can pause; a refresh restores the session with the clock stopped until Resume. The question navigator and Tools start closed. Reveal sits under the question tools instead of inside that row. | The live exam used blue cards, showed a permanent number grid, and had no pause. Lime must not mean "selected". | `3b4af15`, `9b65704` |
 | The exam clock updates a subscriber instead of re-rendering the question every second, and the saved session is no longer rewritten on each tick. The question paper is the stem and the choices: compact header, bottom-sheet navigator, no marketing card around the item. | A ticking clock was rewriting the 150-item session in localStorage and repainting the paper. The old header was an admin bar. | `f9af6b9` |
 | Homepage is the three start actions, the official 150 / 3h 10m and 145 / 2h 40m counts, and a passing rating of at least 80.00. The guide and analytics no longer say CSC requires 70% in every subtest. | The old landing page was a long marketing essay with a fake question count and an unsupported cutoff. | `4396cd3` |
+| The public name is Civio, not Civio Review. About, the footer, and the exam guide state the exam facts in plain sentences and drop the founder story and the amber disclaimer box. | The leftover marketing voice did not match the product. | `8075c5f` |
 
 ### Study and tutor
 
