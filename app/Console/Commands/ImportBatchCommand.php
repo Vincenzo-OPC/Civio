@@ -74,6 +74,19 @@ class ImportBatchCommand extends Command
             return self::FAILURE;
         }
 
+        // Generated questions are not publishable merely because their JSON passes schema checks.
+        // A production import requires recorded editorial approval for every single item.
+        if ($status === 'active') {
+            foreach ($items as $i => $item) {
+                if (($item['status'] ?? null) !== 'approved'
+                    || ($item['review_status'] ?? null) !== 'passed') {
+                    $this->error('Item '.($i + 1)." ({$item['id']}): active import requires status=approved and review_status=passed.");
+
+                    return self::FAILURE;
+                }
+            }
+        }
+
         $created = 0;
         $updated = 0;
 
