@@ -47,3 +47,4 @@ auth.json
 *.dump.gz
 *.backup
 *.bak
+__pycache__/

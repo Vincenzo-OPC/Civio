@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 /**
- * Imports an approved Civio item batch (docs/batches/batch-NNN.json) as active
- * questions with source_group "civio". Idempotent: an item whose stem already
+ * Imports a Civio item batch (docs/batches/batch-NNN.json) as active questions
+ * (or as drafts with --status=draft, for generated batches awaiting review) with source_group "civio". Idempotent: an item whose stem already
  * exists in the civio group is updated, never duplicated. New items are never
  * offline_eligible (only civio:mark-offline-eligible marks items), so they only
  * add to the mock pool and cannot break the offline caps.
@@ -24,7 +24,8 @@ class ImportBatchCommand extends Command
 {
     protected $signature = 'civio:import-batch
         {path : Path to the batch JSON file}
-        {--dry-run : Validate and report without saving}';
+        {--dry-run : Validate and report without saving}
+        {--status=active : Status to save the items with: active or draft}';
 
     protected $description = 'Import an approved Civio item batch as active questions (idempotent)';
 
@@ -65,13 +66,21 @@ class ImportBatchCommand extends Command
             }
         }
 
+        $status = (string) $this->option('status');
+
+        if (! in_array($status, ['active', 'draft'], true)) {
+            $this->error("Unknown status: {$status} (use active or draft).");
+
+            return self::FAILURE;
+        }
+
         $created = 0;
         $updated = 0;
 
         if (! $this->option('dry-run')) {
-            DB::transaction(function () use ($items, &$created, &$updated): void {
+            DB::transaction(function () use ($items, $status, &$created, &$updated): void {
                 foreach ($items as $item) {
-                    $question = $this->upsert($item);
+                    $question = $this->upsert($item, $status);
                     $question->wasRecentlyCreated ? $created++ : $updated++;
                 }
             });
@@ -109,7 +118,7 @@ class ImportBatchCommand extends Command
     }
 
     /** @param array<string, mixed> $item */
-    private function upsert(array $item): Question
+    private function upsert(array $item, string $status): Question
     {
         $category = Category::firstOrCreate(
             ['name' => self::CATEGORIES[$item['domain']]],
@@ -136,7 +145,7 @@ class ImportBatchCommand extends Command
                 'options' => array_values($texts),
                 'correct_option' => (int) $correct,
                 'explanation' => self::explanation($item, $texts),
-                'status' => 'active',
+                'status' => $status,
             ],
         );
     }

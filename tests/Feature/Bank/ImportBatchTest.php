@@ -45,3 +45,20 @@ test('imported items stay out of offline packs, so the offline caps still hold',
     $this->artisan('civio:mark-offline-eligible')->assertSuccessful();
     expect(Question::where('offline_eligible', true)->count())->toBe(0);
 });
+
+test('a generated batch imports as drafts with --status=draft, all 100 items, none active', function () {
+    $path = base_path('docs/batches/batch-002.json');
+
+    $this->artisan('civio:import-batch', ['path' => $path, '--status' => 'draft'])
+        ->expectsOutputToContain('Imported 100 item(s): 100 created, 0 updated.')
+        ->assertSuccessful();
+
+    expect(Question::where('status', 'draft')->count())->toBe(100)
+        ->and(Question::where('status', 'active')->count())->toBe(0);
+
+    $filing = Question::where('stem', 'like', 'In alphabetical filing%')->firstOrFail();
+    expect($filing->explanation)->toContain('ARMA International Simplified Filing Standard Rules, Rule')
+        ->toContain('not a rule published by the CSC');
+
+    $this->artisan('civio:import-batch', ['path' => $path, '--status' => 'bogus'])->assertFailed();
+});
