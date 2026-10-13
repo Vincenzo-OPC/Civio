@@ -40,8 +40,8 @@ export default function Welcome() {
                             Prepare for the Civil Service Exam.
                         </h1>
                         <p className="text-base leading-relaxed text-[var(--civio-ink,#101426)]/75 sm:text-lg">
-                            Practice with focused questions, realistic timed
-                            exams, and explanations that help you improve.
+                            Timed mocks for the Professional and Subprofessional
+                            exams. The explanation comes after you answer.
                         </p>
                     </header>
 
@@ -132,7 +132,7 @@ export default function Welcome() {
                                     <span className="text-base leading-relaxed">
                                         {option}
                                         {index === 1 && (
-                                            <span className="mt-1 block text-xs font-semibold tracking-wide uppercase">
+                                            <span className="mt-1 block text-xs font-semibold">
                                                 Selected
                                             </span>
                                         )}

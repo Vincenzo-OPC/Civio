@@ -19,8 +19,8 @@ export default function Guide() {
         <>
             <div className="mb-8 flex items-start gap-3">
                 <PageHeader
-                    title="Civil Service Exam Reviewer Guide"
-                    description="Learn how to streamline your preparation process, navigate exam structures, and maximize your passing odds."
+                    title="Exam guide"
+                    description="Professional is 150 items in 3 hours 10 minutes. Subprofessional is 145 items in 2 hours 40 minutes. The published general passing rating is at least 80.00."
                 />
             </div>
 
@@ -32,20 +32,15 @@ export default function Guide() {
         return (
             <AppLayout breadcrumbs={Guide.layout.breadcrumbs}>
                 <Head>
-                    <title>
-                        Ultimate CSE Preparation Guide | Civio
-                    </title>
+                    <title>Exam guide | Civio</title>
                     <meta
                         name="description"
-                        content="Discover the best study strategies, time-management tips, and subject coverage breakdowns for the Professional and Subprofessional Civil Service Examinations."
+                        content="Professional is 150 items in 3 hours 10 minutes. Subprofessional is 145 in 2 hours 40 minutes. Passing is a general rating of at least 80.00. Civio is not the Civil Service Commission."
                     />
-                    <meta
-                        property="og:title"
-                        content="Ultimate CSE Preparation Guide | Civio"
-                    />
+                    <meta property="og:title" content="Exam guide | Civio" />
                     <meta
                         property="og:description"
-                        content="Discover the best study strategies, time-management tips, and subject coverage breakdowns for the Professional and Subprofessional Civil Service Examinations."
+                        content="Official item counts, time limits, and the published passing rating. Civio is not an official CSC reviewer."
                     />
                 </Head>
                 <PageContainer>{content}</PageContainer>
@@ -56,18 +51,15 @@ export default function Guide() {
     return (
         <>
             <Head>
-                <title>Ultimate CSE Preparation Guide | Civio</title>
+                <title>Exam guide | Civio</title>
                 <meta
                     name="description"
-                    content="Discover the best study strategies, time-management tips, and subject coverage breakdowns for the Professional and Subprofessional Civil Service Examinations."
+                    content="Professional is 150 items in 3 hours 10 minutes. Subprofessional is 145 in 2 hours 40 minutes. Passing is a general rating of at least 80.00. Civio is not the Civil Service Commission."
                 />
-                <meta
-                    property="og:title"
-                    content="Ultimate CSE Preparation Guide | Civio"
-                />
+                <meta property="og:title" content="Exam guide | Civio" />
                 <meta
                     property="og:description"
-                    content="Discover the best study strategies, time-management tips, and subject coverage breakdowns for the Professional and Subprofessional Civil Service Examinations."
+                    content="Official item counts, time limits, and the published passing rating. Civio is not an official CSC reviewer."
                 />
             </Head>
             <div className="flex min-h-screen flex-col bg-slate-50/30 dark:bg-slate-900/20">
@@ -76,8 +68,8 @@ export default function Guide() {
                     <div className="mx-auto max-w-6xl space-y-8">
                         <div className="flex items-start gap-4 border-b border-border pb-6 md:items-center">
                             <PageHeader
-                                title="Civil Service Exam Reviewer Guide"
-                                description="Learn how to streamline your preparation process, navigate exam structures, and maximize your passing odds."
+                                title="Exam guide"
+                                description="Professional is 150 items in 3 hours 10 minutes. Subprofessional is 145 items in 2 hours 40 minutes. The published general passing rating is at least 80.00."
                                 className="flex-1"
                             />
                         </div>

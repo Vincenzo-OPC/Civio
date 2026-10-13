@@ -142,7 +142,7 @@ export default function SiteHeader({
                                         (link.id === 'learn' &&
                                             url.startsWith('/learn')) ||
                                         (link.id === 'about' &&
-                                            url.startsWith('/about') ||
+                                            url.startsWith('/about')) ||
                                         (link.id === 'exams' &&
                                             url.startsWith('/exams')) ||
                                         (link.id === 'drills' &&
@@ -150,14 +150,14 @@ export default function SiteHeader({
                                         (link.id === 'history' &&
                                             url.startsWith('/history')) ||
                                         (link.id === 'analytics' &&
-                                            url.startsWith('/analytics')));
+                                            url.startsWith('/analytics'));
                                     const isHomePage =
                                         url === '/' || url === '';
                                     const isHomeActive =
                                         (link.id === 'learn' &&
                                             url.startsWith('/learn')) ||
                                         (link.id === 'about' &&
-                                            url.startsWith('/about') ||
+                                            url.startsWith('/about')) ||
                                         (link.id === 'exams' &&
                                             url.startsWith('/exams')) ||
                                         (link.id === 'drills' &&
@@ -165,7 +165,7 @@ export default function SiteHeader({
                                         (link.id === 'history' &&
                                             url.startsWith('/history')) ||
                                         (link.id === 'analytics' &&
-                                            url.startsWith('/analytics'))) ||
+                                            url.startsWith('/analytics')) ||
                                         (isHomePage && isLinkActive);
 
                                     return (
@@ -205,7 +205,11 @@ export default function SiteHeader({
                             <>
                                 {guestUnlimited ? (
                                     <>
-                                        <Button variant="ghost" asChild>
+                                        <Button
+                                            variant="ghost"
+                                            uppercase={false}
+                                            asChild
+                                        >
                                             <Link
                                                 href="/drills"
                                                 className="group font-bold text-primary transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
@@ -213,7 +217,7 @@ export default function SiteHeader({
                                                 Drills
                                             </Link>
                                         </Button>
-                                        <Button asChild>
+                                        <Button uppercase={false} asChild>
                                             <Link
                                                 href="/exams?start=professional&free_attempt=1"
                                                 className="group font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
@@ -224,7 +228,11 @@ export default function SiteHeader({
                                     </>
                                 ) : (
                                     <>
-                                        <Button variant="ghost" asChild>
+                                        <Button
+                                            variant="ghost"
+                                            uppercase={false}
+                                            asChild
+                                        >
                                             <Link
                                                 href={login()}
                                                 className="group font-bold text-primary transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
@@ -232,7 +240,7 @@ export default function SiteHeader({
                                                 Log in
                                             </Link>
                                         </Button>
-                                        <Button asChild>
+                                        <Button uppercase={false} asChild>
                                             <Link
                                                 href={register()}
                                                 className="group font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
@@ -280,30 +288,30 @@ export default function SiteHeader({
                                             (link.id === 'learn' &&
                                                 url.startsWith('/learn')) ||
                                             (link.id === 'about' &&
-                                                url.startsWith('/about') ||
-                                        (link.id === 'exams' &&
-                                            url.startsWith('/exams')) ||
-                                        (link.id === 'drills' &&
-                                            url.startsWith('/drills')) ||
-                                        (link.id === 'history' &&
-                                            url.startsWith('/history')) ||
-                                        (link.id === 'analytics' &&
-                                            url.startsWith('/analytics')));
+                                                url.startsWith('/about')) ||
+                                            (link.id === 'exams' &&
+                                                url.startsWith('/exams')) ||
+                                            (link.id === 'drills' &&
+                                                url.startsWith('/drills')) ||
+                                            (link.id === 'history' &&
+                                                url.startsWith('/history')) ||
+                                            (link.id === 'analytics' &&
+                                                url.startsWith('/analytics'));
                                         const isHomePage =
                                             url === '/' || url === '';
                                         const isHomeActive =
                                             (link.id === 'learn' &&
                                                 url.startsWith('/learn')) ||
                                             (link.id === 'about' &&
-                                                url.startsWith('/about') ||
-                                        (link.id === 'exams' &&
-                                            url.startsWith('/exams')) ||
-                                        (link.id === 'drills' &&
-                                            url.startsWith('/drills')) ||
-                                        (link.id === 'history' &&
-                                            url.startsWith('/history')) ||
-                                        (link.id === 'analytics' &&
-                                            url.startsWith('/analytics'))) ||
+                                                url.startsWith('/about')) ||
+                                            (link.id === 'exams' &&
+                                                url.startsWith('/exams')) ||
+                                            (link.id === 'drills' &&
+                                                url.startsWith('/drills')) ||
+                                            (link.id === 'history' &&
+                                                url.startsWith('/history')) ||
+                                            (link.id === 'analytics' &&
+                                                url.startsWith('/analytics')) ||
                                             (isHomePage && isLinkActive);
 
                                         return (
@@ -348,6 +356,7 @@ export default function SiteHeader({
                                         <>
                                             <Button
                                                 variant="ghost"
+                                                uppercase={false}
                                                 className="w-full rounded-xl py-4 text-base font-bold text-primary sm:py-6"
                                                 asChild
                                             >
@@ -361,6 +370,7 @@ export default function SiteHeader({
                                                 </Link>
                                             </Button>
                                             <Button
+                                                uppercase={false}
                                                 className="w-full rounded-xl py-4 text-base font-bold sm:py-6"
                                                 asChild
                                             >
@@ -375,6 +385,7 @@ export default function SiteHeader({
                                             </Button>
                                             <Button
                                                 variant="secondary"
+                                                uppercase={false}
                                                 className="w-full rounded-xl py-4 text-base font-bold sm:py-6"
                                                 asChild
                                             >
@@ -392,6 +403,7 @@ export default function SiteHeader({
                                         <>
                                             <Button
                                                 variant="ghost"
+                                                uppercase={false}
                                                 className="w-full rounded-xl py-4 text-base font-bold text-primary sm:py-6"
                                                 asChild
                                             >
@@ -405,6 +417,7 @@ export default function SiteHeader({
                                                 </Link>
                                             </Button>
                                             <Button
+                                                uppercase={false}
                                                 className="w-full rounded-xl py-4 text-base font-bold sm:py-6"
                                                 asChild
                                             >

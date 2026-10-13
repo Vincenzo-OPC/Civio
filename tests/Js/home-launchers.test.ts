@@ -9,6 +9,17 @@ const welcome = readFileSync(
     new URL('../../resources/js/pages/public/welcome.tsx', import.meta.url),
     'utf8',
 );
+const about = readFileSync(
+    new URL('../../resources/js/pages/public/about.tsx', import.meta.url),
+    'utf8',
+);
+const brand = readFileSync(
+    new URL(
+        '../../resources/js/components/shared/brand-name.tsx',
+        import.meta.url,
+    ),
+    'utf8',
+);
 
 describe('home launchers', () => {
     it('offers Start Pro, Start Sub Pro and Practice Drills', () => {
@@ -24,10 +35,19 @@ describe('home launchers', () => {
         assert.doesNotMatch(welcome, /guaranteed points/);
         assert.match(welcome, /Continue Studying/);
         assert.match(welcome, /at least 80\.00/);
+        assert.match(welcome, /The explanation comes after/);
+        assert.doesNotMatch(welcome, /help you improve/);
     });
 
     it('has no redundant Mock button or free-exam picker modal', () => {
         assert.doesNotMatch(welcome, /Try Mock Test/);
         assert.doesNotMatch(welcome, /isFreeExamModalOpen/);
+    });
+
+    it('keeps the name Civio and the about page factual', () => {
+        assert.doesNotMatch(brand, /Review/);
+        assert.doesNotMatch(about, /My Story/);
+        assert.doesNotMatch(about, /Empowering Filipinos/);
+        assert.match(about, /not the Civil Service Commission/);
     });
 });
