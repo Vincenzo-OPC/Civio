@@ -1,6 +1,6 @@
 # Civio CSE Question Design Spec
 
-Version: 0.1
+Version: 0.1.2 (CoS condition: Filing Rules need CSC citations; see 10.1)
 Date: 5 Oct 2026 (Asia/Manila); approved 7 Oct 2026
 Owner: GT
 Status: **Approved by GT on 7 Oct 2026.** The canonical copy lives in GT's Obsidian vault; this repo copy
@@ -639,3 +639,19 @@ New items get `questions.source_group = civio` and `status = draft` until GT app
 them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 
 *End of spec.*
+
+## 10.1 Civio Filing Rules v1: CSC source check (v0.1.2, 2026-10-13)
+
+**Condition from Chief of Staff (GT delegated Civio decisions):** every rule in Civio Filing Rules v1 must cite a CSC source link; any rule without one is dropped.
+
+**What CSC publishes:** CSC exam announcements list "Clerical Ability (in English): Filing; Spelling" as a Sub-Professional test area, and nothing more. For example, Examination Announcement No. 05, s. 2025: https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2025/Examination%20Announcement%20No.%2005%20s.%202025.pdf . CSC does not publish a filing or alphabetizing rulebook. The fallback, NAP General Circular No. 1 (records management, https://nationalarchives.gov.ph/downloads/nap-general-circular-1-2-and-grds/), only defines "file" and gives no alphabetical-filing rules. It is also not a CSC source.
+
+| # | Rule | CSC source link | Status |
+| --- | --- | --- | --- |
+| 1 | Surname first | None (CSC only names "Filing" as scope) | **Dropped** |
+| 2 | Letter by letter | None | **Dropped** |
+| 3 | Prefixes are part of the surname | None | **Dropped** |
+| 4 | Titles/suffixes only break ties | None | **Dropped** |
+| 5 | Leading "The" ignored | None | **Dropped** |
+
+**Effect:** Civio Filing Rules v1 has no rules in force. Write no filing items (CLR-FILE-*) and put none in the bank until CoS rules on a source standard that is not from CSC. Clerical spelling items are unaffected. The CSC announcement link above stays the scope citation for the Clerical "Filing" area.

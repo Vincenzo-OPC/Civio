@@ -186,7 +186,7 @@ inline script.
       data interpretation 25
     - Clerical: filing 55 / spelling 45
     - GI: Constitution 40 / RA 6713 35 / peace and human rights 15 / environment 10
-3. **Filing Rules v1:** surname first; letter by letter; prefixes are part of the
+3. **Filing Rules v1 (all 5 dropped 2026-10-13, no CSC source; see spec 10.1):** surname first; letter by letter; prefixes are part of the
    surname; titles and suffixes only break ties; a leading "The" is ignored. Each
    filing item cites its rule. Disputed cases wait for v1.1.
 4. **First release is text only.** Text tables are fine. Figures wait for an image
