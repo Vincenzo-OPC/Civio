@@ -133,7 +133,7 @@ the equivalent Postgres SQL (`scripts/seeds/remove_variant_clones.sql`).
   `civio:mark-offline-eligible`, `/offline/packs` + `/offline/attempts`
   (server re-grade, `offline_practice_results`), drills hub download panel,
   `/offline` runner, worker served at `/sw.js`. See `docs/LITE_MODE_PLAN.md`.
-- **Next:** modernization backlog (`docs/CODE_STANDARD.md`) → Phase 1
+- **Next:** Learning Features (next), see `docs/CODEX_HANDOFF_PLAN.md` §0; then modernization backlog (`docs/CODE_STANDARD.md`) → Phase 1
   foundation → Phase Bank.
 
 ## Hosting intent (not yet executed)

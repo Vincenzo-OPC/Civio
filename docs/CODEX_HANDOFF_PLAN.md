@@ -8,6 +8,52 @@ must never break, what is still open, and what to build next, in order.
 Updated 7 Oct 2026. `main` is the source of truth; if this file and the code
 disagree, the code and tests win, then `AGENTS.md`.
 
+## 0. Learning Features (next)
+
+Added 13 Oct 2026 for Grok Build or Codex. This is a brief only; none of it is built yet.
+Stack: Laravel 13 / Inertia / React 19 / TS / Tailwind 4 / Pest (+ Vitest for TS).
+Every meter and message must come from real stored data, never decoration.
+Write one small commit per item, and keep CI green.
+
+### 0.1 Visible FSRS spaced review (`ts-fsrs`, already a dependency)
+- **Next-review card** after each answer: "Next review in 3 days because you answered fast and correct."
+  - AC: the interval and the reason come from the ts-fsrs scheduler and the stored review log (rating from correct + response time).
+  - Tests: unit tests for rating mapping and interval text; Pest feature test that an answer persists a card state.
+- **Review calendar**: due Today / This week / Later.
+  - AC: counts equal the number of due cards in the DB; works in Lite mode.
+  - Tests: Pest test with fixed clock and seeded cards checks the bucket counts.
+- **"Why this question?"** on every item, e.g. "missed ratio 2 days ago", "due for review", "new topic".
+  - AC: the reason is chosen by the selector and sent with the item, never invented.
+  - Tests: selector unit test for each reason type.
+
+### 0.2 Dashboard meters (game feel, plain labels, calm, not arcade)
+- **Memory**: mean FSRS retrievability over the cards the learner has seen. It falls as cards come due and refills on review. Test with a time-travel clock.
+- **Focus**: today's goal budget (minutes/items) left; suggests a break when low. Test the threshold.
+- **Progress**: XP and level from correct recall of due/new cards and passed Strict Mocks only. Re-answering the same item or practice mode gives no XP (anti-farming). Test that repeats give 0 XP.
+- **Topic Map**: mastery per archetype (FSRS stability + accuracy), lighting up by level. Test the aggregation.
+- **Readiness**: predicted score per subject from Strict Mock results only, hidden until there is enough data. Test that drills don't change it.
+- **Streak** with one freeze day that is used automatically. Test with day-boundary cases in Asia/Manila.
+- AC: each meter has a server source and a test; no meter shows on fake data; it meets the a11y contrast rules and plain-language labels.
+
+### 0.3 Learning methods
+- Retrieval-first quizzes: answer before seeing any hint or explanation.
+- Interleaving that mixes subjects in real exam proportions (Prof/Subprof blueprint). Test the mix ratios.
+- Dexter gives a hint before the answer (one hint step, the key stays withheld). Test that the hint never leaks `answer_option_id`.
+- The Reveal names the learner's specific error from the chosen option's distractor code (spec §codes). Test the mapping for each code family.
+- Post-session insight line from repeated error codes, e.g. "you keep mixing affect/effect". Test with a threshold of ≥2 same-code misses.
+
+### 0.4 Constraints (must not break)
+- Lite mode and cheap phones: keep the `size-limit` budgets (`docs/LITE_MODE_PLAN.md`). No heavy chart libs.
+- Works offline with the L2 packs: FSRS state queues locally and syncs later.
+- The Strict Mock lock is unchanged: no hints, Reveal, or meters during a Strict Mock.
+- "Civio" in Title Case; never imply CSC affiliation.
+- Normal pushes only, never force-push; CI green.
+
+### 0.5 Other open items
+- **Deploy:** Koyeb free + Neon Free (Singapore) + Netlify static landing, once GT creates the accounts. No spend.
+- **Bank:** import the 1,000-item bank into production with `php artisan civio:import-batch` (batches 002–011, `--status=active` after QA) at deploy.
+- **Old desktop app:** item 1530 is untouched; GT skipped it.
+
 ## 1. Read in this order
 
 1. This file.

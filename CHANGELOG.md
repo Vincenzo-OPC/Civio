@@ -13,11 +13,15 @@ baseline, see `docs/CHANGES_SINCE_BASELINE.md`.
 - *(bank)* Questions.source_group groups baseline and Civio-authored items ([ac27f5a](https://github.com/Vincenzo-OPC/Civio/commit/ac27f5a9fa3bc9bf84839ee93767218e469989ca))
 - *(lite)* L2 offline drill packs ([09c62da](https://github.com/Vincenzo-OPC/Civio/commit/09c62daa2c843ff187dd5b6b44801290f4410089))
 - *(exams)* Split Exam Simulation into Study Mock and Strict Mock ([6edbadc](https://github.com/Vincenzo-OPC/Civio/commit/6edbadcd013f14814764c924aecf2b610a2a804a))
+- *(bank)* Civio:import-batch command for approved item batches (idempotent, never offline-eligible) ([4a7f1d1](https://github.com/Vincenzo-OPC/Civio/commit/4a7f1d139914b42010eafe628051c5ed93f5b187))
+- *(bank)* Batch generator pipeline with per-round QA; batch-002 (100 draft items) ([b894c84](https://github.com/Vincenzo-OPC/Civio/commit/b894c846e07d46a98cd946efcf158f52a34202c0))
+- *(bank)* Apply CoS rulings to the generator and QA (spec v0.1.4) ([0138aff](https://github.com/Vincenzo-OPC/Civio/commit/0138affc1a38903c057ee7dae453e69538c2af20))
 
 ### Fixes
 
 - *(analytics)* Safely handle missing keys in ai analysis orchestrator ([c6a173f](https://github.com/Vincenzo-OPC/Civio/commit/c6a173f1386a7d1d6e60b1d598ed5d93fc814228))
 - *(view)* Plain-JS inline scripts so system dark mode applies before paint ([51c429b](https://github.com/Vincenzo-OPC/Civio/commit/51c429be12fb167d2c0f6cab1177daaae115db90))
+- *(bank)* Clerical template pick by rng (was locked to filing); spelling-misspelled items off (no spec code); rebuild batches [skip netlify] ([6647cd8](https://github.com/Vincenzo-OPC/Civio/commit/6647cd890076540a90ed054efaab100af1e12d1f))
 
 ### Performance
 
@@ -37,6 +41,19 @@ baseline, see `docs/CHANGES_SINCE_BASELINE.md`.
 - Connect agent entrypoints to RSI roadmap [skip netlify] ([e3c693a](https://github.com/Vincenzo-OPC/Civio/commit/e3c693ad44f745510d5de995d32c8e888d9f14d4))
 - *(spec)* Drop uncited Civio Filing Rules v1 per CoS CSC-citation condition (v0.1.2) [skip netlify] ([65e37c6](https://github.com/Vincenzo-OPC/Civio/commit/65e37c6170088679c874da8bb1ecc5cfc314f468))
 - *(spec)* Adopt ARMA simplified filing rules as Civio Filing Rules v2 (v0.1.3) [skip netlify] ([bf010c9](https://github.com/Vincenzo-OPC/Civio/commit/bf010c9285c50f36c99f0490219ba1c799dbf5f9))
+- *(batches)* Draft batch-001, 10 original items for CoS review [skip netlify] ([f213bd1](https://github.com/Vincenzo-OPC/Civio/commit/f213bd12be6b42530729153d39069a05bc453c77))
+- *(batches)* Batch-001 CoS PASS (final), add NUM-OTHER-SHARE, ANA-OTHER-RELATION and draft status to spec [skip netlify] ([fc05c0c](https://github.com/Vincenzo-OPC/Civio/commit/fc05c0c5c066dea8e8cadd3d4a82eb964982a0de))
+- *(batches)* Draft batch-002, 10 original items weighted to Numerical and Analytical [skip netlify] ([c48e576](https://github.com/Vincenzo-OPC/Civio/commit/c48e576b88ba53970131cb89bf6a1ad9f7268c32))
+- *(bank)* Batch-003, 100 generated draft items (QA clean) [skip netlify] ([dd71168](https://github.com/Vincenzo-OPC/Civio/commit/dd71168a80cee7d8092f7ac8078a84c21d4e09c3))
+- *(bank)* Batch-004, 100 generated draft items (QA clean) [skip netlify] ([1111190](https://github.com/Vincenzo-OPC/Civio/commit/1111190dfd2706fe0d3069a82928613275defdae))
+- *(bank)* Batch-005, 100 generated draft items (QA clean) [skip netlify] ([e8498d6](https://github.com/Vincenzo-OPC/Civio/commit/e8498d6657d8001c0c7a39710b80a11cd3d835d5))
+- *(bank)* Batch-006, 100 generated draft items (QA clean) [skip netlify] ([f174062](https://github.com/Vincenzo-OPC/Civio/commit/f174062c5bd07e06ce6e5addeb829cfe4c2f8d1a))
+- *(bank)* Batch-007, 100 generated draft items (QA clean) [skip netlify] ([d2b6d7c](https://github.com/Vincenzo-OPC/Civio/commit/d2b6d7c15fe3269168ca409e03aaa5f5c72fad3a))
+- *(bank)* Batch-008, 100 generated draft items (QA clean) [skip netlify] ([8f79c0d](https://github.com/Vincenzo-OPC/Civio/commit/8f79c0dd12e169625fb1ea678cdc4248708ab26c))
+- *(bank)* Batch-009, 100 generated draft items (QA clean) [skip netlify] ([841d8a1](https://github.com/Vincenzo-OPC/Civio/commit/841d8a196039cd1df0ffd2e69df40b41b7e7a851))
+- *(bank)* Batch-010, 100 generated draft items (QA clean) [skip netlify] ([61652d0](https://github.com/Vincenzo-OPC/Civio/commit/61652d083babd965609e0ba7a5a0f9b6be8ed50c))
+- *(bank)* Batch-011, 100 generated draft items (QA clean) [skip netlify] ([1851b5e](https://github.com/Vincenzo-OPC/Civio/commit/1851b5ed363cc228693cdf9396036bf77a061d9c))
+- *(bank)* Rebuild batch-002..011 under the CoS rulings (1,000 items, QA green) [skip netlify] ([66a285d](https://github.com/Vincenzo-OPC/Civio/commit/66a285d144db35d1c03085a55318fec7bf78a23f))
 
 ### Style
 
@@ -49,6 +66,10 @@ baseline, see `docs/CHANGES_SINCE_BASELINE.md`.
 - *(entire)* Codex and Claude Code hooks, committed .githooks, git-refs settings; drop Cursor hooks ([3fe931b](https://github.com/Vincenzo-OPC/Civio/commit/3fe931b0dc622c9d17aff88a873e411ced4f576b))
 - *(brand)* Neutral Civio mark, no author credit in the footer, full legacy storage migration ([08b4640](https://github.com/Vincenzo-OPC/Civio/commit/08b46403669930429ef921a5b5c23c5292f3f775))
 - *(entire)* Refresh Codex and Claude Code hooks for Entire 0.11.4 ([faa9cb9](https://github.com/Vincenzo-OPC/Civio/commit/faa9cb9d6e45eed3ee25fcd06b59bc31a17e3cf2))
+
+### Other
+
+- Batches 002-011 rebuild: topic floors, pronoun rescan, CLR-SPELL-CORRECT-FOIL, spec approvals [skip netlify] ([6452cdf](https://github.com/Vincenzo-OPC/Civio/commit/6452cdfbd8213de0fea163941882e0558ca066d6))
 
 ## [0.1.5-phase0.5] - 2026-10-07
 
