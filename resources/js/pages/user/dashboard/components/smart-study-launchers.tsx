@@ -37,7 +37,7 @@ export function SmartStudyLaunchers({
                             Smart Study Launchers
                         </h2>
                         <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                            Jump straight into your high-yield study modes
+                            Open a mock, a drill, or the notes.
                         </p>
                     </div>
                 </div>

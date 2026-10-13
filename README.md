@@ -58,6 +58,14 @@ npm run format:check
 - `ENTIRE.md` — agent session capture
 - `CHANGELOG.md` — generated with `npm run changelog`
 
+## Copyright
+
+Copyright © 2026 Civio. All rights reserved. See `COPYRIGHT`.
+
+BIR registration RSN 000RC20250000000333 (2025) is a tax registration. It is
+not an endorsement of the questions and it is not a Civil Service Commission
+approval.
+
 ## Origin
 
 Civio started from a baseline codebase at commit `d3f0368`; every change since is

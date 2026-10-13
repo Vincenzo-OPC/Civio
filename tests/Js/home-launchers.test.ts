@@ -13,6 +13,24 @@ const about = readFileSync(
     new URL('../../resources/js/pages/public/about.tsx', import.meta.url),
     'utf8',
 );
+const footer = readFileSync(
+    new URL(
+        '../../resources/js/components/layout/site-footer.tsx',
+        import.meta.url,
+    ),
+    'utf8',
+);
+const guide = readFileSync(
+    new URL(
+        '../../resources/js/components/domain/reviewer-guide-tabs.tsx',
+        import.meta.url,
+    ),
+    'utf8',
+);
+const shell = readFileSync(
+    new URL('../../resources/views/app.blade.php', import.meta.url),
+    'utf8',
+);
 const brand = readFileSync(
     new URL(
         '../../resources/js/components/shared/brand-name.tsx',
@@ -49,5 +67,15 @@ describe('home launchers', () => {
         assert.doesNotMatch(about, /My Story/);
         assert.doesNotMatch(about, /Empowering Filipinos/);
         assert.match(about, /not the Civil Service Commission/);
+        assert.match(footer, /000RC20250000000333/);
+        assert.match(footer, /All rights reserved/);
+        assert.match(footer, /tax registration/);
+        assert.doesNotMatch(footer, /any Philippine government agency/);
+        assert.doesNotMatch(shell, /Ace the/);
+        assert.doesNotMatch(shell, /first attempt/);
+        assert.doesNotMatch(guide, /dual-stage/);
+        assert.doesNotMatch(guide, /passing mark/);
+        assert.match(guide, /150/);
+        assert.match(guide, /at least 80\.00/);
     });
 });

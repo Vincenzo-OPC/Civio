@@ -93,20 +93,15 @@ export default function LearnIndex(props: LearnIndexProps) {
     return (
         <>
             <Head>
-                <title>
-                    Civil Service Study Hub & Syllabus Guides | Civio
-                </title>
+                <title>Study Hub | Civio</title>
                 <meta
                     name="description"
-                    content="Access free, high-yield study modules and review guides covering Numerical, Verbal, Analytical, and Clerical topics for the Civil Service Exam."
+                    content="Practice notes for Numerical, Verbal, Analytical, Clerical, and General Information. Civio is not the Civil Service Commission."
                 />
-                <meta
-                    property="og:title"
-                    content="Civil Service Study Hub & Syllabus Guides | Civio"
-                />
+                <meta property="og:title" content="Study Hub | Civio" />
                 <meta
                     property="og:description"
-                    content="Access free, high-yield study modules and review guides covering Numerical, Verbal, Analytical, and Clerical topics for the Civil Service Exam."
+                    content="Practice notes for the exam subjects. These are not a CSC syllabus."
                 />
             </Head>
             <PageContainer>
@@ -114,7 +109,7 @@ export default function LearnIndex(props: LearnIndexProps) {
                 <div className="mb-8 flex items-start gap-3">
                     <PageHeader
                         title="Study Hub"
-                        description="Dive deep into core subjects, learn mental shortcuts, and master exam theories with our dedicated curated study guides."
+                        description="Notes for the exam subjects. They are practice material, not a CSC syllabus."
                         tooltip="Access comprehensive study modules, lessons, formulas, and progress metrics for each major civil service topic."
                     />
                     {isLoggedIn && (
@@ -125,7 +120,7 @@ export default function LearnIndex(props: LearnIndexProps) {
                                     {
                                         icon: <BookOpen className="size-4" />,
                                         title: 'Review Lessons',
-                                        text: 'Access high-yield lessons, key conceptual breakdowns, and core exam strategies designed to target specific Civil Service subjects.',
+                                        text: 'Read the notes for one subject, then drill that subject.',
                                     },
                                     {
                                         icon: (

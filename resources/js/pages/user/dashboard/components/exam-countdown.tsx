@@ -194,8 +194,8 @@ export function ExamCountdown({
                         <p className="text-sm leading-relaxed leading-snug font-bold text-slate-600 dark:text-slate-400">
                             {motivationText ||
                                 (isUrgent
-                                    ? '🚨 Time is running short! Focus on your weakest topics now.'
-                                    : 'Master your study recommendations to boost your passing probability.')}
+                                    ? 'The date you set is close. Drill the subjects you miss.'
+                                    : 'Drill the subjects you miss. A practice score is not a pass forecast.')}
                         </p>
                     </div>
                 </div>

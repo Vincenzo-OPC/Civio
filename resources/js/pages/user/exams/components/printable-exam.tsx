@@ -108,7 +108,7 @@ function buildWatermarkDataUri(logoBase64: string | null): string {
         <g transform="rotate(-30, 250, 210)" opacity="0.04">
             ${logoTag}
             <text x="250" y="152" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="900" fill="#000" letter-spacing="3">Civio</text>
-            <text x="250" y="176" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#000">Official Mock Examination</text>
+            <text x="250" y="176" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#000">Practice mock. Not a CSC paper.</text>
             <rect x="175" y="188" width="150" height="22" rx="3" fill="none" stroke="#000" stroke-width="1.5"/>
             <text x="250" y="204" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="900" fill="#000" letter-spacing="2">NOT FOR SALE</text>
         </g>
@@ -519,10 +519,9 @@ export function PrintableExam({
                 }
 
                 // Lite L0: the PDF libraries (~180 KB gzip) load only when exporting.
-                const [{ jsPDF }, { default: html2canvas }] = await Promise.all([
-                    import('jspdf'),
-                    import('html2canvas-pro'),
-                ]);
+                const [{ jsPDF }, { default: html2canvas }] = await Promise.all(
+                    [import('jspdf'), import('html2canvas-pro')],
+                );
 
                 if (cancelled) {
                     return;
@@ -1341,9 +1340,8 @@ export function PrintableExam({
                     </div>
 
                     <div className="print-running-footer">
-                        Civio &bull; Mock Examination &bull; NOT FOR
-                        SALE &bull; Unauthorized reproduction is strictly
-                        prohibited
+                        Civio &bull; Mock Examination &bull; NOT FOR SALE &bull;
+                        Unauthorized reproduction is strictly prohibited
                     </div>
                 </div>
 
@@ -1383,8 +1381,8 @@ export function PrintableExam({
                             </div>
 
                             <div className="print-running-footer">
-                                Civio &bull; Mock Examination &bull; NOT
-                                FOR SALE &bull; Unauthorized reproduction is
+                                Civio &bull; Mock Examination &bull; NOT FOR
+                                SALE &bull; Unauthorized reproduction is
                                 strictly prohibited
                             </div>
                         </div>
@@ -1490,9 +1488,8 @@ export function PrintableExam({
                     </div>
 
                     <div className="print-running-footer">
-                        Civio &bull; Mock Examination &bull; NOT FOR
-                        SALE &bull; Unauthorized reproduction is strictly
-                        prohibited
+                        Civio &bull; Mock Examination &bull; NOT FOR SALE &bull;
+                        Unauthorized reproduction is strictly prohibited
                     </div>
                 </div>
 
@@ -1536,9 +1533,8 @@ export function PrintableExam({
                     </div>
 
                     <div className="print-running-footer">
-                        Civio &bull; Mock Examination &bull; NOT FOR
-                        SALE &bull; Unauthorized reproduction is strictly
-                        prohibited
+                        Civio &bull; Mock Examination &bull; NOT FOR SALE &bull;
+                        Unauthorized reproduction is strictly prohibited
                     </div>
                 </div>
             </div>

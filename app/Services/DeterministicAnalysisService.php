@@ -317,7 +317,7 @@ class DeterministicAnalysisService
                 continue;
             }
             $qIds = array_values(array_map('intval', $attempt->question_ids));
-            $grading = app(\App\Services\ExamGradingService::class);
+            $grading = app(ExamGradingService::class);
             foreach ($qIds as $qId) {
                 if (! isset($questionsMap[$qId])) {
                     continue;
@@ -785,18 +785,17 @@ class DeterministicAnalysisService
         $pools = [
             // ── Verdicts ───────────────────────────────────────────
             'verdict_high' => [
-                'Across {totalAttempts} attempts you\'ve reached {avgScore}% — you\'re in a strong position with {daysUntilExam} days to go.',
-                'Your {avgScore}% average after {totalAttempts} attempts shows solid exam readiness. Stay sharp with timed drills before {examDateStr}.',
-                'With {passProbability}% pass probability and strengths in {strengthsList}, you\'re on track. Fine-tune speed and accuracy in the final stretch.',
-                'Impressive consistency — {avgScore}% across {totalAttempts} sessions. Channel your remaining {daysUntilExam} days into simulation exams.',
-                '{totalAttempts} attempts, {avgScore}% average, and a {passProbability}% pass forecast. Lock in your strengths and sharpen weak edges.',
+                'Across {totalAttempts} attempts your practice average is {avgScore}%. {daysUntilExam} days remain until the date you set. That is not a pass forecast.',
+                'Practice average {avgScore}% after {totalAttempts} attempts. The published general passing rating is at least 80.00. This average is not that rating.',
+                'With {totalAttempts} attempts your practice average is {avgScore}%. Civio does not forecast a pass.',
+                '{totalAttempts} attempts, practice average {avgScore}%. That number is not a Civil Service Commission rating.',
             ],
             'verdict_mid' => [
-                'After {totalAttempts} attempts your average sits at {avgScore}%. Targeted work on {weakList} can push you past the 80% threshold.',
-                'You\'re at {avgScore}% with {daysUntilExam} days left — closing the gap on {weakList} is the fastest path to a passing score.',
-                'Your {totalAttempts}-attempt average of {avgScore}% is promising. Prioritizing {weakList} drills will accelerate your progress.',
-                '{avgScore}% readiness after {totalAttempts} attempts. A focused sprint on your weaker areas before {examDateStr} can make the difference.',
-                'Solid foundation at {avgScore}%. The next milestone: boost {weakList} performance to cross the 80% mark.',
+                'After {totalAttempts} attempts your practice average is {avgScore}%. The subjects you missed most: {weakList}.',
+                'Practice average {avgScore}%, with {daysUntilExam} days until the date you set. Drill {weakList} if you want more items there.',
+                'Your practice average is {avgScore}% after {totalAttempts} attempts. That is not a prediction you will pass.',
+                'Practice average {avgScore}%. Before {examDateStr}, the subjects with more misses are {weakList}.',
+                'Practice average {avgScore}%. A higher score on {weakList} here is still not an official rating.',
             ],
             'verdict_low' => [
                 'Your current {avgScore}% average across {totalAttempts} attempts indicates foundational gaps — but that\'s exactly what structured study fixes.',
@@ -811,9 +810,9 @@ class DeterministicAnalysisService
                 'Start your first review session to unlock detailed readiness insights and study recommendations.',
             ],
             'verdict_no_mock' => [
-                'You\'ve completed practice drills, but haven\'t taken a full Mock Exam yet. Complete a Professional or Sub-Professional Mock Exam to unlock your official CSE Passing Probability.',
-                'Drill performance recorded! To unlock an accurate pass probability and exam score prediction, complete at least one full Mock Exam.',
-                'Great effort on practice drills. Complete a full-length simulation exam (Professional or Sub-Professional) to calculate your overall exam readiness.',
+                'You have drill scores and no full mock yet. A mock is 150 or 145 scored items. Civio does not calculate an official pass probability.',
+                'Drill scores are in. They are not a pass forecast. A full mock is the timed 150-item or 145-item set.',
+                'Finish a Professional or Subprofessional mock if you want a timed practice score. That score is not an official result.',
             ],
 
             // ── Encouragement (by score tier + trend) ─────────────
@@ -1001,44 +1000,42 @@ class DeterministicAnalysisService
 
             // ── Milestone Predictions ────────────────────────────
             'milestone_high' => [
-                'At your current pace, you\'ll maintain peak readiness through {examDateStr}.',
-                'You\'re on track to enter exam day with maximum confidence.',
-                'Continue current habits and you\'ll peak at the perfect time for the exam.',
+                'Your recent practice is the score you have. Civio does not forecast the exam on {examDateStr}.',
+                'Keep the subjects you already answer correctly. That is not a prediction you will pass.',
+                'The date you set is {examDateStr}. A practice score is not the exam result.',
             ],
             'milestone_mid' => [
-                'With daily practice, you can improve your confidence index by 10-15% in the next 10 days.',
-                'Targeted study on {weakList} can push you past the 80% threshold within 2 weeks.',
-                'Consistent daily drills should move your average score past the passing mark by {examDateStr}.',
+                'Drill {weakList}. Civio will not estimate how many points that adds.',
+                'More items on {weakList} will change this practice average. It will not certify a pass.',
+                'By {examDateStr} you can finish more mocks. The average here is not a passing forecast.',
             ],
             'milestone_low' => [
-                'Focused foundational study can boost your score by 15-20% in the next 3 weeks.',
-                'Building basics now will create compound gains — expect noticeable improvement within 2 weeks.',
-                'With a structured study plan, a 20%+ improvement is achievable before exam day.',
+                'The misses are concentrated. Drill those subjects. Civio does not promise a point gain.',
+                'A low practice average means those items were missed. It does not predict the next score.',
+                'Use the time before the exam on the subjects you miss. No point gain is guaranteed.',
             ],
             'milestone_empty' => [
-                'Complete a practice exam to map out a clear study path.',
-                'Take your first drill to unlock milestone tracking and study predictions.',
+                'Finish a mock to see a practice score.',
+                'A drill or a mock has to be finished before there is a score to show.',
             ],
-
-            // ── Score Improvement Predictions ────────────────────
             'improvement_high' => [
-                '+3-5% fine-tuning possible with speed drills and simulation exams.',
-                'Marginal gains of 3-5% available through timed practice and error analysis.',
-                '+2-4% improvement by eliminating careless errors in timed conditions.',
+                'Civio does not estimate a future point gain.',
+                'Another timed mock will show a new practice score. It is not a forecast.',
+                'The next score is the next score. This page will not add points in advance.',
             ],
             'improvement_mid' => [
-                '+10-15% improvement achievable with consistent, targeted study habits.',
-                '+12% or more by focusing on your 2-3 weakest subjects.',
-                'A dedicated 2-week push can yield +8-12% score improvement.',
+                'Civio does not estimate a future point gain.',
+                'Drill the subjects you miss, then take another mock if you want a new average.',
+                'No percentage gain is promised for the next two weeks.',
             ],
             'improvement_low' => [
-                '+15-25% improvement potential with structured daily foundational study.',
-                'Significant gains of 20%+ are realistic with a disciplined study plan.',
-                '+18-25% improvement expected as you build core subject knowledge.',
+                'Civio does not estimate a future point gain.',
+                'A low average is the items missed so far. It is not a forecast of the exam.',
+                'Another mock replaces this average. It does not guarantee a higher one.',
             ],
             'improvement_empty' => [
-                '+20% expected after first baseline assessment.',
-                'Initial improvements of 15-25% are typical once structured study begins.',
+                'There is no score to improve yet.',
+                'Finish a mock before treating any number as a baseline.',
             ],
         ];
 

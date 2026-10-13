@@ -103,7 +103,7 @@ const DEFAULT_TEMPLATES: StudyPlanTemplate[] = [
         description:
             'Sharpen speed and accuracy with daily timed drills, full simulation tests, and rapid error analysis before exam day.',
         topics: [
-            'Daily Timed Mock Exam Simulation (170 Items)',
+            'Daily timed mock (150 scored items)',
             'Instant Review & Diagnostic Weak Area Drills',
             'Key Formula & Constitution Summary Sheet Review',
             'Test-taking Strategy & Time Management Prep',

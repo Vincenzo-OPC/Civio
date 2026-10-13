@@ -143,7 +143,7 @@ export function DashboardHero({
                                             <span>Professional Exam</span>
                                         </div>
                                         <span className="text-[10px] text-slate-400">
-                                            170 Qs
+                                            150 items
                                         </span>
                                     </Link>
                                 </DropdownMenuItem>
@@ -164,7 +164,7 @@ export function DashboardHero({
                                             <span>Subprofessional</span>
                                         </div>
                                         <span className="text-[10px] text-slate-400">
-                                            165 Qs
+                                            145 items
                                         </span>
                                     </Link>
                                 </DropdownMenuItem>

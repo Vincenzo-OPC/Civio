@@ -148,7 +148,7 @@ export function useExamState(props: ExamIndexProps) {
                 scoredItems: EXAM_CONSTANTS.SUBPROFESSIONAL_SCORED_ITEMS,
                 timeLimit: '2 Hours 40 Mins',
                 timeLimitSecs: EXAM_CONSTANTS.SUBPROFESSIONAL_TIME_LIMIT_SECS,
-                targetPace: '58 sec / item',
+                targetPace: '66 sec / item',
                 allowedCategories: [
                     'Verbal Ability',
                     'Clerical Ability',
@@ -164,7 +164,7 @@ export function useExamState(props: ExamIndexProps) {
             scoredItems: EXAM_CONSTANTS.PROFESSIONAL_SCORED_ITEMS,
             timeLimit: '3 Hours 10 Mins',
             timeLimitSecs: EXAM_CONSTANTS.PROFESSIONAL_TIME_LIMIT_SECS,
-            targetPace: '67 sec / item',
+            targetPace: '76 sec / item',
             allowedCategories: [
                 'Verbal Ability',
                 'Analytical Ability',

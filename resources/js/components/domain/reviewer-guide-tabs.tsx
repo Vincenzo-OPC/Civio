@@ -43,11 +43,11 @@ export function ReviewerGuideTabs({
             icon: LayoutDashboard,
             color: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40 border-blue-200 dark:border-blue-900/40',
             summary:
-                'Your central command center for daily exam preparation metrics, streak monitoring, and smart topic suggestions.',
+                'Scores from the mocks and drills you have finished, and a way back into the next one.',
             steps: [
-                'Check your Overall Exam Readiness Gauge to see your probability of reaching the 80% passing mark.',
-                'Review your Next Recommended Practice Focus Area to immediately study your highest-yield weak spot.',
-                'Monitor your Daily Study Streak to build consistent long-term habit retention.',
+                'A practice average is not a prediction. The published general passing rating is at least 80.00.',
+                'Open the subject you missed most, then drill it.',
+                'A streak only counts days you studied here. It is not part of the exam.',
             ],
             proTip: 'Spend 2 minutes on the dashboard at the start of every study session to decide whether to read concepts or run drills.',
             actionLabel: 'Go to Dashboard',
@@ -77,7 +77,7 @@ export function ReviewerGuideTabs({
             icon: BookOpen,
             color: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/40 border-violet-200 dark:border-violet-900/40',
             summary:
-                'Concise, high-yield syllabus reading guides covering essential definitions, formulas, and legal frameworks.',
+                'Short notes for the exam subjects: definitions, formulas, and the laws that appear in General Information.',
             steps: [
                 'Browse modules categorized by subject (General Information, Verbal, Analytical, Numerical, Clerical).',
                 'Read bite-sized lessons with estimated reading times (typically 3–8 minutes each).',
@@ -146,11 +146,11 @@ export function ReviewerGuideTabs({
             icon: TrendingUp,
             color: 'text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/40 border-cyan-200 dark:border-cyan-900/40',
             summary:
-                'In-depth breakdown of your score progression and category practice. CSC does not publish a per-subtest cutoff.',
+                'Your practice scores by subject. CSC does not publish a per-subject cutoff.',
             steps: [
                 'Compare subjects to see where practice is thin. This is a Civio view, not an official cutoff.',
-                'Inspect Category Mastery percentages to spot low-performing subjects.',
-                'Review your Average Answer Speed per question to optimize exam pacing.',
+                'A low percentage means you have missed more of those practice items. It is not an official rating.',
+                'Review your average time per item if you want to check pacing.',
             ],
             proTip: 'The published general passing rating is at least 80.00. CSC does not publish a separate minimum for each subtest, so Civio does not treat 70% as an official rule.',
             actionLabel: 'Check Analytics',
@@ -179,7 +179,7 @@ export function ReviewerGuideTabs({
             icon: BookOpen,
             color: 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/30',
             description:
-                'Navigate to the Study Hub (Learn Section) to read concise, high-yield syllabus modules generated from core civil service subjects.',
+                'Read the Study Hub notes for subjects you missed. The notes are practice material, not a CSC syllabus.',
             actionLabel: 'Explore Study Hub',
             actionUrl: '/learn',
             tips: [
@@ -207,12 +207,12 @@ export function ReviewerGuideTabs({
             icon: Clock,
             color: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30',
             description:
-                'Take full-length Strict Mocks under real time limits (150 scored items in 3h 10m for Professional, 145 scored items in 2h 40m for Subprofessional) to build test-day stamina and reach the 80% passing mark.',
+                'Take a Strict Mock at the real time limit: 150 scored items in 3 hours 10 minutes, or 145 in 2 hours 40 minutes. The clock is practice. It does not mean you will pass.',
             actionLabel: 'Open Exam Simulation',
             actionUrl: '/exams',
             tips: [
                 'Simulate actual exam conditions in a quiet room without notes or calculators.',
-                'Pace yourself using the built-in time indicator (67 sec/item for Professional).',
+                'On this mock you have about 76 seconds per scored item on Professional, and about 66 on Subprofessional.',
             ],
         },
         {
@@ -221,7 +221,7 @@ export function ReviewerGuideTabs({
             icon: History,
             color: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/30',
             description:
-                'Track your scoring mastery, passing ratios, and average speed. Review every single incorrect response in Attempt History.',
+                'Look at the subjects you missed and the time you spent. Then drill those subjects. The charts are your practice, not an official result.',
             actionLabel: 'Review Attempt History',
             actionUrl: '/history',
             tips: [
@@ -235,6 +235,7 @@ export function ReviewerGuideTabs({
         professional: {
             title: 'Professional Exam Level',
             items: 170,
+            scored: 150,
             time: '3 hours and 10 minutes',
             scope: [
                 {
@@ -283,6 +284,7 @@ export function ReviewerGuideTabs({
         subprofessional: {
             title: 'Subprofessional Exam Level',
             items: 165,
+            scored: 145,
             time: '2 hours and 40 minutes',
             scope: [
                 {
@@ -327,14 +329,14 @@ export function ReviewerGuideTabs({
 
     const generalTips = [
         {
-            title: 'Maintain the 80% Benchmark',
+            title: 'The passing rating',
             description:
-                'Both Professional and Subprofessional examinations require a minimum rating of 80.00% to pass. Standardize your drills and mock exam benchmarks at 80% accuracy.',
+                'The published general passing rating is at least 80.00. CSC does not publish a separate minimum for each subject. A drill score is not that rating.',
             icon: Award,
             color: 'border-l-emerald-500 text-emerald-600 dark:text-emerald-400',
         },
         {
-            title: 'Master Time Management',
+            title: 'Time per item',
             description:
                 'In Civio mocks you have about 76 seconds per item on Professional (150 items in 3h 10m) and about 66 seconds on Subprofessional (145 items in 2h 40m). Train your pace in a Strict Mock.',
             icon: Clock,
@@ -361,7 +363,7 @@ export function ReviewerGuideTabs({
                             : 'border-transparent text-muted-foreground hover:text-foreground'
                     }`}
                 >
-                    App Features & How-To
+                    Tools
                 </button>
                 <button
                     onClick={() => setActiveTab('flow')}
@@ -371,7 +373,7 @@ export function ReviewerGuideTabs({
                             : 'border-transparent text-muted-foreground hover:text-foreground'
                     }`}
                 >
-                    Reviewer Study Flow
+                    Study order
                 </button>
                 <button
                     onClick={() => setActiveTab('structure')}
@@ -381,7 +383,7 @@ export function ReviewerGuideTabs({
                             : 'border-transparent text-muted-foreground hover:text-foreground'
                     }`}
                 >
-                    CSE Exam Structure
+                    Exam structure
                 </button>
                 <button
                     onClick={() => setActiveTab('tips')}
@@ -391,7 +393,7 @@ export function ReviewerGuideTabs({
                             : 'border-transparent text-muted-foreground hover:text-foreground'
                     }`}
                 >
-                    Smart Study Tips
+                    Notes
                 </button>
             </div>
 
@@ -402,13 +404,12 @@ export function ReviewerGuideTabs({
                         <Sparkles className="mt-0.5 size-5 shrink-0 text-blue-600 dark:text-blue-400" />
                         <div className="space-y-1">
                             <h3 className="text-sm font-bold text-blue-950 dark:text-blue-200">
-                                Feature-by-Feature User Manual
+                                How the tools work
                             </h3>
                             <p className="text-sm leading-relaxed text-blue-800/90 dark:text-blue-300/80">
-                                Don't feel overwhelmed! Civio is designed with
-                                modular tools so you can practice at your own
-                                pace. Here is how each tool works and when to
-                                use it during your preparation journey.
+                                Each tool does one job. Use a mock when you want
+                                the clock. Use a drill when you want one
+                                subject.
                             </p>
                         </div>
                     </div>
@@ -514,14 +515,13 @@ export function ReviewerGuideTabs({
                         <Info className="mt-0.5 size-5 shrink-0 text-blue-600 dark:text-blue-400" />
                         <div>
                             <h3 className="text-sm font-semibold text-blue-900 dark:text-blue-300">
-                                Recommended Study Pathway
+                                Study order
                             </h3>
                             <p className="mt-1 text-sm leading-relaxed text-blue-700/95 dark:text-blue-400/90">
-                                Studies show that taking a diagnostic test first
-                                helps identify exact focus subcategories, which
-                                prevents wasting time reviewing areas you have
-                                already mastered. Follow the four-phase system
-                                below to maximize your efficiency.
+                                Start with a timed mock if you want to see which
+                                subjects cost you marks. Then drill those
+                                subjects. The four steps below are a study
+                                order, not a promise of a score.
                             </p>
                         </div>
                     </div>
@@ -614,8 +614,15 @@ export function ReviewerGuideTabs({
                                     <span className="block text-[10px] font-bold text-muted-foreground uppercase">
                                         Number of Items
                                     </span>
-                                    <span className="text-2xl font-black text-slate-800 dark:text-white">
-                                        {examStructure.professional.items} items
+                                    <span className="text-2xl font-semibold text-slate-800 dark:text-white">
+                                        {examStructure.professional.scored}{' '}
+                                        scored
+                                    </span>
+                                    <span className="mt-1 block text-xs leading-relaxed font-normal text-muted-foreground">
+                                        The paper is{' '}
+                                        {examStructure.professional.items}{' '}
+                                        items. This mock leaves out the unscored
+                                        ones.
                                     </span>
                                 </div>
                                 <div className="rounded-xl border border-slate-100 bg-slate-50/50 p-4 dark:border-slate-900/50 dark:bg-slate-900/20">
@@ -685,9 +692,15 @@ export function ReviewerGuideTabs({
                                     <span className="block text-[10px] font-bold text-muted-foreground uppercase">
                                         Number of Items
                                     </span>
-                                    <span className="text-2xl font-black text-slate-800 dark:text-white">
+                                    <span className="text-2xl font-semibold text-slate-800 dark:text-white">
+                                        {examStructure.subprofessional.scored}{' '}
+                                        scored
+                                    </span>
+                                    <span className="mt-1 block text-xs leading-relaxed font-normal text-muted-foreground">
+                                        The paper is{' '}
                                         {examStructure.subprofessional.items}{' '}
-                                        items
+                                        items. This mock leaves out the unscored
+                                        ones.
                                     </span>
                                 </div>
                                 <div className="rounded-xl border border-slate-100 bg-slate-50/50 p-4 dark:border-slate-900/50 dark:bg-slate-900/20">
@@ -773,15 +786,12 @@ export function ReviewerGuideTabs({
                         <div className="space-y-4 divide-y divide-border">
                             <div className="space-y-1.5 pt-2">
                                 <span className="block text-xs font-bold text-foreground">
-                                    How reliable is the AI Lesson Generator and
-                                    Mock Questions?
+                                    Are these official CSC questions?
                                 </span>
                                 <span className="block text-xs leading-relaxed text-muted-foreground">
-                                    All dynamic lessons and test questions are
-                                    fully vetted by a dual-stage filtering
-                                    system in the reviewer curation pipeline.
-                                    They align with Philippine Civil Service
-                                    Exam competency guidelines.
+                                    No. They are practice questions written for
+                                    Civio. They are not past papers. A score
+                                    here is not your exam result.
                                 </span>
                             </div>
                             <div className="space-y-1.5 pt-4">
@@ -790,12 +800,9 @@ export function ReviewerGuideTabs({
                                     only?
                                 </span>
                                 <span className="block text-xs leading-relaxed text-muted-foreground">
-                                    Yes! Under "Practice Drill", you can check
-                                    and uncheck any individual category or
-                                    fine-grained subcategory (such as "Filing"
-                                    under Clerical Ability, or "Philippine
-                                    Constitution" under General Information) to
-                                    curate specialized practice sessions.
+                                    Yes. In Practice Drills you can pick one
+                                    subject, or one subcategory such as Filing
+                                    or the Constitution.
                                 </span>
                             </div>
                         </div>

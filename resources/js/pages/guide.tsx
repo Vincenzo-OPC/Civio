@@ -40,7 +40,7 @@ export default function Guide() {
                     <meta property="og:title" content="Exam guide | Civio" />
                     <meta
                         property="og:description"
-                        content="Official item counts, time limits, and the published passing rating. Civio is not an official CSC reviewer."
+                        content="Item counts, time limits, and the published passing rating. Civio is not an official CSC reviewer."
                     />
                 </Head>
                 <PageContainer>{content}</PageContainer>
@@ -59,10 +59,10 @@ export default function Guide() {
                 <meta property="og:title" content="Exam guide | Civio" />
                 <meta
                     property="og:description"
-                    content="Official item counts, time limits, and the published passing rating. Civio is not an official CSC reviewer."
+                    content="Item counts, time limits, and the published passing rating. Civio is not an official CSC reviewer."
                 />
             </Head>
-            <div className="flex min-h-screen flex-col bg-slate-50/30 dark:bg-slate-900/20">
+            <div className="flex min-h-screen flex-col bg-[var(--civio-paper,#fafaf7)] text-[var(--civio-ink,#101426)]">
                 <SiteHeader activeNav="guide" />
                 <main className="flex-1 px-4 py-12 sm:px-6">
                     <div className="mx-auto max-w-6xl space-y-8">
@@ -86,7 +86,7 @@ export default function Guide() {
 Guide.layout = {
     breadcrumbs: [
         {
-            title: 'Reviewer Guide',
+            title: 'Exam guide',
             href: '/guide',
         },
     ],

@@ -63,38 +63,38 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
     const pacingAssessment = useMemo(() => {
         if (!latestPacing) {
             return {
-                label: 'Benchmark: 54s/item',
+                label: 'Benchmark: 76s/item',
                 color: 'border-slate-200 bg-slate-50 text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300',
                 icon: <Clock className="size-3 text-slate-500" />,
-                tip: 'CSE Professional gives 170 items in 3h 10m (~54s per question including shading).',
+                tip: 'A Civio Professional mock is 150 scored items in 3 hours 10 minutes, about 76 seconds each. Subprofessional is about 66. This is not an official per-item rule.',
             };
         }
 
         const sec = latestPacing.avg;
 
-        if (sec <= 38) {
+        if (sec <= 40) {
             return {
-                label: 'Rushing Risk (<38s/item)',
+                label: 'Under 40s/item',
                 color: 'border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-300',
                 icon: <Zap className="size-3 text-amber-600" />,
-                tip: 'You are answering very quickly. Double-check for tricky wording in word problems and reading comprehension.',
+                tip: 'You are answering very quickly. Reread the stem before you move on.',
             };
         }
 
-        if (sec <= 56) {
+        if (sec <= 76) {
             return {
-                label: 'Optimal CSE Pace (45-55s)',
+                label: 'Within 76s',
                 color: 'border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300',
                 icon: <CheckCircle2 className="size-3 text-emerald-600" />,
-                tip: 'Excellent pacing! You are comfortably inside the official CSE time limit of ~54s per question.',
+                tip: 'Your recent average is within about 76 seconds per item, the Professional mock pace.',
             };
         }
 
         return {
-            label: 'Time Crunch Risk (>56s/item)',
+            label: 'Over 76s/item',
             color: 'border-rose-200 bg-rose-50 text-rose-800 dark:border-rose-800 dark:bg-rose-950/40 dark:text-rose-300',
             icon: <AlertCircle className="size-3 text-rose-600" />,
-            tip: 'Average speed exceeds the 54s target. Practice skipping and flagging hard math/logic problems to avoid leaving unanswered items.',
+            tip: 'Your recent average is slower than 76 seconds per item on the Professional mock.',
         };
     }, [latestPacing]);
 
@@ -109,8 +109,8 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
                                 Pacing vs Accuracy
                             </h3>
                             <p className="text-[10px] font-semibold text-slate-500 dark:text-slate-400">
-                                Average time per question with official ~54s
-                                target
+                                Average time per item. Professional mock pace is
+                                about 76s.
                             </p>
                         </div>
                     </div>
@@ -178,11 +178,11 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
                                 />
                                 <ReferenceLine
                                     yAxisId="left"
-                                    y={54}
+                                    y={76}
                                     stroke="hsl(var(--destructive))"
                                     strokeDasharray="3 3"
                                     label={{
-                                        value: '54s Target',
+                                        value: '76s',
                                         position: 'insideTopRight',
                                         fill: 'hsl(var(--destructive))',
                                         fontSize: 10,

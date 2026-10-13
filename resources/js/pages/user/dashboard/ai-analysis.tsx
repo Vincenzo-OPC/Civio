@@ -740,7 +740,7 @@ export default function AiAnalysisReport({
                             <div className="space-y-6 lg:col-span-4">
                                 <Card className="flex h-full flex-col items-center justify-between bg-gradient-to-br from-white to-slate-50/50 p-4 text-center sm:p-6 dark:from-slate-900 dark:to-slate-900/60">
                                     <span className="text-xs font-black tracking-wider text-slate-400 uppercase dark:text-slate-500">
-                                        Pass Probability
+                                        Not a forecast
                                     </span>
 
                                     <div className="relative my-6 flex size-40 items-center justify-center">

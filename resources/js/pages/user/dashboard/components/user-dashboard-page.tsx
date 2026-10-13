@@ -168,8 +168,8 @@ export function UserDashboardPage({ stats, aiAnalysis }: DashboardProps) {
                                 AI & Analytics
                             </h4>
                             <p className="mt-1 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                                Track passing probability, score trends, and
-                                study plans.
+                                Practice scores and the subjects you missed. Not
+                                a pass forecast.
                             </p>
                         </div>
                     </div>

@@ -33,6 +33,6 @@ test('pwa meta tags are present in the app layout html', function () {
 
     $response->assertOk();
     $response->assertSee('link rel="manifest" href="/manifest.json"', false);
-    $response->assertSee('meta name="theme-color" content="#0f172a"', false);
+    $response->assertSee('meta name="theme-color" content="#101426"', false);
     $response->assertSee('meta name="apple-mobile-web-app-capable" content="yes"', false);
 });

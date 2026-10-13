@@ -74,7 +74,7 @@ class StudyPlanTemplateService
                 'badge' => 'Exam Week',
                 'description' => 'Sharpen speed and accuracy with daily timed drills, full simulation tests, and rapid error analysis before exam day.',
                 'topics' => [
-                    'Daily Timed Mock Exam Simulation (170 Items)',
+                    'Daily Timed Mock Exam Simulation (150 scored items)',
                     'Instant Review & Diagnostic Weak Area Drills',
                     'Key Formula & Constitution Summary Sheet Review',
                     'Test-taking Strategy & Time Management Prep',
@@ -284,10 +284,10 @@ class StudyPlanTemplateService
                 ['title' => 'Day 52: GenInfo - Human Rights & Environmental Laws', 'description' => 'Universal declaration of human rights, Clean Air Act, and waste management.'],
 
                 // Mock Exam & Final Polish (Days 53-60)
-                ['title' => 'Day 53: Comprehensive Full Mock Exam #1 (170 Items)', 'description' => 'Simulate complete Civil Service Exam with strict 3-hour 10-minute timer.'],
+                ['title' => 'Day 53: Comprehensive Full Mock Exam #1 (150 scored items)', 'description' => 'Simulate complete Civil Service Exam with strict 3-hour 10-minute timer.'],
                 ['title' => 'Day 54: Deep-Dive Rationale Review #1', 'description' => 'Review rationales for all missed questions in Mock #1.'],
                 ['title' => 'Day 55: Targeted Weakness Fix - Verbal & Math Drills', 'description' => 'Practice 40 targeted questions on your lowest-scoring subcategories.'],
-                ['title' => 'Day 56: Comprehensive Full Mock Exam #2 (170 Items)', 'description' => 'Second full mock simulation to benchmark pacing and score consistency.'],
+                ['title' => 'Day 56: Comprehensive Full Mock Exam #2 (150 scored items)', 'description' => 'Second full mock simulation to benchmark pacing and score consistency.'],
                 ['title' => 'Day 57: Deep-Dive Rationale Review #2', 'description' => 'Analyze rationales and fine-tune your exam time allocation strategy.'],
                 ['title' => 'Day 58: Comprehensive Full Mock Exam #3 (Final Benchmark)', 'description' => 'Final full simulation under realistic exam pressure.'],
                 ['title' => 'Day 59: Constitution, Formulas & Shortcut Cheat Sheet Review', 'description' => 'High-yield formula recap, legal definitions, and vocabulary sheets.'],
@@ -351,7 +351,7 @@ class StudyPlanTemplateService
                 ['title' => 'Final Full Mock Exam Simulation', 'description' => 'Take a full 170-item timed mock exam under realistic CSE test conditions.'],
             ],
             '7_day_final_cram' => [
-                ['title' => 'Day 1: Full Diagnostic Mock Exam (170 Items)', 'description' => 'Take a comprehensive mock exam to identify final weak areas and set focus.'],
+                ['title' => 'Day 1: Full Diagnostic Mock Exam (150 scored items)', 'description' => 'Take a comprehensive mock exam to identify final weak areas and set focus.'],
                 ['title' => 'Day 2: Verbal & Vocabulary Rapid Sprint', 'description' => 'Review high-yield idioms, grammar rules, and paragraph organization techniques.'],
                 ['title' => 'Day 3: Numerical Formulas & Shortcut Practice', 'description' => 'Refresh key formulas for percentages, ratios, work, and distance word problems.'],
                 ['title' => 'Day 4: Logic Patterns & Series Drills', 'description' => 'Fast-paced drills on number series, syllogisms, and relational analogies.'],
@@ -416,9 +416,9 @@ class StudyPlanTemplateService
                 ['title' => 'Day 24: GenInfo - RA 6713 Code of Conduct for Public Officials', 'description' => 'Norms of conduct, system of incentives, duties, and prohibited acts.'],
                 ['title' => 'Day 25: GenInfo - Peace, Human Rights & Current Concepts', 'description' => 'Basic human rights principles, peace education, and environmental protection.'],
                 ['title' => 'Day 26: GenInfo - 30-Item Legal & Ethics Drill', 'description' => 'Fast-paced quiz covering Constitution and civil service laws.'],
-                ['title' => 'Day 27: Full Mock Exam Simulation #1 (170 Items)', 'description' => 'Simulate complete Civil Service Exam with strict 3-hour 10-minute timer.'],
+                ['title' => 'Day 27: Full Mock Exam Simulation #1 (150 scored items)', 'description' => 'Simulate complete Civil Service Exam with strict 3-hour 10-minute timer.'],
                 ['title' => 'Day 28: Deep-Dive Mock Rationale & Weakness Fix', 'description' => 'Review every incorrect question and practice targeted drills.'],
-                ['title' => 'Day 29: Full Mock Exam Simulation #2 (170 Items)', 'description' => 'Final simulation test to validate confidence and time allocation.'],
+                ['title' => 'Day 29: Full Mock Exam Simulation #2 (150 scored items)', 'description' => 'Final simulation test to validate confidence and time allocation.'],
                 ['title' => 'Day 30: Final Review, Checklist & Exam Mindset', 'description' => 'Light review of formulas, rules, examination day requirements, and rest.'],
             ],
         };

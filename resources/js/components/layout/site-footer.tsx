@@ -29,13 +29,28 @@ export default function Footer() {
                 <p className="text-sm leading-relaxed text-[var(--civio-ink,#101426)]/75">
                     Civio is an independent study app. It is not affiliated
                     with, endorsed by, or connected to the Civil Service
-                    Commission or any Philippine government agency. The items
-                    and explanations are for practice. A score here is not your
-                    exam result.
+                    Commission. The items and explanations are for practice. A
+                    score here is not your exam result.
                 </p>
 
+                <figure className="flex flex-col gap-2">
+                    <img
+                        src="/images/bir-registered-2025.png"
+                        alt="Bureau of Internal Revenue registered, 2025. RSN 000RC20250000000333."
+                        width={960}
+                        height={540}
+                        className="h-auto w-full border border-[var(--civio-line,#e3e5ea)] bg-white"
+                    />
+                    <figcaption className="text-xs leading-relaxed text-[var(--civio-ink,#101426)]/70">
+                        BIR registered, 2025. RSN 000RC20250000000333. This is a
+                        tax registration. It is not an endorsement of the
+                        questions and it is not a Civil Service Commission
+                        approval.
+                    </figcaption>
+                </figure>
+
                 <div className="flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
-                    <p>© {currentYear} Civio</p>
+                    <p>© {currentYear} Civio. All rights reserved.</p>
                     <nav aria-label="Footer" className="flex gap-4">
                         {FOOTER_LINKS.map(({ href, label }) => (
                             <Link

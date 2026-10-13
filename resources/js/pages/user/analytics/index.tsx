@@ -65,7 +65,7 @@ export default function AnalyticsIndex({ stats, aiAnalysis }: AnalyticsProps) {
                             {
                                 icon: <TrendingUp className="size-4" />,
                                 title: 'Score & Pacing Trends',
-                                text: 'Tracks score improvements and average seconds per question against the official ~54s CSE time target.',
+                                text: 'Practice scores, and seconds per item against about 76 seconds on a Professional mock. Not an official per-item rule.',
                             },
                             {
                                 icon: <Target className="size-4" />,

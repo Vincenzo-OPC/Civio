@@ -91,7 +91,7 @@ export function LiteAnalyticsTables({
                                     </td>
                                     <td className={cell}>
                                         {Math.round(row.secondsPerQuestion)}s
-                                        (target about 54s)
+                                        (about 76s on a Pro mock)
                                     </td>
                                     <td className={cell}>
                                         {Math.round(row.accuracy)}%

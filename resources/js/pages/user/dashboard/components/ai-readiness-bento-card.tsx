@@ -201,7 +201,7 @@ export function AiReadinessBentoCard({
                                 <span className="mt-0.5 text-[9px] leading-none font-bold tracking-wider whitespace-nowrap text-slate-400 uppercase sm:text-[10px] dark:text-slate-500">
                                     {isDrillOnly
                                         ? 'Mock Needed'
-                                        : 'Pass Chance'}
+                                        : 'Not official'}
                                 </span>
                             </div>
                         </div>
@@ -220,7 +220,7 @@ export function AiReadinessBentoCard({
 
                             <p className="text-xs leading-relaxed font-medium text-slate-600 sm:text-sm dark:text-slate-300">
                                 {isDrillOnly
-                                    ? 'Complete a Full Mock Exam to calculate your official CSE passing probability.'
+                                    ? 'A full mock is 150 or 145 scored items. Civio does not calculate an official pass chance.'
                                     : data.priority_action ||
                                       'Focus on targeted practice drills to raise your score.'}
                             </p>
@@ -259,7 +259,7 @@ export function AiReadinessBentoCard({
                     <div className="space-y-3 rounded-xl border border-blue-200/60 bg-blue-50/40 p-4 text-center dark:border-blue-900/40 dark:bg-blue-950/20">
                         <div className="flex items-center justify-center gap-2 text-xs font-bold text-blue-700 dark:text-blue-300">
                             <Loader2 className="size-4 animate-spin" />
-                            <span>AI Coach is computing readiness...</span>
+                            <span>Reading your finished attempts.</span>
                         </div>
                         <Progress value={progress} className="h-2" />
                         <p className="text-[11px] text-slate-500 dark:text-slate-400">
@@ -277,8 +277,8 @@ export function AiReadinessBentoCard({
                                 No Mock Exam Data Yet
                             </p>
                             <p className="mt-0.5 text-[11px] text-slate-500 dark:text-slate-400">
-                                Complete at least 1 mock exam to unlock your AI
-                                passing probability and personalized coaching.
+                                Finish a mock to see a practice score. That
+                                number is not a pass forecast.
                             </p>
                         </div>
                         <Button

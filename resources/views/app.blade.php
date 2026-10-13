@@ -94,7 +94,7 @@
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#101426">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -102,23 +102,23 @@
     <link rel="canonical" href="{{ request()->url() }}">
 
     <!-- Global SEO & Social Sharing Fallbacks -->
-    <meta name="description" content="Ace the Philippine Civil Service Exam with confidence. Civio offers realistic Professional & Subprofessional mock exams, smart study plans, high-yield learning modules, and targeted drills. Free forever base access!">
-    <meta name="keywords" content="civil service exam reviewer, civil service exam reviewer {{ date('Y') }}, free civil service exam reviewer, cse reviewer professional, cse reviewer subprofessional, csc reviewer, civil service reviewer, Civio, civio cse reviewer, civil service mock exam">
+    <meta name="description" content="Timed practice for the Philippine Civil Service Exam. Professional is 150 scored items in 3 hours 10 minutes. Subprofessional is 145 in 2 hours 40 minutes. Civio is not the Civil Service Commission.">
+    <meta name="keywords" content="civil service exam reviewer, civil service exam reviewer {{ date('Y') }}, free civil service exam reviewer, cse reviewer professional, cse reviewer subprofessional, civil service reviewer, Civio, civil service mock exam">
     <meta name="author" content="Civio">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://civio.ph">
-    <meta property="og:title" content="Civio - Civil Service Exam Reviewer">
-    <meta property="og:description" content="Ace the Philippine Civil Service Exam with confidence. Real mock tests, custom study plans, high-yield lessons, and targeted drills. Pass the CSE on your first attempt!">
+    <meta property="og:title" content="Civio">
+    <meta property="og:description" content="Timed practice for the Professional and Subprofessional exams. Civio is not the Civil Service Commission.">
     <meta property="og:image" content="{{ asset('images/hero_image.png') }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://civio.ph">
-    <meta property="twitter:title" content="Civio - Civil Service Exam Reviewer">
-    <meta property="twitter:description" content="Ace the Philippine Civil Service Exam with confidence. Real mock tests, custom study plans, high-yield lessons, and targeted drills. Pass the CSE on your first attempt!">
+    <meta property="twitter:title" content="Civio">
+    <meta property="twitter:description" content="Timed practice for the Professional and Subprofessional exams. Civio is not the Civil Service Commission.">
     <meta property="twitter:image" content="{{ asset('images/hero_image.png') }}">
 
     @viteReactRefresh
