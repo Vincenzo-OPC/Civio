@@ -6,7 +6,7 @@ Civio is an independent reviewer and is not affiliated with the Civil Service Co
 
 Mix: 30 numerical, 25 analytical, 20 verbal_en, 15 clerical, 10 general_information. Analytical items are Professional track; Clerical items are Subprofessional track.
 
-## 1. CIVIO-NUM-SEQ-DIFF-000111
+## 1. CIVIO-NUM-SEQ-DIFF-000112
 
 - track: both · domain: numerical · archetype: NUM-SEQ-DIFF · difficulty: medium · est: 45 s
 - competency: Number sequence · concept: growing differences
@@ -39,7 +39,7 @@ Mix: 30 numerical, 25 analytical, 20 verbal_en, 15 clerical, 10 general_informat
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 2. CIVIO-NUM-WP-RATIO-000112
+## 2. CIVIO-NUM-WP-RATIO-000113
 
 - track: both · domain: numerical · archetype: NUM-WP-RATIO · difficulty: medium · est: 75 s
 - competency: Word problems · concept: ratio
@@ -72,7 +72,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 3. CIVIO-NUM-WP-AVERAGE-000113
+## 3. CIVIO-NUM-WP-AVERAGE-000114
 
 - track: both · domain: numerical · archetype: NUM-WP-AVERAGE · difficulty: medium · est: 60 s
 - competency: Word problems · concept: average
@@ -105,7 +105,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 4. CIVIO-NUM-WP-ALGEBRA-000114
+## 4. CIVIO-NUM-WP-ALGEBRA-000115
 
 - track: both · domain: numerical · archetype: NUM-WP-ALGEBRA · difficulty: hard · est: 90 s
 - competency: Word problems · concept: age problem
@@ -138,7 +138,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 5. CIVIO-NUM-OPS-ORDER-000115
+## 5. CIVIO-NUM-OPS-ORDER-000116
 
 - track: both · domain: numerical · archetype: NUM-OPS-ORDER · difficulty: easy · est: 35 s
 - competency: Basic operations · concept: order of operations
@@ -171,7 +171,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 6. CIVIO-NUM-WP-GEOM-000116
+## 6. CIVIO-NUM-WP-GEOM-000117
 
 - track: both · domain: numerical · archetype: NUM-WP-GEOM · difficulty: medium · est: 75 s
 - competency: Word problems · concept: perimeter and cost
@@ -204,7 +204,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 7. CIVIO-NUM-SEQ-DIFF-000117
+## 7. CIVIO-NUM-SEQ-DIFF-000118
 
 - track: both · domain: numerical · archetype: NUM-SEQ-DIFF · difficulty: medium · est: 45 s
 - competency: Number sequence · concept: growing differences
@@ -237,7 +237,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 8. CIVIO-NUM-WP-RATIO-000118
+## 8. CIVIO-NUM-WP-RATIO-000119
 
 - track: both · domain: numerical · archetype: NUM-WP-RATIO · difficulty: medium · est: 75 s
 - competency: Word problems · concept: ratio
@@ -270,7 +270,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 9. CIVIO-NUM-WP-AVERAGE-000119
+## 9. CIVIO-NUM-WP-AVERAGE-000120
 
 - track: both · domain: numerical · archetype: NUM-WP-AVERAGE · difficulty: medium · est: 60 s
 - competency: Word problems · concept: average
@@ -303,7 +303,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 10. CIVIO-NUM-WP-PCT-CHANGE-000120
+## 10. CIVIO-NUM-WP-PCT-CHANGE-000121
 
 - track: both · domain: numerical · archetype: NUM-WP-PCT-CHANGE · difficulty: easy · est: 45 s
 - competency: Word problems · concept: discount
@@ -336,7 +336,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 11. CIVIO-NUM-WP-GEOM-000121
+## 11. CIVIO-NUM-WP-GEOM-000122
 
 - track: both · domain: numerical · archetype: NUM-WP-GEOM · difficulty: medium · est: 75 s
 - competency: Word problems · concept: perimeter and cost
@@ -369,7 +369,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 12. CIVIO-NUM-SEQ-DIFF-000122
+## 12. CIVIO-NUM-SEQ-DIFF-000123
 
 - track: both · domain: numerical · archetype: NUM-SEQ-DIFF · difficulty: medium · est: 45 s
 - competency: Number sequence · concept: growing differences
@@ -402,7 +402,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 13. CIVIO-NUM-WP-RATIO-000123
+## 13. CIVIO-NUM-WP-RATIO-000124
 
 - track: both · domain: numerical · archetype: NUM-WP-RATIO · difficulty: medium · est: 75 s
 - competency: Word problems · concept: ratio
@@ -435,7 +435,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 14. CIVIO-NUM-WP-AVERAGE-000124
+## 14. CIVIO-NUM-WP-AVERAGE-000125
 
 - track: both · domain: numerical · archetype: NUM-WP-AVERAGE · difficulty: medium · est: 60 s
 - competency: Word problems · concept: average
@@ -468,7 +468,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 15. CIVIO-NUM-WP-ALGEBRA-000125
+## 15. CIVIO-NUM-WP-ALGEBRA-000126
 
 - track: both · domain: numerical · archetype: NUM-WP-ALGEBRA · difficulty: hard · est: 90 s
 - competency: Word problems · concept: age problem
@@ -501,7 +501,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 16. CIVIO-NUM-OPS-ORDER-000126
+## 16. CIVIO-NUM-OPS-ORDER-000127
 
 - track: both · domain: numerical · archetype: NUM-OPS-ORDER · difficulty: easy · est: 35 s
 - competency: Basic operations · concept: order of operations
@@ -534,7 +534,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 17. CIVIO-NUM-WP-GEOM-000127
+## 17. CIVIO-NUM-WP-GEOM-000128
 
 - track: both · domain: numerical · archetype: NUM-WP-GEOM · difficulty: medium · est: 75 s
 - competency: Word problems · concept: perimeter and cost
@@ -567,7 +567,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 18. CIVIO-NUM-SEQ-DIFF-000128
+## 18. CIVIO-NUM-SEQ-DIFF-000129
 
 - track: both · domain: numerical · archetype: NUM-SEQ-DIFF · difficulty: medium · est: 45 s
 - competency: Number sequence · concept: growing differences
@@ -600,7 +600,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 19. CIVIO-NUM-WP-RATE-000129
+## 19. CIVIO-NUM-WP-RATE-000130
 
 - track: both · domain: numerical · archetype: NUM-WP-RATE · difficulty: medium · est: 90 s
 - competency: Word problems · concept: work rate
@@ -633,7 +633,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 20. CIVIO-NUM-WP-PCT-CHANGE-000130
+## 20. CIVIO-NUM-WP-PCT-CHANGE-000131
 
 - track: both · domain: numerical · archetype: NUM-WP-PCT-CHANGE · difficulty: medium · est: 75 s
 - competency: Word problems · concept: simple interest
@@ -666,7 +666,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 21. CIVIO-NUM-WP-PCT-CHANGE-000131
+## 21. CIVIO-NUM-WP-PCT-CHANGE-000132
 
 - track: both · domain: numerical · archetype: NUM-WP-PCT-CHANGE · difficulty: easy · est: 45 s
 - competency: Word problems · concept: discount
@@ -699,7 +699,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 22. CIVIO-NUM-WP-GEOM-000132
+## 22. CIVIO-NUM-WP-GEOM-000133
 
 - track: both · domain: numerical · archetype: NUM-WP-GEOM · difficulty: medium · est: 75 s
 - competency: Word problems · concept: perimeter and cost
@@ -732,7 +732,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 23. CIVIO-NUM-SEQ-DIFF-000133
+## 23. CIVIO-NUM-SEQ-DIFF-000134
 
 - track: both · domain: numerical · archetype: NUM-SEQ-DIFF · difficulty: medium · est: 45 s
 - competency: Number sequence · concept: growing differences
@@ -765,7 +765,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 24. CIVIO-NUM-WP-RATIO-000134
+## 24. CIVIO-NUM-WP-RATIO-000135
 
 - track: both · domain: numerical · archetype: NUM-WP-RATIO · difficulty: medium · est: 75 s
 - competency: Word problems · concept: ratio
@@ -798,7 +798,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 25. CIVIO-NUM-WP-AVERAGE-000135
+## 25. CIVIO-NUM-WP-AVERAGE-000136
 
 - track: both · domain: numerical · archetype: NUM-WP-AVERAGE · difficulty: medium · est: 60 s
 - competency: Word problems · concept: average
@@ -831,7 +831,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 26. CIVIO-NUM-WP-ALGEBRA-000136
+## 26. CIVIO-NUM-WP-ALGEBRA-000137
 
 - track: both · domain: numerical · archetype: NUM-WP-ALGEBRA · difficulty: hard · est: 90 s
 - competency: Word problems · concept: age problem
@@ -864,7 +864,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 27. CIVIO-NUM-OPS-ORDER-000137
+## 27. CIVIO-NUM-OPS-ORDER-000138
 
 - track: both · domain: numerical · archetype: NUM-OPS-ORDER · difficulty: easy · est: 35 s
 - competency: Basic operations · concept: order of operations
@@ -897,7 +897,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 28. CIVIO-NUM-WP-GEOM-000138
+## 28. CIVIO-NUM-WP-GEOM-000139
 
 - track: both · domain: numerical · archetype: NUM-WP-GEOM · difficulty: medium · est: 75 s
 - competency: Word problems · concept: perimeter and cost
@@ -930,7 +930,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 29. CIVIO-NUM-SEQ-DIFF-000139
+## 29. CIVIO-NUM-SEQ-DIFF-000140
 
 - track: both · domain: numerical · archetype: NUM-SEQ-DIFF · difficulty: medium · est: 45 s
 - competency: Number sequence · concept: growing differences
@@ -963,7 +963,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 30. CIVIO-NUM-WP-RATIO-000140
+## 30. CIVIO-NUM-WP-RATIO-000141
 
 - track: both · domain: numerical · archetype: NUM-WP-RATIO · difficulty: medium · est: 75 s
 - competency: Word problems · concept: ratio
@@ -996,7 +996,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 31. CIVIO-ANA-SYMBOL-SERIES-000141
+## 31. CIVIO-ANA-SYMBOL-SERIES-000142
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 50 s
 - competency: Logic · concept: letter coding
@@ -1029,7 +1029,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 32. CIVIO-ANA-DI-TABLE-000142
+## 32. CIVIO-ANA-DI-TABLE-000143
 
 - track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
 - competency: Data interpretation · concept: table reading
@@ -1062,7 +1062,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 33. CIVIO-ANA-SYLLOGISM-000143
+## 33. CIVIO-ANA-SYLLOGISM-000144
 
 - track: professional · domain: analytical · archetype: ANA-SYLLOGISM · difficulty: medium · est: 45 s
 - competency: Logic · concept: syllogism
@@ -1070,32 +1070,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** All libraries are public buildings. No public buildings are late payers. Which conclusion must be true?
+**Stem:** Assume these are true: none of the public buildings are items marked for disposal, and every one of the libraries is among the public buildings. What can be concluded for certain?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | No late payers are insured properties. | A |
-| o2 | Some libraries are late payers. | B |
-| o3 | No libraries are late payers. | C |
-| o4 | All public buildings are libraries. | D |
+| o1 | No libraries are items marked for disposal. | A |
+| o2 | Some libraries are items marked for disposal. | B |
+| o3 | All public buildings are libraries. | C |
+| o4 | No insured properties are items marked for disposal. | D |
 
-`answer_option_id`: o3 (No libraries are late payers.)
+`answer_option_id`: o1 (No libraries are items marked for disposal.)
 
-`distractor_reasoning`: o1 = `LOG-COULD-NOT-MUST`; o2 = `LOG-OVERSTRONG`; o4 = `LOG-CONVERSE`
+`distractor_reasoning`: o2 = `LOG-OVERSTRONG`; o3 = `LOG-CONVERSE`; o4 = `LOG-COULD-NOT-MUST`
 
 **Reveal**
 
 1. *Meaning.* A conclusion "must be true" only if the statements force it. Ignore what you know from real life.
-2. *Shortcut.* Put the libraries circle inside public buildings. The late payers circle sits outside public buildings, so it is outside libraries too.
-3. *Why it is right.* "No libraries are late payers." is right. It follows from the two statements with no extra facts.
+2. *Shortcut.* Put the libraries circle inside public buildings. The "items marked for disposal" circle sits outside public buildings, so it is outside libraries too.
+3. *Why it is right.* "No libraries are items marked for disposal." is right. It follows from the two statements with no extra facts.
 4. *Why the others are wrong.*
-   - No late payers are insured properties.: The statements say nothing about all insured properties; some insured properties may be outside the public buildings group.
-   - Some libraries are late payers.: This contradicts the statements: all libraries are public buildings, and no public buildings is a late payer.
-   - All public buildings are libraries.: This flips the first statement.
+   - Some libraries are items marked for disposal.: This contradicts the statements: all libraries are public buildings, and no public buildings is items marked for disposal.
+   - All public buildings are libraries.: This flips the statement about the two groups.
+   - No insured properties are items marked for disposal.: The statements say nothing about all insured properties; some insured properties may be outside the public buildings group.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 34. CIVIO-ANA-SYMBOL-SERIES-000144
+## 34. CIVIO-ANA-SYMBOL-SERIES-000145
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 45 s
 - competency: Logic · concept: letter series
@@ -1103,32 +1103,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** What comes next in the series?  IO, MQ, QS, UU, ___
+**Stem:** What comes next in the series?  FP, IR, LT, OV, ___
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | VW | A |
-| o2 | YW | B |
-| o3 | YE | C |
-| o4 | WY | D |
+| o1 | PX | A |
+| o2 | XR | B |
+| o3 | RX | C |
+| o4 | RB | D |
 
-`answer_option_id`: o2 (YW)
+`answer_option_id`: o3 (RX)
 
-`distractor_reasoning`: o1 = `NUM-OFF-BY-ONE`; o3 = `NUM-SEQ-OTHER-RULE`; o4 = `ANA-REVERSED`
+`distractor_reasoning`: o1 = `NUM-OFF-BY-ONE`; o2 = `ANA-REVERSED`; o4 = `NUM-SEQ-OTHER-RULE`
 
 **Reveal**
 
 1. *Meaning.* A "letter series" works like a number series. Count each letter's place in the alphabet (A = 1, B = 2, and so on).
-2. *Shortcut.* Split each pair. First letters: I, M, Q, U (jump +4). Second letters: O, Q, S, U (jump +2). Move each one more step.
-3. *Why it is right.* YW is right: U + 4 = Y and U + 2 = W.
+2. *Shortcut.* Split each pair. First letters: F, I, L, O (jump +3). Second letters: P, R, T, V (jump +2). Move each one more step.
+3. *Why it is right.* RX is right: O + 3 = R and V + 2 = X.
 4. *Why the others are wrong.*
-   - VW: VW moves the first letter by only 1. Its jump is +4.
-   - YE: YE moves the second letter by 4, the jump of the first letter. The second letter has its own jump, +2.
-   - WY: WY has the right two letters in the wrong order.
+   - PX: PX moves the first letter by only 1. Its jump is +3.
+   - XR: XR has the right two letters in the wrong order.
+   - RB: RB moves the second letter by 3, the jump of the first letter. The second letter has its own jump, +2.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 35. CIVIO-ANA-CONCLUSION-000145
+## 35. CIVIO-ANA-CONCLUSION-000146
 
 - track: professional · domain: analytical · archetype: ANA-CONCLUSION · difficulty: medium · est: 60 s
 - competency: Logic · concept: ordering
@@ -1136,32 +1136,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Four staff members are compared. Paolo scored higher than Jun-jun. Teresa scored higher than Mang Jun. Mang Jun scored higher than Paolo. Who is third in the order (from the one who got the highest score)?
+**Stem:** Four staff members are compared. Bong finished the report earlier than Mang Jun. Mang Jun finished the report earlier than Ramon. Ramon finished the report earlier than Analyn. Who is third in the order (counting from the one who finished first)?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Jun-jun | A |
+| o1 | Bong | A |
 | o2 | Mang Jun | B |
-| o3 | Paolo | C |
-| o4 | Teresa | D |
+| o3 | Ramon | C |
+| o4 | Analyn | D |
 
-`answer_option_id`: o3 (Paolo)
+`answer_option_id`: o3 (Ramon)
 
-`distractor_reasoning`: o1 = `LOG-COULD-NOT-MUST`; o2 = `LOG-COULD-NOT-MUST`; o4 = `LOG-COULD-NOT-MUST`
+`distractor_reasoning`: o1 = `LOG-IGNORED-CLUE`; o2 = `LOG-ORDER-REVERSED`; o4 = `LOG-ORDER-SWAP`
 
 **Reveal**
 
-1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line.
-2. *Shortcut.* Start from the clue that names someone nobody beats. Line: Teresa → Mang Jun → Paolo → Jun-jun.
-3. *Why it is right.* Paolo is right. The clues give Teresa → Mang Jun → Paolo → Jun-jun, so Paolo is third.
+1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line, and count from the end the question names.
+2. *Shortcut.* Start from the person nobody beats and follow the clues down: Bong → Mang Jun → Ramon → Analyn.
+3. *Why it is right.* Ramon is right. The clues give Bong → Mang Jun → Ramon → Analyn, so Ramon is third.
 4. *Why the others are wrong.*
-   - Jun-jun: Jun-jun is behind everyone; Jun-jun is last.
-   - Mang Jun: Mang Jun is second, not third.
-   - Teresa: Teresa is ahead of everyone; Teresa is first.
+   - Bong: Bong could be third only if you skip the clue "Bong finished the report earlier than Mang Jun." That clue puts Bong first.
+   - Mang Jun: Mang Jun is third from the bottom, not from the top. This counts from the wrong end.
+   - Analyn: Analyn is last. Choosing Analyn swaps the bottom two places.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 36. CIVIO-ANA-SYLLOGISM-000146
+## 36. CIVIO-ANA-SYLLOGISM-000147
 
 - track: professional · domain: analytical · archetype: ANA-SYLLOGISM · difficulty: medium · est: 45 s
 - competency: Logic · concept: syllogism
@@ -1173,14 +1173,14 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Some government workers are not school staff. | A |
-| o2 | All teachers are government workers. | B |
+| o1 | All teachers are government workers. | A |
+| o2 | Some government workers are not school staff. | B |
 | o3 | No school staff are teachers. | C |
 | o4 | All government workers are teachers. | D |
 
-`answer_option_id`: o2 (All teachers are government workers.)
+`answer_option_id`: o1 (All teachers are government workers.)
 
-`distractor_reasoning`: o1 = `LOG-COULD-NOT-MUST`; o3 = `LOG-OVERSTRONG`; o4 = `LOG-CONVERSE`
+`distractor_reasoning`: o2 = `LOG-COULD-NOT-MUST`; o3 = `LOG-OVERSTRONG`; o4 = `LOG-CONVERSE`
 
 **Reveal**
 
@@ -1194,7 +1194,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 37. CIVIO-ANA-SYMBOL-SERIES-000147
+## 37. CIVIO-ANA-SYMBOL-SERIES-000148
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 45 s
 - competency: Logic · concept: letter series
@@ -1202,32 +1202,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** What comes next in the series?  HN, KP, NR, QT, ___
+**Stem:** What comes next in the series?  HR, JS, LT, NU, ___
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | VT | A |
-| o2 | RV | B |
-| o3 | TZ | C |
-| o4 | TV | D |
+| o1 | OV | A |
+| o2 | PZ | B |
+| o3 | PV | C |
+| o4 | VP | D |
 
-`answer_option_id`: o4 (TV)
+`answer_option_id`: o3 (PV)
 
-`distractor_reasoning`: o1 = `ANA-REVERSED`; o2 = `NUM-OFF-BY-ONE`; o3 = `NUM-SEQ-OTHER-RULE`
+`distractor_reasoning`: o1 = `NUM-OFF-BY-ONE`; o2 = `NUM-SEQ-OTHER-RULE`; o4 = `ANA-REVERSED`
 
 **Reveal**
 
 1. *Meaning.* A "letter series" works like a number series. Count each letter's place in the alphabet (A = 1, B = 2, and so on).
-2. *Shortcut.* Split each pair. First letters: H, K, N, Q (jump +3). Second letters: N, P, R, T (jump +2). Move each one more step.
-3. *Why it is right.* TV is right: Q + 3 = T and T + 2 = V.
+2. *Shortcut.* Split each pair. First letters: H, J, L, N (jump +2). Second letters: R, S, T, U (jump +1). Move each one more step.
+3. *Why it is right.* PV is right: N + 2 = P and U + 1 = V.
 4. *Why the others are wrong.*
-   - VT: VT has the right two letters in the wrong order.
-   - RV: RV moves the first letter by only 1. Its jump is +3.
-   - TZ: TZ moves the second letter by 3, the jump of the first letter. The second letter has its own jump, +2.
+   - OV: OV moves the first letter by only 1. Its jump is +2.
+   - PZ: PZ moves the second letter by 2, the jump of the first letter. The second letter has its own jump, +1.
+   - VP: VP has the right two letters in the wrong order.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 38. CIVIO-ANA-CONCLUSION-000148
+## 38. CIVIO-ANA-CONCLUSION-000149
 
 - track: professional · domain: analytical · archetype: ANA-CONCLUSION · difficulty: medium · est: 60 s
 - competency: Logic · concept: ordering
@@ -1235,32 +1235,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Four staff members are compared. Arnel scored higher than Ramon. Nestor scored higher than Aling Rosa. Ramon scored higher than Nestor. Who is third in the order (from the one who got the highest score)?
+**Stem:** Four staff members are compared. Aling Rosa scored higher than Nestor. Nestor scored higher than Paolo. Lourdes scored higher than Aling Rosa. Who is third in the order (counting from the one who got the highest score)?
 
 | option_id | text | shown as |
 |---|---|---|
 | o1 | Nestor | A |
-| o2 | Aling Rosa | B |
-| o3 | Arnel | C |
-| o4 | Ramon | D |
+| o2 | Lourdes | B |
+| o3 | Paolo | C |
+| o4 | Aling Rosa | D |
 
 `answer_option_id`: o1 (Nestor)
 
-`distractor_reasoning`: o2 = `LOG-COULD-NOT-MUST`; o3 = `LOG-COULD-NOT-MUST`; o4 = `LOG-COULD-NOT-MUST`
+`distractor_reasoning`: o2 = `LOG-IGNORED-CLUE`; o3 = `LOG-ORDER-SWAP`; o4 = `LOG-ORDER-REVERSED`
 
 **Reveal**
 
-1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line.
-2. *Shortcut.* Start from the clue that names someone nobody beats. Line: Arnel → Ramon → Nestor → Aling Rosa.
-3. *Why it is right.* Nestor is right. The clues give Arnel → Ramon → Nestor → Aling Rosa, so Nestor is third.
+1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line, and count from the end the question names.
+2. *Shortcut.* Start from the person nobody beats and follow the clues down: Lourdes → Aling Rosa → Nestor → Paolo.
+3. *Why it is right.* Nestor is right. The clues give Lourdes → Aling Rosa → Nestor → Paolo, so Nestor is third.
 4. *Why the others are wrong.*
-   - Aling Rosa: Aling Rosa is behind everyone; Aling Rosa is last.
-   - Arnel: Arnel is ahead of everyone; Arnel is first.
-   - Ramon: Ramon is second, not third.
+   - Lourdes: Lourdes could be third only if you skip the clue "Lourdes scored higher than Aling Rosa." That clue puts Lourdes first.
+   - Paolo: Paolo is last. Choosing Paolo swaps the bottom two places.
+   - Aling Rosa: Aling Rosa is third from the bottom, not from the top. This counts from the wrong end.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 39. CIVIO-ANA-DI-TABLE-000149
+## 39. CIVIO-ANA-DI-TABLE-000150
 
 - track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
 - competency: Data interpretation · concept: table reading
@@ -1293,7 +1293,40 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 40. CIVIO-ANA-SYMBOL-SERIES-000150
+## 40. CIVIO-ANA-ANALOGY-SYN-000151
+
+- track: professional · domain: analytical · archetype: ANA-ANALOGY-SYN · difficulty: medium · est: 30 s
+- competency: Word association (analogy) · concept: analogy
+- micro_skill: similar meaning
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** BEGIN : START :: ____
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | end : finish | A |
+| o2 | start : stop | B |
+| o3 | began : begun | C |
+| o4 | race : runner | D |
+
+`answer_option_id`: o1 (end : finish)
+
+`distractor_reasoning`: o2 = `ANA-OTHER-RELATION`; o3 = `ANA-SOUND`; o4 = `ANA-SAME-TOPIC`
+
+**Reveal**
+
+1. *Meaning.* "A : B :: C : D" means A is to B as C is to D. The two pairs must share the same link.
+2. *Shortcut.* Make a sentence for the stem: "begin is to start" as similar meaning. Test each choice in that sentence.
+3. *Why it is right.* "end : finish" is right. It has the same link, similar meaning, in the same order.
+4. *Why the others are wrong.*
+   - start : stop: "start : stop" is linked in a different way. The stem pair is similar meaning.
+   - began : begun: "began : begun" is linked only by sound or spelling. The stem pair is similar meaning.
+   - race : runner: "race : runner" is about the same topic but not the same link. The stem pair is similar meaning.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 41. CIVIO-ANA-SYMBOL-SERIES-000152
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 50 s
 - competency: Logic · concept: letter coding
@@ -1301,32 +1334,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** In a certain code, OFFICE is written as NEEHBD. How is BUDGET written in the same code?
+**Stem:** In a certain code, VOTER is written as XQVGT. How is PAPER written in the same code?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | CVEHFU | A |
-| o2 | ATCFDS | B |
-| o3 | ATCFDT | C |
-| o4 | ZSBECR | D |
+| o1 | RCRGT | A |
+| o2 | SDSHU | B |
+| o3 | NYNCP | C |
+| o4 | RCRGR | D |
 
-`answer_option_id`: o2 (ATCFDS)
+`answer_option_id`: o1 (RCRGT)
 
-`distractor_reasoning`: o1 = `ANA-REVERSED`; o3 = `NUM-PARTIAL`; o4 = `NUM-OFF-BY-ONE`
+`distractor_reasoning`: o2 = `NUM-OFF-BY-ONE`; o3 = `ANA-REVERSED`; o4 = `NUM-PARTIAL`
 
 **Reveal**
 
 1. *Meaning.* In a "code" item, each letter is swapped for another by one rule. Find the rule from the example, then use it.
-2. *Shortcut.* Compare the first letters: O became N. That is 1 place back. Check one more letter, then shift every letter of BUDGET the same way.
-3. *Why it is right.* ATCFDS is right: each letter of BUDGET moved 1 place back.
+2. *Shortcut.* Compare the first letters: V became X. That is 2 places forward. Check one more letter, then shift every letter of PAPER the same way.
+3. *Why it is right.* RCRGT is right: each letter of PAPER moved 2 places forward.
 4. *Why the others are wrong.*
-   - CVEHFU: CVEHFU shifts each letter 1 the other way.
-   - ATCFDT: ATCFDT leaves the last letter unchanged.
-   - ZSBECR: ZSBECR shifts each letter one place too far.
+   - SDSHU: SDSHU shifts each letter one place too far.
+   - NYNCP: NYNCP shifts each letter 2 the other way.
+   - RCRGR: RCRGR leaves the last letter unchanged.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 41. CIVIO-ANA-DI-TABLE-000151
+## 42. CIVIO-ANA-DI-TABLE-000153
 
 - track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
 - competency: Data interpretation · concept: table reading
@@ -1334,32 +1367,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Supply use of staplers by office (Health: Apr 68, May 22, Jun 52; Cashier: Apr 40, May 16, Jun 38; HR: Apr 74, May 24, Jun 22). How many did HR use in all three months?
+**Stem:** Supply use of folders (packs) by office (Engineering: Jul 26, Aug 54, Sep 68; Assessor: Jul 22, Aug 52, Sep 40; Cashier: Jul 16, Aug 38, Sep 74). How many did Engineering use in all three months?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 120 | A |
-| o2 | 98 | B |
-| o3 | 40 | C |
-| o4 | 62 | D |
+| o1 | 144 | A |
+| o2 | 49.3 | B |
+| o3 | 148 | C |
+| o4 | 80 | D |
 
-`answer_option_id`: o1 (120)
+`answer_option_id`: o3 (148)
 
-`distractor_reasoning`: o2 = `NUM-PARTIAL`; o3 = `DI-NOT-SUPPORTED`; o4 = `DI-WRONG-CELL`
+`distractor_reasoning`: o1 = `DI-WRONG-CELL`; o2 = `DI-NOT-SUPPORTED`; o4 = `NUM-PARTIAL`
 
 **Reveal**
 
 1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
-2. *Shortcut.* Read across the HR row only: 74 + 24 + 22.
-3. *Why it is right.* 120 is right: 74 + 24 + 22 = 120.
+2. *Shortcut.* Read across the Engineering row only: 26 + 54 + 68.
+3. *Why it is right.* 148 is right: 26 + 54 + 68 = 148.
 4. *Why the others are wrong.*
-   - 98: 98 adds only Apr and May.
-   - 40: This is the monthly average. The question asks for the total.
-   - 62: 62 adds the May column for all offices, not the HR row.
+   - 144: 144 adds the Aug column for all offices, not the Engineering row.
+   - 49.3: This is the monthly average. The question asks for the total.
+   - 80: 80 adds only Jul and Aug.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 42. CIVIO-ANA-SYLLOGISM-000152
+## 43. CIVIO-ANA-SYLLOGISM-000154
 
 - track: professional · domain: analytical · archetype: ANA-SYLLOGISM · difficulty: medium · est: 45 s
 - competency: Logic · concept: syllogism
@@ -1367,32 +1400,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** All teachers are school staff. No school staff are late payers. Which conclusion must be true?
+**Stem:** All receipts are documents. No documents are items under quarantine. Which conclusion must be true?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | No late payers are government workers. | A |
-| o2 | No teachers are late payers. | B |
-| o3 | All school staff are teachers. | C |
-| o4 | Some teachers are late payers. | D |
+| o1 | No filed items are items under quarantine. | A |
+| o2 | No receipts are items under quarantine. | B |
+| o3 | All documents are receipts. | C |
+| o4 | Some receipts are items under quarantine. | D |
 
-`answer_option_id`: o2 (No teachers are late payers.)
+`answer_option_id`: o2 (No receipts are items under quarantine.)
 
 `distractor_reasoning`: o1 = `LOG-COULD-NOT-MUST`; o3 = `LOG-CONVERSE`; o4 = `LOG-OVERSTRONG`
 
 **Reveal**
 
 1. *Meaning.* A conclusion "must be true" only if the statements force it. Ignore what you know from real life.
-2. *Shortcut.* Put the teachers circle inside school staff. The late payers circle sits outside school staff, so it is outside teachers too.
-3. *Why it is right.* "No teachers are late payers." is right. It follows from the two statements with no extra facts.
+2. *Shortcut.* Put the receipts circle inside documents. The "items under quarantine" circle sits outside documents, so it is outside receipts too.
+3. *Why it is right.* "No receipts are items under quarantine." is right. It follows from the two statements with no extra facts.
 4. *Why the others are wrong.*
-   - No late payers are government workers.: The statements say nothing about all government workers; some government workers may be outside the school staff group.
-   - All school staff are teachers.: This flips the first statement.
-   - Some teachers are late payers.: This contradicts the statements: all teachers are school staff, and no school staff is a late payer.
+   - No filed items are items under quarantine.: The statements say nothing about all filed items; some filed items may be outside the documents group.
+   - All documents are receipts.: This flips the statement about the two groups.
+   - Some receipts are items under quarantine.: This contradicts the statements: all receipts are documents, and no documents is items under quarantine.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 43. CIVIO-ANA-SYMBOL-SERIES-000153
+## 44. CIVIO-ANA-SYMBOL-SERIES-000155
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 50 s
 - competency: Logic · concept: letter coding
@@ -1425,7 +1458,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 44. CIVIO-ANA-SYLLOGISM-000154
+## 45. CIVIO-ANA-SYLLOGISM-000156
 
 - track: professional · domain: analytical · archetype: ANA-SYLLOGISM · difficulty: medium · est: 45 s
 - competency: Logic · concept: syllogism
@@ -1433,18 +1466,18 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** All jeepneys are public vehicles. All public vehicles are registered vehicles. Which conclusion must be true?
+**Stem:** Statement 1: All public vehicles are registered vehicles. Statement 2: All jeepneys are public vehicles. Which conclusion follows from both statements?
 
 | option_id | text | shown as |
 |---|---|---|
 | o1 | All jeepneys are registered vehicles. | A |
-| o2 | Some registered vehicles are not public vehicles. | B |
-| o3 | No public vehicles are jeepneys. | C |
-| o4 | All registered vehicles are jeepneys. | D |
+| o2 | No public vehicles are jeepneys. | B |
+| o3 | All registered vehicles are jeepneys. | C |
+| o4 | Some registered vehicles are not public vehicles. | D |
 
 `answer_option_id`: o1 (All jeepneys are registered vehicles.)
 
-`distractor_reasoning`: o2 = `LOG-COULD-NOT-MUST`; o3 = `LOG-OVERSTRONG`; o4 = `LOG-CONVERSE`
+`distractor_reasoning`: o2 = `LOG-OVERSTRONG`; o3 = `LOG-CONVERSE`; o4 = `LOG-COULD-NOT-MUST`
 
 **Reveal**
 
@@ -1452,13 +1485,13 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 2. *Shortcut.* Draw circles: jeepneys inside public vehicles, public vehicles inside registered vehicles. So jeepneys sit inside registered vehicles.
 3. *Why it is right.* "All jeepneys are registered vehicles." is right. It follows from the two statements with no extra facts.
 4. *Why the others are wrong.*
-   - Some registered vehicles are not public vehicles.: This could be true, but the statements do not say it.
    - No public vehicles are jeepneys.: This contradicts the statements: every one of the jeepneys is one of the public vehicles.
    - All registered vehicles are jeepneys.: This flips the statement. Being registered vehicles does not make something one of the jeepneys.
+   - Some registered vehicles are not public vehicles.: This could be true, but the statements do not say it.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 45. CIVIO-ANA-SYMBOL-SERIES-000155
+## 46. CIVIO-ANA-SYMBOL-SERIES-000157
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 45 s
 - competency: Logic · concept: letter series
@@ -1466,32 +1499,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** What comes next in the series?  GM, KN, OO, SP, ___
+**Stem:** What comes next in the series?  BM, DP, FS, HV, ___
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | WQ | A |
-| o2 | QW | B |
-| o3 | TQ | C |
-| o4 | WC | D |
+| o1 | IY | A |
+| o2 | JU | B |
+| o3 | JY | C |
+| o4 | YJ | D |
 
-`answer_option_id`: o1 (WQ)
+`answer_option_id`: o3 (JY)
 
-`distractor_reasoning`: o2 = `ANA-REVERSED`; o3 = `NUM-OFF-BY-ONE`; o4 = `NUM-SEQ-OTHER-RULE`
+`distractor_reasoning`: o1 = `NUM-OFF-BY-ONE`; o2 = `NUM-SEQ-OTHER-RULE`; o4 = `ANA-REVERSED`
 
 **Reveal**
 
 1. *Meaning.* A "letter series" works like a number series. Count each letter's place in the alphabet (A = 1, B = 2, and so on).
-2. *Shortcut.* Split each pair. First letters: G, K, O, S (jump +4). Second letters: M, N, O, P (jump +1). Move each one more step.
-3. *Why it is right.* WQ is right: S + 4 = W and P + 1 = Q.
+2. *Shortcut.* Split each pair. First letters: B, D, F, H (jump +2). Second letters: M, P, S, V (jump +3). Move each one more step.
+3. *Why it is right.* JY is right: H + 2 = J and V + 3 = Y.
 4. *Why the others are wrong.*
-   - QW: QW has the right two letters in the wrong order.
-   - TQ: TQ moves the first letter by only 1. Its jump is +4.
-   - WC: WC moves the second letter by 4, the jump of the first letter. The second letter has its own jump, +1.
+   - IY: IY moves the first letter by only 1. Its jump is +2.
+   - JU: JU moves the second letter by 2, the jump of the first letter. The second letter has its own jump, +3.
+   - YJ: YJ has the right two letters in the wrong order.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 46. CIVIO-ANA-CONCLUSION-000156
+## 47. CIVIO-ANA-CONCLUSION-000158
 
 - track: professional · domain: analytical · archetype: ANA-CONCLUSION · difficulty: medium · est: 60 s
 - competency: Logic · concept: ordering
@@ -1499,32 +1532,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Four staff members are compared. Ramon scored higher than Bea. Inday scored higher than Ramon. Joy scored higher than Inday. Who is third in the order (from the one who got the highest score)?
+**Stem:** Four staff members are compared. Dindo encoded more forms than Bea. Bea encoded more forms than Inday. Inday encoded more forms than Arnel. Who is third in the order (counting from the one who encoded the most forms)?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Inday | A |
-| o2 | Bea | B |
-| o3 | Joy | C |
-| o4 | Ramon | D |
+| o1 | Bea | A |
+| o2 | Dindo | B |
+| o3 | Arnel | C |
+| o4 | Inday | D |
 
-`answer_option_id`: o4 (Ramon)
+`answer_option_id`: o4 (Inday)
 
-`distractor_reasoning`: o1 = `LOG-COULD-NOT-MUST`; o2 = `LOG-COULD-NOT-MUST`; o3 = `LOG-COULD-NOT-MUST`
+`distractor_reasoning`: o1 = `LOG-ORDER-REVERSED`; o2 = `LOG-IGNORED-CLUE`; o3 = `LOG-ORDER-SWAP`
 
 **Reveal**
 
-1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line.
-2. *Shortcut.* Start from the clue that names someone nobody beats. Line: Joy → Inday → Ramon → Bea.
-3. *Why it is right.* Ramon is right. The clues give Joy → Inday → Ramon → Bea, so Ramon is third.
+1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line, and count from the end the question names.
+2. *Shortcut.* Start from the person nobody beats and follow the clues down: Dindo → Bea → Inday → Arnel.
+3. *Why it is right.* Inday is right. The clues give Dindo → Bea → Inday → Arnel, so Inday is third.
 4. *Why the others are wrong.*
-   - Inday: Inday is second, not third.
-   - Bea: Bea is behind everyone; Bea is last.
-   - Joy: Joy is ahead of everyone; Joy is first.
+   - Bea: Bea is third from the bottom, not from the top. This counts from the wrong end.
+   - Dindo: Dindo could be third only if you skip the clue "Dindo encoded more forms than Bea." That clue puts Dindo first.
+   - Arnel: Arnel is last. Choosing Arnel swaps the bottom two places.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 47. CIVIO-ANA-DI-TABLE-000157
+## 48. CIVIO-ANA-DI-TABLE-000159
 
 - track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
 - competency: Data interpretation · concept: table reading
@@ -1532,7 +1565,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Supply use of envelopes (boxes) by office (Assessor: Jan 78, Feb 20, Mar 40; Library: Jan 78, Feb 16, Mar 28; Engineering: Jan 18, Feb 32, Mar 48). How many did Engineering use in all three months?
+**Stem:** Supply use of staplers by office (Health: Jan 78, Feb 20, Mar 40; Records: Jan 78, Feb 16, Mar 28; Planning: Jan 18, Feb 32, Mar 48). How many did Planning use in all three months?
 
 | option_id | text | shown as |
 |---|---|---|
@@ -1548,49 +1581,49 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 **Reveal**
 
 1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
-2. *Shortcut.* Read across the Engineering row only: 18 + 32 + 48.
+2. *Shortcut.* Read across the Planning row only: 18 + 32 + 48.
 3. *Why it is right.* 98 is right: 18 + 32 + 48 = 98.
 4. *Why the others are wrong.*
-   - 68: 68 adds the Feb column for all offices, not the Engineering row.
+   - 68: 68 adds the Feb column for all offices, not the Planning row.
    - 32.7: This is the monthly average. The question asks for the total.
    - 50: 50 adds only Jan and Feb.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 48. CIVIO-ANA-ANALOGY-FORM-000158
+## 49. CIVIO-ANA-ANALOGY-PART-000160
 
-- track: professional · domain: analytical · archetype: ANA-ANALOGY-FORM · difficulty: medium · est: 30 s
+- track: professional · domain: analytical · archetype: ANA-ANALOGY-PART · difficulty: medium · est: 30 s
 - competency: Word association (analogy) · concept: analogy
-- micro_skill: condition : what it lacks
+- micro_skill: part : whole
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** DROUGHT : RAIN :: ____
+**Stem:** Chapter is to book as ____.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | cloud : rain | A |
-| o2 | darkness : light | B |
-| o3 | light : darkness | C |
-| o4 | flood : water | D |
+| o1 | album : track | A |
+| o2 | novel : story | B |
+| o3 | verse : song | C |
+| o4 | title : cover | D |
 
-`answer_option_id`: o2 (darkness : light)
+`answer_option_id`: o3 (verse : song)
 
-`distractor_reasoning`: o1 = `ANA-SAME-TOPIC`; o3 = `ANA-REVERSED`; o4 = `ANA-OTHER-RELATION`
+`distractor_reasoning`: o1 = `ANA-REVERSED`; o2 = `ANA-OTHER-RELATION`; o4 = `ANA-SAME-TOPIC`
 
 **Reveal**
 
 1. *Meaning.* "A : B :: C : D" means A is to B as C is to D. The two pairs must share the same link.
-2. *Shortcut.* Make a sentence for the stem: "drought is to rain" as condition : what it lacks. Test each choice in that sentence.
-3. *Why it is right.* "darkness : light" is right. It has the same link, condition : what it lacks, in the same order.
+2. *Shortcut.* Make a sentence for the stem: "chapter is to book" as part : whole. Test each choice in that sentence.
+3. *Why it is right.* "verse : song" is right. It has the same link, part : whole, in the same order.
 4. *Why the others are wrong.*
-   - cloud : rain: "cloud : rain" is about the same topic but not the same link. The stem pair is condition : what it lacks.
-   - light : darkness: "light : darkness" has the right link but in reverse order. The stem pair is condition : what it lacks.
-   - flood : water: "flood : water" is linked in a different way. The stem pair is condition : what it lacks.
+   - album : track: "album : track" has the right link but in reverse order. The stem pair is part : whole.
+   - novel : story: "novel : story" is linked in a different way. The stem pair is part : whole.
+   - title : cover: "title : cover" is about the same topic but not the same link. The stem pair is part : whole.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 49. CIVIO-ANA-SYMBOL-SERIES-000159
+## 50. CIVIO-ANA-SYMBOL-SERIES-000161
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 50 s
 - competency: Logic · concept: letter coding
@@ -1598,32 +1631,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** In a certain code, MARKET is written as KYPICR. How is LIBRARY written in the same code?
+**Stem:** In a certain code, RIVER is written as TKXGT. How is MARKET written in the same code?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | NKDTCTA | A |
-| o2 | JGZPYPW | B |
-| o3 | IFYOXOV | C |
-| o4 | JGZPYPY | D |
+| o1 | OCTMGV | A |
+| o2 | PDUNHW | B |
+| o3 | OCTMGT | C |
+| o4 | KYPICR | D |
 
-`answer_option_id`: o2 (JGZPYPW)
+`answer_option_id`: o1 (OCTMGV)
 
-`distractor_reasoning`: o1 = `ANA-REVERSED`; o3 = `NUM-OFF-BY-ONE`; o4 = `NUM-PARTIAL`
+`distractor_reasoning`: o2 = `NUM-OFF-BY-ONE`; o3 = `NUM-PARTIAL`; o4 = `ANA-REVERSED`
 
 **Reveal**
 
 1. *Meaning.* In a "code" item, each letter is swapped for another by one rule. Find the rule from the example, then use it.
-2. *Shortcut.* Compare the first letters: M became K. That is 2 places back. Check one more letter, then shift every letter of LIBRARY the same way.
-3. *Why it is right.* JGZPYPW is right: each letter of LIBRARY moved 2 places back.
+2. *Shortcut.* Compare the first letters: R became T. That is 2 places forward. Check one more letter, then shift every letter of MARKET the same way.
+3. *Why it is right.* OCTMGV is right: each letter of MARKET moved 2 places forward.
 4. *Why the others are wrong.*
-   - NKDTCTA: NKDTCTA shifts each letter 2 the other way.
-   - IFYOXOV: IFYOXOV shifts each letter one place too far.
-   - JGZPYPY: JGZPYPY leaves the last letter unchanged.
+   - PDUNHW: PDUNHW shifts each letter one place too far.
+   - OCTMGT: OCTMGT leaves the last letter unchanged.
+   - KYPICR: KYPICR shifts each letter 2 the other way.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 50. CIVIO-ANA-DI-TABLE-000160
+## 51. CIVIO-ANA-DI-TABLE-000162
 
 - track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
 - competency: Data interpretation · concept: table reading
@@ -1631,65 +1664,65 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Supply use of bond paper (reams) by office (Planning: Apr 70, May 80, Jun 74; HR: Apr 60, May 42, Jun 78; Library: Apr 28, May 70, Jun 66). In Jun, how many more did HR use than Library?
+**Stem:** Supply use of staplers by office (Records: Apr 60, May 42, Jun 78; Planning: Apr 28, May 70, Jun 66; Engineering: Apr 48, May 52, Jun 80). In Jun, how many more did Engineering use than Planning?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 12 | A |
-| o2 | 32 | B |
-| o3 | 144 | C |
-| o4 | 16 | D |
+| o1 | 16 | A |
+| o2 | 146 | B |
+| o3 | 14 | C |
+| o4 | 20 | D |
 
-`answer_option_id`: o1 (12)
+`answer_option_id`: o3 (14)
 
-`distractor_reasoning`: o2 = `DI-WRONG-CELL`; o3 = `NUM-OP-SWAP`; o4 = `DI-WRONG-CELL`
+`distractor_reasoning`: o1 = `DI-WRONG-CELL`; o2 = `NUM-OP-SWAP`; o4 = `DI-WRONG-CELL`
 
 **Reveal**
 
 1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
-2. *Shortcut.* Go to the Jun column: Library 66, HR 78. Subtract the smaller from the larger.
-3. *Why it is right.* 12 is right: 78 − 66 = 12.
+2. *Shortcut.* Go to the Jun column: Engineering 80, Planning 66. Subtract the smaller from the larger.
+3. *Why it is right.* 14 is right: 80 − 66 = 14.
 4. *Why the others are wrong.*
-   - 32: This uses Apr, not Jun.
-   - 144: This adds the two numbers instead of subtracting.
    - 16: This compares the three-month totals, not one month.
+   - 146: This adds the two numbers instead of subtracting.
+   - 20: This uses Apr, not Jun.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 51. CIVIO-ANA-SYLLOGISM-000161
+## 52. CIVIO-ANA-SYLLOGISM-000163
 
 - track: professional · domain: analytical · archetype: ANA-SYLLOGISM · difficulty: medium · est: 45 s
 - competency: Logic · concept: syllogism
-- micro_skill: chain form
+- micro_skill: some form
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** All barangay captains are elected officials. All elected officials are public officers. Which conclusion must be true?
+**Stem:** Assume these are true: a few of the teachers are part-time workers, and all of the teachers are school staff. What can be concluded for certain?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | No elected officials are barangay captains. | A |
-| o2 | Some public officers are not elected officials. | B |
-| o3 | All public officers are barangay captains. | C |
-| o4 | All barangay captains are public officers. | D |
+| o1 | No school staff are part-time workers. | A |
+| o2 | All part-time workers are teachers. | B |
+| o3 | All school staff are part-time workers. | C |
+| o4 | Some school staff are part-time workers. | D |
 
-`answer_option_id`: o4 (All barangay captains are public officers.)
+`answer_option_id`: o4 (Some school staff are part-time workers.)
 
-`distractor_reasoning`: o1 = `LOG-OVERSTRONG`; o2 = `LOG-COULD-NOT-MUST`; o3 = `LOG-CONVERSE`
+`distractor_reasoning`: o1 = `LOG-OVERSTRONG`; o2 = `LOG-CONVERSE`; o3 = `LOG-OVERSTRONG`
 
 **Reveal**
 
 1. *Meaning.* A conclusion "must be true" only if the statements force it. Ignore what you know from real life.
-2. *Shortcut.* Draw circles: barangay captains inside elected officials, elected officials inside public officers. So barangay captains sit inside public officers.
-3. *Why it is right.* "All barangay captains are public officers." is right. It follows from the two statements with no extra facts.
+2. *Shortcut.* The teachers who are part-time workers are also school staff. So at least some school staff are part-time workers.
+3. *Why it is right.* "Some school staff are part-time workers." is right. It follows from the two statements with no extra facts.
 4. *Why the others are wrong.*
-   - No elected officials are barangay captains.: This contradicts the statements: every one of the barangay captains is one of the elected officials.
-   - Some public officers are not elected officials.: This could be true, but the statements do not say it.
-   - All public officers are barangay captains.: This flips the statement. Being public officers does not make something one of the barangay captains.
+   - No school staff are part-time workers.: This contradicts the statements: the teachers who are part-time workers are also school staff.
+   - All part-time workers are teachers.: This flips the statement about part-time workers. Some part-time workers may be outside the group.
+   - All school staff are part-time workers.: Only some of the teachers are part-time workers, so we cannot say all school staff are.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 52. CIVIO-ANA-SYMBOL-SERIES-000162
+## 53. CIVIO-ANA-SYMBOL-SERIES-000164
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 45 s
 - competency: Logic · concept: letter series
@@ -1697,32 +1730,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** What comes next in the series?  GL, KO, OR, SU, ___
+**Stem:** What comes next in the series?  FS, IT, LU, OV, ___
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | WX | A |
-| o2 | WB | B |
-| o3 | XW | C |
-| o4 | TX | D |
+| o1 | RW | A |
+| o2 | RE | B |
+| o3 | WR | C |
+| o4 | PW | D |
 
-`answer_option_id`: o1 (WX)
+`answer_option_id`: o1 (RW)
 
 `distractor_reasoning`: o2 = `NUM-SEQ-OTHER-RULE`; o3 = `ANA-REVERSED`; o4 = `NUM-OFF-BY-ONE`
 
 **Reveal**
 
 1. *Meaning.* A "letter series" works like a number series. Count each letter's place in the alphabet (A = 1, B = 2, and so on).
-2. *Shortcut.* Split each pair. First letters: G, K, O, S (jump +4). Second letters: L, O, R, U (jump +3). Move each one more step.
-3. *Why it is right.* WX is right: S + 4 = W and U + 3 = X.
+2. *Shortcut.* Split each pair. First letters: F, I, L, O (jump +3). Second letters: S, T, U, V (jump +1). Move each one more step.
+3. *Why it is right.* RW is right: O + 3 = R and V + 1 = W.
 4. *Why the others are wrong.*
-   - WB: WB moves the second letter by 4, the jump of the first letter. The second letter has its own jump, +3.
-   - XW: XW has the right two letters in the wrong order.
-   - TX: TX moves the first letter by only 1. Its jump is +4.
+   - RE: RE moves the second letter by 3, the jump of the first letter. The second letter has its own jump, +1.
+   - WR: WR has the right two letters in the wrong order.
+   - PW: PW moves the first letter by only 1. Its jump is +3.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 53. CIVIO-ANA-CONCLUSION-000163
+## 54. CIVIO-ANA-CONCLUSION-000165
 
 - track: professional · domain: analytical · archetype: ANA-CONCLUSION · difficulty: medium · est: 60 s
 - competency: Logic · concept: ordering
@@ -1730,32 +1763,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Four staff members are compared. Paolo lives nearer the office than Marites. Analyn lives nearer the office than Paolo. Marites lives nearer the office than Jun-jun. Who is third in the order (from the one who lives nearest)?
+**Stem:** Four staff members are compared. Jun-jun encoded more forms than Nonoy. Arnel encoded more forms than Efren. Efren encoded more forms than Jun-jun. Who is third in the order (counting from the one who encoded the most forms)?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Marites | A |
-| o2 | Analyn | B |
-| o3 | Jun-jun | C |
-| o4 | Paolo | D |
+| o1 | Jun-jun | A |
+| o2 | Arnel | B |
+| o3 | Efren | C |
+| o4 | Nonoy | D |
 
-`answer_option_id`: o1 (Marites)
+`answer_option_id`: o1 (Jun-jun)
 
-`distractor_reasoning`: o2 = `LOG-COULD-NOT-MUST`; o3 = `LOG-COULD-NOT-MUST`; o4 = `LOG-COULD-NOT-MUST`
+`distractor_reasoning`: o2 = `LOG-IGNORED-CLUE`; o3 = `LOG-ORDER-REVERSED`; o4 = `LOG-ORDER-SWAP`
 
 **Reveal**
 
-1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line.
-2. *Shortcut.* Start from the clue that names someone nobody beats. Line: Analyn → Paolo → Marites → Jun-jun.
-3. *Why it is right.* Marites is right. The clues give Analyn → Paolo → Marites → Jun-jun, so Marites is third.
+1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line, and count from the end the question names.
+2. *Shortcut.* Start from the person nobody beats and follow the clues down: Arnel → Efren → Jun-jun → Nonoy.
+3. *Why it is right.* Jun-jun is right. The clues give Arnel → Efren → Jun-jun → Nonoy, so Jun-jun is third.
 4. *Why the others are wrong.*
-   - Analyn: Analyn is ahead of everyone; Analyn is first.
-   - Jun-jun: Jun-jun is behind everyone; Jun-jun is last.
-   - Paolo: Paolo is second, not third.
+   - Arnel: Arnel could be third only if you skip the clue "Arnel encoded more forms than Efren." That clue puts Arnel first.
+   - Efren: Efren is third from the bottom, not from the top. This counts from the wrong end.
+   - Nonoy: Nonoy is last. Choosing Nonoy swaps the bottom two places.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 54. CIVIO-ANA-DI-TABLE-000164
+## 55. CIVIO-ANA-DI-TABLE-000166
 
 - track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
 - competency: Data interpretation · concept: table reading
@@ -1763,131 +1796,164 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Supply use of folders (packs) by office (Library: Apr 30, May 46, Jun 22; Health: Apr 28, May 40, Jun 70; Records: Apr 18, May 54, Jun 66). How many did Records use in all three months?
+**Stem:** Supply use of toner (units) by office (Cashier: Apr 18, May 54, Jun 66; Assessor: Apr 68, May 28, Jun 78; Library: Apr 80, May 42, Jun 78). How many did Library use in all three months?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 138 | A |
-| o2 | 140 | B |
-| o3 | 46 | C |
-| o4 | 72 | D |
+| o1 | 66.7 | A |
+| o2 | 200 | B |
+| o3 | 122 | C |
+| o4 | 124 | D |
 
-`answer_option_id`: o1 (138)
+`answer_option_id`: o2 (200)
 
-`distractor_reasoning`: o2 = `DI-WRONG-CELL`; o3 = `DI-NOT-SUPPORTED`; o4 = `NUM-PARTIAL`
+`distractor_reasoning`: o1 = `DI-NOT-SUPPORTED`; o3 = `NUM-PARTIAL`; o4 = `DI-WRONG-CELL`
 
 **Reveal**
 
 1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
-2. *Shortcut.* Read across the Records row only: 18 + 54 + 66.
-3. *Why it is right.* 138 is right: 18 + 54 + 66 = 138.
+2. *Shortcut.* Read across the Library row only: 80 + 42 + 78.
+3. *Why it is right.* 200 is right: 80 + 42 + 78 = 200.
 4. *Why the others are wrong.*
-   - 140: 140 adds the May column for all offices, not the Records row.
-   - 46: This is the monthly average. The question asks for the total.
-   - 72: 72 adds only Apr and May.
+   - 66.7: This is the monthly average. The question asks for the total.
+   - 122: 122 adds only Apr and May.
+   - 124: 124 adds the May column for all offices, not the Library row.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 55. CIVIO-ANA-ANALOGY-DEGREE-000165
+## 56. CIVIO-VEN-SENT-COMP-PHRASAL-000167
 
-- track: professional · domain: analytical · archetype: ANA-ANALOGY-DEGREE · difficulty: medium · est: 30 s
-- competency: Word association (analogy) · concept: analogy
-- micro_skill: lesser : greater degree
+- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-PHRASAL · difficulty: medium · est: 25 s
+- competency: Grammar and correct usage · concept: phrasal verbs
+- micro_skill: pick the right particle
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** WHISPER : SHOUT :: ____
+**Stem:** Choose the phrase that best completes the sentence: We ran ____ of bond paper this morning.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | quiet : silent | A |
-| o2 | smile : laugh | B |
-| o3 | voice : throat | C |
-| o4 | shout : whisper | D |
+| o1 | over | A |
+| o2 | off | B |
+| o3 | out | C |
+| o4 | into | D |
 
-`answer_option_id`: o2 (smile : laugh)
+`answer_option_id`: o3 (out)
 
-`distractor_reasoning`: o1 = `ANA-OTHER-RELATION`; o3 = `ANA-SAME-TOPIC`; o4 = `ANA-REVERSED`
+`distractor_reasoning`: o1 = `VEN-PARTICLE`; o2 = `VEN-PARTICLE`; o4 = `VEN-PARTICLE`
 
 **Reveal**
 
-1. *Meaning.* "A : B :: C : D" means A is to B as C is to D. The two pairs must share the same link.
-2. *Shortcut.* Make a sentence for the stem: "whisper is to shout" as lesser : greater degree. Test each choice in that sentence.
-3. *Why it is right.* "smile : laugh" is right. It has the same link, lesser : greater degree, in the same order.
+1. *Meaning.* A "phrasal verb" is a verb plus a small word (up, out, off, in) that together have their own meaning.
+2. *Shortcut.* Put each choice in the blank and say the sentence. Only one gives the meaning the sentence needs.
+3. *Why it is right.* "out" is right. It gives the meaning the sentence needs.
 4. *Why the others are wrong.*
-   - quiet : silent: "quiet : silent" is linked in a different way. The stem pair is lesser : greater degree.
-   - voice : throat: "voice : throat" is about the same topic but not the same link. The stem pair is lesser : greater degree.
-   - shout : whisper: "shout : whisper" has the right link but in reverse order. The stem pair is lesser : greater degree.
+   - over: "ran over" means hit with a vehicle.
+   - off: "ran off" means left quickly.
+   - into: "ran into" means met by chance.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 56. CIVIO-VEN-ERROR-AGREE-000166
+## 57. CIVIO-VEN-SENT-COMP-WORD-000168
 
-- track: both · domain: verbal_en · archetype: VEN-ERROR-AGREE · difficulty: medium · est: 30 s
-- competency: Grammar and correct usage · concept: subject-verb agreement
-- micro_skill: find the true subject past a prepositional phrase
+- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 30 s
+- competency: Vocabulary · concept: sentence completion
+- micro_skill: use clue words to fill the blank
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the word that best completes the sentence: The leader of the volunteers ____ asked for more trash bags.
+**Stem:** Choose the word that best completes the sentence: The new policy is ____: it applies to every office without exception.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | have | A |
-| o2 | having | B |
-| o3 | to have | C |
-| o4 | has | D |
+| o1 | universal | A |
+| o2 | university | B |
+| o3 | universally | C |
+| o4 | limited | D |
 
-`answer_option_id`: o4 (has)
+`answer_option_id`: o1 (universal)
 
-`distractor_reasoning`: o1 = `VEN-NEAREST-NOUN`; o2 = `VEN-FORM`; o3 = `VEN-FORM`
+`distractor_reasoning`: o2 = `VEN-HOMOPHONE`; o3 = `VEN-FORM`; o4 = `VRB-ANTONYM-TRAP`
 
 **Reveal**
 
-1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s).
-2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "The leader ____". The subject is singular, so use the singular verb.
-3. *Why it is right.* "has" is right: "The leader" is singular.
+1. *Meaning.* Clue words such as because, although, so and since tell you whether the blank agrees with or contrasts with the rest.
+2. *Shortcut.* Find the clue word, decide if the blank should agree or contrast, then check that the choice is the right word form.
+3. *Why it is right.* "universal" is right: it fits the clue in the sentence and is the right word form.
 4. *Why the others are wrong.*
-   - have: "have" agrees with "volunteers", the nearest noun, not with the true subject.
-   - having: "having" cannot be the main verb on its own; the sentence would have no full verb.
-   - to have: "to have" is not a verb form that can stand alone after this subject.
+   - university: "University" only looks similar.
+   - universally: "Universally" is an adverb.
+   - limited: "Limited" goes against "every office".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 57. CIVIO-VEN-ERROR-TENSE-000167
+## 58. CIVIO-VEN-RC-VOCAB-000169
 
-- track: both · domain: verbal_en · archetype: VEN-ERROR-TENSE · difficulty: easy · est: 25 s
-- competency: Grammar and correct usage · concept: verb tense
-- micro_skill: match tense to a time signal
+- track: both · domain: verbal_en · archetype: VEN-RC-VOCAB · difficulty: medium · est: 30 s
+- competency: Vocabulary · concept: vocabulary in context
+- micro_skill: pick the sense that fits the sentence
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the correct verb: Next month, the barangay hall staff ____ the plaza.
+**Stem:** In the sentence below, what does the word in capital letters most nearly mean?  The doctor gave a FIRM reminder to take the medicine.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | has cleaned | A |
-| o2 | will clean | B |
-| o3 | cleaned | C |
-| o4 | will have cleaned | D |
+| o1 | business company | A |
+| o2 | strong and definite | B |
+| o3 | vague | C |
+| o4 | frozen | D |
 
-`answer_option_id`: o2 (will clean)
+`answer_option_id`: o2 (strong and definite)
 
-`distractor_reasoning`: o1 = `VEN-TENSE`; o3 = `VEN-TENSE`; o4 = `VEN-TENSE`
+`distractor_reasoning`: o1 = `VRB-SYNONYM-TRAP`; o3 = `VRB-ANTONYM-TRAP`; o4 = `VEN-REGISTER`
 
 **Reveal**
 
-1. *Meaning.* "Tense" tells when an action happens. A "time signal" is a word like yesterday, tomorrow or since that fixes the time.
-2. *Shortcut.* Find the time signal first: "Next month". It calls for the simple future.
-3. *Why it is right.* "will clean" is right: the simple future matches "Next month".
+1. *Meaning.* Many words have more than one meaning. "In context" means the meaning that fits this sentence.
+2. *Shortcut.* Cover the word in capitals and guess what fits the gap. Then pick the choice closest to your guess, not the most common meaning of "firm".
+3. *Why it is right.* "strong and definite" is right: it is the sense of "firm" that fits the sentence.
 4. *Why the others are wrong.*
-   - has cleaned: "has cleaned" is present perfect. It does not fit the time signal "Next month".
-   - cleaned: "cleaned" is simple past. It does not fit the time signal "Next month".
-   - will have cleaned: "will have cleaned" is future perfect. It does not fit the time signal "Next month".
+   - business company: A firm can be a company; not here.
+   - vague: "Vague" is the opposite.
+   - frozen: "Firm" does not mean frozen.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 58. CIVIO-VEN-WORD-MEANING-000168
+## 59. CIVIO-VEN-SENT-COMP-WORD-000170
+
+- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 20 s
+- competency: Grammar and correct usage · concept: prepositions
+- micro_skill: pick the preposition the word pairs with
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Choose the word that best completes the sentence: The applicant is interested ____ the clerk position.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | for | A |
+| o2 | at | B |
+| o3 | in | C |
+| o4 | on | D |
+
+`answer_option_id`: o3 (in)
+
+`distractor_reasoning`: o1 = `VEN-PARTICLE`; o2 = `VEN-PARTICLE`; o4 = `VEN-PARTICLE`
+
+**Reveal**
+
+1. *Meaning.* A "preposition" is a small linking word (in, on, at, for, with). Many words always pair with one preposition.
+2. *Shortcut.* Read the word just before the blank and recall the phrase it usually forms (interested in, comply with).
+3. *Why it is right.* "in" is right: it is the standard pairing in this sentence.
+4. *Why the others are wrong.*
+   - for: "Interested for" is not standard.
+   - at: "Interested at" is not standard.
+   - on: "Interested" pairs with "in".
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 60. CIVIO-VEN-WORD-MEANING-000171
 
 - track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 20 s
 - competency: Vocabulary · concept: synonyms
@@ -1895,32 +1961,131 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is closest in meaning to the word in capital letters?  OBSOLETE
+**Stem:** Which word is closest in meaning to the word in capital letters?  CANDID
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | absolute | A |
-| o2 | obstinate | B |
-| o3 | modern | C |
-| o4 | outdated | D |
+| o1 | candied | A |
+| o2 | frank | B |
+| o3 | secretive | C |
+| o4 | candidate | D |
 
-`answer_option_id`: o4 (outdated)
+`answer_option_id`: o2 (frank)
 
-`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o2 = `VEN-HOMOPHONE`; o3 = `RC-OPPOSITE`
+`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o3 = `VRB-ANTONYM-TRAP`; o4 = `VEN-HOMOPHONE`
 
 **Reveal**
 
 1. *Meaning.* A "synonym" is a word with nearly the same meaning.
-2. *Shortcut.* Make a short sentence with "obsolete", then swap in each choice. Watch for words that only look or sound like "obsolete".
-3. *Why it is right.* "outdated" is right. "Obsolete" means outdated.
+2. *Shortcut.* Make a short sentence with "candid", then swap in each choice. Watch for words that only look or sound like "candid".
+3. *Why it is right.* "frank" is right. "Candid" means frank.
 4. *Why the others are wrong.*
-   - absolute: "absolute" sounds alike; it means complete.
-   - obstinate: "obstinate" means stubborn.
-   - modern: "modern" is the opposite.
+   - candied: "candied" means coated in sugar.
+   - secretive: "secretive" is the opposite.
+   - candidate: A candidate is a person running for a post.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 59. CIVIO-VEN-SENT-COMP-WORD-000169
+## 61. CIVIO-VEN-SENT-COMP-WORD-000172
+
+- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 25 s
+- competency: Grammar and correct usage · concept: commonly confused words
+- micro_skill: tell look-alike words apart
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Choose the word that best completes the sentence: Please put the signed forms over ____, on the second shelf.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | their | A |
+| o2 | they're | B |
+| o3 | theirs | C |
+| o4 | there | D |
+
+`answer_option_id`: o4 (there)
+
+`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o2 = `VEN-HOMOPHONE`; o3 = `VEN-FORM`
+
+**Reveal**
+
+1. *Meaning.* Some English words look or sound alike but mean different things. Read the whole sentence before choosing.
+2. *Shortcut.* Decide what kind of word the blank needs (a thing, an action, a describing word), then match the meaning.
+3. *Why it is right.* "there" is right. It has the meaning and the word form the sentence needs.
+4. *Why the others are wrong.*
+   - their: "their" shows ownership (their office).
+   - they're: "they're" means "they are".
+   - theirs: "theirs" is a possessive pronoun.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 62. CIVIO-VEN-WORD-MEANING-000173
+
+- track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 20 s
+- competency: Vocabulary · concept: synonyms
+- micro_skill: word meaning
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is closest in meaning to the word in capital letters?  PRUDENT
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | prominent | A |
+| o2 | prude | B |
+| o3 | careful | C |
+| o4 | reckless | D |
+
+`answer_option_id`: o3 (careful)
+
+`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o2 = `VEN-HOMOPHONE`; o4 = `VRB-ANTONYM-TRAP`
+
+**Reveal**
+
+1. *Meaning.* A "synonym" is a word with nearly the same meaning.
+2. *Shortcut.* Make a short sentence with "prudent", then swap in each choice. Watch for words that only look or sound like "prudent".
+3. *Why it is right.* "careful" is right. "Prudent" means careful.
+4. *Why the others are wrong.*
+   - prominent: "prominent" means well known.
+   - prude: A prude is easily shocked.
+   - reckless: "reckless" is the opposite.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 63. CIVIO-VEN-WORD-MEANING-000174
+
+- track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 25 s
+- competency: Vocabulary · concept: idioms
+- micro_skill: meaning of an idiom
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** What does the phrase in capital letters mean?  After the audit, the officer had to FACE THE MUSIC.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | listen to a band | A |
+| o2 | accept the consequences | B |
+| o3 | avoid the blame | C |
+| o4 | lose the job at once | D |
+
+`answer_option_id`: o2 (accept the consequences)
+
+`distractor_reasoning`: o1 = `RC-TOO-NARROW`; o3 = `VRB-ANTONYM-TRAP`; o4 = `RC-EXTREME`
+
+**Reveal**
+
+1. *Meaning.* An "idiom" is a set phrase whose meaning is not the meaning of its separate words.
+2. *Shortcut.* Skip the literal picture. Ask what the speaker wants to say in this situation.
+3. *Why it is right.* "accept the consequences" is right: that is what the idiom means here.
+4. *Why the others are wrong.*
+   - listen to a band: This is the literal reading of the words.
+   - avoid the blame: Avoiding blame is the opposite.
+   - lose the job at once: The idiom does not say how bad the result is.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 64. CIVIO-VEN-SENT-COMP-WORD-000175
 
 - track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 25 s
 - competency: Grammar and correct usage · concept: pronoun case
@@ -1928,32 +2093,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the word that best completes the sentence: To ____ should I give the signed vouchers?
+**Stem:** Choose the word that best completes the sentence: Between you and ____, the plan needs more work.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | whose | A |
-| o2 | whom | B |
-| o3 | who | C |
-| o4 | which | D |
+| o1 | mine | A |
+| o2 | I | B |
+| o3 | myself | C |
+| o4 | me | D |
 
-`answer_option_id`: o2 (whom)
+`answer_option_id`: o4 (me)
 
-`distractor_reasoning`: o1 = `VEN-FORM`; o3 = `VEN-REGISTER`; o4 = `VEN-FORM`
+`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-FORM`; o3 = `VEN-FORM`
 
 **Reveal**
 
 1. *Meaning.* A "subject pronoun" (I, she, we, they) does the action. An "object pronoun" (me, her, us, them) receives it or comes after words like to and between.
 2. *Shortcut.* Cover the other name and read the sentence with only the pronoun. "Gave to me" sounds right; "gave to I" does not.
-3. *Why it is right.* "whom" is right. It is the form the slot needs.
+3. *Why it is right.* "me" is right. It is the form the slot needs.
 4. *Why the others are wrong.*
-   - whose: "whose" shows ownership.
-   - who: After "to", formal English uses "whom".
-   - which: "which" is for things.
+   - mine: "mine" shows ownership.
+   - I: "Between" takes object pronouns: "between you and me".
+   - myself: "myself" is not used after "between".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 60. CIVIO-VEN-ERROR-TENSE-000170
+## 65. CIVIO-VEN-ERROR-TENSE-000176
 
 - track: both · domain: verbal_en · archetype: VEN-ERROR-TENSE · difficulty: easy · est: 25 s
 - competency: Grammar and correct usage · concept: verb tense
@@ -1961,32 +2126,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the correct verb: Tomorrow, the public market office staff ____ the drainage canal.
+**Stem:** Choose the correct verb: Last Friday, Kimberly ____ the payroll.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | will have inspected | A |
-| o2 | has inspected | B |
-| o3 | will inspect | C |
-| o4 | inspected | D |
+| o1 | will have submitted | A |
+| o2 | has submitted | B |
+| o3 | submitted | C |
+| o4 | will submit | D |
 
-`answer_option_id`: o3 (will inspect)
+`answer_option_id`: o3 (submitted)
 
 `distractor_reasoning`: o1 = `VEN-TENSE`; o2 = `VEN-TENSE`; o4 = `VEN-TENSE`
 
 **Reveal**
 
 1. *Meaning.* "Tense" tells when an action happens. A "time signal" is a word like yesterday, tomorrow or since that fixes the time.
-2. *Shortcut.* Find the time signal first: "Tomorrow". It calls for the simple future.
-3. *Why it is right.* "will inspect" is right: the simple future matches "Tomorrow".
+2. *Shortcut.* Find the time signal first: "Last Friday". It calls for the simple past.
+3. *Why it is right.* "submitted" is right: the simple past matches "Last Friday".
 4. *Why the others are wrong.*
-   - will have inspected: "will have inspected" is future perfect. It does not fit the time signal "Tomorrow".
-   - has inspected: "has inspected" is present perfect. It does not fit the time signal "Tomorrow".
-   - inspected: "inspected" is simple past. It does not fit the time signal "Tomorrow".
+   - will have submitted: "will have submitted" is future perfect. It does not fit the time signal "Last Friday".
+   - has submitted: "has submitted" is present perfect. It does not fit the time signal "Last Friday".
+   - will submit: "will submit" is simple future. It does not fit the time signal "Last Friday".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 61. CIVIO-VEN-SENT-COMP-WORD-000171
+## 66. CIVIO-VEN-SENT-COMP-WORD-000177
 
 - track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 25 s
 - competency: Grammar and correct usage · concept: commonly confused words
@@ -1998,14 +2163,14 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | recite | A |
-| o2 | sight | B |
+| o1 | sight | A |
+| o2 | recite | B |
 | o3 | site | C |
 | o4 | cite | D |
 
 `answer_option_id`: o4 (cite)
 
-`distractor_reasoning`: o1 = `VEN-REGISTER`; o2 = `VEN-HOMOPHONE`; o3 = `VEN-HOMOPHONE`
+`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o2 = `VEN-REGISTER`; o3 = `VEN-HOMOPHONE`
 
 **Reveal**
 
@@ -2013,46 +2178,46 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 2. *Shortcut.* Decide what kind of word the blank needs (a thing, an action, a describing word), then match the meaning.
 3. *Why it is right.* "cite" is right. It has the meaning and the word form the sentence needs.
 4. *Why the others are wrong.*
-   - recite: "recite" means to say aloud from memory.
    - sight: "sight" is a view.
+   - recite: "recite" means to say aloud from memory.
    - site: "site" is a place.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 62. CIVIO-VEN-WORD-MEANING-000172
+## 67. CIVIO-VEN-ERROR-AGREE-000178
 
-- track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 20 s
-- competency: Vocabulary · concept: synonyms
-- micro_skill: word meaning
+- track: both · domain: verbal_en · archetype: VEN-ERROR-AGREE · difficulty: medium · est: 30 s
+- competency: Grammar and correct usage · concept: subject-verb agreement
+- micro_skill: find the true subject past a prepositional phrase
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is closest in meaning to the word in capital letters?  VERIFY
+**Stem:** Choose the word that best completes the sentence: The leader of the volunteers ____ at every barangay assembly.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | doubt | A |
-| o2 | vary | B |
-| o3 | confirm | C |
-| o4 | verbalize | D |
+| o1 | speaking | A |
+| o2 | speaks | B |
+| o3 | speak | C |
+| o4 | to speak | D |
 
-`answer_option_id`: o3 (confirm)
+`answer_option_id`: o2 (speaks)
 
-`distractor_reasoning`: o1 = `RC-OPPOSITE`; o2 = `VEN-HOMOPHONE`; o4 = `VEN-HOMOPHONE`
+`distractor_reasoning`: o1 = `VEN-FORM`; o3 = `VEN-NEAREST-NOUN`; o4 = `VEN-FORM`
 
 **Reveal**
 
-1. *Meaning.* A "synonym" is a word with nearly the same meaning.
-2. *Shortcut.* Make a short sentence with "verify", then swap in each choice. Watch for words that only look or sound like "verify".
-3. *Why it is right.* "confirm" is right. "Verify" means confirm.
+1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s); a plural subject takes a plural verb.
+2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "The leader ____". The subject is singular, so use the singular verb.
+3. *Why it is right.* "speaks" is right: "The leader" is singular.
 4. *Why the others are wrong.*
-   - doubt: "doubt" is close to the opposite.
-   - vary: "vary" means to change.
-   - verbalize: "verbalize" means to say in words.
+   - speaking: "speaking" cannot be the main verb on its own; the sentence would have no full verb.
+   - speak: "speak" agrees with "volunteers", the nearest noun, not with the true subject.
+   - to speak: "to speak" is not a verb form that can stand alone after this subject.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 63. CIVIO-VEN-SENT-COMP-WORD-000173
+## 68. CIVIO-VEN-SENT-COMP-WORD-000179
 
 - track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 25 s
 - competency: Grammar and correct usage · concept: pronoun case
@@ -2060,32 +2225,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the word that best completes the sentence: The new rules apply to both you and ____.
+**Stem:** Choose the word that best completes the sentence: The award went to the clerk ____ worked overtime all month.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | they | A |
-| o2 | theirs | B |
-| o3 | them | C |
-| o4 | themselves | D |
+| o1 | which | A |
+| o2 | whom | B |
+| o3 | whose | C |
+| o4 | who | D |
 
-`answer_option_id`: o3 (them)
+`answer_option_id`: o4 (who)
 
-`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-FORM`; o4 = `VEN-FORM`
+`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-FORM`; o3 = `VEN-FORM`
 
 **Reveal**
 
 1. *Meaning.* A "subject pronoun" (I, she, we, they) does the action. An "object pronoun" (me, her, us, them) receives it or comes after words like to and between.
 2. *Shortcut.* Cover the other name and read the sentence with only the pronoun. "Gave to me" sounds right; "gave to I" does not.
-3. *Why it is right.* "them" is right. It is the form the slot needs.
+3. *Why it is right.* "who" is right. It is the form the slot needs.
 4. *Why the others are wrong.*
-   - they: "they" is a subject pronoun; after "to" you need "them".
-   - theirs: "theirs" shows ownership.
-   - themselves: "themselves" needs "they" as the subject.
+   - which: "which" is for things.
+   - whom: "whom" is an object; here the word is the subject of "worked".
+   - whose: "whose" shows ownership.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 64. CIVIO-VEN-ERROR-AGREE-000174
+## 69. CIVIO-VEN-ERROR-AGREE-000180
 
 - track: both · domain: verbal_en · archetype: VEN-ERROR-AGREE · difficulty: medium · est: 30 s
 - competency: Grammar and correct usage · concept: subject-verb agreement
@@ -2093,296 +2258,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the word that best completes the sentence: The box of old receipts ____ more than ten kilos.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | to weigh | A |
-| o2 | weighing | B |
-| o3 | weighs | C |
-| o4 | weigh | D |
-
-`answer_option_id`: o3 (weighs)
-
-`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-FORM`; o4 = `VEN-NEAREST-NOUN`
-
-**Reveal**
-
-1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s).
-2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "The box ____". The subject is singular, so use the singular verb.
-3. *Why it is right.* "weighs" is right: "The box" is singular.
-4. *Why the others are wrong.*
-   - to weigh: "to weigh" is not a verb form that can stand alone after this subject.
-   - weighing: "weighing" cannot be the main verb on its own; the sentence would have no full verb.
-   - weigh: "weigh" agrees with "receipts", the nearest noun, not with the true subject.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 65. CIVIO-VEN-ERROR-TENSE-000175
-
-- track: both · domain: verbal_en · archetype: VEN-ERROR-TENSE · difficulty: easy · est: 25 s
-- competency: Grammar and correct usage · concept: verb tense
-- micro_skill: match tense to a time signal
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the correct verb: Two days ago, the engineering office staff ____ the census forms.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | has encoded | A |
-| o2 | will have encoded | B |
-| o3 | will encode | C |
-| o4 | encoded | D |
-
-`answer_option_id`: o4 (encoded)
-
-`distractor_reasoning`: o1 = `VEN-TENSE`; o2 = `VEN-TENSE`; o3 = `VEN-TENSE`
-
-**Reveal**
-
-1. *Meaning.* "Tense" tells when an action happens. A "time signal" is a word like yesterday, tomorrow or since that fixes the time.
-2. *Shortcut.* Find the time signal first: "Two days ago". It calls for the simple past.
-3. *Why it is right.* "encoded" is right: the simple past matches "Two days ago".
-4. *Why the others are wrong.*
-   - has encoded: "has encoded" is present perfect. It does not fit the time signal "Two days ago".
-   - will have encoded: "will have encoded" is future perfect. It does not fit the time signal "Two days ago".
-   - will encode: "will encode" is simple future. It does not fit the time signal "Two days ago".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 66. CIVIO-VEN-WORD-MEANING-000176
-
-- track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 20 s
-- competency: Vocabulary · concept: synonyms
-- micro_skill: word meaning
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is closest in meaning to the word in capital letters?  NEGLIGENT
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | negligible | A |
-| o2 | careless | B |
-| o3 | attentive | C |
-| o4 | negotiable | D |
-
-`answer_option_id`: o2 (careless)
-
-`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o3 = `RC-OPPOSITE`; o4 = `VEN-HOMOPHONE`
-
-**Reveal**
-
-1. *Meaning.* A "synonym" is a word with nearly the same meaning.
-2. *Shortcut.* Make a short sentence with "negligent", then swap in each choice. Watch for words that only look or sound like "negligent".
-3. *Why it is right.* "careless" is right. "Negligent" means careless.
-4. *Why the others are wrong.*
-   - negligible: "negligible" means too small to matter.
-   - attentive: "attentive" is the opposite.
-   - negotiable: "negotiable" means open to discussion.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 67. CIVIO-VEN-SENT-COMP-WORD-000177
-
-- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 25 s
-- competency: Grammar and correct usage · concept: pronoun case
-- micro_skill: subject vs object pronoun
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the word that best completes the sentence: Each employee must bring ____ own ID.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | their own's | A |
-| o2 | its | B |
-| o3 | his or her | C |
-| o4 | one's | D |
-
-`answer_option_id`: o3 (his or her)
-
-`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-FORM`; o4 = `VEN-REGISTER`
-
-**Reveal**
-
-1. *Meaning.* A "subject pronoun" (I, she, we, they) does the action. An "object pronoun" (me, her, us, them) receives it or comes after words like to and between.
-2. *Shortcut.* Cover the other name and read the sentence with only the pronoun. "Gave to me" sounds right; "gave to I" does not.
-3. *Why it is right.* "his or her" is right. It is the form the slot needs.
-4. *Why the others are wrong.*
-   - their own's: This is not a correct English form.
-   - its: "its" is for things, not people.
-   - one's: "one's" does not match "each employee".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 68. CIVIO-VEN-ERROR-AGREE-000178
-
-- track: both · domain: verbal_en · archetype: VEN-ERROR-AGREE · difficulty: medium · est: 30 s
-- competency: Grammar and correct usage · concept: subject-verb agreement
-- micro_skill: find the true subject past a prepositional phrase
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the word that best completes the sentence: Neither of the drivers ____ late this morning.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | been | A |
-| o2 | were | B |
-| o3 | being | C |
-| o4 | was | D |
-
-`answer_option_id`: o4 (was)
-
-`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-NEAREST-NOUN`; o3 = `VEN-FORM`
-
-**Reveal**
-
-1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s).
-2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "Neither ____". The subject is singular, so use the singular verb.
-3. *Why it is right.* "was" is right: "Neither" is singular.
-4. *Why the others are wrong.*
-   - been: "been" is not a verb form that can stand alone after this subject.
-   - were: "were" agrees with "drivers", the nearest noun, not with the true subject.
-   - being: "being" cannot be the main verb on its own; the sentence would have no full verb.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 69. CIVIO-VEN-ERROR-TENSE-000179
-
-- track: both · domain: verbal_en · archetype: VEN-ERROR-TENSE · difficulty: medium · est: 25 s
-- competency: Grammar and correct usage · concept: verb tense
-- micro_skill: match tense to a time signal
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the correct verb: By the end of the year, Datu ____ the voters' list.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | is updating | A |
-| o2 | has updated | B |
-| o3 | updated | C |
-| o4 | will have updated | D |
-
-`answer_option_id`: o4 (will have updated)
-
-`distractor_reasoning`: o1 = `VEN-TENSE`; o2 = `VEN-TENSE`; o3 = `VEN-TENSE`
-
-**Reveal**
-
-1. *Meaning.* "Tense" tells when an action happens. A "time signal" is a word like yesterday, tomorrow or since that fixes the time.
-2. *Shortcut.* Find the time signal first: "By the end of the year". It calls for the future perfect.
-3. *Why it is right.* "will have updated" is right: the future perfect matches "By the end of the year".
-4. *Why the others are wrong.*
-   - is updating: "is updating" is present progressive. It does not fit the time signal "By the end of the year".
-   - has updated: "has updated" is present perfect. It does not fit the time signal "By the end of the year".
-   - updated: "updated" is simple past. It does not fit the time signal "By the end of the year".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 70. CIVIO-VEN-WORD-MEANING-000180
-
-- track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 20 s
-- competency: Vocabulary · concept: synonyms
-- micro_skill: word meaning
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is closest in meaning to the word in capital letters?  HOSTILE
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | hostage | A |
-| o2 | welcoming | B |
-| o3 | hostel | C |
-| o4 | unfriendly | D |
-
-`answer_option_id`: o4 (unfriendly)
-
-`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o2 = `RC-OPPOSITE`; o3 = `VEN-HOMOPHONE`
-
-**Reveal**
-
-1. *Meaning.* A "synonym" is a word with nearly the same meaning.
-2. *Shortcut.* Make a short sentence with "hostile", then swap in each choice. Watch for words that only look or sound like "hostile".
-3. *Why it is right.* "unfriendly" is right. "Hostile" means unfriendly.
-4. *Why the others are wrong.*
-   - hostage: A hostage is a person held captive.
-   - welcoming: "welcoming" is the opposite.
-   - hostel: A hostel is a cheap place to stay.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 71. CIVIO-VEN-ERROR-AGREE-000181
-
-- track: both · domain: verbal_en · archetype: VEN-ERROR-AGREE · difficulty: medium · est: 30 s
-- competency: Grammar and correct usage · concept: subject-verb agreement
-- micro_skill: find the true subject past a prepositional phrase
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the word that best completes the sentence: The supply of vaccines ____ delivered on Monday.
+**Stem:** Choose the word that best completes the sentence: The head of the three sections ____ absent during the audit.
 
 | option_id | text | shown as |
 |---|---|---|
 | o1 | was | A |
-| o2 | been | B |
-| o3 | being | C |
-| o4 | were | D |
+| o2 | were | B |
+| o3 | been | C |
+| o4 | being | D |
 
 `answer_option_id`: o1 (was)
 
-`distractor_reasoning`: o2 = `VEN-FORM`; o3 = `VEN-FORM`; o4 = `VEN-NEAREST-NOUN`
+`distractor_reasoning`: o2 = `VEN-NEAREST-NOUN`; o3 = `VEN-FORM`; o4 = `VEN-FORM`
 
 **Reveal**
 
-1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s).
-2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "The supply ____". The subject is singular, so use the singular verb.
-3. *Why it is right.* "was" is right: "The supply" is singular.
+1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s); a plural subject takes a plural verb.
+2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "The head ____". The subject is singular, so use the singular verb.
+3. *Why it is right.* "was" is right: "The head" is singular.
 4. *Why the others are wrong.*
+   - were: "were" agrees with "sections", the nearest noun, not with the true subject.
    - been: "been" is not a verb form that can stand alone after this subject.
    - being: "being" cannot be the main verb on its own; the sentence would have no full verb.
-   - were: "were" agrees with "vaccines", the nearest noun, not with the true subject.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 72. CIVIO-VEN-ERROR-TENSE-000182
-
-- track: both · domain: verbal_en · archetype: VEN-ERROR-TENSE · difficulty: medium · est: 25 s
-- competency: Grammar and correct usage · concept: verb tense
-- micro_skill: match tense to a time signal
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the correct verb: Right now, Rhea ____ the payroll.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | submitted | A |
-| o2 | is submitting | B |
-| o3 | will have submitted | C |
-| o4 | submits | D |
-
-`answer_option_id`: o2 (is submitting)
-
-`distractor_reasoning`: o1 = `VEN-TENSE`; o3 = `VEN-TENSE`; o4 = `VEN-TENSE`
-
-**Reveal**
-
-1. *Meaning.* "Tense" tells when an action happens. A "time signal" is a word like yesterday, tomorrow or since that fixes the time.
-2. *Shortcut.* Find the time signal first: "Right now". It calls for the present progressive.
-3. *Why it is right.* "is submitting" is right: the present progressive matches "Right now".
-4. *Why the others are wrong.*
-   - submitted: "submitted" is simple past. It does not fit the time signal "Right now".
-   - will have submitted: "will have submitted" is future perfect. It does not fit the time signal "Right now".
-   - submits: "submits" is simple present. It does not fit the time signal "Right now".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 73. CIVIO-VEN-SENT-COMP-WORD-000183
+## 70. CIVIO-VEN-SENT-COMP-WORD-000181
 
 - track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 25 s
 - competency: Grammar and correct usage · concept: commonly confused words
@@ -2390,32 +2291,98 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the word that best completes the sentence: Each worker must keep the ____ of client records.
+**Stem:** Choose the word that best completes the sentence: The town ____ the drivers who joined the cleanup.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | confident | A |
-| o2 | confidence | B |
-| o3 | confidently | C |
-| o4 | confidentiality | D |
+| o1 | compliment | A |
+| o2 | complimented | B |
+| o3 | complemented | C |
+| o4 | complied | D |
 
-`answer_option_id`: o4 (confidentiality)
+`answer_option_id`: o2 (complimented)
 
-`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-HOMOPHONE`; o3 = `VEN-FORM`
+`distractor_reasoning`: o1 = `VEN-FORM`; o3 = `VEN-HOMOPHONE`; o4 = `VEN-HOMOPHONE`
 
 **Reveal**
 
 1. *Meaning.* Some English words look or sound alike but mean different things. Read the whole sentence before choosing.
 2. *Shortcut.* Decide what kind of word the blank needs (a thing, an action, a describing word), then match the meaning.
-3. *Why it is right.* "confidentiality" is right. It has the meaning and the word form the sentence needs.
+3. *Why it is right.* "complimented" is right. It has the meaning and the word form the sentence needs.
 4. *Why the others are wrong.*
-   - confident: "confident" is an adjective.
-   - confidence: "confidence" means trust in oneself.
-   - confidently: "confidently" is an adverb.
+   - compliment: The sentence needs the past tense.
+   - complemented: "complemented" means completed or matched well.
+   - complied: "complied" means obeyed.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 74. CIVIO-VEN-WORD-MEANING-000184
+## 71. CIVIO-VEN-SENT-COMP-WORD-000182
+
+- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 30 s
+- competency: Vocabulary · concept: sentence completion
+- micro_skill: use clue words to fill the blank
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Choose the word that best completes the sentence: The report was so ____ that the board read it in five minutes.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | brave | A |
+| o2 | briefing | B |
+| o3 | lengthy | C |
+| o4 | brief | D |
+
+`answer_option_id`: o4 (brief)
+
+`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o2 = `VEN-FORM`; o3 = `VRB-ANTONYM-TRAP`
+
+**Reveal**
+
+1. *Meaning.* Clue words such as because, although, so and since tell you whether the blank agrees with or contrasts with the rest.
+2. *Shortcut.* Find the clue word, decide if the blank should agree or contrast, then check that the choice is the right word form.
+3. *Why it is right.* "brief" is right: it fits the clue in the sentence and is the right word form.
+4. *Why the others are wrong.*
+   - brave: "Brave" only looks similar.
+   - briefing: "Briefing" is a noun.
+   - lengthy: A lengthy report takes long to read.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 72. CIVIO-VEN-SENT-COMP-WORD-000183
+
+- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 20 s
+- competency: Grammar and correct usage · concept: prepositions
+- micro_skill: pick the preposition the word pairs with
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Choose the word that best completes the sentence: The office is responsible ____ the safekeeping of records.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | for | A |
+| o2 | on | B |
+| o3 | to | C |
+| o4 | of | D |
+
+`answer_option_id`: o1 (for)
+
+`distractor_reasoning`: o2 = `VEN-PARTICLE`; o3 = `VEN-PARTICLE`; o4 = `VEN-PARTICLE`
+
+**Reveal**
+
+1. *Meaning.* A "preposition" is a small linking word (in, on, at, for, with). Many words always pair with one preposition.
+2. *Shortcut.* Read the word just before the blank and recall the phrase it usually forms (interested in, comply with).
+3. *Why it is right.* "for" is right: it is the standard pairing in this sentence.
+4. *Why the others are wrong.*
+   - on: "Responsible on" is not standard.
+   - to: "Responsible to" names a person you answer to, not a duty.
+   - of: "Responsible" pairs with "for" a duty.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 73. CIVIO-VEN-WORD-MEANING-000184
 
 - track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 20 s
 - competency: Vocabulary · concept: synonyms
@@ -2423,98 +2390,98 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is closest in meaning to the word in capital letters?  PUNCTUAL
+**Stem:** Which word is closest in meaning to the word in capital letters?  RELUCTANT
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | practical | A |
-| o2 | late | B |
-| o3 | punctured | C |
-| o4 | on time | D |
+| o1 | unwilling | A |
+| o2 | eager | B |
+| o3 | resilient | C |
+| o4 | relevant | D |
 
-`answer_option_id`: o4 (on time)
+`answer_option_id`: o1 (unwilling)
 
-`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o2 = `RC-OPPOSITE`; o3 = `VEN-HOMOPHONE`
+`distractor_reasoning`: o2 = `VRB-ANTONYM-TRAP`; o3 = `VEN-HOMOPHONE`; o4 = `VEN-HOMOPHONE`
 
 **Reveal**
 
 1. *Meaning.* A "synonym" is a word with nearly the same meaning.
-2. *Shortcut.* Make a short sentence with "punctual", then swap in each choice. Watch for words that only look or sound like "punctual".
-3. *Why it is right.* "on time" is right. "Punctual" means on time.
+2. *Shortcut.* Make a short sentence with "reluctant", then swap in each choice. Watch for words that only look or sound like "reluctant".
+3. *Why it is right.* "unwilling" is right. "Reluctant" means unwilling.
 4. *Why the others are wrong.*
-   - practical: "practical" means useful.
-   - late: "late" is the opposite.
-   - punctured: "punctured" means pierced.
+   - eager: "eager" is the opposite.
+   - resilient: "resilient" means able to recover.
+   - relevant: "relevant" means related to the topic.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 75. CIVIO-VEN-SENT-COMP-WORD-000185
+## 74. CIVIO-VEN-WORD-MEANING-000185
 
-- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 25 s
-- competency: Grammar and correct usage · concept: pronoun case
-- micro_skill: subject vs object pronoun
+- track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 25 s
+- competency: Vocabulary · concept: idioms
+- micro_skill: meaning of an idiom
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the word that best completes the sentence: The teacher and ____ will check the test papers.
+**Stem:** What does the phrase in capital letters mean?  The treasurer is TIGHTENING THE BELT this quarter.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | I | A |
-| o2 | me | B |
-| o3 | mine | C |
-| o4 | myself | D |
+| o1 | losing weight | A |
+| o2 | spending less | B |
+| o3 | spending more | C |
+| o4 | spending nothing at all | D |
 
-`answer_option_id`: o1 (I)
+`answer_option_id`: o2 (spending less)
 
-`distractor_reasoning`: o2 = `VEN-FORM`; o3 = `VEN-FORM`; o4 = `VEN-FORM`
+`distractor_reasoning`: o1 = `RC-TOO-NARROW`; o3 = `VRB-ANTONYM-TRAP`; o4 = `RC-EXTREME`
 
 **Reveal**
 
-1. *Meaning.* A "subject pronoun" (I, she, we, they) does the action. An "object pronoun" (me, her, us, them) receives it or comes after words like to and between.
-2. *Shortcut.* Cover the other name and read the sentence with only the pronoun. "Gave to me" sounds right; "gave to I" does not.
-3. *Why it is right.* "I" is right. It is the form the slot needs.
+1. *Meaning.* An "idiom" is a set phrase whose meaning is not the meaning of its separate words.
+2. *Shortcut.* Skip the literal picture. Ask what the speaker wants to say in this situation.
+3. *Why it is right.* "spending less" is right: that is what the idiom means here.
 4. *Why the others are wrong.*
-   - me: "me" is an object pronoun; this is part of the subject.
-   - mine: "mine" shows ownership.
-   - myself: "myself" cannot be a subject.
+   - losing weight: This is the literal reading.
+   - spending more: This is the opposite.
+   - spending nothing at all: The idiom means cutting back, not stopping.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 76. CIVIO-CLR-SPELL-WRONG-000186
+## 75. CIVIO-VEN-WORD-MEANING-000186
 
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
-- competency: Spelling · concept: misspelled word
-- micro_skill: find the one misspelled word
+- track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 20 s
+- competency: Vocabulary · concept: antonyms
+- micro_skill: word meaning (opposite)
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is misspelled?  exaggerate | noticeable | assssment | weird
+**Stem:** Which word is most nearly OPPOSITE in meaning to the word in capital letters?  OBSOLETE
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | exaggerate | A |
-| o2 | noticeable | B |
-| o3 | assssment | C |
-| o4 | weird | D |
+| o1 | modern | A |
+| o2 | absolute | B |
+| o3 | obstinate | C |
+| o4 | outdated | D |
 
-`answer_option_id`: o3 (assssment)
+`answer_option_id`: o1 (modern)
 
-`distractor_reasoning`: o1 = `CLR-SPELL-WRONG`; o2 = `CLR-SPELL-WRONG`; o4 = `CLR-SPELL-WRONG`
+`distractor_reasoning`: o2 = `VEN-HOMOPHONE`; o3 = `VEN-HOMOPHONE`; o4 = `VRB-SYNONYM-TRAP`
 
 **Reveal**
 
-1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
-2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
-3. *Why it is right.* "assssment" is misspelled: it drops a letter. The correct spelling is "assessment".
+1. *Meaning.* An "antonym" is a word with the opposite meaning.
+2. *Shortcut.* First say what "obsolete" means (outdated). Then look for the word that means the reverse.
+3. *Why it is right.* "modern" is right. "Obsolete" means outdated; "modern" is the reverse.
 4. *Why the others are wrong.*
-   - exaggerate: "exaggerate" is spelled correctly, even if it looks unusual.
-   - noticeable: "noticeable" is spelled correctly, even if it looks unusual.
-   - weird: "weird" is spelled correctly, even if it looks unusual.
+   - absolute: "absolute" sounds alike; it means complete.
+   - obstinate: "obstinate" means stubborn.
+   - outdated: "outdated" means the same as "obsolete", not the opposite.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 77. CIVIO-CLR-FILE-POSITION-000187
+## 76. CIVIO-CLR-FILE-POSITION-000187
 
 - track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
 - competency: Filing · concept: alphabetic filing of personal names
@@ -2522,131 +2489,65 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed FIRST?  Ramon E. Leon | Gloria L. Dela Torre | Cristina C. Pedro | Eduardo S. De los Santos
+**Stem:** In alphabetical filing, which name is filed FIRST?  Atty. Felipe V. Torres | Dr. Juan R. Dela Cruz | Rafael R. Garcia | Atty. Gloria V. Delos Reyes
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Cristina C. Pedro | A |
-| o2 | Eduardo S. De los Santos | B |
-| o3 | Ramon E. Leon | C |
-| o4 | Gloria L. Dela Torre | D |
+| o1 | Rafael R. Garcia | A |
+| o2 | Atty. Felipe V. Torres | B |
+| o3 | Dr. Juan R. Dela Cruz | C |
+| o4 | Atty. Gloria V. Delos Reyes | D |
 
-`answer_option_id`: o4 (Gloria L. Dela Torre)
+`answer_option_id`: o3 (Dr. Juan R. Dela Cruz)
 
-`distractor_reasoning`: o1 = `CLR-FIRSTNAME-FIRST`; o2 = `CLR-FILE-ORDER`; o3 = `CLR-PREFIX-SPLIT`
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
 1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Gloria L. Dela Torre → DELATORRE, Gloria; Eduardo S. De los Santos → DELOSSANTOS, Eduardo; Ramon E. Leon → LEON, Ramon; Cristina C. Pedro → PEDRO, Cristina.
-3. *Why it is right.* "Gloria L. Dela Torre" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Cristina C. Pedro: "Cristina C. Pedro" sorts by the given name. Personal names file by surname first.
-   - Eduardo S. De los Santos: "Eduardo S. De los Santos" files as DELOSSANTOS, which comes after DELATORRE.
-   - Ramon E. Leon: "Ramon E. Leon" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 78. CIVIO-CLR-SPELL-WRONG-000188
-
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
-- competency: Spelling · concept: misspelled word
-- micro_skill: find the one misspelled word
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is misspelled?  convnience | exaggerate | personnel | embarrass
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | convnience | A |
-| o2 | exaggerate | B |
-| o3 | personnel | C |
-| o4 | embarrass | D |
-
-`answer_option_id`: o1 (convnience)
-
-`distractor_reasoning`: o2 = `CLR-SPELL-WRONG`; o3 = `CLR-SPELL-WRONG`; o4 = `CLR-SPELL-WRONG`
-
-**Reveal**
-
-1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
-2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
-3. *Why it is right.* "convnience" is misspelled: it drops a letter. The correct spelling is "convenience".
-4. *Why the others are wrong.*
-   - exaggerate: "exaggerate" is spelled correctly, even if it looks unusual.
-   - personnel: "personnel" is spelled correctly, even if it looks unusual.
-   - embarrass: "embarrass" is spelled correctly, even if it looks unusual.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 79. CIVIO-CLR-FILE-POSITION-000189
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed FIRST?  Andres D. Dela Torre | Dr. Corazon D. Juan | Atty. Felipe V. Torres | Dr. Juan R. Dela Cruz
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Atty. Felipe V. Torres | A |
-| o2 | Dr. Juan R. Dela Cruz | B |
-| o3 | Dr. Corazon D. Juan | C |
-| o4 | Andres D. Dela Torre | D |
-
-`answer_option_id`: o2 (Dr. Juan R. Dela Cruz)
-
-`distractor_reasoning`: o1 = `CLR-TITLE-COUNTED`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FIRSTNAME-FIRST`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Dr. Juan R. Dela Cruz → DELACRUZ, Juan; Andres D. Dela Torre → DELATORRE, Andres; Dr. Corazon D. Juan → JUAN, Corazon; Atty. Felipe V. Torres → TORRES, Felipe.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Dr. Juan R. Dela Cruz → DELACRUZ, Juan; Atty. Gloria V. Delos Reyes → DELOSREYES, Gloria; Rafael R. Garcia → GARCIA, Rafael; Atty. Felipe V. Torres → TORRES, Felipe.
 3. *Why it is right.* "Dr. Juan R. Dela Cruz" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Atty. Felipe V. Torres: "Atty. Felipe V. Torres" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-   - Dr. Corazon D. Juan: "Dr. Corazon D. Juan" files as JUAN, which comes after DELACRUZ.
-   - Andres D. Dela Torre: "Andres D. Dela Torre" sorts by the given name. Personal names file by surname first.
+   - Rafael R. Garcia: "Rafael R. Garcia" files as GARCIA, which comes after DELACRUZ.
+   - Atty. Felipe V. Torres: "Atty. Felipe V. Torres" sorts by the given name. Personal names file by surname first.
+   - Atty. Gloria V. Delos Reyes: "Atty. Gloria V. Delos Reyes" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 80. CIVIO-CLR-SPELL-WRONG-000190
+## 77. CIVIO-CLR-SPELL-RIGHT-000188
 
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
-- competency: Spelling · concept: misspelled word
-- micro_skill: find the one misspelled word
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
+- competency: Spelling · concept: correct spelling
+- micro_skill: spot the correct spelling
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is misspelled?  calendar | colleague | herass | jewelry
+**Stem:** Which word is spelled correctly?  privlege | privilej | privilege | privillege
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | calendar | A |
-| o2 | colleague | B |
-| o3 | herass | C |
-| o4 | jewelry | D |
+| o1 | privlege | A |
+| o2 | privilej | B |
+| o3 | privilege | C |
+| o4 | privillege | D |
 
-`answer_option_id`: o3 (herass)
+`answer_option_id`: o3 (privilege)
 
-`distractor_reasoning`: o1 = `CLR-SPELL-WRONG`; o2 = `CLR-SPELL-WRONG`; o4 = `CLR-SPELL-WRONG`
+`distractor_reasoning`: o1 = `SPL-DROP`; o2 = `SPL-SOUND`; o4 = `SPL-DOUBLE`
 
 **Reveal**
 
-1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
-2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
-3. *Why it is right.* "herass" is misspelled: it is spelled the way the word sounds. The correct spelling is "harass".
+1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
+2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
+3. *Why it is right.* "privilege" is the standard spelling.
 4. *Why the others are wrong.*
-   - calendar: "calendar" is spelled correctly, even if it looks unusual.
-   - colleague: "colleague" is spelled correctly, even if it looks unusual.
-   - jewelry: "jewelry" is spelled correctly, even if it looks unusual.
+   - privlege: "privlege" drops a letter. The correct spelling is "privilege".
+   - privilej: "privilej" is spelled the way the word sounds. The correct spelling is "privilege".
+   - privillege: "privillege" doubles or undoubles a consonant. The correct spelling is "privilege".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 81. CIVIO-CLR-FILE-POSITION-000191
+## 78. CIVIO-CLR-FILE-POSITION-000189
 
 - track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
 - competency: Filing · concept: alphabetic filing of personal names
@@ -2654,65 +2555,65 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed LAST?  Dr. Juan B. De Leon | Ramon B. Rivera | Felipe D. Dizon | Mario L. Salazar
+**Stem:** In alphabetical filing, which name is filed LAST?  Ramon B. Rivera | Felipe D. Dizon | Mario L. Salazar | Maria D. San Juan
 
 | option_id | text | shown as |
 |---|---|---|
 | o1 | Felipe D. Dizon | A |
-| o2 | Mario L. Salazar | B |
-| o3 | Dr. Juan B. De Leon | C |
-| o4 | Ramon B. Rivera | D |
+| o2 | Maria D. San Juan | B |
+| o3 | Ramon B. Rivera | C |
+| o4 | Mario L. Salazar | D |
 
-`answer_option_id`: o2 (Mario L. Salazar)
+`answer_option_id`: o2 (Maria D. San Juan)
 
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o3 = `CLR-TITLE-COUNTED`; o4 = `CLR-FIRSTNAME-FIRST`
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
 1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Dr. Juan B. De Leon → DELEON, Juan; Felipe D. Dizon → DIZON, Felipe; Ramon B. Rivera → RIVERA, Ramon; Mario L. Salazar → SALAZAR, Mario.
-3. *Why it is right.* "Mario L. Salazar" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Felipe D. Dizon → DIZON, Felipe; Ramon B. Rivera → RIVERA, Ramon; Mario L. Salazar → SALAZAR, Mario; Maria D. San Juan → SANJUAN, Maria.
+3. *Why it is right.* "Maria D. San Juan" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Felipe D. Dizon: "Felipe D. Dizon" files as DIZON, which comes before SALAZAR.
-   - Dr. Juan B. De Leon: "Dr. Juan B. De Leon" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Felipe D. Dizon: "Felipe D. Dizon" files as DIZON, which comes before SANJUAN.
    - Ramon B. Rivera: "Ramon B. Rivera" sorts by the given name. Personal names file by surname first.
+   - Mario L. Salazar: "Mario L. Salazar" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 82. CIVIO-CLR-SPELL-WRONG-000192
+## 79. CIVIO-CLR-SPELL-RIGHT-000190
 
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
-- competency: Spelling · concept: misspelled word
-- micro_skill: find the one misspelled word
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
+- competency: Spelling · concept: correct spelling
+- micro_skill: spot the correct spelling
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is misspelled?  privilege | accommdate | bureaucracy | jewelry
+**Stem:** Which word is spelled correctly?  maintennance | maintnance | maintenance | maintenence
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | privilege | A |
-| o2 | accommdate | B |
-| o3 | bureaucracy | C |
-| o4 | jewelry | D |
+| o1 | maintennance | A |
+| o2 | maintnance | B |
+| o3 | maintenance | C |
+| o4 | maintenence | D |
 
-`answer_option_id`: o2 (accommdate)
+`answer_option_id`: o3 (maintenance)
 
-`distractor_reasoning`: o1 = `CLR-SPELL-WRONG`; o3 = `CLR-SPELL-WRONG`; o4 = `CLR-SPELL-WRONG`
+`distractor_reasoning`: o1 = `SPL-DOUBLE`; o2 = `SPL-DROP`; o4 = `SPL-SOUND`
 
 **Reveal**
 
-1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
-2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
-3. *Why it is right.* "accommdate" is misspelled: it drops a letter. The correct spelling is "accommodate".
+1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
+2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
+3. *Why it is right.* "maintenance" is the standard spelling.
 4. *Why the others are wrong.*
-   - privilege: "privilege" is spelled correctly, even if it looks unusual.
-   - bureaucracy: "bureaucracy" is spelled correctly, even if it looks unusual.
-   - jewelry: "jewelry" is spelled correctly, even if it looks unusual.
+   - maintennance: "maintennance" doubles or undoubles a consonant. The correct spelling is "maintenance".
+   - maintnance: "maintnance" drops a letter. The correct spelling is "maintenance".
+   - maintenence: "maintenence" is spelled the way the word sounds. The correct spelling is "maintenance".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 83. CIVIO-CLR-FILE-POSITION-000193
+## 80. CIVIO-CLR-FILE-POSITION-000191
 
 - track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
 - competency: Filing · concept: alphabetic filing of personal names
@@ -2720,65 +2621,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed FIRST?  Benito G. Rosario | Ernesto M. De los Santos | Dr. Liza N. Flores | Lourdes B. Lim
+**Stem:** In alphabetical filing, which name is filed FIRST?  Atty. Ernesto P. Reyes | Victoria E. Ocampo | Nora S. Del Mundo | Atty. Ramon C. De los Santos
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Lourdes B. Lim | A |
-| o2 | Ernesto M. De los Santos | B |
-| o3 | Benito G. Rosario | C |
-| o4 | Dr. Liza N. Flores | D |
-
-`answer_option_id`: o2 (Ernesto M. De los Santos)
-
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o3 = `CLR-FIRSTNAME-FIRST`; o4 = `CLR-PREFIX-SPLIT`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Ernesto M. De los Santos → DELOSSANTOS, Ernesto; Dr. Liza N. Flores → FLORES, Liza; Lourdes B. Lim → LIM, Lourdes; Benito G. Rosario → ROSARIO, Benito.
-3. *Why it is right.* "Ernesto M. De los Santos" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Lourdes B. Lim: "Lourdes B. Lim" files as LIM, which comes after DELOSSANTOS.
-   - Benito G. Rosario: "Benito G. Rosario" sorts by the given name. Personal names file by surname first.
-   - Dr. Liza N. Flores: "Dr. Liza N. Flores" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 84. CIVIO-CLR-FILE-POSITION-000194
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed FIRST?  Victoria E. Ocampo | Nora S. Del Mundo | Atty. Ramon C. De los Santos | Andres S. Lim
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Andres S. Lim | A |
+| o1 | Atty. Ernesto P. Reyes | A |
 | o2 | Nora S. Del Mundo | B |
 | o3 | Atty. Ramon C. De los Santos | C |
 | o4 | Victoria E. Ocampo | D |
 
 `answer_option_id`: o2 (Nora S. Del Mundo)
 
-`distractor_reasoning`: o1 = `CLR-PREFIX-SPLIT`; o3 = `CLR-TITLE-COUNTED`; o4 = `CLR-FILE-ORDER`
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
 1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Nora S. Del Mundo → DELMUNDO, Nora; Atty. Ramon C. De los Santos → DELOSSANTOS, Ramon; Andres S. Lim → LIM, Andres; Victoria E. Ocampo → OCAMPO, Victoria.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Nora S. Del Mundo → DELMUNDO, Nora; Atty. Ramon C. De los Santos → DELOSSANTOS, Ramon; Victoria E. Ocampo → OCAMPO, Victoria; Atty. Ernesto P. Reyes → REYES, Ernesto.
 3. *Why it is right.* "Nora S. Del Mundo" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Andres S. Lim: "Andres S. Lim" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
+   - Atty. Ernesto P. Reyes: "Atty. Ernesto P. Reyes" sorts by the given name. Personal names file by surname first.
    - Atty. Ramon C. De los Santos: "Atty. Ramon C. De los Santos" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
    - Victoria E. Ocampo: "Victoria E. Ocampo" files as OCAMPO, which comes after DELMUNDO.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 85. CIVIO-CLR-SPELL-RIGHT-000195
+## 81. CIVIO-CLR-SPELL-RIGHT-000192
 
 - track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
 - competency: Spelling · concept: correct spelling
@@ -2786,32 +2654,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is spelled correctly?  allotmant | allotmnt | alotment | allotment
+**Stem:** Which word is spelled correctly?  assessmnt | assessmant | assessment | assesment
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | allotmant | A |
-| o2 | allotmnt | B |
-| o3 | alotment | C |
-| o4 | allotment | D |
+| o1 | assessmnt | A |
+| o2 | assessmant | B |
+| o3 | assessment | C |
+| o4 | assesment | D |
 
-`answer_option_id`: o4 (allotment)
+`answer_option_id`: o3 (assessment)
 
-`distractor_reasoning`: o1 = `SPL-SOUND`; o2 = `SPL-DROP`; o3 = `SPL-DOUBLE`
+`distractor_reasoning`: o1 = `SPL-DROP`; o2 = `SPL-SOUND`; o4 = `SPL-DOUBLE`
 
 **Reveal**
 
 1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
 2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "allotment" is the standard spelling.
+3. *Why it is right.* "assessment" is the standard spelling.
 4. *Why the others are wrong.*
-   - allotmant: "allotmant" is spelled the way the word sounds. The correct spelling is "allotment".
-   - allotmnt: "allotmnt" drops a letter. The correct spelling is "allotment".
-   - alotment: "alotment" doubles or undoubles a consonant. The correct spelling is "allotment".
+   - assessmnt: "assessmnt" drops a letter. The correct spelling is "assessment".
+   - assessmant: "assessmant" is spelled the way the word sounds. The correct spelling is "assessment".
+   - assesment: "assesment" doubles or undoubles a consonant. The correct spelling is "assessment".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 86. CIVIO-CLR-FILE-POSITION-000196
+## 82. CIVIO-CLR-FILE-POSITION-000193
 
 - track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
 - competency: Filing · concept: alphabetic filing of personal names
@@ -2819,32 +2687,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed FIRST?  Atty. Maria F. Dela Cruz | Carlos B. De Guzman | Ana G. De los Santos | Andres P. Torres
+**Stem:** In alphabetical filing, which name is filed LAST?  Liza E. Dela Torre | Ernesto F. Reyes-Tan | Rodrigo S. De Guzman | Danilo P. Del Mundo
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Andres P. Torres | A |
-| o2 | Ana G. De los Santos | B |
-| o3 | Atty. Maria F. Dela Cruz | C |
-| o4 | Carlos B. De Guzman | D |
+| o1 | Ernesto F. Reyes-Tan | A |
+| o2 | Rodrigo S. De Guzman | B |
+| o3 | Liza E. Dela Torre | C |
+| o4 | Danilo P. Del Mundo | D |
 
-`answer_option_id`: o4 (Carlos B. De Guzman)
+`answer_option_id`: o1 (Ernesto F. Reyes-Tan)
 
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FIRSTNAME-FIRST`; o3 = `CLR-PREFIX-SPLIT`
+`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
 1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Carlos B. De Guzman → DEGUZMAN, Carlos; Atty. Maria F. Dela Cruz → DELACRUZ, Maria; Ana G. De los Santos → DELOSSANTOS, Ana; Andres P. Torres → TORRES, Andres.
-3. *Why it is right.* "Carlos B. De Guzman" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Rodrigo S. De Guzman → DEGUZMAN, Rodrigo; Liza E. Dela Torre → DELATORRE, Liza; Danilo P. Del Mundo → DELMUNDO, Danilo; Ernesto F. Reyes-Tan → REYESTAN, Ernesto.
+3. *Why it is right.* "Ernesto F. Reyes-Tan" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Andres P. Torres: "Andres P. Torres" files as TORRES, which comes after DEGUZMAN.
-   - Ana G. De los Santos: "Ana G. De los Santos" sorts by the given name. Personal names file by surname first.
-   - Atty. Maria F. Dela Cruz: "Atty. Maria F. Dela Cruz" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
+   - Rodrigo S. De Guzman: "Rodrigo S. De Guzman" sorts by the given name. Personal names file by surname first.
+   - Liza E. Dela Torre: "Liza E. Dela Torre" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
+   - Danilo P. Del Mundo: "Danilo P. Del Mundo" files as DELMUNDO, which comes before REYESTAN.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 87. CIVIO-CLR-SPELL-RIGHT-000197
+## 83. CIVIO-CLR-SPELL-RIGHT-000194
 
 - track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
 - competency: Spelling · concept: correct spelling
@@ -2852,98 +2720,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is spelled correctly?  liason | liaisson | liison | liaison
+**Stem:** Which word is spelled correctly?  beginning | begnning | beginnng | begining
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | liason | A |
-| o2 | liaisson | B |
-| o3 | liison | C |
-| o4 | liaison | D |
+| o1 | beginning | A |
+| o2 | begnning | B |
+| o3 | beginnng | C |
+| o4 | begining | D |
 
-`answer_option_id`: o4 (liaison)
+`answer_option_id`: o1 (beginning)
 
-`distractor_reasoning`: o1 = `SPL-DROP`; o2 = `SPL-DOUBLE`; o3 = `SPL-DROP`
+`distractor_reasoning`: o2 = `SPL-DROP`; o3 = `SPL-DROP`; o4 = `SPL-DOUBLE`
 
 **Reveal**
 
 1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
 2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "liaison" is the standard spelling.
+3. *Why it is right.* "beginning" is the standard spelling.
 4. *Why the others are wrong.*
-   - liason: "liason" drops a letter. The correct spelling is "liaison".
-   - liaisson: "liaisson" doubles or undoubles a consonant. The correct spelling is "liaison".
-   - liison: "liison" drops a letter. The correct spelling is "liaison".
+   - begnning: "begnning" drops a letter. The correct spelling is "beginning".
+   - beginnng: "beginnng" drops a letter. The correct spelling is "beginning".
+   - begining: "begining" doubles or undoubles a consonant. The correct spelling is "beginning".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 88. CIVIO-CLR-FILE-POSITION-000198
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed LAST?  Felipe P. Santos | Jose A. Mendoza | Dr. Teresita T. Austria | Atty. Maria G. Dela Cruz
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Felipe P. Santos | A |
-| o2 | Jose A. Mendoza | B |
-| o3 | Dr. Teresita T. Austria | C |
-| o4 | Atty. Maria G. Dela Cruz | D |
-
-`answer_option_id`: o1 (Felipe P. Santos)
-
-`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FIRSTNAME-FIRST`; o4 = `CLR-TITLE-COUNTED`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Dr. Teresita T. Austria → AUSTRIA, Teresita; Atty. Maria G. Dela Cruz → DELACRUZ, Maria; Jose A. Mendoza → MENDOZA, Jose; Felipe P. Santos → SANTOS, Felipe.
-3. *Why it is right.* "Felipe P. Santos" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Jose A. Mendoza: "Jose A. Mendoza" files as MENDOZA, which comes before SANTOS.
-   - Dr. Teresita T. Austria: "Dr. Teresita T. Austria" sorts by the given name. Personal names file by surname first.
-   - Atty. Maria G. Dela Cruz: "Atty. Maria G. Dela Cruz" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 89. CIVIO-CLR-SPELL-RIGHT-000199
-
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
-- competency: Spelling · concept: correct spelling
-- micro_skill: spot the correct spelling
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is spelled correctly?  herass | harass | haras | harss
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | herass | A |
-| o2 | harass | B |
-| o3 | haras | C |
-| o4 | harss | D |
-
-`answer_option_id`: o2 (harass)
-
-`distractor_reasoning`: o1 = `SPL-SOUND`; o3 = `SPL-DOUBLE`; o4 = `SPL-DROP`
-
-**Reveal**
-
-1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
-2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "harass" is the standard spelling.
-4. *Why the others are wrong.*
-   - herass: "herass" is spelled the way the word sounds. The correct spelling is "harass".
-   - haras: "haras" doubles or undoubles a consonant. The correct spelling is "harass".
-   - harss: "harss" drops a letter. The correct spelling is "harass".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 90. CIVIO-CLR-FILE-POSITION-000200
+## 84. CIVIO-CLR-FILE-POSITION-000195
 
 - track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
 - competency: Filing · concept: alphabetic filing of personal names
@@ -2951,164 +2753,395 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Civio Filing Rules v2 / ARMA Rule 5 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed LAST?  Engr. Gloria A. Lim | Ana B. Rosario | Benito B. Reyes-Tan | Engr. Cristina M. Juan
+**Stem:** In alphabetical filing, which name is filed FIRST?  Carlos A. Mendoza | Engr. Mario A. Santos-Ocampo | Jose C. Lopez | Rosario R. Flores
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Ana B. Rosario | A |
-| o2 | Engr. Gloria A. Lim | B |
-| o3 | Benito B. Reyes-Tan | C |
-| o4 | Engr. Cristina M. Juan | D |
+| o1 | Engr. Mario A. Santos-Ocampo | A |
+| o2 | Jose C. Lopez | B |
+| o3 | Carlos A. Mendoza | C |
+| o4 | Rosario R. Flores | D |
 
-`answer_option_id`: o1 (Ana B. Rosario)
+`answer_option_id`: o4 (Rosario R. Flores)
 
-`distractor_reasoning`: o2 = `CLR-FIRSTNAME-FIRST`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-TITLE-COUNTED`
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`
 
 **Reveal**
 
 1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Cristina M. Juan → JUAN, Cristina; Engr. Gloria A. Lim → LIM, Gloria; Benito B. Reyes-Tan → REYESTAN, Benito; Ana B. Rosario → ROSARIO, Ana.
-3. *Why it is right.* "Ana B. Rosario" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Rosario R. Flores → FLORES, Rosario; Jose C. Lopez → LOPEZ, Jose; Carlos A. Mendoza → MENDOZA, Carlos; Engr. Mario A. Santos-Ocampo → SANTOSOCAMPO, Mario.
+3. *Why it is right.* "Rosario R. Flores" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Engr. Gloria A. Lim: "Engr. Gloria A. Lim" sorts by the given name. Personal names file by surname first.
-   - Benito B. Reyes-Tan: "Benito B. Reyes-Tan" files as REYESTAN, which comes before ROSARIO.
-   - Engr. Cristina M. Juan: "Engr. Cristina M. Juan" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Engr. Mario A. Santos-Ocampo: "Engr. Mario A. Santos-Ocampo" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Jose C. Lopez: "Jose C. Lopez" files as LOPEZ, which comes after FLORES.
+   - Carlos A. Mendoza: "Carlos A. Mendoza" sorts by the given name. Personal names file by surname first.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 91. CIVIO-GI-TERM-MATCH-000201
+## 85. CIVIO-CLR-FILE-POSITION-000196
 
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 2
-- micro_skill: recall a provision
-- source: R.A. 6713, R.A. 6713, Sec. 2 (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** What is the short title of R.A. 6713?
+**Stem:** In alphabetical filing, which name is filed FIRST?  Atty. Gloria F. Dizon | Alfredo A. San Juan | Liza V. Torres | Teresita N. Cruz
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Anti-Graft and Corrupt Practices Act | A |
-| o2 | Ease of Doing Business Act | B |
-| o3 | Civil Service Law | C |
-| o4 | Code of Conduct and Ethical Standards for Public Officials and Employees | D |
+| o1 | Atty. Gloria F. Dizon | A |
+| o2 | Alfredo A. San Juan | B |
+| o3 | Teresita N. Cruz | C |
+| o4 | Liza V. Torres | D |
 
-`answer_option_id`: o4 (Code of Conduct and Ethical Standards for Public Officials and Employees)
+`answer_option_id`: o3 (Teresita N. Cruz)
 
-`distractor_reasoning`: o1 = `GI-SIBLING-TERM`; o2 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
-1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 2.
-2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 2. That is R.A. 6713; the Anti-Graft law is R.A. 3019.
-3. *Why it is right.* "Code of Conduct and Ethical Standards for Public Officials and Employees" is right. R.A. 6713, Sec. 2 says: "Code of Conduct and Ethical Standards for Public Officials and Employees".
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Teresita N. Cruz → CRUZ, Teresita; Atty. Gloria F. Dizon → DIZON, Gloria; Alfredo A. San Juan → SANJUAN, Alfredo; Liza V. Torres → TORRES, Liza.
+3. *Why it is right.* "Teresita N. Cruz" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Anti-Graft and Corrupt Practices Act: "Anti-Graft and Corrupt Practices Act" is a related term, but not the one the text uses.
-   - Ease of Doing Business Act: "Ease of Doing Business Act" is a related term, but not the one the text uses.
-   - Civil Service Law: "Civil Service Law" is a related term, but not the one the text uses.
+   - Atty. Gloria F. Dizon: "Atty. Gloria F. Dizon" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Alfredo A. San Juan: "Alfredo A. San Juan" sorts by the given name. Personal names file by surname first.
+   - Liza V. Torres: "Liza V. Torres" files as TORRES, which comes after CRUZ.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 92. CIVIO-GI-TERM-MATCH-000202
+## 86. CIVIO-CLR-FILE-POSITION-000197
 
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 4(A)
-- micro_skill: recall a provision
-- source: R.A. 6713, R.A. 6713, Sec. 4(A) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** Under R.A. 6713, always upholding the public interest over personal interest is which norm of conduct?
+**Stem:** In alphabetical filing, which name is filed LAST?  Atty. Ana N. Austria | Liza N. San Pedro | Ramon S. Reyes-Tan | Engr. Benito E. Dela Torre
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Nationalism and patriotism | A |
-| o2 | Political neutrality | B |
-| o3 | Simple living | C |
-| o4 | Commitment to public interest | D |
+| o1 | Engr. Benito E. Dela Torre | A |
+| o2 | Liza N. San Pedro | B |
+| o3 | Ramon S. Reyes-Tan | C |
+| o4 | Atty. Ana N. Austria | D |
 
-`answer_option_id`: o4 (Commitment to public interest)
+`answer_option_id`: o2 (Liza N. San Pedro)
 
-`distractor_reasoning`: o1 = `GI-SIBLING-TERM`; o2 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
-1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 4(A).
-2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 4(A). This is commitment to public interest, Sec. 4(A)(a).
-3. *Why it is right.* "Commitment to public interest" is right. R.A. 6713, Sec. 4(A) says: "always uphold the public interest over and above personal interest".
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Atty. Ana N. Austria → AUSTRIA, Ana; Engr. Benito E. Dela Torre → DELATORRE, Benito; Ramon S. Reyes-Tan → REYESTAN, Ramon; Liza N. San Pedro → SANPEDRO, Liza.
+3. *Why it is right.* "Liza N. San Pedro" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Nationalism and patriotism: "Nationalism and patriotism" is a related term, but not the one the text uses.
-   - Political neutrality: "Political neutrality" is a related term, but not the one the text uses.
-   - Simple living: "Simple living" is a related term, but not the one the text uses.
+   - Engr. Benito E. Dela Torre: "Engr. Benito E. Dela Torre" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
+   - Ramon S. Reyes-Tan: "Ramon S. Reyes-Tan" sorts by the given name. Personal names file by surname first.
+   - Atty. Ana N. Austria: "Atty. Ana N. Austria" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 93. CIVIO-GI-TERM-MATCH-000203
+## 87. CIVIO-CLR-SPELL-RIGHT-000198
 
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
+- competency: Spelling · concept: correct spelling
+- micro_skill: spot the correct spelling
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is spelled correctly?  mischievous | mischeivous | mischievus | mishievous
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | mischievous | A |
+| o2 | mischeivous | B |
+| o3 | mischievus | C |
+| o4 | mishievous | D |
+
+`answer_option_id`: o1 (mischievous)
+
+`distractor_reasoning`: o2 = `SPL-IE-EI`; o3 = `SPL-DROP`; o4 = `SPL-SOUND`
+
+**Reveal**
+
+1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
+2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
+3. *Why it is right.* "mischievous" is the standard spelling.
+4. *Why the others are wrong.*
+   - mischeivous: "mischeivous" swaps the order of i and e. The correct spelling is "mischievous".
+   - mischievus: "mischievus" drops a letter. The correct spelling is "mischievous".
+   - mishievous: "mishievous" is spelled the way the word sounds. The correct spelling is "mischievous".
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 88. CIVIO-CLR-FILE-POSITION-000199
+
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
+- status: draft · review_status: unreviewed
+
+**Stem:** In alphabetical filing, which name is filed LAST?  Engr. Mario A. Ramos | Engr. Rosario E. Del Mundo | Engr. Carlos T. Garcia | Atty. Lourdes F. Dizon
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Engr. Carlos T. Garcia | A |
+| o2 | Atty. Lourdes F. Dizon | B |
+| o3 | Engr. Rosario E. Del Mundo | C |
+| o4 | Engr. Mario A. Ramos | D |
+
+`answer_option_id`: o4 (Engr. Mario A. Ramos)
+
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`
+
+**Reveal**
+
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Rosario E. Del Mundo → DELMUNDO, Rosario; Atty. Lourdes F. Dizon → DIZON, Lourdes; Engr. Carlos T. Garcia → GARCIA, Carlos; Engr. Mario A. Ramos → RAMOS, Mario.
+3. *Why it is right.* "Engr. Mario A. Ramos" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+4. *Why the others are wrong.*
+   - Engr. Carlos T. Garcia: "Engr. Carlos T. Garcia" files as GARCIA, which comes before RAMOS.
+   - Atty. Lourdes F. Dizon: "Atty. Lourdes F. Dizon" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Engr. Rosario E. Del Mundo: "Engr. Rosario E. Del Mundo" sorts by the given name. Personal names file by surname first.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 89. CIVIO-CLR-SPELL-RIGHT-000200
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
+- competency: Spelling · concept: correct spelling
+- micro_skill: spot the correct spelling
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is spelled correctly?  cemmetery | cemetary | cemetery | cemtery
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | cemmetery | A |
+| o2 | cemetary | B |
+| o3 | cemetery | C |
+| o4 | cemtery | D |
+
+`answer_option_id`: o3 (cemetery)
+
+`distractor_reasoning`: o1 = `SPL-DOUBLE`; o2 = `SPL-SOUND`; o4 = `SPL-DROP`
+
+**Reveal**
+
+1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
+2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
+3. *Why it is right.* "cemetery" is the standard spelling.
+4. *Why the others are wrong.*
+   - cemmetery: "cemmetery" doubles or undoubles a consonant. The correct spelling is "cemetery".
+   - cemetary: "cemetary" is spelled the way the word sounds. The correct spelling is "cemetery".
+   - cemtery: "cemtery" drops a letter. The correct spelling is "cemetery".
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 90. CIVIO-CLR-FILE-POSITION-000201
+
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
+- status: draft · review_status: unreviewed
+
+**Stem:** In alphabetical filing, which name is filed FIRST?  Benito N. Salazar | Dr. Victoria S. Del Rosario | Engr. Evelyn L. Garcia | Dr. Andres B. Ocampo
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Dr. Victoria S. Del Rosario | A |
+| o2 | Dr. Andres B. Ocampo | B |
+| o3 | Engr. Evelyn L. Garcia | C |
+| o4 | Benito N. Salazar | D |
+
+`answer_option_id`: o1 (Dr. Victoria S. Del Rosario)
+
+`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
+
+**Reveal**
+
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Dr. Victoria S. Del Rosario → DELROSARIO, Victoria; Engr. Evelyn L. Garcia → GARCIA, Evelyn; Dr. Andres B. Ocampo → OCAMPO, Andres; Benito N. Salazar → SALAZAR, Benito.
+3. *Why it is right.* "Dr. Victoria S. Del Rosario" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+4. *Why the others are wrong.*
+   - Dr. Andres B. Ocampo: "Dr. Andres B. Ocampo" sorts by the given name. Personal names file by surname first.
+   - Engr. Evelyn L. Garcia: "Engr. Evelyn L. Garcia" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
+   - Benito N. Salazar: "Benito N. Salazar" files as SALAZAR, which comes after DELROSARIO.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 91. CIVIO-GI-WHO-HOLDS-POWER-000202
+
+- track: both · domain: general_information · archetype: GI-WHO-HOLDS-POWER · difficulty: medium · est: 25 s
 - competency: Philippine Constitution · concept: Art. IX-B, Sec. 8
 - micro_skill: recall a provision
 - source: The 1987 Constitution, Art. IX-B, Sec. 8 (https://lawphil.net/consti/cons1987.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** What does the 1987 Constitution say about double or additional compensation for public officers?
+**Stem:** Under the 1987 Constitution, may a public officer accept a title of nobility from a foreign government without the consent of Congress?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | It is allowed for elected officials | A |
-| o2 | It is not allowed unless specifically authorized by law | B |
-| o3 | It is allowed if the head of office approves | C |
-| o4 | It is allowed for overtime work | D |
+| o1 | Yes, after retirement only | A |
+| o2 | No | B |
+| o3 | Yes, if it is honorary | C |
+| o4 | Yes, with the President's consent alone | D |
 
-`answer_option_id`: o2 (It is not allowed unless specifically authorized by law)
+`answer_option_id`: o2 (No)
 
-`distractor_reasoning`: o1 = `GI-SOUNDS-RIGHT`; o3 = `GI-WHO-HOLDS-POWER`; o4 = `GI-SOUNDS-RIGHT`
+`distractor_reasoning`: o1 = `GI-SOUNDS-RIGHT`; o3 = `GI-SOUNDS-RIGHT`; o4 = `GI-WRONG-BODY`
 
 **Reveal**
 
 1. *Meaning.* This item is about the 1987 Constitution, Art. IX-B, Sec. 8.
-2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 8. Double pay needs a specific law.
-3. *Why it is right.* "It is not allowed unless specifically authorized by law" is right. Art. IX-B, Sec. 8 says: "No elective or appointive public officer or employee shall receive additional, double, or indirect compensation, unless specifically authorized by law".
+2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 8. Congress must consent to any foreign title, gift or office.
+3. *Why it is right.* "No" is right. Art. IX-B, Sec. 8 says: "accept without the consent of the Congress, any present, emolument, office, or title of any kind from any foreign government".
 4. *Why the others are wrong.*
-   - It is allowed for elected officials: "It is allowed for elected officials" sounds reasonable, but the text does not say it.
-   - It is allowed if the head of office approves: "It is allowed if the head of office approves" names someone who does not hold this power.
-   - It is allowed for overtime work: "It is allowed for overtime work" sounds reasonable, but the text does not say it.
+   - Yes, after retirement only: "Yes, after retirement only" sounds reasonable, but the text does not say it.
+   - Yes, if it is honorary: "Yes, if it is honorary" sounds reasonable, but the text does not say it.
+   - Yes, with the President's consent alone: "Yes, with the President's consent alone" names a different office or body.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 94. CIVIO-GI-TERM-MATCH-000204
+## 92. CIVIO-GI-DEADLINE-NUMBER-000203
 
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 4(A)
+- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
+- competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 8(A)
 - micro_skill: recall a provision
-- source: R.A. 6713, R.A. 6713, Sec. 4(A) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
+- source: R.A. 6713, R.A. 6713, Sec. 8(A) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** Under R.A. 6713, upholding the principle of public accountability and the supremacy of civilian authority over the military is which norm?
+**Stem:** Under R.A. 6713, within how many days after separation from the service must a SALN be filed?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Professionalism | A |
-| o2 | Commitment to democracy | B |
-| o3 | Political neutrality | C |
-| o4 | Nationalism and patriotism | D |
+| o1 | 60 days | A |
+| o2 | 15 days | B |
+| o3 | 10 working days | C |
+| o4 | 30 days | D |
 
-`answer_option_id`: o2 (Commitment to democracy)
+`answer_option_id`: o4 (30 days)
 
-`distractor_reasoning`: o1 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`; o4 = `GI-SIBLING-TERM`
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`
 
 **Reveal**
 
-1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 4(A).
-2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 4(A). Sec. 4(A)(g).
-3. *Why it is right.* "Commitment to democracy" is right. R.A. 6713, Sec. 4(A) says: "Commitment to democracy".
+1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 8(A).
+2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 8(A). On entry, every April 30, and within 30 days after leaving.
+3. *Why it is right.* "30 days" is right. R.A. 6713, Sec. 8(A) says: "within thirty (30) days after separation from the service".
 4. *Why the others are wrong.*
-   - Professionalism: "Professionalism" is a related term, but not the one the text uses.
-   - Political neutrality: "Political neutrality" is a related term, but not the one the text uses.
-   - Nationalism and patriotism: "Nationalism and patriotism" is a related term, but not the one the text uses.
+   - 60 days: "60 days" is a nearby number, but not the one in the text.
+   - 15 days: "15 days" is a nearby number, but not the one in the text.
+   - 10 working days: "10 working days" is a nearby number, but not the one in the text.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 95. CIVIO-GI-DEADLINE-NUMBER-000205
+## 93. CIVIO-GI-DEADLINE-NUMBER-000204
+
+- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. XII, Sec. 2
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. XII, Sec. 2 (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** What is the maximum term of agreements for the exploration of natural resources under Art. XII, Sec. 2, before renewal?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 50 years | A |
+| o2 | 25 years | B |
+| o3 | 99 years | C |
+| o4 | 10 years | D |
+
+`answer_option_id`: o2 (25 years)
+
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. XII, Sec. 2.
+2. *Shortcut.* Tie the fact to its section: Art. XII, Sec. 2. 25 years, renewable for 25 more.
+3. *Why it is right.* "25 years" is right. Art. XII, Sec. 2 says: "for a period not exceeding twenty-five years, renewable for not more than twenty-five years".
+4. *Why the others are wrong.*
+   - 50 years: "50 years" is a nearby number, but not the one in the text.
+   - 99 years: "99 years" is a nearby number, but not the one in the text.
+   - 10 years: "10 years" is a nearby number, but not the one in the text.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 94. CIVIO-GI-WHO-HOLDS-POWER-000205
+
+- track: both · domain: general_information · archetype: GI-WHO-HOLDS-POWER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. XI, Sec. 13
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. XI, Sec. 13 (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** Which office investigates on its own, or on complaint, any act of a public official that appears illegal, unjust, improper or inefficient?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Civil Service Commission | A |
+| o2 | Commission on Audit | B |
+| o3 | Department of the Interior and Local Government | C |
+| o4 | Office of the Ombudsman | D |
+
+`answer_option_id`: o4 (Office of the Ombudsman)
+
+`distractor_reasoning`: o1 = `GI-WRONG-BODY`; o2 = `GI-WRONG-BODY`; o3 = `GI-WRONG-BODY`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. XI, Sec. 13.
+2. *Shortcut.* Tie the fact to its section: Art. XI, Sec. 13. This is a power of the Ombudsman.
+3. *Why it is right.* "Office of the Ombudsman" is right. Art. XI, Sec. 13 says: "appears to be illegal, unjust, improper, or inefficient".
+4. *Why the others are wrong.*
+   - Civil Service Commission: "Civil Service Commission" names a different office or body.
+   - Commission on Audit: "Commission on Audit" names a different office or body.
+   - Department of the Interior and Local Government: "Department of the Interior and Local Government" names a different office or body.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 95. CIVIO-GI-TERM-MATCH-000206
+
+- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. XI, Sec. 1
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. XI, Sec. 1 (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** According to the 1987 Constitution, public office is what?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | A political reward | A |
+| o2 | A public trust | B |
+| o3 | A private right | C |
+| o4 | A lifetime privilege | D |
+
+`answer_option_id`: o2 (A public trust)
+
+`distractor_reasoning`: o1 = `GI-SOUNDS-RIGHT`; o3 = `GI-SOUNDS-RIGHT`; o4 = `GI-SOUNDS-RIGHT`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. XI, Sec. 1.
+2. *Shortcut.* Tie the fact to its section: Art. XI, Sec. 1. Article XI opens: public office is a public trust.
+3. *Why it is right.* "A public trust" is right. Art. XI, Sec. 1 says: "Public office is a public trust".
+4. *Why the others are wrong.*
+   - A political reward: "A political reward" sounds reasonable, but the text does not say it.
+   - A private right: "A private right" sounds reasonable, but the text does not say it.
+   - A lifetime privilege: "A lifetime privilege" sounds reasonable, but the text does not say it.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 96. CIVIO-GI-DEADLINE-NUMBER-000207
 
 - track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
 - competency: Philippine Constitution · concept: Art. VII, Sec. 4
@@ -3116,32 +3149,65 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: The 1987 Constitution, Art. VII, Sec. 4 (https://lawphil.net/consti/cons1987.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** How long is the term of the President under the 1987 Constitution?
+**Stem:** How many successive terms may the Vice-President serve?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 4 years, with one re-election | A |
-| o2 | 3 years, with re-election | B |
-| o3 | 6 years, with one re-election | C |
-| o4 | 6 years, with no re-election | D |
+| o1 | One | A |
+| o2 | No limit | B |
+| o3 | Two | C |
+| o4 | Three | D |
 
-`answer_option_id`: o4 (6 years, with no re-election)
+`answer_option_id`: o3 (Two)
 
-`distractor_reasoning`: o1 = `GI-OLD-RULE`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-SOUNDS-RIGHT`
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-SOUNDS-RIGHT`; o4 = `GI-NEIGHBOR-NUMBER`
 
 **Reveal**
 
 1. *Meaning.* This item is about the 1987 Constitution, Art. VII, Sec. 4.
-2. *Shortcut.* Tie the fact to its section: Art. VII, Sec. 4. One 6-year term; the President cannot be re-elected.
-3. *Why it is right.* "6 years, with no re-election" is right. Art. VII, Sec. 4 says: "The President shall not be eligible for any re-election".
+2. *Shortcut.* Tie the fact to its section: Art. VII, Sec. 4. The Vice-President is limited to two successive terms.
+3. *Why it is right.* "Two" is right. Art. VII, Sec. 4 says: "No Vice-President shall serve for more than two successive terms".
 4. *Why the others are wrong.*
-   - 4 years, with one re-election: "4 years, with one re-election" was the rule under an older charter, not the 1987 text.
-   - 3 years, with re-election: "3 years, with re-election" is a nearby number, but not the one in the text.
-   - 6 years, with one re-election: "6 years, with one re-election" sounds reasonable, but the text does not say it.
+   - One: "One" is a nearby number, but not the one in the text.
+   - No limit: "No limit" sounds reasonable, but the text does not say it.
+   - Three: "Three" is a nearby number, but not the one in the text.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 96. CIVIO-GI-TERM-MATCH-000206
+## 97. CIVIO-GI-DEADLINE-NUMBER-000208
+
+- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. IX-D, Sec. 1(1)
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. IX-D, Sec. 1(1) (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** How many members does the Commission on Audit have, counting the Chairman?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 5 | A |
+| o2 | 7 | B |
+| o3 | 2 | C |
+| o4 | 3 | D |
+
+`answer_option_id`: o4 (3)
+
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. IX-D, Sec. 1(1).
+2. *Shortcut.* Tie the fact to its section: Art. IX-D, Sec. 1(1). COA: a Chairman and two Commissioners.
+3. *Why it is right.* "3" is right. Art. IX-D, Sec. 1(1) says: "composed of a Chairman and two Commissioners".
+4. *Why the others are wrong.*
+   - 5: "5" is a nearby number, but not the one in the text.
+   - 7: "7" is a nearby number, but not the one in the text.
+   - 2: "2" is a nearby number, but not the one in the text.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 98. CIVIO-GI-TERM-MATCH-000209
 
 - track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
 - competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 4(A)
@@ -3149,160 +3215,94 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: R.A. 6713, R.A. 6713, Sec. 4(A) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** Under R.A. 6713, which norm of conduct requires officials to lead modest lives appropriate to their positions and income?
+**Stem:** Under R.A. 6713, extending prompt, courteous and adequate service to the public is part of which norm of conduct?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Nationalism and patriotism | A |
-| o2 | Simple living | B |
-| o3 | Commitment to public interest | C |
-| o4 | Responsiveness to the public | D |
+| o1 | Simple living | A |
+| o2 | Responsiveness to the public | B |
+| o3 | Nationalism and patriotism | C |
+| o4 | Commitment to democracy | D |
 
-`answer_option_id`: o2 (Simple living)
+`answer_option_id`: o2 (Responsiveness to the public)
 
 `distractor_reasoning`: o1 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`; o4 = `GI-SIBLING-TERM`
 
 **Reveal**
 
 1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 4(A).
-2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 4(A). This is simple living, Sec. 4(A)(h).
-3. *Why it is right.* "Simple living" is right. R.A. 6713, Sec. 4(A) says: "shall lead modest lives appropriate to their positions and income".
+2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 4(A). Sec. 4(A)(e).
+3. *Why it is right.* "Responsiveness to the public" is right. R.A. 6713, Sec. 4(A) says: "Responsiveness to the public".
 4. *Why the others are wrong.*
+   - Simple living: "Simple living" is a related term, but not the one the text uses.
    - Nationalism and patriotism: "Nationalism and patriotism" is a related term, but not the one the text uses.
-   - Commitment to public interest: "Commitment to public interest" is a related term, but not the one the text uses.
-   - Responsiveness to the public: "Responsiveness to the public" is a related term, but not the one the text uses.
+   - Commitment to democracy: "Commitment to democracy" is a related term, but not the one the text uses.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 97. CIVIO-GI-DEADLINE-NUMBER-000207
+## 99. CIVIO-GI-DEADLINE-NUMBER-000210
 
 - track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. V, Sec. 1
+- competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 5(c)
 - micro_skill: recall a provision
-- source: The 1987 Constitution, Art. V, Sec. 1 (https://lawphil.net/consti/cons1987.html)
+- source: R.A. 6713, R.A. 6713, Sec. 5(c) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** How long must a voter have resided in the place where he or she proposes to vote, immediately before the election?
+**Stem:** Under R.A. 6713, public officials and employees must process documents and papers how?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | At least 2 years | A |
-| o2 | At least 3 months | B |
-| o3 | At least 6 months | C |
-| o4 | At least 1 year | D |
+| o1 | Within 60 working days, with up to five signatories | A |
+| o2 | In the order of the applicant's rank | B |
+| o3 | Within a reasonable time, with not more than three signatories as far as practicable | C |
+| o4 | Only after the head of office signs personally | D |
 
-`answer_option_id`: o3 (At least 6 months)
+`answer_option_id`: o3 (Within a reasonable time, with not more than three signatories as far as practicable)
 
-`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-SOUNDS-RIGHT`; o4 = `GI-SOUNDS-RIGHT`
 
 **Reveal**
 
-1. *Meaning.* This item is about the 1987 Constitution, Art. V, Sec. 1.
-2. *Shortcut.* Tie the fact to its section: Art. V, Sec. 1. Six months in the place; one year in the Philippines.
-3. *Why it is right.* "At least 6 months" is right. Art. V, Sec. 1 says: "in the place wherein they propose to vote, for at least six months".
+1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 5(c).
+2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 5(c). Reasonable time; at most three signatories as far as practicable.
+3. *Why it is right.* "Within a reasonable time, with not more than three signatories as far as practicable" is right. R.A. 6713, Sec. 5(c) says: "processed and completed within a reasonable time from the preparation thereof and must contain, as far as practicable, not more than three (3) signatories".
 4. *Why the others are wrong.*
-   - At least 2 years: "At least 2 years" is a nearby number, but not the one in the text.
-   - At least 3 months: "At least 3 months" is a nearby number, but not the one in the text.
-   - At least 1 year: "At least 1 year" is a nearby number, but not the one in the text.
+   - Within 60 working days, with up to five signatories: "Within 60 working days, with up to five signatories" is a nearby number, but not the one in the text.
+   - In the order of the applicant's rank: "In the order of the applicant's rank" sounds reasonable, but the text does not say it.
+   - Only after the head of office signs personally: "Only after the head of office signs personally" sounds reasonable, but the text does not say it.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 98. CIVIO-GI-TERM-MATCH-000208
+## 100. CIVIO-GI-DEADLINE-NUMBER-000211
 
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 7(d)
+- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
+- competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 8(A)
 - micro_skill: recall a provision
-- source: R.A. 6713, R.A. 6713, Sec. 7(d) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
+- source: R.A. 6713, R.A. 6713, Sec. 8(A) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** Under R.A. 6713, may a public employee solicit or accept a gift from anyone in connection with an official transaction?
+**Stem:** Under R.A. 6713, by what date each year must the SALN be filed?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Yes, if the gift is worth less than ₱1,000 | A |
-| o2 | Yes, if the head of office knows | B |
-| o3 | Yes, after the transaction is finished | C |
-| o4 | No | D |
+| o1 | On or before June 30 | A |
+| o2 | On or before December 31 | B |
+| o3 | On or before March 31 | C |
+| o4 | On or before April 30 | D |
 
-`answer_option_id`: o4 (No)
+`answer_option_id`: o4 (On or before April 30)
 
-`distractor_reasoning`: o1 = `GI-SOUNDS-RIGHT`; o2 = `GI-SOUNDS-RIGHT`; o3 = `GI-SOUNDS-RIGHT`
-
-**Reveal**
-
-1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 7(d).
-2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 7(d). Gifts tied to official work are prohibited.
-3. *Why it is right.* "No" is right. R.A. 6713, Sec. 7(d) says: "Public officials and employees shall not solicit or accept, directly or indirectly, any gift".
-4. *Why the others are wrong.*
-   - Yes, if the gift is worth less than ₱1,000: "Yes, if the gift is worth less than ₱1,000" sounds reasonable, but the text does not say it.
-   - Yes, if the head of office knows: "Yes, if the head of office knows" sounds reasonable, but the text does not say it.
-   - Yes, after the transaction is finished: "Yes, after the transaction is finished" sounds reasonable, but the text does not say it.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 99. CIVIO-GI-TERM-MATCH-000209
-
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 5(d)
-- micro_skill: recall a provision
-- source: R.A. 6713, R.A. 6713, Sec. 5(d) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** Under R.A. 6713, Sec. 5(d), how must officials and employees attend to anyone who wants to avail of the services of their offices?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Only with a prior appointment | A |
-| o2 | Within 15 working days | B |
-| o3 | At all times, promptly and expeditiously | C |
-| o4 | Only during the first hour of office | D |
-
-`answer_option_id`: o3 (At all times, promptly and expeditiously)
-
-`distractor_reasoning`: o1 = `GI-SOUNDS-RIGHT`; o2 = `GI-DEADLINE-NUMBER`; o4 = `GI-SOUNDS-RIGHT`
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`
 
 **Reveal**
 
-1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 5(d).
-2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 5(d). Sec. 5(d): act immediately on the public's personal transactions.
-3. *Why it is right.* "At all times, promptly and expeditiously" is right. R.A. 6713, Sec. 5(d) says: "at all times, act promptly and expeditiously".
+1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 8(A).
+2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 8(A). Annual SALN: on or before April 30.
+3. *Why it is right.* "On or before April 30" is right. R.A. 6713, Sec. 8(A) says: "on or before April 30".
 4. *Why the others are wrong.*
-   - Only with a prior appointment: "Only with a prior appointment" sounds reasonable, but the text does not say it.
-   - Within 15 working days: "Within 15 working days" is a deadline from a different provision.
-   - Only during the first hour of office: "Only during the first hour of office" sounds reasonable, but the text does not say it.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 100. CIVIO-GI-TERM-MATCH-000210
-
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. II, Sec. 6
-- micro_skill: recall a provision
-- source: The 1987 Constitution, Art. II, Sec. 6 (https://lawphil.net/consti/cons1987.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** Which principle does Art. II, Sec. 6 of the 1987 Constitution declare inviolable?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Freedom of the press | A |
-| o2 | Separation of powers | B |
-| o3 | Local autonomy | C |
-| o4 | Separation of Church and State | D |
-
-`answer_option_id`: o4 (Separation of Church and State)
-
-`distractor_reasoning`: o1 = `GI-SIBLING-TERM`; o2 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`
-
-**Reveal**
-
-1. *Meaning.* This item is about the 1987 Constitution, Art. II, Sec. 6.
-2. *Shortcut.* Tie the fact to its section: Art. II, Sec. 6. Church and State are separate.
-3. *Why it is right.* "Separation of Church and State" is right. Art. II, Sec. 6 says: "The separation of Church and State shall be inviolable".
-4. *Why the others are wrong.*
-   - Freedom of the press: "Freedom of the press" is a related term, but not the one the text uses.
-   - Separation of powers: "Separation of powers" is a related term, but not the one the text uses.
-   - Local autonomy: "Local autonomy" is a related term, but not the one the text uses.
+   - On or before June 30: "On or before June 30" is a nearby number, but not the one in the text.
+   - On or before December 31: "On or before December 31" is a nearby number, but not the one in the text.
+   - On or before March 31: "On or before March 31" is a nearby number, but not the one in the text.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
