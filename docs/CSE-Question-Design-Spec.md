@@ -1,6 +1,6 @@
 # Civio CSE Question Design Spec
 
-Version: 0.1.3 (CoS ruling: Filing Rules v2 from ARMA simplified rules; see 10.2)
+Version: 0.1.4 (CoS rulings on batches 002–011: new codes, tense cap, frame rule, filing sub-reasons, baseline dedup; see 10.3)
 Date: 5 Oct 2026 (Asia/Manila); approved 7 Oct 2026
 Owner: GT
 Status: **Approved by GT on 7 Oct 2026.** The canonical copy lives in GT's Obsidian vault; this repo copy
@@ -237,6 +237,8 @@ Distractor codes:
 - `RC-TOO-BROAD` / `RC-TOO-NARROW`
 - `RC-EXTREME` uses "always/never/completely" beyond the text
 - `RC-OPPOSITE` reverses the passage
+- `VRB-SYNONYM-TRAP` a word that means the same as the cue (or a real sense of the word that does not fit this sentence), offered where something else is asked (v0.1.4)
+- `VRB-ANTONYM-TRAP` a word that means the opposite of what is asked (v0.1.4)
 - `PO-OPENER-MISPLACED` topic sentence not first
 - `PO-TRANSITION-IGNORED` sentence with a link word placed before what it links to
 
@@ -307,6 +309,10 @@ Distractor codes:
 - `LOG-COULD-NOT-MUST` possible but not forced
 - `LOG-OVERSTRONG` "all/only/sole" where the text supports less
 - `LOG-IRRELEVANT` true statement the argument does not need
+- `LOG-MISSED-NEEDED` rejects an assumption the argument does need (v0.1.4)
+- `LOG-ORDER-SWAP` ordering: swaps the asked place with its neighbor (v0.1.4)
+- `LOG-ORDER-REVERSED` ordering: counts from the wrong end of the line (v0.1.4)
+- `LOG-IGNORED-CLUE` ordering: an answer that is possible only if one clue is skipped (v0.1.4)
 - `DI-WRONG-CELL` read the wrong row or column
 - `DI-WRONG-BASE` percent of the wrong total
 - `DI-SCALE` ignored unit or scale label
@@ -338,6 +344,7 @@ Distractor codes:
 - `CLR-TITLE-COUNTED` used a title (Dr., Mrs.) in the sort
 - `CLR-ARTICLE-COUNTED` sorted by a leading "The"
 - `CLR-FIRSTNAME-FIRST` sorted by given name
+- `CLR-LETTER-ORDER` misread the letter-by-letter order of the indexed units (v0.1.4; filing sub-reason only)
 - `SPL-DOUBLE` doubled or undoubled consonant
 - `SPL-IE-EI` vowel order swapped
 - `SPL-DROP` missing letter
@@ -434,6 +441,7 @@ That is the bar: three short lines, no algebra words, one check.
 | `answer_option_id` | string | The `option_id` of the right choice. Never a letter or index |
 | `reveal` | object | `{terms, shortcut, why_correct, why_wrong: {option_id: text}}` |
 | `distractor_reasoning` | object | `{option_id: distractor_code}` for each wrong choice |
+| `distractor_subreason` | object | Filing items only (v0.1.4): `{option_id: "CLR-… : breaks ARMA Rule N (…)"}`; the parent code in `distractor_reasoning` is `CLR-FILE-ORDER` |
 | `source` | string | GI: article/section citation. Others: "Original, Civio" plus any rule cited (for example "Civio Filing Rules v1, Rule 3") |
 | `provenance` | object | `{author, method: human or ai_assisted, created_at, spec_version}` |
 | `status` | enum | `draft`, `curated`, `generated`, `reviewed`, `approved`, `deprecated` |
@@ -682,3 +690,13 @@ them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 **Reveal wording (required on every filing item):** "This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule N), not a rule published by the CSC." Every filing item cites its rule number in `source`, for example "Civio Filing Rules v2 / ARMA Rule 6".
 
 **Still out until v2.1:** identical names filed by address and government-agency names (ARMA rules 9 and 10). I did not verify these against a source here.
+
+## 10.3 CoS rulings on generated batches 002–011 (v0.1.4, 2026-10-13)
+
+**Chief of Staff ruling (GT delegated Civio decisions), 2026-10-13.** Enforced by `scripts/batches/qa.py`.
+
+1. **Tense cap.** Verb-tense items are at most 25% of Verbal (50 of 200) and at most 5 per batch. The rest of Verbal is spread across vocabulary in context, synonyms and antonyms, idioms, subject-verb agreement, prepositions, sentence completion, confused words, phrasal verbs and pronoun case.
+2. **Frames.** Every syllogism type (chain, some, none) and every analogy type (function, part, synonym, degree, form) has at least 3 stem frames, each used with fresh content. No frame appears more than twice in one batch.
+3. **Codes adopted.** `LOG-MISSED-NEEDED`, `VRB-SYNONYM-TRAP`, `VRB-ANTONYM-TRAP`. Synonym and antonym traps use the VRB codes, not `RC-OPPOSITE` (which stays for reading passages). Ordering items give each wrong choice its own code (`LOG-ORDER-SWAP`, `LOG-ORDER-REVERSED`, `LOG-IGNORED-CLUE`); one code on every wrong choice fails QA.
+4. **Filing sub-reasons.** Filing distractors keep `CLR-FILE-ORDER` as the parent code. Each also gets a `distractor_subreason` that names the ARMA rule it breaks (for example "CLR-PREFIX-SPLIT: breaks ARMA Rule 6").
+5. **Dedup.** Every new stem is checked against the baseline bank (the seed scripts in `scripts/`), all earlier batches and the dev DB: exact match and near match on normalized stems.

@@ -1,5 +1,6 @@
 """Verbal Ability (English). Grammar frames with coded errors, plus curated word tables."""
 from common import make, Skip, FIRST, PLACES, OFFICES
+import verbal_more as VM
 
 B = dict(track="both", domain="verbal_en")
 
@@ -24,24 +25,27 @@ AGREE = [
     ("The price of school supplies", "supplies", [("rises", "rise", "every June"), ("was", "were", "discussed at the meeting")]),
     ("Everyone in the two offices", "offices", [("wants", "want", "a shorter queue"), ("was", "were", "invited to the seminar")]),
 ]
-FORMS = {"is": "being", "was": "being", "has": "having"}
+PLURAL = {"are", "were", "have"}
 
 
 def agree(rng, iid):
     subj, noun, preds = rng.choice(AGREE)
     vs, vp, rest = rng.choice(preds)
+    plural = vs in PLURAL or not vs.endswith("s")
+    base = vs if plural else vp
     stem = f"Choose the word that best completes the sentence: {subj} ____ {rest}."
-    third = FORMS.get(vs, vp + "ing" if not vp.endswith("e") else vp[:-1] + "ing")
-    fourth = {"is": "be", "was": "been", "has": "to have"}.get(vs, "to " + vp)
+    third = {"is": "being", "are": "being", "was": "being", "were": "being", "has": "having", "have": "having"}.get(vs, (base[:-1] if base.endswith("e") else base) + "ing")
+    fourth = {"is": "be", "are": "be", "was": "been", "were": "been", "has": "to have", "have": "to have"}.get(vs, "to " + base)
     wrong = [(vp, "VEN-NEAREST-NOUN", f"\"{vp}\" agrees with \"{noun}\", the nearest noun, not with the true subject."),
              (third, "VEN-FORM", f"\"{third}\" cannot be the main verb on its own; the sentence would have no full verb."),
              (fourth, "VEN-FORM", f"\"{fourth}\" is not a verb form that can stand alone after this subject.")]
     head = subj.split(" of ")[0].split(" on ")[0].split(" in ")[0]
+    num = "plural" if plural else "singular"
     it = make(id=iid, **B, competency="Grammar and correct usage", concept="subject-verb agreement", micro_skill="find the true subject past a prepositional phrase",
               archetype="VEN-ERROR-AGREE", difficulty="medium", est=30, stem=stem, correct=vs, wrong=wrong,
-              terms="The \"subject\" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s).",
-              shortcut=f"Cover the phrase that starts with \"of\", \"on\" or \"in\". Read \"{head} ____\". The subject is singular, so use the singular verb.",
-              why_correct=f"\"{vs}\" is right: \"{head}\" is singular.", rng=rng)
+              terms="The \"subject\" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s); a plural subject takes a plural verb.",
+              shortcut=f"Cover the phrase that starts with \"of\", \"on\" or \"in\". Read \"{head} ____\". The subject is {num}, so use the {num} verb.",
+              why_correct=f"\"{vs}\" is right: \"{head}\" is {num}.", rng=rng)
     it["_sig"] = stem
     return it
 
@@ -126,31 +130,31 @@ PHRASAL = [
 
 # synonyms: (word, sentence context, right, [(wrong, code, why)])
 SYN = [
-    ("diligent", "hard-working", [("lazy", "RC-OPPOSITE", "\"lazy\" is the opposite."), ("diluted", "VEN-HOMOPHONE", "\"diluted\" only looks like \"diligent\"; it means made weaker."), ("delicate", "VEN-HOMOPHONE", "\"delicate\" only looks similar; it means easily broken.")]),
-    ("candid", "frank", [("secretive", "RC-OPPOSITE", "\"secretive\" is the opposite."), ("candied", "VEN-HOMOPHONE", "\"candied\" means coated in sugar."), ("candidate", "VEN-HOMOPHONE", "A candidate is a person running for a post.")]),
-    ("meager", "scanty", [("plentiful", "RC-OPPOSITE", "\"plentiful\" is the opposite."), ("eager", "VEN-HOMOPHONE", "\"eager\" only sounds alike; it means keen."), ("meaningful", "VEN-HOMOPHONE", "\"meaningful\" only looks similar.")]),
-    ("prudent", "careful", [("reckless", "RC-OPPOSITE", "\"reckless\" is the opposite."), ("prude", "VEN-HOMOPHONE", "A prude is easily shocked."), ("prominent", "VEN-HOMOPHONE", "\"prominent\" means well known.")]),
-    ("obsolete", "outdated", [("modern", "RC-OPPOSITE", "\"modern\" is the opposite."), ("absolute", "VEN-HOMOPHONE", "\"absolute\" sounds alike; it means complete."), ("obstinate", "VEN-HOMOPHONE", "\"obstinate\" means stubborn.")]),
-    ("lenient", "tolerant", [("strict", "RC-OPPOSITE", "\"strict\" is the opposite."), ("lending", "VEN-HOMOPHONE", "\"lending\" means giving a loan."), ("lean", "VEN-HOMOPHONE", "\"lean\" means thin.")]),
-    ("verify", "confirm", [("doubt", "RC-OPPOSITE", "\"doubt\" is close to the opposite."), ("vary", "VEN-HOMOPHONE", "\"vary\" means to change."), ("verbalize", "VEN-HOMOPHONE", "\"verbalize\" means to say in words.")]),
-    ("abundant", "plentiful", [("scarce", "RC-OPPOSITE", "\"scarce\" is the opposite."), ("abandoned", "VEN-HOMOPHONE", "\"abandoned\" means left behind."), ("redundant", "VEN-HOMOPHONE", "\"redundant\" means more than needed.")]),
-    ("hostile", "unfriendly", [("welcoming", "RC-OPPOSITE", "\"welcoming\" is the opposite."), ("hostel", "VEN-HOMOPHONE", "A hostel is a cheap place to stay."), ("hostage", "VEN-HOMOPHONE", "A hostage is a person held captive.")]),
-    ("tedious", "boring", [("exciting", "RC-OPPOSITE", "\"exciting\" is the opposite."), ("tidy", "VEN-HOMOPHONE", "\"tidy\" means neat."), ("timid", "VEN-HOMOPHONE", "\"timid\" means shy.")]),
-    ("feasible", "workable", [("impossible", "RC-OPPOSITE", "\"impossible\" is the opposite."), ("festive", "VEN-HOMOPHONE", "\"festive\" means cheerful, like a fiesta."), ("visible", "VEN-HOMOPHONE", "\"visible\" means can be seen.")]),
-    ("concise", "brief", [("wordy", "RC-OPPOSITE", "\"wordy\" is the opposite."), ("concave", "VEN-HOMOPHONE", "\"concave\" means curved inward."), ("precise", "VEN-HOMOPHONE", "\"precise\" means exact, not short.")]),
-    ("vacant", "empty", [("occupied", "RC-OPPOSITE", "\"occupied\" is the opposite."), ("vacation", "VEN-HOMOPHONE", "A vacation is a holiday."), ("vague", "VEN-HOMOPHONE", "\"vague\" means unclear.")]),
-    ("imminent", "about to happen", [("far off", "RC-OPPOSITE", "\"far off\" is the opposite."), ("eminent", "VEN-HOMOPHONE", "\"eminent\" means famous and respected."), ("immense", "VEN-HOMOPHONE", "\"immense\" means huge.")]),
-    ("frugal", "thrifty", [("wasteful", "RC-OPPOSITE", "\"wasteful\" is the opposite."), ("fragile", "VEN-HOMOPHONE", "\"fragile\" means easily broken."), ("fruitful", "VEN-HOMOPHONE", "\"fruitful\" means productive.")]),
-    ("authentic", "genuine", [("fake", "RC-OPPOSITE", "\"fake\" is the opposite."), ("authority", "VEN-HOMOPHONE", "\"authority\" means power to decide."), ("automatic", "VEN-HOMOPHONE", "\"automatic\" means working by itself.")]),
-    ("reluctant", "unwilling", [("eager", "RC-OPPOSITE", "\"eager\" is the opposite."), ("relevant", "VEN-HOMOPHONE", "\"relevant\" means related to the topic."), ("resilient", "VEN-HOMOPHONE", "\"resilient\" means able to recover.")]),
-    ("integrity", "honesty", [("corruption", "RC-OPPOSITE", "\"corruption\" is the opposite."), ("integration", "VEN-HOMOPHONE", "\"integration\" means joining parts together."), ("intensity", "VEN-HOMOPHONE", "\"intensity\" means strength of feeling.")]),
-    ("negligent", "careless", [("attentive", "RC-OPPOSITE", "\"attentive\" is the opposite."), ("negligible", "VEN-HOMOPHONE", "\"negligible\" means too small to matter."), ("negotiable", "VEN-HOMOPHONE", "\"negotiable\" means open to discussion.")]),
-    ("transparent", "open", [("hidden", "RC-OPPOSITE", "\"hidden\" is the opposite."), ("transport", "VEN-HOMOPHONE", "\"transport\" means to carry."), ("transient", "VEN-HOMOPHONE", "\"transient\" means brief, passing.")]),
-    ("punctual", "on time", [("late", "RC-OPPOSITE", "\"late\" is the opposite."), ("punctured", "VEN-HOMOPHONE", "\"punctured\" means pierced."), ("practical", "VEN-HOMOPHONE", "\"practical\" means useful.")]),
-    ("courteous", "polite", [("rude", "RC-OPPOSITE", "\"rude\" is the opposite."), ("courageous", "VEN-HOMOPHONE", "\"courageous\" means brave."), ("curious", "VEN-HOMOPHONE", "\"curious\" means wanting to know.")]),
-    ("deteriorate", "worsen", [("improve", "RC-OPPOSITE", "\"improve\" is the opposite."), ("determine", "VEN-HOMOPHONE", "\"determine\" means to decide."), ("detour", "VEN-HOMOPHONE", "A detour is a different route.")]),
-    ("accurate", "correct", [("wrong", "RC-OPPOSITE", "\"wrong\" is the opposite."), ("accustomed", "VEN-HOMOPHONE", "\"accustomed\" means used to."), ("adequate", "VEN-HOMOPHONE", "\"adequate\" means enough.")]),
-    ("temporary", "short-term", [("permanent", "RC-OPPOSITE", "\"permanent\" is the opposite."), ("temperate", "VEN-HOMOPHONE", "\"temperate\" means mild."), ("contemporary", "VEN-HOMOPHONE", "\"contemporary\" means of the same time or modern.")]),
+    ("diligent", "hard-working", [("lazy", "VRB-ANTONYM-TRAP", "\"lazy\" is the opposite."), ("diluted", "VEN-HOMOPHONE", "\"diluted\" only looks like \"diligent\"; it means made weaker."), ("delicate", "VEN-HOMOPHONE", "\"delicate\" only looks similar; it means easily broken.")]),
+    ("candid", "frank", [("secretive", "VRB-ANTONYM-TRAP", "\"secretive\" is the opposite."), ("candied", "VEN-HOMOPHONE", "\"candied\" means coated in sugar."), ("candidate", "VEN-HOMOPHONE", "A candidate is a person running for a post.")]),
+    ("meager", "scanty", [("plentiful", "VRB-ANTONYM-TRAP", "\"plentiful\" is the opposite."), ("eager", "VEN-HOMOPHONE", "\"eager\" only sounds alike; it means keen."), ("meaningful", "VEN-HOMOPHONE", "\"meaningful\" only looks similar.")]),
+    ("prudent", "careful", [("reckless", "VRB-ANTONYM-TRAP", "\"reckless\" is the opposite."), ("prude", "VEN-HOMOPHONE", "A prude is easily shocked."), ("prominent", "VEN-HOMOPHONE", "\"prominent\" means well known.")]),
+    ("obsolete", "outdated", [("modern", "VRB-ANTONYM-TRAP", "\"modern\" is the opposite."), ("absolute", "VEN-HOMOPHONE", "\"absolute\" sounds alike; it means complete."), ("obstinate", "VEN-HOMOPHONE", "\"obstinate\" means stubborn.")]),
+    ("lenient", "tolerant", [("strict", "VRB-ANTONYM-TRAP", "\"strict\" is the opposite."), ("lending", "VEN-HOMOPHONE", "\"lending\" means giving a loan."), ("lean", "VEN-HOMOPHONE", "\"lean\" means thin.")]),
+    ("verify", "confirm", [("doubt", "VRB-ANTONYM-TRAP", "\"doubt\" is close to the opposite."), ("vary", "VEN-HOMOPHONE", "\"vary\" means to change."), ("verbalize", "VEN-HOMOPHONE", "\"verbalize\" means to say in words.")]),
+    ("abundant", "plentiful", [("scarce", "VRB-ANTONYM-TRAP", "\"scarce\" is the opposite."), ("abandoned", "VEN-HOMOPHONE", "\"abandoned\" means left behind."), ("redundant", "VEN-HOMOPHONE", "\"redundant\" means more than needed.")]),
+    ("hostile", "unfriendly", [("welcoming", "VRB-ANTONYM-TRAP", "\"welcoming\" is the opposite."), ("hostel", "VEN-HOMOPHONE", "A hostel is a cheap place to stay."), ("hostage", "VEN-HOMOPHONE", "A hostage is a person held captive.")]),
+    ("tedious", "boring", [("exciting", "VRB-ANTONYM-TRAP", "\"exciting\" is the opposite."), ("tidy", "VEN-HOMOPHONE", "\"tidy\" means neat."), ("timid", "VEN-HOMOPHONE", "\"timid\" means shy.")]),
+    ("feasible", "workable", [("impossible", "VRB-ANTONYM-TRAP", "\"impossible\" is the opposite."), ("festive", "VEN-HOMOPHONE", "\"festive\" means cheerful, like a fiesta."), ("visible", "VEN-HOMOPHONE", "\"visible\" means can be seen.")]),
+    ("concise", "brief", [("wordy", "VRB-ANTONYM-TRAP", "\"wordy\" is the opposite."), ("concave", "VEN-HOMOPHONE", "\"concave\" means curved inward."), ("precise", "VEN-HOMOPHONE", "\"precise\" means exact, not short.")]),
+    ("vacant", "empty", [("occupied", "VRB-ANTONYM-TRAP", "\"occupied\" is the opposite."), ("vacation", "VEN-HOMOPHONE", "A vacation is a holiday."), ("vague", "VEN-HOMOPHONE", "\"vague\" means unclear.")]),
+    ("imminent", "about to happen", [("far off", "VRB-ANTONYM-TRAP", "\"far off\" is the opposite."), ("eminent", "VEN-HOMOPHONE", "\"eminent\" means famous and respected."), ("immense", "VEN-HOMOPHONE", "\"immense\" means huge.")]),
+    ("frugal", "thrifty", [("wasteful", "VRB-ANTONYM-TRAP", "\"wasteful\" is the opposite."), ("fragile", "VEN-HOMOPHONE", "\"fragile\" means easily broken."), ("fruitful", "VEN-HOMOPHONE", "\"fruitful\" means productive.")]),
+    ("authentic", "genuine", [("fake", "VRB-ANTONYM-TRAP", "\"fake\" is the opposite."), ("authority", "VEN-HOMOPHONE", "\"authority\" means power to decide."), ("automatic", "VEN-HOMOPHONE", "\"automatic\" means working by itself.")]),
+    ("reluctant", "unwilling", [("eager", "VRB-ANTONYM-TRAP", "\"eager\" is the opposite."), ("relevant", "VEN-HOMOPHONE", "\"relevant\" means related to the topic."), ("resilient", "VEN-HOMOPHONE", "\"resilient\" means able to recover.")]),
+    ("integrity", "honesty", [("corruption", "VRB-ANTONYM-TRAP", "\"corruption\" is the opposite."), ("integration", "VEN-HOMOPHONE", "\"integration\" means joining parts together."), ("intensity", "VEN-HOMOPHONE", "\"intensity\" means strength of feeling.")]),
+    ("negligent", "careless", [("attentive", "VRB-ANTONYM-TRAP", "\"attentive\" is the opposite."), ("negligible", "VEN-HOMOPHONE", "\"negligible\" means too small to matter."), ("negotiable", "VEN-HOMOPHONE", "\"negotiable\" means open to discussion.")]),
+    ("transparent", "open", [("hidden", "VRB-ANTONYM-TRAP", "\"hidden\" is the opposite."), ("transport", "VEN-HOMOPHONE", "\"transport\" means to carry."), ("transient", "VEN-HOMOPHONE", "\"transient\" means brief, passing.")]),
+    ("punctual", "on time", [("late", "VRB-ANTONYM-TRAP", "\"late\" is the opposite."), ("punctured", "VEN-HOMOPHONE", "\"punctured\" means pierced."), ("practical", "VEN-HOMOPHONE", "\"practical\" means useful.")]),
+    ("courteous", "polite", [("rude", "VRB-ANTONYM-TRAP", "\"rude\" is the opposite."), ("courageous", "VEN-HOMOPHONE", "\"courageous\" means brave."), ("curious", "VEN-HOMOPHONE", "\"curious\" means wanting to know.")]),
+    ("deteriorate", "worsen", [("improve", "VRB-ANTONYM-TRAP", "\"improve\" is the opposite."), ("determine", "VEN-HOMOPHONE", "\"determine\" means to decide."), ("detour", "VEN-HOMOPHONE", "A detour is a different route.")]),
+    ("accurate", "correct", [("wrong", "VRB-ANTONYM-TRAP", "\"wrong\" is the opposite."), ("accustomed", "VEN-HOMOPHONE", "\"accustomed\" means used to."), ("adequate", "VEN-HOMOPHONE", "\"adequate\" means enough.")]),
+    ("temporary", "short-term", [("permanent", "VRB-ANTONYM-TRAP", "\"permanent\" is the opposite."), ("temperate", "VEN-HOMOPHONE", "\"temperate\" means mild."), ("contemporary", "VEN-HOMOPHONE", "\"contemporary\" means of the same time or modern.")]),
 ]
 CTX = ["The {w} staff of the {o} drew praise.", "The memo described the plan as {w}.", "Everyone noticed how {w} the new officer was.",
        "In the {o}, the word \"{w}\" appeared in the report.", "The auditor used the word \"{w}\" in her findings."]
@@ -188,7 +192,7 @@ def antonym(rng, iid):
     opp = wr[0][0]
     return make(id=iid, **B, competency="Vocabulary", concept="antonyms", micro_skill="word meaning (opposite)", archetype="VEN-WORD-MEANING", difficulty="medium", est=20,
                 stem=f"Which word is most nearly OPPOSITE in meaning to the word in capital letters?  {w.upper()}", correct=opp,
-                wrong=[(syn, "RC-OPPOSITE", f"\"{syn}\" means the same as \"{w}\", not the opposite.")] + [(t, c, y) for t, c, y in wr[1:]],
+                wrong=[(syn, "VRB-SYNONYM-TRAP", f"\"{syn}\" means the same as \"{w}\", not the opposite.")] + [(t, c, y) for t, c, y in wr[1:]],
                 terms="An \"antonym\" is a word with the opposite meaning.",
                 shortcut=f"First say what \"{w}\" means ({syn}). Then look for the word that means the reverse.",
                 why_correct=f"\"{opp}\" is right. \"{w.capitalize()}\" means {syn}; \"{opp}\" is the reverse.", rng=rng)
@@ -216,4 +220,54 @@ def pronoun(rng, iid):
                 why_correct=f"\"{c}\" is right. It is the form the slot needs.", rng=rng)
 
 
-TEMPLATES = [agree, agree, tense, tense, confused, phrasal, synonym, antonym, pronoun]
+AGREE += VM.AGREE_MORE
+
+
+def vocab_context(rng, iid):
+    sent, word, c, wr = rng.choice(VM.VIC)
+    it = make(id=iid, **B, competency="Vocabulary", concept="vocabulary in context", micro_skill="pick the sense that fits the sentence", archetype="VEN-RC-VOCAB",
+              difficulty="medium", est=30, stem=f"In the sentence below, what does the word in capital letters most nearly mean?  {sent}", correct=c, wrong=wr,
+              terms="Many words have more than one meaning. \"In context\" means the meaning that fits this sentence.",
+              shortcut=f"Cover the word in capitals and guess what fits the gap. Then pick the choice closest to your guess, not the most common meaning of \"{word}\".",
+              why_correct=f"\"{c}\" is right: it is the sense of \"{word}\" that fits the sentence.", rng=rng)
+    it["_sig"] = "VIC:" + sent
+    return it
+
+
+def idiom(rng, iid):
+    sent, c, wr = rng.choice(VM.IDIOMS)
+    it = make(id=iid, **B, competency="Vocabulary", concept="idioms", micro_skill="meaning of an idiom", archetype="VEN-WORD-MEANING", difficulty="medium", est=25,
+              stem=f"What does the phrase in capital letters mean?  {sent}", correct=c, wrong=wr,
+              terms="An \"idiom\" is a set phrase whose meaning is not the meaning of its separate words.",
+              shortcut="Skip the literal picture. Ask what the speaker wants to say in this situation.",
+              why_correct=f"\"{c}\" is right: that is what the idiom means here.", rng=rng)
+    it["_sig"] = "IDM:" + sent
+    return it
+
+
+def preposition(rng, iid):
+    sent, c, wr = rng.choice(VM.PREP)
+    it = make(id=iid, **B, competency="Grammar and correct usage", concept="prepositions", micro_skill="pick the preposition the word pairs with",
+              archetype="VEN-SENT-COMP-WORD", difficulty="medium", est=20, stem=f"Choose the word that best completes the sentence: {sent}", correct=c, wrong=wr,
+              terms="A \"preposition\" is a small linking word (in, on, at, for, with). Many words always pair with one preposition.",
+              shortcut="Read the word just before the blank and recall the phrase it usually forms (interested in, comply with).",
+              why_correct=f"\"{c}\" is right: it is the standard pairing in this sentence.", rng=rng)
+    it["_sig"] = "PRP:" + sent
+    return it
+
+
+def completion(rng, iid):
+    sent, c, wr = rng.choice(VM.SCOMP)
+    it = make(id=iid, **B, competency="Vocabulary", concept="sentence completion", micro_skill="use clue words to fill the blank", archetype="VEN-SENT-COMP-WORD",
+              difficulty="medium", est=30, stem=f"Choose the word that best completes the sentence: {sent}", correct=c, wrong=wr,
+              terms="Clue words such as because, although, so and since tell you whether the blank agrees with or contrasts with the rest.",
+              shortcut="Find the clue word, decide if the blank should agree or contrast, then check that the choice is the right word form.",
+              why_correct=f"\"{c}\" is right: it fits the clue in the sentence and is the right word form.", rng=rng)
+    it["_sig"] = "SCP:" + sent
+    return it
+
+
+TEMPLATES = [agree, tense, confused, phrasal, synonym, antonym, pronoun, vocab_context, idiom, preposition, completion]
+# per-batch caps by concept (CoS ruling: tense at most 5 per batch and 50 of 200 overall)
+CAPS = {"verb tense": 4, "subject-verb agreement": 4, "synonyms": 3, "antonyms": 3, "commonly confused words": 3, "phrasal verbs": 2, "pronoun case": 2,
+        "vocabulary in context": 3, "idioms": 2, "prepositions": 2, "sentence completion": 2}

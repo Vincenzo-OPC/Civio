@@ -2,7 +2,10 @@
 import json, math, os, re
 from fractions import Fraction as F
 from common import jaccard
-import clerical, verbal, analytical, gi_facts
+import clerical, verbal, verbal_more, analytical, gi_facts, baseline
+
+SPEC = os.path.join(os.path.dirname(__file__), "..", "..", "docs", "CSE-Question-Design-Spec.md")
+CODES = set(re.findall(r"`([A-Z]{2,4}-[A-Z][A-Z0-9-]*[A-Z0-9])`", open(SPEC, encoding="utf-8").read()))
 
 REQ = ["id", "track", "domain", "competency", "concept", "micro_skill", "archetype", "difficulty", "est_seconds", "language", "stem", "options",
        "answer_option_id", "reveal", "distractor_reasoning", "source", "source_url", "source_group", "status", "review_status", "provenance"]
@@ -96,7 +99,7 @@ def solve_ana(it):
         assert all((AZ.index(y) - AZ.index(x)) % 26 == k for x, y in zip(w1, c1))
         return "".join(AZ[(AZ.index(c) + k) % 26] for c in w2)
     if s.startswith("Four staff members"):
-        pairs = re.findall(r"([A-Z][\w\- ]+?) (?:finished the report earlier than|has served longer than|scored higher than|lives nearer the office than) ([A-Z][\w\- ]+?)\.", s)
+        pairs = re.findall(r"([A-Z][\w\- ]+?) (?:finished the report earlier than|has served longer than|scored higher than|lives nearer the office than|arrived earlier than|encoded more forms than) ([A-Z][\w\- ]+?)\.", s)
         names = {x for p in pairs for x in p}
         order = []
         rem = set(names)
@@ -119,17 +122,29 @@ def solve_ana(it):
             v = tab[m.group(1)]
             return f"{v[0] * 100 // sum(v)}%"
     if a == "ANA-SYLLOGISM":
-        m = re.search(r"All (.+?) are (.+?)\. All \2 are (.+?)\.", s)
-        if m:
-            return f"All {m.group(1)} are {m.group(3)}."
-        m = re.search(r"All (.+?) are (.+?)\. Some \1 are volunteers", s)
-        if m:
-            return f"Some {m.group(2)} are volunteers."
-        m = re.search(r"All (.+?) are (.+?)\. No \2 are late payers", s)
-        if m:
-            return f"No {m.group(1)} are late payers."
+        t = s.replace("Statement 1: ", "").replace("Statement 2: ", "").replace("Assume these are true: ", "")
+        t = re.sub(r"every one of the (.+?) is among the (.+?)(,|\.)", r"All \1 are \2.", t)
+        t = re.sub(r"none of the (.+?) are (.+?)(,|\.)", r"No \1 are \2.", t)
+        t = re.sub(r"a few of the (.+?) are (.+?)(,|\.)", r"Some \1 are \2.", t)
+        t = re.sub(r"all of the (.+?) are (.+?)(,|\.)", r"All \1 are \2.", t)
+        alls = re.findall(r"All (.+?) are (.+?)\.", t)
+        some = re.findall(r"Some (.+?) are (.+?)\.", t)
+        no = re.findall(r"No (.+?) are (.+?)\.", t)
+        if len(alls) == 2:
+            (x1, y1), (x2, y2) = alls
+            return f"All {x1} are {y2}." if y1 == x2 else f"All {x2} are {y1}." if y2 == x1 else None
+        if alls and some:
+            (x, y), (sx, p_) = alls[0], some[0]
+            return f"Some {y} are {p_}." if sx == x else None
+        if alls and no:
+            (x, y), (nx, p_) = alls[0], no[0]
+            return f"No {x} are {p_}." if nx == y else None
+        return None
     if a.startswith("ANA-ANALOGY"):
-        a_, b_ = [x.strip().lower() for x in s.split("::")[0].split(":")]
+        m = re.match(r"(.+?) : (.+?) :: ____$", s) or re.match(r"(.+?) is to (.+?) as ____\.$", s) or re.search(r'"(.+?) : (.+?)"', s) or re.search(r'"(.+?)" and "(.+?)"', s)
+        if not m:
+            return None
+        a_, b_ = m.group(1).strip().lower(), m.group(2).strip().lower()
         for t in analytical.ANALOGIES:
             if (t[0], t[1]) == (a_, b_):
                 return f"{t[4][0]} : {t[4][1]}"
@@ -173,7 +188,10 @@ def solve_verb(it):
         for row in verbal.TV:
             if s.rstrip(".").endswith(row[7]) or (row[7] + " on time") in s:
                 return {"past": row[1], "future": row[2], "present": row[3], "presperf": row[4], "futperf": row[5], "prog": row[6]}[t]
-    tables = verbal.CONFUSED + verbal.PHRASAL + verbal.PRON
+    tables = verbal.CONFUSED + verbal.PHRASAL + verbal.PRON + verbal_more.PREP + verbal_more.SCOMP + verbal_more.IDIOMS
+    for sent, word, c, _ in verbal_more.VIC:
+        if s.endswith(sent):
+            return c
     for sent, c, _ in tables:
         if s.endswith(sent):
             return c
@@ -214,6 +232,18 @@ def check_item(it):
         if re.search(r"\b(choice|option|letter) [A-D]\b", it["reveal"]["why_correct"] + " ".join(it["reveal"]["why_wrong"].values())):
             errs.append("names a choice by letter")
             break
+    for oid, code in it["distractor_reasoning"].items():
+        if code not in CODES:
+            errs.append(f"code {code} not in spec")
+    codes = list(it["distractor_reasoning"].values())
+    if it.get("concept") == "ordering" and len(set(codes)) != len(codes):
+        errs.append("ordering item: each wrong option needs its own code")
+    if it["archetype"].startswith("CLR-FILE"):
+        sub = it.get("distractor_subreason", {})
+        if set(codes) != {"CLR-FILE-ORDER"} or set(sub) != set(it["distractor_reasoning"]) or not all(re.search(r"ARMA Rule \d", v) and v.split(":")[0] in CODES for v in sub.values()):
+            errs.append("filing: parent code CLR-FILE-ORDER plus an ARMA-rule sub-reason for every distractor")
+    if it.get("concept") in ("synonyms", "antonyms") and "RC-OPPOSITE" in codes:
+        errs.append("synonym/antonym traps must use VRB-SYNONYM-TRAP / VRB-ANTONYM-TRAP")
     d = it["domain"]
     if d == "general_information" and not it.get("_legacy"):
         if it["source_url"] not in GI_URLS:
@@ -280,3 +310,67 @@ def check_gi_evidence(items, cache="/workspace/gi"):
             if re.sub(r"\s+", " ", f[5]).lower() not in txt[f[0]]:
                 bad.append(it["id"])
     return bad
+
+
+BASE = None
+
+
+def baseline_hits(items, near=0.65):
+    """Exact and near matches of item stems against the baseline bank (normalized stems)."""
+    global BASE
+    if BASE is None:
+        BASE = [(src, baseline.norm(st), pre) for src, st, pre in baseline.stems()]
+    hits = []
+    for it in items:
+        n = baseline.norm(it["stem"])
+        for src, b, pre in BASE:
+            if (pre and n.startswith(b[:50])) or n == b:
+                hits.append((it["id"], "exact", src, b[:70]))
+                break
+            if not pre and jaccard(n, b) >= near:
+                hits.append((it["id"], "near", src, b[:70]))
+                break
+            if it.get("archetype", "").startswith("ANA-ANALOGY") and not pre:
+                pair = analogy_pair(it["stem"])
+                if pair and re.search(r"\b%s\b.{0,12}\b%s\b" % tuple(map(re.escape, pair)), b):
+                    hits.append((it["id"], "near (same analogy pair)", src, b[:70]))
+                    break
+    return hits
+
+
+def analogy_pair(s):
+    m = re.match(r"(.+?) : (.+?) :: _+$", s) or re.match(r"(.+?) is to (.+?) as _+\.$", s) or re.search(r'"(.+?) : (.+?)"', s) or re.search(r'"(.+?)" and "(.+?)"', s)
+    return (m.group(1).strip().lower(), m.group(2).strip().lower()) if m else None
+
+
+TENSE_CONCEPTS = {"verb tense", "tense consistency"}
+
+
+def check_batch_rules(batch_items):
+    """Per-batch CoS rules: tense <= 5, frame <= 2."""
+    out = []
+    t = sum(1 for i in batch_items if i.get("concept") in TENSE_CONCEPTS)
+    if t > 5:
+        out.append(("batch", f"{t} tense items (max 5)"))
+    from collections import Counter
+    for f, n in Counter(i.get("gen_frame") for i in batch_items if i.get("gen_frame")).items():
+        if n > 2:
+            out.append(("batch", f"frame {f} used {n} times (max 2)"))
+    return out
+
+
+def check_bank_rules(all_items):
+    """Bank-wide CoS rules: tense <= 50 of Verbal; every syllogism/analogy type has >= 3 frames."""
+    out = []
+    t = sum(1 for i in all_items if i.get("concept") in TENSE_CONCEPTS)
+    if t > 50:
+        out.append(("bank", f"{t} tense items (max 50)"))
+    types = {}
+    for i in all_items:
+        if i["archetype"] == "ANA-SYLLOGISM" or i["archetype"].startswith("ANA-ANALOGY"):
+            key = ("SYL-" + i.get("gen_frame", "SYL-?")[4]) if i["archetype"] == "ANA-SYLLOGISM" else i["archetype"]
+            types.setdefault(key, set()).add(i.get("gen_frame", "hand-written"))
+    for k, fr in types.items():
+        if len(fr) < 3:
+            out.append(("bank", f"{k}: only {len(fr)} frames"))
+    return out

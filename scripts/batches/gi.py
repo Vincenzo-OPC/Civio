@@ -14,7 +14,7 @@ def item(rng, iid, idx):
     src, cite, q, c, wr, ev, ex = F[idx]
     it = make(id=iid, track="both", domain="general_information", competency="Philippine Constitution" if src == C else
               "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)", concept=cite, micro_skill="recall a provision",
-              archetype="GI-DEADLINE-NUMBER" if any(w[1] == "GI-NEIGHBOR-NUMBER" for w in wr) else "GI-TERM-MATCH", difficulty="medium", est=25,
+              archetype="GI-DEADLINE-NUMBER" if any(w[1] == "GI-NEIGHBOR-NUMBER" for w in wr) else "GI-WHO-HOLDS-POWER" if any(w[1] == "GI-WRONG-BODY" for w in wr) else "GI-TERM-MATCH", difficulty="medium", est=25,
               stem=q, correct=c, wrong=[(t, code, f"\"{t}\" {WHY[code]}.") for t, code in wr],
               terms=f"This item is about {LAW[src]}, {cite}.",
               shortcut=f"Tie the fact to its section: {cite}. {ex}",

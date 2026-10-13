@@ -170,12 +170,19 @@ def file_position(rng, iid):
     it = make(id=iid, **B, competency="Filing", concept="alphabetic filing of personal names", micro_skill="surname, prefix and title rules",
               archetype="CLR-FILE-POSITION", difficulty="medium", est=45,
               stem=f"In alphabetical filing, which name is filed {word}?  " + " | ".join(show(p) for p in ppl), correct=show(c),
-              wrong=[(show(p), code, f"\"{show(p)}\" {why[code]}." if code != "CLR-FILE-ORDER" else
+              wrong=[(show(p), "CLR-FILE-ORDER", f"\"{show(p)}\" {why[code]}." if code != "CLR-FILE-ORDER" else
                       f"\"{show(p)}\" files as {idx(p)}, which comes {'before' if last else 'after'} {idx(c)}.") for p, code in traps[:3]],
               terms="\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
               shortcut=f"Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: {units}.",
               why_correct=f"\"{show(c)}\" is right. It comes {'last' if last else 'first'} when every name is indexed surname first, letter by letter. " + ARMA_NOTE.format(n=rule),
               source=f"Civio Filing Rules v2 / ARMA Rule {rule}", url="https://webstore.ansi.org/standards/arma/ansiarma122005", rng=rng)
+    sub = {"CLR-PREFIX-SPLIT": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+           "CLR-FIRSTNAME-FIRST": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
+           "CLR-TITLE-COUNTED": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)",
+           "CLR-FILE-ORDER": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)"}
+    shown = {show(p): code for p, code in traps[:3]}
+    txt = {o["option_id"]: o["text"] for o in it["options"]}
+    it["distractor_subreason"] = {oid: sub[shown[txt[oid]]] for oid in it["distractor_reasoning"]}
     it["_sig"] = it["stem"]
     return it
 

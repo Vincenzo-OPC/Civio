@@ -58,30 +58,33 @@ def code_shift(rng, iid):
 
 def ranking(rng, iid):
     n = rng.sample(FIRST, 4)
-    order = n[:]  # tallest/fastest... first
-    rng.shuffle(order)
-    trait = rng.choice([("finished the report earlier than", "finished first", "earliest"), ("has served longer than", "has served the longest", "longest"),
-                        ("scored higher than", "got the highest score", "highest"), ("lives nearer the office than", "lives nearest", "nearest")])
-    a, b, c, d = order
-    clues = [f"{a} {trait[0]} {b}.", f"{c} {trait[0]} {a}.", f"{b} {trait[0]} {d}."]
-    # true order: c > a > b > d
-    true = [c, a, b, d]
+    rng.shuffle(n)
+    trait = rng.choice([("finished the report earlier than", "finished first"), ("has served longer than", "has served the longest"),
+                        ("scored higher than", "got the highest score"), ("lives nearer the office than", "lives nearest"),
+                        ("arrived earlier than", "arrived first"), ("encoded more forms than", "encoded the most forms")])
+    a, b, c, d = n
+    cl = {"ca": f"{c} {trait[0]} {a}.", "ab": f"{a} {trait[0]} {b}.", "bd": f"{b} {trait[0]} {d}."}
+    true = [c, a, b, d]  # from the top
+    clues = list(cl.values())
     rng.shuffle(clues)
     ask = rng.choice(["second", "third"])
-    pos = 1 if ask == "second" else 2
-    ans = true[pos]
-    others = [x for x in true if x != ans]
-    reasons = {c: ("ANA-ONE-LINK", f"{c} is ahead of everyone; {c} is first."),
-               a: ("ANA-ONE-LINK", f"{a} is second, not {ask}."),
-               b: ("ANA-ONE-LINK", f"{b} is third, not {ask}."),
-               d: ("ANA-ONE-LINK", f"{d} is behind everyone; {d} is last.")}
-    return make(id=iid, **B, competency="Logic", concept="ordering", micro_skill="chain comparison clues into one order", archetype="ANA-CONCLUSION",
-                difficulty="medium", est=60,
-                stem=f"Four staff members are compared. {' '.join(clues)} Who is {ask} in the order (from the one who {trait[1]})?", correct=ans,
-                wrong=[(o, "LOG-COULD-NOT-MUST", reasons[o][1]) for o in others],
-                terms="An \"ordering\" item gives pairs. Join the pairs into one line.",
-                shortcut=f"Start from the clue that names someone nobody beats. Line: {' → '.join(true)}.",
-                why_correct=f"{ans} is right. The clues give {' → '.join(true)}, so {ans} is {ask}.", rng=rng)
+    if ask == "second":
+        ans = a
+        wrong = [(c, "LOG-ORDER-SWAP", f"{c} is first. Choosing {c} swaps the top two places."),
+                 (b, "LOG-ORDER-REVERSED", f"{b} is second from the bottom, not from the top. This counts from the wrong end."),
+                 (d, "LOG-IGNORED-CLUE", f"{d} could be second only if you skip the clue \"{cl['bd']}\" That clue puts {d} last.")]
+    else:
+        ans = b
+        wrong = [(d, "LOG-ORDER-SWAP", f"{d} is last. Choosing {d} swaps the bottom two places."),
+                 (a, "LOG-ORDER-REVERSED", f"{a} is third from the bottom, not from the top. This counts from the wrong end."),
+                 (c, "LOG-IGNORED-CLUE", f"{c} could be third only if you skip the clue \"{cl['ca']}\" That clue puts {c} first.")]
+    it = make(id=iid, **B, competency="Logic", concept="ordering", micro_skill="chain comparison clues into one order", archetype="ANA-CONCLUSION",
+              difficulty="medium", est=60,
+              stem=f"Four staff members are compared. {' '.join(clues)} Who is {ask} in the order (counting from the one who {trait[1]})?", correct=ans,
+              wrong=wrong, terms="An \"ordering\" item gives pairs. Join the pairs into one line, and count from the end the question names.",
+              shortcut=f"Start from the person nobody beats and follow the clues down: {' → '.join(true)}.",
+              why_correct=f"{ans} is right. The clues give {' → '.join(true)}, so {ans} is {ask}.", rng=rng)
+    return it
 
 
 ITEMS = ["bond paper (reams)", "ballpens (boxes)", "folders (packs)", "toner (units)", "staplers", "envelopes (boxes)"]
@@ -146,39 +149,67 @@ CATS = [("encoders", "clerks", "employees"), ("nurses", "health workers", "publi
         ("typhoon reports", "bulletins", "public notices")]
 
 
-def syllogism(rng, iid):
+PEOPLE = {"encoders", "nurses", "barangay captains", "auditors", "teachers", "judges", "volunteers", "drivers", "farmers"}
+SOME_PROP = {"p": ["volunteers", "night-shift workers", "first-time applicants", "choir members", "blood donors", "union members", "scholars", "part-time workers"],
+             "t": ["donations", "imported goods", "items on the March list", "rentals", "gifts from the province", "second-hand goods", "items marked for repair", "items in the audit sample"]}
+NONE_PROP = {"p": ["late payers", "smokers", "absentees", "rule violators", "job-order hires", "new trainees"],
+             "t": ["recalled items", "items marked for disposal", "items under quarantine", "stolen goods", "expired stock", "unregistered items"]}
+SYL_FRAMES = {
+    "chain": [("C1", "All {s} are {m}. All {m} are {b}. Which conclusion must be true?"),
+              ("C2", "Statement 1: All {m} are {b}. Statement 2: All {s} are {m}. Which conclusion follows from both statements?"),
+              ("C3", "Assume these are true: every one of the {s} is among the {m}, and every one of the {m} is among the {b}. What can be concluded for certain?")],
+    "some": [("S1", "All {s} are {m}. Some {s} are {p}. Which conclusion must be true?"),
+             ("S2", "Statement 1: Some {s} are {p}. Statement 2: All {s} are {m}. Which conclusion follows from both statements?"),
+             ("S3", "Assume these are true: a few of the {s} are {p}, and all of the {s} are {m}. What can be concluded for certain?")],
+    "none": [("N1", "All {s} are {m}. No {m} are {p}. Which conclusion must be true?"),
+             ("N2", "Statement 1: No {m} are {p}. Statement 2: All {s} are {m}. Which conclusion follows from both statements?"),
+             ("N3", "Assume these are true: none of the {m} are {p}, and every one of the {s} is among the {m}. What can be concluded for certain?")],
+}
+
+
+def syllogism(rng, iid, form=None, frame=None):
     s, m, b = rng.choice(CATS)
-    form = rng.choice(["chain", "some", "none"])
+    form = form or rng.choice(list(SYL_FRAMES))
+    fid, tpl = frame or least_used(rng, "SYL-" + form, SYL_FRAMES[form])
+    kind = "p" if s in PEOPLE else "t"
+    p = rng.choice((SOME_PROP if form == "some" else NONE_PROP)[kind])
+    if p == s or p == m:
+        p = (SOME_PROP if form == "some" else NONE_PROP)[kind][0]
+    stem = tpl.format(s=s, m=m, b=b, p=p)
     if form == "chain":
-        stem = f"All {s} are {m}. All {m} are {b}. Which conclusion must be true?"
         c = f"All {s} are {b}."
         wr = [(f"All {b} are {s}.", "LOG-CONVERSE", f"This flips the statement. Being {b} does not make something one of the {s}."),
-              (f"Some {b} are not {m}.", "LOG-COULD-NOT-MUST", f"This could be true, but the statements do not say it."),
+              (f"Some {b} are not {m}.", "LOG-COULD-NOT-MUST", "This could be true, but the statements do not say it."),
               (f"No {m} are {s}.", "LOG-OVERSTRONG", f"This contradicts the statements: every one of the {s} is one of the {m}.")]
         sc = f"Draw circles: {s} inside {m}, {m} inside {b}. So {s} sit inside {b}."
     elif form == "some":
-        stem = f"All {s} are {m}. Some {s} are volunteers. Which conclusion must be true?"
-        c = f"Some {m} are volunteers."
-        wr = [(f"All {m} are volunteers.", "LOG-OVERSTRONG", f"Only some of the {s} are volunteers, so we cannot say all {m} are."),
-              (f"All volunteers are {s}.", "LOG-CONVERSE", "This flips the second statement. Some volunteers may be outside the group."),
-              (f"No {m} are volunteers.", "LOG-OVERSTRONG", f"This contradicts the statements: the volunteer {s} are also {m}.")]
-        sc = f"The {s} who are volunteers are also {m}. So at least some {m} are volunteers."
+        c = f"Some {m} are {p}."
+        wr = [(f"All {m} are {p}.", "LOG-OVERSTRONG", f"Only some of the {s} are {p}, so we cannot say all {m} are."),
+              (f"All {p} are {s}.", "LOG-CONVERSE", f"This flips the statement about {p}. Some {p} may be outside the group."),
+              (f"No {m} are {p}.", "LOG-OVERSTRONG", f"This contradicts the statements: the {s} who are {p} are also {m}.")]
+        sc = f"The {s} who are {p} are also {m}. So at least some {m} are {p}."
     else:
-        stem = f"All {s} are {m}. No {m} are late payers. Which conclusion must be true?"
-        c = f"No {s} are late payers."
-        wr = [(f"Some {s} are late payers.", "LOG-OVERSTRONG", f"This contradicts the statements: all {s} are {m}, and no {m} is a late payer."),
-              (f"No late payers are {b}.", "LOG-COULD-NOT-MUST", f"The statements say nothing about all {b}; some {b} may be outside the {m} group."),
-              (f"All {m} are {s}.", "LOG-CONVERSE", "This flips the first statement.")]
-        sc = f"Put the {s} circle inside {m}. The late payers circle sits outside {m}, so it is outside {s} too."
-    return make(id=iid, **B, competency="Logic", concept="syllogism", micro_skill=f"{form} form", archetype="ANA-SYLLOGISM", difficulty="medium", est=45,
-                stem=stem, correct=c, wrong=wr, terms="A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
-                shortcut=sc, why_correct=f"\"{c}\" is right. It follows from the two statements with no extra facts.", rng=rng)
+        c = f"No {s} are {p}."
+        wr = [(f"Some {s} are {p}.", "LOG-OVERSTRONG", f"This contradicts the statements: all {s} are {m}, and no {m} is {p}."),
+              (f"No {b} are {p}.", "LOG-COULD-NOT-MUST", f"The statements say nothing about all {b}; some {b} may be outside the {m} group."),
+              (f"All {m} are {s}.", "LOG-CONVERSE", "This flips the statement about the two groups.")]
+        sc = f"Put the {s} circle inside {m}. The \"{p}\" circle sits outside {m}, so it is outside {s} too."
+    it = make(id=iid, **B, competency="Logic", concept="syllogism", micro_skill=f"{form} form", archetype="ANA-SYLLOGISM", difficulty="medium", est=45,
+              stem=stem, correct=c, wrong=wr, terms="A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+              shortcut=sc, why_correct=f"\"{c}\" is right. It follows from the two statements with no extra facts.", rng=rng)
+    it["_frame"] = f"SYL-{fid}"
+    it["_kind"] = "SYL-" + form
+    it["_sig"] = f"SYL:{form}:{s}:{p if form != 'chain' else b}"
+    return it
 
 
 # Analogies: (a, b, relation, archetype, [distractor pairs with codes])
 ANALOGIES = [
-    ("pen", "write", "tool : what it is used for", "ANA-ANALOGY-FUNCTION", ("scissors", "cut"), [("ink", "paper", "ANA-SAME-TOPIC"), ("read", "book", "ANA-REVERSED"), ("knife", "sharp", "ANA-OTHER-RELATION")]),
-    ("thermometer", "temperature", "tool : what it measures", "ANA-ANALOGY-FUNCTION", ("scale", "weight"), [("clock", "alarm", "ANA-OTHER-RELATION"), ("heat", "fever", "ANA-SAME-TOPIC"), ("distance", "ruler", "ANA-REVERSED")]),
+    ("cool", "cold", "lesser : greater degree", "ANA-ANALOGY-DEGREE", ("breeze", "gale"), [("cold", "cool", "ANA-REVERSED"), ("ice", "winter", "ANA-SAME-TOPIC"), ("hot", "cold", "ANA-OTHER-RELATION")]),
+    ("tired", "exhausted", "lesser : greater degree", "ANA-ANALOGY-DEGREE", ("hungry", "starving"), [("exhausted", "tired", "ANA-REVERSED"), ("sleep", "bed", "ANA-SAME-TOPIC"), ("awake", "asleep", "ANA-OTHER-RELATION")]),
+    ("pond", "lake", "lesser : greater degree", "ANA-ANALOGY-DEGREE", ("hill", "mountain"), [("lake", "pond", "ANA-REVERSED"), ("fish", "water", "ANA-SAME-TOPIC"), ("river", "bridge", "ANA-OTHER-RELATION")]),
+    ("begin", "start", "similar meaning", "ANA-ANALOGY-SYN", ("end", "finish"), [("start", "stop", "ANA-OTHER-RELATION"), ("race", "runner", "ANA-SAME-TOPIC"), ("began", "begun", "ANA-SOUND")]),
+    ("broom", "sweep", "tool : what it is used for", "ANA-ANALOGY-FUNCTION", ("scissors", "cut"), [("dust", "floor", "ANA-SAME-TOPIC"), ("sweep", "broom", "ANA-REVERSED"), ("brush", "bristle", "ANA-OTHER-RELATION")]),
     ("page", "book", "part : whole", "ANA-ANALOGY-PART", ("brick", "wall"), [("library", "shelf", "ANA-REVERSED"), ("author", "story", "ANA-OTHER-RELATION"), ("ink", "printer", "ANA-SAME-TOPIC")]),
     ("finger", "hand", "part : whole", "ANA-ANALOGY-PART", ("spoke", "wheel"), [("glove", "hand", "ANA-ONE-LINK"), ("arm", "elbow", "ANA-REVERSED"), ("ring", "jewel", "ANA-OTHER-RELATION")]),
     ("timid", "afraid", "similar meaning", "ANA-ANALOGY-SYN", ("happy", "glad"), [("brave", "afraid", "ANA-OTHER-RELATION"), ("tame", "lion", "ANA-SOUND"), ("shy", "crowd", "ANA-SAME-TOPIC")]),
@@ -187,7 +218,7 @@ ANALOGIES = [
     ("whisper", "shout", "lesser : greater degree", "ANA-ANALOGY-DEGREE", ("smile", "laugh"), [("shout", "whisper", "ANA-REVERSED"), ("voice", "throat", "ANA-SAME-TOPIC"), ("quiet", "silent", "ANA-OTHER-RELATION")]),
     ("teacher", "school", "worker : workplace", "ANA-ANALOGY-FUNCTION", ("farmer", "field"), [("student", "teacher", "ANA-OTHER-RELATION"), ("classroom", "chalk", "ANA-SAME-TOPIC"), ("hospital", "nurse", "ANA-REVERSED")]),
     ("pilot", "airplane", "worker : what they operate", "ANA-ANALOGY-FUNCTION", ("captain", "ship"), [("passenger", "bus", "ANA-OTHER-RELATION"), ("sky", "cloud", "ANA-SAME-TOPIC"), ("train", "driver", "ANA-REVERSED")]),
-    ("seed", "tree", "early stage : later stage", "ANA-ANALOGY-FORM", ("egg", "chicken"), [("leaf", "branch", "ANA-OTHER-RELATION"), ("fruit", "seed", "ANA-REVERSED"), ("soil", "water", "ANA-SAME-TOPIC")]),
+    ("bud", "flower", "early stage : later stage", "ANA-ANALOGY-FORM", ("egg", "chicken"), [("petal", "stem", "ANA-OTHER-RELATION"), ("flower", "bud", "ANA-REVERSED"), ("garden", "soil", "ANA-SAME-TOPIC")]),
     ("caterpillar", "butterfly", "early stage : later stage", "ANA-ANALOGY-FORM", ("tadpole", "frog"), [("bee", "honey", "ANA-OTHER-RELATION"), ("wing", "bird", "ANA-OTHER-RELATION"), ("adult", "child", "ANA-REVERSED")]),
     ("doctor", "diagnosis", "worker : what they produce", "ANA-ANALOGY-FUNCTION", ("architect", "blueprint"), [("patient", "medicine", "ANA-SAME-TOPIC"), ("plan", "engineer", "ANA-REVERSED"), ("nurse", "doctor", "ANA-OTHER-RELATION")]),
     ("rice", "grain", "member : group", "ANA-ANALOGY-PART", ("carrot", "vegetable"), [("bread", "flour", "ANA-OTHER-RELATION"), ("fruit", "mango", "ANA-REVERSED"), ("field", "harvest", "ANA-SAME-TOPIC")]),
@@ -210,17 +241,36 @@ ANALOGIES = [
 ]
 
 
-def analogy(rng, iid):
+ANA_FRAMES = [("A1", "{A} : {B} :: ____"), ("A2", "{a} is to {b} as ____."), ("A3", "Which pair shows the same relationship as \"{a} : {b}\"?"),
+              ("A4", "Find the pair whose link matches the link between \"{a}\" and \"{b}\".")]
+
+
+from collections import Counter, defaultdict
+FRAME_USE = defaultdict(Counter)  # type -> frame -> uses so far in the bank (build.py keeps it current)
+
+
+def least_used(rng, kind, frames):
+    low = min(FRAME_USE[kind][f[0]] for f in frames)
+    return rng.choice([f for f in frames if FRAME_USE[kind][f[0]] == low])
+
+
+def analogy(rng, iid, frame=None):
     a, b, rel, arch, good, bad = rng.choice(ANALOGIES)
+    fid, tpl = frame or least_used(rng, arch, ANA_FRAMES)
     fmt = lambda p: f"{p[0]} : {p[1]}"
     why = {"ANA-SAME-TOPIC": "is about the same topic but not the same link", "ANA-REVERSED": "has the right link but in reverse order",
            "ANA-OTHER-RELATION": "is linked in a different way", "ANA-SOUND": "is linked only by sound or spelling", "ANA-ONE-LINK": "is linked to only one stem word"}
-    return make(id=iid, **B, competency="Word association (analogy)", concept="analogy", micro_skill=rel, archetype=arch, difficulty="medium", est=30,
-                stem=f"{a.upper()} : {b.upper()} :: ____", correct=fmt(good),
-                wrong=[(fmt(p), c, f"\"{fmt(p)}\" {why[c]}. The stem pair is {rel}.") for p, c in [(x[:2], x[2]) for x in bad]],
-                terms="\"A : B :: C : D\" means A is to B as C is to D. The two pairs must share the same link.",
-                shortcut=f"Make a sentence for the stem: \"{a} is to {b}\" as {rel}. Test each choice in that sentence.",
-                why_correct=f"\"{fmt(good)}\" is right. It has the same link, {rel}, in the same order.", rng=rng)
+    stem = tpl.format(A=a.upper(), B=b.upper(), a=a.capitalize() if fid == "A2" else a, b=b)
+    it = make(id=iid, **B, competency="Word association (analogy)", concept="analogy", micro_skill=rel, archetype=arch, difficulty="medium", est=30,
+              stem=stem, correct=fmt(good),
+              wrong=[(fmt(p), c, f"\"{fmt(p)}\" {why[c]}. The stem pair is {rel}.") for p, c in [(x[:2], x[2]) for x in bad]],
+              terms="\"A : B :: C : D\" means A is to B as C is to D. The two pairs must share the same link.",
+              shortcut=f"Make a sentence for the stem: \"{a} is to {b}\" as {rel}. Test each choice in that sentence.",
+              why_correct=f"\"{fmt(good)}\" is right. It has the same link, {rel}, in the same order.", rng=rng)
+    it["_frame"] = f"ANA-{fid}"
+    it["_kind"] = arch
+    it["_sig"] = f"ANA:{a}:{b}"
+    return it
 
 
 TEMPLATES = [letter_series, code_shift, ranking, di_table, di_table, syllogism, analogy]
