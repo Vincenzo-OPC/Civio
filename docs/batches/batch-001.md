@@ -1,10 +1,12 @@
-# Civio batch 001 (draft for Chief of Staff review)
+# Civio batch 001 (approved: CoS PASS, final per GT delegation)
 
-Spec: `docs/CSE-Question-Design-Spec.md` v0.1.3. Author: CSE (Grok Bot, AI-assisted). Reviewer: Chief of Staff (not the author). Then GT approves item by item.
-All items are original, `source_group: civio`, `status: draft`, `review_status: unreviewed`. Nothing has been inserted into any database. Seed-ready copy: `docs/batches/batch-001.json`.
+Spec: `docs/CSE-Question-Design-Spec.md` v0.1.3. Author: CSE (Grok Bot, AI-assisted). Reviewer: Chief of Staff.
+**Review result: CoS PASS on all 10 items (2026-10-13). Final approval: GT delegated approvals to Chief of Staff.**
+All items are original, `source_group: civio`. Bank status on import: `active` (`php artisan civio:import-batch docs/batches/batch-001.json`). Seed-ready copy: `docs/batches/batch-001.json`.
 Civio is an independent reviewer and is not affiliated with the Civil Service Commission.
 
 Mix: 3 Numerical, 3 Verbal (English), 2 General Information, 1 Analytical (Professional), 1 Clerical spelling (Subprofessional).
+Post-review fixes: item 3 r3 code is now `NUM-OTHER-SHARE`; item 9 y2 code is now `ANA-OTHER-RELATION` with a reworded Reveal line.
 
 ## 1. CIVIO-NUM-WP-PCT-CHANGE-000001
 
@@ -12,6 +14,7 @@ Mix: 3 Numerical, 3 Verbal (English), 2 General Information, 1 Analytical (Profe
 - competency: Word problems · concept: successive percent change
 - micro_skill: chain a percent increase and a percent decrease on the same price
 - source: Original, Civio
+- status: approved · review_status: passed · reviewer: Chief of Staff (final approval, delegated by GT) (2026-10-13T19:16:00+08:00)
 
 **Stem:** A store sold a sack of rice for ₱250. It raised the price by 20%. A week later, it cut the new price by 20%. What is the final price of the sack?
 
@@ -36,7 +39,7 @@ Mix: 3 Numerical, 3 Verbal (English), 2 General Information, 1 Analytical (Profe
    - ₱288: ₱288 adds the 20% raise again to ₱240. That is one step too many.
    - ₱300: ₱300 is only the price after the raise. It stops before the cut.
 
-Review: [ ] CoS pass  [ ] GT approve  Notes:
+Review: [x] CoS PASS (final, per GT delegation, 2026-10-13)
 
 ## 2. CIVIO-NUM-SEQ-DIFF-000002
 
@@ -44,6 +47,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - competency: Number sequence · concept: number series with growing differences
 - micro_skill: find the rule in the differences and extend it
 - source: Original, Civio
+- status: approved · review_status: passed · reviewer: Chief of Staff (final approval, delegated by GT) (2026-10-13T19:16:00+08:00)
 
 **Stem:** What number comes next in the series?  4, 7, 12, 19, 28, ___
 
@@ -68,7 +72,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
    - 37: 37 repeats the last jump, +9. The jump keeps growing, so it should be +11.
    - 41: 41 adds 13. That skips one step in the jumps (it goes 9 then 13 instead of 9 then 11).
 
-Review: [ ] CoS pass  [ ] GT approve  Notes:
+Review: [x] CoS PASS (final, per GT delegation, 2026-10-13)
 
 ## 3. CIVIO-NUM-WP-RATIO-000003
 
@@ -76,6 +80,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - competency: Word problems · concept: ratio
 - micro_skill: split a total in a given ratio and find the larger share
 - source: Original, Civio
+- status: approved · review_status: passed · reviewer: Chief of Staff (final approval, delegated by GT) (2026-10-13T19:16:00+08:00)
 
 **Stem:** A barangay will split a ₱18,000 cleanup fund between Purok Uno and Purok Dos in the ratio 4 : 5. How much will Purok Dos receive?
 
@@ -88,7 +93,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 `answer_option_id`: r4 (₱10,000)
 
-`distractor_reasoning`: r1 = `NUM-PARTIAL`; r2 = `NUM-WRONG-BASE`; r3 = `NUM-WRONG-BASE`
+`distractor_reasoning`: r1 = `NUM-PARTIAL`; r2 = `NUM-WRONG-BASE`; r3 = `NUM-OTHER-SHARE`
 
 **Reveal**
 
@@ -100,7 +105,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
    - ₱3,600: ₱3,600 divides ₱18,000 by 5 alone. It should divide by all 9 parts.
    - ₱8,000: ₱8,000 is Purok Uno's share (4 parts). The question asks for Purok Dos.
 
-Review: [ ] CoS pass  [ ] GT approve  Notes:
+Review: [x] CoS PASS (final, per GT delegation, 2026-10-13)
 
 ## 4. CIVIO-VEN-WORD-MEANING-000004
 
@@ -108,6 +113,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - competency: Vocabulary (word meaning) · concept: word meaning in context
 - micro_skill: choose the sense of 'defer' that fits the sentence
 - source: Original, Civio
+- status: approved · review_status: passed · reviewer: Chief of Staff (final approval, delegated by GT) (2026-10-13T19:16:00+08:00)
 
 **Stem:** What is the meaning of the word "defer" in the sentence?  The council chose to defer the vote on the new parking rules until all barangay captains could attend.
 
@@ -132,7 +138,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
    - yield to another's opinion: "Yield to another's opinion" is a real meaning of "defer" (as in "defer to the expert"). It does not fit a vote that is being moved.
    - hurry: "Hurry" is the opposite. Waiting for everyone slows the vote down.
 
-Review: [ ] CoS pass  [ ] GT approve  Notes:
+Review: [x] CoS PASS (final, per GT delegation, 2026-10-13)
 
 ## 5. CIVIO-VEN-SENT-COMP-PHRASAL-000005
 
@@ -140,6 +146,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - competency: Sentence completion · concept: phrasal verbs
 - micro_skill: pick the particle that gives 'call ___' the meaning 'cancel'
 - source: Original, Civio
+- status: approved · review_status: passed · reviewer: Chief of Staff (final approval, delegated by GT) (2026-10-13T19:16:00+08:00)
 
 **Stem:** Because of the typhoon warning, the town fiesta parade was called ______.
 
@@ -164,7 +171,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
    - up: "Called up" means phoned or summoned, for example for duty. A parade is not phoned.
    - in: "Called in" means asked to come, like calling in extra staff. It does not stop an event.
 
-Review: [ ] CoS pass  [ ] GT approve  Notes:
+Review: [x] CoS PASS (final, per GT delegation, 2026-10-13)
 
 ## 6. CIVIO-VEN-SENT-COMP-WORD-000006
 
@@ -172,6 +179,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - competency: Sentence completion · concept: commonly confused words
 - micro_skill: tell 'affect' (verb) from 'effect'
 - source: Original, Civio
+- status: approved · review_status: passed · reviewer: Chief of Staff (final approval, delegated by GT) (2026-10-13T19:16:00+08:00)
 
 **Stem:** The new route ordinance will ______ every tricycle driver in the municipality.
 
@@ -196,7 +204,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
    - afflict: "Afflict" means to cause pain or suffering. It is too strong and negative for a route rule.
    - infect: "Infect" means to spread a disease. It only sounds close to "affect".
 
-Review: [ ] CoS pass  [ ] GT approve  Notes:
+Review: [x] CoS PASS (final, per GT delegation, 2026-10-13)
 
 ## 7. CIVIO-GI-WHO-HOLDS-POWER-000007
 
@@ -204,6 +212,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - competency: Philippine Constitution · concept: impeachment
 - micro_skill: name the body with the exclusive power to initiate impeachment
 - source: 1987 Const., Art. XI, Sec. 3(1) (https://lawphil.net/consti/cons1987.html)
+- status: approved · review_status: passed · reviewer: Chief of Staff (final approval, delegated by GT) (2026-10-13T19:16:00+08:00)
 
 **Stem:** Under the 1987 Constitution, which body has the exclusive power to initiate all cases of impeachment?
 
@@ -228,7 +237,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
    - Supreme Court: The Supreme Court does not start impeachment. Its Chief Justice only presides when the President is on trial in the Senate (Art. XI, Sec. 3(6)).
    - Office of the Ombudsman: The Ombudsman investigates complaints against officials (Art. XI, Sec. 13). The Ombudsman can be impeached but does not start impeachment.
 
-Review: [ ] CoS pass  [ ] GT approve  Notes:
+Review: [x] CoS PASS (final, per GT delegation, 2026-10-13)
 
 ## 8. CIVIO-GI-SCENARIO-APPLY-000008
 
@@ -236,6 +245,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: norms of conduct
 - micro_skill: match a described behavior to the R.A. 6713 norm it shows
 - source: R.A. 6713, Sec. 4(A)(h) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
+- status: approved · review_status: passed · reviewer: Chief of Staff (final approval, delegated by GT) (2026-10-13T19:16:00+08:00)
 
 **Stem:** A municipal assessor and her family live within her salary. They avoid showing off expensive cars, jewelry, or parties. Which norm of conduct under R.A. 6713 does this best show?
 
@@ -260,7 +270,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
    - Commitment to public interest: Commitment to public interest (Sec. 4(A)(a)) is about putting the public first and not wasting government funds. The story is about the family's own spending.
    - Nationalism and patriotism: Nationalism and patriotism (Sec. 4(A)(f)) is about loyalty to the country and using local products. The story does not mention that.
 
-Review: [ ] CoS pass  [ ] GT approve  Notes:
+Review: [x] CoS PASS (final, per GT delegation, 2026-10-13)
 
 ## 9. CIVIO-ANA-ANALOGY-PART-WHOLE-000009
 
@@ -268,6 +278,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - competency: Word association (analogy) · concept: part to whole
 - micro_skill: keep the part-to-whole direction
 - source: Original, Civio
+- status: approved · review_status: passed · reviewer: Chief of Staff (final approval, delegated by GT) (2026-10-13T19:16:00+08:00)
 
 **Stem:** PAGE : BOOK :: ______
 
@@ -280,7 +291,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 `answer_option_id`: y1 (barangay : municipality)
 
-`distractor_reasoning`: y2 = `ANA-REVERSED`; y3 = `ANA-SAME-TOPIC`; y4 = `ANA-ONE-LINK`
+`distractor_reasoning`: y2 = `ANA-OTHER-RELATION`; y3 = `ANA-SAME-TOPIC`; y4 = `ANA-ONE-LINK`
 
 **Reveal**
 
@@ -288,11 +299,11 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 2. *Shortcut.* Make a short sentence for the first pair: "A page is one part of a book." Then test each choice in the same sentence.
 3. *Why it is right.* "Barangay : municipality" is right. "A barangay is one part of a municipality." Same link, same order.
 4. *Why the others are wrong.*
-   - library : book: "A library holds books." The bigger thing comes first, so the order is reversed.
+   - library : book: A library holds books: container and contents, not part and whole.
    - author : manuscript: "An author writes a manuscript." That is maker and product, not part and whole.
    - page : paper: "A page is made of paper." That is a material, and it links to only one word from the first pair.
 
-Review: [ ] CoS pass  [ ] GT approve  Notes:
+Review: [x] CoS PASS (final, per GT delegation, 2026-10-13)
 
 ## 10. CIVIO-CLR-SPELL-WRONG-000010
 
@@ -300,6 +311,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - competency: Spelling · concept: commonly misspelled words
 - micro_skill: spot the one misspelled word among hard but correct words
 - source: Original, Civio
+- status: approved · review_status: passed · reviewer: Chief of Staff (final approval, delegated by GT) (2026-10-13T19:16:00+08:00)
 
 **Stem:** Which word is misspelled?
 
@@ -324,10 +336,9 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
    - receive: "Receive" is correct. After c, the e comes before the i.
    - maintenance: "Maintenance" is correct. It is spelled "main-ten-ance", not like the verb "maintain".
 
-Review: [ ] CoS pass  [ ] GT approve  Notes:
+Review: [x] CoS PASS (final, per GT delegation, 2026-10-13)
 
 ## Checks done by the author
 
-- Math recomputed twice: item 1: 250 × 1.2 = 300, 300 × 0.8 = 240 (and 250 + 50 − 60 = 240). Item 2: differences 3, 5, 7, 9, 11, so 28 + 11 = 39. Item 3: 18,000 ÷ 9 = 2,000; 5 × 2,000 = 10,000; 4 × 2,000 = 8,000; total 18,000. Asserted in the generator too.
+- Math recomputed twice: item 1: 250 × 1.2 = 300, 300 × 0.8 = 240 (and 250 + 50 − 60 = 240). Item 2: differences 3, 5, 7, 9, 11, so 28 + 11 = 39. Item 3: 18,000 ÷ 9 = 2,000; 5 × 2,000 = 10,000; 4 × 2,000 = 8,000; total 18,000.
 - GI text checked against the LawPhil copies: 1987 Const. Art. XI Sec. 3(1), 3(6), Sec. 13; R.A. 6713 Sec. 4(A)(a), (b), (f), (h).
-- Spec note: section 6 lists `status` values without `draft`; section 10 item 6 says new items get `draft`. This batch follows section 10. CoS may want section 6 updated.

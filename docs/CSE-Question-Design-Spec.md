@@ -198,6 +198,7 @@ Distractor codes:
 - `NUM-GIVEN-REUSED` picked a number already in the stem
 - `NUM-SEQ-OTHER-RULE` next term under a simpler but wrong rule
 - `NUM-OFF-BY-ONE` counting fence-post error
+- `NUM-OTHER-SHARE` answered the other party's share (added v0.1.3, CoS)
 
 Suggested Civio mix: basic operations 30%, number sequence 20%, word problems 50%. Difficulty mix per set: 30% easy, 50% medium, 20% hard.
 
@@ -301,6 +302,7 @@ Distractor codes:
 - `ANA-REVERSED` right relation, wrong direction
 - `ANA-ONE-LINK` pair linked to only one of the stem words
 - `ANA-SOUND` pair linked by spelling or sound, not meaning
+- `ANA-OTHER-RELATION` pair with a different clear relation (for example container : contents for a part : whole stem) (added v0.1.3, CoS)
 - `LOG-CONVERSE` reverses "all A are B"
 - `LOG-COULD-NOT-MUST` possible but not forced
 - `LOG-OVERSTRONG` "all/only/sole" where the text supports less
@@ -434,13 +436,14 @@ That is the bar: three short lines, no algebra words, one check.
 | `distractor_reasoning` | object | `{option_id: distractor_code}` for each wrong choice |
 | `source` | string | GI: article/section citation. Others: "Original, Civio" plus any rule cited (for example "Civio Filing Rules v1, Rule 3") |
 | `provenance` | object | `{author, method: human or ai_assisted, created_at, spec_version}` |
-| `status` | enum | `curated`, `generated`, `reviewed`, `approved`, `deprecated` |
+| `status` | enum | `draft`, `curated`, `generated`, `reviewed`, `approved`, `deprecated` |
 | `review_status` | enum | `unreviewed`, `in_review`, `changes_requested`, `passed`, `failed` |
 | `reviewer` | string | Who reviewed |
 | `reviewed_at` | datetime | With time zone |
 | `notes` | string | Optional |
 
 Status meanings:
+- `draft`: a new Civio item waiting for review (section 10, item 6). Never shown to users. (added v0.1.3, CoS)
 - `curated`: hand-written by GT or a named human from official sources.
 - `generated`: drafted by a tool or AI. Never shown to users.
 - `reviewed`: passed the checklist in Section 7 by a reviewer other than the author.
