@@ -62,3 +62,20 @@ test('a generated batch imports as drafts with --status=draft, all 100 items, no
 
     $this->artisan('civio:import-batch', ['path' => $path, '--status' => 'bogus'])->assertFailed();
 });
+
+test('generated unreviewed items cannot be activated even when the operator omits draft mode', function () {
+    $path = base_path('docs/batches/batch-002.json');
+
+    $this->artisan('civio:import-batch', ['path' => $path])
+        ->expectsOutputToContain('active import requires status=approved and review_status=passed')
+        ->assertFailed();
+
+    expect(Question::count())->toBe(0)
+        ->and(Question::where('status', 'active')->count())->toBe(0);
+
+    $this->artisan('civio:import-batch', ['path' => $path, '--status' => 'draft'])
+        ->assertSuccessful();
+
+    expect(Question::where('status', 'draft')->count())->toBe(100)
+        ->and(Question::where('status', 'active')->count())->toBe(0);
+});
