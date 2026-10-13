@@ -306,36 +306,36 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 10. CIVIO-NUM-SEQ-DIFF-000021
+## 10. CIVIO-NUM-WP-RATIO-000021
 
-- track: both · domain: numerical · archetype: NUM-SEQ-DIFF · difficulty: medium · est: 45 s
-- competency: Number sequence · concept: growing differences
-- micro_skill: extend a series whose jumps grow by a fixed amount
+- track: both · domain: numerical · archetype: NUM-WP-RATIO · difficulty: medium · est: 75 s
+- competency: Word problems · concept: ratio
+- micro_skill: split a total in a ratio
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Find the next number in the series.  15, 17, 20, 24, 29, ___
+**Stem:** Rhea and Liza will share ₱10,500 of prize money in the ratio 2 : 5. How much is Liza's share?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 34 | A |
-| o2 | 31 | B |
-| o3 | 35 | C |
-| o4 | 36 | D |
+| o1 | ₱7,500 | A |
+| o2 | ₱2,100 | B |
+| o3 | ₱1,500 | C |
+| o4 | ₱3,000 | D |
 
-`answer_option_id`: o3 (35)
+`answer_option_id`: o1 (₱7,500)
 
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-SEQ-OTHER-RULE`; o4 = `NUM-OFF-BY-ONE`
+`distractor_reasoning`: o2 = `NUM-WRONG-BASE`; o3 = `NUM-PARTIAL`; o4 = `NUM-OTHER-SHARE`
 
 **Reveal**
 
-1. *Meaning.* A "series" is a list of numbers that follows one rule. The "jump" is how much you add to get the next number.
-2. *Shortcut.* Write the jumps under the list: +2, +3, +4, +5. Each jump is 1 more than the one before. So the next jump is +6.
-3. *Why it is right.* 35 is right: 29 + 6 = 35.
+1. *Meaning.* A ratio of 2 : 5 means for every 2 pesos one person gets, the other gets 5 pesos.
+2. *Shortcut.* Add the ratio numbers to get equal parts: 2 + 5 = 7. One part = ₱10,500 ÷ 7 = ₱1,500. Then multiply by the parts you need.
+3. *Why it is right.* ₱7,500 is right: 5 × ₱1,500 = ₱7,500. Check: ₱3,000 + ₱7,500 = ₱10,500.
 4. *Why the others are wrong.*
-   - 34: 34 repeats the last jump, +5. The jumps keep growing by 1.
-   - 31: 31 adds only the first jump, +2, as if the jump never changed.
-   - 36: 36 uses a jump of +7, one step too far in the growing jumps.
+   - ₱2,100: ₱2,100 divides the total by 5 alone, not by all 7 parts.
+   - ₱1,500: ₱1,500 is one part. It stops before multiplying by 5.
+   - ₱3,000: ₱3,000 is Rhea's share (2 parts). The question asks for Liza.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -347,131 +347,65 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** A ₱10,000 allowance fund is divided between Bea and Jomar in the ratio 2 : 3. What is Jomar's share?
+**Stem:** Rogelio and Kimberly will share ₱25,000 of prize money in the ratio 3 : 7. How much is Kimberly's share?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | ₱2,000 | A |
-| o2 | ₱4,000 | B |
-| o3 | ₱6,000 | C |
-| o4 | ₱3,333.33 | D |
+| o1 | ₱2,500 | A |
+| o2 | ₱3,571.43 | B |
+| o3 | ₱17,500 | C |
+| o4 | ₱7,500 | D |
 
-`answer_option_id`: o3 (₱6,000)
+`answer_option_id`: o3 (₱17,500)
 
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-OTHER-SHARE`; o4 = `NUM-WRONG-BASE`
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-WRONG-BASE`; o4 = `NUM-OTHER-SHARE`
 
 **Reveal**
 
-1. *Meaning.* A ratio of 2 : 3 means for every 2 pesos one person gets, the other gets 3 pesos.
-2. *Shortcut.* Add the ratio numbers to get equal parts: 2 + 3 = 5. One part = ₱10,000 ÷ 5 = ₱2,000. Then multiply by the parts you need.
-3. *Why it is right.* ₱6,000 is right: 3 × ₱2,000 = ₱6,000. Check: ₱4,000 + ₱6,000 = ₱10,000.
+1. *Meaning.* A ratio of 3 : 7 means for every 3 pesos one person gets, the other gets 7 pesos.
+2. *Shortcut.* Add the ratio numbers to get equal parts: 3 + 7 = 10. One part = ₱25,000 ÷ 10 = ₱2,500. Then multiply by the parts you need.
+3. *Why it is right.* ₱17,500 is right: 7 × ₱2,500 = ₱17,500. Check: ₱7,500 + ₱17,500 = ₱25,000.
 4. *Why the others are wrong.*
-   - ₱2,000: ₱2,000 is one part. It stops before multiplying by 3.
-   - ₱4,000: ₱4,000 is Bea's share (2 parts). The question asks for Jomar.
-   - ₱3,333.33: ₱3,333.33 divides the total by 3 alone, not by all 5 parts.
+   - ₱2,500: ₱2,500 is one part. It stops before multiplying by 7.
+   - ₱3,571.43: ₱3,571.43 divides the total by 7 alone, not by all 10 parts.
+   - ₱7,500: ₱7,500 is Rogelio's share (3 parts). The question asks for Kimberly.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 12. CIVIO-NUM-WP-AVERAGE-000023
+## 12. CIVIO-NUM-SEQ-DIFF-000023
 
-- track: both · domain: numerical · archetype: NUM-WP-AVERAGE · difficulty: medium · est: 60 s
-- competency: Word problems · concept: average
-- micro_skill: new average after one value joins
+- track: both · domain: numerical · archetype: NUM-SEQ-DIFF · difficulty: medium · est: 45 s
+- competency: Number sequence · concept: growing differences
+- micro_skill: extend a series whose jumps grow by a fixed amount
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** The average age of the 9 drivers in the municipal health office is 21 years. One more person, with 41 years, joins them. What is the new average age?
+**Stem:** Find the next number in the series.  6, 12, 19, 27, 36, ___
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 230 years | A |
-| o2 | 23.22 years | B |
-| o3 | 23 years | C |
-| o4 | 31 years | D |
+| o1 | 45 | A |
+| o2 | 42 | B |
+| o3 | 46 | C |
+| o4 | 47 | D |
 
-`answer_option_id`: o3 (23 years)
+`answer_option_id`: o3 (46)
 
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-OFF-BY-ONE`; o4 = `NUM-WRONG-BASE`
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-SEQ-OTHER-RULE`; o4 = `NUM-OFF-BY-ONE`
 
 **Reveal**
 
-1. *Meaning.* "Average" means share equally.
-2. *Shortcut.* The new person is 41 − 21 = 20 above the old average. Share that among all 10 people: 20 ÷ 10 = 2. Add it: 21 + 2 = 23.
-3. *Why it is right.* 23 years is right. Long way: 9 × 21 = 189; + 41 = 230; ÷ 10 = 23.
+1. *Meaning.* A "series" is a list of numbers that follows one rule. The "jump" is how much you add to get the next number.
+2. *Shortcut.* Write the jumps under the list: +6, +7, +8, +9. Each jump is 1 more than the one before. So the next jump is +10.
+3. *Why it is right.* 46 is right: 36 + 10 = 46.
 4. *Why the others are wrong.*
-   - 230 years: This is the total of all 10 values. It stops before dividing by 10.
-   - 23.22 years: This shares the extra 20 years among 9 people. After the new person joins there are 10.
-   - 31 years: This averages 21 and 41 only, treating the 9 old members as one person.
+   - 45: 45 repeats the last jump, +9. The jumps keep growing by 1.
+   - 42: 42 adds only the first jump, +6, as if the jump never changed.
+   - 47: 47 uses a jump of +11, one step too far in the growing jumps.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 ## 13. CIVIO-NUM-WP-PCT-CHANGE-000024
-
-- track: both · domain: numerical · archetype: NUM-WP-PCT-CHANGE · difficulty: easy · est: 45 s
-- competency: Word problems · concept: discount
-- micro_skill: price after a percent discount
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** A electric fan is priced at ₱2,400. It is sold at 25% off. How much does a buyer pay?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | ₱600 | A |
-| o2 | ₱2,375 | B |
-| o3 | ₱3,000 | C |
-| o4 | ₱1,800 | D |
-
-`answer_option_id`: o4 (₱1,800)
-
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-WRONG-BASE`; o3 = `NUM-OP-SWAP`
-
-**Reveal**
-
-1. *Meaning.* "25% off" means 25 pesos less for every 100 pesos of the price.
-2. *Shortcut.* Pay 75% of the price: ₱2,400 × 0.75 = ₱1,800.
-3. *Why it is right.* ₱1,800 is right. Check: discount ₱600; ₱2,400 − ₱600 = ₱1,800.
-4. *Why the others are wrong.*
-   - ₱600: ₱600 is the discount itself. The buyer pays the price minus this amount.
-   - ₱2,375: ₱2,375 subtracts 25 pesos, not 25% of the price.
-   - ₱3,000: ₱3,000 adds 25% instead of taking it off.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 14. CIVIO-NUM-FRAC-DEC-000025
-
-- track: both · domain: numerical · archetype: NUM-FRAC-DEC · difficulty: hard · est: 75 s
-- competency: Word problems · concept: fraction of the remainder
-- micro_skill: take a fraction of what is left
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** A barangay had 900 sacks of relief rice. It gave out 1/6 of them on Monday and 1/3 of the remaining sacks of relief rice on Tuesday. How many are left?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 750 | A |
-| o2 | 500 | B |
-| o3 | 450 | C |
-| o4 | 250 | D |
-
-`answer_option_id`: o2 (500)
-
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o3 = `NUM-WRONG-BASE`; o4 = `NUM-PARTIAL`
-
-**Reveal**
-
-1. *Meaning.* A "fraction of the remaining" is a part of what is left, not of the starting amount.
-2. *Shortcut.* Go day by day. Monday: 1/6 of 900 = 150, so 750 left. Tuesday: 1/3 of 750 = 250, so 750 − 250 = 500 left.
-3. *Why it is right.* 500 is right. Check: 150 + 250 + 500 = 900.
-4. *Why the others are wrong.*
-   - 750: 750 is what was left after Monday only.
-   - 450: 450 takes 1/3 of the original 900. Tuesday's share is 1/3 of what was left after Monday.
-   - 250: 250 is how many were given on Tuesday, not how many are left.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 15. CIVIO-NUM-WP-PCT-CHANGE-000026
 
 - track: both · domain: numerical · archetype: NUM-WP-PCT-CHANGE · difficulty: medium · est: 90 s
 - competency: Word problems · concept: successive percent change
@@ -479,61 +413,127 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** A market stall sold a box of bond paper for ₱200. It raised the price by 50%. Later, it lowered the new price by 10%. What is the final price?
+**Stem:** A supplier sold a bag of cement for ₱1,200. It raised the price by 10%. Later, it lowered the new price by 40%. What is the final price?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | ₱300 | A |
-| o2 | ₱405 | B |
-| o3 | ₱280 | C |
-| o4 | ₱270 | D |
+| o1 | ₱1,320 | A |
+| o2 | ₱871.20 | B |
+| o3 | ₱792 | C |
+| o4 | ₱840 | D |
 
-`answer_option_id`: o4 (₱270)
+`answer_option_id`: o3 (₱792)
 
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-EXTRA-STEP`; o3 = `NUM-PCT-ADD`
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-EXTRA-STEP`; o4 = `NUM-PCT-ADD`
 
 **Reveal**
 
 1. *Meaning.* "Percent" means "out of 100". A raise or a cut of a percent is always taken from the price at that moment.
-2. *Shortcut.* Do one change at a time. ₱200 up 50% is ₱200 + ₱100 = ₱300. Then 10% of ₱300 is ₱30, so ₱300 − ₱30 = ₱270.
-3. *Why it is right.* ₱270 is right. Check: 200 × 1.5 = 300, and 300 × 0.9 = 270.
+2. *Shortcut.* Do one change at a time. ₱1,200 up 10% is ₱1,200 + ₱120 = ₱1,320. Then 40% of ₱1,320 is ₱528, so ₱1,320 − ₱528 = ₱792.
+3. *Why it is right.* ₱792 is right. Check: 1,200 × 1.1 = 1,320, and 1,320 × 0.6 = 792.
 4. *Why the others are wrong.*
-   - ₱300: ₱300 is only the price after the raise. It stops before the cut.
-   - ₱405: ₱405 applies the 50% raise again at the end. That is one step too many.
-   - ₱280: ₱280 adds and subtracts the percents first (50% − 10%). The second change is taken from the new price, not the old one.
+   - ₱1,320: ₱1,320 is only the price after the raise. It stops before the cut.
+   - ₱871.20: ₱871.20 applies the 10% raise again at the end. That is one step too many.
+   - ₱840: ₱840 adds and subtracts the percents first (10% − 40%). The second change is taken from the new price, not the old one.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 16. CIVIO-NUM-SEQ-MULT-000027
+## 14. CIVIO-NUM-WP-ALGEBRA-000025
 
-- track: both · domain: numerical · archetype: NUM-SEQ-MULT · difficulty: hard · est: 50 s
-- competency: Number sequence · concept: multiply then add
-- micro_skill: find a ×k then ±c rule
+- track: both · domain: numerical · archetype: NUM-WP-ALGEBRA · difficulty: hard · est: 90 s
+- competency: Word problems · concept: age problem
+- micro_skill: set up now-and-later ages
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** What number comes next?  4, 10, 22, 46, 94, ___
+**Stem:** Rogelio is 3 times as old as his daughter. In 5 years, Rogelio will be twice as old as the daughter. How old is Rogelio now?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 190 | A |
-| o2 | 192 | B |
-| o3 | 142 | C |
-| o4 | 188 | D |
+| o1 | 10 | A |
+| o2 | 20 | B |
+| o3 | 5 | C |
+| o4 | 15 | D |
 
-`answer_option_id`: o1 (190)
+`answer_option_id`: o4 (15)
 
-`distractor_reasoning`: o2 = `NUM-EXTRA-STEP`; o3 = `NUM-SEQ-OTHER-RULE`; o4 = `NUM-PARTIAL`
+`distractor_reasoning`: o1 = `NUM-OTHER-SHARE`; o2 = `NUM-EXTRA-STEP`; o3 = `NUM-OTHER-SHARE`
 
 **Reveal**
 
-1. *Meaning.* A "rule" is the same steps done to each number to get the next one.
-2. *Shortcut.* Test "times 2, then + 2" on the first numbers: 4 × 2 + 2 = 10; 10 × 2 + 2 = 22. It works, so use it on 94.
-3. *Why it is right.* 190 is right: 94 × 2 = 188, then + 2 gives 190.
+1. *Meaning.* "3 times as old" means the age is the younger person's age multiplied by 3.
+2. *Shortcut.* Try the choices. If Rogelio is 15, the daughter is 5. In 5 years: 20 and 10. 20 = 2 × 10, so it works.
+3. *Why it is right.* 15 is right. Algebra: daughter = s, Rogelio = 3s; 3s + 5 = 2(s + 5) gives s = 5, so Rogelio = 15.
 4. *Why the others are wrong.*
-   - 192: 192 does the + 2 step twice.
-   - 142: 142 repeats the last difference (48). The jumps are not the same each time.
-   - 188: 188 multiplies by 2 but forgets the + 2 step.
+   - 10: 10 is the daughter's age 5 years from now.
+   - 20: 20 is Rogelio's age 5 years from now, not today.
+   - 5: 5 is the daughter's age now, not Rogelio's.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 15. CIVIO-NUM-WP-ALGEBRA-000026
+
+- track: both · domain: numerical · archetype: NUM-WP-ALGEBRA · difficulty: hard · est: 90 s
+- competency: Word problems · concept: age problem
+- micro_skill: set up now-and-later ages
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Aileen is 4 times as old as her nephew. In 10 years, Aileen will be twice as old as the nephew. How old is Aileen now?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 15 | A |
+| o2 | 20 | B |
+| o3 | 30 | C |
+| o4 | 5 | D |
+
+`answer_option_id`: o2 (20)
+
+`distractor_reasoning`: o1 = `NUM-OTHER-SHARE`; o3 = `NUM-EXTRA-STEP`; o4 = `NUM-OTHER-SHARE`
+
+**Reveal**
+
+1. *Meaning.* "4 times as old" means the age is the younger person's age multiplied by 4.
+2. *Shortcut.* Try the choices. If Aileen is 20, the nephew is 5. In 10 years: 30 and 15. 30 = 2 × 15, so it works.
+3. *Why it is right.* 20 is right. Algebra: nephew = s, Aileen = 4s; 4s + 10 = 2(s + 10) gives s = 5, so Aileen = 20.
+4. *Why the others are wrong.*
+   - 15: 15 is the nephew's age 10 years from now.
+   - 30: 30 is Aileen's age 10 years from now, not today.
+   - 5: 5 is the nephew's age now, not Aileen's.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 16. CIVIO-NUM-WP-GEOM-000027
+
+- track: both · domain: numerical · archetype: NUM-WP-GEOM · difficulty: medium · est: 75 s
+- competency: Word problems · concept: perimeter and cost
+- micro_skill: find perimeter, then multiply by cost per meter
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** A rectangular vegetable garden is 16 m long and 6 m wide. A fence costs ₱50 per meter. How much will it cost to put the fence around the whole vegetable garden?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | ₱2,200 | A |
+| o2 | ₱4,800 | B |
+| o3 | ₱1,100 | C |
+| o4 | ₱44 | D |
+
+`answer_option_id`: o1 (₱2,200)
+
+`distractor_reasoning`: o2 = `NUM-WRONG-BASE`; o3 = `NUM-PARTIAL`; o4 = `NUM-PARTIAL`
+
+**Reveal**
+
+1. *Meaning.* "Perimeter" is the distance around a shape. For a rectangle it is 2 × (length + width).
+2. *Shortcut.* Around = 2 × (16 + 6) = 44 m. Cost = 44 × ₱50.
+3. *Why it is right.* ₱2,200 is right: 44 m × ₱50 = ₱2,200.
+4. *Why the others are wrong.*
+   - ₱4,800: This uses the area (96 square meters). Going around uses the perimeter.
+   - ₱1,100: This uses only one length and one width (22 m). A rectangle has two of each.
+   - ₱44: ₱44 is just the perimeter in meters written as pesos. It stops before multiplying by ₱50.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -545,28 +545,28 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Mylene can paint a classroom in 6 hours. Aling Rosa can do the same job in 12 hours. Working together, how long will they take?
+**Stem:** Ramon can wash the ambulance fleet in 8 hours. Bong can do the same job in 24 hours. Working together, how long will they take?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 9 hours | A |
-| o2 | 15 minutes | B |
-| o3 | 18 hours | C |
-| o4 | 4 hours | D |
+| o1 | 32 hours | A |
+| o2 | 10 minutes | B |
+| o3 | 6 hours | C |
+| o4 | 16 hours | D |
 
-`answer_option_id`: o4 (4 hours)
+`answer_option_id`: o3 (6 hours)
 
-`distractor_reasoning`: o1 = `NUM-WRONG-BASE`; o2 = `NUM-PARTIAL`; o3 = `NUM-OP-SWAP`
+`distractor_reasoning`: o1 = `NUM-OP-SWAP`; o2 = `NUM-PARTIAL`; o4 = `NUM-WRONG-BASE`
 
 **Reveal**
 
 1. *Meaning.* A "rate" is how much of the job gets done in one hour.
-2. *Shortcut.* Per hour, Mylene does 1/6 and Aling Rosa does 1/12. Together: 1/6 + 1/12 = 1/4. So the whole job takes 4 hours.
-3. *Why it is right.* 4 hours is right. Check: in 4 hours, Mylene does 4/6 and Aling Rosa does 4/12; together that is 1 whole job.
+2. *Shortcut.* Per hour, Ramon does 1/8 and Bong does 1/24. Together: 1/8 + 1/24 = 1/6. So the whole job takes 6 hours.
+3. *Why it is right.* 6 hours is right. Check: in 6 hours, Ramon does 6/8 and Bong does 6/24; together that is 1 whole job.
 4. *Why the others are wrong.*
-   - 9 hours: 9 hours is the average of the two times. Together they must be faster than the faster person alone.
-   - 15 minutes: This reads the combined rate (1/4 of the job per hour) as a time. It stops before turning the rate into hours.
-   - 18 hours: 18 hours adds the two times. Add the work done per hour, not the hours.
+   - 32 hours: 32 hours adds the two times. Add the work done per hour, not the hours.
+   - 10 minutes: This reads the combined rate (1/6 of the job per hour) as a time. It stops before turning the rate into hours.
+   - 16 hours: 16 hours is the average of the two times. Together they must be faster than the faster person alone.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -578,28 +578,28 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** A farmer borrows ₱10,000 at 6% simple interest per year. How much interest is due after 3 years?
+**Stem:** A vendor borrows ₱10,000 at 10% simple interest per year. How much interest is due after 4 years and 6 months?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | ₱1,800 | A |
-| o2 | ₱600 | B |
-| o3 | ₱18,000 | C |
-| o4 | ₱11,800 | D |
+| o1 | ₱4,600 | A |
+| o2 | ₱4,000 | B |
+| o3 | ₱14,500 | C |
+| o4 | ₱4,500 | D |
 
-`answer_option_id`: o1 (₱1,800)
+`answer_option_id`: o4 (₱4,500)
 
-`distractor_reasoning`: o2 = `NUM-PARTIAL`; o3 = `NUM-DECIMAL`; o4 = `NUM-EXTRA-STEP`
+`distractor_reasoning`: o1 = `NUM-UNIT`; o2 = `NUM-PARTIAL`; o3 = `NUM-EXTRA-STEP`
 
 **Reveal**
 
-1. *Meaning.* "Simple interest" is the extra money paid for borrowing, the same amount each year. 6% per year means ₱6 for every ₱100 each year.
-2. *Shortcut.* Find one year first: 6% of ₱10,000 = ₱600. Time is 3 years. Multiply: 3 × ₱600 = ₱1,800.
-3. *Why it is right.* ₱1,800 is right. Check: 10,000 × 0.06 × 3 = 1,800.
+1. *Meaning.* "Simple interest" is the extra money paid for borrowing, the same amount each year. 10% per year means ₱10 for every ₱100 each year.
+2. *Shortcut.* Find one year first: 10% of ₱10,000 = ₱1,000. Time is 4.5 years. Multiply: 4.5 × ₱1,000 = ₱4,500.
+3. *Why it is right.* ₱4,500 is right. Check: 10,000 × 0.1 × 4.5 = 4,500.
 4. *Why the others are wrong.*
-   - ₱600: This is one year's interest. It stops before multiplying by the years.
-   - ₱18,000: This slips the decimal point: it uses r as a tenth instead of a hundredth.
-   - ₱11,800: ₱11,800 is the loan plus interest. The question asks for the interest only.
+   - ₱4,600: This uses 4.6 years. 6 months is 0.5 of a year, not 0.6.
+   - ₱4,000: This counts only the whole years and leaves out the months.
+   - ₱14,500: ₱14,500 is the loan plus interest. The question asks for the interest only.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -611,197 +611,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** A pair of school shoes is priced at ₱1,500. It is sold at 35% off. How much does a buyer pay?
+**Stem:** A pair of school shoes is priced at ₱480. It is sold at 15% off. How much does a buyer pay?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | ₱525 | A |
-| o2 | ₱2,025 | B |
-| o3 | ₱975 | C |
-| o4 | ₱1,465 | D |
+| o1 | ₱408 | A |
+| o2 | ₱465 | B |
+| o3 | ₱72 | C |
+| o4 | ₱552 | D |
 
-`answer_option_id`: o3 (₱975)
+`answer_option_id`: o1 (₱408)
 
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-OP-SWAP`; o4 = `NUM-WRONG-BASE`
-
-**Reveal**
-
-1. *Meaning.* "35% off" means 35 pesos less for every 100 pesos of the price.
-2. *Shortcut.* Pay 65% of the price: ₱1,500 × 0.65 = ₱975.
-3. *Why it is right.* ₱975 is right. Check: discount ₱525; ₱1,500 − ₱525 = ₱975.
-4. *Why the others are wrong.*
-   - ₱525: ₱525 is the discount itself. The buyer pays the price minus this amount.
-   - ₱2,025: ₱2,025 adds 35% instead of taking it off.
-   - ₱1,465: ₱1,465 subtracts 35 pesos, not 35% of the price.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 20. CIVIO-NUM-FRAC-DEC-000031
-
-- track: both · domain: numerical · archetype: NUM-FRAC-DEC · difficulty: hard · est: 75 s
-- competency: Word problems · concept: fraction of the remainder
-- micro_skill: take a fraction of what is left
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** A barangay had 480 notebooks. It gave out 1/4 of them on Monday and 1/3 of the remaining notebooks on Tuesday. How many are left?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 240 | A |
-| o2 | 200 | B |
-| o3 | 360 | C |
-| o4 | 120 | D |
-
-`answer_option_id`: o1 (240)
-
-`distractor_reasoning`: o2 = `NUM-WRONG-BASE`; o3 = `NUM-PARTIAL`; o4 = `NUM-PARTIAL`
+`distractor_reasoning`: o2 = `NUM-WRONG-BASE`; o3 = `NUM-PARTIAL`; o4 = `NUM-OP-SWAP`
 
 **Reveal**
 
-1. *Meaning.* A "fraction of the remaining" is a part of what is left, not of the starting amount.
-2. *Shortcut.* Go day by day. Monday: 1/4 of 480 = 120, so 360 left. Tuesday: 1/3 of 360 = 120, so 360 − 120 = 240 left.
-3. *Why it is right.* 240 is right. Check: 120 + 120 + 240 = 480.
+1. *Meaning.* "15% off" means 15 pesos less for every 100 pesos of the price.
+2. *Shortcut.* Pay 85% of the price: ₱480 × 0.85 = ₱408.
+3. *Why it is right.* ₱408 is right. Check: discount ₱72; ₱480 − ₱72 = ₱408.
 4. *Why the others are wrong.*
-   - 200: 200 takes 1/3 of the original 480. Tuesday's share is 1/3 of what was left after Monday.
-   - 360: 360 is what was left after Monday only.
-   - 120: 120 is how many were given on Tuesday, not how many are left.
+   - ₱465: ₱465 subtracts 15 pesos, not 15% of the price.
+   - ₱72: ₱72 is the discount itself. The buyer pays the price minus this amount.
+   - ₱552: ₱552 adds 15% instead of taking it off.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 21. CIVIO-NUM-WP-PCT-CHANGE-000032
-
-- track: both · domain: numerical · archetype: NUM-WP-PCT-CHANGE · difficulty: medium · est: 90 s
-- competency: Word problems · concept: successive percent change
-- micro_skill: chain a percent increase and a percent decrease
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** A market stall sold a tank of LPG for ₱320. It raised the price by 20%. Later, it lowered the new price by 50%. What is the final price?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | ₱384 | A |
-| o2 | ₱192 | B |
-| o3 | ₱230.40 | C |
-| o4 | ₱224 | D |
-
-`answer_option_id`: o2 (₱192)
-
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o3 = `NUM-EXTRA-STEP`; o4 = `NUM-PCT-ADD`
-
-**Reveal**
-
-1. *Meaning.* "Percent" means "out of 100". A raise or a cut of a percent is always taken from the price at that moment.
-2. *Shortcut.* Do one change at a time. ₱320 up 20% is ₱320 + ₱64 = ₱384. Then 50% of ₱384 is ₱192, so ₱384 − ₱192 = ₱192.
-3. *Why it is right.* ₱192 is right. Check: 320 × 1.2 = 384, and 384 × 0.5 = 192.
-4. *Why the others are wrong.*
-   - ₱384: ₱384 is only the price after the raise. It stops before the cut.
-   - ₱230.40: ₱230.40 applies the 20% raise again at the end. That is one step too many.
-   - ₱224: ₱224 adds and subtracts the percents first (20% − 50%). The second change is taken from the new price, not the old one.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 22. CIVIO-NUM-WP-RATIO-000033
-
-- track: both · domain: numerical · archetype: NUM-WP-RATIO · difficulty: medium · est: 75 s
-- competency: Word problems · concept: ratio
-- micro_skill: split a total in a ratio
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Jun-jun and Rhea will share ₱10,500 of commission in the ratio 3 : 4. How much is Rhea's share?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | ₱1,500 | A |
-| o2 | ₱2,625 | B |
-| o3 | ₱6,000 | C |
-| o4 | ₱4,500 | D |
-
-`answer_option_id`: o3 (₱6,000)
-
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-WRONG-BASE`; o4 = `NUM-OTHER-SHARE`
-
-**Reveal**
-
-1. *Meaning.* A ratio of 3 : 4 means for every 3 pesos one person gets, the other gets 4 pesos.
-2. *Shortcut.* Add the ratio numbers to get equal parts: 3 + 4 = 7. One part = ₱10,500 ÷ 7 = ₱1,500. Then multiply by the parts you need.
-3. *Why it is right.* ₱6,000 is right: 4 × ₱1,500 = ₱6,000. Check: ₱4,500 + ₱6,000 = ₱10,500.
-4. *Why the others are wrong.*
-   - ₱1,500: ₱1,500 is one part. It stops before multiplying by 4.
-   - ₱2,625: ₱2,625 divides the total by 4 alone, not by all 7 parts.
-   - ₱4,500: ₱4,500 is Jun-jun's share (3 parts). The question asks for Rhea.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 23. CIVIO-NUM-WP-AVERAGE-000034
-
-- track: both · domain: numerical · archetype: NUM-WP-AVERAGE · difficulty: medium · est: 60 s
-- competency: Word problems · concept: average
-- micro_skill: new average after one value joins
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** The average age of the 6 staff members in the barangay hall is 45 years. One more person, with 66 years, joins them. What is the new average age?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 48.5 years | A |
-| o2 | 336 years | B |
-| o3 | 55.5 years | C |
-| o4 | 48 years | D |
-
-`answer_option_id`: o4 (48 years)
-
-`distractor_reasoning`: o1 = `NUM-OFF-BY-ONE`; o2 = `NUM-PARTIAL`; o3 = `NUM-WRONG-BASE`
-
-**Reveal**
-
-1. *Meaning.* "Average" means share equally.
-2. *Shortcut.* The new person is 66 − 45 = 21 above the old average. Share that among all 7 people: 21 ÷ 7 = 3. Add it: 45 + 3 = 48.
-3. *Why it is right.* 48 years is right. Long way: 6 × 45 = 270; + 66 = 336; ÷ 7 = 48.
-4. *Why the others are wrong.*
-   - 48.5 years: This shares the extra 21 years among 6 people. After the new person joins there are 7.
-   - 336 years: This is the total of all 7 values. It stops before dividing by 7.
-   - 55.5 years: This averages 45 and 66 only, treating the 6 old members as one person.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 24. CIVIO-NUM-WP-ALGEBRA-000035
-
-- track: both · domain: numerical · archetype: NUM-WP-ALGEBRA · difficulty: hard · est: 90 s
-- competency: Word problems · concept: age problem
-- micro_skill: set up now-and-later ages
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Inday is 5 times as old as her nephew. In 21 years, Inday will be twice as old as the nephew. How old is Inday now?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 28 | A |
-| o2 | 7 | B |
-| o3 | 56 | C |
-| o4 | 35 | D |
-
-`answer_option_id`: o4 (35)
-
-`distractor_reasoning`: o1 = `NUM-OTHER-SHARE`; o2 = `NUM-OTHER-SHARE`; o3 = `NUM-EXTRA-STEP`
-
-**Reveal**
-
-1. *Meaning.* "5 times as old" means the age is the younger person's age multiplied by 5.
-2. *Shortcut.* Try the choices. If Inday is 35, the nephew is 7. In 21 years: 56 and 28. 56 = 2 × 28, so it works.
-3. *Why it is right.* 35 is right. Algebra: nephew = s, Inday = 5s; 5s + 21 = 2(s + 21) gives s = 7, so Inday = 35.
-4. *Why the others are wrong.*
-   - 28: 28 is the nephew's age 21 years from now.
-   - 7: 7 is the nephew's age now, not Inday's.
-   - 56: 56 is Inday's age 21 years from now, not today.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 25. CIVIO-NUM-OPS-ORDER-000036
+## 20. CIVIO-NUM-OPS-ORDER-000031
 
 - track: both · domain: numerical · archetype: NUM-OPS-ORDER · difficulty: easy · est: 35 s
 - competency: Basic operations · concept: order of operations
@@ -809,131 +644,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** What is the value of 20 + 3 × 6 − 12?
+**Stem:** What is the value of 4 + 2 × 4 − 10?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 26 | A |
-| o2 | 17 | B |
-| o3 | 126 | C |
-| o4 | 2 | D |
+| o1 | 2 | A |
+| o2 | -8 | B |
+| o3 | 0 | C |
+| o4 | 14 | D |
 
-`answer_option_id`: o1 (26)
+`answer_option_id`: o1 (2)
 
-`distractor_reasoning`: o2 = `NUM-OP-SWAP`; o3 = `NUM-ORDER-OPS`; o4 = `NUM-ORDER-OPS`
+`distractor_reasoning`: o2 = `NUM-ORDER-OPS`; o3 = `NUM-OP-SWAP`; o4 = `NUM-ORDER-OPS`
 
 **Reveal**
 
 1. *Meaning.* "Order of operations" is the rule for which step to do first: multiply and divide before you add and subtract.
-2. *Shortcut.* Circle the × first: 3 × 6 = 18. Then go left to right: 20 + 18 − 12.
-3. *Why it is right.* 26 is right: 20 + 18 = 38, and 38 − 12 = 26.
+2. *Shortcut.* Circle the × first: 2 × 4 = 8. Then go left to right: 4 + 8 − 10.
+3. *Why it is right.* 2 is right: 4 + 8 = 12, and 12 − 10 = 2.
 4. *Why the others are wrong.*
-   - 17: 17 adds 3 and 6 instead of multiplying them.
-   - 126: 126 works left to right: (20 + 3) × 6. Multiplication comes first.
-   - 2: 2 subtracts 12 from 6 before multiplying, which the expression does not say.
+   - -8: -8 subtracts 10 from 4 before multiplying, which the expression does not say.
+   - 0: 0 adds 2 and 4 instead of multiplying them.
+   - 14: 14 works left to right: (4 + 2) × 4. Multiplication comes first.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 26. CIVIO-NUM-WP-GEOM-000037
-
-- track: both · domain: numerical · archetype: NUM-WP-GEOM · difficulty: medium · est: 75 s
-- competency: Word problems · concept: perimeter and cost
-- micro_skill: find perimeter, then multiply by cost per meter
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** A rectangular basketball court is 38 m long and 4 m wide. A lace border costs ₱40 per meter. How much will it cost to put the lace border around the whole basketball court?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | ₱6,080 | A |
-| o2 | ₱84 | B |
-| o3 | ₱3,360 | C |
-| o4 | ₱1,680 | D |
-
-`answer_option_id`: o3 (₱3,360)
-
-`distractor_reasoning`: o1 = `NUM-WRONG-BASE`; o2 = `NUM-PARTIAL`; o4 = `NUM-PARTIAL`
-
-**Reveal**
-
-1. *Meaning.* "Perimeter" is the distance around a shape. For a rectangle it is 2 × (length + width).
-2. *Shortcut.* Around = 2 × (38 + 4) = 84 m. Cost = 84 × ₱40.
-3. *Why it is right.* ₱3,360 is right: 84 m × ₱40 = ₱3,360.
-4. *Why the others are wrong.*
-   - ₱6,080: This uses the area (152 square meters). Going around uses the perimeter.
-   - ₱84: ₱84 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.
-   - ₱1,680: This uses only one length and one width (42 m). A rectangle has two of each.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 27. CIVIO-NUM-SEQ-DIFF-000038
-
-- track: both · domain: numerical · archetype: NUM-SEQ-DIFF · difficulty: medium · est: 45 s
-- competency: Number sequence · concept: growing differences
-- micro_skill: extend a series whose jumps grow by a fixed amount
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** What number comes next in the series?  3, 5, 10, 18, 29, ___
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 40 | A |
-| o2 | 31 | B |
-| o3 | 43 | C |
-| o4 | 46 | D |
-
-`answer_option_id`: o3 (43)
-
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-SEQ-OTHER-RULE`; o4 = `NUM-OFF-BY-ONE`
-
-**Reveal**
-
-1. *Meaning.* A "series" is a list of numbers that follows one rule. The "jump" is how much you add to get the next number.
-2. *Shortcut.* Write the jumps under the list: +2, +5, +8, +11. Each jump is 3 more than the one before. So the next jump is +14.
-3. *Why it is right.* 43 is right: 29 + 14 = 43.
-4. *Why the others are wrong.*
-   - 40: 40 repeats the last jump, +11. The jumps keep growing by 3.
-   - 31: 31 adds only the first jump, +2, as if the jump never changed.
-   - 46: 46 uses a jump of +17, one step too far in the growing jumps.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 28. CIVIO-NUM-WP-RATIO-000039
-
-- track: both · domain: numerical · archetype: NUM-WP-RATIO · difficulty: medium · est: 75 s
-- competency: Word problems · concept: ratio
-- micro_skill: split a total in a ratio
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Kimberly and Tess will share ₱18,000 of prize money in the ratio 4 : 5. How much is Tess's share?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | ₱10,000 | A |
-| o2 | ₱8,000 | B |
-| o3 | ₱2,000 | C |
-| o4 | ₱3,600 | D |
-
-`answer_option_id`: o1 (₱10,000)
-
-`distractor_reasoning`: o2 = `NUM-OTHER-SHARE`; o3 = `NUM-PARTIAL`; o4 = `NUM-WRONG-BASE`
-
-**Reveal**
-
-1. *Meaning.* A ratio of 4 : 5 means for every 4 pesos one person gets, the other gets 5 pesos.
-2. *Shortcut.* Add the ratio numbers to get equal parts: 4 + 5 = 9. One part = ₱18,000 ÷ 9 = ₱2,000. Then multiply by the parts you need.
-3. *Why it is right.* ₱10,000 is right: 5 × ₱2,000 = ₱10,000. Check: ₱8,000 + ₱10,000 = ₱18,000.
-4. *Why the others are wrong.*
-   - ₱8,000: ₱8,000 is Kimberly's share (4 parts). The question asks for Tess.
-   - ₱2,000: ₱2,000 is one part. It stops before multiplying by 5.
-   - ₱3,600: ₱3,600 divides the total by 5 alone, not by all 9 parts.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 29. CIVIO-NUM-WP-AVERAGE-000040
+## 21. CIVIO-NUM-WP-AVERAGE-000032
 
 - track: both · domain: numerical · archetype: NUM-WP-AVERAGE · difficulty: medium · est: 60 s
 - competency: Word problems · concept: average
@@ -941,65 +677,230 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** The average age of the 6 drivers in the city treasurer's office is 23 years. One more person, with 30 years, joins them. What is the new average age?
+**Stem:** The average age of the 4 clerks in the engineering office is 22 years. One more person, with 32 years, joins them. What is the new average age?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 26.5 years | A |
-| o2 | 24 years | B |
-| o3 | 24.17 years | C |
-| o4 | 168 years | D |
+| o1 | 24 years | A |
+| o2 | 24.5 years | B |
+| o3 | 120 years | C |
+| o4 | 27 years | D |
 
-`answer_option_id`: o2 (24 years)
+`answer_option_id`: o1 (24 years)
 
-`distractor_reasoning`: o1 = `NUM-WRONG-BASE`; o3 = `NUM-OFF-BY-ONE`; o4 = `NUM-PARTIAL`
+`distractor_reasoning`: o2 = `NUM-OFF-BY-ONE`; o3 = `NUM-PARTIAL`; o4 = `NUM-WRONG-BASE`
 
 **Reveal**
 
 1. *Meaning.* "Average" means share equally.
-2. *Shortcut.* The new person is 30 − 23 = 7 above the old average. Share that among all 7 people: 7 ÷ 7 = 1. Add it: 23 + 1 = 24.
-3. *Why it is right.* 24 years is right. Long way: 6 × 23 = 138; + 30 = 168; ÷ 7 = 24.
+2. *Shortcut.* The new person is 32 − 22 = 10 above the old average. Share that among all 5 people: 10 ÷ 5 = 2. Add it: 22 + 2 = 24.
+3. *Why it is right.* 24 years is right. Long way: 4 × 22 = 88; + 32 = 120; ÷ 5 = 24.
 4. *Why the others are wrong.*
-   - 26.5 years: This averages 23 and 30 only, treating the 6 old members as one person.
-   - 24.17 years: This shares the extra 7 years among 6 people. After the new person joins there are 7.
-   - 168 years: This is the total of all 7 values. It stops before dividing by 7.
+   - 24.5 years: This shares the extra 10 years among 4 people. After the new person joins there are 5.
+   - 120 years: This is the total of all 5 values. It stops before dividing by 5.
+   - 27 years: This averages 22 and 32 only, treating the 4 old members as one person.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 30. CIVIO-NUM-WP-ALGEBRA-000041
+## 22. CIVIO-NUM-WP-PCT-CHANGE-000033
 
-- track: both · domain: numerical · archetype: NUM-WP-ALGEBRA · difficulty: hard · est: 90 s
-- competency: Word problems · concept: age problem
-- micro_skill: set up now-and-later ages
+- track: both · domain: numerical · archetype: NUM-WP-PCT-CHANGE · difficulty: medium · est: 75 s
+- competency: Word problems · concept: simple interest
+- micro_skill: interest = principal × rate × time
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Efren is 4 times as old as his niece. In 22 years, Efren will be twice as old as the niece. How old is Efren now?
+**Stem:** A government employee borrows ₱50,000 at 12% simple interest per year. How much interest is due after 3 years and 6 months?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 11 | A |
-| o2 | 33 | B |
-| o3 | 66 | C |
-| o4 | 44 | D |
+| o1 | ₱71,000 | A |
+| o2 | ₱18,000 | B |
+| o3 | ₱21,000 | C |
+| o4 | ₱21,600 | D |
 
-`answer_option_id`: o4 (44)
+`answer_option_id`: o3 (₱21,000)
 
-`distractor_reasoning`: o1 = `NUM-OTHER-SHARE`; o2 = `NUM-OTHER-SHARE`; o3 = `NUM-EXTRA-STEP`
+`distractor_reasoning`: o1 = `NUM-EXTRA-STEP`; o2 = `NUM-PARTIAL`; o4 = `NUM-UNIT`
 
 **Reveal**
 
-1. *Meaning.* "4 times as old" means the age is the younger person's age multiplied by 4.
-2. *Shortcut.* Try the choices. If Efren is 44, the niece is 11. In 22 years: 66 and 33. 66 = 2 × 33, so it works.
-3. *Why it is right.* 44 is right. Algebra: niece = s, Efren = 4s; 4s + 22 = 2(s + 22) gives s = 11, so Efren = 44.
+1. *Meaning.* "Simple interest" is the extra money paid for borrowing, the same amount each year. 12% per year means ₱12 for every ₱100 each year.
+2. *Shortcut.* Find one year first: 12% of ₱50,000 = ₱6,000. Time is 3.5 years. Multiply: 3.5 × ₱6,000 = ₱21,000.
+3. *Why it is right.* ₱21,000 is right. Check: 50,000 × 0.12 × 3.5 = 21,000.
 4. *Why the others are wrong.*
-   - 11: 11 is the niece's age now, not Efren's.
-   - 33: 33 is the niece's age 22 years from now.
-   - 66: 66 is Efren's age 22 years from now, not today.
+   - ₱71,000: ₱71,000 is the loan plus interest. The question asks for the interest only.
+   - ₱18,000: This counts only the whole years and leaves out the months.
+   - ₱21,600: This uses 3.6 years. 6 months is 0.5 of a year, not 0.6.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 31. CIVIO-NUM-OPS-ORDER-000042
+## 23. CIVIO-NUM-FRAC-DEC-000034
+
+- track: both · domain: numerical · archetype: NUM-FRAC-DEC · difficulty: hard · est: 75 s
+- competency: Word problems · concept: fraction of the remainder
+- micro_skill: take a fraction of what is left
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** A barangay had 600 liters of fuel. It gave out 1/5 of them on Monday and 3/4 of the remaining liters of fuel on Tuesday. How many are left?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 360 | A |
+| o2 | 120 | B |
+| o3 | 480 | C |
+| o4 | 30 | D |
+
+`answer_option_id`: o2 (120)
+
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o3 = `NUM-PARTIAL`; o4 = `NUM-WRONG-BASE`
+
+**Reveal**
+
+1. *Meaning.* A "fraction of the remaining" is a part of what is left, not of the starting amount.
+2. *Shortcut.* Go day by day. Monday: 1/5 of 600 = 120, so 480 left. Tuesday: 3/4 of 480 = 360, so 480 − 360 = 120 left.
+3. *Why it is right.* 120 is right. Check: 120 + 360 + 120 = 600.
+4. *Why the others are wrong.*
+   - 360: 360 is how many were given on Tuesday, not how many are left.
+   - 480: 480 is what was left after Monday only.
+   - 30: 30 takes 3/4 of the original 600. Tuesday's share is 3/4 of what was left after Monday.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 24. CIVIO-NUM-SEQ-MULT-000035
+
+- track: both · domain: numerical · archetype: NUM-SEQ-MULT · difficulty: hard · est: 50 s
+- competency: Number sequence · concept: multiply then add
+- micro_skill: find a ×k then ±c rule
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** What number comes next?  2, 6, 14, 30, 62, ___
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 124 | A |
+| o2 | 94 | B |
+| o3 | 128 | C |
+| o4 | 126 | D |
+
+`answer_option_id`: o4 (126)
+
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-SEQ-OTHER-RULE`; o3 = `NUM-EXTRA-STEP`
+
+**Reveal**
+
+1. *Meaning.* A "rule" is the same steps done to each number to get the next one.
+2. *Shortcut.* Test "times 2, then + 2" on the first numbers: 2 × 2 + 2 = 6; 6 × 2 + 2 = 14. It works, so use it on 62.
+3. *Why it is right.* 126 is right: 62 × 2 = 124, then + 2 gives 126.
+4. *Why the others are wrong.*
+   - 124: 124 multiplies by 2 but forgets the + 2 step.
+   - 94: 94 repeats the last difference (32). The jumps are not the same each time.
+   - 128: 128 does the + 2 step twice.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 25. CIVIO-NUM-WP-PCT-CHANGE-000036
+
+- track: both · domain: numerical · archetype: NUM-WP-PCT-CHANGE · difficulty: easy · est: 45 s
+- competency: Word problems · concept: discount
+- micro_skill: price after a percent discount
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** A backpack is priced at ₱400. It is sold at 15% off. How much does a buyer pay?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | ₱340 | A |
+| o2 | ₱60 | B |
+| o3 | ₱385 | C |
+| o4 | ₱460 | D |
+
+`answer_option_id`: o1 (₱340)
+
+`distractor_reasoning`: o2 = `NUM-PARTIAL`; o3 = `NUM-WRONG-BASE`; o4 = `NUM-OP-SWAP`
+
+**Reveal**
+
+1. *Meaning.* "15% off" means 15 pesos less for every 100 pesos of the price.
+2. *Shortcut.* Pay 85% of the price: ₱400 × 0.85 = ₱340.
+3. *Why it is right.* ₱340 is right. Check: discount ₱60; ₱400 − ₱60 = ₱340.
+4. *Why the others are wrong.*
+   - ₱60: ₱60 is the discount itself. The buyer pays the price minus this amount.
+   - ₱385: ₱385 subtracts 15 pesos, not 15% of the price.
+   - ₱460: ₱460 adds 15% instead of taking it off.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 26. CIVIO-NUM-WP-AVERAGE-000037
+
+- track: both · domain: numerical · archetype: NUM-WP-AVERAGE · difficulty: medium · est: 60 s
+- competency: Word problems · concept: average
+- micro_skill: new average after one value joins
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** The average years of service of the 4 barangay health workers in the district hospital is 9 years. One more person, with 19 years, joins them. What is the new average years of service?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 11 years | A |
+| o2 | 14 years | B |
+| o3 | 55 years | C |
+| o4 | 11.5 years | D |
+
+`answer_option_id`: o1 (11 years)
+
+`distractor_reasoning`: o2 = `NUM-WRONG-BASE`; o3 = `NUM-PARTIAL`; o4 = `NUM-OFF-BY-ONE`
+
+**Reveal**
+
+1. *Meaning.* "Average" means share equally.
+2. *Shortcut.* The new person is 19 − 9 = 10 above the old average. Share that among all 5 people: 10 ÷ 5 = 2. Add it: 9 + 2 = 11.
+3. *Why it is right.* 11 years is right. Long way: 4 × 9 = 36; + 19 = 55; ÷ 5 = 11.
+4. *Why the others are wrong.*
+   - 14 years: This averages 9 and 19 only, treating the 4 old members as one person.
+   - 55 years: This is the total of all 5 values. It stops before dividing by 5.
+   - 11.5 years: This shares the extra 10 years among 4 people. After the new person joins there are 5.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 27. CIVIO-NUM-WP-PCT-CHANGE-000038
+
+- track: both · domain: numerical · archetype: NUM-WP-PCT-CHANGE · difficulty: medium · est: 90 s
+- competency: Word problems · concept: successive percent change
+- micro_skill: chain a percent increase and a percent decrease
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** A hardware store sold a gallon of paint for ₱800. It raised the price by 30%. Later, it lowered the new price by 50%. What is the final price?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | ₱640 | A |
+| o2 | ₱676 | B |
+| o3 | ₱1,040 | C |
+| o4 | ₱520 | D |
+
+`answer_option_id`: o4 (₱520)
+
+`distractor_reasoning`: o1 = `NUM-PCT-ADD`; o2 = `NUM-EXTRA-STEP`; o3 = `NUM-PARTIAL`
+
+**Reveal**
+
+1. *Meaning.* "Percent" means "out of 100". A raise or a cut of a percent is always taken from the price at that moment.
+2. *Shortcut.* Do one change at a time. ₱800 up 30% is ₱800 + ₱240 = ₱1,040. Then 50% of ₱1,040 is ₱520, so ₱1,040 − ₱520 = ₱520.
+3. *Why it is right.* ₱520 is right. Check: 800 × 1.3 = 1,040, and 1,040 × 0.5 = 520.
+4. *Why the others are wrong.*
+   - ₱640: ₱640 adds and subtracts the percents first (30% − 50%). The second change is taken from the new price, not the old one.
+   - ₱676: ₱676 applies the 30% raise again at the end. That is one step too many.
+   - ₱1,040: ₱1,040 is only the price after the raise. It stops before the cut.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 28. CIVIO-NUM-OPS-ORDER-000039
 
 - track: both · domain: numerical · archetype: NUM-OPS-ORDER · difficulty: easy · est: 35 s
 - competency: Basic operations · concept: order of operations
@@ -1032,6 +933,105 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
+## 29. CIVIO-NUM-WP-RATIO-000040
+
+- track: both · domain: numerical · archetype: NUM-WP-RATIO · difficulty: medium · est: 75 s
+- competency: Word problems · concept: ratio
+- micro_skill: split a total in a ratio
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Aileen and Efren will share ₱21,000 of commission in the ratio 3 : 4. How much is Efren's share?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | ₱5,250 | A |
+| o2 | ₱12,000 | B |
+| o3 | ₱9,000 | C |
+| o4 | ₱3,000 | D |
+
+`answer_option_id`: o2 (₱12,000)
+
+`distractor_reasoning`: o1 = `NUM-WRONG-BASE`; o3 = `NUM-OTHER-SHARE`; o4 = `NUM-PARTIAL`
+
+**Reveal**
+
+1. *Meaning.* A ratio of 3 : 4 means for every 3 pesos one person gets, the other gets 4 pesos.
+2. *Shortcut.* Add the ratio numbers to get equal parts: 3 + 4 = 7. One part = ₱21,000 ÷ 7 = ₱3,000. Then multiply by the parts you need.
+3. *Why it is right.* ₱12,000 is right: 4 × ₱3,000 = ₱12,000. Check: ₱9,000 + ₱12,000 = ₱21,000.
+4. *Why the others are wrong.*
+   - ₱5,250: ₱5,250 divides the total by 4 alone, not by all 7 parts.
+   - ₱9,000: ₱9,000 is Aileen's share (3 parts). The question asks for Efren.
+   - ₱3,000: ₱3,000 is one part. It stops before multiplying by 4.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 30. CIVIO-NUM-OPS-ORDER-000041
+
+- track: both · domain: numerical · archetype: NUM-OPS-ORDER · difficulty: easy · est: 35 s
+- competency: Basic operations · concept: order of operations
+- micro_skill: multiply before adding and subtracting
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** What is the value of 9 + 4 × 3 − 1?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 20 | A |
+| o2 | 15 | B |
+| o3 | 17 | C |
+| o4 | 38 | D |
+
+`answer_option_id`: o1 (20)
+
+`distractor_reasoning`: o2 = `NUM-OP-SWAP`; o3 = `NUM-ORDER-OPS`; o4 = `NUM-ORDER-OPS`
+
+**Reveal**
+
+1. *Meaning.* "Order of operations" is the rule for which step to do first: multiply and divide before you add and subtract.
+2. *Shortcut.* Circle the × first: 4 × 3 = 12. Then go left to right: 9 + 12 − 1.
+3. *Why it is right.* 20 is right: 9 + 12 = 21, and 21 − 1 = 20.
+4. *Why the others are wrong.*
+   - 15: 15 adds 4 and 3 instead of multiplying them.
+   - 17: 17 subtracts 1 from 3 before multiplying, which the expression does not say.
+   - 38: 38 works left to right: (9 + 4) × 3. Multiplication comes first.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 31. CIVIO-NUM-WP-RATE-000042
+
+- track: both · domain: numerical · archetype: NUM-WP-RATE · difficulty: medium · est: 90 s
+- competency: Word problems · concept: work rate
+- micro_skill: add work rates
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Ramon can encode a box of survey forms in 6 hours. Arnel can do the same job in 3 hours. Working together, how long will they take?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 9 hours | A |
+| o2 | 2 hours | B |
+| o3 | 30 minutes | C |
+| o4 | 4.5 hours | D |
+
+`answer_option_id`: o2 (2 hours)
+
+`distractor_reasoning`: o1 = `NUM-OP-SWAP`; o3 = `NUM-PARTIAL`; o4 = `NUM-WRONG-BASE`
+
+**Reveal**
+
+1. *Meaning.* A "rate" is how much of the job gets done in one hour.
+2. *Shortcut.* Per hour, Ramon does 1/6 and Arnel does 1/3. Together: 1/6 + 1/3 = 1/2. So the whole job takes 2 hours.
+3. *Why it is right.* 2 hours is right. Check: in 2 hours, Ramon does 2/6 and Arnel does 2/3; together that is 1 whole job.
+4. *Why the others are wrong.*
+   - 9 hours: 9 hours adds the two times. Add the work done per hour, not the hours.
+   - 30 minutes: This reads the combined rate (1/2 of the job per hour) as a time. It stops before turning the rate into hours.
+   - 4.5 hours: 4.5 hours is the average of the two times. Together they must be faster than the faster person alone.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
 ## 32. CIVIO-NUM-WP-GEOM-000043
 
 - track: both · domain: numerical · archetype: NUM-WP-GEOM · difficulty: medium · est: 75 s
@@ -1040,28 +1040,28 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** A rectangular vegetable garden is 32 m long and 4 m wide. A fence costs ₱40 per meter. How much will it cost to put the fence around the whole vegetable garden?
+**Stem:** A rectangular school lot is 30 m long and 6 m wide. A chain-link fence costs ₱40 per meter. How much will it cost to put the chain-link fence around the whole school lot?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | ₱72 | A |
-| o2 | ₱1,440 | B |
-| o3 | ₱5,120 | C |
-| o4 | ₱2,880 | D |
+| o1 | ₱1,440 | A |
+| o2 | ₱72 | B |
+| o3 | ₱2,880 | C |
+| o4 | ₱7,200 | D |
 
-`answer_option_id`: o4 (₱2,880)
+`answer_option_id`: o3 (₱2,880)
 
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-PARTIAL`; o3 = `NUM-WRONG-BASE`
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-PARTIAL`; o4 = `NUM-WRONG-BASE`
 
 **Reveal**
 
 1. *Meaning.* "Perimeter" is the distance around a shape. For a rectangle it is 2 × (length + width).
-2. *Shortcut.* Around = 2 × (32 + 4) = 72 m. Cost = 72 × ₱40.
+2. *Shortcut.* Around = 2 × (30 + 6) = 72 m. Cost = 72 × ₱40.
 3. *Why it is right.* ₱2,880 is right: 72 m × ₱40 = ₱2,880.
 4. *Why the others are wrong.*
-   - ₱72: ₱72 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.
    - ₱1,440: This uses only one length and one width (36 m). A rectangle has two of each.
-   - ₱5,120: This uses the area (128 square meters). Going around uses the perimeter.
+   - ₱72: ₱72 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.
+   - ₱7,200: This uses the area (180 square meters). Going around uses the perimeter.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -1073,197 +1073,98 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which number should come next?  4, 5, 9, 16, 26, ___
+**Stem:** Which number should come next?  4, 8, 15, 25, 38, ___
 
 | option_id | text | shown as |
 |---|---|---|
 | o1 | 42 | A |
-| o2 | 27 | B |
-| o3 | 36 | C |
-| o4 | 39 | D |
+| o2 | 54 | B |
+| o3 | 57 | C |
+| o4 | 51 | D |
 
-`answer_option_id`: o4 (39)
+`answer_option_id`: o2 (54)
 
-`distractor_reasoning`: o1 = `NUM-OFF-BY-ONE`; o2 = `NUM-SEQ-OTHER-RULE`; o3 = `NUM-PARTIAL`
+`distractor_reasoning`: o1 = `NUM-SEQ-OTHER-RULE`; o3 = `NUM-OFF-BY-ONE`; o4 = `NUM-PARTIAL`
 
 **Reveal**
 
 1. *Meaning.* A "series" is a list of numbers that follows one rule. The "jump" is how much you add to get the next number.
-2. *Shortcut.* Write the jumps under the list: +1, +4, +7, +10. Each jump is 3 more than the one before. So the next jump is +13.
-3. *Why it is right.* 39 is right: 26 + 13 = 39.
+2. *Shortcut.* Write the jumps under the list: +4, +7, +10, +13. Each jump is 3 more than the one before. So the next jump is +16.
+3. *Why it is right.* 54 is right: 38 + 16 = 54.
 4. *Why the others are wrong.*
-   - 42: 42 uses a jump of +16, one step too far in the growing jumps.
-   - 27: 27 adds only the first jump, +1, as if the jump never changed.
-   - 36: 36 repeats the last jump, +10. The jumps keep growing by 3.
+   - 42: 42 adds only the first jump, +4, as if the jump never changed.
+   - 57: 57 uses a jump of +19, one step too far in the growing jumps.
+   - 51: 51 repeats the last jump, +13. The jumps keep growing by 3.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 34. CIVIO-NUM-WP-RATIO-000045
+## 34. CIVIO-NUM-WP-PCT-CHANGE-000045
 
-- track: both · domain: numerical · archetype: NUM-WP-RATIO · difficulty: medium · est: 75 s
-- competency: Word problems · concept: ratio
-- micro_skill: split a total in a ratio
+- track: both · domain: numerical · archetype: NUM-WP-PCT-CHANGE · difficulty: medium · est: 90 s
+- competency: Word problems · concept: successive percent change
+- micro_skill: chain a percent increase and a percent decrease
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Aling Rosa and Nestor will share ₱4,500 of allowance fund in the ratio 4 : 5. How much is Nestor's share?
+**Stem:** A cooperative store sold a tank of LPG for ₱150. It raised the price by 50%. Later, it lowered the new price by 20%. What is the final price?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | ₱900 | A |
-| o2 | ₱2,500 | B |
-| o3 | ₱500 | C |
-| o4 | ₱2,000 | D |
+| o1 | ₱225 | A |
+| o2 | ₱270 | B |
+| o3 | ₱195 | C |
+| o4 | ₱180 | D |
 
-`answer_option_id`: o2 (₱2,500)
+`answer_option_id`: o4 (₱180)
 
-`distractor_reasoning`: o1 = `NUM-WRONG-BASE`; o3 = `NUM-PARTIAL`; o4 = `NUM-OTHER-SHARE`
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `NUM-EXTRA-STEP`; o3 = `NUM-PCT-ADD`
 
 **Reveal**
 
-1. *Meaning.* A ratio of 4 : 5 means for every 4 pesos one person gets, the other gets 5 pesos.
-2. *Shortcut.* Add the ratio numbers to get equal parts: 4 + 5 = 9. One part = ₱4,500 ÷ 9 = ₱500. Then multiply by the parts you need.
-3. *Why it is right.* ₱2,500 is right: 5 × ₱500 = ₱2,500. Check: ₱2,000 + ₱2,500 = ₱4,500.
+1. *Meaning.* "Percent" means "out of 100". A raise or a cut of a percent is always taken from the price at that moment.
+2. *Shortcut.* Do one change at a time. ₱150 up 50% is ₱150 + ₱75 = ₱225. Then 20% of ₱225 is ₱45, so ₱225 − ₱45 = ₱180.
+3. *Why it is right.* ₱180 is right. Check: 150 × 1.5 = 225, and 225 × 0.8 = 180.
 4. *Why the others are wrong.*
-   - ₱900: ₱900 divides the total by 5 alone, not by all 9 parts.
-   - ₱500: ₱500 is one part. It stops before multiplying by 5.
-   - ₱2,000: ₱2,000 is Aling Rosa's share (4 parts). The question asks for Nestor.
+   - ₱225: ₱225 is only the price after the raise. It stops before the cut.
+   - ₱270: ₱270 applies the 50% raise again at the end. That is one step too many.
+   - ₱195: ₱195 adds and subtracts the percents first (50% − 20%). The second change is taken from the new price, not the old one.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 35. CIVIO-NUM-WP-AVERAGE-000046
+## 35. CIVIO-NUM-FRAC-DEC-000046
 
-- track: both · domain: numerical · archetype: NUM-WP-AVERAGE · difficulty: medium · est: 60 s
-- competency: Word problems · concept: average
-- micro_skill: new average after one value joins
+- track: both · domain: numerical · archetype: NUM-FRAC-DEC · difficulty: hard · est: 75 s
+- competency: Word problems · concept: fraction of the remainder
+- micro_skill: take a fraction of what is left
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** The average years of service of the 4 teachers in the municipal health office is 14 years. One more person, with 24 years, joins them. What is the new average years of service?
+**Stem:** A barangay had 900 face masks. It gave out 2/5 of them on Monday and 1/3 of the remaining face masks on Tuesday. How many are left?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 19 years | A |
-| o2 | 80 years | B |
-| o3 | 16.5 years | C |
-| o4 | 16 years | D |
+| o1 | 180 | A |
+| o2 | 360 | B |
+| o3 | 540 | C |
+| o4 | 240 | D |
 
-`answer_option_id`: o4 (16 years)
+`answer_option_id`: o2 (360)
 
-`distractor_reasoning`: o1 = `NUM-WRONG-BASE`; o2 = `NUM-PARTIAL`; o3 = `NUM-OFF-BY-ONE`
-
-**Reveal**
-
-1. *Meaning.* "Average" means share equally.
-2. *Shortcut.* The new person is 24 − 14 = 10 above the old average. Share that among all 5 people: 10 ÷ 5 = 2. Add it: 14 + 2 = 16.
-3. *Why it is right.* 16 years is right. Long way: 4 × 14 = 56; + 24 = 80; ÷ 5 = 16.
-4. *Why the others are wrong.*
-   - 19 years: This averages 14 and 24 only, treating the 4 old members as one person.
-   - 80 years: This is the total of all 5 values. It stops before dividing by 5.
-   - 16.5 years: This shares the extra 10 years among 4 people. After the new person joins there are 5.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 36. CIVIO-ANA-SYMBOL-SERIES-000047
-
-- track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 50 s
-- competency: Logic · concept: letter coding
-- micro_skill: find and apply a letter shift
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** In a certain code, MARKET is written as PDUNHW. How is PORT written in the same code?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | TSVX | A |
-| o2 | SRUW | B |
-| o3 | SRUT | C |
-| o4 | MLOQ | D |
-
-`answer_option_id`: o2 (SRUW)
-
-`distractor_reasoning`: o1 = `NUM-OFF-BY-ONE`; o3 = `NUM-PARTIAL`; o4 = `ANA-REVERSED`
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o3 = `NUM-PARTIAL`; o4 = `NUM-WRONG-BASE`
 
 **Reveal**
 
-1. *Meaning.* In a "code" item, each letter is swapped for another by one rule. Find the rule from the example, then use it.
-2. *Shortcut.* Compare the first letters: M became P. That is 3 places forward. Check one more letter, then shift every letter of PORT the same way.
-3. *Why it is right.* SRUW is right: each letter of PORT moved 3 places forward.
+1. *Meaning.* A "fraction of the remaining" is a part of what is left, not of the starting amount.
+2. *Shortcut.* Go day by day. Monday: 2/5 of 900 = 360, so 540 left. Tuesday: 1/3 of 540 = 180, so 540 − 180 = 360 left.
+3. *Why it is right.* 360 is right. Check: 360 + 180 + 360 = 900.
 4. *Why the others are wrong.*
-   - TSVX: TSVX shifts each letter one place too far.
-   - SRUT: SRUT leaves the last letter unchanged.
-   - MLOQ: MLOQ shifts each letter 3 the other way.
+   - 180: 180 is how many were given on Tuesday, not how many are left.
+   - 540: 540 is what was left after Monday only.
+   - 240: 240 takes 1/3 of the original 900. Tuesday's share is 1/3 of what was left after Monday.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 37. CIVIO-ANA-SYLLOGISM-000048
-
-- track: professional · domain: analytical · archetype: ANA-SYLLOGISM · difficulty: medium · est: 45 s
-- competency: Logic · concept: syllogism
-- micro_skill: chain form
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Assume these are true: every one of the judges is among the lawyers, and every one of the lawyers is among the bar members. What can be concluded for certain?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Some bar members are not lawyers. | A |
-| o2 | All bar members are judges. | B |
-| o3 | All judges are bar members. | C |
-| o4 | No lawyers are judges. | D |
-
-`answer_option_id`: o3 (All judges are bar members.)
-
-`distractor_reasoning`: o1 = `LOG-COULD-NOT-MUST`; o2 = `LOG-CONVERSE`; o4 = `LOG-OVERSTRONG`
-
-**Reveal**
-
-1. *Meaning.* A conclusion "must be true" only if the statements force it. Ignore what you know from real life.
-2. *Shortcut.* Draw circles: judges inside lawyers, lawyers inside bar members. So judges sit inside bar members.
-3. *Why it is right.* "All judges are bar members." is right. It follows from the two statements with no extra facts.
-4. *Why the others are wrong.*
-   - Some bar members are not lawyers.: This could be true, but the statements do not say it.
-   - All bar members are judges.: This flips the statement. Being bar members does not make something one of the judges.
-   - No lawyers are judges.: This contradicts the statements: every one of the judges is one of the lawyers.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 38. CIVIO-ANA-SYMBOL-SERIES-000049
-
-- track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 45 s
-- competency: Logic · concept: letter series
-- micro_skill: track two letter jumps at once
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** What comes next in the series?  CK, FM, IO, LQ, ___
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | SO | A |
-| o2 | MS | B |
-| o3 | OS | C |
-| o4 | OW | D |
-
-`answer_option_id`: o3 (OS)
-
-`distractor_reasoning`: o1 = `ANA-REVERSED`; o2 = `NUM-OFF-BY-ONE`; o4 = `NUM-SEQ-OTHER-RULE`
-
-**Reveal**
-
-1. *Meaning.* A "letter series" works like a number series. Count each letter's place in the alphabet (A = 1, B = 2, and so on).
-2. *Shortcut.* Split each pair. First letters: C, F, I, L (jump +3). Second letters: K, M, O, Q (jump +2). Move each one more step.
-3. *Why it is right.* OS is right: L + 3 = O and Q + 2 = S.
-4. *Why the others are wrong.*
-   - SO: SO has the right two letters in the wrong order.
-   - MS: MS moves the first letter by only 1. Its jump is +3.
-   - OW: OW moves the second letter by 3, the jump of the first letter. The second letter has its own jump, +2.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 39. CIVIO-ANA-CONCLUSION-000050
+## 36. CIVIO-ANA-CONCLUSION-000047
 
 - track: professional · domain: analytical · archetype: ANA-CONCLUSION · difficulty: medium · est: 60 s
 - competency: Logic · concept: ordering
@@ -1271,127 +1172,226 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Four staff members are compared. Tess lives nearer the office than Teresa. Mylene lives nearer the office than Tess. Liza lives nearer the office than Mylene. Who is second in the order (counting from the one who lives nearest)?
+**Stem:** Four staff members are compared. Aling Rosa lives nearer the office than Teresa. Kimberly lives nearer the office than Aling Rosa. Jun-jun lives nearer the office than Kimberly. Who is second in the order (counting from the one who lives nearest)?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Teresa | A |
-| o2 | Liza | B |
-| o3 | Tess | C |
-| o4 | Mylene | D |
+| o1 | Kimberly | A |
+| o2 | Jun-jun | B |
+| o3 | Teresa | C |
+| o4 | Aling Rosa | D |
 
-`answer_option_id`: o4 (Mylene)
+`answer_option_id`: o1 (Kimberly)
 
-`distractor_reasoning`: o1 = `LOG-IGNORED-CLUE`; o2 = `LOG-ORDER-SWAP`; o3 = `LOG-ORDER-REVERSED`
+`distractor_reasoning`: o2 = `LOG-ORDER-SWAP`; o3 = `LOG-IGNORED-CLUE`; o4 = `LOG-ORDER-REVERSED`
 
 **Reveal**
 
 1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line, and count from the end the question names.
-2. *Shortcut.* Start from the person nobody beats and follow the clues down: Liza → Mylene → Tess → Teresa.
-3. *Why it is right.* Mylene is right. The clues give Liza → Mylene → Tess → Teresa, so Mylene is second.
+2. *Shortcut.* Start from the person nobody beats and follow the clues down: Jun-jun → Kimberly → Aling Rosa → Teresa.
+3. *Why it is right.* Kimberly is right. The clues give Jun-jun → Kimberly → Aling Rosa → Teresa, so Kimberly is second.
 4. *Why the others are wrong.*
-   - Teresa: Teresa could be second only if you skip the clue "Tess lives nearer the office than Teresa." That clue puts Teresa last.
-   - Liza: Liza is first. Choosing Liza swaps the top two places.
-   - Tess: Tess is second from the bottom, not from the top. This counts from the wrong end.
+   - Jun-jun: Jun-jun is first. Choosing Jun-jun swaps the top two places.
+   - Teresa: Teresa could be second only if you skip the clue "Aling Rosa lives nearer the office than Teresa." That clue puts Teresa last.
+   - Aling Rosa: Aling Rosa is second from the bottom, not from the top. This counts from the wrong end.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 40. CIVIO-ANA-DI-TABLE-000051
+## 37. CIVIO-ANA-CONCLUSION-000048
 
-- track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
-- competency: Data interpretation · concept: table reading
-- micro_skill: table total
+- track: professional · domain: analytical · archetype: ANA-CONCLUSION · difficulty: medium · est: 60 s
+- competency: Logic · concept: ordering
+- micro_skill: chain comparison clues into one order
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Supply use of ballpens (boxes) by office (Assessor: Jul 60, Aug 80, Sep 36; Planning: Jul 48, Aug 24, Sep 36; Records: Jul 44, Aug 66, Sep 20). How many did Assessor use in all three months?
+**Stem:** Four staff members are compared. Cora scored higher than Inday. Ramon scored higher than Cora. Joy scored higher than Ramon. Who is second in the order (counting from the one who got the highest score)?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 176 | A |
-| o2 | 170 | B |
-| o3 | 140 | C |
-| o4 | 58.7 | D |
+| o1 | Ramon | A |
+| o2 | Cora | B |
+| o3 | Joy | C |
+| o4 | Inday | D |
 
-`answer_option_id`: o1 (176)
+`answer_option_id`: o1 (Ramon)
 
-`distractor_reasoning`: o2 = `DI-WRONG-CELL`; o3 = `NUM-PARTIAL`; o4 = `DI-NOT-SUPPORTED`
+`distractor_reasoning`: o2 = `LOG-ORDER-REVERSED`; o3 = `LOG-ORDER-SWAP`; o4 = `LOG-IGNORED-CLUE`
 
 **Reveal**
 
-1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
-2. *Shortcut.* Read across the Assessor row only: 60 + 80 + 36.
-3. *Why it is right.* 176 is right: 60 + 80 + 36 = 176.
+1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line, and count from the end the question names.
+2. *Shortcut.* Start from the person nobody beats and follow the clues down: Joy → Ramon → Cora → Inday.
+3. *Why it is right.* Ramon is right. The clues give Joy → Ramon → Cora → Inday, so Ramon is second.
 4. *Why the others are wrong.*
-   - 170: 170 adds the Aug column for all offices, not the Assessor row.
-   - 140: 140 adds only Jul and Aug.
-   - 58.7: This is the monthly average. The question asks for the total.
+   - Cora: Cora is second from the bottom, not from the top. This counts from the wrong end.
+   - Joy: Joy is first. Choosing Joy swaps the top two places.
+   - Inday: Inday could be second only if you skip the clue "Cora scored higher than Inday." That clue puts Inday last.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 41. CIVIO-ANA-ANALOGY-FUNCTION-000052
+## 38. CIVIO-ANA-ANALOGY-SYN-000049
 
-- track: professional · domain: analytical · archetype: ANA-ANALOGY-FUNCTION · difficulty: medium · est: 30 s
+- track: professional · domain: analytical · archetype: ANA-ANALOGY-SYN · difficulty: medium · est: 30 s
 - competency: Word association (analogy) · concept: analogy
-- micro_skill: worker : what they operate
+- micro_skill: opposite meaning
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Find the pair whose link matches the link between "pilot" and "airplane".
+**Stem:** EXPAND : SHRINK :: ____
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | train : driver | A |
-| o2 | captain : ship | B |
-| o3 | sky : cloud | C |
-| o4 | passenger : bus | D |
+| o1 | expense : spend | A |
+| o2 | rise : fall | B |
+| o3 | grow : increase | C |
+| o4 | balloon : air | D |
 
-`answer_option_id`: o2 (captain : ship)
+`answer_option_id`: o2 (rise : fall)
 
-`distractor_reasoning`: o1 = `ANA-REVERSED`; o3 = `ANA-SAME-TOPIC`; o4 = `ANA-OTHER-RELATION`
+`distractor_reasoning`: o1 = `ANA-SOUND`; o3 = `ANA-OTHER-RELATION`; o4 = `ANA-SAME-TOPIC`
 
 **Reveal**
 
 1. *Meaning.* "A : B :: C : D" means A is to B as C is to D. The two pairs must share the same link.
-2. *Shortcut.* Make a sentence for the stem: "pilot is to airplane" as worker : what they operate. Test each choice in that sentence.
-3. *Why it is right.* "captain : ship" is right. It has the same link, worker : what they operate, in the same order.
+2. *Shortcut.* Make a sentence for the stem: "expand is to shrink" as opposite meaning. Test each choice in that sentence.
+3. *Why it is right.* "rise : fall" is right. It has the same link, opposite meaning, in the same order.
 4. *Why the others are wrong.*
-   - train : driver: "train : driver" has the right link but in reverse order. The stem pair is worker : what they operate.
-   - sky : cloud: "sky : cloud" is about the same topic but not the same link. The stem pair is worker : what they operate.
-   - passenger : bus: "passenger : bus" is linked in a different way. The stem pair is worker : what they operate.
+   - expense : spend: "expense : spend" is linked only by sound or spelling. The stem pair is opposite meaning.
+   - grow : increase: "grow : increase" is linked in a different way. The stem pair is opposite meaning.
+   - balloon : air: "balloon : air" is about the same topic but not the same link. The stem pair is opposite meaning.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 42. CIVIO-ANA-SYMBOL-SERIES-000053
+## 39. CIVIO-ANA-SYMBOL-SERIES-000050
 
-- track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 50 s
-- competency: Logic · concept: letter coding
-- micro_skill: find and apply a letter shift
+- track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 45 s
+- competency: Logic · concept: letter series
+- micro_skill: track two letter jumps at once
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** In a certain code, MAYOR is written as NBZPS. How is STAMP written in the same code?
+**Stem:** What comes next in the series?  EO, GP, IQ, KR, ___
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | RSZLO | A |
-| o2 | TUBNP | B |
-| o3 | UVCOR | C |
-| o4 | TUBNQ | D |
+| o1 | MW | A |
+| o2 | LS | B |
+| o3 | MS | C |
+| o4 | SM | D |
 
-`answer_option_id`: o4 (TUBNQ)
+`answer_option_id`: o3 (MS)
 
-`distractor_reasoning`: o1 = `ANA-REVERSED`; o2 = `NUM-PARTIAL`; o3 = `NUM-OFF-BY-ONE`
+`distractor_reasoning`: o1 = `NUM-SEQ-OTHER-RULE`; o2 = `NUM-OFF-BY-ONE`; o4 = `ANA-REVERSED`
 
 **Reveal**
 
-1. *Meaning.* In a "code" item, each letter is swapped for another by one rule. Find the rule from the example, then use it.
-2. *Shortcut.* Compare the first letters: M became N. That is 1 place forward. Check one more letter, then shift every letter of STAMP the same way.
-3. *Why it is right.* TUBNQ is right: each letter of STAMP moved 1 place forward.
+1. *Meaning.* A "letter series" works like a number series. Count each letter's place in the alphabet (A = 1, B = 2, and so on).
+2. *Shortcut.* Split each pair. First letters: E, G, I, K (jump +2). Second letters: O, P, Q, R (jump +1). Move each one more step.
+3. *Why it is right.* MS is right: K + 2 = M and R + 1 = S.
 4. *Why the others are wrong.*
-   - RSZLO: RSZLO shifts each letter 1 the other way.
-   - TUBNP: TUBNP leaves the last letter unchanged.
-   - UVCOR: UVCOR shifts each letter one place too far.
+   - MW: MW moves the second letter by 2, the jump of the first letter. The second letter has its own jump, +1.
+   - LS: LS moves the first letter by only 1. Its jump is +2.
+   - SM: SM has the right two letters in the wrong order.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 40. CIVIO-ANA-CONCLUSION-000051
+
+- track: professional · domain: analytical · archetype: ANA-CONCLUSION · difficulty: medium · est: 60 s
+- competency: Logic · concept: ordering
+- micro_skill: chain comparison clues into one order
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Four staff members are compared. Lourdes arrived earlier than Jun-jun. Inday arrived earlier than Lourdes. Bea arrived earlier than Inday. Who is second in the order (counting from the one who arrived first)?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Jun-jun | A |
+| o2 | Lourdes | B |
+| o3 | Bea | C |
+| o4 | Inday | D |
+
+`answer_option_id`: o4 (Inday)
+
+`distractor_reasoning`: o1 = `LOG-IGNORED-CLUE`; o2 = `LOG-ORDER-REVERSED`; o3 = `LOG-ORDER-SWAP`
+
+**Reveal**
+
+1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line, and count from the end the question names.
+2. *Shortcut.* Start from the person nobody beats and follow the clues down: Bea → Inday → Lourdes → Jun-jun.
+3. *Why it is right.* Inday is right. The clues give Bea → Inday → Lourdes → Jun-jun, so Inday is second.
+4. *Why the others are wrong.*
+   - Jun-jun: Jun-jun could be second only if you skip the clue "Lourdes arrived earlier than Jun-jun." That clue puts Jun-jun last.
+   - Lourdes: Lourdes is second from the bottom, not from the top. This counts from the wrong end.
+   - Bea: Bea is first. Choosing Bea swaps the top two places.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 41. CIVIO-ANA-CONCLUSION-000052
+
+- track: professional · domain: analytical · archetype: ANA-CONCLUSION · difficulty: medium · est: 60 s
+- competency: Logic · concept: ordering
+- micro_skill: chain comparison clues into one order
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Four staff members are compared. Teresa arrived earlier than Carlo. Jomar arrived earlier than Analyn. Analyn arrived earlier than Teresa. Who is third in the order (counting from the one who arrived first)?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Teresa | A |
+| o2 | Jomar | B |
+| o3 | Analyn | C |
+| o4 | Carlo | D |
+
+`answer_option_id`: o1 (Teresa)
+
+`distractor_reasoning`: o2 = `LOG-IGNORED-CLUE`; o3 = `LOG-ORDER-REVERSED`; o4 = `LOG-ORDER-SWAP`
+
+**Reveal**
+
+1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line, and count from the end the question names.
+2. *Shortcut.* Start from the person nobody beats and follow the clues down: Jomar → Analyn → Teresa → Carlo.
+3. *Why it is right.* Teresa is right. The clues give Jomar → Analyn → Teresa → Carlo, so Teresa is third.
+4. *Why the others are wrong.*
+   - Jomar: Jomar could be third only if you skip the clue "Jomar arrived earlier than Analyn." That clue puts Jomar first.
+   - Analyn: Analyn is third from the bottom, not from the top. This counts from the wrong end.
+   - Carlo: Carlo is last. Choosing Carlo swaps the bottom two places.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 42. CIVIO-ANA-SYLLOGISM-000053
+
+- track: professional · domain: analytical · archetype: ANA-SYLLOGISM · difficulty: medium · est: 45 s
+- competency: Logic · concept: syllogism
+- micro_skill: some form
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Statement 1: Some mangoes are rentals. Statement 2: All mangoes are fruits. Which conclusion follows from both statements?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | No fruits are rentals. | A |
+| o2 | Some fruits are rentals. | B |
+| o3 | All fruits are rentals. | C |
+| o4 | All rentals are mangoes. | D |
+
+`answer_option_id`: o2 (Some fruits are rentals.)
+
+`distractor_reasoning`: o1 = `LOG-OVERSTRONG`; o3 = `LOG-OVERSTRONG`; o4 = `LOG-CONVERSE`
+
+**Reveal**
+
+1. *Meaning.* A conclusion "must be true" only if the statements force it. Ignore what you know from real life.
+2. *Shortcut.* The mangoes who are rentals are also fruits. So at least some fruits are rentals.
+3. *Why it is right.* "Some fruits are rentals." is right. It follows from the two statements with no extra facts.
+4. *Why the others are wrong.*
+   - No fruits are rentals.: This contradicts the statements: the mangoes who are rentals are also fruits.
+   - All fruits are rentals.: Only some of the mangoes are rentals, so we cannot say all fruits are.
+   - All rentals are mangoes.: This flips the statement about rentals. Some rentals may be outside the group.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -1403,28 +1403,28 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Statement 1: No health workers are new trainees. Statement 2: All nurses are health workers. Which conclusion follows from both statements?
+**Stem:** All typhoon reports are bulletins. No bulletins are stolen goods. Which conclusion must be true?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | No public servants are new trainees. | A |
-| o2 | Some nurses are new trainees. | B |
-| o3 | No nurses are new trainees. | C |
-| o4 | All health workers are nurses. | D |
+| o1 | Some typhoon reports are stolen goods. | A |
+| o2 | No public notices are stolen goods. | B |
+| o3 | All bulletins are typhoon reports. | C |
+| o4 | No typhoon reports are stolen goods. | D |
 
-`answer_option_id`: o3 (No nurses are new trainees.)
+`answer_option_id`: o4 (No typhoon reports are stolen goods.)
 
-`distractor_reasoning`: o1 = `LOG-COULD-NOT-MUST`; o2 = `LOG-OVERSTRONG`; o4 = `LOG-CONVERSE`
+`distractor_reasoning`: o1 = `LOG-OVERSTRONG`; o2 = `LOG-COULD-NOT-MUST`; o3 = `LOG-CONVERSE`
 
 **Reveal**
 
 1. *Meaning.* A conclusion "must be true" only if the statements force it. Ignore what you know from real life.
-2. *Shortcut.* Put the nurses circle inside health workers. The "new trainees" circle sits outside health workers, so it is outside nurses too.
-3. *Why it is right.* "No nurses are new trainees." is right. It follows from the two statements with no extra facts.
+2. *Shortcut.* Put the typhoon reports circle inside bulletins. The "stolen goods" circle sits outside bulletins, so it is outside typhoon reports too.
+3. *Why it is right.* "No typhoon reports are stolen goods." is right. It follows from the two statements with no extra facts.
 4. *Why the others are wrong.*
-   - No public servants are new trainees.: The statements say nothing about all public servants; some public servants may be outside the health workers group.
-   - Some nurses are new trainees.: This contradicts the statements: all nurses are health workers, and no health workers is new trainees.
-   - All health workers are nurses.: This flips the statement about the two groups.
+   - Some typhoon reports are stolen goods.: This contradicts the statements: all typhoon reports are bulletins, and no bulletins is stolen goods.
+   - No public notices are stolen goods.: The statements say nothing about all public notices; some public notices may be outside the bulletins group.
+   - All bulletins are typhoon reports.: This flips the statement about the two groups.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -1436,98 +1436,32 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** In a certain code, NOTICE is written as OPUJDF. How is MARKET written in the same code?
+**Stem:** In a certain code, NOTICE is written as QRWLFH. How is PUBLIC written in the same code?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | OCTMGV | A |
-| o2 | LZQJDS | B |
-| o3 | NBSLFU | C |
-| o4 | NBSLFT | D |
+| o1 | MRYIFZ | A |
+| o2 | SXEOLC | B |
+| o3 | TYFPMG | C |
+| o4 | SXEOLF | D |
 
-`answer_option_id`: o3 (NBSLFU)
+`answer_option_id`: o4 (SXEOLF)
 
-`distractor_reasoning`: o1 = `NUM-OFF-BY-ONE`; o2 = `ANA-REVERSED`; o4 = `NUM-PARTIAL`
+`distractor_reasoning`: o1 = `ANA-REVERSED`; o2 = `NUM-PARTIAL`; o3 = `NUM-OFF-BY-ONE`
 
 **Reveal**
 
 1. *Meaning.* In a "code" item, each letter is swapped for another by one rule. Find the rule from the example, then use it.
-2. *Shortcut.* Compare the first letters: N became O. That is 1 place forward. Check one more letter, then shift every letter of MARKET the same way.
-3. *Why it is right.* NBSLFU is right: each letter of MARKET moved 1 place forward.
+2. *Shortcut.* Compare the first letters: N became Q. That is 3 places forward. Check one more letter, then shift every letter of PUBLIC the same way.
+3. *Why it is right.* SXEOLF is right: each letter of PUBLIC moved 3 places forward.
 4. *Why the others are wrong.*
-   - OCTMGV: OCTMGV shifts each letter one place too far.
-   - LZQJDS: LZQJDS shifts each letter 1 the other way.
-   - NBSLFT: NBSLFT leaves the last letter unchanged.
+   - MRYIFZ: MRYIFZ shifts each letter 3 the other way.
+   - SXEOLC: SXEOLC leaves the last letter unchanged.
+   - TYFPMG: TYFPMG shifts each letter one place too far.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 45. CIVIO-ANA-DI-TABLE-000056
-
-- track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
-- competency: Data interpretation · concept: table reading
-- micro_skill: table total
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Supply use of folders (packs) by office (HR: Jul 28, Aug 66, Sep 58; Records: Jul 42, Aug 78, Sep 20; Planning: Jul 24, Aug 24, Sep 58). How many did Planning use in all three months?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 48 | A |
-| o2 | 168 | B |
-| o3 | 35.3 | C |
-| o4 | 106 | D |
-
-`answer_option_id`: o4 (106)
-
-`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `DI-WRONG-CELL`; o3 = `DI-NOT-SUPPORTED`
-
-**Reveal**
-
-1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
-2. *Shortcut.* Read across the Planning row only: 24 + 24 + 58.
-3. *Why it is right.* 106 is right: 24 + 24 + 58 = 106.
-4. *Why the others are wrong.*
-   - 48: 48 adds only Jul and Aug.
-   - 168: 168 adds the Aug column for all offices, not the Planning row.
-   - 35.3: This is the monthly average. The question asks for the total.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 46. CIVIO-ANA-SYLLOGISM-000057
-
-- track: professional · domain: analytical · archetype: ANA-SYLLOGISM · difficulty: medium · est: 45 s
-- competency: Logic · concept: syllogism
-- micro_skill: some form
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Statement 1: Some encoders are night-shift workers. Statement 2: All encoders are clerks. Which conclusion follows from both statements?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | All clerks are night-shift workers. | A |
-| o2 | Some clerks are night-shift workers. | B |
-| o3 | All night-shift workers are encoders. | C |
-| o4 | No clerks are night-shift workers. | D |
-
-`answer_option_id`: o2 (Some clerks are night-shift workers.)
-
-`distractor_reasoning`: o1 = `LOG-OVERSTRONG`; o3 = `LOG-CONVERSE`; o4 = `LOG-OVERSTRONG`
-
-**Reveal**
-
-1. *Meaning.* A conclusion "must be true" only if the statements force it. Ignore what you know from real life.
-2. *Shortcut.* The encoders who are night-shift workers are also clerks. So at least some clerks are night-shift workers.
-3. *Why it is right.* "Some clerks are night-shift workers." is right. It follows from the two statements with no extra facts.
-4. *Why the others are wrong.*
-   - All clerks are night-shift workers.: Only some of the encoders are night-shift workers, so we cannot say all clerks are.
-   - All night-shift workers are encoders.: This flips the statement about night-shift workers. Some night-shift workers may be outside the group.
-   - No clerks are night-shift workers.: This contradicts the statements: the encoders who are night-shift workers are also clerks.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 47. CIVIO-ANA-SYMBOL-SERIES-000058
+## 45. CIVIO-ANA-SYMBOL-SERIES-000056
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 45 s
 - competency: Logic · concept: letter series
@@ -1535,131 +1469,101 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** What comes next in the series?  CR, GT, KV, OX, ___
+**Stem:** What comes next in the series?  CR, GS, KT, OU, ___
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | ZS | A |
+| o1 | SV | A |
 | o2 | SH | B |
-| o3 | PZ | C |
-| o4 | SZ | D |
+| o3 | VS | C |
+| o4 | PV | D |
 
-`answer_option_id`: o4 (SZ)
+`answer_option_id`: o1 (SV)
 
-`distractor_reasoning`: o1 = `ANA-REVERSED`; o2 = `NUM-SEQ-OTHER-RULE`; o3 = `NUM-OFF-BY-ONE`
+`distractor_reasoning`: o2 = `NUM-SEQ-OTHER-RULE`; o3 = `ANA-REVERSED`; o4 = `NUM-OFF-BY-ONE`
 
 **Reveal**
 
 1. *Meaning.* A "letter series" works like a number series. Count each letter's place in the alphabet (A = 1, B = 2, and so on).
-2. *Shortcut.* Split each pair. First letters: C, G, K, O (jump +4). Second letters: R, T, V, X (jump +2). Move each one more step.
-3. *Why it is right.* SZ is right: O + 4 = S and X + 2 = Z.
+2. *Shortcut.* Split each pair. First letters: C, G, K, O (jump +4). Second letters: R, S, T, U (jump +1). Move each one more step.
+3. *Why it is right.* SV is right: O + 4 = S and U + 1 = V.
 4. *Why the others are wrong.*
-   - ZS: ZS has the right two letters in the wrong order.
-   - SH: SH moves the second letter by 4, the jump of the first letter. The second letter has its own jump, +2.
-   - PZ: PZ moves the first letter by only 1. Its jump is +4.
+   - SH: SH moves the second letter by 4, the jump of the first letter. The second letter has its own jump, +1.
+   - VS: VS has the right two letters in the wrong order.
+   - PV: PV moves the first letter by only 1. Its jump is +4.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 48. CIVIO-ANA-CONCLUSION-000059
+## 46. CIVIO-ANA-ANALOGY-FUNCTION-000057
 
-- track: professional · domain: analytical · archetype: ANA-CONCLUSION · difficulty: medium · est: 60 s
-- competency: Logic · concept: ordering
-- micro_skill: chain comparison clues into one order
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Four staff members are compared. Datu encoded more forms than Nestor. Nestor encoded more forms than Bea. Jomar encoded more forms than Datu. Who is second in the order (counting from the one who encoded the most forms)?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Bea | A |
-| o2 | Nestor | B |
-| o3 | Datu | C |
-| o4 | Jomar | D |
-
-`answer_option_id`: o3 (Datu)
-
-`distractor_reasoning`: o1 = `LOG-IGNORED-CLUE`; o2 = `LOG-ORDER-REVERSED`; o4 = `LOG-ORDER-SWAP`
-
-**Reveal**
-
-1. *Meaning.* An "ordering" item gives pairs. Join the pairs into one line, and count from the end the question names.
-2. *Shortcut.* Start from the person nobody beats and follow the clues down: Jomar → Datu → Nestor → Bea.
-3. *Why it is right.* Datu is right. The clues give Jomar → Datu → Nestor → Bea, so Datu is second.
-4. *Why the others are wrong.*
-   - Bea: Bea could be second only if you skip the clue "Nestor encoded more forms than Bea." That clue puts Bea last.
-   - Nestor: Nestor is second from the bottom, not from the top. This counts from the wrong end.
-   - Jomar: Jomar is first. Choosing Jomar swaps the top two places.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 49. CIVIO-ANA-DI-TABLE-000060
-
-- track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
-- competency: Data interpretation · concept: table reading
-- micro_skill: table diff
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Supply use of envelopes (boxes) by office (HR: Jan 34, Feb 72, Mar 12; Cashier: Jan 24, Feb 70, Mar 56; Engineering: Jan 78, Feb 42, Mar 12). In Mar, how many more did Cashier use than HR?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 32 | A |
-| o2 | 68 | B |
-| o3 | 44 | C |
-| o4 | 10 | D |
-
-`answer_option_id`: o3 (44)
-
-`distractor_reasoning`: o1 = `DI-WRONG-CELL`; o2 = `NUM-OP-SWAP`; o4 = `DI-WRONG-CELL`
-
-**Reveal**
-
-1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
-2. *Shortcut.* Go to the Mar column: Cashier 56, HR 12. Subtract the smaller from the larger.
-3. *Why it is right.* 44 is right: 56 − 12 = 44.
-4. *Why the others are wrong.*
-   - 32: This compares the three-month totals, not one month.
-   - 68: This adds the two numbers instead of subtracting.
-   - 10: This uses Jan, not Mar.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 50. CIVIO-ANA-ANALOGY-FORM-000061
-
-- track: professional · domain: analytical · archetype: ANA-ANALOGY-FORM · difficulty: medium · est: 30 s
+- track: professional · domain: analytical · archetype: ANA-ANALOGY-FUNCTION · difficulty: medium · est: 30 s
 - competency: Word association (analogy) · concept: analogy
-- micro_skill: early stage : later stage
+- micro_skill: worker : workplace
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Bud is to flower as ____.
+**Stem:** TEACHER : SCHOOL :: ____
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | petal : stem | A |
-| o2 | garden : soil | B |
-| o3 | egg : chicken | C |
-| o4 | flower : bud | D |
+| o1 | hospital : nurse | A |
+| o2 | classroom : chalk | B |
+| o3 | student : teacher | C |
+| o4 | farmer : field | D |
 
-`answer_option_id`: o3 (egg : chicken)
+`answer_option_id`: o4 (farmer : field)
 
-`distractor_reasoning`: o1 = `ANA-OTHER-RELATION`; o2 = `ANA-SAME-TOPIC`; o4 = `ANA-REVERSED`
+`distractor_reasoning`: o1 = `ANA-REVERSED`; o2 = `ANA-SAME-TOPIC`; o3 = `ANA-OTHER-RELATION`
 
 **Reveal**
 
 1. *Meaning.* "A : B :: C : D" means A is to B as C is to D. The two pairs must share the same link.
-2. *Shortcut.* Make a sentence for the stem: "bud is to flower" as early stage : later stage. Test each choice in that sentence.
-3. *Why it is right.* "egg : chicken" is right. It has the same link, early stage : later stage, in the same order.
+2. *Shortcut.* Make a sentence for the stem: "teacher is to school" as worker : workplace. Test each choice in that sentence.
+3. *Why it is right.* "farmer : field" is right. It has the same link, worker : workplace, in the same order.
 4. *Why the others are wrong.*
-   - petal : stem: "petal : stem" is linked in a different way. The stem pair is early stage : later stage.
-   - garden : soil: "garden : soil" is about the same topic but not the same link. The stem pair is early stage : later stage.
-   - flower : bud: "flower : bud" has the right link but in reverse order. The stem pair is early stage : later stage.
+   - hospital : nurse: "hospital : nurse" has the right link but in reverse order. The stem pair is worker : workplace.
+   - classroom : chalk: "classroom : chalk" is about the same topic but not the same link. The stem pair is worker : workplace.
+   - student : teacher: "student : teacher" is linked in a different way. The stem pair is worker : workplace.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 51. CIVIO-ANA-SYMBOL-SERIES-000062
+## 47. CIVIO-ANA-ASSUME-I-II-000058
+
+- track: professional · domain: analytical · archetype: ANA-ASSUME-I-II · difficulty: medium · est: 60 s
+- competency: Assumptions and conclusions · concept: assumption
+- micro_skill: spot an assumption the statement needs
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Statement: The office will print forms in both English and Filipino so every visitor can fill them out.
+Assumption I: Some visitors read Filipino more easily than English.
+Assumption II: Some visitors read English more easily than Filipino.
+Which assumption is implicit in the statement?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Only II | A |
+| o2 | Both I and II | B |
+| o3 | Neither I nor II | C |
+| o4 | Only I | D |
+
+`answer_option_id`: o2 (Both I and II)
+
+`distractor_reasoning`: o1 = `LOG-MISSED-NEEDED`; o3 = `LOG-MISSED-NEEDED`; o4 = `LOG-MISSED-NEEDED`
+
+**Reveal**
+
+1. *Meaning.* An "implicit assumption" is something the speaker must take as true for the statement to make sense, even if it is not said.
+2. *Shortcut.* Negate each assumption. If the statement stops making sense, the assumption is needed.
+3. *Why it is right.* "Both I and II" is right. Both assumptions are needed for the plan to make sense.
+4. *Why the others are wrong.*
+   - Only II: "Only II" rejects an assumption the statement does need.
+   - Neither I nor II: "Neither I nor II" rejects an assumption the statement does need.
+   - Only I: "Only I" rejects an assumption the statement does need.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 48. CIVIO-ANA-SYMBOL-SERIES-000059
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 50 s
 - competency: Logic · concept: letter coding
@@ -1667,164 +1571,65 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** In a certain code, SCHOOL is written as TDIPPM. How is TOWN written in the same code?
+**Stem:** In a certain code, BRIDGE is written as EULGJH. How is NOTICE written in the same code?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | VQYP | A |
-| o2 | UPXN | B |
-| o3 | SNVM | C |
-| o4 | UPXO | D |
+| o1 | QRWLFE | A |
+| o2 | KLQFZB | B |
+| o3 | QRWLFH | C |
+| o4 | RSXMGI | D |
 
-`answer_option_id`: o4 (UPXO)
+`answer_option_id`: o3 (QRWLFH)
 
-`distractor_reasoning`: o1 = `NUM-OFF-BY-ONE`; o2 = `NUM-PARTIAL`; o3 = `ANA-REVERSED`
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `ANA-REVERSED`; o4 = `NUM-OFF-BY-ONE`
 
 **Reveal**
 
 1. *Meaning.* In a "code" item, each letter is swapped for another by one rule. Find the rule from the example, then use it.
-2. *Shortcut.* Compare the first letters: S became T. That is 1 place forward. Check one more letter, then shift every letter of TOWN the same way.
-3. *Why it is right.* UPXO is right: each letter of TOWN moved 1 place forward.
+2. *Shortcut.* Compare the first letters: B became E. That is 3 places forward. Check one more letter, then shift every letter of NOTICE the same way.
+3. *Why it is right.* QRWLFH is right: each letter of NOTICE moved 3 places forward.
 4. *Why the others are wrong.*
-   - VQYP: VQYP shifts each letter one place too far.
-   - UPXN: UPXN leaves the last letter unchanged.
-   - SNVM: SNVM shifts each letter 1 the other way.
+   - QRWLFE: QRWLFE leaves the last letter unchanged.
+   - KLQFZB: KLQFZB shifts each letter 3 the other way.
+   - RSXMGI: RSXMGI shifts each letter one place too far.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 52. CIVIO-ANA-DI-TABLE-000063
+## 49. CIVIO-ANA-ANALOGY-FUNCTION-000060
 
-- track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
-- competency: Data interpretation · concept: table reading
-- micro_skill: table total
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Supply use of staplers by office (Cashier: Jan 68, Feb 50, Mar 78; Planning: Jan 18, Feb 52, Mar 60; HR: Jan 14, Feb 24, Mar 46). How many did Planning use in all three months?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 126 | A |
-| o2 | 70 | B |
-| o3 | 130 | C |
-| o4 | 43.3 | D |
-
-`answer_option_id`: o3 (130)
-
-`distractor_reasoning`: o1 = `DI-WRONG-CELL`; o2 = `NUM-PARTIAL`; o4 = `DI-NOT-SUPPORTED`
-
-**Reveal**
-
-1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
-2. *Shortcut.* Read across the Planning row only: 18 + 52 + 60.
-3. *Why it is right.* 130 is right: 18 + 52 + 60 = 130.
-4. *Why the others are wrong.*
-   - 126: 126 adds the Feb column for all offices, not the Planning row.
-   - 70: 70 adds only Jan and Feb.
-   - 43.3: This is the monthly average. The question asks for the total.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 53. CIVIO-ANA-ANALOGY-SYN-000064
-
-- track: professional · domain: analytical · archetype: ANA-ANALOGY-SYN · difficulty: medium · est: 30 s
+- track: professional · domain: analytical · archetype: ANA-ANALOGY-FUNCTION · difficulty: medium · est: 30 s
 - competency: Word association (analogy) · concept: analogy
-- micro_skill: opposite meaning
+- micro_skill: tool : what it is used for
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which pair shows the same relationship as "generous : stingy"?
+**Stem:** Broom is to sweep as ____.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | gift : money | A |
-| o2 | humble : proud | B |
-| o3 | giver : giving | C |
-| o4 | kind : gentle | D |
+| o1 | scissors : cut | A |
+| o2 | sweep : broom | B |
+| o3 | brush : bristle | C |
+| o4 | dust : floor | D |
 
-`answer_option_id`: o2 (humble : proud)
+`answer_option_id`: o1 (scissors : cut)
 
-`distractor_reasoning`: o1 = `ANA-SAME-TOPIC`; o3 = `ANA-SOUND`; o4 = `ANA-OTHER-RELATION`
+`distractor_reasoning`: o2 = `ANA-REVERSED`; o3 = `ANA-OTHER-RELATION`; o4 = `ANA-SAME-TOPIC`
 
 **Reveal**
 
 1. *Meaning.* "A : B :: C : D" means A is to B as C is to D. The two pairs must share the same link.
-2. *Shortcut.* Make a sentence for the stem: "generous is to stingy" as opposite meaning. Test each choice in that sentence.
-3. *Why it is right.* "humble : proud" is right. It has the same link, opposite meaning, in the same order.
+2. *Shortcut.* Make a sentence for the stem: "broom is to sweep" as tool : what it is used for. Test each choice in that sentence.
+3. *Why it is right.* "scissors : cut" is right. It has the same link, tool : what it is used for, in the same order.
 4. *Why the others are wrong.*
-   - gift : money: "gift : money" is about the same topic but not the same link. The stem pair is opposite meaning.
-   - giver : giving: "giver : giving" is linked only by sound or spelling. The stem pair is opposite meaning.
-   - kind : gentle: "kind : gentle" is linked in a different way. The stem pair is opposite meaning.
+   - sweep : broom: "sweep : broom" has the right link but in reverse order. The stem pair is tool : what it is used for.
+   - brush : bristle: "brush : bristle" is linked in a different way. The stem pair is tool : what it is used for.
+   - dust : floor: "dust : floor" is about the same topic but not the same link. The stem pair is tool : what it is used for.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 54. CIVIO-ANA-SYMBOL-SERIES-000065
-
-- track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 50 s
-- competency: Logic · concept: letter coding
-- micro_skill: find and apply a letter shift
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** In a certain code, LIBRARY is written as JGZPYPW. How is SCHOOL written in the same code?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | QAFMMJ | A |
-| o2 | QAFMML | B |
-| o3 | PZELLI | C |
-| o4 | UEJQQN | D |
-
-`answer_option_id`: o1 (QAFMMJ)
-
-`distractor_reasoning`: o2 = `NUM-PARTIAL`; o3 = `NUM-OFF-BY-ONE`; o4 = `ANA-REVERSED`
-
-**Reveal**
-
-1. *Meaning.* In a "code" item, each letter is swapped for another by one rule. Find the rule from the example, then use it.
-2. *Shortcut.* Compare the first letters: L became J. That is 2 places back. Check one more letter, then shift every letter of SCHOOL the same way.
-3. *Why it is right.* QAFMMJ is right: each letter of SCHOOL moved 2 places back.
-4. *Why the others are wrong.*
-   - QAFMML: QAFMML leaves the last letter unchanged.
-   - PZELLI: PZELLI shifts each letter one place too far.
-   - UEJQQN: UEJQQN shifts each letter 2 the other way.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 55. CIVIO-ANA-DI-TABLE-000066
-
-- track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
-- competency: Data interpretation · concept: table reading
-- micro_skill: table total
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Supply use of staplers by office (Engineering: Jul 64, Aug 30, Sep 58; Assessor: Jul 28, Aug 80, Sep 48; HR: Jul 20, Aug 52, Sep 46). How many did Assessor use in all three months?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 162 | A |
-| o2 | 108 | B |
-| o3 | 156 | C |
-| o4 | 52 | D |
-
-`answer_option_id`: o3 (156)
-
-`distractor_reasoning`: o1 = `DI-WRONG-CELL`; o2 = `NUM-PARTIAL`; o4 = `DI-NOT-SUPPORTED`
-
-**Reveal**
-
-1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
-2. *Shortcut.* Read across the Assessor row only: 28 + 80 + 48.
-3. *Why it is right.* 156 is right: 28 + 80 + 48 = 156.
-4. *Why the others are wrong.*
-   - 162: 162 adds the Aug column for all offices, not the Assessor row.
-   - 108: 108 adds only Jul and Aug.
-   - 52: This is the monthly average. The question asks for the total.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 56. CIVIO-ANA-ANALOGY-FUNCTION-000067
+## 50. CIVIO-ANA-ANALOGY-FUNCTION-000061
 
 - track: professional · domain: analytical · archetype: ANA-ANALOGY-FUNCTION · difficulty: medium · est: 30 s
 - competency: Word association (analogy) · concept: analogy
@@ -1836,14 +1641,14 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | bank : vault | A |
-| o2 | receipt : cashier | B |
-| o3 | salary : work | C |
-| o4 | librarian : books | D |
+| o1 | receipt : cashier | A |
+| o2 | salary : work | B |
+| o3 | librarian : books | C |
+| o4 | bank : vault | D |
 
-`answer_option_id`: o4 (librarian : books)
+`answer_option_id`: o3 (librarian : books)
 
-`distractor_reasoning`: o1 = `ANA-SAME-TOPIC`; o2 = `ANA-REVERSED`; o3 = `ANA-OTHER-RELATION`
+`distractor_reasoning`: o1 = `ANA-REVERSED`; o2 = `ANA-OTHER-RELATION`; o4 = `ANA-SAME-TOPIC`
 
 **Reveal**
 
@@ -1851,13 +1656,115 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 2. *Shortcut.* Make a sentence for the stem: "cashier is to money" as worker : what they handle. Test each choice in that sentence.
 3. *Why it is right.* "librarian : books" is right. It has the same link, worker : what they handle, in the same order.
 4. *Why the others are wrong.*
-   - bank : vault: "bank : vault" is about the same topic but not the same link. The stem pair is worker : what they handle.
    - receipt : cashier: "receipt : cashier" has the right link but in reverse order. The stem pair is worker : what they handle.
    - salary : work: "salary : work" is linked in a different way. The stem pair is worker : what they handle.
+   - bank : vault: "bank : vault" is about the same topic but not the same link. The stem pair is worker : what they handle.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 57. CIVIO-ANA-SYMBOL-SERIES-000068
+## 51. CIVIO-ANA-SYMBOL-SERIES-000062
+
+- track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 45 s
+- competency: Logic · concept: letter series
+- micro_skill: track two letter jumps at once
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** What comes next in the series?  AN, EP, IR, MT, ___
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | NV | A |
+| o2 | QD | B |
+| o3 | VQ | C |
+| o4 | QV | D |
+
+`answer_option_id`: o4 (QV)
+
+`distractor_reasoning`: o1 = `NUM-OFF-BY-ONE`; o2 = `NUM-SEQ-OTHER-RULE`; o3 = `ANA-REVERSED`
+
+**Reveal**
+
+1. *Meaning.* A "letter series" works like a number series. Count each letter's place in the alphabet (A = 1, B = 2, and so on).
+2. *Shortcut.* Split each pair. First letters: A, E, I, M (jump +4). Second letters: N, P, R, T (jump +2). Move each one more step.
+3. *Why it is right.* QV is right: M + 4 = Q and T + 2 = V.
+4. *Why the others are wrong.*
+   - NV: NV moves the first letter by only 1. Its jump is +4.
+   - QD: QD moves the second letter by 4, the jump of the first letter. The second letter has its own jump, +2.
+   - VQ: VQ has the right two letters in the wrong order.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 52. CIVIO-ANA-ASSUME-I-II-000063
+
+- track: professional · domain: analytical · archetype: ANA-ASSUME-I-II · difficulty: medium · est: 60 s
+- competency: Assumptions and conclusions · concept: assumption
+- micro_skill: spot an assumption the statement needs
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Statement: The guard keeps a logbook of visitors to the records room.
+Assumption I: Knowing who entered the records room is useful.
+Assumption II: Records can be needed later, so who handled them matters.
+Which assumption is implicit in the statement?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Both I and II | A |
+| o2 | Only I | B |
+| o3 | Only II | C |
+| o4 | Neither I nor II | D |
+
+`answer_option_id`: o1 (Both I and II)
+
+`distractor_reasoning`: o2 = `LOG-MISSED-NEEDED`; o3 = `LOG-MISSED-NEEDED`; o4 = `LOG-MISSED-NEEDED`
+
+**Reveal**
+
+1. *Meaning.* An "implicit assumption" is something the speaker must take as true for the statement to make sense, even if it is not said.
+2. *Shortcut.* Negate each assumption. If the statement stops making sense, the assumption is needed.
+3. *Why it is right.* "Both I and II" is right. Both assumptions are needed for the plan to make sense.
+4. *Why the others are wrong.*
+   - Only I: "Only I" rejects an assumption the statement does need.
+   - Only II: "Only II" rejects an assumption the statement does need.
+   - Neither I nor II: "Neither I nor II" rejects an assumption the statement does need.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 53. CIVIO-ANA-DI-TABLE-000064
+
+- track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
+- competency: Data interpretation · concept: table reading
+- micro_skill: table diff
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Supply use of toner (units) by office (Cashier: Jul 58, Aug 24, Sep 14; HR: Jul 38, Aug 58, Sep 48; Engineering: Jul 52, Aug 48, Sep 76). In Sep, how many more did Engineering use than HR?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 124 | A |
+| o2 | 32 | B |
+| o3 | 14 | C |
+| o4 | 28 | D |
+
+`answer_option_id`: o4 (28)
+
+`distractor_reasoning`: o1 = `NUM-OP-SWAP`; o2 = `DI-WRONG-CELL`; o3 = `DI-WRONG-CELL`
+
+**Reveal**
+
+1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
+2. *Shortcut.* Go to the Sep column: Engineering 76, HR 48. Subtract the smaller from the larger.
+3. *Why it is right.* 28 is right: 76 − 48 = 28.
+4. *Why the others are wrong.*
+   - 124: This adds the two numbers instead of subtracting.
+   - 32: This compares the three-month totals, not one month.
+   - 14: This uses Jul, not Sep.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 54. CIVIO-ANA-SYMBOL-SERIES-000065
 
 - track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 50 s
 - competency: Logic · concept: letter coding
@@ -1865,28 +1772,127 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** In a certain code, AGENT is written as YECLR. How is NOTICE written in the same code?
+**Stem:** In a certain code, RECORD is written as UHFRUG. How is PERMIT written in the same code?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | PQVKEG | A |
-| o2 | LMRGAE | B |
-| o3 | LMRGAC | C |
-| o4 | KLQFZB | D |
+| o1 | SHUPLW | A |
+| o2 | TIVQMX | B |
+| o3 | MBOJFQ | C |
+| o4 | SHUPLT | D |
 
-`answer_option_id`: o3 (LMRGAC)
+`answer_option_id`: o1 (SHUPLW)
 
-`distractor_reasoning`: o1 = `ANA-REVERSED`; o2 = `NUM-PARTIAL`; o4 = `NUM-OFF-BY-ONE`
+`distractor_reasoning`: o2 = `NUM-OFF-BY-ONE`; o3 = `ANA-REVERSED`; o4 = `NUM-PARTIAL`
 
 **Reveal**
 
 1. *Meaning.* In a "code" item, each letter is swapped for another by one rule. Find the rule from the example, then use it.
-2. *Shortcut.* Compare the first letters: A became Y. That is 2 places back. Check one more letter, then shift every letter of NOTICE the same way.
-3. *Why it is right.* LMRGAC is right: each letter of NOTICE moved 2 places back.
+2. *Shortcut.* Compare the first letters: R became U. That is 3 places forward. Check one more letter, then shift every letter of PERMIT the same way.
+3. *Why it is right.* SHUPLW is right: each letter of PERMIT moved 3 places forward.
 4. *Why the others are wrong.*
-   - PQVKEG: PQVKEG shifts each letter 2 the other way.
-   - LMRGAE: LMRGAE leaves the last letter unchanged.
-   - KLQFZB: KLQFZB shifts each letter one place too far.
+   - TIVQMX: TIVQMX shifts each letter one place too far.
+   - MBOJFQ: MBOJFQ shifts each letter 3 the other way.
+   - SHUPLT: SHUPLT leaves the last letter unchanged.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 55. CIVIO-ANA-DI-TABLE-000066
+
+- track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
+- competency: Data interpretation · concept: table reading
+- micro_skill: table total
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Supply use of staplers by office (Planning: Jul 64, Aug 18, Sep 46; Library: Jul 26, Aug 74, Sep 74; HR: Jul 10, Aug 60, Sep 64). How many did Planning use in all three months?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 82 | A |
+| o2 | 128 | B |
+| o3 | 42.7 | C |
+| o4 | 152 | D |
+
+`answer_option_id`: o2 (128)
+
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o3 = `DI-NOT-SUPPORTED`; o4 = `DI-WRONG-CELL`
+
+**Reveal**
+
+1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
+2. *Shortcut.* Read across the Planning row only: 64 + 18 + 46.
+3. *Why it is right.* 128 is right: 64 + 18 + 46 = 128.
+4. *Why the others are wrong.*
+   - 82: 82 adds only Jul and Aug.
+   - 42.7: This is the monthly average. The question asks for the total.
+   - 152: 152 adds the Aug column for all offices, not the Planning row.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 56. CIVIO-ANA-DI-TABLE-000067
+
+- track: professional · domain: analytical · archetype: ANA-DI-TABLE · difficulty: medium · est: 75 s
+- competency: Data interpretation · concept: table reading
+- micro_skill: table total
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Supply use of toner (units) by office (HR: Jan 48, Feb 44, Mar 40; Cashier: Jan 48, Feb 28, Mar 78; Assessor: Jan 50, Feb 38, Mar 52). How many did HR use in all three months?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 92 | A |
+| o2 | 110 | B |
+| o3 | 44 | C |
+| o4 | 132 | D |
+
+`answer_option_id`: o4 (132)
+
+`distractor_reasoning`: o1 = `NUM-PARTIAL`; o2 = `DI-WRONG-CELL`; o3 = `DI-NOT-SUPPORTED`
+
+**Reveal**
+
+1. *Meaning.* A "row" runs across (one office). A "column" runs down (one month).
+2. *Shortcut.* Read across the HR row only: 48 + 44 + 40.
+3. *Why it is right.* 132 is right: 48 + 44 + 40 = 132.
+4. *Why the others are wrong.*
+   - 92: 92 adds only Jan and Feb.
+   - 110: 110 adds the Feb column for all offices, not the HR row.
+   - 44: This is the monthly average. The question asks for the total.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 57. CIVIO-ANA-SYMBOL-SERIES-000068
+
+- track: professional · domain: analytical · archetype: ANA-SYMBOL-SERIES · difficulty: medium · est: 45 s
+- competency: Logic · concept: letter series
+- micro_skill: track two letter jumps at once
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** What comes next in the series?  HP, KR, NT, QV, ___
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | XT | A |
+| o2 | TX | B |
+| o3 | TB | C |
+| o4 | RX | D |
+
+`answer_option_id`: o2 (TX)
+
+`distractor_reasoning`: o1 = `ANA-REVERSED`; o3 = `NUM-SEQ-OTHER-RULE`; o4 = `NUM-OFF-BY-ONE`
+
+**Reveal**
+
+1. *Meaning.* A "letter series" works like a number series. Count each letter's place in the alphabet (A = 1, B = 2, and so on).
+2. *Shortcut.* Split each pair. First letters: H, K, N, Q (jump +3). Second letters: P, R, T, V (jump +2). Move each one more step.
+3. *Why it is right.* TX is right: Q + 3 = T and V + 2 = X.
+4. *Why the others are wrong.*
+   - XT: XT has the right two letters in the wrong order.
+   - TB: TB moves the second letter by 3, the jump of the first letter. The second letter has its own jump, +2.
+   - RX: RX moves the first letter by only 1. Its jump is +3.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -1898,197 +1904,98 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the word that best completes the sentence: The members of the board ____ meeting in the session hall.
+**Stem:** Choose the word that best completes the sentence: The schedule of the trainings ____ posted on the bulletin board.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | being | A |
-| o2 | is | B |
+| o1 | be | A |
+| o2 | being | B |
 | o3 | are | C |
-| o4 | be | D |
+| o4 | is | D |
 
-`answer_option_id`: o3 (are)
+`answer_option_id`: o4 (is)
 
-`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-NEAREST-NOUN`; o4 = `VEN-FORM`
+`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-FORM`; o3 = `VEN-NEAREST-NOUN`
 
 **Reveal**
 
 1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s); a plural subject takes a plural verb.
-2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "The members ____". The subject is plural, so use the plural verb.
-3. *Why it is right.* "are" is right: "The members" is plural.
+2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "The schedule ____". The subject is singular, so use the singular verb.
+3. *Why it is right.* "is" is right: "The schedule" is singular.
 4. *Why the others are wrong.*
-   - being: "being" cannot be the main verb on its own; the sentence would have no full verb.
-   - is: "is" agrees with "board", the nearest noun, not with the true subject.
    - be: "be" is not a verb form that can stand alone after this subject.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 59. CIVIO-VEN-WORD-MEANING-000070
-
-- track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 25 s
-- competency: Vocabulary · concept: idioms
-- micro_skill: meaning of an idiom
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** What does the phrase in capital letters mean?  The plan to move the market is still UP IN THE AIR.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | final | A |
-| o2 | undecided | B |
-| o3 | on an upper floor | C |
-| o4 | cancelled | D |
-
-`answer_option_id`: o2 (undecided)
-
-`distractor_reasoning`: o1 = `VRB-ANTONYM-TRAP`; o3 = `RC-TOO-NARROW`; o4 = `RC-EXTREME`
-
-**Reveal**
-
-1. *Meaning.* An "idiom" is a set phrase whose meaning is not the meaning of its separate words.
-2. *Shortcut.* Skip the literal picture. Ask what the speaker wants to say in this situation.
-3. *Why it is right.* "undecided" is right: that is what the idiom means here.
-4. *Why the others are wrong.*
-   - final: "Final" is the opposite.
-   - on an upper floor: This is the literal reading.
-   - cancelled: Undecided is not the same as cancelled.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 60. CIVIO-VEN-ERROR-TENSE-000071
-
-- track: both · domain: verbal_en · archetype: VEN-ERROR-TENSE · difficulty: easy · est: 25 s
-- competency: Grammar and correct usage · concept: verb tense
-- micro_skill: match tense to a time signal
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the correct verb: Yesterday, the social welfare office staff ____ the attendance sheets.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | checked | A |
-| o2 | will check | B |
-| o3 | has checked | C |
-| o4 | will have checked | D |
-
-`answer_option_id`: o1 (checked)
-
-`distractor_reasoning`: o2 = `VEN-TENSE`; o3 = `VEN-TENSE`; o4 = `VEN-TENSE`
-
-**Reveal**
-
-1. *Meaning.* "Tense" tells when an action happens. A "time signal" is a word like yesterday, tomorrow or since that fixes the time.
-2. *Shortcut.* Find the time signal first: "Yesterday". It calls for the simple past.
-3. *Why it is right.* "checked" is right: the simple past matches "Yesterday".
-4. *Why the others are wrong.*
-   - will check: "will check" is simple future. It does not fit the time signal "Yesterday".
-   - has checked: "has checked" is present perfect. It does not fit the time signal "Yesterday".
-   - will have checked: "will have checked" is future perfect. It does not fit the time signal "Yesterday".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 61. CIVIO-VEN-ERROR-AGREE-000072
-
-- track: both · domain: verbal_en · archetype: VEN-ERROR-AGREE · difficulty: medium · est: 30 s
-- competency: Grammar and correct usage · concept: subject-verb agreement
-- micro_skill: find the true subject past a prepositional phrase
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the word that best completes the sentence: Every one of the forms ____ filed by noon.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | been | A |
-| o2 | were | B |
-| o3 | being | C |
-| o4 | was | D |
-
-`answer_option_id`: o4 (was)
-
-`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-NEAREST-NOUN`; o3 = `VEN-FORM`
-
-**Reveal**
-
-1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s); a plural subject takes a plural verb.
-2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "Every one ____". The subject is singular, so use the singular verb.
-3. *Why it is right.* "was" is right: "Every one" is singular.
-4. *Why the others are wrong.*
-   - been: "been" is not a verb form that can stand alone after this subject.
-   - were: "were" agrees with "forms", the nearest noun, not with the true subject.
    - being: "being" cannot be the main verb on its own; the sentence would have no full verb.
+   - are: "are" agrees with "trainings", the nearest noun, not with the true subject.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 62. CIVIO-VEN-SENT-COMP-WORD-000073
+## 59. CIVIO-VEN-SENT-COMP-PHRASAL-000070
 
-- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 30 s
-- competency: Vocabulary · concept: sentence completion
-- micro_skill: use clue words to fill the blank
+- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-PHRASAL · difficulty: medium · est: 25 s
+- competency: Grammar and correct usage · concept: phrasal verbs
+- micro_skill: pick the right particle
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the word that best completes the sentence: To save paper, the office will ____ old forms as scratch pads.
+**Stem:** Choose the phrase that best completes the sentence: We ran ____ of bond paper this morning.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | discard | A |
-| o2 | refuse | B |
-| o3 | reuse | C |
-| o4 | reused | D |
+| o1 | over | A |
+| o2 | into | B |
+| o3 | out | C |
+| o4 | off | D |
 
-`answer_option_id`: o3 (reuse)
+`answer_option_id`: o3 (out)
 
-`distractor_reasoning`: o1 = `VRB-ANTONYM-TRAP`; o2 = `VEN-HOMOPHONE`; o4 = `VEN-FORM`
+`distractor_reasoning`: o1 = `VEN-PARTICLE`; o2 = `VEN-PARTICLE`; o4 = `VEN-PARTICLE`
 
 **Reveal**
 
-1. *Meaning.* Clue words such as because, although, so and since tell you whether the blank agrees with or contrasts with the rest.
-2. *Shortcut.* Find the clue word, decide if the blank should agree or contrast, then check that the choice is the right word form.
-3. *Why it is right.* "reuse" is right: it fits the clue in the sentence and is the right word form.
+1. *Meaning.* A "phrasal verb" is a verb plus a small word (up, out, off, in) that together have their own meaning.
+2. *Shortcut.* Put each choice in the blank and say the sentence. Only one gives the meaning the sentence needs.
+3. *Why it is right.* "out" is right. It gives the meaning the sentence needs.
 4. *Why the others are wrong.*
-   - discard: Discarding them would not save paper.
-   - refuse: "Refuse" only looks similar.
-   - reused: After "will" the base form is needed.
+   - over: "ran over" means hit with a vehicle.
+   - into: "ran into" means met by chance.
+   - off: "ran off" means left quickly.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 63. CIVIO-VEN-RC-VOCAB-000074
+## 60. CIVIO-VEN-SENT-COMP-WORD-000071
 
-- track: both · domain: verbal_en · archetype: VEN-RC-VOCAB · difficulty: medium · est: 30 s
-- competency: Vocabulary · concept: vocabulary in context
-- micro_skill: pick the sense that fits the sentence
+- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 20 s
+- competency: Grammar and correct usage · concept: prepositions
+- micro_skill: pick the preposition the word pairs with
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** In the sentence below, what does the word in capital letters most nearly mean?  The engineer gave a RELIABLE estimate of the cost.
+**Stem:** Choose the word that best completes the sentence: She has worked in the office ____ 2018.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | relieved | A |
-| o2 | doubtful | B |
-| o3 | dependable | C |
-| o4 | reliant | D |
+| o1 | during | A |
+| o2 | for | B |
+| o3 | from | C |
+| o4 | since | D |
 
-`answer_option_id`: o3 (dependable)
+`answer_option_id`: o4 (since)
 
-`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o2 = `VRB-ANTONYM-TRAP`; o4 = `VEN-HOMOPHONE`
+`distractor_reasoning`: o1 = `VEN-PARTICLE`; o2 = `VEN-PARTICLE`; o3 = `VEN-PARTICLE`
 
 **Reveal**
 
-1. *Meaning.* Many words have more than one meaning. "In context" means the meaning that fits this sentence.
-2. *Shortcut.* Cover the word in capitals and guess what fits the gap. Then pick the choice closest to your guess, not the most common meaning of "reliable".
-3. *Why it is right.* "dependable" is right: it is the sense of "reliable" that fits the sentence.
+1. *Meaning.* A "preposition" is a small linking word (in, on, at, for, with). Many words always pair with one preposition.
+2. *Shortcut.* Read the word just before the blank and recall the phrase it usually forms (interested in, comply with).
+3. *Why it is right.* "since" is right: it is the standard pairing in this sentence.
 4. *Why the others are wrong.*
-   - relieved: "Relieved" only looks similar.
-   - doubtful: "Doubtful" is the opposite.
-   - reliant: "Reliant" means depending on someone, not being depended on.
+   - during: "During 2018" means only within that year.
+   - for: "For" takes a length of time (for six years), not a starting year.
+   - from: "From 2018" needs "to ..." or another verb form.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 64. CIVIO-VEN-RC-VOCAB-000075
+## 61. CIVIO-VEN-RC-VOCAB-000072
 
 - track: both · domain: verbal_en · archetype: VEN-RC-VOCAB · difficulty: medium · est: 30 s
 - competency: Vocabulary · concept: vocabulary in context
@@ -2100,14 +2007,14 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | biased | A |
-| o2 | light-colored | B |
-| o3 | trade show | C |
-| o4 | just | D |
+| o1 | just | A |
+| o2 | biased | B |
+| o3 | light-colored | C |
+| o4 | trade show | D |
 
-`answer_option_id`: o4 (just)
+`answer_option_id`: o1 (just)
 
-`distractor_reasoning`: o1 = `VRB-ANTONYM-TRAP`; o2 = `VRB-SYNONYM-TRAP`; o3 = `VRB-SYNONYM-TRAP`
+`distractor_reasoning`: o2 = `VRB-ANTONYM-TRAP`; o3 = `VRB-SYNONYM-TRAP`; o4 = `VRB-SYNONYM-TRAP`
 
 **Reveal**
 
@@ -2121,172 +2028,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 65. CIVIO-VEN-SENT-COMP-WORD-000076
-
-- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 30 s
-- competency: Vocabulary · concept: sentence completion
-- micro_skill: use clue words to fill the blank
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the word that best completes the sentence: The vendors ____ the new rule because it raised their fees.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | supported | A |
-| o2 | supposed | B |
-| o3 | opposite | C |
-| o4 | opposed | D |
-
-`answer_option_id`: o4 (opposed)
-
-`distractor_reasoning`: o1 = `VRB-ANTONYM-TRAP`; o2 = `VEN-HOMOPHONE`; o3 = `VEN-FORM`
-
-**Reveal**
-
-1. *Meaning.* Clue words such as because, although, so and since tell you whether the blank agrees with or contrasts with the rest.
-2. *Shortcut.* Find the clue word, decide if the blank should agree or contrast, then check that the choice is the right word form.
-3. *Why it is right.* "opposed" is right: it fits the clue in the sentence and is the right word form.
-4. *Why the others are wrong.*
-   - supported: Higher fees give a reason to oppose, not support.
-   - supposed: "Supposed" only looks similar.
-   - opposite: "Opposite" is not a verb.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 66. CIVIO-VEN-SENT-COMP-WORD-000077
-
-- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 25 s
-- competency: Grammar and correct usage · concept: pronoun case
-- micro_skill: subject vs object pronoun
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the word that best completes the sentence: To ____ should I give the signed vouchers?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | whom | A |
-| o2 | who | B |
-| o3 | which | C |
-| o4 | whose | D |
-
-`answer_option_id`: o1 (whom)
-
-`distractor_reasoning`: o2 = `VEN-REGISTER`; o3 = `VEN-FORM`; o4 = `VEN-FORM`
-
-**Reveal**
-
-1. *Meaning.* A "subject pronoun" (I, she, we, they) does the action. An "object pronoun" (me, her, us, them) receives it or comes after words like to and between.
-2. *Shortcut.* Cover the other name and read the sentence with only the pronoun. "Gave to me" sounds right; "gave to I" does not.
-3. *Why it is right.* "whom" is right. It is the form the slot needs.
-4. *Why the others are wrong.*
-   - who: After "to", formal English uses "whom".
-   - which: "which" is for things.
-   - whose: "whose" shows ownership.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 67. CIVIO-VEN-SENT-COMP-WORD-000078
-
-- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 25 s
-- competency: Grammar and correct usage · concept: commonly confused words
-- micro_skill: tell look-alike words apart
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the word that best completes the sentence: All offices must ____ with the new dress code.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | complain | A |
-| o2 | comply to | B |
-| o3 | compile | C |
-| o4 | comply | D |
-
-`answer_option_id`: o4 (comply)
-
-`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o2 = `VEN-PARTICLE`; o3 = `VEN-HOMOPHONE`
-
-**Reveal**
-
-1. *Meaning.* Some English words look or sound alike but mean different things. Read the whole sentence before choosing.
-2. *Shortcut.* Decide what kind of word the blank needs (a thing, an action, a describing word), then match the meaning.
-3. *Why it is right.* "comply" is right. It has the meaning and the word form the sentence needs.
-4. *Why the others are wrong.*
-   - complain: "complain" means to say you are unhappy.
-   - comply to: The usual pairing is "comply with"; "with" is already in the sentence.
-   - compile: "compile" means to collect into one list.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 68. CIVIO-VEN-ERROR-AGREE-000079
-
-- track: both · domain: verbal_en · archetype: VEN-ERROR-AGREE · difficulty: medium · est: 30 s
-- competency: Grammar and correct usage · concept: subject-verb agreement
-- micro_skill: find the true subject past a prepositional phrase
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the word that best completes the sentence: The quality of the roads ____ improved this year.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | to have | A |
-| o2 | having | B |
-| o3 | has | C |
-| o4 | have | D |
-
-`answer_option_id`: o3 (has)
-
-`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-FORM`; o4 = `VEN-NEAREST-NOUN`
-
-**Reveal**
-
-1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s); a plural subject takes a plural verb.
-2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "The quality ____". The subject is singular, so use the singular verb.
-3. *Why it is right.* "has" is right: "The quality" is singular.
-4. *Why the others are wrong.*
-   - to have: "to have" is not a verb form that can stand alone after this subject.
-   - having: "having" cannot be the main verb on its own; the sentence would have no full verb.
-   - have: "have" agrees with "roads", the nearest noun, not with the true subject.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 69. CIVIO-VEN-SENT-COMP-WORD-000080
-
-- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 20 s
-- competency: Grammar and correct usage · concept: prepositions
-- micro_skill: pick the preposition the word pairs with
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Choose the word that best completes the sentence: The payroll depends ____ the attendance sheets.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | from | A |
-| o2 | of | B |
-| o3 | on | C |
-| o4 | with | D |
-
-`answer_option_id`: o3 (on)
-
-`distractor_reasoning`: o1 = `VEN-PARTICLE`; o2 = `VEN-PARTICLE`; o4 = `VEN-PARTICLE`
-
-**Reveal**
-
-1. *Meaning.* A "preposition" is a small linking word (in, on, at, for, with). Many words always pair with one preposition.
-2. *Shortcut.* Read the word just before the blank and recall the phrase it usually forms (interested in, comply with).
-3. *Why it is right.* "on" is right: it is the standard pairing in this sentence.
-4. *Why the others are wrong.*
-   - from: "Depend from" is not standard.
-   - of: "Depend" pairs with "on".
-   - with: "Depend with" is not standard.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 70. CIVIO-VEN-SENT-COMP-PHRASAL-000081
+## 62. CIVIO-VEN-SENT-COMP-PHRASAL-000073
 
 - track: both · domain: verbal_en · archetype: VEN-SENT-COMP-PHRASAL · difficulty: medium · est: 25 s
 - competency: Grammar and correct usage · concept: phrasal verbs
@@ -2294,16 +2036,16 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the phrase that best completes the sentence: The office will ____ a new system for leave requests.
+**Stem:** Choose the phrase that best completes the sentence: The old printer finally ____ after ten years.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | set aside | A |
-| o2 | set up | B |
-| o3 | set off | C |
-| o4 | set back | D |
+| o1 | broke up | A |
+| o2 | broke down | B |
+| o3 | broke out | C |
+| o4 | broke in | D |
 
-`answer_option_id`: o2 (set up)
+`answer_option_id`: o2 (broke down)
 
 `distractor_reasoning`: o1 = `VEN-PARTICLE`; o3 = `VEN-PARTICLE`; o4 = `VEN-PARTICLE`
 
@@ -2311,15 +2053,147 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 1. *Meaning.* A "phrasal verb" is a verb plus a small word (up, out, off, in) that together have their own meaning.
 2. *Shortcut.* Put each choice in the blank and say the sentence. Only one gives the meaning the sentence needs.
-3. *Why it is right.* "set up" is right. It gives the meaning the sentence needs.
+3. *Why it is right.* "broke down" is right. It gives the meaning the sentence needs.
 4. *Why the others are wrong.*
-   - set aside: "set aside" means to save for later.
-   - set off: "set off" means to start a trip or trigger.
-   - set back: "set back" means to delay.
+   - broke up: "broke up" means ended a relationship or split.
+   - broke out: "broke out" means started suddenly, like a fire.
+   - broke in: "broke in" means entered by force.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 71. CIVIO-VEN-WORD-MEANING-000082
+## 63. CIVIO-VEN-SENT-COMP-WORD-000074
+
+- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 25 s
+- competency: Grammar and correct usage · concept: commonly confused words
+- micro_skill: tell look-alike words apart
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Choose the word that best completes the sentence: The committee voted to ____ the new proposal.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | accepts | A |
+| o2 | accept | B |
+| o3 | except | C |
+| o4 | access | D |
+
+`answer_option_id`: o2 (accept)
+
+`distractor_reasoning`: o1 = `VEN-FORM`; o3 = `VEN-HOMOPHONE`; o4 = `VEN-HOMOPHONE`
+
+**Reveal**
+
+1. *Meaning.* Some English words look or sound alike but mean different things. Read the whole sentence before choosing.
+2. *Shortcut.* Decide what kind of word the blank needs (a thing, an action, a describing word), then match the meaning.
+3. *Why it is right.* "accept" is right. It has the meaning and the word form the sentence needs.
+4. *Why the others are wrong.*
+   - accepts: After "to" the base form is needed.
+   - except: "except" means leaving out.
+   - access: "access" means a way in.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 64. CIVIO-VEN-ERROR-TENSE-000075
+
+- track: both · domain: verbal_en · archetype: VEN-ERROR-TENSE · difficulty: easy · est: 25 s
+- competency: Grammar and correct usage · concept: verb tense
+- micro_skill: match tense to a time signal
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Choose the correct verb: Two days ago, the engineering office staff ____ the voters' list.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | has updated | A |
+| o2 | will have updated | B |
+| o3 | will update | C |
+| o4 | updated | D |
+
+`answer_option_id`: o4 (updated)
+
+`distractor_reasoning`: o1 = `VEN-TENSE`; o2 = `VEN-TENSE`; o3 = `VEN-TENSE`
+
+**Reveal**
+
+1. *Meaning.* "Tense" tells when an action happens. A "time signal" is a word like yesterday, tomorrow or since that fixes the time.
+2. *Shortcut.* Find the time signal first: "Two days ago". It calls for the simple past.
+3. *Why it is right.* "updated" is right: the simple past matches "Two days ago".
+4. *Why the others are wrong.*
+   - has updated: "has updated" is present perfect. It does not fit the time signal "Two days ago".
+   - will have updated: "will have updated" is future perfect. It does not fit the time signal "Two days ago".
+   - will update: "will update" is simple future. It does not fit the time signal "Two days ago".
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 65. CIVIO-VEN-ERROR-AGREE-000076
+
+- track: both · domain: verbal_en · archetype: VEN-ERROR-AGREE · difficulty: medium · est: 30 s
+- competency: Grammar and correct usage · concept: subject-verb agreement
+- micro_skill: find the true subject past a prepositional phrase
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Choose the word that best completes the sentence: A stack of folders ____ left in the conference room.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | were | A |
+| o2 | being | B |
+| o3 | been | C |
+| o4 | was | D |
+
+`answer_option_id`: o4 (was)
+
+`distractor_reasoning`: o1 = `VEN-NEAREST-NOUN`; o2 = `VEN-FORM`; o3 = `VEN-FORM`
+
+**Reveal**
+
+1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s); a plural subject takes a plural verb.
+2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "A stack ____". The subject is singular, so use the singular verb.
+3. *Why it is right.* "was" is right: "A stack" is singular.
+4. *Why the others are wrong.*
+   - were: "were" agrees with "folders", the nearest noun, not with the true subject.
+   - being: "being" cannot be the main verb on its own; the sentence would have no full verb.
+   - been: "been" is not a verb form that can stand alone after this subject.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 66. CIVIO-VEN-SENT-COMP-WORD-000077
+
+- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-WORD · difficulty: medium · est: 20 s
+- competency: Grammar and correct usage · concept: prepositions
+- micro_skill: pick the preposition the word pairs with
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Choose the word that best completes the sentence: All staff must arrive ____ the venue before 8 a.m.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | at | A |
+| o2 | into | B |
+| o3 | on | C |
+| o4 | to | D |
+
+`answer_option_id`: o1 (at)
+
+`distractor_reasoning`: o2 = `VEN-PARTICLE`; o3 = `VEN-PARTICLE`; o4 = `VEN-PARTICLE`
+
+**Reveal**
+
+1. *Meaning.* A "preposition" is a small linking word (in, on, at, for, with). Many words always pair with one preposition.
+2. *Shortcut.* Read the word just before the blank and recall the phrase it usually forms (interested in, comply with).
+3. *Why it is right.* "at" is right: it is the standard pairing in this sentence.
+4. *Why the others are wrong.*
+   - into: "Arrive into" is not standard.
+   - on: "Arrive on" is for days.
+   - to: "Arrive" takes "at" (or "in" for a city), not "to".
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 67. CIVIO-VEN-WORD-MEANING-000078
 
 - track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 20 s
 - competency: Vocabulary · concept: synonyms
@@ -2327,28 +2201,160 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is closest in meaning to the word in capital letters?  OBSOLETE
+**Stem:** Which word is closest in meaning to the word in capital letters?  ABUNDANT
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | absolute | A |
-| o2 | outdated | B |
-| o3 | modern | C |
-| o4 | obstinate | D |
+| o1 | plentiful | A |
+| o2 | redundant | B |
+| o3 | abandoned | C |
+| o4 | scarce | D |
 
-`answer_option_id`: o2 (outdated)
+`answer_option_id`: o1 (plentiful)
 
-`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o3 = `VRB-ANTONYM-TRAP`; o4 = `VEN-HOMOPHONE`
+`distractor_reasoning`: o2 = `VEN-HOMOPHONE`; o3 = `VEN-HOMOPHONE`; o4 = `VRB-ANTONYM-TRAP`
 
 **Reveal**
 
 1. *Meaning.* A "synonym" is a word with nearly the same meaning.
-2. *Shortcut.* Make a short sentence with "obsolete", then swap in each choice. Watch for words that only look or sound like "obsolete".
-3. *Why it is right.* "outdated" is right. "Obsolete" means outdated.
+2. *Shortcut.* Make a short sentence with "abundant", then swap in each choice. Watch for words that only look or sound like "abundant".
+3. *Why it is right.* "plentiful" is right. "Abundant" means plentiful.
 4. *Why the others are wrong.*
-   - absolute: "absolute" sounds alike; it means complete.
-   - modern: "modern" is the opposite.
-   - obstinate: "obstinate" means stubborn.
+   - redundant: "redundant" means more than needed.
+   - abandoned: "abandoned" means left behind.
+   - scarce: "scarce" is the opposite.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 68. CIVIO-VEN-WORD-MEANING-000079
+
+- track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 25 s
+- competency: Vocabulary · concept: idioms
+- micro_skill: meaning of an idiom
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** What does the phrase in capital letters mean?  The treasurer is TIGHTENING THE BELT this quarter.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | spending less | A |
+| o2 | losing weight | B |
+| o3 | spending nothing at all | C |
+| o4 | spending more | D |
+
+`answer_option_id`: o1 (spending less)
+
+`distractor_reasoning`: o2 = `RC-TOO-NARROW`; o3 = `RC-EXTREME`; o4 = `VRB-ANTONYM-TRAP`
+
+**Reveal**
+
+1. *Meaning.* An "idiom" is a set phrase whose meaning is not the meaning of its separate words.
+2. *Shortcut.* Skip the literal picture. Ask what the speaker wants to say in this situation.
+3. *Why it is right.* "spending less" is right: that is what the idiom means here.
+4. *Why the others are wrong.*
+   - losing weight: This is the literal reading.
+   - spending nothing at all: The idiom means cutting back, not stopping.
+   - spending more: This is the opposite.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 69. CIVIO-VEN-RC-VOCAB-000080
+
+- track: both · domain: verbal_en · archetype: VEN-RC-VOCAB · difficulty: medium · est: 30 s
+- competency: Vocabulary · concept: vocabulary in context
+- micro_skill: pick the sense that fits the sentence
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** In the sentence below, what does the word in capital letters most nearly mean?  The mayor will ADDRESS the flooding problem at the next session.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | ignore | A |
+| o2 | dress up | B |
+| o3 | deal with | C |
+| o4 | live at | D |
+
+`answer_option_id`: o3 (deal with)
+
+`distractor_reasoning`: o1 = `VRB-ANTONYM-TRAP`; o2 = `VEN-HOMOPHONE`; o4 = `VRB-SYNONYM-TRAP`
+
+**Reveal**
+
+1. *Meaning.* Many words have more than one meaning. "In context" means the meaning that fits this sentence.
+2. *Shortcut.* Cover the word in capitals and guess what fits the gap. Then pick the choice closest to your guess, not the most common meaning of "address".
+3. *Why it is right.* "deal with" is right: it is the sense of "address" that fits the sentence.
+4. *Why the others are wrong.*
+   - ignore: "Ignore" is the opposite of dealing with a problem.
+   - dress up: This only sounds like part of the word.
+   - live at: "Address" can mean a home location, but here it is an action on a problem.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 70. CIVIO-VEN-WORD-MEANING-000081
+
+- track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 25 s
+- competency: Vocabulary · concept: idioms
+- micro_skill: meaning of an idiom
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** What does the phrase in capital letters mean?  We should not CRY OVER SPILLED MILK; let us redo the forms.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | regret what cannot be changed | A |
+| o2 | clean the pantry | B |
+| o3 | punish the one who erred | C |
+| o4 | celebrate a mistake | D |
+
+`answer_option_id`: o1 (regret what cannot be changed)
+
+`distractor_reasoning`: o2 = `RC-TOO-NARROW`; o3 = `RC-NOT-IN-TEXT`; o4 = `VRB-ANTONYM-TRAP`
+
+**Reveal**
+
+1. *Meaning.* An "idiom" is a set phrase whose meaning is not the meaning of its separate words.
+2. *Shortcut.* Skip the literal picture. Ask what the speaker wants to say in this situation.
+3. *Why it is right.* "regret what cannot be changed" is right: that is what the idiom means here.
+4. *Why the others are wrong.*
+   - clean the pantry: This is the literal reading.
+   - punish the one who erred: The idiom says nothing about punishment.
+   - celebrate a mistake: This goes the opposite way.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 71. CIVIO-VEN-ERROR-AGREE-000082
+
+- track: both · domain: verbal_en · archetype: VEN-ERROR-AGREE · difficulty: medium · est: 30 s
+- competency: Grammar and correct usage · concept: subject-verb agreement
+- micro_skill: find the true subject past a prepositional phrase
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Choose the word that best completes the sentence: The price of school supplies ____ every June.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | to rise | A |
+| o2 | rise | B |
+| o3 | rises | C |
+| o4 | rising | D |
+
+`answer_option_id`: o3 (rises)
+
+`distractor_reasoning`: o1 = `VEN-FORM`; o2 = `VEN-NEAREST-NOUN`; o4 = `VEN-FORM`
+
+**Reveal**
+
+1. *Meaning.* The "subject" is who or what the sentence is about. A singular subject takes a singular verb (often ending in -s); a plural subject takes a plural verb.
+2. *Shortcut.* Cover the phrase that starts with "of", "on" or "in". Read "The price ____". The subject is singular, so use the singular verb.
+3. *Why it is right.* "rises" is right: "The price" is singular.
+4. *Why the others are wrong.*
+   - to rise: "to rise" is not a verb form that can stand alone after this subject.
+   - rise: "rise" agrees with "supplies", the nearest noun, not with the true subject.
+   - rising: "rising" cannot be the main verb on its own; the sentence would have no full verb.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -2360,65 +2366,98 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the correct verb: Next month, Aileen ____ the census forms.
+**Stem:** Choose the correct verb: Yesterday, Rhea ____ the relief goods.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | will encode | A |
-| o2 | encoded | B |
-| o3 | has encoded | C |
-| o4 | will have encoded | D |
+| o1 | will deliver | A |
+| o2 | has delivered | B |
+| o3 | will have delivered | C |
+| o4 | delivered | D |
 
-`answer_option_id`: o1 (will encode)
+`answer_option_id`: o4 (delivered)
 
-`distractor_reasoning`: o2 = `VEN-TENSE`; o3 = `VEN-TENSE`; o4 = `VEN-TENSE`
+`distractor_reasoning`: o1 = `VEN-TENSE`; o2 = `VEN-TENSE`; o3 = `VEN-TENSE`
 
 **Reveal**
 
 1. *Meaning.* "Tense" tells when an action happens. A "time signal" is a word like yesterday, tomorrow or since that fixes the time.
-2. *Shortcut.* Find the time signal first: "Next month". It calls for the simple future.
-3. *Why it is right.* "will encode" is right: the simple future matches "Next month".
+2. *Shortcut.* Find the time signal first: "Yesterday". It calls for the simple past.
+3. *Why it is right.* "delivered" is right: the simple past matches "Yesterday".
 4. *Why the others are wrong.*
-   - encoded: "encoded" is simple past. It does not fit the time signal "Next month".
-   - has encoded: "has encoded" is present perfect. It does not fit the time signal "Next month".
-   - will have encoded: "will have encoded" is future perfect. It does not fit the time signal "Next month".
+   - will deliver: "will deliver" is simple future. It does not fit the time signal "Yesterday".
+   - has delivered: "has delivered" is present perfect. It does not fit the time signal "Yesterday".
+   - will have delivered: "will have delivered" is future perfect. It does not fit the time signal "Yesterday".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 ## 73. CIVIO-VEN-WORD-MEANING-000084
 
 - track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 20 s
-- competency: Vocabulary · concept: antonyms
-- micro_skill: word meaning (opposite)
+- competency: Vocabulary · concept: synonyms
+- micro_skill: word meaning
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is most nearly OPPOSITE in meaning to the word in capital letters?  DETERIORATE
+**Stem:** Which word is closest in meaning to the word in capital letters?  PRUDENT
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | determine | A |
-| o2 | improve | B |
-| o3 | detour | C |
-| o4 | worsen | D |
+| o1 | reckless | A |
+| o2 | prominent | B |
+| o3 | careful | C |
+| o4 | prude | D |
 
-`answer_option_id`: o2 (improve)
+`answer_option_id`: o3 (careful)
 
-`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o3 = `VEN-HOMOPHONE`; o4 = `VRB-SYNONYM-TRAP`
+`distractor_reasoning`: o1 = `VRB-ANTONYM-TRAP`; o2 = `VEN-HOMOPHONE`; o4 = `VEN-HOMOPHONE`
 
 **Reveal**
 
-1. *Meaning.* An "antonym" is a word with the opposite meaning.
-2. *Shortcut.* First say what "deteriorate" means (worsen). Then look for the word that means the reverse.
-3. *Why it is right.* "improve" is right. "Deteriorate" means worsen; "improve" is the reverse.
+1. *Meaning.* A "synonym" is a word with nearly the same meaning.
+2. *Shortcut.* Make a short sentence with "prudent", then swap in each choice. Watch for words that only look or sound like "prudent".
+3. *Why it is right.* "careful" is right. "Prudent" means careful.
 4. *Why the others are wrong.*
-   - determine: "determine" means to decide.
-   - detour: A detour is a different route.
-   - worsen: "worsen" means the same as "deteriorate", not the opposite.
+   - reckless: "reckless" is the opposite.
+   - prominent: "prominent" means well known.
+   - prude: A prude is easily shocked.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 74. CIVIO-VEN-WORD-MEANING-000085
+## 74. CIVIO-VEN-ERROR-TENSE-000085
+
+- track: both · domain: verbal_en · archetype: VEN-ERROR-TENSE · difficulty: medium · est: 25 s
+- competency: Grammar and correct usage · concept: verb tense
+- micro_skill: match tense to a time signal
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Choose the correct verb: Right now, Ramon ____ the plaza.
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | cleaned | A |
+| o2 | will have cleaned | B |
+| o3 | is cleaning | C |
+| o4 | cleans | D |
+
+`answer_option_id`: o3 (is cleaning)
+
+`distractor_reasoning`: o1 = `VEN-TENSE`; o2 = `VEN-TENSE`; o4 = `VEN-TENSE`
+
+**Reveal**
+
+1. *Meaning.* "Tense" tells when an action happens. A "time signal" is a word like yesterday, tomorrow or since that fixes the time.
+2. *Shortcut.* Find the time signal first: "Right now". It calls for the present progressive.
+3. *Why it is right.* "is cleaning" is right: the present progressive matches "Right now".
+4. *Why the others are wrong.*
+   - cleaned: "cleaned" is simple past. It does not fit the time signal "Right now".
+   - will have cleaned: "will have cleaned" is future perfect. It does not fit the time signal "Right now".
+   - cleans: "cleans" is simple present. It does not fit the time signal "Right now".
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 75. CIVIO-VEN-WORD-MEANING-000086
 
 - track: both · domain: verbal_en · archetype: VEN-WORD-MEANING · difficulty: medium · est: 20 s
 - competency: Vocabulary · concept: antonyms
@@ -2426,197 +2465,65 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is most nearly OPPOSITE in meaning to the word in capital letters?  TEMPORARY
+**Stem:** Which word is most nearly OPPOSITE in meaning to the word in capital letters?  TEDIOUS
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | permanent | A |
-| o2 | short-term | B |
-| o3 | contemporary | C |
-| o4 | temperate | D |
+| o1 | timid | A |
+| o2 | tidy | B |
+| o3 | boring | C |
+| o4 | exciting | D |
 
-`answer_option_id`: o1 (permanent)
+`answer_option_id`: o4 (exciting)
 
-`distractor_reasoning`: o2 = `VRB-SYNONYM-TRAP`; o3 = `VEN-HOMOPHONE`; o4 = `VEN-HOMOPHONE`
+`distractor_reasoning`: o1 = `VEN-HOMOPHONE`; o2 = `VEN-HOMOPHONE`; o3 = `VRB-SYNONYM-TRAP`
 
 **Reveal**
 
 1. *Meaning.* An "antonym" is a word with the opposite meaning.
-2. *Shortcut.* First say what "temporary" means (short-term). Then look for the word that means the reverse.
-3. *Why it is right.* "permanent" is right. "Temporary" means short-term; "permanent" is the reverse.
+2. *Shortcut.* First say what "tedious" means (boring). Then look for the word that means the reverse.
+3. *Why it is right.* "exciting" is right. "Tedious" means boring; "exciting" is the reverse.
 4. *Why the others are wrong.*
-   - short-term: "short-term" means the same as "temporary", not the opposite.
-   - contemporary: "contemporary" means of the same time or modern.
-   - temperate: "temperate" means mild.
+   - timid: "timid" means shy.
+   - tidy: "tidy" means neat.
+   - boring: "boring" means the same as "tedious", not the opposite.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 75. CIVIO-VEN-SENT-COMP-PHRASAL-000086
+## 76. CIVIO-VEN-ERROR-TENSE-000087
 
-- track: both · domain: verbal_en · archetype: VEN-SENT-COMP-PHRASAL · difficulty: medium · est: 25 s
-- competency: Grammar and correct usage · concept: phrasal verbs
-- micro_skill: pick the right particle
+- track: both · domain: verbal_en · archetype: VEN-ERROR-TENSE · difficulty: medium · est: 25 s
+- competency: Grammar and correct usage · concept: verb tense
+- micro_skill: match tense to a time signal
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Choose the phrase that best completes the sentence: The meeting was ____ because of the typhoon.
+**Stem:** Choose the correct verb: By next week, the city treasurer's office staff ____ the health center.
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | called up | A |
-| o2 | called in | B |
-| o3 | called on | C |
-| o4 | called off | D |
+| o1 | will have visited | A |
+| o2 | is visiting | B |
+| o3 | visited | C |
+| o4 | has visited | D |
 
-`answer_option_id`: o4 (called off)
+`answer_option_id`: o1 (will have visited)
 
-`distractor_reasoning`: o1 = `VEN-PARTICLE`; o2 = `VEN-PARTICLE`; o3 = `VEN-PARTICLE`
-
-**Reveal**
-
-1. *Meaning.* A "phrasal verb" is a verb plus a small word (up, out, off, in) that together have their own meaning.
-2. *Shortcut.* Put each choice in the blank and say the sentence. Only one gives the meaning the sentence needs.
-3. *Why it is right.* "called off" is right. It gives the meaning the sentence needs.
-4. *Why the others are wrong.*
-   - called up: "called up" means phoned or drafted.
-   - called in: "called in" means asked to come.
-   - called on: "called on" means visited or asked to speak.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 76. CIVIO-VEN-RC-VOCAB-000087
-
-- track: both · domain: verbal_en · archetype: VEN-RC-VOCAB · difficulty: medium · est: 30 s
-- competency: Vocabulary · concept: vocabulary in context
-- micro_skill: pick the sense that fits the sentence
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** In the sentence below, what does the word in capital letters most nearly mean?  The clerk will POST the results on the bulletin board.
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | hide | A |
-| o2 | mail | B |
-| o3 | wooden pole | C |
-| o4 | display publicly | D |
-
-`answer_option_id`: o4 (display publicly)
-
-`distractor_reasoning`: o1 = `VRB-ANTONYM-TRAP`; o2 = `VRB-SYNONYM-TRAP`; o3 = `VRB-SYNONYM-TRAP`
+`distractor_reasoning`: o2 = `VEN-TENSE`; o3 = `VEN-TENSE`; o4 = `VEN-TENSE`
 
 **Reveal**
 
-1. *Meaning.* Many words have more than one meaning. "In context" means the meaning that fits this sentence.
-2. *Shortcut.* Cover the word in capitals and guess what fits the gap. Then pick the choice closest to your guess, not the most common meaning of "post".
-3. *Why it is right.* "display publicly" is right: it is the sense of "post" that fits the sentence.
+1. *Meaning.* "Tense" tells when an action happens. A "time signal" is a word like yesterday, tomorrow or since that fixes the time.
+2. *Shortcut.* Find the time signal first: "By next week". It calls for the future perfect.
+3. *Why it is right.* "will have visited" is right: the future perfect matches "By next week".
 4. *Why the others are wrong.*
-   - hide: Hiding is the opposite.
-   - mail: "Post" can mean mail, but a bulletin board is not mailed.
-   - wooden pole: A post can be a pole; not here.
+   - is visiting: "is visiting" is present progressive. It does not fit the time signal "By next week".
+   - visited: "visited" is simple past. It does not fit the time signal "By next week".
+   - has visited: "has visited" is present perfect. It does not fit the time signal "By next week".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 77. CIVIO-CLR-FILE-POSITION-000088
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed FIRST?  Engr. Corazon A. San Juan | Lourdes C. De los Santos | Dr. Elena E. Santos-Ocampo | Engr. Imelda T. Santos
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Lourdes C. De los Santos | A |
-| o2 | Engr. Imelda T. Santos | B |
-| o3 | Engr. Corazon A. San Juan | C |
-| o4 | Dr. Elena E. Santos-Ocampo | D |
-
-`answer_option_id`: o1 (Lourdes C. De los Santos)
-
-`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Lourdes C. De los Santos → DELOSSANTOS, Lourdes; Engr. Corazon A. San Juan → SANJUAN, Corazon; Engr. Imelda T. Santos → SANTOS, Imelda; Dr. Elena E. Santos-Ocampo → SANTOSOCAMPO, Elena.
-3. *Why it is right.* "Lourdes C. De los Santos" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Engr. Imelda T. Santos: "Engr. Imelda T. Santos" files as SANTOS, which comes after DELOSSANTOS.
-   - Engr. Corazon A. San Juan: "Engr. Corazon A. San Juan" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-   - Dr. Elena E. Santos-Ocampo: "Dr. Elena E. Santos-Ocampo" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 78. CIVIO-CLR-FILE-POSITION-000089
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 5 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed LAST?  Gloria T. Santos | Ana B. Ramos | Engr. Rodrigo E. Austria | Engr. Rosario E. Pedro
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Ana B. Ramos | A |
-| o2 | Engr. Rodrigo E. Austria | B |
-| o3 | Gloria T. Santos | C |
-| o4 | Engr. Rosario E. Pedro | D |
-
-`answer_option_id`: o3 (Gloria T. Santos)
-
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Rodrigo E. Austria → AUSTRIA, Rodrigo; Engr. Rosario E. Pedro → PEDRO, Rosario; Ana B. Ramos → RAMOS, Ana; Gloria T. Santos → SANTOS, Gloria.
-3. *Why it is right.* "Gloria T. Santos" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Ana B. Ramos: "Ana B. Ramos" files as RAMOS, which comes before SANTOS.
-   - Engr. Rodrigo E. Austria: "Engr. Rodrigo E. Austria" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-   - Engr. Rosario E. Pedro: "Engr. Rosario E. Pedro" sorts by the given name. Personal names file by surname first.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 79. CIVIO-CLR-FILE-POSITION-000090
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed LAST?  Teresita P. Leon | Dr. Eduardo E. Ocampo | Dr. Nora D. Rivera | Elena E. Delos Reyes
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Dr. Eduardo E. Ocampo | A |
-| o2 | Teresita P. Leon | B |
-| o3 | Dr. Nora D. Rivera | C |
-| o4 | Elena E. Delos Reyes | D |
-
-`answer_option_id`: o3 (Dr. Nora D. Rivera)
-
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Elena E. Delos Reyes → DELOSREYES, Elena; Teresita P. Leon → LEON, Teresita; Dr. Eduardo E. Ocampo → OCAMPO, Eduardo; Dr. Nora D. Rivera → RIVERA, Nora.
-3. *Why it is right.* "Dr. Nora D. Rivera" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Dr. Eduardo E. Ocampo: "Dr. Eduardo E. Ocampo" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-   - Teresita P. Leon: "Teresita P. Leon" sorts by the given name. Personal names file by surname first.
-   - Elena E. Delos Reyes: "Elena E. Delos Reyes" files as DELOSREYES, which comes before RIVERA.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 80. CIVIO-CLR-SPELL-RIGHT-000091
+## 77. CIVIO-CLR-SPELL-RIGHT-000088
 
 - track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
 - competency: Spelling · concept: correct spelling
@@ -2624,32 +2531,98 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is spelled correctly?  fluoresent | fluorescnt | fluorescent | fluorrescent
+**Stem:** Which word is spelled correctly?  millennium | milennium | millennum | millnnium
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | fluoresent | A |
-| o2 | fluorescnt | B |
-| o3 | fluorescent | C |
-| o4 | fluorrescent | D |
+| o1 | millennium | A |
+| o2 | milennium | B |
+| o3 | millennum | C |
+| o4 | millnnium | D |
 
-`answer_option_id`: o3 (fluorescent)
+`answer_option_id`: o1 (millennium)
 
-`distractor_reasoning`: o1 = `SPL-SOUND`; o2 = `SPL-DROP`; o4 = `SPL-DOUBLE`
+`distractor_reasoning`: o2 = `SPL-DOUBLE`; o3 = `SPL-DROP`; o4 = `SPL-DROP`
 
 **Reveal**
 
 1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
 2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "fluorescent" is the standard spelling.
+3. *Why it is right.* "millennium" is the standard spelling.
 4. *Why the others are wrong.*
-   - fluoresent: "fluoresent" is spelled the way the word sounds. The correct spelling is "fluorescent".
-   - fluorescnt: "fluorescnt" drops a letter. The correct spelling is "fluorescent".
-   - fluorrescent: "fluorrescent" doubles or undoubles a consonant. The correct spelling is "fluorescent".
+   - milennium: "milennium" doubles or undoubles a consonant. The correct spelling is "millennium".
+   - millennum: "millennum" drops a letter. The correct spelling is "millennium".
+   - millnnium: "millnnium" drops a letter. The correct spelling is "millennium".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 81. CIVIO-CLR-FILE-POSITION-000092
+## 78. CIVIO-CLR-SPELL-WRONG-000089
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
+- competency: Spelling · concept: misspelled word
+- micro_skill: find the one misspelled word
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is misspelled?  definittely | beginning | recommend | receipt
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | definittely | A |
+| o2 | beginning | B |
+| o3 | recommend | C |
+| o4 | receipt | D |
+
+`answer_option_id`: o1 (definittely)
+
+`distractor_reasoning`: o2 = `CLR-SPELL-CORRECT-FOIL`; o3 = `CLR-SPELL-CORRECT-FOIL`; o4 = `CLR-SPELL-CORRECT-FOIL`
+
+**Reveal**
+
+1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
+2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
+3. *Why it is right.* "definittely" is misspelled: it doubles or undoubles a consonant. The correct spelling is "definitely".
+4. *Why the others are wrong.*
+   - beginning: "beginning" is spelled correctly, even if it looks unusual.
+   - recommend: "recommend" is spelled correctly, even if it looks unusual.
+   - receipt: "receipt" is spelled correctly, even if it looks unusual.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 79. CIVIO-CLR-SPELL-WRONG-000090
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
+- competency: Spelling · concept: misspelled word
+- micro_skill: find the one misspelled word
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is misspelled?  millnnium | cemetery | dilemma | jewelry
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | millnnium | A |
+| o2 | cemetery | B |
+| o3 | dilemma | C |
+| o4 | jewelry | D |
+
+`answer_option_id`: o1 (millnnium)
+
+`distractor_reasoning`: o2 = `CLR-SPELL-CORRECT-FOIL`; o3 = `CLR-SPELL-CORRECT-FOIL`; o4 = `CLR-SPELL-CORRECT-FOIL`
+
+**Reveal**
+
+1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
+2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
+3. *Why it is right.* "millnnium" is misspelled: it drops a letter. The correct spelling is "millennium".
+4. *Why the others are wrong.*
+   - cemetery: "cemetery" is spelled correctly, even if it looks unusual.
+   - dilemma: "dilemma" is spelled correctly, even if it looks unusual.
+   - jewelry: "jewelry" is spelled correctly, even if it looks unusual.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 80. CIVIO-CLR-FILE-POSITION-000091
 
 - track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
 - competency: Filing · concept: alphabetic filing of personal names
@@ -2657,32 +2630,197 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed FIRST?  Ramon E. Lim | Atty. Gloria G. Tan | Corazon A. Pedro | Dr. Elena V. Dela Cruz
+**Stem:** In alphabetical filing, which name is filed FIRST?  Andres M. Del Mundo | Ernesto D. Flores | Atty. Benito R. Delos Reyes | Danilo T. Leon
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Atty. Gloria G. Tan | A |
-| o2 | Corazon A. Pedro | B |
-| o3 | Ramon E. Lim | C |
-| o4 | Dr. Elena V. Dela Cruz | D |
+| o1 | Ernesto D. Flores | A |
+| o2 | Atty. Benito R. Delos Reyes | B |
+| o3 | Andres M. Del Mundo | C |
+| o4 | Danilo T. Leon | D |
 
-`answer_option_id`: o4 (Dr. Elena V. Dela Cruz)
+`answer_option_id`: o3 (Andres M. Del Mundo)
 
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
 1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Dr. Elena V. Dela Cruz → DELACRUZ, Elena; Ramon E. Lim → LIM, Ramon; Corazon A. Pedro → PEDRO, Corazon; Atty. Gloria G. Tan → TAN, Gloria.
-3. *Why it is right.* "Dr. Elena V. Dela Cruz" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Andres M. Del Mundo → DELMUNDO, Andres; Atty. Benito R. Delos Reyes → DELOSREYES, Benito; Ernesto D. Flores → FLORES, Ernesto; Danilo T. Leon → LEON, Danilo.
+3. *Why it is right.* "Andres M. Del Mundo" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Atty. Gloria G. Tan: "Atty. Gloria G. Tan" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-   - Corazon A. Pedro: "Corazon A. Pedro" sorts by the given name. Personal names file by surname first.
-   - Ramon E. Lim: "Ramon E. Lim" files as LIM, which comes after DELACRUZ.
+   - Ernesto D. Flores: "Ernesto D. Flores" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
+   - Atty. Benito R. Delos Reyes: "Atty. Benito R. Delos Reyes" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Danilo T. Leon: "Danilo T. Leon" files as LEON, which comes after DELMUNDO.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 82. CIVIO-CLR-FILE-POSITION-000093
+## 81. CIVIO-CLR-SPELL-WRONG-000092
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
+- competency: Spelling · concept: misspelled word
+- micro_skill: find the one misspelled word
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is misspelled?  parliamnt | transferred | schedule | surveillance
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | parliamnt | A |
+| o2 | transferred | B |
+| o3 | schedule | C |
+| o4 | surveillance | D |
+
+`answer_option_id`: o1 (parliamnt)
+
+`distractor_reasoning`: o2 = `CLR-SPELL-CORRECT-FOIL`; o3 = `CLR-SPELL-CORRECT-FOIL`; o4 = `CLR-SPELL-CORRECT-FOIL`
+
+**Reveal**
+
+1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
+2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
+3. *Why it is right.* "parliamnt" is misspelled: it drops a letter. The correct spelling is "parliament".
+4. *Why the others are wrong.*
+   - transferred: "transferred" is spelled correctly, even if it looks unusual.
+   - schedule: "schedule" is spelled correctly, even if it looks unusual.
+   - surveillance: "surveillance" is spelled correctly, even if it looks unusual.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 82. CIVIO-CLR-SPELL-WRONG-000093
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
+- competency: Spelling · concept: misspelled word
+- micro_skill: find the one misspelled word
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is misspelled?  colleague | conscientious | convenience | personel
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | colleague | A |
+| o2 | conscientious | B |
+| o3 | convenience | C |
+| o4 | personel | D |
+
+`answer_option_id`: o4 (personel)
+
+`distractor_reasoning`: o1 = `CLR-SPELL-CORRECT-FOIL`; o2 = `CLR-SPELL-CORRECT-FOIL`; o3 = `CLR-SPELL-CORRECT-FOIL`
+
+**Reveal**
+
+1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
+2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
+3. *Why it is right.* "personel" is misspelled: it doubles or undoubles a consonant. The correct spelling is "personnel".
+4. *Why the others are wrong.*
+   - colleague: "colleague" is spelled correctly, even if it looks unusual.
+   - conscientious: "conscientious" is spelled correctly, even if it looks unusual.
+   - convenience: "convenience" is spelled correctly, even if it looks unusual.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 83. CIVIO-CLR-SPELL-WRONG-000094
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
+- competency: Spelling · concept: misspelled word
+- micro_skill: find the one misspelled word
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is misspelled?  embarrass | acquaintence | inoculate | maintenance
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | embarrass | A |
+| o2 | acquaintence | B |
+| o3 | inoculate | C |
+| o4 | maintenance | D |
+
+`answer_option_id`: o2 (acquaintence)
+
+`distractor_reasoning`: o1 = `CLR-SPELL-CORRECT-FOIL`; o3 = `CLR-SPELL-CORRECT-FOIL`; o4 = `CLR-SPELL-CORRECT-FOIL`
+
+**Reveal**
+
+1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
+2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
+3. *Why it is right.* "acquaintence" is misspelled: it is spelled the way the word sounds. The correct spelling is "acquaintance".
+4. *Why the others are wrong.*
+   - embarrass: "embarrass" is spelled correctly, even if it looks unusual.
+   - inoculate: "inoculate" is spelled correctly, even if it looks unusual.
+   - maintenance: "maintenance" is spelled correctly, even if it looks unusual.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 84. CIVIO-CLR-FILE-POSITION-000095
+
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 5 (https://webstore.ansi.org/standards/arma/ansiarma122005)
+- status: draft · review_status: unreviewed
+
+**Stem:** In alphabetical filing, which name is filed LAST?  Ernesto C. Santos | Engr. Benito B. Leon | Ana B. Jose | Engr. Liza L. Reyes
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Ernesto C. Santos | A |
+| o2 | Engr. Liza L. Reyes | B |
+| o3 | Ana B. Jose | C |
+| o4 | Engr. Benito B. Leon | D |
+
+`answer_option_id`: o1 (Ernesto C. Santos)
+
+`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
+
+**Reveal**
+
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Ana B. Jose → JOSE, Ana; Engr. Benito B. Leon → LEON, Benito; Engr. Liza L. Reyes → REYES, Liza; Ernesto C. Santos → SANTOS, Ernesto.
+3. *Why it is right.* "Ernesto C. Santos" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC.
+4. *Why the others are wrong.*
+   - Engr. Liza L. Reyes: "Engr. Liza L. Reyes" sorts by the given name. Personal names file by surname first.
+   - Ana B. Jose: "Ana B. Jose" files as JOSE, which comes before SANTOS.
+   - Engr. Benito B. Leon: "Engr. Benito B. Leon" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 85. CIVIO-CLR-SPELL-WRONG-000096
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
+- competency: Spelling · concept: misspelled word
+- micro_skill: find the one misspelled word
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is misspelled?  separate | liison | rhythm | exaggerate
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | separate | A |
+| o2 | liison | B |
+| o3 | rhythm | C |
+| o4 | exaggerate | D |
+
+`answer_option_id`: o2 (liison)
+
+`distractor_reasoning`: o1 = `CLR-SPELL-CORRECT-FOIL`; o3 = `CLR-SPELL-CORRECT-FOIL`; o4 = `CLR-SPELL-CORRECT-FOIL`
+
+**Reveal**
+
+1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
+2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
+3. *Why it is right.* "liison" is misspelled: it drops a letter. The correct spelling is "liaison".
+4. *Why the others are wrong.*
+   - separate: "separate" is spelled correctly, even if it looks unusual.
+   - rhythm: "rhythm" is spelled correctly, even if it looks unusual.
+   - exaggerate: "exaggerate" is spelled correctly, even if it looks unusual.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 86. CIVIO-CLR-FILE-POSITION-000097
 
 - track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
 - competency: Filing · concept: alphabetic filing of personal names
@@ -2715,40 +2853,139 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 83. CIVIO-CLR-FILE-POSITION-000094
+## 87. CIVIO-CLR-SPELL-WRONG-000098
 
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 5 (https://webstore.ansi.org/standards/arma/ansiarma122005)
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
+- competency: Spelling · concept: misspelled word
+- micro_skill: find the one misspelled word
+- source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed FIRST?  Rosario N. Aquino | Atty. Victoria T. Pedro | Eduardo T. Lopez | Juan P. Santos-Ocampo
+**Stem:** Which word is misspelled?  separrate | exaggerate | bureaucracy | conscience
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Juan P. Santos-Ocampo | A |
-| o2 | Eduardo T. Lopez | B |
-| o3 | Rosario N. Aquino | C |
-| o4 | Atty. Victoria T. Pedro | D |
+| o1 | separrate | A |
+| o2 | exaggerate | B |
+| o3 | bureaucracy | C |
+| o4 | conscience | D |
 
-`answer_option_id`: o3 (Rosario N. Aquino)
+`answer_option_id`: o1 (separrate)
 
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
+`distractor_reasoning`: o2 = `CLR-SPELL-CORRECT-FOIL`; o3 = `CLR-SPELL-CORRECT-FOIL`; o4 = `CLR-SPELL-CORRECT-FOIL`
 
 **Reveal**
 
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Rosario N. Aquino → AQUINO, Rosario; Eduardo T. Lopez → LOPEZ, Eduardo; Atty. Victoria T. Pedro → PEDRO, Victoria; Juan P. Santos-Ocampo → SANTOSOCAMPO, Juan.
-3. *Why it is right.* "Rosario N. Aquino" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC.
+1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
+2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
+3. *Why it is right.* "separrate" is misspelled: it doubles or undoubles a consonant. The correct spelling is "separate".
 4. *Why the others are wrong.*
-   - Juan P. Santos-Ocampo: "Juan P. Santos-Ocampo" files as SANTOSOCAMPO, which comes after AQUINO.
-   - Eduardo T. Lopez: "Eduardo T. Lopez" sorts by the given name. Personal names file by surname first.
-   - Atty. Victoria T. Pedro: "Atty. Victoria T. Pedro" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - exaggerate: "exaggerate" is spelled correctly, even if it looks unusual.
+   - bureaucracy: "bureaucracy" is spelled correctly, even if it looks unusual.
+   - conscience: "conscience" is spelled correctly, even if it looks unusual.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 84. CIVIO-CLR-FILE-POSITION-000095
+## 88. CIVIO-CLR-SPELL-WRONG-000099
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
+- competency: Spelling · concept: misspelled word
+- micro_skill: find the one misspelled word
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is misspelled?  miscellaneous | occasionally | existence | accessble
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | miscellaneous | A |
+| o2 | occasionally | B |
+| o3 | existence | C |
+| o4 | accessble | D |
+
+`answer_option_id`: o4 (accessble)
+
+`distractor_reasoning`: o1 = `CLR-SPELL-CORRECT-FOIL`; o2 = `CLR-SPELL-CORRECT-FOIL`; o3 = `CLR-SPELL-CORRECT-FOIL`
+
+**Reveal**
+
+1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
+2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
+3. *Why it is right.* "accessble" is misspelled: it drops a letter. The correct spelling is "accessible".
+4. *Why the others are wrong.*
+   - miscellaneous: "miscellaneous" is spelled correctly, even if it looks unusual.
+   - occasionally: "occasionally" is spelled correctly, even if it looks unusual.
+   - existence: "existence" is spelled correctly, even if it looks unusual.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 89. CIVIO-CLR-SPELL-WRONG-000100
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
+- competency: Spelling · concept: misspelled word
+- micro_skill: find the one misspelled word
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is misspelled?  license | noticeable | vacum | achievement
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | license | A |
+| o2 | noticeable | B |
+| o3 | vacum | C |
+| o4 | achievement | D |
+
+`answer_option_id`: o3 (vacum)
+
+`distractor_reasoning`: o1 = `CLR-SPELL-CORRECT-FOIL`; o2 = `CLR-SPELL-CORRECT-FOIL`; o4 = `CLR-SPELL-CORRECT-FOIL`
+
+**Reveal**
+
+1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
+2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
+3. *Why it is right.* "vacum" is misspelled: it drops a letter. The correct spelling is "vacuum".
+4. *Why the others are wrong.*
+   - license: "license" is spelled correctly, even if it looks unusual.
+   - noticeable: "noticeable" is spelled correctly, even if it looks unusual.
+   - achievement: "achievement" is spelled correctly, even if it looks unusual.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 90. CIVIO-CLR-SPELL-WRONG-000101
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-WRONG · difficulty: medium · est: 15 s
+- competency: Spelling · concept: misspelled word
+- micro_skill: find the one misspelled word
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is misspelled?  requisition | phenomenon | pronnciation | definitely
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | requisition | A |
+| o2 | phenomenon | B |
+| o3 | pronnciation | C |
+| o4 | definitely | D |
+
+`answer_option_id`: o3 (pronnciation)
+
+`distractor_reasoning`: o1 = `CLR-SPELL-CORRECT-FOIL`; o2 = `CLR-SPELL-CORRECT-FOIL`; o4 = `CLR-SPELL-CORRECT-FOIL`
+
+**Reveal**
+
+1. *Meaning.* Exactly one of the words has a spelling mistake. The others are correct.
+2. *Shortcut.* Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.
+3. *Why it is right.* "pronnciation" is misspelled: it drops a letter. The correct spelling is "pronunciation".
+4. *Why the others are wrong.*
+   - requisition: "requisition" is spelled correctly, even if it looks unusual.
+   - phenomenon: "phenomenon" is spelled correctly, even if it looks unusual.
+   - definitely: "definitely" is spelled correctly, even if it looks unusual.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 91. CIVIO-CLR-FILE-POSITION-000102
 
 - track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
 - competency: Filing · concept: alphabetic filing of personal names
@@ -2781,300 +3018,69 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 85. CIVIO-CLR-SPELL-RIGHT-000096
-
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
-- competency: Spelling · concept: correct spelling
-- micro_skill: spot the correct spelling
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is spelled correctly?  itinerery | ittinerary | itinrary | itinerary
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | itinerery | A |
-| o2 | ittinerary | B |
-| o3 | itinrary | C |
-| o4 | itinerary | D |
-
-`answer_option_id`: o4 (itinerary)
-
-`distractor_reasoning`: o1 = `SPL-SOUND`; o2 = `SPL-DOUBLE`; o3 = `SPL-DROP`
-
-**Reveal**
-
-1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
-2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "itinerary" is the standard spelling.
-4. *Why the others are wrong.*
-   - itinerery: "itinerery" is spelled the way the word sounds. The correct spelling is "itinerary".
-   - ittinerary: "ittinerary" doubles or undoubles a consonant. The correct spelling is "itinerary".
-   - itinrary: "itinrary" drops a letter. The correct spelling is "itinerary".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 86. CIVIO-CLR-SPELL-RIGHT-000097
-
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
-- competency: Spelling · concept: correct spelling
-- micro_skill: spot the correct spelling
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is spelled correctly?  recept | reciept | recipt | receipt
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | recept | A |
-| o2 | reciept | B |
-| o3 | recipt | C |
-| o4 | receipt | D |
-
-`answer_option_id`: o4 (receipt)
-
-`distractor_reasoning`: o1 = `SPL-DROP`; o2 = `SPL-IE-EI`; o3 = `SPL-DROP`
-
-**Reveal**
-
-1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
-2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "receipt" is the standard spelling.
-4. *Why the others are wrong.*
-   - recept: "recept" drops a letter. The correct spelling is "receipt".
-   - reciept: "reciept" swaps the order of i and e. The correct spelling is "receipt".
-   - recipt: "recipt" drops a letter. The correct spelling is "receipt".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 87. CIVIO-CLR-FILE-POSITION-000098
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed FIRST?  Atty. Nora B. Delos Reyes | Benito A. Ramos | Jose E. Dela Cruz | Danilo E. Rosario
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Danilo E. Rosario | A |
-| o2 | Atty. Nora B. Delos Reyes | B |
-| o3 | Benito A. Ramos | C |
-| o4 | Jose E. Dela Cruz | D |
-
-`answer_option_id`: o4 (Jose E. Dela Cruz)
-
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Jose E. Dela Cruz → DELACRUZ, Jose; Atty. Nora B. Delos Reyes → DELOSREYES, Nora; Benito A. Ramos → RAMOS, Benito; Danilo E. Rosario → ROSARIO, Danilo.
-3. *Why it is right.* "Jose E. Dela Cruz" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Danilo E. Rosario: "Danilo E. Rosario" files as ROSARIO, which comes after DELACRUZ.
-   - Atty. Nora B. Delos Reyes: "Atty. Nora B. Delos Reyes" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-   - Benito A. Ramos: "Benito A. Ramos" sorts by the given name. Personal names file by surname first.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 88. CIVIO-CLR-SPELL-RIGHT-000099
-
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
-- competency: Spelling · concept: correct spelling
-- micro_skill: spot the correct spelling
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is spelled correctly?  acheivement | achievement | achievemment | achievemant
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | acheivement | A |
-| o2 | achievement | B |
-| o3 | achievemment | C |
-| o4 | achievemant | D |
-
-`answer_option_id`: o2 (achievement)
-
-`distractor_reasoning`: o1 = `SPL-IE-EI`; o3 = `SPL-DOUBLE`; o4 = `SPL-SOUND`
-
-**Reveal**
-
-1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
-2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "achievement" is the standard spelling.
-4. *Why the others are wrong.*
-   - acheivement: "acheivement" swaps the order of i and e. The correct spelling is "achievement".
-   - achievemment: "achievemment" doubles or undoubles a consonant. The correct spelling is "achievement".
-   - achievemant: "achievemant" is spelled the way the word sounds. The correct spelling is "achievement".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 89. CIVIO-CLR-FILE-POSITION-000100
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed FIRST?  Maria F. Dela Cruz | Corazon E. Rosario | Nora S. De Leon | Atty. Elena B. Dela Torre
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Maria F. Dela Cruz | A |
-| o2 | Atty. Elena B. Dela Torre | B |
-| o3 | Corazon E. Rosario | C |
-| o4 | Nora S. De Leon | D |
-
-`answer_option_id`: o1 (Maria F. Dela Cruz)
-
-`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Maria F. Dela Cruz → DELACRUZ, Maria; Atty. Elena B. Dela Torre → DELATORRE, Elena; Nora S. De Leon → DELEON, Nora; Corazon E. Rosario → ROSARIO, Corazon.
-3. *Why it is right.* "Maria F. Dela Cruz" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Atty. Elena B. Dela Torre: "Atty. Elena B. Dela Torre" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-   - Corazon E. Rosario: "Corazon E. Rosario" sorts by the given name. Personal names file by surname first.
-   - Nora S. De Leon: "Nora S. De Leon" files as DELEON, which comes after DELACRUZ.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 90. CIVIO-CLR-FILE-POSITION-000101
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed LAST?  Jose E. Dela Torre | Atty. Elena P. Mendoza | Dr. Ramon A. Flores | Atty. Rafael R. Santos-Ocampo
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Atty. Rafael R. Santos-Ocampo | A |
-| o2 | Atty. Elena P. Mendoza | B |
-| o3 | Dr. Ramon A. Flores | C |
-| o4 | Jose E. Dela Torre | D |
-
-`answer_option_id`: o1 (Atty. Rafael R. Santos-Ocampo)
-
-`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Jose E. Dela Torre → DELATORRE, Jose; Dr. Ramon A. Flores → FLORES, Ramon; Atty. Elena P. Mendoza → MENDOZA, Elena; Atty. Rafael R. Santos-Ocampo → SANTOSOCAMPO, Rafael.
-3. *Why it is right.* "Atty. Rafael R. Santos-Ocampo" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Atty. Elena P. Mendoza: "Atty. Elena P. Mendoza" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-   - Dr. Ramon A. Flores: "Dr. Ramon A. Flores" sorts by the given name. Personal names file by surname first.
-   - Jose E. Dela Torre: "Jose E. Dela Torre" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 91. CIVIO-CLR-FILE-POSITION-000102
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed FIRST?  Victoria R. De Leon | Mario E. Villanueva | Juan F. Dizon | Benito L. Rosario
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Juan F. Dizon | A |
-| o2 | Victoria R. De Leon | B |
-| o3 | Benito L. Rosario | C |
-| o4 | Mario E. Villanueva | D |
-
-`answer_option_id`: o2 (Victoria R. De Leon)
-
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Victoria R. De Leon → DELEON, Victoria; Juan F. Dizon → DIZON, Juan; Benito L. Rosario → ROSARIO, Benito; Mario E. Villanueva → VILLANUEVA, Mario.
-3. *Why it is right.* "Victoria R. De Leon" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Juan F. Dizon: "Juan F. Dizon" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-   - Benito L. Rosario: "Benito L. Rosario" sorts by the given name. Personal names file by surname first.
-   - Mario E. Villanueva: "Mario E. Villanueva" files as VILLANUEVA, which comes after DELEON.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
 ## 92. CIVIO-GI-DEADLINE-NUMBER-000103
 
 - track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. VII, Sec. 4
+- competency: Philippine Constitution · concept: Art. VII, Sec. 2
 - micro_skill: recall a provision
-- source: The 1987 Constitution, Art. VII, Sec. 4 (https://lawphil.net/consti/cons1987.html)
+- source: The 1987 Constitution, Art. VII, Sec. 2 (https://lawphil.net/consti/cons1987.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** How long is the term of the President under the 1987 Constitution?
+**Stem:** How many years must a person have lived in the Philippines immediately before the election to be President?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 4 years, with one re-election | A |
-| o2 | 3 years, with re-election | B |
-| o3 | 6 years, with one re-election | C |
-| o4 | 6 years, with no re-election | D |
+| o1 | 15 years | A |
+| o2 | 2 years | B |
+| o3 | 10 years | C |
+| o4 | 5 years | D |
 
-`answer_option_id`: o4 (6 years, with no re-election)
+`answer_option_id`: o3 (10 years)
 
-`distractor_reasoning`: o1 = `GI-OLD-RULE`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-SOUNDS-RIGHT`
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
 
 **Reveal**
 
-1. *Meaning.* This item is about the 1987 Constitution, Art. VII, Sec. 4.
-2. *Shortcut.* Tie the fact to its section: Art. VII, Sec. 4. One 6-year term; the President cannot be re-elected.
-3. *Why it is right.* "6 years, with no re-election" is right. Art. VII, Sec. 4 says: "The President shall not be eligible for any re-election".
+1. *Meaning.* This item is about the 1987 Constitution, Art. VII, Sec. 2.
+2. *Shortcut.* Tie the fact to its section: Art. VII, Sec. 2. Ten years of residence is required.
+3. *Why it is right.* "10 years" is right. Art. VII, Sec. 2 says: "a resident of the Philippines for at least ten years immediately preceding such election".
 4. *Why the others are wrong.*
-   - 4 years, with one re-election: "4 years, with one re-election" was the rule under an older charter, not the 1987 text.
-   - 3 years, with re-election: "3 years, with re-election" is a nearby number, but not the one in the text.
-   - 6 years, with one re-election: "6 years, with one re-election" sounds reasonable, but the text does not say it.
+   - 15 years: "15 years" is a nearby number, but not the one in the text.
+   - 2 years: "2 years" is a nearby number, but not the one in the text.
+   - 5 years: "5 years" is a nearby number, but not the one in the text.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 93. CIVIO-GI-TERM-MATCH-000104
+## 93. CIVIO-GI-DEADLINE-NUMBER-000104
 
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 4(A)
+- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. VII, Sec. 18
 - micro_skill: recall a provision
-- source: R.A. 6713, R.A. 6713, Sec. 4(A) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
+- source: The 1987 Constitution, Art. VII, Sec. 18 (https://lawphil.net/consti/cons1987.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** Under R.A. 6713, providing service to everyone without unfair discrimination regardless of party affiliation is which norm of conduct?
+**Stem:** Under the 1987 Constitution, a proclamation of martial law may not last longer than how many days without extension by Congress?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Justness and sincerity | A |
-| o2 | Professionalism | B |
-| o3 | Commitment to democracy | C |
-| o4 | Political neutrality | D |
+| o1 | 15 days | A |
+| o2 | 30 days | B |
+| o3 | 90 days | C |
+| o4 | 60 days | D |
 
-`answer_option_id`: o4 (Political neutrality)
+`answer_option_id`: o4 (60 days)
 
-`distractor_reasoning`: o1 = `GI-SIBLING-TERM`; o2 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`
 
 **Reveal**
 
-1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 4(A).
-2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 4(A). This is political neutrality, Sec. 4(A)(d).
-3. *Why it is right.* "Political neutrality" is right. R.A. 6713, Sec. 4(A) says: "Political neutrality".
+1. *Meaning.* This item is about the 1987 Constitution, Art. VII, Sec. 18.
+2. *Shortcut.* Tie the fact to its section: Art. VII, Sec. 18. Martial law is limited to 60 days unless Congress extends it.
+3. *Why it is right.* "60 days" is right. Art. VII, Sec. 18 says: "for a period not exceeding sixty days".
 4. *Why the others are wrong.*
-   - Justness and sincerity: "Justness and sincerity" is a related term, but not the one the text uses.
-   - Professionalism: "Professionalism" is a related term, but not the one the text uses.
-   - Commitment to democracy: "Commitment to democracy" is a related term, but not the one the text uses.
+   - 15 days: "15 days" is a nearby number, but not the one in the text.
+   - 30 days: "30 days" is a nearby number, but not the one in the text.
+   - 90 days: "90 days" is a nearby number, but not the one in the text.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -3086,28 +3092,28 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: The 1987 Constitution, Art. IX-B, Sec. 1(1) (https://lawphil.net/consti/cons1987.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** What is the minimum age to be appointed Chairman or Commissioner of the Civil Service Commission?
+**Stem:** How many Commissioners does the Civil Service Commission have, besides its Chairman?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 30 years old | A |
-| o2 | 35 years old | B |
-| o3 | 40 years old | C |
-| o4 | 45 years old | D |
+| o1 | Three | A |
+| o2 | Six | B |
+| o3 | Four | C |
+| o4 | Two | D |
 
-`answer_option_id`: o2 (35 years old)
+`answer_option_id`: o4 (Two)
 
-`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`
 
 **Reveal**
 
 1. *Meaning.* This item is about the 1987 Constitution, Art. IX-B, Sec. 1(1).
-2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 1(1). CSC members must be at least 35 when appointed.
-3. *Why it is right.* "35 years old" is right. Art. IX-B, Sec. 1(1) says: "at least thirty-five years of age".
+2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 1(1). The CSC has a Chairman and two Commissioners.
+3. *Why it is right.* "Two" is right. Art. IX-B, Sec. 1(1) says: "composed of a Chairman and two Commissioners".
 4. *Why the others are wrong.*
-   - 30 years old: "30 years old" is a nearby number, but not the one in the text.
-   - 40 years old: "40 years old" is a nearby number, but not the one in the text.
-   - 45 years old: "45 years old" is a nearby number, but not the one in the text.
+   - Three: "Three" is a nearby number, but not the one in the text.
+   - Six: "Six" is a nearby number, but not the one in the text.
+   - Four: "Four" is a nearby number, but not the one in the text.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -3119,193 +3125,193 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: The 1987 Constitution, Art. VI, Sec. 4 (https://lawphil.net/consti/cons1987.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** How many consecutive terms may a Senator serve?
+**Stem:** How long is the term of office of a Senator under the 1987 Constitution?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Three | A |
-| o2 | One | B |
-| o3 | Two | C |
-| o4 | No limit | D |
+| o1 | 6 years | A |
+| o2 | 4 years | B |
+| o3 | 3 years | C |
+| o4 | 9 years | D |
 
-`answer_option_id`: o3 (Two)
+`answer_option_id`: o1 (6 years)
 
-`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-SOUNDS-RIGHT`
+`distractor_reasoning`: o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
 
 **Reveal**
 
 1. *Meaning.* This item is about the 1987 Constitution, Art. VI, Sec. 4.
-2. *Shortcut.* Tie the fact to its section: Art. VI, Sec. 4. A Senator may not serve more than two terms in a row.
-3. *Why it is right.* "Two" is right. Art. VI, Sec. 4 says: "No Senator shall serve for more than two consecutive terms".
+2. *Shortcut.* Tie the fact to its section: Art. VI, Sec. 4. Senators serve 6-year terms.
+3. *Why it is right.* "6 years" is right. Art. VI, Sec. 4 says: "The term of office of the Senators shall be six years".
 4. *Why the others are wrong.*
-   - Three: "Three" is a nearby number, but not the one in the text.
-   - One: "One" is a nearby number, but not the one in the text.
-   - No limit: "No limit" sounds reasonable, but the text does not say it.
+   - 4 years: "4 years" is a nearby number, but not the one in the text.
+   - 3 years: "3 years" is a nearby number, but not the one in the text.
+   - 9 years: "9 years" is a nearby number, but not the one in the text.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 96. CIVIO-GI-TERM-MATCH-000107
+## 96. CIVIO-GI-WHO-HOLDS-POWER-000107
 
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. IX-B, Sec. 2(5)
+- track: both · domain: general_information · archetype: GI-WHO-HOLDS-POWER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. III, Sec. 19(1)
 - micro_skill: recall a provision
-- source: The 1987 Constitution, Art. IX-B, Sec. 2(5) (https://lawphil.net/consti/cons1987.html)
+- source: The 1987 Constitution, Art. III, Sec. 19(1) (https://lawphil.net/consti/cons1987.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** Under the 1987 Constitution, the right of government employees to do what shall not be denied?
+**Stem:** What does the 1987 Constitution say about the death penalty?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Strike | A |
-| o2 | Campaign for candidates | B |
-| o3 | Hold two government posts | C |
-| o4 | Self-organization | D |
+| o1 | It may be imposed by any court | A |
+| o2 | It shall not be imposed, unless Congress provides for it for compelling reasons involving heinous crimes | B |
+| o3 | It may be imposed by the President | C |
+| o4 | It is required for all heinous crimes | D |
 
-`answer_option_id`: o4 (Self-organization)
+`answer_option_id`: o2 (It shall not be imposed, unless Congress provides for it for compelling reasons involving heinous crimes)
 
-`distractor_reasoning`: o1 = `GI-SOUNDS-RIGHT`; o2 = `GI-SOUNDS-RIGHT`; o3 = `GI-SOUNDS-RIGHT`
-
-**Reveal**
-
-1. *Meaning.* This item is about the 1987 Constitution, Art. IX-B, Sec. 2(5).
-2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 2(5). Employees may form unions (self-organization).
-3. *Why it is right.* "Self-organization" is right. Art. IX-B, Sec. 2(5) says: "The right to self-organization shall not be denied to government employees".
-4. *Why the others are wrong.*
-   - Strike: "Strike" sounds reasonable, but the text does not say it.
-   - Campaign for candidates: "Campaign for candidates" sounds reasonable, but the text does not say it.
-   - Hold two government posts: "Hold two government posts" sounds reasonable, but the text does not say it.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 97. CIVIO-GI-TERM-MATCH-000108
-
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. III, Sec. 20
-- micro_skill: recall a provision
-- source: The 1987 Constitution, Art. III, Sec. 20 (https://lawphil.net/consti/cons1987.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** Under the Bill of Rights, no person shall be imprisoned for what?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Debt or non-payment of a poll tax | A |
-| o2 | Theft | B |
-| o3 | Contempt of court | C |
-| o4 | Estafa | D |
-
-`answer_option_id`: o1 (Debt or non-payment of a poll tax)
-
-`distractor_reasoning`: o2 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`; o4 = `GI-SIBLING-TERM`
+`distractor_reasoning`: o1 = `GI-WRONG-BODY`; o3 = `GI-WRONG-BODY`; o4 = `GI-SOUNDS-RIGHT`
 
 **Reveal**
 
-1. *Meaning.* This item is about the 1987 Constitution, Art. III, Sec. 20.
-2. *Shortcut.* Tie the fact to its section: Art. III, Sec. 20. No prison for debt.
-3. *Why it is right.* "Debt or non-payment of a poll tax" is right. Art. III, Sec. 20 says: "No person shall be imprisoned for debt or non-payment of a poll tax".
+1. *Meaning.* This item is about the 1987 Constitution, Art. III, Sec. 19(1).
+2. *Shortcut.* Tie the fact to its section: Art. III, Sec. 19(1). Default: no death penalty.
+3. *Why it is right.* "It shall not be imposed, unless Congress provides for it for compelling reasons involving heinous crimes" is right. Art. III, Sec. 19(1) says: "Neither shall death penalty be imposed, unless, for compelling reasons involving heinous crimes, the Congress hereafter provides for it".
 4. *Why the others are wrong.*
-   - Theft: "Theft" is a related term, but not the one the text uses.
-   - Contempt of court: "Contempt of court" is a related term, but not the one the text uses.
-   - Estafa: "Estafa" is a related term, but not the one the text uses.
+   - It may be imposed by any court: "It may be imposed by any court" names a different office or body.
+   - It may be imposed by the President: "It may be imposed by the President" names a different office or body.
+   - It is required for all heinous crimes: "It is required for all heinous crimes" sounds reasonable, but the text does not say it.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 98. CIVIO-GI-TERM-MATCH-000109
-
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. IX-B, Sec. 2(2)
-- micro_skill: recall a provision
-- source: The 1987 Constitution, Art. IX-B, Sec. 2(2) (https://lawphil.net/consti/cons1987.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** Under the 1987 Constitution, appointments in the civil service shall be made only according to what?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Seniority alone | A |
-| o2 | Merit and fitness, determined as far as practicable by competitive examination | B |
-| o3 | Recommendation of a local official | C |
-| o4 | Length of residence in the area | D |
-
-`answer_option_id`: o2 (Merit and fitness, determined as far as practicable by competitive examination)
-
-`distractor_reasoning`: o1 = `GI-SOUNDS-RIGHT`; o3 = `GI-SOUNDS-RIGHT`; o4 = `GI-SOUNDS-RIGHT`
-
-**Reveal**
-
-1. *Meaning.* This item is about the 1987 Constitution, Art. IX-B, Sec. 2(2).
-2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 2(2). Merit and fitness is the constitutional rule.
-3. *Why it is right.* "Merit and fitness, determined as far as practicable by competitive examination" is right. Art. IX-B, Sec. 2(2) says: "according to merit and fitness to be determined, as far as practicable".
-4. *Why the others are wrong.*
-   - Seniority alone: "Seniority alone" sounds reasonable, but the text does not say it.
-   - Recommendation of a local official: "Recommendation of a local official" sounds reasonable, but the text does not say it.
-   - Length of residence in the area: "Length of residence in the area" sounds reasonable, but the text does not say it.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 99. CIVIO-GI-DEADLINE-NUMBER-000110
+## 97. CIVIO-GI-DEADLINE-NUMBER-000108
 
 - track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. VIII, Sec. 7(1)
+- competency: Philippine Constitution · concept: Art. VI, Sec. 7
 - micro_skill: recall a provision
-- source: The 1987 Constitution, Art. VIII, Sec. 7(1) (https://lawphil.net/consti/cons1987.html)
+- source: The 1987 Constitution, Art. VI, Sec. 7 (https://lawphil.net/consti/cons1987.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** What is the minimum age to be appointed a member of the Supreme Court?
+**Stem:** How long is the term of a Member of the House of Representatives?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 50 years old | A |
-| o2 | 35 years old | B |
-| o3 | 40 years old | C |
-| o4 | 45 years old | D |
+| o1 | 6 years | A |
+| o2 | 2 years | B |
+| o3 | 4 years | C |
+| o4 | 3 years | D |
 
-`answer_option_id`: o3 (40 years old)
+`answer_option_id`: o4 (3 years)
+
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. VI, Sec. 7.
+2. *Shortcut.* Tie the fact to its section: Art. VI, Sec. 7. House Members serve 3-year terms.
+3. *Why it is right.* "3 years" is right. Art. VI, Sec. 7 says: "shall be elected for a term of three years".
+4. *Why the others are wrong.*
+   - 6 years: "6 years" is a nearby number, but not the one in the text.
+   - 2 years: "2 years" is a nearby number, but not the one in the text.
+   - 4 years: "4 years" is a nearby number, but not the one in the text.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 98. CIVIO-GI-DEADLINE-NUMBER-000109
+
+- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. VIII, Sec. 11
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. VIII, Sec. 11 (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** Up to what age may members of the Supreme Court hold office?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 60 years | A |
+| o2 | 75 years | B |
+| o3 | 70 years | C |
+| o4 | 65 years | D |
+
+`answer_option_id`: o3 (70 years)
 
 `distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
 
 **Reveal**
 
-1. *Meaning.* This item is about the 1987 Constitution, Art. VIII, Sec. 7(1).
-2. *Shortcut.* Tie the fact to its section: Art. VIII, Sec. 7(1). A Justice must be at least 40.
-3. *Why it is right.* "40 years old" is right. Art. VIII, Sec. 7(1) says: "must be at least forty years of age".
+1. *Meaning.* This item is about the 1987 Constitution, Art. VIII, Sec. 11.
+2. *Shortcut.* Tie the fact to its section: Art. VIII, Sec. 11. Justices serve until age 70.
+3. *Why it is right.* "70 years" is right. Art. VIII, Sec. 11 says: "until they reach the age of seventy years".
 4. *Why the others are wrong.*
-   - 50 years old: "50 years old" is a nearby number, but not the one in the text.
-   - 35 years old: "35 years old" is a nearby number, but not the one in the text.
-   - 45 years old: "45 years old" is a nearby number, but not the one in the text.
+   - 60 years: "60 years" is a nearby number, but not the one in the text.
+   - 75 years: "75 years" is a nearby number, but not the one in the text.
+   - 65 years: "65 years" is a nearby number, but not the one in the text.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 100. CIVIO-GI-WHO-HOLDS-POWER-000111
+## 99. CIVIO-GI-TERM-MATCH-000110
 
-- track: both · domain: general_information · archetype: GI-WHO-HOLDS-POWER · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. VI, Sec. 24
+- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. XI, Sec. 17
 - micro_skill: recall a provision
-- source: The 1987 Constitution, Art. VI, Sec. 24 (https://lawphil.net/consti/cons1987.html)
+- source: The 1987 Constitution, Art. XI, Sec. 17 (https://lawphil.net/consti/cons1987.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** Under the 1987 Constitution, appropriation, revenue and tariff bills must originate exclusively in which body?
+**Stem:** What must a public officer submit under oath upon assuming office and as often as required by law?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Office of the President | A |
-| o2 | House of Representatives | B |
-| o3 | Senate | C |
-| o4 | Commission on Audit | D |
+| o1 | A medical certificate | A |
+| o2 | A declaration of assets, liabilities, and net worth | B |
+| o3 | An income tax return only | C |
+| o4 | A police clearance | D |
 
-`answer_option_id`: o2 (House of Representatives)
+`answer_option_id`: o2 (A declaration of assets, liabilities, and net worth)
 
-`distractor_reasoning`: o1 = `GI-WRONG-BODY`; o3 = `GI-WRONG-BODY`; o4 = `GI-WRONG-BODY`
+`distractor_reasoning`: o1 = `GI-SOUNDS-RIGHT`; o3 = `GI-SIBLING-TERM`; o4 = `GI-SOUNDS-RIGHT`
 
 **Reveal**
 
-1. *Meaning.* This item is about the 1987 Constitution, Art. VI, Sec. 24.
-2. *Shortcut.* Tie the fact to its section: Art. VI, Sec. 24. Money bills start in the House; the Senate may propose amendments.
-3. *Why it is right.* "House of Representatives" is right. Art. VI, Sec. 24 says: "shall originate exclusively in the House of Representatives".
+1. *Meaning.* This item is about the 1987 Constitution, Art. XI, Sec. 17.
+2. *Shortcut.* Tie the fact to its section: Art. XI, Sec. 17. This is the SALN.
+3. *Why it is right.* "A declaration of assets, liabilities, and net worth" is right. Art. XI, Sec. 17 says: "submit a declaration under oath of his assets, liabilities, and net worth".
 4. *Why the others are wrong.*
-   - Office of the President: "Office of the President" names a different office or body.
-   - Senate: "Senate" names a different office or body.
-   - Commission on Audit: "Commission on Audit" names a different office or body.
+   - A medical certificate: "A medical certificate" sounds reasonable, but the text does not say it.
+   - An income tax return only: "An income tax return only" is a related term, but not the one the text uses.
+   - A police clearance: "A police clearance" sounds reasonable, but the text does not say it.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 100. CIVIO-GI-DEADLINE-NUMBER-000111
+
+- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. IX-B, Sec. 1(2)
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. IX-B, Sec. 1(2) (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** How long is the term of the Chairman of the Civil Service Commission?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 9 years, without reappointment | A |
+| o2 | 5 years, without reappointment | B |
+| o3 | 7 years, without reappointment | C |
+| o4 | 6 years, with one reappointment | D |
+
+`answer_option_id`: o3 (7 years, without reappointment)
+
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-SOUNDS-RIGHT`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. IX-B, Sec. 1(2).
+2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 1(2). CSC Chairman: one 7-year term, no reappointment.
+3. *Why it is right.* "7 years, without reappointment" is right. Art. IX-B, Sec. 1(2) says: "for a term of seven years without reappointment".
+4. *Why the others are wrong.*
+   - 9 years, without reappointment: "9 years, without reappointment" is a nearby number, but not the one in the text.
+   - 5 years, without reappointment: "5 years, without reappointment" is a nearby number, but not the one in the text.
+   - 6 years, with one reappointment: "6 years, with one reappointment" sounds reasonable, but the text does not say it.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 

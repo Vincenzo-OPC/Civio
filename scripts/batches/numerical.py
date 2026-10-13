@@ -1,6 +1,6 @@
 """Numerical Ability templates. Keys computed in code; each distractor is a coded mistake."""
 from fractions import Fraction as F
-from common import make, peso, num, Skip, FIRST, PLACES, OFFICES
+from common import make, peso, num, Skip, FIRST, PLACES, OFFICES, pronoun
 
 B = dict(track="both", domain="numerical")
 
@@ -97,13 +97,15 @@ def ratio(rng, iid):
 
 
 def work_rate(rng, iid):
-    a, b = rng.choice([(6, 3), (4, 12), (10, 15), (6, 12), (12, 4), (20, 30), (8, 24), (9, 18), (15, 10)])
+    a, b = rng.choice([(6, 3), (4, 12), (10, 15), (6, 12), (12, 4), (20, 30), (8, 24), (9, 18), (15, 10), (3, 6), (5, 20), (12, 24), (10, 40), (14, 35),
+                       (18, 9), (30, 60), (21, 28), (40, 10), (36, 12), (45, 30), (24, 8), (28, 21), (35, 14), (60, 20)])
     t = F(a * b, a + b)
     if t.denominator != 1:
         raise Skip()
     t = int(t)
     x, y = rng.sample(FIRST, 2)
-    job = rng.choice(["encode a box of survey forms", "paint a classroom", "sort a sack of mail", "inventory a supply room", "clean the plaza"])
+    job = rng.choice(["encode a box of survey forms", "paint a classroom", "sort a sack of mail", "inventory a supply room", "clean the plaza", "repack the relief goods",
+                      "scan the old land titles", "mow the school field", "label the census boxes", "wash the ambulance fleet"])
     avg = F(a + b, 2)
     fmt = lambda h: f"{num(float(h))} hours" if h != 1 else "1 hour"
     if len({t, a + b, avg, F(1, t)}) < 4:
@@ -190,7 +192,7 @@ def age(rng, iid):
     if len({P, s, s + y, P + y}) < 4:
         raise Skip()
     return make(id=iid, **B, competency="Word problems", concept="age problem", micro_skill="set up now-and-later ages", archetype="NUM-WP-ALGEBRA",
-                difficulty="hard", est=90, stem=f"{x} is {m} times as old as {('her' if rng.random() < 0.5 else 'his')} {rel}. In {y} years, {x} will be {times} as old as the {rel}. How old is {x} now?",
+                difficulty="hard", est=90, stem=f"{x} is {m} times as old as {pronoun(x)} {rel}. In {y} years, {x} will be {times} as old as the {rel}. How old is {x} now?",
                 correct=str(P),
                 wrong=[(str(s), "NUM-OTHER-SHARE", f"{s} is the {rel}'s age now, not {x}'s."),
                        (str(s + y), "NUM-OTHER-SHARE", f"{s + y} is the {rel}'s age {y} years from now."),
@@ -236,9 +238,9 @@ def order_ops(rng, iid):
 
 
 def fraction_rest(rng, iid):
-    tot = rng.choice([120, 180, 240, 360, 480, 600, 720, 900])
-    f1 = rng.choice([F(1, 3), F(1, 4), F(2, 5), F(1, 6), F(3, 8)])
-    f2 = rng.choice([F(1, 2), F(1, 3), F(1, 4), F(2, 3)])
+    tot = rng.choice([120, 180, 240, 360, 480, 600, 720, 840, 900, 960, 1080, 1200, 1440])
+    f1 = rng.choice([F(1, 3), F(1, 4), F(2, 5), F(1, 6), F(3, 8), F(1, 5), F(2, 3), F(3, 4), F(1, 8)])
+    f2 = rng.choice([F(1, 2), F(1, 3), F(1, 4), F(2, 3), F(3, 5), F(1, 6), F(3, 4)])
     used1 = tot * f1
     rest = tot - used1
     used2 = rest * f2
@@ -248,7 +250,7 @@ def fraction_rest(rng, iid):
     w1 = tot - used1 - tot * f2
     if len({left, rest, used2, w1}) < 4 or w1 <= 0:
         raise Skip()
-    it = rng.choice(["sacks of relief rice", "face masks", "seedlings", "notebooks", "liters of fuel"])
+    it = rng.choice(["sacks of relief rice", "face masks", "seedlings", "notebooks", "liters of fuel", "hygiene kits", "school chairs", "vitamin packs", "bags of cement", "rolls of tarpaulin"])
     return make(id=iid, **B, competency="Word problems", concept="fraction of the remainder", micro_skill="take a fraction of what is left",
                 archetype="NUM-FRAC-DEC", difficulty="hard", est=75,
                 stem=f"A barangay had {tot} {it}. It gave out {f1} of them on Monday and {f2} of the remaining {it} on Tuesday. How many are left?",
@@ -282,3 +284,7 @@ def rect(rng, iid):
 
 
 TEMPLATES = [pct_change, seq_diff, seq_mult, ratio, work_rate, average_join, simple_interest, age, discount, order_ops, fraction_rest, rect]
+
+MINS = {"work rate": 2, "fraction of the remainder": 2}
+CAPS = {"work rate": 3, "fraction of the remainder": 3}
+DEFAULT_CAP = 3

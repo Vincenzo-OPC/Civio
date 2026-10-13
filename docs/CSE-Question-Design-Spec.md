@@ -311,7 +311,7 @@ Distractor codes:
 - `LOG-IRRELEVANT` true statement the argument does not need
 - `LOG-MISSED-NEEDED` rejects an assumption the argument does need (v0.1.4)
 - `LOG-ORDER-SWAP` ordering: swaps the asked place with its neighbor (v0.1.4)
-- `LOG-ORDER-REVERSED` ordering: counts from the wrong end of the line (v0.1.4)
+- `LOG-ORDER-REVERSED` ordering: counts from the wrong end of the line (v0.1.4, approved by CoS)
 - `LOG-IGNORED-CLUE` ordering: an answer that is possible only if one clue is skipped (v0.1.4)
 - `DI-WRONG-CELL` read the wrong row or column
 - `DI-WRONG-BASE` percent of the wrong total
@@ -344,7 +344,8 @@ Distractor codes:
 - `CLR-TITLE-COUNTED` used a title (Dr., Mrs.) in the sort
 - `CLR-ARTICLE-COUNTED` sorted by a leading "The"
 - `CLR-FIRSTNAME-FIRST` sorted by given name
-- `CLR-LETTER-ORDER` misread the letter-by-letter order of the indexed units (v0.1.4; filing sub-reason only)
+- `CLR-SPELL-CORRECT-FOIL` a correctly spelled word that looks unusual, offered beside the one misspelled word (v0.1.4)
+- `CLR-LETTER-ORDER` misread the letter-by-letter order of the indexed units (v0.1.4, approved by CoS; filing sub-reason only)
 - `SPL-DOUBLE` doubled or undoubled consonant
 - `SPL-IE-EI` vowel order swapped
 - `SPL-DROP` missing letter
@@ -700,3 +701,4 @@ them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 3. **Codes adopted.** `LOG-MISSED-NEEDED`, `VRB-SYNONYM-TRAP`, `VRB-ANTONYM-TRAP`. Synonym and antonym traps use the VRB codes, not `RC-OPPOSITE` (which stays for reading passages). Ordering items give each wrong choice its own code (`LOG-ORDER-SWAP`, `LOG-ORDER-REVERSED`, `LOG-IGNORED-CLUE`); one code on every wrong choice fails QA.
 4. **Filing sub-reasons.** Filing distractors keep `CLR-FILE-ORDER` as the parent code. Each also gets a `distractor_subreason` that names the ARMA rule it breaks (for example "CLR-PREFIX-SPLIT: breaks ARMA Rule 6").
 5. **Dedup.** Every new stem is checked against the baseline bank (the seed scripts in `scripts/`), all earlier batches and the dev DB: exact match and near match on normalized stems.
+6. **Added the same day.** `LOG-ORDER-REVERSED`, `CLR-LETTER-ORDER` and `CLR-SPELL-CORRECT-FOIL` are approved; "which word is misspelled" items are back on. Thin topics get a floor: fractions and work rate at least 20 each, assumption/conclusion at least 15, with the room taken from topics over the per-batch cap. Every item that names a person is rescanned for pronouns that match the name.

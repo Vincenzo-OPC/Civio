@@ -12,6 +12,15 @@ PROVENANCE = {"author": "CSE (Grok Bot)", "method": "ai_assisted", "created_at":
 
 FIRST = ["Liza", "Ramon", "Teresa", "Datu", "Aling Rosa", "Mang Jun", "Bea", "Carlo", "Nonoy", "Inday", "Joy", "Paolo", "Mylene", "Arnel", "Grace",
          "Rhea", "Jomar", "Nestor", "Aileen", "Dindo", "Marites", "Efren", "Lourdes", "Bong", "Analyn", "Jun-jun", "Cora", "Rogelio", "Tess", "Kimberly"]
+FEMALE = {"Liza", "Teresa", "Aling Rosa", "Bea", "Inday", "Joy", "Mylene", "Grace", "Rhea", "Aileen", "Marites", "Lourdes", "Analyn", "Cora", "Tess", "Kimberly"}
+MALE = set(FIRST) - FEMALE  # Ramon, Datu, Mang Jun, Carlo, Nonoy, Paolo, Arnel, Jomar, Nestor, Dindo, Efren, Bong, Jun-jun, Rogelio
+
+
+def pronoun(name, kind="poss"):
+    f = name in FEMALE
+    return {"poss": "her" if f else "his", "subj": "she" if f else "he", "obj": "her" if f else "him"}[kind]
+
+
 PLACES = ["Iloilo", "Tacloban", "Cagayan de Oro", "Baguio", "Naga", "Dumaguete", "Zamboanga", "Tuguegarao", "Legazpi", "Butuan", "Vigan", "Cotabato",
           "Puerto Princesa", "Laoag", "Ormoc", "Dipolog", "Roxas", "Calbayog", "Koronadal", "Lucena"]
 OFFICES = ["municipal health office", "barangay hall", "city treasurer's office", "public library", "provincial capitol", "district hospital",

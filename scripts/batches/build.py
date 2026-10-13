@@ -76,11 +76,18 @@ def main(rnd):
                     it = gi.item(rng, "TMP", k)
                     used_facts.add(k)
                 else:
-                    tpl = GEN[dom][(made + tries) % len(GEN[dom])] if dom not in ("verbal_en", "clerical") else rng.choice(GEN[dom])
+                    tpl = rng.choice(GEN[dom])
                     it = tpl(rng, "TMP")
-                    if dom == "verbal_en":
-                        have = sum(1 for x in items if x["domain"] == dom and x["concept"] == it["concept"])
-                        if have >= verbal.CAPS.get(it["concept"], 2):
+                    have = sum(1 for x in items if x["domain"] == dom and x["concept"] == it["concept"])
+                    if dom == "verbal_en" and have >= verbal.CAPS.get(it["concept"], 2):
+                        continue
+                    mod = {"numerical": numerical, "analytical": analytical}.get(dom)
+                    if mod:
+                        if have >= mod.CAPS.get(it["concept"], getattr(mod, "DEFAULT_CAP", 99)):
+                            continue
+                        unmet = {c: m - sum(1 for x in items if x["domain"] == dom and x["concept"] == c) for c, m in mod.MINS.items()}
+                        need = sum(v for v in unmet.values() if v > 0)
+                        if need and tries < 5000 and n - made <= need and unmet.get(it["concept"], 0) <= 0:
                             continue
                     fr = it.get("_frame")
                     if fr and sum(1 for x in items if x.get("gen_frame") == fr) >= 2:

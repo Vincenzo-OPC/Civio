@@ -80,7 +80,7 @@ def spell_wrong(rng, iid):
     others = rng.sample([x for x in WORDS if x != w], 3)
     it = make(id=iid, **B, competency="Spelling", concept="misspelled word", micro_skill="find the one misspelled word", archetype="CLR-SPELL-WRONG",
               difficulty="medium", est=15, stem="Which word is misspelled?", correct=bad,
-              wrong=[(o, "CLR-SPELL-WRONG", f"\"{o}\" is spelled correctly, even if it looks unusual.") for o in others],
+              wrong=[(o, "CLR-SPELL-CORRECT-FOIL", f"\"{o}\" is spelled correctly, even if it looks unusual.") for o in others],
               terms="Exactly one of the words has a spelling mistake. The others are correct.",
               shortcut="Scan for the usual traps: double letters, i and e order, dropped vowels and sound-alike endings.",
               why_correct=f"\"{bad}\" is misspelled: it {MISS[code]}. The correct spelling is \"{w}\".", rng=rng)
@@ -187,5 +187,4 @@ def file_position(rng, iid):
     return it
 
 
-# spell_wrong is off: its distractors are correctly spelled words, and spec v0.1.4 has no distractor code for that trap.
-TEMPLATES = [spell_right, file_position]
+TEMPLATES = [spell_right, spell_wrong, file_position]  # spell_wrong foils use CLR-SPELL-CORRECT-FOIL (CoS, v0.1.4)

@@ -140,6 +140,11 @@ def solve_ana(it):
             (x, y), (nx, p_) = alls[0], no[0]
             return f"No {x} are {p_}." if nx == y else None
         return None
+    if a == "ANA-ASSUME-I-II" and not it.get("_legacy"):
+        import assume
+        for st, a1, a2, key in assume.ROWS:
+            if s.startswith(f"Statement: {st}"):
+                return analytical.OPT[key]
     if a.startswith("ANA-ANALOGY"):
         m = re.match(r"(.+?) : (.+?) :: ____$", s) or re.match(r"(.+?) is to (.+?) as ____\.$", s) or re.search(r'"(.+?) : (.+?)"', s) or re.search(r'"(.+?)" and "(.+?)"', s)
         if not m:
@@ -207,8 +212,39 @@ def key_text(it):
     return next(o["text"] for o in it["options"] if o["option_id"] == it["answer_option_id"])
 
 
+from common import FIRST, FEMALE
+
+PRON_F, PRON_M = {"she", "her", "hers", "herself"}, {"he", "him", "his", "himself"}
+
+
+def pronoun_errors(it):
+    """Rescan every text field that mentions a person: a sentence with exactly one named person must use matching pronouns."""
+    out = []
+    texts = [it["stem"], it["reveal"]["shortcut"], it["reveal"]["why_correct"], *it["reveal"]["why_wrong"].values(), *(o["text"] for o in it["options"])]
+    for t in texts:
+        for sent in re.split(r"(?<=[.?!])\s+", t):
+            names = [n for n in FIRST if re.search(r"\b%s\b" % re.escape(n), sent)]
+            if len(names) != 1:
+                continue
+            low = sent.lower()
+            f = names[0] in FEMALE
+            rel = r"(son|daughter|nephew|niece|child|children|father|mother|brother|sister|staff|office|desk|team)"
+            # "his son" / "her niece": the pronoun is the named person's, so it must match the name
+            for pr in re.findall(r"\b(his|her)\s+" + rel + r"\b", low):
+                if (pr[0] == "his") == f:
+                    out.append(f"pronoun does not match {names[0]}: {sent[:60]}")
+            # other pronouns are fine only if a person of that gender is also in the sentence
+            rest = re.sub(r"\b(his|her)\s+" + rel + r"\b", " ", low)
+            words = set(re.findall(r"[a-z]+", rest))
+            male_rel = words & {"son", "nephew", "father", "brother", "man", "boy"}
+            fem_rel = words & {"daughter", "niece", "mother", "sister", "woman", "girl"}
+            if (f and words & PRON_M and not male_rel) or (not f and words & PRON_F and not fem_rel):
+                out.append(f"pronoun does not match {names[0]}: {sent[:60]}")
+    return out
+
+
 def check_item(it):
-    errs = []
+    errs = pronoun_errors(it)
     for k in REQ:
         if k not in it:
             errs.append(f"missing {k}")

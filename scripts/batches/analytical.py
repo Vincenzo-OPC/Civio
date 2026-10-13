@@ -273,4 +273,33 @@ def analogy(rng, iid, frame=None):
     return it
 
 
-TEMPLATES = [letter_series, code_shift, ranking, di_table, di_table, syllogism, analogy]
+import assume as _A
+OPT = {"I": "Only I", "II": "Only II", "both": "Both I and II", "neither": "Neither I nor II"}
+
+
+def assumption(rng, iid):
+    st, a1, a2, key = rng.choice(_A.ROWS)
+    why = {"I": f"Only assumption I is needed. II (\"{a2}\") is not required by the statement.",
+           "II": f"Only assumption II is needed. I (\"{a1}\") is not required by the statement.",
+           "both": "Both assumptions are needed for the plan to make sense.", "neither": "Neither assumption is needed; both go beyond the statement."}
+    code = {("I", "II"): "LOG-IRRELEVANT", ("I", "both"): "LOG-COULD-NOT-MUST", ("I", "neither"): "LOG-MISSED-NEEDED",
+            ("II", "I"): "LOG-IRRELEVANT", ("II", "both"): "LOG-COULD-NOT-MUST", ("II", "neither"): "LOG-MISSED-NEEDED",
+            ("both", "I"): "LOG-MISSED-NEEDED", ("both", "II"): "LOG-MISSED-NEEDED", ("both", "neither"): "LOG-MISSED-NEEDED",
+            ("neither", "I"): "LOG-COULD-NOT-MUST", ("neither", "II"): "LOG-COULD-NOT-MUST", ("neither", "both"): "LOG-COULD-NOT-MUST"}
+    expl = {"LOG-IRRELEVANT": "picks the assumption the statement does not need and drops the one it does",
+            "LOG-COULD-NOT-MUST": "accepts an assumption that is merely plausible, not required",
+            "LOG-MISSED-NEEDED": "rejects an assumption the statement does need"}
+    wr = [(OPT[k], code[(key, k)], f"\"{OPT[k]}\" {expl[code[(key, k)]]}.") for k in OPT if k != key]
+    it = make(id=iid, **B, competency="Assumptions and conclusions", concept="assumption", micro_skill="spot an assumption the statement needs",
+              archetype="ANA-ASSUME-I-II", difficulty="medium", est=60,
+              stem=f"Statement: {st}\nAssumption I: {a1}\nAssumption II: {a2}\nWhich assumption is implicit in the statement?", correct=OPT[key], wrong=wr,
+              terms="An \"implicit assumption\" is something the speaker must take as true for the statement to make sense, even if it is not said.",
+              shortcut="Negate each assumption. If the statement stops making sense, the assumption is needed.", why_correct=f"\"{OPT[key]}\" is right. {why[key]}", rng=rng)
+    it["_sig"] = "ASM:" + st
+    return it
+
+
+TEMPLATES = [letter_series, code_shift, ranking, di_table, syllogism, analogy, assumption]
+# per-batch minimums (CoS: assumption/conclusion at least 15) and caps (take room from over-full topics)
+MINS = {"assumption": 2}
+CAPS = {"letter series": 5, "letter coding": 5, "table reading": 6, "ordering": 4, "syllogism": 5, "analogy": 4, "assumption": 2}

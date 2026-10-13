@@ -1,0 +1,21 @@
+"""Hand-written assumption items (ANA-ASSUME-I-II). Row: (statement, assumption I, assumption II, key) with key in I, II, both, neither."""
+ROWS = [
+    ("The barangay will post the new garbage schedule on every street corner so residents know their pickup day.", "Residents can read the posted schedule.", "Every resident owns a mobile phone.", "I"),
+    ("The city hall added a second cashier window to cut the long lines on payday.", "One more window can serve more people at the same time.", "The cashiers on the first window are lazy.", "I"),
+    ("The school asks parents to sign a form before students join the field trip.", "Parents' consent matters for the trip.", "All students dislike field trips.", "I"),
+    ("To save power, the office will switch off the air conditioners at 5 p.m.", "Running the air conditioners uses electricity.", "No one works after 5 p.m.", "I"),
+    ("The health center will open on Saturdays so working mothers can bring their babies for vaccines.", "Some working mothers cannot come on weekdays.", "Vaccines given on Saturday work better.", "I"),
+    ("The mayor asked residents to report clogged canals through the new hotline.", "Residents can reach the hotline.", "The hotline will end all flooding in the town.", "I"),
+    ("Applicants must bring a valid ID so the clerk can confirm who they are.", "Any paper with a name on it will do.", "A valid ID shows who the holder is.", "II"),
+    ("The library will extend its hours during exam week because more students come to study.", "Students study only in libraries.", "Demand for the library rises during exam week.", "II"),
+    ("The engineering office will repair the bridge before the rainy season starts.", "The rainy season could make the damage worse or the repair harder.", "The bridge was built last year.", "II"),
+    ("The cooperative will train members to keep simple records of their sales.", "All members already keep perfect records.", "Simple records can help members run their business.", "II"),
+    ("The town will plant trees along the river to slow down soil erosion.", "Tree roots can help hold soil in place.", "Planting trees costs nothing.", "I"),
+    ("The office will print forms in both English and Filipino so every visitor can fill them out.", "Some visitors read Filipino more easily than English.", "Some visitors read English more easily than Filipino.", "both"),
+    ("The treasurer will send payment reminders by text and by letter to reach all taxpayers.", "Some taxpayers may not get text messages.", "Some taxpayers may not read mailed letters.", "both"),
+    ("The market will put up signs with prices to stop vendors from overcharging.", "Buyers can see posted prices.", "Some vendors have charged more than the fair price.", "both"),
+    ("The guard keeps a logbook of visitors to the records room.", "Knowing who entered the records room is useful.", "Records can be needed later, so who handled them matters.", "both"),
+    ("The barangay held its assembly in the covered court.", "Everyone in the barangay plays basketball.", "The covered court is the largest room in the province.", "neither"),
+    ("The office replaced its old printer with a faster one.", "The new printer will never break down.", "Faster printers are always cheaper.", "neither"),
+    ("The town band played at the opening of the new public market.", "Every vendor in the market is a musician.", "The market will close if the band does not play again.", "neither"),
+]
