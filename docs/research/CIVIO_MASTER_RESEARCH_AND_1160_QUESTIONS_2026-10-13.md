@@ -2,17 +2,17 @@
 
 Snapshot date: 13 October 2026
 Compiled from Vincenzo-OPC/Civio repository source files. This is a self-contained text dossier; source JSON files remain the canonical inputs.
-IMPORTANT: Contains 1,160 questions, not 1,160 independently verified questions. Of these, 10 are marked approved/passed and 1,150 draft/unreviewed. These flags reflect repository metadata, not an independent factual audit. DO NOT ACTIVATE unreviewed content. No production deployment was made.
+IMPORTANT: Contains 1,160 questions, not 1,160 independently verified questions. The original 1,010 are now marked approved/passed in the repository following commit 4a996c2 (Chief of Staff approval), while the three new supplements total 150 draft/unreviewed. This approval is repository metadata, NOT independent verification by this assistant. These flags reflect repository metadata, not an independent factual audit. DO NOT ACTIVATE unreviewed content. No production deployment was made.
 
 ## Scope, constraints, and key research findings
 
 The official CSC Examination Announcement No. 03, s. 2026 covers the CSE-PPT. SUBPROFESSIONAL: General Information (1987 Constitution; R.A. 6713; peace/human rights; environmental management and protection), Verbal Ability (English and Filipino, including word meaning, sentence completion, error recognition, sentence structure, paragraph organization and reading comprehension), Numerical Ability (English: basic operations, sequence and word problems), and Clerical Ability (English: filing and spelling). PROFESSIONAL replaces Clerical with Analytical Ability. No official CSC subtest percentage weights have been established from that announcement; Civio practice proportions are NOT claimed to be official. The cited passing standard is at least 80.00; calculator use is banned for the cited exam. Civio is not affiliated with CSC.
 
-Existing batches 001–011: 1,010 entries. Domain totals: 303 Numerical, 251 Analytical, 203 English Verbal, 151 Clerical, 102 General Information. All 1,010 were tagged language=en, exposing a Filipino language gap. Of the existing bank 10 were approved and 1,000 remain unreviewed. Its 34 archetypes include many highly repeated templates, so precise similarity checking is needed despite zero identical existing stems and IDs.
+Existing batches 001–011: 1,010 entries. Domain totals: 303 Numerical, 251 Analytical, 203 English Verbal, 151 Clerical, 102 General Information. All 1,010 were tagged language=en, exposing a Filipino language gap. IMPORTANT UPDATED STATUS: As of commit 4a996c2, all 1,010 existing items are flagged approved/passed by Chief of Staff after fixes. Earlier in this session only 10 were flagged passed. Status flags changed concurrently; independently check the claimed approvals and question accuracy rather than relying on flags alone. Its 34 archetypes include many highly repeated templates, so precise similarity checking is needed despite zero identical existing stems and IDs.
 
 New content created in this session: 80 original Filipino Verbal drafts (24 vocabulary, 20 completion, 10 grammar/structure, 20 comprehension, 6 organization); 30 original General Information drafts with primary-law links, adding environmental and human-rights coverage; and 40 original Clerical drafts (8 surname filing, 6 reference-number filing, 6 chronological filing, 20 spelling). These underwent structural/uniqueness checks, and filing-answer sorting was recomputed. They are not yet fully independently reviewed.
 
-The importer was modified to require status=approved AND review_status=passed before active import, with regression tests. The most recently observed CI completed successfully on the new supplement test; later documentation-only CI was running. Do not claim a green full release or live availability.
+The importer was modified to require status=approved AND review_status=passed before active import, with regression tests. At compilation the supplement regression tests had passed; subsequent CI status may change. Check latest GitHub Actions before publishing. Do not claim a green full release or live availability.
 
 Official source: https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2026/ExamAnn_2026_03_Conduct%20of%2009%20Aug%202026%20CSE-PPT_orig%20signed.pdf
 1987 Constitution: https://lawphil.net/consti/cons1987.html
@@ -16029,7 +16029,9 @@ them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 
 
 
-## Existing build audit and release constraints (source copy)
+## Historical build audit and release constraints (snapshot before concurrent approval metadata update)
+
+NOTE: The audit text below was committed before the 4a996c2 bulk approval record and therefore contains outdated counts for passed/unreviewed items. Use the UPDATED STATUS in this master document and actual JSON metadata instead.
 
 # Civio · Subprofessional Bank Build and Release Audit
 
