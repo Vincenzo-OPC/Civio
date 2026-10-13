@@ -191,9 +191,13 @@ inline script.
       data interpretation 25
     - Clerical: filing 55 / spelling 45
     - GI: Constitution 40 / RA 6713 35 / peace and human rights 15 / environment 10
-3. **Filing Rules v1 (all 5 dropped 2026-10-13, no CSC source; see spec 10.1):** surname first; letter by letter; prefixes are part of the
-   surname; titles and suffixes only break ties; a leading "The" is ignored. Each
-   filing item cites its rule. Disputed cases wait for v1.1.
+3. **Filing Rules v2 (CoS ruling 2026-10-13, spec v0.1.3 section 10.2):** ARMA
+   International Simplified Filing Standard Rules 1-8 (unit order and letter by
+   letter; minor words and symbols with a leading "The" last; punctuation ignored;
+   initials and abbreviations; titles and suffixes last; prefixes joined; digits
+   before letters; organizations as written). v1 was dropped because CSC publishes
+   no filing rules. Every filing Reveal must say the rule is the standard office
+   rule (ARMA), not CSC-published, and cite its rule number.
 4. **First release is text only.** Text tables are fine. Figures wait for an image
    pipeline with alt text and a text fallback.
 5. **Review flow:** CSE authors; Chief of Staff reviews (Codex as alternate); GT

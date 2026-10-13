@@ -1,6 +1,6 @@
 # Civio CSE Question Design Spec
 
-Version: 0.1.2 (CoS condition: Filing Rules need CSC citations; see 10.1)
+Version: 0.1.3 (CoS ruling: Filing Rules v2 from ARMA simplified rules; see 10.2)
 Date: 5 Oct 2026 (Asia/Manila); approved 7 Oct 2026
 Owner: GT
 Status: **Approved by GT on 7 Oct 2026.** The canonical copy lives in GT's Obsidian vault; this repo copy
@@ -640,7 +640,7 @@ them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 
 *End of spec.*
 
-## 10.1 Civio Filing Rules v1: CSC source check (v0.1.2, 2026-10-13)
+## 10.1 Civio Filing Rules v1: CSC source check (v0.1.2, 2026-10-13; superseded by 10.2)
 
 **Condition from Chief of Staff (GT delegated Civio decisions):** every rule in Civio Filing Rules v1 must cite a CSC source link; any rule without one is dropped.
 
@@ -655,3 +655,27 @@ them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 | 5 | Leading "The" ignored | None | **Dropped** |
 
 **Effect:** Civio Filing Rules v1 has no rules in force. Write no filing items (CLR-FILE-*) and put none in the bank until CoS rules on a source standard that is not from CSC. Clerical spelling items are unaffected. The CSC announcement link above stays the scope citation for the Clerical "Filing" area.
+
+## 10.2 Civio Filing Rules v2: ARMA simplified rules (v0.1.3, 2026-10-13)
+
+**Chief of Staff ruling (GT delegated Civio decisions), 2026-10-13:** CSC publishes no filing rulebook (see 10.1), so ARMA International's Simplified Filing Standard Rules (alphabetic filing) are the approved source. Civio Filing Rules v2 replace v1 and the 10.1 drop. Each rule cites ARMA.
+
+**Sources (checked on the web 2026-10-13):**
+- [A1] ARMA International, *Alphabetic Filing Rules*, ANSI/ARMA 1-1995 (3rd ed.). Listing: https://webstore.ansi.org/standards/arma/ansiarma1995
+- [A2] ARMA International, *Establishing Alphabetic, Numeric and Subject Filing Systems*, ANSI/ARMA 12-2005 (ARMA: "contains standard rules for indexing alphabetic data"). Listings: https://webstore.ansi.org/standards/arma/ansiarma122005 and https://www.pathlms.com/arma-international/courses/57497 . ARMA's standards page: https://www.arma.org/general/custom.asp?page=standards
+- Note: A1 and A2 are paid documents, and I found no ARMA-hosted free copy of the "Simplified Filing Standard Rules". The rule numbers and wording below were checked against public reproductions that cite ARMA, for example https://www.slideserve.com/dane-keller/arma-filing-rules . Check against a licensed copy of A2 before you rely on a fine point.
+
+| # | Civio rule (ARMA simplified rule) | Citation |
+| --- | --- | --- |
+| 1 | **Indexing order of units.** Personal names: surname, then given name, then middle name or initial. Business names: as written. Compare unit by unit, letter by letter; "nothing comes before something" (Baker before Bakersly). | ARMA Simplified Filing Standard Rules, Rule 1 [A2] |
+| 2 | **Minor words and symbols in business names.** Articles, prepositions, conjunctions and symbols (&, %, $) are separate units; a symbol is indexed as if spelled out. "The" as the first word is the last unit. | Rule 2 [A2] |
+| 3 | **Punctuation and possessives.** Ignore all punctuation; a hyphenated name is one unit (Garcia-Lopez = GarciaLopez). | Rule 3 [A2] |
+| 4 | **Single letters and abbreviations.** Initials in personal names are separate units. Abbreviated given names and nicknames are indexed as written. Business acronyms and abbreviations are indexed as written. | Rule 4 [A2] |
+| 5 | **Titles and suffixes.** A title before a name (Dr., Atty., Engr.) or a seniority or professional suffix after it (Jr., III, CPA) is the last unit. Numeric suffixes file before alphabetic ones. | Rule 5 [A2] |
+| 6 | **Prefixes, articles and particles.** A prefix (de, de la, del, Mac, Mc, O', San, Van) joins the part that follows into one unit (De la Cruz = DelaCruz, filed under D). | Rule 6 [A2] |
+| 7 | **Numbers in business names.** Digits file before letters, in ascending order. Arabic numerals file before Roman numerals. Spelled-out numbers file alphabetically. Ignore ordinal endings (1st = 1). | Rule 7 [A2] |
+| 8 | **Organizations and institutions.** Index the name as written on the letterhead. | Rule 8 [A2] |
+
+**Reveal wording (required on every filing item):** "This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule N), not a rule published by the CSC." Every filing item cites its rule number in `source`, for example "Civio Filing Rules v2 / ARMA Rule 6".
+
+**Still out until v2.1:** identical names filed by address and government-agency names (ARMA rules 9 and 10). I did not verify these against a source here.
