@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-#[Fillable(['subcategory_id', 'language', 'stem', 'options', 'correct_option', 'explanation', 'created_by', 'status', 'source_group'])]
+#[Fillable(['subcategory_id', 'language', 'stem', 'options', 'correct_option', 'explanation', 'created_by', 'status', 'source_group', 'replaces_question_id', 'offline_eligible'])]
 class Question extends Model
 {
     use HasFactory;
@@ -34,6 +34,7 @@ class Question extends Model
             'status' => QuestionStatus::class,
             'source_group' => QuestionSourceGroup::class,
             'offline_eligible' => 'boolean',
+            'replaces_question_id' => 'integer',
         ];
     }
 
