@@ -262,7 +262,9 @@ def check_item(it):
     for f in ("terms", "shortcut", "why_correct"):
         if not it["reveal"].get(f):
             errs.append(f"reveal.{f} empty")
-    if it["status"] != "draft" or it["source_group"] != "civio":
+    approved = (it["status"] == "approved" and it.get("review_status") == "passed"
+                and it.get("reviewer") and it.get("reviewed_at"))
+    if not (it["status"] == "draft" or approved) or it["source_group"] != "civio":
         errs.append("status/source_group")
     for o in it["options"]:
         if re.search(r"\b(choice|option|letter) [A-D]\b", it["reveal"]["why_correct"] + " ".join(it["reveal"]["why_wrong"].values())):

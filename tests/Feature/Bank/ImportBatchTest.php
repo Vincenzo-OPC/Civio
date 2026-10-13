@@ -64,7 +64,17 @@ test('a generated batch imports as drafts with --status=draft, all 100 items, no
 });
 
 test('generated unreviewed items cannot be activated even when the operator omits draft mode', function () {
-    $path = base_path('docs/batches/batch-002.json');
+    // batch-002 is now CoS-approved, so rebuild an unreviewed copy of it as the fixture.
+    $batch = json_decode(file_get_contents(base_path('docs/batches/batch-002.json')), true);
+    foreach ($batch['items'] as &$item) {
+        $item['status'] = 'draft';
+        $item['review_status'] = 'unreviewed';
+        $item['reviewer'] = null;
+        $item['reviewed_at'] = null;
+    }
+    unset($item);
+    $path = tempnam(sys_get_temp_dir(), 'unreviewed-batch-');
+    file_put_contents($path, json_encode($batch));
 
     $this->artisan('civio:import-batch', ['path' => $path])
         ->expectsOutputToContain('active import requires status=approved and review_status=passed')
