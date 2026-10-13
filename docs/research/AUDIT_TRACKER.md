@@ -116,3 +116,13 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **Change record:** `round-02-fixes.json` stays, with `replaces` (old stem and key) for each item.
 - **Checks:** `qa_all.py --no-fixes` is GREEN on the committed files. The Bank Pest tests were updated for the approved supplements and the shortcut render.
 - **Local DB:** imported on the MSI. Old-stem rows were set to draft (retired, with history kept).
+
+## Round 03 (2026-10-13): ChatGPT batch 001 (100 Filipino Verbal)
+
+- **Results:**
+  - `qa.py` reports 0 flags.
+  - 0 duplicates against 1,207 bank stems or the baseline.
+  - No order key matches its listed order.
+- **Fixes:** 040005 had two possible keys and is fixed. 040018 marked the wrong word. 040044 had the wrong code. 040047 had a spelling error. 040069 and 040070 were rewritten as applied din/rin and daw/raw items.
+- **Status:** all 100 stay draft. Review request: `audit/round-03-chatgpt-001-review-request.md`.
+- **Next:** CoS verdict, then round 03b on the baseline bank (550).

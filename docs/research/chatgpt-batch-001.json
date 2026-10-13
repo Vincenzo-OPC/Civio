@@ -268,7 +268,7 @@
         },
         {
           "option_id": "o2",
-          "text": "pag-aalala"
+          "text": "pagtataka"
         },
         {
           "option_id": "o3",
@@ -286,7 +286,7 @@
         "why_correct": "\"pagdududa\" ang tamang sagot. Kulang pa ang katibayan kaya may pagdududa.",
         "why_wrong": {
           "o1": "\"katiyakan\" — walang pag-aalinlangan",
-          "o2": "\"pag-aalala\" — pagkabahala, hindi kinakailangang pagdududa sa impormasyon",
+          "o2": "Ang pagtataka ay pagkamangha o pagkalito, hindi pag-aalinlangan sa katiyakan.",
           "o3": "\"lubos na pagtanggi\" — mas tiyak na pasya kaysa pagdududa"
         }
       },
@@ -308,7 +308,7 @@
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040006",
@@ -1053,7 +1053,7 @@
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "fil",
-      "stem": "Sa pangungusap na \"UUNAHIN ng ospital ang mga kasong may kagyat na pangangailangan sa lunas.\" ano ang pinakamalapit na kahulugan ng \"KAGYAT\"?",
+      "stem": "Sa pangungusap na \"Uunahin ng ospital ang mga kasong may KAGYAT na pangangailangan sa lunas.\" ano ang pinakamalapit na kahulugan ng \"KAGYAT\"?",
       "options": [
         {
           "option_id": "o1",
@@ -1101,7 +1101,7 @@
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
     },
     {
       "id": "CIVIO-VFIL-KASINGKAHULUGAN-040019",
@@ -2672,7 +2672,7 @@
       "distractor_reasoning": {
         "o2": "FIL-SAME-FIELD",
         "o3": "FIL-SYNONYM-TRAP",
-        "o4": "FIL-INTENSITY"
+        "o4": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2687,7 +2687,7 @@
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
     },
     {
       "id": "CIVIO-VFIL-KASALUNGAT-040045",
@@ -2845,7 +2845,7 @@
       "reveal": {
         "terms": "Ang sawikain ay may matalinghagang kahulugan, kaya hindi sapat ang literal na pagbasa.",
         "shortcut": "Naubos ang kanyang magagamit na pera.",
-        "why_correct": "\"halos wala nang pera\" ang tamang sagot. Naubos ang kanyang magagamit na pera.",
+        "why_correct": "\"halos wala nang pera\" ang tamang sagot. Naubos ang kaniyang magagamit na pera.",
         "why_wrong": {
           "o1": "\"may pisikal na sira ang bulsa\" — literal na butas sa damit",
           "o3": "\"may maliit na kulang sa sukli\" — hindi kasimbigat ng naubos na pera",
@@ -2870,7 +2870,7 @@
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
     },
     {
       "id": "CIVIO-VFIL-WIKAIN-040048",
@@ -4164,40 +4164,40 @@
       "difficulty": "medium",
       "est_seconds": 40,
       "language": "fil",
-      "stem": "Batay sa paliwanag ng Komisyon sa Wikang Filipino, alin ang tamang pagtingin sa anyong 'din' at 'rin'?",
+      "stem": "Aling pangungusap ang wasto ang gamit ng 'din' at 'rin'?",
       "options": [
         {
           "option_id": "o1",
-          "text": "Ipinagbabawal ang 'din' kapag nauuna ang salitang nagtatapos sa patinig."
+          "text": "Darating rin ang tulong; handa din ang mga boluntaryo."
         },
         {
           "option_id": "o2",
-          "text": "Ang 'rin' lamang ang katanggap-tanggap sa lahat ng pangungusap."
+          "text": "Darating din ang tulong; handa din ang mga boluntaryo."
         },
         {
           "option_id": "o3",
-          "text": "Hindi ginagamit ang 'rin' sa makabagong Filipino."
+          "text": "Darating din ang tulong; handa rin ang mga boluntaryo."
         },
         {
           "option_id": "o4",
-          "text": "Karaniwang nakadepende sa naunang tunog ang pagpili, ngunit hindi laging maituturing na mali ang isang anyo."
+          "text": "Darating rin ang tulong; handa rin ang mga boluntaryo."
         }
       ],
-      "answer_option_id": "o4",
+      "answer_option_id": "o3",
       "reveal": {
         "terms": "Ang tuntuning panggramatika ay nasusuri sa tungkulin ng salita sa buong pangungusap.",
         "shortcut": "Iwasang gawing absolute right/wrong ang palitang din/rin dahil kinikilala ng KWF ang aktuwal na baryasyon.",
-        "why_correct": "\"Karaniwang nakadepende sa naunang tunog ang pagpili, ngunit hindi laging maituturing na mali ang isang anyo.\" ang tamang sagot. Iwasang gawing absolute right/wrong ang palitang din/rin dahil kinikilala ng KWF ang aktuwal na baryasyon.",
+        "why_correct": "\"Darating din ang tulong; handa rin ang mga boluntaryo.\" ang tamang sagot. \"Din\" pagkatapos ng salitang nagtatapos sa katinig (darating); \"rin\" pagkatapos ng patinig o malapatinig na w/y (handa).",
         "why_wrong": {
-          "o1": "\"Ipinagbabawal ang 'din' kapag nauuna ang salitang nagtatapos sa patinig.\" — Hindi absolutong pagbabawal ang tradisyonal na gabay.",
-          "o2": "\"Ang 'rin' lamang ang katanggap-tanggap sa lahat ng pangungusap.\" — May gamit ang din at rin, kaya hindi iisang anyo lamang.",
-          "o3": "\"Hindi ginagamit ang 'rin' sa makabagong Filipino.\" — Karaniwan pa ring ginagamit ang rin."
+          "o1": "Baligtad: \"rin\" pagkatapos ng katinig at \"din\" pagkatapos ng patinig.",
+          "o2": "Tama ang \"darating din\", pero patinig ang dulo ng \"handa\", kaya \"rin\".",
+          "o4": "Tama ang \"handa rin\", pero katinig ang dulo ng \"darating\", kaya \"din\"."
         }
       },
       "distractor_reasoning": {
         "o1": "FIL-SPOKEN-FORM",
-        "o2": "FIL-SAME-FIELD",
-        "o3": "FIL-SPOKEN-FORM"
+        "o2": "FIL-SPOKEN-FORM",
+        "o4": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio; Komisyon sa Wikang Filipino, Ortograpiyang Pambansa (2013), Section 8.1, as published in DepEd Order No. 34, s. 2013.",
       "source_url": "https://www.deped.gov.ph/wp-content/uploads/2013/08/DO_s2013_034.pdf",
@@ -4212,7 +4212,7 @@
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040070",
@@ -4225,40 +4225,40 @@
       "difficulty": "medium",
       "est_seconds": 40,
       "language": "fil",
-      "stem": "Sa talakayan sa wika, alin ang tumpak na pahayag tungkol sa 'daw' at 'raw'?",
+      "stem": "Aling pangungusap ang wasto ang gamit ng 'daw' at 'raw'?",
       "options": [
         {
           "option_id": "o1",
-          "text": "'Daw' lamang ang kinikilala at hindi maaaring gamitin ang 'raw'."
+          "text": "Uuwi daw si Ben, at aalis raw si Lito."
         },
         {
           "option_id": "o2",
-          "text": "'Raw' ang ginagamit lamang para sa mga pangngalang pantangi."
+          "text": "Uuwi raw si Ben, at aalis daw si Lito."
         },
         {
           "option_id": "o3",
-          "text": "Pareho silang panandang pampahayag ng narinig, at karaniwang may palitang d/r ayon sa naunang tunog."
+          "text": "Uuwi raw si Ben, at aalis raw si Lito."
         },
         {
           "option_id": "o4",
-          "text": "Ang 'raw' ay pananda ng pagmamay-ari samantalang ang 'daw' ay panghalip."
+          "text": "Uuwi daw si Ben, at aalis daw si Lito."
         }
       ],
-      "answer_option_id": "o3",
+      "answer_option_id": "o2",
       "reveal": {
         "terms": "Ang tuntuning panggramatika ay nasusuri sa tungkulin ng salita sa buong pangungusap.",
         "shortcut": "Magkapareho ang tungkuling magpahayag ng impormasyong naibalita; maaaring magpalit ang d at r.",
-        "why_correct": "\"Pareho silang panandang pampahayag ng narinig, at karaniwang may palitang d/r ayon sa naunang tunog.\" ang tamang sagot. Magkapareho ang tungkuling magpahayag ng impormasyong naibalita; maaaring magpalit ang d at r.",
+        "why_correct": "\"Uuwi raw si Ben, at aalis daw si Lito.\" ang tamang sagot. \"Raw\" pagkatapos ng patinig (uuwi); \"daw\" pagkatapos ng katinig (aalis).",
         "why_wrong": {
-          "o1": "\"'Daw' lamang ang kinikilala at hindi maaaring gamitin ang 'raw'.\" — Tinatanggap at ginagamit ang parehong anyo.",
-          "o2": "\"'Raw' ang ginagamit lamang para sa mga pangngalang pantangi.\" — Hindi nakatali sa pangngalang pantangi ang gamit.",
-          "o4": "\"Ang 'raw' ay pananda ng pagmamay-ari samantalang ang 'daw' ay panghalip.\" — Pareho silang hindi panandang pagmamay-ari o panghalip."
+          "o1": "Baligtad: \"daw\" pagkatapos ng patinig at \"raw\" pagkatapos ng katinig.",
+          "o3": "Tama ang \"uuwi raw\", pero katinig ang dulo ng \"aalis\", kaya \"daw\".",
+          "o4": "Tama ang \"aalis daw\", pero patinig ang dulo ng \"uuwi\", kaya \"raw\"."
         }
       },
       "distractor_reasoning": {
         "o1": "FIL-SPOKEN-FORM",
-        "o2": "FIL-SAME-FIELD",
-        "o4": "FIL-SAME-FIELD"
+        "o3": "FIL-SPOKEN-FORM",
+        "o4": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio; Komisyon sa Wikang Filipino, Ortograpiyang Pambansa (2013), Section 8.1, as published in DepEd Order No. 34, s. 2013.",
       "source_url": "https://www.deped.gov.ph/wp-content/uploads/2013/08/DO_s2013_034.pdf",
@@ -4273,7 +4273,7 @@
         "created_at": "2026-10-13T21:53:00+08:00",
         "spec_version": "0.1.5"
       },
-      "notes": "Independent editorial QA required prior to approval."
+      "notes": "Independent editorial QA required prior to approval. Round 03 audit (Grok Bot, 2026-10-13): fixed, see audit/round-03-chatgpt-001-review-request.md."
     },
     {
       "id": "CIVIO-VFIL-BALARILA-040071",
