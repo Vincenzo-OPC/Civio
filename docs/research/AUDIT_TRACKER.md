@@ -86,3 +86,13 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
   - CoS verdict on the 178 rewrites, gap-fill-003, and the shortcuts. Then merge the rewrites into the batches, retire the old-stem DB rows (the importer keys on stem), and sync.
   - Round 03: baseline bank (550), Subprofessional first.
   - Shortcut backfill for Clerical, Verbal and GI.
+
+| ChatGPT 001 | 2026-10-13 | `chatgpt-batch-001.json`: 100 original Filipino Verbal drafts (synonym 25, antonym 20, sawikain 15, grammar 15, reading 15, paragraph ordering 10) | 0 approved; 100 unreviewed | independent content and linguistic review pending | 0 structural blockers in connector checks | `chatgpt-batch-001.json` |
+
+## ChatGPT batch 001 (2026-10-13)
+
+- New file: `docs/research/chatgpt-batch-001.json`, **100 draft / unreviewed Filipino Verbal items**. Breakdown: 25 synonym, 20 antonym, 15 idiom/sawikain, 15 grammar, 15 reading comprehension, 10 paragraph-order questions.
+- Static checks: 4 distinct options each, answer-option references, item metadata, spec distractor codes, choice-specific `why_wrong`, ordering-code distinctness, nontrivial order keys and locally unique IDs/stems. Token Jaccard at threshold **0.65** found no matches against **1,197** existing bank/supplement/gap-fill questions and **127** available baseline seed/prefix stems. This is not a comparison against all 550 rows in the private local development DB.
+- **Validation limitation:** The actual Python `scripts/batches/qa.py` was not executable in this connector-only environment. The equivalent structural and token-duplicate checks were run, but the new JSON MUST pass the repository's Python QA and independent review before import or approval. No app code, tests, Grok batches or deploy were changed.
+- Review focus: `CIVIO-VFIL-KASINGKAHULUGAN-040009` (mabini), `CIVIO-VFIL-KASINGKAHULUGAN-040013` (kinauukulang), `CIVIO-VFIL-WIKAIN-040069` (check idiom ID if applicable; reviewers should inspect all idioms), grammar items `CIVIO-VFIL-BALARILA-040069`/`040070` (din/rin, daw/raw; compare DepEd/KWF *Ortograpiyang Pambansa* §8.1) and all 10 ordering items for unique defensibility. Review interpretation and tone as natural Filipino and verify dictionary spelling. Review `RC-TOO-NARROW` choices for code precision. 
+- Never auto-approve, activate or deploy. Reviewers: Grok Bot → Chief of Staff.
