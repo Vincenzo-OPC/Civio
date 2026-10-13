@@ -1,0 +1,631 @@
+{
+  "batch": "batch-002",
+  "spec_version": "0.1.3",
+  "status": "draft for Chief of Staff review",
+  "intro": [
+    "Spec: `docs/CSE-Question-Design-Spec.md` v0.1.3. Author: CSE (Grok Bot, AI-assisted). Reviewer: Chief of Staff (not the author).",
+    "All items are original, `source_group: civio`, `status: draft`, `review_status: unreviewed`. Not imported into any database. Seed-ready copy: `docs/batches/batch-002.json` (import after approval with `php artisan civio:import-batch`).",
+    "Civio is an independent reviewer and is not affiliated with the Civil Service Commission.",
+    "",
+    "Mix: 4 Numerical, 4 Analytical (Professional), 1 Verbal (English), 1 General Information."
+  ],
+  "outro": [
+    "## Checks done by the author",
+    "",
+    "- Math, twice (by hand and asserted in the generator): item 11: 1/6 + 1/3 = 1/2 box per hour, so 2 h; in 2 h, 2/6 + 4/6 = 1. Item 12: 5 × 32 = 160, + 44 = 204, ÷ 6 = 34; also 32 + 12 ÷ 6 = 34. Item 13: 20,000 × 0.06 = 1,200 per year × 2.5 = 3,000. Item 14: s = 12, Teresa 36; in 12 years 48 = 2 × 24. Item 17: B, E, I, N = 2, 5, 9, 14; +6 gives 20 = T.",
+    "- GI text checked against the LawPhil copy of R.A. 6713: Sec. 5(a) (15 working days), Sec. 5(b) (45 working days), Sec. 8(A) (30 days), Sec. 8(C)(2) (10 working days).",
+    "- For CoS: item 16 uses the proposed code `LOG-MISSED-NEEDED` (not yet in the spec). Item 17 reuses the numerical series codes because section 3.4 has no series codes. Item 13 uses `NUM-WP-PCT-CHANGE` for simple interest, the closest listed archetype."
+  ],
+  "items": [
+    {
+      "id": "CIVIO-NUM-WP-RATE-000011",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add two work rates to find the time working together",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Liza can encode a box of survey forms in 6 hours. Ramon can encode the same box in 3 hours. If they work together, how long will it take them to encode one box?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "30 minutes"
+        },
+        {
+          "option_id": "n2",
+          "text": "2 hours"
+        },
+        {
+          "option_id": "n3",
+          "text": "4 hours 30 minutes"
+        },
+        {
+          "option_id": "n4",
+          "text": "9 hours"
+        }
+      ],
+      "answer_option_id": "n2",
+      "reveal": {
+        "terms": "A \"rate\" is how much work gets done in one hour.",
+        "shortcut": "Turn each time into \"part of the job per hour\", then add. Liza does 1/6 of the box each hour. Ramon does 1/3, which is 2/6. Together they do 3/6 = 1/2 of the box each hour. Half a box per hour means one box takes 2 hours.",
+        "why_correct": "2 hours is right. Check: in 2 hours Liza does 2/6 = 1/3 and Ramon does 2/3. 1/3 + 2/3 = 1 whole box.",
+        "why_wrong": {
+          "n1": "30 minutes reads the rate \"1/2 box per hour\" as \"1/2 hour\". It stops before turning the rate back into time.",
+          "n3": "4 hours 30 minutes is the average of 6 and 3. Working together is faster than either person alone, so the answer must be under 3 hours.",
+          "n4": "9 hours adds the two times. You add the rates, not the times."
+        }
+      },
+      "distractor_reasoning": {
+        "n1": "NUM-PARTIAL",
+        "n3": "NUM-WRONG-BASE",
+        "n4": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-NUM-WP-AVERAGE-000012",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "average",
+      "micro_skill": "find the new average after one value is added",
+      "archetype": "NUM-WP-AVERAGE",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "The average age of the 5 staff members in a municipal library is 32. A new librarian who is 44 years old joins them. What is the new average age of the 6 staff members?",
+      "options": [
+        {
+          "option_id": "a1",
+          "text": "34"
+        },
+        {
+          "option_id": "a2",
+          "text": "34.4"
+        },
+        {
+          "option_id": "a3",
+          "text": "38"
+        },
+        {
+          "option_id": "a4",
+          "text": "204"
+        }
+      ],
+      "answer_option_id": "a1",
+      "reveal": {
+        "terms": "\"Average\" means share equally. An average age of 32 for 5 people is the same as all 5 being 32.",
+        "shortcut": "Share the extra years. The new person is 44 − 32 = 12 years above the old average. Those 12 extra years are shared by all 6 people now: 12 ÷ 6 = 2. So the average goes up by 2: 32 + 2 = 34.",
+        "why_correct": "34 is right. Check the long way: 5 × 32 = 160. 160 + 44 = 204. 204 ÷ 6 = 34.",
+        "why_wrong": {
+          "a2": "34.4 shares the 12 extra years among 5 people. After the new librarian joins there are 6 people.",
+          "a3": "38 is the average of 32 and 44. That treats the 5 old staff as if they were one person.",
+          "a4": "204 is the total of all 6 ages. It stops before dividing by 6."
+        }
+      },
+      "distractor_reasoning": {
+        "a2": "NUM-OFF-BY-ONE",
+        "a3": "NUM-WRONG-BASE",
+        "a4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000013",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "simple interest",
+      "micro_skill": "use interest = principal × rate × time with time in years",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A cooperative member borrows ₱20,000 at 6% simple interest per year. How much interest will she owe after 2 years and 6 months?",
+      "options": [
+        {
+          "option_id": "i1",
+          "text": "₱2,400"
+        },
+        {
+          "option_id": "i2",
+          "text": "₱3,000"
+        },
+        {
+          "option_id": "i3",
+          "text": "₱3,120"
+        },
+        {
+          "option_id": "i4",
+          "text": "₱23,000"
+        }
+      ],
+      "answer_option_id": "i2",
+      "reveal": {
+        "terms": "\"Simple interest\" is the extra money paid for borrowing. It is the same amount every year. \"6% per year\" means ₱6 for every ₱100, each year.",
+        "shortcut": "Find one year first, then multiply by the years. One year: 6% of ₱20,000 = ₱1,200. Six months is half a year, so 2 years and 6 months = 2.5 years. 2.5 × ₱1,200 = ₱3,000.",
+        "why_correct": "₱3,000 is right. Check: 20,000 × 0.06 × 2.5 = 1,200 × 2.5 = 3,000.",
+        "why_wrong": {
+          "i1": "₱2,400 counts only 2 years. It leaves out the 6 months.",
+          "i3": "₱3,120 uses 2.6 years. Six months is 0.5 of a year, not 0.6.",
+          "i4": "₱23,000 is the loan plus the interest. The question asks for the interest only."
+        }
+      },
+      "distractor_reasoning": {
+        "i1": "NUM-PARTIAL",
+        "i3": "NUM-UNIT",
+        "i4": "NUM-EXTRA-STEP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "Archetype NUM-WP-PCT-CHANGE is the closest listed archetype for simple interest; CoS may want a NUM-WP-INTEREST archetype."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-000014",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "age problem",
+      "micro_skill": "set up 'times as old now' and 'twice as old later' and solve",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Teresa is 3 times as old as her son. In 12 years, she will be twice as old as her son. How old is Teresa now?",
+      "options": [
+        {
+          "option_id": "t1",
+          "text": "12"
+        },
+        {
+          "option_id": "t2",
+          "text": "24"
+        },
+        {
+          "option_id": "t3",
+          "text": "36"
+        },
+        {
+          "option_id": "t4",
+          "text": "48"
+        }
+      ],
+      "answer_option_id": "t3",
+      "reveal": {
+        "terms": "\"3 times as old\" means her age is her son's age multiplied by 3. \"Twice\" means multiplied by 2.",
+        "shortcut": "Try the choices instead of using algebra. Take each choice as Teresa's age now, divide by 3 for the son, add 12 to both, and see if she is twice his age. 36: son is 12. In 12 years: 48 and 24. 48 is twice 24.",
+        "why_correct": "36 is right. Algebra check: son = s, Teresa = 3s. 3s + 12 = 2(s + 12), so 3s + 12 = 2s + 24, so s = 12 and Teresa = 36.",
+        "why_wrong": {
+          "t1": "12 is the son's age now. The question asks for Teresa's age.",
+          "t2": "24 is the son's age 12 years from now.",
+          "t4": "48 is Teresa's age 12 years from now, not her age today."
+        }
+      },
+      "distractor_reasoning": {
+        "t1": "NUM-OTHER-SHARE",
+        "t2": "NUM-OTHER-SHARE",
+        "t4": "NUM-EXTRA-STEP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-ANA-SYLLOGISM-000015",
+      "track": "pro",
+      "domain": "analytical",
+      "competency": "Logic",
+      "concept": "syllogism",
+      "micro_skill": "chain 'all A are B' and 'no B is C' to 'no A is C'",
+      "archetype": "ANA-SYLLOGISM",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "All records clerks in the provincial office are trained in filing. No employee trained in filing is a new hire. Which statement must be true?",
+      "options": [
+        {
+          "option_id": "l1",
+          "text": "All employees trained in filing are records clerks."
+        },
+        {
+          "option_id": "l2",
+          "text": "No records clerk in the provincial office is a new hire."
+        },
+        {
+          "option_id": "l3",
+          "text": "Some employees who are not new hires are not records clerks."
+        },
+        {
+          "option_id": "l4",
+          "text": "No new hire works in the records section."
+        }
+      ],
+      "answer_option_id": "l2",
+      "reveal": {
+        "terms": "\"Must be true\" means it follows from the two statements alone, with no outside facts. \"Could be true\" is not enough.",
+        "shortcut": "Draw circles. The records-clerk circle sits inside the trained-in-filing circle. The new-hire circle sits outside the trained-in-filing circle. So the records-clerk circle cannot touch the new-hire circle.",
+        "why_correct": "\"No records clerk in the provincial office is a new hire\" is right. Every clerk is trained in filing, and nobody trained in filing is a new hire.",
+        "why_wrong": {
+          "l1": "This flips the first statement. \"All clerks are trained\" does not mean \"all trained people are clerks\".",
+          "l3": "This could be true, but nothing forces it. Every trained employee might be a records clerk.",
+          "l4": "This goes too far. A new hire could work in the records section in a job other than records clerk, for example as a driver."
+        }
+      },
+      "distractor_reasoning": {
+        "l1": "LOG-CONVERSE",
+        "l3": "LOG-COULD-NOT-MUST",
+        "l4": "LOG-OVERSTRONG"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-ANA-ASSUME-I-II-000016",
+      "track": "pro",
+      "domain": "analytical",
+      "competency": "Assumptions and conclusions",
+      "concept": "assumptions",
+      "micro_skill": "keep the assumption the plan needs and drop one that is only plausible",
+      "archetype": "ANA-ASSUME-I-II",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Statement: The municipal treasurer's office will stay open until 7 p.m. so that working residents can pay their real property tax after work.\nAssumption I: Some residents cannot pay during regular office hours because of their work.\nAssumption II: Staying open later will increase the town's total tax collection.\nWhich assumption is implicit in the statement?",
+      "options": [
+        {
+          "option_id": "s1",
+          "text": "Only I"
+        },
+        {
+          "option_id": "s2",
+          "text": "Only II"
+        },
+        {
+          "option_id": "s3",
+          "text": "Both I and II"
+        },
+        {
+          "option_id": "s4",
+          "text": "Neither I nor II"
+        }
+      ],
+      "answer_option_id": "s1",
+      "reveal": {
+        "terms": "An \"assumption\" is an idea the speaker takes for granted without saying it. If the assumption were false, the plan would make no sense.",
+        "shortcut": "Use the \"if not\" test. Say the opposite of each assumption and ask: does the plan still make sense? If the plan falls apart, the assumption is needed.",
+        "why_correct": "\"Only I\" is right. If no resident had trouble paying during work hours, there would be no reason to open until 7 p.m. So I is needed. If collection stayed the same, the plan could still help residents pay more easily. So II is not needed.",
+        "why_wrong": {
+          "s2": "II is not needed, and it leaves out I. The plan is about making payment convenient, not about raising more money.",
+          "s3": "II is reasonable, but the plan does not depend on it. A merely plausible idea is not an assumption.",
+          "s4": "I fails the \"if not\" test. Without it, the longer hours have no purpose."
+        }
+      },
+      "distractor_reasoning": {
+        "s2": "LOG-IRRELEVANT",
+        "s3": "LOG-COULD-NOT-MUST",
+        "s4": "LOG-MISSED-NEEDED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "s4 uses proposed code LOG-MISSED-NEEDED (rejected an assumption the plan needs); not yet in spec section 3.4. Needs CoS approval."
+    },
+    {
+      "id": "CIVIO-ANA-SYMBOL-SERIES-000017",
+      "track": "pro",
+      "domain": "analytical",
+      "competency": "Logic",
+      "concept": "letter series",
+      "micro_skill": "find the growing gap between letter positions",
+      "archetype": "ANA-SYMBOL-SERIES",
+      "difficulty": "medium",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "What letter comes next in the series?  B, E, I, N, ___",
+      "options": [
+        {
+          "option_id": "x1",
+          "text": "Q"
+        },
+        {
+          "option_id": "x2",
+          "text": "S"
+        },
+        {
+          "option_id": "x3",
+          "text": "T"
+        },
+        {
+          "option_id": "x4",
+          "text": "U"
+        }
+      ],
+      "answer_option_id": "x3",
+      "reveal": {
+        "terms": "A letter's \"position\" is its place in the alphabet: A = 1, B = 2, C = 3, and so on.",
+        "shortcut": "Change letters to numbers, then look at the jumps. B, E, I, N = 2, 5, 9, 14. The jumps are +3, +4, +5. The next jump is +6: 14 + 6 = 20, and the 20th letter is T.",
+        "why_correct": "T is right. Check by counting from N: O, P, Q, R, S, T is 6 steps.",
+        "why_wrong": {
+          "x1": "Q uses +3 every time, the first jump only. The jumps grow by 1.",
+          "x2": "S repeats the last jump, +5. The next jump should be +6.",
+          "x4": "U jumps +7. That skips a step in the growing jumps."
+        }
+      },
+      "distractor_reasoning": {
+        "x1": "NUM-SEQ-OTHER-RULE",
+        "x2": "NUM-PARTIAL",
+        "x4": "NUM-OFF-BY-ONE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "Section 3.4 has no series distractor codes; numerical series codes reused."
+    },
+    {
+      "id": "CIVIO-ANA-ANALOGY-FUNCTION-000018",
+      "track": "pro",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "concept": "instrument : what it measures",
+      "micro_skill": "match tool-to-quantity-measured in the same order",
+      "archetype": "ANA-ANALOGY-FUNCTION",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "THERMOMETER : TEMPERATURE :: ______",
+      "options": [
+        {
+          "option_id": "f1",
+          "text": "odometer : distance"
+        },
+        {
+          "option_id": "f2",
+          "text": "weight : scale"
+        },
+        {
+          "option_id": "f3",
+          "text": "speedometer : car"
+        },
+        {
+          "option_id": "f4",
+          "text": "ruler : pencil"
+        }
+      ],
+      "answer_option_id": "f1",
+      "reveal": {
+        "terms": "An \"analogy\" compares two pairs. The second pair must have the same link, in the same order.",
+        "shortcut": "Make a sentence for the first pair: \"A thermometer measures temperature.\" Put each choice into the same sentence.",
+        "why_correct": "\"Odometer : distance\" is right. \"An odometer measures distance.\" Same link, same order.",
+        "why_wrong": {
+          "f2": "\"Weight is measured by a scale\" is the same link backwards. The measuring tool should come first.",
+          "f3": "\"A speedometer is found in a car.\" That is tool and where it is installed, not tool and what it measures.",
+          "f4": "A ruler and a pencil are both desk tools. Being on the same topic is not the same link."
+        }
+      },
+      "distractor_reasoning": {
+        "f2": "ANA-REVERSED",
+        "f3": "ANA-OTHER-RELATION",
+        "f4": "ANA-SAME-TOPIC"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-VEN-ERROR-TENSE-000019",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Grammar and correct usage",
+      "concept": "tense consistency",
+      "micro_skill": "match the verb to a past time signal",
+      "archetype": "VEN-ERROR-TENSE",
+      "difficulty": "medium",
+      "est_seconds": 35,
+      "language": "en",
+      "stem": "Which part of the sentence contains an error?  Last Friday, the new clerk / finishes encoding / all the leave forms / before the office closed.",
+      "options": [
+        {
+          "option_id": "v1",
+          "text": "Last Friday, the new clerk"
+        },
+        {
+          "option_id": "v2",
+          "text": "finishes encoding"
+        },
+        {
+          "option_id": "v3",
+          "text": "all the leave forms"
+        },
+        {
+          "option_id": "v4",
+          "text": "before the office closed"
+        }
+      ],
+      "answer_option_id": "v2",
+      "reveal": {
+        "terms": "\"Tense\" tells when an action happens: past, present, or future. A \"time signal\" is a word like \"last Friday\" or \"tomorrow\".",
+        "shortcut": "Find the time signal first, then check every verb against it. \"Last Friday\" is past. So every action in the sentence should be past.",
+        "why_correct": "\"Finishes encoding\" is the error. It is present tense, but \"last Friday\" is past. It should be \"finished encoding\".",
+        "why_wrong": {
+          "v1": "\"Last Friday, the new clerk\" is the time signal and the subject. It is correct, and it is what shows the other verb is wrong.",
+          "v3": "\"All the leave forms\" is a correct plural object. Plural nouns do not change the verb tense.",
+          "v4": "\"Before the office closed\" is already in the past tense, which matches \"last Friday\"."
+        }
+      },
+      "distractor_reasoning": {
+        "v1": "VEN-TENSE",
+        "v3": "VEN-NEAREST-NOUN",
+        "v4": "VEN-TENSE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-GI-DEADLINE-NUMBER-000020",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "concept": "duties of public officials",
+      "micro_skill": "recall the deadline to answer letters from the public",
+      "archetype": "GI-DEADLINE-NUMBER",
+      "difficulty": "easy",
+      "est_seconds": 20,
+      "language": "en",
+      "stem": "Under R.A. 6713, within how many working days must public officials and employees respond to letters and requests sent by the public?",
+      "options": [
+        {
+          "option_id": "d1",
+          "text": "10 working days"
+        },
+        {
+          "option_id": "d2",
+          "text": "15 working days"
+        },
+        {
+          "option_id": "d3",
+          "text": "30 days"
+        },
+        {
+          "option_id": "d4",
+          "text": "45 working days"
+        }
+      ],
+      "answer_option_id": "d2",
+      "reveal": {
+        "terms": "\"Working days\" are office days. Weekends and holidays are not counted.",
+        "shortcut": "Link each number in the law to its job: 15 = answer the public's letters. 30 = file the SALN after taking office. 45 = agency's yearly performance report. 10 = when a filed SALN can be copied.",
+        "why_correct": "\"15 working days\" is right. R.A. 6713, Sec. 5(a) says officials and employees shall respond to letters and other communications from the public within fifteen working days from receipt, and the reply must state the action taken.",
+        "why_wrong": {
+          "d1": "10 working days is when filed SALNs become available for copying (Sec. 8(C)(2)), not the deadline to answer letters.",
+          "d3": "30 days is the deadline to file the SALN after taking office (Sec. 8(A)).",
+          "d4": "45 working days is the deadline for an agency's annual performance report (Sec. 5(b))."
+        }
+      },
+      "distractor_reasoning": {
+        "d1": "GI-NEIGHBOR-NUMBER",
+        "d3": "GI-NEIGHBOR-NUMBER",
+        "d4": "GI-NEIGHBOR-NUMBER"
+      },
+      "source": "R.A. 6713, Sec. 5(a)",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    }
+  ]
+}
