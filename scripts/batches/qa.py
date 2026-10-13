@@ -67,8 +67,9 @@ def solve_num(it):
         d = int(re.search(r"(\d+)% off", s).group(1))
         return p * (100 - d) / 100
     if a == "NUM-OPS-ORDER":
-        ex = re.search(r"value of (.+)\?", s).group(1).replace("×", "*").replace("−", "-")
-        return str(eval(ex, {"__builtins__": {}}))
+        ex = re.search(r"value of (.+)\?", s).group(1).replace("×", "*").replace("−", "-").replace("÷", "/")
+        v = F(eval(re.sub(r"(\d+)", r"F(\1)", ex), {"__builtins__": {}, "F": F}))
+        return str(v.numerator) if v.denominator == 1 else None
     if a == "NUM-FRAC-DEC":
         tot = int(re.search(r"had (\d+)", s).group(1))
         f1, f2 = [F(x) for x in re.findall(r"(\d+/\d+)", s)]
@@ -156,13 +157,18 @@ def solve_ana(it):
     return None
 
 
+from fixes import spell_words
+CORRECT = set(clerical.WORDS) | {w for w, _ in spell_words.T} | set(spell_words.FOILS)
+MISSPELT = {m: (w, c) for w, ms in spell_words.T for m, c in ms}
+
+
 def solve_cler(it):
     s, a = it["stem"], it["archetype"]
     if a == "CLR-SPELL-RIGHT":
-        ok = [o["text"] for o in it["options"] if o["text"] in clerical.WORDS]
+        ok = [o["text"] for o in it["options"] if o["text"] in CORRECT]
         return ok[0] if len(ok) == 1 else None
     if a == "CLR-SPELL-WRONG":
-        bad = [o["text"] for o in it["options"] if o["text"] not in clerical.WORDS]
+        bad = [o["text"] for o in it["options"] if o["text"] not in CORRECT]
         return bad[0] if len(bad) == 1 else None
     if a == "CLR-FILE-POSITION":
         names = s.split("?  ")[1].split(" | ")
@@ -262,6 +268,14 @@ def check_item(it):
     for f in ("terms", "shortcut", "why_correct"):
         if not it["reveal"].get(f):
             errs.append(f"reveal.{f} empty")
+    if "shortcut" in it:
+        sc = it["shortcut"]
+        if not isinstance(sc, str) or not sc.strip():
+            errs.append("shortcut: omit the field instead of leaving it empty")
+        elif len(sc) > 300:
+            errs.append("shortcut longer than 300 characters (keep it to one technique)")
+        elif re.search(r"\b(choice|option|letter) [A-D]\b", sc):
+            errs.append("shortcut names a choice by letter")
     kt = next((o["text"] for o in it["options"] if o["option_id"] == it["answer_option_id"]), "")
     labs = re.findall(r"^\s*([1-9A-Z])[.)]\s", it["stem"], re.M)
     if len(labs) >= 3 and re.sub(r"[^0-9A-Z]", "", kt) == "".join(labs):
@@ -401,9 +415,44 @@ def check_batch_rules(batch_items):
     return out
 
 
+def stem_frame(s):
+    """Stem phrasing: text before the first colon, question mark or double space, with numbers as N."""
+    return re.sub(r"\d+(\.\d+)?", "N", re.split(r"[:?]|  ", s)[0]).strip()[:70]
+
+
+def spell_target(it):
+    k = key_text(it)
+    return (MISSPELT.get(k, (k,))[0] if it["archetype"] == "CLR-SPELL-WRONG" else k).lower()
+
+
+def check_spelling(all_items):
+    """Round 02 CoS rule: one spelling target per item bank-wide; coded error types must match the misspelling."""
+    out, seen = [], {}
+    for it in all_items:
+        if it["archetype"] not in ("CLR-SPELL-RIGHT", "CLR-SPELL-WRONG"):
+            continue
+        t = spell_target(it)
+        if t in seen:
+            out.append((it["id"], f"spelling target '{t}' repeats {seen[t]}"))
+        seen[t] = it["id"]
+        for o in it["options"]:
+            if o["text"] in MISSPELT:
+                w, c = MISSPELT[o["text"]]
+                code = it["distractor_reasoning"].get(o["option_id"]) or it.get("error_code")
+                if code != c or not spell_words.check_code(w, o["text"], c):
+                    out.append((it["id"], f"error code {code} does not describe {o['text']}"))
+    return out
+
+
 def check_bank_rules(all_items):
-    """Bank-wide CoS rules: tense <= 50 of Verbal; every syllogism/analogy type has >= 3 frames."""
-    out = []
+    """Bank-wide CoS rules: tense <= 50 of Verbal; every syllogism/analogy type has >= 3 frames; spelling targets unique."""
+    out = check_spelling(all_items)
+    from collections import Counter
+    dom = Counter(i["domain"] for i in all_items)
+    fr = Counter((i["domain"], stem_frame(i["stem"])) for i in all_items)
+    for (d, f), n in fr.items():
+        if n > 0.25 * dom[d]:
+            out.append(("bank", f"{d}: phrasing '{f}' used {n}/{dom[d]} (max 25%)"))
     t = sum(1 for i in all_items if i.get("concept") in TENSE_CONCEPTS)
     if t > 50:
         out.append(("bank", f"{t} tense items (max 50)"))

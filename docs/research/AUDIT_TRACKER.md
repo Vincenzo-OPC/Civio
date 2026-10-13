@@ -7,7 +7,8 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 | 01 | 2026-10-13 | ChatGPT supplements 001: 150 (VFIL 80, GI 30, CLR 40) | 0 release-ready (140 content-pass) | 140 | 10 | audit/round-01.md |
 | 01 fixes | 2026-10-13 | All 150 supplement items fixed (still draft); gap-fill-001 23 | gap-fill: 20 CoS PASS + 3 fixed → approved | 150 fixed | 0 open | audit/round-01-fixes.md |
 | 02 | 2026-10-13 | Batches 001-011, Subprofessional domains: 759 (CLR 151, VEN 203, GI 102, NUM 303) | 759 key-correct | ~27 proposed (CoS) + 58 metadata applied | 0 | audit/round-02.md |
-| 02 gap | 2026-10-13 | gap-fill-002: 14 new drafts (VEN error 5, NUM frac/dec 6, CLR business filing 3) | pending review | – | – | audit/round-02-review-request.md |
+| 02 gap | 2026-10-13 | gap-fill-002: 14 new drafts (VEN error 5, NUM frac/dec 6, CLR business filing 3) | 14 CoS PASS (4 fixed) → approved, active locally | 4 | 0 | audit/round-02-fixes.md |
+| 02 fixes | 2026-10-13 | CoS round 02 rulings: 178 rewrites of approved items (spelling 93, Verbal lead-in 60, ops shapes 25) + gap-fill-003 10 filing drafts + 267 Numerical shortcuts | pending CoS | 178 changed | 0 | audit/round-02-fixes.md, audit/round-02-fixes-review-request.md |
 
 ## Round 01
 
@@ -62,3 +63,26 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
   - round 03: baseline bank (550), Subprofessional domains first, starting with clerical and GI
   - CoS rulings on the round 02 proposals
   - gap fill 003: Filipino idioms and grammar beyond the supplements, and ARMA Rules 4 and 8
+
+## Round 02 fixes (2026-10-13)
+
+- **Gap-fill 002:** CoS PASS on all 14. I applied the 4 code and why-wrong fixes plus the optional VEN-ERROR-0003 recode. All 14 are approved and active in the local Civio DB.
+- **Rulings applied (spec v0.1.6, §10.5):** these are rewrites of approved items, held in `docs/research/round-02-fixes.json` with status draft and review_status "changed". The batch files keep the approved versions.
+  - 93 spelling items rewritten: unique real-misspelling targets, plus the new code SPL-SILENT. The 2 wrong error labels went away with the rewrite.
+  - 60 Verbal lead-ins rewritten: "best completes" is down from 89 to 29.
+  - 25 order-of-operations items rewritten across 5 new shapes, with keys recomputed.
+  - The VFIL-0007 o2 recode to FIL-OTHER-TRAIT is applied in gap-fill-001 and synced.
+- **Filing:** gap-fill-003 adds 10 drafts for ARMA Rules 2, 3, 4, 7 and 8.
+- **Shortcut field (spec v0.1.7, §10.6):**
+  - New optional `shortcut` field. `qa.py` accepts it, and the importer shows it as "Shortcut:", followed by "Method:".
+  - 267 verified Numerical shortcuts are in `shortcuts-num-001.json`, pending CoS.
+- **qa.py additions:**
+  - one spelling target per item, bank-wide
+  - error codes must match the misspelling
+  - the 25% frame cap
+  - exact evaluation of brackets and ÷
+  - `qa_all.py` overlays `round-*-fixes.json`; it is GREEN with the overlay and RED with `--no-fixes`, as expected.
+- **Next:**
+  - CoS verdict on the 178 rewrites, gap-fill-003, and the shortcuts. Then merge the rewrites into the batches, retire the old-stem DB rows (the importer keys on stem), and sync.
+  - Round 03: baseline bank (550), Subprofessional first.
+  - Shortcut backfill for Clerical, Verbal and GI.

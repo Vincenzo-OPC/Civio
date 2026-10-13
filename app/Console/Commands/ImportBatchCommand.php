@@ -178,7 +178,17 @@ class ImportBatchCommand extends Command
             $lines[] = 'Meaning: '.$r['terms'];
         }
 
-        $lines[] = 'Shortcut: '.$r['shortcut'];
+        // Optional item-level shortcut (spec 0.1.7): one short, honest technique. When present it leads,
+        // and the Reveal's worked method follows under its own label, so the Reveal UI needs no change.
+        if (! empty($item['shortcut'])) {
+            $lines[] = 'Shortcut: '.$item['shortcut'];
+
+            if (! empty($r['shortcut'])) {
+                $lines[] = 'Method: '.$r['shortcut'];
+            }
+        } elseif (! empty($r['shortcut'])) {
+            $lines[] = 'Shortcut: '.$r['shortcut'];
+        }
         $lines[] = 'Why it is right: '.$r['why_correct'];
         $lines[] = 'Why the others are wrong:';
 

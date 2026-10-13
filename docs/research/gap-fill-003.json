@@ -1,0 +1,727 @@
+{
+  "batch": "gap-fill-003",
+  "spec_version": "0.1.6",
+  "status": "draft (gap fill; for independent review)",
+  "items": [
+    {
+      "id": "CIVIO-GAP3-CLR-FILE-ORDER-0015",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business and organization filing (ARMA rules)",
+      "micro_skill": "apply ARMA Rule 2",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed FIRST?\nR & S Hardware | R Best Laundry | R Cruz Pharmacy | Rabago Store",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "R Best Laundry"
+        },
+        {
+          "option_id": "o2",
+          "text": "R Cruz Pharmacy"
+        },
+        {
+          "option_id": "o3",
+          "text": "R & S Hardware"
+        },
+        {
+          "option_id": "o4",
+          "text": "Rabago Store"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A symbol such as & is indexed as if spelled out (\"and\") and is its own unit.",
+        "shortcut": "Read \"&\" aloud as \"and\", then compare.",
+        "why_correct": "Units: R / and / S / Hardware. The second units are and, Best, Cruz; \"and\" is first. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 2), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o1": "Files first only if \"&\" is skipped. Spelled out as \"and\", R & S comes before R Best.",
+          "o2": "Second unit \"Cruz\" comes after \"and\" and \"Best\".",
+          "o4": "\"R\" alone comes before \"Rabago\": nothing comes before something."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "distractor_subreason": {
+        "o1": "CLR-LETTER-ORDER: skips the symbol, breaks ARMA Rule 2",
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      },
+      "computed_order": [
+        "R & S Hardware",
+        "R Best Laundry",
+        "R Cruz Pharmacy",
+        "Rabago Store"
+      ],
+      "source": "Civio Filing Rules v2 / ARMA Rule 2",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.6"
+      },
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP3-CLR-FILE-ORDER-0016",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business and organization filing (ARMA rules)",
+      "micro_skill": "apply ARMA Rule 2",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed LAST?\nLucky Star Bakery | Luz Bakeshop | The Luz Garden | Luz of the Valley Resort",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Luz of the Valley Resort"
+        },
+        {
+          "option_id": "o2",
+          "text": "Lucky Star Bakery"
+        },
+        {
+          "option_id": "o3",
+          "text": "Luz Bakeshop"
+        },
+        {
+          "option_id": "o4",
+          "text": "The Luz Garden"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A leading \"The\" becomes the last unit. Other minor words (of, the, and) inside the name stay where they are, as units.",
+        "shortcut": "Move a leading \"The\" to the end first; leave inner minor words alone.",
+        "why_correct": "Second units among the Luz names: Bakeshop, Garden, of. \"of\" is last, so Luz of the Valley Resort is last. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 2), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o2": "\"Lucky\" comes before \"Luz\", so it files first, not last.",
+          "o3": "\"Bakeshop\" is the earliest second unit among the Luz names.",
+          "o4": "Files last only if the leading \"The\" is counted first (T). It moves to the end: Luz Garden The."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "distractor_subreason": {
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o4": "CLR-ARTICLE-COUNTED: breaks ARMA Rule 2"
+      },
+      "computed_order": [
+        "Lucky Star Bakery",
+        "Luz Bakeshop",
+        "The Luz Garden",
+        "Luz of the Valley Resort"
+      ],
+      "source": "Civio Filing Rules v2 / ARMA Rule 2",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.6"
+      },
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP3-CLR-FILE-ORDER-0017",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business and organization filing (ARMA rules)",
+      "micro_skill": "apply ARMA Rule 3",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed FIRST?\nAna's Bakery | Ana Carinderia | Anas Printing | Anastacia Salon",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Ana's Bakery"
+        },
+        {
+          "option_id": "o2",
+          "text": "Anas Printing"
+        },
+        {
+          "option_id": "o3",
+          "text": "Anastacia Salon"
+        },
+        {
+          "option_id": "o4",
+          "text": "Ana Carinderia"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Punctuation is ignored. A possessive keeps its s: Ana's = Anas.",
+        "shortcut": "Delete the apostrophe, keep every letter.",
+        "why_correct": "Units: Ana / Carinderia; Anas / Bakery; Anas / Printing; Anastacia / Salon. \"Ana\" alone files first. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 3), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o1": "Files first only if \"'s\" is dropped (Ana Bakery). The apostrophe is ignored but the s stays: Anas.",
+          "o2": "\"Anas\" comes after \"Ana\": nothing comes before something.",
+          "o3": "\"Anastacia\" is longer than \"Ana\" and \"Anas\", so it comes after them."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER"
+      },
+      "distractor_subreason": {
+        "o1": "CLR-LETTER-ORDER: drops the possessive s, breaks ARMA Rule 3",
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      },
+      "computed_order": [
+        "Ana Carinderia",
+        "Ana's Bakery",
+        "Anas Printing",
+        "Anastacia Salon"
+      ],
+      "source": "Civio Filing Rules v2 / ARMA Rule 3",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.6"
+      },
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP3-CLR-FILE-ORDER-0018",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business and organization filing (ARMA rules)",
+      "micro_skill": "apply ARMA Rule 3",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed LAST?\nCruz-Lim Trading | Cruz Lumber | Cruzada Store | Cruzlan Rice Mill",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Cruz Lumber"
+        },
+        {
+          "option_id": "o2",
+          "text": "Cruz-Lim Trading"
+        },
+        {
+          "option_id": "o3",
+          "text": "Cruzada Store"
+        },
+        {
+          "option_id": "o4",
+          "text": "Cruzlan Rice Mill"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Punctuation is ignored, and a hyphenated name is one unit: Cruz-Lim = CruzLim.",
+        "shortcut": "Close up the hyphen, then compare letter by letter.",
+        "why_correct": "Units in order: Cruz, Cruzada, Cruzlan, CruzLim. CruzLim is last (cruzli comes after cruzla). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 3), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o1": "\"Cruz\" alone files first: nothing comes before something.",
+          "o3": "\"Cruzada\" comes before \"Cruzlan\" and \"CruzLim\" (a before l).",
+          "o4": "Files last only if Cruz-Lim is split into Cruz / Lim. As one unit, CruzLim comes after Cruzlan (cruzla comes before cruzli)."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "distractor_subreason": {
+        "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o4": "CLR-LETTER-ORDER: splits the hyphenated name, breaks ARMA Rule 3"
+      },
+      "computed_order": [
+        "Cruz Lumber",
+        "Cruzada Store",
+        "Cruzlan Rice Mill",
+        "Cruz-Lim Trading"
+      ],
+      "source": "Civio Filing Rules v2 / ARMA Rule 3",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.6"
+      },
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP3-CLR-FILE-ORDER-0019",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "personal and business name filing (ARMA rules)",
+      "micro_skill": "apply ARMA Rule 4",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed FIRST?\nJ. Ramos | Jose Ramos | Juan B. Ramos | Jo Anne Ramos",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Jose Ramos"
+        },
+        {
+          "option_id": "o2",
+          "text": "J. Ramos"
+        },
+        {
+          "option_id": "o3",
+          "text": "Juan B. Ramos"
+        },
+        {
+          "option_id": "o4",
+          "text": "Jo Anne Ramos"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "An initial in a personal name is its own unit. Surname first, then given name or initial.",
+        "shortcut": "A lone initial comes before every name that starts with that letter (nothing before something).",
+        "why_correct": "All file under Ramos. Second units: J, Jo, Jose, Juan. The initial J is first. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 4), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o1": "\"Jose\" comes after \"J\" and \"Jo\".",
+          "o3": "\"Juan\" comes after \"J\", \"Jo\" and \"Jose\".",
+          "o4": "\"Jo\" comes after the initial \"J\": a single letter files before any name that starts with it."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "distractor_subreason": {
+        "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 4"
+      },
+      "computed_order": [
+        "J. Ramos",
+        "Jo Anne Ramos",
+        "Jose Ramos",
+        "Juan B. Ramos"
+      ],
+      "source": "Civio Filing Rules v2 / ARMA Rule 4",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.6"
+      },
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP3-CLR-FILE-ORDER-0020",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "personal and business name filing (ARMA rules)",
+      "micro_skill": "apply ARMA Rule 4",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed FIRST?\nABC Glass | A B Cruz Store | Abaca Crafts | ABS Motors",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "ABC Glass"
+        },
+        {
+          "option_id": "o2",
+          "text": "Abaca Crafts"
+        },
+        {
+          "option_id": "o3",
+          "text": "A B Cruz Store"
+        },
+        {
+          "option_id": "o4",
+          "text": "ABS Motors"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Single letters separated by spaces are separate units. An acronym written without spaces (ABC) is one unit.",
+        "shortcut": "Spaces decide: \"A B\" is two units, \"ABC\" is one.",
+        "why_correct": "First units: A, Abaca, ABC, ABS. The single letter A is first. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 4), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o1": "Files first only if ABC is split into A / B / C. A business acronym is one unit, written as it is: ABC.",
+          "o2": "\"Abaca\" comes after the single letter \"A\".",
+          "o4": "\"ABS\" comes after \"A\", \"Abaca\" and \"ABC\"."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "distractor_subreason": {
+        "o1": "CLR-LETTER-ORDER: splits the acronym, breaks ARMA Rule 4",
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      },
+      "computed_order": [
+        "A B Cruz Store",
+        "Abaca Crafts",
+        "ABC Glass",
+        "ABS Motors"
+      ],
+      "source": "Civio Filing Rules v2 / ARMA Rule 4",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.6"
+      },
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP3-CLR-FILE-ORDER-0021",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business and organization filing (ARMA rules)",
+      "micro_skill": "apply ARMA Rule 7",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed FIRST?\n100 Islands Tours | 7 Seas Shipping | VII Arts Studio | Seven Hills Inn",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "7 Seas Shipping"
+        },
+        {
+          "option_id": "o2",
+          "text": "100 Islands Tours"
+        },
+        {
+          "option_id": "o3",
+          "text": "VII Arts Studio"
+        },
+        {
+          "option_id": "o4",
+          "text": "Seven Hills Inn"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Arabic numerals first, in ascending order, then Roman numerals, then names that start with letters.",
+        "shortcut": "Compare numbers by value, not by first digit.",
+        "why_correct": "Order: 7, 100, VII, Seven. 7 Seas Shipping is first. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 7), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o2": "Files first only if 100 is read digit by digit (1 before 7). Numbers file in ascending order: 7 before 100.",
+          "o3": "Roman numerals file after Arabic numerals.",
+          "o4": "A spelled-out number files with the letters, after all numerals."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "distractor_subreason": {
+        "o2": "CLR-LETTER-ORDER: compares digits one by one, breaks ARMA Rule 7",
+        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 7",
+        "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 7"
+      },
+      "computed_order": [
+        "7 Seas Shipping",
+        "100 Islands Tours",
+        "VII Arts Studio",
+        "Seven Hills Inn"
+      ],
+      "source": "Civio Filing Rules v2 / ARMA Rule 7",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.6"
+      },
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP3-CLR-FILE-ORDER-0022",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business and organization filing (ARMA rules)",
+      "micro_skill": "apply ARMA Rule 7",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed LAST?\n3rd Avenue Cafe | III Kings Bakery | Three Sisters Bakery | Thomas Bakery",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "3rd Avenue Cafe"
+        },
+        {
+          "option_id": "o2",
+          "text": "III Kings Bakery"
+        },
+        {
+          "option_id": "o3",
+          "text": "Thomas Bakery"
+        },
+        {
+          "option_id": "o4",
+          "text": "Three Sisters Bakery"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Spelled-out numbers are filed as words. Ordinal endings (st, nd, rd, th) are ignored.",
+        "shortcut": "Only digits and Roman numerals go in the number group; words go with the letters.",
+        "why_correct": "Order: 3rd Avenue, III Kings, Thomas, Three. \"Thr\" comes after \"Tho\", so Three Sisters Bakery is last. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 7), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o1": "Arabic numerals file first; the ordinal ending \"rd\" is ignored.",
+          "o2": "Roman numerals file before any name that starts with a letter.",
+          "o3": "Files last only if \"Three\" is filed as the number 3. A spelled-out number files alphabetically: Thomas before Three."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER"
+      },
+      "distractor_subreason": {
+        "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 7",
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 7",
+        "o3": "CLR-LETTER-ORDER: files a spelled-out number with the numerals, breaks ARMA Rule 7"
+      },
+      "computed_order": [
+        "3rd Avenue Cafe",
+        "III Kings Bakery",
+        "Thomas Bakery",
+        "Three Sisters Bakery"
+      ],
+      "source": "Civio Filing Rules v2 / ARMA Rule 7",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.6"
+      },
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP3-CLR-FILE-ORDER-0023",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business and organization filing (ARMA rules)",
+      "micro_skill": "apply ARMA Rule 8",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed LAST?\nUniversity of the East | University of Santo Tomas | University of San Carlos | Union Bank",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "University of Santo Tomas"
+        },
+        {
+          "option_id": "o2",
+          "text": "University of San Carlos"
+        },
+        {
+          "option_id": "o3",
+          "text": "Union Bank"
+        },
+        {
+          "option_id": "o4",
+          "text": "University of the East"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "An organization is indexed as written on its letterhead, minor words included; only a leading \"The\" moves to the end.",
+        "shortcut": "Do not rearrange a school's name to its key word; read it as written.",
+        "why_correct": "Third units among the University names: San, Santo, the. \"the\" is last, so University of the East is last. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 8), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o1": "Files last only if \"the\" is dropped (University of East). The name is indexed as written, so \"the\" is the third unit.",
+          "o2": "\"San\" comes before \"Santo\" and \"the\": nothing comes before something.",
+          "o3": "\"Union\" comes before \"University\"."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER"
+      },
+      "distractor_subreason": {
+        "o1": "CLR-LETTER-ORDER: drops a minor word, breaks ARMA Rule 8",
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      },
+      "computed_order": [
+        "Union Bank",
+        "University of San Carlos",
+        "University of Santo Tomas",
+        "University of the East"
+      ],
+      "source": "Civio Filing Rules v2 / ARMA Rule 8",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.6"
+      },
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP3-CLR-FILE-ORDER-0024",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "business and organization filing (ARMA rules)",
+      "micro_skill": "apply ARMA Rule 8",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed LAST?\nAteneo de Davao University | Ateneo de Manila University | Ateneo Graduate School | Ateneo Law School",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Ateneo Law School"
+        },
+        {
+          "option_id": "o2",
+          "text": "Ateneo de Davao University"
+        },
+        {
+          "option_id": "o3",
+          "text": "Ateneo de Manila University"
+        },
+        {
+          "option_id": "o4",
+          "text": "Ateneo Graduate School"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "An organization is indexed as written on its letterhead; small words such as \"de\" are units in their place.",
+        "shortcut": "Keep every word of the official name, in order.",
+        "why_correct": "Second units: de, de, Graduate, Law. \"Law\" is last, so Ateneo Law School is last. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 8), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+        "why_wrong": {
+          "o2": "\"de Davao\" files first: de, then Davao before Manila.",
+          "o3": "Files last only if \"de\" is dropped (Ateneo Manila). As written, \"de\" is the second unit and comes before Graduate and Law.",
+          "o4": "\"Graduate\" comes before \"Law\"."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "distractor_subreason": {
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "o3": "CLR-LETTER-ORDER: drops a minor word, breaks ARMA Rule 8",
+        "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      },
+      "computed_order": [
+        "Ateneo de Davao University",
+        "Ateneo de Manila University",
+        "Ateneo Graduate School",
+        "Ateneo Law School"
+      ],
+      "source": "Civio Filing Rules v2 / ARMA Rule 8",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.6"
+      },
+      "notes": "Gap fill round 03 (CoS round 02 ruling: filing coverage for ARMA Rules 2, 3, 4, 7, 8); needs independent review."
+    }
+  ]
+}

@@ -406,13 +406,13 @@
         "why_correct": "Ang bukas-palad ay mapagbigay o matulungin.",
         "why_wrong": {
           "o1": "Literal na pagbasa sa palad.",
-          "o2": "Walang kaugnayan sa pagiging mapagbigay.",
+          "o2": "Tunay na ugali ito, pero walang kaugnayan sa sawikain; ang \"bukas-palad\" ay pagiging mapagbigay.",
           "o3": "Literal na pagbasa sa nakabukas na kamay."
         }
       },
       "distractor_reasoning": {
         "o1": "FIL-LITERAL",
-        "o2": "FIL-SAME-FIELD",
+        "o2": "FIL-OTHER-TRAIT",
         "o3": "FIL-LITERAL"
       },
       "source": "Original, Civio",
@@ -428,7 +428,7 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Gap fill round 01; needs independent review."
+      "notes": "Gap fill round 01; needs independent review. Round 02: o2 recoded FIL-SAME-FIELD -> FIL-OTHER-TRAIT per CoS ruling 2026-10-13."
     },
     {
       "id": "CIVIO-GAP1-VFIL-WIKAIN-0008",

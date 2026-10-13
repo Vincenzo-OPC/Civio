@@ -1,6 +1,6 @@
 # Civio CSE Question Design Spec
 
-Version: 0.1.4 (CoS rulings on batches 002–011: new codes, tense cap, frame rule, filing sub-reasons, baseline dedup; see 10.3)
+Version: 0.1.7 (optional item-level `shortcut` field, see §6 and 10.6; CoS round 02 rulings in 10.5)
 Date: 5 Oct 2026 (Asia/Manila); approved 7 Oct 2026
 Owner: GT
 Status: **Approved by GT on 7 Oct 2026.** The canonical copy lives in GT's Obsidian vault; this repo copy
@@ -267,6 +267,7 @@ Distractor codes:
 - `FIL-LITERAL` idiom taken word-for-word
 - `FIL-INTENSITY` right direction, wrong strength
 - `FIL-SPOKEN-FORM` common spoken usage that breaks the standard rule
+- `FIL-OTHER-TRAIT` (idiom items) a real personality trait or quality that has nothing to do with the idiom (v0.1.6)
 - plus the RC and paragraph codes from 3.2
 
 Suggested Civio mix (Filipino half of Verbal): synonym 25%, antonym 20%, idiom 15%, grammar 15%, reading 15%, paragraph order 10%.
@@ -349,7 +350,8 @@ Distractor codes:
 - `SPL-DOUBLE` doubled or undoubled consonant
 - `SPL-IE-EI` vowel order swapped
 - `SPL-DROP` missing letter
-- `SPL-SOUND` spelled as it sounds
+- `SPL-SOUND` spelled as it sounds (includes sound-alike endings such as -ance/-ence, -ant/-ent)
+- `SPL-SILENT` a silent letter is left out, as in "goverment" or "rythm" (v0.1.6)
 
 Suggested Civio mix: filing 55%, spelling 45%.
 
@@ -441,6 +443,7 @@ That is the bar: three short lines, no algebra words, one check.
 | `options` | array | Exactly 4 objects: `{option_id, text}` |
 | `answer_option_id` | string | The `option_id` of the right choice. Never a letter or index |
 | `reveal` | object | `{terms, shortcut, why_correct, why_wrong: {option_id: text}}` |
+| `shortcut` | string, optional (v0.1.7) | One short, honest technique for solving the item, shown first in the Reveal as "Shortcut: …" (the Reveal's own `reveal.shortcut` worked steps then show as "Method: …"). Examples: 15% = 10% + 5%; do the multiplication first; i before e except after c; a leading "The" files last. Leave the field out when no real shortcut exists; never pad it. Numerical shortcuts must be checked to give the key on the item's own numbers. |
 | `distractor_reasoning` | object | `{option_id: distractor_code}` for each wrong choice |
 | `distractor_subreason` | object | Filing items only (v0.1.4): `{option_id: "CLR-… : breaks ARMA Rule N (…)"}`; the parent code in `distractor_reasoning` is `CLR-FILE-ORDER` |
 | `source` | string | GI: article/section citation. Others: "Original, Civio" plus any rule cited (for example "Civio Filing Rules v1, Rule 3") |
@@ -710,3 +713,18 @@ them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 1. **New codes.** `FIL-ANTONYM-TRAP` is for synonym or meaning items in Filipino, including sawikain, where a distractor gives the opposite meaning. `RC-SUPPORTED-NOT-ASKED` is for NOT or EXCEPT reading questions, where a distractor is a true or supported statement and so is not the answer.
 2. **Order check.** An ordering or paragraph-organization item whose key equals the order in which the sentences are listed fails QA (`qa.py`).
 3. **Filing Reveals.** Every filing Reveal cites "(ANSI/ARMA 12-2005)".
+
+## 10.5 CoS rulings on audit round 02 (v0.1.6, 2026-10-13)
+
+**Chief of Staff ruling (independent reviewer; GT delegated Civio decisions), 2026-10-13.**
+
+1. **Spelling realism.** A misspelling must be one people really make: doubled letters, ie/ei, silent letters, or sound-alike endings (-ance/-ence and similar). Keyboard-typo forms ("parliamnt", "licnse") are not used.
+2. **One target per word.** A spelling target word (the word being tested) appears in only one item in the whole bank. `qa.py` checks this, and checks that each coded error type describes its misspelling.
+3. **Filing coverage.** Filing items cover ARMA Rules 1 to 8, not only Rules 1, 5 and 6. Each cites ANSI/ARMA 12-2005 (ARMA International), never the CSC.
+4. **Frame cap.** No single stem phrasing may exceed 25% of the items in its subject (domain) across the generated batches. Order-of-operations items use more than one expression shape.
+5. **New codes.** `SPL-SILENT` (silent letter left out) and `FIL-OTHER-TRAIT` (idiom distractor naming a real trait unrelated to the idiom).
+6. Rewritten items that were approved go back to draft with review_status "changed" until Chief of Staff passes them again.
+
+## 10.6 Optional shortcut field (v0.1.7, 2026-10-13)
+
+**GT request, 2026-10-13.** Items may carry an optional `shortcut`: one short, honest technique (percent: 15% = 10% + 5%; order of operations: multiply first; spelling: an ie/ei rule; filing: an ARMA rule mnemonic). Omit it when no real shortcut exists. `qa.py` accepts the field and rejects an empty or padded one (over 300 characters). The importer shows it first in the Reveal as "Shortcut: …" and relabels the worked steps "Method: …"; items without the field render as before. Adding a shortcut to an approved item is a content change: it waits for Chief of Staff before it is merged or imported. Numerical is backfilled first in `docs/research/shortcuts-num-001.json`, each shortcut evaluated on the item's own numbers.

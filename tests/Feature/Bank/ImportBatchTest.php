@@ -1,5 +1,6 @@
 <?php
 
+use App\Console\Commands\ImportBatchCommand;
 use App\Models\Question;
 
 test('batch 001 imports as active civio items, keyed, and re-running changes nothing', function () {
@@ -88,4 +89,16 @@ test('generated unreviewed items cannot be activated even when the operator omit
 
     expect(Question::where('status', 'draft')->count())->toBe(100)
         ->and(Question::where('status', 'active')->count())->toBe(0);
+});
+
+test('an optional item-level shortcut leads the Reveal and the worked steps follow as Method', function () {
+    $item = json_decode(file_get_contents(base_path('docs/batches/batch-001.json')), true)['items'][0];
+    $texts = array_column($item['options'], 'text', 'option_id');
+
+    $plain = ImportBatchCommand::explanation($item, $texts);
+    expect($plain)->toContain('Shortcut: '.$item['reveal']['shortcut'])->not->toContain('Method:');
+
+    $item['shortcut'] = 'Chain the changes as multipliers: ₱250 × 1.2 × 0.8 = ₱240.';
+    $with = ImportBatchCommand::explanation($item, $texts);
+    expect($with)->toContain("Shortcut: {$item['shortcut']}\nMethod: {$item['reveal']['shortcut']}");
 });
