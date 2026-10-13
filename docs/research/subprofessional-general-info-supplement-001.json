@@ -1,0 +1,1778 @@
+{
+  "batch": "subprofessional-general-info-supplement-001",
+  "spec_version": "0.1.4",
+  "status": "draft, primary legal source cited, editorial review required",
+  "note": "30 original General Information items on environment and human rights gaps. Facts referenced to the cited primary law. Remain drafts and must pass legal and editorial review before active import.",
+  "items": [
+    {
+      "id": "CIVIO-GI-20261013-0001",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Solid waste",
+      "concept": "Solid waste",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "A local council wants a law specifically governing ecological solid waste management. Which law should it consult?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "R.A. 9275"
+        },
+        {
+          "option_id": "b",
+          "text": "R.A. 9147"
+        },
+        {
+          "option_id": "c",
+          "text": "R.A. 8749"
+        },
+        {
+          "option_id": "d",
+          "text": "R.A. 9003"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 9003 is the Ecological Solid Waste Management Act of 2000.",
+        "why_correct": "R.A. 9003 is the Ecological Solid Waste Management Act of 2000.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0002",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Source segregation",
+      "concept": "Source segregation",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Under R.A. 9003, what does segregation at source chiefly require?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Burying reusable materials with residual waste"
+        },
+        {
+          "option_id": "b",
+          "text": "Mixing compostable and hazardous wastes"
+        },
+        {
+          "option_id": "c",
+          "text": "Separating kinds of waste where they are generated"
+        },
+        {
+          "option_id": "d",
+          "text": "Combining all wastes before collection"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Source segregation means separating waste at the place where it is generated.",
+        "why_correct": "Source segregation means separating waste at the place where it is generated.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0003",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Composting",
+      "concept": "Composting",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which action best illustrates composting as described in R.A. 9003?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Burning discarded plastics in an open lot"
+        },
+        {
+          "option_id": "b",
+          "text": "Allowing organic scraps to decompose under controlled conditions"
+        },
+        {
+          "option_id": "c",
+          "text": "Dumping mixed waste into a creek"
+        },
+        {
+          "option_id": "d",
+          "text": "Mixing batteries with food scraps"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Composting uses controlled biological decomposition of organic materials.",
+        "why_correct": "Composting uses controlled biological decomposition of organic materials.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0004",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Waste minimization",
+      "concept": "Waste minimization",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "A barangay encourages residents to reuse containers before discarding them. Which R.A. 9003 principle does this practice support?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Waste avoidance and resource conservation"
+        },
+        {
+          "option_id": "b",
+          "text": "Discharging untreated wastewater"
+        },
+        {
+          "option_id": "c",
+          "text": "Increased disposal without sorting"
+        },
+        {
+          "option_id": "d",
+          "text": "Unrestricted burning of waste"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Reuse supports reducing waste and recovering useful resources.",
+        "why_correct": "Reuse supports reducing waste and recovering useful resources.",
+        "why_wrong": {
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0005",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Government responsibility",
+      "concept": "Government responsibility",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Under R.A. 9003, which level of government retains primary responsibility for implementing solid waste management?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Foreign embassies"
+        },
+        {
+          "option_id": "b",
+          "text": "International courts"
+        },
+        {
+          "option_id": "c",
+          "text": "Private advertising agencies"
+        },
+        {
+          "option_id": "d",
+          "text": "Local government units"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 9003 assigns primary responsibility to local government units.",
+        "why_correct": "R.A. 9003 assigns primary responsibility to local government units.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0006",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Clean Air Act",
+      "concept": "Clean Air Act",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "A citizen asks which Philippine statute mainly addresses air pollution control. Which is correct?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "R.A. 8749"
+        },
+        {
+          "option_id": "b",
+          "text": "R.A. 9147"
+        },
+        {
+          "option_id": "c",
+          "text": "R.A. 9275"
+        },
+        {
+          "option_id": "d",
+          "text": "R.A. 9003"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 8749 is the Philippine Clean Air Act of 1999.",
+        "why_correct": "R.A. 8749 is the Philippine Clean Air Act of 1999.",
+        "why_wrong": {
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0007",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Air pollution",
+      "concept": "Air pollution",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "A factory releases soot that degrades air quality. Which environmental problem is most directly involved?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Groundwater over-extraction"
+        },
+        {
+          "option_id": "b",
+          "text": "Air pollution"
+        },
+        {
+          "option_id": "c",
+          "text": "Coastal erosion"
+        },
+        {
+          "option_id": "d",
+          "text": "Loss of topsoil fertility only"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Soot released to the atmosphere is relevant to air pollution under the Clean Air Act.",
+        "why_correct": "Soot released to the atmosphere is relevant to air pollution under the Clean Air Act.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0008",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Polluter pays",
+      "concept": "Polluter pays",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which principle recognized in the Philippine Clean Air Act connects pollution costs to those responsible for polluting?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Environmental costs belong only to residents"
+        },
+        {
+          "option_id": "b",
+          "text": "All polluters are exempt"
+        },
+        {
+          "option_id": "c",
+          "text": "Polluters must pay"
+        },
+        {
+          "option_id": "d",
+          "text": "Permits remove all cleanup obligations"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 8749 recognizes the polluters-must-pay principle.",
+        "why_correct": "R.A. 8749 recognizes the polluters-must-pay principle.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0009",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Public participation",
+      "concept": "Public participation",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "A city invites residents to comment on an air-quality plan. Which R.A. 8749 approach is being applied?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Exclusion of the public from air monitoring"
+        },
+        {
+          "option_id": "b",
+          "text": "Removal of accountability for emitters"
+        },
+        {
+          "option_id": "c",
+          "text": "Suspension of all air standards"
+        },
+        {
+          "option_id": "d",
+          "text": "Public participation in environmental planning"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The law encourages public involvement in air-quality planning and monitoring.",
+        "why_correct": "The law encourages public involvement in air-quality planning and monitoring.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0010",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Air quality",
+      "concept": "Air quality",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which is a central objective of R.A. 8749?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Preventing and controlling harmful emissions into the air"
+        },
+        {
+          "option_id": "b",
+          "text": "Determining the minimum voting age"
+        },
+        {
+          "option_id": "c",
+          "text": "Regulating only wildlife hunting licenses"
+        },
+        {
+          "option_id": "d",
+          "text": "Setting graduation requirements for public schools"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The statute establishes a broad national policy for air pollution management.",
+        "why_correct": "The statute establishes a broad national policy for air pollution management.",
+        "why_wrong": {
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0011",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Clean Water Act",
+      "concept": "Clean Water Act",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which law establishes the Philippine Clean Water Act of 2004?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "R.A. 9729"
+        },
+        {
+          "option_id": "b",
+          "text": "R.A. 9275"
+        },
+        {
+          "option_id": "c",
+          "text": "R.A. 8749"
+        },
+        {
+          "option_id": "d",
+          "text": "R.A. 9003"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 9275 is the Philippine Clean Water Act of 2004.",
+        "why_correct": "R.A. 9275 is the Philippine Clean Water Act of 2004.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0012",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Water bodies",
+      "concept": "Water bodies",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which water bodies fall within the water-quality protection policy of R.A. 9275?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Only privately owned wells"
+        },
+        {
+          "option_id": "b",
+          "text": "Only swimming pools"
+        },
+        {
+          "option_id": "c",
+          "text": "Fresh, brackish, and marine waters"
+        },
+        {
+          "option_id": "d",
+          "text": "Only mountain waterfalls"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 9275 covers the quality of fresh, brackish, and marine waters.",
+        "why_correct": "R.A. 9275 covers the quality of fresh, brackish, and marine waters.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0013",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Water pollution",
+      "concept": "Water pollution",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "A community finds untreated wastewater flowing into a river. What concern is most directly addressed by R.A. 9275?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Aircraft registration"
+        },
+        {
+          "option_id": "b",
+          "text": "Road traffic signs"
+        },
+        {
+          "option_id": "c",
+          "text": "Building-height restrictions"
+        },
+        {
+          "option_id": "d",
+          "text": "Water pollution prevention and control"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 9275 provides a framework for reducing and controlling water pollution.",
+        "why_correct": "R.A. 9275 provides a framework for reducing and controlling water pollution.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0014",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Land-based sources",
+      "concept": "Land-based sources",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which pollution source does R.A. 9275 emphasize in its primary coverage?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Pollution from land-based sources"
+        },
+        {
+          "option_id": "b",
+          "text": "Only sound from aircraft"
+        },
+        {
+          "option_id": "c",
+          "text": "Only ultraviolet radiation"
+        },
+        {
+          "option_id": "d",
+          "text": "Only pollution originating from satellites"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Its coverage primarily emphasizes water pollution from land-based sources, while standards apply broadly.",
+        "why_correct": "Its coverage primarily emphasizes water pollution from land-based sources, while standards apply broadly.",
+        "why_wrong": {
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0015",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Environmental management",
+      "concept": "Environmental management",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "A local plan combines monitoring, prevention, and community education to protect waterways. Which approach best matches R.A. 9275?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Disposal of all waste into drains"
+        },
+        {
+          "option_id": "b",
+          "text": "Treating public information as unnecessary"
+        },
+        {
+          "option_id": "c",
+          "text": "Integrated water-quality management"
+        },
+        {
+          "option_id": "d",
+          "text": "Removal of monitoring systems"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The law supports coordinated prevention, monitoring and informed public participation.",
+        "why_correct": "The law supports coordinated prevention, monitoring and informed public participation.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0016",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Wildlife law",
+      "concept": "Wildlife law",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "A conservation officer is looking for the law protecting wildlife species and habitats. Which statute is directly relevant?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "R.A. 9147"
+        },
+        {
+          "option_id": "b",
+          "text": "R.A. 8749"
+        },
+        {
+          "option_id": "c",
+          "text": "R.A. 9003"
+        },
+        {
+          "option_id": "d",
+          "text": "R.A. 9275"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 9147 is the Wildlife Resources Conservation and Protection Act.",
+        "why_correct": "R.A. 9147 is the Wildlife Resources Conservation and Protection Act.",
+        "why_wrong": {
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0017",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Wildlife habitat",
+      "concept": "Wildlife habitat",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "What is a principal goal of R.A. 9147?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Prohibit all scientific biodiversity research"
+        },
+        {
+          "option_id": "b",
+          "text": "Replace native species with imported species"
+        },
+        {
+          "option_id": "c",
+          "text": "Convert every habitat into commercial housing"
+        },
+        {
+          "option_id": "d",
+          "text": "Conserve wildlife and the habitats they depend on"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The law aims to conserve wildlife species, habitats and ecological balance.",
+        "why_correct": "The law aims to conserve wildlife species, habitats and ecological balance.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0018",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Endemic species",
+      "concept": "Endemic species",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Under the definitions in R.A. 9147, what is an endemic species?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "A species that lives only in captivity"
+        },
+        {
+          "option_id": "b",
+          "text": "A species with no natural habitat"
+        },
+        {
+          "option_id": "c",
+          "text": "A species naturally found only in specific areas of the country"
+        },
+        {
+          "option_id": "d",
+          "text": "Any species recently imported from abroad"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Endemic means naturally occurring only in particular areas of the country.",
+        "why_correct": "Endemic means naturally occurring only in particular areas of the country.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0019",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Wildlife trade",
+      "concept": "Wildlife trade",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which activity is among those regulated under R.A. 9147?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Sale of ordinary office supplies"
+        },
+        {
+          "option_id": "b",
+          "text": "Collection and trade of wildlife"
+        },
+        {
+          "option_id": "c",
+          "text": "Registration of school attendance"
+        },
+        {
+          "option_id": "d",
+          "text": "Library book borrowing"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The law regulates collection, exchange, importation and exportation of wildlife.",
+        "why_correct": "The law regulates collection, exchange, importation and exportation of wildlife.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0020",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Habitat",
+      "concept": "Habitat",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which description best matches the legal concept of habitat in R.A. 9147?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "The natural place or environment where a species occurs"
+        },
+        {
+          "option_id": "b",
+          "text": "A list of endangered species only"
+        },
+        {
+          "option_id": "c",
+          "text": "The price of a wildlife product"
+        },
+        {
+          "option_id": "d",
+          "text": "Any construction site near a city"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "A habitat is the place or environment where a species naturally occurs or has established a population.",
+        "why_correct": "A habitat is the place or environment where a species naturally occurs or has established a population.",
+        "why_wrong": {
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0021",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Climate Change Act",
+      "concept": "Climate Change Act",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which law established the Climate Change Commission?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "R.A. 8749"
+        },
+        {
+          "option_id": "b",
+          "text": "R.A. 9147"
+        },
+        {
+          "option_id": "c",
+          "text": "R.A. 9003"
+        },
+        {
+          "option_id": "d",
+          "text": "R.A. 9729"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 9729 is the Climate Change Act of 2009 and created the Climate Change Commission.",
+        "why_correct": "R.A. 9729 is the Climate Change Act of 2009 and created the Climate Change Commission.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0022",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Adaptation",
+      "concept": "Adaptation",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "A flood-prone community raises critical equipment above expected flood levels. This is chiefly an example of:",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Open dumping"
+        },
+        {
+          "option_id": "b",
+          "text": "Wildlife importation"
+        },
+        {
+          "option_id": "c",
+          "text": "Climate adaptation"
+        },
+        {
+          "option_id": "d",
+          "text": "Air-quality sampling only"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Adaptation means adjusting systems to actual or expected climate effects.",
+        "why_correct": "Adaptation means adjusting systems to actual or expected climate effects.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0023",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Anthropogenic causes",
+      "concept": "Anthropogenic causes",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "The word anthropogenic in R.A. 9729 refers to causes arising from:",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Only earthquakes"
+        },
+        {
+          "option_id": "b",
+          "text": "Human activities"
+        },
+        {
+          "option_id": "c",
+          "text": "Only natural lunar cycles"
+        },
+        {
+          "option_id": "d",
+          "text": "Only changes in ocean tides"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Anthropogenic causes are produced by human activities.",
+        "why_correct": "Anthropogenic causes are produced by human activities.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0024",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Climate policy",
+      "concept": "Climate policy",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "According to the Climate Change Act, climate concerns should be incorporated into:",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Government policy and development planning"
+        },
+        {
+          "option_id": "b",
+          "text": "Only school uniforms"
+        },
+        {
+          "option_id": "c",
+          "text": "Only private entertainment programs"
+        },
+        {
+          "option_id": "d",
+          "text": "Only road sign colors"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 9729 directs the integration of climate change in government policy and development plans.",
+        "why_correct": "R.A. 9729 directs the integration of climate change in government policy and development plans.",
+        "why_wrong": {
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0025",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Safe Spaces Act",
+      "concept": "Safe Spaces Act",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which law is formally called the Safe Spaces Act?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "R.A. 9003"
+        },
+        {
+          "option_id": "b",
+          "text": "R.A. 8749"
+        },
+        {
+          "option_id": "c",
+          "text": "R.A. 9275"
+        },
+        {
+          "option_id": "d",
+          "text": "R.A. 11313"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "R.A. 11313 is the Safe Spaces Act.",
+        "why_correct": "R.A. 11313 is the Safe Spaces Act.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0026",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Gender-based harassment",
+      "concept": "Gender-based harassment",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "A commuter experiences unwanted sexual remarks in a terminal. Which Philippine law directly addresses gender-based harassment in public spaces?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "R.A. 11313"
+        },
+        {
+          "option_id": "b",
+          "text": "R.A. 9147"
+        },
+        {
+          "option_id": "c",
+          "text": "R.A. 9729"
+        },
+        {
+          "option_id": "d",
+          "text": "R.A. 9003"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The Safe Spaces Act covers gender-based harassment in public spaces, including transport terminals.",
+        "why_correct": "The Safe Spaces Act covers gender-based harassment in public spaces, including transport terminals.",
+        "why_wrong": {
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0027",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Online safety",
+      "concept": "Online safety",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which situation is addressed by the online-harassment provisions of R.A. 11313?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Legitimate classroom attendance"
+        },
+        {
+          "option_id": "b",
+          "text": "Unwanted gender-based sexual harassment directed at a person online"
+        },
+        {
+          "option_id": "c",
+          "text": "A polite request for a work update"
+        },
+        {
+          "option_id": "d",
+          "text": "Filing an ordinary public-record request"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The Act also covers gender-based online sexual harassment.",
+        "why_correct": "The Act also covers gender-based online sexual harassment.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0028",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Public-space coverage",
+      "concept": "Public-space coverage",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which is among the public places contemplated by R.A. 11313?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Only distant fishing grounds"
+        },
+        {
+          "option_id": "b",
+          "text": "Only private bedrooms"
+        },
+        {
+          "option_id": "c",
+          "text": "Public transport terminals"
+        },
+        {
+          "option_id": "d",
+          "text": "Only uninhabited islands"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The law's public-space definition includes transportation terminals.",
+        "why_correct": "The law's public-space definition includes transportation terminals.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0029",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Ecology right",
+      "concept": "Ecology right",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which provision expressly protects the right to a balanced and healthful ecology?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Article I, Section 1"
+        },
+        {
+          "option_id": "b",
+          "text": "Article XVII, Section 30"
+        },
+        {
+          "option_id": "c",
+          "text": "Article III, Section 25"
+        },
+        {
+          "option_id": "d",
+          "text": "Article II, Section 16 of the 1987 Constitution"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Article II, Section 16 protects the right to a balanced and healthful ecology.",
+        "why_correct": "Article II, Section 16 protects the right to a balanced and healthful ecology.",
+        "why_wrong": {
+          "a": "This option does not match the cited provision or the scenario.",
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "GI-WRONG-LAW-OR-CLAIM",
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    },
+    {
+      "id": "CIVIO-GI-20261013-0030",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Equal protection",
+      "concept": "Equal protection",
+      "micro_skill": "Apply the cited primary Philippine law to an original scenario",
+      "archetype": "GI-SOURCE-BASED-SCENARIO",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Which part of the Constitution contains the equal protection guarantee?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Article III, Section 1"
+        },
+        {
+          "option_id": "b",
+          "text": "Article X, Section 20"
+        },
+        {
+          "option_id": "c",
+          "text": "Article XVII, Section 1"
+        },
+        {
+          "option_id": "d",
+          "text": "Article I, Section 1"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Article III, Section 1 contains due process and equal protection guarantees.",
+        "why_correct": "Article III, Section 1 contains due process and equal protection guarantees.",
+        "why_wrong": {
+          "b": "This option does not match the cited provision or the scenario.",
+          "c": "This option does not match the cited provision or the scenario.",
+          "d": "This option does not match the cited provision or the scenario."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "GI-WRONG-LAW-OR-CLAIM",
+        "c": "GI-WRONG-LAW-OR-CLAIM",
+        "d": "GI-WRONG-LAW-OR-CLAIM"
+      },
+      "source": "Original Civio item; facts checked against primary law",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted independent composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation."
+    }
+  ]
+}
