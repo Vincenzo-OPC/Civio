@@ -1,0 +1,2368 @@
+{
+  "batch": "subprofessional-clerical-supplement-001",
+  "spec_version": "0.1.4",
+  "status": "draft, editorial review required",
+  "note": "40 Subprofessional-only clerical items: surname-first alphabetic filing, numerical reference filing, chronological filing, and English spelling. Sorting and key uniqueness independently recomputed by deterministic code. Rules are explicitly defined in each item; no claim that CSC mandates a private filing standard.",
+  "items": [
+    {
+      "id": "CIVIO-CLR-20261013-0001",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "names",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NAMES",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A filing clerk arranges records alphabetically by surname, then given name. Which folder should be filed FIRST?\nFolders: Alma Serrano | Anton Santos | Bea Salcedo | Carlo Santiago",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Alma Serrano"
+        },
+        {
+          "option_id": "b",
+          "text": "Carlo Santiago"
+        },
+        {
+          "option_id": "c",
+          "text": "Bea Salcedo"
+        },
+        {
+          "option_id": "d",
+          "text": "Anton Santos"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Use surname first, then given name, in alphabetical order. The first folder is Bea Salcedo.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Bea Salcedo.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "b": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0002",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "names",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NAMES",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A filing clerk arranges records alphabetically by surname, then given name. Which folder should be filed LAST?\nFolders: Dina Mercado | Dina Mendoza | Dina Mendez | Dina Melchor",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Dina Melchor"
+        },
+        {
+          "option_id": "b",
+          "text": "Dina Mendoza"
+        },
+        {
+          "option_id": "c",
+          "text": "Dina Mercado"
+        },
+        {
+          "option_id": "d",
+          "text": "Dina Mendez"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Use surname first, then given name, in alphabetical order. The last folder is Dina Mercado.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Dina Mercado.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "b": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0003",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "names",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NAMES",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A filing clerk arranges records alphabetically by surname, then given name. Which folder should be filed FIRST?\nFolders: Elise Cabrera | Emil Cabral | Elena Caballero | Edgar Cabantog",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Elena Caballero"
+        },
+        {
+          "option_id": "b",
+          "text": "Elise Cabrera"
+        },
+        {
+          "option_id": "c",
+          "text": "Emil Cabral"
+        },
+        {
+          "option_id": "d",
+          "text": "Edgar Cabantog"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Use surname first, then given name, in alphabetical order. The first folder is Elena Caballero.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Elena Caballero.",
+        "why_wrong": {
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0004",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "names",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NAMES",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A filing clerk arranges records alphabetically by surname, then given name. Which folder should be filed LAST?\nFolders: Liza Villanueva | Leo Villamor | Lorna Villar | Luz Villegas",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Leo Villamor"
+        },
+        {
+          "option_id": "b",
+          "text": "Liza Villanueva"
+        },
+        {
+          "option_id": "c",
+          "text": "Lorna Villar"
+        },
+        {
+          "option_id": "d",
+          "text": "Luz Villegas"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Use surname first, then given name, in alphabetical order. The last folder is Luz Villegas.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Luz Villegas.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "b": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0005",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "names",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NAMES",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A filing clerk arranges records alphabetically by surname, then given name. Which folder should be filed FIRST?\nFolders: Nina Roldan | Noel Robles | Nico Roxas | Nena Roman",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Nico Roxas"
+        },
+        {
+          "option_id": "b",
+          "text": "Noel Robles"
+        },
+        {
+          "option_id": "c",
+          "text": "Nena Roman"
+        },
+        {
+          "option_id": "d",
+          "text": "Nina Roldan"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Use surname first, then given name, in alphabetical order. The first folder is Noel Robles.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Noel Robles.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0006",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "names",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NAMES",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A filing clerk arranges records alphabetically by surname, then given name. Which folder should be filed LAST?\nFolders: Pablo Valencia | Paula Valdez | Patricia Valerio | Paolo Valles",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Patricia Valerio"
+        },
+        {
+          "option_id": "b",
+          "text": "Paolo Valles"
+        },
+        {
+          "option_id": "c",
+          "text": "Pablo Valencia"
+        },
+        {
+          "option_id": "d",
+          "text": "Paula Valdez"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Use surname first, then given name, in alphabetical order. The last folder is Paolo Valles.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Paolo Valles.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0007",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "names",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NAMES",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A filing clerk arranges records alphabetically by surname, then given name. Which folder should be filed FIRST?\nFolders: Rico Alvarez | Rita Alvarado | Rina Alonzo | Ramon Alva",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Rico Alvarez"
+        },
+        {
+          "option_id": "b",
+          "text": "Rina Alonzo"
+        },
+        {
+          "option_id": "c",
+          "text": "Ramon Alva"
+        },
+        {
+          "option_id": "d",
+          "text": "Rita Alvarado"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Use surname first, then given name, in alphabetical order. The first folder is Rina Alonzo.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Rina Alonzo.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0008",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "names",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NAMES",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A filing clerk arranges records alphabetically by surname, then given name. Which folder should be filed LAST?\nFolders: Sofia Bautista | Samuel Batong | Shiela Bañez | Sandro Bayani",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Samuel Batong"
+        },
+        {
+          "option_id": "b",
+          "text": "Sofia Bautista"
+        },
+        {
+          "option_id": "c",
+          "text": "Sandro Bayani"
+        },
+        {
+          "option_id": "d",
+          "text": "Shiela Bañez"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Use surname first, then given name, in alphabetical order. The last folder is Sandro Bayani.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Sandro Bayani.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "b": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0009",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "numeric",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NUMERIC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "The registry uses ascending numerical filing by the full five-digit reference number. Which record should be placed FIRST?\nRecords: 00142 | 00124 | 00141 | 00114",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "00124"
+        },
+        {
+          "option_id": "b",
+          "text": "00141"
+        },
+        {
+          "option_id": "c",
+          "text": "00142"
+        },
+        {
+          "option_id": "d",
+          "text": "00114"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "b": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0010",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "numeric",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NUMERIC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "The registry uses ascending numerical filing by the full five-digit reference number. Which record should be placed LAST?\nRecords: 00709 | 00790 | 00719 | 00791",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "00709"
+        },
+        {
+          "option_id": "b",
+          "text": "00719"
+        },
+        {
+          "option_id": "c",
+          "text": "00790"
+        },
+        {
+          "option_id": "d",
+          "text": "00791"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "b": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0011",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "numeric",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NUMERIC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "The registry uses ascending numerical filing by the full five-digit reference number. Which record should be placed FIRST?\nRecords: 02004 | 02040 | 02400 | 02003",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "02003"
+        },
+        {
+          "option_id": "b",
+          "text": "02040"
+        },
+        {
+          "option_id": "c",
+          "text": "02400"
+        },
+        {
+          "option_id": "d",
+          "text": "02004"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_wrong": {
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0012",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "numeric",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NUMERIC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "The registry uses ascending numerical filing by the full five-digit reference number. Which record should be placed LAST?\nRecords: 10021 | 10102 | 10012 | 10020",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "10020"
+        },
+        {
+          "option_id": "b",
+          "text": "10021"
+        },
+        {
+          "option_id": "c",
+          "text": "10012"
+        },
+        {
+          "option_id": "d",
+          "text": "10102"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "b": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0013",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "numeric",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NUMERIC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "The registry uses ascending numerical filing by the full five-digit reference number. Which record should be placed FIRST?\nRecords: 04318 | 04381 | 04138 | 04319",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "04319"
+        },
+        {
+          "option_id": "b",
+          "text": "04138"
+        },
+        {
+          "option_id": "c",
+          "text": "04318"
+        },
+        {
+          "option_id": "d",
+          "text": "04381"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0014",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "numeric",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-NUMERIC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "The registry uses ascending numerical filing by the full five-digit reference number. Which record should be placed LAST?\nRecords: 09001 | 00901 | 09010 | 09011",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "09001"
+        },
+        {
+          "option_id": "b",
+          "text": "09011"
+        },
+        {
+          "option_id": "c",
+          "text": "00901"
+        },
+        {
+          "option_id": "d",
+          "text": "09010"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0015",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "chronological",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-CHRONOLOGICAL",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Documents are filed from earliest date to latest, using YYYY-MM-DD. Which dated record should be placed FIRST?\nDates: 2026-10-01 | 2026-09-30 | 2026-10-03 | 2026-09-28",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "2026-10-01"
+        },
+        {
+          "option_id": "b",
+          "text": "2026-09-30"
+        },
+        {
+          "option_id": "c",
+          "text": "2026-10-03"
+        },
+        {
+          "option_id": "d",
+          "text": "2026-09-28"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "b": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0016",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "chronological",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-CHRONOLOGICAL",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Documents are filed from earliest date to latest, using YYYY-MM-DD. Which dated record should be placed LAST?\nDates: 2026-01-05 | 2026-01-15 | 2026-02-01 | 2026-01-25",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "2026-02-01"
+        },
+        {
+          "option_id": "b",
+          "text": "2026-01-15"
+        },
+        {
+          "option_id": "c",
+          "text": "2026-01-05"
+        },
+        {
+          "option_id": "d",
+          "text": "2026-01-25"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_wrong": {
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0017",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "chronological",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-CHRONOLOGICAL",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Documents are filed from earliest date to latest, using YYYY-MM-DD. Which dated record should be placed FIRST?\nDates: 2025-12-21 | 2026-01-02 | 2025-11-30 | 2025-12-03",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "2025-11-30"
+        },
+        {
+          "option_id": "b",
+          "text": "2025-12-03"
+        },
+        {
+          "option_id": "c",
+          "text": "2026-01-02"
+        },
+        {
+          "option_id": "d",
+          "text": "2025-12-21"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_wrong": {
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0018",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "chronological",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-CHRONOLOGICAL",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Documents are filed from earliest date to latest, using YYYY-MM-DD. Which dated record should be placed LAST?\nDates: 2026-07-31 | 2026-08-01 | 2026-07-30 | 2026-08-03",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "2026-08-03"
+        },
+        {
+          "option_id": "b",
+          "text": "2026-07-31"
+        },
+        {
+          "option_id": "c",
+          "text": "2026-07-30"
+        },
+        {
+          "option_id": "d",
+          "text": "2026-08-01"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_wrong": {
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0019",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "chronological",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-CHRONOLOGICAL",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Documents are filed from earliest date to latest, using YYYY-MM-DD. Which dated record should be placed FIRST?\nDates: 2026-03-01 | 2026-02-28 | 2026-03-03 | 2026-02-27",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "2026-03-01"
+        },
+        {
+          "option_id": "b",
+          "text": "2026-02-27"
+        },
+        {
+          "option_id": "c",
+          "text": "2026-03-03"
+        },
+        {
+          "option_id": "d",
+          "text": "2026-02-28"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "c": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "c": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0020",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "chronological",
+      "micro_skill": "Apply the stated filing order accurately",
+      "archetype": "CLR-CHRONOLOGICAL",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Documents are filed from earliest date to latest, using YYYY-MM-DD. Which dated record should be placed LAST?\nDates: 2026-11-14 | 2026-11-04 | 2026-10-30 | 2026-10-31",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "2026-10-31"
+        },
+        {
+          "option_id": "b",
+          "text": "2026-11-04"
+        },
+        {
+          "option_id": "c",
+          "text": "2026-11-14"
+        },
+        {
+          "option_id": "d",
+          "text": "2026-10-30"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_wrong": {
+          "a": "This is not at the requested first or last position under the specified filing rule.",
+          "b": "This is not at the requested first or last position under the specified filing rule.",
+          "d": "This is not at the requested first or last position under the specified filing rule."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "CLR-WRONG-POSITION",
+        "b": "CLR-WRONG-POSITION",
+        "d": "CLR-WRONG-POSITION"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0021",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"a place to stay\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "acomodation"
+        },
+        {
+          "option_id": "b",
+          "text": "accommodation"
+        },
+        {
+          "option_id": "c",
+          "text": "acommodation"
+        },
+        {
+          "option_id": "d",
+          "text": "accomodation"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"accommodation\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"accommodation\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0022",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"upkeep\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "maintainance"
+        },
+        {
+          "option_id": "b",
+          "text": "maintenance"
+        },
+        {
+          "option_id": "c",
+          "text": "maintenence"
+        },
+        {
+          "option_id": "d",
+          "text": "maintinance"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"maintenance\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"maintenance\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0023",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"not joined\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "seperete"
+        },
+        {
+          "option_id": "b",
+          "text": "seperate"
+        },
+        {
+          "option_id": "c",
+          "text": "separrate"
+        },
+        {
+          "option_id": "d",
+          "text": "separate"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"separate\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"separate\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0024",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"required\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "nessesary"
+        },
+        {
+          "option_id": "b",
+          "text": "necesary"
+        },
+        {
+          "option_id": "c",
+          "text": "neccessary"
+        },
+        {
+          "option_id": "d",
+          "text": "necessary"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"necessary\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"necessary\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0025",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"a formal suggestion\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "recommendation"
+        },
+        {
+          "option_id": "b",
+          "text": "reccommendation"
+        },
+        {
+          "option_id": "c",
+          "text": "recommenddation"
+        },
+        {
+          "option_id": "d",
+          "text": "recomendation"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"recommendation\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"recommendation\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0026",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"proof of payment\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "reciept"
+        },
+        {
+          "option_id": "b",
+          "text": "receipt"
+        },
+        {
+          "option_id": "c",
+          "text": "receeipt"
+        },
+        {
+          "option_id": "d",
+          "text": "receit"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"receipt\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"receipt\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0027",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"a special right\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "privelege"
+        },
+        {
+          "option_id": "b",
+          "text": "privilage"
+        },
+        {
+          "option_id": "c",
+          "text": "privilege"
+        },
+        {
+          "option_id": "d",
+          "text": "priviledge"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"privilege\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"privilege\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "b": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0028",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"without doubt\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "definitely"
+        },
+        {
+          "option_id": "b",
+          "text": "definitly"
+        },
+        {
+          "option_id": "c",
+          "text": "definately"
+        },
+        {
+          "option_id": "d",
+          "text": "defenitely"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"definitely\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"definitely\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0029",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"a group assigned a task\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "committie"
+        },
+        {
+          "option_id": "b",
+          "text": "comittee"
+        },
+        {
+          "option_id": "c",
+          "text": "commitee"
+        },
+        {
+          "option_id": "d",
+          "text": "committee"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"committee\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"committee\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0030",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"a particular event\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "ocassion"
+        },
+        {
+          "option_id": "b",
+          "text": "occassion"
+        },
+        {
+          "option_id": "c",
+          "text": "ocasian"
+        },
+        {
+          "option_id": "d",
+          "text": "occasion"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"occasion\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"occasion\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0031",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"the staff of an organization\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "personnell"
+        },
+        {
+          "option_id": "b",
+          "text": "personnel"
+        },
+        {
+          "option_id": "c",
+          "text": "personeel"
+        },
+        {
+          "option_id": "d",
+          "text": "personel"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"personnel\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"personnel\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0032",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"to cause awkwardness\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "embarrass"
+        },
+        {
+          "option_id": "b",
+          "text": "embarass"
+        },
+        {
+          "option_id": "c",
+          "text": "embbarass"
+        },
+        {
+          "option_id": "d",
+          "text": "embarras"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"embarrass\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"embarrass\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0033",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"a list of survey questions\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "questionnaire"
+        },
+        {
+          "option_id": "b",
+          "text": "questionaire"
+        },
+        {
+          "option_id": "c",
+          "text": "questinnaire"
+        },
+        {
+          "option_id": "d",
+          "text": "questionnair"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"questionnaire\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"questionnaire\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0034",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"a schedule of dates\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "calandar"
+        },
+        {
+          "option_id": "b",
+          "text": "calender"
+        },
+        {
+          "option_id": "c",
+          "text": "calendar"
+        },
+        {
+          "option_id": "d",
+          "text": "callendar"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"calendar\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"calendar\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "b": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0035",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"a person connecting groups\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "liaisson"
+        },
+        {
+          "option_id": "b",
+          "text": "laysion"
+        },
+        {
+          "option_id": "c",
+          "text": "liason"
+        },
+        {
+          "option_id": "d",
+          "text": "liaison"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"liaison\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"liaison\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0036",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"without delay\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "imediately"
+        },
+        {
+          "option_id": "b",
+          "text": "immediateley"
+        },
+        {
+          "option_id": "c",
+          "text": "immediatly"
+        },
+        {
+          "option_id": "d",
+          "text": "immediately"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"immediately\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"immediately\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0037",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"easy to reach or use\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "accessable"
+        },
+        {
+          "option_id": "b",
+          "text": "acessible"
+        },
+        {
+          "option_id": "c",
+          "text": "accessible"
+        },
+        {
+          "option_id": "d",
+          "text": "accesible"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"accessible\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"accessible\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "b": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0038",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"an event or happening\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "b",
+          "text": "occurrance"
+        },
+        {
+          "option_id": "c",
+          "text": "occurence"
+        },
+        {
+          "option_id": "d",
+          "text": "ocurrence"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"occurrence\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"occurrence\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "b": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0039",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"an administrative system\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "bureacracy"
+        },
+        {
+          "option_id": "b",
+          "text": "bureaucracy"
+        },
+        {
+          "option_id": "c",
+          "text": "beaurocracy"
+        },
+        {
+          "option_id": "d",
+          "text": "burocracy"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"bureaucracy\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"bureaucracy\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    },
+    {
+      "id": "CIVIO-CLR-20261013-0040",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "spelling",
+      "micro_skill": "Identify the only standard spelling",
+      "archetype": "CLR-SPELLING",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which choice correctly spells the word meaning the office term \"a person supervising an organization\" in a government memo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "superintendant"
+        },
+        {
+          "option_id": "b",
+          "text": "superintendent"
+        },
+        {
+          "option_id": "c",
+          "text": "supertendent"
+        },
+        {
+          "option_id": "d",
+          "text": "superintendantt"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "",
+        "shortcut": "The standard spelling is \"superintendent\". Check its exact letter order and doubled consonants where present.",
+        "why_correct": "The standard spelling is \"superintendent\". Check its exact letter order and doubled consonants where present.",
+        "why_wrong": {
+          "a": "This alternative has an incorrect letter order or number of letters.",
+          "c": "This alternative has an incorrect letter order or number of letters.",
+          "d": "This alternative has an incorrect letter order or number of letters."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "SPL-ERROR",
+        "c": "SPL-ERROR",
+        "d": "SPL-ERROR"
+      },
+      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition and independent deterministic sorting/spelling checks",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+    }
+  ]
+}
