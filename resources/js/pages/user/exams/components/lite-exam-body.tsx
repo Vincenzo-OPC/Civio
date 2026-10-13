@@ -3,13 +3,16 @@ import LiteModeToggle from '@/components/shared/lite-mode-toggle';
 import type { AiHandoffAttemptState } from '@/lib/ai-handoff';
 import { renderFormattedText } from '@/lib/exam-formatters';
 import type { Question } from '../types';
+import { answerOptionVisual } from '../utils/answer-state';
 import { CopyForAiButton } from './copy-for-ai-button';
+import { AnswerOption } from './session/answer-option';
 
 export interface LiteRevealedAnswer {
     letter: string;
     text: string;
     explanation?: string | null;
     hasConflict?: boolean;
+    displayIndex?: number;
 }
 
 interface LiteExamBodyProps {
@@ -32,6 +35,7 @@ interface LiteExamBodyProps {
     onExit: () => void;
     /** False in a Strict Mock: no Reveal, Dexter or Copy for AI. */
     showStudyTools?: boolean;
+    strict?: boolean;
     onReveal: () => void;
     revealed: LiteRevealedAnswer | null;
     onHideReveal: () => void;
@@ -64,6 +68,7 @@ export function LiteExamBody({
     onSubmit,
     onExit,
     showStudyTools = true,
+    strict = false,
     onReveal,
     revealed,
     onHideReveal,
@@ -105,30 +110,29 @@ export function LiteExamBody({
                             {renderFormattedText(question.stem, true)}
                         </div>
 
-                        <div className="flex flex-col gap-2" role="radiogroup">
+                        <div className="flex flex-col" role="radiogroup">
                             {question.options.map((option, idx) => {
-                                const selected = answers[currentIdx] === idx;
+                                const revealedHere = revealed !== null;
+                                const choice = answerOptionVisual({
+                                    optionIndex: idx,
+                                    selectedIndex: answers[currentIdx],
+                                    revealed: revealedHere,
+                                    strict,
+                                    correctIndex: revealedHere
+                                        ? (revealed?.displayIndex ?? null)
+                                        : null,
+                                });
 
                                 return (
-                                    <button
+                                    <AnswerOption
                                         key={idx}
-                                        type="button"
-                                        role="radio"
-                                        aria-checked={selected}
-                                        onClick={() => onSelect(idx)}
-                                        className={`lite-tap flex w-full items-start gap-3 rounded-lg border px-4 py-3 text-left text-base ${
-                                            selected
-                                                ? 'border-blue-600 bg-blue-50 font-semibold dark:bg-blue-950'
-                                                : 'border-border'
-                                        }`}
+                                        letter={LETTERS[idx] ?? String(idx + 1)}
+                                        visual={choice.visual}
+                                        status={choice.status}
+                                        onSelect={() => onSelect(idx)}
                                     >
-                                        <span className="font-bold">
-                                            {LETTERS[idx] ?? idx + 1}.
-                                        </span>
-                                        <span>
-                                            {renderFormattedText(option, true)}
-                                        </span>
-                                    </button>
+                                        {renderFormattedText(option, true)}
+                                    </AnswerOption>
                                 );
                             })}
                         </div>
@@ -138,9 +142,13 @@ export function LiteExamBody({
                                 <button
                                     type="button"
                                     onClick={onReveal}
-                                    className={button}
+                                    className={
+                                        revealed
+                                            ? button
+                                            : 'lite-tap rounded-lg bg-[var(--civio-violet)] px-4 text-sm font-semibold text-white'
+                                    }
                                 >
-                                    Reveal
+                                    Reveal Answer
                                 </button>
                             )}
                             {showStudyTools && copyAttempt && (
@@ -205,7 +213,7 @@ export function LiteExamBody({
                         <button
                             type="button"
                             onClick={onSubmit}
-                            className="lite-tap flex-1 rounded-lg bg-emerald-700 px-4 text-sm font-bold text-white"
+                            className="lite-tap flex-1 rounded-lg bg-[var(--civio-violet)] px-4 text-sm font-bold text-white"
                         >
                             Submit
                         </button>
@@ -213,7 +221,7 @@ export function LiteExamBody({
                         <button
                             type="button"
                             onClick={() => onNavigate(currentIdx + 1)}
-                            className="lite-tap flex-1 rounded-lg bg-blue-700 px-4 text-sm font-bold text-white"
+                            className="lite-tap flex-1 rounded-lg bg-[var(--civio-violet)] px-4 text-sm font-bold text-white"
                         >
                             Next
                         </button>

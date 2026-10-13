@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { toast } from 'sonner';
+import { shouldRunExamClock } from '../utils/answer-state';
 
 interface UseExamTimerProps {
     isExamActive: boolean;
@@ -7,6 +8,7 @@ interface UseExamTimerProps {
     isTimed: boolean;
     sessionTimeLimitSecs: number;
     currentIdx: number;
+    isPaused?: boolean;
     onTimerExpired: () => void;
 }
 
@@ -16,6 +18,7 @@ export function useExamTimer({
     isTimed,
     sessionTimeLimitSecs,
     currentIdx,
+    isPaused = false,
     onTimerExpired,
 }: UseExamTimerProps) {
     const [timeLeft, setTimeLeft] = useState(sessionTimeLimitSecs);
@@ -52,71 +55,76 @@ export function useExamTimer({
 
     // Live countdown timer & per-question time tracking
     useEffect(() => {
-        if (isExamActive && !isExamSubmitted) {
-            timerRef.current = setInterval(() => {
-                // Increment active question time
-                const activeIdx = currentIdxRef.current;
-                setQuestionTimes((prev) => ({
-                    ...prev,
-                    [activeIdx]: (prev[activeIdx] || 0) + 1,
-                }));
-                setItemElapsed((prev) => prev + 1);
-
-                if (isTimed) {
-                    setTimeLeft((prev) => {
-                        if (prev <= 1) {
-                            if (timerRef.current) {
-                                clearInterval(timerRef.current);
-                            }
-
-                            timeLeftRef.current = 0;
-                            onTimerExpired();
-
-                            return 0;
-                        }
-
-                        const next = prev - 1;
-                        timeLeftRef.current = next;
-
-                        // Timer warnings
-                        if (next === 600 && !warned10MinRef.current) {
-                            warned10MinRef.current = true;
-                            toast.warning(
-                                '10 minutes remaining in this session.',
-                                {
-                                    id: 'timer-warning-10m',
-                                },
-                            );
-                        } else if (next === 60 && !warned1MinRef.current) {
-                            warned1MinRef.current = true;
-                            toast.error(
-                                '1 minute remaining! Your exam will auto-submit soon.',
-                                {
-                                    id: 'timer-warning-1m',
-                                    duration: 10000,
-                                },
-                            );
-                        }
-
-                        return next;
-                    });
-                } else {
-                    setTimeLeft((prev) => {
-                        const next = prev + 1;
-                        timeLeftRef.current = next;
-
-                        return next;
-                    });
-                }
-            }, 1000);
+        if (
+            !shouldRunExamClock({
+                isExamActive,
+                isExamSubmitted,
+                isPaused,
+            })
+        ) {
+            return;
         }
+
+        timerRef.current = setInterval(() => {
+            // Increment active question time
+            const activeIdx = currentIdxRef.current;
+            setQuestionTimes((prev) => ({
+                ...prev,
+                [activeIdx]: (prev[activeIdx] || 0) + 1,
+            }));
+            setItemElapsed((prev) => prev + 1);
+
+            if (isTimed) {
+                setTimeLeft((prev) => {
+                    if (prev <= 1) {
+                        if (timerRef.current) {
+                            clearInterval(timerRef.current);
+                        }
+
+                        timeLeftRef.current = 0;
+                        onTimerExpired();
+
+                        return 0;
+                    }
+
+                    const next = prev - 1;
+                    timeLeftRef.current = next;
+
+                    // Timer warnings
+                    if (next === 600 && !warned10MinRef.current) {
+                        warned10MinRef.current = true;
+                        toast.warning('10 minutes remaining in this session.', {
+                            id: 'timer-warning-10m',
+                        });
+                    } else if (next === 60 && !warned1MinRef.current) {
+                        warned1MinRef.current = true;
+                        toast.error(
+                            '1 minute remaining! Your exam will auto-submit soon.',
+                            {
+                                id: 'timer-warning-1m',
+                                duration: 10000,
+                            },
+                        );
+                    }
+
+                    return next;
+                });
+            } else {
+                setTimeLeft((prev) => {
+                    const next = prev + 1;
+                    timeLeftRef.current = next;
+
+                    return next;
+                });
+            }
+        }, 1000);
 
         return () => {
             if (timerRef.current) {
                 clearInterval(timerRef.current);
             }
         };
-    }, [isExamActive, isExamSubmitted, isTimed, onTimerExpired]);
+    }, [isExamActive, isExamSubmitted, isTimed, isPaused, onTimerExpired]);
 
     const formatTime = useCallback((secs: number) => {
         const h = Math.floor(secs / 3600);

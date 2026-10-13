@@ -18,6 +18,7 @@ import type {
     ExamIndexProps,
     SimulationDetails,
 } from '../types';
+import { recoveredSessionStartsPaused } from '../utils/answer-state';
 import type { ExamMode } from '../utils/exam-mode';
 import { isTimerOn, parseExamMode } from '../utils/exam-mode';
 import {
@@ -78,6 +79,7 @@ export function useExamState(props: ExamIndexProps) {
     const [showLockedModal, setShowLockedModal] = useState(false);
 
     const [isTimed, setIsTimed] = useState(true);
+    const [isPaused, setIsPaused] = useState(false);
     /** Exam Simulation mode for full mocks (drills ignore it). */
     const [examMode, setExamMode] = useState<ExamMode>('study');
     /** Study Mock timer choice; Strict always times. */
@@ -209,6 +211,7 @@ export function useExamState(props: ExamIndexProps) {
         isTimed,
         sessionTimeLimitSecs,
         currentIdx,
+        isPaused,
         onTimerExpired: onTimerExpiredCallback,
     });
 
@@ -299,6 +302,7 @@ export function useExamState(props: ExamIndexProps) {
             setReviewScreenActive(false);
             setResults(null);
             setSubmittedByTimer(false);
+            setIsPaused(false);
         },
         [
             resetTimer,
@@ -397,6 +401,7 @@ export function useExamState(props: ExamIndexProps) {
         sessionTimeLimitSecs,
         timeLeft,
         isTimed,
+        isPaused,
         onRestoreSession: useCallback(
             (restoredData) => {
                 setSelectedExamId(restoredData.selectedExamId);
@@ -412,6 +417,12 @@ export function useExamState(props: ExamIndexProps) {
                 setSessionTimeLimitSecs(restoredData.sessionTimeLimitSecs);
                 setTimeLeft(restoredData.timeLeft);
                 setIsTimed(restoredData.isTimed);
+                setIsPaused(
+                    recoveredSessionStartsPaused(
+                        restoredData.isTimed,
+                        restoredData.timeLeft,
+                    ),
+                );
                 setIsExamActive(true);
                 setIsExamSubmitted(false);
                 toast.info('Restored your previous active exam session.');
@@ -544,6 +555,10 @@ export function useExamState(props: ExamIndexProps) {
 
     const handleSelectOption = useCallback(
         (optionIndex: number) => {
+            if (isPaused) {
+                return;
+            }
+
             setAnswers((prev) => {
                 const previousAnswer = prev[currentIdx];
 
@@ -567,7 +582,7 @@ export function useExamState(props: ExamIndexProps) {
                 };
             });
         },
-        [currentIdx],
+        [currentIdx, isPaused],
     );
 
     const toggleFlag = useCallback((qIndex: number) => {
@@ -782,6 +797,7 @@ export function useExamState(props: ExamIndexProps) {
         timeLeft,
         itemElapsed,
         isTimed,
+        isPaused,
         examMode,
         setExamMode,
         studyTimed,
@@ -821,5 +837,6 @@ export function useExamState(props: ExamIndexProps) {
         handleSubmitExam,
         handleExitExam,
         getActiveTimeLimitSecs,
+        setIsPaused,
     };
 }

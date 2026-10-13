@@ -34,12 +34,15 @@ import type { AiHandoffAttemptState } from '@/lib/ai-handoff';
 import { renderFormattedText } from '@/lib/exam-formatters';
 import { useContentShield } from '../hooks/use-content-shield';
 import type { Question, SimulationDetails } from '../types';
+import { answerOptionVisual } from '../utils/answer-state';
 import type { ExamMode } from '../utils/exam-mode';
 import { showsStudyTools } from '../utils/exam-mode';
 import { CopyForAiButton } from './copy-for-ai-button';
 import { ExamTimerDisplay } from './exam-timer-display';
 import { LiteExamBody } from './lite-exam-body';
 import QuestionPalettePanel from './question-palette-panel';
+import { AnswerOption } from './session/answer-option';
+import { PauseOverlay } from './session/pause-overlay';
 
 interface RevealedAnswer {
     questionId: number;
@@ -82,6 +85,10 @@ interface LiveExamViewProps {
     showRegisterModal: boolean;
     handleCancelFreeExam: () => void;
     customConfirmModal: React.ReactNode;
+    isPaused?: boolean;
+    canPause?: boolean;
+    onPause?: () => void;
+    onResume?: () => void;
 }
 
 export function LiveExamView({
@@ -113,6 +120,10 @@ export function LiveExamView({
     showRegisterModal,
     handleCancelFreeExam,
     customConfirmModal,
+    isPaused = false,
+    canPause = false,
+    onPause,
+    onResume,
 }: LiveExamViewProps) {
     const activeQuestion = activeQuestions[currentIdx];
     const studyTools = showsStudyTools(examMode, isDrillSession);
@@ -133,7 +144,8 @@ export function LiveExamView({
     });
     const [isScratchpadOpen, setIsScratchpadOpen] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
-    const [isPaletteCollapsed, setIsPaletteCollapsed] = useState(false);
+    const [isPaletteCollapsed, setIsPaletteCollapsed] = useState(true);
+    const [toolsOpen, setToolsOpen] = useState(false);
     const [revealedAnswer, setRevealedAnswer] = useState<RevealedAnswer | null>(
         null,
     );
@@ -328,6 +340,10 @@ export function LiveExamView({
     }, [activeQuestions, answers, flagged, timeLeft]);
 
     const onOptionClick = (optIdx: number) => {
+        if (isPaused) {
+            return;
+        }
+
         const isCurrentlySelected = answers[currentIdx] === optIdx;
         handleSelectOption(optIdx);
 
@@ -345,6 +361,16 @@ export function LiveExamView({
     // Navigation-only Keyboard Listener (security keys handled by useContentShield)
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
+            if (isPaused) {
+                return;
+            }
+
+            if (e.key === 'Escape' && toolsOpen) {
+                setToolsOpen(false);
+
+                return;
+            }
+
             if (
                 ['INPUT', 'TEXTAREA', 'SELECT'].includes(
                     (e.target as HTMLElement)?.tagName,
@@ -455,12 +481,14 @@ export function LiveExamView({
         handleSelectOption,
         toggleFlag,
         answers,
+        isPaused,
+        toolsOpen,
     ]);
 
     // Reveal: fetch this item's key (server checks reveal rules) and map
     // it back to the displayed (shuffled) option order.
     const handleReveal = async () => {
-        if (!activeQuestion || !studyTools) {
+        if (!activeQuestion || !studyTools || isPaused) {
             return;
         }
 
@@ -555,12 +583,18 @@ export function LiveExamView({
             <div
                 ref={contentRef}
                 {...wrapperProps}
-                className={`fixed inset-0 z-50 flex flex-col bg-background transition-none select-none ${
+                className={`civio-session fixed inset-0 z-50 flex flex-col transition-none select-none ${
                     isShielded
                         ? 'pointer-events-none invisible opacity-0'
                         : 'opacity-100'
                 }`}
             >
+                {isPaused && (
+                    <PauseOverlay
+                        strict={!canPause}
+                        onResume={() => onResume?.()}
+                    />
+                )}
                 {lite ? (
                     <LiteExamBody
                         title={details.title}
@@ -581,6 +615,7 @@ export function LiveExamView({
                         onSubmit={() => handleSubmitExam(false)}
                         onExit={handleExitExam}
                         showStudyTools={studyTools}
+                        strict={!studyTools && !isDrillSession}
                         onReveal={handleReveal}
                         revealed={
                             revealedAnswer &&
@@ -674,93 +709,121 @@ export function LiveExamView({
                                         </div>
                                     )}
 
-                                    {/* Auto-Next */}
                                     <button
-                                        onClick={() => {
-                                            const nextState = !autoAdvance;
-                                            setAutoAdvance(nextState);
-
-                                            if (nextState) {
-                                                toast.success(
-                                                    'Auto-Next Enabled',
-                                                    {
-                                                        description:
-                                                            'Question will automatically advance after selecting an answer.',
-                                                        duration: 2500,
-                                                    },
-                                                );
-                                            } else {
-                                                toast.info(
-                                                    'Auto-Next Disabled',
-                                                    {
-                                                        duration: 2000,
-                                                    },
-                                                );
-                                            }
-                                        }}
-                                        title={`Auto-Advance after answering (${autoAdvance ? 'ON' : 'OFF'})`}
-                                        className={`flex h-8 items-center justify-center gap-1.5 rounded-lg border px-2.5 text-xs font-bold transition ${
-                                            autoAdvance
-                                                ? 'border-blue-300 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-blue-400'
-                                                : 'border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground'
-                                        }`}
-                                    >
-                                        <Zap
-                                            className={`size-3.5 shrink-0 ${autoAdvance ? 'fill-blue-600 text-blue-600 dark:text-blue-400' : ''}`}
-                                        />
-                                        <span className="hidden whitespace-nowrap sm:inline">
-                                            Auto-Next
-                                        </span>
-                                    </button>
-
-                                    {/* Scratchpad Notes */}
-                                    <button
+                                        type="button"
                                         onClick={() =>
-                                            setIsScratchpadOpen(true)
+                                            setToolsOpen((open) => !open)
                                         }
-                                        title="Scratchpad / Notes"
-                                        className={`relative flex h-8 items-center justify-center gap-1.5 rounded-lg border px-2.5 text-xs font-bold transition ${
-                                            scratchpadNotes.trim().length > 0
-                                                ? 'border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-900/50 dark:bg-amber-950/40 dark:text-amber-400'
-                                                : 'border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground'
-                                        }`}
+                                        aria-expanded={toolsOpen}
+                                        className="flex h-8 items-center rounded-lg border border-[var(--civio-line)] px-2.5 text-xs font-bold"
                                     >
-                                        <Edit3 className="size-3.5 shrink-0" />
-                                        <span className="hidden whitespace-nowrap md:inline">
-                                            Notes
-                                        </span>
-                                        {scratchpadNotes.trim().length > 0 && (
-                                            <span className="absolute -top-1 -right-1 size-2 rounded-full bg-amber-500 ring-2 ring-background" />
-                                        )}
+                                        Tools
                                     </button>
 
-                                    {/* Keyboard Shortcuts — hidden on mobile */}
-                                    <button
-                                        onClick={() =>
-                                            setShowKeyboardModal(true)
-                                        }
-                                        title="Keyboard Shortcuts (?)"
-                                        className="hidden size-8 h-8 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground transition hover:bg-accent hover:text-foreground sm:flex"
-                                    >
-                                        <Keyboard className="size-4 shrink-0" />
-                                    </button>
+                                    {canPause && !isPaused && (
+                                        <button
+                                            type="button"
+                                            onClick={() => onPause?.()}
+                                            className="flex h-8 items-center rounded-lg border border-[var(--civio-line)] px-2.5 text-xs font-bold"
+                                        >
+                                            Pause
+                                        </button>
+                                    )}
 
-                                    {/* Fullscreen Toggle — hidden on mobile */}
-                                    <button
-                                        onClick={toggleFullscreen}
-                                        title={
-                                            isFullscreen
-                                                ? 'Exit Fullscreen'
-                                                : 'Focus Mode (Fullscreen)'
-                                        }
-                                        className="hidden size-8 h-8 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground transition hover:bg-accent hover:text-foreground sm:flex"
-                                    >
-                                        {isFullscreen ? (
-                                            <Minimize2 className="size-4 shrink-0" />
-                                        ) : (
-                                            <Maximize2 className="size-4 shrink-0" />
-                                        )}
-                                    </button>
+                                    {toolsOpen && (
+                                        <>
+                                            {/* Auto-Next */}
+                                            <button
+                                                onClick={() => {
+                                                    const nextState =
+                                                        !autoAdvance;
+                                                    setAutoAdvance(nextState);
+
+                                                    if (nextState) {
+                                                        toast.success(
+                                                            'Auto-Next Enabled',
+                                                            {
+                                                                description:
+                                                                    'Question will automatically advance after selecting an answer.',
+                                                                duration: 2500,
+                                                            },
+                                                        );
+                                                    } else {
+                                                        toast.info(
+                                                            'Auto-Next Disabled',
+                                                            {
+                                                                duration: 2000,
+                                                            },
+                                                        );
+                                                    }
+                                                }}
+                                                title={`Auto-Advance after answering (${autoAdvance ? 'ON' : 'OFF'})`}
+                                                className={`flex h-8 items-center justify-center gap-1.5 rounded-lg border px-2.5 text-xs font-bold transition ${
+                                                    autoAdvance
+                                                        ? 'border-blue-300 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-blue-400'
+                                                        : 'border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground'
+                                                }`}
+                                            >
+                                                <Zap
+                                                    className={`size-3.5 shrink-0 ${autoAdvance ? 'fill-blue-600 text-blue-600 dark:text-blue-400' : ''}`}
+                                                />
+                                                <span className="hidden whitespace-nowrap sm:inline">
+                                                    Auto-Next
+                                                </span>
+                                            </button>
+
+                                            {/* Scratchpad Notes */}
+                                            <button
+                                                onClick={() =>
+                                                    setIsScratchpadOpen(true)
+                                                }
+                                                title="Scratchpad / Notes"
+                                                className={`relative flex h-8 items-center justify-center gap-1.5 rounded-lg border px-2.5 text-xs font-bold transition ${
+                                                    scratchpadNotes.trim()
+                                                        .length > 0
+                                                        ? 'border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-900/50 dark:bg-amber-950/40 dark:text-amber-400'
+                                                        : 'border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground'
+                                                }`}
+                                            >
+                                                <Edit3 className="size-3.5 shrink-0" />
+                                                <span className="hidden whitespace-nowrap md:inline">
+                                                    Notes
+                                                </span>
+                                                {scratchpadNotes.trim().length >
+                                                    0 && (
+                                                    <span className="absolute -top-1 -right-1 size-2 rounded-full bg-amber-500 ring-2 ring-background" />
+                                                )}
+                                            </button>
+
+                                            {/* Keyboard Shortcuts — hidden on mobile */}
+                                            <button
+                                                onClick={() =>
+                                                    setShowKeyboardModal(true)
+                                                }
+                                                title="Keyboard Shortcuts (?)"
+                                                className="hidden size-8 h-8 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground transition hover:bg-accent hover:text-foreground sm:flex"
+                                            >
+                                                <Keyboard className="size-4 shrink-0" />
+                                            </button>
+
+                                            {/* Fullscreen Toggle — hidden on mobile */}
+                                            <button
+                                                onClick={toggleFullscreen}
+                                                title={
+                                                    isFullscreen
+                                                        ? 'Exit Fullscreen'
+                                                        : 'Focus Mode (Fullscreen)'
+                                                }
+                                                className="hidden size-8 h-8 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground transition hover:bg-accent hover:text-foreground sm:flex"
+                                            >
+                                                {isFullscreen ? (
+                                                    <Minimize2 className="size-4 shrink-0" />
+                                                ) : (
+                                                    <Maximize2 className="size-4 shrink-0" />
+                                                )}
+                                            </button>
+                                        </>
+                                    )}
 
                                     {/* Divider before timer */}
                                     <div className="mx-0.5 h-4 w-px shrink-0 bg-border/60" />
@@ -850,7 +913,7 @@ export function LiveExamView({
                             className="relative h-1.5 w-full overflow-hidden bg-muted/60"
                         >
                             <div
-                                className="h-full bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300"
+                                className="h-full bg-[var(--civio-violet)]"
                                 style={{ width: `${stats.progressPct}%` }}
                             />
                         </div>
@@ -858,8 +921,8 @@ export function LiveExamView({
                         {/* MAIN TWO-COLUMN SPLIT PANEL LAYOUT */}
                         <div className="flex flex-1 overflow-hidden">
                             {/* LEFT COLUMN: ACTIVE QUESTION CARD & OPTION SELECTORS */}
-                            <div className="flex flex-1 flex-col justify-between overflow-y-auto bg-background p-4 sm:p-6 md:p-10">
-                                <div className="mx-auto w-full max-w-3xl">
+                            <div className="flex flex-1 flex-col justify-between overflow-y-auto p-4 sm:p-6 md:p-10">
+                                <div className="mx-auto w-full max-w-[42rem]">
                                     {activeQuestion ? (
                                         <div className="flex animate-in flex-col gap-3 duration-150 fade-in sm:gap-6">
                                             {/* Question stem container */}
@@ -936,9 +999,14 @@ export function LiveExamView({
                                                                 onClick={
                                                                     handleReveal
                                                                 }
-                                                                className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground hover:bg-muted"
+                                                                className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold ${
+                                                                    revealedAnswer?.questionId ===
+                                                                    activeQuestion.id
+                                                                        ? 'text-muted-foreground hover:bg-muted'
+                                                                        : 'bg-[var(--civio-violet)] text-white'
+                                                                }`}
                                                             >
-                                                                Reveal
+                                                                Reveal Answer
                                                             </button>
                                                         )}
 
@@ -953,132 +1021,129 @@ export function LiveExamView({
                                                                 )}
                                                             />
                                                         )}
-
-                                                        {studyTools &&
-                                                            revealedAnswer &&
-                                                            revealedAnswer.questionId ===
-                                                                activeQuestion?.id && (
-                                                                <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm dark:border-amber-900/50 dark:bg-amber-950/30">
-                                                                    <div
-                                                                        className={`font-bold ${revealedAnswer.hasConflict ? 'text-red-600 dark:text-red-400' : 'text-amber-700 dark:text-amber-400'}`}
-                                                                    >
-                                                                        {revealedAnswer.hasConflict
-                                                                            ? '⚠️ Answer Key Conflict'
-                                                                            : 'Reveal'}
-                                                                        :{' '}
-                                                                        {
-                                                                            revealedAnswer.letter
-                                                                        }{' '}
-                                                                        —{' '}
-                                                                        {
-                                                                            revealedAnswer.text
-                                                                        }
-                                                                    </div>
-                                                                    {revealedAnswer.hasConflict && (
-                                                                        <div className="mt-1 text-xs text-red-600 dark:text-red-400">
-                                                                            Dexter
-                                                                            detected
-                                                                            a
-                                                                            possible
-                                                                            error
-                                                                            in
-                                                                            the
-                                                                            stored
-                                                                            answer.
-                                                                        </div>
-                                                                    )}
-                                                                    {revealedAnswer.explanation && (
-                                                                        <div className="mt-1 text-amber-600 dark:text-amber-300">
-                                                                            {
-                                                                                revealedAnswer.explanation
-                                                                            }
-                                                                        </div>
-                                                                    )}
-
-                                                                    {revealedAnswer.expound && (
-                                                                        <div className="mt-2 border-t border-amber-200 pt-2 text-amber-700 dark:border-amber-900/50 dark:text-amber-300">
-                                                                            {
-                                                                                revealedAnswer.expound
-                                                                            }
-                                                                        </div>
-                                                                    )}
-
-                                                                    <div className="mt-2 flex gap-2">
-                                                                        <button
-                                                                            onClick={async () => {
-                                                                                try {
-                                                                                    const res =
-                                                                                        await fetch(
-                                                                                            '/exams/expound',
-                                                                                            {
-                                                                                                method: 'POST',
-                                                                                                headers:
-                                                                                                    {
-                                                                                                        'Content-Type':
-                                                                                                            'application/json',
-                                                                                                        'X-CSRF-TOKEN':
-                                                                                                            document
-                                                                                                                .querySelector(
-                                                                                                                    'meta[name="csrf-token"]',
-                                                                                                                )
-                                                                                                                ?.getAttribute(
-                                                                                                                    'content',
-                                                                                                                ) ||
-                                                                                                            '',
-                                                                                                    },
-                                                                                                body: JSON.stringify(
-                                                                                                    {
-                                                                                                        question_id:
-                                                                                                            activeQuestion.id,
-                                                                                                    },
-                                                                                                ),
-                                                                                            },
-                                                                                        );
-                                                                                    const data =
-                                                                                        await res.json();
-
-                                                                                    if (
-                                                                                        data.success
-                                                                                    ) {
-                                                                                        setRevealedAnswer(
-                                                                                            (
-                                                                                                prev,
-                                                                                            ) =>
-                                                                                                prev
-                                                                                                    ? {
-                                                                                                          ...prev,
-                                                                                                          expound:
-                                                                                                              data.explanation ||
-                                                                                                              'No further explanation available.',
-                                                                                                      }
-                                                                                                    : null,
-                                                                                        );
-                                                                                    }
-                                                                                } catch {
-                                                                                    alert(
-                                                                                        'Expound failed',
-                                                                                    );
-                                                                                }
-                                                                            }}
-                                                                            className="rounded bg-amber-600 px-2 py-0.5 text-xs text-white hover:bg-amber-700"
-                                                                        >
-                                                                            Expound
-                                                                        </button>
-                                                                        <button
-                                                                            onClick={() =>
-                                                                                setRevealedAnswer(
-                                                                                    null,
-                                                                                )
-                                                                            }
-                                                                            className="text-xs text-amber-600 hover:underline dark:text-amber-400"
-                                                                        >
-                                                                            Hide
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            )}
                                                     </div>
                                                 </div>
+
+                                                {studyTools &&
+                                                    revealedAnswer &&
+                                                    revealedAnswer.questionId ===
+                                                        activeQuestion?.id && (
+                                                        <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm dark:border-amber-900/50 dark:bg-amber-950/30">
+                                                            <div
+                                                                className={`font-bold ${revealedAnswer.hasConflict ? 'text-red-600 dark:text-red-400' : 'text-amber-700 dark:text-amber-400'}`}
+                                                            >
+                                                                {revealedAnswer.hasConflict
+                                                                    ? '⚠️ Answer Key Conflict'
+                                                                    : 'Reveal'}
+                                                                :{' '}
+                                                                {
+                                                                    revealedAnswer.letter
+                                                                }{' '}
+                                                                —{' '}
+                                                                {
+                                                                    revealedAnswer.text
+                                                                }
+                                                            </div>
+                                                            {revealedAnswer.hasConflict && (
+                                                                <div className="mt-1 text-xs text-red-600 dark:text-red-400">
+                                                                    Dexter
+                                                                    detected a
+                                                                    possible
+                                                                    error in the
+                                                                    stored
+                                                                    answer.
+                                                                </div>
+                                                            )}
+                                                            {revealedAnswer.explanation && (
+                                                                <div className="mt-1 text-amber-600 dark:text-amber-300">
+                                                                    {
+                                                                        revealedAnswer.explanation
+                                                                    }
+                                                                </div>
+                                                            )}
+
+                                                            {revealedAnswer.expound && (
+                                                                <div className="mt-2 border-t border-amber-200 pt-2 text-amber-700 dark:border-amber-900/50 dark:text-amber-300">
+                                                                    {
+                                                                        revealedAnswer.expound
+                                                                    }
+                                                                </div>
+                                                            )}
+
+                                                            <div className="mt-2 flex gap-2">
+                                                                <button
+                                                                    onClick={async () => {
+                                                                        try {
+                                                                            const res =
+                                                                                await fetch(
+                                                                                    '/exams/expound',
+                                                                                    {
+                                                                                        method: 'POST',
+                                                                                        headers:
+                                                                                            {
+                                                                                                'Content-Type':
+                                                                                                    'application/json',
+                                                                                                'X-CSRF-TOKEN':
+                                                                                                    document
+                                                                                                        .querySelector(
+                                                                                                            'meta[name="csrf-token"]',
+                                                                                                        )
+                                                                                                        ?.getAttribute(
+                                                                                                            'content',
+                                                                                                        ) ||
+                                                                                                    '',
+                                                                                            },
+                                                                                        body: JSON.stringify(
+                                                                                            {
+                                                                                                question_id:
+                                                                                                    activeQuestion.id,
+                                                                                            },
+                                                                                        ),
+                                                                                    },
+                                                                                );
+                                                                            const data =
+                                                                                await res.json();
+
+                                                                            if (
+                                                                                data.success
+                                                                            ) {
+                                                                                setRevealedAnswer(
+                                                                                    (
+                                                                                        prev,
+                                                                                    ) =>
+                                                                                        prev
+                                                                                            ? {
+                                                                                                  ...prev,
+                                                                                                  expound:
+                                                                                                      data.explanation ||
+                                                                                                      'No further explanation available.',
+                                                                                              }
+                                                                                            : null,
+                                                                                );
+                                                                            }
+                                                                        } catch {
+                                                                            alert(
+                                                                                'Expound failed',
+                                                                            );
+                                                                        }
+                                                                    }}
+                                                                    className="rounded bg-amber-600 px-2 py-0.5 text-xs text-white hover:bg-amber-700"
+                                                                >
+                                                                    Expound
+                                                                </button>
+                                                                <button
+                                                                    onClick={() =>
+                                                                        setRevealedAnswer(
+                                                                            null,
+                                                                        )
+                                                                    }
+                                                                    className="text-xs text-amber-600 hover:underline dark:text-amber-400"
+                                                                >
+                                                                    Hide
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    )}
                                                 <div className="text-sm leading-relaxed font-semibold text-foreground">
                                                     {renderFormattedText(
                                                         activeQuestion.stem,
@@ -1088,100 +1153,93 @@ export function LiveExamView({
                                             </div>
 
                                             {/* Options Grid selector stack */}
-                                            <div className="flex flex-col gap-3.5">
+                                            <div
+                                                className="flex flex-col"
+                                                role="radiogroup"
+                                            >
                                                 {activeQuestion.options.map(
                                                     (opt, idx) => {
                                                         const label =
                                                             String.fromCharCode(
                                                                 65 + idx,
                                                             );
-                                                        const isSelected =
-                                                            answers[
-                                                                currentIdx
-                                                            ] === idx;
                                                         const isEliminated =
                                                             !!eliminatedOptions[
                                                                 currentIdx
                                                             ]?.[idx];
+                                                        const revealedHere = !!(
+                                                            revealedAnswer &&
+                                                            revealedAnswer.questionId ===
+                                                                activeQuestion.id
+                                                        );
+                                                        const choice =
+                                                            answerOptionVisual({
+                                                                optionIndex:
+                                                                    idx,
+                                                                selectedIndex:
+                                                                    answers[
+                                                                        currentIdx
+                                                                    ],
+                                                                revealed:
+                                                                    revealedHere,
+                                                                strict:
+                                                                    !studyTools &&
+                                                                    !isDrillSession,
+                                                                correctIndex:
+                                                                    revealedHere
+                                                                        ? revealedAnswer.displayIndex
+                                                                        : null,
+                                                            });
 
                                                         return (
-                                                            <div
+                                                            <AnswerOption
                                                                 key={idx}
-                                                                onClick={() =>
+                                                                letter={label}
+                                                                visual={
+                                                                    choice.visual
+                                                                }
+                                                                status={
+                                                                    choice.status
+                                                                }
+                                                                eliminated={
+                                                                    isEliminated
+                                                                }
+                                                                onSelect={() =>
                                                                     !isEliminated &&
                                                                     onOptionClick(
                                                                         idx,
                                                                     )
                                                                 }
-                                                                className={`shadow-3xs group relative flex cursor-pointer items-center justify-between gap-4 rounded-xl border p-4 transition-all duration-200 ${
-                                                                    isEliminated
-                                                                        ? 'border-dashed border-border/70 bg-muted/25 opacity-45'
-                                                                        : isSelected
-                                                                          ? 'border-blue-600 bg-blue-50/90 shadow-sm dark:border-blue-500 dark:bg-blue-950/40'
-                                                                          : 'border-border bg-card hover:border-blue-500/40 hover:bg-accent/40'
-                                                                }`}
-                                                            >
-                                                                <div className="flex min-w-0 flex-1 items-center gap-4">
-                                                                    <span
-                                                                        className={`flex size-8 shrink-0 items-center justify-center rounded-full border text-xs font-black transition ${
-                                                                            isEliminated
-                                                                                ? 'border-border bg-muted/60 text-muted-foreground line-through'
-                                                                                : isSelected
-                                                                                  ? 'border-blue-600 bg-blue-600 text-white shadow-xs'
-                                                                                  : 'border-border bg-background text-muted-foreground group-hover:border-border/80 group-hover:text-foreground'
-                                                                        }`}
-                                                                    >
-                                                                        {label}
-                                                                    </span>
-                                                                    <p
-                                                                        className={`text-sm font-bold transition md:text-base ${
-                                                                            isEliminated
-                                                                                ? 'text-muted-foreground line-through'
-                                                                                : isSelected
-                                                                                  ? 'text-blue-900 dark:text-blue-200'
-                                                                                  : 'text-foreground'
-                                                                        }`}
-                                                                    >
-                                                                        {renderFormattedText(
-                                                                            opt,
-                                                                            false,
-                                                                            undefined,
-                                                                            true,
-                                                                        )}
-                                                                    </p>
-                                                                </div>
-
-                                                                {/* Option Strikethrough Elimination Toggle */}
-                                                                <button
-                                                                    type="button"
-                                                                    onClick={(
-                                                                        e,
-                                                                    ) =>
-                                                                        toggleElimination(
+                                                                trailing={
+                                                                    <button
+                                                                        type="button"
+                                                                        onClick={(
                                                                             e,
-                                                                            currentIdx,
-                                                                            idx,
-                                                                        )
-                                                                    }
-                                                                    title={
-                                                                        isEliminated
-                                                                            ? 'Restore choice'
-                                                                            : 'Strike out choice (Eliminate)'
-                                                                    }
-                                                                    className={`inline-flex shrink-0 items-center gap-1 rounded-lg p-2 text-xs font-bold transition ${
-                                                                        isEliminated
-                                                                            ? 'bg-rose-100/80 text-rose-700 hover:bg-rose-200 dark:bg-rose-950/60 dark:text-rose-400'
-                                                                            : 'text-muted-foreground opacity-30 hover:bg-muted hover:text-foreground hover:opacity-100'
-                                                                    }`}
-                                                                >
-                                                                    <Strikethrough className="size-4" />
-                                                                    {isEliminated && (
-                                                                        <span className="hidden text-[10px] sm:inline">
-                                                                            Struck
-                                                                        </span>
-                                                                    )}
-                                                                </button>
-                                                            </div>
+                                                                        ) =>
+                                                                            toggleElimination(
+                                                                                e,
+                                                                                currentIdx,
+                                                                                idx,
+                                                                            )
+                                                                        }
+                                                                        title={
+                                                                            isEliminated
+                                                                                ? 'Restore choice'
+                                                                                : 'Strike out choice'
+                                                                        }
+                                                                        className="inline-flex shrink-0 items-center p-2 text-xs font-bold text-[var(--civio-ink)]/60"
+                                                                    >
+                                                                        <Strikethrough className="size-4" />
+                                                                    </button>
+                                                                }
+                                                            >
+                                                                {renderFormattedText(
+                                                                    opt,
+                                                                    false,
+                                                                    undefined,
+                                                                    true,
+                                                                )}
+                                                            </AnswerOption>
                                                         );
                                                     },
                                                 )}
@@ -1219,7 +1277,7 @@ export function LiveExamView({
                                                     currentIdx + 1,
                                                 )
                                             }
-                                            className="shadow-3xs flex items-center gap-1.5 rounded-lg bg-blue-600 px-5 py-2.5 text-xs font-bold text-white transition hover:bg-blue-700 focus:outline-none"
+                                            className="shadow-3xs flex items-center gap-1.5 rounded-lg bg-[var(--civio-violet)] px-5 py-2.5 text-xs font-bold text-white transition hover:bg-[var(--civio-violet-deep)] focus:outline-none"
                                         >
                                             Next Question
                                             <ChevronRight className="size-4" />
@@ -1229,7 +1287,7 @@ export function LiveExamView({
                                             onClick={() =>
                                                 handleSubmitExam(false)
                                             }
-                                            className="flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-emerald-700 focus:outline-none sm:px-6"
+                                            className="flex items-center gap-1.5 rounded-lg bg-[var(--civio-violet)] px-4 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-[var(--civio-violet-deep)] focus:outline-none sm:px-6"
                                         >
                                             <CheckCircle2 className="size-4" />
                                             Submit Exam

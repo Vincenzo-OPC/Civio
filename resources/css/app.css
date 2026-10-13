@@ -237,6 +237,31 @@ html.lite {
     --font-heading: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
+/* Exam surface only. Admin pages keep the existing blue tokens. */
+.civio-session {
+    --civio-violet: #5b35f5;
+    --civio-violet-deep: #3d20c8;
+    --civio-lime: #b6f72d;
+    --civio-ink: #101426;
+    --civio-paper: #fafaf7;
+    --civio-surface: #f4f5f2;
+    --civio-line: #e3e5ea;
+    --civio-error: #e5484d;
+    background: var(--civio-paper);
+    color: var(--civio-ink);
+}
+
+.dark .civio-session {
+    --civio-violet: #8b74ff;
+    --civio-violet-deep: #c4b6ff;
+    --civio-lime: #c6f55a;
+    --civio-ink: #fafaf7;
+    --civio-paper: #101426;
+    --civio-surface: #1a1e30;
+    --civio-line: #2c3148;
+    --civio-error: #ff8a8d;
+}
+
 html.lite body,
 html.lite button,
 html.lite input,

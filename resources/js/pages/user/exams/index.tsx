@@ -95,6 +95,8 @@ export default function ExamIndex(props: ExamIndexProps) {
         handleSubmitExam,
         handleExitExam,
         getActiveTimeLimitSecs,
+        isPaused,
+        setIsPaused,
     } = useExamState(props);
 
     const customConfirmModal = (
@@ -174,6 +176,10 @@ export default function ExamIndex(props: ExamIndexProps) {
                     showRegisterModal={showRegisterModal}
                     handleCancelFreeExam={handleCancelFreeExam}
                     customConfirmModal={customConfirmModal}
+                    isPaused={isPaused}
+                    canPause={isDrillSession || examMode === 'study'}
+                    onPause={() => setIsPaused(true)}
+                    onResume={() => setIsPaused(false)}
                 />
             </ExamSessionProvider>
         );

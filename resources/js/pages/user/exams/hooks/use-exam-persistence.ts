@@ -39,6 +39,7 @@ export interface ActiveSessionData {
     sessionTimeLimitSecs: number;
     timeLeft: number;
     isTimed: boolean;
+    paused?: boolean;
     timestamp: number;
 }
 
@@ -58,6 +59,7 @@ interface UseExamPersistenceProps {
     sessionTimeLimitSecs: number;
     timeLeft: number;
     isTimed: boolean;
+    isPaused?: boolean;
     onRestoreSession: (data: ActiveSessionData) => void;
 }
 
@@ -77,6 +79,7 @@ export function useExamPersistence({
     sessionTimeLimitSecs,
     timeLeft,
     isTimed,
+    isPaused = false,
     onRestoreSession,
 }: UseExamPersistenceProps) {
     const saveSession = useCallback(() => {
@@ -124,6 +127,7 @@ export function useExamPersistence({
             sessionTimeLimitSecs,
             timeLeft,
             isTimed,
+            paused: isPaused,
             timestamp: Date.now(),
         };
 
@@ -148,6 +152,7 @@ export function useExamPersistence({
         sessionTimeLimitSecs,
         timeLeft,
         isTimed,
+        isPaused,
     ]);
 
     const clearSession = useCallback(() => {
