@@ -7,3 +7,4 @@
 - qa.py: nakaka- and kanya/kanyang checks in every field; option-in-stem check for Filipino vocabulary. Fixed one "kanyang" in filipino-supplement-001 (0015).
 - Key/trap separation: in `MockPoolState` (session builder), with tests; `qa_fil.py` lists remaining pairs.
 - All 100 approved/passed by Chief of Staff, 2026-10-13. No deploy.
+- MSI local import PENDING: the MSI was offline at 23:00 PHT. Next time it is up: copy chatgpt-batch-001.json, filipino-supplement-001.json and app/Services/Exam/MockPoolState.php + MockSessionService.php into the civio container, run `php artisan bank:import-batch` on chatgpt-batch-001.json as active, then confirm mocks start at 150 and 145.
