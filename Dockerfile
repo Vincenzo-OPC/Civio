@@ -32,5 +32,8 @@ COPY --chmod=755 scripts/00-laravel-deploy.sh /etc/entrypoint.d/00-laravel-deplo
 # Expose port 8080 (ServerSideUp default)
 EXPOSE 8080
 
+# Ensure Laravel can write logs/caches (composer/npm ran as root)
+RUN mkdir -p storage/logs bootstrap/cache && chown -R www-data:www-data storage bootstrap/cache
+
 # Switch back to the non-root www-data user for execution
 USER www-data
