@@ -22,36 +22,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "pabaya"
+          "text": "masipag"
         },
         {
           "option_id": "b",
-          "text": "malungkutin"
-        },
-        {
-          "option_id": "c",
           "text": "marahas"
         },
         {
+          "option_id": "c",
+          "text": "malungkutin"
+        },
+        {
           "option_id": "d",
-          "text": "masipag"
+          "text": "pabaya"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Kasingkahulugan ng masigasig ang masipag.",
         "why_correct": "Kasingkahulugan ng masigasig ang masipag.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -81,11 +81,11 @@
       "options": [
         {
           "option_id": "a",
-          "text": "sagana"
+          "text": "kulang"
         },
         {
           "option_id": "b",
-          "text": "sikat"
+          "text": "sagana"
         },
         {
           "option_id": "c",
@@ -93,23 +93,23 @@
         },
         {
           "option_id": "d",
-          "text": "kulang"
+          "text": "sikat"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang salat sa pondo ay kulang sa salapi.",
         "why_correct": "Ang salat sa pondo ay kulang sa salapi.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -144,32 +144,32 @@
         },
         {
           "option_id": "b",
-          "text": "masalimuot"
+          "text": "simple"
         },
         {
           "option_id": "c",
-          "text": "mahaba"
+          "text": "masalimuot"
         },
         {
           "option_id": "d",
-          "text": "simple"
+          "text": "mahaba"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang payak ay simple at madaling unawain.",
         "why_correct": "Ang payak ay simple at madaling unawain.",
         "why_wrong": {
           "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -199,11 +199,11 @@
       "options": [
         {
           "option_id": "a",
-          "text": "padalos-dalos"
+          "text": "maingay"
         },
         {
           "option_id": "b",
-          "text": "maingay"
+          "text": "padalos-dalos"
         },
         {
           "option_id": "c",
@@ -220,14 +220,14 @@
         "shortcut": "Ang mahinahon ay kalmado at hindi bugso ng damdamin.",
         "why_correct": "Ang mahinahon ay kalmado at hindi bugso ng damdamin.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -262,32 +262,32 @@
         },
         {
           "option_id": "b",
-          "text": "payak"
-        },
-        {
-          "option_id": "c",
           "text": "maikli"
         },
         {
-          "option_id": "d",
+          "option_id": "c",
           "text": "komplikado"
+        },
+        {
+          "option_id": "d",
+          "text": "payak"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang masalimuot ay maraming bahagi o komplikasyon.",
         "why_correct": "Ang masalimuot ay maraming bahagi o komplikasyon.",
         "why_wrong": {
           "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -317,36 +317,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "madaling maniwala"
-        },
-        {
-          "option_id": "b",
           "text": "palaging magmadali"
         },
         {
+          "option_id": "b",
+          "text": "madaling maniwala"
+        },
+        {
           "option_id": "c",
-          "text": "umiwas sa detalye"
+          "text": "masusing magsuri"
         },
         {
           "option_id": "d",
-          "text": "masusing magsuri"
+          "text": "umiwas sa detalye"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang mapanuri ay nag-iisip at nagsusuri nang mabuti.",
         "why_correct": "Ang mapanuri ay nag-iisip at nagsusuri nang mabuti.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -376,15 +376,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "katiyakan"
+          "text": "pagmamadali"
         },
         {
           "option_id": "b",
-          "text": "kasiyahan"
+          "text": "katiyakan"
         },
         {
           "option_id": "c",
-          "text": "pagmamadali"
+          "text": "kasiyahan"
         },
         {
           "option_id": "d",
@@ -397,15 +397,15 @@
         "shortcut": "Ang pag-aalinlangan ay pagdududa.",
         "why_correct": "Ang pag-aalinlangan ay pagdududa.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -435,7 +435,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "walang kaugnayan"
+          "text": "may saysay"
         },
         {
           "option_id": "b",
@@ -447,22 +447,22 @@
         },
         {
           "option_id": "d",
-          "text": "may saysay"
+          "text": "walang kaugnayan"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang makabuluhan ay may saysay o kabuluhan.",
         "why_correct": "Ang makabuluhan ay may saysay o kabuluhan.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
@@ -494,36 +494,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "mababaw"
+          "text": "matindi"
         },
         {
           "option_id": "b",
-          "text": "malamig"
+          "text": "mababaw"
         },
         {
           "option_id": "c",
-          "text": "walang pakialam"
+          "text": "malamig"
         },
         {
           "option_id": "d",
-          "text": "matindi"
+          "text": "walang pakialam"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang marubdob na hangarin ay matindi at taos-puso.",
         "why_correct": "Ang marubdob na hangarin ay matindi at taos-puso.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -553,7 +553,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "kulang"
+          "text": "hindi kumpleto"
         },
         {
           "option_id": "b",
@@ -561,7 +561,7 @@
         },
         {
           "option_id": "c",
-          "text": "hindi kumpleto"
+          "text": "kulang"
         },
         {
           "option_id": "d",
@@ -574,15 +574,15 @@
         "shortcut": "Ang wasto ay tama o nararapat.",
         "why_correct": "Ang wasto ay tama o nararapat.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -612,36 +612,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "matibay"
-        },
-        {
-          "option_id": "b",
-          "text": "matatagalan"
-        },
-        {
-          "option_id": "c",
           "text": "matiyaga"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
           "text": "marupok"
+        },
+        {
+          "option_id": "c",
+          "text": "matatagalan"
+        },
+        {
+          "option_id": "d",
+          "text": "matibay"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Kasalungat ng matatag sa tibay ang marupok.",
         "why_correct": "Kasalungat ng matatag sa tibay ang marupok.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -671,36 +671,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "sandali"
-        },
-        {
-          "option_id": "b",
-          "text": "mabilis"
-        },
-        {
-          "option_id": "c",
           "text": "pansamantala"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
           "text": "pangmatagalan"
+        },
+        {
+          "option_id": "c",
+          "text": "sandali"
+        },
+        {
+          "option_id": "d",
+          "text": "mabilis"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Kasalungat ng panandalian ang pangmatagalan.",
         "why_correct": "Kasalungat ng panandalian ang pangmatagalan.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -730,36 +730,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "masaya"
+          "text": "matamlay"
         },
         {
           "option_id": "b",
-          "text": "aktibo"
+          "text": "masaya"
         },
         {
           "option_id": "c",
-          "text": "masigabo"
+          "text": "aktibo"
         },
         {
           "option_id": "d",
-          "text": "matamlay"
+          "text": "masigabo"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang matamlay ay kabaligtaran ng masigla.",
         "why_correct": "Ang matamlay ay kabaligtaran ng masigla.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -789,7 +789,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "palagi"
+          "text": "paulit-ulit"
         },
         {
           "option_id": "b",
@@ -797,28 +797,28 @@
         },
         {
           "option_id": "c",
-          "text": "paulit-ulit"
+          "text": "bihira"
         },
         {
           "option_id": "d",
-          "text": "bihira"
+          "text": "palagi"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang bihira ay hindi madalas mangyari.",
         "why_correct": "Ang bihira ay hindi madalas mangyari.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -848,36 +848,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "ganap"
-        },
-        {
-          "option_id": "b",
-          "text": "buo"
-        },
-        {
-          "option_id": "c",
           "text": "taos-puso"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
+          "text": "ganap"
+        },
+        {
+          "option_id": "c",
           "text": "bahagya"
+        },
+        {
+          "option_id": "d",
+          "text": "buo"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang bahagya ay hindi buo o lubos.",
         "why_correct": "Ang bahagya ay hindi buo o lubos.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -907,7 +907,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "masusi"
+          "text": "padalos-dalos"
         },
         {
           "option_id": "b",
@@ -915,28 +915,28 @@
         },
         {
           "option_id": "c",
-          "text": "mapanuri"
+          "text": "masusi"
         },
         {
           "option_id": "d",
-          "text": "padalos-dalos"
+          "text": "mapanuri"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang padalos-dalos ay walang sapat na pag-iingat.",
         "why_correct": "Ang padalos-dalos ay walang sapat na pag-iingat.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -966,15 +966,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "tiyak"
+          "text": "tuwiran"
         },
         {
           "option_id": "b",
-          "text": "hayag"
+          "text": "tiyak"
         },
         {
           "option_id": "c",
-          "text": "tuwiran"
+          "text": "hayag"
         },
         {
           "option_id": "d",
@@ -987,15 +987,15 @@
         "shortcut": "Ang malabo ay hindi malinaw.",
         "why_correct": "Ang malabo ay hindi malinaw.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1025,36 +1025,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "matiisin"
-        },
-        {
-          "option_id": "b",
-          "text": "masipag"
-        },
-        {
-          "option_id": "c",
           "text": "matatag"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
           "text": "mainipin"
+        },
+        {
+          "option_id": "c",
+          "text": "matiisin"
+        },
+        {
+          "option_id": "d",
+          "text": "masipag"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang mainipin ay madaling mawalan ng tiyaga.",
         "why_correct": "Ang mainipin ay madaling mawalan ng tiyaga.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1084,36 +1084,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "matatag"
+          "text": "marupok"
         },
         {
           "option_id": "b",
-          "text": "matigas"
+          "text": "matatag"
         },
         {
           "option_id": "c",
-          "text": "matibay-tibay"
+          "text": "matigas"
         },
         {
           "option_id": "d",
-          "text": "marupok"
+          "text": "matibay-tibay"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang marupok ay madaling masira, kabaligtaran ng matibay.",
         "why_correct": "Ang marupok ay madaling masira, kabaligtaran ng matibay.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1143,7 +1143,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "payapa"
+          "text": "banayad"
         },
         {
           "option_id": "b",
@@ -1151,7 +1151,7 @@
         },
         {
           "option_id": "c",
-          "text": "banayad"
+          "text": "payapa"
         },
         {
           "option_id": "d",
@@ -1164,15 +1164,15 @@
         "shortcut": "Ang maingay ay kabaligtaran ng tahimik.",
         "why_correct": "Ang maingay ay kabaligtaran ng tahimik.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1202,36 +1202,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "pinakahuli"
-        },
-        {
-          "option_id": "b",
-          "text": "pinakamaliit"
-        },
-        {
-          "option_id": "c",
           "text": "hindi kailangan"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
           "text": "pinakamahalaga"
+        },
+        {
+          "option_id": "c",
+          "text": "pinakamaliit"
+        },
+        {
+          "option_id": "d",
+          "text": "pinakahuli"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang pangunahin ay pinakamahalaga o una sa prayoridad.",
         "why_correct": "Ang pangunahin ay pinakamahalaga o una sa prayoridad.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1261,7 +1261,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "napakaliit"
+          "text": "maraming bahagi"
         },
         {
           "option_id": "b",
@@ -1269,28 +1269,28 @@
         },
         {
           "option_id": "c",
-          "text": "walang paksa"
+          "text": "napakaliit"
         },
         {
           "option_id": "d",
-          "text": "maraming bahagi"
+          "text": "walang paksa"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang malawak na saklaw ay marami o sari-saring bahagi.",
         "why_correct": "Ang malawak na saklaw ay marami o sari-saring bahagi.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1320,15 +1320,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "mahirap hanapin"
+          "text": "walang pinagmulan"
         },
         {
           "option_id": "b",
-          "text": "laging mahaba"
+          "text": "mahirap hanapin"
         },
         {
           "option_id": "c",
-          "text": "walang pinagmulan"
+          "text": "laging mahaba"
         },
         {
           "option_id": "d",
@@ -1341,15 +1341,15 @@
         "shortcut": "Kapaki-pakinabang ang impormasyong may gamit o pakinabang.",
         "why_correct": "Kapaki-pakinabang ang impormasyong may gamit o pakinabang.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
+          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1379,36 +1379,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "pahapyaw"
-        },
-        {
-          "option_id": "b",
           "text": "pabaya"
         },
         {
-          "option_id": "c",
+          "option_id": "b",
           "text": "walang ayos"
         },
         {
-          "option_id": "d",
+          "option_id": "c",
           "text": "detalyado at maingat"
+        },
+        {
+          "option_id": "d",
+          "text": "pahapyaw"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang masusing pagsusuri ay detalyado at maingat.",
         "why_correct": "Ang masusing pagsusuri ay detalyado at maingat.",
         "why_wrong": {
+          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
           "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
         }
       },
       "distractor_reasoning": {
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1442,32 +1442,32 @@
         },
         {
           "option_id": "b",
-          "text": "ipagpaliban"
-        },
-        {
-          "option_id": "c",
           "text": "kaligtaan"
         },
         {
-          "option_id": "d",
+          "option_id": "c",
           "text": "linawin"
+        },
+        {
+          "option_id": "d",
+          "text": "ipagpaliban"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang linawin ay angkop dahil layunin ang pag-iwas sa pagkalito.",
         "why_correct": "Ang linawin ay angkop dahil layunin ang pag-iwas sa pagkalito.",
         "why_wrong": {
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1497,15 +1497,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "nakalimutan"
-        },
-        {
-          "option_id": "b",
           "text": "iniwasan"
         },
         {
-          "option_id": "c",
+          "option_id": "b",
           "text": "ipinagwalang-bahala"
+        },
+        {
+          "option_id": "c",
+          "text": "nakalimutan"
         },
         {
           "option_id": "d",
@@ -1518,15 +1518,15 @@
         "shortcut": "Naipagtagumpay ang akma sa positibong resulta sa kabila ng limitadong oras.",
         "why_correct": "Naipagtagumpay ang akma sa positibong resulta sa kabila ng limitadong oras.",
         "why_wrong": {
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1556,36 +1556,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "ganap"
+          "text": "kulang"
         },
         {
           "option_id": "b",
-          "text": "masusi"
-        },
-        {
-          "option_id": "c",
           "text": "tumpak"
         },
         {
+          "option_id": "c",
+          "text": "masusi"
+        },
+        {
           "option_id": "d",
-          "text": "kulang"
+          "text": "ganap"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Tumutukoy ang kulang sa nawawalang impormasyon.",
         "why_correct": "Tumutukoy ang kulang sa nawawalang impormasyon.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1615,36 +1615,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Salungat"
+          "text": "Alinsunod"
         },
         {
           "option_id": "b",
-          "text": "Malayo"
-        },
-        {
-          "option_id": "c",
           "text": "Hiwalay"
         },
         {
+          "option_id": "c",
+          "text": "Salungat"
+        },
+        {
           "option_id": "d",
-          "text": "Alinsunod"
+          "text": "Malayo"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang alinsunod ay nangangahulugang ayon sa patakaran.",
         "why_correct": "Ang alinsunod ay nangangahulugang ayon sa patakaran.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1682,14 +1682,14 @@
         },
         {
           "option_id": "c",
-          "text": "ngunit"
+          "text": "upang"
         },
         {
           "option_id": "d",
-          "text": "upang"
+          "text": "ngunit"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ginagamit ang upang sa pagpapahayag ng layunin.",
@@ -1697,13 +1697,13 @@
         "why_wrong": {
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1733,36 +1733,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "subalit"
-        },
-        {
-          "option_id": "b",
           "text": "dahil dito"
         },
         {
-          "option_id": "c",
+          "option_id": "b",
           "text": "gayunman"
         },
         {
-          "option_id": "d",
+          "option_id": "c",
           "text": "upang"
+        },
+        {
+          "option_id": "d",
+          "text": "subalit"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang pangalawang sugnay ay nagsasaad ng layunin.",
         "why_correct": "Ang pangalawang sugnay ay nagsasaad ng layunin.",
         "why_wrong": {
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1796,7 +1796,7 @@
         },
         {
           "option_id": "b",
-          "text": "gayunman"
+          "text": "bunga nito"
         },
         {
           "option_id": "c",
@@ -1804,23 +1804,23 @@
         },
         {
           "option_id": "d",
-          "text": "bunga nito"
+          "text": "gayunman"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang bunga nito ay nagpapakita ng naging resulta.",
         "why_correct": "Ang bunga nito ay nagpapakita ng naging resulta.",
         "why_wrong": {
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -1851,36 +1851,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Dahil"
-        },
-        {
-          "option_id": "b",
           "text": "Upang"
         },
         {
+          "option_id": "b",
+          "text": "Kahit"
+        },
+        {
           "option_id": "c",
-          "text": "Samakatuwid"
+          "text": "Dahil"
         },
         {
           "option_id": "d",
-          "text": "Kahit"
+          "text": "Samakatuwid"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang kahit ay nagpapakita ng pagsalungat sa inaasahang epekto ng ulan.",
         "why_correct": "Ang kahit ay nagpapakita ng pagsalungat sa inaasahang epekto ng ulan.",
         "why_wrong": {
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1969,36 +1969,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "ngunit"
+          "text": "upang"
         },
         {
           "option_id": "b",
-          "text": "maliban"
-        },
-        {
-          "option_id": "c",
           "text": "kahit"
         },
         {
+          "option_id": "c",
+          "text": "ngunit"
+        },
+        {
           "option_id": "d",
-          "text": "upang"
+          "text": "maliban"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang upang ay nagpapahayag ng layunin ng pagkalap ng ebidensiya.",
         "why_correct": "Ang upang ay nagpapahayag ng layunin ng pagkalap ng ebidensiya.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2036,14 +2036,14 @@
         },
         {
           "option_id": "c",
-          "text": "itago nang walang rekord"
+          "text": "itala"
         },
         {
           "option_id": "d",
-          "text": "itala"
+          "text": "itago nang walang rekord"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang pagtatala ay tumutulong sa maayos na paghahanap ng dokumento.",
@@ -2051,13 +2051,13 @@
         "why_wrong": {
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2087,15 +2087,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "bagaman"
-        },
-        {
-          "option_id": "b",
           "text": "gayunman"
         },
         {
-          "option_id": "c",
+          "option_id": "b",
           "text": "subalit"
+        },
+        {
+          "option_id": "c",
+          "text": "bagaman"
         },
         {
           "option_id": "d",
@@ -2108,15 +2108,15 @@
         "shortcut": "Ang upang ay nagpapakita ng dahilan o layunin ng pagsusuri.",
         "why_correct": "Ang upang ay nagpapakita ng dahilan o layunin ng pagsusuri.",
         "why_wrong": {
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2146,7 +2146,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "wasto"
+          "text": "mali"
         },
         {
           "option_id": "b",
@@ -2158,22 +2158,22 @@
         },
         {
           "option_id": "d",
-          "text": "mali"
+          "text": "wasto"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Sinasalungat ng mali ang pagiging kapaki-pakinabang ng mabilis na tugon.",
         "why_correct": "Sinasalungat ng mali ang pagiging kapaki-pakinabang ng mabilis na tugon.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
@@ -2205,36 +2205,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Dahil"
-        },
-        {
-          "option_id": "b",
           "text": "Alinsunod"
         },
         {
+          "option_id": "b",
+          "text": "Sa kabila"
+        },
+        {
           "option_id": "c",
-          "text": "Kasama"
+          "text": "Dahil"
         },
         {
           "option_id": "d",
-          "text": "Sa kabila"
+          "text": "Kasama"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang sa kabila ay angkop sa hindi inaasahang paghahanda kahit maikli ang abiso.",
         "why_correct": "Ang sa kabila ay angkop sa hindi inaasahang paghahanda kahit maikli ang abiso.",
         "why_wrong": {
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2323,36 +2323,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "kaya"
-        },
-        {
-          "option_id": "b",
           "text": "upang"
         },
         {
-          "option_id": "c",
+          "option_id": "b",
           "text": "dahil"
         },
         {
-          "option_id": "d",
+          "option_id": "c",
           "text": "ngunit"
+        },
+        {
+          "option_id": "d",
+          "text": "kaya"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang ngunit ay nagpapakita ng pagkakaiba ng panukala at pagkakapareho ng layunin.",
         "why_correct": "Ang ngunit ay nagpapakita ng pagkakaiba ng panukala at pagkakapareho ng layunin.",
         "why_wrong": {
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2382,11 +2382,11 @@
       "options": [
         {
           "option_id": "a",
-          "text": "labis"
+          "text": "akma"
         },
         {
           "option_id": "b",
-          "text": "salungat"
+          "text": "labis"
         },
         {
           "option_id": "c",
@@ -2394,23 +2394,23 @@
         },
         {
           "option_id": "d",
-          "text": "akma"
+          "text": "salungat"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Akma ang mungkahing naaayon sa takdang badyet.",
         "why_correct": "Akma ang mungkahing naaayon sa takdang badyet.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -2441,7 +2441,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "ngunit"
+          "text": "samantala"
         },
         {
           "option_id": "b",
@@ -2449,7 +2449,7 @@
         },
         {
           "option_id": "c",
-          "text": "samantala"
+          "text": "ngunit"
         },
         {
           "option_id": "d",
@@ -2462,15 +2462,15 @@
         "shortcut": "Ang upang ay angkop sa layunin ng pagbibigay ng halimbawa.",
         "why_correct": "Ang upang ay angkop sa layunin ng pagbibigay ng halimbawa.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2500,11 +2500,11 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Ipagwalang-bahala"
+          "text": "Itapon"
         },
         {
           "option_id": "b",
-          "text": "Itapon"
+          "text": "Basahin"
         },
         {
           "option_id": "c",
@@ -2512,23 +2512,23 @@
         },
         {
           "option_id": "d",
-          "text": "Basahin"
+          "text": "Ipagwalang-bahala"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang basahin ay angkop upang masuri ang kabuuan bago pumirma.",
         "why_correct": "Ang basahin ay angkop upang masuri ang kabuuan bago pumirma.",
         "why_wrong": {
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -2559,36 +2559,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "gayunman"
-        },
-        {
-          "option_id": "b",
-          "text": "subalit"
-        },
-        {
-          "option_id": "c",
           "text": "sa halip"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
           "text": "dahil"
+        },
+        {
+          "option_id": "c",
+          "text": "gayunman"
+        },
+        {
+          "option_id": "d",
+          "text": "subalit"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang dahil ay nagpapakita ng sanhi ng karagdagang pagsasanay.",
         "why_correct": "Ang dahil ay nagpapakita ng sanhi ng karagdagang pagsasanay.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2618,36 +2618,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Nagsumite siya nang ulat ng maaga."
-        },
-        {
-          "option_id": "b",
           "text": "Nagsumite siya ng ulat ng maaga."
         },
         {
+          "option_id": "b",
+          "text": "Nagsumite siya nang ulat ng maaga."
+        },
+        {
           "option_id": "c",
-          "text": "Nagsumite siya nang ulat nang maaga."
+          "text": "Nagsumite siya ng ulat nang maaga."
         },
         {
           "option_id": "d",
-          "text": "Nagsumite siya ng ulat nang maaga."
+          "text": "Nagsumite siya nang ulat nang maaga."
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ginagamit ang ng para sa layon na ulat at nang para sa paraan o oras na maaga.",
         "why_correct": "Ginagamit ang ng para sa layon na ulat at nang para sa paraan o oras na maaga.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2677,36 +2677,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Bawat kawani ay may mga tungkuling dapat gampanan nilang lahat."
+          "text": "Bawat kawani ay may tungkuling dapat gampanan."
         },
         {
           "option_id": "b",
-          "text": "Bawat kawani ay may tungkulin na dapat gampanan nila bawat isa."
-        },
-        {
-          "option_id": "c",
           "text": "Bawat kawani ay may tungkuling dapat gampanan ng lahat nilang bawat isa."
         },
         {
+          "option_id": "c",
+          "text": "Bawat kawani ay may tungkulin na dapat gampanan nila bawat isa."
+        },
+        {
           "option_id": "d",
-          "text": "Bawat kawani ay may tungkuling dapat gampanan."
+          "text": "Bawat kawani ay may mga tungkuling dapat gampanan nilang lahat."
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Maikli, malinaw, at wastong pangungusap ang unang pagpipilian.",
         "why_correct": "Maikli, malinaw, at wastong pangungusap ang unang pagpipilian.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2736,11 +2736,11 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Dahil umulan ipinagpaliban ang palaro."
+          "text": "Dahil umulan, ipinagpaliban ang palaro."
         },
         {
           "option_id": "b",
-          "text": "Dahil umulan; ipinagpaliban ang palaro."
+          "text": "Dahil umulan ipinagpaliban ang palaro."
         },
         {
           "option_id": "c",
@@ -2748,23 +2748,23 @@
         },
         {
           "option_id": "d",
-          "text": "Dahil umulan, ipinagpaliban ang palaro."
+          "text": "Dahil umulan; ipinagpaliban ang palaro."
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang kuwit ay naghihiwalay sa panimulang sugnay na Dahil umulan.",
         "why_correct": "Ang kuwit ay naghihiwalay sa panimulang sugnay na Dahil umulan.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -2799,32 +2799,32 @@
         },
         {
           "option_id": "b",
-          "text": "Ang ulat ay sinuri muna sa bago inilathala."
+          "text": "Ang ulat ay sinuri muna bago inilathala."
         },
         {
           "option_id": "c",
-          "text": "Ang ulat ay sinuri muna habang bago inilathala."
+          "text": "Ang ulat ay sinuri muna sa bago inilathala."
         },
         {
           "option_id": "d",
-          "text": "Ang ulat ay sinuri muna bago inilathala."
+          "text": "Ang ulat ay sinuri muna habang bago inilathala."
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang bago ay malinaw na nagpapakita ng pagkakasunod ng gawain.",
         "why_correct": "Ang bago ay malinaw na nagpapakita ng pagkakasunod ng gawain.",
         "why_wrong": {
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2854,11 +2854,11 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Maayos ng naitala na kawani ang mga kahilingan."
+          "text": "Maayos na naitala na kawani ang mga kahilingan."
         },
         {
           "option_id": "b",
-          "text": "Maayos na naitala na kawani ang mga kahilingan."
+          "text": "Maayos ng naitala na kawani ang mga kahilingan."
         },
         {
           "option_id": "c",
@@ -2875,14 +2875,14 @@
         "shortcut": "Na ang pang-ugnay pagkatapos ng maayos at ng ang pananda sa kawani.",
         "why_correct": "Na ang pang-ugnay pagkatapos ng maayos at ng ang pananda sa kawani.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -2917,32 +2917,32 @@
         },
         {
           "option_id": "b",
-          "text": "Kahapon sa paalala ay ipinadala ng opisina ang mga aplikante."
-        },
-        {
-          "option_id": "c",
           "text": "Mga aplikante kahapon ipinadala sa paalala ang opisina."
         },
         {
-          "option_id": "d",
+          "option_id": "c",
           "text": "Ipinadala ng opisina ang paalala sa mga aplikante kahapon."
+        },
+        {
+          "option_id": "d",
+          "text": "Kahapon sa paalala ay ipinadala ng opisina ang mga aplikante."
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Malinaw ang simuno, pandiwa, at layon sa unang pangungusap.",
         "why_correct": "Malinaw ang simuno, pandiwa, at layon sa unang pangungusap.",
         "why_wrong": {
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2972,36 +2972,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Nagsagawa ng pagsasanay ngunit mapabuti ang serbisyo."
-        },
-        {
-          "option_id": "b",
           "text": "Nagsagawa ng pagsasanay gayunman mapabuti ang serbisyo."
         },
         {
+          "option_id": "b",
+          "text": "Nagsagawa ng pagsasanay ngunit mapabuti ang serbisyo."
+        },
+        {
           "option_id": "c",
-          "text": "Nagsagawa ng pagsasanay samantala mapabuti ang serbisyo."
+          "text": "Nagsagawa ng pagsasanay upang mapabuti ang serbisyo."
         },
         {
           "option_id": "d",
-          "text": "Nagsagawa ng pagsasanay upang mapabuti ang serbisyo."
+          "text": "Nagsagawa ng pagsasanay samantala mapabuti ang serbisyo."
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang upang ang tamang pang-ugnay para sa layunin.",
         "why_correct": "Ang upang ang tamang pang-ugnay para sa layunin.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3035,11 +3035,11 @@
         },
         {
           "option_id": "b",
-          "text": "Mas mahaba ang pila ngayon ng kahapon."
+          "text": "Mas mahaba ang pila ngayon pero kaysa kahapon."
         },
         {
           "option_id": "c",
-          "text": "Mas mahaba ang pila ngayon pero kaysa kahapon."
+          "text": "Mas mahaba ang pila ngayon ng kahapon."
         },
         {
           "option_id": "d",
@@ -3053,14 +3053,14 @@
         "why_correct": "Kaysa ang karaniwang panandang panghambing.",
         "why_wrong": {
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3090,11 +3090,11 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Mayroon kami sapat na upuan sa mga bisita."
+          "text": "Mayroon ng kaming sapat na upuan para sa mga bisita."
         },
         {
           "option_id": "b",
-          "text": "Mayroon ng kaming sapat na upuan para sa mga bisita."
+          "text": "Mayroon kaming sapat na upuan para sa mga bisita."
         },
         {
           "option_id": "c",
@@ -3102,23 +3102,23 @@
         },
         {
           "option_id": "d",
-          "text": "Mayroon kaming sapat na upuan para sa mga bisita."
+          "text": "Mayroon kami sapat na upuan sa mga bisita."
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang mayroon kaming ay wastong anyo sa pangungusap.",
         "why_correct": "Ang mayroon kaming ay wastong anyo sa pangungusap.",
         "why_wrong": {
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
           "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -3153,32 +3153,32 @@
         },
         {
           "option_id": "b",
-          "text": "Nasira ang tubo upang pansamantalang nawalan ng tubig."
+          "text": "Nasira ang tubo kaya pansamantalang nawalan ng tubig."
         },
         {
           "option_id": "c",
-          "text": "Nasira ang tubo samantala kaya nawalan ng tubig."
+          "text": "Nasira ang tubo upang pansamantalang nawalan ng tubig."
         },
         {
           "option_id": "d",
-          "text": "Nasira ang tubo kaya pansamantalang nawalan ng tubig."
+          "text": "Nasira ang tubo samantala kaya nawalan ng tubig."
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Ang kaya ay nag-uugnay ng sanhi at bunga.",
         "why_correct": "Ang kaya ay nag-uugnay ng sanhi at bunga.",
         "why_wrong": {
           "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
+          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3208,11 +3208,11 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Mangalap ng donasyong pera"
+          "text": "Mag-imbak ng pagkain"
         },
         {
           "option_id": "b",
-          "text": "Mag-imbak ng pagkain"
+          "text": "Mangalap ng donasyong pera"
         },
         {
           "option_id": "c",
@@ -3229,14 +3229,14 @@
         "shortcut": "Itinatabi ang lumang baterya upang hindi mahalo sa karaniwang basura.",
         "why_correct": "Itinatabi ang lumang baterya upang hindi mahalo sa karaniwang basura.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -3267,36 +3267,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Tuwing Lunes"
+          "text": "Tuwing Biyernes"
         },
         {
           "option_id": "b",
-          "text": "Araw-araw"
-        },
-        {
-          "option_id": "c",
           "text": "Isang beses sa isang taon"
         },
         {
+          "option_id": "c",
+          "text": "Araw-araw"
+        },
+        {
           "option_id": "d",
-          "text": "Tuwing Biyernes"
+          "text": "Tuwing Lunes"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Tuwirang nakasaad ang Biyernes.",
         "why_correct": "Tuwirang nakasaad ang Biyernes.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3326,11 +3326,11 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Mas mahal itong itapon kapag magkahiwalay"
+          "text": "Maaaring makapinsala ang ilang sangkap nito"
         },
         {
           "option_id": "b",
-          "text": "Lahat ng baterya ay nabubulok"
+          "text": "Mas mahal itong itapon kapag magkahiwalay"
         },
         {
           "option_id": "c",
@@ -3338,23 +3338,23 @@
         },
         {
           "option_id": "d",
-          "text": "Maaaring makapinsala ang ilang sangkap nito"
+          "text": "Lahat ng baterya ay nabubulok"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "May binanggit na mga sangkap na maaaring makapinsala.",
         "why_correct": "May binanggit na mga sangkap na maaaring makapinsala.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -3385,15 +3385,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Ang lokasyon ng kahon"
+          "text": "Ang uri ng basurang ihihiwalay"
         },
         {
           "option_id": "b",
-          "text": "Ang araw ng koleksiyon"
+          "text": "Ang lokasyon ng kahon"
         },
         {
           "option_id": "c",
-          "text": "Ang uri ng basurang ihihiwalay"
+          "text": "Ang araw ng koleksiyon"
         },
         {
           "option_id": "d",
@@ -3406,15 +3406,15 @@
         "shortcut": "Walang numerong nagsasabi ng timbang sa talata.",
         "why_correct": "Walang numerong nagsasabi ng timbang sa talata.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3444,7 +3444,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Isinara ang lahat ng tanggapan"
+          "text": "Nagbukas ng dagdag na pila para sa ilang aplikante"
         },
         {
           "option_id": "b",
@@ -3456,22 +3456,22 @@
         },
         {
           "option_id": "d",
-          "text": "Nagbukas ng dagdag na pila para sa ilang aplikante"
+          "text": "Isinara ang lahat ng tanggapan"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Dagdag na pila ang pangunahing pagbabago.",
         "why_correct": "Dagdag na pila ang pangunahing pagbabago.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
@@ -3503,36 +3503,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Nawala ang lahat ng pila"
-        },
-        {
-          "option_id": "b",
-          "text": "Dumoble ang bilang ng kawani"
-        },
-        {
-          "option_id": "c",
           "text": "Bumaba ang lahat ng bayarin"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
+          "text": "Nawala ang lahat ng pila"
+        },
+        {
+          "option_id": "c",
           "text": "Mas umikli ang paghihintay ng partikular na grupo"
+        },
+        {
+          "option_id": "d",
+          "text": "Dumoble ang bilang ng kawani"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Mas maikli ang paghihintay para sa inilaanang grupo.",
         "why_correct": "Mas maikli ang paghihintay para sa inilaanang grupo.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3570,14 +3570,14 @@
         },
         {
           "option_id": "c",
-          "text": "Ipinagbawal ang pagtatala"
+          "text": "Hindi pa tiyak ang epekto sa kabuuang daloy"
         },
         {
           "option_id": "d",
-          "text": "Hindi pa tiyak ang epekto sa kabuuang daloy"
+          "text": "Ipinagbawal ang pagtatala"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Inaalam pa nila ang pangkalahatang epekto.",
@@ -3585,13 +3585,13 @@
         "why_wrong": {
           "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3621,36 +3621,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "May bagong pila para sa ilang aplikante"
-        },
-        {
-          "option_id": "b",
-          "text": "May nasukat na pagbabago sa unang linggo"
-        },
-        {
-          "option_id": "c",
           "text": "Patuloy ang pagsusuri ng opisina"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
           "text": "Bumilis na ang serbisyo para sa lahat ng aplikante"
+        },
+        {
+          "option_id": "c",
+          "text": "May nasukat na pagbabago sa unang linggo"
+        },
+        {
+          "option_id": "d",
+          "text": "May bagong pila para sa ilang aplikante"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Walang patunay na ang lahat ng aplikante ay mas mabilis nang napagsilbihan.",
         "why_correct": "Walang patunay na ang lahat ng aplikante ay mas mabilis nang napagsilbihan.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3684,7 +3684,7 @@
         },
         {
           "option_id": "b",
-          "text": "Pagpapalit ng lahat ng silid-aralan"
+          "text": "Paggawa ng reading corner"
         },
         {
           "option_id": "c",
@@ -3692,23 +3692,23 @@
         },
         {
           "option_id": "d",
-          "text": "Paggawa ng reading corner"
+          "text": "Pagpapalit ng lahat ng silid-aralan"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Reading corner ang paksa ng buong talata.",
         "why_correct": "Reading corner ang paksa ng buong talata.",
         "why_wrong": {
           "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
@@ -3739,36 +3739,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Mga magulang"
+          "text": "Mga guro"
         },
         {
           "option_id": "b",
-          "text": "Mga mag-aaral"
+          "text": "Mga magulang"
         },
         {
           "option_id": "c",
-          "text": "Mga bisita"
+          "text": "Mga mag-aaral"
         },
         {
           "option_id": "d",
-          "text": "Mga guro"
+          "text": "Mga bisita"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Nabanggit na inayos ng mga guro ang estante.",
         "why_correct": "Nabanggit na inayos ng mga guro ang estante.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3798,7 +3798,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Ipinagbili ang mga aklat"
+          "text": "Inilipat ang paaralan"
         },
         {
           "option_id": "b",
@@ -3806,7 +3806,7 @@
         },
         {
           "option_id": "c",
-          "text": "Inilipat ang paaralan"
+          "text": "Ipinagbili ang mga aklat"
         },
         {
           "option_id": "d",
@@ -3819,15 +3819,15 @@
         "shortcut": "Kaligtasan ng upuan at bentilasyon ang sinuri.",
         "why_correct": "Kaligtasan ng upuan at bentilasyon ang sinuri.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3857,36 +3857,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Ngayong araw"
-        },
-        {
-          "option_id": "b",
-          "text": "Noong nakaraang taon"
-        },
-        {
-          "option_id": "c",
           "text": "Walang itinakdang panahon"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
+          "text": "Ngayong araw"
+        },
+        {
+          "option_id": "c",
           "text": "Sa susunod na buwan"
+        },
+        {
+          "option_id": "d",
+          "text": "Noong nakaraang taon"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Itinakda ang pagbubukas sa susunod na buwan.",
         "why_correct": "Itinakda ang pagbubukas sa susunod na buwan.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3916,7 +3916,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Madagdagan ang magkakaibang bersiyon"
+          "text": "Mabawasan ang maling impormasyon"
         },
         {
           "option_id": "b",
@@ -3924,28 +3924,28 @@
         },
         {
           "option_id": "c",
-          "text": "Matanggal ang bawat mungkahi"
+          "text": "Madagdagan ang magkakaibang bersiyon"
         },
         {
           "option_id": "d",
-          "text": "Mabawasan ang maling impormasyon"
+          "text": "Matanggal ang bawat mungkahi"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Ang iisang talaan ay ginawa upang mabawasan ang maling impormasyon.",
         "why_correct": "Ang iisang talaan ay ginawa upang mabawasan ang maling impormasyon.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3975,15 +3975,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Sinumang bisita"
+          "text": "Tanging dating empleyado"
         },
         {
           "option_id": "b",
-          "text": "Lahat nang walang pagsusuri"
+          "text": "Sinumang bisita"
         },
         {
           "option_id": "c",
-          "text": "Tanging dating empleyado"
+          "text": "Lahat nang walang pagsusuri"
         },
         {
           "option_id": "d",
@@ -3996,15 +3996,15 @@
         "shortcut": "Iisa lamang na itinalagang kawani ang may kapangyarihan.",
         "why_correct": "Iisa lamang na itinalagang kawani ang may kapangyarihan.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4034,7 +4034,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Awtomatikong nilalathala"
+          "text": "Hindi kailanman tinatanggap"
         },
         {
           "option_id": "b",
@@ -4042,28 +4042,28 @@
         },
         {
           "option_id": "c",
-          "text": "Hindi kailanman tinatanggap"
+          "text": "Sinusuri muna bago ilathala"
         },
         {
           "option_id": "d",
-          "text": "Sinusuri muna bago ilathala"
+          "text": "Awtomatikong nilalathala"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Pinapayagan ang mungkahi ngunit sinusuri muna.",
         "why_correct": "Pinapayagan ang mungkahi ngunit sinusuri muna.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4093,36 +4093,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Pagsusuri sa mungkahi"
+          "text": "Pagbabago ng opisyal na bersiyon ng sinumang kawani"
         },
         {
           "option_id": "b",
-          "text": "Pagtatalaga ng responsable sa bersiyon"
+          "text": "Pagsusuri sa mungkahi"
         },
         {
           "option_id": "c",
-          "text": "Paggamit ng iisang talaan"
+          "text": "Pagtatalaga ng responsable sa bersiyon"
         },
         {
           "option_id": "d",
-          "text": "Pagbabago ng opisyal na bersiyon ng sinumang kawani"
+          "text": "Paggamit ng iisang talaan"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "a",
       "reveal": {
         "terms": "",
         "shortcut": "Hindi lahat ng kawani ang maaaring magpalit ng opisyal na bersiyon.",
         "why_correct": "Hindi lahat ng kawani ang maaaring magpalit ng opisyal na bersiyon.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4152,7 +4152,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Binabaan agad ang presyo"
+          "text": "Kinakansela ang mga order"
         },
         {
           "option_id": "b",
@@ -4160,7 +4160,7 @@
         },
         {
           "option_id": "c",
-          "text": "Kinakansela ang mga order"
+          "text": "Binabaan agad ang presyo"
         },
         {
           "option_id": "d",
@@ -4173,15 +4173,15 @@
         "shortcut": "Pagbibilang ng ani ang unang hakbang.",
         "why_correct": "Pagbibilang ng ani ang unang hakbang.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4211,36 +4211,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Mga kasaping nahuling umorder"
-        },
-        {
-          "option_id": "b",
-          "text": "Mga hindi pa nag-oorder"
-        },
-        {
-          "option_id": "c",
           "text": "Mga mamimiling walang tala"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
           "text": "Mga kasaping may naunang order"
+        },
+        {
+          "option_id": "c",
+          "text": "Mga hindi pa nag-oorder"
+        },
+        {
+          "option_id": "d",
+          "text": "Mga kasaping nahuling umorder"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Mga kasaping may naunang order ang inuuna.",
         "why_correct": "Mga kasaping may naunang order ang inuuna.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4270,36 +4270,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Walang ani sa umaga"
-        },
-        {
-          "option_id": "b",
-          "text": "Ipinagbawal ang pagtitinda"
-        },
-        {
-          "option_id": "c",
           "text": "Hindi nila binibilang ang ani"
         },
         {
-          "option_id": "d",
+          "option_id": "b",
           "text": "Maaaring may bagong kahilingan sa hapon"
+        },
+        {
+          "option_id": "c",
+          "text": "Walang ani sa umaga"
+        },
+        {
+          "option_id": "d",
+          "text": "Ipinagbawal ang pagtitinda"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Posibleng madagdagan ang demand sa hapon.",
         "why_correct": "Posibleng madagdagan ang demand sa hapon.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4329,15 +4329,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Laging pareho ang dami ng ibinebenta"
+          "text": "Awtomatikong inuubos lahat ng ani"
         },
         {
           "option_id": "b",
-          "text": "Walang sinusunod na prayoridad"
+          "text": "Laging pareho ang dami ng ibinebenta"
         },
         {
           "option_id": "c",
-          "text": "Awtomatikong inuubos lahat ng ani"
+          "text": "Walang sinusunod na prayoridad"
         },
         {
           "option_id": "d",
@@ -4350,15 +4350,15 @@
         "shortcut": "Binibilang ang ani at inuuna ang dating order bago magpasya.",
         "why_correct": "Binibilang ang ani at inuuna ang dating order bago magpasya.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
           "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
+          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
         "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4388,36 +4388,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "2-3-1-4"
-        },
-        {
-          "option_id": "b",
           "text": "2-1-3-4"
         },
         {
-          "option_id": "c",
+          "option_id": "b",
           "text": "1-2-3-4"
         },
         {
-          "option_id": "d",
+          "option_id": "c",
           "text": "4-1-2-3"
+        },
+        {
+          "option_id": "d",
+          "text": "2-3-1-4"
         }
       ],
-      "answer_option_id": "c",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Nagsisimula sa layunin, sinusundan ng listahan, pagbili at pagsusuri.",
         "why_correct": "Nagsisimula sa layunin, sinusundan ng listahan, pagbili at pagsusuri.",
         "why_wrong": {
+          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
           "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
         }
       },
       "distractor_reasoning": {
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4451,32 +4451,32 @@
         },
         {
           "option_id": "b",
-          "text": "2-3-1-4"
-        },
-        {
-          "option_id": "c",
           "text": "1-3-2-4"
         },
         {
-          "option_id": "d",
+          "option_id": "c",
           "text": "1-2-3-4"
+        },
+        {
+          "option_id": "d",
+          "text": "2-3-1-4"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Magkakasunod ang pagtanggap, pagtatala, pagpapasa at pagtugon.",
         "why_correct": "Magkakasunod ang pagtanggap, pagtatala, pagpapasa at pagtugon.",
         "why_wrong": {
           "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4506,36 +4506,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "1-2-3-4"
-        },
-        {
-          "option_id": "b",
           "text": "4-1-2-3"
         },
         {
+          "option_id": "b",
+          "text": "1-2-4-3"
+        },
+        {
           "option_id": "c",
-          "text": "2-3-1-4"
+          "text": "1-2-3-4"
         },
         {
           "option_id": "d",
-          "text": "1-2-4-3"
+          "text": "2-3-1-4"
         }
       ],
-      "answer_option_id": "a",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Ang pasiya at pagpili ng lugar ay nauuna sa pagtatanim at pag-aani.",
         "why_correct": "Ang pasiya at pagpili ng lugar ay nauuna sa pagtatanim at pag-aani.",
         "why_wrong": {
-          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4565,36 +4565,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "3-1-2-4"
+          "text": "2-3-1-4"
         },
         {
           "option_id": "b",
-          "text": "1-2-3-4"
-        },
-        {
-          "option_id": "c",
           "text": "4-1-2-3"
         },
         {
+          "option_id": "c",
+          "text": "1-2-3-4"
+        },
+        {
           "option_id": "d",
-          "text": "2-3-1-4"
+          "text": "3-1-2-4"
         }
       ],
-      "answer_option_id": "b",
+      "answer_option_id": "c",
       "reveal": {
         "terms": "",
         "shortcut": "Tamang panahon ang pagkatuklas, pag-uulat, pagkukumpuni at pagbubukas.",
         "why_correct": "Tamang panahon ang pagkatuklas, pag-uulat, pagkukumpuni at pagbubukas.",
         "why_wrong": {
-          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4624,36 +4624,36 @@
       "options": [
         {
           "option_id": "a",
-          "text": "2-3-1-4"
+          "text": "4-1-2-3"
         },
         {
           "option_id": "b",
-          "text": "2-1-3-4"
-        },
-        {
-          "option_id": "c",
           "text": "1-2-3-4"
         },
         {
+          "option_id": "c",
+          "text": "2-3-1-4"
+        },
+        {
           "option_id": "d",
-          "text": "4-1-2-3"
+          "text": "2-1-3-4"
         }
       ],
-      "answer_option_id": "c",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Kailangang makumpleto at masuri ang datos bago magsulat ng pinal na ulat.",
         "why_correct": "Kailangang makumpleto at masuri ang datos bago magsulat ng pinal na ulat.",
         "why_wrong": {
-          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4687,32 +4687,32 @@
         },
         {
           "option_id": "b",
-          "text": "2-3-1-4"
+          "text": "1-2-3-4"
         },
         {
           "option_id": "c",
-          "text": "1-3-2-4"
+          "text": "2-3-1-4"
         },
         {
           "option_id": "d",
-          "text": "1-2-3-4"
+          "text": "1-3-2-4"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "b",
       "reveal": {
         "terms": "",
         "shortcut": "Sunod-sunod ang anunsiyo, rehistrasyon, pagdalo at feedback.",
         "why_correct": "Sunod-sunod ang anunsiyo, rehistrasyon, pagdalo at feedback.",
         "why_wrong": {
           "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
+          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
         }
       },
       "distractor_reasoning": {
         "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
+        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
       },
       "source": "Original, Civio",
       "source_url": null,
