@@ -12,6 +12,7 @@ baseline, see `docs/CHANGES_SINCE_BASELINE.md`.
 - *(lite)* L1 server-picked mocks, Lite mode flag and text-first exam screen ([c825fe9](https://github.com/Vincenzo-OPC/Civio/commit/c825fe973bd1cc44791d87758139a6c825f40316))
 - *(bank)* Questions.source_group groups baseline and Civio-authored items ([ac27f5a](https://github.com/Vincenzo-OPC/Civio/commit/ac27f5a9fa3bc9bf84839ee93767218e469989ca))
 - *(lite)* L2 offline drill packs ([09c62da](https://github.com/Vincenzo-OPC/Civio/commit/09c62daa2c843ff187dd5b6b44801290f4410089))
+- *(exams)* Split Exam Simulation into Study Mock and Strict Mock ([6edbadc](https://github.com/Vincenzo-OPC/Civio/commit/6edbadcd013f14814764c924aecf2b610a2a804a))
 
 ### Fixes
 
@@ -30,6 +31,12 @@ baseline, see `docs/CHANGES_SINCE_BASELINE.md`.
 - *(baseline)* Civio-only README and docs; fold the desktop patch log; drop old fork notes and audit ([a0019af](https://github.com/Vincenzo-OPC/Civio/commit/a0019af6eb42681221e7361ad873bd940ffa9207))
 - Civio code standard and ranked modernization backlog ([fa431e0](https://github.com/Vincenzo-OPC/Civio/commit/fa431e05e2c50962b1ef65b91725a52290be66f4))
 - Codex handoff plan, linked first from AGENTS; L2 rows point at 09c62da ([9a68dac](https://github.com/Vincenzo-OPC/Civio/commit/9a68dac822a138f1c41b2315168ae794f17414a7))
+- Record measured AI self-improvement roadmap [skip netlify] ([89dd651](https://github.com/Vincenzo-OPC/Civio/commit/89dd651eca114adc9edbc7d4d42524e038ebe1e5))
+- *(agents)* Surface evolutionary research and safety boundaries [skip netlify] ([65f3d9e](https://github.com/Vincenzo-OPC/Civio/commit/65f3d9eab04f6207b1aab099a87fb10f2d249294))
+- Connect agent entrypoints to RSI roadmap [skip netlify] ([50793b5](https://github.com/Vincenzo-OPC/Civio/commit/50793b5821d6bf4d73539144b75bdfad0d0b2d68))
+- Connect agent entrypoints to RSI roadmap [skip netlify] ([e3c693a](https://github.com/Vincenzo-OPC/Civio/commit/e3c693ad44f745510d5de995d32c8e888d9f14d4))
+- *(spec)* Drop uncited Civio Filing Rules v1 per CoS CSC-citation condition (v0.1.2) [skip netlify] ([65e37c6](https://github.com/Vincenzo-OPC/Civio/commit/65e37c6170088679c874da8bb1ecc5cfc314f468))
+- *(spec)* Adopt ARMA simplified filing rules as Civio Filing Rules v2 (v0.1.3) [skip netlify] ([bf010c9](https://github.com/Vincenzo-OPC/Civio/commit/bf010c9285c50f36c99f0490219ba1c799dbf5f9))
 
 ### Style
 
@@ -41,6 +48,7 @@ baseline, see `docs/CHANGES_SINCE_BASELINE.md`.
 
 - *(entire)* Codex and Claude Code hooks, committed .githooks, git-refs settings; drop Cursor hooks ([3fe931b](https://github.com/Vincenzo-OPC/Civio/commit/3fe931b0dc622c9d17aff88a873e411ced4f576b))
 - *(brand)* Neutral Civio mark, no author credit in the footer, full legacy storage migration ([08b4640](https://github.com/Vincenzo-OPC/Civio/commit/08b46403669930429ef921a5b5c23c5292f3f775))
+- *(entire)* Refresh Codex and Claude Code hooks for Entire 0.11.4 ([faa9cb9](https://github.com/Vincenzo-OPC/Civio/commit/faa9cb9d6e45eed3ee25fcd06b59bc31a17e3cf2))
 
 ## [0.1.5-phase0.5] - 2026-10-07
 
