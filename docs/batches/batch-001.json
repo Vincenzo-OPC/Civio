@@ -1,0 +1,618 @@
+{
+  "batch": "batch-001",
+  "spec_version": "0.1.3",
+  "status": "draft for Chief of Staff review",
+  "note": "Not inserted into any database. Civio is not affiliated with the Civil Service Commission.",
+  "items": [
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "successive percent change",
+      "micro_skill": "chain a percent increase and a percent decrease on the same price",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A store sold a sack of rice for ₱250. It raised the price by 20%. A week later, it cut the new price by 20%. What is the final price of the sack?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "₱240"
+        },
+        {
+          "option_id": "n2",
+          "text": "₱250"
+        },
+        {
+          "option_id": "n3",
+          "text": "₱288"
+        },
+        {
+          "option_id": "n4",
+          "text": "₱300"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": {
+        "terms": "\"Percent\" means \"out of 100\". 20% of a price is 20 pesos for every 100 pesos. \"Raise by 20%\" means add 20% of the price at that moment. \"Cut by 20%\" means take away 20% of the price at that moment.",
+        "shortcut": "Each change uses the price right before it. Tiny example: ₱100 up 10% is ₱110. Then down 10% is ₱110 − ₱11 = ₱99, not ₱100. Now this item: ₱250 up 20% is ₱250 + ₱50 = ₱300. Then down 20% of ₱300 is ₱300 − ₱60 = ₱240.",
+        "why_correct": "₱240 is right. Check another way: 250 × 1.2 = 300, and 300 × 0.8 = 240.",
+        "why_wrong": {
+          "n2": "₱250 treats +20% and −20% as cancelling out. The cut is taken from the bigger price, ₱300, so it removes more than the raise added.",
+          "n3": "₱288 adds the 20% raise again to ₱240. That is one step too many.",
+          "n4": "₱300 is only the price after the raise. It stops before the cut."
+        }
+      },
+      "distractor_reasoning": {
+        "n2": "NUM-PCT-ADD",
+        "n3": "NUM-EXTRA-STEP",
+        "n4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:15:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-NUM-SEQ-DIFF-000002",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Number sequence",
+      "concept": "number series with growing differences",
+      "micro_skill": "find the rule in the differences and extend it",
+      "archetype": "NUM-SEQ-DIFF",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "What number comes next in the series?  4, 7, 12, 19, 28, ___",
+      "options": [
+        {
+          "option_id": "s1",
+          "text": "31"
+        },
+        {
+          "option_id": "s2",
+          "text": "37"
+        },
+        {
+          "option_id": "s3",
+          "text": "39"
+        },
+        {
+          "option_id": "s4",
+          "text": "41"
+        }
+      ],
+      "answer_option_id": "s3",
+      "reveal": {
+        "terms": "A \"series\" is a list of numbers that follows one rule. The \"difference\" is how much you add to get from one number to the next.",
+        "shortcut": "Write the jumps under the list. 4 to 7 is +3. 7 to 12 is +5. 12 to 19 is +7. 19 to 28 is +9. The jumps go up by 2 each time. So the next jump is +11.",
+        "why_correct": "39 is right: 28 + 11 = 39. Check the jumps: 3, 5, 7, 9, 11 each grow by 2.",
+        "why_wrong": {
+          "s1": "31 adds only the first jump, +3, to 28. The jump does not stay at 3.",
+          "s2": "37 repeats the last jump, +9. The jump keeps growing, so it should be +11.",
+          "s4": "41 adds 13. That skips one step in the jumps (it goes 9 then 13 instead of 9 then 11)."
+        }
+      },
+      "distractor_reasoning": {
+        "s1": "NUM-SEQ-OTHER-RULE",
+        "s2": "NUM-PARTIAL",
+        "s4": "NUM-OFF-BY-ONE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:15:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-000003",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ratio",
+      "micro_skill": "split a total in a given ratio and find the larger share",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A barangay will split a ₱18,000 cleanup fund between Purok Uno and Purok Dos in the ratio 4 : 5. How much will Purok Dos receive?",
+      "options": [
+        {
+          "option_id": "r1",
+          "text": "₱2,000"
+        },
+        {
+          "option_id": "r2",
+          "text": "₱3,600"
+        },
+        {
+          "option_id": "r3",
+          "text": "₱8,000"
+        },
+        {
+          "option_id": "r4",
+          "text": "₱10,000"
+        }
+      ],
+      "answer_option_id": "r4",
+      "reveal": {
+        "terms": "A \"ratio\" of 4 : 5 means that for every 4 pesos one side gets, the other side gets 5 pesos.",
+        "shortcut": "Add the ratio numbers to get the number of equal parts: 4 + 5 = 9 parts. One part is the total ÷ 9. Then multiply by the parts you need. Tiny example: ₱90 in 4 : 5 gives 9 parts of ₱10, so ₱40 and ₱50.",
+        "why_correct": "₱10,000 is right. ₱18,000 ÷ 9 = ₱2,000 per part. Purok Dos has 5 parts: 5 × ₱2,000 = ₱10,000. Check: ₱8,000 + ₱10,000 = ₱18,000.",
+        "why_wrong": {
+          "r1": "₱2,000 is the value of one part. It stops before multiplying by 5.",
+          "r2": "₱3,600 divides ₱18,000 by 5 alone. It should divide by all 9 parts.",
+          "r3": "₱8,000 is Purok Uno's share (4 parts). The question asks for Purok Dos."
+        }
+      },
+      "distractor_reasoning": {
+        "r1": "NUM-PARTIAL",
+        "r2": "NUM-WRONG-BASE",
+        "r3": "NUM-WRONG-BASE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:15:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-VEN-WORD-MEANING-000004",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary (word meaning)",
+      "concept": "word meaning in context",
+      "micro_skill": "choose the sense of 'defer' that fits the sentence",
+      "archetype": "VEN-WORD-MEANING",
+      "difficulty": "easy",
+      "est_seconds": 20,
+      "language": "en",
+      "stem": "What is the meaning of the word \"defer\" in the sentence?  The council chose to defer the vote on the new parking rules until all barangay captains could attend.",
+      "options": [
+        {
+          "option_id": "w1",
+          "text": "postpone"
+        },
+        {
+          "option_id": "w2",
+          "text": "cancel"
+        },
+        {
+          "option_id": "w3",
+          "text": "yield to another's opinion"
+        },
+        {
+          "option_id": "w4",
+          "text": "hurry"
+        }
+      ],
+      "answer_option_id": "w1",
+      "reveal": {
+        "terms": "\"Context\" means the words around a word. They tell you which meaning the writer wants.",
+        "shortcut": "Swap each choice into the sentence and read it again. Keep the one that still makes sense. The clue here is \"until all barangay captains could attend\". That points to a later time.",
+        "why_correct": "\"Postpone\" is right. \"The council chose to postpone the vote ... until all barangay captains could attend\" means the vote moves to a later day.",
+        "why_wrong": {
+          "w2": "\"Cancel\" goes too far. \"Until\" shows the vote will still happen later.",
+          "w3": "\"Yield to another's opinion\" is a real meaning of \"defer\" (as in \"defer to the expert\"). It does not fit a vote that is being moved.",
+          "w4": "\"Hurry\" is the opposite. Waiting for everyone slows the vote down."
+        }
+      },
+      "distractor_reasoning": {
+        "w2": "RC-EXTREME",
+        "w3": "RC-NOT-IN-TEXT",
+        "w4": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:15:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-VEN-SENT-COMP-PHRASAL-000005",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence completion",
+      "concept": "phrasal verbs",
+      "micro_skill": "pick the particle that gives 'call ___' the meaning 'cancel'",
+      "archetype": "VEN-SENT-COMP-PHRASAL",
+      "difficulty": "easy",
+      "est_seconds": 25,
+      "language": "en",
+      "stem": "Because of the typhoon warning, the town fiesta parade was called ______.",
+      "options": [
+        {
+          "option_id": "p1",
+          "text": "off"
+        },
+        {
+          "option_id": "p2",
+          "text": "out"
+        },
+        {
+          "option_id": "p3",
+          "text": "up"
+        },
+        {
+          "option_id": "p4",
+          "text": "in"
+        }
+      ],
+      "answer_option_id": "p1",
+      "reveal": {
+        "terms": "A \"phrasal verb\" is a verb plus a small word like off, out, up or in. The small word changes the meaning.",
+        "shortcut": "Ask what happens to a parade during a typhoon warning. It is stopped before it starts. Then match that meaning: \"call off\" = cancel.",
+        "why_correct": "\"Off\" is right. \"The parade was called off\" means it was cancelled because of the typhoon.",
+        "why_wrong": {
+          "p2": "\"Called out\" means named or criticized in public. It does not mean cancelled.",
+          "p3": "\"Called up\" means phoned or summoned, for example for duty. A parade is not phoned.",
+          "p4": "\"Called in\" means asked to come, like calling in extra staff. It does not stop an event."
+        }
+      },
+      "distractor_reasoning": {
+        "p2": "VEN-PARTICLE",
+        "p3": "VEN-PARTICLE",
+        "p4": "VEN-PARTICLE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:15:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-VEN-SENT-COMP-WORD-000006",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence completion",
+      "concept": "commonly confused words",
+      "micro_skill": "tell 'affect' (verb) from 'effect'",
+      "archetype": "VEN-SENT-COMP-WORD",
+      "difficulty": "medium",
+      "est_seconds": 25,
+      "language": "en",
+      "stem": "The new route ordinance will ______ every tricycle driver in the municipality.",
+      "options": [
+        {
+          "option_id": "a1",
+          "text": "affect"
+        },
+        {
+          "option_id": "a2",
+          "text": "effect"
+        },
+        {
+          "option_id": "a3",
+          "text": "afflict"
+        },
+        {
+          "option_id": "a4",
+          "text": "infect"
+        }
+      ],
+      "answer_option_id": "a1",
+      "reveal": {
+        "terms": "A \"verb\" is an action word. A \"noun\" is a thing. Here the blank needs a verb, because it comes right after \"will\".",
+        "shortcut": "Remember \"A for Action\": \"affect\" is the action (to change or influence). \"Effect\" is usually the result, a thing. Tiny example: \"Rain affects traffic. The effect is delay.\"",
+        "why_correct": "\"Affect\" is right. \"The ordinance will affect every driver\" means it will change how every driver works.",
+        "why_wrong": {
+          "a2": "\"Effect\" sounds the same but is usually a noun (a result). As a verb it means \"to bring about\", and you cannot bring about a driver.",
+          "a3": "\"Afflict\" means to cause pain or suffering. It is too strong and negative for a route rule.",
+          "a4": "\"Infect\" means to spread a disease. It only sounds close to \"affect\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a2": "VEN-HOMOPHONE",
+        "a3": "VEN-REGISTER",
+        "a4": "VEN-HOMOPHONE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:15:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-GI-WHO-HOLDS-POWER-000007",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Philippine Constitution",
+      "concept": "impeachment",
+      "micro_skill": "name the body with the exclusive power to initiate impeachment",
+      "archetype": "GI-WHO-HOLDS-POWER",
+      "difficulty": "easy",
+      "est_seconds": 20,
+      "language": "en",
+      "stem": "Under the 1987 Constitution, which body has the exclusive power to initiate all cases of impeachment?",
+      "options": [
+        {
+          "option_id": "g1",
+          "text": "House of Representatives"
+        },
+        {
+          "option_id": "g2",
+          "text": "Senate"
+        },
+        {
+          "option_id": "g3",
+          "text": "Supreme Court"
+        },
+        {
+          "option_id": "g4",
+          "text": "Office of the Ombudsman"
+        }
+      ],
+      "answer_option_id": "g1",
+      "reveal": {
+        "terms": "\"Impeachment\" is the way Congress can remove top officials, like the President or the Ombudsman. \"Initiate\" means start the case.",
+        "shortcut": "Think of a court case: one side files, the other side judges. In impeachment the House files (starts) and the Senate judges (tries).",
+        "why_correct": "\"House of Representatives\" is right. Article XI, Section 3(1) says the House has the exclusive power to initiate all cases of impeachment.",
+        "why_wrong": {
+          "g2": "The Senate tries and decides impeachment cases (Art. XI, Sec. 3(6)). It does not start them.",
+          "g3": "The Supreme Court does not start impeachment. Its Chief Justice only presides when the President is on trial in the Senate (Art. XI, Sec. 3(6)).",
+          "g4": "The Ombudsman investigates complaints against officials (Art. XI, Sec. 13). The Ombudsman can be impeached but does not start impeachment."
+        }
+      },
+      "distractor_reasoning": {
+        "g2": "GI-WRONG-BODY",
+        "g3": "GI-WRONG-BODY",
+        "g4": "GI-SOUNDS-RIGHT"
+      },
+      "source": "1987 Const., Art. XI, Sec. 3(1)",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:15:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-GI-SCENARIO-APPLY-000008",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "concept": "norms of conduct",
+      "micro_skill": "match a described behavior to the R.A. 6713 norm it shows",
+      "archetype": "GI-SCENARIO-APPLY",
+      "difficulty": "medium",
+      "est_seconds": 35,
+      "language": "en",
+      "stem": "A municipal assessor and her family live within her salary. They avoid showing off expensive cars, jewelry, or parties. Which norm of conduct under R.A. 6713 does this best show?",
+      "options": [
+        {
+          "option_id": "e1",
+          "text": "Simple living"
+        },
+        {
+          "option_id": "e2",
+          "text": "Professionalism"
+        },
+        {
+          "option_id": "e3",
+          "text": "Commitment to public interest"
+        },
+        {
+          "option_id": "e4",
+          "text": "Nationalism and patriotism"
+        }
+      ],
+      "answer_option_id": "e1",
+      "reveal": {
+        "terms": "A \"norm of conduct\" is a standard of behavior that every government worker must follow. R.A. 6713 Section 4(A) lists eight of them.",
+        "shortcut": "Find the key idea in the story and match it to the name. Here the key idea is a modest lifestyle with no showing off of wealth. The norm with \"modest lives\" in it is Simple living.",
+        "why_correct": "\"Simple living\" is right. R.A. 6713, Sec. 4(A)(h) says officials and their families shall lead modest lives that fit their position and income, and shall not make an extravagant display of wealth.",
+        "why_wrong": {
+          "e2": "Professionalism (Sec. 4(A)(b)) is about doing the job with excellence and skill. The story is about lifestyle, not job skill.",
+          "e3": "Commitment to public interest (Sec. 4(A)(a)) is about putting the public first and not wasting government funds. The story is about the family's own spending.",
+          "e4": "Nationalism and patriotism (Sec. 4(A)(f)) is about loyalty to the country and using local products. The story does not mention that."
+        }
+      },
+      "distractor_reasoning": {
+        "e2": "GI-SIBLING-TERM",
+        "e3": "GI-SIBLING-TERM",
+        "e4": "GI-SIBLING-TERM"
+      },
+      "source": "R.A. 6713, Sec. 4(A)(h)",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:15:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-ANA-ANALOGY-PART-WHOLE-000009",
+      "track": "pro",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "concept": "part to whole",
+      "micro_skill": "keep the part-to-whole direction",
+      "archetype": "ANA-ANALOGY-PART/WHOLE",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "PAGE : BOOK :: ______",
+      "options": [
+        {
+          "option_id": "y1",
+          "text": "barangay : municipality"
+        },
+        {
+          "option_id": "y2",
+          "text": "library : book"
+        },
+        {
+          "option_id": "y3",
+          "text": "author : manuscript"
+        },
+        {
+          "option_id": "y4",
+          "text": "page : paper"
+        }
+      ],
+      "answer_option_id": "y1",
+      "reveal": {
+        "terms": "An \"analogy\" compares two pairs. The second pair must have the same link, in the same order, as the first pair.",
+        "shortcut": "Make a short sentence for the first pair: \"A page is one part of a book.\" Then test each choice in the same sentence.",
+        "why_correct": "\"Barangay : municipality\" is right. \"A barangay is one part of a municipality.\" Same link, same order.",
+        "why_wrong": {
+          "y2": "\"A library holds books.\" The bigger thing comes first, so the order is reversed.",
+          "y3": "\"An author writes a manuscript.\" That is maker and product, not part and whole.",
+          "y4": "\"A page is made of paper.\" That is a material, and it links to only one word from the first pair."
+        }
+      },
+      "distractor_reasoning": {
+        "y2": "ANA-REVERSED",
+        "y3": "ANA-SAME-TOPIC",
+        "y4": "ANA-ONE-LINK"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:15:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    },
+    {
+      "id": "CIVIO-CLR-SPELL-WRONG-000010",
+      "track": "sub",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "commonly misspelled words",
+      "micro_skill": "spot the one misspelled word among hard but correct words",
+      "archetype": "CLR-SPELL-WRONG",
+      "difficulty": "easy",
+      "est_seconds": 15,
+      "language": "en",
+      "stem": "Which word is misspelled?",
+      "options": [
+        {
+          "option_id": "c1",
+          "text": "accommodate"
+        },
+        {
+          "option_id": "c2",
+          "text": "receive"
+        },
+        {
+          "option_id": "c3",
+          "text": "maintenance"
+        },
+        {
+          "option_id": "c4",
+          "text": "ocassion"
+        }
+      ],
+      "answer_option_id": "c4",
+      "reveal": {
+        "terms": "\"Misspelled\" means written with wrong letters. Only one choice is wrong here.",
+        "shortcut": "Check the double letters first, because they cause most errors. \"Occasion\" has a double c and a single s: oc-ca-sion.",
+        "why_correct": "\"Ocassion\" is the misspelled word. The correct spelling is \"occasion\": two c's, one s.",
+        "why_wrong": {
+          "c1": "\"Accommodate\" is correct. It has two c's and two m's, which looks odd but is right.",
+          "c2": "\"Receive\" is correct. After c, the e comes before the i.",
+          "c3": "\"Maintenance\" is correct. It is spelled \"main-ten-ance\", not like the verb \"maintain\"."
+        }
+      },
+      "distractor_reasoning": {
+        "c1": "SPL-DOUBLE",
+        "c2": "SPL-IE-EI",
+        "c3": "SPL-SOUND"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:15:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": ""
+    }
+  ]
+}
