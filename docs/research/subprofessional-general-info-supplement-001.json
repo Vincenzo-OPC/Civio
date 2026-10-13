@@ -36,19 +36,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 9003 is the Ecological Solid Waste Management Act of 2000.",
         "why_correct": "R.A. 9003 is the Ecological Solid Waste Management Act of 2000.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario."
+          "a": "R.A. 9275 is the Clean Water Act, which does not govern this.",
+          "b": "R.A. 9147 is the Wildlife Act, which does not govern this.",
+          "c": "R.A. 8749 is the Clean Air Act, which does not govern this."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SIBLING-TERM",
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
@@ -95,19 +95,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "Source segregation means separating waste at the place where it is generated.",
         "why_correct": "Source segregation means separating waste at the place where it is generated.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"Burying reusable materials with residual waste\" contradicts the cited provision.",
+          "b": "\"Mixing compostable and hazardous wastes\" contradicts the cited provision.",
+          "d": "\"Combining all wastes before collection\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SOUNDS-RIGHT",
+        "b": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
@@ -154,19 +154,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "Composting uses controlled biological decomposition of organic materials.",
         "why_correct": "Composting uses controlled biological decomposition of organic materials.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"Burning discarded plastics in an open lot\" contradicts the cited provision.",
+          "c": "\"Dumping mixed waste into a creek\" contradicts the cited provision.",
+          "d": "\"Mixing batteries with food scraps\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SOUNDS-RIGHT",
+        "c": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
@@ -213,19 +213,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "Reuse supports reducing waste and recovering useful resources.",
         "why_correct": "Reuse supports reducing waste and recovering useful resources.",
         "why_wrong": {
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "b": "\"Discharging untreated wastewater\" contradicts the cited provision.",
+          "c": "\"Increased disposal without sorting\" contradicts the cited provision.",
+          "d": "\"Unrestricted burning of waste\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "b": "GI-SOUNDS-RIGHT",
+        "c": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
@@ -255,15 +255,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Foreign embassies"
+          "text": "The Department of Environment and Natural Resources"
         },
         {
           "option_id": "b",
-          "text": "International courts"
+          "text": "The National Solid Waste Management Commission"
         },
         {
           "option_id": "c",
-          "text": "Private advertising agencies"
+          "text": "The Department of the Interior and Local Government"
         },
         {
           "option_id": "d",
@@ -272,19 +272,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 9003 assigns primary responsibility to local government units.",
         "why_correct": "R.A. 9003 assigns primary responsibility to local government units.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario."
+          "a": "DENR has national oversight, but Sec. 10 puts primary responsibility on LGUs.",
+          "b": "The Commission oversees the national framework; LGUs implement and enforce.",
+          "c": "DILG supervises LGUs generally but is not named primarily responsible."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-WRONG-BODY",
+        "b": "GI-WRONG-BODY",
+        "c": "GI-WRONG-BODY"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
@@ -331,19 +331,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 8749 is the Philippine Clean Air Act of 1999.",
         "why_correct": "R.A. 8749 is the Philippine Clean Air Act of 1999.",
         "why_wrong": {
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "b": "R.A. 9147 is the Wildlife Act, which does not govern this.",
+          "c": "R.A. 9275 is the Clean Water Act, which does not govern this.",
+          "d": "R.A. 9003 is the Ecological Solid Waste Management Act, which does not govern this."
         }
       },
       "distractor_reasoning": {
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM",
+        "d": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
@@ -390,19 +390,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "Soot released to the atmosphere is relevant to air pollution under the Clean Air Act.",
         "why_correct": "Soot released to the atmosphere is relevant to air pollution under the Clean Air Act.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"Groundwater over-extraction\" contradicts the cited provision.",
+          "c": "\"Coastal erosion\" contradicts the cited provision.",
+          "d": "\"Loss of topsoil fertility only\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SOUNDS-RIGHT",
+        "c": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
@@ -449,19 +449,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 8749 recognizes the polluters-must-pay principle.",
         "why_correct": "R.A. 8749 recognizes the polluters-must-pay principle.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"Environmental costs belong only to residents\" contradicts the cited provision.",
+          "b": "\"All polluters are exempt\" contradicts the cited provision.",
+          "d": "\"Permits remove all cleanup obligations\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SOUNDS-RIGHT",
+        "b": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
@@ -508,19 +508,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "The law encourages public involvement in air-quality planning and monitoring.",
         "why_correct": "The law encourages public involvement in air-quality planning and monitoring.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario."
+          "a": "\"Exclusion of the public from air monitoring\" contradicts the cited provision.",
+          "b": "\"Removal of accountability for emitters\" contradicts the cited provision.",
+          "c": "\"Suspension of all air standards\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SOUNDS-RIGHT",
+        "b": "GI-SOUNDS-RIGHT",
+        "c": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
@@ -554,32 +554,32 @@
         },
         {
           "option_id": "b",
-          "text": "Determining the minimum voting age"
+          "text": "Regulating solid waste collection schedules"
         },
         {
           "option_id": "c",
-          "text": "Regulating only wildlife hunting licenses"
+          "text": "Protecting the quality of rivers and seas"
         },
         {
           "option_id": "d",
-          "text": "Setting graduation requirements for public schools"
+          "text": "Creating the Climate Change Commission"
         }
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "The statute establishes a broad national policy for air pollution management.",
         "why_correct": "The statute establishes a broad national policy for air pollution management.",
         "why_wrong": {
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "b": "\"Regulating solid waste collection schedules\": Sibling environmental law topic, not R.A. 8749.",
+          "c": "\"Protecting the quality of rivers and seas\": Sibling environmental law topic, not R.A. 8749.",
+          "d": "\"Creating the Climate Change Commission\": Sibling environmental law topic, not R.A. 8749."
         }
       },
       "distractor_reasoning": {
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM",
+        "d": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
@@ -626,19 +626,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 9275 is the Philippine Clean Water Act of 2004.",
         "why_correct": "R.A. 9275 is the Philippine Clean Water Act of 2004.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "R.A. 9729 is the Climate Change Act, which does not govern this.",
+          "c": "R.A. 8749 is the Clean Air Act, which does not govern this.",
+          "d": "R.A. 9003 is the Ecological Solid Waste Management Act, which does not govern this."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM",
+        "d": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
@@ -685,19 +685,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 9275 covers the quality of fresh, brackish, and marine waters.",
         "why_correct": "R.A. 9275 covers the quality of fresh, brackish, and marine waters.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"Only privately owned wells\" contradicts the cited provision.",
+          "b": "\"Only swimming pools\" contradicts the cited provision.",
+          "d": "\"Only mountain waterfalls\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SOUNDS-RIGHT",
+        "b": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
@@ -727,15 +727,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Aircraft registration"
+          "text": "Air pollution control"
         },
         {
           "option_id": "b",
-          "text": "Road traffic signs"
+          "text": "Solid waste segregation"
         },
         {
           "option_id": "c",
-          "text": "Building-height restrictions"
+          "text": "Wildlife trade regulation"
         },
         {
           "option_id": "d",
@@ -744,19 +744,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 9275 provides a framework for reducing and controlling water pollution.",
         "why_correct": "R.A. 9275 provides a framework for reducing and controlling water pollution.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario."
+          "a": "\"Air pollution control\": A different environmental law topic, not R.A. 9275.",
+          "b": "\"Solid waste segregation\": A different environmental law topic, not R.A. 9275.",
+          "c": "\"Wildlife trade regulation\": A different environmental law topic, not R.A. 9275."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SIBLING-TERM",
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
@@ -790,32 +790,32 @@
         },
         {
           "option_id": "b",
-          "text": "Only sound from aircraft"
+          "text": "Pollution from ships at sea only"
         },
         {
           "option_id": "c",
-          "text": "Only ultraviolet radiation"
+          "text": "Air emissions from factories"
         },
         {
           "option_id": "d",
-          "text": "Only pollution originating from satellites"
+          "text": "Solid waste in landfills"
         }
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "Its coverage primarily emphasizes water pollution from land-based sources, while standards apply broadly.",
         "why_correct": "Its coverage primarily emphasizes water pollution from land-based sources, while standards apply broadly.",
         "why_wrong": {
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "b": "\"Pollution from ships at sea only\": Not the primary coverage stated in R.A. 9275, Sec. 4.",
+          "c": "\"Air emissions from factories\": Not the primary coverage stated in R.A. 9275, Sec. 4.",
+          "d": "\"Solid waste in landfills\": Not the primary coverage stated in R.A. 9275, Sec. 4."
         }
       },
       "distractor_reasoning": {
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM",
+        "d": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
@@ -862,19 +862,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "The law supports coordinated prevention, monitoring and informed public participation.",
         "why_correct": "The law supports coordinated prevention, monitoring and informed public participation.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"Disposal of all waste into drains\" contradicts the cited provision.",
+          "b": "\"Treating public information as unnecessary\" contradicts the cited provision.",
+          "d": "\"Removal of monitoring systems\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SOUNDS-RIGHT",
+        "b": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
@@ -921,19 +921,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 9147 is the Wildlife Resources Conservation and Protection Act.",
         "why_correct": "R.A. 9147 is the Wildlife Resources Conservation and Protection Act.",
         "why_wrong": {
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "b": "R.A. 8749 is the Clean Air Act, which does not govern this.",
+          "c": "R.A. 9003 is the Ecological Solid Waste Management Act, which does not govern this.",
+          "d": "R.A. 9275 is the Clean Water Act, which does not govern this."
         }
       },
       "distractor_reasoning": {
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM",
+        "d": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
@@ -963,15 +963,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Prohibit all scientific biodiversity research"
+          "text": "Control air emissions from motor vehicles"
         },
         {
           "option_id": "b",
-          "text": "Replace native species with imported species"
+          "text": "Promote the introduction of exotic species"
         },
         {
           "option_id": "c",
-          "text": "Convert every habitat into commercial housing"
+          "text": "Regulate solid waste disposal facilities"
         },
         {
           "option_id": "d",
@@ -980,19 +980,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "The law aims to conserve wildlife species, habitats and ecological balance.",
         "why_correct": "The law aims to conserve wildlife species, habitats and ecological balance.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario."
+          "a": "\"Control air emissions from motor vehicles\": Not an aim of R.A. 9147; it conserves wildlife.",
+          "b": "\"Promote the introduction of exotic species\": Not an aim of R.A. 9147; it conserves wildlife.",
+          "c": "\"Regulate solid waste disposal facilities\": Not an aim of R.A. 9147; it conserves wildlife."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SIBLING-TERM",
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
@@ -1039,19 +1039,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "Endemic means naturally occurring only in particular areas of the country.",
         "why_correct": "Endemic means naturally occurring only in particular areas of the country.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"A species that lives only in captivity\" contradicts the cited provision.",
+          "b": "\"A species with no natural habitat\" contradicts the cited provision.",
+          "d": "\"Any species recently imported from abroad\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SOUNDS-RIGHT",
+        "b": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
@@ -1081,7 +1081,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Sale of ordinary office supplies"
+          "text": "Disposal of household solid waste"
         },
         {
           "option_id": "b",
@@ -1089,28 +1089,28 @@
         },
         {
           "option_id": "c",
-          "text": "Registration of school attendance"
+          "text": "Discharge of wastewater into rivers"
         },
         {
           "option_id": "d",
-          "text": "Library book borrowing"
+          "text": "Emission of smoke from vehicles"
         }
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "The law regulates collection, exchange, importation and exportation of wildlife.",
         "why_correct": "The law regulates collection, exchange, importation and exportation of wildlife.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"Disposal of household solid waste\": Regulated by another environmental law, not R.A. 9147.",
+          "c": "\"Discharge of wastewater into rivers\": Regulated by another environmental law, not R.A. 9147.",
+          "d": "\"Emission of smoke from vehicles\": Regulated by another environmental law, not R.A. 9147."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM",
+        "d": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
@@ -1157,19 +1157,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "A habitat is the place or environment where a species naturally occurs or has established a population.",
         "why_correct": "A habitat is the place or environment where a species naturally occurs or has established a population.",
         "why_wrong": {
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "b": "\"A list of endangered species only\" contradicts the cited provision.",
+          "c": "\"The price of a wildlife product\" contradicts the cited provision.",
+          "d": "\"Any construction site near a city\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "b": "GI-SOUNDS-RIGHT",
+        "c": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
@@ -1216,19 +1216,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 9729 is the Climate Change Act of 2009 and created the Climate Change Commission.",
         "why_correct": "R.A. 9729 is the Climate Change Act of 2009 and created the Climate Change Commission.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario."
+          "a": "R.A. 8749 is the Clean Air Act, which does not govern this.",
+          "b": "R.A. 9147 is the Wildlife Act, which does not govern this.",
+          "c": "R.A. 9003 is the Ecological Solid Waste Management Act, which does not govern this."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SIBLING-TERM",
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
@@ -1275,19 +1275,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "Adaptation means adjusting systems to actual or expected climate effects.",
         "why_correct": "Adaptation means adjusting systems to actual or expected climate effects.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"Open dumping\" contradicts the cited provision.",
+          "b": "\"Wildlife importation\" contradicts the cited provision.",
+          "d": "\"Air-quality sampling only\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SOUNDS-RIGHT",
+        "b": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
@@ -1317,7 +1317,7 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Only earthquakes"
+          "text": "Volcanic eruptions"
         },
         {
           "option_id": "b",
@@ -1325,28 +1325,28 @@
         },
         {
           "option_id": "c",
-          "text": "Only natural lunar cycles"
+          "text": "Natural variability of the climate"
         },
         {
           "option_id": "d",
-          "text": "Only changes in ocean tides"
+          "text": "Changes in solar activity"
         }
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "Anthropogenic causes are produced by human activities.",
         "why_correct": "Anthropogenic causes are produced by human activities.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"Volcanic eruptions\": Natural causes; anthropogenic means from human activities.",
+          "c": "\"Natural variability of the climate\": Natural causes; anthropogenic means from human activities.",
+          "d": "\"Changes in solar activity\": Natural causes; anthropogenic means from human activities."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM",
+        "d": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
@@ -1380,32 +1380,32 @@
         },
         {
           "option_id": "b",
-          "text": "Only school uniforms"
+          "text": "Private business plans only"
         },
         {
           "option_id": "c",
-          "text": "Only private entertainment programs"
+          "text": "Local plans only, after national approval"
         },
         {
           "option_id": "d",
-          "text": "Only road sign colors"
+          "text": "Disaster response after a calamity only"
         }
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 9729 directs the integration of climate change in government policy and development plans.",
         "why_correct": "R.A. 9729 directs the integration of climate change in government policy and development plans.",
         "why_wrong": {
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "b": "\"Private business plans only\": R.A. 9729 integrates climate change into government policy and development plans broadly.",
+          "c": "\"Local plans only, after national approval\": R.A. 9729 integrates climate change into government policy and development plans broadly.",
+          "d": "\"Disaster response after a calamity only\": R.A. 9729 integrates climate change into government policy and development plans broadly."
         }
       },
       "distractor_reasoning": {
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM",
+        "d": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
@@ -1452,19 +1452,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "R.A. 11313 is the Safe Spaces Act.",
         "why_correct": "R.A. 11313 is the Safe Spaces Act.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario."
+          "a": "R.A. 9003 is the Ecological Solid Waste Management Act, which does not govern this.",
+          "b": "R.A. 8749 is the Clean Air Act, which does not govern this.",
+          "c": "R.A. 9275 is the Clean Water Act, which does not govern this."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SIBLING-TERM",
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
@@ -1511,19 +1511,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "The Safe Spaces Act covers gender-based harassment in public spaces, including transport terminals.",
         "why_correct": "The Safe Spaces Act covers gender-based harassment in public spaces, including transport terminals.",
         "why_wrong": {
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "b": "R.A. 9147 is the Wildlife Act, which does not govern this.",
+          "c": "R.A. 9729 is the Climate Change Act, which does not govern this.",
+          "d": "R.A. 9003 is the Ecological Solid Waste Management Act, which does not govern this."
         }
       },
       "distractor_reasoning": {
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "b": "GI-SIBLING-TERM",
+        "c": "GI-SIBLING-TERM",
+        "d": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
@@ -1570,19 +1570,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "The Act also covers gender-based online sexual harassment.",
         "why_correct": "The Act also covers gender-based online sexual harassment.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "\"Legitimate classroom attendance\" contradicts the cited provision.",
+          "c": "\"A polite request for a work update\" contradicts the cited provision.",
+          "d": "\"Filing an ordinary public-record request\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SOUNDS-RIGHT",
+        "c": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
@@ -1612,11 +1612,11 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Only distant fishing grounds"
+          "text": "Private residences"
         },
         {
           "option_id": "b",
-          "text": "Only private bedrooms"
+          "text": "A closed-door family gathering at home"
         },
         {
           "option_id": "c",
@@ -1624,24 +1624,24 @@
         },
         {
           "option_id": "d",
-          "text": "Only uninhabited islands"
+          "text": "A private car not used for app-based transport"
         }
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "The law's public-space definition includes transportation terminals.",
         "why_correct": "The law's public-space definition includes transportation terminals.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "a": "R.A. 11313 public spaces do not include private homes; those are covered by other laws.",
+          "b": "A private family setting, not a public space under R.A. 11313.",
+          "d": "R.A. 11313 covers private vehicles only when used for app-based transport."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-SIBLING-TERM",
+        "b": "GI-SIBLING-TERM",
+        "d": "GI-SIBLING-TERM"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html",
@@ -1671,15 +1671,15 @@
       "options": [
         {
           "option_id": "a",
-          "text": "Article I, Section 1"
+          "text": "Article II, Section 15 of the 1987 Constitution"
         },
         {
           "option_id": "b",
-          "text": "Article XVII, Section 30"
+          "text": "Article XII, Section 2 of the 1987 Constitution"
         },
         {
           "option_id": "c",
-          "text": "Article III, Section 25"
+          "text": "Article III, Section 1 of the 1987 Constitution"
         },
         {
           "option_id": "d",
@@ -1688,19 +1688,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "Article II, Section 16 protects the right to a balanced and healthful ecology.",
         "why_correct": "Article II, Section 16 protects the right to a balanced and healthful ecology.",
         "why_wrong": {
-          "a": "This option does not match the cited provision or the scenario.",
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario."
+          "a": "Art. II, Sec. 15 is the right to health.",
+          "b": "Art. XII, Sec. 2 is the Regalian doctrine on natural resources.",
+          "c": "Art. III, Sec. 1 is due process and equal protection."
         }
       },
       "distractor_reasoning": {
-        "a": "GI-WRONG-LAW-OR-CLAIM",
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM"
+        "a": "GI-NEIGHBOR-NUMBER",
+        "b": "GI-NEIGHBOR-NUMBER",
+        "c": "GI-NEIGHBOR-NUMBER"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/consti/cons1987.html",
@@ -1747,19 +1747,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Cited source: Original Civio item; facts checked against primary law.",
         "shortcut": "Article III, Section 1 contains due process and equal protection guarantees.",
         "why_correct": "Article III, Section 1 contains due process and equal protection guarantees.",
         "why_wrong": {
-          "b": "This option does not match the cited provision or the scenario.",
-          "c": "This option does not match the cited provision or the scenario.",
-          "d": "This option does not match the cited provision or the scenario."
+          "b": "\"Article X, Section 20\" contradicts the cited provision.",
+          "c": "\"Article XVII, Section 1\" contradicts the cited provision.",
+          "d": "\"Article I, Section 1\" contradicts the cited provision."
         }
       },
       "distractor_reasoning": {
-        "b": "GI-WRONG-LAW-OR-CLAIM",
-        "c": "GI-WRONG-LAW-OR-CLAIM",
-        "d": "GI-WRONG-LAW-OR-CLAIM"
+        "b": "GI-SOUNDS-RIGHT",
+        "c": "GI-SOUNDS-RIGHT",
+        "d": "GI-SOUNDS-RIGHT"
       },
       "source": "Original Civio item; facts checked against primary law",
       "source_url": "https://lawphil.net/consti/cons1987.html",

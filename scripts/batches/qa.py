@@ -262,6 +262,10 @@ def check_item(it):
     for f in ("terms", "shortcut", "why_correct"):
         if not it["reveal"].get(f):
             errs.append(f"reveal.{f} empty")
+    kt = next((o["text"] for o in it["options"] if o["option_id"] == it["answer_option_id"]), "")
+    labs = re.findall(r"^\s*([1-9A-Z])[.)]\s", it["stem"], re.M)
+    if len(labs) >= 3 and re.sub(r"[^0-9A-Z]", "", kt) == "".join(labs):
+        errs.append("order item: key matches listed order")
     approved = (it["status"] == "approved" and it.get("review_status") == "passed"
                 and it.get("reviewer") and it.get("reviewed_at"))
     if not (it["status"] == "draft" or approved) or it["source_group"] != "civio":

@@ -702,3 +702,11 @@ them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 4. **Filing sub-reasons.** Filing distractors keep `CLR-FILE-ORDER` as the parent code. Each also gets a `distractor_subreason` that names the ARMA rule it breaks (for example "CLR-PREFIX-SPLIT: breaks ARMA Rule 6").
 5. **Dedup.** Every new stem is checked against the baseline bank (the seed scripts in `scripts/`), all earlier batches and the dev DB: exact match and near match on normalized stems.
 6. **Added the same day.** `LOG-ORDER-REVERSED`, `CLR-LETTER-ORDER` and `CLR-SPELL-CORRECT-FOIL` are approved; "which word is misspelled" items are back on. Thin topics get a floor: fractions and work rate at least 20 each, assumption/conclusion at least 15, with the room taken from topics over the per-batch cap. Every item that names a person is rescanned for pronouns that match the name.
+
+## 10.4 CoS rulings on audit round 01 (v0.1.5, 2026-10-13)
+
+**Chief of Staff ruling (independent reviewer; GT delegated Civio decisions), 2026-10-13.**
+
+1. **New codes.** `FIL-ANTONYM-TRAP` is for synonym or meaning items in Filipino, including sawikain, where a distractor gives the opposite meaning. `RC-SUPPORTED-NOT-ASKED` is for NOT or EXCEPT reading questions, where a distractor is a true or supported statement and so is not the answer.
+2. **Order check.** An ordering or paragraph-organization item whose key equals the order in which the sentences are listed fails QA (`qa.py`).
+3. **Filing Reveals.** Every filing Reveal cites "(ANSI/ARMA 12-2005)".

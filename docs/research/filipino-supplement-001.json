@@ -39,19 +39,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Kasingkahulugan ng masigasig ang masipag.",
         "why_correct": "Kasingkahulugan ng masigasig ang masipag.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "b": "Ang \"marahas\" ay hindi kasingkahulugan ng masigasig sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "c": "Ang \"malungkutin\" ay hindi kasingkahulugan ng masigasig sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "d": "Ang \"pabaya\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-ANTONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -98,19 +98,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang salat sa pondo ay kulang sa salapi.",
         "why_correct": "Ang salat sa pondo ay kulang sa salapi.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "b": "Ang \"sagana\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "c": "Ang \"malinaw\" ay hindi kasingkahulugan ng salat sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "d": "Ang \"sikat\" ay hindi kasingkahulugan ng salat sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-ANTONYM-TRAP",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -157,19 +157,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang payak ay simple at madaling unawain.",
         "why_correct": "Ang payak ay simple at madaling unawain.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"paligoy-ligoy\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "c": "Ang \"masalimuot\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "d": "Ang \"mahaba\" ay hindi kasingkahulugan ng payak sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-ANTONYM-TRAP",
+        "c": "FIL-ANTONYM-TRAP",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -216,19 +216,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang mahinahon ay kalmado at hindi bugso ng damdamin.",
         "why_correct": "Ang mahinahon ay kalmado at hindi bugso ng damdamin.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"maingay\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "b": "Ang \"padalos-dalos\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "c": "Ang \"marupok\" ay hindi kasingkahulugan ng mahinahon sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-ANTONYM-TRAP",
+        "b": "FIL-ANTONYM-TRAP",
+        "c": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -275,19 +275,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang masalimuot ay maraming bahagi o komplikasyon.",
         "why_correct": "Ang masalimuot ay maraming bahagi o komplikasyon.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"madali\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "b": "Ang \"maikli\" ay hindi kasingkahulugan ng masalimuot sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "d": "Ang \"payak\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-ANTONYM-TRAP",
+        "b": "FIL-SAME-FIELD",
+        "d": "FIL-ANTONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -334,19 +334,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang mapanuri ay nag-iisip at nagsusuri nang mabuti.",
         "why_correct": "Ang mapanuri ay nag-iisip at nagsusuri nang mabuti.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"palaging magmadali\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "b": "Ang \"madaling maniwala\" ay hindi kasingkahulugan ng mapanuri sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "d": "Ang \"umiwas sa detalye\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-ANTONYM-TRAP",
+        "b": "FIL-SAME-FIELD",
+        "d": "FIL-ANTONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -393,19 +393,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang pag-aalinlangan ay pagdududa.",
         "why_correct": "Ang pag-aalinlangan ay pagdududa.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"pagmamadali\" ay hindi kasingkahulugan ng pag-aalinlangan sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "b": "Ang \"katiyakan\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "c": "Ang \"kasiyahan\" ay hindi kasingkahulugan ng pag-aalinlangan sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "b": "FIL-ANTONYM-TRAP",
+        "c": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -452,19 +452,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang makabuluhan ay may saysay o kabuluhan.",
         "why_correct": "Ang makabuluhan ay may saysay o kabuluhan.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "b": "Ang \"paulit-ulit\" ay hindi kasingkahulugan ng makabuluhan sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "c": "Ang \"maingay\" ay hindi kasingkahulugan ng makabuluhan sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "d": "Ang \"walang kaugnayan\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-ANTONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -511,19 +511,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang marubdob na hangarin ay matindi at taos-puso.",
         "why_correct": "Ang marubdob na hangarin ay matindi at taos-puso.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "b": "Ang \"mababaw\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "c": "Ang \"malamig\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "d": "Ang \"walang pakialam\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-ANTONYM-TRAP",
+        "c": "FIL-ANTONYM-TRAP",
+        "d": "FIL-ANTONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -570,19 +570,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang wasto ay tama o nararapat.",
         "why_correct": "Ang wasto ay tama o nararapat.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"hindi kumpleto\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "b": "Ang \"palihim\" ay hindi kasingkahulugan ng wastong sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "c": "Ang \"kulang\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-ANTONYM-TRAP",
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-ANTONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -629,19 +629,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Kasalungat ng matatag sa tibay ang marupok.",
         "why_correct": "Kasalungat ng matatag sa tibay ang marupok.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"matiyaga\" ay may ibang kahulugan; hindi ito ang kabaligtaran ng matatag.",
+          "c": "Ang \"matatagalan\" ay may ibang kahulugan; hindi ito ang kabaligtaran ng matatag.",
+          "d": "Ang \"matibay\" ay kahawig ng kahulugan ng matatag, hindi kasalungat nito."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-SYNONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -688,19 +688,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Kasalungat ng panandalian ang pangmatagalan.",
         "why_correct": "Kasalungat ng panandalian ang pangmatagalan.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"pansamantala\" ay kahawig ng kahulugan ng panandalian, hindi kasalungat nito.",
+          "c": "Ang \"sandali\" ay kahawig ng kahulugan ng panandalian, hindi kasalungat nito.",
+          "d": "Ang \"mabilis\" ay may ibang kahulugan; hindi ito ang kabaligtaran ng panandalian."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SYNONYM-TRAP",
+        "c": "FIL-SYNONYM-TRAP",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -747,19 +747,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang matamlay ay kabaligtaran ng masigla.",
         "why_correct": "Ang matamlay ay kabaligtaran ng masigla.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "b": "Ang \"masaya\" ay kahawig ng kahulugan ng masigla, hindi kasalungat nito.",
+          "c": "Ang \"aktibo\" ay kahawig ng kahulugan ng masigla, hindi kasalungat nito.",
+          "d": "Ang \"masigabo\" ay kahawig ng kahulugan ng masigla, hindi kasalungat nito."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SYNONYM-TRAP",
+        "c": "FIL-SYNONYM-TRAP",
+        "d": "FIL-SYNONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -806,19 +806,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang bihira ay hindi madalas mangyari.",
         "why_correct": "Ang bihira ay hindi madalas mangyari.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"paulit-ulit\" ay kahawig ng kahulugan ng madalas, hindi kasalungat nito.",
+          "b": "Ang \"lagi\" ay kahawig ng kahulugan ng madalas, hindi kasalungat nito.",
+          "d": "Ang \"palagi\" ay kahawig ng kahulugan ng madalas, hindi kasalungat nito."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SYNONYM-TRAP",
+        "b": "FIL-SYNONYM-TRAP",
+        "d": "FIL-SYNONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -865,19 +865,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang bahagya ay hindi buo o lubos.",
         "why_correct": "Ang bahagya ay hindi buo o lubos.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"taos-puso\" ay may ibang kahulugan; hindi ito ang kabaligtaran ng lubos.",
+          "b": "Ang \"ganap\" ay kahawig ng kahulugan ng lubos, hindi kasalungat nito.",
+          "d": "Ang \"buo\" ay kahawig ng kahulugan ng lubos, hindi kasalungat nito."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "b": "FIL-SYNONYM-TRAP",
+        "d": "FIL-SYNONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -924,19 +924,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang padalos-dalos ay walang sapat na pag-iingat.",
         "why_correct": "Ang padalos-dalos ay walang sapat na pag-iingat.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "b": "Ang \"mahinahon\" ay may ibang kahulugan; hindi ito ang kabaligtaran ng maingat.",
+          "c": "Ang \"masusi\" ay kahawig ng kahulugan ng maingat, hindi kasalungat nito.",
+          "d": "Ang \"mapanuri\" ay kahawig ng kahulugan ng maingat, hindi kasalungat nito."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SYNONYM-TRAP",
+        "d": "FIL-SYNONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -983,19 +983,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang malabo ay hindi malinaw.",
         "why_correct": "Ang malabo ay hindi malinaw.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"tuwiran\" ay kahawig ng kahulugan ng malinaw, hindi kasalungat nito.",
+          "b": "Ang \"tiyak\" ay kahawig ng kahulugan ng malinaw, hindi kasalungat nito.",
+          "c": "Ang \"hayag\" ay kahawig ng kahulugan ng malinaw, hindi kasalungat nito."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SYNONYM-TRAP",
+        "b": "FIL-SYNONYM-TRAP",
+        "c": "FIL-SYNONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1042,19 +1042,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang mainipin ay madaling mawalan ng tiyaga.",
         "why_correct": "Ang mainipin ay madaling mawalan ng tiyaga.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"matatag\" ay may ibang kahulugan; hindi ito ang kabaligtaran ng matiyaga.",
+          "c": "Ang \"matiisin\" ay kahawig ng kahulugan ng matiyaga, hindi kasalungat nito.",
+          "d": "Ang \"masipag\" ay may ibang kahulugan; hindi ito ang kabaligtaran ng matiyaga."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "c": "FIL-SYNONYM-TRAP",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1096,24 +1096,24 @@
         },
         {
           "option_id": "d",
-          "text": "matibay-tibay"
+          "text": "mabigat"
         }
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang marupok ay madaling masira, kabaligtaran ng matibay.",
         "why_correct": "Ang marupok ay madaling masira, kabaligtaran ng matibay.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "b": "Ang \"matatag\" ay kahawig ng kahulugan ng matibay, hindi kasalungat nito.",
+          "c": "Ang \"matigas\" ay kahawig ng kahulugan ng matibay, hindi kasalungat nito.",
+          "d": "Ang \"mabigat\" ay may ibang kahulugan; hindi ito ang kabaligtaran ng matibay."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SYNONYM-TRAP",
+        "c": "FIL-SYNONYM-TRAP",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1160,19 +1160,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang maingay ay kabaligtaran ng tahimik.",
         "why_correct": "Ang maingay ay kabaligtaran ng tahimik.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"banayad\" ay kahawig ng kahulugan ng tahimik, hindi kasalungat nito.",
+          "b": "Ang \"kalma\" ay kahawig ng kahulugan ng tahimik, hindi kasalungat nito.",
+          "c": "Ang \"payapa\" ay kahawig ng kahulugan ng tahimik, hindi kasalungat nito."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SYNONYM-TRAP",
+        "b": "FIL-SYNONYM-TRAP",
+        "c": "FIL-SYNONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1219,19 +1219,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang pangunahin ay pinakamahalaga o una sa prayoridad.",
         "why_correct": "Ang pangunahin ay pinakamahalaga o una sa prayoridad.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"hindi kailangan\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "c": "Ang \"pinakamaliit\" ay hindi kasingkahulugan ng pangunahin sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "d": "Ang \"pinakahuli\" ay hindi kasingkahulugan ng pangunahin sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-ANTONYM-TRAP",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1278,19 +1278,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang malawak na saklaw ay marami o sari-saring bahagi.",
         "why_correct": "Ang malawak na saklaw ay marami o sari-saring bahagi.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "b": "Ang \"walang hangganan sa batas\" ay hindi kasingkahulugan ng malawak sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "c": "Ang \"napakaliit\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "d": "Ang \"walang paksa\" ay hindi kasingkahulugan ng malawak sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-ANTONYM-TRAP",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1337,19 +1337,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Kapaki-pakinabang ang impormasyong may gamit o pakinabang.",
         "why_correct": "Kapaki-pakinabang ang impormasyong may gamit o pakinabang.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "c": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"walang pinagmulan\" ay hindi kasingkahulugan ng kapaki-pakinabang sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "b": "Ang \"mahirap hanapin\" ay hindi kasingkahulugan ng kapaki-pakinabang sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "c": "Ang \"laging mahaba\" ay hindi kasingkahulugan ng kapaki-pakinabang sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1396,19 +1396,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
         "shortcut": "Ang masusing pagsusuri ay detalyado at maingat.",
         "why_correct": "Ang masusing pagsusuri ay detalyado at maingat.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "a": "Hindi ito ang pinakamalapit na kahulugan sa konteksto.",
-          "b": "Hindi ito ang pinakamalapit na kahulugan sa konteksto."
+          "a": "Ang \"pabaya\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "b": "Ang \"walang ayos\" ay hindi kasingkahulugan ng masusi sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "d": "Ang \"pahapyaw\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-ANTONYM-TRAP",
+        "b": "FIL-SAME-FIELD",
+        "d": "FIL-ANTONYM-TRAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1455,19 +1455,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ang linawin ay angkop dahil layunin ang pag-iwas sa pagkalito.",
         "why_correct": "Ang linawin ay angkop dahil layunin ang pag-iwas sa pagkalito.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Hindi tugma ang \"itago\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "b": "Hindi tugma ang \"kaligtaan\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "d": "Hindi tugma ang \"ipagpaliban\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "b": "FIL-SAME-FIELD",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1509,24 +1509,24 @@
         },
         {
           "option_id": "d",
-          "text": "naipagtagumpay"
+          "text": "naisakatuparan"
         }
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
-        "shortcut": "Naipagtagumpay ang akma sa positibong resulta sa kabila ng limitadong oras.",
-        "why_correct": "Naipagtagumpay ang akma sa positibong resulta sa kabila ng limitadong oras.",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
+        "shortcut": "Naisakatuparan (natapos nang matagumpay) ang akma sa positibong resulta sa kabila ng limitadong oras.",
+        "why_correct": "Naisakatuparan (natapos nang matagumpay) ang akma sa positibong resulta sa kabila ng limitadong oras.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Hindi tugma ang \"iniwasan\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "b": "Hindi tugma ang \"ipinagwalang-bahala\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "c": "Hindi tugma ang \"nakalimutan\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1573,19 +1573,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Tumutukoy ang kulang sa nawawalang impormasyon.",
         "why_correct": "Tumutukoy ang kulang sa nawawalang impormasyon.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "b": "Hindi tugma ang \"tumpak\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "c": "Hindi tugma ang \"masusi\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "d": "Hindi tugma ang \"ganap\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1632,19 +1632,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ang alinsunod ay nangangahulugang ayon sa patakaran.",
         "why_correct": "Ang alinsunod ay nangangahulugang ayon sa patakaran.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "b": "Hindi tugma ang \"Hiwalay\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "c": "Hindi tugma ang \"Salungat\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "d": "Hindi tugma ang \"Malayo\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1691,19 +1691,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ginagamit ang upang sa pagpapahayag ng layunin.",
         "why_correct": "Ginagamit ang upang sa pagpapahayag ng layunin.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Ang \"bagaman\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "b": "Ang \"samantala\" ay pang-ugnay ng sabayang pangyayari, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "d": "Ang \"ngunit\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-TRANSITION-IGNORED",
+        "b": "PO-TRANSITION-IGNORED",
+        "d": "PO-TRANSITION-IGNORED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1750,19 +1750,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ang pangalawang sugnay ay nagsasaad ng layunin.",
         "why_correct": "Ang pangalawang sugnay ay nagsasaad ng layunin.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Ang \"dahil dito\" ay pang-ugnay ng bunga, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "b": "Ang \"gayunman\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "d": "Ang \"subalit\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-TRANSITION-IGNORED",
+        "b": "PO-TRANSITION-IGNORED",
+        "d": "PO-TRANSITION-IGNORED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1809,19 +1809,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ang bunga nito ay nagpapakita ng naging resulta.",
         "why_correct": "Ang bunga nito ay nagpapakita ng naging resulta.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Ang \"sa kabila nito\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "c": "Ang \"sa halip\" ay pang-ugnay ng pamalit, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "d": "Ang \"gayunman\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-TRANSITION-IGNORED",
+        "c": "PO-TRANSITION-IGNORED",
+        "d": "PO-TRANSITION-IGNORED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1868,19 +1868,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ang kahit ay nagpapakita ng pagsalungat sa inaasahang epekto ng ulan.",
         "why_correct": "Ang kahit ay nagpapakita ng pagsalungat sa inaasahang epekto ng ulan.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Ang \"Upang\" ay pang-ugnay ng layunin, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "c": "Ang \"Dahil\" ay pang-ugnay ng sanhi, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "d": "Ang \"Samakatuwid\" ay pang-ugnay ng konklusyon, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-TRANSITION-IGNORED",
+        "c": "PO-TRANSITION-IGNORED",
+        "d": "PO-TRANSITION-IGNORED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1927,19 +1927,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ang bago ang tamang pang-ugnay sa pagkakasunod ng dalawang gawain.",
         "why_correct": "Ang bago ang tamang pang-ugnay sa pagkakasunod ng dalawang gawain.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Ang \"sapagkat\" ay pang-ugnay ng sanhi, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "b": "Ang \"dahil dito\" ay pang-ugnay ng bunga, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "c": "Ang \"samantala\" ay pang-ugnay ng sabayang pangyayari, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-TRANSITION-IGNORED",
+        "b": "PO-TRANSITION-IGNORED",
+        "c": "PO-TRANSITION-IGNORED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -1965,40 +1965,40 @@
       "difficulty": "medium",
       "est_seconds": 50,
       "language": "fil",
-      "stem": "Kailangan ng sapat na ebidensiya _____ makagawa ng makatarungang pasiya.",
+      "stem": "Kulang ang ebidensiya, _____ ipinagpaliban ang pasiya.",
       "options": [
         {
           "option_id": "a",
-          "text": "upang"
-        },
-        {
-          "option_id": "b",
           "text": "kahit"
         },
         {
+          "option_id": "b",
+          "text": "upang"
+        },
+        {
           "option_id": "c",
-          "text": "ngunit"
+          "text": "kaya"
         },
         {
           "option_id": "d",
           "text": "maliban"
         }
       ],
-      "answer_option_id": "a",
+      "answer_option_id": "c",
       "reveal": {
-        "terms": "",
-        "shortcut": "Ang upang ay nagpapahayag ng layunin ng pagkalap ng ebidensiya.",
-        "why_correct": "Ang upang ay nagpapahayag ng layunin ng pagkalap ng ebidensiya.",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
+        "shortcut": "Ang \"kaya\" ay nag-uugnay ng sanhi (kulang ang ebidensiya) at bunga (ipinagpaliban).",
+        "why_correct": "Ang \"kaya\" ay nag-uugnay ng sanhi (kulang ang ebidensiya) at bunga (ipinagpaliban).",
         "why_wrong": {
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Ang \"kahit\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "b": "Ang \"upang\" ay pang-ugnay ng layunin, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "d": "Ang \"maliban\" ay pang-ugnay ng pagbubukod, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-TRANSITION-IGNORED",
+        "b": "PO-TRANSITION-IGNORED",
+        "d": "PO-TRANSITION-IGNORED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2045,19 +2045,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ang pagtatala ay tumutulong sa maayos na paghahanap ng dokumento.",
         "why_correct": "Ang pagtatala ay tumutulong sa maayos na paghahanap ng dokumento.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Hindi tugma ang \"itapon\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "b": "Hindi tugma ang \"ibalewala\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "d": "Hindi tugma ang \"itago nang walang rekord\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "b": "FIL-SAME-FIELD",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2083,40 +2083,40 @@
       "difficulty": "medium",
       "est_seconds": 50,
       "language": "fil",
-      "stem": "Sinuri ang bilang ng mga nakatanggap ng serbisyo _____ ihambing ang resulta sa nakaraang buwan.",
+      "stem": "Mas marami ang nakatanggap ng serbisyo ngayong buwan _____ noong nakaraang buwan.",
       "options": [
         {
           "option_id": "a",
-          "text": "gayunman"
+          "text": "kahit"
         },
         {
           "option_id": "b",
-          "text": "subalit"
+          "text": "upang"
         },
         {
           "option_id": "c",
-          "text": "bagaman"
+          "text": "kaysa"
         },
         {
           "option_id": "d",
-          "text": "upang"
+          "text": "dahil"
         }
       ],
-      "answer_option_id": "d",
+      "answer_option_id": "c",
       "reveal": {
-        "terms": "",
-        "shortcut": "Ang upang ay nagpapakita ng dahilan o layunin ng pagsusuri.",
-        "why_correct": "Ang upang ay nagpapakita ng dahilan o layunin ng pagsusuri.",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
+        "shortcut": "Ang \"kaysa\" ang pananda ng paghahambing.",
+        "why_correct": "Ang \"kaysa\" ang pananda ng paghahambing.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Ang \"kahit\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "b": "Ang \"upang\" ay pang-ugnay ng layunin, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "d": "Ang \"dahil\" ay pang-ugnay ng sanhi, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-TRANSITION-IGNORED",
+        "b": "PO-TRANSITION-IGNORED",
+        "d": "PO-TRANSITION-IGNORED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2163,19 +2163,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Sinasalungat ng mali ang pagiging kapaki-pakinabang ng mabilis na tugon.",
         "why_correct": "Sinasalungat ng mali ang pagiging kapaki-pakinabang ng mabilis na tugon.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "b": "Hindi tugma ang \"kumpleto\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "c": "Hindi tugma ang \"napapanahon\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "d": "Hindi tugma ang \"wasto\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2201,11 +2201,11 @@
       "difficulty": "medium",
       "est_seconds": 50,
       "language": "fil",
-      "stem": "_____ sa maikling abiso, maagang nakahanda ang mga kawani.",
+      "stem": "_____ ng maikling abiso, maagang nakahanda ang mga kawani.",
       "options": [
         {
           "option_id": "a",
-          "text": "Alinsunod"
+          "text": "Sa tulong"
         },
         {
           "option_id": "b",
@@ -2213,28 +2213,28 @@
         },
         {
           "option_id": "c",
-          "text": "Dahil"
+          "text": "Bunga"
         },
         {
           "option_id": "d",
-          "text": "Kasama"
+          "text": "Sa pamamagitan"
         }
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
-        "shortcut": "Ang sa kabila ay angkop sa hindi inaasahang paghahanda kahit maikli ang abiso.",
-        "why_correct": "Ang sa kabila ay angkop sa hindi inaasahang paghahanda kahit maikli ang abiso.",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
+        "shortcut": "Pagsalungat ang hinihingi: \"sa kabila ng\".",
+        "why_correct": "\"Sa kabila ng maikling abiso\" ay nagpapakita ng pagsalungat: kahit maikli ang abiso, maaga pa ring nakahanda.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "\"Sa tulong ng maikling abiso\" — hindi nakatutulong ang maikling abiso; walang pagsalungat.",
+          "c": "\"Bunga ng maikling abiso\" — sanhi-bunga ang ipinahihiwatig, pero ang maagang paghahanda ay salungat sa inaasahan.",
+          "d": "\"Sa pamamagitan ng maikling abiso\" — paraan ang tinutukoy, hindi pagsalungat."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "c": "PO-TRANSITION-IGNORED",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2281,19 +2281,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Kailangang beripikahin o tiyakin ang kawastuhan ng datos.",
         "why_correct": "Kailangang beripikahin o tiyakin ang kawastuhan ng datos.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Hindi tugma ang \"hulaan\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "b": "Hindi tugma ang \"palitan nang basta-basta\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "c": "Hindi tugma ang \"burahin kaagad\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2340,19 +2340,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ang ngunit ay nagpapakita ng pagkakaiba ng panukala at pagkakapareho ng layunin.",
         "why_correct": "Ang ngunit ay nagpapakita ng pagkakaiba ng panukala at pagkakapareho ng layunin.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Ang \"upang\" ay pang-ugnay ng layunin, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "b": "Ang \"dahil\" ay pang-ugnay ng sanhi, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "d": "Ang \"kaya\" ay pang-ugnay ng bunga, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-TRANSITION-IGNORED",
+        "b": "PO-TRANSITION-IGNORED",
+        "d": "PO-TRANSITION-IGNORED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2399,19 +2399,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Akma ang mungkahing naaayon sa takdang badyet.",
         "why_correct": "Akma ang mungkahing naaayon sa takdang badyet.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "b": "Hindi tugma ang \"labis\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "c": "Hindi tugma ang \"wala\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "d": "Hindi tugma ang \"salungat\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2437,11 +2437,11 @@
       "difficulty": "medium",
       "est_seconds": 50,
       "language": "fil",
-      "stem": "Nagbigay ang guro ng halimbawa _____ mas maunawaan ng mga mag-aaral ang aralin.",
+      "stem": "Malinaw ang halimbawang ibinigay ng guro; _____, mas naunawaan ng mga mag-aaral ang aralin.",
       "options": [
         {
           "option_id": "a",
-          "text": "samantala"
+          "text": "gayunman"
         },
         {
           "option_id": "b",
@@ -2449,28 +2449,28 @@
         },
         {
           "option_id": "c",
-          "text": "ngunit"
+          "text": "sa halip"
         },
         {
           "option_id": "d",
-          "text": "upang"
+          "text": "dahil dito"
         }
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
-        "shortcut": "Ang upang ay angkop sa layunin ng pagbibigay ng halimbawa.",
-        "why_correct": "Ang upang ay angkop sa layunin ng pagbibigay ng halimbawa.",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
+        "shortcut": "Ang \"dahil dito\" ay nagpapakita ng bunga ng malinaw na halimbawa.",
+        "why_correct": "Ang \"dahil dito\" ay nagpapakita ng bunga ng malinaw na halimbawa.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Ang \"gayunman\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "b": "Ang \"bagaman\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "c": "Ang \"sa halip\" ay pang-ugnay ng pamalit, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-TRANSITION-IGNORED",
+        "b": "PO-TRANSITION-IGNORED",
+        "c": "PO-TRANSITION-IGNORED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2517,19 +2517,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ang basahin ay angkop upang masuri ang kabuuan bago pumirma.",
         "why_correct": "Ang basahin ay angkop upang masuri ang kabuuan bago pumirma.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Hindi tugma ang \"Itapon\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "c": "Hindi tugma ang \"Takpan\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye.",
+          "d": "Hindi tugma ang \"Ipagwalang-bahala\" sa kahulugan ng pangungusap; sasalungatin nito ang layunin o detalye."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-SAME-FIELD"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2576,19 +2576,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Pagbuo ng pangungusap: piliin ang salita o pang-ugnay na tugma sa ugnayan ng mga bahagi (layunin, sanhi, bunga, pagsalungat).",
         "shortcut": "Ang dahil ay nagpapakita ng sanhi ng karagdagang pagsasanay.",
         "why_correct": "Ang dahil ay nagpapakita ng sanhi ng karagdagang pagsasanay.",
         "why_wrong": {
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "Ang \"sa halip\" ay pang-ugnay ng pamalit, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "c": "Ang \"gayunman\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap.",
+          "d": "Ang \"subalit\" ay pang-ugnay ng pagsalungat, na hindi tugma sa ugnayan ng dalawang bahagi ng pangungusap."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-TRANSITION-IGNORED",
+        "c": "PO-TRANSITION-IGNORED",
+        "d": "PO-TRANSITION-IGNORED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2635,19 +2635,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Balarila: wastong gamit ng ng/nang, na, mayroon, pang-ugnay at ayos ng pangungusap.",
         "shortcut": "Ginagamit ang ng para sa layon na ulat at nang para sa paraan o oras na maaga.",
         "why_correct": "Ginagamit ang ng para sa layon na ulat at nang para sa paraan o oras na maaga.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "May mali sa \"Nagsumite siya ng ulat ng maaga.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "b": "May mali sa \"Nagsumite siya nang ulat ng maaga.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "d": "May mali sa \"Nagsumite siya nang ulat nang maaga.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SPOKEN-FORM",
+        "b": "FIL-SPOKEN-FORM",
+        "d": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2689,24 +2689,24 @@
         },
         {
           "option_id": "d",
-          "text": "Bawat kawani ay may mga tungkuling dapat gampanan nilang lahat."
+          "text": "Bawat kawani ay may tungkuling dapat gampanan nila."
         }
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Balarila: wastong gamit ng ng/nang, na, mayroon, pang-ugnay at ayos ng pangungusap.",
         "shortcut": "Maikli, malinaw, at wastong pangungusap ang unang pagpipilian.",
-        "why_correct": "Maikli, malinaw, at wastong pangungusap ang unang pagpipilian.",
+        "why_correct": "\"Bawat kawani ay may tungkuling dapat gampanan.\" ang maikli at wasto; ang \"bawat\" ay isahan kaya hindi na kailangan ng \"nila/nilang lahat\".",
         "why_wrong": {
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "b": "May mali sa \"Bawat kawani ay may tungkuling dapat gampanan ng lahat nilang bawat isa.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "c": "May mali sa \"Bawat kawani ay may tungkulin na dapat gampanan nila bawat isa.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "d": "May mali sa \"Bawat kawani ay may tungkuling dapat gampanan nila.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SPOKEN-FORM",
+        "c": "FIL-SPOKEN-FORM",
+        "d": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2753,19 +2753,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Balarila: wastong gamit ng ng/nang, na, mayroon, pang-ugnay at ayos ng pangungusap.",
         "shortcut": "Ang kuwit ay naghihiwalay sa panimulang sugnay na Dahil umulan.",
         "why_correct": "Ang kuwit ay naghihiwalay sa panimulang sugnay na Dahil umulan.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "b": "May mali sa \"Dahil umulan ipinagpaliban ang palaro.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "c": "May mali sa \"Dahil, umulan ipinagpaliban ang palaro.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "d": "May mali sa \"Dahil umulan; ipinagpaliban ang palaro.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "FIL-SPOKEN-FORM",
+        "c": "FIL-SPOKEN-FORM",
+        "d": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2812,19 +2812,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Balarila: wastong gamit ng ng/nang, na, mayroon, pang-ugnay at ayos ng pangungusap.",
         "shortcut": "Ang bago ay malinaw na nagpapakita ng pagkakasunod ng gawain.",
         "why_correct": "Ang bago ay malinaw na nagpapakita ng pagkakasunod ng gawain.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "May mali sa \"Ang ulat ay sinuri muna ngunit bago inilathala.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "c": "May mali sa \"Ang ulat ay sinuri muna sa bago inilathala.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "d": "May mali sa \"Ang ulat ay sinuri muna habang bago inilathala.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SPOKEN-FORM",
+        "c": "FIL-SPOKEN-FORM",
+        "d": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2871,19 +2871,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Balarila: wastong gamit ng ng/nang, na, mayroon, pang-ugnay at ayos ng pangungusap.",
         "shortcut": "Na ang pang-ugnay pagkatapos ng maayos at ng ang pananda sa kawani.",
         "why_correct": "Na ang pang-ugnay pagkatapos ng maayos at ng ang pananda sa kawani.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "May mali sa \"Maayos na naitala na kawani ang mga kahilingan.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "b": "May mali sa \"Maayos ng naitala na kawani ang mga kahilingan.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "c": "May mali sa \"Maayos ng naitala ng kawani ang mga kahilingan.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SPOKEN-FORM",
+        "b": "FIL-SPOKEN-FORM",
+        "c": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2930,19 +2930,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
-        "shortcut": "Malinaw ang simuno, pandiwa, at layon sa unang pangungusap.",
-        "why_correct": "Malinaw ang simuno, pandiwa, at layon sa unang pangungusap.",
+        "terms": "Balarila: wastong gamit ng ng/nang, na, mayroon, pang-ugnay at ayos ng pangungusap.",
+        "shortcut": "Sa \"Ipinadala ng opisina ang paalala sa mga aplikante kahapon,\" malinaw ang tagaganap (opisina), pandiwa, layon (paalala), tagatanggap at panahon.",
+        "why_correct": "Sa \"Ipinadala ng opisina ang paalala sa mga aplikante kahapon,\" malinaw ang tagaganap (opisina), pandiwa, layon (paalala), tagatanggap at panahon.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "May mali sa \"Ipinadala ang paalala ng kahapon sa opisina ng mga aplikante.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "b": "May mali sa \"Mga aplikante kahapon ipinadala sa paalala ang opisina.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "d": "May mali sa \"Kahapon sa paalala ay ipinadala ng opisina ang mga aplikante.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SPOKEN-FORM",
+        "b": "FIL-SPOKEN-FORM",
+        "d": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -2989,19 +2989,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Balarila: wastong gamit ng ng/nang, na, mayroon, pang-ugnay at ayos ng pangungusap.",
         "shortcut": "Ang upang ang tamang pang-ugnay para sa layunin.",
         "why_correct": "Ang upang ang tamang pang-ugnay para sa layunin.",
         "why_wrong": {
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "May mali sa \"Nagsagawa ng pagsasanay gayunman mapabuti ang serbisyo.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "b": "May mali sa \"Nagsagawa ng pagsasanay ngunit mapabuti ang serbisyo.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "d": "May mali sa \"Nagsagawa ng pagsasanay samantala mapabuti ang serbisyo.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SPOKEN-FORM",
+        "b": "FIL-SPOKEN-FORM",
+        "d": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3048,19 +3048,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Balarila: wastong gamit ng ng/nang, na, mayroon, pang-ugnay at ayos ng pangungusap.",
         "shortcut": "Kaysa ang karaniwang panandang panghambing.",
         "why_correct": "Kaysa ang karaniwang panandang panghambing.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "b": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "May mali sa \"Mas mahaba ang pila ngayon kaysa sa noon kahapon bukas.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "b": "May mali sa \"Mas mahaba ang pila ngayon pero kaysa kahapon.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "c": "May mali sa \"Mas mahaba ang pila ngayon ng kahapon.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SPOKEN-FORM",
+        "b": "FIL-SPOKEN-FORM",
+        "c": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3107,19 +3107,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Balarila: wastong gamit ng ng/nang, na, mayroon, pang-ugnay at ayos ng pangungusap.",
         "shortcut": "Ang mayroon kaming ay wastong anyo sa pangungusap.",
         "why_correct": "Ang mayroon kaming ay wastong anyo sa pangungusap.",
         "why_wrong": {
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "May mali sa \"Mayroon ng kaming sapat na upuan para sa mga bisita.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "c": "May mali sa \"Mayroon kaming sa sapat na upuan ng mga bisita.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "d": "May mali sa \"Mayroon kami sapat na upuan sa mga bisita.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SPOKEN-FORM",
+        "c": "FIL-SPOKEN-FORM",
+        "d": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3166,19 +3166,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Balarila: wastong gamit ng ng/nang, na, mayroon, pang-ugnay at ayos ng pangungusap.",
         "shortcut": "Ang kaya ay nag-uugnay ng sanhi at bunga.",
         "why_correct": "Ang kaya ay nag-uugnay ng sanhi at bunga.",
         "why_wrong": {
-          "a": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "c": "Hindi ito ang pinakawastong salita o anyo sa pangungusap.",
-          "d": "Hindi ito ang pinakawastong salita o anyo sa pangungusap."
+          "a": "May mali sa \"Nasira ang tubo ngunit pansamantalang nawalan ng tubig kaya.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "c": "May mali sa \"Nasira ang tubo upang pansamantalang nawalan ng tubig.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita.",
+          "d": "May mali sa \"Nasira ang tubo samantala kaya nawalan ng tubig.\": hindi wasto ang gamit ng pang-ugnay, pananda o ayos ng mga salita."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "FIL-SPOKEN-FORM",
+        "c": "FIL-SPOKEN-FORM",
+        "d": "FIL-SPOKEN-FORM"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3225,19 +3225,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Itinatabi ang lumang baterya upang hindi mahalo sa karaniwang basura.",
         "why_correct": "Itinatabi ang lumang baterya upang hindi mahalo sa karaniwang basura.",
         "why_wrong": {
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Mag-imbak ng pagkain\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Mangalap ng donasyong pera\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Magsilbing dekorasyon\"."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3284,19 +3284,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Tuwirang nakasaad ang Biyernes.",
         "why_correct": "Tuwirang nakasaad ang Biyernes.",
         "why_wrong": {
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "b": "Walang bahagi ng talata na nagsasabing \"Isang beses sa isang taon\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Araw-araw\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Tuwing Lunes\"."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3343,19 +3343,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "May binanggit na mga sangkap na maaaring makapinsala.",
         "why_correct": "May binanggit na mga sangkap na maaaring makapinsala.",
         "why_wrong": {
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "b": "Walang bahagi ng talata na nagsasabing \"Mas mahal itong itapon kapag magkahiwalay\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Mas magaan ang karaniwang basura\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Lahat ng baterya ay nabubulok\"."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3402,19 +3402,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Walang numerong nagsasabi ng timbang sa talata.",
         "why_correct": "Walang numerong nagsasabi ng timbang sa talata.",
         "why_wrong": {
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Ang \"Ang uri ng basurang ihihiwalay\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "b": "Ang \"Ang lokasyon ng kahon\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "c": "Ang \"Ang araw ng koleksiyon\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-SUPPORTED-NOT-ASKED",
+        "b": "RC-SUPPORTED-NOT-ASKED",
+        "c": "RC-SUPPORTED-NOT-ASKED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3461,19 +3461,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Dagdag na pila ang pangunahing pagbabago.",
         "why_correct": "Dagdag na pila ang pangunahing pagbabago.",
         "why_wrong": {
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "b": "Walang bahagi ng talata na nagsasabing \"Kinansela ang lahat ng aplikasyon\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Nagtaas agad ng bayarin\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Isinara ang lahat ng tanggapan\"."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3520,19 +3520,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Mas maikli ang paghihintay para sa inilaanang grupo.",
         "why_correct": "Mas maikli ang paghihintay para sa inilaanang grupo.",
         "why_wrong": {
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Bumaba ang lahat ng bayarin\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Nawala ang lahat ng pila\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Dumoble ang bilang ng kawani\"."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3579,19 +3579,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Inaalam pa nila ang pangkalahatang epekto.",
         "why_correct": "Inaalam pa nila ang pangkalahatang epekto.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Hindi nagbukas ang dagdag na pila\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Walang dumating na aplikante\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Ipinagbawal ang pagtatala\"."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3638,19 +3638,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Walang patunay na ang lahat ng aplikante ay mas mabilis nang napagsilbihan.",
         "why_correct": "Walang patunay na ang lahat ng aplikante ay mas mabilis nang napagsilbihan.",
         "why_wrong": {
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Ang \"Patuloy ang pagsusuri ng opisina\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "c": "Ang \"May nasukat na pagbabago sa unang linggo\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "d": "Ang \"May bagong pila para sa ilang aplikante\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-SUPPORTED-NOT-ASKED",
+        "c": "RC-SUPPORTED-NOT-ASKED",
+        "d": "RC-SUPPORTED-NOT-ASKED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3697,19 +3697,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Reading corner ang paksa ng buong talata.",
         "why_correct": "Reading corner ang paksa ng buong talata.",
         "why_wrong": {
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Pagtatayo ng bagong palaruan\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Pagbili ng mga sasakyan\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Pagpapalit ng lahat ng silid-aralan\"."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3756,19 +3756,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Nabanggit na inayos ng mga guro ang estante.",
         "why_correct": "Nabanggit na inayos ng mga guro ang estante.",
         "why_wrong": {
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "b": "Walang bahagi ng talata na nagsasabing \"Mga magulang\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Mga mag-aaral\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Mga bisita\"."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3815,19 +3815,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Kaligtasan ng upuan at bentilasyon ang sinuri.",
         "why_correct": "Kaligtasan ng upuan at bentilasyon ang sinuri.",
         "why_wrong": {
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Inilipat ang paaralan\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Giniba ang silid\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Ipinagbili ang mga aklat\"."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3874,19 +3874,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Itinakda ang pagbubukas sa susunod na buwan.",
         "why_correct": "Itinakda ang pagbubukas sa susunod na buwan.",
         "why_wrong": {
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Walang itinakdang panahon\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Ngayong araw\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Noong nakaraang taon\"."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3933,19 +3933,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Ang iisang talaan ay ginawa upang mabawasan ang maling impormasyon.",
         "why_correct": "Ang iisang talaan ay ginawa upang mabawasan ang maling impormasyon.",
         "why_wrong": {
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "b": "Walang bahagi ng talata na nagsasabing \"Maitago ang lahat ng anunsiyo\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Madagdagan ang magkakaibang bersiyon\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Matanggal ang bawat mungkahi\"."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -3992,19 +3992,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Iisa lamang na itinalagang kawani ang may kapangyarihan.",
         "why_correct": "Iisa lamang na itinalagang kawani ang may kapangyarihan.",
         "why_wrong": {
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Tanging dating empleyado\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Sinumang bisita\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Lahat nang walang pagsusuri\"."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4051,19 +4051,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Pinapayagan ang mungkahi ngunit sinusuri muna.",
         "why_correct": "Pinapayagan ang mungkahi ngunit sinusuri muna.",
         "why_wrong": {
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Hindi kailanman tinatanggap\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Agad itinatapon\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Awtomatikong nilalathala\"."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4110,19 +4110,19 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Hindi lahat ng kawani ang maaaring magpalit ng opisyal na bersiyon.",
         "why_correct": "Hindi lahat ng kawani ang maaaring magpalit ng opisyal na bersiyon.",
         "why_wrong": {
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "b": "Ang \"Pagsusuri sa mungkahi\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "c": "Ang \"Pagtatalaga ng responsable sa bersiyon\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "d": "Ang \"Paggamit ng iisang talaan\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "RC-SUPPORTED-NOT-ASKED",
+        "c": "RC-SUPPORTED-NOT-ASKED",
+        "d": "RC-SUPPORTED-NOT-ASKED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4169,19 +4169,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Pagbibilang ng ani ang unang hakbang.",
         "why_correct": "Pagbibilang ng ani ang unang hakbang.",
         "why_wrong": {
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Kinakansela ang mga order\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Isinasara ang pamilihan\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Binabaan agad ang presyo\"."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4228,19 +4228,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Mga kasaping may naunang order ang inuuna.",
         "why_correct": "Mga kasaping may naunang order ang inuuna.",
         "why_wrong": {
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Mga mamimiling walang tala\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Mga hindi pa nag-oorder\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Mga kasaping nahuling umorder\"."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4287,19 +4287,19 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Posibleng madagdagan ang demand sa hapon.",
         "why_correct": "Posibleng madagdagan ang demand sa hapon.",
         "why_wrong": {
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "d": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Hindi nila binibilang ang ani\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Walang ani sa umaga\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Ipinagbawal ang pagtitinda\"."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4346,19 +4346,19 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
         "shortcut": "Binibilang ang ani at inuuna ang dating order bago magpasya.",
         "why_correct": "Binibilang ang ani at inuuna ang dating order bago magpasya.",
         "why_wrong": {
-          "b": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "c": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito.",
-          "a": "Hindi sinusuportahan ng nabasang talata ang pagpipiliang ito."
+          "a": "Walang bahagi ng talata na nagsasabing \"Awtomatikong inuubos lahat ng ani\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Laging pareho ang dami ng ibinebenta\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Walang sinusunod na prayoridad\"."
         }
       },
       "distractor_reasoning": {
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4384,40 +4384,40 @@
       "difficulty": "hard",
       "est_seconds": 90,
       "language": "fil",
-      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Unang itinakda ng grupo ang layunin ng proyekto.\n2. Pagkatapos ay inilista nila ang mga kailangang kagamitan.\n3. Nang makumpleto ang listahan, nagsimula ang pagbili.\n4. Sa huli, sinuri nila ang mga resibo.\nAlin ang wastong pagkakasunod?",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Pagkatapos ay inilista nila ang mga kailangang kagamitan.\n2. Nang makumpleto ang listahan, nagsimula ang pagbili.\n3. Sa huli, sinuri nila ang mga resibo.\n4. Unang itinakda ng grupo ang layunin ng proyekto.\nAlin ang wastong pagkakasunod?",
       "options": [
         {
           "option_id": "a",
-          "text": "2-1-3-4"
+          "text": "4-2-1-3"
         },
         {
           "option_id": "b",
-          "text": "1-2-3-4"
+          "text": "3-2-1-4"
         },
         {
           "option_id": "c",
-          "text": "4-1-2-3"
+          "text": "1-4-2-3"
         },
         {
           "option_id": "d",
-          "text": "2-3-1-4"
+          "text": "4-1-2-3"
         }
       ],
-      "answer_option_id": "b",
+      "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Pagsusunod-sunod: hanapin ang panimula at ang mga hudyat (una, pagkatapos, sa huli).",
         "shortcut": "Nagsisimula sa layunin, sinusundan ng listahan, pagbili at pagsusuri.",
-        "why_correct": "Nagsisimula sa layunin, sinusundan ng listahan, pagbili at pagsusuri.",
+        "why_correct": "Wastong ayos: 4-1-2-3. Nagsisimula sa layunin, sinusundan ng listahan, pagbili at pagsusuri.",
         "why_wrong": {
-          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "a": "Napagpalit ang dalawang gitnang hakbang; hindi maaaring mauna ang ikatlong pangyayari sa ikalawa.",
+          "b": "Baligtad ang buong pagkakasunod; nauuna ang pangwakas na hakbang.",
+          "c": "Hindi ang tunay na panimulang pangungusap ang nauna."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "LOG-ORDER-SWAP",
+        "b": "LOG-ORDER-REVERSED",
+        "c": "PO-OPENER-MISPLACED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4443,7 +4443,7 @@
       "difficulty": "hard",
       "est_seconds": 90,
       "language": "fil",
-      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Nakatanggap ang opisina ng bagong reklamo.\n2. Itinala muna ang mahahalagang detalye nito.\n3. Pagkatapos ay ipinasa ang tala sa kaukulang yunit.\n4. Sa wakas, ipinaalam sa nagreklamo ang susunod na hakbang.\nAlin ang wastong pagkakasunod?",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Nakatanggap ang opisina ng bagong reklamo.\n2. Pagkatapos ay ipinasa ang tala sa kaukulang yunit.\n3. Sa wakas, ipinaalam sa nagreklamo ang susunod na hakbang.\n4. Itinala muna ang mahahalagang detalye nito.\nAlin ang wastong pagkakasunod?",
       "options": [
         {
           "option_id": "a",
@@ -4451,32 +4451,32 @@
         },
         {
           "option_id": "b",
-          "text": "1-3-2-4"
+          "text": "3-2-4-1"
         },
         {
           "option_id": "c",
-          "text": "1-2-3-4"
+          "text": "1-4-2-3"
         },
         {
           "option_id": "d",
-          "text": "2-3-1-4"
+          "text": "1-2-4-3"
         }
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pagsusunod-sunod: hanapin ang panimula at ang mga hudyat (una, pagkatapos, sa huli).",
         "shortcut": "Magkakasunod ang pagtanggap, pagtatala, pagpapasa at pagtugon.",
-        "why_correct": "Magkakasunod ang pagtanggap, pagtatala, pagpapasa at pagtugon.",
+        "why_correct": "Wastong ayos: 1-4-2-3. Magkakasunod ang pagtanggap, pagtatala, pagpapasa at pagtugon.",
         "why_wrong": {
-          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "a": "Hindi ang tunay na panimulang pangungusap ang nauna.",
+          "b": "Baligtad ang buong pagkakasunod; nauuna ang pangwakas na hakbang.",
+          "d": "Napagpalit ang dalawang gitnang hakbang; hindi maaaring mauna ang ikatlong pangyayari sa ikalawa."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-OPENER-MISPLACED",
+        "b": "LOG-ORDER-REVERSED",
+        "d": "LOG-ORDER-SWAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4502,40 +4502,40 @@
       "difficulty": "hard",
       "est_seconds": 90,
       "language": "fil",
-      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Nagpasya ang paaralan na magtanim ng mga gulay.\n2. Pinili nila ang bakanteng bahagi ng bakuran.\n3. Inihanda ng mga mag-aaral ang lupa at mga punla.\n4. Pagkaraan ng ilang linggo, inani nila ang mga gulay.\nAlin ang wastong pagkakasunod?",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Inihanda ng mga mag-aaral ang lupa at mga punla.\n2. Pagkaraan ng ilang linggo, inani nila ang mga gulay.\n3. Nagpasya ang paaralan na magtanim ng mga gulay.\n4. Pinili nila ang bakanteng bahagi ng bakuran.\nAlin ang wastong pagkakasunod?",
       "options": [
         {
           "option_id": "a",
-          "text": "4-1-2-3"
+          "text": "3-4-1-2"
         },
         {
           "option_id": "b",
-          "text": "1-2-4-3"
+          "text": "2-1-4-3"
         },
         {
           "option_id": "c",
-          "text": "1-2-3-4"
+          "text": "3-1-4-2"
         },
         {
           "option_id": "d",
-          "text": "2-3-1-4"
+          "text": "4-3-1-2"
         }
       ],
-      "answer_option_id": "c",
+      "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pagsusunod-sunod: hanapin ang panimula at ang mga hudyat (una, pagkatapos, sa huli).",
         "shortcut": "Ang pasiya at pagpili ng lugar ay nauuna sa pagtatanim at pag-aani.",
-        "why_correct": "Ang pasiya at pagpili ng lugar ay nauuna sa pagtatanim at pag-aani.",
+        "why_correct": "Wastong ayos: 3-4-1-2. Ang pasiya at pagpili ng lugar ay nauuna sa pagtatanim at pag-aani.",
         "why_wrong": {
-          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "b": "Baligtad ang buong pagkakasunod; nauuna ang pangwakas na hakbang.",
+          "c": "Napagpalit ang dalawang gitnang hakbang; hindi maaaring mauna ang ikatlong pangyayari sa ikalawa.",
+          "d": "Hindi ang tunay na panimulang pangungusap ang nauna."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "LOG-ORDER-REVERSED",
+        "c": "LOG-ORDER-SWAP",
+        "d": "PO-OPENER-MISPLACED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4561,19 +4561,19 @@
       "difficulty": "hard",
       "est_seconds": 90,
       "language": "fil",
-      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. May napansing tagas sa silid-aklatan.\n2. Agad na iniulat ito sa tagapangasiwa.\n3. Sinuri ng tagapag-ayos ang tubo at inayos ang sira.\n4. Matapos ang pagkukumpuni, muling binuksan ang silid.\nAlin ang wastong pagkakasunod?",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. May napansing tagas sa silid-aklatan.\n2. Sinuri ng tagapag-ayos ang tubo at inayos ang sira.\n3. Agad na iniulat ito sa tagapangasiwa.\n4. Matapos ang pagkukumpuni, muling binuksan ang silid.\nAlin ang wastong pagkakasunod?",
       "options": [
         {
           "option_id": "a",
-          "text": "2-3-1-4"
+          "text": "4-2-3-1"
         },
         {
           "option_id": "b",
-          "text": "4-1-2-3"
+          "text": "1-2-3-4"
         },
         {
           "option_id": "c",
-          "text": "1-2-3-4"
+          "text": "1-3-2-4"
         },
         {
           "option_id": "d",
@@ -4582,19 +4582,19 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pagsusunod-sunod: hanapin ang panimula at ang mga hudyat (una, pagkatapos, sa huli).",
         "shortcut": "Tamang panahon ang pagkatuklas, pag-uulat, pagkukumpuni at pagbubukas.",
-        "why_correct": "Tamang panahon ang pagkatuklas, pag-uulat, pagkukumpuni at pagbubukas.",
+        "why_correct": "Wastong ayos: 1-3-2-4. Tamang panahon ang pagkatuklas, pag-uulat, pagkukumpuni at pagbubukas.",
         "why_wrong": {
-          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "b": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "a": "Baligtad ang buong pagkakasunod; nauuna ang pangwakas na hakbang.",
+          "b": "Napagpalit ang dalawang gitnang hakbang; hindi maaaring mauna ang ikatlong pangyayari sa ikalawa.",
+          "d": "Hindi ang tunay na panimulang pangungusap ang nauna."
         }
       },
       "distractor_reasoning": {
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "b": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "LOG-ORDER-REVERSED",
+        "b": "LOG-ORDER-SWAP",
+        "d": "PO-OPENER-MISPLACED"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4620,40 +4620,40 @@
       "difficulty": "hard",
       "est_seconds": 90,
       "language": "fil",
-      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Nalaman ng pangkat na kulang ang mga datos.\n2. Humingi sila ng karagdagang tala mula sa iba pang yunit.\n3. Pinagsama at sinuri nila ang mga natanggap na datos.\n4. Doon lamang nila isinulat ang pinal na ulat.\nAlin ang wastong pagkakasunod?",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Pinagsama at sinuri nila ang mga natanggap na datos.\n2. Humingi sila ng karagdagang tala mula sa iba pang yunit.\n3. Doon lamang nila isinulat ang pinal na ulat.\n4. Nalaman ng pangkat na kulang ang mga datos.\nAlin ang wastong pagkakasunod?",
       "options": [
         {
           "option_id": "a",
-          "text": "4-1-2-3"
+          "text": "2-4-1-3"
         },
         {
           "option_id": "b",
-          "text": "1-2-3-4"
+          "text": "3-1-2-4"
         },
         {
           "option_id": "c",
-          "text": "2-3-1-4"
+          "text": "4-2-1-3"
         },
         {
           "option_id": "d",
-          "text": "2-1-3-4"
+          "text": "4-1-2-3"
         }
       ],
-      "answer_option_id": "b",
+      "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Pagsusunod-sunod: hanapin ang panimula at ang mga hudyat (una, pagkatapos, sa huli).",
         "shortcut": "Kailangang makumpleto at masuri ang datos bago magsulat ng pinal na ulat.",
-        "why_correct": "Kailangang makumpleto at masuri ang datos bago magsulat ng pinal na ulat.",
+        "why_correct": "Wastong ayos: 4-2-1-3. Kailangang makumpleto at masuri ang datos bago magsulat ng pinal na ulat.",
         "why_wrong": {
-          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "a": "Hindi ang tunay na panimulang pangungusap ang nauna.",
+          "b": "Baligtad ang buong pagkakasunod; nauuna ang pangwakas na hakbang.",
+          "d": "Napagpalit ang dalawang gitnang hakbang; hindi maaaring mauna ang ikatlong pangyayari sa ikalawa."
         }
       },
       "distractor_reasoning": {
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "a": "PO-OPENER-MISPLACED",
+        "b": "LOG-ORDER-REVERSED",
+        "d": "LOG-ORDER-SWAP"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -4679,40 +4679,40 @@
       "difficulty": "hard",
       "est_seconds": 90,
       "language": "fil",
-      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Nag-anunsiyo ang barangay ng libreng seminar.\n2. Nagparehistro ang mga nais dumalo.\n3. Sa araw ng seminar, pinatunayan ang pagdalo ng mga kalahok.\n4. Pagkatapos, nangalap ng puna ang mga tagapag-ayos.\nAlin ang wastong pagkakasunod?",
+      "stem": "Ayusin ang mga pangungusap upang maging malinaw ang daloy.\n1. Nagparehistro ang mga nais dumalo.\n2. Nag-anunsiyo ang barangay ng libreng seminar.\n3. Sa araw ng seminar, pinatunayan ang pagdalo ng mga kalahok.\n4. Pagkatapos, nangalap ng puna ang mga tagapag-ayos.\nAlin ang wastong pagkakasunod?",
       "options": [
         {
           "option_id": "a",
-          "text": "4-1-2-3"
+          "text": "2-1-3-4"
         },
         {
           "option_id": "b",
-          "text": "1-2-3-4"
-        },
-        {
-          "option_id": "c",
           "text": "2-3-1-4"
         },
         {
+          "option_id": "c",
+          "text": "4-3-1-2"
+        },
+        {
           "option_id": "d",
-          "text": "1-3-2-4"
+          "text": "1-2-3-4"
         }
       ],
-      "answer_option_id": "b",
+      "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Pagsusunod-sunod: hanapin ang panimula at ang mga hudyat (una, pagkatapos, sa huli).",
         "shortcut": "Sunod-sunod ang anunsiyo, rehistrasyon, pagdalo at feedback.",
-        "why_correct": "Sunod-sunod ang anunsiyo, rehistrasyon, pagdalo at feedback.",
+        "why_correct": "Wastong ayos: 2-1-3-4. Sunod-sunod ang anunsiyo, rehistrasyon, pagdalo at feedback.",
         "why_wrong": {
-          "a": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "c": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari.",
-          "d": "Naiiba ang lohikal na pagkakasunod ng mga pangyayari."
+          "b": "Napagpalit ang dalawang gitnang hakbang; hindi maaaring mauna ang ikatlong pangyayari sa ikalawa.",
+          "c": "Baligtad ang buong pagkakasunod; nauuna ang pangwakas na hakbang.",
+          "d": "Hindi ang tunay na panimulang pangungusap ang nauna."
         }
       },
       "distractor_reasoning": {
-        "a": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "c": "VFIL-PLAUSIBLE-DISTRACTOR",
-        "d": "VFIL-PLAUSIBLE-DISTRACTOR"
+        "b": "LOG-ORDER-SWAP",
+        "c": "LOG-ORDER-REVERSED",
+        "d": "PO-OPENER-MISPLACED"
       },
       "source": "Original, Civio",
       "source_url": null,

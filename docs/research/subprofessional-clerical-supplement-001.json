@@ -36,21 +36,21 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: arrange records by the stated rule, comparing unit by unit.",
         "shortcut": "Use surname first, then given name, in alphabetical order. The first folder is Bea Salcedo.",
-        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Bea Salcedo.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Bea Salcedo. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"Alma Serrano\" files in position 4 of 4 (surname first, letter by letter), not first. It would be first/last only if sorted by given name.",
+          "b": "\"Carlo Santiago\" files in position 2 of 4 (surname first, letter by letter), not first.",
+          "d": "\"Anton Santos\" files in position 3 of 4 (surname first, letter by letter), not first."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "b": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "b": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -61,7 +61,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1",
+        "b": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "d": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0002",
@@ -95,21 +100,21 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: arrange records by the stated rule, comparing unit by unit.",
         "shortcut": "Use surname first, then given name, in alphabetical order. The last folder is Dina Mercado.",
-        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Dina Mercado.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Dina Mercado. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"Dina Melchor\" files in position 1 of 4 (surname first, letter by letter), not last.",
+          "b": "\"Dina Mendoza\" files in position 3 of 4 (surname first, letter by letter), not last.",
+          "d": "\"Dina Mendez\" files in position 2 of 4 (surname first, letter by letter), not last."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "b": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "b": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -120,7 +125,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "b": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "d": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0003",
@@ -154,21 +164,21 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: arrange records by the stated rule, comparing unit by unit.",
         "shortcut": "Use surname first, then given name, in alphabetical order. The first folder is Elena Caballero.",
-        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Elena Caballero.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Elena Caballero. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "b": "\"Elise Cabrera\" files in position 4 of 4 (surname first, letter by letter), not first.",
+          "c": "\"Emil Cabral\" files in position 3 of 4 (surname first, letter by letter), not first.",
+          "d": "\"Edgar Cabantog\" files in position 2 of 4 (surname first, letter by letter), not first. It would be first/last only if sorted by given name."
         }
       },
       "distractor_reasoning": {
-        "b": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "b": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -179,7 +189,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "b": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "c": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "d": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0004",
@@ -213,21 +228,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: arrange records by the stated rule, comparing unit by unit.",
         "shortcut": "Use surname first, then given name, in alphabetical order. The last folder is Luz Villegas.",
-        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Luz Villegas.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Luz Villegas. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"Leo Villamor\" files in position 1 of 4 (surname first, letter by letter), not last.",
+          "b": "\"Liza Villanueva\" files in position 2 of 4 (surname first, letter by letter), not last.",
+          "c": "\"Lorna Villar\" files in position 3 of 4 (surname first, letter by letter), not last."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "b": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "b": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -238,7 +253,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "b": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "c": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0005",
@@ -272,21 +292,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: arrange records by the stated rule, comparing unit by unit.",
         "shortcut": "Use surname first, then given name, in alphabetical order. The first folder is Noel Robles.",
-        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Noel Robles.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Noel Robles. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"Nico Roxas\" files in position 4 of 4 (surname first, letter by letter), not first.",
+          "c": "\"Nena Roman\" files in position 3 of 4 (surname first, letter by letter), not first. It would be first/last only if sorted by given name.",
+          "d": "\"Nina Roldan\" files in position 2 of 4 (surname first, letter by letter), not first."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -297,7 +317,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "c": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1",
+        "d": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0006",
@@ -331,21 +356,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: arrange records by the stated rule, comparing unit by unit.",
         "shortcut": "Use surname first, then given name, in alphabetical order. The last folder is Paolo Valles.",
-        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Paolo Valles.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Paolo Valles. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"Patricia Valerio\" files in position 3 of 4 (surname first, letter by letter), not last.",
+          "c": "\"Pablo Valencia\" files in position 2 of 4 (surname first, letter by letter), not last.",
+          "d": "\"Paula Valdez\" files in position 1 of 4 (surname first, letter by letter), not last. It would be first/last only if sorted by given name."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -356,7 +381,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "c": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "d": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0007",
@@ -390,21 +420,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: arrange records by the stated rule, comparing unit by unit.",
         "shortcut": "Use surname first, then given name, in alphabetical order. The first folder is Rina Alonzo.",
-        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Rina Alonzo.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The first folder is Rina Alonzo. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"Rico Alvarez\" files in position 4 of 4 (surname first, letter by letter), not first.",
+          "c": "\"Ramon Alva\" files in position 2 of 4 (surname first, letter by letter), not first. It would be first/last only if sorted by given name.",
+          "d": "\"Rita Alvarado\" files in position 3 of 4 (surname first, letter by letter), not first."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -415,7 +445,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "c": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1",
+        "d": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0008",
@@ -449,21 +484,21 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: arrange records by the stated rule, comparing unit by unit.",
         "shortcut": "Use surname first, then given name, in alphabetical order. The last folder is Sandro Bayani.",
-        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Sandro Bayani.",
+        "why_correct": "Use surname first, then given name, in alphabetical order. The last folder is Sandro Bayani. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"Samuel Batong\" files in position 2 of 4 (surname first, letter by letter), not last.",
+          "b": "\"Sofia Bautista\" files in position 3 of 4 (surname first, letter by letter), not last. It would be first/last only if sorted by given name.",
+          "d": "\"Shiela Bañez\" files in position 1 of 4 (surname first, letter by letter), not last."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "b": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "b": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ARMA Rule 1",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -474,7 +509,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: breaks ARMA Rule 1",
+        "b": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1",
+        "d": "CLR-LETTER-ORDER: breaks ARMA Rule 1"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0009",
@@ -508,21 +548,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
-        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"00124\" is position 2 of 4 in ascending order, not first.",
+          "b": "\"00141\" is position 3 of 4 in ascending order, not first.",
+          "c": "\"00142\" is position 4 of 4 in ascending order, not first."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "b": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "b": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -533,7 +573,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0010",
@@ -567,21 +612,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
-        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"00709\" is position 1 of 4 in ascending order, not last.",
+          "b": "\"00719\" is position 2 of 4 in ascending order, not last.",
+          "c": "\"00790\" is position 3 of 4 in ascending order, not last."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "b": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "b": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -592,7 +637,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0011",
@@ -626,21 +676,21 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
-        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "b": "\"02040\" is position 3 of 4 in ascending order, not first.",
+          "c": "\"02400\" is position 4 of 4 in ascending order, not first.",
+          "d": "\"02004\" is position 2 of 4 in ascending order, not first."
         }
       },
       "distractor_reasoning": {
-        "b": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "b": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -651,7 +701,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0012",
@@ -685,21 +740,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
-        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"10020\" is position 2 of 4 in ascending order, not last.",
+          "b": "\"10021\" is position 3 of 4 in ascending order, not last.",
+          "c": "\"10012\" is position 1 of 4 in ascending order, not last."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "b": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "b": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -710,7 +765,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0013",
@@ -744,21 +804,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
-        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"04319\" is position 3 of 4 in ascending order, not first.",
+          "c": "\"04318\" is position 2 of 4 in ascending order, not first.",
+          "d": "\"04381\" is position 4 of 4 in ascending order, not first."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -769,7 +829,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0014",
@@ -803,21 +868,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
-        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros.",
+        "why_correct": "Compare the complete five-digit reference numbers numerically, preserving leading zeros. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"09001\" is position 2 of 4 in ascending order, not last.",
+          "c": "\"00901\" is position 1 of 4 in ascending order, not last.",
+          "d": "\"09010\" is position 3 of 4 in ascending order, not last."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -828,7 +893,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0015",
@@ -862,21 +932,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare year, then month, then day to find the correct chronological position.",
-        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"2026-10-01\" is position 3 of 4 in ascending order, not first.",
+          "b": "\"2026-09-30\" is position 2 of 4 in ascending order, not first.",
+          "c": "\"2026-10-03\" is position 4 of 4 in ascending order, not first."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "b": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "b": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -887,7 +957,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0016",
@@ -921,21 +996,21 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare year, then month, then day to find the correct chronological position.",
-        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "b": "\"2026-01-15\" is position 2 of 4 in ascending order, not last.",
+          "c": "\"2026-01-05\" is position 1 of 4 in ascending order, not last.",
+          "d": "\"2026-01-25\" is position 3 of 4 in ascending order, not last."
         }
       },
       "distractor_reasoning": {
-        "b": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "b": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -946,7 +1021,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0017",
@@ -980,21 +1060,21 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare year, then month, then day to find the correct chronological position.",
-        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "b": "\"2025-12-03\" is position 2 of 4 in ascending order, not first.",
+          "c": "\"2026-01-02\" is position 4 of 4 in ascending order, not first.",
+          "d": "\"2025-12-21\" is position 3 of 4 in ascending order, not first."
         }
       },
       "distractor_reasoning": {
-        "b": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "b": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1005,7 +1085,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0018",
@@ -1039,21 +1124,21 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare year, then month, then day to find the correct chronological position.",
-        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "b": "\"2026-07-31\" is position 2 of 4 in ascending order, not last.",
+          "c": "\"2026-07-30\" is position 1 of 4 in ascending order, not last.",
+          "d": "\"2026-08-01\" is position 3 of 4 in ascending order, not last."
         }
       },
       "distractor_reasoning": {
-        "b": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "b": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1064,7 +1149,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0019",
@@ -1098,21 +1188,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare year, then month, then day to find the correct chronological position.",
-        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "c": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"2026-03-01\" is position 3 of 4 in ascending order, not first.",
+          "c": "\"2026-03-03\" is position 4 of 4 in ascending order, not first.",
+          "d": "\"2026-02-28\" is position 2 of 4 in ascending order, not first."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "c": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "c": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1123,7 +1213,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "c": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0020",
@@ -1157,21 +1252,21 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Filing: compare numbers or dates digit by digit from the left.",
         "shortcut": "Compare year, then month, then day to find the correct chronological position.",
-        "why_correct": "Compare year, then month, then day to find the correct chronological position.",
+        "why_correct": "Compare year, then month, then day to find the correct chronological position. This follows standard office numeric/chronologic filing not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
         "why_wrong": {
-          "a": "This is not at the requested first or last position under the specified filing rule.",
-          "b": "This is not at the requested first or last position under the specified filing rule.",
-          "d": "This is not at the requested first or last position under the specified filing rule."
+          "a": "\"2026-10-31\" is position 2 of 4 in ascending order, not last.",
+          "b": "\"2026-11-04\" is position 3 of 4 in ascending order, not last.",
+          "d": "\"2026-10-30\" is position 1 of 4 in ascending order, not last."
         }
       },
       "distractor_reasoning": {
-        "a": "CLR-WRONG-POSITION",
-        "b": "CLR-WRONG-POSITION",
-        "d": "CLR-WRONG-POSITION"
+        "a": "CLR-FILE-ORDER",
+        "b": "CLR-FILE-ORDER",
+        "d": "CLR-FILE-ORDER"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005 numeric and chronologic filing",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1182,7 +1277,12 @@
         "created_at": "2026-10-13",
         "spec_version": "0.1.4"
       },
-      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards."
+      "notes": "Editorial review required; filing conventions are stipulated in each question and are not CSC-prescribed standards.",
+      "distractor_subreason": {
+        "a": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "b": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)",
+        "d": "CLR-LETTER-ORDER: misreads digit-by-digit order (ANSI/ARMA 12-2005)"
+      }
     },
     {
       "id": "CIVIO-CLR-20261013-0021",
@@ -1195,7 +1295,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"a place to stay\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: a place to stay)",
       "options": [
         {
           "option_id": "a",
@@ -1216,21 +1316,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"accommodation\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"accommodation\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"acomodation\" is misspelled: a letter is missing. The correct form is \"accommodation\".",
+          "c": "\"acommodation\" is misspelled: a letter is missing. The correct form is \"accommodation\".",
+          "d": "\"accomodation\" is misspelled: a letter is missing. The correct form is \"accommodation\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "a": "SPL-DROP",
+        "c": "SPL-DROP",
+        "d": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1254,7 +1354,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"upkeep\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: upkeep)",
       "options": [
         {
           "option_id": "a",
@@ -1275,21 +1375,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"maintenance\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"maintenance\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"maintainance\" is misspelled: a letter is doubled or added. The correct form is \"maintenance\".",
+          "c": "\"maintenence\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"maintenance\".",
+          "d": "\"maintinance\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"maintenance\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "a": "SPL-DOUBLE",
+        "c": "SPL-SOUND",
+        "d": "SPL-SOUND"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1313,7 +1413,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"not joined\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: not joined)",
       "options": [
         {
           "option_id": "a",
@@ -1334,21 +1434,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"separate\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"separate\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"seperete\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"separate\".",
+          "b": "\"seperate\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"separate\".",
+          "c": "\"separrate\" is misspelled: a letter is doubled or added. The correct form is \"separate\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR"
+        "a": "SPL-SOUND",
+        "b": "SPL-SOUND",
+        "c": "SPL-DOUBLE"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1372,7 +1472,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"required\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: required)",
       "options": [
         {
           "option_id": "a",
@@ -1393,21 +1493,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"necessary\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"necessary\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"nessesary\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"necessary\".",
+          "b": "\"necesary\" is misspelled: a letter is missing. The correct form is \"necessary\".",
+          "c": "\"neccessary\" is misspelled: a letter is doubled or added. The correct form is \"necessary\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR"
+        "a": "SPL-SOUND",
+        "b": "SPL-DROP",
+        "c": "SPL-DOUBLE"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1431,7 +1531,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"a formal suggestion\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: a formal suggestion)",
       "options": [
         {
           "option_id": "a",
@@ -1452,21 +1552,21 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"recommendation\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"recommendation\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "b": "\"reccommendation\" is misspelled: a letter is doubled or added. The correct form is \"recommendation\".",
+          "c": "\"recommenddation\" is misspelled: a letter is doubled or added. The correct form is \"recommendation\".",
+          "d": "\"recomendation\" is misspelled: a letter is missing. The correct form is \"recommendation\"."
         }
       },
       "distractor_reasoning": {
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "b": "SPL-DOUBLE",
+        "c": "SPL-DOUBLE",
+        "d": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1490,7 +1590,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"proof of payment\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: proof of payment)",
       "options": [
         {
           "option_id": "a",
@@ -1511,21 +1611,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"receipt\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"receipt\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"reciept\" is misspelled: i and e are in the wrong order. The correct form is \"receipt\".",
+          "c": "\"receeipt\" is misspelled: a letter is doubled or added. The correct form is \"receipt\".",
+          "d": "\"receit\" is misspelled: a letter is missing. The correct form is \"receipt\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "a": "SPL-IE-EI",
+        "c": "SPL-DOUBLE",
+        "d": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1549,7 +1649,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"a special right\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: a special right)",
       "options": [
         {
           "option_id": "a",
@@ -1570,21 +1670,21 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"privilege\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"privilege\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"privelege\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"privilege\".",
+          "b": "\"privilage\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"privilege\".",
+          "d": "\"priviledge\" is misspelled: a letter is doubled or added. The correct form is \"privilege\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "b": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "a": "SPL-SOUND",
+        "b": "SPL-SOUND",
+        "d": "SPL-DOUBLE"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1608,7 +1708,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"without doubt\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: without doubt)",
       "options": [
         {
           "option_id": "a",
@@ -1629,21 +1729,21 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"definitely\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"definitely\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "b": "\"definitly\" is misspelled: a letter is missing. The correct form is \"definitely\".",
+          "c": "\"definately\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"definitely\".",
+          "d": "\"defenitely\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"definitely\"."
         }
       },
       "distractor_reasoning": {
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "b": "SPL-DROP",
+        "c": "SPL-SOUND",
+        "d": "SPL-SOUND"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1667,7 +1767,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"a group assigned a task\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: a group assigned a task)",
       "options": [
         {
           "option_id": "a",
@@ -1688,21 +1788,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"committee\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"committee\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"committie\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"committee\".",
+          "b": "\"comittee\" is misspelled: a letter is missing. The correct form is \"committee\".",
+          "c": "\"commitee\" is misspelled: a letter is missing. The correct form is \"committee\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR"
+        "a": "SPL-SOUND",
+        "b": "SPL-DROP",
+        "c": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1726,7 +1826,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"a particular event\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: a particular event)",
       "options": [
         {
           "option_id": "a",
@@ -1747,21 +1847,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"occasion\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"occasion\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"ocassion\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"occasion\".",
+          "b": "\"occassion\" is misspelled: a letter is doubled or added. The correct form is \"occasion\".",
+          "c": "\"ocasian\" is misspelled: a letter is missing. The correct form is \"occasion\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR"
+        "a": "SPL-SOUND",
+        "b": "SPL-DOUBLE",
+        "c": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1785,7 +1885,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"the staff of an organization\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: the staff of an organization)",
       "options": [
         {
           "option_id": "a",
@@ -1806,21 +1906,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"personnel\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"personnel\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"personnell\" is misspelled: a letter is doubled or added. The correct form is \"personnel\".",
+          "c": "\"personeel\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"personnel\".",
+          "d": "\"personel\" is misspelled: a letter is missing. The correct form is \"personnel\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "a": "SPL-DOUBLE",
+        "c": "SPL-SOUND",
+        "d": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1844,7 +1944,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"to cause awkwardness\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: to cause awkwardness)",
       "options": [
         {
           "option_id": "a",
@@ -1865,21 +1965,21 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"embarrass\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"embarrass\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "b": "\"embarass\" is misspelled: a letter is missing. The correct form is \"embarrass\".",
+          "c": "\"embbarass\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"embarrass\".",
+          "d": "\"embarras\" is misspelled: a letter is missing. The correct form is \"embarrass\"."
         }
       },
       "distractor_reasoning": {
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "b": "SPL-DROP",
+        "c": "SPL-SOUND",
+        "d": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1903,7 +2003,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"a list of survey questions\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: a list of survey questions)",
       "options": [
         {
           "option_id": "a",
@@ -1924,21 +2024,21 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"questionnaire\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"questionnaire\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "b": "\"questionaire\" is misspelled: a letter is missing. The correct form is \"questionnaire\".",
+          "c": "\"questinnaire\" is misspelled: a letter is missing. The correct form is \"questionnaire\".",
+          "d": "\"questionnair\" is misspelled: a letter is missing. The correct form is \"questionnaire\"."
         }
       },
       "distractor_reasoning": {
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "b": "SPL-DROP",
+        "c": "SPL-DROP",
+        "d": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -1962,7 +2062,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"a schedule of dates\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: a schedule of dates)",
       "options": [
         {
           "option_id": "a",
@@ -1983,21 +2083,21 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"calendar\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"calendar\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"calandar\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"calendar\".",
+          "b": "\"calender\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"calendar\".",
+          "d": "\"callendar\" is misspelled: a letter is doubled or added. The correct form is \"calendar\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "b": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "a": "SPL-SOUND",
+        "b": "SPL-SOUND",
+        "d": "SPL-DOUBLE"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -2021,7 +2121,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"a person connecting groups\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: a person connecting groups)",
       "options": [
         {
           "option_id": "a",
@@ -2042,21 +2142,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"liaison\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"liaison\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"liaisson\" is misspelled: a letter is doubled or added. The correct form is \"liaison\".",
+          "b": "\"laysion\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"liaison\".",
+          "c": "\"liason\" is misspelled: a letter is missing. The correct form is \"liaison\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR"
+        "a": "SPL-DOUBLE",
+        "b": "SPL-SOUND",
+        "c": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -2080,7 +2180,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"without delay\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: without delay)",
       "options": [
         {
           "option_id": "a",
@@ -2101,21 +2201,21 @@
       ],
       "answer_option_id": "d",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"immediately\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"immediately\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"imediately\" is misspelled: a letter is missing. The correct form is \"immediately\".",
+          "b": "\"immediateley\" is misspelled: a letter is doubled or added. The correct form is \"immediately\".",
+          "c": "\"immediatly\" is misspelled: a letter is missing. The correct form is \"immediately\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR"
+        "a": "SPL-DROP",
+        "b": "SPL-DOUBLE",
+        "c": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -2139,7 +2239,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"easy to reach or use\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: easy to reach or use)",
       "options": [
         {
           "option_id": "a",
@@ -2160,21 +2260,21 @@
       ],
       "answer_option_id": "c",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"accessible\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"accessible\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"accessable\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"accessible\".",
+          "b": "\"acessible\" is misspelled: a letter is missing. The correct form is \"accessible\".",
+          "d": "\"accesible\" is misspelled: a letter is missing. The correct form is \"accessible\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "b": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "a": "SPL-SOUND",
+        "b": "SPL-DROP",
+        "d": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -2198,7 +2298,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"an event or happening\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: an event or happening)",
       "options": [
         {
           "option_id": "a",
@@ -2219,21 +2319,21 @@
       ],
       "answer_option_id": "a",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"occurrence\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"occurrence\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "b": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "b": "\"occurrance\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"occurrence\".",
+          "c": "\"occurence\" is misspelled: a letter is missing. The correct form is \"occurrence\".",
+          "d": "\"ocurrence\" is misspelled: a letter is missing. The correct form is \"occurrence\"."
         }
       },
       "distractor_reasoning": {
-        "b": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "b": "SPL-SOUND",
+        "c": "SPL-DROP",
+        "d": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -2257,7 +2357,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"an administrative system\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: an administrative system)",
       "options": [
         {
           "option_id": "a",
@@ -2278,21 +2378,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"bureaucracy\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"bureaucracy\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"bureacracy\" is misspelled: a letter is missing. The correct form is \"bureaucracy\".",
+          "c": "\"beaurocracy\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"bureaucracy\".",
+          "d": "\"burocracy\" is misspelled: a letter is missing. The correct form is \"bureaucracy\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "a": "SPL-DROP",
+        "c": "SPL-SOUND",
+        "d": "SPL-DROP"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
@@ -2316,7 +2416,7 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which choice correctly spells the word meaning the office term \"a person supervising an organization\" in a government memo?",
+      "stem": "Which word is spelled correctly? (Meaning: a person supervising an organization)",
       "options": [
         {
           "option_id": "a",
@@ -2337,21 +2437,21 @@
       ],
       "answer_option_id": "b",
       "reveal": {
-        "terms": "",
+        "terms": "Spelling: choose the standard (Merriam-Webster/Oxford) spelling.",
         "shortcut": "The standard spelling is \"superintendent\". Check its exact letter order and doubled consonants where present.",
         "why_correct": "The standard spelling is \"superintendent\". Check its exact letter order and doubled consonants where present.",
         "why_wrong": {
-          "a": "This alternative has an incorrect letter order or number of letters.",
-          "c": "This alternative has an incorrect letter order or number of letters.",
-          "d": "This alternative has an incorrect letter order or number of letters."
+          "a": "\"superintendant\" is misspelled: spelled by sound, with a wrong vowel or consonant. The correct form is \"superintendent\".",
+          "c": "\"supertendent\" is misspelled: a letter is missing. The correct form is \"superintendent\".",
+          "d": "\"superintendantt\" is misspelled: a letter is doubled or added. The correct form is \"superintendent\"."
         }
       },
       "distractor_reasoning": {
-        "a": "SPL-ERROR",
-        "c": "SPL-ERROR",
-        "d": "SPL-ERROR"
+        "a": "SPL-SOUND",
+        "c": "SPL-DROP",
+        "d": "SPL-DOUBLE"
       },
-      "source": "Original Civio practice exercise; filing rule explicitly stated",
+      "source": "Original, Civio; standard English spelling (Merriam-Webster / Oxford)",
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
