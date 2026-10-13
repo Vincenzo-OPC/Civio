@@ -1,0 +1,1425 @@
+{
+  "batch": "gap-fill-001",
+  "spec_version": "0.1.4",
+  "status": "draft (gap fill; for independent review)",
+  "items": [
+    {
+      "id": "CIVIO-GAP1-GI-TERM-MATCH-0001",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Peace and human rights (1987 Constitution)",
+      "concept": "Art. II, Sec. 2",
+      "micro_skill": "",
+      "archetype": "GI-TERM-MATCH",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Under the 1987 Constitution, what does the Philippines renounce as an instrument of national policy?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "War"
+        },
+        {
+          "option_id": "o2",
+          "text": "Foreign trade"
+        },
+        {
+          "option_id": "o3",
+          "text": "Diplomacy"
+        },
+        {
+          "option_id": "o4",
+          "text": "Treaty-making"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Art. II, Sec. 2 is a state policy on peace.",
+        "shortcut": "Art. II, Sec. 2: the country renounces war.",
+        "why_correct": "Art. II, Sec. 2 says: \"The Philippines renounces war as an instrument of national policy.\"",
+        "why_wrong": {
+          "o3": "Diplomacy is a peaceful tool the State keeps using.",
+          "o2": "Trade is not renounced anywhere in Art. II.",
+          "o4": "The State still enters treaties; Art. VII, Sec. 21 sets how."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "GI-SOUNDS-RIGHT",
+        "o2": "GI-SOUNDS-RIGHT",
+        "o4": "GI-SIBLING-TERM"
+      },
+      "source": "1987 Constitution, Art. II, Sec. 2",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-GI-TERM-MATCH-0002",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Peace and human rights (1987 Constitution)",
+      "concept": "Art. II, Sec. 11",
+      "micro_skill": "",
+      "archetype": "GI-TERM-MATCH",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Which state policy in Article II says the State \"values the dignity of every human person and guarantees full respect for human rights\"?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Section 28"
+        },
+        {
+          "option_id": "o2",
+          "text": "Section 6"
+        },
+        {
+          "option_id": "o3",
+          "text": "Section 11"
+        },
+        {
+          "option_id": "o4",
+          "text": "Section 16"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Article II lists declared principles and state policies.",
+        "shortcut": "Dignity and human rights: Art. II, Sec. 11.",
+        "why_correct": "Art. II, Sec. 11 reads: \"The State values the dignity of every human person and guarantees full respect for human rights.\"",
+        "why_wrong": {
+          "o4": "Sec. 16 is the right to a balanced and healthful ecology.",
+          "o2": "Sec. 6 is the separation of Church and State.",
+          "o1": "Sec. 28 is full public disclosure of transactions."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "GI-NEIGHBOR-NUMBER",
+        "o2": "GI-NEIGHBOR-NUMBER",
+        "o1": "GI-NEIGHBOR-NUMBER"
+      },
+      "source": "1987 Constitution, Art. II, Sec. 11",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-GI-WHO-HOLDS-POWER-0003",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Peace and human rights (1987 Constitution)",
+      "concept": "Art. XIII, Sec. 17(2)",
+      "micro_skill": "",
+      "archetype": "GI-WHO-HOLDS-POWER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "How many persons compose the Commission on Human Rights under the 1987 Constitution?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "A Chairman and four Members"
+        },
+        {
+          "option_id": "o2",
+          "text": "A Chairman and six Members"
+        },
+        {
+          "option_id": "o3",
+          "text": "A Chairman and two Members"
+        },
+        {
+          "option_id": "o4",
+          "text": "Five Commissioners with no Chairman"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "The CHR is an independent office created by Art. XIII, Sec. 17.",
+        "shortcut": "CHR: 1 Chairman + 4 Members.",
+        "why_correct": "Art. XIII, Sec. 17(2): \"The Commission shall be composed of a Chairman and four Members who must be natural-born citizens of the Philippines and a majority of whom shall be members of the Bar.\"",
+        "why_wrong": {
+          "o3": "Chairman plus two is the make-up of the CSC and COA (Art. IX-B, IX-D), not the CHR.",
+          "o2": "Chairman plus six is the COMELEC (Art. IX-C).",
+          "o4": "The text names a Chairman."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "GI-WRONG-BODY",
+        "o2": "GI-WRONG-BODY",
+        "o4": "GI-SOUNDS-RIGHT"
+      },
+      "source": "1987 Constitution, Art. XIII, Sec. 17(2)",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-GI-SCENARIO-APPLY-0004",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Peace and human rights (1987 Constitution)",
+      "concept": "Art. XIII, Sec. 18(4)",
+      "micro_skill": "",
+      "archetype": "GI-SCENARIO-APPLY",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "A CHR team arrives unannounced at a municipal jail to inspect how detainees are treated. Which constitutional power of the Commission is it using?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Power to amend the Rules of Court"
+        },
+        {
+          "option_id": "o2",
+          "text": "Visitorial powers over jails, prisons, or detention facilities"
+        },
+        {
+          "option_id": "o3",
+          "text": "Power to prosecute and convict offenders"
+        },
+        {
+          "option_id": "o4",
+          "text": "Power to grant pardons"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Art. XIII, Sec. 18 lists the CHR's powers and functions.",
+        "shortcut": "Jail inspection = visitorial powers, Sec. 18(4).",
+        "why_correct": "Art. XIII, Sec. 18(4): the CHR shall \"Exercise visitorial powers over jails, prisons, or detention facilities.\"",
+        "why_wrong": {
+          "o4": "Pardons belong to the President (Art. VII, Sec. 19).",
+          "o3": "The CHR investigates; it does not prosecute or convict.",
+          "o1": "The Supreme Court promulgates the Rules of Court (Art. VIII, Sec. 5(5)); the CHR only adopts its own rules."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "GI-WRONG-BODY",
+        "o3": "GI-SOUNDS-RIGHT",
+        "o1": "GI-WRONG-BODY"
+      },
+      "source": "1987 Constitution, Art. XIII, Sec. 18(4)",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-GI-SCENARIO-APPLY-0005",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Peace and human rights (1987 Constitution)",
+      "concept": "Art. III, Sec. 12(1)",
+      "micro_skill": "",
+      "archetype": "GI-SCENARIO-APPLY",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "A suspect is being questioned by police about a theft and cannot afford a lawyer. What does the Bill of Rights require?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "A barangay official may serve as counsel"
+        },
+        {
+          "option_id": "o2",
+          "text": "Counsel must be provided to the suspect"
+        },
+        {
+          "option_id": "o3",
+          "text": "The suspect must first post bail"
+        },
+        {
+          "option_id": "o4",
+          "text": "Questioning may continue without counsel if the suspect is cooperative"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Art. III, Sec. 12(1) covers rights of a person under investigation.",
+        "shortcut": "Can't afford counsel? One must be provided.",
+        "why_correct": "Art. III, Sec. 12(1): the person \"shall have the right ... to have competent and independent counsel preferably of his own choice. If the person cannot afford the services of counsel, he must be provided with one.\"",
+        "why_wrong": {
+          "o4": "The right to counsel does not depend on cooperation; it can be waived only in writing and in the presence of counsel.",
+          "o3": "Bail is a separate right (Sec. 13) and is not a condition for counsel.",
+          "o1": "Counsel must be competent and independent; the text does not allow a substitute official."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "GI-SOUNDS-RIGHT",
+        "o3": "GI-SIBLING-TERM",
+        "o1": "GI-SOUNDS-RIGHT"
+      },
+      "source": "1987 Constitution, Art. III, Sec. 12(1)",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VFIL-WIKAIN-0006",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Verbal Ability (Filipino)",
+      "concept": "sawikain",
+      "micro_skill": "",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "fil",
+      "stem": "Ano ang kahulugan ng sawikaing nasa malalaking titik?\nDahil walang trabaho, NAGBIBILANG NG POSTE si Ramon araw-araw.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "mahilig maglakad"
+        },
+        {
+          "option_id": "o2",
+          "text": "nagtatrabaho sa Meralco"
+        },
+        {
+          "option_id": "o3",
+          "text": "nagsusukat ng kalsada"
+        },
+        {
+          "option_id": "o4",
+          "text": "walang hanapbuhay"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Ang sawikain ay pahayag na may di-literal na kahulugan.",
+        "shortcut": "Huwag basahin nang literal; tingnan ang konteksto.",
+        "why_correct": "Ang nagbibilang ng poste ay taong walang trabaho.",
+        "why_wrong": {
+          "o2": "Literal na pagbasa sa poste.",
+          "o1": "Kaugnay ng paglalakad sa kalye pero hindi ito ang kahulugan.",
+          "o3": "Literal na pagbasa sa pagbibilang."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "FIL-LITERAL",
+        "o1": "FIL-SAME-FIELD",
+        "o3": "FIL-LITERAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VFIL-WIKAIN-0007",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Verbal Ability (Filipino)",
+      "concept": "sawikain",
+      "micro_skill": "",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "fil",
+      "stem": "Ano ang kahulugan ng sawikaing nasa malalaking titik?\nBUKAS-PALAD ang kapitan sa mga nasalanta ng bagyo.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "maraming sugat sa kamay"
+        },
+        {
+          "option_id": "o2",
+          "text": "madaling magalit"
+        },
+        {
+          "option_id": "o3",
+          "text": "mahilig kumaway"
+        },
+        {
+          "option_id": "o4",
+          "text": "mapagbigay"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Ang sawikain ay pahayag na may di-literal na kahulugan.",
+        "shortcut": "Huwag basahin nang literal; tingnan ang konteksto.",
+        "why_correct": "Ang bukas-palad ay mapagbigay o matulungin.",
+        "why_wrong": {
+          "o1": "Literal na pagbasa sa palad.",
+          "o2": "Walang kaugnayan sa pagiging mapagbigay.",
+          "o3": "Literal na pagbasa sa nakabukas na kamay."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "FIL-LITERAL",
+        "o2": "FIL-SAME-FIELD",
+        "o3": "FIL-LITERAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VFIL-WIKAIN-0008",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Verbal Ability (Filipino)",
+      "concept": "sawikain",
+      "micro_skill": "",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "fil",
+      "stem": "Ano ang kahulugan ng sawikaing nasa malalaking titik?\nHuwag mong pagsabihan nang malakas si Lito; BALAT-SIBUYAS siya.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "manipis ang balat"
+        },
+        {
+          "option_id": "o2",
+          "text": "madaling masaktan ang damdamin"
+        },
+        {
+          "option_id": "o3",
+          "text": "mabaho ang amoy"
+        },
+        {
+          "option_id": "o4",
+          "text": "mahilig magluto"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Ang sawikain ay pahayag na may di-literal na kahulugan.",
+        "shortcut": "Huwag basahin nang literal; tingnan ang konteksto.",
+        "why_correct": "Ang balat-sibuyas ay maramdamin o madaling masaktan.",
+        "why_wrong": {
+          "o1": "Literal na pagbasa sa balat ng sibuyas.",
+          "o3": "Literal na katangian ng sibuyas.",
+          "o4": "Kaugnay ng sibuyas sa kusina, hindi ng ugali."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "FIL-LITERAL",
+        "o3": "FIL-LITERAL",
+        "o4": "FIL-SAME-FIELD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VFIL-WIKAIN-0009",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Verbal Ability (Filipino)",
+      "concept": "sawikain",
+      "micro_skill": "",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "fil",
+      "stem": "Ano ang kahulugan ng sawikaing nasa malalaking titik?\nNAGSUNOG NG KILAY si Ana bago ang pagsusulit ng Serbisyo Sibil.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "nag-ahit ng kilay"
+        },
+        {
+          "option_id": "o2",
+          "text": "nagpuyat sa paglalaro"
+        },
+        {
+          "option_id": "o3",
+          "text": "nag-aral nang mabuti"
+        },
+        {
+          "option_id": "o4",
+          "text": "napaso sa kandila"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Ang sawikain ay pahayag na may di-literal na kahulugan.",
+        "shortcut": "Huwag basahin nang literal; tingnan ang konteksto.",
+        "why_correct": "Ang nagsunog ng kilay ay nag-aral nang puspusan.",
+        "why_wrong": {
+          "o4": "Literal na pagbasa sa pagsunog.",
+          "o1": "Literal na pagbasa sa kilay.",
+          "o2": "May puyat din pero hindi pag-aaral ang ginawa."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "FIL-LITERAL",
+        "o1": "FIL-LITERAL",
+        "o2": "FIL-SAME-FIELD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VFIL-WIKAIN-0010",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Verbal Ability (Filipino)",
+      "concept": "sawikain",
+      "micro_skill": "",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "fil",
+      "stem": "Ano ang kahulugan ng sawikaing nasa malalaking titik?\nNINGAS-KUGON ang ilang kawani: masigla sa unang linggo ng proyekto, pagkatapos ay tumigil na.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "palaging masipag"
+        },
+        {
+          "option_id": "o2",
+          "text": "mahilig magsiga"
+        },
+        {
+          "option_id": "o3",
+          "text": "masigasig lamang sa simula"
+        },
+        {
+          "option_id": "o4",
+          "text": "mainitin ang ulo"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Ang sawikain ay pahayag na may di-literal na kahulugan.",
+        "shortcut": "Huwag basahin nang literal; tingnan ang konteksto.",
+        "why_correct": "Ang ningas-kugon ay sigla sa umpisa na agad ding nawawala.",
+        "why_wrong": {
+          "o2": "Literal na pagbasa sa apoy at kugon.",
+          "o1": "Kabaligtaran: hindi tumatagal ang sipag.",
+          "o4": "Kaugnay ng init pero ugali sa galit ang tinutukoy."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "FIL-LITERAL",
+        "o1": "FIL-INTENSITY",
+        "o4": "FIL-SAME-FIELD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VFIL-WIKAIN-0011",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Verbal Ability (Filipino)",
+      "concept": "sawikain",
+      "micro_skill": "",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "fil",
+      "stem": "Ano ang kahulugan ng sawikaing nasa malalaking titik?\nITAGA MO SA BATO: tutuparin ko ang pangako ko sa barangay.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "magalit ka sa akin"
+        },
+        {
+          "option_id": "o2",
+          "text": "tandaan mo nang tiyak"
+        },
+        {
+          "option_id": "o3",
+          "text": "kalimutan mo na"
+        },
+        {
+          "option_id": "o4",
+          "text": "ukitin mo sa bato"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Ang sawikain ay pahayag na may di-literal na kahulugan.",
+        "shortcut": "Huwag basahin nang literal; tingnan ang konteksto.",
+        "why_correct": "Ang itaga sa bato ay tandaan dahil tiyak na mangyayari.",
+        "why_wrong": {
+          "o4": "Literal na pagbasa sa pagtaga.",
+          "o3": "Kabaligtaran ng kahulugan.",
+          "o1": "Walang kaugnayan sa pangako."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "FIL-LITERAL",
+        "o3": "FIL-SYNONYM-TRAP",
+        "o1": "FIL-SAME-FIELD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VFIL-WIKAIN-0012",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Verbal Ability (Filipino)",
+      "concept": "sawikain",
+      "micro_skill": "",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "fil",
+      "stem": "Ano ang kahulugan ng sawikaing nasa malalaking titik?\nKAPIT SA PATALIM ang ginawa ng tindero nang mangutang siya sa 5-6.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "gumawa ng mapanganib na hakbang dahil sa matinding pangangailangan"
+        },
+        {
+          "option_id": "o2",
+          "text": "nagtiwala sa kaibigan"
+        },
+        {
+          "option_id": "o3",
+          "text": "humawak ng kutsilyo"
+        },
+        {
+          "option_id": "o4",
+          "text": "nagtinda ng patalim"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang sawikain ay pahayag na may di-literal na kahulugan.",
+        "shortcut": "Huwag basahin nang literal; tingnan ang konteksto.",
+        "why_correct": "Ang kapit sa patalim ay desperadong hakbang dahil sa gipit.",
+        "why_wrong": {
+          "o3": "Literal na pagbasa.",
+          "o4": "Literal na pagbasa sa patalim bilang paninda.",
+          "o2": "Mas mahina at iba ang kahulugan."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "FIL-LITERAL",
+        "o4": "FIL-LITERAL",
+        "o2": "FIL-INTENSITY"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VFIL-WIKAIN-0013",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Verbal Ability (Filipino)",
+      "concept": "sawikain",
+      "micro_skill": "",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "fil",
+      "stem": "Ano ang kahulugan ng sawikaing nasa malalaking titik?\nMABABAW ANG LUHA ni Lola kaya umiyak siya sa simpleng palabas.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "madaling umiyak"
+        },
+        {
+          "option_id": "o2",
+          "text": "mahina ang paningin"
+        },
+        {
+          "option_id": "o3",
+          "text": "hindi marunong umiyak"
+        },
+        {
+          "option_id": "o4",
+          "text": "mababaw ang mata"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang sawikain ay pahayag na may di-literal na kahulugan.",
+        "shortcut": "Huwag basahin nang literal; tingnan ang konteksto.",
+        "why_correct": "Ang mababaw ang luha ay madaling maiyak.",
+        "why_wrong": {
+          "o4": "Literal na pagbasa.",
+          "o2": "Kaugnay ng mata pero hindi ito ang kahulugan.",
+          "o3": "Kabaligtaran ng kahulugan."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "FIL-LITERAL",
+        "o2": "FIL-SAME-FIELD",
+        "o3": "FIL-SYNONYM-TRAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VEN-RC-0014",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "reading comprehension",
+      "micro_skill": "",
+      "archetype": "VEN-RC",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Passage: The municipal treasurer's office moved its payment counter to the ground floor in June. Before the move, senior citizens had to climb two flights of stairs, and many asked relatives to pay for them. In July, the office recorded 40% more payments made in person by senior citizens than in May. The treasurer said the office will also add a second counter if the line stays long in August.\n\nWhat is the main point of the passage?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Stairs are dangerous in all public buildings"
+        },
+        {
+          "option_id": "o2",
+          "text": "Relatives should stop paying for senior citizens"
+        },
+        {
+          "option_id": "o3",
+          "text": "The treasurer's office will close in August"
+        },
+        {
+          "option_id": "o4",
+          "text": "Moving the counter made in-person payment easier for senior citizens"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Answer only from what the passage states or clearly implies.",
+        "shortcut": "Find the sentence that answers the question.",
+        "why_correct": "The passage is about the counter move and its effect on senior citizens.",
+        "why_wrong": {
+          "o3": "Nothing says the office will close.",
+          "o2": "The passage reports a fact; it gives no such advice.",
+          "o1": "Too broad: the passage is about one office."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "RC-NOT-IN-TEXT",
+        "o2": "RC-NOT-IN-TEXT",
+        "o1": "RC-TOO-BROAD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VEN-RC-0015",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "reading comprehension",
+      "micro_skill": "",
+      "archetype": "VEN-RC",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Passage: The municipal treasurer's office moved its payment counter to the ground floor in June. Before the move, senior citizens had to climb two flights of stairs, and many asked relatives to pay for them. In July, the office recorded 40% more payments made in person by senior citizens than in May. The treasurer said the office will also add a second counter if the line stays long in August.\n\nAccording to the passage, what did many senior citizens do before the move?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Asked relatives to pay for them"
+        },
+        {
+          "option_id": "o2",
+          "text": "Paid at a second counter"
+        },
+        {
+          "option_id": "o3",
+          "text": "Paid online"
+        },
+        {
+          "option_id": "o4",
+          "text": "Stopped paying their taxes"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Answer only from what the passage states or clearly implies.",
+        "shortcut": "Find the sentence that answers the question.",
+        "why_correct": "Second sentence: many asked relatives to pay for them.",
+        "why_wrong": {
+          "o3": "Online payment is never mentioned.",
+          "o2": "The second counter is only a future plan.",
+          "o4": "Extreme claim not in the text."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "RC-NOT-IN-TEXT",
+        "o2": "RC-TOO-NARROW",
+        "o4": "RC-EXTREME"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VEN-RC-0016",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "reading comprehension",
+      "micro_skill": "",
+      "archetype": "VEN-RC",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Passage: The municipal treasurer's office moved its payment counter to the ground floor in June. Before the move, senior citizens had to climb two flights of stairs, and many asked relatives to pay for them. In July, the office recorded 40% more payments made in person by senior citizens than in May. The treasurer said the office will also add a second counter if the line stays long in August.\n\nWhat can be inferred about the second counter?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "It already opened in June"
+        },
+        {
+          "option_id": "o2",
+          "text": "It is only for senior citizens"
+        },
+        {
+          "option_id": "o3",
+          "text": "It will replace the ground-floor counter"
+        },
+        {
+          "option_id": "o4",
+          "text": "It depends on how long the line is in August"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Answer only from what the passage states or clearly implies.",
+        "shortcut": "Find the sentence that answers the question.",
+        "why_correct": "The treasurer will add it only \"if the line stays long in August.\"",
+        "why_wrong": {
+          "o1": "Only the moved counter opened in June.",
+          "o2": "The text does not limit it to senior citizens.",
+          "o3": "The text says add, not replace."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-NOT-IN-TEXT",
+        "o2": "RC-TOO-NARROW",
+        "o3": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VEN-RC-0017",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "reading comprehension",
+      "micro_skill": "",
+      "archetype": "VEN-RC",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Passage: The municipal treasurer's office moved its payment counter to the ground floor in June. Before the move, senior citizens had to climb two flights of stairs, and many asked relatives to pay for them. In July, the office recorded 40% more payments made in person by senior citizens than in May. The treasurer said the office will also add a second counter if the line stays long in August.\n\nWhich statement is NOT supported by the passage?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "In-person payments by senior citizens rose from May to July"
+        },
+        {
+          "option_id": "o2",
+          "text": "Every senior citizen now pays in person"
+        },
+        {
+          "option_id": "o3",
+          "text": "The counter was moved to the ground floor"
+        },
+        {
+          "option_id": "o4",
+          "text": "A second counter may be added"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Answer only from what the passage states or clearly implies.",
+        "shortcut": "Find the sentence that answers the question.",
+        "why_correct": "\"Every\" overstates a 40% rise; the others are stated in the text.",
+        "why_wrong": {
+          "o1": "Supported: 40% more than in May.",
+          "o3": "Supported: stated in sentence 1.",
+          "o4": "Supported: stated in the last sentence."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VEN-PO-0018",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "paragraph organization",
+      "micro_skill": "",
+      "archetype": "VEN-PO",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Arrange the sentences into a logical paragraph.\nS. Next, the clerk checks that every required field is filled in.\nP. First, the applicant gets the form from the front desk.\nQ. Finally, the applicant receives a claim stub with a release date.\nR. The applicant then submits the completed form to the records clerk.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "RPSQ"
+        },
+        {
+          "option_id": "o2",
+          "text": "PSRQ"
+        },
+        {
+          "option_id": "o3",
+          "text": "PRSQ"
+        },
+        {
+          "option_id": "o4",
+          "text": "QSRP"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Look for the opener and the transition words (first, then, however, as a result).",
+        "shortcut": "Find the sentence that needs nothing before it.",
+        "why_correct": "First (P) → then submits (R) → next, clerk checks (S) → finally, claim stub (Q).",
+        "why_wrong": {
+          "o2": "The clerk can't check the form before it is submitted.",
+          "o1": "R says \"then\", so it cannot open the paragraph.",
+          "o4": "Reversed: \"Finally\" cannot come first."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "PO-TRANSITION-IGNORED",
+        "o1": "PO-OPENER-MISPLACED",
+        "o4": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VEN-PO-0019",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "paragraph organization",
+      "micro_skill": "",
+      "archetype": "VEN-PO",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Arrange the sentences into a logical paragraph.\nP. As a result, the office now prints only the pages it needs.\nQ. The supply officer noticed that paper costs doubled in one quarter.\nR. She traced the rise to full reports being printed for every meeting.\nS. She proposed sending reports by email and printing only summaries.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "QSRP"
+        },
+        {
+          "option_id": "o2",
+          "text": "RQSP"
+        },
+        {
+          "option_id": "o3",
+          "text": "PSRQ"
+        },
+        {
+          "option_id": "o4",
+          "text": "QRSP"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Look for the opener and the transition words (first, then, however, as a result).",
+        "shortcut": "Find the sentence that needs nothing before it.",
+        "why_correct": "Problem noticed (Q) → cause traced (R) → proposal (S) → result (P).",
+        "why_wrong": {
+          "o2": "\"She\" in R needs Q first to say who she is.",
+          "o1": "The proposal (S) depends on the cause found in R.",
+          "o3": "Reversed: \"As a result\" closes the paragraph."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "PO-OPENER-MISPLACED",
+        "o1": "LOG-ORDER-SWAP",
+        "o3": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-VEN-PO-0020",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Verbal Ability (English)",
+      "concept": "paragraph organization",
+      "micro_skill": "",
+      "archetype": "VEN-PO",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Arrange the sentences into a logical paragraph.\nP. However, many residents did not know where the new bins were.\nQ. The barangay installed color-coded bins for segregated waste.\nR. To fix this, officials posted maps at the barangay hall and chapel.\nS. Within a month, mixed waste at the bins dropped noticeably.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "QRPS"
+        },
+        {
+          "option_id": "o2",
+          "text": "PQRS"
+        },
+        {
+          "option_id": "o3",
+          "text": "SRPQ"
+        },
+        {
+          "option_id": "o4",
+          "text": "QPRS"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Look for the opener and the transition words (first, then, however, as a result).",
+        "shortcut": "Find the sentence that needs nothing before it.",
+        "why_correct": "Action (Q) → problem, \"However\" (P) → fix, \"To fix this\" (R) → result (S).",
+        "why_wrong": {
+          "o2": "\"However\" needs something to contrast with, so P cannot open.",
+          "o1": "\"To fix this\" (R) needs the problem in P first.",
+          "o3": "Reversed order."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "PO-OPENER-MISPLACED",
+        "o1": "PO-TRANSITION-IGNORED",
+        "o3": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review."
+    },
+    {
+      "id": "CIVIO-GAP1-CLR-FILE-ORDER-0021",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "alphabetic filing (ARMA rules)",
+      "micro_skill": "",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed FIRST?\nAtty. Carlos Dizon | Ma. Lourdes de la Cruz | Benito Delgado | Ramon Dizon Jr.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Ramon Dizon Jr."
+        },
+        {
+          "option_id": "o2",
+          "text": "Ma. Lourdes de la Cruz"
+        },
+        {
+          "option_id": "o3",
+          "text": "Atty. Carlos Dizon"
+        },
+        {
+          "option_id": "o4",
+          "text": "Benito Delgado"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Index each name into units, then compare unit by unit, letter by letter.",
+        "shortcut": "Apply ARMA Rule 6 first.",
+        "why_correct": "Index units: DelaCruz, Delgado, Dizon Carlos (Atty. last), Dizon Ramon (Jr. last). \"Dela\" < \"Delg\", so De la Cruz is first. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_wrong": {
+          "o3": "Atty. is the last unit, so this files as Dizon Carlos, after the D-e names.",
+          "o4": "Delgado comes after DelaCruz (a < g at the 4th letter).",
+          "o1": "Jr. is a last unit; Dizon still files after Del- names."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER",
+        "o1": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 6",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review.",
+      "distractor_subreason": {
+        "o3": "CLR-TITLE-COUNTED: breaks ARMA Rule 5",
+        "o4": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6",
+        "o1": "CLR-TITLE-COUNTED: breaks ARMA Rule 5"
+      }
+    },
+    {
+      "id": "CIVIO-GAP1-CLR-FILE-ORDER-0022",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "alphabetic filing (ARMA rules)",
+      "micro_skill": "",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which business name is filed FIRST?\nAce Printing | 3 Sisters Bakery | Bright Star Hardware | Alpha Office Supply",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "3 Sisters Bakery"
+        },
+        {
+          "option_id": "o2",
+          "text": "Alpha Office Supply"
+        },
+        {
+          "option_id": "o3",
+          "text": "Ace Printing"
+        },
+        {
+          "option_id": "o4",
+          "text": "Bright Star Hardware"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Index each name into units, then compare unit by unit, letter by letter.",
+        "shortcut": "Apply ARMA Rule 7 first.",
+        "why_correct": "Under ARMA Rule 7, names that begin with digits file before names that begin with letters. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 7), not a rule published by the CSC.",
+        "why_wrong": {
+          "o3": "Letters file after digits.",
+          "o4": "Letters file after digits, and B comes after A.",
+          "o2": "Ac comes before Al, and in any case letter names file after the digit name."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 7",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review.",
+      "distractor_subreason": {
+        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 7",
+        "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 7",
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 7"
+      }
+    },
+    {
+      "id": "CIVIO-GAP1-CLR-FILE-ORDER-0023",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Clerical Ability",
+      "concept": "alphabetic filing (ARMA rules)",
+      "micro_skill": "",
+      "archetype": "CLR-FILE-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Using standard alphabetic filing, which name is filed LAST?\nDr. Elena Santos | Elena Santos-Reyes | San Jose Pharmacy | Engr. Elmer Santos",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Dr. Elena Santos"
+        },
+        {
+          "option_id": "o2",
+          "text": "Engr. Elmer Santos"
+        },
+        {
+          "option_id": "o3",
+          "text": "San Jose Pharmacy"
+        },
+        {
+          "option_id": "o4",
+          "text": "Elena Santos-Reyes"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Index each name into units, then compare unit by unit, letter by letter.",
+        "shortcut": "Apply ARMA Rule 3 first.",
+        "why_correct": "Units: SanJose Pharmacy (Rule 6), Santos Elena Dr, Santos Elmer Engr, SantosReyes Elena (Rule 3: hyphenated is one unit). SantosReyes is longest after Santos, so it is last. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 3), not a rule published by the CSC.",
+        "why_wrong": {
+          "o1": "Dr. is the last unit; this files as Santos Elena, before SantosReyes.",
+          "o3": "San Jose is one unit, SanJose, which files before Santos.",
+          "o2": "Engr. is the last unit; Santos Elmer still precedes SantosReyes."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 3",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "Gap fill round 01; needs independent review.",
+      "distractor_subreason": {
+        "o1": "CLR-TITLE-COUNTED: breaks ARMA Rule 5",
+        "o3": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6",
+        "o2": "CLR-TITLE-COUNTED: breaks ARMA Rule 5"
+      }
+    }
+  ]
+}
