@@ -46,7 +46,7 @@ export function AnswerOption({
 }: AnswerOptionProps) {
     return (
         <div
-            className={`flex items-start gap-3 border-b px-1 py-3 ${
+            className={`flex min-h-12 items-start gap-3 border-b px-1 py-3.5 ${
                 eliminated ? 'border-dashed opacity-45' : SHELL[visual]
             } border-x-0 border-t-0`}
         >

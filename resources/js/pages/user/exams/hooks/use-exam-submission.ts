@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import type { MutableRefObject } from 'react';
 import { toast } from 'sonner';
 import { useGuestUnlimited } from '@/lib/civio-study';
 import {
@@ -21,6 +22,8 @@ interface UseExamSubmissionProps {
     isTimed: boolean;
     sessionTimeLimitSecs: number;
     timeLeft: number;
+    timeLeftRef?: MutableRefObject<number>;
+    questionTimesRef?: MutableRefObject<Record<number, number>>;
     drillCategoryId: number | null;
     drillCategoryName: string | null;
     drillSubcategories: string[];
@@ -45,6 +48,8 @@ export function useExamSubmission({
     isTimed,
     sessionTimeLimitSecs,
     timeLeft,
+    timeLeftRef,
+    questionTimesRef,
     drillCategoryId,
     drillCategoryName,
     drillSubcategories,
@@ -164,9 +169,12 @@ export function useExamSubmission({
                 keysAvailable && totalScoredQuestions > 0
                     ? Math.round((correctCount / totalScoredQuestions) * 100)
                     : 0;
+            const liveTimeLeft = timeLeftRef?.current ?? timeLeft;
+            const liveQuestionTimes =
+                questionTimesRef?.current ?? questionTimes;
             const elapsedSecs = isTimed
-                ? Math.max(0, sessionTimeLimitSecs - timeLeft)
-                : timeLeft;
+                ? Math.max(0, sessionTimeLimitSecs - liveTimeLeft)
+                : liveTimeLeft;
 
             const computedResults: ExamResults = {
                 score: scorePercentage,
@@ -211,7 +219,7 @@ export function useExamSubmission({
                         drillCategoryName || 'Civil Service Examination',
                     duration_secs: elapsedSecs,
                     is_timed: isTimed,
-                    question_times: questionTimes,
+                    question_times: liveQuestionTimes,
                     answer_changes: answerChanges,
                     selected_subcategories: drillSubcategories,
                     language: drillLanguage,
@@ -219,7 +227,7 @@ export function useExamSubmission({
                 },
             };
 
-                        apiPost('/exams/attempts', payload)
+            apiPost('/exams/attempts', payload)
                 .then((data: any) => {
                     if (data?.attempt_id) {
                         setLastStoredAttemptId(data.attempt_id);
@@ -234,7 +242,8 @@ export function useExamSubmission({
                     }
 
                     if (data?.success && typeof data.score === 'number') {
-                        const serverMap = data.cat_scores?.categoryScoreMap ?? catMap;
+                        const serverMap =
+                            data.cat_scores?.categoryScoreMap ?? catMap;
                         setResults({
                             score: data.score,
                             total: data.total_questions ?? totalScoredQuestions,
@@ -274,7 +283,8 @@ export function useExamSubmission({
                                 new CustomEvent('civio:exam-answer-keys', {
                                     detail: {
                                         keys: Object.fromEntries(keyById),
-                                        answers: data.answers ?? answersByQuestionId,
+                                        answers:
+                                            data.answers ?? answersByQuestionId,
                                     },
                                 }),
                             );
@@ -297,6 +307,8 @@ export function useExamSubmission({
             isTimed,
             sessionTimeLimitSecs,
             timeLeft,
+            timeLeftRef,
+            questionTimesRef,
             drillCategoryId,
             drillCategoryName,
             drillSubcategories,
@@ -381,4 +393,3 @@ export function useExamSubmission({
         lastStoredAttemptId,
     };
 }
-

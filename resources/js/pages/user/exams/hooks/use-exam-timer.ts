@@ -1,6 +1,12 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import type { SetStateAction } from 'react';
 import { toast } from 'sonner';
 import { shouldRunExamClock } from '../utils/answer-state';
+
+export interface ExamClockSnapshot {
+    timeLeft: number;
+    itemElapsed: number;
+}
 
 interface UseExamTimerProps {
     isExamActive: boolean;
@@ -12,6 +18,11 @@ interface UseExamTimerProps {
     onTimerExpired: () => void;
 }
 
+/**
+ * The visible clocks subscribe to a snapshot. React state is flushed every
+ * 15 seconds so a tick does not re-render the question paper or rewrite
+ * localStorage. Submit and recovery read the refs, which stay current.
+ */
 export function useExamTimer({
     isExamActive,
     isExamSubmitted,
@@ -21,16 +32,69 @@ export function useExamTimer({
     isPaused = false,
     onTimerExpired,
 }: UseExamTimerProps) {
-    const [timeLeft, setTimeLeft] = useState(sessionTimeLimitSecs);
-    const [questionTimes, setQuestionTimes] = useState<Record<number, number>>(
-        {},
-    );
+    const [timeLeft, setTimeLeftState] = useState(sessionTimeLimitSecs);
+    const [questionTimes, setQuestionTimesState] = useState<
+        Record<number, number>
+    >({});
     const [itemElapsed, setItemElapsed] = useState(0);
     const timeLeftRef = useRef(sessionTimeLimitSecs);
+    const questionTimesRef = useRef<Record<number, number>>({});
     const currentIdxRef = useRef(currentIdx);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
     const warned10MinRef = useRef(false);
     const warned1MinRef = useRef(false);
+    const listenersRef = useRef(new Set<() => void>());
+    const snapshotRef = useRef<ExamClockSnapshot>({
+        timeLeft: sessionTimeLimitSecs,
+        itemElapsed: 0,
+    });
+
+    const publishClock = useCallback(
+        (nextLeft: number, nextElapsed: number) => {
+            timeLeftRef.current = nextLeft;
+            snapshotRef.current = {
+                timeLeft: nextLeft,
+                itemElapsed: nextElapsed,
+            };
+            listenersRef.current.forEach((listener) => listener());
+        },
+        [],
+    );
+
+    const subscribeClock = useCallback((listener: () => void) => {
+        listenersRef.current.add(listener);
+
+        return () => {
+            listenersRef.current.delete(listener);
+        };
+    }, []);
+
+    const getClockSnapshot = useCallback(() => snapshotRef.current, []);
+
+    const setTimeLeft = useCallback(
+        (value: SetStateAction<number>) => {
+            const next =
+                typeof value === 'function'
+                    ? value(timeLeftRef.current)
+                    : value;
+            publishClock(next, snapshotRef.current.itemElapsed);
+            setTimeLeftState(next);
+        },
+        [publishClock],
+    );
+
+    const setQuestionTimes = useCallback(
+        (value: SetStateAction<Record<number, number>>) => {
+            setQuestionTimesState((prev) => {
+                const next = typeof value === 'function' ? value(prev) : value;
+                questionTimesRef.current = { ...next };
+
+                return next;
+            });
+        },
+        [],
+    );
+
     useEffect(() => {
         currentIdxRef.current = currentIdx;
     }, [currentIdx]);
@@ -41,19 +105,24 @@ export function useExamTimer({
     useEffect(() => {
         if (itemIdxRef.current !== currentIdx) {
             itemIdxRef.current = currentIdx;
+            publishClock(timeLeftRef.current, 0);
             setItemElapsed(0);
         }
-    }, [currentIdx]);
+    }, [currentIdx, publishClock]);
 
-    const resetTimer = useCallback((newLimitSecs: number) => {
-        setTimeLeft(newLimitSecs);
-        timeLeftRef.current = newLimitSecs;
-        warned10MinRef.current = false;
-        warned1MinRef.current = false;
-        setItemElapsed(0);
-    }, []);
+    const resetTimer = useCallback(
+        (newLimitSecs: number) => {
+            warned10MinRef.current = false;
+            warned1MinRef.current = false;
+            publishClock(newLimitSecs, 0);
+            setTimeLeftState(newLimitSecs);
+            setItemElapsed(0);
+        },
+        [publishClock],
+    );
 
-    // Live countdown timer & per-question time tracking
+    // Live countdown timer & per-question time tracking.
+    // One interval. It updates refs and the clock snapshot only.
     useEffect(() => {
         if (
             !shouldRunExamClock({
@@ -65,57 +134,64 @@ export function useExamTimer({
             return;
         }
 
+        let ticks = 0;
         timerRef.current = setInterval(() => {
-            // Increment active question time
             const activeIdx = currentIdxRef.current;
-            setQuestionTimes((prev) => ({
-                ...prev,
-                [activeIdx]: (prev[activeIdx] || 0) + 1,
-            }));
-            setItemElapsed((prev) => prev + 1);
+            const times = questionTimesRef.current;
+            times[activeIdx] = (times[activeIdx] || 0) + 1;
+            const nextElapsed = snapshotRef.current.itemElapsed + 1;
+            ticks += 1;
+
+            const flush = (nextLeft: number, elapsed: number) => {
+                setTimeLeftState(nextLeft);
+                setItemElapsed(elapsed);
+                setQuestionTimesState({ ...questionTimesRef.current });
+            };
 
             if (isTimed) {
-                setTimeLeft((prev) => {
-                    if (prev <= 1) {
-                        if (timerRef.current) {
-                            clearInterval(timerRef.current);
-                        }
+                const prev = timeLeftRef.current;
 
-                        timeLeftRef.current = 0;
-                        onTimerExpired();
-
-                        return 0;
+                if (prev <= 1) {
+                    if (timerRef.current) {
+                        clearInterval(timerRef.current);
                     }
 
-                    const next = prev - 1;
-                    timeLeftRef.current = next;
+                    publishClock(0, nextElapsed);
+                    flush(0, nextElapsed);
+                    onTimerExpired();
 
-                    // Timer warnings
-                    if (next === 600 && !warned10MinRef.current) {
-                        warned10MinRef.current = true;
-                        toast.warning('10 minutes remaining in this session.', {
-                            id: 'timer-warning-10m',
-                        });
-                    } else if (next === 60 && !warned1MinRef.current) {
-                        warned1MinRef.current = true;
-                        toast.error(
-                            '1 minute remaining! Your exam will auto-submit soon.',
-                            {
-                                id: 'timer-warning-1m',
-                                duration: 10000,
-                            },
-                        );
-                    }
+                    return;
+                }
 
-                    return next;
-                });
+                const next = prev - 1;
+                publishClock(next, nextElapsed);
+
+                if (next === 600 && !warned10MinRef.current) {
+                    warned10MinRef.current = true;
+                    toast.warning('10 minutes remaining in this session.', {
+                        id: 'timer-warning-10m',
+                    });
+                } else if (next === 60 && !warned1MinRef.current) {
+                    warned1MinRef.current = true;
+                    toast.error(
+                        '1 minute remaining! Your exam will auto-submit soon.',
+                        {
+                            id: 'timer-warning-1m',
+                            duration: 10000,
+                        },
+                    );
+                }
+
+                if (ticks % 15 === 0) {
+                    flush(next, nextElapsed);
+                }
             } else {
-                setTimeLeft((prev) => {
-                    const next = prev + 1;
-                    timeLeftRef.current = next;
+                const next = timeLeftRef.current + 1;
+                publishClock(next, nextElapsed);
 
-                    return next;
-                });
+                if (ticks % 15 === 0) {
+                    flush(next, nextElapsed);
+                }
             }
         }, 1000);
 
@@ -123,8 +199,20 @@ export function useExamTimer({
             if (timerRef.current) {
                 clearInterval(timerRef.current);
             }
+
+            // Pause, submit, or leave: keep React state aligned with the refs.
+            setTimeLeftState(timeLeftRef.current);
+            setItemElapsed(snapshotRef.current.itemElapsed);
+            setQuestionTimesState({ ...questionTimesRef.current });
         };
-    }, [isExamActive, isExamSubmitted, isTimed, isPaused, onTimerExpired]);
+    }, [
+        isExamActive,
+        isExamSubmitted,
+        isTimed,
+        isPaused,
+        onTimerExpired,
+        publishClock,
+    ]);
 
     const formatTime = useCallback((secs: number) => {
         const h = Math.floor(secs / 3600);
@@ -143,5 +231,8 @@ export function useExamTimer({
         formatTime,
         resetTimer,
         timeLeftRef,
+        questionTimesRef,
+        subscribeClock,
+        getClockSnapshot,
     };
 }

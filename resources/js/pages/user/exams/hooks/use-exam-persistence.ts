@@ -1,4 +1,5 @@
 import { useEffect, useCallback } from 'react';
+import type { MutableRefObject } from 'react';
 import type { Question } from '../types';
 import type { ExamMode } from '../utils/exam-mode';
 import { isDemographicQuestion } from '../utils/exam-utils';
@@ -60,6 +61,9 @@ interface UseExamPersistenceProps {
     timeLeft: number;
     isTimed: boolean;
     isPaused?: boolean;
+    /** Live clock. Read at save time so a tick does not rebuild this callback. */
+    timeLeftRef?: MutableRefObject<number>;
+    questionTimesRef?: MutableRefObject<Record<number, number>>;
     onRestoreSession: (data: ActiveSessionData) => void;
 }
 
@@ -72,12 +76,12 @@ export function useExamPersistence({
     activeQuestions,
     currentIdx,
     answers,
-    questionTimes,
     answerChanges,
     flagged,
     scratchpads,
     sessionTimeLimitSecs,
-    timeLeft,
+    timeLeftRef,
+    questionTimesRef,
     isTimed,
     isPaused = false,
     onRestoreSession,
@@ -105,7 +109,7 @@ export function useExamPersistence({
                 scoredQuestions,
             ),
             questionTimes: remapIndexedRecord(
-                questionTimes,
+                questionTimesRef?.current ?? {},
                 activeQuestions,
                 scoredQuestions,
             ),
@@ -125,7 +129,7 @@ export function useExamPersistence({
                 scoredQuestions,
             ),
             sessionTimeLimitSecs,
-            timeLeft,
+            timeLeft: timeLeftRef?.current ?? 0,
             isTimed,
             paused: isPaused,
             timestamp: Date.now(),
@@ -145,14 +149,14 @@ export function useExamPersistence({
         activeQuestions,
         currentIdx,
         answers,
-        questionTimes,
         answerChanges,
         flagged,
         scratchpads,
         sessionTimeLimitSecs,
-        timeLeft,
         isTimed,
         isPaused,
+        timeLeftRef,
+        questionTimesRef,
     ]);
 
     const clearSession = useCallback(() => {

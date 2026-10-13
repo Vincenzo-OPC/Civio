@@ -97,6 +97,8 @@ export default function ExamIndex(props: ExamIndexProps) {
         getActiveTimeLimitSecs,
         isPaused,
         setIsPaused,
+        subscribeClock,
+        getClockSnapshot,
     } = useExamState(props);
 
     const customConfirmModal = (
@@ -180,6 +182,8 @@ export default function ExamIndex(props: ExamIndexProps) {
                     canPause={isDrillSession || examMode === 'study'}
                     onPause={() => setIsPaused(true)}
                     onResume={() => setIsPaused(false)}
+                    subscribeClock={subscribeClock}
+                    getClockSnapshot={getClockSnapshot}
                 />
             </ExamSessionProvider>
         );

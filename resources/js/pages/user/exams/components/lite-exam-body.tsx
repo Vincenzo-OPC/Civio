@@ -2,9 +2,11 @@ import { useState } from 'react';
 import LiteModeToggle from '@/components/shared/lite-mode-toggle';
 import type { AiHandoffAttemptState } from '@/lib/ai-handoff';
 import { renderFormattedText } from '@/lib/exam-formatters';
+import type { ExamClockSnapshot } from '../hooks/use-exam-timer';
 import type { Question } from '../types';
 import { answerOptionVisual } from '../utils/answer-state';
 import { CopyForAiButton } from './copy-for-ai-button';
+import { ExamTimerDisplay } from './exam-timer-display';
 import { AnswerOption } from './session/answer-option';
 
 export interface LiteRevealedAnswer {
@@ -28,6 +30,8 @@ interface LiteExamBodyProps {
     timeLeft: number;
     itemElapsed: number;
     formatTime: (secs: number) => string;
+    subscribeClock?: (listener: () => void) => () => void;
+    getClockSnapshot?: () => ExamClockSnapshot;
     onSelect: (optionIdx: number) => void;
     onNavigate: (idx: number) => void;
     onToggleFlag: (idx: number) => void;
@@ -62,6 +66,8 @@ export function LiteExamBody({
     timeLeft,
     itemElapsed,
     formatTime,
+    subscribeClock,
+    getClockSnapshot,
     onSelect,
     onNavigate,
     onToggleFlag,
@@ -88,25 +94,33 @@ export function LiteExamBody({
                         Exit
                     </button>
                     <span className="min-w-0 truncate text-sm font-semibold">
+                        {isDrillSession ? 'Drill' : 'Exam'}
+                        <span className="mx-1 text-[var(--civio-ink)]/40">
+                            ·
+                        </span>
                         {title}
                     </span>
                     <LiteModeToggle />
                 </div>
 
-                <p className="text-sm" aria-live="off">
-                    {isTimed
-                        ? `${isDrillSession ? 'Drill' : 'Exam'} left ${formatTime(timeLeft)} · `
-                        : ''}
-                    This item {formatTime(itemElapsed)}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                    Item {currentIdx + 1} of {total} · {answeredCount} answered
+                <ExamTimerDisplay
+                    isTimed={isTimed}
+                    timeLeft={timeLeft}
+                    itemElapsed={itemElapsed}
+                    formatTime={formatTime}
+                    subscribeClock={subscribeClock}
+                    getClockSnapshot={getClockSnapshot}
+                />
+                <p className="text-sm text-[var(--civio-ink)]/70">
+                    {currentIdx + 1} of {total}
+                    <span className="mx-1.5">·</span>
+                    {answeredCount} answered
                     {flagged[currentIdx] ? ' · Flagged' : ''}
                 </p>
 
                 {question ? (
                     <>
-                        <div className="text-base leading-relaxed">
+                        <div className="text-lg leading-relaxed">
                             {renderFormattedText(question.stem, true)}
                         </div>
 
@@ -200,7 +214,7 @@ export function LiteExamBody({
                     <p className="text-sm">No item to show.</p>
                 )}
 
-                <div className="flex gap-2">
+                <div className="sticky bottom-0 flex gap-2 bg-[var(--civio-paper)] py-3">
                     <button
                         type="button"
                         onClick={() => onNavigate(Math.max(0, currentIdx - 1))}
@@ -256,7 +270,7 @@ export function LiteExamBody({
                                     }
                                     className={`lite-tap rounded border text-xs ${
                                         idx === currentIdx
-                                            ? 'border-blue-600 font-bold'
+                                            ? 'border-[var(--civio-violet)] font-bold'
                                             : 'border-border'
                                     }`}
                                 >

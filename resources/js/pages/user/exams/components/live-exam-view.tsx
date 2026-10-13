@@ -15,7 +15,6 @@ import {
     Minimize2,
     Edit3,
     Strikethrough,
-    BookOpen,
 } from 'lucide-react';
 import { useState, useMemo, useEffect } from 'react';
 import { toast } from 'sonner';
@@ -33,6 +32,7 @@ import { useLiteMode } from '@/hooks/use-lite-mode';
 import type { AiHandoffAttemptState } from '@/lib/ai-handoff';
 import { renderFormattedText } from '@/lib/exam-formatters';
 import { useContentShield } from '../hooks/use-content-shield';
+import type { ExamClockSnapshot } from '../hooks/use-exam-timer';
 import type { Question, SimulationDetails } from '../types';
 import { answerOptionVisual } from '../utils/answer-state';
 import type { ExamMode } from '../utils/exam-mode';
@@ -89,6 +89,8 @@ interface LiveExamViewProps {
     canPause?: boolean;
     onPause?: () => void;
     onResume?: () => void;
+    subscribeClock?: (listener: () => void) => () => void;
+    getClockSnapshot?: () => ExamClockSnapshot;
 }
 
 export function LiveExamView({
@@ -124,6 +126,8 @@ export function LiveExamView({
     canPause = false,
     onPause,
     onResume,
+    subscribeClock,
+    getClockSnapshot,
 }: LiveExamViewProps) {
     const activeQuestion = activeQuestions[currentIdx];
     const studyTools = showsStudyTools(examMode, isDrillSession);
@@ -609,6 +613,8 @@ export function LiveExamView({
                         timeLeft={timeLeft}
                         itemElapsed={itemElapsed}
                         formatTime={formatTime}
+                        subscribeClock={subscribeClock}
+                        getClockSnapshot={getClockSnapshot}
                         onSelect={onOptionClick}
                         onNavigate={handleQuestionNavigate}
                         onToggleFlag={toggleFlag}
@@ -632,525 +638,391 @@ export function LiveExamView({
                     />
                 ) : (
                     <>
-                        {/* TOP NAVBAR HEADER: RESPONSIVE MULTI-ROW MICRO-LAYOUT */}
-                        <div className="shadow-3xs flex w-full flex-col justify-center gap-2 border-b border-border bg-card px-3 py-3 sm:px-5 lg:h-[84px]">
-                            {/* ROW 1: Exit, Title, Tools & Timer */}
-                            <div className="flex w-full items-center justify-between gap-1.5 text-sm font-bold">
-                                {/* Left: Exit & Exam Title */}
-                                <div className="flex min-w-0 items-center gap-1.5">
+                        <header className="flex w-full flex-col border-b border-[var(--civio-line)] bg-[var(--civio-paper)]">
+                            <div className="flex w-full items-center gap-1 px-2 py-1.5 sm:px-4">
+                                <button
+                                    onClick={handleExitExam}
+                                    title={
+                                        isDrillSession
+                                            ? 'Exit Drill'
+                                            : 'Exit Exam'
+                                    }
+                                    className="flex size-10 shrink-0 items-center justify-center rounded-lg text-[var(--civio-ink)]"
+                                >
+                                    <ChevronLeft className="size-5" />
+                                    <span className="sr-only">
+                                        {isDrillSession
+                                            ? 'Exit Drill'
+                                            : 'Exit Exam'}
+                                    </span>
+                                </button>
+
+                                <div className="min-w-0 flex-1" />
+
+                                <ExamTimerDisplay
+                                    isTimed={isTimed}
+                                    timeLeft={timeLeft}
+                                    itemElapsed={itemElapsed}
+                                    formatTime={formatTime}
+                                    subscribeClock={subscribeClock}
+                                    getClockSnapshot={getClockSnapshot}
+                                />
+
+                                {activeQuestion && (
                                     <button
-                                        onClick={handleExitExam}
-                                        title={
-                                            isDrillSession
-                                                ? 'Exit Drill'
-                                                : 'Exit Exam'
+                                        type="button"
+                                        onClick={() => toggleFlag(currentIdx)}
+                                        aria-pressed={!!flagged[currentIdx]}
+                                        aria-label={
+                                            flagged[currentIdx]
+                                                ? 'Unflag question'
+                                                : 'Flag question'
                                         }
-                                        className="group flex h-8 shrink-0 items-center gap-1 rounded-md px-2 text-xs font-bold text-muted-foreground transition hover:bg-accent hover:text-foreground focus-visible:outline-none"
-                                    >
-                                        <ChevronLeft className="size-4" />
-                                        <span className="hidden sm:inline">
-                                            {isDrillSession
-                                                ? 'Exit Drill'
-                                                : 'Exit Exam'}
-                                        </span>
-                                    </button>
-
-                                    <div className="h-4 w-px shrink-0 bg-border" />
-
-                                    <span
-                                        className={`shrink-0 rounded-md px-2 py-0.5 text-[10px] font-extrabold tracking-wider uppercase ${
-                                            isDrillSession
-                                                ? 'bg-purple-50 text-purple-700 dark:bg-purple-950/40 dark:text-purple-300'
-                                                : 'bg-blue-50 text-blue-600 dark:bg-blue-950/30 dark:text-blue-400'
+                                        className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${
+                                            flagged[currentIdx]
+                                                ? 'text-[var(--civio-error)]'
+                                                : 'text-[var(--civio-ink)]/60'
                                         }`}
                                     >
-                                        <span className="md:hidden">
-                                            {isDrillSession ? 'Drill' : 'Live'}
-                                        </span>
-                                        <span className="hidden md:inline">
-                                            {isDrillSession
-                                                ? 'Practice Drill'
-                                                : 'Live Simulation'}
-                                        </span>
-                                    </span>
+                                        <Flag
+                                            className={`size-4 ${
+                                                flagged[currentIdx]
+                                                    ? 'fill-[var(--civio-error)]'
+                                                    : ''
+                                            }`}
+                                        />
+                                    </button>
+                                )}
 
-                                    <span className="truncate font-heading text-sm font-bold text-foreground">
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        if (window.innerWidth >= 1024) {
+                                            setIsPaletteCollapsed(
+                                                (prev) => !prev,
+                                            );
+                                        } else {
+                                            setIsMobilePaletteOpen(true);
+                                        }
+                                    }}
+                                    aria-label="Question list"
+                                    className="flex size-10 shrink-0 items-center justify-center rounded-lg text-[var(--civio-violet)]"
+                                >
+                                    <LayoutGrid className="size-4" />
+                                </button>
+                            </div>
+
+                            <div className="flex items-center justify-between gap-3 px-3 pb-1.5 text-xs sm:px-5">
+                                <p className="min-w-0 flex-1 text-[var(--civio-ink)]">
+                                    <span className="text-sm font-semibold">
+                                        {isDrillSession
+                                            ? 'Drill'
+                                            : examMode === 'strict'
+                                              ? 'Strict Mock'
+                                              : 'Study Mock'}
+                                    </span>
+                                    {activeQuestion && (
+                                        <>
+                                            <span className="mx-1.5 text-[var(--civio-ink)]/40">
+                                                ·
+                                            </span>
+                                            <span className="font-semibold">
+                                                {currentIdx + 1} of{' '}
+                                                {activeQuestions.length}
+                                            </span>
+                                        </>
+                                    )}
+                                    <span className="mt-0.5 block truncate text-[var(--civio-ink)]/60">
                                         {details.title}
                                     </span>
-                                </div>
-
-                                {/* Right: Compact tool icons + Timer + Palette */}
-                                <div className="flex shrink-0 items-center gap-1.5 text-xs">
-                                    {/* Pace Engine */}
-                                    {isTimed && stats.unanswered > 0 && (
-                                        <div
-                                            title={`Target pace: ~${stats.targetPace}s per question`}
-                                            className={`inline-flex h-8 items-center gap-1 rounded-md border px-2 font-bold ${
-                                                stats.paceStatus === 'behind'
-                                                    ? 'border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-900/50 dark:bg-rose-950/30 dark:text-rose-400'
-                                                    : stats.paceStatus ===
-                                                        'warn'
-                                                      ? 'border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-400'
-                                                      : 'border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/30 dark:text-emerald-400'
-                                            }`}
-                                        >
-                                            <TrendingUp className="size-4 shrink-0" />
-                                            <span className="whitespace-nowrap">
-                                                ~{stats.targetPace}s/q
-                                            </span>
-                                            <span className="hidden whitespace-nowrap md:inline">
-                                                {stats.paceStatus === 'behind'
-                                                    ? '• Speed Up'
-                                                    : stats.paceStatus ===
-                                                        'warn'
-                                                      ? '• Moderate'
-                                                      : '• On Track'}
-                                            </span>
-                                        </div>
-                                    )}
-
+                                </p>
+                                <div className="flex shrink-0 items-center">
                                     <button
                                         type="button"
                                         onClick={() =>
                                             setToolsOpen((open) => !open)
                                         }
                                         aria-expanded={toolsOpen}
-                                        className="flex h-8 items-center rounded-lg border border-[var(--civio-line)] px-2.5 text-xs font-bold"
+                                        className="h-8 rounded-lg px-2 font-semibold text-[var(--civio-ink)]/70"
                                     >
                                         Tools
                                     </button>
-
                                     {canPause && !isPaused && (
                                         <button
                                             type="button"
                                             onClick={() => onPause?.()}
-                                            className="flex h-8 items-center rounded-lg border border-[var(--civio-line)] px-2.5 text-xs font-bold"
+                                            className="h-8 rounded-lg px-2 font-semibold"
                                         >
                                             Pause
                                         </button>
                                     )}
-
-                                    {toolsOpen && (
-                                        <>
-                                            {/* Auto-Next */}
-                                            <button
-                                                onClick={() => {
-                                                    const nextState =
-                                                        !autoAdvance;
-                                                    setAutoAdvance(nextState);
-
-                                                    if (nextState) {
-                                                        toast.success(
-                                                            'Auto-Next Enabled',
-                                                            {
-                                                                description:
-                                                                    'Question will automatically advance after selecting an answer.',
-                                                                duration: 2500,
-                                                            },
-                                                        );
-                                                    } else {
-                                                        toast.info(
-                                                            'Auto-Next Disabled',
-                                                            {
-                                                                duration: 2000,
-                                                            },
-                                                        );
-                                                    }
-                                                }}
-                                                title={`Auto-Advance after answering (${autoAdvance ? 'ON' : 'OFF'})`}
-                                                className={`flex h-8 items-center justify-center gap-1.5 rounded-lg border px-2.5 text-xs font-bold transition ${
-                                                    autoAdvance
-                                                        ? 'border-blue-300 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-blue-400'
-                                                        : 'border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground'
-                                                }`}
-                                            >
-                                                <Zap
-                                                    className={`size-3.5 shrink-0 ${autoAdvance ? 'fill-blue-600 text-blue-600 dark:text-blue-400' : ''}`}
-                                                />
-                                                <span className="hidden whitespace-nowrap sm:inline">
-                                                    Auto-Next
-                                                </span>
-                                            </button>
-
-                                            {/* Scratchpad Notes */}
-                                            <button
-                                                onClick={() =>
-                                                    setIsScratchpadOpen(true)
-                                                }
-                                                title="Scratchpad / Notes"
-                                                className={`relative flex h-8 items-center justify-center gap-1.5 rounded-lg border px-2.5 text-xs font-bold transition ${
-                                                    scratchpadNotes.trim()
-                                                        .length > 0
-                                                        ? 'border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-900/50 dark:bg-amber-950/40 dark:text-amber-400'
-                                                        : 'border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground'
-                                                }`}
-                                            >
-                                                <Edit3 className="size-3.5 shrink-0" />
-                                                <span className="hidden whitespace-nowrap md:inline">
-                                                    Notes
-                                                </span>
-                                                {scratchpadNotes.trim().length >
-                                                    0 && (
-                                                    <span className="absolute -top-1 -right-1 size-2 rounded-full bg-amber-500 ring-2 ring-background" />
-                                                )}
-                                            </button>
-
-                                            {/* Keyboard Shortcuts — hidden on mobile */}
-                                            <button
-                                                onClick={() =>
-                                                    setShowKeyboardModal(true)
-                                                }
-                                                title="Keyboard Shortcuts (?)"
-                                                className="hidden size-8 h-8 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground transition hover:bg-accent hover:text-foreground sm:flex"
-                                            >
-                                                <Keyboard className="size-4 shrink-0" />
-                                            </button>
-
-                                            {/* Fullscreen Toggle — hidden on mobile */}
-                                            <button
-                                                onClick={toggleFullscreen}
-                                                title={
-                                                    isFullscreen
-                                                        ? 'Exit Fullscreen'
-                                                        : 'Focus Mode (Fullscreen)'
-                                                }
-                                                className="hidden size-8 h-8 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground transition hover:bg-accent hover:text-foreground sm:flex"
-                                            >
-                                                {isFullscreen ? (
-                                                    <Minimize2 className="size-4 shrink-0" />
-                                                ) : (
-                                                    <Maximize2 className="size-4 shrink-0" />
-                                                )}
-                                            </button>
-                                        </>
-                                    )}
-
-                                    {/* Divider before timer */}
-                                    <div className="mx-0.5 h-4 w-px shrink-0 bg-border/60" />
-
-                                    <LiteModeToggle className="hidden sm:inline-flex" />
-
-                                    {/* Timer */}
-                                    <ExamTimerDisplay
-                                        isTimed={isTimed}
-                                        timeLeft={timeLeft}
-                                        itemElapsed={itemElapsed}
-                                        formatTime={formatTime}
-                                    />
-
-                                    <button
-                                        onClick={() => {
-                                            if (window.innerWidth >= 1024) {
-                                                setIsPaletteCollapsed(
-                                                    (prev) => !prev,
-                                                );
-                                            } else {
-                                                setIsMobilePaletteOpen(true);
-                                            }
-                                        }}
-                                        title={
-                                            isPaletteCollapsed
-                                                ? 'Expand Question Palette'
-                                                : 'Question Palette'
-                                        }
-                                        className={`shadow-3xs flex h-8 cursor-pointer items-center justify-center rounded-lg px-2.5 transition focus:outline-none ${
-                                            isPaletteCollapsed
-                                                ? 'border border-blue-300 bg-blue-50 text-blue-700 hover:bg-blue-100 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-blue-400'
-                                                : 'bg-blue-600 text-white hover:bg-blue-700'
-                                        }`}
-                                    >
-                                        <LayoutGrid className="size-4 shrink-0" />
-                                        <span className="ml-1.5 hidden text-xs font-bold whitespace-nowrap sm:inline">
-                                            Palette
-                                        </span>
-                                    </button>
                                 </div>
                             </div>
 
-                            {/* ROW 2: Category Pill, Question Counter & Answered Progress */}
-                            {activeQuestion && (
-                                <div className="flex w-full items-center justify-between gap-1.5 text-xs font-medium text-muted-foreground">
-                                    <div className="flex min-w-0 items-center gap-1.5">
-                                        <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-blue-100/40 bg-blue-50/80 px-2.5 py-0.5 text-[11px] font-bold text-blue-600 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-400">
-                                            <BookOpen className="size-3" />
-                                            <span className="max-w-[120px] truncate sm:max-w-none">
-                                                {activeQuestion.category}
-                                            </span>
-                                        </span>
+                            <div
+                                aria-label={`Answered ${stats.progressPct} percent`}
+                                className="h-1 w-full bg-[var(--civio-line)]"
+                            >
+                                <div
+                                    className="h-full bg-[var(--civio-violet)]"
+                                    style={{
+                                        width: `${stats.progressPct}%`,
+                                    }}
+                                />
+                            </div>
 
-                                        <span className="text-muted-foreground/30">
-                                            •
+                            {toolsOpen && (
+                                <div className="flex flex-wrap items-center gap-2 border-t border-[var(--civio-line)] px-3 py-2 sm:px-5">
+                                    {isTimed && stats.unanswered > 0 && (
+                                        <span
+                                            title={`Target pace: ~${stats.targetPace}s per question`}
+                                            className="inline-flex items-center gap-1 text-xs font-semibold text-[var(--civio-ink)]/70"
+                                        >
+                                            <TrendingUp className="size-3.5" />~
+                                            {stats.targetPace}s each
+                                            {stats.paceStatus === 'behind'
+                                                ? ' · behind'
+                                                : stats.paceStatus === 'warn'
+                                                  ? ' · close'
+                                                  : ' · on pace'}
                                         </span>
+                                    )}
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            const nextState = !autoAdvance;
+                                            setAutoAdvance(nextState);
 
-                                        <span className="whitespace-nowrap">
-                                            Question{' '}
-                                            <strong className="font-extrabold text-foreground">
-                                                {currentIdx + 1}
-                                            </strong>{' '}
-                                            of {activeQuestions.length}
-                                        </span>
-                                    </div>
-
-                                    <span className="shrink-0 whitespace-nowrap text-muted-foreground">
-                                        <span className="hidden sm:inline">
-                                            Answered{' '}
-                                        </span>
-                                        <strong className="font-extrabold text-foreground">
-                                            {stats.answered}/{stats.totalGraded}
-                                        </strong>{' '}
-                                        <span className="xs:inline hidden">
-                                            ({stats.progressPct}%)
-                                        </span>
-                                    </span>
+                                            if (nextState) {
+                                                toast.success(
+                                                    'Auto-Next Enabled',
+                                                    {
+                                                        description:
+                                                            'Question will automatically advance after selecting an answer.',
+                                                        duration: 2500,
+                                                    },
+                                                );
+                                            } else {
+                                                toast.info(
+                                                    'Auto-Next Disabled',
+                                                    { duration: 2000 },
+                                                );
+                                            }
+                                        }}
+                                        className="h-9 rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold"
+                                    >
+                                        <Zap className="mr-1 inline size-3.5" />
+                                        Auto-Next {autoAdvance ? 'on' : 'off'}
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setIsScratchpadOpen(true)
+                                        }
+                                        className="h-9 rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold"
+                                    >
+                                        <Edit3 className="mr-1 inline size-3.5" />
+                                        Notes
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setShowKeyboardModal(true)
+                                        }
+                                        className="hidden h-9 items-center rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold sm:inline-flex"
+                                    >
+                                        <Keyboard className="mr-1 size-3.5" />
+                                        Keys
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={toggleFullscreen}
+                                        className="hidden h-9 items-center rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold sm:inline-flex"
+                                    >
+                                        {isFullscreen ? (
+                                            <Minimize2 className="mr-1 size-3.5" />
+                                        ) : (
+                                            <Maximize2 className="mr-1 size-3.5" />
+                                        )}
+                                        Focus
+                                    </button>
+                                    <LiteModeToggle className="hidden sm:inline-flex" />
                                 </div>
                             )}
-                        </div>
-
-                        {/* HORIZONTAL COMPLETION PROGRESS BAR */}
-                        <div
-                            title={`Exam Completion: ${stats.progressPct}% (${stats.answered} of ${stats.totalGraded} answered)`}
-                            aria-label={`Exam Completion Progress: ${stats.progressPct}%`}
-                            className="relative h-1.5 w-full overflow-hidden bg-muted/60"
-                        >
-                            <div
-                                className="h-full bg-[var(--civio-violet)]"
-                                style={{ width: `${stats.progressPct}%` }}
-                            />
-                        </div>
-
+                        </header>
                         {/* MAIN TWO-COLUMN SPLIT PANEL LAYOUT */}
                         <div className="flex flex-1 overflow-hidden">
                             {/* LEFT COLUMN: ACTIVE QUESTION CARD & OPTION SELECTORS */}
                             <div className="flex flex-1 flex-col justify-between overflow-y-auto p-4 sm:p-6 md:p-10">
                                 <div className="mx-auto w-full max-w-[42rem]">
                                     {activeQuestion ? (
-                                        <div className="flex animate-in flex-col gap-3 duration-150 fade-in sm:gap-6">
-                                            {/* Question stem container */}
-                                            <div className="shadow-3xs relative rounded-2xl border border-border bg-card p-4 sm:p-6">
-                                                <div className="mb-4 flex items-center justify-between">
-                                                    <div className="flex items-center gap-2">
-                                                        <span className="text-[10px] font-black tracking-wider text-blue-600 uppercase dark:text-blue-400">
-                                                            Multiple Choice
-                                                        </span>
-                                                    </div>
-                                                    <div className="flex items-center gap-2">
-                                                        <button
-                                                            disabled={
-                                                                isReported
-                                                            }
-                                                            onClick={() =>
-                                                                !isReported &&
-                                                                setIsReportModalOpen(
-                                                                    true,
-                                                                )
-                                                            }
-                                                            title={
-                                                                isReported
-                                                                    ? 'You have already reported an issue for this question.'
-                                                                    : undefined
-                                                            }
-                                                            className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold transition focus:outline-none ${
-                                                                isReported
-                                                                    ? 'cursor-not-allowed text-muted-foreground opacity-60'
-                                                                    : 'text-amber-600 hover:bg-amber-50 dark:text-amber-500 dark:hover:bg-amber-950/20'
-                                                            }`}
-                                                        >
-                                                            <AlertCircle
-                                                                className={`size-3.5 ${
-                                                                    isReported
-                                                                        ? 'fill-muted-foreground/20 text-muted-foreground'
-                                                                        : ''
-                                                                }`}
-                                                            />
-                                                            {isReported
-                                                                ? 'Reported'
-                                                                : 'Report Issue'}
-                                                        </button>
-                                                        <button
-                                                            onClick={() =>
-                                                                toggleFlag(
-                                                                    currentIdx,
-                                                                )
-                                                            }
-                                                            className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold transition focus:outline-none ${
-                                                                flagged[
-                                                                    currentIdx
-                                                                ]
-                                                                    ? 'border border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-900/50 dark:bg-rose-950/30 dark:text-rose-400'
-                                                                    : 'text-muted-foreground hover:bg-muted'
-                                                            }`}
-                                                        >
-                                                            <Flag
-                                                                className={`size-3.5 ${
-                                                                    flagged[
-                                                                        currentIdx
-                                                                    ]
-                                                                        ? 'fill-rose-600 text-rose-600 dark:text-rose-400'
-                                                                        : ''
-                                                                }`}
-                                                            />
-                                                            {flagged[currentIdx]
-                                                                ? 'Flagged for Review'
-                                                                : 'Flag for Review'}
-                                                        </button>
-
-                                                        {studyTools && (
-                                                            <button
-                                                                onClick={
-                                                                    handleReveal
-                                                                }
-                                                                className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold ${
-                                                                    revealedAnswer?.questionId ===
-                                                                    activeQuestion.id
-                                                                        ? 'text-muted-foreground hover:bg-muted'
-                                                                        : 'bg-[var(--civio-violet)] text-white'
-                                                                }`}
-                                                            >
-                                                                Reveal Answer
-                                                            </button>
+                                        <div className="flex flex-col gap-5">
+                                            <div className="text-lg leading-relaxed text-foreground md:text-xl">
+                                                {renderFormattedText(
+                                                    activeQuestion.stem,
+                                                    true,
+                                                )}
+                                            </div>
+                                            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                                                <button
+                                                    type="button"
+                                                    disabled={isReported}
+                                                    onClick={() =>
+                                                        !isReported &&
+                                                        setIsReportModalOpen(
+                                                            true,
+                                                        )
+                                                    }
+                                                    className="text-xs font-semibold text-[var(--civio-ink)]/60 disabled:opacity-50"
+                                                >
+                                                    {isReported
+                                                        ? 'Reported'
+                                                        : 'Report'}
+                                                </button>
+                                                {studyTools && (
+                                                    <button
+                                                        onClick={handleReveal}
+                                                        className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold ${
+                                                            revealedAnswer?.questionId ===
+                                                            activeQuestion.id
+                                                                ? 'text-muted-foreground hover:bg-muted'
+                                                                : 'bg-[var(--civio-violet)] text-white'
+                                                        }`}
+                                                    >
+                                                        Reveal Answer
+                                                    </button>
+                                                )}
+                                                {/* Copy for AI: drills and Study Mocks; hidden in a Strict Mock. */}
+                                                {studyTools && (
+                                                    <CopyForAiButton
+                                                        question={
+                                                            activeQuestion
+                                                        }
+                                                        attempt={liveHandoffAttempt(
+                                                            activeQuestion.id,
                                                         )}
+                                                    />
+                                                )}
+                                            </div>
 
-                                                        {/* Copy for AI: drills and Study Mocks; hidden in a Strict Mock. */}
-                                                        {studyTools && (
-                                                            <CopyForAiButton
-                                                                question={
-                                                                    activeQuestion
-                                                                }
-                                                                attempt={liveHandoffAttempt(
-                                                                    activeQuestion.id,
-                                                                )}
-                                                            />
+                                            {studyTools &&
+                                                revealedAnswer &&
+                                                revealedAnswer.questionId ===
+                                                    activeQuestion?.id && (
+                                                    <div className="rounded-lg border border-[var(--civio-line)] p-3 text-sm">
+                                                        <div
+                                                            className={`font-bold ${revealedAnswer.hasConflict ? 'text-red-600 dark:text-red-400' : 'text-amber-700 dark:text-amber-400'}`}
+                                                        >
+                                                            {revealedAnswer.hasConflict
+                                                                ? 'Answer key conflict'
+                                                                : 'Reveal'}
+                                                            :{' '}
+                                                            {
+                                                                revealedAnswer.letter
+                                                            }{' '}
+                                                            —{' '}
+                                                            {
+                                                                revealedAnswer.text
+                                                            }
+                                                        </div>
+                                                        {revealedAnswer.hasConflict && (
+                                                            <div className="mt-1 text-xs text-red-600 dark:text-red-400">
+                                                                Dexter detected
+                                                                a possible error
+                                                                in the stored
+                                                                answer.
+                                                            </div>
                                                         )}
-                                                    </div>
-                                                </div>
-
-                                                {studyTools &&
-                                                    revealedAnswer &&
-                                                    revealedAnswer.questionId ===
-                                                        activeQuestion?.id && (
-                                                        <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm dark:border-amber-900/50 dark:bg-amber-950/30">
-                                                            <div
-                                                                className={`font-bold ${revealedAnswer.hasConflict ? 'text-red-600 dark:text-red-400' : 'text-amber-700 dark:text-amber-400'}`}
-                                                            >
-                                                                {revealedAnswer.hasConflict
-                                                                    ? '⚠️ Answer Key Conflict'
-                                                                    : 'Reveal'}
-                                                                :{' '}
+                                                        {revealedAnswer.explanation && (
+                                                            <div className="mt-1 text-amber-600 dark:text-amber-300">
                                                                 {
-                                                                    revealedAnswer.letter
-                                                                }{' '}
-                                                                —{' '}
-                                                                {
-                                                                    revealedAnswer.text
+                                                                    revealedAnswer.explanation
                                                                 }
                                                             </div>
-                                                            {revealedAnswer.hasConflict && (
-                                                                <div className="mt-1 text-xs text-red-600 dark:text-red-400">
-                                                                    Dexter
-                                                                    detected a
-                                                                    possible
-                                                                    error in the
-                                                                    stored
-                                                                    answer.
-                                                                </div>
-                                                            )}
-                                                            {revealedAnswer.explanation && (
-                                                                <div className="mt-1 text-amber-600 dark:text-amber-300">
-                                                                    {
-                                                                        revealedAnswer.explanation
-                                                                    }
-                                                                </div>
-                                                            )}
+                                                        )}
 
-                                                            {revealedAnswer.expound && (
-                                                                <div className="mt-2 border-t border-amber-200 pt-2 text-amber-700 dark:border-amber-900/50 dark:text-amber-300">
-                                                                    {
-                                                                        revealedAnswer.expound
-                                                                    }
-                                                                </div>
-                                                            )}
+                                                        {revealedAnswer.expound && (
+                                                            <div className="mt-2 border-t border-amber-200 pt-2 text-amber-700 dark:border-amber-900/50 dark:text-amber-300">
+                                                                {
+                                                                    revealedAnswer.expound
+                                                                }
+                                                            </div>
+                                                        )}
 
-                                                            <div className="mt-2 flex gap-2">
-                                                                <button
-                                                                    onClick={async () => {
-                                                                        try {
-                                                                            const res =
-                                                                                await fetch(
-                                                                                    '/exams/expound',
-                                                                                    {
-                                                                                        method: 'POST',
-                                                                                        headers:
-                                                                                            {
-                                                                                                'Content-Type':
-                                                                                                    'application/json',
-                                                                                                'X-CSRF-TOKEN':
-                                                                                                    document
-                                                                                                        .querySelector(
-                                                                                                            'meta[name="csrf-token"]',
-                                                                                                        )
-                                                                                                        ?.getAttribute(
-                                                                                                            'content',
-                                                                                                        ) ||
-                                                                                                    '',
-                                                                                            },
-                                                                                        body: JSON.stringify(
-                                                                                            {
-                                                                                                question_id:
-                                                                                                    activeQuestion.id,
-                                                                                            },
-                                                                                        ),
-                                                                                    },
-                                                                                );
-                                                                            const data =
-                                                                                await res.json();
+                                                        <div className="mt-2 flex gap-2">
+                                                            <button
+                                                                onClick={async () => {
+                                                                    try {
+                                                                        const res =
+                                                                            await fetch(
+                                                                                '/exams/expound',
+                                                                                {
+                                                                                    method: 'POST',
+                                                                                    headers:
+                                                                                        {
+                                                                                            'Content-Type':
+                                                                                                'application/json',
+                                                                                            'X-CSRF-TOKEN':
+                                                                                                document
+                                                                                                    .querySelector(
+                                                                                                        'meta[name="csrf-token"]',
+                                                                                                    )
+                                                                                                    ?.getAttribute(
+                                                                                                        'content',
+                                                                                                    ) ||
+                                                                                                '',
+                                                                                        },
+                                                                                    body: JSON.stringify(
+                                                                                        {
+                                                                                            question_id:
+                                                                                                activeQuestion.id,
+                                                                                        },
+                                                                                    ),
+                                                                                },
+                                                                            );
+                                                                        const data =
+                                                                            await res.json();
 
-                                                                            if (
-                                                                                data.success
-                                                                            ) {
-                                                                                setRevealedAnswer(
-                                                                                    (
-                                                                                        prev,
-                                                                                    ) =>
-                                                                                        prev
-                                                                                            ? {
-                                                                                                  ...prev,
-                                                                                                  expound:
-                                                                                                      data.explanation ||
-                                                                                                      'No further explanation available.',
-                                                                                              }
-                                                                                            : null,
-                                                                                );
-                                                                            }
-                                                                        } catch {
-                                                                            alert(
-                                                                                'Expound failed',
+                                                                        if (
+                                                                            data.success
+                                                                        ) {
+                                                                            setRevealedAnswer(
+                                                                                (
+                                                                                    prev,
+                                                                                ) =>
+                                                                                    prev
+                                                                                        ? {
+                                                                                              ...prev,
+                                                                                              expound:
+                                                                                                  data.explanation ||
+                                                                                                  'No further explanation available.',
+                                                                                          }
+                                                                                        : null,
                                                                             );
                                                                         }
-                                                                    }}
-                                                                    className="rounded bg-amber-600 px-2 py-0.5 text-xs text-white hover:bg-amber-700"
-                                                                >
-                                                                    Expound
-                                                                </button>
-                                                                <button
-                                                                    onClick={() =>
-                                                                        setRevealedAnswer(
-                                                                            null,
-                                                                        )
+                                                                    } catch {
+                                                                        alert(
+                                                                            'Expound failed',
+                                                                        );
                                                                     }
-                                                                    className="text-xs text-amber-600 hover:underline dark:text-amber-400"
-                                                                >
-                                                                    Hide
-                                                                </button>
-                                                            </div>
+                                                                }}
+                                                                className="rounded bg-amber-600 px-2 py-0.5 text-xs text-white hover:bg-amber-700"
+                                                            >
+                                                                Expound
+                                                            </button>
+                                                            <button
+                                                                onClick={() =>
+                                                                    setRevealedAnswer(
+                                                                        null,
+                                                                    )
+                                                                }
+                                                                className="text-xs text-amber-600 hover:underline dark:text-amber-400"
+                                                            >
+                                                                Hide
+                                                            </button>
                                                         </div>
-                                                    )}
-                                                <div className="text-sm leading-relaxed font-semibold text-foreground">
-                                                    {renderFormattedText(
-                                                        activeQuestion.stem,
-                                                        true,
-                                                    )}
-                                                </div>
-                                            </div>
+                                                    </div>
+                                                )}
 
                                             {/* Options Grid selector stack */}
                                             <div
@@ -1256,7 +1128,7 @@ export function LiveExamView({
                                 </div>
 
                                 {/* CORE CONTROL BUTTONS (PREV, NEXT, SUBMIT) */}
-                                <div className="mx-auto mt-8 flex w-full max-w-3xl items-center justify-between gap-4 border-t border-border pt-6">
+                                <div className="sticky bottom-0 z-10 mx-auto mt-6 flex w-full max-w-[42rem] items-center gap-3 border-t border-[var(--civio-line)] bg-[var(--civio-paper)] py-3">
                                     <button
                                         onClick={() =>
                                             handleQuestionNavigate(
@@ -1264,10 +1136,10 @@ export function LiveExamView({
                                             )
                                         }
                                         disabled={currentIdx === 0}
-                                        className="shadow-3xs flex items-center gap-1.5 rounded-lg border border-border bg-card px-5 py-2.5 text-xs font-bold text-foreground transition hover:bg-muted focus:outline-none disabled:cursor-not-allowed disabled:opacity-40"
+                                        className="flex min-h-12 flex-1 items-center justify-center gap-1 rounded-lg border border-[var(--civio-line)] text-sm font-semibold disabled:opacity-40"
                                     >
                                         <ChevronLeft className="size-4" />
-                                        Previous Question
+                                        Previous
                                     </button>
 
                                     {currentIdx < activeQuestions.length - 1 ? (
@@ -1277,9 +1149,9 @@ export function LiveExamView({
                                                     currentIdx + 1,
                                                 )
                                             }
-                                            className="shadow-3xs flex items-center gap-1.5 rounded-lg bg-[var(--civio-violet)] px-5 py-2.5 text-xs font-bold text-white transition hover:bg-[var(--civio-violet-deep)] focus:outline-none"
+                                            className="flex min-h-12 flex-1 items-center justify-center gap-1 rounded-lg bg-[var(--civio-violet)] text-sm font-semibold text-white"
                                         >
-                                            Next Question
+                                            Next
                                             <ChevronRight className="size-4" />
                                         </button>
                                     ) : (
@@ -1287,10 +1159,10 @@ export function LiveExamView({
                                             onClick={() =>
                                                 handleSubmitExam(false)
                                             }
-                                            className="flex items-center gap-1.5 rounded-lg bg-[var(--civio-violet)] px-4 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-[var(--civio-violet-deep)] focus:outline-none sm:px-6"
+                                            className="flex min-h-12 flex-1 items-center justify-center gap-1.5 rounded-lg bg-[var(--civio-violet)] text-sm font-semibold text-white"
                                         >
                                             <CheckCircle2 className="size-4" />
-                                            Submit Exam
+                                            Submit
                                         </button>
                                     )}
                                 </div>
@@ -1478,7 +1350,7 @@ export function LiveExamView({
                 {/* Guest Free Attempt: Locked Question Modal */}
                 {showLockedModal && (
                     <div
-                        className="fixed inset-0 z-[100] flex animate-in items-center justify-center bg-slate-900/60 p-4 backdrop-blur-xs duration-200 fade-in"
+                        className="fixed inset-0 z-[100] flex animate-in items-center justify-center bg-slate-900/60 p-4 duration-200 fade-in"
                         onClick={() => setShowLockedModal(false)}
                     >
                         <div
@@ -1519,7 +1391,7 @@ export function LiveExamView({
                 {/* Guest Free Attempt: Register / Continue Modal */}
                 {showRegisterModal && (
                     <div
-                        className="fixed inset-0 z-[100] flex animate-in items-center justify-center bg-slate-900/60 p-4 backdrop-blur-xs duration-200 fade-in"
+                        className="fixed inset-0 z-[100] flex animate-in items-center justify-center bg-slate-900/60 p-4 duration-200 fade-in"
                         onClick={() => setShowRegisterModal(false)}
                     >
                         <div

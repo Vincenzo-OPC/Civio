@@ -205,6 +205,10 @@ export function useExamState(props: ExamIndexProps) {
         itemElapsed,
         formatTime,
         resetTimer,
+        timeLeftRef,
+        questionTimesRef,
+        subscribeClock,
+        getClockSnapshot,
     } = useExamTimer({
         isExamActive,
         isExamSubmitted,
@@ -228,6 +232,8 @@ export function useExamState(props: ExamIndexProps) {
             isTimed,
             sessionTimeLimitSecs,
             timeLeft,
+            timeLeftRef,
+            questionTimesRef,
             drillCategoryId,
             drillCategoryName,
             drillSubcategories,
@@ -402,6 +408,8 @@ export function useExamState(props: ExamIndexProps) {
         timeLeft,
         isTimed,
         isPaused,
+        timeLeftRef,
+        questionTimesRef,
         onRestoreSession: useCallback(
             (restoredData) => {
                 setSelectedExamId(restoredData.selectedExamId);
@@ -838,5 +846,7 @@ export function useExamState(props: ExamIndexProps) {
         handleExitExam,
         getActiveTimeLimitSecs,
         setIsPaused,
+        subscribeClock,
+        getClockSnapshot,
     };
 }

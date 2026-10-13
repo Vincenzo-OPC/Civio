@@ -276,7 +276,7 @@ export default function QuestionPalettePanel({
             {mode === 'exam' && (
                 <div className="grid shrink-0 grid-cols-3 gap-2 border-b border-border bg-muted/40 px-4 py-3 text-[10px] font-bold text-muted-foreground">
                     <div className="flex items-center gap-1">
-                        <div className="size-2.5 rounded bg-blue-600" />
+                        <div className="size-2.5 rounded bg-[var(--civio-violet)]" />
                         <span>Answered</span>
                     </div>
                     <div className="flex items-center gap-1">
@@ -408,9 +408,9 @@ export default function QuestionPalettePanel({
                                         isFilteredOut
                                             ? 'cursor-not-allowed border-border bg-background text-muted-foreground opacity-20 grayscale'
                                             : isActive
-                                              ? 'border-blue-600 bg-card font-black text-blue-600 ring-2 ring-blue-600 ring-offset-1 dark:bg-blue-950/30 dark:text-blue-400 dark:ring-offset-background'
+                                              ? 'border-[var(--civio-violet)] font-black text-[var(--civio-violet)] ring-2 ring-[var(--civio-violet)] ring-offset-1'
                                               : isAnswered
-                                                ? 'border-blue-600 bg-blue-600 text-white hover:bg-blue-700'
+                                                ? 'border-[var(--civio-violet)] bg-[var(--civio-violet)] text-white'
                                                 : isFlagged
                                                   ? 'border-rose-300 bg-rose-50 font-extrabold text-rose-700 dark:border-rose-900/40 dark:bg-rose-950/30 dark:text-rose-400'
                                                   : 'border-border bg-background text-foreground hover:bg-muted'
@@ -496,11 +496,11 @@ export default function QuestionPalettePanel({
     if (isMobile) {
         return (
             <div
-                className="fixed inset-0 z-100 flex justify-end bg-slate-900/60 backdrop-blur-xs lg:hidden"
+                className="fixed inset-0 z-100 flex items-end bg-slate-900/50 lg:hidden"
                 onClick={onCloseMobile}
             >
                 <div
-                    className="flex h-full w-80 max-w-[85vw] flex-col border-l border-border bg-card shadow-2xl"
+                    className="flex max-h-[78vh] w-full flex-col rounded-t-2xl border-t border-[var(--civio-line)] bg-[var(--civio-paper)]"
                     onClick={(e) => e.stopPropagation()}
                 >
                     {content}
@@ -521,7 +521,7 @@ export default function QuestionPalettePanel({
                 </button>
 
                 <div className="flex flex-col items-center gap-3">
-                    <LayoutGrid className="size-4 text-blue-600 dark:text-blue-400" />
+                    <LayoutGrid className="size-4 text-[var(--civio-violet)]" />
                     <span className="rotate-180 text-[10px] font-extrabold tracking-widest text-muted-foreground uppercase [writing-mode:vertical-lr]">
                         Question Palette
                     </span>
