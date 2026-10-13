@@ -1,0 +1,49 @@
+# Civio local run on GT's MSI, side by side with the old study app.
+# Separate project/containers/volume: never touches hiraya-review-* (:8080/:5433) or Hermes (:8642).
+# Start: docker compose -p civio-local -f docker-compose.local.yml up -d --build
+# Stop:  docker compose -p civio-local -f docker-compose.local.yml stop
+name: civio-local
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: civio-local-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: civio_local
+      POSTGRES_USER: civio
+      POSTGRES_PASSWORD: civio_local_dev
+    ports:
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - civio_local_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U civio -d civio_local"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  app:
+    build: .
+    image: civio-local-app
+    container_name: civio-local-app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8090:8080"
+    env_file:
+      - .env
+    environment:
+      APP_ENV: local
+      APP_URL: http://localhost:8090
+      SESSION_DRIVER: database
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: civio_local
+      DB_USERNAME: civio
+      DB_PASSWORD: civio_local_dev
+      CIVIO_GUEST_UNLIMITED: "true"
+      CIVIO_CONTENT_SHIELD: "false"
+volumes:
+  civio_local_pgdata:
