@@ -2525,61 +2525,61 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed LAST?  Engr. Danilo D. Lim | Atty. Jose T. Ramos | Engr. Rodrigo G. Del Rosario | Alfredo D. San Juan
+**Stem:** In alphabetical filing, which name is filed FIRST?  Engr. Corazon A. San Juan | Lourdes C. De los Santos | Dr. Elena E. Santos-Ocampo | Engr. Imelda T. Santos
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Engr. Danilo D. Lim | A |
-| o2 | Alfredo D. San Juan | B |
-| o3 | Engr. Rodrigo G. Del Rosario | C |
-| o4 | Atty. Jose T. Ramos | D |
+| o1 | Lourdes C. De los Santos | A |
+| o2 | Engr. Imelda T. Santos | B |
+| o3 | Engr. Corazon A. San Juan | C |
+| o4 | Dr. Elena E. Santos-Ocampo | D |
 
-`answer_option_id`: o2 (Alfredo D. San Juan)
+`answer_option_id`: o1 (Lourdes C. De los Santos)
 
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
+`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
 1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Rodrigo G. Del Rosario → DELROSARIO, Rodrigo; Engr. Danilo D. Lim → LIM, Danilo; Atty. Jose T. Ramos → RAMOS, Jose; Alfredo D. San Juan → SANJUAN, Alfredo.
-3. *Why it is right.* "Alfredo D. San Juan" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Lourdes C. De los Santos → DELOSSANTOS, Lourdes; Engr. Corazon A. San Juan → SANJUAN, Corazon; Engr. Imelda T. Santos → SANTOS, Imelda; Dr. Elena E. Santos-Ocampo → SANTOSOCAMPO, Elena.
+3. *Why it is right.* "Lourdes C. De los Santos" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Engr. Danilo D. Lim: "Engr. Danilo D. Lim" files as LIM, which comes before SANJUAN.
-   - Engr. Rodrigo G. Del Rosario: "Engr. Rodrigo G. Del Rosario" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-   - Atty. Jose T. Ramos: "Atty. Jose T. Ramos" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Engr. Imelda T. Santos: "Engr. Imelda T. Santos" files as SANTOS, which comes after DELOSSANTOS.
+   - Engr. Corazon A. San Juan: "Engr. Corazon A. San Juan" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
+   - Dr. Elena E. Santos-Ocampo: "Dr. Elena E. Santos-Ocampo" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 78. CIVIO-CLR-SPELL-RIGHT-000089
+## 78. CIVIO-CLR-FILE-POSITION-000089
 
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
-- competency: Spelling · concept: correct spelling
-- micro_skill: spot the correct spelling
-- source: Original, Civio
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 5 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is spelled correctly?  consceince | conscience | consciance | conscence
+**Stem:** In alphabetical filing, which name is filed LAST?  Gloria T. Santos | Ana B. Ramos | Engr. Rodrigo E. Austria | Engr. Rosario E. Pedro
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | consceince | A |
-| o2 | conscience | B |
-| o3 | consciance | C |
-| o4 | conscence | D |
+| o1 | Ana B. Ramos | A |
+| o2 | Engr. Rodrigo E. Austria | B |
+| o3 | Gloria T. Santos | C |
+| o4 | Engr. Rosario E. Pedro | D |
 
-`answer_option_id`: o2 (conscience)
+`answer_option_id`: o3 (Gloria T. Santos)
 
-`distractor_reasoning`: o1 = `SPL-IE-EI`; o3 = `SPL-SOUND`; o4 = `SPL-DROP`
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
-1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
-2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "conscience" is the standard spelling.
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Rodrigo E. Austria → AUSTRIA, Rodrigo; Engr. Rosario E. Pedro → PEDRO, Rosario; Ana B. Ramos → RAMOS, Ana; Gloria T. Santos → SANTOS, Gloria.
+3. *Why it is right.* "Gloria T. Santos" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - consceince: "consceince" swaps the order of i and e. The correct spelling is "conscience".
-   - consciance: "consciance" is spelled the way the word sounds. The correct spelling is "conscience".
-   - conscence: "conscence" drops a letter. The correct spelling is "conscience".
+   - Ana B. Ramos: "Ana B. Ramos" files as RAMOS, which comes before SANTOS.
+   - Engr. Rodrigo E. Austria: "Engr. Rodrigo E. Austria" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Engr. Rosario E. Pedro: "Engr. Rosario E. Pedro" sorts by the given name. Personal names file by surname first.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -2591,28 +2591,28 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed LAST?  Lourdes C. De los Santos | Dr. Elena E. Santos-Ocampo | Engr. Imelda T. Santos | Atty. Benito B. Flores
+**Stem:** In alphabetical filing, which name is filed LAST?  Teresita P. Leon | Dr. Eduardo E. Ocampo | Dr. Nora D. Rivera | Elena E. Delos Reyes
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Engr. Imelda T. Santos | A |
-| o2 | Dr. Elena E. Santos-Ocampo | B |
-| o3 | Lourdes C. De los Santos | C |
-| o4 | Atty. Benito B. Flores | D |
+| o1 | Dr. Eduardo E. Ocampo | A |
+| o2 | Teresita P. Leon | B |
+| o3 | Dr. Nora D. Rivera | C |
+| o4 | Elena E. Delos Reyes | D |
 
-`answer_option_id`: o2 (Dr. Elena E. Santos-Ocampo)
+`answer_option_id`: o3 (Dr. Nora D. Rivera)
 
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
 1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Lourdes C. De los Santos → DELOSSANTOS, Lourdes; Atty. Benito B. Flores → FLORES, Benito; Engr. Imelda T. Santos → SANTOS, Imelda; Dr. Elena E. Santos-Ocampo → SANTOSOCAMPO, Elena.
-3. *Why it is right.* "Dr. Elena E. Santos-Ocampo" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Elena E. Delos Reyes → DELOSREYES, Elena; Teresita P. Leon → LEON, Teresita; Dr. Eduardo E. Ocampo → OCAMPO, Eduardo; Dr. Nora D. Rivera → RIVERA, Nora.
+3. *Why it is right.* "Dr. Nora D. Rivera" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Engr. Imelda T. Santos: "Engr. Imelda T. Santos" files as SANTOS, which comes before SANTOSOCAMPO.
-   - Lourdes C. De los Santos: "Lourdes C. De los Santos" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-   - Atty. Benito B. Flores: "Atty. Benito B. Flores" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Dr. Eduardo E. Ocampo: "Dr. Eduardo E. Ocampo" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Teresita P. Leon: "Teresita P. Leon" sorts by the given name. Personal names file by surname first.
+   - Elena E. Delos Reyes: "Elena E. Delos Reyes" files as DELOSREYES, which comes before RIVERA.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -2624,28 +2624,28 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is spelled correctly?  forreign | foriegn | foreign | foregn
+**Stem:** Which word is spelled correctly?  fluoresent | fluorescnt | fluorescent | fluorrescent
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | forreign | A |
-| o2 | foriegn | B |
-| o3 | foreign | C |
-| o4 | foregn | D |
+| o1 | fluoresent | A |
+| o2 | fluorescnt | B |
+| o3 | fluorescent | C |
+| o4 | fluorrescent | D |
 
-`answer_option_id`: o3 (foreign)
+`answer_option_id`: o3 (fluorescent)
 
-`distractor_reasoning`: o1 = `SPL-DOUBLE`; o2 = `SPL-IE-EI`; o4 = `SPL-DROP`
+`distractor_reasoning`: o1 = `SPL-SOUND`; o2 = `SPL-DROP`; o4 = `SPL-DOUBLE`
 
 **Reveal**
 
 1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
 2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "foreign" is the standard spelling.
+3. *Why it is right.* "fluorescent" is the standard spelling.
 4. *Why the others are wrong.*
-   - forreign: "forreign" doubles or undoubles a consonant. The correct spelling is "foreign".
-   - foriegn: "foriegn" swaps the order of i and e. The correct spelling is "foreign".
-   - foregn: "foregn" drops a letter. The correct spelling is "foreign".
+   - fluoresent: "fluoresent" is spelled the way the word sounds. The correct spelling is "fluorescent".
+   - fluorescnt: "fluorescnt" drops a letter. The correct spelling is "fluorescent".
+   - fluorrescent: "fluorrescent" doubles or undoubles a consonant. The correct spelling is "fluorescent".
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -2657,61 +2657,61 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed FIRST?  Dr. Danilo L. Del Rosario | Maria E. Flores | Juan B. Salazar | Evelyn C. Delos Reyes
+**Stem:** In alphabetical filing, which name is filed FIRST?  Ramon E. Lim | Atty. Gloria G. Tan | Corazon A. Pedro | Dr. Elena V. Dela Cruz
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Maria E. Flores | A |
-| o2 | Juan B. Salazar | B |
-| o3 | Evelyn C. Delos Reyes | C |
-| o4 | Dr. Danilo L. Del Rosario | D |
+| o1 | Atty. Gloria G. Tan | A |
+| o2 | Corazon A. Pedro | B |
+| o3 | Ramon E. Lim | C |
+| o4 | Dr. Elena V. Dela Cruz | D |
 
-`answer_option_id`: o3 (Evelyn C. Delos Reyes)
+`answer_option_id`: o4 (Dr. Elena V. Dela Cruz)
+
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`
+
+**Reveal**
+
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Dr. Elena V. Dela Cruz → DELACRUZ, Elena; Ramon E. Lim → LIM, Ramon; Corazon A. Pedro → PEDRO, Corazon; Atty. Gloria G. Tan → TAN, Gloria.
+3. *Why it is right.* "Dr. Elena V. Dela Cruz" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+4. *Why the others are wrong.*
+   - Atty. Gloria G. Tan: "Atty. Gloria G. Tan" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Corazon A. Pedro: "Corazon A. Pedro" sorts by the given name. Personal names file by surname first.
+   - Ramon E. Lim: "Ramon E. Lim" files as LIM, which comes after DELACRUZ.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 82. CIVIO-CLR-FILE-POSITION-000093
+
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
+- status: draft · review_status: unreviewed
+
+**Stem:** In alphabetical filing, which name is filed LAST?  Juan A. Pascual | Imelda S. Dela Cruz | Atty. Corazon A. Garcia | Dr. Benito A. Del Rosario
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Dr. Benito A. Del Rosario | A |
+| o2 | Atty. Corazon A. Garcia | B |
+| o3 | Juan A. Pascual | C |
+| o4 | Imelda S. Dela Cruz | D |
+
+`answer_option_id`: o3 (Juan A. Pascual)
 
 `distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
 1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Evelyn C. Delos Reyes → DELOSREYES, Evelyn; Dr. Danilo L. Del Rosario → DELROSARIO, Danilo; Maria E. Flores → FLORES, Maria; Juan B. Salazar → SALAZAR, Juan.
-3. *Why it is right.* "Evelyn C. Delos Reyes" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Imelda S. Dela Cruz → DELACRUZ, Imelda; Dr. Benito A. Del Rosario → DELROSARIO, Benito; Atty. Corazon A. Garcia → GARCIA, Corazon; Juan A. Pascual → PASCUAL, Juan.
+3. *Why it is right.* "Juan A. Pascual" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Maria E. Flores: "Maria E. Flores" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-   - Juan B. Salazar: "Juan B. Salazar" files as SALAZAR, which comes after DELOSREYES.
-   - Dr. Danilo L. Del Rosario: "Dr. Danilo L. Del Rosario" sorts by the given name. Personal names file by surname first.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 82. CIVIO-CLR-SPELL-RIGHT-000093
-
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
-- competency: Spelling · concept: correct spelling
-- micro_skill: spot the correct spelling
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is spelled correctly?  fenomenon | phenommenon | phenomenon | phenmenon
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | fenomenon | A |
-| o2 | phenommenon | B |
-| o3 | phenomenon | C |
-| o4 | phenmenon | D |
-
-`answer_option_id`: o3 (phenomenon)
-
-`distractor_reasoning`: o1 = `SPL-SOUND`; o2 = `SPL-DOUBLE`; o4 = `SPL-DROP`
-
-**Reveal**
-
-1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
-2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "phenomenon" is the standard spelling.
-4. *Why the others are wrong.*
-   - fenomenon: "fenomenon" is spelled the way the word sounds. The correct spelling is "phenomenon".
-   - phenommenon: "phenommenon" doubles or undoubles a consonant. The correct spelling is "phenomenon".
-   - phenmenon: "phenmenon" drops a letter. The correct spelling is "phenomenon".
+   - Dr. Benito A. Del Rosario: "Dr. Benito A. Del Rosario" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
+   - Atty. Corazon A. Garcia: "Atty. Corazon A. Garcia" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Imelda S. Dela Cruz: "Imelda S. Dela Cruz" files as DELACRUZ, which comes before PASCUAL.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
@@ -2720,233 +2720,35 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
 - competency: Filing · concept: alphabetic filing of personal names
 - micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
+- source: Civio Filing Rules v2 / ARMA Rule 5 (https://webstore.ansi.org/standards/arma/ansiarma122005)
 - status: draft · review_status: unreviewed
 
-**Stem:** In alphabetical filing, which name is filed FIRST?  Evelyn C. Tan | Rodrigo E. Dela Cruz | Engr. Rosario E. Pedro | Engr. Rafael S. San Juan
+**Stem:** In alphabetical filing, which name is filed FIRST?  Rosario N. Aquino | Atty. Victoria T. Pedro | Eduardo T. Lopez | Juan P. Santos-Ocampo
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | Engr. Rosario E. Pedro | A |
-| o2 | Evelyn C. Tan | B |
-| o3 | Rodrigo E. Dela Cruz | C |
-| o4 | Engr. Rafael S. San Juan | D |
+| o1 | Juan P. Santos-Ocampo | A |
+| o2 | Eduardo T. Lopez | B |
+| o3 | Rosario N. Aquino | C |
+| o4 | Atty. Victoria T. Pedro | D |
 
-`answer_option_id`: o3 (Rodrigo E. Dela Cruz)
+`answer_option_id`: o3 (Rosario N. Aquino)
 
 `distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
 
 **Reveal**
 
 1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Rodrigo E. Dela Cruz → DELACRUZ, Rodrigo; Engr. Rosario E. Pedro → PEDRO, Rosario; Engr. Rafael S. San Juan → SANJUAN, Rafael; Evelyn C. Tan → TAN, Evelyn.
-3. *Why it is right.* "Rodrigo E. Dela Cruz" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Rosario N. Aquino → AQUINO, Rosario; Eduardo T. Lopez → LOPEZ, Eduardo; Atty. Victoria T. Pedro → PEDRO, Victoria; Juan P. Santos-Ocampo → SANTOSOCAMPO, Juan.
+3. *Why it is right.* "Rosario N. Aquino" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC.
 4. *Why the others are wrong.*
-   - Engr. Rosario E. Pedro: "Engr. Rosario E. Pedro" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-   - Evelyn C. Tan: "Evelyn C. Tan" sorts by the given name. Personal names file by surname first.
-   - Engr. Rafael S. San Juan: "Engr. Rafael S. San Juan" files as SANJUAN, which comes after DELACRUZ.
+   - Juan P. Santos-Ocampo: "Juan P. Santos-Ocampo" files as SANTOSOCAMPO, which comes after AQUINO.
+   - Eduardo T. Lopez: "Eduardo T. Lopez" sorts by the given name. Personal names file by surname first.
+   - Atty. Victoria T. Pedro: "Atty. Victoria T. Pedro" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 84. CIVIO-CLR-SPELL-RIGHT-000095
-
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
-- competency: Spelling · concept: correct spelling
-- micro_skill: spot the correct spelling
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is spelled correctly?  guerantee | guarntee | guarantee | guarrantee
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | guerantee | A |
-| o2 | guarntee | B |
-| o3 | guarantee | C |
-| o4 | guarrantee | D |
-
-`answer_option_id`: o3 (guarantee)
-
-`distractor_reasoning`: o1 = `SPL-SOUND`; o2 = `SPL-DROP`; o4 = `SPL-DOUBLE`
-
-**Reveal**
-
-1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
-2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "guarantee" is the standard spelling.
-4. *Why the others are wrong.*
-   - guerantee: "guerantee" is spelled the way the word sounds. The correct spelling is "guarantee".
-   - guarntee: "guarntee" drops a letter. The correct spelling is "guarantee".
-   - guarrantee: "guarrantee" doubles or undoubles a consonant. The correct spelling is "guarantee".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 85. CIVIO-CLR-FILE-POSITION-000096
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed FIRST?  Dr. Nora D. Rivera | Elena E. Delos Reyes | Andres R. De Guzman | Benito V. Dizon
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Elena E. Delos Reyes | A |
-| o2 | Dr. Nora D. Rivera | B |
-| o3 | Andres R. De Guzman | C |
-| o4 | Benito V. Dizon | D |
-
-`answer_option_id`: o3 (Andres R. De Guzman)
-
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Andres R. De Guzman → DEGUZMAN, Andres; Elena E. Delos Reyes → DELOSREYES, Elena; Benito V. Dizon → DIZON, Benito; Dr. Nora D. Rivera → RIVERA, Nora.
-3. *Why it is right.* "Andres R. De Guzman" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Elena E. Delos Reyes: "Elena E. Delos Reyes" files as DELOSREYES, which comes after DEGUZMAN.
-   - Dr. Nora D. Rivera: "Dr. Nora D. Rivera" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-   - Benito V. Dizon: "Benito V. Dizon" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 86. CIVIO-CLR-SPELL-RIGHT-000097
-
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
-- competency: Spelling · concept: correct spelling
-- micro_skill: spot the correct spelling
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is spelled correctly?  permssible | permisible | permissible | permissable
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | permssible | A |
-| o2 | permisible | B |
-| o3 | permissible | C |
-| o4 | permissable | D |
-
-`answer_option_id`: o3 (permissible)
-
-`distractor_reasoning`: o1 = `SPL-DROP`; o2 = `SPL-DOUBLE`; o4 = `SPL-SOUND`
-
-**Reveal**
-
-1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
-2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "permissible" is the standard spelling.
-4. *Why the others are wrong.*
-   - permssible: "permssible" drops a letter. The correct spelling is "permissible".
-   - permisible: "permisible" doubles or undoubles a consonant. The correct spelling is "permissible".
-   - permissable: "permissable" is spelled the way the word sounds. The correct spelling is "permissible".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 87. CIVIO-CLR-FILE-POSITION-000098
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed FIRST?  Gloria A. Rivera | Liza N. De Leon | Rosario B. Flores | Engr. Benito R. Tan
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Liza N. De Leon | A |
-| o2 | Rosario B. Flores | B |
-| o3 | Gloria A. Rivera | C |
-| o4 | Engr. Benito R. Tan | D |
-
-`answer_option_id`: o1 (Liza N. De Leon)
-
-`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Liza N. De Leon → DELEON, Liza; Rosario B. Flores → FLORES, Rosario; Gloria A. Rivera → RIVERA, Gloria; Engr. Benito R. Tan → TAN, Benito.
-3. *Why it is right.* "Liza N. De Leon" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Rosario B. Flores: "Rosario B. Flores" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-   - Gloria A. Rivera: "Gloria A. Rivera" files as RIVERA, which comes after DELEON.
-   - Engr. Benito R. Tan: "Engr. Benito R. Tan" sorts by the given name. Personal names file by surname first.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 88. CIVIO-CLR-FILE-POSITION-000099
-
-- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
-- competency: Filing · concept: alphabetic filing of personal names
-- micro_skill: surname, prefix and title rules
-- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
-- status: draft · review_status: unreviewed
-
-**Stem:** In alphabetical filing, which name is filed LAST?  Dr. Alfredo N. Juan | Dr. Jose N. Lim | Engr. Ramon N. Del Mundo | Liza T. Flores
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Engr. Ramon N. Del Mundo | A |
-| o2 | Liza T. Flores | B |
-| o3 | Dr. Alfredo N. Juan | C |
-| o4 | Dr. Jose N. Lim | D |
-
-`answer_option_id`: o4 (Dr. Jose N. Lim)
-
-`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`
-
-**Reveal**
-
-1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
-2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Ramon N. Del Mundo → DELMUNDO, Ramon; Liza T. Flores → FLORES, Liza; Dr. Alfredo N. Juan → JUAN, Alfredo; Dr. Jose N. Lim → LIM, Jose.
-3. *Why it is right.* "Dr. Jose N. Lim" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
-4. *Why the others are wrong.*
-   - Engr. Ramon N. Del Mundo: "Engr. Ramon N. Del Mundo" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
-   - Liza T. Flores: "Liza T. Flores" files as FLORES, which comes before LIM.
-   - Dr. Alfredo N. Juan: "Dr. Alfredo N. Juan" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 89. CIVIO-CLR-SPELL-RIGHT-000100
-
-- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
-- competency: Spelling · concept: correct spelling
-- micro_skill: spot the correct spelling
-- source: Original, Civio
-- status: draft · review_status: unreviewed
-
-**Stem:** Which word is spelled correctly?  entreprneur | entrepreneur | entrpreneur | entreprenneur
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | entreprneur | A |
-| o2 | entrepreneur | B |
-| o3 | entrpreneur | C |
-| o4 | entreprenneur | D |
-
-`answer_option_id`: o2 (entrepreneur)
-
-`distractor_reasoning`: o1 = `SPL-DROP`; o3 = `SPL-DROP`; o4 = `SPL-DOUBLE`
-
-**Reveal**
-
-1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
-2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "entrepreneur" is the standard spelling.
-4. *Why the others are wrong.*
-   - entreprneur: "entreprneur" drops a letter. The correct spelling is "entrepreneur".
-   - entrpreneur: "entrpreneur" drops a letter. The correct spelling is "entrepreneur".
-   - entreprenneur: "entreprenneur" doubles or undoubles a consonant. The correct spelling is "entrepreneur".
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 90. CIVIO-CLR-FILE-POSITION-000101
+## 84. CIVIO-CLR-FILE-POSITION-000095
 
 - track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
 - competency: Filing · concept: alphabetic filing of personal names
@@ -2979,7 +2781,7 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 91. CIVIO-CLR-SPELL-RIGHT-000102
+## 85. CIVIO-CLR-SPELL-RIGHT-000096
 
 - track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
 - competency: Spelling · concept: correct spelling
@@ -2987,32 +2789,461 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 - source: Original, Civio
 - status: draft · review_status: unreviewed
 
-**Stem:** Which word is spelled correctly?  occasionlly | ocasionally | occsionally | occasionally
+**Stem:** Which word is spelled correctly?  itinerery | ittinerary | itinrary | itinerary
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | occasionlly | A |
-| o2 | ocasionally | B |
-| o3 | occsionally | C |
-| o4 | occasionally | D |
+| o1 | itinerery | A |
+| o2 | ittinerary | B |
+| o3 | itinrary | C |
+| o4 | itinerary | D |
 
-`answer_option_id`: o4 (occasionally)
+`answer_option_id`: o4 (itinerary)
 
-`distractor_reasoning`: o1 = `SPL-DROP`; o2 = `SPL-DOUBLE`; o3 = `SPL-DROP`
+`distractor_reasoning`: o1 = `SPL-SOUND`; o2 = `SPL-DOUBLE`; o3 = `SPL-DROP`
 
 **Reveal**
 
 1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
 2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
-3. *Why it is right.* "occasionally" is the standard spelling.
+3. *Why it is right.* "itinerary" is the standard spelling.
 4. *Why the others are wrong.*
-   - occasionlly: "occasionlly" drops a letter. The correct spelling is "occasionally".
-   - ocasionally: "ocasionally" doubles or undoubles a consonant. The correct spelling is "occasionally".
-   - occsionally: "occsionally" drops a letter. The correct spelling is "occasionally".
+   - itinerery: "itinerery" is spelled the way the word sounds. The correct spelling is "itinerary".
+   - ittinerary: "ittinerary" doubles or undoubles a consonant. The correct spelling is "itinerary".
+   - itinrary: "itinrary" drops a letter. The correct spelling is "itinerary".
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 86. CIVIO-CLR-SPELL-RIGHT-000097
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
+- competency: Spelling · concept: correct spelling
+- micro_skill: spot the correct spelling
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is spelled correctly?  recept | reciept | recipt | receipt
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | recept | A |
+| o2 | reciept | B |
+| o3 | recipt | C |
+| o4 | receipt | D |
+
+`answer_option_id`: o4 (receipt)
+
+`distractor_reasoning`: o1 = `SPL-DROP`; o2 = `SPL-IE-EI`; o3 = `SPL-DROP`
+
+**Reveal**
+
+1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
+2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
+3. *Why it is right.* "receipt" is the standard spelling.
+4. *Why the others are wrong.*
+   - recept: "recept" drops a letter. The correct spelling is "receipt".
+   - reciept: "reciept" swaps the order of i and e. The correct spelling is "receipt".
+   - recipt: "recipt" drops a letter. The correct spelling is "receipt".
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 87. CIVIO-CLR-FILE-POSITION-000098
+
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
+- status: draft · review_status: unreviewed
+
+**Stem:** In alphabetical filing, which name is filed FIRST?  Atty. Nora B. Delos Reyes | Benito A. Ramos | Jose E. Dela Cruz | Danilo E. Rosario
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Danilo E. Rosario | A |
+| o2 | Atty. Nora B. Delos Reyes | B |
+| o3 | Benito A. Ramos | C |
+| o4 | Jose E. Dela Cruz | D |
+
+`answer_option_id`: o4 (Jose E. Dela Cruz)
+
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`
+
+**Reveal**
+
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Jose E. Dela Cruz → DELACRUZ, Jose; Atty. Nora B. Delos Reyes → DELOSREYES, Nora; Benito A. Ramos → RAMOS, Benito; Danilo E. Rosario → ROSARIO, Danilo.
+3. *Why it is right.* "Jose E. Dela Cruz" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+4. *Why the others are wrong.*
+   - Danilo E. Rosario: "Danilo E. Rosario" files as ROSARIO, which comes after DELACRUZ.
+   - Atty. Nora B. Delos Reyes: "Atty. Nora B. Delos Reyes" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Benito A. Ramos: "Benito A. Ramos" sorts by the given name. Personal names file by surname first.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 88. CIVIO-CLR-SPELL-RIGHT-000099
+
+- track: subprofessional · domain: clerical · archetype: CLR-SPELL-RIGHT · difficulty: medium · est: 15 s
+- competency: Spelling · concept: correct spelling
+- micro_skill: spot the correct spelling
+- source: Original, Civio
+- status: draft · review_status: unreviewed
+
+**Stem:** Which word is spelled correctly?  acheivement | achievement | achievemment | achievemant
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | acheivement | A |
+| o2 | achievement | B |
+| o3 | achievemment | C |
+| o4 | achievemant | D |
+
+`answer_option_id`: o2 (achievement)
+
+`distractor_reasoning`: o1 = `SPL-IE-EI`; o3 = `SPL-DOUBLE`; o4 = `SPL-SOUND`
+
+**Reveal**
+
+1. *Meaning.* Look at each word letter by letter. Exactly one choice is spelled the standard way.
+2. *Shortcut.* Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.
+3. *Why it is right.* "achievement" is the standard spelling.
+4. *Why the others are wrong.*
+   - acheivement: "acheivement" swaps the order of i and e. The correct spelling is "achievement".
+   - achievemment: "achievemment" doubles or undoubles a consonant. The correct spelling is "achievement".
+   - achievemant: "achievemant" is spelled the way the word sounds. The correct spelling is "achievement".
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 89. CIVIO-CLR-FILE-POSITION-000100
+
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
+- status: draft · review_status: unreviewed
+
+**Stem:** In alphabetical filing, which name is filed FIRST?  Maria F. Dela Cruz | Corazon E. Rosario | Nora S. De Leon | Atty. Elena B. Dela Torre
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Maria F. Dela Cruz | A |
+| o2 | Atty. Elena B. Dela Torre | B |
+| o3 | Corazon E. Rosario | C |
+| o4 | Nora S. De Leon | D |
+
+`answer_option_id`: o1 (Maria F. Dela Cruz)
+
+`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
+
+**Reveal**
+
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Maria F. Dela Cruz → DELACRUZ, Maria; Atty. Elena B. Dela Torre → DELATORRE, Elena; Nora S. De Leon → DELEON, Nora; Corazon E. Rosario → ROSARIO, Corazon.
+3. *Why it is right.* "Maria F. Dela Cruz" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+4. *Why the others are wrong.*
+   - Atty. Elena B. Dela Torre: "Atty. Elena B. Dela Torre" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Corazon E. Rosario: "Corazon E. Rosario" sorts by the given name. Personal names file by surname first.
+   - Nora S. De Leon: "Nora S. De Leon" files as DELEON, which comes after DELACRUZ.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 90. CIVIO-CLR-FILE-POSITION-000101
+
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
+- status: draft · review_status: unreviewed
+
+**Stem:** In alphabetical filing, which name is filed LAST?  Jose E. Dela Torre | Atty. Elena P. Mendoza | Dr. Ramon A. Flores | Atty. Rafael R. Santos-Ocampo
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Atty. Rafael R. Santos-Ocampo | A |
+| o2 | Atty. Elena P. Mendoza | B |
+| o3 | Dr. Ramon A. Flores | C |
+| o4 | Jose E. Dela Torre | D |
+
+`answer_option_id`: o1 (Atty. Rafael R. Santos-Ocampo)
+
+`distractor_reasoning`: o2 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
+
+**Reveal**
+
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Jose E. Dela Torre → DELATORRE, Jose; Dr. Ramon A. Flores → FLORES, Ramon; Atty. Elena P. Mendoza → MENDOZA, Elena; Atty. Rafael R. Santos-Ocampo → SANTOSOCAMPO, Rafael.
+3. *Why it is right.* "Atty. Rafael R. Santos-Ocampo" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+4. *Why the others are wrong.*
+   - Atty. Elena P. Mendoza: "Atty. Elena P. Mendoza" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.
+   - Dr. Ramon A. Flores: "Dr. Ramon A. Flores" sorts by the given name. Personal names file by surname first.
+   - Jose E. Dela Torre: "Jose E. Dela Torre" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 91. CIVIO-CLR-FILE-POSITION-000102
+
+- track: subprofessional · domain: clerical · archetype: CLR-FILE-POSITION · difficulty: medium · est: 45 s
+- competency: Filing · concept: alphabetic filing of personal names
+- micro_skill: surname, prefix and title rules
+- source: Civio Filing Rules v2 / ARMA Rule 6 (https://webstore.ansi.org/standards/arma/ansiarma122005)
+- status: draft · review_status: unreviewed
+
+**Stem:** In alphabetical filing, which name is filed FIRST?  Victoria R. De Leon | Mario E. Villanueva | Juan F. Dizon | Benito L. Rosario
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Juan F. Dizon | A |
+| o2 | Victoria R. De Leon | B |
+| o3 | Benito L. Rosario | C |
+| o4 | Mario E. Villanueva | D |
+
+`answer_option_id`: o2 (Victoria R. De Leon)
+
+`distractor_reasoning`: o1 = `CLR-FILE-ORDER`; o3 = `CLR-FILE-ORDER`; o4 = `CLR-FILE-ORDER`
+
+**Reveal**
+
+1. *Meaning.* "Indexing" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.
+2. *Shortcut.* Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Victoria R. De Leon → DELEON, Victoria; Juan F. Dizon → DIZON, Juan; Benito L. Rosario → ROSARIO, Benito; Mario E. Villanueva → VILLANUEVA, Mario.
+3. *Why it is right.* "Victoria R. De Leon" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.
+4. *Why the others are wrong.*
+   - Juan F. Dizon: "Juan F. Dizon" files the prefix as a separate word (for example "Dela Cruz" under C). A prefix joins the rest of the surname.
+   - Benito L. Rosario: "Benito L. Rosario" sorts by the given name. Personal names file by surname first.
+   - Mario E. Villanueva: "Mario E. Villanueva" files as VILLANUEVA, which comes after DELEON.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 ## 92. CIVIO-GI-DEADLINE-NUMBER-000103
+
+- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. VII, Sec. 4
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. VII, Sec. 4 (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** How long is the term of the President under the 1987 Constitution?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 4 years, with one re-election | A |
+| o2 | 3 years, with re-election | B |
+| o3 | 6 years, with one re-election | C |
+| o4 | 6 years, with no re-election | D |
+
+`answer_option_id`: o4 (6 years, with no re-election)
+
+`distractor_reasoning`: o1 = `GI-OLD-RULE`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-SOUNDS-RIGHT`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. VII, Sec. 4.
+2. *Shortcut.* Tie the fact to its section: Art. VII, Sec. 4. One 6-year term; the President cannot be re-elected.
+3. *Why it is right.* "6 years, with no re-election" is right. Art. VII, Sec. 4 says: "The President shall not be eligible for any re-election".
+4. *Why the others are wrong.*
+   - 4 years, with one re-election: "4 years, with one re-election" was the rule under an older charter, not the 1987 text.
+   - 3 years, with re-election: "3 years, with re-election" is a nearby number, but not the one in the text.
+   - 6 years, with one re-election: "6 years, with one re-election" sounds reasonable, but the text does not say it.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 93. CIVIO-GI-TERM-MATCH-000104
+
+- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
+- competency: Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) · concept: R.A. 6713, Sec. 4(A)
+- micro_skill: recall a provision
+- source: R.A. 6713, R.A. 6713, Sec. 4(A) (https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** Under R.A. 6713, providing service to everyone without unfair discrimination regardless of party affiliation is which norm of conduct?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Justness and sincerity | A |
+| o2 | Professionalism | B |
+| o3 | Commitment to democracy | C |
+| o4 | Political neutrality | D |
+
+`answer_option_id`: o4 (Political neutrality)
+
+`distractor_reasoning`: o1 = `GI-SIBLING-TERM`; o2 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`
+
+**Reveal**
+
+1. *Meaning.* This item is about R.A. 6713, R.A. 6713, Sec. 4(A).
+2. *Shortcut.* Tie the fact to its section: R.A. 6713, Sec. 4(A). This is political neutrality, Sec. 4(A)(d).
+3. *Why it is right.* "Political neutrality" is right. R.A. 6713, Sec. 4(A) says: "Political neutrality".
+4. *Why the others are wrong.*
+   - Justness and sincerity: "Justness and sincerity" is a related term, but not the one the text uses.
+   - Professionalism: "Professionalism" is a related term, but not the one the text uses.
+   - Commitment to democracy: "Commitment to democracy" is a related term, but not the one the text uses.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 94. CIVIO-GI-DEADLINE-NUMBER-000105
+
+- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. IX-B, Sec. 1(1)
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. IX-B, Sec. 1(1) (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** What is the minimum age to be appointed Chairman or Commissioner of the Civil Service Commission?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | 30 years old | A |
+| o2 | 35 years old | B |
+| o3 | 40 years old | C |
+| o4 | 45 years old | D |
+
+`answer_option_id`: o2 (35 years old)
+
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. IX-B, Sec. 1(1).
+2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 1(1). CSC members must be at least 35 when appointed.
+3. *Why it is right.* "35 years old" is right. Art. IX-B, Sec. 1(1) says: "at least thirty-five years of age".
+4. *Why the others are wrong.*
+   - 30 years old: "30 years old" is a nearby number, but not the one in the text.
+   - 40 years old: "40 years old" is a nearby number, but not the one in the text.
+   - 45 years old: "45 years old" is a nearby number, but not the one in the text.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 95. CIVIO-GI-DEADLINE-NUMBER-000106
+
+- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. VI, Sec. 4
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. VI, Sec. 4 (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** How many consecutive terms may a Senator serve?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Three | A |
+| o2 | One | B |
+| o3 | Two | C |
+| o4 | No limit | D |
+
+`answer_option_id`: o3 (Two)
+
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-SOUNDS-RIGHT`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. VI, Sec. 4.
+2. *Shortcut.* Tie the fact to its section: Art. VI, Sec. 4. A Senator may not serve more than two terms in a row.
+3. *Why it is right.* "Two" is right. Art. VI, Sec. 4 says: "No Senator shall serve for more than two consecutive terms".
+4. *Why the others are wrong.*
+   - Three: "Three" is a nearby number, but not the one in the text.
+   - One: "One" is a nearby number, but not the one in the text.
+   - No limit: "No limit" sounds reasonable, but the text does not say it.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 96. CIVIO-GI-TERM-MATCH-000107
+
+- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. IX-B, Sec. 2(5)
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. IX-B, Sec. 2(5) (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** Under the 1987 Constitution, the right of government employees to do what shall not be denied?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Strike | A |
+| o2 | Campaign for candidates | B |
+| o3 | Hold two government posts | C |
+| o4 | Self-organization | D |
+
+`answer_option_id`: o4 (Self-organization)
+
+`distractor_reasoning`: o1 = `GI-SOUNDS-RIGHT`; o2 = `GI-SOUNDS-RIGHT`; o3 = `GI-SOUNDS-RIGHT`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. IX-B, Sec. 2(5).
+2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 2(5). Employees may form unions (self-organization).
+3. *Why it is right.* "Self-organization" is right. Art. IX-B, Sec. 2(5) says: "The right to self-organization shall not be denied to government employees".
+4. *Why the others are wrong.*
+   - Strike: "Strike" sounds reasonable, but the text does not say it.
+   - Campaign for candidates: "Campaign for candidates" sounds reasonable, but the text does not say it.
+   - Hold two government posts: "Hold two government posts" sounds reasonable, but the text does not say it.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 97. CIVIO-GI-TERM-MATCH-000108
+
+- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. III, Sec. 20
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. III, Sec. 20 (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** Under the Bill of Rights, no person shall be imprisoned for what?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Debt or non-payment of a poll tax | A |
+| o2 | Theft | B |
+| o3 | Contempt of court | C |
+| o4 | Estafa | D |
+
+`answer_option_id`: o1 (Debt or non-payment of a poll tax)
+
+`distractor_reasoning`: o2 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`; o4 = `GI-SIBLING-TERM`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. III, Sec. 20.
+2. *Shortcut.* Tie the fact to its section: Art. III, Sec. 20. No prison for debt.
+3. *Why it is right.* "Debt or non-payment of a poll tax" is right. Art. III, Sec. 20 says: "No person shall be imprisoned for debt or non-payment of a poll tax".
+4. *Why the others are wrong.*
+   - Theft: "Theft" is a related term, but not the one the text uses.
+   - Contempt of court: "Contempt of court" is a related term, but not the one the text uses.
+   - Estafa: "Estafa" is a related term, but not the one the text uses.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 98. CIVIO-GI-TERM-MATCH-000109
+
+- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. IX-B, Sec. 2(2)
+- micro_skill: recall a provision
+- source: The 1987 Constitution, Art. IX-B, Sec. 2(2) (https://lawphil.net/consti/cons1987.html)
+- status: draft · review_status: unreviewed
+
+**Stem:** Under the 1987 Constitution, appointments in the civil service shall be made only according to what?
+
+| option_id | text | shown as |
+|---|---|---|
+| o1 | Seniority alone | A |
+| o2 | Merit and fitness, determined as far as practicable by competitive examination | B |
+| o3 | Recommendation of a local official | C |
+| o4 | Length of residence in the area | D |
+
+`answer_option_id`: o2 (Merit and fitness, determined as far as practicable by competitive examination)
+
+`distractor_reasoning`: o1 = `GI-SOUNDS-RIGHT`; o3 = `GI-SOUNDS-RIGHT`; o4 = `GI-SOUNDS-RIGHT`
+
+**Reveal**
+
+1. *Meaning.* This item is about the 1987 Constitution, Art. IX-B, Sec. 2(2).
+2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 2(2). Merit and fitness is the constitutional rule.
+3. *Why it is right.* "Merit and fitness, determined as far as practicable by competitive examination" is right. Art. IX-B, Sec. 2(2) says: "according to merit and fitness to be determined, as far as practicable".
+4. *Why the others are wrong.*
+   - Seniority alone: "Seniority alone" sounds reasonable, but the text does not say it.
+   - Recommendation of a local official: "Recommendation of a local official" sounds reasonable, but the text does not say it.
+   - Length of residence in the area: "Length of residence in the area" sounds reasonable, but the text does not say it.
+
+Review: [ ] CoS pass  [ ] GT approve  Notes:
+
+## 99. CIVIO-GI-DEADLINE-NUMBER-000110
 
 - track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
 - competency: Philippine Constitution · concept: Art. VIII, Sec. 7(1)
@@ -3024,14 +3255,14 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 35 years old | A |
-| o2 | 50 years old | B |
-| o3 | 45 years old | C |
-| o4 | 40 years old | D |
+| o1 | 50 years old | A |
+| o2 | 35 years old | B |
+| o3 | 40 years old | C |
+| o4 | 45 years old | D |
 
-`answer_option_id`: o4 (40 years old)
+`answer_option_id`: o3 (40 years old)
 
-`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`
+`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
 
 **Reveal**
 
@@ -3039,273 +3270,42 @@ Review: [ ] CoS pass  [ ] GT approve  Notes:
 2. *Shortcut.* Tie the fact to its section: Art. VIII, Sec. 7(1). A Justice must be at least 40.
 3. *Why it is right.* "40 years old" is right. Art. VIII, Sec. 7(1) says: "must be at least forty years of age".
 4. *Why the others are wrong.*
-   - 35 years old: "35 years old" is a nearby number, but not the one in the text.
    - 50 years old: "50 years old" is a nearby number, but not the one in the text.
+   - 35 years old: "35 years old" is a nearby number, but not the one in the text.
    - 45 years old: "45 years old" is a nearby number, but not the one in the text.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 
-## 93. CIVIO-GI-DEADLINE-NUMBER-000104
+## 100. CIVIO-GI-WHO-HOLDS-POWER-000111
 
-- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. VI, Sec. 4
+- track: both · domain: general_information · archetype: GI-WHO-HOLDS-POWER · difficulty: medium · est: 25 s
+- competency: Philippine Constitution · concept: Art. VI, Sec. 24
 - micro_skill: recall a provision
-- source: The 1987 Constitution, Art. VI, Sec. 4 (https://lawphil.net/consti/cons1987.html)
+- source: The 1987 Constitution, Art. VI, Sec. 24 (https://lawphil.net/consti/cons1987.html)
 - status: draft · review_status: unreviewed
 
-**Stem:** How long is the term of office of a Senator under the 1987 Constitution?
+**Stem:** Under the 1987 Constitution, appropriation, revenue and tariff bills must originate exclusively in which body?
 
 | option_id | text | shown as |
 |---|---|---|
-| o1 | 6 years | A |
-| o2 | 4 years | B |
-| o3 | 3 years | C |
-| o4 | 9 years | D |
+| o1 | Office of the President | A |
+| o2 | House of Representatives | B |
+| o3 | Senate | C |
+| o4 | Commission on Audit | D |
 
-`answer_option_id`: o1 (6 years)
+`answer_option_id`: o2 (House of Representatives)
 
-`distractor_reasoning`: o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
-
-**Reveal**
-
-1. *Meaning.* This item is about the 1987 Constitution, Art. VI, Sec. 4.
-2. *Shortcut.* Tie the fact to its section: Art. VI, Sec. 4. Senators serve 6-year terms.
-3. *Why it is right.* "6 years" is right. Art. VI, Sec. 4 says: "The term of office of the Senators shall be six years".
-4. *Why the others are wrong.*
-   - 4 years: "4 years" is a nearby number, but not the one in the text.
-   - 3 years: "3 years" is a nearby number, but not the one in the text.
-   - 9 years: "9 years" is a nearby number, but not the one in the text.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 94. CIVIO-GI-TERM-MATCH-000105
-
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. III, Sec. 7
-- micro_skill: recall a provision
-- source: The 1987 Constitution, Art. III, Sec. 7 (https://lawphil.net/consti/cons1987.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** Which right is recognized by Art. III, Sec. 7 of the 1987 Constitution?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | The right to government employment | A |
-| o2 | The right of the people to information on matters of public concern | B |
-| o3 | The right to strike | C |
-| o4 | The right to free legal service in civil cases | D |
-
-`answer_option_id`: o2 (The right of the people to information on matters of public concern)
-
-`distractor_reasoning`: o1 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`; o4 = `GI-SIBLING-TERM`
+`distractor_reasoning`: o1 = `GI-WRONG-BODY`; o3 = `GI-WRONG-BODY`; o4 = `GI-WRONG-BODY`
 
 **Reveal**
 
-1. *Meaning.* This item is about the 1987 Constitution, Art. III, Sec. 7.
-2. *Shortcut.* Tie the fact to its section: Art. III, Sec. 7. Right to information.
-3. *Why it is right.* "The right of the people to information on matters of public concern" is right. Art. III, Sec. 7 says: "The right of the people to information on matters of public concern shall be recognized".
+1. *Meaning.* This item is about the 1987 Constitution, Art. VI, Sec. 24.
+2. *Shortcut.* Tie the fact to its section: Art. VI, Sec. 24. Money bills start in the House; the Senate may propose amendments.
+3. *Why it is right.* "House of Representatives" is right. Art. VI, Sec. 24 says: "shall originate exclusively in the House of Representatives".
 4. *Why the others are wrong.*
-   - The right to government employment: "The right to government employment" is a related term, but not the one the text uses.
-   - The right to strike: "The right to strike" is a related term, but not the one the text uses.
-   - The right to free legal service in civil cases: "The right to free legal service in civil cases" is a related term, but not the one the text uses.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 95. CIVIO-GI-DEADLINE-NUMBER-000106
-
-- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. VI, Sec. 7
-- micro_skill: recall a provision
-- source: The 1987 Constitution, Art. VI, Sec. 7 (https://lawphil.net/consti/cons1987.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** How long is the term of a Member of the House of Representatives?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 6 years | A |
-| o2 | 2 years | B |
-| o3 | 4 years | C |
-| o4 | 3 years | D |
-
-`answer_option_id`: o4 (3 years)
-
-`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`
-
-**Reveal**
-
-1. *Meaning.* This item is about the 1987 Constitution, Art. VI, Sec. 7.
-2. *Shortcut.* Tie the fact to its section: Art. VI, Sec. 7. House Members serve 3-year terms.
-3. *Why it is right.* "3 years" is right. Art. VI, Sec. 7 says: "shall be elected for a term of three years".
-4. *Why the others are wrong.*
-   - 6 years: "6 years" is a nearby number, but not the one in the text.
-   - 2 years: "2 years" is a nearby number, but not the one in the text.
-   - 4 years: "4 years" is a nearby number, but not the one in the text.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 96. CIVIO-GI-DEADLINE-NUMBER-000107
-
-- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. VII, Sec. 18
-- micro_skill: recall a provision
-- source: The 1987 Constitution, Art. VII, Sec. 18 (https://lawphil.net/consti/cons1987.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** Within how many hours after a proclamation of martial law must the President report to Congress?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 72 hours | A |
-| o2 | 7 days | B |
-| o3 | 48 hours | C |
-| o4 | 24 hours | D |
-
-`answer_option_id`: o3 (48 hours)
-
-`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
-
-**Reveal**
-
-1. *Meaning.* This item is about the 1987 Constitution, Art. VII, Sec. 18.
-2. *Shortcut.* Tie the fact to its section: Art. VII, Sec. 18. The report to Congress is due within 48 hours.
-3. *Why it is right.* "48 hours" is right. Art. VII, Sec. 18 says: "Within forty-eight hours from the proclamation of martial law".
-4. *Why the others are wrong.*
-   - 72 hours: "72 hours" is a nearby number, but not the one in the text.
-   - 7 days: "7 days" is a nearby number, but not the one in the text.
-   - 24 hours: "24 hours" is a nearby number, but not the one in the text.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 97. CIVIO-GI-TERM-MATCH-000108
-
-- track: both · domain: general_information · archetype: GI-TERM-MATCH · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. XI, Sec. 2
-- micro_skill: recall a provision
-- source: The 1987 Constitution, Art. XI, Sec. 2 (https://lawphil.net/consti/cons1987.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** Which of these is NOT a ground for impeachment under the 1987 Constitution?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Culpable violation of the Constitution | A |
-| o2 | Poor performance rating | B |
-| o3 | Betrayal of public trust | C |
-| o4 | Graft and corruption | D |
-
-`answer_option_id`: o2 (Poor performance rating)
-
-`distractor_reasoning`: o1 = `GI-SIBLING-TERM`; o3 = `GI-SIBLING-TERM`; o4 = `GI-SIBLING-TERM`
-
-**Reveal**
-
-1. *Meaning.* This item is about the 1987 Constitution, Art. XI, Sec. 2.
-2. *Shortcut.* Tie the fact to its section: Art. XI, Sec. 2. The grounds are listed in Sec. 2; poor performance is not one.
-3. *Why it is right.* "Poor performance rating" is right. Art. XI, Sec. 2 says: "culpable violation of the Constitution, treason, bribery, graft and corruption, other high crimes, or betrayal of public trust".
-4. *Why the others are wrong.*
-   - Culpable violation of the Constitution: "Culpable violation of the Constitution" is a related term, but not the one the text uses.
-   - Betrayal of public trust: "Betrayal of public trust" is a related term, but not the one the text uses.
-   - Graft and corruption: "Graft and corruption" is a related term, but not the one the text uses.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 98. CIVIO-GI-DEADLINE-NUMBER-000109
-
-- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. IX-B, Sec. 1(1)
-- micro_skill: recall a provision
-- source: The 1987 Constitution, Art. IX-B, Sec. 1(1) (https://lawphil.net/consti/cons1987.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** How many Commissioners does the Civil Service Commission have, besides its Chairman?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Six | A |
-| o2 | Four | B |
-| o3 | Two | C |
-| o4 | Three | D |
-
-`answer_option_id`: o3 (Two)
-
-`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
-
-**Reveal**
-
-1. *Meaning.* This item is about the 1987 Constitution, Art. IX-B, Sec. 1(1).
-2. *Shortcut.* Tie the fact to its section: Art. IX-B, Sec. 1(1). The CSC has a Chairman and two Commissioners.
-3. *Why it is right.* "Two" is right. Art. IX-B, Sec. 1(1) says: "composed of a Chairman and two Commissioners".
-4. *Why the others are wrong.*
-   - Six: "Six" is a nearby number, but not the one in the text.
-   - Four: "Four" is a nearby number, but not the one in the text.
-   - Three: "Three" is a nearby number, but not the one in the text.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 99. CIVIO-GI-DEADLINE-NUMBER-000110
-
-- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. VI, Sec. 7
-- micro_skill: recall a provision
-- source: The 1987 Constitution, Art. VI, Sec. 7 (https://lawphil.net/consti/cons1987.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** How many consecutive terms may a Member of the House of Representatives serve?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | Four | A |
-| o2 | Two | B |
-| o3 | One | C |
-| o4 | Three | D |
-
-`answer_option_id`: o4 (Three)
-
-`distractor_reasoning`: o1 = `GI-NEIGHBOR-NUMBER`; o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`
-
-**Reveal**
-
-1. *Meaning.* This item is about the 1987 Constitution, Art. VI, Sec. 7.
-2. *Shortcut.* Tie the fact to its section: Art. VI, Sec. 7. A House Member may serve up to three terms in a row.
-3. *Why it is right.* "Three" is right. Art. VI, Sec. 7 says: "No member of the House of Representatives shall serve for more than three consecutive terms".
-4. *Why the others are wrong.*
-   - Four: "Four" is a nearby number, but not the one in the text.
-   - Two: "Two" is a nearby number, but not the one in the text.
-   - One: "One" is a nearby number, but not the one in the text.
-
-Review: [ ] CoS pass  [ ] GT approve  Notes:
-
-## 100. CIVIO-GI-DEADLINE-NUMBER-000111
-
-- track: both · domain: general_information · archetype: GI-DEADLINE-NUMBER · difficulty: medium · est: 25 s
-- competency: Philippine Constitution · concept: Art. VI, Sec. 2
-- micro_skill: recall a provision
-- source: The 1987 Constitution, Art. VI, Sec. 2 (https://lawphil.net/consti/cons1987.html)
-- status: draft · review_status: unreviewed
-
-**Stem:** How many Senators make up the Senate under the 1987 Constitution?
-
-| option_id | text | shown as |
-|---|---|---|
-| o1 | 24 | A |
-| o2 | 30 | B |
-| o3 | 25 | C |
-| o4 | 12 | D |
-
-`answer_option_id`: o1 (24)
-
-`distractor_reasoning`: o2 = `GI-NEIGHBOR-NUMBER`; o3 = `GI-NEIGHBOR-NUMBER`; o4 = `GI-NEIGHBOR-NUMBER`
-
-**Reveal**
-
-1. *Meaning.* This item is about the 1987 Constitution, Art. VI, Sec. 2.
-2. *Shortcut.* Tie the fact to its section: Art. VI, Sec. 2. The Senate has 24 members elected at large.
-3. *Why it is right.* "24" is right. Art. VI, Sec. 2 says: "The Senate shall be composed of twenty-four Senators".
-4. *Why the others are wrong.*
-   - 30: "30" is a nearby number, but not the one in the text.
-   - 25: "25" is a nearby number, but not the one in the text.
-   - 12: "12" is a nearby number, but not the one in the text.
+   - Office of the President: "Office of the President" names a different office or body.
+   - Senate: "Senate" names a different office or body.
+   - Commission on Audit: "Commission on Audit" names a different office or body.
 
 Review: [ ] CoS pass  [ ] GT approve  Notes:
 

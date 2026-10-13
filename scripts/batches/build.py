@@ -76,7 +76,7 @@ def main(rnd):
                     it = gi.item(rng, "TMP", k)
                     used_facts.add(k)
                 else:
-                    tpl = GEN[dom][(made + tries) % len(GEN[dom])] if dom != "verbal_en" else rng.choice(GEN[dom])
+                    tpl = GEN[dom][(made + tries) % len(GEN[dom])] if dom not in ("verbal_en", "clerical") else rng.choice(GEN[dom])
                     it = tpl(rng, "TMP")
                     if dom == "verbal_en":
                         have = sum(1 for x in items if x["domain"] == dom and x["concept"] == it["concept"])

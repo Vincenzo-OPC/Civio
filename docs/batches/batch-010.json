@@ -4687,622 +4687,34 @@
       "difficulty": "medium",
       "est_seconds": 45,
       "language": "en",
-      "stem": "In alphabetical filing, which name is filed FIRST?  Carlos A. Pedro | Dr. Teresita B. Juan | Engr. Imelda E. Del Rosario | Ernesto F. Flores",
+      "stem": "In alphabetical filing, which name is filed LAST?  Lourdes S. Ramos | Atty. Maria D. Dela Torre | Ramon N. Del Rosario | Teresita T. Mendoza",
       "options": [
         {
           "option_id": "o1",
-          "text": "Carlos A. Pedro"
+          "text": "Ramon N. Del Rosario"
         },
         {
           "option_id": "o2",
-          "text": "Ernesto F. Flores"
+          "text": "Lourdes S. Ramos"
         },
         {
           "option_id": "o3",
-          "text": "Engr. Imelda E. Del Rosario"
+          "text": "Teresita T. Mendoza"
         },
         {
           "option_id": "o4",
-          "text": "Dr. Teresita B. Juan"
-        }
-      ],
-      "answer_option_id": "o3",
-      "reveal": {
-        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Imelda E. Del Rosario → DELROSARIO, Imelda; Ernesto F. Flores → FLORES, Ernesto; Dr. Teresita B. Juan → JUAN, Teresita; Carlos A. Pedro → PEDRO, Carlos.",
-        "why_correct": "\"Engr. Imelda E. Del Rosario\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
-        "why_wrong": {
-          "o1": "\"Carlos A. Pedro\" sorts by the given name. Personal names file by surname first.",
-          "o2": "\"Ernesto F. Flores\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",
-          "o4": "\"Dr. Teresita B. Juan\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "CLR-FILE-ORDER",
-        "o2": "CLR-FILE-ORDER",
-        "o4": "CLR-FILE-ORDER"
-      },
-      "source": "Civio Filing Rules v2 / ARMA Rule 6",
-      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "distractor_subreason": {
-        "o1": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
-        "o2": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
-        "o4": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)"
-      },
-      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Carlos A. Pedro | Dr. Teresita B. Juan | Engr. Imelda E. Del Rosario | Ernesto F. Flores"
-    },
-    {
-      "id": "CIVIO-CLR-SPELL-RIGHT-000888",
-      "track": "subprofessional",
-      "domain": "clerical",
-      "competency": "Spelling",
-      "concept": "correct spelling",
-      "micro_skill": "spot the correct spelling",
-      "archetype": "CLR-SPELL-RIGHT",
-      "difficulty": "medium",
-      "est_seconds": 15,
-      "language": "en",
-      "stem": "Which word is spelled correctly?  unanimus | unnimous | unannimous | unanimous",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "unanimus"
-        },
-        {
-          "option_id": "o2",
-          "text": "unnimous"
-        },
-        {
-          "option_id": "o3",
-          "text": "unannimous"
-        },
-        {
-          "option_id": "o4",
-          "text": "unanimous"
-        }
-      ],
-      "answer_option_id": "o4",
-      "reveal": {
-        "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
-        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
-        "why_correct": "\"unanimous\" is the standard spelling.",
-        "why_wrong": {
-          "o1": "\"unanimus\" is spelled the way the word sounds. The correct spelling is \"unanimous\".",
-          "o2": "\"unnimous\" drops a letter. The correct spelling is \"unanimous\".",
-          "o3": "\"unannimous\" doubles or undoubles a consonant. The correct spelling is \"unanimous\"."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "SPL-SOUND",
-        "o2": "SPL-DROP",
-        "o3": "SPL-DOUBLE"
-      },
-      "source": "Original, Civio",
-      "source_url": null,
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "gen_sig": "R:unanimous"
-    },
-    {
-      "id": "CIVIO-CLR-FILE-POSITION-000889",
-      "track": "subprofessional",
-      "domain": "clerical",
-      "competency": "Filing",
-      "concept": "alphabetic filing of personal names",
-      "micro_skill": "surname, prefix and title rules",
-      "archetype": "CLR-FILE-POSITION",
-      "difficulty": "medium",
-      "est_seconds": 45,
-      "language": "en",
-      "stem": "In alphabetical filing, which name is filed FIRST?  Dr. Ramon F. Pascual | Benito E. De Guzman | Engr. Nora M. Garcia | Engr. Alfredo B. Dela Torre",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Benito E. De Guzman"
-        },
-        {
-          "option_id": "o2",
-          "text": "Dr. Ramon F. Pascual"
-        },
-        {
-          "option_id": "o3",
-          "text": "Engr. Alfredo B. Dela Torre"
-        },
-        {
-          "option_id": "o4",
-          "text": "Engr. Nora M. Garcia"
-        }
-      ],
-      "answer_option_id": "o1",
-      "reveal": {
-        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Benito E. De Guzman → DEGUZMAN, Benito; Engr. Alfredo B. Dela Torre → DELATORRE, Alfredo; Engr. Nora M. Garcia → GARCIA, Nora; Dr. Ramon F. Pascual → PASCUAL, Ramon.",
-        "why_correct": "\"Benito E. De Guzman\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
-        "why_wrong": {
-          "o2": "\"Dr. Ramon F. Pascual\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.",
-          "o3": "\"Engr. Alfredo B. Dela Torre\" sorts by the given name. Personal names file by surname first.",
-          "o4": "\"Engr. Nora M. Garcia\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname."
-        }
-      },
-      "distractor_reasoning": {
-        "o2": "CLR-FILE-ORDER",
-        "o3": "CLR-FILE-ORDER",
-        "o4": "CLR-FILE-ORDER"
-      },
-      "source": "Civio Filing Rules v2 / ARMA Rule 6",
-      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "distractor_subreason": {
-        "o2": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)",
-        "o3": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
-        "o4": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)"
-      },
-      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Dr. Ramon F. Pascual | Benito E. De Guzman | Engr. Nora M. Garcia | Engr. Alfredo B. Dela Torre"
-    },
-    {
-      "id": "CIVIO-CLR-SPELL-RIGHT-000890",
-      "track": "subprofessional",
-      "domain": "clerical",
-      "competency": "Spelling",
-      "concept": "correct spelling",
-      "micro_skill": "spot the correct spelling",
-      "archetype": "CLR-SPELL-RIGHT",
-      "difficulty": "medium",
-      "est_seconds": 15,
-      "language": "en",
-      "stem": "Which word is spelled correctly?  receive | recieve | recive | receve",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "receive"
-        },
-        {
-          "option_id": "o2",
-          "text": "recieve"
-        },
-        {
-          "option_id": "o3",
-          "text": "recive"
-        },
-        {
-          "option_id": "o4",
-          "text": "receve"
-        }
-      ],
-      "answer_option_id": "o1",
-      "reveal": {
-        "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
-        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
-        "why_correct": "\"receive\" is the standard spelling.",
-        "why_wrong": {
-          "o2": "\"recieve\" swaps the order of i and e. The correct spelling is \"receive\".",
-          "o3": "\"recive\" drops a letter. The correct spelling is \"receive\".",
-          "o4": "\"receve\" drops a letter. The correct spelling is \"receive\"."
-        }
-      },
-      "distractor_reasoning": {
-        "o2": "SPL-IE-EI",
-        "o3": "SPL-DROP",
-        "o4": "SPL-DROP"
-      },
-      "source": "Original, Civio",
-      "source_url": null,
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "gen_sig": "R:receive"
-    },
-    {
-      "id": "CIVIO-CLR-FILE-POSITION-000891",
-      "track": "subprofessional",
-      "domain": "clerical",
-      "competency": "Filing",
-      "concept": "alphabetic filing of personal names",
-      "micro_skill": "surname, prefix and title rules",
-      "archetype": "CLR-FILE-POSITION",
-      "difficulty": "medium",
-      "est_seconds": 45,
-      "language": "en",
-      "stem": "In alphabetical filing, which name is filed LAST?  Alfredo C. Garcia | Engr. Ramon C. Flores | Ana R. Villanueva | Engr. Cristina S. Cruz",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Ana R. Villanueva"
-        },
-        {
-          "option_id": "o2",
-          "text": "Alfredo C. Garcia"
-        },
-        {
-          "option_id": "o3",
-          "text": "Engr. Cristina S. Cruz"
-        },
-        {
-          "option_id": "o4",
-          "text": "Engr. Ramon C. Flores"
-        }
-      ],
-      "answer_option_id": "o1",
-      "reveal": {
-        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Cristina S. Cruz → CRUZ, Cristina; Engr. Ramon C. Flores → FLORES, Ramon; Alfredo C. Garcia → GARCIA, Alfredo; Ana R. Villanueva → VILLANUEVA, Ana.",
-        "why_correct": "\"Ana R. Villanueva\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC.",
-        "why_wrong": {
-          "o2": "\"Alfredo C. Garcia\" files as GARCIA, which comes before VILLANUEVA.",
-          "o3": "\"Engr. Cristina S. Cruz\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.",
-          "o4": "\"Engr. Ramon C. Flores\" sorts by the given name. Personal names file by surname first."
-        }
-      },
-      "distractor_reasoning": {
-        "o2": "CLR-FILE-ORDER",
-        "o3": "CLR-FILE-ORDER",
-        "o4": "CLR-FILE-ORDER"
-      },
-      "source": "Civio Filing Rules v2 / ARMA Rule 5",
-      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "distractor_subreason": {
-        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)",
-        "o3": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)",
-        "o4": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)"
-      },
-      "gen_sig": "In alphabetical filing, which name is filed LAST?  Alfredo C. Garcia | Engr. Ramon C. Flores | Ana R. Villanueva | Engr. Cristina S. Cruz"
-    },
-    {
-      "id": "CIVIO-CLR-SPELL-RIGHT-000892",
-      "track": "subprofessional",
-      "domain": "clerical",
-      "competency": "Spelling",
-      "concept": "correct spelling",
-      "micro_skill": "spot the correct spelling",
-      "archetype": "CLR-SPELL-RIGHT",
-      "difficulty": "medium",
-      "est_seconds": 15,
-      "language": "en",
-      "stem": "Which word is spelled correctly?  defintely | definitly | definitely | definnitely",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "defintely"
-        },
-        {
-          "option_id": "o2",
-          "text": "definitly"
-        },
-        {
-          "option_id": "o3",
-          "text": "definitely"
-        },
-        {
-          "option_id": "o4",
-          "text": "definnitely"
-        }
-      ],
-      "answer_option_id": "o3",
-      "reveal": {
-        "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
-        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
-        "why_correct": "\"definitely\" is the standard spelling.",
-        "why_wrong": {
-          "o1": "\"defintely\" drops a letter. The correct spelling is \"definitely\".",
-          "o2": "\"definitly\" drops a letter. The correct spelling is \"definitely\".",
-          "o4": "\"definnitely\" doubles or undoubles a consonant. The correct spelling is \"definitely\"."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "SPL-DROP",
-        "o2": "SPL-DROP",
-        "o4": "SPL-DOUBLE"
-      },
-      "source": "Original, Civio",
-      "source_url": null,
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "gen_sig": "R:definitely"
-    },
-    {
-      "id": "CIVIO-CLR-FILE-POSITION-000893",
-      "track": "subprofessional",
-      "domain": "clerical",
-      "competency": "Filing",
-      "concept": "alphabetic filing of personal names",
-      "micro_skill": "surname, prefix and title rules",
-      "archetype": "CLR-FILE-POSITION",
-      "difficulty": "medium",
-      "est_seconds": 45,
-      "language": "en",
-      "stem": "In alphabetical filing, which name is filed LAST?  Benito G. Lim | Mario N. De Leon | Lourdes F. Delos Reyes | Juan V. Manalo",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Lourdes F. Delos Reyes"
-        },
-        {
-          "option_id": "o2",
-          "text": "Benito G. Lim"
-        },
-        {
-          "option_id": "o3",
-          "text": "Juan V. Manalo"
-        },
-        {
-          "option_id": "o4",
-          "text": "Mario N. De Leon"
-        }
-      ],
-      "answer_option_id": "o3",
-      "reveal": {
-        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Mario N. De Leon → DELEON, Mario; Lourdes F. Delos Reyes → DELOSREYES, Lourdes; Benito G. Lim → LIM, Benito; Juan V. Manalo → MANALO, Juan.",
-        "why_correct": "\"Juan V. Manalo\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
-        "why_wrong": {
-          "o1": "\"Lourdes F. Delos Reyes\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",
-          "o2": "\"Benito G. Lim\" files as LIM, which comes before MANALO.",
-          "o4": "\"Mario N. De Leon\" sorts by the given name. Personal names file by surname first."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "CLR-FILE-ORDER",
-        "o2": "CLR-FILE-ORDER",
-        "o4": "CLR-FILE-ORDER"
-      },
-      "source": "Civio Filing Rules v2 / ARMA Rule 6",
-      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "distractor_subreason": {
-        "o1": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
-        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)",
-        "o4": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)"
-      },
-      "gen_sig": "In alphabetical filing, which name is filed LAST?  Benito G. Lim | Mario N. De Leon | Lourdes F. Delos Reyes | Juan V. Manalo"
-    },
-    {
-      "id": "CIVIO-CLR-FILE-POSITION-000894",
-      "track": "subprofessional",
-      "domain": "clerical",
-      "competency": "Filing",
-      "concept": "alphabetic filing of personal names",
-      "micro_skill": "surname, prefix and title rules",
-      "archetype": "CLR-FILE-POSITION",
-      "difficulty": "medium",
-      "est_seconds": 45,
-      "language": "en",
-      "stem": "In alphabetical filing, which name is filed LAST?  Engr. Ramon S. Cruz | Dr. Imelda D. De Guzman | Nora B. Ocampo | Dr. Mario R. Reyes-Tan",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Dr. Imelda D. De Guzman"
-        },
-        {
-          "option_id": "o2",
-          "text": "Nora B. Ocampo"
-        },
-        {
-          "option_id": "o3",
-          "text": "Dr. Mario R. Reyes-Tan"
-        },
-        {
-          "option_id": "o4",
-          "text": "Engr. Ramon S. Cruz"
-        }
-      ],
-      "answer_option_id": "o3",
-      "reveal": {
-        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Ramon S. Cruz → CRUZ, Ramon; Dr. Imelda D. De Guzman → DEGUZMAN, Imelda; Nora B. Ocampo → OCAMPO, Nora; Dr. Mario R. Reyes-Tan → REYESTAN, Mario.",
-        "why_correct": "\"Dr. Mario R. Reyes-Tan\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
-        "why_wrong": {
-          "o1": "\"Dr. Imelda D. De Guzman\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.",
-          "o2": "\"Nora B. Ocampo\" files as OCAMPO, which comes before REYESTAN.",
-          "o4": "\"Engr. Ramon S. Cruz\" sorts by the given name. Personal names file by surname first."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "CLR-FILE-ORDER",
-        "o2": "CLR-FILE-ORDER",
-        "o4": "CLR-FILE-ORDER"
-      },
-      "source": "Civio Filing Rules v2 / ARMA Rule 6",
-      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "distractor_subreason": {
-        "o1": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)",
-        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)",
-        "o4": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)"
-      },
-      "gen_sig": "In alphabetical filing, which name is filed LAST?  Engr. Ramon S. Cruz | Dr. Imelda D. De Guzman | Nora B. Ocampo | Dr. Mario R. Reyes-Tan"
-    },
-    {
-      "id": "CIVIO-CLR-FILE-POSITION-000895",
-      "track": "subprofessional",
-      "domain": "clerical",
-      "competency": "Filing",
-      "concept": "alphabetic filing of personal names",
-      "micro_skill": "surname, prefix and title rules",
-      "archetype": "CLR-FILE-POSITION",
-      "difficulty": "medium",
-      "est_seconds": 45,
-      "language": "en",
-      "stem": "In alphabetical filing, which name is filed FIRST?  Victoria B. Torres | Alfredo E. Leon | Eduardo P. Garcia-Lopez | Dr. Ramon N. Pascual",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Alfredo E. Leon"
-        },
-        {
-          "option_id": "o2",
-          "text": "Dr. Ramon N. Pascual"
-        },
-        {
-          "option_id": "o3",
-          "text": "Victoria B. Torres"
-        },
-        {
-          "option_id": "o4",
-          "text": "Eduardo P. Garcia-Lopez"
-        }
-      ],
-      "answer_option_id": "o4",
-      "reveal": {
-        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Eduardo P. Garcia-Lopez → GARCIALOPEZ, Eduardo; Alfredo E. Leon → LEON, Alfredo; Dr. Ramon N. Pascual → PASCUAL, Ramon; Victoria B. Torres → TORRES, Victoria.",
-        "why_correct": "\"Eduardo P. Garcia-Lopez\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC.",
-        "why_wrong": {
-          "o1": "\"Alfredo E. Leon\" sorts by the given name. Personal names file by surname first.",
-          "o2": "\"Dr. Ramon N. Pascual\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.",
-          "o3": "\"Victoria B. Torres\" files as TORRES, which comes after GARCIALOPEZ."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "CLR-FILE-ORDER",
-        "o2": "CLR-FILE-ORDER",
-        "o3": "CLR-FILE-ORDER"
-      },
-      "source": "Civio Filing Rules v2 / ARMA Rule 5",
-      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "distractor_subreason": {
-        "o1": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
-        "o2": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)",
-        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)"
-      },
-      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Victoria B. Torres | Alfredo E. Leon | Eduardo P. Garcia-Lopez | Dr. Ramon N. Pascual"
-    },
-    {
-      "id": "CIVIO-CLR-FILE-POSITION-000896",
-      "track": "subprofessional",
-      "domain": "clerical",
-      "competency": "Filing",
-      "concept": "alphabetic filing of personal names",
-      "micro_skill": "surname, prefix and title rules",
-      "archetype": "CLR-FILE-POSITION",
-      "difficulty": "medium",
-      "est_seconds": 45,
-      "language": "en",
-      "stem": "In alphabetical filing, which name is filed LAST?  Liza P. Del Rosario | Lourdes D. Garcia | Engr. Gloria A. San Pedro | Nora P. Del Mundo",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Lourdes D. Garcia"
-        },
-        {
-          "option_id": "o2",
-          "text": "Engr. Gloria A. San Pedro"
-        },
-        {
-          "option_id": "o3",
-          "text": "Nora P. Del Mundo"
-        },
-        {
-          "option_id": "o4",
-          "text": "Liza P. Del Rosario"
+          "text": "Atty. Maria D. Dela Torre"
         }
       ],
       "answer_option_id": "o2",
       "reveal": {
         "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Nora P. Del Mundo → DELMUNDO, Nora; Liza P. Del Rosario → DELROSARIO, Liza; Lourdes D. Garcia → GARCIA, Lourdes; Engr. Gloria A. San Pedro → SANPEDRO, Gloria.",
-        "why_correct": "\"Engr. Gloria A. San Pedro\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Atty. Maria D. Dela Torre → DELATORRE, Maria; Ramon N. Del Rosario → DELROSARIO, Ramon; Teresita T. Mendoza → MENDOZA, Teresita; Lourdes S. Ramos → RAMOS, Lourdes.",
+        "why_correct": "\"Lourdes S. Ramos\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
         "why_wrong": {
-          "o1": "\"Lourdes D. Garcia\" files as GARCIA, which comes before SANPEDRO.",
-          "o3": "\"Nora P. Del Mundo\" sorts by the given name. Personal names file by surname first.",
-          "o4": "\"Liza P. Del Rosario\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname."
+          "o1": "\"Ramon N. Del Rosario\" files as DELROSARIO, which comes before RAMOS.",
+          "o3": "\"Teresita T. Mendoza\" sorts by the given name. Personal names file by surname first.",
+          "o4": "\"Atty. Maria D. Dela Torre\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname."
         }
       },
       "distractor_reasoning": {
@@ -5329,10 +4741,10 @@
         "o3": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
         "o4": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)"
       },
-      "gen_sig": "In alphabetical filing, which name is filed LAST?  Liza P. Del Rosario | Lourdes D. Garcia | Engr. Gloria A. San Pedro | Nora P. Del Mundo"
+      "gen_sig": "In alphabetical filing, which name is filed LAST?  Lourdes S. Ramos | Atty. Maria D. Dela Torre | Ramon N. Del Rosario | Teresita T. Mendoza"
     },
     {
-      "id": "CIVIO-CLR-SPELL-RIGHT-000897",
+      "id": "CIVIO-CLR-SPELL-RIGHT-000888",
       "track": "subprofessional",
       "domain": "clerical",
       "competency": "Spelling",
@@ -5342,40 +4754,40 @@
       "difficulty": "medium",
       "est_seconds": 15,
       "language": "en",
-      "stem": "Which word is spelled correctly?  itinerary | itinerery | itinnerary | itinerry",
+      "stem": "Which word is spelled correctly?  independence | indpendence | indeppendence | independance",
       "options": [
         {
           "option_id": "o1",
-          "text": "itinerary"
+          "text": "independence"
         },
         {
           "option_id": "o2",
-          "text": "itinerery"
+          "text": "indpendence"
         },
         {
           "option_id": "o3",
-          "text": "itinnerary"
+          "text": "indeppendence"
         },
         {
           "option_id": "o4",
-          "text": "itinerry"
+          "text": "independance"
         }
       ],
       "answer_option_id": "o1",
       "reveal": {
         "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
         "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
-        "why_correct": "\"itinerary\" is the standard spelling.",
+        "why_correct": "\"independence\" is the standard spelling.",
         "why_wrong": {
-          "o2": "\"itinerery\" is spelled the way the word sounds. The correct spelling is \"itinerary\".",
-          "o3": "\"itinnerary\" doubles or undoubles a consonant. The correct spelling is \"itinerary\".",
-          "o4": "\"itinerry\" drops a letter. The correct spelling is \"itinerary\"."
+          "o2": "\"indpendence\" drops a letter. The correct spelling is \"independence\".",
+          "o3": "\"indeppendence\" doubles or undoubles a consonant. The correct spelling is \"independence\".",
+          "o4": "\"independance\" is spelled the way the word sounds. The correct spelling is \"independence\"."
         }
       },
       "distractor_reasoning": {
-        "o2": "SPL-SOUND",
+        "o2": "SPL-DROP",
         "o3": "SPL-DOUBLE",
-        "o4": "SPL-DROP"
+        "o4": "SPL-SOUND"
       },
       "source": "Original, Civio",
       "source_url": null,
@@ -5391,10 +4803,10 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_sig": "R:itinerary"
+      "gen_sig": "R:independence"
     },
     {
-      "id": "CIVIO-CLR-FILE-POSITION-000898",
+      "id": "CIVIO-CLR-FILE-POSITION-000889",
       "track": "subprofessional",
       "domain": "clerical",
       "competency": "Filing",
@@ -5404,101 +4816,34 @@
       "difficulty": "medium",
       "est_seconds": 45,
       "language": "en",
-      "stem": "In alphabetical filing, which name is filed FIRST?  Mario S. Delos Reyes | Ernesto B. Leon | Engr. Eduardo R. San Juan | Danilo V. Tan",
+      "stem": "In alphabetical filing, which name is filed FIRST?  Victoria C. San Juan | Benito G. Lim | Mario N. De Leon | Lourdes F. Delos Reyes",
       "options": [
         {
           "option_id": "o1",
-          "text": "Engr. Eduardo R. San Juan"
+          "text": "Victoria C. San Juan"
         },
         {
           "option_id": "o2",
-          "text": "Danilo V. Tan"
+          "text": "Benito G. Lim"
         },
         {
           "option_id": "o3",
-          "text": "Ernesto B. Leon"
+          "text": "Mario N. De Leon"
         },
         {
           "option_id": "o4",
-          "text": "Mario S. Delos Reyes"
-        }
-      ],
-      "answer_option_id": "o4",
-      "reveal": {
-        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Mario S. Delos Reyes → DELOSREYES, Mario; Ernesto B. Leon → LEON, Ernesto; Engr. Eduardo R. San Juan → SANJUAN, Eduardo; Danilo V. Tan → TAN, Danilo.",
-        "why_correct": "\"Mario S. Delos Reyes\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
-        "why_wrong": {
-          "o1": "\"Engr. Eduardo R. San Juan\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",
-          "o2": "\"Danilo V. Tan\" sorts by the given name. Personal names file by surname first.",
-          "o3": "\"Ernesto B. Leon\" files as LEON, which comes after DELOSREYES."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "CLR-FILE-ORDER",
-        "o2": "CLR-FILE-ORDER",
-        "o3": "CLR-FILE-ORDER"
-      },
-      "source": "Civio Filing Rules v2 / ARMA Rule 6",
-      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "distractor_subreason": {
-        "o1": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
-        "o2": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
-        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)"
-      },
-      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Mario S. Delos Reyes | Ernesto B. Leon | Engr. Eduardo R. San Juan | Danilo V. Tan"
-    },
-    {
-      "id": "CIVIO-CLR-FILE-POSITION-000899",
-      "track": "subprofessional",
-      "domain": "clerical",
-      "competency": "Filing",
-      "concept": "alphabetic filing of personal names",
-      "micro_skill": "surname, prefix and title rules",
-      "archetype": "CLR-FILE-POSITION",
-      "difficulty": "medium",
-      "est_seconds": 45,
-      "language": "en",
-      "stem": "In alphabetical filing, which name is filed LAST?  Lourdes T. San Pedro | Cristina P. Rivera | Liza N. Dela Torre | Atty. Andres G. Santos",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Liza N. Dela Torre"
-        },
-        {
-          "option_id": "o2",
-          "text": "Lourdes T. San Pedro"
-        },
-        {
-          "option_id": "o3",
-          "text": "Atty. Andres G. Santos"
-        },
-        {
-          "option_id": "o4",
-          "text": "Cristina P. Rivera"
+          "text": "Lourdes F. Delos Reyes"
         }
       ],
       "answer_option_id": "o3",
       "reveal": {
         "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Liza N. Dela Torre → DELATORRE, Liza; Cristina P. Rivera → RIVERA, Cristina; Lourdes T. San Pedro → SANPEDRO, Lourdes; Atty. Andres G. Santos → SANTOS, Andres.",
-        "why_correct": "\"Atty. Andres G. Santos\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Mario N. De Leon → DELEON, Mario; Lourdes F. Delos Reyes → DELOSREYES, Lourdes; Benito G. Lim → LIM, Benito; Victoria C. San Juan → SANJUAN, Victoria.",
+        "why_correct": "\"Mario N. De Leon\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
         "why_wrong": {
-          "o1": "\"Liza N. Dela Torre\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",
-          "o2": "\"Lourdes T. San Pedro\" sorts by the given name. Personal names file by surname first.",
-          "o4": "\"Cristina P. Rivera\" files as RIVERA, which comes before SANTOS."
+          "o1": "\"Victoria C. San Juan\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",
+          "o2": "\"Benito G. Lim\" sorts by the given name. Personal names file by surname first.",
+          "o4": "\"Lourdes F. Delos Reyes\" files as DELOSREYES, which comes after DELEON."
         }
       },
       "distractor_reasoning": {
@@ -5525,10 +4870,72 @@
         "o2": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
         "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)"
       },
-      "gen_sig": "In alphabetical filing, which name is filed LAST?  Lourdes T. San Pedro | Cristina P. Rivera | Liza N. Dela Torre | Atty. Andres G. Santos"
+      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Victoria C. San Juan | Benito G. Lim | Mario N. De Leon | Lourdes F. Delos Reyes"
     },
     {
-      "id": "CIVIO-CLR-FILE-POSITION-000900",
+      "id": "CIVIO-CLR-SPELL-RIGHT-000890",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "correct spelling",
+      "micro_skill": "spot the correct spelling",
+      "archetype": "CLR-SPELL-RIGHT",
+      "difficulty": "medium",
+      "est_seconds": 15,
+      "language": "en",
+      "stem": "Which word is spelled correctly?  consceintious | consientious | conscientious | conscientius",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "consceintious"
+        },
+        {
+          "option_id": "o2",
+          "text": "consientious"
+        },
+        {
+          "option_id": "o3",
+          "text": "conscientious"
+        },
+        {
+          "option_id": "o4",
+          "text": "conscientius"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
+        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
+        "why_correct": "\"conscientious\" is the standard spelling.",
+        "why_wrong": {
+          "o1": "\"consceintious\" swaps the order of i and e. The correct spelling is \"conscientious\".",
+          "o2": "\"consientious\" is spelled the way the word sounds. The correct spelling is \"conscientious\".",
+          "o4": "\"conscientius\" drops a letter. The correct spelling is \"conscientious\"."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "SPL-IE-EI",
+        "o2": "SPL-SOUND",
+        "o4": "SPL-DROP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_sig": "R:conscientious"
+    },
+    {
+      "id": "CIVIO-CLR-FILE-POSITION-000891",
       "track": "subprofessional",
       "domain": "clerical",
       "competency": "Filing",
@@ -5538,39 +4945,39 @@
       "difficulty": "medium",
       "est_seconds": 45,
       "language": "en",
-      "stem": "In alphabetical filing, which name is filed FIRST?  Engr. Liza V. Bautista | Engr. Felipe P. Dela Cruz | Rosario E. San Juan | Dr. Maria F. Rivera",
+      "stem": "In alphabetical filing, which name is filed FIRST?  Dr. Juan R. Ramos | Atty. Rodrigo M. Delos Reyes | Nora F. Austria | Engr. Carlos N. Mendoza",
       "options": [
         {
           "option_id": "o1",
-          "text": "Rosario E. San Juan"
+          "text": "Engr. Carlos N. Mendoza"
         },
         {
           "option_id": "o2",
-          "text": "Engr. Liza V. Bautista"
+          "text": "Atty. Rodrigo M. Delos Reyes"
         },
         {
           "option_id": "o3",
-          "text": "Dr. Maria F. Rivera"
+          "text": "Nora F. Austria"
         },
         {
           "option_id": "o4",
-          "text": "Engr. Felipe P. Dela Cruz"
+          "text": "Dr. Juan R. Ramos"
         }
       ],
-      "answer_option_id": "o2",
+      "answer_option_id": "o3",
       "reveal": {
         "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Liza V. Bautista → BAUTISTA, Liza; Engr. Felipe P. Dela Cruz → DELACRUZ, Felipe; Dr. Maria F. Rivera → RIVERA, Maria; Rosario E. San Juan → SANJUAN, Rosario.",
-        "why_correct": "\"Engr. Liza V. Bautista\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Nora F. Austria → AUSTRIA, Nora; Atty. Rodrigo M. Delos Reyes → DELOSREYES, Rodrigo; Engr. Carlos N. Mendoza → MENDOZA, Carlos; Dr. Juan R. Ramos → RAMOS, Juan.",
+        "why_correct": "\"Nora F. Austria\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
         "why_wrong": {
-          "o1": "\"Rosario E. San Juan\" files as SANJUAN, which comes after BAUTISTA.",
-          "o3": "\"Dr. Maria F. Rivera\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.",
-          "o4": "\"Engr. Felipe P. Dela Cruz\" sorts by the given name. Personal names file by surname first."
+          "o1": "\"Engr. Carlos N. Mendoza\" sorts by the given name. Personal names file by surname first.",
+          "o2": "\"Atty. Rodrigo M. Delos Reyes\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.",
+          "o4": "\"Dr. Juan R. Ramos\" files as RAMOS, which comes after AUSTRIA."
         }
       },
       "distractor_reasoning": {
         "o1": "CLR-FILE-ORDER",
-        "o3": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER",
         "o4": "CLR-FILE-ORDER"
       },
       "source": "Civio Filing Rules v2 / ARMA Rule 6",
@@ -5588,14 +4995,76 @@
       },
       "notes": "",
       "distractor_subreason": {
-        "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)",
-        "o3": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)",
-        "o4": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)"
+        "o1": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
+        "o2": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)",
+        "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)"
       },
-      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Engr. Liza V. Bautista | Engr. Felipe P. Dela Cruz | Rosario E. San Juan | Dr. Maria F. Rivera"
+      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Dr. Juan R. Ramos | Atty. Rodrigo M. Delos Reyes | Nora F. Austria | Engr. Carlos N. Mendoza"
     },
     {
-      "id": "CIVIO-CLR-FILE-POSITION-000901",
+      "id": "CIVIO-CLR-SPELL-RIGHT-000892",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "correct spelling",
+      "micro_skill": "spot the correct spelling",
+      "archetype": "CLR-SPELL-RIGHT",
+      "difficulty": "medium",
+      "est_seconds": 15,
+      "language": "en",
+      "stem": "Which word is spelled correctly?  necessery | necesary | necessary | necessry",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "necessery"
+        },
+        {
+          "option_id": "o2",
+          "text": "necesary"
+        },
+        {
+          "option_id": "o3",
+          "text": "necessary"
+        },
+        {
+          "option_id": "o4",
+          "text": "necessry"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
+        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
+        "why_correct": "\"necessary\" is the standard spelling.",
+        "why_wrong": {
+          "o1": "\"necessery\" is spelled the way the word sounds. The correct spelling is \"necessary\".",
+          "o2": "\"necesary\" doubles or undoubles a consonant. The correct spelling is \"necessary\".",
+          "o4": "\"necessry\" drops a letter. The correct spelling is \"necessary\"."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "SPL-SOUND",
+        "o2": "SPL-DOUBLE",
+        "o4": "SPL-DROP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_sig": "R:necessary"
+    },
+    {
+      "id": "CIVIO-CLR-FILE-POSITION-000893",
       "track": "subprofessional",
       "domain": "clerical",
       "competency": "Filing",
@@ -5605,34 +5074,34 @@
       "difficulty": "medium",
       "est_seconds": 45,
       "language": "en",
-      "stem": "In alphabetical filing, which name is filed FIRST?  Dr. Nora C. Aquino | Corazon T. Del Mundo | Atty. Gloria E. Santos-Ocampo | Ramon M. Tan",
+      "stem": "In alphabetical filing, which name is filed LAST?  Carlos A. Del Rosario | Nora B. Dela Torre | Engr. Andres E. San Pedro | Rodrigo B. Del Mundo",
       "options": [
         {
           "option_id": "o1",
-          "text": "Ramon M. Tan"
+          "text": "Carlos A. Del Rosario"
         },
         {
           "option_id": "o2",
-          "text": "Corazon T. Del Mundo"
+          "text": "Rodrigo B. Del Mundo"
         },
         {
           "option_id": "o3",
-          "text": "Dr. Nora C. Aquino"
+          "text": "Engr. Andres E. San Pedro"
         },
         {
           "option_id": "o4",
-          "text": "Atty. Gloria E. Santos-Ocampo"
+          "text": "Nora B. Dela Torre"
         }
       ],
       "answer_option_id": "o3",
       "reveal": {
         "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
-        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Dr. Nora C. Aquino → AQUINO, Nora; Corazon T. Del Mundo → DELMUNDO, Corazon; Atty. Gloria E. Santos-Ocampo → SANTOSOCAMPO, Gloria; Ramon M. Tan → TAN, Ramon.",
-        "why_correct": "\"Dr. Nora C. Aquino\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Nora B. Dela Torre → DELATORRE, Nora; Rodrigo B. Del Mundo → DELMUNDO, Rodrigo; Carlos A. Del Rosario → DELROSARIO, Carlos; Engr. Andres E. San Pedro → SANPEDRO, Andres.",
+        "why_correct": "\"Engr. Andres E. San Pedro\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
         "why_wrong": {
-          "o1": "\"Ramon M. Tan\" files as TAN, which comes after AQUINO.",
-          "o2": "\"Corazon T. Del Mundo\" sorts by the given name. Personal names file by surname first.",
-          "o4": "\"Atty. Gloria E. Santos-Ocampo\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit."
+          "o1": "\"Carlos A. Del Rosario\" files as DELROSARIO, which comes before SANPEDRO.",
+          "o2": "\"Rodrigo B. Del Mundo\" sorts by the given name. Personal names file by surname first.",
+          "o4": "\"Nora B. Dela Torre\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname."
         }
       },
       "distractor_reasoning": {
@@ -5657,49 +5126,575 @@
       "distractor_subreason": {
         "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)",
         "o2": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
+        "o4": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)"
+      },
+      "gen_sig": "In alphabetical filing, which name is filed LAST?  Carlos A. Del Rosario | Nora B. Dela Torre | Engr. Andres E. San Pedro | Rodrigo B. Del Mundo"
+    },
+    {
+      "id": "CIVIO-CLR-FILE-POSITION-000894",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "alphabetic filing of personal names",
+      "micro_skill": "surname, prefix and title rules",
+      "archetype": "CLR-FILE-POSITION",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "In alphabetical filing, which name is filed FIRST?  Ana P. De Guzman | Liza D. Austria | Engr. Juan V. Rosario | Felipe R. Torres",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Liza D. Austria"
+        },
+        {
+          "option_id": "o2",
+          "text": "Engr. Juan V. Rosario"
+        },
+        {
+          "option_id": "o3",
+          "text": "Ana P. De Guzman"
+        },
+        {
+          "option_id": "o4",
+          "text": "Felipe R. Torres"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
+        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Liza D. Austria → AUSTRIA, Liza; Ana P. De Guzman → DEGUZMAN, Ana; Engr. Juan V. Rosario → ROSARIO, Juan; Felipe R. Torres → TORRES, Felipe.",
+        "why_correct": "\"Liza D. Austria\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_wrong": {
+          "o2": "\"Engr. Juan V. Rosario\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit.",
+          "o3": "\"Ana P. De Guzman\" sorts by the given name. Personal names file by surname first.",
+          "o4": "\"Felipe R. Torres\" files as TORRES, which comes after AUSTRIA."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 6",
+      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "distractor_subreason": {
+        "o2": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)",
+        "o3": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
+        "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)"
+      },
+      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Ana P. De Guzman | Liza D. Austria | Engr. Juan V. Rosario | Felipe R. Torres"
+    },
+    {
+      "id": "CIVIO-CLR-SPELL-RIGHT-000895",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "correct spelling",
+      "micro_skill": "spot the correct spelling",
+      "archetype": "CLR-SPELL-RIGHT",
+      "difficulty": "medium",
+      "est_seconds": 15,
+      "language": "en",
+      "stem": "Which word is spelled correctly?  existnce | exstence | existence | existance",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "existnce"
+        },
+        {
+          "option_id": "o2",
+          "text": "exstence"
+        },
+        {
+          "option_id": "o3",
+          "text": "existence"
+        },
+        {
+          "option_id": "o4",
+          "text": "existance"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
+        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
+        "why_correct": "\"existence\" is the standard spelling.",
+        "why_wrong": {
+          "o1": "\"existnce\" drops a letter. The correct spelling is \"existence\".",
+          "o2": "\"exstence\" drops a letter. The correct spelling is \"existence\".",
+          "o4": "\"existance\" is spelled the way the word sounds. The correct spelling is \"existence\"."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "SPL-DROP",
+        "o2": "SPL-DROP",
+        "o4": "SPL-SOUND"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_sig": "R:existence"
+    },
+    {
+      "id": "CIVIO-CLR-SPELL-RIGHT-000896",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "concept": "correct spelling",
+      "micro_skill": "spot the correct spelling",
+      "archetype": "CLR-SPELL-RIGHT",
+      "difficulty": "medium",
+      "est_seconds": 15,
+      "language": "en",
+      "stem": "Which word is spelled correctly?  conscence | consciance | consceince | conscience",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "conscence"
+        },
+        {
+          "option_id": "o2",
+          "text": "consciance"
+        },
+        {
+          "option_id": "o3",
+          "text": "consceince"
+        },
+        {
+          "option_id": "o4",
+          "text": "conscience"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Look at each word letter by letter. Exactly one choice is spelled the standard way.",
+        "shortcut": "Check the tricky spots first: double letters, i and e together, and endings like -ance/-ence and -able/-ible.",
+        "why_correct": "\"conscience\" is the standard spelling.",
+        "why_wrong": {
+          "o1": "\"conscence\" drops a letter. The correct spelling is \"conscience\".",
+          "o2": "\"consciance\" is spelled the way the word sounds. The correct spelling is \"conscience\".",
+          "o3": "\"consceince\" swaps the order of i and e. The correct spelling is \"conscience\"."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "SPL-DROP",
+        "o2": "SPL-SOUND",
+        "o3": "SPL-IE-EI"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_sig": "R:conscience"
+    },
+    {
+      "id": "CIVIO-CLR-FILE-POSITION-000897",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "alphabetic filing of personal names",
+      "micro_skill": "surname, prefix and title rules",
+      "archetype": "CLR-FILE-POSITION",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "In alphabetical filing, which name is filed FIRST?  Engr. Juan B. Delos Reyes | Dr. Corazon V. De los Santos | Danilo V. Tan | Alfredo C. Reyes",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Alfredo C. Reyes"
+        },
+        {
+          "option_id": "o2",
+          "text": "Danilo V. Tan"
+        },
+        {
+          "option_id": "o3",
+          "text": "Engr. Juan B. Delos Reyes"
+        },
+        {
+          "option_id": "o4",
+          "text": "Dr. Corazon V. De los Santos"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
+        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Juan B. Delos Reyes → DELOSREYES, Juan; Dr. Corazon V. De los Santos → DELOSSANTOS, Corazon; Alfredo C. Reyes → REYES, Alfredo; Danilo V. Tan → TAN, Danilo.",
+        "why_correct": "\"Engr. Juan B. Delos Reyes\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_wrong": {
+          "o1": "\"Alfredo C. Reyes\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",
+          "o2": "\"Danilo V. Tan\" files as TAN, which comes after DELOSREYES.",
+          "o4": "\"Dr. Corazon V. De los Santos\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 6",
+      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "distractor_subreason": {
+        "o1": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)",
         "o4": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)"
       },
-      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Dr. Nora C. Aquino | Corazon T. Del Mundo | Atty. Gloria E. Santos-Ocampo | Ramon M. Tan"
+      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Engr. Juan B. Delos Reyes | Dr. Corazon V. De los Santos | Danilo V. Tan | Alfredo C. Reyes"
+    },
+    {
+      "id": "CIVIO-CLR-FILE-POSITION-000898",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "alphabetic filing of personal names",
+      "micro_skill": "surname, prefix and title rules",
+      "archetype": "CLR-FILE-POSITION",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "In alphabetical filing, which name is filed LAST?  Engr. Imelda N. Cruz-Manalo | Teresita M. De los Santos | Danilo R. Reyes-Tan | Nora G. Dizon",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Teresita M. De los Santos"
+        },
+        {
+          "option_id": "o2",
+          "text": "Danilo R. Reyes-Tan"
+        },
+        {
+          "option_id": "o3",
+          "text": "Nora G. Dizon"
+        },
+        {
+          "option_id": "o4",
+          "text": "Engr. Imelda N. Cruz-Manalo"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
+        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Engr. Imelda N. Cruz-Manalo → CRUZMANALO, Imelda; Teresita M. De los Santos → DELOSSANTOS, Teresita; Nora G. Dizon → DIZON, Nora; Danilo R. Reyes-Tan → REYESTAN, Danilo.",
+        "why_correct": "\"Danilo R. Reyes-Tan\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_wrong": {
+          "o1": "\"Teresita M. De los Santos\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",
+          "o3": "\"Nora G. Dizon\" files as DIZON, which comes before REYESTAN.",
+          "o4": "\"Engr. Imelda N. Cruz-Manalo\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 6",
+      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "distractor_subreason": {
+        "o1": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+        "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)",
+        "o4": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)"
+      },
+      "gen_sig": "In alphabetical filing, which name is filed LAST?  Engr. Imelda N. Cruz-Manalo | Teresita M. De los Santos | Danilo R. Reyes-Tan | Nora G. Dizon"
+    },
+    {
+      "id": "CIVIO-CLR-FILE-POSITION-000899",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "alphabetic filing of personal names",
+      "micro_skill": "surname, prefix and title rules",
+      "archetype": "CLR-FILE-POSITION",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "In alphabetical filing, which name is filed LAST?  Alfredo V. Mendoza | Engr. Lourdes E. Delos Reyes | Victoria B. Dela Cruz | Eduardo B. Austria",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Alfredo V. Mendoza"
+        },
+        {
+          "option_id": "o2",
+          "text": "Eduardo B. Austria"
+        },
+        {
+          "option_id": "o3",
+          "text": "Engr. Lourdes E. Delos Reyes"
+        },
+        {
+          "option_id": "o4",
+          "text": "Victoria B. Dela Cruz"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
+        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Eduardo B. Austria → AUSTRIA, Eduardo; Victoria B. Dela Cruz → DELACRUZ, Victoria; Engr. Lourdes E. Delos Reyes → DELOSREYES, Lourdes; Alfredo V. Mendoza → MENDOZA, Alfredo.",
+        "why_correct": "\"Alfredo V. Mendoza\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_wrong": {
+          "o2": "\"Eduardo B. Austria\" files as AUSTRIA, which comes before MENDOZA.",
+          "o3": "\"Engr. Lourdes E. Delos Reyes\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname.",
+          "o4": "\"Victoria B. Dela Cruz\" sorts by the given name. Personal names file by surname first."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 6",
+      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "distractor_subreason": {
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)",
+        "o3": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+        "o4": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)"
+      },
+      "gen_sig": "In alphabetical filing, which name is filed LAST?  Alfredo V. Mendoza | Engr. Lourdes E. Delos Reyes | Victoria B. Dela Cruz | Eduardo B. Austria"
+    },
+    {
+      "id": "CIVIO-CLR-FILE-POSITION-000900",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "alphabetic filing of personal names",
+      "micro_skill": "surname, prefix and title rules",
+      "archetype": "CLR-FILE-POSITION",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "In alphabetical filing, which name is filed LAST?  Engr. Ramon T. Del Rosario | Eduardo L. Dela Cruz | Imelda T. Manalo | Atty. Danilo D. Dela Torre",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Imelda T. Manalo"
+        },
+        {
+          "option_id": "o2",
+          "text": "Eduardo L. Dela Cruz"
+        },
+        {
+          "option_id": "o3",
+          "text": "Engr. Ramon T. Del Rosario"
+        },
+        {
+          "option_id": "o4",
+          "text": "Atty. Danilo D. Dela Torre"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
+        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Eduardo L. Dela Cruz → DELACRUZ, Eduardo; Atty. Danilo D. Dela Torre → DELATORRE, Danilo; Engr. Ramon T. Del Rosario → DELROSARIO, Ramon; Imelda T. Manalo → MANALO, Imelda.",
+        "why_correct": "\"Imelda T. Manalo\" is right. It comes last when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_wrong": {
+          "o2": "\"Eduardo L. Dela Cruz\" files as DELACRUZ, which comes before MANALO.",
+          "o3": "\"Engr. Ramon T. Del Rosario\" sorts by the given name. Personal names file by surname first.",
+          "o4": "\"Atty. Danilo D. Dela Torre\" files the prefix as a separate word (for example \"Dela Cruz\" under C). A prefix joins the rest of the surname."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER",
+        "o4": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 6",
+      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "distractor_subreason": {
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)",
+        "o3": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
+        "o4": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)"
+      },
+      "gen_sig": "In alphabetical filing, which name is filed LAST?  Engr. Ramon T. Del Rosario | Eduardo L. Dela Cruz | Imelda T. Manalo | Atty. Danilo D. Dela Torre"
+    },
+    {
+      "id": "CIVIO-CLR-FILE-POSITION-000901",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Filing",
+      "concept": "alphabetic filing of personal names",
+      "micro_skill": "surname, prefix and title rules",
+      "archetype": "CLR-FILE-POSITION",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "In alphabetical filing, which name is filed FIRST?  Cristina B. Torres | Elena L. Aquino | Dr. Ramon L. San Juan | Rafael D. Garcia",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Cristina B. Torres"
+        },
+        {
+          "option_id": "o2",
+          "text": "Rafael D. Garcia"
+        },
+        {
+          "option_id": "o3",
+          "text": "Dr. Ramon L. San Juan"
+        },
+        {
+          "option_id": "o4",
+          "text": "Elena L. Aquino"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "\"Indexing\" means writing a name in filing order: surname first, then given name, then middle initial. A title such as Dr. is the last unit.",
+        "shortcut": "Rewrite each surname as one block: drop spaces and hyphens, keep the prefix (Dela Cruz = DELACRUZ). Then compare letter by letter (ARMA Rule 1). Order: Elena L. Aquino → AQUINO, Elena; Rafael D. Garcia → GARCIA, Rafael; Dr. Ramon L. San Juan → SANJUAN, Ramon; Cristina B. Torres → TORRES, Cristina.",
+        "why_correct": "\"Elena L. Aquino\" is right. It comes first when every name is indexed surname first, letter by letter. This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC.",
+        "why_wrong": {
+          "o1": "\"Cristina B. Torres\" sorts by the given name. Personal names file by surname first.",
+          "o2": "\"Rafael D. Garcia\" files as GARCIA, which comes after AQUINO.",
+          "o3": "\"Dr. Ramon L. San Juan\" sorts by the title (Dr., Atty., Engr.). A title is only the last unit."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "CLR-FILE-ORDER",
+        "o2": "CLR-FILE-ORDER",
+        "o3": "CLR-FILE-ORDER"
+      },
+      "source": "Civio Filing Rules v2 / ARMA Rule 6",
+      "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "distractor_subreason": {
+        "o1": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
+        "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter)",
+        "o3": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title is the last unit, used only to break ties)"
+      },
+      "gen_sig": "In alphabetical filing, which name is filed FIRST?  Cristina B. Torres | Elena L. Aquino | Dr. Ramon L. San Juan | Rafael D. Garcia"
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-000902",
       "track": "both",
       "domain": "general_information",
       "competency": "Philippine Constitution",
-      "concept": "Art. VI, Sec. 27(1)",
+      "concept": "Art. VI, Sec. 5(2)",
       "micro_skill": "recall a provision",
       "archetype": "GI-DEADLINE-NUMBER",
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "en",
-      "stem": "How many days does the President have to veto a bill before it becomes law without signature?",
+      "stem": "Party-list representatives make up what share of the total House membership?",
       "options": [
         {
           "option_id": "o1",
-          "text": "30 days from receipt"
+          "text": "20 percent"
         },
         {
           "option_id": "o2",
-          "text": "15 days from receipt"
+          "text": "10 percent"
         },
         {
           "option_id": "o3",
-          "text": "10 days from receipt"
+          "text": "50 percent"
         },
         {
           "option_id": "o4",
-          "text": "60 days from receipt"
+          "text": "25 percent"
         }
       ],
       "answer_option_id": "o1",
       "reveal": {
-        "terms": "This item is about the 1987 Constitution, Art. VI, Sec. 27(1).",
-        "shortcut": "Tie the fact to its section: Art. VI, Sec. 27(1). A bill becomes law if not vetoed within 30 days.",
-        "why_correct": "\"30 days from receipt\" is right. Art. VI, Sec. 27(1) says: \"within thirty days after the date of receipt thereof\".",
+        "terms": "This item is about the 1987 Constitution, Art. VI, Sec. 5(2).",
+        "shortcut": "Tie the fact to its section: Art. VI, Sec. 5(2). Party-list members are 20% of the House.",
+        "why_correct": "\"20 percent\" is right. Art. VI, Sec. 5(2) says: \"twenty per centum of the total number of representatives\".",
         "why_wrong": {
-          "o2": "\"15 days from receipt\" is a nearby number, but not the one in the text.",
-          "o3": "\"10 days from receipt\" is a nearby number, but not the one in the text.",
-          "o4": "\"60 days from receipt\" is a nearby number, but not the one in the text."
+          "o2": "\"10 percent\" is a nearby number, but not the one in the text.",
+          "o3": "\"50 percent\" is a nearby number, but not the one in the text.",
+          "o4": "\"25 percent\" is a nearby number, but not the one in the text."
         }
       },
       "distractor_reasoning": {
@@ -5707,7 +5702,7 @@
         "o3": "GI-NEIGHBOR-NUMBER",
         "o4": "GI-NEIGHBOR-NUMBER"
       },
-      "source": "The 1987 Constitution, Art. VI, Sec. 27(1)",
+      "source": "The 1987 Constitution, Art. VI, Sec. 5(2)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
       "status": "draft",
@@ -5721,466 +5716,25 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_fact": 73,
-      "gen_sig": "GI:How many days does the President have to veto a bill before it becomes law without signature?"
+      "gen_fact": 7,
+      "gen_sig": "GI:Party-list representatives make up what share of the total House membership?"
     },
     {
-      "id": "CIVIO-GI-TERM-MATCH-000903",
-      "track": "both",
-      "domain": "general_information",
-      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
-      "concept": "R.A. 6713, Sec. 4(A)",
-      "micro_skill": "recall a provision",
-      "archetype": "GI-TERM-MATCH",
-      "difficulty": "medium",
-      "est_seconds": 25,
-      "language": "en",
-      "stem": "Under R.A. 6713, always upholding the public interest over personal interest is which norm of conduct?",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Political neutrality"
-        },
-        {
-          "option_id": "o2",
-          "text": "Simple living"
-        },
-        {
-          "option_id": "o3",
-          "text": "Nationalism and patriotism"
-        },
-        {
-          "option_id": "o4",
-          "text": "Commitment to public interest"
-        }
-      ],
-      "answer_option_id": "o4",
-      "reveal": {
-        "terms": "This item is about R.A. 6713, R.A. 6713, Sec. 4(A).",
-        "shortcut": "Tie the fact to its section: R.A. 6713, Sec. 4(A). This is commitment to public interest, Sec. 4(A)(a).",
-        "why_correct": "\"Commitment to public interest\" is right. R.A. 6713, Sec. 4(A) says: \"always uphold the public interest over and above personal interest\".",
-        "why_wrong": {
-          "o1": "\"Political neutrality\" is a related term, but not the one the text uses.",
-          "o2": "\"Simple living\" is a related term, but not the one the text uses.",
-          "o3": "\"Nationalism and patriotism\" is a related term, but not the one the text uses."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "GI-SIBLING-TERM",
-        "o2": "GI-SIBLING-TERM",
-        "o3": "GI-SIBLING-TERM"
-      },
-      "source": "R.A. 6713, R.A. 6713, Sec. 4(A)",
-      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "gen_fact": 85,
-      "gen_sig": "GI:Under R.A. 6713, always upholding the public interest over personal interest is which norm of conduct?"
-    },
-    {
-      "id": "CIVIO-GI-TERM-MATCH-000904",
-      "track": "both",
-      "domain": "general_information",
-      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
-      "concept": "R.A. 6713, Sec. 7(b)",
-      "micro_skill": "recall a provision",
-      "archetype": "GI-TERM-MATCH",
-      "difficulty": "medium",
-      "est_seconds": 25,
-      "language": "en",
-      "stem": "Under R.A. 6713, may a public employee engage in a private practice of profession during incumbency?",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Yes, with no limits"
-        },
-        {
-          "option_id": "o2",
-          "text": "Yes, if done on weekends"
-        },
-        {
-          "option_id": "o3",
-          "text": "Never, under any condition"
-        },
-        {
-          "option_id": "o4",
-          "text": "Only if authorized by the Constitution or law, and it does not conflict with official functions"
-        }
-      ],
-      "answer_option_id": "o4",
-      "reveal": {
-        "terms": "This item is about R.A. 6713, R.A. 6713, Sec. 7(b).",
-        "shortcut": "Tie the fact to its section: R.A. 6713, Sec. 7(b). Allowed only when authorized and with no conflict.",
-        "why_correct": "\"Only if authorized by the Constitution or law, and it does not conflict with official functions\" is right. R.A. 6713, Sec. 7(b) says: \"unless authorized by the Constitution or law, provided, that such practice will not conflict or tend to conflict with their official functions\".",
-        "why_wrong": {
-          "o1": "\"Yes, with no limits\" sounds reasonable, but the text does not say it.",
-          "o2": "\"Yes, if done on weekends\" sounds reasonable, but the text does not say it.",
-          "o3": "\"Never, under any condition\" sounds reasonable, but the text does not say it."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "GI-SOUNDS-RIGHT",
-        "o2": "GI-SOUNDS-RIGHT",
-        "o3": "GI-SOUNDS-RIGHT"
-      },
-      "source": "R.A. 6713, R.A. 6713, Sec. 7(b)",
-      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "gen_fact": 105,
-      "gen_sig": "GI:Under R.A. 6713, may a public employee engage in a private practice of profession during incumbency?"
-    },
-    {
-      "id": "CIVIO-GI-DEADLINE-NUMBER-000905",
+      "id": "CIVIO-GI-DEADLINE-NUMBER-000903",
       "track": "both",
       "domain": "general_information",
       "competency": "Philippine Constitution",
-      "concept": "Art. XI, Sec. 3(5)",
+      "concept": "Art. VII, Sec. 18",
       "micro_skill": "recall a provision",
       "archetype": "GI-DEADLINE-NUMBER",
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "en",
-      "stem": "How often may impeachment proceedings be initiated against the same official?",
+      "stem": "Under the 1987 Constitution, a proclamation of martial law may not last longer than how many days without extension by Congress?",
       "options": [
         {
           "option_id": "o1",
-          "text": "Once every six months"
-        },
-        {
-          "option_id": "o2",
-          "text": "Not more than once within a period of one year"
-        },
-        {
-          "option_id": "o3",
-          "text": "Not more than twice a year"
-        },
-        {
-          "option_id": "o4",
-          "text": "Once every term"
-        }
-      ],
-      "answer_option_id": "o2",
-      "reveal": {
-        "terms": "This item is about the 1987 Constitution, Art. XI, Sec. 3(5).",
-        "shortcut": "Tie the fact to its section: Art. XI, Sec. 3(5). The one-year bar.",
-        "why_correct": "\"Not more than once within a period of one year\" is right. Art. XI, Sec. 3(5) says: \"No impeachment proceedings shall be initiated against the same official more than once within a period of one year\".",
-        "why_wrong": {
-          "o1": "\"Once every six months\" is a nearby number, but not the one in the text.",
-          "o3": "\"Not more than twice a year\" is a nearby number, but not the one in the text.",
-          "o4": "\"Once every term\" sounds reasonable, but the text does not say it."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "GI-NEIGHBOR-NUMBER",
-        "o3": "GI-NEIGHBOR-NUMBER",
-        "o4": "GI-SOUNDS-RIGHT"
-      },
-      "source": "The 1987 Constitution, Art. XI, Sec. 3(5)",
-      "source_url": "https://lawphil.net/consti/cons1987.html",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "gen_fact": 41,
-      "gen_sig": "GI:How often may impeachment proceedings be initiated against the same official?"
-    },
-    {
-      "id": "CIVIO-GI-TERM-MATCH-000906",
-      "track": "both",
-      "domain": "general_information",
-      "competency": "Philippine Constitution",
-      "concept": "Art. XIV, Sec. 7",
-      "micro_skill": "recall a provision",
-      "archetype": "GI-TERM-MATCH",
-      "difficulty": "medium",
-      "est_seconds": 25,
-      "language": "en",
-      "stem": "For purposes of communication and instruction, what are the official languages of the Philippines?",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Filipino and Spanish"
-        },
-        {
-          "option_id": "o2",
-          "text": "English and Spanish"
-        },
-        {
-          "option_id": "o3",
-          "text": "Filipino only"
-        },
-        {
-          "option_id": "o4",
-          "text": "Filipino and, until otherwise provided by law, English"
-        }
-      ],
-      "answer_option_id": "o4",
-      "reveal": {
-        "terms": "This item is about the 1987 Constitution, Art. XIV, Sec. 7.",
-        "shortcut": "Tie the fact to its section: Art. XIV, Sec. 7. Filipino and English.",
-        "why_correct": "\"Filipino and, until otherwise provided by law, English\" is right. Art. XIV, Sec. 7 says: \"the official languages of the Philippines are Filipino and, until otherwise provided by law, English\".",
-        "why_wrong": {
-          "o1": "\"Filipino and Spanish\" was the rule under an older charter, not the 1987 text.",
-          "o2": "\"English and Spanish\" was the rule under an older charter, not the 1987 text.",
-          "o3": "\"Filipino only\" sounds reasonable, but the text does not say it."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "GI-OLD-RULE",
-        "o2": "GI-OLD-RULE",
-        "o3": "GI-SOUNDS-RIGHT"
-      },
-      "source": "The 1987 Constitution, Art. XIV, Sec. 7",
-      "source_url": "https://lawphil.net/consti/cons1987.html",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "gen_fact": 65,
-      "gen_sig": "GI:For purposes of communication and instruction, what are the official languages of the Philippines?"
-    },
-    {
-      "id": "CIVIO-GI-DEADLINE-NUMBER-000907",
-      "track": "both",
-      "domain": "general_information",
-      "competency": "Philippine Constitution",
-      "concept": "Art. VI, Sec. 23(1)",
-      "micro_skill": "recall a provision",
-      "archetype": "GI-DEADLINE-NUMBER",
-      "difficulty": "medium",
-      "est_seconds": 25,
-      "language": "en",
-      "stem": "What vote of both Houses in joint session, voting separately, is needed to declare the existence of a state of war?",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Three-fourths"
-        },
-        {
-          "option_id": "o2",
-          "text": "Two-thirds"
-        },
-        {
-          "option_id": "o3",
-          "text": "Majority"
-        },
-        {
-          "option_id": "o4",
-          "text": "Unanimous"
-        }
-      ],
-      "answer_option_id": "o2",
-      "reveal": {
-        "terms": "This item is about the 1987 Constitution, Art. VI, Sec. 23(1).",
-        "shortcut": "Tie the fact to its section: Art. VI, Sec. 23(1). Declaring war needs two-thirds.",
-        "why_correct": "\"Two-thirds\" is right. Art. VI, Sec. 23(1) says: \"by a vote of two-thirds of both Houses in joint session assembled, voting separately\".",
-        "why_wrong": {
-          "o1": "\"Three-fourths\" is a nearby number, but not the one in the text.",
-          "o3": "\"Majority\" is a nearby number, but not the one in the text.",
-          "o4": "\"Unanimous\" is a nearby number, but not the one in the text."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "GI-NEIGHBOR-NUMBER",
-        "o3": "GI-NEIGHBOR-NUMBER",
-        "o4": "GI-NEIGHBOR-NUMBER"
-      },
-      "source": "The 1987 Constitution, Art. VI, Sec. 23(1)",
-      "source_url": "https://lawphil.net/consti/cons1987.html",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "gen_fact": 75,
-      "gen_sig": "GI:What vote of both Houses in joint session, voting separately, is needed to declare the existence of a state of war?"
-    },
-    {
-      "id": "CIVIO-GI-DEADLINE-NUMBER-000908",
-      "track": "both",
-      "domain": "general_information",
-      "competency": "Philippine Constitution",
-      "concept": "Art. XVII, Sec. 1",
-      "micro_skill": "recall a provision",
-      "archetype": "GI-DEADLINE-NUMBER",
-      "difficulty": "medium",
-      "est_seconds": 25,
-      "language": "en",
-      "stem": "By what vote may Congress propose amendments to the Constitution acting as a constituent assembly?",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Three-fourths of all its Members"
-        },
-        {
-          "option_id": "o2",
-          "text": "A simple majority"
-        },
-        {
-          "option_id": "o3",
-          "text": "One-half of its Members"
-        },
-        {
-          "option_id": "o4",
-          "text": "Two-thirds of all its Members"
-        }
-      ],
-      "answer_option_id": "o1",
-      "reveal": {
-        "terms": "This item is about the 1987 Constitution, Art. XVII, Sec. 1.",
-        "shortcut": "Tie the fact to its section: Art. XVII, Sec. 1. Constituent assembly: three-fourths vote.",
-        "why_correct": "\"Three-fourths of all its Members\" is right. Art. XVII, Sec. 1 says: \"upon a vote of three-fourths of all its Members\".",
-        "why_wrong": {
-          "o2": "\"A simple majority\" is a nearby number, but not the one in the text.",
-          "o3": "\"One-half of its Members\" is a nearby number, but not the one in the text.",
-          "o4": "\"Two-thirds of all its Members\" is a nearby number, but not the one in the text."
-        }
-      },
-      "distractor_reasoning": {
-        "o2": "GI-NEIGHBOR-NUMBER",
-        "o3": "GI-NEIGHBOR-NUMBER",
-        "o4": "GI-NEIGHBOR-NUMBER"
-      },
-      "source": "The 1987 Constitution, Art. XVII, Sec. 1",
-      "source_url": "https://lawphil.net/consti/cons1987.html",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "gen_fact": 70,
-      "gen_sig": "GI:By what vote may Congress propose amendments to the Constitution acting as a constituent assembly?"
-    },
-    {
-      "id": "CIVIO-GI-TERM-MATCH-000909",
-      "track": "both",
-      "domain": "general_information",
-      "competency": "Philippine Constitution",
-      "concept": "Art. IX-B, Sec. 2(3)",
-      "micro_skill": "recall a provision",
-      "archetype": "GI-TERM-MATCH",
-      "difficulty": "medium",
-      "est_seconds": 25,
-      "language": "en",
-      "stem": "Under the 1987 Constitution, can a civil service officer or employee be suspended or dismissed without cause?",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "Yes, at the pleasure of the head of office"
-        },
-        {
-          "option_id": "o2",
-          "text": "No; only for cause provided by law"
-        },
-        {
-          "option_id": "o3",
-          "text": "Only during the first year of service"
-        },
-        {
-          "option_id": "o4",
-          "text": "Yes, after 30 days' notice"
-        }
-      ],
-      "answer_option_id": "o2",
-      "reveal": {
-        "terms": "This item is about the 1987 Constitution, Art. IX-B, Sec. 2(3).",
-        "shortcut": "Tie the fact to its section: Art. IX-B, Sec. 2(3). Security of tenure: removal only for legal cause.",
-        "why_correct": "\"No; only for cause provided by law\" is right. Art. IX-B, Sec. 2(3) says: \"No officer or employee of the civil service shall be removed or suspended except for cause provided by law\".",
-        "why_wrong": {
-          "o1": "\"Yes, at the pleasure of the head of office\" sounds reasonable, but the text does not say it.",
-          "o3": "\"Only during the first year of service\" sounds reasonable, but the text does not say it.",
-          "o4": "\"Yes, after 30 days' notice\" sounds reasonable, but the text does not say it."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "GI-SOUNDS-RIGHT",
-        "o3": "GI-SOUNDS-RIGHT",
-        "o4": "GI-SOUNDS-RIGHT"
-      },
-      "source": "The 1987 Constitution, Art. IX-B, Sec. 2(3)",
-      "source_url": "https://lawphil.net/consti/cons1987.html",
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "CSE (Grok Bot)",
-        "method": "ai_assisted",
-        "created_at": "2026-10-13T19:30:00+08:00",
-        "spec_version": "0.1.3"
-      },
-      "notes": "",
-      "gen_fact": 27,
-      "gen_sig": "GI:Under the 1987 Constitution, can a civil service officer or employee be suspended or dismissed without cause?"
-    },
-    {
-      "id": "CIVIO-GI-DEADLINE-NUMBER-000910",
-      "track": "both",
-      "domain": "general_information",
-      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
-      "concept": "R.A. 6713, Sec. 9",
-      "micro_skill": "recall a provision",
-      "archetype": "GI-DEADLINE-NUMBER",
-      "difficulty": "medium",
-      "est_seconds": 25,
-      "language": "en",
-      "stem": "Under R.A. 6713, when a conflict of interest arises, within how many days from assuming office must an official divest his or her shareholdings or interest?",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "15 days"
+          "text": "90 days"
         },
         {
           "option_id": "o2",
@@ -6188,22 +5742,22 @@
         },
         {
           "option_id": "o3",
-          "text": "90 days"
+          "text": "30 days"
         },
         {
           "option_id": "o4",
-          "text": "30 days"
+          "text": "15 days"
         }
       ],
       "answer_option_id": "o2",
       "reveal": {
-        "terms": "This item is about R.A. 6713, R.A. 6713, Sec. 9.",
-        "shortcut": "Tie the fact to its section: R.A. 6713, Sec. 9. Resign from the business within 30 days; divest within 60 days.",
-        "why_correct": "\"60 days\" is right. R.A. 6713, Sec. 9 says: \"divest himself of his shareholdings or interest within sixty (60) days from such assumption\".",
+        "terms": "This item is about the 1987 Constitution, Art. VII, Sec. 18.",
+        "shortcut": "Tie the fact to its section: Art. VII, Sec. 18. Martial law is limited to 60 days unless Congress extends it.",
+        "why_correct": "\"60 days\" is right. Art. VII, Sec. 18 says: \"for a period not exceeding sixty days\".",
         "why_wrong": {
-          "o1": "\"15 days\" is a nearby number, but not the one in the text.",
-          "o3": "\"90 days\" is a nearby number, but not the one in the text.",
-          "o4": "\"30 days\" is a nearby number, but not the one in the text."
+          "o1": "\"90 days\" is a nearby number, but not the one in the text.",
+          "o3": "\"30 days\" is a nearby number, but not the one in the text.",
+          "o4": "\"15 days\" is a nearby number, but not the one in the text."
         }
       },
       "distractor_reasoning": {
@@ -6211,7 +5765,259 @@
         "o3": "GI-NEIGHBOR-NUMBER",
         "o4": "GI-NEIGHBOR-NUMBER"
       },
-      "source": "R.A. 6713, R.A. 6713, Sec. 9",
+      "source": "The 1987 Constitution, Art. VII, Sec. 18",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_fact": 16,
+      "gen_sig": "GI:Under the 1987 Constitution, a proclamation of martial law may not last longer than how many days without extension by Congress?"
+    },
+    {
+      "id": "CIVIO-GI-DEADLINE-NUMBER-000904",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Philippine Constitution",
+      "concept": "Art. VIII, Sec. 11",
+      "micro_skill": "recall a provision",
+      "archetype": "GI-DEADLINE-NUMBER",
+      "difficulty": "medium",
+      "est_seconds": 25,
+      "language": "en",
+      "stem": "Up to what age may members of the Supreme Court hold office?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "65 years"
+        },
+        {
+          "option_id": "o2",
+          "text": "60 years"
+        },
+        {
+          "option_id": "o3",
+          "text": "75 years"
+        },
+        {
+          "option_id": "o4",
+          "text": "70 years"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "This item is about the 1987 Constitution, Art. VIII, Sec. 11.",
+        "shortcut": "Tie the fact to its section: Art. VIII, Sec. 11. Justices serve until age 70.",
+        "why_correct": "\"70 years\" is right. Art. VIII, Sec. 11 says: \"until they reach the age of seventy years\".",
+        "why_wrong": {
+          "o1": "\"65 years\" is a nearby number, but not the one in the text.",
+          "o2": "\"60 years\" is a nearby number, but not the one in the text.",
+          "o3": "\"75 years\" is a nearby number, but not the one in the text."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "GI-NEIGHBOR-NUMBER",
+        "o2": "GI-NEIGHBOR-NUMBER",
+        "o3": "GI-NEIGHBOR-NUMBER"
+      },
+      "source": "The 1987 Constitution, Art. VIII, Sec. 11",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_fact": 19,
+      "gen_sig": "GI:Up to what age may members of the Supreme Court hold office?"
+    },
+    {
+      "id": "CIVIO-GI-TERM-MATCH-000905",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Philippine Constitution",
+      "concept": "Art. III, Sec. 16",
+      "micro_skill": "recall a provision",
+      "archetype": "GI-TERM-MATCH",
+      "difficulty": "medium",
+      "est_seconds": 25,
+      "language": "en",
+      "stem": "Under the Bill of Rights, all persons shall have the right to what before all judicial, quasi-judicial, or administrative bodies?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Skip preliminary investigation"
+        },
+        {
+          "option_id": "o2",
+          "text": "Free transportation to hearings"
+        },
+        {
+          "option_id": "o3",
+          "text": "A speedy disposition of their cases"
+        },
+        {
+          "option_id": "o4",
+          "text": "Choose their own judge"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "This item is about the 1987 Constitution, Art. III, Sec. 16.",
+        "shortcut": "Tie the fact to its section: Art. III, Sec. 16. Speedy disposition of cases.",
+        "why_correct": "\"A speedy disposition of their cases\" is right. Art. III, Sec. 16 says: \"the right to a speedy disposition of their cases before all judicial, quasi-judicial, or administrative bodies\".",
+        "why_wrong": {
+          "o1": "\"Skip preliminary investigation\" is a related term, but not the one the text uses.",
+          "o2": "\"Free transportation to hearings\" is a related term, but not the one the text uses.",
+          "o4": "\"Choose their own judge\" is a related term, but not the one the text uses."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "GI-SIBLING-TERM",
+        "o2": "GI-SIBLING-TERM",
+        "o4": "GI-SIBLING-TERM"
+      },
+      "source": "The 1987 Constitution, Art. III, Sec. 16",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_fact": 59,
+      "gen_sig": "GI:Under the Bill of Rights, all persons shall have the right to what before all judicial, quasi-judicial, or administrative bodies?"
+    },
+    {
+      "id": "CIVIO-GI-TERM-MATCH-000906",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Philippine Constitution",
+      "concept": "Art. II, Sec. 16",
+      "micro_skill": "recall a provision",
+      "archetype": "GI-TERM-MATCH",
+      "difficulty": "medium",
+      "est_seconds": 25,
+      "language": "en",
+      "stem": "Under Art. II, Sec. 16, the State shall protect and advance the right of the people to what?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Unlimited use of natural resources"
+        },
+        {
+          "option_id": "o2",
+          "text": "A balanced and healthful ecology"
+        },
+        {
+          "option_id": "o3",
+          "text": "Tax-free land"
+        },
+        {
+          "option_id": "o4",
+          "text": "Free electricity"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "This item is about the 1987 Constitution, Art. II, Sec. 16.",
+        "shortcut": "Tie the fact to its section: Art. II, Sec. 16. This is the environmental right.",
+        "why_correct": "\"A balanced and healthful ecology\" is right. Art. II, Sec. 16 says: \"right of the people to a balanced and healthful ecology\".",
+        "why_wrong": {
+          "o1": "\"Unlimited use of natural resources\" sounds reasonable, but the text does not say it.",
+          "o3": "\"Tax-free land\" sounds reasonable, but the text does not say it.",
+          "o4": "\"Free electricity\" sounds reasonable, but the text does not say it."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "GI-SOUNDS-RIGHT",
+        "o3": "GI-SOUNDS-RIGHT",
+        "o4": "GI-SOUNDS-RIGHT"
+      },
+      "source": "The 1987 Constitution, Art. II, Sec. 16",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_fact": 56,
+      "gen_sig": "GI:Under Art. II, Sec. 16, the State shall protect and advance the right of the people to what?"
+    },
+    {
+      "id": "CIVIO-GI-TERM-MATCH-000907",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "concept": "R.A. 6713, Sec. 2",
+      "micro_skill": "recall a provision",
+      "archetype": "GI-TERM-MATCH",
+      "difficulty": "medium",
+      "est_seconds": 25,
+      "language": "en",
+      "stem": "What is the short title of R.A. 6713?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Code of Conduct and Ethical Standards for Public Officials and Employees"
+        },
+        {
+          "option_id": "o2",
+          "text": "Ease of Doing Business Act"
+        },
+        {
+          "option_id": "o3",
+          "text": "Civil Service Law"
+        },
+        {
+          "option_id": "o4",
+          "text": "Anti-Graft and Corrupt Practices Act"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "This item is about R.A. 6713, R.A. 6713, Sec. 2.",
+        "shortcut": "Tie the fact to its section: R.A. 6713, Sec. 2. That is R.A. 6713; the Anti-Graft law is R.A. 3019.",
+        "why_correct": "\"Code of Conduct and Ethical Standards for Public Officials and Employees\" is right. R.A. 6713, Sec. 2 says: \"Code of Conduct and Ethical Standards for Public Officials and Employees\".",
+        "why_wrong": {
+          "o2": "\"Ease of Doing Business Act\" is a related term, but not the one the text uses.",
+          "o3": "\"Civil Service Law\" is a related term, but not the one the text uses.",
+          "o4": "\"Anti-Graft and Corrupt Practices Act\" is a related term, but not the one the text uses."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "GI-SIBLING-TERM",
+        "o3": "GI-SIBLING-TERM",
+        "o4": "GI-SIBLING-TERM"
+      },
+      "source": "R.A. 6713, R.A. 6713, Sec. 2",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
       "status": "draft",
@@ -6225,56 +6031,245 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_fact": 95,
-      "gen_sig": "GI:Under R.A. 6713, when a conflict of interest arises, within how many days from assuming office must an official divest his or her shareholdings or interest?"
+      "gen_fact": 87,
+      "gen_sig": "GI:What is the short title of R.A. 6713?"
+    },
+    {
+      "id": "CIVIO-GI-WHO-HOLDS-POWER-000908",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Philippine Constitution",
+      "concept": "Art. XVI, Sec. 3",
+      "micro_skill": "recall a provision",
+      "archetype": "GI-WHO-HOLDS-POWER",
+      "difficulty": "medium",
+      "est_seconds": 25,
+      "language": "en",
+      "stem": "What does the 1987 Constitution say about suing the State?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Only the President may be sued"
+        },
+        {
+          "option_id": "o2",
+          "text": "The State may not be sued without its consent"
+        },
+        {
+          "option_id": "o3",
+          "text": "The State may be sued only by foreigners"
+        },
+        {
+          "option_id": "o4",
+          "text": "The State may be sued in any court at any time"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "This item is about the 1987 Constitution, Art. XVI, Sec. 3.",
+        "shortcut": "Tie the fact to its section: Art. XVI, Sec. 3. State immunity from suit.",
+        "why_correct": "\"The State may not be sued without its consent\" is right. Art. XVI, Sec. 3 says: \"The State may not be sued without its consent\".",
+        "why_wrong": {
+          "o1": "\"Only the President may be sued\" names a different office or body.",
+          "o3": "\"The State may be sued only by foreigners\" sounds reasonable, but the text does not say it.",
+          "o4": "\"The State may be sued in any court at any time\" sounds reasonable, but the text does not say it."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "GI-WRONG-BODY",
+        "o3": "GI-SOUNDS-RIGHT",
+        "o4": "GI-SOUNDS-RIGHT"
+      },
+      "source": "The 1987 Constitution, Art. XVI, Sec. 3",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_fact": 66,
+      "gen_sig": "GI:What does the 1987 Constitution say about suing the State?"
+    },
+    {
+      "id": "CIVIO-GI-DEADLINE-NUMBER-000909",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Philippine Constitution",
+      "concept": "Art. VII, Sec. 2",
+      "micro_skill": "recall a provision",
+      "archetype": "GI-DEADLINE-NUMBER",
+      "difficulty": "medium",
+      "est_seconds": 25,
+      "language": "en",
+      "stem": "What is the minimum age to be elected President of the Philippines?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "35 years old"
+        },
+        {
+          "option_id": "o2",
+          "text": "40 years old"
+        },
+        {
+          "option_id": "o3",
+          "text": "50 years old"
+        },
+        {
+          "option_id": "o4",
+          "text": "45 years old"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "This item is about the 1987 Constitution, Art. VII, Sec. 2.",
+        "shortcut": "Tie the fact to its section: Art. VII, Sec. 2. The President must be at least 40 on election day.",
+        "why_correct": "\"40 years old\" is right. Art. VII, Sec. 2 says: \"at least forty years of age on the day of the election\".",
+        "why_wrong": {
+          "o1": "\"35 years old\" is a nearby number, but not the one in the text.",
+          "o3": "\"50 years old\" is a nearby number, but not the one in the text.",
+          "o4": "\"45 years old\" is a nearby number, but not the one in the text."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "GI-NEIGHBOR-NUMBER",
+        "o3": "GI-NEIGHBOR-NUMBER",
+        "o4": "GI-NEIGHBOR-NUMBER"
+      },
+      "source": "The 1987 Constitution, Art. VII, Sec. 2",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_fact": 12,
+      "gen_sig": "GI:What is the minimum age to be elected President of the Philippines?"
+    },
+    {
+      "id": "CIVIO-GI-WHO-HOLDS-POWER-000910",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Philippine Constitution",
+      "concept": "Art. VII, Sec. 1",
+      "micro_skill": "recall a provision",
+      "archetype": "GI-WHO-HOLDS-POWER",
+      "difficulty": "medium",
+      "est_seconds": 25,
+      "language": "en",
+      "stem": "In whom is executive power vested under the 1987 Constitution?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The Cabinet"
+        },
+        {
+          "option_id": "o2",
+          "text": "The Senate President"
+        },
+        {
+          "option_id": "o3",
+          "text": "The President"
+        },
+        {
+          "option_id": "o4",
+          "text": "The Vice-President"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "This item is about the 1987 Constitution, Art. VII, Sec. 1.",
+        "shortcut": "Tie the fact to its section: Art. VII, Sec. 1. Executive power belongs to the President.",
+        "why_correct": "\"The President\" is right. Art. VII, Sec. 1 says: \"The executive power shall be vested in the President of the Philippines\".",
+        "why_wrong": {
+          "o1": "\"The Cabinet\" names a different office or body.",
+          "o2": "\"The Senate President\" names a different office or body.",
+          "o4": "\"The Vice-President\" names a different office or body."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "GI-WRONG-BODY",
+        "o2": "GI-WRONG-BODY",
+        "o4": "GI-WRONG-BODY"
+      },
+      "source": "The 1987 Constitution, Art. VII, Sec. 1",
+      "source_url": "https://lawphil.net/consti/cons1987.html",
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_fact": 10,
+      "gen_sig": "GI:In whom is executive power vested under the 1987 Constitution?"
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-000911",
       "track": "both",
       "domain": "general_information",
       "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
-      "concept": "R.A. 6713, Sec. 4(A)",
+      "concept": "R.A. 6713, Sec. 7(d)",
       "micro_skill": "recall a provision",
       "archetype": "GI-TERM-MATCH",
       "difficulty": "medium",
       "est_seconds": 25,
       "language": "en",
-      "stem": "Under R.A. 6713, the norm that officials shall remain true to the people at all times, act with justness and sincerity, and not discriminate is called what?",
+      "stem": "Under R.A. 6713, may a public employee solicit or accept a gift from anyone in connection with an official transaction?",
       "options": [
         {
           "option_id": "o1",
-          "text": "Simple living"
+          "text": "No"
         },
         {
           "option_id": "o2",
-          "text": "Justness and sincerity"
+          "text": "Yes, if the head of office knows"
         },
         {
           "option_id": "o3",
-          "text": "Political neutrality"
+          "text": "Yes, after the transaction is finished"
         },
         {
           "option_id": "o4",
-          "text": "Professionalism"
+          "text": "Yes, if the gift is worth less than ₱1,000"
         }
       ],
-      "answer_option_id": "o2",
+      "answer_option_id": "o1",
       "reveal": {
-        "terms": "This item is about R.A. 6713, R.A. 6713, Sec. 4(A).",
-        "shortcut": "Tie the fact to its section: R.A. 6713, Sec. 4(A). Sec. 4(A)(c).",
-        "why_correct": "\"Justness and sincerity\" is right. R.A. 6713, Sec. 4(A) says: \"Justness and sincerity\".",
+        "terms": "This item is about R.A. 6713, R.A. 6713, Sec. 7(d).",
+        "shortcut": "Tie the fact to its section: R.A. 6713, Sec. 7(d). Gifts tied to official work are prohibited.",
+        "why_correct": "\"No\" is right. R.A. 6713, Sec. 7(d) says: \"Public officials and employees shall not solicit or accept, directly or indirectly, any gift\".",
         "why_wrong": {
-          "o1": "\"Simple living\" is a related term, but not the one the text uses.",
-          "o3": "\"Political neutrality\" is a related term, but not the one the text uses.",
-          "o4": "\"Professionalism\" is a related term, but not the one the text uses."
+          "o2": "\"Yes, if the head of office knows\" sounds reasonable, but the text does not say it.",
+          "o3": "\"Yes, after the transaction is finished\" sounds reasonable, but the text does not say it.",
+          "o4": "\"Yes, if the gift is worth less than ₱1,000\" sounds reasonable, but the text does not say it."
         }
       },
       "distractor_reasoning": {
-        "o1": "GI-SIBLING-TERM",
-        "o3": "GI-SIBLING-TERM",
-        "o4": "GI-SIBLING-TERM"
+        "o2": "GI-SOUNDS-RIGHT",
+        "o3": "GI-SOUNDS-RIGHT",
+        "o4": "GI-SOUNDS-RIGHT"
       },
-      "source": "R.A. 6713, R.A. 6713, Sec. 4(A)",
+      "source": "R.A. 6713, R.A. 6713, Sec. 7(d)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
       "status": "draft",
@@ -6288,8 +6283,8 @@
         "spec_version": "0.1.3"
       },
       "notes": "",
-      "gen_fact": 100,
-      "gen_sig": "GI:Under R.A. 6713, the norm that officials shall remain true to the people at all times, act with justness and sincerity, and not discriminate is called what?"
+      "gen_fact": 88,
+      "gen_sig": "GI:Under R.A. 6713, may a public employee solicit or accept a gift from anyone in connection with an official transaction?"
     }
   ]
 }

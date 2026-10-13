@@ -187,4 +187,5 @@ def file_position(rng, iid):
     return it
 
 
-TEMPLATES = [spell_right, spell_wrong, file_position, file_position]
+# spell_wrong is off: its distractors are correctly spelled words, and spec v0.1.4 has no distractor code for that trap.
+TEMPLATES = [spell_right, file_position]
