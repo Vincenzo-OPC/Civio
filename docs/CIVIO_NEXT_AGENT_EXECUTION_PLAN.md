@@ -2,7 +2,7 @@
 
 This is the only roadmap to follow. [CIVIO_CURRENT_STATE_HANDOFF.md](CIVIO_CURRENT_STATE_HANDOFF.md) is the current-state note. Specialized docs stay where they are. If this file and the code disagree, the code and tests win.
 
-Session start SHA: `3c18ec0258ec855795654afc85a93fa435684d55`. The commit that adds this file is the new tip. Confirm with `git rev-parse HEAD` and `git rev-parse origin/main`.
+Session start SHA: `3c18ec0258ec855795654afc85a93fa435684d55`. The setup-copy commit is `d8d1714`. Confirm the tip with `git rev-parse origin/main` after the docs commit that records it.
 
 ## Startup
 
