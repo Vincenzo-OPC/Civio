@@ -64,3 +64,25 @@ export function ThemeToggle() {
         </DropdownMenu>
     );
 }
+
+/** One click between light and dark. Used where the site header is covered. */
+export function DarkModeToggle({ className = '' }: { className?: string }) {
+    const { resolvedAppearance, updateAppearance } = useAppearance();
+    const isDark = resolvedAppearance === 'dark';
+
+    return (
+        <button
+            type="button"
+            onClick={() => updateAppearance(isDark ? 'light' : 'dark')}
+            aria-pressed={isDark}
+            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={isDark ? 'Light mode' : 'Dark mode'}
+            className={`flex size-10 shrink-0 items-center justify-center rounded-lg text-[var(--civio-ink)] ${className}`}
+        >
+            {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
+            <span className="sr-only">
+                {isDark ? 'Light mode' : 'Dark mode'}
+            </span>
+        </button>
+    );
+}

@@ -26,6 +26,7 @@ import React, {
     useRef,
 } from 'react';
 import { ReportIssueModal } from '@/components/domain/report-issue-modal';
+import { DarkModeToggle } from '@/components/shared/theme-toggle';
 import type { AiHandoffExamLevel } from '@/lib/ai-handoff';
 import {
     renderFormattedText,
@@ -720,7 +721,10 @@ export function ReviewExamView({
                 correct: data.correct,
                 missed: data.total - data.correct,
             }))
-            .sort((a, b) => a.accuracy - b.accuracy || a.topic.localeCompare(b.topic));
+            .sort(
+                (a, b) =>
+                    a.accuracy - b.accuracy || a.topic.localeCompare(b.topic),
+            );
 
         const weakTopics = allTopics.filter((t) => t.accuracy < 80);
 
@@ -857,6 +861,7 @@ export function ReviewExamView({
 
                         {/* Right: Topic Performance & Palette Toggle */}
                         <div className="flex shrink-0 items-center gap-1.5 text-xs">
+                            <DarkModeToggle className="size-8 text-foreground" />
                             {stats.allTopics.length > 0 && (
                                 <button
                                     type="button"
@@ -1074,7 +1079,9 @@ export function ReviewExamView({
                                                                 <div>
                                                                     <div className="flex items-start justify-between gap-2">
                                                                         <span className="line-clamp-2 text-xs font-bold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                                                                            {t.topic}
+                                                                            {
+                                                                                t.topic
+                                                                            }
                                                                             <span className="mt-0.5 block text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
                                                                                 {t.kind ===
                                                                                 'category'
@@ -1129,8 +1136,7 @@ export function ReviewExamView({
                                                                         {
                                                                             t.missed
                                                                         }{' '}
-                                                                        missed
-                                                                        /{' '}
+                                                                        missed /{' '}
                                                                         {
                                                                             t.total
                                                                         }

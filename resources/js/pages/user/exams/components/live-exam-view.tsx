@@ -20,6 +20,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { toast } from 'sonner';
 import { ReportIssueModal } from '@/components/domain/report-issue-modal';
 import LiteModeToggle from '@/components/shared/lite-mode-toggle';
+import { DarkModeToggle } from '@/components/shared/theme-toggle';
 import {
     Dialog,
     DialogContent,
@@ -667,6 +668,8 @@ export function LiveExamView({
                                     subscribeClock={subscribeClock}
                                     getClockSnapshot={getClockSnapshot}
                                 />
+
+                                <DarkModeToggle />
 
                                 {activeQuestion && (
                                     <button

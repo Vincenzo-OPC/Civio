@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import LiteModeToggle from '@/components/shared/lite-mode-toggle';
+import { DarkModeToggle } from '@/components/shared/theme-toggle';
 import type { AiHandoffAttemptState } from '@/lib/ai-handoff';
 import { renderFormattedText } from '@/lib/exam-formatters';
 import type { ExamClockSnapshot } from '../hooks/use-exam-timer';
@@ -100,7 +101,10 @@ export function LiteExamBody({
                         </span>
                         {title}
                     </span>
-                    <LiteModeToggle />
+                    <span className="flex shrink-0 items-center gap-2">
+                        <DarkModeToggle className="size-9" />
+                        <LiteModeToggle />
+                    </span>
                 </div>
 
                 <ExamTimerDisplay

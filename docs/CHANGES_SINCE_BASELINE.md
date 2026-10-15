@@ -72,6 +72,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Footer shows the 2025 BIR registration badge and RSN 000RC20250000000333, labeled as a tax registration, not a CSC approval. Copyright is Civio, all rights reserved. The project license field is proprietary. Public copy no longer promises a pass, a pass probability, or a 54-second official pace. The setup pace matches the mock: about 76 seconds on Professional and about 66 on Subprofessional. | The registration is real, and the old pages sold a result Civio cannot know. | `0023105` |
 | Dashboard, guide, study-plan cards, and the analysis text drop the command-center voice, the glow, and the forecast labels. The practice index number is unchanged. It is labeled as not a forecast. | The pages still shouted after the homepage was quieted. | `6771c56` |
 | The floating coffee support button is gone. The contact page at `/support` stays. | The button asked for optional support. Practice stays free, and there is no donation link. | `1cbc2fb` |
+| A dark mode button sits on the mock, the lite exam, and answer review. One click switches light and dark. The header menu (Light, Dark, System) is unchanged. | The mock covers the page header, so the existing theme control was unreachable during an exam. | this commit |
 
 ### Study and tutor
 
