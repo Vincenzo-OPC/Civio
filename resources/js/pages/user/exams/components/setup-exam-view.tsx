@@ -21,8 +21,8 @@ import type { ExamMode } from '../utils/exam-mode';
 import { EXAM_MODE_LABELS, EXAM_MODES } from '../utils/exam-mode';
 
 const MODE_BLURBS: Record<ExamMode, string> = {
-    study: 'Practice the full mock with Reveal, Dexter and Copy for AI on every item. The timer is your choice.',
-    strict: 'Exam-day rehearsal: always timed, no Reveal, Dexter or Copy for AI. Answers unlock only after you submit.',
+    study: 'Practice the full mock with Reveal, Dexter, Copy for AI and Ask ChatGPT on every item. The timer is your choice.',
+    strict: 'Exam-day rehearsal: always timed, no Reveal, Dexter, Copy for AI or Ask ChatGPT. Answers unlock only after you submit.',
 };
 
 interface SetupExamViewProps {
@@ -105,7 +105,9 @@ export function SetupExamView({
                                     : 'professional'
                             }
                             onChange={(id: ExamDialId) =>
-                                setSelectedExamId(id === 'subprofessional' ? 2 : 1)
+                                setSelectedExamId(
+                                    id === 'subprofessional' ? 2 : 1,
+                                )
                             }
                         />
 

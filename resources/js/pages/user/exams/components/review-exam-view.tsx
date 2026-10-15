@@ -40,6 +40,7 @@ import type {
     ExamResults,
     ReviewStatusFilter,
 } from '../types';
+import { AskChatGptButton } from './ask-chatgpt-button';
 import { BookmarkToDrillSetDialog } from './bookmark-to-drill-set-dialog';
 import { CopyForAiButton } from './copy-for-ai-button';
 import QuestionPalettePanel from './question-palette-panel';
@@ -1265,38 +1266,72 @@ export function ReviewExamView({
                                                     {!currentQuestion.isDemographic &&
                                                         currentQuestion.category !==
                                                             'Demographic Profile' && (
-                                                            <CopyForAiButton
-                                                                question={
-                                                                    currentQuestion
-                                                                }
-                                                                attempt={{
-                                                                    mode: 'review',
-                                                                    revealed: true,
-                                                                    selectedDisplayIndex:
-                                                                        chosenOption ===
-                                                                            undefined ||
-                                                                        chosenOption ===
-                                                                            null
-                                                                            ? undefined
-                                                                            : Number(
-                                                                                  chosenOption,
-                                                                              ),
-                                                                    verifiedCorrectDisplayIndex:
-                                                                        typeof currentQuestion.correct_option ===
-                                                                        'number'
-                                                                            ? currentQuestion.correct_option
-                                                                            : undefined,
-                                                                    verifiedExplanation:
-                                                                        currentQuestion.explanation,
-                                                                    questionNumber:
-                                                                        currentIdx +
-                                                                        1,
-                                                                    totalQuestions:
-                                                                        activeQuestions.length,
-                                                                    examLevel,
-                                                                }}
-                                                                className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground transition hover:bg-muted focus:outline-none"
-                                                            />
+                                                            <>
+                                                                <CopyForAiButton
+                                                                    question={
+                                                                        currentQuestion
+                                                                    }
+                                                                    attempt={{
+                                                                        mode: 'review',
+                                                                        revealed: true,
+                                                                        selectedDisplayIndex:
+                                                                            chosenOption ===
+                                                                                undefined ||
+                                                                            chosenOption ===
+                                                                                null
+                                                                                ? undefined
+                                                                                : Number(
+                                                                                      chosenOption,
+                                                                                  ),
+                                                                        verifiedCorrectDisplayIndex:
+                                                                            typeof currentQuestion.correct_option ===
+                                                                            'number'
+                                                                                ? currentQuestion.correct_option
+                                                                                : undefined,
+                                                                        verifiedExplanation:
+                                                                            currentQuestion.explanation,
+                                                                        questionNumber:
+                                                                            currentIdx +
+                                                                            1,
+                                                                        totalQuestions:
+                                                                            activeQuestions.length,
+                                                                        examLevel,
+                                                                    }}
+                                                                    className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground transition hover:bg-muted focus:outline-none"
+                                                                />
+                                                                <AskChatGptButton
+                                                                    question={
+                                                                        currentQuestion
+                                                                    }
+                                                                    attempt={{
+                                                                        mode: 'review',
+                                                                        revealed: true,
+                                                                        selectedDisplayIndex:
+                                                                            chosenOption ===
+                                                                                undefined ||
+                                                                            chosenOption ===
+                                                                                null
+                                                                                ? undefined
+                                                                                : Number(
+                                                                                      chosenOption,
+                                                                                  ),
+                                                                        verifiedCorrectDisplayIndex:
+                                                                            typeof currentQuestion.correct_option ===
+                                                                            'number'
+                                                                                ? currentQuestion.correct_option
+                                                                                : undefined,
+                                                                        verifiedExplanation:
+                                                                            currentQuestion.explanation,
+                                                                        questionNumber:
+                                                                            currentIdx +
+                                                                            1,
+                                                                        totalQuestions:
+                                                                            activeQuestions.length,
+                                                                        examLevel,
+                                                                    }}
+                                                                    className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground no-underline transition hover:bg-muted focus:outline-none"
+                                                                />
+                                                            </>
                                                         )}
                                                     {(() => {
                                                         if (

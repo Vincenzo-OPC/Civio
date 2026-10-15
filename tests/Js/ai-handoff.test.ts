@@ -4,6 +4,8 @@ import {
     AI_HANDOFF_EXPLAIN_PROMPT,
     AI_HANDOFF_HINT_PROMPT,
     buildAiHandoffText,
+    chatgptAskUrl,
+    CHATGPT_ASK_LIMIT,
     toPlainText,
 } from '../../resources/js/lib/ai-handoff';
 import type {
@@ -105,6 +107,24 @@ describe('buildAiHandoffText — before Reveal', () => {
             mode: 'live',
         });
         assert.ok(text.endsWith(AI_HANDOFF_HINT_PROMPT));
+    });
+});
+
+describe('Ask ChatGPT link', () => {
+    it('opens chatgpt.com with the same handoff in the query', () => {
+        const text = buildAiHandoffText(shuffledQuestion, baseAttempt);
+        const url = new URL(chatgptAskUrl(text));
+
+        assert.equal(url.origin, 'https://chatgpt.com');
+        assert.equal(url.searchParams.get('q'), text);
+        assert.doesNotMatch(url.searchParams.get('q') ?? '', /SECRET/);
+    });
+
+    it('leaves a long question off the address so the clipboard can carry it', () => {
+        const url = new URL(chatgptAskUrl('x'.repeat(CHATGPT_ASK_LIMIT + 1)));
+
+        assert.equal(url.origin, 'https://chatgpt.com');
+        assert.equal(url.search, '');
     });
 });
 

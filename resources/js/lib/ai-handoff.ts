@@ -353,3 +353,22 @@ export async function copyAiHandoff(
 
     return { ok, text };
 }
+
+/**
+ * Same handoff as Copy for AI, opened the way Chrome's "Ask ChatGPT" menu
+ * does: a new tab with the question in the box. ChatGPT reads `?q=`. A long
+ * item is left on the clipboard and the tab opens empty, because a huge query
+ * string gets dropped.
+ */
+export const CHATGPT_ASK_URL = 'https://chatgpt.com/';
+export const CHATGPT_ASK_LIMIT = 1500;
+
+export function chatgptAskUrl(prompt: string): string {
+    const url = new URL(CHATGPT_ASK_URL);
+
+    if (prompt.length > 0 && prompt.length <= CHATGPT_ASK_LIMIT) {
+        url.searchParams.set('q', prompt);
+    }
+
+    return url.toString();
+}

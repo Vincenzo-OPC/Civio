@@ -6,6 +6,7 @@ import { renderFormattedText } from '@/lib/exam-formatters';
 import type { ExamClockSnapshot } from '../hooks/use-exam-timer';
 import type { Question } from '../types';
 import { answerOptionVisual } from '../utils/answer-state';
+import { AskChatGptButton } from './ask-chatgpt-button';
 import { CopyForAiButton } from './copy-for-ai-button';
 import { ExamTimerDisplay } from './exam-timer-display';
 import { AnswerOption } from './session/answer-option';
@@ -179,6 +180,12 @@ export function LiteExamBody({
                             )}
                             {showStudyTools && copyAttempt && (
                                 <CopyForAiButton
+                                    question={question}
+                                    attempt={copyAttempt}
+                                />
+                            )}
+                            {showStudyTools && copyAttempt && (
+                                <AskChatGptButton
                                     question={question}
                                     attempt={copyAttempt}
                                 />

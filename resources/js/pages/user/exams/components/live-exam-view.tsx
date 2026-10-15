@@ -39,6 +39,7 @@ import type { Question, SimulationDetails } from '../types';
 import { answerOptionVisual } from '../utils/answer-state';
 import type { ExamMode } from '../utils/exam-mode';
 import { showsStudyTools } from '../utils/exam-mode';
+import { AskChatGptButton } from './ask-chatgpt-button';
 import { CopyForAiButton } from './copy-for-ai-button';
 import { ExamTimerDisplay } from './exam-timer-display';
 import { LiteExamBody } from './lite-exam-body';
@@ -927,6 +928,16 @@ export function LiveExamView({
                                                 {/* Copy for AI: drills and Study Mocks; hidden in a Strict Mock. */}
                                                 {studyTools && (
                                                     <CopyForAiButton
+                                                        question={
+                                                            activeQuestion
+                                                        }
+                                                        attempt={liveHandoffAttempt(
+                                                            activeQuestion.id,
+                                                        )}
+                                                    />
+                                                )}
+                                                {studyTools && (
+                                                    <AskChatGptButton
                                                         question={
                                                             activeQuestion
                                                         }

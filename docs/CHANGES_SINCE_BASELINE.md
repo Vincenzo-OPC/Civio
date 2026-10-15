@@ -96,6 +96,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | What changed | Why | Commits |
 | --- | --- | --- |
 | "Copy for AI" button beside Reveal and in review; clean, semantic export formatter (`lib/ai-handoff.ts`) with tests. The key is included only when the item was revealed or the attempt is in review. | Let users paste an item into their own AI assistant without leaking live keys. | `3ab87d2`, `3ba17ab`; spec `29caf02`, `d62b7bc`, `1d4c96d` |
+| Ask ChatGPT, beside Copy for AI in study, review and offline drills. It opens chatgpt.com with the same handoff in `?q=`. A long item is copied instead. Hidden in a Strict Mock. The answer stays out until Reveal. | Same job as Chrome's right-click "Ask ChatGPT", without a second copy of the question. | |
 
 ### Bank and seeds
 

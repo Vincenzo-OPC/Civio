@@ -62,6 +62,7 @@ export function ExamScreenPreview() {
                         Reveal Answer
                     </span>
                     <span className="opacity-70">Copy for AI</span>
+                    <span className="opacity-70">Ask ChatGPT</span>
                 </p>
                 <div className="mt-4 flex flex-col" role="list">
                     {CHOICES.map((choice) => (
