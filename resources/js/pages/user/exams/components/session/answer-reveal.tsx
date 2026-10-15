@@ -156,36 +156,18 @@ interface AnswerRevealProps {
     tutor?: RevealTutorPayload | null;
     chosenIndex?: number | null;
     correctIndex?: number | null;
-    onHide: () => void;
-    onOpenFollowUp?: (questionId: number) => void;
     ask?: {
         question: AiHandoffQuestion;
         attempt: AiHandoffAttemptState;
     } | null;
 }
 
-type Panel = 'steps' | 'shortcut' | 'mistakes' | 'visual' | 'simpler' | 'next';
+type Panel = 'steps' | 'shortcut' | 'mistakes' | 'visual' | 'simpler';
 
 function shortWork(explanation: string): string {
     const work = explanation.split(/The matching choice is/i)[0] ?? '';
 
     return work.replace(/\s+/g, ' ').trim();
-}
-
-function followUpLine(direction: string, skill: string): string {
-    if (direction === 'easier') {
-        return 'A similar item, a bit easier.';
-    }
-
-    if (direction === 'harder') {
-        return 'A similar item, a bit harder.';
-    }
-
-    if (direction === 'other-skill') {
-        return `${skill} has been the weaker set.`;
-    }
-
-    return skill ? `Another item in ${skill}.` : 'Another item on this skill.';
 }
 
 function RectangleFigure({
@@ -278,8 +260,6 @@ export function AnswerReveal({
     tutor = null,
     chosenIndex = null,
     correctIndex = null,
-    onHide,
-    onOpenFollowUp,
     ask = null,
 }: AnswerRevealProps) {
     const [panel, setPanel] = useState<Panel | null>(null);
@@ -322,10 +302,6 @@ export function AnswerReveal({
             id: 'simpler',
             label: showingSimpler ? 'Usual Wording' : 'Explain Simpler',
         });
-    }
-
-    if (tutor?.followUp) {
-        controls.push({ id: 'next', label: 'Try Another' });
     }
 
     return (
@@ -435,40 +411,15 @@ export function AnswerReveal({
                         ))}
                     </ol>
                 )}
-            {panel === 'next' && tutor?.followUp && (
+            {ask && (
                 <div className="mt-3">
-                    <p>
-                        {followUpLine(
-                            tutor.followUp.direction,
-                            tutor.followUp.skill,
-                        )}
-                    </p>
-                    <p className="mt-1 opacity-80">{tutor.followUp.stem}</p>
-                    {onOpenFollowUp && (
-                        <button
-                            type="button"
-                            onClick={() =>
-                                onOpenFollowUp(tutor.followUp!.questionId)
-                            }
-                            className="mt-2 font-semibold text-[var(--civio-violet,#5b35f5)]"
-                        >
-                            Open It
-                        </button>
-                    )}
-                </div>
-            )}
-            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
-                {ask && (
                     <AskAssistantButton
                         question={ask.question}
                         attempt={ask.attempt}
                         className="inline-flex items-center gap-1.5 font-semibold no-underline"
                     />
-                )}
-                <button type="button" onClick={onHide} className="opacity-70">
-                    Hide
-                </button>
-            </div>
+                </div>
+            )}
         </div>
     );
 }

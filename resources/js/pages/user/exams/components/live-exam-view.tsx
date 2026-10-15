@@ -1,4 +1,4 @@
-import { Head, router, usePage } from '@inertiajs/react';
+import { Head, usePage } from '@inertiajs/react';
 import {
     LayoutGrid,
     AlertCircle,
@@ -648,18 +648,6 @@ export function LiveExamView({
                                 : null
                         }
                         onHideReveal={() => setRevealedAnswer(null)}
-                        onOpenFollowUp={(id) => {
-                            const index = activeQuestions.findIndex(
-                                (item) => item.id === id,
-                            );
-                            setRevealedAnswer(null);
-
-                            if (index >= 0) {
-                                handleQuestionNavigate(index);
-                            } else {
-                                router.visit('/drills');
-                            }
-                        }}
                         copyAttempt={
                             studyTools && activeQuestion
                                 ? liveHandoffAttempt(activeQuestion.id)
@@ -912,7 +900,21 @@ export function LiveExamView({
                                                 </button>
                                                 {studyTools && (
                                                     <button
-                                                        onClick={handleReveal}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            if (
+                                                                revealedAnswer?.questionId ===
+                                                                activeQuestion.id
+                                                            ) {
+                                                                setRevealedAnswer(
+                                                                    null,
+                                                                );
+
+                                                                return;
+                                                            }
+
+                                                            void handleReveal();
+                                                        }}
                                                         className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold ${
                                                             revealedAnswer?.questionId ===
                                                             activeQuestion.id
@@ -920,7 +922,10 @@ export function LiveExamView({
                                                                 : 'bg-[var(--civio-violet)] text-white'
                                                         }`}
                                                     >
-                                                        Show Explanation
+                                                        {revealedAnswer?.questionId ===
+                                                        activeQuestion.id
+                                                            ? 'Hide Explanation'
+                                                            : 'Show Explanation'}
                                                     </button>
                                                 )}
                                                 {/* Copy for AI: drills and Study Mocks; hidden in a Strict Mock. */}
@@ -974,34 +979,6 @@ export function LiveExamView({
                                                         correctIndex={
                                                             revealedAnswer.displayIndex
                                                         }
-                                                        onHide={() =>
-                                                            setRevealedAnswer(
-                                                                null,
-                                                            )
-                                                        }
-                                                        onOpenFollowUp={(
-                                                            id,
-                                                        ) => {
-                                                            const index =
-                                                                activeQuestions.findIndex(
-                                                                    (item) =>
-                                                                        item.id ===
-                                                                        id,
-                                                                );
-                                                            setRevealedAnswer(
-                                                                null,
-                                                            );
-
-                                                            if (index >= 0) {
-                                                                handleQuestionNavigate(
-                                                                    index,
-                                                                );
-                                                            } else {
-                                                                router.visit(
-                                                                    '/drills',
-                                                                );
-                                                            }
-                                                        }}
                                                         ask={{
                                                             question:
                                                                 activeQuestion,
@@ -1214,7 +1191,7 @@ export function LiveExamView({
                     <DialogContent className="sm:max-w-2xl">
                         <DialogHeader>
                             <DialogTitle className="flex items-center gap-2 font-heading text-lg font-bold">
-                                <Keyboard className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                <Keyboard className="size-5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                 Keyboard Shortcuts
                             </DialogTitle>
                             <DialogDescription>
@@ -1347,7 +1324,7 @@ export function LiveExamView({
                             onClick={(e) => e.stopPropagation()}
                         >
                             <div className="mb-1 flex items-center gap-2">
-                                <Lock className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                <Lock className="size-5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                 <h3 className="font-heading text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
                                     Premium Feature Locked
                                 </h3>
@@ -1388,7 +1365,7 @@ export function LiveExamView({
                             onClick={(e) => e.stopPropagation()}
                         >
                             <div className="mb-1 flex items-center gap-2">
-                                <Lock className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                <Lock className="size-5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                 <h3 className="font-heading text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
                                     Free Preview Limit Reached
                                 </h3>

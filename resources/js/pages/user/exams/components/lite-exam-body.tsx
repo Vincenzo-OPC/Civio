@@ -49,7 +49,6 @@ interface LiteExamBodyProps {
     onReveal: () => void;
     revealed: LiteRevealedAnswer | null;
     onHideReveal: () => void;
-    onOpenFollowUp?: (questionId: number) => void;
     copyAttempt: AiHandoffAttemptState | null;
 }
 
@@ -86,7 +85,6 @@ export function LiteExamBody({
     onReveal,
     revealed,
     onHideReveal,
-    onOpenFollowUp,
     copyAttempt,
 }: LiteExamBodyProps) {
     const [showAll, setShowAll] = useState(false);
@@ -168,14 +166,18 @@ export function LiteExamBody({
                             {showStudyTools && (
                                 <button
                                     type="button"
-                                    onClick={onReveal}
+                                    onClick={() =>
+                                        revealed ? onHideReveal() : onReveal()
+                                    }
                                     className={
                                         revealed
                                             ? button
                                             : 'lite-tap rounded-lg bg-[var(--civio-violet)] px-4 text-sm font-semibold text-white'
                                     }
                                 >
-                                    Show Explanation
+                                    {revealed
+                                        ? 'Hide Explanation'
+                                        : 'Show Explanation'}
                                 </button>
                             )}
                             {showStudyTools && copyAttempt && (
@@ -209,8 +211,6 @@ export function LiteExamBody({
                                 tutor={revealed.tutor}
                                 chosenIndex={answers[currentIdx] ?? null}
                                 correctIndex={revealed.displayIndex ?? null}
-                                onHide={onHideReveal}
-                                onOpenFollowUp={onOpenFollowUp}
                                 ask={
                                     copyAttempt
                                         ? {
