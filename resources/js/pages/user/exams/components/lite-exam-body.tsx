@@ -49,6 +49,7 @@ interface LiteExamBodyProps {
     onReveal: () => void;
     revealed: LiteRevealedAnswer | null;
     onHideReveal: () => void;
+    onTryAnother?: (questionId: number) => void;
     copyAttempt: AiHandoffAttemptState | null;
 }
 
@@ -85,6 +86,7 @@ export function LiteExamBody({
     onReveal,
     revealed,
     onHideReveal,
+    onTryAnother,
     copyAttempt,
 }: LiteExamBodyProps) {
     const [showAll, setShowAll] = useState(false);
@@ -211,6 +213,7 @@ export function LiteExamBody({
                                 tutor={revealed.tutor}
                                 chosenIndex={answers[currentIdx] ?? null}
                                 correctIndex={revealed.displayIndex ?? null}
+                                onTryAnother={onTryAnother}
                                 ask={
                                     copyAttempt
                                         ? {

@@ -156,6 +156,7 @@ interface AnswerRevealProps {
     tutor?: RevealTutorPayload | null;
     chosenIndex?: number | null;
     correctIndex?: number | null;
+    onTryAnother?: (questionId: number) => void;
     ask?: {
         question: AiHandoffQuestion;
         attempt: AiHandoffAttemptState;
@@ -163,6 +164,22 @@ interface AnswerRevealProps {
 }
 
 type Panel = 'steps' | 'shortcut' | 'mistakes' | 'visual' | 'simpler';
+
+function followUpLine(direction: string): string {
+    if (direction === 'easier') {
+        return 'A similar item, a bit easier.';
+    }
+
+    if (direction === 'harder') {
+        return 'A similar item, a bit harder.';
+    }
+
+    if (direction === 'other-skill') {
+        return 'An item from a skill that needs more work.';
+    }
+
+    return 'A similar item.';
+}
 
 function shortWork(explanation: string): string {
     const work = explanation.split(/The matching choice is/i)[0] ?? '';
@@ -260,6 +277,7 @@ export function AnswerReveal({
     tutor = null,
     chosenIndex = null,
     correctIndex = null,
+    onTryAnother,
     ask = null,
 }: AnswerRevealProps) {
     const [panel, setPanel] = useState<Panel | null>(null);
@@ -411,6 +429,22 @@ export function AnswerReveal({
                         ))}
                     </ol>
                 )}
+            {tutor?.followUp && onTryAnother && (
+                <p className="mt-3">
+                    <button
+                        type="button"
+                        onClick={() =>
+                            onTryAnother(tutor.followUp!.questionId)
+                        }
+                        className="font-semibold text-[var(--civio-violet,#5b35f5)]"
+                    >
+                        Try Another
+                    </button>
+                    <span className="ml-2 opacity-70">
+                        {followUpLine(tutor.followUp.direction)}
+                    </span>
+                </p>
+            )}
             {ask && (
                 <div className="mt-3">
                     <AskAssistantButton

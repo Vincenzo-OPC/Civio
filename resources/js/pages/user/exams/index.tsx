@@ -87,6 +87,7 @@ export default function ExamIndex(props: ExamIndexProps) {
         toggleFlag,
         handleSelectOption,
         handleQuestionNavigate,
+        openFollowUp,
         handleCategoryChange,
         handleRegisterFromFreeExam,
         handleCancelFreeExam,
@@ -166,6 +167,7 @@ export default function ExamIndex(props: ExamIndexProps) {
                     answers={answers}
                     handleSelectOption={handleSelectOption}
                     handleQuestionNavigate={handleQuestionNavigate}
+                    onTryAnother={openFollowUp}
                     isFreeAttempt={isFreeAttempt}
                     setShowRegisterModal={setShowRegisterModal}
                     handleSubmitExam={handleSubmitExam}

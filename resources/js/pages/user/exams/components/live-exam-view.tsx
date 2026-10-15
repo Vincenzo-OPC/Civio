@@ -78,6 +78,7 @@ interface LiveExamViewProps {
     answers: Record<number, number>;
     handleSelectOption: (idx: number) => void;
     handleQuestionNavigate: (idx: number) => void;
+    onTryAnother?: (questionId: number) => boolean;
     isFreeAttempt: boolean;
     setShowRegisterModal: (val: boolean) => void;
     handleSubmitExam: (isTimeout: boolean) => void;
@@ -115,6 +116,7 @@ export function LiveExamView({
     answers,
     handleSelectOption,
     handleQuestionNavigate,
+    onTryAnother,
     isFreeAttempt,
     setShowRegisterModal,
     handleSubmitExam,
@@ -648,6 +650,22 @@ export function LiveExamView({
                                 : null
                         }
                         onHideReveal={() => setRevealedAnswer(null)}
+                        onTryAnother={
+                            onTryAnother
+                                ? (questionId) => {
+                                      const opened = onTryAnother(questionId);
+
+                                      if (opened) {
+                                          setRevealedAnswer(null);
+                                      } else {
+                                          toast.message(
+                                              'That item is not in this practice.',
+                                              { id: 'try-another' },
+                                          );
+                                      }
+                                  }
+                                : undefined
+                        }
                         copyAttempt={
                             studyTools && activeQuestion
                                 ? liveHandoffAttempt(activeQuestion.id)
@@ -978,6 +996,33 @@ export function LiveExamView({
                                                         }
                                                         correctIndex={
                                                             revealedAnswer.displayIndex
+                                                        }
+                                                        onTryAnother={
+                                                            onTryAnother
+                                                                ? (
+                                                                      questionId,
+                                                                  ) => {
+                                                                      const opened =
+                                                                          onTryAnother(
+                                                                              questionId,
+                                                                          );
+
+                                                                      if (
+                                                                          opened
+                                                                      ) {
+                                                                          setRevealedAnswer(
+                                                                              null,
+                                                                          );
+                                                                      } else {
+                                                                          toast.message(
+                                                                              'That item is not in this practice.',
+                                                                              {
+                                                                                  id: 'try-another',
+                                                                              },
+                                                                          );
+                                                                      }
+                                                                  }
+                                                                : undefined
                                                         }
                                                         ask={{
                                                             question:
