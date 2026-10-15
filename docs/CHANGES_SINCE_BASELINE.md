@@ -107,7 +107,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Setup, the live exam, the guide, and the scorecard now say Study Mode and Exam Mode. The score ring uses the same violet as the homepage and does not say Passed or Failed. | The homepage names and the exam screens had drifted. A practice rating is not an official result. | `2677ac0` |
 | The purple light on the Professional and Subprofessional cards is gone. The homepage sample now runs Report, Show Explanation, Copy Question, and Ask. | The light stayed as a stain after the cursor left. The sample looked like a mock but none of its controls did anything. | `f23f487` |
 | Dark mode is black with the logo lime, not navy and violet. The passing ring is lime in dark mode. Copy Question says Question Copied. | The old dark palette fought the wordmark. Lime is the contrast color on black. | `0a6aeef` |
-| The homepage header, exam cards, practice modes, and passing panel are frosted glass over a soft wash. The question sample stays solid. Lite mode and reduced transparency turn the frost off. | Glass only reads when something sits behind it. The question text should stay easy to read. | |
+| The homepage header, exam cards, practice modes, and passing panel are frosted glass over a soft wash. The question sample stays solid. Lite mode and reduced transparency turn the frost off. | Glass only reads when something sits behind it. The question text should stay easy to read. | `1de3bc2` |
 
 ### Bank and seeds
 
