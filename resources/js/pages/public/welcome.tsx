@@ -1,7 +1,10 @@
 import { Head, Link, router, usePage } from '@inertiajs/react';
+import { useState } from 'react';
 import ExamFormat from '@/components/domain/exam-format';
+import { ExamLevelPicker } from '@/components/domain/exam-level-picker';
 import SiteFooter from '@/components/layout/site-footer';
 import SiteHeader from '@/components/layout/site-header';
+import type { ExamDialId } from '@/lib/exam-dials';
 import type { Auth } from '@/types';
 
 const SAMPLE = {
@@ -16,10 +19,11 @@ const SAMPLE = {
 
 export default function Welcome() {
     const { auth } = usePage<{ auth: Auth }>().props;
+    const [level, setLevel] = useState<ExamDialId>('professional');
 
-    const startExam = (track: 'professional' | 'subprofessional') => {
+    const startExam = () => {
         const guest = auth?.user ? '' : '&free_attempt=1';
-        router.visit(`/exams?start=${track}${guest}`);
+        router.visit(`/exams?start=${level}${guest}`);
     };
 
     return (
@@ -31,60 +35,40 @@ export default function Welcome() {
                 />
             </Head>
             <SiteHeader activeNav="home" />
-            <main className="bg-[var(--civio-paper,#fafaf7)] text-[var(--civio-ink,#101426)]">
+            <main className="bg-[#FAFAF7] text-[#101426] dark:bg-[#101426] dark:text-[#FAFAF7]">
                 <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-8 sm:px-6 sm:py-12">
                     <header className="flex flex-col gap-3">
                         <h1 className="font-heading text-3xl font-semibold tracking-tight sm:text-5xl">
-                            Prepare for the Civil Service Exam.
+                            Choose Your Exam
                         </h1>
-                        <p className="text-base leading-relaxed text-[var(--civio-ink,#101426)]/75 sm:text-lg">
+                        <p className="max-w-[36rem] text-base leading-relaxed opacity-75 sm:text-lg">
                             Timed mocks for the Professional and Subprofessional
                             exams. The explanation comes after you answer.
                         </p>
                     </header>
 
-                    <div className="grid gap-3 sm:grid-cols-3">
+                    <ExamLevelPicker value={level} onChange={setLevel} />
+
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                         <button
                             type="button"
-                            onClick={() => startExam('professional')}
-                            className="rounded-xl bg-[var(--civio-violet,#5b35f5)] px-4 py-4 text-left text-white"
+                            onClick={startExam}
+                            className="inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-[#5B35F5] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] focus-visible:outline-none sm:w-auto dark:focus-visible:ring-offset-[#101426]"
                         >
-                            <span className="block text-sm font-semibold">
-                                Start Pro
-                            </span>
-                            <span className="mt-1 block text-xs text-white/80">
-                                150 items · 3h 10m
-                            </span>
-                        </button>
-                        <button
-                            type="button"
-                            onClick={() => startExam('subprofessional')}
-                            className="rounded-xl border border-[var(--civio-line,#e3e5ea)] bg-white px-4 py-4 text-left dark:bg-transparent"
-                        >
-                            <span className="block text-sm font-semibold">
-                                Start Sub Pro
-                            </span>
-                            <span className="mt-1 block text-xs opacity-70">
-                                145 items · 2h 40m
-                            </span>
+                            Set Up Mock Exam
                         </button>
                         <Link
                             href="/exams"
-                            className="rounded-xl border border-[var(--civio-line,#e3e5ea)] bg-white px-4 py-4 text-left dark:bg-transparent"
+                            className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border-2 border-[#E3E5EA] bg-white px-5 py-3 text-sm font-semibold transition-colors hover:border-[#5B35F5]/40 focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] focus-visible:outline-none sm:w-auto dark:border-[#2c3148] dark:bg-transparent dark:hover:border-[#A594FF]/50 dark:focus-visible:ring-[#A594FF] dark:focus-visible:ring-offset-[#101426]"
                         >
-                            <span className="block text-sm font-semibold">
-                                Continue Studying
-                            </span>
-                            <span className="mt-1 block text-xs opacity-70">
-                                Resume a mock or open the exam setup
-                            </span>
+                            Continue Studying
                         </Link>
                     </div>
 
                     <p className="text-sm">
                         <Link
                             href="/drills"
-                            className="font-semibold text-[var(--civio-violet,#5b35f5)] underline-offset-4 hover:underline"
+                            className="font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#C4B6FF]"
                         >
                             Practice Drills
                         </Link>
@@ -99,7 +83,7 @@ export default function Welcome() {
 
                     <section
                         aria-label="Question interface preview"
-                        className="rounded-2xl border border-[var(--civio-line,#e3e5ea)] bg-white p-4 sm:p-6 dark:bg-transparent"
+                        className="rounded-2xl border border-[#E3E5EA] bg-white p-4 sm:p-6 dark:border-[#2c3148] dark:bg-[#1a1e30]"
                     >
                         <p className="text-xs font-semibold tracking-wide opacity-60">
                             Interface preview · not a scored item
@@ -112,17 +96,17 @@ export default function Welcome() {
                                 <div
                                     key={option}
                                     role="listitem"
-                                    className={`flex min-h-12 items-start gap-3 border-b border-[var(--civio-line,#e3e5ea)] py-3 ${
+                                    className={`flex min-h-12 items-start gap-3 border-b border-[#E3E5EA] py-3 dark:border-[#2c3148] ${
                                         index === 1
-                                            ? 'text-[var(--civio-violet,#5b35f5)]'
+                                            ? 'text-[#5B35F5] dark:text-[#C4B6FF]'
                                             : ''
                                     }`}
                                 >
                                     <span
                                         className={`flex size-7 shrink-0 items-center justify-center border text-xs font-bold ${
                                             index === 1
-                                                ? 'border-[var(--civio-violet,#5b35f5)] bg-[var(--civio-violet,#5b35f5)] text-white'
-                                                : 'border-[var(--civio-line,#e3e5ea)]'
+                                                ? 'border-[#5B35F5] bg-[#5B35F5] text-white dark:border-[#A594FF] dark:bg-[#A594FF] dark:text-[#101426]'
+                                                : 'border-[#E3E5EA] dark:border-[#2c3148]'
                                         }`}
                                     >
                                         {String.fromCharCode(65 + index)}

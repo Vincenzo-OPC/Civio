@@ -34,6 +34,7 @@ interface LiteExamBodyProps {
     timeLeft: number;
     itemElapsed: number;
     formatTime: (secs: number) => string;
+    totalSeconds?: number;
     subscribeClock?: (listener: () => void) => () => void;
     getClockSnapshot?: () => ExamClockSnapshot;
     onSelect: (optionIdx: number) => void;
@@ -71,6 +72,7 @@ export function LiteExamBody({
     timeLeft,
     itemElapsed,
     formatTime,
+    totalSeconds,
     subscribeClock,
     getClockSnapshot,
     onSelect,
@@ -117,6 +119,7 @@ export function LiteExamBody({
                     timeLeft={timeLeft}
                     itemElapsed={itemElapsed}
                     formatTime={formatTime}
+                    totalSeconds={totalSeconds}
                     subscribeClock={subscribeClock}
                     getClockSnapshot={getClockSnapshot}
                 />

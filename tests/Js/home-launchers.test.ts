@@ -2,9 +2,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { describe, it } from 'node:test';
 
-// MSI desktop patch: Home offers Start Pro, Start Sub Pro and Practice Drills.
-// The separate "Try Mock Test" button (which opened a duplicate track picker)
-// was removed. Guard against it coming back.
+// Home leads with the exam dials: Choose Your Exam, Set Up Mock Exam,
+// Continue Studying, Practice Drills, and Study Hub. The old Start Pro /
+// Start Sub Pro pair and the "Try Mock Test" picker stay gone.
 const welcome = readFileSync(
     new URL('../../resources/js/pages/public/welcome.tsx', import.meta.url),
     'utf8',
@@ -47,10 +47,14 @@ const brand = readFileSync(
 );
 
 describe('home launchers', () => {
-    it('offers Start Pro, Start Sub Pro and Practice Drills', () => {
-        assert.match(welcome, /Start Pro\b/);
-        assert.match(welcome, /Start Sub Pro\b/);
+    it('offers the exam dials, Set Up Mock Exam, and Practice Drills', () => {
+        assert.match(welcome, /Choose Your Exam/);
+        assert.match(welcome, /Set Up Mock Exam/);
+        assert.match(welcome, /ExamLevelPicker/);
         assert.match(welcome, /Practice Drills/);
+        assert.match(welcome, /Study Hub/);
+        assert.doesNotMatch(welcome, /Start Pro\b/);
+        assert.doesNotMatch(welcome, /Start Sub Pro\b/);
     });
 
     it('does not bring back the marketing essay or a fake question count', () => {

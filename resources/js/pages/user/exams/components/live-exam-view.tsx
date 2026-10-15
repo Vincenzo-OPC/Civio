@@ -629,6 +629,7 @@ export function LiveExamView({
                         timeLeft={timeLeft}
                         itemElapsed={itemElapsed}
                         formatTime={formatTime}
+                        totalSeconds={details.timeLimitSecs}
                         subscribeClock={subscribeClock}
                         getClockSnapshot={getClockSnapshot}
                         onSelect={onOptionClick}
@@ -692,6 +693,7 @@ export function LiveExamView({
                                     timeLeft={timeLeft}
                                     itemElapsed={itemElapsed}
                                     formatTime={formatTime}
+                                    totalSeconds={details.timeLimitSecs}
                                     subscribeClock={subscribeClock}
                                     getClockSnapshot={getClockSnapshot}
                                 />

@@ -1,7 +1,5 @@
 import { Head, usePage } from '@inertiajs/react';
 import {
-    Award,
-    ClipboardList,
     List,
     CheckCircle2,
     Clock,
@@ -12,9 +10,11 @@ import {
     Download,
 } from 'lucide-react';
 import React from 'react';
+import { ExamLevelPicker } from '@/components/domain/exam-level-picker';
 import { PageContainer } from '@/components/layout/page-container';
 import { PageHeader } from '@/components/layout/page-header';
 import { HowItWorksModal } from '@/components/shared/how-it-works-modal';
+import type { ExamDialId } from '@/lib/exam-dials';
 import type { Auth } from '@/types';
 import type { SimulationDetails } from '../types';
 import type { ExamMode } from '../utils/exam-mode';
@@ -98,81 +98,16 @@ export function SetupExamView({
                 <div className="grid grid-cols-1 gap-3 sm:gap-6 lg:grid-cols-3">
                     {/* Left Panel: Level Selectors */}
                     <div className="flex flex-col gap-4 lg:col-span-2">
-                        {/* Professional Level Card */}
-                        <div
-                            onClick={() => setSelectedExamId(1)}
-                            className={`flex cursor-pointer items-center justify-between rounded-xl border-2 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 ${
-                                selectedExamId === 1
-                                    ? 'border-[#5B35F5] bg-[#F4F5F2] dark:border-[#8b74ff] dark:bg-[#1a1e30]'
-                                    : 'border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900'
-                            }`}
-                        >
-                            <div className="flex items-center gap-4">
-                                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#5B35F5] text-white">
-                                    <Award className="size-6 fill-current text-white" />
-                                </div>
-                                <div>
-                                    <h3 className="font-heading text-xl font-black tracking-tight text-slate-900 dark:text-white">
-                                        Professional Level
-                                    </h3>
-                                    <p className="mt-1 max-w-2xl text-sm leading-relaxed text-slate-500 md:text-base dark:text-slate-400">
-                                        Comprehensive assessment for supervisory
-                                        and advanced technical positions.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="shrink-0 pl-4">
-                                <div
-                                    className={`flex size-5 items-center justify-center rounded-full border ${
-                                        selectedExamId === 1
-                                            ? 'border-[#5B35F5] dark:border-[#8b74ff]'
-                                            : 'border-slate-300 dark:border-slate-600'
-                                    }`}
-                                >
-                                    {selectedExamId === 1 && (
-                                        <div className="size-2.5 rounded-full bg-[#5B35F5]" />
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Subprofessional Level Card */}
-                        <div
-                            onClick={() => setSelectedExamId(2)}
-                            className={`flex cursor-pointer items-center justify-between rounded-xl border-2 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 ${
+                        <ExamLevelPicker
+                            value={
                                 selectedExamId === 2
-                                    ? 'border-[#5B35F5] bg-[#F4F5F2] dark:border-[#8b74ff] dark:bg-[#1a1e30]'
-                                    : 'border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900'
-                            }`}
-                        >
-                            <div className="flex items-center gap-4">
-                                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#F4F5F2] text-[#5B35F5] dark:bg-[#1a1e30]">
-                                    <ClipboardList className="size-6" />
-                                </div>
-                                <div>
-                                    <h3 className="font-heading text-xl font-black tracking-tight text-slate-900 dark:text-white">
-                                        Subprofessional Level
-                                    </h3>
-                                    <p className="mt-1 max-w-2xl text-sm leading-relaxed text-slate-500 md:text-base dark:text-slate-400">
-                                        Standardized assessment for clerical,
-                                        routine, and manual service positions.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="shrink-0 pl-4">
-                                <div
-                                    className={`flex size-5 items-center justify-center rounded-full border ${
-                                        selectedExamId === 2
-                                            ? 'border-[#5B35F5] dark:border-[#8b74ff]'
-                                            : 'border-slate-300 dark:border-slate-600'
-                                    }`}
-                                >
-                                    {selectedExamId === 2 && (
-                                        <div className="size-2.5 rounded-full bg-[#5B35F5]" />
-                                    )}
-                                </div>
-                            </div>
-                        </div>
+                                    ? 'subprofessional'
+                                    : 'professional'
+                            }
+                            onChange={(id: ExamDialId) =>
+                                setSelectedExamId(id === 'subprofessional' ? 2 : 1)
+                            }
+                        />
 
                         {/* Exam Simulation mode */}
                         <fieldset className="rounded-xl border-2 border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">

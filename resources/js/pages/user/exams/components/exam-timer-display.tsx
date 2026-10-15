@@ -1,5 +1,6 @@
 import { Timer } from 'lucide-react';
 import React, { useSyncExternalStore } from 'react';
+import { TimeDial } from '@/components/domain/time-dial';
 import {
     examClockTone,
     formatExamLeft,
@@ -7,6 +8,7 @@ import {
     itemClockTone,
 } from '@/lib/exam-clock';
 import type { ClockTone } from '@/lib/exam-clock';
+import { formatSitting } from '@/lib/exam-dials';
 import type { ExamClockSnapshot } from '../hooks/use-exam-timer';
 
 interface ExamTimerDisplayProps {
@@ -14,6 +16,7 @@ interface ExamTimerDisplayProps {
     timeLeft: number;
     itemElapsed: number;
     formatTime: (secs: number) => string;
+    totalSeconds?: number;
     subscribeClock?: (listener: () => void) => () => void;
     getClockSnapshot?: () => ExamClockSnapshot;
 }
@@ -34,19 +37,42 @@ function ClockReadout({
     isTimed,
     timeLeft,
     itemElapsed,
+    totalSeconds,
 }: {
     isTimed: boolean;
     timeLeft: number;
     itemElapsed: number;
+    totalSeconds?: number;
 }) {
+    const tone = examClockTone(timeLeft);
+
     return (
-        <div className="inline-flex items-center gap-2 text-xs font-semibold tabular-nums">
+        <div className="inline-flex shrink-0 items-center gap-1.5 text-xs font-semibold tabular-nums">
+            {isTimed && totalSeconds && totalSeconds > 0 ? (
+                <TimeDial
+                    compact
+                    decorative
+                    totalSeconds={totalSeconds}
+                    remainingSeconds={timeLeft}
+                    tone={tone}
+                />
+            ) : null}
             {isTimed ? (
                 <span
-                    className={toneClass(examClockTone(timeLeft))}
-                    title="Time left for the whole mock"
+                    className={toneClass(tone)}
+                    title={
+                        totalSeconds && totalSeconds > 0
+                            ? `Time left of ${formatSitting(totalSeconds)}`
+                            : 'Time left for the whole mock'
+                    }
                 >
                     {formatExamLeft(timeLeft)}
+                    {totalSeconds && totalSeconds > 0 ? (
+                        <span className="sr-only">
+                            {' '}
+                            left of {formatSitting(totalSeconds)}
+                        </span>
+                    ) : null}
                 </span>
             ) : (
                 <span className="text-[var(--civio-ink)]/60">Untimed</span>
@@ -67,10 +93,12 @@ function ClockReadout({
 
 function LiveClock({
     isTimed,
+    totalSeconds,
     subscribeClock,
     getClockSnapshot,
 }: {
     isTimed: boolean;
+    totalSeconds?: number;
     subscribeClock: (listener: () => void) => () => void;
     getClockSnapshot: () => ExamClockSnapshot;
 }) {
@@ -85,6 +113,7 @@ function LiveClock({
             isTimed={isTimed}
             timeLeft={snap.timeLeft}
             itemElapsed={snap.itemElapsed}
+            totalSeconds={totalSeconds}
         />
     );
 }
@@ -93,6 +122,7 @@ export const ExamTimerDisplay = React.memo(function ExamTimerDisplay({
     isTimed,
     timeLeft,
     itemElapsed,
+    totalSeconds,
     subscribeClock,
     getClockSnapshot,
 }: ExamTimerDisplayProps) {
@@ -100,6 +130,7 @@ export const ExamTimerDisplay = React.memo(function ExamTimerDisplay({
         return (
             <LiveClock
                 isTimed={isTimed}
+                totalSeconds={totalSeconds}
                 subscribeClock={subscribeClock}
                 getClockSnapshot={getClockSnapshot}
             />
@@ -111,6 +142,7 @@ export const ExamTimerDisplay = React.memo(function ExamTimerDisplay({
             isTimed={isTimed}
             timeLeft={timeLeft}
             itemElapsed={itemElapsed}
+            totalSeconds={totalSeconds}
         />
     );
 });
