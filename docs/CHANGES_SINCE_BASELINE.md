@@ -113,6 +113,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Show Explanation becomes Hide Explanation on the same button. Try Another is gone. | A second Hide sat under the explanation, and Try Another opened a question that was not in the mock. | `896b781` |
 | Try Another opens that follow-up item in the current practice. | The old button left the mock and opened the drills list. | `b0d9141` |
 | Try Another carries the follow-up item with the explanation, so it can open even when the page did not load the whole bank. | The button looked up a question the exam page no longer sends. | `f739606` |
+| Similar Item asks the assistant for one new question and stays on the exam. Explanation actions are buttons. Auto-Next is gone. Flag, the question list, and cross-out explain themselves on hover. | Try Another left the exam and showed an item with no choices. The explanation links looked like plain text. Auto-Next and the word Palette were leftover chrome. | |
 
 ### Bank and seeds
 

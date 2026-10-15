@@ -75,7 +75,7 @@ export default function QuestionPalettePanel({
             {isMobile ? (
                 <div className="flex h-16 shrink-0 items-center justify-between border-b border-border bg-card px-4 sm:px-6">
                     <span className="font-heading text-sm font-bold text-foreground">
-                        Question Palette
+                        Question List
                     </span>
                     <button
                         onClick={onCloseMobile}
@@ -87,12 +87,12 @@ export default function QuestionPalettePanel({
             ) : (
                 <div className="hidden h-12 shrink-0 items-center justify-between border-b border-border bg-card px-4 lg:flex">
                     <span className="font-heading text-xs font-bold text-foreground">
-                        Question Palette
+                        Question List
                     </span>
                     {onToggleCollapse && (
                         <button
                             onClick={onToggleCollapse}
-                            title="Collapse Question Palette"
+                            title="Collapse Question List"
                             className="rounded-md p-1.5 text-muted-foreground transition hover:bg-muted hover:text-foreground"
                         >
                             <PanelRightClose className="size-4" />
@@ -514,7 +514,7 @@ export default function QuestionPalettePanel({
             <div className="hidden w-12 shrink-0 flex-col items-center justify-between border-l border-border bg-card py-4 transition-all duration-300 lg:flex">
                 <button
                     onClick={onToggleCollapse}
-                    title="Expand Question Palette"
+                    title="Expand Question List"
                     className="flex size-8 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground transition hover:bg-accent hover:text-foreground"
                 >
                     <PanelRightOpen className="size-4" />
@@ -523,7 +523,7 @@ export default function QuestionPalettePanel({
                 <div className="flex flex-col items-center gap-3">
                     <LayoutGrid className="size-4 text-[var(--civio-violet)]" />
                     <span className="rotate-180 text-[10px] font-semibold tracking-widest text-muted-foreground uppercase [writing-mode:vertical-lr]">
-                        Question Palette
+                        Question List
                     </span>
                 </div>
 

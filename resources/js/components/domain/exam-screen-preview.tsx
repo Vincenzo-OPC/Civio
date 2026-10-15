@@ -7,7 +7,6 @@ import {
     Maximize2,
     Moon,
     Sun,
-    Zap,
 } from 'lucide-react';
 import { useRef, useState } from 'react';
 import { toast } from 'sonner';
@@ -42,7 +41,6 @@ export function ExamScreenPreview() {
     const [paused, setPaused] = useState(false);
     const [flagged, setFlagged] = useState(false);
     const [mapOpen, setMapOpen] = useState(false);
-    const [autoNext, setAutoNext] = useState(false);
     const [notesOpen, setNotesOpen] = useState(false);
     const [keysOpen, setKeysOpen] = useState(false);
     const [note, setNote] = useState('');
@@ -68,12 +66,6 @@ export function ExamScreenPreview() {
 
     const choose = (index: number) => {
         setSelected(index);
-
-        if (autoNext) {
-            toast.message('Auto-Next would move on in a full mock.', {
-                id: 'sample-auto-next',
-            });
-        }
     };
 
     return (
@@ -205,15 +197,6 @@ export function ExamScreenPreview() {
 
             {toolsOpen && (
                 <div className="flex flex-wrap items-center gap-2 border-t border-[var(--civio-line)] px-3 py-2 sm:px-5">
-                    <button
-                        type="button"
-                        aria-pressed={autoNext}
-                        onClick={() => setAutoNext((on) => !on)}
-                        className="h-9 rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold"
-                    >
-                        <Zap className="mr-1 inline size-3.5" />
-                        Auto-Next {autoNext ? 'on' : 'off'}
-                    </button>
                     <button
                         type="button"
                         aria-expanded={notesOpen}

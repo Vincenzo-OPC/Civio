@@ -115,7 +115,7 @@ export function ReviewerGuideTabs({
             steps: [
                 'Select Professional (150 scored items, 3h 10m) or Subprofessional (145 scored items, 2h 40m). The unscored demographic items of the real exam are left out.',
                 'Choose Study Mode (Show Explanation on every item, timer optional) or Exam Mode (always timed, answers locked until you submit).',
-                'Use the interactive Question Palette on the right to track answered, skipped, and flagged items.',
+                'Use the question list on the right to see answered, skipped, and flagged items.',
                 'Use the "Flag for Review" feature to mark difficult items and revisit them before final submission.',
             ],
             proTip: 'Train under strict timer discipline: you have about 76 seconds per item on the Professional mock.',

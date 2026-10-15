@@ -18,6 +18,8 @@ interface AskAssistantButtonProps {
     question: AiHandoffQuestion;
     attempt: AiHandoffAttemptState;
     options?: AiHandoffOptions;
+    label?: string;
+    title?: string;
     className?: string;
 }
 
@@ -38,6 +40,8 @@ export function AskAssistantButton({
     question,
     attempt,
     options,
+    label,
+    title,
     className,
 }: AskAssistantButtonProps) {
     const assistant = useSyncExternalStore(
@@ -48,7 +52,12 @@ export function AskAssistantButton({
     const text = buildAiHandoffText(question, attempt, options);
     const href = assistantAskUrl(assistant, text);
     const prefilled = href?.includes('?q=') ?? false;
-    const label = `Ask ${NAME[assistant]}`;
+    const labelText = label ?? `Ask ${NAME[assistant]}`;
+    const titleText =
+        title ??
+        (href
+            ? `Open this question in ${NAME[assistant]}`
+            : 'Copy this question so you can paste it into your assistant');
     const classNameResolved =
         className ??
         'inline-flex cursor-pointer items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground no-underline transition hover:bg-muted focus:outline-none';
@@ -78,7 +87,7 @@ export function AskAssistantButton({
     const content = (
         <>
             <AssistantMark assistant={assistant} className="size-3.5" />
-            {label}
+            {labelText}
         </>
     );
 
@@ -86,7 +95,7 @@ export function AskAssistantButton({
         return (
             <button
                 type="button"
-                title="Copy this question so you can paste it into your assistant"
+                title={titleText}
                 onClick={onActivate}
                 className={classNameResolved}
             >
@@ -100,7 +109,7 @@ export function AskAssistantButton({
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            title={`Open this question in ${NAME[assistant]}`}
+            title={titleText}
             onClick={onActivate}
             className={classNameResolved}
         >

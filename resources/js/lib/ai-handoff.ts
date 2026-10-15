@@ -54,6 +54,8 @@ export type AiHandoffAttemptState = {
 export type AiHandoffOptions = {
     /** Include the learner's own note after Reveal / in review. Default false. */
     includeLearnerNote?: boolean;
+    /** Replaces the default hint or explain request at the end of the handoff. */
+    closingPrompt?: string;
 };
 
 export const AI_HANDOFF_HINT_PROMPT =
@@ -253,7 +255,7 @@ export function buildAiHandoffText(
     );
 
     if (!canIncludeAnswer(attempt)) {
-        lines.push('', AI_HANDOFF_HINT_PROMPT);
+        lines.push('', options.closingPrompt ?? AI_HANDOFF_HINT_PROMPT);
 
         return lines.join('\n');
     }
@@ -304,7 +306,7 @@ export function buildAiHandoffText(
         lines.push('', 'My note:', note);
     }
 
-    lines.push('', AI_HANDOFF_EXPLAIN_PROMPT);
+    lines.push('', options.closingPrompt ?? AI_HANDOFF_EXPLAIN_PROMPT);
 
     return lines.join('\n');
 }

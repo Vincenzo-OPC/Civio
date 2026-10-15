@@ -190,9 +190,6 @@ interface AnswerRevealProps {
     tutor?: RevealTutorPayload | null;
     chosenIndex?: number | null;
     correctIndex?: number | null;
-    onTryAnother?: (
-        followUp: NonNullable<RevealTutorPayload['followUp']>,
-    ) => void;
     ask?: {
         question: AiHandoffQuestion;
         attempt: AiHandoffAttemptState;
@@ -201,21 +198,8 @@ interface AnswerRevealProps {
 
 type Panel = 'steps' | 'shortcut' | 'mistakes' | 'visual' | 'simpler';
 
-function followUpLine(direction: string): string {
-    if (direction === 'easier') {
-        return 'A similar item, a bit easier.';
-    }
-
-    if (direction === 'harder') {
-        return 'A similar item, a bit harder.';
-    }
-
-    if (direction === 'other-skill') {
-        return 'An item from a skill that needs more work.';
-    }
-
-    return 'A similar item.';
-}
+const SIMILAR_ITEM_PROMPT =
+    'Write one new practice question on this same skill for the Philippine Civil Service Exam. Change the numbers or the wording. Give four choices, say which one is correct, and explain it in a few lines.';
 
 function shortWork(explanation: string): string {
     const work = explanation.split(/The matching choice is/i)[0] ?? '';
@@ -313,7 +297,6 @@ export function AnswerReveal({
     tutor = null,
     chosenIndex = null,
     correctIndex = null,
-    onTryAnother,
     ask = null,
 }: AnswerRevealProps) {
     const [panel, setPanel] = useState<Panel | null>(null);
@@ -384,23 +367,40 @@ export function AnswerReveal({
                     <p className="mt-1">{lead}</p>
                 </div>
             )}
-            {controls.length > 0 && (
-                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+            {(controls.length > 0 || ask) && (
+                <div className="mt-4 flex flex-wrap gap-2">
                     {controls.map((control) => (
                         <button
                             key={control.id}
                             type="button"
                             onClick={() => toggle(control.id)}
-                            className={
+                            className={`inline-flex items-center rounded-lg border px-3 py-1.5 text-xs font-semibold ${
                                 panel === control.id
-                                    ? 'font-semibold text-[var(--civio-violet,#5b35f5)]'
-                                    : 'opacity-80'
-                            }
+                                    ? 'border-[var(--civio-violet,#5b35f5)] bg-[var(--civio-violet,#5b35f5)]/10'
+                                    : 'border-[var(--civio-line,#e3e5ea)]'
+                            }`}
                             aria-expanded={panel === control.id}
                         >
                             {control.label}
                         </button>
                     ))}
+                    {ask && (
+                        <AskAssistantButton
+                            question={ask.question}
+                            attempt={ask.attempt}
+                            label="Similar Item"
+                            title="Opens your assistant in a new tab and asks for one similar question. You stay on this item."
+                            options={{ closingPrompt: SIMILAR_ITEM_PROMPT }}
+                            className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--civio-line,#e3e5ea)] px-3 py-1.5 text-xs font-semibold no-underline"
+                        />
+                    )}
+                    {ask && (
+                        <AskAssistantButton
+                            question={ask.question}
+                            attempt={ask.attempt}
+                            className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--civio-line,#e3e5ea)] px-3 py-1.5 text-xs font-semibold no-underline"
+                        />
+                    )}
                 </div>
             )}
             {panel === 'steps' && tutor && (
@@ -465,29 +465,6 @@ export function AnswerReveal({
                         ))}
                     </ol>
                 )}
-            {tutor?.followUp && onTryAnother && (
-                <p className="mt-3">
-                    <button
-                        type="button"
-                        onClick={() => onTryAnother(tutor.followUp!)}
-                        className="font-semibold text-[var(--civio-violet,#5b35f5)]"
-                    >
-                        Try Another
-                    </button>
-                    <span className="ml-2 opacity-70">
-                        {followUpLine(tutor.followUp.direction)}
-                    </span>
-                </p>
-            )}
-            {ask && (
-                <div className="mt-3">
-                    <AskAssistantButton
-                        question={ask.question}
-                        attempt={ask.attempt}
-                        className="inline-flex items-center gap-1.5 font-semibold no-underline"
-                    />
-                </div>
-            )}
         </div>
     );
 }

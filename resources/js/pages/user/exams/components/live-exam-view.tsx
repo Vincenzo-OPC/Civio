@@ -9,8 +9,6 @@ import {
     Lock,
     LogIn,
     Keyboard,
-    Zap,
-    TrendingUp,
     Maximize2,
     Minimize2,
     Edit3,
@@ -78,10 +76,6 @@ interface LiveExamViewProps {
     answers: Record<number, number>;
     handleSelectOption: (idx: number) => void;
     handleQuestionNavigate: (idx: number) => void;
-    onTryAnother?: (followUp: {
-        questionId: number;
-        question?: Question | null;
-    }) => boolean;
     isFreeAttempt: boolean;
     setShowRegisterModal: (val: boolean) => void;
     handleSubmitExam: (isTimeout: boolean) => void;
@@ -119,7 +113,6 @@ export function LiveExamView({
     answers,
     handleSelectOption,
     handleQuestionNavigate,
-    onTryAnother,
     isFreeAttempt,
     setShowRegisterModal,
     handleSubmitExam,
@@ -146,7 +139,6 @@ export function LiveExamView({
     const [liveStatusFilter, setLiveStatusFilter] = useState<
         'all' | 'unanswered' | 'answered' | 'flagged'
     >('all');
-    const [autoAdvance, setAutoAdvance] = useState(false);
     const [showKeyboardModal, setShowKeyboardModal] = useState(false);
 
     // Advanced UI/UX feature states
@@ -358,18 +350,7 @@ export function LiveExamView({
             return;
         }
 
-        const isCurrentlySelected = answers[currentIdx] === optIdx;
         handleSelectOption(optIdx);
-
-        if (
-            !isCurrentlySelected &&
-            autoAdvance &&
-            currentIdx < activeQuestions.length - 1
-        ) {
-            setTimeout(() => {
-                handleQuestionNavigate(currentIdx + 1);
-            }, 250);
-        }
     };
 
     // Navigation-only Keyboard Listener (security keys handled by useContentShield)
@@ -489,7 +470,6 @@ export function LiveExamView({
         currentIdx,
         activeQuestions,
         activeQuestion,
-        autoAdvance,
         eliminatedOptions,
         handleQuestionNavigate,
         handleSelectOption,
@@ -653,22 +633,6 @@ export function LiveExamView({
                                 : null
                         }
                         onHideReveal={() => setRevealedAnswer(null)}
-                        onTryAnother={
-                            onTryAnother
-                                ? (followUp) => {
-                                      const opened = onTryAnother(followUp);
-
-                                      if (opened) {
-                                          setRevealedAnswer(null);
-                                      } else {
-                                          toast.message(
-                                              'That item is not in this practice.',
-                                              { id: 'try-another' },
-                                          );
-                                      }
-                                  }
-                                : undefined
-                        }
                         copyAttempt={
                             studyTools && activeQuestion
                                 ? liveHandoffAttempt(activeQuestion.id)
@@ -711,47 +675,67 @@ export function LiveExamView({
                                 <DarkModeToggle />
 
                                 {activeQuestion && (
-                                    <button
-                                        type="button"
-                                        onClick={() => toggleFlag(currentIdx)}
-                                        aria-pressed={!!flagged[currentIdx]}
-                                        aria-label={
-                                            flagged[currentIdx]
-                                                ? 'Unflag question'
-                                                : 'Flag question'
-                                        }
-                                        className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${
-                                            flagged[currentIdx]
-                                                ? 'text-[var(--civio-error)]'
-                                                : 'text-[var(--civio-ink)]/60'
-                                        }`}
-                                    >
-                                        <Flag
-                                            className={`size-4 ${
+                                    <span className="group/hint relative">
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                toggleFlag(currentIdx)
+                                            }
+                                            aria-pressed={!!flagged[currentIdx]}
+                                            aria-label={
                                                 flagged[currentIdx]
-                                                    ? 'fill-[var(--civio-error)]'
-                                                    : ''
+                                                    ? 'Remove the flag'
+                                                    : 'Flag this item'
+                                            }
+                                            className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${
+                                                flagged[currentIdx]
+                                                    ? 'text-[var(--civio-error)]'
+                                                    : 'text-[var(--civio-ink)]/60'
                                             }`}
-                                        />
-                                    </button>
+                                        >
+                                            <Flag
+                                                className={`size-4 ${
+                                                    flagged[currentIdx]
+                                                        ? 'fill-[var(--civio-error)]'
+                                                        : ''
+                                                }`}
+                                            />
+                                        </button>
+                                        <span
+                                            role="tooltip"
+                                            className="pointer-events-none absolute top-[calc(100%+6px)] right-0 z-30 hidden w-48 rounded-lg border border-[var(--civio-line)] bg-[var(--civio-paper)] px-2.5 py-2 text-left text-[11px] leading-snug font-medium shadow-sm group-hover/hint:block group-focus-within/hint:block"
+                                        >
+                                            Flag this item. It stays marked so
+                                            you can come back to it.
+                                        </span>
+                                    </span>
                                 )}
 
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        if (window.innerWidth >= 1024) {
-                                            setIsPaletteCollapsed(
-                                                (prev) => !prev,
-                                            );
-                                        } else {
-                                            setIsMobilePaletteOpen(true);
-                                        }
-                                    }}
-                                    aria-label="Question list"
-                                    className="flex size-10 shrink-0 items-center justify-center rounded-lg text-[var(--civio-violet)]"
-                                >
-                                    <LayoutGrid className="size-4" />
-                                </button>
+                                <span className="group/hint relative">
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            if (window.innerWidth >= 1024) {
+                                                setIsPaletteCollapsed(
+                                                    (prev) => !prev,
+                                                );
+                                            } else {
+                                                setIsMobilePaletteOpen(true);
+                                            }
+                                        }}
+                                        aria-label="Question list"
+                                        className="flex size-10 shrink-0 items-center justify-center rounded-lg text-[var(--civio-violet)]"
+                                    >
+                                        <LayoutGrid className="size-4" />
+                                    </button>
+                                    <span
+                                        role="tooltip"
+                                        className="pointer-events-none absolute top-[calc(100%+6px)] right-0 z-30 hidden w-48 rounded-lg border border-[var(--civio-line)] bg-[var(--civio-paper)] px-2.5 py-2 text-left text-[11px] leading-snug font-medium shadow-sm group-hover/hint:block group-focus-within/hint:block"
+                                    >
+                                        Question list. Jump to any item in this
+                                        exam.
+                                    </span>
+                                </span>
                             </div>
 
                             <div className="flex items-center justify-between gap-3 px-3 pb-1.5 text-xs sm:px-5">
@@ -814,46 +798,16 @@ export function LiveExamView({
                             {toolsOpen && (
                                 <div className="flex flex-wrap items-center gap-2 border-t border-[var(--civio-line)] px-3 py-2 sm:px-5">
                                     {isTimed && stats.unanswered > 0 && (
-                                        <span
-                                            title={`Target pace: ~${stats.targetPace}s per question`}
-                                            className="inline-flex items-center gap-1 text-xs font-semibold text-[var(--civio-ink)]/70"
-                                        >
-                                            <TrendingUp className="size-3.5" />~
-                                            {stats.targetPace}s each
+                                        <span className="text-xs text-[var(--civio-ink)]/70">
+                                            About {stats.targetPace} seconds an
+                                            item.
                                             {stats.paceStatus === 'behind'
-                                                ? ' · behind'
+                                                ? ' You are behind.'
                                                 : stats.paceStatus === 'warn'
-                                                  ? ' · close'
-                                                  : ' · on pace'}
+                                                  ? ' You are close.'
+                                                  : ' You are on pace.'}
                                         </span>
                                     )}
-                                    <button
-                                        type="button"
-                                        onClick={() => {
-                                            const nextState = !autoAdvance;
-                                            setAutoAdvance(nextState);
-
-                                            if (nextState) {
-                                                toast.success(
-                                                    'Auto-Next Enabled',
-                                                    {
-                                                        description:
-                                                            'Question will automatically advance after selecting an answer.',
-                                                        duration: 2500,
-                                                    },
-                                                );
-                                            } else {
-                                                toast.info(
-                                                    'Auto-Next Disabled',
-                                                    { duration: 2000 },
-                                                );
-                                            }
-                                        }}
-                                        className="h-9 rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold"
-                                    >
-                                        <Zap className="mr-1 inline size-3.5" />
-                                        Auto-Next {autoAdvance ? 'on' : 'off'}
-                                    </button>
                                     <button
                                         type="button"
                                         onClick={() =>
@@ -1000,31 +954,6 @@ export function LiveExamView({
                                                         correctIndex={
                                                             revealedAnswer.displayIndex
                                                         }
-                                                        onTryAnother={
-                                                            onTryAnother
-                                                                ? (followUp) => {
-                                                                      const opened =
-                                                                          onTryAnother(
-                                                                              followUp,
-                                                                          );
-
-                                                                      if (
-                                                                          opened
-                                                                      ) {
-                                                                          setRevealedAnswer(
-                                                                              null,
-                                                                          );
-                                                                      } else {
-                                                                          toast.message(
-                                                                              'That item is not in this practice.',
-                                                                              {
-                                                                                  id: 'try-another',
-                                                                              },
-                                                                          );
-                                                                      }
-                                                                  }
-                                                                : undefined
-                                                        }
                                                         ask={{
                                                             question:
                                                                 activeQuestion,
@@ -1095,26 +1024,36 @@ export function LiveExamView({
                                                                     )
                                                                 }
                                                                 trailing={
-                                                                    <button
-                                                                        type="button"
-                                                                        onClick={(
-                                                                            e,
-                                                                        ) =>
-                                                                            toggleElimination(
+                                                                    <span className="group/hint relative">
+                                                                        <button
+                                                                            type="button"
+                                                                            onClick={(
                                                                                 e,
-                                                                                currentIdx,
-                                                                                idx,
-                                                                            )
-                                                                        }
-                                                                        title={
-                                                                            isEliminated
-                                                                                ? 'Restore choice'
-                                                                                : 'Strike out choice'
-                                                                        }
-                                                                        className="inline-flex shrink-0 items-center p-2 text-xs font-bold text-[var(--civio-ink)]/60"
-                                                                    >
-                                                                        <Strikethrough className="size-4" />
-                                                                    </button>
+                                                                            ) =>
+                                                                                toggleElimination(
+                                                                                    e,
+                                                                                    currentIdx,
+                                                                                    idx,
+                                                                                )
+                                                                            }
+                                                                            aria-label={
+                                                                                isEliminated
+                                                                                    ? 'Bring this choice back'
+                                                                                    : 'Cross out this choice'
+                                                                            }
+                                                                            className="inline-flex shrink-0 items-center p-2 text-xs font-bold text-[var(--civio-ink)]/60"
+                                                                        >
+                                                                            <Strikethrough className="size-4" />
+                                                                        </button>
+                                                                        <span
+                                                                            role="tooltip"
+                                                                            className="pointer-events-none absolute top-[calc(100%+6px)] right-0 z-30 hidden w-44 rounded-lg border border-[var(--civio-line)] bg-[var(--civio-paper)] px-2.5 py-2 text-left text-[11px] leading-snug font-medium shadow-sm group-hover/hint:block group-focus-within/hint:block"
+                                                                        >
+                                                                            {isEliminated
+                                                                                ? 'Bring this choice back.'
+                                                                                : 'Cross out this choice. It is not removed from the exam.'}
+                                                                        </span>
+                                                                    </span>
                                                                 }
                                                             >
                                                                 {renderFormattedText(

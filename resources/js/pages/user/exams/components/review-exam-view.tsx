@@ -921,7 +921,7 @@ export function ReviewExamView({
                                 </button>
                             )}
 
-                            {/* Question Palette Toggle Button */}
+                            {/* Question List Toggle Button */}
                             <button
                                 onClick={() => {
                                     if (window.innerWidth >= 1024) {
@@ -932,8 +932,8 @@ export function ReviewExamView({
                                 }}
                                 title={
                                     isPaletteCollapsed
-                                        ? 'Expand Question Palette'
-                                        : 'Question Palette'
+                                        ? 'Expand Question List'
+                                        : 'Question List'
                                 }
                                 className={`shadow-3xs flex h-8 cursor-pointer items-center justify-center rounded-md transition focus:outline-none ${
                                     isPaletteCollapsed
@@ -944,7 +944,7 @@ export function ReviewExamView({
                                 <LayoutGrid className="size-4 shrink-0" />
                                 {isPaletteCollapsed && (
                                     <span className="ml-1.5 hidden text-xs font-bold whitespace-nowrap lg:inline">
-                                        Show Palette
+                                        Show List
                                     </span>
                                 )}
                             </button>
@@ -1790,7 +1790,7 @@ export function ReviewExamView({
                     />
                 </div>
 
-                {/* Mobile Question Palette Drawer */}
+                {/* Mobile Question List Drawer */}
                 {isMobilePaletteOpen && (
                     <QuestionPalettePanel
                         mode="review"

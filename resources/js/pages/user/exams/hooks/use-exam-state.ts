@@ -26,7 +26,7 @@ import {
     EXAM_CONSTANTS,
     apiPost,
 } from '../utils/exam-utils';
-import { shortMockNotice, shuffleOptionsForQuestion } from '../utils/mock-pool';
+import { shortMockNotice } from '../utils/mock-pool';
 import { startMockSession } from '../utils/mock-session';
 import { useExamHydration } from './use-exam-hydration';
 import { useExamPersistence } from './use-exam-persistence';
@@ -587,47 +587,6 @@ export function useExamState(props: ExamIndexProps) {
         setCurrentIdx(targetIdx);
     }, []);
 
-    const openFollowUp = useCallback(
-        (followUp: {
-            questionId: number;
-            question?: Question | null;
-        }): boolean => {
-            const existing = activeQuestions.findIndex(
-                (item) => item.id === followUp.questionId,
-            );
-
-            if (existing >= 0) {
-                setCurrentIdx(existing);
-
-                return true;
-            }
-
-            const source =
-                followUp.question ??
-                questions.find((item) => item.id === followUp.questionId);
-
-            if (!source) {
-                return false;
-            }
-
-            const next = shuffleOptionsForQuestion({
-                ...source,
-                correct_option: undefined,
-                explanation: undefined,
-            });
-
-            setActiveQuestions((current) =>
-                current.some((item) => item.id === followUp.questionId)
-                    ? current
-                    : [...current, next],
-            );
-            setCurrentIdx(activeQuestions.length);
-
-            return true;
-        },
-        [activeQuestions, questions],
-    );
-
     const handleCategoryChange = useCallback(
         (category: string) => {
             setSelectedPaletteCategory(category);
@@ -861,7 +820,6 @@ export function useExamState(props: ExamIndexProps) {
         toggleFlag,
         handleSelectOption,
         handleQuestionNavigate,
-        openFollowUp,
         handleCategoryChange,
         handleRegisterFromFreeExam,
         handleCancelFreeExam,
