@@ -684,9 +684,10 @@ export function LiveExamView({
                                             aria-pressed={!!flagged[currentIdx]}
                                             aria-label={
                                                 flagged[currentIdx]
-                                                    ? 'Remove the flag'
-                                                    : 'Flag this item'
+                                                    ? 'Remove flag.'
+                                                    : 'Flag for review.'
                                             }
+                                            aria-describedby="exam-flag-hint"
                                             className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${
                                                 flagged[currentIdx]
                                                     ? 'text-[var(--civio-error)]'
@@ -702,11 +703,13 @@ export function LiveExamView({
                                             />
                                         </button>
                                         <span
+                                            id="exam-flag-hint"
                                             role="tooltip"
-                                            className="pointer-events-none absolute top-[calc(100%+6px)] right-0 z-30 hidden w-48 rounded-lg border border-[var(--civio-line)] bg-[var(--civio-paper)] px-2.5 py-2 text-left text-[11px] leading-snug font-medium shadow-sm group-hover/hint:block group-focus-within/hint:block"
+                                            className="pointer-events-none absolute top-[calc(100%+6px)] right-0 z-30 hidden rounded-lg border border-[var(--civio-line)] bg-[var(--civio-paper)] px-2.5 py-1.5 text-[11px] leading-none font-medium whitespace-nowrap shadow-sm group-focus-within/hint:block group-hover/hint:block"
                                         >
-                                            Flag this item. It stays marked so
-                                            you can come back to it.
+                                            {flagged[currentIdx]
+                                                ? 'Remove flag.'
+                                                : 'Flag for review.'}
                                         </span>
                                     </span>
                                 )}
@@ -723,17 +726,18 @@ export function LiveExamView({
                                                 setIsMobilePaletteOpen(true);
                                             }
                                         }}
-                                        aria-label="Question list"
+                                        aria-label="Jump to a question."
+                                        aria-describedby="exam-list-hint"
                                         className="flex size-10 shrink-0 items-center justify-center rounded-lg text-[var(--civio-violet)]"
                                     >
                                         <LayoutGrid className="size-4" />
                                     </button>
                                     <span
+                                        id="exam-list-hint"
                                         role="tooltip"
-                                        className="pointer-events-none absolute top-[calc(100%+6px)] right-0 z-30 hidden w-48 rounded-lg border border-[var(--civio-line)] bg-[var(--civio-paper)] px-2.5 py-2 text-left text-[11px] leading-snug font-medium shadow-sm group-hover/hint:block group-focus-within/hint:block"
+                                        className="pointer-events-none absolute top-[calc(100%+6px)] right-0 z-30 hidden rounded-lg border border-[var(--civio-line)] bg-[var(--civio-paper)] px-2.5 py-1.5 text-[11px] leading-none font-medium whitespace-nowrap shadow-sm group-focus-within/hint:block group-hover/hint:block"
                                     >
-                                        Question list. Jump to any item in this
-                                        exam.
+                                        Jump to a question.
                                     </span>
                                 </span>
                             </div>
@@ -851,7 +855,7 @@ export function LiveExamView({
                                 <div className="mx-auto w-full max-w-[42rem]">
                                     {activeQuestion ? (
                                         <div className="flex flex-col gap-5">
-                                            <div className="text-lg leading-relaxed text-foreground md:text-xl">
+                                            <div className="text-lg leading-relaxed tracking-tight text-foreground md:text-xl">
                                                 {renderFormattedText(
                                                     activeQuestion.stem,
                                                     true,
@@ -1039,20 +1043,22 @@ export function LiveExamView({
                                                                             }
                                                                             aria-label={
                                                                                 isEliminated
-                                                                                    ? 'Bring this choice back'
-                                                                                    : 'Cross out this choice'
+                                                                                    ? 'Restore this choice.'
+                                                                                    : 'Cross out this choice.'
                                                                             }
+                                                                            aria-describedby={`exam-cross-${currentIdx}-${idx}`}
                                                                             className="inline-flex shrink-0 items-center p-2 text-xs font-bold text-[var(--civio-ink)]/60"
                                                                         >
                                                                             <Strikethrough className="size-4" />
                                                                         </button>
                                                                         <span
+                                                                            id={`exam-cross-${currentIdx}-${idx}`}
                                                                             role="tooltip"
-                                                                            className="pointer-events-none absolute top-[calc(100%+6px)] right-0 z-30 hidden w-44 rounded-lg border border-[var(--civio-line)] bg-[var(--civio-paper)] px-2.5 py-2 text-left text-[11px] leading-snug font-medium shadow-sm group-hover/hint:block group-focus-within/hint:block"
+                                                                            className="pointer-events-none absolute top-[calc(100%+6px)] right-0 z-30 hidden rounded-lg border border-[var(--civio-line)] bg-[var(--civio-paper)] px-2.5 py-1.5 text-[11px] leading-none font-medium whitespace-nowrap shadow-sm group-focus-within/hint:block group-hover/hint:block"
                                                                         >
                                                                             {isEliminated
-                                                                                ? 'Bring this choice back.'
-                                                                                : 'Cross out this choice. It is not removed from the exam.'}
+                                                                                ? 'Restore this choice.'
+                                                                                : 'Cross out this choice.'}
                                                                         </span>
                                                                     </span>
                                                                 }

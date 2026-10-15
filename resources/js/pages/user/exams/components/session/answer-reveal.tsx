@@ -402,7 +402,7 @@ export function AnswerReveal({
                 </div>
             )}
             {panel === 'steps' && tutor && (
-                <ol className="mt-3 flex flex-col gap-2">
+                <ol className="mt-4 flex flex-col gap-2.5 leading-relaxed">
                     {tutor.steps.map((step, index) => (
                         <li
                             key={`${index}-${step}`}

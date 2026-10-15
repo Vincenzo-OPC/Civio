@@ -63,7 +63,7 @@ export function AnswerOption({
                 className="flex min-w-0 flex-1 items-start gap-3 text-left disabled:cursor-not-allowed"
             >
                 <span
-                    className={`flex size-7 shrink-0 items-center justify-center border text-xs font-bold ${BADGE[eliminated ? 'unanswered' : visual]}`}
+                    className={`flex size-7 shrink-0 items-center justify-center border text-xs font-bold tabular-nums ${BADGE[eliminated ? 'unanswered' : visual]}`}
                 >
                     {letter}
                 </span>

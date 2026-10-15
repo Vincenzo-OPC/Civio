@@ -28,4 +28,19 @@ Not done, and not claimed:
 - Persistent mastery, spaced review, and a diagnostic that changes the next item for every skill.
 - Pass probabilities.
 
+FSRS, traced on 16 October 2026 against `main`:
+
+The scheduler in `resources/js/lib/review/fsrs.ts` can create a card and compute the next due date. `tests/Js/fsrs.test.ts` covers that function. Nothing else imports `initCard`, `scheduleAfterAnswer`, or `previewRatings`.
+
+| Link | Status |
+| --- | --- |
+| A learner finishes a question | The exam and drills save an attempt. They do not call the scheduler. |
+| A persistent review record | No review-card table. The card state is not stored. |
+| A computed next-review date | Computed only inside the unused wrapper. |
+| A due-review queue | Not built. The study calendar is a task list, not FSRS. |
+| The next drill the learner opens | Chosen by topic, weakness, or a saved set. Not by due cards. |
+| Offline review and sync | Offline packs sync answers. They do not sync FSRS cards. |
+
+The smallest next slice is one table for card state, one write when a drill item is answered, and one due list. That is a separate change, with its own tests. It is not part of the exam typography pass.
+
 Those stay later. The scoring, mock timer, and strict-mode lock (no explanation until submit) are unchanged.

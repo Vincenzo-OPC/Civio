@@ -124,7 +124,7 @@ Hover tips on Flag, the question list, and cross-out exist. Their wording has no
 
 - Similar Item opens the learner's assistant in a new tab. Civio does not generate or insert that question.
 - The question bank is not tagged well enough for a reliable in-exam "similar item."
-- FSRS code exists. This audit did not prove that every study surface schedules reviews from it. Read `resources/js/lib/review/fsrs.ts` and [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md) before claiming the loop is finished.
+- FSRS code exists in `resources/js/lib/review/fsrs.ts` and is covered by `tests/Js/fsrs.test.ts`. No exam, drill, or offline path imports it. There is no review-card table, no due queue, and no next-drill selection from a due date. See [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md).
 - This audit did not capture new screenshots of the solid buttons. Confirm them in the running Study Mock.
 - `app/Providers/AppServiceProvider.php` has an uncommitted local preview change. Leave it uncommitted.
 

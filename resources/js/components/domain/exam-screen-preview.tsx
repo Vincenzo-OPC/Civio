@@ -78,12 +78,10 @@ export function ExamScreenPreview() {
                     type="button"
                     aria-label="Back to Choose Your Exam"
                     onClick={() =>
-                        document
-                            .getElementById('choose-exam')
-                            ?.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start',
-                            })
+                        document.getElementById('choose-exam')?.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start',
+                        })
                     }
                     className="flex size-9 shrink-0 items-center justify-center"
                 >
@@ -108,13 +106,12 @@ export function ExamScreenPreview() {
                 <button
                     type="button"
                     aria-pressed={flagged}
-                    aria-label={
-                        flagged ? 'Unflag this sample' : 'Flag this sample'
-                    }
+                    aria-label={flagged ? 'Remove flag.' : 'Flag for review.'}
+                    title={flagged ? 'Remove flag.' : 'Flag for review.'}
                     onClick={() => setFlagged((on) => !on)}
                     className={`flex size-9 shrink-0 items-center justify-center ${
                         flagged
-                            ? 'text-[var(--civio-violet)]'
+                            ? 'text-[var(--civio-error)]'
                             : 'text-[var(--civio-ink)]/60'
                     }`}
                 >
@@ -125,7 +122,8 @@ export function ExamScreenPreview() {
                 <button
                     type="button"
                     aria-expanded={mapOpen}
-                    aria-label="Question map"
+                    aria-label="Jump to a question."
+                    title="Jump to a question."
                     onClick={() => setMapOpen((open) => !open)}
                     className={`flex size-9 shrink-0 items-center justify-center ${
                         mapOpen
@@ -139,7 +137,7 @@ export function ExamScreenPreview() {
 
             {mapOpen && (
                 <div className="border-b border-[var(--civio-line)] px-4 py-3">
-                    <p className="text-xs font-semibold">Items</p>
+                    <p className="text-xs font-semibold">Question List</p>
                     <div className="mt-2 flex flex-wrap gap-1.5">
                         {MAP.map((number) => (
                             <button
@@ -255,7 +253,7 @@ export function ExamScreenPreview() {
             </div>
 
             <div className="px-4 py-5 sm:px-6 sm:py-6">
-                <p className="text-lg leading-relaxed md:text-xl">
+                <p className="text-lg leading-relaxed tracking-tight md:text-xl">
                     {QUESTION.stem}
                 </p>
                 <div className="mt-5 flex flex-wrap items-center gap-3">

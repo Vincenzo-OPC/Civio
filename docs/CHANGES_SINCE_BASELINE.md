@@ -119,6 +119,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Study and navigation buttons are filled capsules with no outline. Light primary is black. Dark primary is the logo green. | The bordered gray boxes still looked like form fields, not Apple or Meta controls. | `0da175f` |
 | Report, Show Explanation, Copy Question, and Ask use a solid 36px fill. A current-state handoff is in docs/CIVIO_CURRENT_STATE_HANDOFF.md. | The translucent capsule fill still looked like text. | `7741271` |
 | The built CSS drops the unused display-p3 and lab copies of the Tailwind palette. The sRGB colors stay. | App CSS was 32.89 kB brotli against a 33 kB cap. | `6cafabb` |
+| Exam hints are shorter. The homepage sample says Question List, not Question map. FSRS is documented as unwired. | The hints were long, and the sample used a different name from the exam. | |
 
 ### Bank and seeds
 
