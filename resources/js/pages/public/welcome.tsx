@@ -33,9 +33,6 @@ export default function Welcome() {
             <main className="bg-[var(--civio-paper,#fafaf7)] text-[var(--civio-ink,#101426)]">
                 <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-8 sm:px-6 sm:py-12">
                     <header className="flex flex-col gap-3">
-                        <p className="text-sm font-semibold tracking-wide text-[var(--civio-violet,#5b35f5)]">
-                            Civio
-                        </p>
                         <h1 className="font-heading text-3xl font-semibold tracking-tight sm:text-5xl">
                             Prepare for the Civil Service Exam.
                         </h1>

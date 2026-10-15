@@ -103,12 +103,12 @@ export function SetupExamView({
                             onClick={() => setSelectedExamId(1)}
                             className={`flex cursor-pointer items-center justify-between rounded-xl border-2 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 ${
                                 selectedExamId === 1
-                                    ? 'dark:bg-blue-950/30/10 border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-950/10'
+                                    ? 'border-[#5B35F5] bg-[#F4F5F2] dark:border-[#8b74ff] dark:bg-[#1a1e30]'
                                     : 'border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900'
                             }`}
                         >
                             <div className="flex items-center gap-4">
-                                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white">
+                                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#5B35F5] text-white">
                                     <Award className="size-6 fill-current text-white" />
                                 </div>
                                 <div>
@@ -125,12 +125,12 @@ export function SetupExamView({
                                 <div
                                     className={`flex size-5 items-center justify-center rounded-full border ${
                                         selectedExamId === 1
-                                            ? 'border-blue-600 dark:border-blue-500'
+                                            ? 'border-[#5B35F5] dark:border-[#8b74ff]'
                                             : 'border-slate-300 dark:border-slate-600'
                                     }`}
                                 >
                                     {selectedExamId === 1 && (
-                                        <div className="size-2.5 rounded-full bg-blue-600 dark:bg-blue-500" />
+                                        <div className="size-2.5 rounded-full bg-[#5B35F5]" />
                                     )}
                                 </div>
                             </div>
@@ -141,12 +141,12 @@ export function SetupExamView({
                             onClick={() => setSelectedExamId(2)}
                             className={`flex cursor-pointer items-center justify-between rounded-xl border-2 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 ${
                                 selectedExamId === 2
-                                    ? 'dark:bg-blue-950/30/10 border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-950/10'
+                                    ? 'border-[#5B35F5] bg-[#F4F5F2] dark:border-[#8b74ff] dark:bg-[#1a1e30]'
                                     : 'border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900'
                             }`}
                         >
                             <div className="flex items-center gap-4">
-                                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+                                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#F4F5F2] text-[#5B35F5] dark:bg-[#1a1e30]">
                                     <ClipboardList className="size-6" />
                                 </div>
                                 <div>
@@ -163,12 +163,12 @@ export function SetupExamView({
                                 <div
                                     className={`flex size-5 items-center justify-center rounded-full border ${
                                         selectedExamId === 2
-                                            ? 'border-blue-600 dark:border-blue-500'
+                                            ? 'border-[#5B35F5] dark:border-[#8b74ff]'
                                             : 'border-slate-300 dark:border-slate-600'
                                     }`}
                                 >
                                     {selectedExamId === 2 && (
-                                        <div className="size-2.5 rounded-full bg-blue-600 dark:bg-blue-500" />
+                                        <div className="size-2.5 rounded-full bg-[#5B35F5]" />
                                     )}
                                 </div>
                             </div>
@@ -185,8 +185,8 @@ export function SetupExamView({
                                         key={mode}
                                         className={`flex cursor-pointer flex-col gap-1 rounded-lg border-2 p-3 ${
                                             examMode === mode
-                                                ? 'border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-950/10'
-                                                : 'border-slate-200 dark:border-slate-800'
+                                                ? 'border-[#5B35F5] bg-[#F4F5F2] dark:border-[#8b74ff] dark:bg-[#1a1e30]'
+                                                : 'border-[#E3E5EA] dark:border-[#2c3148]'
                                         }`}
                                     >
                                         <span className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
@@ -226,9 +226,9 @@ export function SetupExamView({
                     </div>
 
                     {/* Right Panel: Simulation Overview */}
-                    <div className="dark:bg-blue-950/30/30 flex min-h-[380px] flex-col justify-between rounded-xl border border-blue-100/50 bg-blue-50 p-4 shadow-sm sm:p-6 dark:border-blue-950/20 dark:bg-blue-950/10">
+                    <div className="flex min-h-[380px] flex-col justify-between rounded-xl border border-[#E3E5EA] bg-[#FAFAF7] p-4 sm:p-6 dark:border-[#2c3148] dark:bg-[#101426]">
                         <div>
-                            <h2 className="mb-4 border-b border-blue-100/40 pb-2 font-heading text-xl font-black tracking-tight text-slate-900 dark:border-blue-950/20 dark:text-white">
+                            <h2 className="mb-4 border-b border-[#E3E5EA] pb-2 font-heading text-xl font-semibold tracking-tight text-[#101426] dark:border-[#2c3148] dark:text-[#FAFAF7]">
                                 Simulation Overview
                             </h2>
 
@@ -282,51 +282,39 @@ export function SetupExamView({
                             </div>
                         </div>
 
-                        {/* Bottom Actions and Stable Connection Alert */}
-                        <div className="mt-6 flex flex-col gap-4">
-                            {/* Technical check callout to avoid data losses */}
-                            <div className="rounded-lg border border-slate-200 bg-white/70 p-3.5 text-center text-[11px] leading-relaxed font-medium text-slate-600 shadow-2xs dark:border-slate-800 dark:bg-slate-900/70 dark:text-slate-400">
-                                Ensure you have a stable connection.{' '}
-                                {examMode === 'strict' || studyTimed
-                                    ? 'The timer will begin immediately upon confirmation.'
-                                    : 'This Study Mock is untimed.'}
-                            </div>
-
-                            <div className="flex gap-3">
-                                {/* Action CTA Button */}
+                        <div className="mt-6 flex gap-3">
+                            <button
+                                onClick={handleBeginExam}
+                                className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#5B35F5] py-3 text-xs font-semibold text-white hover:bg-[#3D20C8] focus-visible:outline-none"
+                            >
+                                Begin {EXAM_MODE_LABELS[examMode]}
+                                <ArrowRight className="size-4" />
+                            </button>
+                            {(auth.user?.role === 'admin' ||
+                                auth.user?.can_download_pdf) && (
                                 <button
-                                    onClick={handleBeginExam}
-                                    className="group flex flex-1 items-center justify-center gap-2 rounded-lg bg-blue-600 py-3 text-xs font-semibold text-white shadow-sm transition transition-all duration-150 duration-300 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                    onClick={onPrint}
+                                    disabled={isPrinting}
+                                    title="Download PDF Exam Booklet"
+                                    className="group flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-sm transition-all hover:border-blue-300 hover:bg-slate-50 hover:text-blue-600 disabled:opacity-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
                                 >
-                                    Begin {EXAM_MODE_LABELS[examMode]}
-                                    <ArrowRight className="size-4" />
+                                    {isPrinting ? (
+                                        <div className="size-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                                    ) : (
+                                        <Download className="size-5 text-slate-500 transition-colors group-hover:text-blue-600 dark:text-slate-400" />
+                                    )}
                                 </button>
-                                {(auth.user?.role === 'admin' ||
-                                    auth.user?.can_download_pdf) && (
-                                    <button
-                                        onClick={onPrint}
-                                        disabled={isPrinting}
-                                        title="Download PDF Exam Booklet"
-                                        className="group flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-sm transition-all hover:border-blue-300 hover:bg-slate-50 hover:text-blue-600 disabled:opacity-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
-                                    >
-                                        {isPrinting ? (
-                                            <div className="size-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                                        ) : (
-                                            <Download className="size-5 text-slate-500 transition-colors group-hover:text-blue-600 dark:text-slate-400" />
-                                        )}
-                                    </button>
-                                )}
-                            </div>
-
-                            <p className="mt-2 text-center text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
-                                💡{' '}
-                                <span className="font-semibold text-slate-700 dark:text-slate-300">
-                                    PDF Booklet:
-                                </span>{' '}
-                                Automatically generates a high-resolution, A4
-                                PDF exam booklet with answer key.
-                            </p>
+                            )}
                         </div>
+
+                        <p className="mt-2 text-center text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
+                            💡{' '}
+                            <span className="font-semibold text-slate-700 dark:text-slate-300">
+                                PDF Booklet:
+                            </span>{' '}
+                            Automatically generates a high-resolution, A4 PDF
+                            exam booklet with answer key.
+                        </p>
                     </div>
                 </div>
             </PageContainer>

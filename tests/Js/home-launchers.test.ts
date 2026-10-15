@@ -67,9 +67,10 @@ describe('home launchers', () => {
         assert.doesNotMatch(about, /My Story/);
         assert.doesNotMatch(about, /Empowering Filipinos/);
         assert.match(about, /not the Civil Service Commission/);
-        assert.match(footer, /000RC20250000000333/);
-        assert.match(footer, /All rights reserved/);
-        assert.match(footer, /tax registration/);
+        assert.match(footer, /All Rights Reserved/);
+        assert.match(footer, /bir-registered-2025/);
+        assert.doesNotMatch(footer, /tax registration/);
+        assert.doesNotMatch(footer, /not affiliated/);
         assert.doesNotMatch(footer, /any Philippine government agency/);
         assert.doesNotMatch(shell, /Ace the/);
         assert.doesNotMatch(shell, /first attempt/);

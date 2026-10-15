@@ -11,57 +11,33 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="w-full border-t border-[var(--civio-line,#e3e5ea)] bg-[var(--civio-paper,#fafaf7)] text-[var(--civio-ink,#101426)]">
-            <div className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-8 sm:px-6">
-                <div className="flex flex-col gap-3">
-                    <Link
-                        href="/"
-                        className="inline-flex items-center text-base font-semibold"
-                    >
-                        <AppLogo />
-                    </Link>
-                    <p className="text-sm leading-relaxed text-[var(--civio-ink,#101426)]/70">
-                        Practice for the Civil Service Exam. Civio is not the
-                        Civil Service Commission.
-                    </p>
-                </div>
-
-                <p className="text-sm leading-relaxed text-[var(--civio-ink,#101426)]/75">
-                    Civio is an independent study app. It is not affiliated
-                    with, endorsed by, or connected to the Civil Service
-                    Commission. The items and explanations are for practice. A
-                    score here is not your exam result.
-                </p>
-
-                <figure className="flex flex-col gap-2">
+        <footer className="w-full border-t border-[#E3E5EA] bg-[#FAFAF7] text-[#101426] dark:border-[#2c3148] dark:bg-[#101426] dark:text-[#FAFAF7]">
+            <div className="mx-auto flex w-full max-w-3xl flex-col gap-4 px-4 py-6 sm:px-6">
+                <Link href="/" className="inline-flex w-fit" aria-label="Civio">
+                    <AppLogo />
+                </Link>
+                <div className="flex items-end justify-between gap-4">
+                    <div className="flex flex-col gap-2 text-sm">
+                        <p>© {currentYear} Civio. All Rights Reserved.</p>
+                        <nav aria-label="Footer" className="flex gap-4">
+                            {FOOTER_LINKS.map(({ href, label }) => (
+                                <Link
+                                    key={href}
+                                    href={href}
+                                    className="underline-offset-4 hover:underline"
+                                >
+                                    {label}
+                                </Link>
+                            ))}
+                        </nav>
+                    </div>
                     <img
                         src="/images/bir-registered-2025.png"
-                        alt="Bureau of Internal Revenue registered, 2025. RSN 000RC20250000000333."
+                        alt="BIR registered, 2025"
                         width={960}
                         height={540}
-                        className="h-auto w-full border border-[var(--civio-line,#e3e5ea)] bg-white"
+                        className="h-14 w-auto shrink-0"
                     />
-                    <figcaption className="text-xs leading-relaxed text-[var(--civio-ink,#101426)]/70">
-                        BIR registered, 2025. RSN 000RC20250000000333. This is a
-                        tax registration. It is not an endorsement of the
-                        questions and it is not a Civil Service Commission
-                        approval.
-                    </figcaption>
-                </figure>
-
-                <div className="flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
-                    <p>© {currentYear} Civio. All rights reserved.</p>
-                    <nav aria-label="Footer" className="flex gap-4">
-                        {FOOTER_LINKS.map(({ href, label }) => (
-                            <Link
-                                key={href}
-                                href={href}
-                                className="underline-offset-4 hover:underline"
-                            >
-                                {label}
-                            </Link>
-                        ))}
-                    </nav>
                 </div>
             </div>
         </footer>

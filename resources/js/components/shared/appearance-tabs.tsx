@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { Monitor, Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import type { HTMLAttributes } from 'react';
 import type { Appearance } from '@/hooks/use-appearance';
 import { useAppearance } from '@/hooks/use-appearance';
@@ -9,18 +9,19 @@ export default function AppearanceToggleTab({
     className = '',
     ...props
 }: HTMLAttributes<HTMLDivElement>) {
-    const { appearance, updateAppearance } = useAppearance();
+    const { appearance, resolvedAppearance, updateAppearance } =
+        useAppearance();
+    const selected = appearance === 'system' ? resolvedAppearance : appearance;
 
     const tabs: { value: Appearance; icon: LucideIcon; label: string }[] = [
         { value: 'light', icon: Sun, label: 'Light' },
         { value: 'dark', icon: Moon, label: 'Dark' },
-        { value: 'system', icon: Monitor, label: 'System' },
     ];
 
     return (
         <div
             className={cn(
-                'inline-flex gap-1 rounded-lg bg-slate-100 p-1 dark:bg-slate-800',
+                'inline-flex gap-1 rounded-lg bg-[#F4F5F2] p-1 dark:bg-[#1a1e30]',
                 className,
             )}
             {...props}
@@ -31,9 +32,9 @@ export default function AppearanceToggleTab({
                     onClick={() => updateAppearance(value)}
                     className={cn(
                         'flex items-center rounded-md px-3.5 py-1.5 transition-colors',
-                        appearance === value
-                            ? 'bg-white shadow-xs dark:bg-slate-700 dark:text-slate-100'
-                            : 'text-slate-500 hover:bg-slate-200/60 hover:text-black dark:text-slate-400 dark:hover:bg-slate-700/60',
+                        selected === value
+                            ? 'bg-white shadow-xs dark:bg-[#101426] dark:text-[#FAFAF7]'
+                            : 'text-[#101426]/60 hover:text-[#101426] dark:text-[#FAFAF7]/60 dark:hover:text-[#FAFAF7]',
                     )}
                 >
                     <Icon className="-ml-1 h-4 w-4" />

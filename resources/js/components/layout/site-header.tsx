@@ -110,7 +110,7 @@ export default function SiteHeader({
     return (
         <>
             <div
-                className="fixed top-0 left-0 z-[99] h-[3.5px] bg-primary transition-all duration-100 ease-out"
+                className="fixed top-0 left-0 z-[99] h-[3.5px] bg-[#5B35F5] transition-all duration-100 ease-out"
                 style={{
                     width: `${scrollProgress}%`,
                     opacity: showHeader ? 0 : 1,
@@ -119,7 +119,7 @@ export default function SiteHeader({
             />
 
             <header
-                className={`sticky top-0 left-0 z-50 w-full border-b border-gray-200 bg-white/90 text-sm backdrop-blur-md transition-all duration-300 not-has-[nav]:hidden dark:border-gray-800 dark:bg-black/90 ${
+                className={`sticky top-0 left-0 z-50 w-full border-b border-[#E3E5EA] bg-[#FAFAF7] text-sm text-[#101426] transition-all duration-300 not-has-[nav]:hidden dark:border-[#2c3148] dark:bg-[#101426] dark:text-[#FAFAF7] ${
                     showHeader ? 'translate-y-0 shadow-sm' : '-translate-y-full'
                 }`}
             >
@@ -180,7 +180,7 @@ export default function SiteHeader({
                                                 }
                                                 className={`border-b-2 pb-1 transition-all ${
                                                     isHomeActive
-                                                        ? 'border-primary font-bold text-primary'
+                                                        ? 'border-[#5B35F5] font-semibold text-[#5B35F5]'
                                                         : 'border-transparent text-muted-foreground hover:border-border hover:text-foreground'
                                                 }`}
                                             >
@@ -212,15 +212,19 @@ export default function SiteHeader({
                                         >
                                             <Link
                                                 href="/drills"
-                                                className="group font-bold text-primary transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                                className="font-medium text-[#5B35F5]"
                                             >
                                                 Drills
                                             </Link>
                                         </Button>
-                                        <Button uppercase={false} asChild>
+                                        <Button
+                                            uppercase={false}
+                                            className="bg-[#5B35F5] font-medium hover:bg-[#3D20C8]"
+                                            asChild
+                                        >
                                             <Link
                                                 href="/exams?start=professional&free_attempt=1"
-                                                className="group font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                                className="transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                                             >
                                                 Start Pro
                                             </Link>
@@ -272,7 +276,7 @@ export default function SiteHeader({
                 </nav>
 
                 <div
-                    className={`absolute top-full right-0 left-0 z-40 transform border-b border-slate-200 bg-white/95 backdrop-blur-lg transition-all duration-300 ease-in-out xl:hidden dark:border-slate-800 dark:bg-black/95 ${
+                    className={`absolute top-full right-0 left-0 z-40 transform border-b border-[#E3E5EA] bg-[#FAFAF7] transition-all duration-300 ease-in-out xl:hidden dark:border-[#2c3148] dark:bg-[#101426] ${
                         isMenuOpen
                             ? 'translate-y-0 opacity-100'
                             : 'pointer-events-none -translate-y-10 opacity-0'
@@ -326,7 +330,7 @@ export default function SiteHeader({
                                                     }
                                                     className={`block py-1 transition-all ${
                                                         isHomeActive
-                                                            ? 'font-bold text-primary'
+                                                            ? 'font-semibold text-[#5B35F5]'
                                                             : 'text-muted-foreground hover:text-foreground'
                                                     }`}
                                                 >
@@ -357,7 +361,7 @@ export default function SiteHeader({
                                             <Button
                                                 variant="ghost"
                                                 uppercase={false}
-                                                className="w-full rounded-xl py-4 text-base font-bold text-primary sm:py-6"
+                                                className="w-full rounded-xl py-4 text-base font-medium text-[#5B35F5] sm:py-6"
                                                 asChild
                                             >
                                                 <Link
@@ -371,7 +375,7 @@ export default function SiteHeader({
                                             </Button>
                                             <Button
                                                 uppercase={false}
-                                                className="w-full rounded-xl py-4 text-base font-bold sm:py-6"
+                                                className="w-full rounded-xl bg-[#5B35F5] py-4 text-base font-medium hover:bg-[#3D20C8] sm:py-6"
                                                 asChild
                                             >
                                                 <Link
@@ -384,9 +388,9 @@ export default function SiteHeader({
                                                 </Link>
                                             </Button>
                                             <Button
-                                                variant="secondary"
+                                                variant="outline"
                                                 uppercase={false}
-                                                className="w-full rounded-xl py-4 text-base font-bold sm:py-6"
+                                                className="w-full rounded-xl py-4 text-base font-medium sm:py-6"
                                                 asChild
                                             >
                                                 <Link
