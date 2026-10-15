@@ -9,8 +9,11 @@ use App\Models\Question;
 use App\Models\Subcategory;
 use App\Services\Exam\ExpoundService;
 use App\Services\Exam\MockPoolSelector;
+use App\Services\Exam\Reveal\Solvers\AlphabeticalFilingSolver;
 use App\Services\Exam\Reveal\Solvers\CheckedPatternSolver;
 use App\Services\Exam\Reveal\Solvers\FibonacciSequenceSolver;
+use App\Services\Exam\Reveal\Solvers\GrammarRuleSolver;
+use App\Services\Exam\Reveal\Solvers\MixtureConcentrationSolver;
 use App\Services\Exam\Reveal\Solvers\OrderOfOperationsSolver;
 use App\Services\Exam\Reveal\Solvers\RectanglePerimeterSolver;
 use App\Services\Exam\Reveal\Solvers\RevealSolver;
@@ -31,7 +34,10 @@ final class RevealTutor
         $this->solvers = [
             new RectanglePerimeterSolver,
             new TerminalDigitFilingSolver,
+            new AlphabeticalFilingSolver,
             new FibonacciSequenceSolver,
+            new MixtureConcentrationSolver,
+            new GrammarRuleSolver,
             new OrderOfOperationsSolver($expound),
             new CheckedPatternSolver,
         ];

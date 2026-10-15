@@ -13,13 +13,14 @@ What this pass changed (Phase 1 slice):
 - The study button is **Show Explanation**. The panel heading is **Understand the Answer**.
 - Extra parts keep their own names: Step-by-Step, Exam Tip, Common Mistake, Explain Simpler, Try Another, Diagram.
 - Terminal-digit filing is taught by groups, with a three-group diagram, only when the key is the last group.
-- A Fibonacci-type sequence is taught only when every shown term is the sum of the two before it and the next term is the key. An ordinary sequence is not labeled Fibonacci.
+- A two-solution mixture is taught from the amount of substance, not by averaging the percentages, and only when that result is the stored answer.
+- Alphabetical filing is taught by sorting the written names. The lesson appears only when the stored answer is the name or sequence in that place.
+- Three grammar errors are taught only when the stored answer is the sentence that contains them: "between you and I," "me and him" as a subject, "each ... need," and "the set ... were." Other grammar items keep their stored explanation.
 
 Not done, and not claimed:
 
 - A concept library shared across questions.
 - Persistent mastery, spaced review, and a diagnostic that changes the next item for every skill.
-- Mixture, grammar, and the rest of the visual set.
 - Pass probabilities.
 
 Those stay later. The scoring, mock timer, and strict-mode lock (no explanation until submit) are unchanged.

@@ -17,6 +17,7 @@ export interface RevealTutorPayload {
         width?: number;
         unit?: string;
         groups?: string[];
+        mark?: string;
     } | null;
     followUp: {
         questionId: number;
@@ -64,7 +65,10 @@ export function readRevealTutor(value: unknown): RevealTutorPayload | null {
                       : [];
               })
             : [],
-        visual: rectangleVisual(visual) ?? filingVisual(visual),
+        visual:
+            rectangleVisual(visual) ??
+            filingVisual(visual) ??
+            labeledVisual(visual),
         followUp:
             typeof followUp?.questionId === 'number' &&
             typeof followUp.stem === 'string'
@@ -114,7 +118,34 @@ function filingVisual(
         (group): group is string => typeof group === 'string',
     );
 
-    return groups.length === 3 ? { kind: 'filing', groups } : null;
+    return groups.length === 3 && visual.kind === 'filing'
+        ? { kind: 'filing', groups }
+        : null;
+}
+
+function labeledVisual(
+    visual: Record<string, unknown> | null,
+): RevealTutorPayload['visual'] {
+    if (
+        (visual?.kind !== 'mixture' && visual?.kind !== 'order') ||
+        !Array.isArray(visual.groups)
+    ) {
+        return null;
+    }
+
+    const groups = visual.groups.filter(
+        (group): group is string => typeof group === 'string',
+    );
+
+    if (groups.length < 2) {
+        return null;
+    }
+
+    return {
+        kind: visual.kind,
+        groups,
+        mark: typeof visual.mark === 'string' ? visual.mark : undefined,
+    };
 }
 
 interface AnswerRevealProps {
@@ -384,6 +415,25 @@ export function AnswerReveal({
                 tutor?.visual?.kind === 'filing' &&
                 tutor.visual.groups && (
                     <FilingFigure groups={tutor.visual.groups} />
+                )}
+            {panel === 'visual' &&
+                (tutor?.visual?.kind === 'mixture' ||
+                    tutor?.visual?.kind === 'order') &&
+                tutor.visual.groups && (
+                    <ol className="mt-3 flex flex-col gap-1">
+                        {tutor.visual.groups.map((label) => (
+                            <li
+                                key={label}
+                                className={
+                                    label === tutor.visual?.mark
+                                        ? 'font-semibold text-[var(--civio-violet,#5b35f5)]'
+                                        : undefined
+                                }
+                            >
+                                {label}
+                            </li>
+                        ))}
+                    </ol>
                 )}
             {panel === 'next' && tutor?.followUp && (
                 <div className="mt-3">

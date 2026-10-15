@@ -156,3 +156,66 @@ it('does not call an ordinary sequence Fibonacci', function () {
 
     expect($tutor['concept'])->not->toContain('Fibonacci');
 });
+
+it('teaches a two-solution mixture when the weighted result matches the key', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Mixture: 2 liters of 10% solution + 3 liters of 20% solution. Resulting concentration:',
+        'options' => ['14%', '15%', '16%', '18%'],
+        'correct_option' => 2,
+    ]));
+
+    expect($tutor['steps'][4] ?? null)->toBe('0.8 ÷ 5 × 100 = 16%.')
+        ->and($tutor['shortcut'])->toContain('16%')
+        ->and($tutor['commonMistakes'][0]['choice'] ?? null)->toBe('15%')
+        ->and($tutor['visual']['kind'] ?? null)->toBe('mixture');
+});
+
+it('refuses a mixture whose key is the unweighted average', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Mix 2 liters of a 10% solution with 3 liters of a 20% solution. What is the resulting concentration?',
+        'options' => ['14%', '15%', '16%', '18%'],
+        'correct_option' => 1,
+    ]));
+
+    expect($tutor['visual'])->toBeNull()
+        ->and($tutor['shortcut'])->toBeNull();
+});
+
+it('teaches alphabetical order when the key is the last name', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Which comes last alphabetically?',
+        'options' => ['Lopez, Ana', 'Lopez, Beatriz', 'Lopez, Carla', 'Lopez, Diana'],
+        'correct_option' => 3,
+    ]));
+
+    expect($tutor['steps'][0])->toContain('Lopez, Diana')
+        ->and($tutor['visual']['mark'] ?? null)->toBe('Lopez, Diana');
+});
+
+it('teaches between you and I only when that sentence is the key', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Which sentence contains an incorrect pronoun case?',
+        'options' => [
+            'The supervisor spoke with Ana and me.',
+            'He and I prepared the index.',
+            'Between you and I, the file is incomplete.',
+            'They submitted their reports.',
+        ],
+        'correct_option' => 2,
+    ]));
+
+    expect($tutor['concept'])->toContain('between you and me')
+        ->and($tutor['shortcut'])->toContain('Drop the other person');
+});
+
+it('keeps a stored explanation when the pronoun error is not a checked rule', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Which sentence contains an incorrect pronoun case?',
+        'options' => ['Ana and me went.', 'Correct one.', 'Also fine.', 'Fine too.'],
+        'correct_option' => 0,
+        'explanation' => 'Stored pronoun note.',
+    ]));
+
+    expect($tutor['concept'])->toBe('Stored pronoun note.')
+        ->and($tutor['shortcut'])->toBeNull();
+});
