@@ -1,7 +1,12 @@
 # Civio External AI Handoff
 
-**Status:** Product / UX specification  
-**Date:** 5 Oct 2026 (Asia/Manila)  
+**Shipped behavior** is in [`ENGINES.md`](ENGINES.md). The button is
+**Copy Question**, not “Copy for AI”. Ask can be ChatGPT, Gemini, Copilot,
+Grok, or Ask AI, chosen in Settings → Preferences. The notes below are the
+original specification and are kept so the decision is still on record.
+
+**Status:** Product / UX specification
+**Date:** 5 Oct 2026 (Asia/Manila)
 **Repo:** `Vincenzo-OPC/Civio`
 
 ## Decision

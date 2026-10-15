@@ -33,6 +33,25 @@ export default function About() {
                     <ExamFormat />
 
                     <section className="flex flex-col gap-3 text-sm leading-relaxed">
+                        <h2 className="font-heading text-xl font-semibold tracking-tight">
+                            How an Explanation Is Chosen
+                        </h2>
+                        <p>
+                            Show Explanation does not call a chat model. If a
+                            rule can recompute the item, and that result is the
+                            stored answer, Civio teaches from the rule. If not,
+                            it shows the explanation already saved on the
+                            question.
+                        </p>
+                        <p>
+                            Step-by-Step, Exam Tip, Common Mistake, and Diagram
+                            appear only when that part exists. Copy Question and
+                            Ask send the item out. They do not grade it. A
+                            Strict Mock hides all of these until you submit.
+                        </p>
+                    </section>
+
+                    <section className="flex flex-col gap-3 text-sm leading-relaxed">
                         <p>
                             You can study without an account. Dexter is the
                             tutor in the app. He checks an item against its

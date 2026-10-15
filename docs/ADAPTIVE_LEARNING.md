@@ -1,5 +1,8 @@
 # Adaptive learning
 
+The reader-facing map of the engines, including the class names, is
+[`ENGINES.md`](ENGINES.md). This file is the shorter status note.
+
 Phase 0 looked at the current exam, not a new app.
 
 What already teaches without an AI call:

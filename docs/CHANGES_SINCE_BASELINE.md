@@ -102,6 +102,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Show Explanation replaces Reveal Answer. The panel is headed Understand the Answer, with Step-by-Step, Exam Tip, Common Mistake, Explain Simpler, and Try Another only when that part exists. Terminal-digit filing and Fibonacci-type sequences are taught only when the stored key matches the recomputed answer. | A correct letter is not a lesson. These two patterns were named in the teaching brief and can be checked without an AI call. | `c9fbca6` |
 | Mixture, alphabetical filing, and three grammar rules join the checked lessons. Each one is shown only when the stored answer matches the rule. A pronoun item that is not one of those rules keeps its stored explanation. | The explanation engine should cover clerical and verbal items the same way it covers a perimeter: check first, then teach. | `b31ee80` |
 | A number list is taught when the rule is a constant gap, a constant multiplier, or consecutive squares. Mean, median, percent change, simple interest, and a greatest common factor are taught the same way: only when the recomputed value is the stored answer. | Most of the number items in the bank were still a stored sentence. These rules can be checked. | `9256312` |
+| The explanation engine, Dexter, Copy Question, and Ask are written up in `docs/ENGINES.md`, linked from the README and the architecture note. About has a short plain version. | The rules were in code and in phase notes, not in one place a reader could open. | |
 
 ### Bank and seeds
 

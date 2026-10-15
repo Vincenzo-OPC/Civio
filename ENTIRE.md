@@ -1,5 +1,8 @@
 # Entire on Civio
 
+Product behavior (explanation engine, Dexter, Copy Question, Ask) is
+[`docs/ENGINES.md`](docs/ENGINES.md). This file is only the Entire checkpoint tool.
+
 Entire ([entire.io](https://entire.io), `entireio/cli`) is a standalone CLI that
 links AI agent sessions (prompts, transcripts) to the commits they produced. It
 is not a plugin or MCP server; see `.entire/README.md`.

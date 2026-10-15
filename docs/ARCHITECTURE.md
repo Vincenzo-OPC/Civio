@@ -20,6 +20,9 @@ Postgres (Neon planned) / SQLite (tests)
 
 Exam flow: active pool → ExamQuestionResource **without** keys → client shuffle
 (ID-keyed answers) → POST `/exams/attempts` → server grade → scorecard with keys.
-Reveal during play: `POST /exams/reveal`.
+Reveal during play: `POST /exams/reveal`. The handler is
+`App\Services\Exam\Reveal\RevealTutor`. A lesson is published only when a
+solver recomputes the same value as the stored key. Map, glossary, and the
+list of solvers: `docs/ENGINES.md`.
 
 See also: `docs/BACKEND_DEVELOPMENT_GUIDE.md`, `docs/LIBRARIES.md`, `AGENTS.md`.

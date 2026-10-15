@@ -7,8 +7,13 @@ Subprofessional mocks, practice drills, learn modules, and the Dexter tutor.
 ## Features
 
 - Server-graded mocks (150 Professional / 145 Subprofessional items) picked on
-  the server; answer keys stay on the server until Reveal or submit.
-- Practice drills by topic, with Reveal, explanations and Copy for AI.
+  the server; answer keys stay on the server until Show Explanation or submit.
+- Practice drills by topic, with Show Explanation, explanations, and Copy Question.
+- The explanation engine teaches a checked lesson only when a rule recomputes
+  to the stored key. Otherwise the stored explanation is kept. No chat model
+  is required. See `docs/ENGINES.md`.
+- Ask opens the assistant chosen in Settings (ChatGPT, Gemini, Copilot, Grok,
+  or Ask AI). It does not grade the item.
 - Lite mode for cheap phones and slow data (auto on Save-Data / 2G / 3G).
 - Offline drill packs: download a topic, practise with no connection, sync
   when back online (the server re-checks every answer; offline items never
@@ -47,6 +52,7 @@ npm run format:check
 
 ## Docs
 
+- `docs/ENGINES.md` — explanation engine, Dexter, Copy Question, and Ask
 - `docs/CODEX_HANDOFF_PLAN.md` — start here: what is built, what must not break, what is next
 - `AGENTS.md` / `CLAUDE.md` — rules for agents and contributors
 - `docs/CODE_STANDARD.md` — coding standard and modernization backlog
@@ -55,7 +61,7 @@ npm run format:check
 - `docs/CSE-Question-Design-Spec.md` — question design (no bank items without approval)
 - `docs/QUESTION_SOURCE_GROUPS.md` — question source groups and the re-parameterize workflow
 - `docs/EXTERNAL_AI_HANDOFF.md` · `docs/AI_STUDY_AND_SPELLING_SYSTEM.md` · `docs/2026_AI_PRODUCT_STANDARD.md`
-- `ENTIRE.md` — agent session capture
+- `ENTIRE.md` — Entire checkpoint capture for agent sessions, not the product map
 - `CHANGELOG.md` — generated with `npm run changelog`
 
 ## Copyright
