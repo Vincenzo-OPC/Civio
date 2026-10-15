@@ -105,7 +105,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | The explanation engine, Dexter, Copy Question, and Ask are written up in `docs/ENGINES.md`, linked from the README and the architecture note. About has a short plain version. | The rules were in code and in phase notes, not in one place a reader could open. | `216f824` |
 | The homepage now leads with Choose Your Exam, the two sittings as question counts and durations, Practice Modes, and an 80% passing mark. The header reads CSE REVIEWER. Sign In and Create Account replace the old header labels. | The page was already the right product. The type, the numbers, and the mode names needed to be set on purpose. | `d6e673d` |
 | Setup, the live exam, the guide, and the scorecard now say Study Mode and Exam Mode. The score ring uses the same violet as the homepage and does not say Passed or Failed. | The homepage names and the exam screens had drifted. A practice rating is not an official result. | `2677ac0` |
-| The purple light on the Professional and Subprofessional cards is gone. The homepage sample now runs Report, Show Explanation, Copy Question, and Ask. | The light stayed as a stain after the cursor left. The sample looked like a mock but none of its controls did anything. | |
+| The purple light on the Professional and Subprofessional cards is gone. The homepage sample now runs Report, Show Explanation, Copy Question, and Ask. | The light stayed as a stain after the cursor left. The sample looked like a mock but none of its controls did anything. | `f23f487` |
 
 ### Bank and seeds
 
