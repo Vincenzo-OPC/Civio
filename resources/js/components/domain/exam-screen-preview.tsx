@@ -258,7 +258,7 @@ export function ExamScreenPreview() {
                 <p className="text-lg leading-relaxed md:text-xl">
                     {QUESTION.stem}
                 </p>
-                <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+                <div className="mt-5 flex flex-wrap items-center gap-3">
                     <button
                         type="button"
                         onClick={() =>
@@ -267,24 +267,32 @@ export function ExamScreenPreview() {
                                 { id: 'sample-report' },
                             )
                         }
-                        className="text-xs font-semibold text-[var(--civio-ink)]/60"
+                        className="inline-flex h-9 items-center rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold"
                     >
                         Report
                     </button>
                     <button
                         type="button"
                         onClick={() => setExplained((open) => !open)}
-                        className={`inline-flex items-center rounded-lg px-2.5 py-1.5 text-[11px] font-bold ${
+                        className={`inline-flex h-9 items-center rounded-lg px-3.5 text-[13px] font-semibold ${
                             explained
-                                ? 'text-[var(--civio-ink)]/70'
+                                ? 'border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)]'
                                 : 'bg-[var(--civio-violet)] text-white'
                         }`}
                     >
                         {explained ? 'Hide Explanation' : 'Show Explanation'}
                     </button>
-                    <CopyForAiButton question={QUESTION} attempt={attempt} />
-                    <AskAssistantButton question={QUESTION} attempt={attempt} />
-                </p>
+                    <CopyForAiButton
+                        question={QUESTION}
+                        attempt={attempt}
+                        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold"
+                    />
+                    <AskAssistantButton
+                        question={QUESTION}
+                        attempt={attempt}
+                        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold no-underline"
+                    />
+                </div>
                 {notesOpen && (
                     <label className="mt-4 block text-xs font-semibold">
                         Notes

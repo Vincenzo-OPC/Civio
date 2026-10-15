@@ -201,6 +201,9 @@ type Panel = 'steps' | 'shortcut' | 'mistakes' | 'visual' | 'simpler';
 const SIMILAR_ITEM_PROMPT =
     'Write one new practice question on this same skill for the Philippine Civil Service Exam. Change the numbers or the wording. Give four choices, say which one is correct, and explain it in a few lines.';
 
+const revealButton =
+    'inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface,#f4f5f2)] px-3.5 text-[13px] font-semibold text-[var(--civio-ink)] no-underline';
+
 function shortWork(explanation: string): string {
     const work = explanation.split(/The matching choice is/i)[0] ?? '';
 
@@ -362,23 +365,23 @@ export function AnswerReveal({
                 </p>
             )}
             {lead && (
-                <div className="mt-3">
+                <div className="mt-4">
                     <p className="font-semibold">Understand the Answer</p>
-                    <p className="mt-1">{lead}</p>
+                    <p className="mt-1.5">{lead}</p>
                 </div>
             )}
             {(controls.length > 0 || ask) && (
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-wrap gap-3">
                     {controls.map((control) => (
                         <button
                             key={control.id}
                             type="button"
                             onClick={() => toggle(control.id)}
-                            className={`inline-flex items-center rounded-lg border px-3 py-1.5 text-xs font-semibold ${
+                            className={
                                 panel === control.id
-                                    ? 'border-[var(--civio-violet,#5b35f5)] bg-[var(--civio-violet,#5b35f5)]/10'
-                                    : 'border-[var(--civio-line,#e3e5ea)]'
-                            }`}
+                                    ? `${revealButton} border-[var(--civio-violet,#5b35f5)] bg-[var(--civio-violet,#5b35f5)]/12`
+                                    : revealButton
+                            }
                             aria-expanded={panel === control.id}
                         >
                             {control.label}
@@ -391,14 +394,14 @@ export function AnswerReveal({
                             label="Similar Item"
                             title="Opens your assistant in a new tab and asks for one similar question. You stay on this item."
                             options={{ closingPrompt: SIMILAR_ITEM_PROMPT }}
-                            className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--civio-line,#e3e5ea)] px-3 py-1.5 text-xs font-semibold no-underline"
+                            className={revealButton}
                         />
                     )}
                     {ask && (
                         <AskAssistantButton
                             question={ask.question}
                             attempt={ask.attempt}
-                            className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--civio-line,#e3e5ea)] px-3 py-1.5 text-xs font-semibold no-underline"
+                            className={revealButton}
                         />
                     )}
                 </div>

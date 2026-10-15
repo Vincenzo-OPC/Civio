@@ -857,7 +857,7 @@ export function LiveExamView({
                                                     true,
                                                 )}
                                             </div>
-                                            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                                            <div className="flex flex-wrap items-center gap-3">
                                                 <button
                                                     type="button"
                                                     disabled={isReported}
@@ -867,7 +867,7 @@ export function LiveExamView({
                                                             true,
                                                         )
                                                     }
-                                                    className="text-xs font-semibold text-[var(--civio-ink)]/60 disabled:opacity-50"
+                                                    className="inline-flex h-9 items-center rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold disabled:opacity-50"
                                                 >
                                                     {isReported
                                                         ? 'Reported'
@@ -890,10 +890,10 @@ export function LiveExamView({
 
                                                             void handleReveal();
                                                         }}
-                                                        className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold ${
+                                                        className={`inline-flex h-9 items-center rounded-lg px-3.5 text-[13px] font-semibold ${
                                                             revealedAnswer?.questionId ===
                                                             activeQuestion.id
-                                                                ? 'text-muted-foreground hover:bg-muted'
+                                                                ? 'border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)]'
                                                                 : 'bg-[var(--civio-violet)] text-white'
                                                         }`}
                                                     >
@@ -903,7 +903,6 @@ export function LiveExamView({
                                                             : 'Show Explanation'}
                                                     </button>
                                                 )}
-                                                {/* Copy for AI: drills and Study Mocks; hidden in a Strict Mock. */}
                                                 {studyTools && (
                                                     <CopyForAiButton
                                                         question={
@@ -912,6 +911,7 @@ export function LiveExamView({
                                                         attempt={liveHandoffAttempt(
                                                             activeQuestion.id,
                                                         )}
+                                                        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold"
                                                     />
                                                 )}
                                                 {studyTools && (
@@ -922,6 +922,7 @@ export function LiveExamView({
                                                         attempt={liveHandoffAttempt(
                                                             activeQuestion.id,
                                                         )}
+                                                        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold no-underline"
                                                     />
                                                 )}
                                             </div>
