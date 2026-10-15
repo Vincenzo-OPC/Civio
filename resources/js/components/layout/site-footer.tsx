@@ -18,7 +18,7 @@ export default function Footer() {
                 </Link>
                 <div className="flex items-end justify-between gap-4">
                     <div className="flex flex-col gap-2 text-sm">
-                        <p>© {currentYear} Civio. All Rights Reserved.</p>
+                        <p>© {currentYear} Civio. All rights reserved.</p>
                         <nav aria-label="Footer" className="flex gap-4">
                             {FOOTER_LINKS.map(({ href, label }) => (
                                 <Link
@@ -31,13 +31,6 @@ export default function Footer() {
                             ))}
                         </nav>
                     </div>
-                    <img
-                        src="/images/bir-registered-2025.png"
-                        alt="BIR registered, 2025"
-                        width={960}
-                        height={540}
-                        className="h-14 w-auto shrink-0"
-                    />
                 </div>
             </div>
         </footer>

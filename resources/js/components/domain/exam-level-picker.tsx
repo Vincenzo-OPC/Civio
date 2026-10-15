@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import { CircleCheck } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 import { TimeDial } from '@/components/domain/time-dial';
 import { EXAM_DIALS } from '@/lib/exam-dials';
 import type { ExamDialId } from '@/lib/exam-dials';
@@ -8,6 +9,50 @@ const LEVELS = [EXAM_DIALS.professional, EXAM_DIALS.subprofessional] as const;
 interface ExamLevelPickerProps {
     value: ExamDialId;
     onChange: (id: ExamDialId) => void;
+}
+
+function useCount(target: number): number {
+    const [shown, setShown] = useState(0);
+    const from = useRef(0);
+
+    useEffect(() => {
+        const reduce = window.matchMedia(
+            '(prefers-reduced-motion: reduce)',
+        ).matches;
+
+        if (reduce) {
+            from.current = target;
+            const frame = requestAnimationFrame(() => setShown(target));
+
+            return () => cancelAnimationFrame(frame);
+        }
+
+        const startValue = from.current;
+        const start = performance.now();
+        let frame = 0;
+        const tick = (now: number) => {
+            const progress = Math.min(1, (now - start) / 460);
+            const eased = 1 - (1 - progress) ** 3;
+
+            setShown(Math.round(startValue + (target - startValue) * eased));
+
+            if (progress < 1) {
+                frame = requestAnimationFrame(tick);
+            } else {
+                from.current = target;
+            }
+        };
+
+        frame = requestAnimationFrame(tick);
+
+        return () => cancelAnimationFrame(frame);
+    }, [target]);
+
+    return shown;
+}
+
+function pad(value: number): string {
+    return String(value).padStart(2, '0');
 }
 
 export function ExamLevelPicker({ value, onChange }: ExamLevelPickerProps) {
@@ -23,75 +68,124 @@ export function ExamLevelPicker({ value, onChange }: ExamLevelPickerProps) {
     };
 
     return (
-        <div>
-            <div
-                role="radiogroup"
-                aria-label="Choose Your Exam"
-                className="grid gap-3 sm:grid-cols-2"
-                onKeyDown={(event) => {
-                    if (
-                        event.key === 'ArrowRight' ||
-                        event.key === 'ArrowDown'
-                    ) {
-                        event.preventDefault();
-                        move(1);
-                    }
+        <div
+            role="radiogroup"
+            aria-label="Choose Your Exam"
+            className="grid gap-3 sm:grid-cols-2"
+            onKeyDown={(event) => {
+                if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+                    event.preventDefault();
+                    move(1);
+                }
 
-                    if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-                        event.preventDefault();
-                        move(-1);
-                    }
-                }}
-            >
-                {LEVELS.map((level) => {
-                    const selected = level.id === value;
-                    const hours = Math.floor(level.seconds / 3600);
-                    const minutes = Math.floor((level.seconds % 3600) / 60);
-
-                    return (
-                        <button
-                            key={level.id}
-                            type="button"
-                            role="radio"
-                            aria-checked={selected}
-                            aria-label={`${level.name}, ${level.questions} Questions, ${hours} hours ${minutes} minutes. ${level.description}`}
-                            tabIndex={selected ? 0 : -1}
-                            ref={(node) => {
-                                buttons.current[level.id] = node;
-                            }}
-                            onClick={() => onChange(level.id)}
-                            className={`flex h-full flex-col items-center rounded-2xl border bg-white px-4 py-5 text-center text-[#101426] transition-[transform,border-color,box-shadow] duration-200 ease-out outline-none focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] motion-reduce:transform-none motion-reduce:transition-none sm:px-5 dark:bg-[#1a1e30] dark:text-[#FAFAF7] dark:focus-visible:ring-[#C4B6FF] dark:focus-visible:ring-offset-[#101426] ${
-                                selected
-                                    ? '-translate-y-0.5 border-[#5B35F5] shadow-sm dark:border-[#C4B6FF]'
-                                    : 'border-[#E3E5EA] hover:-translate-y-0.5 hover:border-[#5B35F5]/40 hover:shadow-sm dark:border-[#3a415c] dark:hover:border-[#C4B6FF]/60'
-                            }`}
-                        >
-                            <TimeDial
-                                totalSeconds={level.seconds}
-                                quiet={!selected}
-                                decorative
-                            />
-                            <span
-                                className={`mt-3 font-heading text-lg font-semibold tracking-tight ${
-                                    selected
-                                        ? 'text-[#5B35F5] dark:text-[#C4B6FF]'
-                                        : ''
-                                }`}
-                            >
-                                {level.name}
-                            </span>
-                            <span className="mt-1 text-sm leading-relaxed">
-                                <span className="font-semibold tabular-nums">
-                                    {level.questions} questions
-                                </span>
-                            </span>
-                        </button>
-                    );
-                })}
-            </div>
-            <p className="mt-3 text-sm leading-relaxed opacity-70">
-                The ring shows the full time limit, not a score.
-            </p>
+                if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+                    event.preventDefault();
+                    move(-1);
+                }
+            }}
+        >
+            {LEVELS.map((level, index) => (
+                <ExamCard
+                    key={level.id}
+                    level={level}
+                    selected={level.id === value}
+                    delay={index}
+                    onChange={onChange}
+                    setButton={(node) => {
+                        buttons.current[level.id] = node;
+                    }}
+                />
+            ))}
         </div>
+    );
+}
+
+function ExamCard({
+    level,
+    selected,
+    delay,
+    onChange,
+    setButton,
+}: {
+    level: (typeof LEVELS)[number];
+    selected: boolean;
+    delay: number;
+    onChange: (id: ExamDialId) => void;
+    setButton: (node: HTMLButtonElement | null) => void;
+}) {
+    const hours = useCount(Math.floor(level.seconds / 3600));
+    const minutes = useCount(Math.floor((level.seconds % 3600) / 60));
+    const questions = useCount(level.questions);
+
+    return (
+        <button
+            type="button"
+            role="radio"
+            aria-checked={selected}
+            aria-label={`${level.name}, ${level.questions} Questions, ${pad(Math.floor(level.seconds / 3600))}h ${pad(Math.floor((level.seconds % 3600) / 60))}m. ${level.description}`}
+            tabIndex={selected ? 0 : -1}
+            ref={setButton}
+            onClick={() => onChange(level.id)}
+            onMouseMove={(event) => {
+                const rect = event.currentTarget.getBoundingClientRect();
+                event.currentTarget.style.setProperty(
+                    '--spot-x',
+                    `${event.clientX - rect.left}px`,
+                );
+                event.currentTarget.style.setProperty(
+                    '--spot-y',
+                    `${event.clientY - rect.top}px`,
+                );
+            }}
+            style={{ animationDelay: `${120 + delay * 90}ms` }}
+            className={`civio-exam-card civio-rise flex h-full flex-col rounded-2xl border bg-white px-5 py-5 text-left text-[#101426] transition-[transform,border-color,box-shadow] duration-200 ease-out outline-none focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] motion-reduce:transform-none sm:px-6 dark:bg-[#1a1e30] dark:text-[#FAFAF7] dark:focus-visible:ring-[#C4B6FF] dark:focus-visible:ring-offset-[#101426] ${
+                selected
+                    ? 'border-2 border-[#5B35F5] shadow-sm dark:border-[#C4B6FF]'
+                    : 'border-[#E3E5EA] hover:-translate-y-0.5 hover:border-[#5B35F5]/45 hover:shadow-sm dark:border-[#3a415c] dark:hover:border-[#C4B6FF]/60'
+            }`}
+        >
+            <span className="flex items-start justify-between gap-3">
+                <span className="font-heading text-xl font-semibold tracking-tight text-balance">
+                    {level.name}
+                </span>
+                <CircleCheck
+                    aria-hidden
+                    className={`size-5 shrink-0 transition-opacity ${
+                        selected
+                            ? 'text-[#5B35F5] opacity-100 dark:text-[#C4B6FF]'
+                            : 'opacity-0'
+                    }`}
+                />
+            </span>
+            <span className="mt-2 min-h-[3.25rem] text-sm leading-relaxed text-[#101426]/75 dark:text-[#FAFAF7]/75">
+                {level.description}
+            </span>
+            <span className="mt-5 flex items-end justify-between gap-3">
+                <span>
+                    <span className="block font-heading text-4xl leading-none font-semibold tracking-tight tabular-nums">
+                        {questions}
+                    </span>
+                    <span className="mt-1 block text-xs tracking-wide">
+                        Questions
+                    </span>
+                </span>
+                <span className="flex items-center gap-2">
+                    <TimeDial
+                        totalSeconds={level.seconds}
+                        quiet={!selected}
+                        decorative
+                        className="size-14"
+                    />
+                    <span>
+                        <span className="block font-heading text-2xl leading-none font-semibold tracking-tight tabular-nums">
+                            {pad(hours)}h {pad(minutes)}m
+                        </span>
+                        <span className="mt-1 block text-right text-xs tracking-wide">
+                            Duration
+                        </span>
+                    </span>
+                </span>
+            </span>
+        </button>
     );
 }

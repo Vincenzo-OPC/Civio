@@ -127,9 +127,12 @@ export default function SiteHeader({
                     <div className="flex items-center">
                         <Link
                             href={home()}
-                            className="group flex items-center gap-2 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                            className="group flex items-center gap-3 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                         >
                             <AppLogo />
+                            <span className="hidden text-[0.65rem] font-semibold tracking-[0.18em] text-[#101426]/55 sm:inline dark:text-[#FAFAF7]/55">
+                                CSE REVIEWER
+                            </span>
                         </Link>
                     </div>
 
@@ -203,43 +206,26 @@ export default function SiteHeader({
                             </Link>
                         ) : (
                             <>
-                                {guestUnlimited ? (
-                                    <Button
-                                        uppercase={false}
-                                        className="bg-[#5B35F5] font-medium hover:bg-[#3D20C8]"
-                                        asChild
+                                <Button
+                                    variant="ghost"
+                                    uppercase={false}
+                                    asChild
+                                >
+                                    <Link
+                                        href={login()}
+                                        className="group font-semibold text-primary transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                     >
-                                        <Link
-                                            href="/exams?start=professional&free_attempt=1"
-                                            className="transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-                                        >
-                                            Start Pro
-                                        </Link>
-                                    </Button>
-                                ) : (
-                                    <>
-                                        <Button
-                                            variant="ghost"
-                                            uppercase={false}
-                                            asChild
-                                        >
-                                            <Link
-                                                href={login()}
-                                                className="group font-bold text-primary transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
-                                            >
-                                                Log in
-                                            </Link>
-                                        </Button>
-                                        <Button uppercase={false} asChild>
-                                            <Link
-                                                href={register()}
-                                                className="group font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
-                                            >
-                                                Register
-                                            </Link>
-                                        </Button>
-                                    </>
-                                )}
+                                        Sign In
+                                    </Link>
+                                </Button>
+                                <Button uppercase={false} asChild>
+                                    <Link
+                                        href={register()}
+                                        className="group font-semibold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                    >
+                                        Create Account
+                                    </Link>
+                                </Button>
                             </>
                         )}
                         <ThemeToggle />
@@ -342,86 +328,31 @@ export default function SiteHeader({
                                 </Link>
                             ) : (
                                 <>
-                                    {guestUnlimited ? (
-                                        <>
-                                            <Button
-                                                variant="ghost"
-                                                uppercase={false}
-                                                className="w-full rounded-xl py-4 text-base font-medium text-[#5B35F5] sm:py-6"
-                                                asChild
-                                            >
-                                                <Link
-                                                    href="/drills"
-                                                    onClick={() =>
-                                                        setIsMenuOpen(false)
-                                                    }
-                                                >
-                                                    Practice Drills
-                                                </Link>
-                                            </Button>
-                                            <Button
-                                                uppercase={false}
-                                                className="w-full rounded-xl bg-[#5B35F5] py-4 text-base font-medium hover:bg-[#3D20C8] sm:py-6"
-                                                asChild
-                                            >
-                                                <Link
-                                                    href="/exams?start=professional&free_attempt=1"
-                                                    onClick={() =>
-                                                        setIsMenuOpen(false)
-                                                    }
-                                                >
-                                                    Start Pro
-                                                </Link>
-                                            </Button>
-                                            <Button
-                                                variant="outline"
-                                                uppercase={false}
-                                                className="w-full rounded-xl py-4 text-base font-medium sm:py-6"
-                                                asChild
-                                            >
-                                                <Link
-                                                    href="/exams?start=subprofessional&free_attempt=1"
-                                                    onClick={() =>
-                                                        setIsMenuOpen(false)
-                                                    }
-                                                >
-                                                    Start Sub Pro
-                                                </Link>
-                                            </Button>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <Button
-                                                variant="ghost"
-                                                uppercase={false}
-                                                className="w-full rounded-xl py-4 text-base font-bold text-primary sm:py-6"
-                                                asChild
-                                            >
-                                                <Link
-                                                    href={login()}
-                                                    onClick={() =>
-                                                        setIsMenuOpen(false)
-                                                    }
-                                                >
-                                                    Log in
-                                                </Link>
-                                            </Button>
-                                            <Button
-                                                uppercase={false}
-                                                className="w-full rounded-xl py-4 text-base font-bold sm:py-6"
-                                                asChild
-                                            >
-                                                <Link
-                                                    href={register()}
-                                                    onClick={() =>
-                                                        setIsMenuOpen(false)
-                                                    }
-                                                >
-                                                    Register
-                                                </Link>
-                                            </Button>
-                                        </>
-                                    )}
+                                    <Button
+                                        variant="ghost"
+                                        uppercase={false}
+                                        className="w-full rounded-xl py-4 text-base font-semibold text-primary sm:py-6"
+                                        asChild
+                                    >
+                                        <Link
+                                            href={login()}
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            Sign In
+                                        </Link>
+                                    </Button>
+                                    <Button
+                                        uppercase={false}
+                                        className="w-full rounded-xl py-4 text-base font-semibold sm:py-6"
+                                        asChild
+                                    >
+                                        <Link
+                                            href={register()}
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            Create Account
+                                        </Link>
+                                    </Button>
                                 </>
                             )}
                         </div>

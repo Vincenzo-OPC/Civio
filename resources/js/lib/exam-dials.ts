@@ -12,7 +12,8 @@ export const EXAM_DIALS = {
         name: 'Professional',
         questions: 150,
         seconds: EXAM_DURATION_SECS.Professional,
-        description: 'For professional, technical, and supervisory posts.',
+        description:
+            'For professional, technical, and scientific positions in government service.',
     },
     subprofessional: {
         id: 'subprofessional',
@@ -20,7 +21,8 @@ export const EXAM_DIALS = {
         name: 'Subprofessional',
         questions: 145,
         seconds: EXAM_DURATION_SECS.Subprofessional,
-        description: 'For clerical, trades, and custodial posts.',
+        description:
+            'For clerical, trades, crafts, and custodial positions in government service.',
     },
 } as const;
 

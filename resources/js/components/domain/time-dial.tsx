@@ -1,4 +1,5 @@
 import { formatSitting } from '@/lib/exam-dials';
+import { cn } from '@/lib/utils';
 
 const SIZE = 200;
 const CENTER = SIZE / 2;
@@ -32,6 +33,7 @@ export interface TimeDialProps {
     /** Hide from the accessibility tree when nearby text already says the time. */
     decorative?: boolean;
     label?: string;
+    className?: string;
 }
 
 export function TimeDial({
@@ -42,6 +44,7 @@ export function TimeDial({
     tone = 'calm',
     decorative = false,
     label,
+    className,
 }: TimeDialProps) {
     const countdown = remainingSeconds !== undefined;
     const total = Math.max(1, totalSeconds);
@@ -59,11 +62,13 @@ export function TimeDial({
     return (
         <svg
             viewBox={`0 0 ${SIZE} ${SIZE}`}
-            className={
+            className={cn(
                 compact
                     ? 'size-7 shrink-0 max-[380px]:hidden'
-                    : 'mx-auto size-40 text-[#101426] dark:text-[#FAFAF7]'
-            }
+                    : 'mx-auto text-[#101426] dark:text-[#FAFAF7]',
+                !compact && 'size-40',
+                className,
+            )}
             role={decorative ? undefined : 'img'}
             aria-hidden={decorative ? true : undefined}
             aria-label={

@@ -311,10 +311,39 @@ html.lite {
     animation: civio-pass-draw 900ms ease both;
 }
 
+.civio-exam-card {
+    background-image: radial-gradient(
+        220px circle at var(--spot-x, 50%) var(--spot-y, 20%),
+        color-mix(in srgb, #5b35f5 16%, transparent),
+        transparent 72%
+    );
+}
+
+.civio-rise {
+    animation: civio-rise 480ms ease both;
+}
+
+@keyframes civio-rise {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .civio-arc-draw,
-    .civio-pass-draw {
+    .civio-pass-draw,
+    .civio-rise {
         animation: none;
+    }
+
+    .civio-exam-card {
+        background-image: none;
     }
 
     .civio-arc,

@@ -1,16 +1,43 @@
 import { Head, Link, router, usePage } from '@inertiajs/react';
+import { BookOpen, Target, Timer } from 'lucide-react';
 import { useState } from 'react';
 import ExamFormat from '@/components/domain/exam-format';
 import { ExamLevelPicker } from '@/components/domain/exam-level-picker';
 import { ExamScreenPreview } from '@/components/domain/exam-screen-preview';
 import SiteFooter from '@/components/layout/site-footer';
 import SiteHeader from '@/components/layout/site-header';
+import { EXAM_DIALS } from '@/lib/exam-dials';
 import type { ExamDialId } from '@/lib/exam-dials';
 import type { Auth } from '@/types';
+
+const MODES = [
+    {
+        name: 'Study Mode',
+        description:
+            'Practice at your own pace with instant feedback and detailed explanations.',
+        href: '/exams',
+        icon: BookOpen,
+    },
+    {
+        name: 'Exam Mode',
+        description:
+            'Experience a timed mock exam with answers and results revealed after submission.',
+        href: '/exams',
+        icon: Timer,
+    },
+    {
+        name: 'Practice Drills',
+        description:
+            'Strengthen specific skills with focused practice by subject and topic.',
+        href: '/drills',
+        icon: Target,
+    },
+] as const;
 
 export default function Welcome() {
     const { auth } = usePage<{ auth: Auth }>().props;
     const [level, setLevel] = useState<ExamDialId>('professional');
+    const name = EXAM_DIALS[level].name;
 
     const startExam = () => {
         const guest = auth?.user ? '' : '&free_attempt=1';
@@ -27,49 +54,75 @@ export default function Welcome() {
             </Head>
             <SiteHeader activeNav="home" />
             <main className="bg-[#FAFAF7] text-[#101426] dark:bg-[#101426] dark:text-[#FAFAF7]">
-                <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-8 sm:px-6 sm:py-12">
-                    <header className="flex flex-col gap-2">
-                        <h1 className="font-heading text-3xl font-semibold tracking-tight sm:text-5xl">
-                            Choose Your Exam
-                        </h1>
-                        <p className="max-w-[32rem] text-base leading-relaxed opacity-75 sm:text-lg">
-                            A full mock. The explanation comes after you answer.
+                <div className="mx-auto flex w-full max-w-3xl flex-col gap-10 px-4 py-8 sm:px-6 sm:py-12">
+                    <header className="civio-rise flex flex-col gap-3">
+                        <p className="text-xs font-semibold tracking-[0.18em] text-[#5B35F5] dark:text-[#C4B6FF]">
+                            PHILIPPINE CIVIL SERVICE EXAM
                         </p>
+                        <h1 className="font-heading text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+                            Choose Your Exam.
+                        </h1>
                     </header>
 
                     <ExamLevelPicker value={level} onChange={setLevel} />
 
-                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                    <div
+                        className="civio-rise flex flex-col gap-3 sm:flex-row sm:items-center"
+                        style={{ animationDelay: '180ms' }}
+                    >
                         <button
                             type="button"
                             onClick={startExam}
-                            className="inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-[#5B35F5] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] focus-visible:outline-none sm:w-auto dark:focus-visible:ring-offset-[#101426]"
+                            className="inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-[#5B35F5] px-5 py-3 text-sm font-semibold text-white transition-[transform,background-color] duration-200 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] focus-visible:outline-none active:scale-[0.98] motion-reduce:transform-none sm:w-auto dark:focus-visible:ring-offset-[#101426]"
                         >
-                            Set Up Mock Exam
+                            Continue with {name}
                         </button>
                         <Link
-                            href="/exams"
+                            href="/drills"
                             className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border-2 border-[#E3E5EA] bg-white px-5 py-3 text-sm font-semibold transition-colors hover:border-[#5B35F5]/40 focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] focus-visible:outline-none sm:w-auto dark:border-[#2c3148] dark:bg-transparent dark:hover:border-[#A594FF]/50 dark:focus-visible:ring-[#A594FF] dark:focus-visible:ring-offset-[#101426]"
                         >
-                            Continue Studying
+                            Practice by Topic
                         </Link>
                     </div>
 
-                    <p className="text-sm">
-                        <Link
-                            href="/drills"
-                            className="font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#C4B6FF]"
-                        >
-                            Practice Drills
-                        </Link>
-                        <span className="mx-2 opacity-40">·</span>
-                        <Link
-                            href="/learn"
-                            className="font-semibold underline-offset-4 hover:underline"
-                        >
-                            Study Hub
-                        </Link>
-                    </p>
+                    <section
+                        aria-label="Practice Modes"
+                        className="flex flex-col gap-4"
+                    >
+                        <h2 className="font-heading text-xl font-semibold tracking-tight">
+                            Practice Modes
+                        </h2>
+                        <div className="grid gap-3 sm:grid-cols-3">
+                            {MODES.map((mode) => {
+                                const Icon = mode.icon;
+
+                                return (
+                                    <Link
+                                        key={mode.name}
+                                        href={
+                                            mode.href === '/drills'
+                                                ? '/drills'
+                                                : mode.name === 'Study Mode'
+                                                  ? `/exams?start=${level}${auth?.user ? '' : '&free_attempt=1'}`
+                                                  : '/exams'
+                                        }
+                                        className="flex flex-col gap-3 rounded-2xl border border-[#E3E5EA] bg-white p-4 transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-[#5B35F5]/40 hover:shadow-sm focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:outline-none motion-reduce:transform-none dark:border-[#3a415c] dark:bg-[#1a1e30] dark:hover:border-[#C4B6FF]/50"
+                                    >
+                                        <Icon
+                                            className="size-5 text-[#5B35F5] dark:text-[#C4B6FF]"
+                                            aria-hidden
+                                        />
+                                        <span className="font-heading text-base font-semibold tracking-tight">
+                                            {mode.name}
+                                        </span>
+                                        <span className="text-sm leading-relaxed text-[#101426]/75 dark:text-[#FAFAF7]/75">
+                                            {mode.description}
+                                        </span>
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    </section>
 
                     <ExamScreenPreview />
 

@@ -1,29 +1,61 @@
-const TRACKS = [
-    {
-        name: 'Professional',
-        count: '150',
-        time: '3 hours 10 minutes',
-        posts: 'Professional, technical, and supervisory posts.',
-    },
-    {
-        name: 'Subprofessional',
-        count: '145',
-        time: '2 hours 40 minutes',
-        posts: 'Clerical, trades, and custodial posts.',
-    },
-] as const;
+import { ArrowUpRight } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 const MARK = 120;
 const MARK_CENTER = MARK / 2;
 const MARK_RADIUS = 46;
+const CSC_REFERENCE =
+    'https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2026/ExamAnn_2026_03_Conduct%20of%2009%20Aug%202026%20CSE-PPT_orig%20signed.pdf';
+
+function useCount(target: number): number {
+    const [shown, setShown] = useState(0);
+    const from = useRef(0);
+
+    useEffect(() => {
+        const reduce = window.matchMedia(
+            '(prefers-reduced-motion: reduce)',
+        ).matches;
+
+        if (reduce) {
+            from.current = target;
+            const frame = requestAnimationFrame(() => setShown(target));
+
+            return () => cancelAnimationFrame(frame);
+        }
+
+        const startValue = from.current;
+        const start = performance.now();
+        let frame = 0;
+        const tick = (now: number) => {
+            const progress = Math.min(1, (now - start) / 700);
+            const eased = 1 - (1 - progress) ** 3;
+
+            setShown(Math.round(startValue + (target - startValue) * eased));
+
+            if (progress < 1) {
+                frame = requestAnimationFrame(tick);
+            } else {
+                from.current = target;
+            }
+        };
+
+        frame = requestAnimationFrame(tick);
+
+        return () => cancelAnimationFrame(frame);
+    }, [target]);
+
+    return shown;
+}
 
 export default function ExamFormat() {
     const ring = 2 * Math.PI * MARK_RADIUS;
+    const mark = useCount(80);
 
     return (
         <section
-            aria-label="Exam format"
-            className="rounded-2xl border border-[#E3E5EA] bg-white p-5 text-[#101426] sm:p-6 dark:border-[#3a415c] dark:bg-[#1a1e30] dark:text-[#FAFAF7]"
+            aria-label="About the Exam"
+            className="civio-rise rounded-2xl border border-[#E3E5EA] bg-white p-5 text-[#101426] sm:p-6 dark:border-[#3a415c] dark:bg-[#1a1e30] dark:text-[#FAFAF7]"
+            style={{ animationDelay: '280ms' }}
         >
             <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
                 <div className="relative size-36 shrink-0">
@@ -54,40 +86,40 @@ export default function ExamFormat() {
                             transform={`rotate(-90 ${MARK_CENTER} ${MARK_CENTER})`}
                         />
                     </svg>
-                    <p className="absolute inset-0 flex items-center justify-center font-heading text-3xl font-semibold tracking-tight tabular-nums">
-                        80.00
+                    <p className="absolute inset-0 flex flex-col items-center justify-center">
+                        <span className="font-heading text-3xl leading-none font-semibold tracking-tight tabular-nums">
+                            {mark}%
+                        </span>
+                        <span className="mt-1 text-[0.65rem] tracking-[0.14em] uppercase">
+                            Passing Mark
+                        </span>
                     </p>
                 </div>
-
-                <div className="grid w-full flex-1 gap-5 sm:grid-cols-2">
-                    {TRACKS.map((track) => (
-                        <div key={track.name}>
-                            <h2 className="font-heading text-base font-semibold tracking-tight">
-                                {track.name}
-                            </h2>
-                            <p className="mt-2 leading-none">
-                                <span className="font-heading text-2xl font-semibold tracking-tight tabular-nums">
-                                    {track.count}
-                                </span>
-                                <span className="ml-2 text-sm">
-                                    scored items
-                                </span>
-                            </p>
-                            <p className="mt-2 text-sm tabular-nums">
-                                {track.time}
-                            </p>
-                            <p className="mt-1 text-sm leading-relaxed text-[#101426]/70 dark:text-[#FAFAF7]/75">
-                                {track.posts}
-                            </p>
-                        </div>
-                    ))}
+                <div className="max-w-prose">
+                    <h2 className="font-heading text-xl font-semibold tracking-tight">
+                        About the Exam
+                    </h2>
+                    <p className="mt-3 text-sm leading-relaxed text-[#101426]/75 dark:text-[#FAFAF7]/75">
+                        The CSC requires a general rating of at least 80.00.
+                        Civio mock exams include only scored questions,
+                        excluding the separate 20-item Examinee Descriptive
+                        Questionnaire.
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#101426]/75 dark:text-[#FAFAF7]/75">
+                        Civio is independent and not affiliated with the Civil
+                        Service Commission.
+                    </p>
+                    <a
+                        href={CSC_REFERENCE}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#C4B6FF]"
+                    >
+                        Official CSC Reference
+                        <ArrowUpRight className="size-3.5" aria-hidden />
+                    </a>
                 </div>
             </div>
-            <p className="mt-5 text-sm leading-relaxed text-[#101426]/75 dark:text-[#FAFAF7]/75">
-                The published general passing rating is at least 80.00. Civio is
-                not the Civil Service Commission and is not an official CSC
-                reviewer. A practice score is not your result.
-            </p>
         </section>
     );
 }
