@@ -14,6 +14,59 @@ import {
 import type { ViteManifest } from './resources/js/lib/pwa-precache';
 
 /**
+ * The built CSS repeats the Tailwind palette in display-p3 and lab.
+ * `@layer theme` already has the sRGB values. Those two blocks are about
+ * 4 kB brotli and leave the 33 kB cap with no room.
+ */
+function dropWideGamutPalette(css: string): string {
+    const markers = [
+        '@supports (color:color(display-p3 0 0 0))',
+        '@supports (color:lab(0% 0 0))',
+    ];
+
+    let output = css;
+
+    for (const marker of markers) {
+        let cursor = 0;
+        let next = '';
+
+        while (cursor < output.length) {
+            const start = output.indexOf(marker, cursor);
+
+            if (start < 0) {
+                next += output.slice(cursor);
+                break;
+            }
+
+            let depth = 0;
+            let end = start;
+
+            for (; end < output.length; end++) {
+                const char = output[end];
+
+                if (char === '{') {
+                    depth++;
+                } else if (char === '}') {
+                    depth--;
+
+                    if (depth === 0) {
+                        end++;
+                        break;
+                    }
+                }
+            }
+
+            next += output.slice(cursor, start);
+            cursor = end;
+        }
+
+        output = next;
+    }
+
+    return output;
+}
+
+/**
  * Lite L0: precache only the app shell + critical routes (see
  * resources/js/lib/pwa-precache.ts). Falls back to the full list if the Vite
  * manifest is missing.
@@ -54,6 +107,27 @@ export default defineConfig({
             },
         }),
         tailwindcss(),
+        {
+            name: 'drop-wide-gamut-palette',
+            apply: 'build',
+            generateBundle(_options, bundle) {
+                for (const item of Object.values(bundle)) {
+                    if (
+                        item.type !== 'asset' ||
+                        !item.fileName.endsWith('.css')
+                    ) {
+                        continue;
+                    }
+
+                    const source =
+                        typeof item.source === 'string'
+                            ? item.source
+                            : Buffer.from(item.source).toString('utf8');
+
+                    item.source = dropWideGamutPalette(source);
+                }
+            },
+        },
         wayfinder({
             formVariants: true,
         }),
