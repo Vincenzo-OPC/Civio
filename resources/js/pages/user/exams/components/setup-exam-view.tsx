@@ -112,7 +112,7 @@ export function SetupExamView({
                         />
 
                         {/* Exam Simulation mode */}
-                        <fieldset className="rounded-2xl border border-[#E3E5EA] bg-white p-5 dark:border-[#3a415c] dark:bg-[#1a1e30]">
+                        <fieldset className="rounded-2xl border border-[#E3E5EA] bg-white p-5 dark:border-[#2a2a2a] dark:bg-[#141414]">
                             <legend className="px-1 font-heading text-sm font-semibold tracking-tight text-[#101426] dark:text-[#FAFAF7]">
                                 Mode
                             </legend>
@@ -122,8 +122,8 @@ export function SetupExamView({
                                         key={mode}
                                         className={`flex cursor-pointer flex-col gap-1 rounded-xl border p-3 transition-colors ${
                                             examMode === mode
-                                                ? 'border-2 border-[#5B35F5] bg-[#FAFAF7] dark:border-[#C4B6FF] dark:bg-[#101426]'
-                                                : 'border-[#E3E5EA] hover:border-[#5B35F5]/40 dark:border-[#2c3148]'
+                                                ? 'border-2 border-[#5B35F5] bg-[#FAFAF7] dark:border-[#B6F72D] dark:bg-black'
+                                                : 'border-[#E3E5EA] hover:border-[#5B35F5]/40 dark:border-[#2a2a2a]'
                                         }`}
                                     >
                                         <span className="flex items-center gap-2 text-sm font-semibold text-[#101426] dark:text-[#FAFAF7]">
@@ -163,9 +163,9 @@ export function SetupExamView({
                     </div>
 
                     {/* Right Panel: Simulation Overview */}
-                    <div className="flex min-h-[380px] flex-col justify-between rounded-xl border border-[#E3E5EA] bg-[#FAFAF7] p-4 sm:p-6 dark:border-[#2c3148] dark:bg-[#101426]">
+                    <div className="flex min-h-[380px] flex-col justify-between rounded-xl border border-[#E3E5EA] bg-[#FAFAF7] p-4 sm:p-6 dark:border-[#2a2a2a] dark:bg-black">
                         <div>
-                            <h2 className="mb-4 border-b border-[#E3E5EA] pb-2 font-heading text-xl font-semibold tracking-tight text-[#101426] dark:border-[#2c3148] dark:text-[#FAFAF7]">
+                            <h2 className="mb-4 border-b border-[#E3E5EA] pb-2 font-heading text-xl font-semibold tracking-tight text-[#101426] dark:border-[#2a2a2a] dark:text-[#FAFAF7]">
                                 Simulation Overview
                             </h2>
 

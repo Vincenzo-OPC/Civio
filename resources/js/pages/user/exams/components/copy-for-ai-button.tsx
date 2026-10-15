@@ -28,7 +28,7 @@ export function CopyForAiButton({
         const { ok } = await copyAiHandoff(question, attempt, options);
 
         if (ok) {
-            toast.success('Question copied.', {
+            toast.success('Question Copied', {
                 id: 'copy-for-ai',
             });
         } else {

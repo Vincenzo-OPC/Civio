@@ -491,7 +491,7 @@ export function ScorecardView({
                                                         cx="50"
                                                         cy="50"
                                                         r={radius}
-                                                        className="fill-none stroke-[#5B35F5] transition-all duration-700 dark:stroke-[#C4B6FF]"
+                                                        className="fill-none stroke-[#5B35F5] transition-all duration-700 dark:stroke-[#B6F72D]"
                                                         strokeWidth="7"
                                                         strokeDasharray={
                                                             circumference
@@ -515,7 +515,7 @@ export function ScorecardView({
                                             </div>
                                             <div className="mt-3 flex flex-col items-center gap-1">
                                                 <span
-                                                    className="inline-flex rounded-full bg-[#FAFAF7] px-3 py-1 text-xs font-semibold text-[#101426] dark:bg-[#101426] dark:text-[#FAFAF7]"
+                                                    className="inline-flex rounded-full bg-[#FAFAF7] px-3 py-1 text-xs font-semibold text-[#101426] dark:bg-black dark:text-[#FAFAF7]"
                                                 >
                                                     {isPassed
                                                         ? 'At Least 80.00'

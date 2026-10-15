@@ -54,7 +54,7 @@ export default function ExamFormat() {
     return (
         <section
             aria-label="About the Exam"
-            className="civio-rise rounded-2xl border border-[#E3E5EA] bg-white p-5 text-[#101426] sm:p-6 dark:border-[#3a415c] dark:bg-[#1a1e30] dark:text-[#FAFAF7]"
+            className="civio-rise rounded-2xl border border-[#E3E5EA] bg-white p-5 text-[#101426] sm:p-6 dark:border-[#2a2a2a] dark:bg-[#141414] dark:text-[#FAFAF7]"
             style={{ animationDelay: '280ms' }}
         >
             <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
@@ -75,7 +75,7 @@ export default function ExamFormat() {
                             strokeWidth={8}
                         />
                         <circle
-                            className="civio-pass civio-pass-draw text-[#5B35F5] dark:text-[#C4B6FF]"
+                            className="civio-pass civio-pass-draw text-[#5B35F5] dark:text-[#B6F72D]"
                             cx={MARK_CENTER}
                             cy={MARK_CENTER}
                             r={MARK_RADIUS}
@@ -113,7 +113,7 @@ export default function ExamFormat() {
                         href={CSC_REFERENCE}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#C4B6FF]"
+                        className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#B6F72D]"
                     >
                         Official CSC Reference
                         <ArrowUpRight className="size-3.5" aria-hidden />

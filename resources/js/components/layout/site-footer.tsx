@@ -11,7 +11,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="w-full border-t border-[#E3E5EA] bg-[#FAFAF7] text-[#101426] dark:border-[#2c3148] dark:bg-[#101426] dark:text-[#FAFAF7]">
+        <footer className="w-full border-t border-[#E3E5EA] bg-[#FAFAF7] text-[#101426] dark:border-[#2a2a2a] dark:bg-black dark:text-[#FAFAF7]">
             <div className="mx-auto flex w-full max-w-3xl flex-col gap-4 px-4 py-6 sm:px-6">
                 <Link href="/" className="inline-flex w-fit" aria-label="Civio">
                     <AppLogo />

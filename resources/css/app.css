@@ -155,52 +155,48 @@
 }
 
 .dark {
-    --background: #0f172a;
-    --foreground: #f1f5f9;
+    --background: #000000;
+    --foreground: #f4f4f5;
 
-    --card: #1e293b;
-    --card-foreground: #f1f5f9;
+    --card: #141414;
+    --card-foreground: #f4f4f5;
 
-    --popover: #1e293b;
-    --popover-foreground: #f1f5f9;
+    --popover: #141414;
+    --popover-foreground: #f4f4f5;
 
-    --primary: #3b82f6;
-    /* Lighter primary for dark mode */
-    --primary-foreground: #ffffff;
+    --primary: #b6f72d;
+    --primary-foreground: #0a0a0a;
 
-    --secondary: #10b981;
-    /* Secondary (Emerald) */
-    --secondary-foreground: #ffffff;
+    --secondary: #1a1a1a;
+    --secondary-foreground: #f4f4f5;
 
-    --muted: #334155;
-    --muted-foreground: #cbd5e1;
+    --muted: #1a1a1a;
+    --muted-foreground: #a1a1aa;
 
-    --accent: #334155;
-    --accent-foreground: #f1f5f9;
+    --accent: #1a1a1a;
+    --accent-foreground: #f4f4f5;
 
     --destructive: #f87171;
-    --destructive-foreground: #0f172a;
+    --destructive-foreground: #0a0a0a;
 
-    --border: #334155;
-    --input: #334155;
-    --ring: #3b82f6;
+    --border: #2a2a2a;
+    --input: #2a2a2a;
+    --ring: #b6f72d;
 
-    --chart-1: #3b82f6;
-    --chart-2: #34d399;
-    /* Emerald-400 */
-    --chart-3: #10b981;
-    /* Emerald-500 */
-    --chart-4: #cbd5e1;
-    --chart-5: #60a5fa;
+    --chart-1: #b6f72d;
+    --chart-2: #f4f4f5;
+    --chart-3: #a1a1aa;
+    --chart-4: #52525b;
+    --chart-5: #b6f72d;
 
-    --sidebar: #090d16;
-    --sidebar-foreground: #f1f5f9;
-    --sidebar-primary: #3b82f6;
-    --sidebar-primary-foreground: #ffffff;
-    --sidebar-accent: #1e293b;
-    --sidebar-accent-foreground: #f1f5f9;
-    --sidebar-border: #334155;
-    --sidebar-ring: #3b82f6;
+    --sidebar: #000000;
+    --sidebar-foreground: #f4f4f5;
+    --sidebar-primary: #b6f72d;
+    --sidebar-primary-foreground: #0a0a0a;
+    --sidebar-accent: #141414;
+    --sidebar-accent-foreground: #f4f4f5;
+    --sidebar-border: #2a2a2a;
+    --sidebar-ring: #b6f72d;
 }
 
 @layer base {
@@ -254,11 +250,11 @@ html.lite {
 .dark .civio-session {
     --civio-violet: #8b74ff;
     --civio-violet-deep: #c4b6ff;
-    --civio-lime: #c6f55a;
-    --civio-ink: #fafaf7;
-    --civio-paper: #101426;
-    --civio-surface: #1a1e30;
-    --civio-line: #2c3148;
+    --civio-lime: #b6f72d;
+    --civio-ink: #f4f4f5;
+    --civio-paper: #000000;
+    --civio-surface: #141414;
+    --civio-line: #2a2a2a;
     --civio-error: #ff8a8d;
 }
 

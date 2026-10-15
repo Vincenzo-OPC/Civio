@@ -50,6 +50,12 @@ const applyTheme = (appearance: Appearance): void => {
 
     document.documentElement.classList.toggle('dark', isDark);
     document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+
+    const theme = document.querySelector('meta[name="theme-color"]');
+
+    if (theme) {
+        theme.setAttribute('content', isDark ? '#000000' : '#FAFAF7');
+    }
 };
 
 const subscribe = (callback: () => void) => {
