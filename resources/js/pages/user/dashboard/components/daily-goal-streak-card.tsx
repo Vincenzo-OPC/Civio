@@ -99,7 +99,7 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
                             return (
                                 <div
                                     key={idx}
-                                    className={`flex size-7 items-center justify-center rounded-lg text-xs font-black transition-all ${
+                                    className={`flex size-7 items-center justify-center rounded-lg text-xs font-semibold transition-all ${
                                         isCompleted
                                             ? 'bg-amber-500 text-white shadow-2xs'
                                             : isToday
@@ -125,12 +125,12 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
                 <div className="space-y-2.5 rounded-xl border border-slate-100 bg-slate-50/70 p-3.5 sm:p-4 dark:border-slate-800/60 dark:bg-slate-950/40">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                            <Target className="size-4 text-blue-600 dark:text-blue-400" />
+                            <Target className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                             <span className="text-xs font-bold text-slate-700 sm:text-sm dark:text-slate-200">
                                 Questions Solved Today
                             </span>
                         </div>
-                        <div className="flex items-center gap-1 text-xs font-black text-slate-900 sm:text-sm dark:text-white">
+                        <div className="flex items-center gap-1 text-xs font-semibold text-slate-900 sm:text-sm dark:text-white">
                             <span>{questionsToday}</span>
                             <span className="text-slate-400 dark:text-slate-500">
                                 / {goalTarget}
@@ -140,7 +140,7 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
 
                     <Progress
                         value={progressPct}
-                        className={`h-2.5 ${isGoalMet ? '[&>div]:bg-emerald-500' : '[&>div]:bg-blue-600'}`}
+                        className={`h-2.5 ${isGoalMet ? '[&>div]:bg-emerald-500' : '[&>div]:bg-[#5B35F5]'}`}
                     />
 
                     <div className="flex items-center justify-between text-xs font-semibold text-slate-500 dark:text-slate-400">
@@ -188,7 +188,7 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
                         className="group flex items-center justify-between rounded-xl border border-blue-200/70 bg-blue-50/40 p-3 transition-all hover:border-blue-300 hover:bg-blue-50/70 dark:border-blue-900/40 dark:bg-blue-950/20 dark:hover:border-blue-800"
                     >
                         <div className="flex min-w-0 items-center gap-2.5">
-                            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400">
+                            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-400/10 dark:text-[#B3F52D]">
                                 <Bookmark className="size-4" />
                             </div>
                             <div className="min-w-0">
@@ -209,7 +209,7 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
             <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800/80">
                 <Link
                     href={drillsIndex({ query: { from: '/dashboard' } })}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] transition-colors hover:text-blue-700 dark:text-[#B3F52D] dark:hover:text-blue-300"
                 >
                     <span>Practice Quick Drill</span>
                     <ArrowRight className="size-3.5" />

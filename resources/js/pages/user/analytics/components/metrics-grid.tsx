@@ -22,16 +22,16 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
             {/* AVG SCORE */}
             <div className={cardClass}>
                 <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-black tracking-wider text-slate-400 uppercase">
+                    <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
                         Avg Score
                     </span>
                     <Award className="size-4 text-blue-500" />
                 </div>
                 <div className="mt-2 flex items-baseline gap-1.5">
-                    <span className="font-heading text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    <span className="font-heading text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
                         {activeStats.avgScore}%
                     </span>
-                    <span className="inline-flex items-center gap-0.5 rounded-full border border-emerald-200 bg-emerald-50 px-1.5 py-0.5 text-[9px] font-extrabold text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-400">
+                    <span className="inline-flex items-center gap-0.5 rounded-full border border-emerald-200 bg-emerald-50 px-1.5 py-0.5 text-[9px] font-semibold text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-400">
                         <TrendingUp className="size-2.5" />
                         Live
                     </span>
@@ -41,13 +41,13 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
             {/* PASSING RATE */}
             <div className={cardClass}>
                 <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-black tracking-wider text-slate-400 uppercase">
+                    <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
                         Passing Rate
                     </span>
                     <Target className="size-4 text-emerald-500" />
                 </div>
                 <div className="mt-2 flex items-baseline gap-1.5">
-                    <span className="font-heading text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    <span className="font-heading text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
                         {activeStats.passingRate}%
                     </span>
                     <span className="text-[9px] font-bold text-slate-400">
@@ -59,13 +59,13 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
             {/* TOTAL RUNS */}
             <div className={cardClass}>
                 <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-black tracking-wider text-slate-400 uppercase">
+                    <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
                         Total runs
                     </span>
                     <FileText className="size-4 text-indigo-500" />
                 </div>
                 <div className="mt-2">
-                    <span className="font-heading text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    <span className="font-heading text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
                         {activeStats.totalExams}
                     </span>
                     <p className="text-[9px] font-bold text-slate-400">
@@ -77,13 +77,13 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
             {/* QUESTIONS SOLVED */}
             <div className={cardClass}>
                 <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-black tracking-wider text-slate-400 uppercase">
+                    <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
                         Avg Time
                     </span>
                     <Clock className="size-4 text-purple-500" />
                 </div>
                 <div className="mt-2">
-                    <span className="font-heading text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    <span className="font-heading text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
                         {activeStats.avgDuration}
                     </span>
                     <p className="text-[9px] font-bold text-slate-400">
@@ -95,13 +95,13 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
             {/* STRONGEST AREA */}
             <div className={cardClass}>
                 <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-black tracking-wider text-slate-400 uppercase">
+                    <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
                         Strongest
                     </span>
                     <TrendingUp className="size-4 text-emerald-500" />
                 </div>
                 <div className="mt-2">
-                    <span className="line-clamp-1 font-heading text-base font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    <span className="line-clamp-1 font-heading text-base font-semibold tracking-tight text-slate-900 dark:text-white">
                         {activeStats.strongestArea}
                     </span>
                     <p className="text-[9px] font-bold text-slate-400">
@@ -113,13 +113,13 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
             {/* WEAKEST AREA */}
             <div className={cardClass}>
                 <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-black tracking-wider text-slate-400 uppercase">
+                    <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
                         Focus Area
                     </span>
                     <TrendingDown className="size-4 text-rose-500" />
                 </div>
                 <div className="mt-2">
-                    <span className="line-clamp-1 font-heading text-base font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    <span className="line-clamp-1 font-heading text-base font-semibold tracking-tight text-slate-900 dark:text-white">
                         {activeStats.weakestArea}
                     </span>
                     <p className="text-[9px] font-bold text-slate-400">

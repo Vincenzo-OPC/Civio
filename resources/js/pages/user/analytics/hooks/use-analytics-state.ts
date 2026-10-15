@@ -73,7 +73,7 @@ const defaultStats: AnalyticsStats = {
         {
             name: 'Clerical Ability',
             percentage: 85,
-            color: 'bg-blue-650 dark:bg-blue-500',
+            color: 'bg-blue-650 dark:bg-[#B3F52D] dark:text-[#0A0A0A]',
             correct: 34,
             total: 40,
         },

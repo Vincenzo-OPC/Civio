@@ -1,5 +1,5 @@
-# Civio local run on GT's MSI, side by side with the old study app.
-# Separate project/containers/volume: never touches hiraya-review-* (:8080/:5433) or Hermes (:8642).
+# Civio local run on GT's MSI, beside the other local stack.
+# Separate project, containers, and volume. Does not use ports 8080 or 5433, or Hermes on 8642.
 # Start: docker compose -p civio-local -f docker-compose.local.yml up -d --build
 # Stop:  docker compose -p civio-local -f docker-compose.local.yml stop
 name: civio-local

@@ -52,7 +52,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                     return (
                         <Link
                             href={`${questionsIndex().url}?page=${page}`}
-                            className="group flex w-fit items-center gap-1 text-xs font-black text-foreground transition transition-all duration-300 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                            className="group flex w-fit items-center gap-1 text-xs font-semibold text-foreground transition transition-all duration-300 hover:text-[#5B35F5] dark:text-[#B3F52D] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                         >
                             <ChevronLeft className="size-4" />
                             Back to Curation Manager
@@ -85,13 +85,13 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                         {/* 1. Main Question Card */}
                         <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-6">
                             <div className="mb-5 flex items-center justify-between border-b border-border pb-3.5">
-                                <span className="flex items-center gap-1.5 text-xs font-black text-foreground uppercase">
-                                    <HelpCircle className="size-4.5 text-blue-600 dark:text-blue-400" />
+                                <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground uppercase">
+                                    <HelpCircle className="size-4.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                     Exam Practice Question
                                 </span>
 
                                 <span
-                                    className={`inline-flex rounded-md border px-2 py-0.5 text-[9px] font-extrabold tracking-wide uppercase ${getCategoryStyles(question.category)}`}
+                                    className={`inline-flex rounded-md border px-2 py-0.5 text-[9px] font-semibold tracking-wide uppercase ${getCategoryStyles(question.category)}`}
                                 >
                                     {question.category}
                                 </span>
@@ -119,7 +119,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                                         >
                                             {/* Choice Index Badge */}
                                             <span
-                                                className={`inline-flex size-7 shrink-0 items-center justify-center rounded-lg text-xs font-black ${
+                                                className={`inline-flex size-7 shrink-0 items-center justify-center rounded-lg text-xs font-semibold ${
                                                     isCorrect
                                                         ? 'bg-emerald-600 text-white'
                                                         : 'bg-muted text-muted-foreground'
@@ -132,7 +132,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                                             <span
                                                 className={`text-xs leading-relaxed font-semibold ${
                                                     isCorrect
-                                                        ? 'font-extrabold text-foreground'
+                                                        ? 'font-semibold text-foreground'
                                                         : 'text-muted-foreground'
                                                 }`}
                                             >
@@ -146,7 +146,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
 
                                             {/* Correct marker check */}
                                             {isCorrect && (
-                                                <span className="ml-auto inline-flex items-center gap-1 rounded-md border border-emerald-200 bg-emerald-100/70 px-2 py-0.5 text-[9px] font-extrabold text-emerald-700 uppercase dark:border-emerald-900/50 dark:bg-emerald-950/40 dark:text-emerald-400">
+                                                <span className="ml-auto inline-flex items-center gap-1 rounded-md border border-emerald-200 bg-emerald-100/70 px-2 py-0.5 text-[9px] font-semibold text-emerald-700 uppercase dark:border-emerald-900/50 dark:bg-emerald-950/40 dark:text-emerald-400">
                                                     Correct Answer
                                                 </span>
                                             )}
@@ -158,8 +158,8 @@ export default function QuestionShow({ question }: QuestionShowProps) {
 
                         {/* 2. Rationale Card */}
                         <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-6">
-                            <h2 className="mb-4 flex items-center gap-1.5 border-b border-border pb-3.5 text-sm font-black text-foreground uppercase">
-                                <Sparkles className="size-4.5 text-blue-600 dark:text-blue-400" />
+                            <h2 className="mb-4 flex items-center gap-1.5 border-b border-border pb-3.5 text-sm font-semibold text-foreground uppercase">
+                                <Sparkles className="size-4.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                 Cognitive Explanation & Rationale
                             </h2>
                             <div className="text-sm leading-relaxed text-muted-foreground">
@@ -172,32 +172,32 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                     <div className="space-y-6">
                         {/* Summary specifications card */}
                         <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-6">
-                            <h2 className="mb-4 block border-b border-border pb-3 text-xs font-black tracking-wider text-foreground uppercase">
+                            <h2 className="mb-4 block border-b border-border pb-3 text-xs font-semibold tracking-wider text-foreground uppercase">
                                 Question Metrics
                             </h2>
 
                             <div className="space-y-4">
                                 {/* Unique ID */}
                                 <div className="flex items-center justify-between text-xs">
-                                    <span className="text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                                    <span className="text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                         Record ID
                                     </span>
-                                    <span className="font-mono font-black text-foreground">
+                                    <span className="font-mono font-semibold text-foreground">
                                         #{question.id}
                                     </span>
                                 </div>
 
                                 {/* Status */}
                                 <div className="flex items-center justify-between text-xs">
-                                    <span className="text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                                    <span className="text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                         Publish Status
                                     </span>
                                     {question.status === 'ACTIVE' ? (
-                                        <span className="inline-flex items-center gap-1 rounded-md border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[9px] font-extrabold text-emerald-700 uppercase dark:border-emerald-900/30 dark:bg-emerald-950/20 dark:bg-emerald-950/30 dark:text-emerald-400">
+                                        <span className="inline-flex items-center gap-1 rounded-md border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[9px] font-semibold text-emerald-700 uppercase dark:border-emerald-900/30 dark:bg-emerald-950/20 dark:bg-emerald-950/30 dark:text-emerald-400">
                                             Active
                                         </span>
                                     ) : (
-                                        <span className="inline-flex items-center gap-1 rounded-md border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-extrabold text-blue-600 uppercase dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-blue-400">
+                                        <span className="inline-flex items-center gap-1 rounded-md border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] uppercase dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                             Draft
                                         </span>
                                     )}
@@ -205,7 +205,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
 
                                 {/* Target Subcategory */}
                                 <div className="flex items-center justify-between text-xs">
-                                    <span className="text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                                    <span className="text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                         Subcategory
                                     </span>
                                     <span className="font-bold text-foreground capitalize">
@@ -215,7 +215,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
 
                                 {/* Language */}
                                 <div className="flex items-center justify-between text-xs font-bold">
-                                    <span className="flex items-center gap-1 text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                                    <span className="flex items-center gap-1 text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                         <Globe className="size-3.5 text-muted-foreground" />
                                         Language
                                     </span>
@@ -228,13 +228,13 @@ export default function QuestionShow({ question }: QuestionShowProps) {
 
                         {/* CSE Syllabus Mapping specs */}
                         <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-6">
-                            <h2 className="mb-4 block border-b border-border pb-3 text-xs font-black tracking-wider text-foreground uppercase">
+                            <h2 className="mb-4 block border-b border-border pb-3 text-xs font-semibold tracking-wider text-foreground uppercase">
                                 CSE Curation Guidelines
                             </h2>
 
                             <div className="space-y-3.5 text-xs leading-relaxed font-semibold text-muted-foreground">
                                 <div className="flex gap-2">
-                                    <Layers className="mt-0.5 size-4.5 shrink-0 text-blue-600 dark:text-blue-400" />
+                                    <Layers className="mt-0.5 size-4.5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                     <p>
                                         Always align practice questions directly
                                         to the official syllabus structure for
@@ -242,7 +242,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                                     </p>
                                 </div>
                                 <div className="flex gap-2">
-                                    <Activity className="mt-0.5 size-4.5 shrink-0 text-blue-600 dark:text-blue-400" />
+                                    <Activity className="mt-0.5 size-4.5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                     <p>
                                         Ensure distractor options are authentic
                                         and that rationales detail standard

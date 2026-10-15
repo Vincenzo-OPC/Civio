@@ -214,7 +214,7 @@ function RevealableAnswer({
             <div className="mt-4 ml-0 md:ml-8">
                 <button
                     onClick={() => setIsRevealed(true)}
-                    className="flex cursor-pointer items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-sm font-bold text-blue-700 transition-colors hover:bg-blue-100 dark:border-blue-900/50 dark:bg-blue-950/30 dark:text-blue-300 dark:hover:bg-blue-900/50"
+                    className="flex cursor-pointer items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-sm font-bold text-blue-700 transition-colors hover:bg-blue-100 dark:border-blue-900/50 dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-900/50"
                 >
                     <HelpCircle className="size-4" />
                     Show Explanation
@@ -331,7 +331,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                     parts.push(
                         <strong
                             key={`${keyPrefix}-bold-${match.index}`}
-                            className="font-extrabold text-slate-950 dark:text-white"
+                            className="font-semibold text-slate-950 dark:text-white"
                         >
                             {formatMathInline(match[2].trim())}
                         </strong>,
@@ -445,7 +445,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                 normalized.length > 4
             ) {
                 return (
-                    <strong className="font-extrabold text-slate-950 dark:text-white">
+                    <strong className="font-semibold text-slate-950 dark:text-white">
                         {parseInline(
                             normalized.substring(2, normalized.length - 2),
                         )}
@@ -490,7 +490,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
             rendered.push(
                 <div
                     key={`ladder-${key}`}
-                    className="my-8 flex flex-col font-mono text-xl font-black tracking-widest text-slate-800 dark:text-slate-200"
+                    className="my-8 flex flex-col font-mono text-xl font-semibold tracking-widest text-slate-800 dark:text-slate-200"
                 >
                     {ladderLines.map((line, i) => {
                         const parts = line.split('|');
@@ -500,7 +500,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
 
                         return (
                             <div key={i} className="flex items-center">
-                                <div className="w-12 shrink-0 text-right text-blue-600 dark:text-blue-400">
+                                <div className="w-12 shrink-0 text-right text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     {divisor}
                                 </div>
                                 <div
@@ -532,7 +532,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                     className="my-7 overflow-x-auto rounded-lg border border-slate-200 shadow-sm dark:border-slate-800"
                 >
                     <table className="w-full min-w-[36rem] text-left text-sm leading-relaxed">
-                        <thead className="bg-slate-100 text-xs font-extrabold text-slate-700 uppercase dark:bg-slate-900 dark:text-slate-200">
+                        <thead className="bg-slate-100 text-xs font-semibold text-slate-700 uppercase dark:bg-slate-900 dark:text-slate-200">
                             <tr>
                                 {headers.map((header, i) => (
                                     <th
@@ -682,7 +682,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                     rendered.push(
                         <h1
                             key={`h1-${idx}`}
-                            className="mt-8 mb-5 text-2xl leading-tight font-black text-slate-950 dark:text-white"
+                            className="mt-8 mb-5 text-2xl leading-tight font-semibold text-slate-950 dark:text-white"
                         >
                             {parseLineContent(headerText)}
                         </h1>,
@@ -695,9 +695,9 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                     rendered.push(
                         <h2
                             key={`h2-${idx}`}
-                            className={`mt-8 mb-4 flex items-center gap-2 border-b pb-3 text-xl leading-tight font-black dark:border-slate-800 dark:text-white ${
+                            className={`mt-8 mb-4 flex items-center gap-2 border-b pb-3 text-xl leading-tight font-semibold dark:border-slate-800 dark:text-white ${
                                 isCheckSection
-                                    ? 'border-blue-200 text-blue-800 dark:border-blue-900/50 dark:text-blue-300'
+                                    ? 'border-blue-200 text-blue-800 dark:border-blue-900/50 dark:text-[#B3F52D]'
                                     : 'border-slate-200 text-slate-950'
                             }`}
                         >
@@ -711,9 +711,9 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                     rendered.push(
                         <h3
                             key={`h3-${idx}`}
-                            className="mt-7 mb-3 flex items-center gap-2 text-lg leading-snug font-extrabold text-slate-900 dark:text-white"
+                            className="mt-7 mb-3 flex items-center gap-2 text-lg leading-snug font-semibold text-slate-900 dark:text-white"
                         >
-                            <BookOpen className="size-5 shrink-0 text-blue-600 dark:text-blue-400" />
+                            <BookOpen className="size-5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                             {parseLineContent(headerText)}
                         </h3>,
                     );
@@ -721,7 +721,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                     rendered.push(
                         <h4
                             key={`h4-${idx}`}
-                            className="mt-6 mb-2 text-base font-extrabold tracking-wide text-slate-800 uppercase dark:text-slate-200"
+                            className="mt-6 mb-2 text-base font-semibold tracking-wide text-slate-800 uppercase dark:text-slate-200"
                         >
                             {parseLineContent(headerText)}
                         </h4>,
@@ -742,7 +742,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                         key={`callout-${idx}`}
                         className="my-7 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-900/40 dark:border-amber-900/50 dark:bg-amber-950/20 dark:bg-amber-950/30"
                     >
-                        <span className="mb-2 flex items-center gap-2 text-sm font-black tracking-wide text-amber-800 uppercase dark:text-amber-300">
+                        <span className="mb-2 flex items-center gap-2 text-sm font-semibold tracking-wide text-amber-800 uppercase dark:text-amber-300">
                             <Lightbulb className="size-4" />
                             {label}
                         </span>
@@ -761,8 +761,8 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                         key={`q-${idx}`}
                         className="mt-7 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-900/50 dark:bg-blue-950/20 dark:bg-blue-950/30"
                     >
-                        <div className="flex items-start gap-3 text-base leading-7 font-extrabold text-slate-950 dark:text-white">
-                            <HelpCircle className="mt-1 size-5 shrink-0 text-blue-700 dark:text-blue-300" />
+                        <div className="flex items-start gap-3 text-base leading-7 font-semibold text-slate-950 dark:text-white">
+                            <HelpCircle className="mt-1 size-5 shrink-0 text-blue-700 dark:text-[#B3F52D]" />
                             <span>{parseLineContent(trimmed)}</span>
                         </div>
                     </div>,
@@ -777,7 +777,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                         key={`opt-${idx}`}
                         className="mt-2 ml-0 flex items-start gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-base leading-7 font-semibold text-slate-700 md:ml-8 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300"
                     >
-                        <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-slate-200 text-sm font-black text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+                        <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-slate-200 text-sm font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                             {trimmed.charAt(0)}
                         </span>
                         <span>{parseLineContent(trimmed.substring(2))}</span>
@@ -847,7 +847,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                                 key={`ul-${j}`}
                                 className="mt-2 flex gap-3 pl-1 text-base leading-8 text-slate-700 dark:text-slate-300"
                             >
-                                <span className="mt-3 size-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400" />
+                                <span className="mt-3 size-1.5 shrink-0 rounded-full bg-[#5B35F5] dark:bg-blue-400" />
                                 <span>
                                     {parseLineContent(
                                         nextTrimmed.substring(1).trim(),
@@ -943,7 +943,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                                 key={`ul-${j}`}
                                 className="mt-2 flex gap-3 pl-1 text-base leading-8 text-slate-700 dark:text-slate-300"
                             >
-                                <span className="mt-3 size-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400" />
+                                <span className="mt-3 size-1.5 shrink-0 rounded-full bg-[#5B35F5] dark:bg-blue-400" />
                                 <span>
                                     {parseLineContent(
                                         nextTrimmed.substring(1).trim(),
@@ -987,7 +987,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                         key={`ul-${idx}`}
                         className="my-2 flex gap-3 pl-1 text-base leading-8 text-slate-700 dark:text-slate-300"
                     >
-                        <span className="mt-3 size-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400" />
+                        <span className="mt-3 size-1.5 shrink-0 rounded-full bg-[#5B35F5] dark:bg-blue-400" />
                         <span>
                             {parseLineContent(trimmed.substring(1).trim())}
                         </span>
@@ -1004,7 +1004,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                         key={`ol-${idx}`}
                         className="my-2 flex gap-3 pl-1 text-base leading-8 text-slate-700 dark:text-slate-300"
                     >
-                        <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-slate-200 text-sm font-black text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+                        <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-slate-200 text-sm font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                             {trimmed.substring(0, numberEnd)}
                         </span>
                         <span>

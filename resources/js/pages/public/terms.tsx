@@ -30,7 +30,7 @@ export default function Terms({ terms }: TermsProps) {
                                 <FileText className="h-6 w-6" />
                             </div>
                             <div>
-                                <h1 className="font-heading text-2xl font-black tracking-tight text-foreground sm:text-4xl sm:text-5xl md:text-4xl">
+                                <h1 className="font-heading text-2xl font-semibold tracking-tight text-foreground sm:text-4xl sm:text-5xl md:text-4xl">
                                     Terms of Service
                                 </h1>
                                 <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
@@ -56,7 +56,7 @@ export default function Terms({ terms }: TermsProps) {
                             ) : (
                                 <div className="space-y-8">
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             1. Acceptance of Terms
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
@@ -70,7 +70,7 @@ export default function Terms({ terms }: TermsProps) {
                                     </section>
 
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             2. Description of Service
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
@@ -87,7 +87,7 @@ export default function Terms({ terms }: TermsProps) {
                                     </section>
 
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             3. Unofficial Study Aid Disclaimer
                                         </h2>
                                         <p className="text-rose-650 text-base leading-relaxed font-semibold text-foreground text-muted-foreground dark:text-rose-400">
@@ -105,7 +105,7 @@ export default function Terms({ terms }: TermsProps) {
                                     </section>
 
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             4. Account Rules & Google Login
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
@@ -133,7 +133,7 @@ export default function Terms({ terms }: TermsProps) {
                                     </section>
 
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             5. Fair Use & Prohibited Acts
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
@@ -151,7 +151,7 @@ export default function Terms({ terms }: TermsProps) {
                                     </section>
 
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             6. Modifications and Termination of
                                             Service
                                         </h2>

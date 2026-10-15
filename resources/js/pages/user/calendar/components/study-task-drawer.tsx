@@ -119,7 +119,7 @@ export function StudyTaskDrawer({
                         <div className="flex items-center justify-between gap-2">
                             <Badge
                                 variant="outline"
-                                className="border-blue-200 bg-blue-50 text-xs font-bold text-blue-700 dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300"
+                                className="border-blue-200 bg-blue-50 text-xs font-bold text-blue-700 dark:border-blue-900 dark:bg-blue-950/40 dark:text-[#B3F52D]"
                             >
                                 <Tag className="mr-1 size-3" />
                                 {catName}
@@ -146,7 +146,7 @@ export function StudyTaskDrawer({
                             </button>
                         </div>
 
-                        <SheetTitle className="mt-3 text-lg font-black text-slate-900 dark:text-white">
+                        <SheetTitle className="mt-3 text-lg font-semibold text-slate-900 dark:text-white">
                             {task.title}
                         </SheetTitle>
 
@@ -174,7 +174,7 @@ export function StudyTaskDrawer({
                                         <Sparkles className="size-4" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xs font-black text-slate-900 dark:text-white">
+                                        <h4 className="text-xs font-semibold text-slate-900 dark:text-white">
                                             Targeted Practice Drill
                                         </h4>
                                         <p className="text-[11px] text-slate-600 dark:text-slate-400">
@@ -224,7 +224,7 @@ export function StudyTaskDrawer({
                                             className="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 text-xs font-semibold text-slate-800 shadow-2xs transition hover:border-blue-300 hover:bg-blue-50/50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-blue-700 dark:hover:bg-blue-950/30"
                                         >
                                             <div className="flex items-center gap-2 truncate pr-2">
-                                                <BookOpen className="size-4 shrink-0 text-blue-600 dark:text-blue-400" />
+                                                <BookOpen className="size-4 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                                 <span className="truncate">
                                                     {mod.title}
                                                 </span>

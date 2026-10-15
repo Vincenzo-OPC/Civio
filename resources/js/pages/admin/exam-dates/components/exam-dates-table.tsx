@@ -55,12 +55,12 @@ export function ExamDatesTable({
                                 </td>
                                 <td className="px-4 py-3">
                                     {exam.is_active ? (
-                                        <span className="inline-flex items-center gap-1 rounded-md border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[9px] font-extrabold text-emerald-700 uppercase dark:border-emerald-900/30 dark:bg-emerald-950/20 dark:bg-emerald-950/30 dark:text-emerald-400">
+                                        <span className="inline-flex items-center gap-1 rounded-md border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[9px] font-semibold text-emerald-700 uppercase dark:border-emerald-900/30 dark:bg-emerald-950/20 dark:bg-emerald-950/30 dark:text-emerald-400">
                                             <CheckCircle className="h-3 w-3" />
                                             Active
                                         </span>
                                     ) : (
-                                        <span className="inline-flex items-center gap-1 rounded-md border border-slate-200 bg-slate-100 px-2 py-0.5 text-[9px] font-extrabold text-slate-600 uppercase dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400">
+                                        <span className="inline-flex items-center gap-1 rounded-md border border-slate-200 bg-slate-100 px-2 py-0.5 text-[9px] font-semibold text-slate-600 uppercase dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400">
                                             <XCircle className="h-3 w-3" />
                                             Inactive
                                         </span>
@@ -97,7 +97,7 @@ export function ExamDatesTable({
                                                         onClick={() =>
                                                             onEdit(exam)
                                                         }
-                                                        className="rounded-md p-1.5 text-blue-600 hover:bg-blue-50 dark:bg-blue-950/30 dark:text-blue-400 dark:hover:bg-blue-950/30"
+                                                        className="rounded-md p-1.5 text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-50 dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-950/30"
                                                     >
                                                         <Edit2 className="h-4 w-4" />
                                                     </button>

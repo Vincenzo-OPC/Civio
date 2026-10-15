@@ -92,14 +92,14 @@ export function AttemptExpandableRow({ attempt }: AttemptExpandableRowProps) {
                                 className="h-8 gap-1.5 text-xs font-bold"
                             >
                                 <Link href={retakeUrl}>
-                                    <RotateCcw className="size-3.5 text-blue-600 dark:text-blue-400" />
+                                    <RotateCcw className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                     Retake {isDrill ? 'Drill' : 'Exam'}
                                 </Link>
                             </Button>
                             <Button
                                 asChild
                                 size="sm"
-                                className="h-8 gap-1.5 bg-blue-600 text-xs font-bold text-white hover:bg-blue-700"
+                                className="h-8 gap-1.5 bg-[#5B35F5] text-xs font-bold text-white hover:bg-[#4a2ad4]"
                             >
                                 <Link
                                     href={`/exams?attempt_id=${attempt.id}&from=history`}

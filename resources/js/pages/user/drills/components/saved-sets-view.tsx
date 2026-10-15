@@ -124,7 +124,7 @@ export function SavedSetsView({
             {/* Header / Intro */}
             <div className="flex flex-col justify-between gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs sm:flex-row sm:items-center sm:p-6">
                 <div className="flex items-start gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400">
+                    <div className="flex size-10 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                         <Bookmark className="size-5" />
                     </div>
                     <div>
@@ -168,7 +168,7 @@ export function SavedSetsView({
                     <button
                         type="button"
                         onClick={() => setIsCreateModalOpen(true)}
-                        className="flex cursor-pointer items-center gap-1.5 rounded-xl bg-blue-600 px-4 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-blue-700 active:scale-95"
+                        className="flex cursor-pointer items-center gap-1.5 rounded-xl bg-[#5B35F5] px-4 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-[#4a2ad4] active:scale-95"
                     >
                         <Plus className="size-4" />
                         <span>New Practice Set</span>
@@ -189,11 +189,11 @@ export function SavedSetsView({
                             >
                                 <div>
                                     <div className="flex items-start justify-between">
-                                        <div className="flex size-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+                                        <div className="flex size-10 items-center justify-center rounded-xl bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                             <Folder className="size-5" />
                                         </div>
                                         <div className="flex items-center gap-1.5">
-                                            <span className="rounded-full bg-muted px-2.5 py-0.5 text-[11px] font-black text-foreground">
+                                            <span className="rounded-full bg-muted px-2.5 py-0.5 text-[11px] font-semibold text-foreground">
                                                 {set.questions_count} Question
                                                 {set.questions_count === 1
                                                     ? ''
@@ -206,7 +206,7 @@ export function SavedSetsView({
                                                     setSetForEdit(set);
                                                 }}
                                                 title="Edit Set & Questions"
-                                                className="cursor-pointer rounded-lg p-1 text-muted-foreground opacity-70 transition hover:bg-blue-50 hover:text-blue-600 hover:opacity-100 dark:hover:bg-blue-950/40"
+                                                className="cursor-pointer rounded-lg p-1 text-muted-foreground opacity-70 transition hover:bg-blue-50 hover:text-[#5B35F5] dark:text-[#B3F52D] hover:opacity-100 dark:hover:bg-blue-950/40"
                                             >
                                                 <Pencil className="size-3.5" />
                                             </button>
@@ -257,7 +257,7 @@ export function SavedSetsView({
                                         onClick={() =>
                                             onLaunchSavedSetDrill(set.id)
                                         }
-                                        className="flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-blue-600 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-blue-700 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
+                                        className="flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-[#5B35F5] py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-[#4a2ad4] active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
                                     >
                                         <Play className="size-3.5 fill-current" />
                                         <span>
@@ -295,7 +295,7 @@ export function SavedSetsView({
                     <button
                         type="button"
                         onClick={() => setIsCreateModalOpen(true)}
-                        className="mt-4 flex items-center gap-1.5 rounded-xl bg-blue-600 px-4 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-blue-700 active:scale-95"
+                        className="mt-4 flex items-center gap-1.5 rounded-xl bg-[#5B35F5] px-4 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-[#4a2ad4] active:scale-95"
                     >
                         <Plus className="size-4" />
                         <span>Create Your First Set</span>
@@ -364,7 +364,7 @@ export function SavedSetsView({
                                 <button
                                     type="submit"
                                     disabled={isSubmitting || !setName.trim()}
-                                    className="rounded-xl bg-blue-600 px-5 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-blue-700 active:scale-95 disabled:opacity-40"
+                                    className="rounded-xl bg-[#5B35F5] px-5 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-[#4a2ad4] active:scale-95 disabled:opacity-40"
                                 >
                                     {isSubmitting
                                         ? 'Creating...'

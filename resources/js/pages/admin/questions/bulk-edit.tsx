@@ -576,7 +576,7 @@ export default function BulkEditQuestions({
             >
                 <div className="mb-4 rounded-xl border border-purple-200 bg-purple-50 p-4 dark:border-purple-900/30 dark:bg-purple-950/20">
                     <p className="text-sm font-semibold text-purple-800 dark:text-purple-300">
-                        <span className="font-black">Multi-Edit Tip:</span> Hold{' '}
+                        <span className="font-semibold">Multi-Edit Tip:</span> Hold{' '}
                         <strong>Alt</strong> and click on multiple inputs (text
                         boxes, options, dropdowns) to link them. Typing in one
                         will magically update all linked fields at the same
@@ -638,7 +638,7 @@ export default function BulkEditQuestions({
                     </button>
                     {selectedToRemove.size > 0 && (
                         <div className="flex w-full items-center justify-between gap-4 rounded-xl border border-blue-200 bg-blue-50 px-4 py-2 sm:w-auto sm:justify-start dark:border-blue-900/30 dark:bg-blue-950/20">
-                            <span className="text-xs font-bold text-blue-800 dark:text-blue-300">
+                            <span className="text-xs font-bold text-blue-800 dark:text-[#B3F52D]">
                                 {selectedToRemove.size} questions selected
                             </span>
                             <div className="flex items-center gap-2">
@@ -680,7 +680,7 @@ export default function BulkEditQuestions({
                         </h4>
                         <div className="flex flex-col items-end gap-3 sm:flex-row">
                             <div className="w-full sm:w-1/3">
-                                <label className="mb-1 block text-[10px] font-extrabold text-slate-400 uppercase">
+                                <label className="mb-1 block text-[10px] font-semibold text-slate-400 uppercase">
                                     Find (Exact Match)
                                 </label>
                                 <input
@@ -694,7 +694,7 @@ export default function BulkEditQuestions({
                                 />
                             </div>
                             <div className="w-full sm:w-1/3">
-                                <label className="mb-1 block text-[10px] font-extrabold text-slate-400 uppercase">
+                                <label className="mb-1 block text-[10px] font-semibold text-slate-400 uppercase">
                                     Replace With
                                 </label>
                                 <input
@@ -712,7 +712,7 @@ export default function BulkEditQuestions({
                                     <button
                                         type="button"
                                         onClick={() => setMatchCase(!matchCase)}
-                                        className={`flex items-center gap-1 rounded-lg px-2 py-1 text-[10px] font-bold transition ${matchCase ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'}`}
+                                        className={`flex items-center gap-1 rounded-lg px-2 py-1 text-[10px] font-bold transition ${matchCase ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-[#B3F52D]' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'}`}
                                         title="Match Case"
                                     >
                                         <Type className="size-3" />
@@ -721,7 +721,7 @@ export default function BulkEditQuestions({
                                     <button
                                         type="button"
                                         onClick={() => setUseRegex(!useRegex)}
-                                        className={`flex items-center gap-1 rounded-lg px-2 py-1 text-[10px] font-bold transition ${useRegex ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'}`}
+                                        className={`flex items-center gap-1 rounded-lg px-2 py-1 text-[10px] font-bold transition ${useRegex ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-[#B3F52D]' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'}`}
                                         title="Use Regular Expression"
                                     >
                                         <Regex className="size-3" />
@@ -732,7 +732,7 @@ export default function BulkEditQuestions({
                                     type="button"
                                     disabled={!findText}
                                     onClick={handleFindAndReplace}
-                                    className="h-8 w-full rounded-lg bg-blue-600 px-4 py-1.5 text-xs font-bold text-white shadow-sm transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+                                    className="h-8 w-full rounded-lg bg-[#5B35F5] px-4 py-1.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#4a2ad4] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
                                 >
                                     Replace All
                                 </button>
@@ -749,7 +749,7 @@ export default function BulkEditQuestions({
                         </h4>
                         <div className="grid grid-cols-1 items-end gap-3 md:grid-cols-2 xl:grid-cols-5">
                             <div className="w-full">
-                                <label className="mb-1 block text-[10px] font-extrabold text-slate-400 uppercase">
+                                <label className="mb-1 block text-[10px] font-semibold text-slate-400 uppercase">
                                     Category
                                 </label>
                                 <SelectField
@@ -766,7 +766,7 @@ export default function BulkEditQuestions({
                                 />
                             </div>
                             <div className="w-full sm:flex-1">
-                                <label className="mb-1 block text-[10px] font-extrabold text-slate-400 uppercase">
+                                <label className="mb-1 block text-[10px] font-semibold text-slate-400 uppercase">
                                     Subcategory
                                 </label>
                                 <SelectField
@@ -796,7 +796,7 @@ export default function BulkEditQuestions({
                                 batchSubcategory === 'Word analogy' ||
                                 batchSubcategory === 'Word Analogy') && (
                                 <div className="w-full sm:flex-1">
-                                    <label className="mb-1 block text-[10px] font-extrabold text-slate-400 uppercase">
+                                    <label className="mb-1 block text-[10px] font-semibold text-slate-400 uppercase">
                                         Language
                                     </label>
                                     <SelectField
@@ -812,7 +812,7 @@ export default function BulkEditQuestions({
                                 </div>
                             )}
                             <div className="w-full">
-                                <label className="mb-1 block text-[10px] font-extrabold text-slate-400 uppercase">
+                                <label className="mb-1 block text-[10px] font-semibold text-slate-400 uppercase">
                                     Status
                                 </label>
                                 <SelectField
@@ -1023,7 +1023,7 @@ export default function BulkEditQuestions({
                                     )}
 
                                     <div className="mb-4">
-                                        <label className="mb-1 block text-[10px] font-extrabold text-slate-400 uppercase">
+                                        <label className="mb-1 block text-[10px] font-semibold text-slate-400 uppercase">
                                             Question Stem
                                         </label>
                                         <AutoResizeTextarea
@@ -1063,7 +1063,7 @@ export default function BulkEditQuestions({
                                     </div>
 
                                     <div className="mb-4">
-                                        <label className="mb-2 block text-[10px] font-extrabold text-slate-400 uppercase">
+                                        <label className="mb-2 block text-[10px] font-semibold text-slate-400 uppercase">
                                             Distractor Options & Correct Choice
                                         </label>
                                         <div className="space-y-3">
@@ -1109,7 +1109,7 @@ export default function BulkEditQuestions({
                                                             className="size-4.5 cursor-pointer accent-emerald-600"
                                                         />
                                                         <span
-                                                            className={`inline-flex size-6.5 shrink-0 items-center justify-center rounded-lg text-[10px] font-black ${
+                                                            className={`inline-flex size-6.5 shrink-0 items-center justify-center rounded-lg text-[10px] font-semibold ${
                                                                 q.correct_option ===
                                                                 optIndex
                                                                     ? 'bg-emerald-600 text-white'
@@ -1142,7 +1142,7 @@ export default function BulkEditQuestions({
                                     </div>
 
                                     <div>
-                                        <label className="mb-1 block text-[10px] font-extrabold text-muted-foreground uppercase">
+                                        <label className="mb-1 block text-[10px] font-semibold text-muted-foreground uppercase">
                                             Cognitive Explanation & Rationale
                                         </label>
                                         <AutoResizeTextarea

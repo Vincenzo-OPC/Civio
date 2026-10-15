@@ -90,7 +90,7 @@ export function ConfigView({
                 onClick={makeBackOnClick({
                     onFallback: handleBack,
                 })}
-                className="flex w-fit cursor-pointer items-center gap-1 text-xs font-black text-foreground transition hover:text-blue-600 focus:outline-none dark:text-blue-400 dark:hover:text-blue-400"
+                className="flex w-fit cursor-pointer items-center gap-1 text-xs font-semibold text-foreground transition hover:text-[#5B35F5] dark:text-[#B3F52D] focus:outline-none dark:text-[#B3F52D] dark:hover:text-blue-400"
             >
                 <ChevronLeft className="size-4" />
                 {backLabel}
@@ -135,7 +135,7 @@ export function ConfigView({
                 <div className="flex flex-col gap-5 lg:col-span-2">
                     {/* 1. Subcategory Selector */}
                     <Card className="p-5 shadow-2xs">
-                        <div className="mb-3 flex items-center gap-1.5 text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                        <div className="mb-3 flex items-center gap-1.5 text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                             <ListFilter className="size-3" />
                             <span>Select Subcategories</span>
                         </div>
@@ -156,7 +156,7 @@ export function ConfigView({
                                                 : ''
                                         } ${
                                             isSelected
-                                                ? 'border-blue-600 bg-blue-50 text-blue-700 dark:border-blue-500 dark:bg-blue-950/30 dark:text-blue-400'
+                                                ? 'border-blue-600 bg-blue-50 text-blue-700 dark:border-blue-500 dark:bg-blue-950/30 dark:text-[#B3F52D]'
                                                 : 'border-border bg-white text-muted-foreground hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-400 dark:hover:bg-slate-800'
                                         }`}
                                     >
@@ -173,11 +173,11 @@ export function ConfigView({
                     {/* 2. Question Count Selector */}
                     <Card className="p-5 shadow-2xs">
                         <div className="mb-3 flex items-center justify-between">
-                            <div className="flex items-center gap-1.5 text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                            <div className="flex items-center gap-1.5 text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                 <ListOrdered className="size-3" />
                                 <span>Question Count</span>
                             </div>
-                            <span className="dark:bg-blue-950/30/50 rounded-md bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-blue-600 dark:bg-blue-950/20 dark:text-blue-400">
+                            <span className="dark:bg-blue-950/30/50 rounded-md bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/20 dark:text-[#B3F52D]">
                                 Total Questions:{' '}
                                 {questionCount === 'all'
                                     ? filteredQCount
@@ -205,7 +205,7 @@ export function ConfigView({
                                                     : ''
                                             } ${
                                                 !isCustomMode && isSelected
-                                                    ? 'border-blue-600 bg-blue-600 text-white shadow-xs'
+                                                    ? 'border-blue-600 bg-[#5B35F5] text-white shadow-xs'
                                                     : 'border-border bg-slate-50/50 text-muted-foreground hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-800'
                                             }`}
                                         >
@@ -229,7 +229,7 @@ export function ConfigView({
                                         : ''
                                 } ${
                                     !isCustomMode && questionCount === 'all'
-                                        ? 'border-blue-600 bg-blue-600 text-white shadow-xs'
+                                        ? 'border-blue-600 bg-[#5B35F5] text-white shadow-xs'
                                         : 'border-border bg-slate-50/50 text-muted-foreground hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-800'
                                 }`}
                             >
@@ -335,7 +335,7 @@ export function ConfigView({
                     {/* 3. Language Selector (Only shown if current selection contains Filipino/Tagalog questions) */}
                     {hasFilipinoQuestions && (
                         <Card className="p-5 shadow-2xs">
-                            <div className="mb-3.5 flex items-center gap-1.5 text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                            <div className="mb-3.5 flex items-center gap-1.5 text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                 <Globe className="size-3" />
                                 <span>Language</span>
                             </div>
@@ -361,7 +361,7 @@ export function ConfigView({
                                                     onChange={() =>
                                                         setLanguage(lang)
                                                     }
-                                                    className="size-4 border-border text-blue-600 focus:ring-blue-500 dark:border-slate-800 dark:bg-slate-900 dark:text-blue-400"
+                                                    className="size-4 border-border text-[#5B35F5] dark:text-[#B3F52D] focus:ring-blue-500 dark:border-slate-800 dark:bg-slate-900 dark:text-[#B3F52D]"
                                                 />
                                                 {lang === 'Both'
                                                     ? 'Both (Mixed)'
@@ -376,7 +376,7 @@ export function ConfigView({
 
                     {/* 4. Practice Mode Selector */}
                     <Card className="p-5 shadow-2xs">
-                        <div className="mb-3.5 flex items-center gap-1.5 text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                        <div className="mb-3.5 flex items-center gap-1.5 text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                             <Timer className="size-3" />
                             <span>Practice Mode</span>
                         </div>
@@ -396,12 +396,12 @@ export function ConfigView({
                                 }`}
                             >
                                 <div
-                                    className={`rounded-lg p-2 ${isTimed ? 'bg-blue-600 text-white' : 'bg-slate-100 text-muted-foreground dark:bg-slate-900'}`}
+                                    className={`rounded-lg p-2 ${isTimed ? 'bg-[#5B35F5] text-white' : 'bg-slate-100 text-muted-foreground dark:bg-slate-900'}`}
                                 >
                                     <Timer className="size-4" />
                                 </div>
                                 <div>
-                                    <span className="block text-xs font-black text-foreground">
+                                    <span className="block text-xs font-semibold text-foreground">
                                         Timed Practice
                                     </span>
                                     <span className="mt-1 block text-[10px] leading-normal text-muted-foreground">
@@ -432,7 +432,7 @@ export function ConfigView({
                                     <Hourglass className="size-4" />
                                 </div>
                                 <div>
-                                    <span className="block text-xs font-black text-foreground">
+                                    <span className="block text-xs font-semibold text-foreground">
                                         Untimed Practice
                                     </span>
                                     <span className="mt-1 block text-[10px] leading-normal text-muted-foreground">
@@ -491,9 +491,9 @@ export function ConfigView({
                                         Format:
                                     </span>
                                     <span
-                                        className={`rounded-full px-2.5 py-0.5 text-[10px] font-extrabold uppercase ${
+                                        className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase ${
                                             isTimed
-                                                ? 'bg-blue-50 text-blue-700 dark:bg-blue-500/15 dark:text-blue-400'
+                                                ? 'bg-blue-50 text-blue-700 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/15 dark:text-[#B3F52D]'
                                                 : 'bg-emerald-50 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-400'
                                         }`}
                                     >
@@ -508,7 +508,7 @@ export function ConfigView({
                         <div className="mt-8">
                             <button
                                 onClick={startDrill}
-                                className="group flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 py-3 text-sm font-bold text-white shadow-md transition duration-300 hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                className="group flex w-full items-center justify-center gap-2 rounded-lg bg-[#5B35F5] py-3 text-sm font-bold text-white shadow-md transition duration-300 hover:bg-[#4a2ad4] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                             >
                                 Start Drill
                                 <ChevronRight className="size-4" />

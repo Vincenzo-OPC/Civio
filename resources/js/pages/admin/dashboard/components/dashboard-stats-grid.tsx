@@ -16,14 +16,14 @@ export function DashboardStatsGrid({ metrics }: DashboardStatsGridProps) {
                 suffix="total records"
                 icon={Database}
                 iconBgColor="bg-blue-50 dark:bg-blue-950/50"
-                iconTextColor="text-blue-600 dark:text-blue-400 dark:text-blue-400"
+                iconTextColor="text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-[#B3F52D]"
                 footer={{
                     highlight: `${metrics.active_questions} Verified`,
                     highlightColor:
                         'text-emerald-600 dark:text-emerald-400 dark:text-emerald-400',
                     secondary: `${metrics.draft_questions} Drafts`,
                     secondaryColor:
-                        'text-blue-600 dark:text-blue-400 dark:text-blue-400',
+                        'text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-[#B3F52D]',
                 }}
             />
 

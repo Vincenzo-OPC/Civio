@@ -96,7 +96,7 @@ export function AIGeneratorPanel({
 
                     <div className="mb-4 flex items-center justify-between border-b border-border pb-4">
                         <h2 className="inline-flex items-center gap-2 text-base font-bold text-foreground">
-                            <Sparkles className="size-4 animate-pulse text-blue-600 dark:text-blue-400" />
+                            <Sparkles className="size-4 animate-pulse text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                             Configuration Options
                         </h2>
 
@@ -104,7 +104,7 @@ export function AIGeneratorPanel({
                             <DialogTrigger asChild>
                                 <button
                                     type="button"
-                                    className="inline-flex items-center gap-1.5 rounded-lg border border-blue-200 bg-blue-50 px-2 py-1 text-[10px] font-bold text-blue-700 transition-colors hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:bg-blue-900/50"
+                                    className="inline-flex items-center gap-1.5 rounded-lg border border-blue-200 bg-blue-50 px-2 py-1 text-[10px] font-bold text-blue-700 transition-colors hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-[#B3F52D] dark:hover:bg-blue-900/50"
                                 >
                                     <HelpCircle className="size-3" />
                                     How it works
@@ -147,7 +147,7 @@ export function AIGeneratorPanel({
                                                 </span>
                                             </li>
                                             <li className="flex items-start gap-2 text-slate-600 dark:text-slate-400">
-                                                <div className="mt-0.5 rounded bg-blue-100 p-0.5 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
+                                                <div className="mt-0.5 rounded bg-blue-100 p-0.5 text-blue-700 dark:bg-blue-900/30 dark:text-[#B3F52D]">
                                                     <Sparkle className="size-3" />
                                                 </div>
                                                 <span className="leading-snug">
@@ -492,7 +492,7 @@ export function AIGeneratorPanel({
                                                 }}
                                                 className={`flex items-center justify-between rounded-lg px-3 py-2 text-xs font-bold transition-colors hover:bg-primary/10 hover:text-primary ${
                                                     aiCount === num
-                                                        ? 'bg-primary/15 font-black text-primary'
+                                                        ? 'bg-primary/15 font-semibold text-primary'
                                                         : 'text-foreground'
                                                 }`}
                                             >
@@ -503,7 +503,7 @@ export function AIGeneratorPanel({
                                                         : 'Questions'}
                                                 </span>
                                                 {aiCount === num && (
-                                                    <span className="text-[10px] font-black text-primary uppercase">
+                                                    <span className="text-[10px] font-semibold text-primary uppercase">
                                                         Selected
                                                     </span>
                                                 )}
@@ -587,7 +587,7 @@ export function AIGeneratorPanel({
                                                                 abstract
                                                                 reasoning
                                                             </td>
-                                                            <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Flash / 3.7
                                                                 Pro
@@ -611,7 +611,7 @@ export function AIGeneratorPanel({
                                                                 Data
                                                                 interpretation
                                                             </td>
-                                                            <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Flash / 3.7
                                                                 Pro
@@ -631,7 +631,7 @@ export function AIGeneratorPanel({
                                                             <td className="p-3 font-bold">
                                                                 Word analogy
                                                             </td>
-                                                            <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Flash / 3.7
                                                                 Pro
@@ -652,7 +652,7 @@ export function AIGeneratorPanel({
                                                                 assumptions &
                                                                 conclusions
                                                             </td>
-                                                            <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Pro / 3.7
                                                                 Flash
@@ -1015,7 +1015,7 @@ export function AIGeneratorPanel({
                             <div className="border-emerald-250 shadow-3xs dark:bg-emerald-950/30/40 flex items-start gap-3 rounded-xl border border-l-4 border-l-emerald-500 bg-emerald-50 p-4 text-xs font-semibold text-emerald-800 dark:border-emerald-900/30 dark:bg-emerald-950/20">
                                 <CheckCircle2 className="text-emerald-650 mt-0.5 size-4.5 shrink-0" />
                                 <div className="flex flex-1 flex-col gap-1.5">
-                                    <span className="font-extrabold text-emerald-950">
+                                    <span className="font-semibold text-emerald-950">
                                         Questions Generated!
                                     </span>
                                     <span className="leading-relaxed font-semibold text-muted-foreground">
@@ -1026,7 +1026,7 @@ export function AIGeneratorPanel({
                                     </span>
                                     <Link
                                         href={questionsDrafts().url}
-                                        className="group mt-1 inline-flex items-center gap-1 font-extrabold text-emerald-700 underline transition-all duration-300 hover:text-emerald-900 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                        className="group mt-1 inline-flex items-center gap-1 font-semibold text-emerald-700 underline transition-all duration-300 hover:text-emerald-900 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                     >
                                         Go to Drafts Review &rarr;
                                     </Link>

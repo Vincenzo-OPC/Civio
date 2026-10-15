@@ -249,7 +249,7 @@ export function ScheduleModal({
         <Dialog open={isOpen} onOpenChange={onOpenChange}>
             <DialogContent className="max-h-[90vh] overflow-y-auto">
                 <DialogHeader>
-                    <DialogTitle className="text-2xl font-black tracking-tight">
+                    <DialogTitle className="text-2xl font-semibold tracking-tight">
                         {isEditMode ? 'Edit Study Item' : 'Add Study Item'}
                     </DialogTitle>
                     {selectedDate && (
@@ -410,7 +410,7 @@ export function ScheduleModal({
                                                             }}
                                                             className={`w-full rounded px-3 py-1.5 text-left text-xs transition-colors ${
                                                                 isSelected
-                                                                    ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
+                                                                    ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-[#B3F52D]'
                                                                     : 'text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-900'
                                                             }`}
                                                         >
@@ -548,7 +548,7 @@ export function ScheduleModal({
                                             className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold shadow-sm transition-all ${
                                                 isAttached
                                                     ? 'border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100/80 dark:border-emerald-900/50 dark:border-emerald-950 dark:bg-emerald-950/30 dark:bg-emerald-950/40 dark:text-emerald-300'
-                                                    : 'border-blue-200 bg-white text-blue-700 hover:border-blue-300 hover:bg-blue-50 dark:border-blue-900/50 dark:border-slate-800 dark:bg-blue-950/30 dark:bg-slate-950 dark:text-blue-400'
+                                                    : 'border-blue-200 bg-white text-blue-700 hover:border-blue-300 hover:bg-blue-50 dark:border-blue-900/50 dark:border-slate-800 dark:bg-blue-950/30 dark:bg-slate-950 dark:text-[#B3F52D]'
                                             }`}
                                         >
                                             {isAttached ? (
@@ -573,7 +573,7 @@ export function ScheduleModal({
                         <Button variant="outline">Cancel</Button>
                     </DialogClose>
                     <Button
-                        className="bg-blue-600 hover:bg-blue-700"
+                        className="bg-[#5B35F5] hover:bg-[#4a2ad4]"
                         onClick={handleAddStudy}
                         disabled={isLoading || !formData.title.trim()}
                     >

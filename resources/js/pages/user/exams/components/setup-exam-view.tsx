@@ -233,12 +233,12 @@ export function SetupExamView({
                                     onClick={onPrint}
                                     disabled={isPrinting}
                                     title="Download PDF Exam Booklet"
-                                    className="group flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-sm transition-all hover:border-blue-300 hover:bg-slate-50 hover:text-blue-600 disabled:opacity-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                                    className="group flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-sm transition-all hover:border-blue-300 hover:bg-slate-50 hover:text-[#5B35F5] dark:text-[#B3F52D] disabled:opacity-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
                                 >
                                     {isPrinting ? (
                                         <div className="size-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
                                     ) : (
-                                        <Download className="size-5 text-slate-500 transition-colors group-hover:text-blue-600 dark:text-slate-400" />
+                                        <Download className="size-5 text-slate-500 transition-colors group-hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-slate-400" />
                                     )}
                                 </button>
                             )}

@@ -66,13 +66,13 @@ export function ShiftScheduleModal({
         <Dialog open={isOpen} onOpenChange={onOpenChange}>
             <DialogContent className="max-w-2xl">
                 <DialogHeader>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
+                    <div className="flex items-center gap-2 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                         <CalendarDays className="size-5" />
                         <span className="text-xs font-bold tracking-wider uppercase">
                             Schedule Catch-Up & Rebalance
                         </span>
                     </div>
-                    <DialogTitle className="text-xl font-black text-slate-900 dark:text-white">
+                    <DialogTitle className="text-xl font-semibold text-slate-900 dark:text-white">
                         Shift Study Schedule
                     </DialogTitle>
                     <DialogDescription className="text-xs text-slate-500 dark:text-slate-400">
@@ -99,15 +99,15 @@ export function ShiftScheduleModal({
                         }`}
                     >
                         <div className="flex items-start gap-3">
-                            <div className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white shadow-2xs">
+                            <div className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-[#5B35F5] text-white shadow-2xs">
                                 <RotateCw className="size-4" />
                             </div>
                             <div className="min-w-0 flex-1">
                                 <div className="flex items-center justify-between gap-2">
-                                    <h4 className="text-xs font-black text-slate-900 dark:text-white">
+                                    <h4 className="text-xs font-semibold text-slate-900 dark:text-white">
                                         Auto Catch-Up (Restart from Today)
                                     </h4>
-                                    <span className="inline-flex items-center rounded-md bg-blue-100 px-1.5 py-0.5 text-[10px] font-extrabold text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+                                    <span className="inline-flex items-center rounded-md bg-blue-100 px-1.5 py-0.5 text-[10px] font-semibold text-blue-700 dark:bg-blue-950 dark:text-[#B3F52D]">
                                         Recommended
                                     </span>
                                 </div>
@@ -135,7 +135,7 @@ export function ShiftScheduleModal({
                                 <FastForward className="size-4" />
                             </div>
                             <div className="min-w-0 flex-1">
-                                <h4 className="text-xs font-black text-slate-900 dark:text-white">
+                                <h4 className="text-xs font-semibold text-slate-900 dark:text-white">
                                     Push Forward by Fixed Days
                                 </h4>
                                 <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
@@ -190,7 +190,7 @@ export function ShiftScheduleModal({
                         type="button"
                         onClick={handleShift}
                         disabled={isLoading}
-                        className="h-9 gap-1.5 bg-blue-600 text-xs font-bold text-white shadow-2xs hover:bg-blue-700"
+                        className="h-9 gap-1.5 bg-[#5B35F5] text-xs font-bold text-white shadow-2xs hover:bg-[#4a2ad4]"
                     >
                         <Sparkles className="size-3.5" />
                         <span>{isLoading ? 'Shifting...' : 'Apply Shift'}</span>

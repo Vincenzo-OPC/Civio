@@ -365,7 +365,7 @@ export default function DraftsLearnList({
                     <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
                         <table className="w-full text-left text-xs">
                             <thead>
-                                <tr className="border-b border-border bg-muted/60 text-[11px] font-black tracking-wider text-muted-foreground uppercase">
+                                <tr className="border-b border-border bg-muted/60 text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
                                     <th className="w-12 py-3.5 pr-3 pl-4 text-center">
                                         Approve
                                     </th>
@@ -429,7 +429,7 @@ export default function DraftsLearnList({
                                                 <span className="w-fit max-w-[150px] truncate rounded-full border border-border bg-muted px-2 py-0.5 text-[10px] font-bold text-foreground">
                                                     {m.category}
                                                 </span>
-                                                <span className="w-fit max-w-[150px] truncate rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-blue-400">
+                                                <span className="w-fit max-w-[150px] truncate rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                                     {m.subcategory}
                                                 </span>
                                             </div>
@@ -484,7 +484,7 @@ export default function DraftsLearnList({
                                                                 )
                                                             }
                                                             title="Edit Inline"
-                                                            className="cursor-pointer rounded-lg border border-border bg-card p-1.5 text-muted-foreground transition hover:border-blue-200 hover:text-blue-600 dark:hover:text-blue-400"
+                                                            className="cursor-pointer rounded-lg border border-border bg-card p-1.5 text-muted-foreground transition hover:border-blue-200 hover:text-[#5B35F5] dark:text-[#B3F52D] dark:hover:text-blue-400"
                                                         >
                                                             <Edit3 className="size-4" />
                                                         </button>
@@ -528,7 +528,7 @@ export default function DraftsLearnList({
                                 <span className="rounded-full border border-border bg-muted px-3 py-0.5 text-xs font-semibold text-foreground">
                                     {m.category}
                                 </span>
-                                <span className="rounded-full border border-blue-100 bg-blue-50 px-3 py-0.5 text-xs font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-blue-400">
+                                <span className="rounded-full border border-blue-100 bg-blue-50 px-3 py-0.5 text-xs font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                     {m.subcategory}
                                 </span>
                                 <span className="rounded-full border border-border bg-muted px-3 py-0.5 text-xs font-semibold text-foreground">
@@ -731,7 +731,7 @@ export default function DraftsLearnList({
                             ) : (
                                 <div className="space-y-3">
                                     <div>
-                                        <h2 className="text-lg leading-tight font-black text-foreground">
+                                        <h2 className="text-lg leading-tight font-semibold text-foreground">
                                             {m.title}
                                         </h2>
                                         <p className="mt-0.5 text-sm leading-relaxed font-bold text-muted-foreground">
@@ -747,7 +747,7 @@ export default function DraftsLearnList({
                                         <div className="mb-4 flex items-center justify-between gap-1.5 border-b border-border pb-2.5">
                                             <div className="flex items-center gap-1.5">
                                                 <FileText className="size-4 text-muted-foreground" />
-                                                <span className="text-[10px] font-black tracking-wider text-muted-foreground uppercase">
+                                                <span className="text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                                     Lesson Material Preview
                                                 </span>
                                             </div>
@@ -763,11 +763,11 @@ export default function DraftsLearnList({
                                                             }),
                                                         )
                                                     }
-                                                    className={`cursor-pointer rounded-md px-2 py-1 text-[9.5px] font-extrabold uppercase transition ${
+                                                    className={`cursor-pointer rounded-md px-2 py-1 text-[9.5px] font-semibold uppercase transition ${
                                                         (previewMode[m.id] ||
                                                             'preview') ===
                                                         'preview'
-                                                            ? 'shadow-3xs bg-card text-blue-600 dark:text-blue-400 dark:text-white'
+                                                            ? 'shadow-3xs bg-card text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-white'
                                                             : 'text-muted-foreground hover:text-foreground'
                                                     }`}
                                                 >
@@ -783,10 +783,10 @@ export default function DraftsLearnList({
                                                             }),
                                                         )
                                                     }
-                                                    className={`cursor-pointer rounded-md px-2 py-1 text-[9.5px] font-extrabold uppercase transition ${
+                                                    className={`cursor-pointer rounded-md px-2 py-1 text-[9.5px] font-semibold uppercase transition ${
                                                         previewMode[m.id] ===
                                                         'raw'
-                                                            ? 'shadow-3xs bg-card text-blue-600 dark:text-blue-400 dark:text-white'
+                                                            ? 'shadow-3xs bg-card text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-white'
                                                             : 'text-muted-foreground hover:text-foreground'
                                                     }`}
                                                 >

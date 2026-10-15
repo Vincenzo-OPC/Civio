@@ -145,7 +145,7 @@ export default function Register({ passwordRules, turnstileSiteKey }: Props) {
                                     !termsAccepted ||
                                     !!(turnstileSiteKey && !turnstileToken)
                                 }
-                                className="mt-2 h-12 w-full rounded-xl bg-blue-600 text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-blue-700 disabled:opacity-50 dark:bg-blue-600 dark:hover:bg-blue-500"
+                                className="mt-2 h-12 w-full rounded-xl bg-[#5B35F5] text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-[#4a2ad4] disabled:opacity-50 dark:bg-[#B3F52D] dark:text-[#0A0A0A] dark:hover:bg-[#9ED41F]"
                                 tabIndex={6}
                                 data-test="register-user-button"
                             >
@@ -181,7 +181,7 @@ export default function Register({ passwordRules, turnstileSiteKey }: Props) {
                                 className="h-11 rounded-xl border-slate-200 font-medium transition-colors hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
                                 onClick={() => setSocialModal('facebook')}
                             >
-                                <FacebookIcon className="mr-2 h-4 w-4 text-blue-600 transition-transform group-hover:scale-110 dark:text-blue-400" />
+                                <FacebookIcon className="mr-2 h-4 w-4 text-[#5B35F5] dark:text-[#B3F52D] transition-transform group-hover:scale-110 dark:text-[#B3F52D]" />
                                 Facebook
                             </Button> */}
                         </div>
@@ -191,7 +191,7 @@ export default function Register({ passwordRules, turnstileSiteKey }: Props) {
                             <TextLink
                                 href={login()}
                                 tabIndex={7}
-                                className="font-semibold text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+                                className="font-semibold text-[#5B35F5] dark:text-[#B3F52D] hover:text-blue-500 dark:text-[#B3F52D] dark:hover:text-blue-300"
                             >
                                 Log in
                             </TextLink>

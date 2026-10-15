@@ -27,7 +27,7 @@ export function AiDiagnosticBanner({ aiAnalysis }: AiDiagnosticBannerProps) {
                     </div>
                     <div>
                         <div className="flex items-center gap-2">
-                            <h4 className="text-sm font-black text-slate-900 sm:text-base dark:text-white">
+                            <h4 className="text-sm font-semibold text-slate-900 sm:text-base dark:text-white">
                                 AI Diagnostic Report & Personalized Strategy
                             </h4>
                             {status === 'ready' && (

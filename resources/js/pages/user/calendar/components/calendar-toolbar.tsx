@@ -126,7 +126,7 @@ export function CalendarToolbar({
                             onClick={() => setActiveView('month')}
                             className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all ${
                                 activeView === 'month'
-                                    ? 'bg-white text-blue-600 shadow-2xs dark:bg-slate-900 dark:text-blue-400'
+                                    ? 'bg-white text-[#5B35F5] dark:text-[#B3F52D] shadow-2xs dark:bg-slate-900 dark:text-[#B3F52D]'
                                     : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
                             }`}
                         >
@@ -139,7 +139,7 @@ export function CalendarToolbar({
                             onClick={() => setActiveView('week')}
                             className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all ${
                                 activeView === 'week'
-                                    ? 'bg-white text-blue-600 shadow-2xs dark:bg-slate-900 dark:text-blue-400'
+                                    ? 'bg-white text-[#5B35F5] dark:text-[#B3F52D] shadow-2xs dark:bg-slate-900 dark:text-[#B3F52D]'
                                     : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
                             }`}
                         >
@@ -152,7 +152,7 @@ export function CalendarToolbar({
                             onClick={() => setActiveView('agenda')}
                             className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all ${
                                 activeView === 'agenda'
-                                    ? 'bg-white text-blue-600 shadow-2xs dark:bg-slate-900 dark:text-blue-400'
+                                    ? 'bg-white text-[#5B35F5] dark:text-[#B3F52D] shadow-2xs dark:bg-slate-900 dark:text-[#B3F52D]'
                                     : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
                             }`}
                         >
@@ -180,7 +180,7 @@ export function CalendarToolbar({
                                 onClick={() => setSelectedCategory('all')}
                                 className={`cursor-pointer text-xs font-semibold ${
                                     selectedCategory === 'all'
-                                        ? 'bg-blue-50 font-bold text-blue-700 dark:bg-blue-950/50 dark:text-blue-300'
+                                        ? 'bg-blue-50 font-bold text-blue-700 dark:bg-blue-950/50 dark:text-[#B3F52D]'
                                         : ''
                                 }`}
                             >
@@ -192,7 +192,7 @@ export function CalendarToolbar({
                                     onClick={() => setSelectedCategory(cat.id)}
                                     className={`cursor-pointer text-xs font-semibold ${
                                         selectedCategory === cat.id
-                                            ? 'bg-blue-50 font-bold text-blue-700 dark:bg-blue-950/50 dark:text-blue-300'
+                                            ? 'bg-blue-50 font-bold text-blue-700 dark:bg-blue-950/50 dark:text-[#B3F52D]'
                                             : ''
                                     }`}
                                 >
@@ -220,7 +220,7 @@ export function CalendarToolbar({
                     </Button>
 
                     <div className="flex items-center gap-2 px-1">
-                        <span className="min-w-35 text-center text-sm font-black text-slate-900 sm:min-w-42.5 sm:text-base dark:text-white">
+                        <span className="min-w-35 text-center text-sm font-semibold text-slate-900 sm:min-w-42.5 sm:text-base dark:text-white">
                             {activeView === 'week'
                                 ? weekRangeLabel
                                 : `${currentMonthName} ${currentYear}`}
@@ -231,7 +231,7 @@ export function CalendarToolbar({
                             size="sm"
                             onClick={handleToday}
                             disabled={isCurrentMonth && activeView !== 'week'}
-                            className="h-7 px-2 text-[11px] font-bold text-blue-600 hover:bg-blue-50 dark:text-blue-400 dark:hover:bg-blue-950/40"
+                            className="h-7 px-2 text-[11px] font-bold text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-50 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
                         >
                             Today
                         </Button>
@@ -270,7 +270,7 @@ export function CalendarToolbar({
                     <Button
                         size="sm"
                         onClick={onOpenAddModal}
-                        className="h-9 gap-1.5 bg-blue-600 text-xs font-bold text-white shadow-2xs transition-all hover:bg-blue-700 active:scale-95"
+                        className="h-9 gap-1.5 bg-[#5B35F5] text-xs font-bold text-white shadow-2xs transition-all hover:bg-[#4a2ad4] active:scale-95"
                     >
                         <Plus className="size-3.5" />
                         <span>Add Task</span>
@@ -298,9 +298,9 @@ export function CalendarToolbar({
                             </DropdownMenuItem>
                             <DropdownMenuItem
                                 onClick={onOpenShiftModal}
-                                className="cursor-pointer gap-2 py-2 text-xs font-semibold text-blue-600 dark:text-blue-400"
+                                className="cursor-pointer gap-2 py-2 text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
                             >
-                                <RotateCw className="size-3.5 text-blue-600 dark:text-blue-400" />
+                                <RotateCw className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                 <span>Shift / Auto Catch-Up</span>
                             </DropdownMenuItem>
                             <DropdownMenuItem

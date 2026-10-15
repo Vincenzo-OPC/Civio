@@ -72,7 +72,7 @@ export function ExamCountdown({
                             <span className="text-[10px] font-bold tracking-widest text-rose-600 uppercase dark:text-rose-400">
                                 Exam Day Is Here
                             </span>
-                            <h3 className="mt-0.5 font-heading text-lg font-black tracking-tight text-slate-900 dark:text-white">
+                            <h3 className="mt-0.5 font-heading text-lg font-semibold tracking-tight text-slate-900 dark:text-white">
                                 Civil Service Exam date has arrived:{' '}
                                 <span className="underline decoration-slate-300 decoration-2 underline-offset-4 dark:decoration-white/40">
                                     {examDate}
@@ -100,27 +100,27 @@ export function ExamCountdown({
             }`}
         >
             {/* Decorative background lights */}
-            <div className="pointer-events-none absolute -top-20 -right-20 h-48 w-48 rounded-full bg-blue-400/10 blur-3xl dark:bg-blue-500/10" />
+            <div className="pointer-events-none absolute -top-20 -right-20 h-48 w-48 rounded-full bg-blue-400/10 blur-3xl dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10" />
             <div className="pointer-events-none absolute -bottom-20 -left-20 h-48 w-48 rounded-full bg-indigo-400/10 blur-3xl dark:bg-indigo-500/10" />
 
             <div className="relative z-10 flex flex-col gap-3 sm:gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="flex items-center gap-4">
                     <div
-                        className={`flex size-14 shrink-0 items-center justify-center rounded-full border backdrop-blur-md ${isUrgent ? 'border-amber-200 bg-amber-100/50 dark:border-amber-500/30 dark:bg-amber-500/20' : 'border-blue-200 bg-blue-100/50 dark:border-blue-500/30 dark:bg-blue-500/20'}`}
+                        className={`flex size-14 shrink-0 items-center justify-center rounded-full border backdrop-blur-md ${isUrgent ? 'border-amber-200 bg-amber-100/50 dark:border-amber-500/30 dark:bg-amber-500/20' : 'border-blue-200 bg-blue-100/50 dark:border-blue-500/30 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/20'}`}
                     >
                         <Clock
-                            className={`size-7 ${isUrgent ? 'animate-pulse text-amber-600 dark:text-amber-400' : 'text-blue-600 dark:text-blue-400'}`}
+                            className={`size-7 ${isUrgent ? 'animate-pulse text-amber-600 dark:text-amber-400' : 'text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]'}`}
                         />
                     </div>
                     <div>
                         <span
-                            className={`text-[10px] font-bold tracking-widest uppercase ${isUrgent ? 'text-amber-600 dark:text-amber-400' : 'text-blue-600 dark:text-blue-400'}`}
+                            className={`text-[10px] font-bold tracking-widest uppercase ${isUrgent ? 'text-amber-600 dark:text-amber-400' : 'text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]'}`}
                         >
                             {isUrgent
                                 ? '⚠️ EXAM Nearing COUNTDOWN'
                                 : 'Exam Countdown'}
                         </span>
-                        <h3 className="mt-0.5 font-heading text-lg font-black tracking-tight text-slate-900 dark:text-white">
+                        <h3 className="mt-0.5 font-heading text-lg font-semibold tracking-tight text-slate-900 dark:text-white">
                             Civil Service Exam:{' '}
                             <span className="underline decoration-slate-300 decoration-2 underline-offset-4 dark:decoration-white/40">
                                 {examDate}
@@ -139,7 +139,7 @@ export function ExamCountdown({
                     <div className="flex items-start gap-1.5 sm:gap-2">
                         {/* Days */}
                         <div className="flex flex-col items-center">
-                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-extrabold tracking-tight text-slate-800 backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-white">
+                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-semibold tracking-tight text-slate-800 backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-white">
                                 {padZero(timeLeft.days)}
                             </div>
                             <span className="mt-1.5 text-[9px] font-bold text-slate-500 uppercase sm:text-[10px] dark:text-slate-400">
@@ -147,13 +147,13 @@ export function ExamCountdown({
                             </span>
                         </div>
 
-                        <span className="flex h-12 items-center font-mono text-xl font-black tracking-tight text-slate-300 sm:h-14 sm:text-xl dark:text-slate-600">
+                        <span className="flex h-12 items-center font-mono text-xl font-semibold tracking-tight text-slate-300 sm:h-14 sm:text-xl dark:text-slate-600">
                             :
                         </span>
 
                         {/* Hours */}
                         <div className="flex flex-col items-center">
-                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-extrabold tracking-tight text-slate-800 backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-white">
+                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-semibold tracking-tight text-slate-800 backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-white">
                                 {padZero(timeLeft.hours)}
                             </div>
                             <span className="mt-1.5 text-[9px] font-bold text-slate-500 uppercase sm:text-[10px] dark:text-slate-400">
@@ -161,13 +161,13 @@ export function ExamCountdown({
                             </span>
                         </div>
 
-                        <span className="flex h-12 items-center font-mono text-xl font-black tracking-tight text-slate-300 sm:h-14 sm:text-xl dark:text-slate-600">
+                        <span className="flex h-12 items-center font-mono text-xl font-semibold tracking-tight text-slate-300 sm:h-14 sm:text-xl dark:text-slate-600">
                             :
                         </span>
 
                         {/* Minutes */}
                         <div className="flex flex-col items-center">
-                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-extrabold tracking-tight text-slate-800 backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-white">
+                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-semibold tracking-tight text-slate-800 backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-white">
                                 {padZero(timeLeft.minutes)}
                             </div>
                             <span className="mt-1.5 text-[9px] font-bold text-slate-500 uppercase sm:text-[10px] dark:text-slate-400">
@@ -175,13 +175,13 @@ export function ExamCountdown({
                             </span>
                         </div>
 
-                        <span className="flex h-12 items-center font-mono text-xl font-black tracking-tight text-slate-300 sm:h-14 sm:text-xl dark:text-slate-600">
+                        <span className="flex h-12 items-center font-mono text-xl font-semibold tracking-tight text-slate-300 sm:h-14 sm:text-xl dark:text-slate-600">
                             :
                         </span>
 
                         {/* Seconds */}
                         <div className="flex flex-col items-center">
-                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-extrabold tracking-tight text-blue-600 backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-blue-400">
+                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-[#B3F52D]">
                                 {padZero(timeLeft.seconds)}
                             </div>
                             <span className="mt-1.5 text-[9px] font-bold text-slate-500 uppercase sm:text-[10px] dark:text-slate-400">

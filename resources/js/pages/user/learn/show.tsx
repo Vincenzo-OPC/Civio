@@ -114,7 +114,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
 
             <div
                 ref={progressRef}
-                className="fixed top-0 left-0 z-50 h-1 w-full origin-left scale-x-0 bg-blue-600 transition-transform duration-100"
+                className="fixed top-0 left-0 z-50 h-1 w-full origin-left scale-x-0 bg-[#5B35F5] transition-transform duration-100"
             />
 
             <PageContainer className="bg-slate-50/30 p-4 md:p-6 dark:bg-slate-900/20">
@@ -136,7 +136,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                         <Link
                             href={backUrl}
                             onClick={makeBackOnClick()}
-                            className="group flex w-fit items-center gap-1 text-sm font-black text-foreground transition transition-all duration-300 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400 dark:hover:text-blue-400"
+                            className="group flex w-fit items-center gap-1 text-sm font-semibold text-foreground transition transition-all duration-300 hover:text-[#5B35F5] dark:text-[#B3F52D] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D] dark:hover:text-blue-400"
                         >
                             <ChevronLeft className="size-4" />
                             {label}
@@ -149,7 +149,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                         <article className="group animate-fade-in rounded-xl border border-border bg-card p-5 shadow-sm transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none md:p-9">
                             <div className="flex flex-wrap items-center gap-2 border-b border-border pb-5">
                                 <span
-                                    className={`rounded-full border px-3 py-0.5 text-xs font-extrabold uppercase ${getCategoryStyles(module.category)}`}
+                                    className={`rounded-full border px-3 py-0.5 text-xs font-semibold uppercase ${getCategoryStyles(module.category)}`}
                                 >
                                     {module.category}
                                 </span>
@@ -172,7 +172,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                                 </div>
                             )}
 
-                            <h1 className="mt-6 font-heading text-xl leading-tight font-black text-foreground sm:text-3xl md:text-4xl">
+                            <h1 className="mt-6 font-heading text-xl leading-tight font-semibold text-foreground sm:text-3xl md:text-4xl">
                                 {module.title}
                             </h1>
 
@@ -180,7 +180,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                                 {module.summary}
                             </p>
 
-                            <div className="mt-6 flex items-center gap-4 text-xs font-extrabold tracking-wide text-muted-foreground uppercase">
+                            <div className="mt-6 flex items-center gap-4 text-xs font-semibold tracking-wide text-muted-foreground uppercase">
                                 <div className="flex items-center gap-1.5">
                                     <Calendar className="size-4" />
                                     <span>Updated {module.updated_at}</span>
@@ -275,7 +275,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                                 {!canReadFull && (
                                     <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-center justify-center bg-gradient-to-t from-white/95 via-white/90 to-transparent p-4 pt-32 text-center sm:p-6 dark:from-slate-950/95 dark:via-slate-950/90">
                                         <div className="max-w-2xl rounded-2xl border border-primary/20 bg-background/80 p-4 shadow-xl backdrop-blur-md sm:p-6 lg:p-8">
-                                            <h3 className="font-heading text-xl font-black text-foreground">
+                                            <h3 className="font-heading text-xl font-semibold text-foreground">
                                                 Unlock Full Lesson for Free
                                             </h3>
                                             <p className="mt-3 text-base leading-relaxed font-semibold text-muted-foreground">
@@ -313,8 +313,8 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                     <aside className="group flex min-w-0 flex-col gap-3 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none sm:gap-6">
                         <Card className="p-5 shadow-xs">
                             <div className="flex items-center gap-2 border-b border-border pb-3">
-                                <BookMarked className="size-4 text-blue-600 dark:text-blue-400" />
-                                <span className="text-sm font-black text-foreground uppercase">
+                                <BookMarked className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                <span className="text-sm font-semibold text-foreground uppercase">
                                     Syllabus Overview
                                 </span>
                             </div>
@@ -347,7 +347,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                             </div>
 
                             <div className="mt-6 rounded-lg bg-slate-50 p-4 dark:bg-slate-900/50">
-                                <span className="flex items-center gap-2 text-xs font-black tracking-wide text-muted-foreground uppercase">
+                                <span className="flex items-center gap-2 text-xs font-semibold tracking-wide text-muted-foreground uppercase">
                                     <Lightbulb className="size-4 text-amber-500" />
                                     Learning Goal
                                 </span>
@@ -361,7 +361,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
 
                         {recommended.length > 0 && (
                             <Card className="p-5 shadow-xs">
-                                <span className="mb-4 block border-b border-border pb-3 text-sm font-black text-foreground uppercase">
+                                <span className="mb-4 block border-b border-border pb-3 text-sm font-semibold text-foreground uppercase">
                                     Related Modules
                                 </span>
                                 <div className="flex flex-col gap-3.5">
@@ -371,7 +371,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                                             href={`/learn/${rec.slug}`}
                                             className="group group block border-b border-border/40 pb-3 transition-all duration-300 last:border-0 last:pb-0 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                         >
-                                            <h4 className="line-clamp-2 text-sm font-black text-foreground transition hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-400">
+                                            <h4 className="line-clamp-2 text-sm font-semibold text-foreground transition hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:hover:text-blue-400">
                                                 {rec.title}
                                             </h4>
                                             <span className="mt-1 flex items-center gap-1.5 text-xs font-bold text-muted-foreground uppercase">

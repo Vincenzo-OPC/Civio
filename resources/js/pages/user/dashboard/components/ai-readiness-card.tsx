@@ -126,7 +126,7 @@ export default function AiReadinessCard({
                             <Brain className="size-6" />
                         </div>
                         <div>
-                            <h3 className="flex items-center justify-center gap-2 text-xl font-black tracking-tight text-slate-900 md:justify-start dark:text-white">
+                            <h3 className="flex items-center justify-center gap-2 text-xl font-semibold tracking-tight text-slate-900 md:justify-start dark:text-white">
                                 {analysisMode === 'ai'
                                     ? 'AI Readiness Report'
                                     : 'Readiness Report'}
@@ -156,7 +156,7 @@ export default function AiReadinessCard({
                             <Brain className="size-6" />
                         </div>
                         <div>
-                            <h3 className="flex items-center justify-center gap-2 text-xl font-black tracking-tight text-slate-900 md:justify-start dark:text-white">
+                            <h3 className="flex items-center justify-center gap-2 text-xl font-semibold tracking-tight text-slate-900 md:justify-start dark:text-white">
                                 {analysisMode === 'ai'
                                     ? 'AI Readiness Report'
                                     : 'Readiness Report'}
@@ -173,7 +173,7 @@ export default function AiReadinessCard({
                     <div>
                         <Link
                             href="/exams"
-                            className="group inline-flex items-center gap-1 rounded-lg bg-blue-600 px-3 py-1 text-xs font-extrabold text-white transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                            className="group inline-flex items-center gap-1 rounded-lg bg-[#5B35F5] px-3 py-1 text-xs font-semibold text-white transition transition-all duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                         >
                             Take Exam &rarr;
                         </Link>
@@ -187,20 +187,20 @@ export default function AiReadinessCard({
         return (
             <div className={containerClasses}>
                 {/* Background decorative glows */}
-                <div className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-blue-500/5 blur-3xl dark:bg-blue-500/10" />
+                <div className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-blue-500/5 blur-3xl dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10" />
                 <div className="pointer-events-none absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-indigo-500/5 blur-3xl dark:bg-indigo-500/10" />
 
                 <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
                     <div className="flex flex-col items-center gap-4 md:flex-row">
-                        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 text-blue-600 dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-blue-500/10 dark:bg-blue-950/30 dark:text-blue-400">
+                        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                             <Brain className="size-6 animate-pulse" />
                         </div>
                         <div>
-                            <h3 className="flex items-center justify-center gap-2 text-xl font-black tracking-tight text-slate-900 md:justify-start dark:text-white">
+                            <h3 className="flex items-center justify-center gap-2 text-xl font-semibold tracking-tight text-slate-900 md:justify-start dark:text-white">
                                 {analysisMode === 'ai'
                                     ? 'AI Readiness Report'
                                     : 'Readiness Report'}
-                                <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700 dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-blue-500/10 dark:bg-rose-950/30 dark:text-blue-400">
+                                <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700 dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10 dark:bg-rose-950/30 dark:text-[#B3F52D]">
                                     Locked
                                 </span>
                             </h3>
@@ -227,7 +227,7 @@ export default function AiReadinessCard({
         return (
             <div className={containerClasses}>
                 {/* Background decorative glows */}
-                <div className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-blue-500/5 blur-3xl dark:bg-blue-500/10" />
+                <div className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-blue-500/5 blur-3xl dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10" />
 
                 <div className="flex flex-col items-center justify-center gap-4 py-4 text-center sm:py-6">
                     <div className="relative flex size-18 items-center justify-center">
@@ -254,10 +254,10 @@ export default function AiReadinessCard({
                                 strokeDasharray={circumference}
                                 strokeDashoffset={strokeDashoffset}
                                 strokeLinecap="round"
-                                className="text-blue-600 transition-all duration-300 ease-out dark:text-blue-400"
+                                className="text-[#5B35F5] dark:text-[#B3F52D] transition-all duration-300 ease-out dark:text-[#B3F52D]"
                             />
                         </svg>
-                        <span className="text-xs font-black tracking-tight text-blue-600 dark:text-blue-400">
+                        <span className="text-xs font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                             {progress}%
                         </span>
                     </div>
@@ -318,13 +318,13 @@ export default function AiReadinessCard({
         return (
             <div className={containerClasses}>
                 {/* Background decorative glows */}
-                <div className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-blue-500/5 blur-3xl dark:bg-blue-500/10" />
+                <div className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-blue-500/5 blur-3xl dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10" />
                 <div className="pointer-events-none absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-indigo-500/5 blur-3xl dark:bg-indigo-500/10" />
 
                 {/* Header */}
                 <div className="mb-6 flex flex-col gap-4 border-b border-slate-200/80 pb-4 sm:flex-row sm:items-center sm:justify-between dark:border-slate-800/80">
                     <div className="flex items-center gap-3">
-                        <div className="flex size-10 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 text-blue-600 dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-blue-500/10 dark:bg-blue-950/30 dark:text-blue-400">
+                        <div className="flex size-10 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                             <Brain className="size-5" />
                         </div>
                         <div>
@@ -335,7 +335,7 @@ export default function AiReadinessCard({
                                 <Link
                                     href="/settings/preferences"
                                     title="Change analysis mode preference"
-                                    className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[9px] font-black tracking-wider uppercase transition-all duration-200 hover:scale-105 hover:bg-slate-100 dark:hover:bg-slate-800 ${
+                                    className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[9px] font-semibold tracking-wider uppercase transition-all duration-200 hover:scale-105 hover:bg-slate-100 dark:hover:bg-slate-800 ${
                                         analysisMode === 'ai'
                                             ? 'border-indigo-200 bg-indigo-50 text-indigo-700 dark:border-indigo-500/20 dark:bg-indigo-500/10 dark:text-indigo-400'
                                             : 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-400'
@@ -395,7 +395,7 @@ export default function AiReadinessCard({
                                             ? `/analytics/ai-analysis?attempt_id=${attemptId}`
                                             : '/analytics/ai-analysis'
                                     }
-                                    className="group inline-flex items-center gap-1 rounded-lg bg-blue-600 px-3 py-1 text-xs font-extrabold text-white transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                    className="group inline-flex items-center gap-1 rounded-lg bg-[#5B35F5] px-3 py-1 text-xs font-semibold text-white transition transition-all duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                 >
                                     Full Report &rarr;
                                 </Link>
@@ -442,13 +442,13 @@ export default function AiReadinessCard({
                             </svg>
                             <div className="flex flex-col items-center justify-center">
                                 <span
-                                    className={`text-3xl font-black ${textColor}`}
+                                    className={`text-3xl font-semibold ${textColor}`}
                                 >
                                     {prob}%
                                 </span>
                             </div>
                         </div>
-                        <span className="mt-2 text-[10px] font-black tracking-widest text-slate-500 uppercase dark:text-slate-400">
+                        <span className="mt-2 text-[10px] font-semibold tracking-widest text-slate-500 uppercase dark:text-slate-400">
                             Passing Probability
                         </span>
                     </div>

@@ -62,7 +62,7 @@ export default function SocialConsentModal({
                     <Button
                         type="button"
                         disabled={!accepted}
-                        className="flex-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 dark:bg-blue-500 dark:text-white dark:hover:bg-blue-600"
+                        className="flex-1 rounded-xl bg-[#5B35F5] text-white hover:bg-[#4a2ad4] disabled:opacity-50 dark:bg-[#B3F52D] dark:text-[#0A0A0A] dark:text-white dark:hover:bg-[#5B35F5]"
                         onClick={() => {
                             const url = new URL(
                                 redirectUrl,

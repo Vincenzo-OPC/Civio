@@ -38,16 +38,16 @@ export function HistoryKpiCards({ stats }: HistoryKpiCardsProps) {
                     <span className="text-xs font-bold text-muted-foreground uppercase">
                         Completed Runs
                     </span>
-                    <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+                    <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                         <BookCheck className="size-4" />
                     </div>
                 </div>
                 <div className="mt-3 flex items-baseline justify-between">
-                    <span className="text-2xl font-black tracking-tight text-foreground">
+                    <span className="text-2xl font-semibold tracking-tight text-foreground">
                         {total_attempts}
                     </span>
                     <div className="flex items-center gap-1.5 text-[11px] font-bold text-muted-foreground">
-                        <span className="text-blue-600 dark:text-blue-400">
+                        <span className="text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                             {total_exams} exams
                         </span>
                         <span>•</span>
@@ -73,7 +73,7 @@ export function HistoryKpiCards({ stats }: HistoryKpiCardsProps) {
                 </div>
                 <div className="mt-3 flex items-baseline justify-between">
                     <div className="flex items-baseline gap-1">
-                        <span className="text-2xl font-black tracking-tight text-foreground">
+                        <span className="text-2xl font-semibold tracking-tight text-foreground">
                             {avg_score}%
                         </span>
                     </div>
@@ -98,7 +98,7 @@ export function HistoryKpiCards({ stats }: HistoryKpiCardsProps) {
                     </div>
                 </div>
                 <div className="mt-3 flex items-baseline justify-between">
-                    <span className="text-2xl font-black tracking-tight text-foreground">
+                    <span className="text-2xl font-semibold tracking-tight text-foreground">
                         {total_duration}
                     </span>
                     <div className="flex items-center gap-1.5 text-[11px] font-bold text-muted-foreground">
@@ -123,7 +123,7 @@ export function HistoryKpiCards({ stats }: HistoryKpiCardsProps) {
                 </div>
                 <div className="mt-3 flex items-baseline justify-between">
                     <div className="flex items-baseline gap-1">
-                        <span className="text-2xl font-black tracking-tight text-foreground">
+                        <span className="text-2xl font-semibold tracking-tight text-foreground">
                             {streak}
                         </span>
                         <span className="text-xs font-bold text-muted-foreground">

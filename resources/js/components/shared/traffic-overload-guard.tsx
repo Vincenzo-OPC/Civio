@@ -116,7 +116,7 @@ export function TrafficOverloadGuard() {
                 <div className="dark:bg-amber-950/30/90 fixed right-4 bottom-4 z-[9999] flex animate-bounce items-center gap-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 shadow-lg backdrop-blur transition-all dark:border-amber-900/50 dark:bg-amber-950/95">
                     <RefreshCw className="size-4 animate-spin text-amber-600 dark:text-amber-400" />
                     <div className="flex flex-col">
-                        <span className="text-xs font-black text-amber-900 dark:text-amber-300">
+                        <span className="text-xs font-semibold text-amber-900 dark:text-amber-300">
                             Connection unstable
                         </span>
                         <span className="dark:text-amber-405 mt-0.5 text-[10px] leading-none text-amber-700">
@@ -138,7 +138,7 @@ export function TrafficOverloadGuard() {
                                 <AlertCircle className="size-8" />
                             </div>
 
-                            <h3 className="text-xl font-black text-slate-900 dark:text-white">
+                            <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                                 {errorType === 'rate_limit'
                                     ? 'Too Many Requests'
                                     : 'Server Under Heavy Load'}
@@ -160,7 +160,7 @@ export function TrafficOverloadGuard() {
                             <div className="mt-6 flex w-full gap-3">
                                 <button
                                     onClick={() => setIsOpen(false)}
-                                    className="flex-1 cursor-pointer rounded-xl bg-slate-100 py-3 text-sm font-black text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
+                                    className="flex-1 cursor-pointer rounded-xl bg-slate-100 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
                                 >
                                     Dismiss
                                 </button>
@@ -169,7 +169,7 @@ export function TrafficOverloadGuard() {
                                         setIsOpen(false);
                                         window.location.reload();
                                     }}
-                                    className="flex-1 cursor-pointer rounded-xl bg-blue-600 py-3 text-sm font-black text-white transition hover:bg-blue-700"
+                                    className="flex-1 cursor-pointer rounded-xl bg-[#5B35F5] py-3 text-sm font-semibold text-white transition hover:bg-[#4a2ad4]"
                                 >
                                     Reload Page
                                 </button>

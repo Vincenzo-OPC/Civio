@@ -21,10 +21,10 @@ export function SystemStatsCard({
                     <CardTitle className="text-sm font-medium">
                         Environment
                     </CardTitle>
-                    <Activity className="size-4 text-blue-500 transition-transform duration-300 group-hover:rotate-12 dark:text-blue-400" />
+                    <Activity className="size-4 text-blue-500 transition-transform duration-300 group-hover:rotate-12 dark:text-[#B3F52D]" />
                 </CardHeader>
                 <CardContent>
-                    <div className="text-2xl font-black tracking-tight text-slate-900 capitalize dark:text-white">
+                    <div className="text-2xl font-semibold tracking-tight text-slate-900 capitalize dark:text-white">
                         {environment}
                     </div>
                 </CardContent>
@@ -39,7 +39,7 @@ export function SystemStatsCard({
                 </CardHeader>
                 <CardContent>
                     <div
-                        className={`text-2xl font-black tracking-tight ${isMaintenanceMode ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-600 dark:text-emerald-400'}`}
+                        className={`text-2xl font-semibold tracking-tight ${isMaintenanceMode ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-600 dark:text-emerald-400'}`}
                     >
                         {isMaintenanceMode ? 'Maintenance' : 'Live'}
                     </div>
@@ -54,7 +54,7 @@ export function SystemStatsCard({
                     <Database className="size-4 text-amber-500 transition-transform duration-300 group-hover:-translate-y-0.5 dark:text-amber-400" />
                 </CardHeader>
                 <CardContent>
-                    <div className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+                    <div className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
                         {laravelVersion}
                     </div>
                 </CardContent>
@@ -66,7 +66,7 @@ export function SystemStatsCard({
                     <HardDrive className="size-4 text-indigo-500 transition-transform duration-300 group-hover:rotate-6 dark:text-indigo-400" />
                 </CardHeader>
                 <CardContent>
-                    <div className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+                    <div className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
                         {phpVersion}
                     </div>
                 </CardContent>

@@ -1,55 +1,78 @@
 /**
  * One-time browser storage migration for returning users.
  *
- * Builds before the Civio rename stored progress under a different key prefix.
- * On boot we copy each old key to its `civio_` name (only when the new key is
- * still empty) and delete the old one, so study bias, cookie consent, the drills
- * tab and in-tab navigation state survive the rename. Safe to call repeatedly.
+ * Older builds stored a few keys under a retired prefix. On boot we copy each
+ * known suffix to its `civio_` name when that name is still empty, then delete
+ * the old key. Safe to call repeatedly.
  */
 
-/** The only place the pre-rename key prefix is spelled out. */
-export const LEGACY_KEY_PREFIX = 'hiraya_';
 export const CURRENT_KEY_PREFIX = 'civio_';
 
-/** Key suffixes (after the prefix) kept in localStorage. */
+/** Key suffixes kept in localStorage. */
 export const LEGACY_LOCAL_KEYS = [
     'guest_study_bias_v1',
     'cookie_consent',
     'drills_active_tab',
 ] as const;
 
-/** Key suffixes (after the prefix) kept in sessionStorage. */
+/** Key suffixes kept in sessionStorage. */
 export const LEGACY_SESSION_KEYS = [
     'previous_location',
     'back_anchor',
     'exam_origin',
 ] as const;
 
-type KeyValueStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
+type KeyValueStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'> & {
+    readonly length?: number;
+    key?: (index: number) => string | null;
+};
 
 export interface StorageTargets {
     readonly local?: KeyValueStorage | null;
     readonly session?: KeyValueStorage | null;
 }
 
-/** Moves the given legacy keys in one storage. Returns how many were moved. */
+/** Moves a non-civio key that ends in a known suffix. Returns how many were moved. */
 export function migrateKeys(
     storage: KeyValueStorage,
     suffixes: readonly string[],
 ): number {
+    if (typeof storage.key !== 'function' || typeof storage.length !== 'number') {
+        return 0;
+    }
+
+    const found: string[] = [];
+
+    for (let index = 0; index < storage.length; index++) {
+        const name = storage.key(index);
+
+        if (
+            name &&
+            !name.startsWith(CURRENT_KEY_PREFIX) &&
+            suffixes.some((suffix) => name.endsWith(suffix))
+        ) {
+            found.push(name);
+        }
+    }
+
     let moved = 0;
 
-    for (const suffix of suffixes) {
-        const from = `${LEGACY_KEY_PREFIX}${suffix}`;
-        const to = `${CURRENT_KEY_PREFIX}${suffix}`;
-        const legacy = storage.getItem(from);
+    for (const from of found) {
+        const suffix = suffixes.find((item) => from.endsWith(item));
 
-        if (legacy === null) {
+        if (!suffix) {
+            continue;
+        }
+
+        const to = `${CURRENT_KEY_PREFIX}${suffix}`;
+        const previous = storage.getItem(from);
+
+        if (previous === null) {
             continue;
         }
 
         if (storage.getItem(to) === null) {
-            storage.setItem(to, legacy);
+            storage.setItem(to, previous);
             moved++;
         }
 

@@ -51,7 +51,7 @@ export function AppModal({
                 {(title || description) && (
                     <DialogHeader>
                         {title && (
-                            <DialogTitle className="font-heading text-lg font-black">
+                            <DialogTitle className="font-heading text-lg font-semibold">
                                 {title}
                             </DialogTitle>
                         )}

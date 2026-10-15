@@ -119,7 +119,7 @@ export function AdvancedFilters({
                 <div className="flex shrink-0 items-center justify-between border-b border-slate-100 bg-slate-50/50 p-4 sm:p-6 dark:border-slate-900 dark:bg-slate-900/10">
                     <div className="flex items-center gap-2">
                         <Filter className="size-5 text-slate-600 dark:text-slate-400" />
-                        <h3 className="font-heading text-xl font-black tracking-tight text-slate-900 dark:text-white">
+                        <h3 className="font-heading text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
                             Advanced Filters
                         </h3>
                     </div>
@@ -154,7 +154,7 @@ export function AdvancedFilters({
                                     onClick={() => handleStatusChange(value)}
                                     className={`rounded-lg border-2 px-3 py-2 text-xs font-bold transition ${
                                         filters.status === value
-                                            ? 'border-blue-500 bg-blue-50 text-blue-700 dark:border-blue-400 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-blue-400'
+                                            ? 'border-blue-500 bg-blue-50 text-blue-700 dark:border-blue-400 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-[#B3F52D]'
                                             : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-slate-300 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-slate-700'
                                     }`}
                                 >
@@ -185,7 +185,7 @@ export function AdvancedFilters({
                                     }
                                     className={`rounded-lg border-2 px-3 py-2 text-xs font-bold transition ${
                                         filters.termsAcceptance === value
-                                            ? 'border-blue-500 bg-blue-50 text-blue-700 dark:border-blue-400 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-blue-400'
+                                            ? 'border-blue-500 bg-blue-50 text-blue-700 dark:border-blue-400 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-[#B3F52D]'
                                             : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-slate-300 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-slate-700'
                                     }`}
                                 >
@@ -214,7 +214,7 @@ export function AdvancedFilters({
                                     onClick={() => handleRoleChange(value)}
                                     className={`rounded-lg border-2 px-3 py-2 text-xs font-bold transition ${
                                         filters.role === value
-                                            ? 'border-blue-500 bg-blue-50 text-blue-700 dark:border-blue-400 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-blue-400'
+                                            ? 'border-blue-500 bg-blue-50 text-blue-700 dark:border-blue-400 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-[#B3F52D]'
                                             : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-slate-300 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-slate-700'
                                     }`}
                                 >

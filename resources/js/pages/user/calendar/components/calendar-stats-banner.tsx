@@ -100,7 +100,7 @@ export function CalendarStatsBanner({
                     <div className="flex size-7 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
                         <Sparkles className="size-3.5" />
                     </div>
-                    <span className="text-xs font-black tracking-wider text-slate-900 uppercase dark:text-white">
+                    <span className="text-xs font-semibold tracking-wider text-slate-900 uppercase dark:text-white">
                         Study Momentum & Goals
                     </span>
                     <Badge
@@ -132,10 +132,10 @@ export function CalendarStatsBanner({
                     <div className="flex flex-col justify-between rounded-xl border border-slate-200/70 bg-white p-3.5 dark:border-slate-800 dark:bg-slate-900">
                         <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">
-                                <Target className="size-3.5 text-blue-600 dark:text-blue-400" />
+                                <Target className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                 <span>This Week&apos;s Goal</span>
                             </div>
-                            <span className="text-xs font-black text-blue-600 dark:text-blue-400">
+                            <span className="text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 {weekStats.completed} / {weekStats.total} Done
                             </span>
                         </div>
@@ -169,13 +169,13 @@ export function CalendarStatsBanner({
                                 <Flame className="size-3.5 text-amber-500" />
                                 <span>Study Habit Streak</span>
                             </div>
-                            <span className="inline-flex items-center rounded-md bg-amber-50 px-1.5 py-0.5 text-[10px] font-extrabold text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
+                            <span className="inline-flex items-center rounded-md bg-amber-50 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
                                 Active
                             </span>
                         </div>
 
                         <div className="mt-2 flex items-baseline gap-2">
-                            <span className="text-2xl font-black text-slate-900 dark:text-white">
+                            <span className="text-2xl font-semibold text-slate-900 dark:text-white">
                                 {streakDays}
                             </span>
                             <span className="text-xs font-bold text-slate-500 dark:text-slate-400">
@@ -213,7 +213,7 @@ export function CalendarStatsBanner({
                         </div>
 
                         <div className="mt-2 flex items-baseline gap-2">
-                            <span className="text-2xl font-black text-slate-900 dark:text-white">
+                            <span className="text-2xl font-semibold text-slate-900 dark:text-white">
                                 {nextExam ? nextExam.days_remaining : 0}
                             </span>
                             <span className="text-xs font-bold text-slate-500 dark:text-slate-400">

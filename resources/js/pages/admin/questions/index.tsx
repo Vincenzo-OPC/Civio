@@ -297,7 +297,7 @@ export default function QuestionsIndex({
                 {/* Header */}
                 <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                     <div>
-                        <h1 className="text-2xl font-black tracking-tight text-foreground">
+                        <h1 className="text-2xl font-semibold tracking-tight text-foreground">
                             Question Management
                         </h1>
                         <p className="text-base leading-relaxed text-muted-foreground">
@@ -307,7 +307,7 @@ export default function QuestionsIndex({
                     </div>
                     <Link
                         href={questionsCreate().url}
-                        className="group inline-flex cursor-pointer items-center gap-1.5 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-md transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                        className="group inline-flex cursor-pointer items-center gap-1.5 rounded-xl bg-[#5B35F5] px-5 py-2.5 text-sm font-bold text-white shadow-md transition transition-all duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                     >
                         <ChevronRight className="size-4 transition-transform group-hover:scale-110" />
                         Create New Question
@@ -537,7 +537,7 @@ export default function QuestionsIndex({
                                     onClick={() => setViewMode('table')}
                                     className={`flex cursor-pointer items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-bold transition ${
                                         viewMode === 'table'
-                                            ? 'bg-blue-600 text-white shadow-xs'
+                                            ? 'bg-[#5B35F5] text-white shadow-xs'
                                             : 'text-muted-foreground hover:text-foreground'
                                     }`}
                                     title="Table List View"
@@ -552,7 +552,7 @@ export default function QuestionsIndex({
                                     onClick={() => setViewMode('grid')}
                                     className={`flex cursor-pointer items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-bold transition ${
                                         viewMode === 'grid'
-                                            ? 'bg-blue-600 text-white shadow-xs'
+                                            ? 'bg-[#5B35F5] text-white shadow-xs'
                                             : 'text-muted-foreground hover:text-foreground'
                                     }`}
                                     title="Grid Card View"
@@ -571,14 +571,14 @@ export default function QuestionsIndex({
                 {selectedIds.size > 0 && (
                     <div className="mb-4 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-blue-200 bg-blue-50 p-4 shadow-xs dark:border-blue-900/30 dark:bg-blue-950/30">
                         <div className="flex items-center gap-2">
-                            <span className="text-sm font-bold text-blue-900 dark:text-blue-300">
+                            <span className="text-sm font-bold text-blue-900 dark:text-[#B3F52D]">
                                 {selectedIds.size} question
                                 {selectedIds.size !== 1 ? 's' : ''} selected
                             </span>
                             <button
                                 type="button"
                                 onClick={() => setSelectedIds(new Set())}
-                                className="text-xs font-semibold text-blue-700 underline transition hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-200"
+                                className="text-xs font-semibold text-blue-700 underline transition hover:text-blue-900 dark:text-[#B3F52D] dark:hover:text-blue-200"
                             >
                                 Clear selection
                             </button>
@@ -620,7 +620,7 @@ export default function QuestionsIndex({
                                     variant="outline"
                                     size="sm"
                                     icon={Edit2}
-                                    className="border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-900 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-blue-400 dark:hover:bg-blue-950/40"
+                                    className="border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-900 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
                                 >
                                     Bulk Edit
                                 </Button>
@@ -640,7 +640,7 @@ export default function QuestionsIndex({
 
                 {/* 2.5 ACTIONS LEGEND */}
                 {questions.length > 0 && (
-                    <div className="mb-4 flex flex-wrap items-center justify-end gap-3 rounded-xl border border-border bg-card p-3 text-[10px] font-extrabold tracking-wider uppercase">
+                    <div className="mb-4 flex flex-wrap items-center justify-end gap-3 rounded-xl border border-border bg-card p-3 text-[10px] font-semibold tracking-wider uppercase">
                         <span className="text-muted-foreground">Legend:</span>
                         <div className="flex items-center gap-1.5 rounded-lg border border-slate-100 bg-slate-50 px-2 py-1 dark:border-slate-800 dark:bg-slate-900/50 dark:bg-slate-950/30">
                             <span className="flex size-5.5 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400">
@@ -651,10 +651,10 @@ export default function QuestionsIndex({
                             </span>
                         </div>
                         <div className="dark:bg-blue-950/30/50 flex items-center gap-1.5 rounded-lg border border-blue-100 bg-blue-50 px-2 py-1 dark:border-blue-900/20 dark:bg-blue-950/10">
-                            <span className="border-blue-250 flex size-5.5 items-center justify-center rounded-md border bg-blue-100 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-blue-400">
+                            <span className="border-blue-250 flex size-5.5 items-center justify-center rounded-md border bg-blue-100 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-[#B3F52D]">
                                 <Edit2 className="size-3" />
                             </span>
-                            <span className="text-blue-800 dark:text-blue-300">
+                            <span className="text-blue-800 dark:text-[#B3F52D]">
                                 Edit Question
                             </span>
                         </div>
@@ -820,7 +820,7 @@ export default function QuestionsIndex({
                                                                         q,
                                                                     )
                                                                 }
-                                                                className="inline-flex shrink-0 cursor-pointer items-center gap-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-[9px] font-extrabold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:bg-blue-900/50"
+                                                                className="inline-flex shrink-0 cursor-pointer items-center gap-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-[9px] font-semibold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-[#B3F52D] dark:hover:bg-blue-900/50"
                                                                 title="Quick preview diagram"
                                                             >
                                                                 <FileImage className="size-3" />
@@ -876,13 +876,13 @@ export default function QuestionsIndex({
                                                 </td>
                                                 <td className="w-36 px-4 py-3">
                                                     <span
-                                                        className={`inline-flex max-w-[130px] truncate rounded-md border px-2 py-0.5 text-[9px] font-extrabold tracking-wide uppercase ${getCategoryStyles(q.category)}`}
+                                                        className={`inline-flex max-w-[130px] truncate rounded-md border px-2 py-0.5 text-[9px] font-semibold tracking-wide uppercase ${getCategoryStyles(q.category)}`}
                                                     >
                                                         {q.category}
                                                     </span>
                                                 </td>
                                                 <td className="w-40 px-4 py-3">
-                                                    <span className="inline-block max-w-[140px] truncate rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-blue-300">
+                                                    <span className="inline-block max-w-[140px] truncate rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                                         {q.subcategory}
                                                     </span>
                                                 </td>
@@ -894,11 +894,11 @@ export default function QuestionsIndex({
                                                 </td>
                                                 <td className="px-4 py-3">
                                                     <span
-                                                        className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[9px] font-extrabold uppercase ${
+                                                        className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[9px] font-semibold uppercase ${
                                                             q.status ===
                                                             'ACTIVE'
                                                                 ? 'border-emerald-100 bg-emerald-50 text-emerald-700 dark:border-emerald-900/30 dark:bg-emerald-950/30 dark:text-emerald-400'
-                                                                : 'border-blue-100 bg-blue-50 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-blue-400'
+                                                                : 'border-blue-100 bg-blue-50 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-[#B3F52D]'
                                                         }`}
                                                     >
                                                         {q.status}
@@ -915,7 +915,7 @@ export default function QuestionsIndex({
                                                                 >
                                                                     <Link
                                                                         href={`${questionsShow(q.id).url}?page=${currentPage}`}
-                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
+                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
                                                                     >
                                                                         <Eye className="size-4" />
                                                                     </Link>
@@ -950,7 +950,7 @@ export default function QuestionsIndex({
                                                                 >
                                                                     <Link
                                                                         href={`${questionsEdit(q.id).url}?page=${currentPage}`}
-                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
+                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
                                                                     >
                                                                         <Edit2 className="size-4" />
                                                                     </Link>
@@ -1019,19 +1019,19 @@ export default function QuestionsIndex({
                                         <div className="mb-4 flex items-start justify-between gap-2 pr-8">
                                             <div className="flex flex-wrap items-center gap-1.5">
                                                 <span
-                                                    className={`inline-flex rounded-md border px-2 py-0.5 text-[9px] font-extrabold tracking-wide uppercase ${getCategoryStyles(q.category)}`}
+                                                    className={`inline-flex rounded-md border px-2 py-0.5 text-[9px] font-semibold tracking-wide uppercase ${getCategoryStyles(q.category)}`}
                                                 >
                                                     {q.category}
                                                 </span>
-                                                <span className="rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-blue-300">
+                                                <span className="rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                                     {q.subcategory}
                                                 </span>
                                             </div>
                                             <span
-                                                className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[9px] font-extrabold uppercase ${
+                                                className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[9px] font-semibold uppercase ${
                                                     q.status === 'ACTIVE'
                                                         ? 'border-emerald-100 bg-emerald-50 text-emerald-700 dark:border-emerald-900/30 dark:bg-emerald-950/20 dark:bg-emerald-950/30 dark:text-emerald-400'
-                                                        : 'border-blue-100 bg-blue-50 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-blue-400'
+                                                        : 'border-blue-100 bg-blue-50 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-[#B3F52D]'
                                                 }`}
                                             >
                                                 {q.status}
@@ -1063,7 +1063,7 @@ export default function QuestionsIndex({
                                                                 q,
                                                             )
                                                         }
-                                                        className="inline-flex shrink-0 cursor-pointer items-center gap-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-[9px] font-extrabold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:bg-blue-900/50"
+                                                        className="inline-flex shrink-0 cursor-pointer items-center gap-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-[9px] font-semibold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-[#B3F52D] dark:hover:bg-blue-900/50"
                                                         title="Quick preview diagram"
                                                     >
                                                         <FileImage className="size-3" />
@@ -1088,7 +1088,7 @@ export default function QuestionsIndex({
                                                     <TooltipTrigger asChild>
                                                         <Link
                                                             href={`${questionsShow(q.id).url}?page=${currentPage}`}
-                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-blue-600 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                                         >
                                                             <Eye className="size-4" />
                                                         </Link>
@@ -1121,7 +1121,7 @@ export default function QuestionsIndex({
                                                     <TooltipTrigger asChild>
                                                         <Link
                                                             href={`${questionsEdit(q.id).url}?page=${currentPage}`}
-                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-blue-600 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                                         >
                                                             <Edit2 className="size-4" />
                                                         </Link>
@@ -1241,9 +1241,9 @@ export default function QuestionsIndex({
                                                 onClick={() =>
                                                     handlePageChange(pageNum)
                                                 }
-                                                className={`size-8 cursor-pointer rounded-lg text-xs font-black transition focus:outline-none ${
+                                                className={`size-8 cursor-pointer rounded-lg text-xs font-semibold transition focus:outline-none ${
                                                     isActive
-                                                        ? 'bg-blue-600 text-white'
+                                                        ? 'bg-[#5B35F5] text-white'
                                                         : 'border border-border bg-card text-foreground hover:bg-muted'
                                                 }`}
                                             >
@@ -1333,11 +1333,11 @@ export default function QuestionsIndex({
                                         Question #{previewQuestion.id} Preview
                                     </DialogTitle>
                                     <span
-                                        className={`inline-flex rounded-md border px-2 py-0.5 text-[9px] font-extrabold tracking-wide uppercase ${getCategoryStyles(previewQuestion.category)}`}
+                                        className={`inline-flex rounded-md border px-2 py-0.5 text-[9px] font-semibold tracking-wide uppercase ${getCategoryStyles(previewQuestion.category)}`}
                                     >
                                         {previewQuestion.category}
                                     </span>
-                                    <span className="rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-blue-300">
+                                    <span className="rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                         {previewQuestion.subcategory}
                                     </span>
                                 </div>
@@ -1389,7 +1389,7 @@ export default function QuestionsIndex({
                                                             >
                                                                 <div className="flex items-center gap-4">
                                                                     <span
-                                                                        className={`flex size-8 shrink-0 items-center justify-center rounded-full border text-xs font-black transition ${
+                                                                        className={`flex size-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition ${
                                                                             isCorrect
                                                                                 ? 'border-emerald-600 bg-emerald-600 text-white'
                                                                                 : 'border-border bg-background text-muted-foreground'
@@ -1413,7 +1413,7 @@ export default function QuestionsIndex({
                                                                     </p>
                                                                 </div>
                                                                 {isCorrect && (
-                                                                    <span className="ml-auto rounded bg-emerald-600 px-1.5 py-0.5 text-[9px] font-black text-white">
+                                                                    <span className="ml-auto rounded bg-emerald-600 px-1.5 py-0.5 text-[9px] font-semibold text-white">
                                                                         Correct
                                                                     </span>
                                                                 )}
@@ -1428,7 +1428,7 @@ export default function QuestionsIndex({
                                 {previewQuestion.explanation && (
                                     <div className="shadow-3xs mt-2 overflow-hidden rounded-2xl border border-border bg-card text-sm leading-relaxed text-muted-foreground transition-all">
                                         <div className="flex w-full items-center gap-2 p-4 font-bold text-foreground sm:p-5">
-                                            <HelpCircle className="size-4 text-blue-600 dark:text-blue-400" />
+                                            <HelpCircle className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                             <span>
                                                 Explanation &amp; Rationale
                                             </span>
@@ -1457,7 +1457,7 @@ export default function QuestionsIndex({
                                                         {propositions.length >
                                                             0 && (
                                                             <div className="shadow-3xs mb-4 rounded-xl border border-border bg-background p-4">
-                                                                <span className="mb-2 block font-heading text-[10px] font-black tracking-wider text-muted-foreground uppercase">
+                                                                <span className="mb-2 block font-heading text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                                                     Proposition
                                                                     Key:
                                                                 </span>
@@ -1473,7 +1473,7 @@ export default function QuestionsIndex({
                                                                                 }
                                                                                 className="flex items-center gap-2 text-xs"
                                                                             >
-                                                                                <span className="inline-flex size-5 items-center justify-center rounded border border-blue-100/60 bg-blue-50 font-mono text-[10px] font-black text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-400">
+                                                                                <span className="inline-flex size-5 items-center justify-center rounded border border-blue-100/60 bg-blue-50 font-mono text-[10px] font-semibold text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                                                                     {String.fromCharCode(
                                                                                         65 +
                                                                                             idx,

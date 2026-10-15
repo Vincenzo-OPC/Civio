@@ -148,7 +148,7 @@ export function AgendaView({
         let catId = 1;
         let matchedSubcategoryName: string | null = null;
         let colorClasses = {
-            badge: 'border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-blue-300',
+            badge: 'border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-[#B3F52D]',
             bg: 'bg-white dark:bg-slate-900',
             border: 'border-slate-200/80 dark:border-slate-800',
         };
@@ -312,7 +312,7 @@ export function AgendaView({
                             type="checkbox"
                             checked={isSelected}
                             onChange={() => toggleSelectSchedule(task.id)}
-                            className="mt-1 size-4 shrink-0 cursor-pointer rounded border-slate-300 text-blue-600 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800"
+                            className="mt-1 size-4 shrink-0 cursor-pointer rounded border-slate-300 text-[#5B35F5] dark:text-[#B3F52D] focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800"
                             aria-label={`Select ${task.title}`}
                         />
                     )}
@@ -331,7 +331,7 @@ export function AgendaView({
                             <CheckCircle2 className="size-5.5 text-emerald-600 dark:text-emerald-400" />
                         ) : (
                             <Circle
-                                className={`size-5.5 ${isOverdue ? 'text-rose-400 hover:text-rose-600' : 'text-slate-400 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-400'}`}
+                                className={`size-5.5 ${isOverdue ? 'text-rose-400 hover:text-rose-600' : 'text-slate-400 hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-slate-500 dark:hover:text-blue-400'}`}
                             />
                         )}
                     </button>
@@ -360,7 +360,7 @@ export function AgendaView({
                                 </span>
                             )}
                             {isOverdue && !task.is_done && (
-                                <Badge className="border-rose-300 bg-rose-100 text-[10px] font-extrabold text-rose-700 dark:border-rose-900 dark:bg-rose-950 dark:text-rose-300">
+                                <Badge className="border-rose-300 bg-rose-100 text-[10px] font-semibold text-rose-700 dark:border-rose-900 dark:bg-rose-950 dark:text-rose-300">
                                     Overdue
                                 </Badge>
                             )}
@@ -392,7 +392,7 @@ export function AgendaView({
                                 <Link
                                     key={i}
                                     href={link.url}
-                                    className="inline-flex items-center gap-1 rounded-lg border border-blue-200 bg-blue-50/70 px-2 py-0.5 text-[11px] font-bold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:bg-blue-900/60"
+                                    className="inline-flex items-center gap-1 rounded-lg border border-blue-200 bg-blue-50/70 px-2 py-0.5 text-[11px] font-bold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-[#B3F52D] dark:hover:bg-blue-900/60"
                                 >
                                     <BookOpen className="size-3" />
                                     <span>Learn: {link.title}</span>
@@ -418,7 +418,7 @@ export function AgendaView({
                     {isOverdue && !task.is_done && (
                         <Button
                             size="sm"
-                            className="h-7 bg-blue-600 px-2.5 text-xs font-bold text-white hover:bg-blue-700"
+                            className="h-7 bg-[#5B35F5] px-2.5 text-xs font-bold text-white hover:bg-[#4a2ad4]"
                             onClick={() => handleRescheduleToToday(task)}
                         >
                             Move to Today
@@ -473,7 +473,7 @@ export function AgendaView({
                                 size="sm"
                                 variant="outline"
                                 disabled={isBulkLoading}
-                                className="h-8 border-blue-300 bg-white font-bold text-blue-700 hover:bg-blue-50 dark:border-blue-800 dark:bg-slate-900 dark:text-blue-300"
+                                className="h-8 border-blue-300 bg-white font-bold text-blue-700 hover:bg-blue-50 dark:border-blue-800 dark:bg-slate-900 dark:text-[#B3F52D]"
                                 onClick={async () => {
                                     setIsBulkLoading(true);
 
@@ -537,11 +537,11 @@ export function AgendaView({
             <div className="space-y-3">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <span className="flex size-7 items-center justify-center rounded-lg bg-blue-600 text-xs font-black text-white">
+                        <span className="flex size-7 items-center justify-center rounded-lg bg-[#5B35F5] text-xs font-semibold text-white">
                             {new Date(todayStr + 'T00:00:00').getDate()}
                         </span>
                         <div>
-                            <h3 className="text-base font-black text-slate-900 dark:text-white">
+                            <h3 className="text-base font-semibold text-slate-900 dark:text-white">
                                 Today&apos;s Plan
                             </h3>
                             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
@@ -574,7 +574,7 @@ export function AgendaView({
                     </div>
                 ) : (
                     <Card className="flex flex-col items-center justify-center border-dashed p-8 text-center">
-                        <div className="mb-2 flex size-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+                        <div className="mb-2 flex size-10 items-center justify-center rounded-xl bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                             <Sparkles className="size-5" />
                         </div>
                         <p className="text-sm font-bold text-slate-800 dark:text-slate-200">
@@ -586,7 +586,7 @@ export function AgendaView({
                         </p>
                         <Button
                             size="sm"
-                            className="mt-3 bg-blue-600 font-bold text-white hover:bg-blue-700"
+                            className="mt-3 bg-[#5B35F5] font-bold text-white hover:bg-[#4a2ad4]"
                             onClick={() => openModal(todayStr)}
                         >
                             <Plus className="mr-1.5 size-3.5" />
@@ -645,7 +645,7 @@ export function AgendaView({
             {/* UPCOMING DAYS SCHEDULE */}
             {upcomingDays.length > 0 && (
                 <div className="space-y-4 pt-2">
-                    <h3 className="text-sm font-black tracking-wider text-slate-400 uppercase dark:text-slate-500">
+                    <h3 className="text-sm font-semibold tracking-wider text-slate-400 uppercase dark:text-slate-500">
                         Upcoming Days
                     </h3>
 
@@ -665,7 +665,7 @@ export function AgendaView({
                                     <button
                                         type="button"
                                         onClick={() => openModal(dateStr)}
-                                        className="text-[11px] font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                                        className="text-[11px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] hover:text-blue-700 dark:text-[#B3F52D]"
                                     >
                                         + Add Task
                                     </button>

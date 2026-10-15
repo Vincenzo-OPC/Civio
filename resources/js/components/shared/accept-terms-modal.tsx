@@ -67,7 +67,7 @@ export default function AcceptTermsModal({ isOpen }: Props) {
                                     your account.{' '}
                                     <Link
                                         href="/terms"
-                                        className="group text-blue-600 underline transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                                        className="group text-[#5B35F5] dark:text-[#B3F52D] underline transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                     >
                                         Read full terms of service →
                                     </Link>
@@ -86,7 +86,7 @@ export default function AcceptTermsModal({ isOpen }: Props) {
                                     consent.{' '}
                                     <Link
                                         href="/privacy"
-                                        className="group text-blue-600 underline transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                                        className="group text-[#5B35F5] dark:text-[#B3F52D] underline transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                     >
                                         Read full privacy policy →
                                     </Link>
@@ -135,7 +135,7 @@ export default function AcceptTermsModal({ isOpen }: Props) {
                         <Button
                             onClick={handleAccept}
                             disabled={!agreed || isSubmitting}
-                            className="flex-1 rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 dark:bg-blue-600 dark:hover:bg-blue-500"
+                            className="flex-1 rounded-lg bg-[#5B35F5] text-white hover:bg-[#4a2ad4] disabled:opacity-50 dark:bg-[#B3F52D] dark:text-[#0A0A0A] dark:hover:bg-[#9ED41F]"
                         >
                             {isSubmitting ? 'Accepting...' : 'Continue'}
                         </Button>

@@ -70,7 +70,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                 }
               : {
                     text: 'Practice average under 70',
-                    color: 'border-blue-300 bg-blue-50 text-blue-800 dark:border-blue-800 dark:bg-blue-950/40 dark:text-blue-300',
+                    color: 'border-blue-300 bg-blue-50 text-blue-800 dark:border-blue-800 dark:bg-blue-950/40 dark:text-[#B3F52D]',
                     dotColor: 'bg-blue-500',
                 };
 
@@ -82,10 +82,10 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
                     {/* Score Circle / Metric */}
                     <div className="relative flex size-24 shrink-0 flex-col items-center justify-center rounded-2xl border-2 border-primary/20 bg-primary/5 shadow-inner sm:size-28">
-                        <span className="font-heading text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        <span className="font-heading text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
                             {readinessIndex}%
                         </span>
-                        <span className="text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                        <span className="text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                             Practice
                         </span>
                     </div>
@@ -111,7 +111,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                         </div>
 
                         <div>
-                            <h2 className="text-base font-black text-slate-900 sm:text-lg dark:text-white">
+                            <h2 className="text-base font-semibold text-slate-900 sm:text-lg dark:text-white">
                                 Subject practice
                             </h2>
                             <p className="text-xs font-medium text-muted-foreground sm:text-sm">
@@ -176,7 +176,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                 <div className="mb-3 flex items-center justify-between">
                     <div className="flex items-center gap-1.5">
                         <ShieldCheck className="size-4 text-primary" />
-                        <span className="text-xs font-black tracking-wide text-slate-900 uppercase dark:text-white">
+                        <span className="text-xs font-semibold tracking-wide text-slate-900 uppercase dark:text-white">
                             Subject practice
                         </span>
                         <TooltipProvider>
@@ -234,7 +234,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                                           </span>
                                       </div>
                                       <span
-                                          className={`font-black ${
+                                          className={`font-semibold ${
                                               subtest.passed
                                                   ? 'text-emerald-700 dark:text-emerald-300'
                                                   : 'text-rose-700 dark:text-rose-400'

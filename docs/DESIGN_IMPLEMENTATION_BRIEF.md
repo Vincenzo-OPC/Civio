@@ -495,7 +495,7 @@ Show the actual application with realistic questions, not fabricated progress nu
 
 The Civio question should feel like a beautifully designed digital exam paper with intelligent learning tools available on demand.
 
-It must be visually original, functionally reliable, easy for ordinary Filipino CSE candidates, and clearly different from Hiraya.
+It must be visually original, functionally reliable, easy for ordinary Filipino CSE candidates, and clearly different from a generic reviewer template.
 
 Keep the underlying intelligence. Replace the visual clutter.
 

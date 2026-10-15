@@ -308,7 +308,7 @@ export default function DraftsQuestionList({
                         <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
                             <table className="w-full text-left text-xs">
                                 <thead>
-                                    <tr className="border-b border-border bg-muted/60 text-[11px] font-black tracking-wider text-muted-foreground uppercase">
+                                    <tr className="border-b border-border bg-muted/60 text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
                                         <th className="w-12 px-4 py-3 text-center">
                                             <input
                                                 type="checkbox"
@@ -325,7 +325,7 @@ export default function DraftsQuestionList({
                                                 title="Select all on this page"
                                             />
                                         </th>
-                                        <th className="w-20 px-4 py-3.5 text-left text-xs font-black tracking-wider text-muted-foreground uppercase">
+                                        <th className="w-20 px-4 py-3.5 text-left text-xs font-semibold tracking-wider text-muted-foreground uppercase">
                                             ID
                                         </th>
                                         <th className="min-w-[400px] px-4 py-3.5">
@@ -394,7 +394,7 @@ export default function DraftsQuestionList({
                                                                             q,
                                                                         )
                                                                     }
-                                                                    className="inline-flex shrink-0 cursor-pointer items-center gap-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-[9px] font-extrabold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:bg-blue-900/50"
+                                                                    className="inline-flex shrink-0 cursor-pointer items-center gap-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-[9px] font-semibold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-[#B3F52D] dark:hover:bg-blue-900/50"
                                                                     title="Quick preview diagram"
                                                                 >
                                                                     <FileImage className="size-3" />
@@ -452,7 +452,7 @@ export default function DraftsQuestionList({
                                                 </td>
                                                 <td className="w-48 px-4 py-4 align-top">
                                                     <span className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-800 dark:border-emerald-900/40 dark:bg-emerald-950/30 dark:text-emerald-300">
-                                                        <span className="flex size-4 items-center justify-center rounded-md bg-emerald-600 text-[10px] font-black text-white dark:bg-emerald-400">
+                                                        <span className="flex size-4 items-center justify-center rounded-md bg-emerald-600 text-[10px] font-semibold text-white dark:bg-emerald-400">
                                                             {String.fromCharCode(
                                                                 65 +
                                                                     correctOptIndex,
@@ -473,7 +473,7 @@ export default function DraftsQuestionList({
                                                         <span className="w-fit max-w-[150px] truncate rounded-full border border-border bg-muted px-2 py-0.5 text-[10px] font-bold text-foreground">
                                                             {q.category}
                                                         </span>
-                                                        <span className="w-fit max-w-[150px] truncate rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-blue-400">
+                                                        <span className="w-fit max-w-[150px] truncate rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                                             {q.subcategory}
                                                         </span>
                                                     </div>
@@ -499,7 +499,7 @@ export default function DraftsQuestionList({
                                                                 )
                                                             }
                                                             title="Quick Preview"
-                                                            className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
+                                                            className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
                                                         >
                                                             <FileImage className="size-4" />
                                                         </button>
@@ -511,7 +511,7 @@ export default function DraftsQuestionList({
                                                                 )
                                                             }
                                                             title="Edit"
-                                                            className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
+                                                            className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
                                                         >
                                                             <Edit3 className="size-4" />
                                                         </button>
@@ -560,13 +560,13 @@ export default function DraftsQuestionList({
                         {/* Card Header metadata */}
                         <div className="mb-4 flex items-center justify-between border-b border-border pr-8 pb-3">
                             <div className="flex flex-wrap items-center gap-2">
-                                <span className="font-mono text-[11px] font-black tracking-widest text-muted-foreground uppercase">
+                                <span className="font-mono text-[11px] font-semibold tracking-widest text-muted-foreground uppercase">
                                     #{q.id}
                                 </span>
-                                <span className="rounded-full border border-border bg-muted px-3 py-0.5 text-[10px] font-extrabold text-foreground uppercase">
+                                <span className="rounded-full border border-border bg-muted px-3 py-0.5 text-[10px] font-semibold text-foreground uppercase">
                                     {q.category}
                                 </span>
-                                <span className="rounded-full border border-blue-100 bg-blue-50 px-3 py-0.5 text-[10px] font-bold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-blue-300">
+                                <span className="rounded-full border border-blue-100 bg-blue-50 px-3 py-0.5 text-[10px] font-bold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                     {q.subcategory}
                                 </span>
                                 {q.approved ? (
@@ -590,7 +590,7 @@ export default function DraftsQuestionList({
                                                 onClick={() =>
                                                     setPreviewQuestion(q)
                                                 }
-                                                className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
+                                                className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
                                             >
                                                 <FileImage className="size-4" />
                                             </button>
@@ -607,7 +607,7 @@ export default function DraftsQuestionList({
                                                 onClick={() =>
                                                     setEditModalQuestion(q)
                                                 }
-                                                className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
+                                                className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
                                             >
                                                 <Edit3 className="size-4" />
                                             </button>
@@ -661,7 +661,7 @@ export default function DraftsQuestionList({
                                         >
                                             <div className="flex items-center gap-4">
                                                 <span
-                                                    className={`flex size-8 shrink-0 items-center justify-center rounded-full border text-xs font-black transition ${
+                                                    className={`flex size-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition ${
                                                         isCorrect
                                                             ? 'border-emerald-600 bg-emerald-600 text-white'
                                                             : 'border-border bg-background text-muted-foreground'
@@ -685,7 +685,7 @@ export default function DraftsQuestionList({
                                                 </p>
                                             </div>
                                             {isCorrect && (
-                                                <span className="ml-auto rounded bg-emerald-600 px-1.5 py-0.5 text-[9px] font-black text-white">
+                                                <span className="ml-auto rounded bg-emerald-600 px-1.5 py-0.5 text-[9px] font-semibold text-white">
                                                     Correct
                                                 </span>
                                             )}
@@ -747,7 +747,7 @@ export default function DraftsQuestionList({
                                     <span className="w-fit rounded-full border border-border bg-muted px-2 py-0.5 text-[10px] font-bold text-foreground">
                                         {previewQuestion.category}
                                     </span>
-                                    <span className="w-fit rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-blue-400">
+                                    <span className="w-fit rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                         {previewQuestion.subcategory}
                                     </span>
                                 </div>
@@ -794,7 +794,7 @@ export default function DraftsQuestionList({
                                                             >
                                                                 <div className="flex items-center gap-4">
                                                                     <span
-                                                                        className={`flex size-8 shrink-0 items-center justify-center rounded-full border text-xs font-black transition ${
+                                                                        className={`flex size-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition ${
                                                                             isCorrect
                                                                                 ? 'border-emerald-600 bg-emerald-600 text-white'
                                                                                 : 'border-border bg-background text-muted-foreground'
@@ -818,7 +818,7 @@ export default function DraftsQuestionList({
                                                                     </p>
                                                                 </div>
                                                                 {isCorrect && (
-                                                                    <span className="ml-auto rounded bg-emerald-600 px-1.5 py-0.5 text-[9px] font-black text-white">
+                                                                    <span className="ml-auto rounded bg-emerald-600 px-1.5 py-0.5 text-[9px] font-semibold text-white">
                                                                         Correct
                                                                     </span>
                                                                 )}
@@ -833,7 +833,7 @@ export default function DraftsQuestionList({
                                 {previewQuestion.explanation && (
                                     <div className="shadow-3xs mt-2 overflow-hidden rounded-2xl border border-border bg-card text-sm leading-relaxed text-muted-foreground transition-all">
                                         <div className="flex w-full items-center gap-2 p-4 font-bold text-foreground sm:p-5">
-                                            <HelpCircle className="size-4 text-blue-600 dark:text-blue-400" />
+                                            <HelpCircle className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                             <span>
                                                 Explanation &amp; Rationale
                                             </span>
@@ -862,7 +862,7 @@ export default function DraftsQuestionList({
                                                         {propositions.length >
                                                             0 && (
                                                             <div className="shadow-3xs mb-4 rounded-xl border border-border bg-background p-4">
-                                                                <span className="mb-2 block font-heading text-[10px] font-black tracking-wider text-muted-foreground uppercase">
+                                                                <span className="mb-2 block font-heading text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                                                     Proposition
                                                                     Key:
                                                                 </span>
@@ -878,7 +878,7 @@ export default function DraftsQuestionList({
                                                                                 }
                                                                                 className="flex items-center gap-2 text-xs"
                                                                             >
-                                                                                <span className="inline-flex size-5 items-center justify-center rounded border border-blue-100/60 bg-blue-50 font-mono text-[10px] font-black text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-400">
+                                                                                <span className="inline-flex size-5 items-center justify-center rounded border border-blue-100/60 bg-blue-50 font-mono text-[10px] font-semibold text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                                                                     {String.fromCharCode(
                                                                                         65 +
                                                                                             idx,

@@ -38,9 +38,9 @@ export function SearchFilterRow({
             <div className="flex flex-wrap gap-2">
                 <button
                     onClick={() => setSelectedCategory('all')}
-                    className={`cursor-pointer rounded-lg px-4 py-2 text-xs font-extrabold transition ${
+                    className={`cursor-pointer rounded-lg px-4 py-2 text-xs font-semibold transition ${
                         selectedCategory === 'all'
-                            ? 'bg-blue-600 text-white shadow-xs'
+                            ? 'bg-[#5B35F5] text-white shadow-xs'
                             : 'bg-slate-50 text-muted-foreground hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-800'
                     }`}
                 >
@@ -61,9 +61,9 @@ export function SearchFilterRow({
                         <button
                             key={cat.id}
                             onClick={() => setSelectedCategory(cat.name)}
-                            className={`cursor-pointer rounded-lg px-4 py-2 text-xs font-extrabold transition ${
+                            className={`cursor-pointer rounded-lg px-4 py-2 text-xs font-semibold transition ${
                                 isSelected
-                                    ? 'bg-blue-600 text-white shadow-xs'
+                                    ? 'bg-[#5B35F5] text-white shadow-xs'
                                     : 'bg-slate-50 text-muted-foreground hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-800'
                             }`}
                         >

@@ -84,13 +84,13 @@ export function AdminTable<T>({
             {(title || (legend && legend.length > 0)) && (
                 <div className="flex flex-col gap-3 border-b border-slate-100 bg-slate-50/20 p-5 sm:flex-row sm:items-center sm:justify-between dark:border-slate-900 dark:bg-slate-900/10">
                     {title && (
-                        <span className="font-heading text-sm font-extrabold text-slate-800 dark:text-slate-200">
+                        <span className="font-heading text-sm font-semibold text-slate-800 dark:text-slate-200">
                             {title}
                         </span>
                     )}
 
                     {legend && legend.length > 0 && (
-                        <div className="flex flex-wrap items-center gap-3 text-[10px] font-extrabold tracking-wider uppercase">
+                        <div className="flex flex-wrap items-center gap-3 text-[10px] font-semibold tracking-wider uppercase">
                             <span className="text-slate-400/80">Legend:</span>
                             {legend.map((item, idx) => {
                                 let badgeClass = '';
@@ -105,9 +105,9 @@ export function AdminTable<T>({
                                         break;
                                     case 'blue':
                                         badgeClass =
-                                            'bg-blue-50/50 dark:bg-blue-950/10 border-blue-100 dark:border-blue-900/20 text-blue-800 dark:text-blue-300';
+                                            'bg-blue-50/50 dark:bg-blue-950/10 border-blue-100 dark:border-blue-900/20 text-blue-800 dark:text-[#B3F52D]';
                                         iconWrapperClass =
-                                            'border-blue-250 bg-blue-100 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-blue-400';
+                                            'border-blue-250 bg-blue-100 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-[#B3F52D]';
                                         break;
                                     case 'rose':
                                         badgeClass =
@@ -357,9 +357,9 @@ export function AdminTable<T>({
                                         onClick={() =>
                                             handlePageChange(pageNum)
                                         }
-                                        className={`size-8 cursor-pointer p-0 text-xs font-black transition focus:outline-none ${
+                                        className={`size-8 cursor-pointer p-0 text-xs font-semibold transition focus:outline-none ${
                                             isActive
-                                                ? 'shadow-3xs bg-blue-600 text-white hover:bg-blue-700'
+                                                ? 'shadow-3xs bg-[#5B35F5] text-white hover:bg-[#4a2ad4]'
                                                 : 'dark:text-slate-350 border-slate-200 bg-white text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800'
                                         }`}
                                     >

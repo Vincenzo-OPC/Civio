@@ -41,7 +41,7 @@ export function ReviewerGuideTabs({
             title: 'Dashboard & Readiness Tracker',
             badge: 'Home Base',
             icon: LayoutDashboard,
-            color: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40 border-blue-200 dark:border-blue-900/40',
+            color: 'text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] bg-blue-50 dark:bg-blue-950/40 border-blue-200 dark:border-blue-900/40',
             summary:
                 'Scores from the mocks and drills you have finished, and a way back into the next one.',
             steps: [
@@ -163,7 +163,7 @@ export function ReviewerGuideTabs({
             phase: 'Phase 1',
             title: 'Diagnostic Benchmark',
             icon: ClipboardList,
-            color: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30',
+            color: 'text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] bg-blue-50 dark:bg-blue-950/30',
             description:
                 'Begin by taking an initial diagnostic test to establish your baseline score and identify focus subcategories.',
             actionLabel: 'Take Diagnostic Exam',
@@ -340,7 +340,7 @@ export function ReviewerGuideTabs({
             description:
                 'In Civio mocks you have about 76 seconds per item on Professional (150 items in 3h 10m) and about 66 seconds on Subprofessional (145 items in 2h 40m). Train your pace in Exam Mode.',
             icon: Clock,
-            color: 'border-l-blue-500 text-blue-600 dark:text-blue-400',
+            color: 'border-l-blue-500 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]',
         },
         {
             title: 'Analyze Explanations',
@@ -401,12 +401,12 @@ export function ReviewerGuideTabs({
             {activeTab === 'features' && (
                 <div className="space-y-8">
                     <div className="flex items-start gap-3.5 rounded-2xl border border-blue-100 bg-blue-50/80 p-5 dark:border-blue-900/30 dark:bg-blue-950/20">
-                        <Sparkles className="mt-0.5 size-5 shrink-0 text-blue-600 dark:text-blue-400" />
+                        <Sparkles className="mt-0.5 size-5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                         <div className="space-y-1">
                             <h3 className="text-sm font-bold text-blue-950 dark:text-blue-200">
                                 How the tools work
                             </h3>
-                            <p className="text-sm leading-relaxed text-blue-800/90 dark:text-blue-300/80">
+                            <p className="text-sm leading-relaxed text-blue-800/90 dark:text-[#B3F52D]/80">
                                 Each tool does one job. Use a mock when you want
                                 the clock. Use a drill when you want one
                                 subject.
@@ -463,7 +463,7 @@ export function ReviewerGuideTabs({
                                                             key={sIdx}
                                                             className="flex items-start gap-2"
                                                         >
-                                                            <span className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[10px] font-black text-primary">
+                                                            <span className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[10px] font-semibold text-primary">
                                                                 {sIdx + 1}
                                                             </span>
                                                             <span>{step}</span>
@@ -512,12 +512,12 @@ export function ReviewerGuideTabs({
             {activeTab === 'flow' && (
                 <div className="space-y-6">
                     <div className="dark:bg-blue-950/30/20 flex items-start gap-3.5 rounded-xl border border-blue-100 bg-blue-50 p-5 dark:border-blue-900/30 dark:bg-blue-950/10">
-                        <Info className="mt-0.5 size-5 shrink-0 text-blue-600 dark:text-blue-400" />
+                        <Info className="mt-0.5 size-5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                         <div>
-                            <h3 className="text-sm font-semibold text-blue-900 dark:text-blue-300">
+                            <h3 className="text-sm font-semibold text-blue-900 dark:text-[#B3F52D]">
                                 Study order
                             </h3>
-                            <p className="mt-1 text-sm leading-relaxed text-blue-700/95 dark:text-blue-400/90">
+                            <p className="mt-1 text-sm leading-relaxed text-blue-700/95 dark:text-[#B3F52D]/90">
                                 Start with a timed mock if you want to see which
                                 subjects cost you marks. Then drill those
                                 subjects. The four steps below are a study
@@ -598,8 +598,8 @@ export function ReviewerGuideTabs({
                         {/* Professional Section */}
                         <Card className="space-y-6 border border-border bg-card p-4 sm:p-6">
                             <div className="space-y-1.5 border-b border-border pb-4">
-                                <h3 className="flex items-center gap-2 font-heading text-xl font-extrabold text-foreground">
-                                    <Award className="size-5 text-blue-600 dark:text-blue-400" />
+                                <h3 className="flex items-center gap-2 font-heading text-xl font-semibold text-foreground">
+                                    <Award className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                     {examStructure.professional.title}
                                 </h3>
                                 <p className="text-sm leading-relaxed text-muted-foreground">
@@ -650,7 +650,7 @@ export function ReviewerGuideTabs({
                                                     <span className="text-sm font-bold text-foreground">
                                                         {scope.name}
                                                     </span>
-                                                    <span className="text-[10px] font-semibold text-blue-600 dark:text-blue-400">
+                                                    <span className="text-[10px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                         ({scope.lang})
                                                     </span>
                                                 </div>
@@ -676,7 +676,7 @@ export function ReviewerGuideTabs({
                         {/* Subprofessional Section */}
                         <Card className="space-y-6 border border-border bg-card p-4 sm:p-6">
                             <div className="space-y-1.5 border-b border-border pb-4">
-                                <h3 className="flex items-center gap-2 font-heading text-xl font-extrabold text-foreground">
+                                <h3 className="flex items-center gap-2 font-heading text-xl font-semibold text-foreground">
                                     <Award className="size-5 text-indigo-600 dark:text-indigo-400" />
                                     {examStructure.subprofessional.title}
                                 </h3>
@@ -728,7 +728,7 @@ export function ReviewerGuideTabs({
                                                     <span className="text-sm font-bold text-foreground">
                                                         {scope.name}
                                                     </span>
-                                                    <span className="text-[10px] font-semibold text-blue-600 dark:text-blue-400">
+                                                    <span className="text-[10px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                         ({scope.lang})
                                                     </span>
                                                 </div>

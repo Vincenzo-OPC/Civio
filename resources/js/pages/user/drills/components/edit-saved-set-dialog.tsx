@@ -300,7 +300,7 @@ function EditSavedSetModalBody({
             <DialogHeader className="border-b border-border p-5 pb-4">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
-                        <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400">
+                        <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                             <Bookmark className="size-4" />
                         </div>
                         <div>
@@ -382,12 +382,12 @@ function EditSavedSetModalBody({
                                         className="group flex items-start justify-between gap-3 rounded-xl border border-border bg-card p-3.5 transition hover:border-blue-500/40"
                                     >
                                         <div className="flex min-w-0 flex-1 items-start gap-3">
-                                            <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-muted text-[11px] font-black text-muted-foreground">
+                                            <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-muted text-[11px] font-semibold text-muted-foreground">
                                                 {idx + 1}
                                             </span>
                                             <div className="min-w-0 flex-1">
                                                 <div className="mb-1 flex flex-wrap items-center gap-1.5">
-                                                    <span className="rounded-md bg-blue-50 px-1.5 py-0.5 text-[10px] font-bold text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">
+                                                    <span className="rounded-md bg-blue-50 px-1.5 py-0.5 text-[10px] font-bold text-blue-700 dark:bg-blue-950/60 dark:text-[#B3F52D]">
                                                         {q.category}
                                                     </span>
                                                     {q.subcategory && (
@@ -441,7 +441,7 @@ function EditSavedSetModalBody({
                                 <Button
                                     size="sm"
                                     onClick={() => setActiveTab('add')}
-                                    className="mt-3 gap-1.5 bg-blue-600 text-xs text-white hover:bg-blue-700"
+                                    className="mt-3 gap-1.5 bg-[#5B35F5] text-xs text-white hover:bg-[#4a2ad4]"
                                 >
                                     <Plus className="size-3.5" />
                                     <span>Add Questions Now</span>
@@ -501,7 +501,7 @@ function EditSavedSetModalBody({
                                         >
                                             <div className="min-w-0 flex-1">
                                                 <div className="mb-1 flex flex-wrap items-center gap-1.5">
-                                                    <span className="rounded-md bg-blue-50 px-1.5 py-0.5 text-[10px] font-bold text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">
+                                                    <span className="rounded-md bg-blue-50 px-1.5 py-0.5 text-[10px] font-bold text-blue-700 dark:bg-blue-950/60 dark:text-[#B3F52D]">
                                                         {q.category}
                                                     </span>
                                                     {q.subcategory && (
@@ -527,7 +527,7 @@ function EditSavedSetModalBody({
                                                 onClick={() =>
                                                     handleAddQuestion(q.id)
                                                 }
-                                                className="shrink-0 gap-1 border-blue-200 text-xs text-blue-600 hover:bg-blue-50 dark:border-blue-800 dark:text-blue-400 dark:hover:bg-blue-950/40"
+                                                className="shrink-0 gap-1 border-blue-200 text-xs text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-50 dark:border-blue-800 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
                                             >
                                                 {addingQuestionId === q.id ? (
                                                     <Loader2 className="size-3.5 animate-spin" />
@@ -590,7 +590,7 @@ function EditSavedSetModalBody({
                                 type="submit"
                                 size="sm"
                                 disabled={isSavingDetails || !name.trim()}
-                                className="gap-1.5 bg-blue-600 text-xs font-bold text-white hover:bg-blue-700"
+                                className="gap-1.5 bg-[#5B35F5] text-xs font-bold text-white hover:bg-[#4a2ad4]"
                             >
                                 {isSavingDetails && (
                                     <Loader2 className="size-3.5 animate-spin" />

@@ -96,7 +96,7 @@ Also inspect:
 - government forms/portals only to understand familiar terminology and accessibility problems
 - CSC materials to understand information density, not to imitate CSC branding
 
-Civio must remain visibly independent from CSC and visibly independent from Hiraya.
+Civio must remain visibly independent from CSC.
 
 ---
 
@@ -187,7 +187,7 @@ Recommended process:
    - mobile behavior
    - accessibility
    - build feasibility
-   - separation from Hiraya
+   - separation from generic reviewer layouts
 5. Take useful ideas, then redesign manually/agentically into one coherent Civio system.
 
 Generated outputs are **references**, not production designs.
@@ -212,7 +212,7 @@ Before presenting a design, answer:
 10. Could a first-time CSE taker use the screen without explanation?
 11. Does the user know what to do next within 2 seconds?
 12. Is the right rail actually necessary?
-13. Does the layout still resemble Hiraya structurally?
+13. Does the layout still resemble a generic reviewer?
 14. Does mobile preserve the same clarity rather than shrink desktop?
 15. Is every persistent widget worth stealing attention from the question?
 
@@ -348,7 +348,7 @@ Before major implementation, provide:
 
 1. reference matrix
 2. anti-slop critique of the current Civio mock
-3. anti-Hiraya structural comparison
+3. structural comparison against a generic reviewer
 4. three materially different wireframe/layout directions
 5. one recommended direction and why
 6. desktop study screen

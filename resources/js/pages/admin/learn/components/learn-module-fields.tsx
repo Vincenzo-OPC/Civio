@@ -25,7 +25,7 @@ export function LearnModuleFields({
 }: LearnModuleFieldsProps) {
     const labelClass =
         labelSize === 'compact'
-            ? 'mb-1 block text-[10px] font-extrabold text-muted-foreground uppercase'
+            ? 'mb-1 block text-[10px] font-semibold text-muted-foreground uppercase'
             : 'mb-1 block text-xs font-bold tracking-wider text-muted-foreground uppercase';
     const textareaClass = mutedTextareas
         ? 'w-full rounded-xl border border-border bg-muted p-3 text-xs font-semibold text-foreground focus:border-blue-500 focus:outline-none'

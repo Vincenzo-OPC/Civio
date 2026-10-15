@@ -76,7 +76,7 @@ export function DayDetailsSheet({
                     {/* Header */}
                     <SheetHeader className="border-b border-slate-200/80 bg-slate-50/50 p-6 dark:border-slate-800/80 dark:bg-slate-900/50">
                         <div className="flex items-center justify-between gap-2">
-                            <div className="flex items-center gap-1.5 text-xs font-bold tracking-wider text-blue-600 uppercase dark:text-blue-400">
+                            <div className="flex items-center gap-1.5 text-xs font-bold tracking-wider text-[#5B35F5] dark:text-[#B3F52D] uppercase dark:text-[#B3F52D]">
                                 <Calendar className="size-4" />
                                 <span>Day Inspector</span>
                             </div>
@@ -86,14 +86,14 @@ export function DayDetailsSheet({
                                     onAddNew(dateStr);
                                     onOpenChange(false);
                                 }}
-                                className="h-8 gap-1.5 bg-blue-600 text-xs font-bold text-white shadow-2xs hover:bg-blue-700"
+                                className="h-8 gap-1.5 bg-[#5B35F5] text-xs font-bold text-white shadow-2xs hover:bg-[#4a2ad4]"
                             >
                                 <Plus className="size-3.5" />
                                 <span>Add Task</span>
                             </Button>
                         </div>
 
-                        <SheetTitle className="mt-2 text-lg font-black text-slate-900 dark:text-white">
+                        <SheetTitle className="mt-2 text-lg font-semibold text-slate-900 dark:text-white">
                             {formattedDate}
                         </SheetTitle>
 
@@ -125,7 +125,7 @@ export function DayDetailsSheet({
                                         onAddNew(dateStr);
                                         onOpenChange(false);
                                     }}
-                                    className="mt-4 h-8 gap-1 text-xs font-bold text-blue-600 hover:bg-blue-50 dark:text-blue-400 dark:hover:bg-blue-950/40"
+                                    className="mt-4 h-8 gap-1 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-50 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
                                 >
                                     <Plus className="size-3.5" />
                                     <span>Schedule Session</span>
@@ -173,7 +173,7 @@ export function DayDetailsSheet({
                                                     {task.is_done ? (
                                                         <CheckCircle2 className="size-5 text-emerald-600 dark:text-emerald-400" />
                                                     ) : (
-                                                        <Circle className="size-5 text-slate-400 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-400" />
+                                                        <Circle className="size-5 text-slate-400 hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-slate-500 dark:hover:text-blue-400" />
                                                     )}
                                                 </button>
 
@@ -191,7 +191,7 @@ export function DayDetailsSheet({
                                                     <div className="mt-1 flex flex-wrap items-center gap-2">
                                                         <Badge
                                                             variant="outline"
-                                                            className="border-blue-200 bg-blue-50 text-[10px] font-bold text-blue-700 dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300"
+                                                            className="border-blue-200 bg-blue-50 text-[10px] font-bold text-blue-700 dark:border-blue-900 dark:bg-blue-950/40 dark:text-[#B3F52D]"
                                                         >
                                                             {catName}
                                                         </Badge>

@@ -314,7 +314,7 @@ export function StudyPlanTemplatesModal({
                             Ready-Made Curriculum
                         </span>
                     </div>
-                    <DialogTitle className="text-xl font-black text-slate-900 dark:text-white">
+                    <DialogTitle className="text-xl font-semibold text-slate-900 dark:text-white">
                         Choose a Study Plan Template
                     </DialogTitle>
                     <DialogDescription className="text-xs text-slate-500 dark:text-slate-400">
@@ -420,7 +420,7 @@ export function StudyPlanTemplatesModal({
                         <div className="space-y-4">
                             <div>
                                 <div className="flex items-center justify-between gap-2">
-                                    <span className="inline-flex items-center rounded-md bg-indigo-100 px-2 py-0.5 text-[10px] font-extrabold tracking-wide text-indigo-700 uppercase dark:bg-indigo-950/60 dark:text-indigo-300">
+                                    <span className="inline-flex items-center rounded-md bg-indigo-100 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-indigo-700 uppercase dark:bg-indigo-950/60 dark:text-indigo-300">
                                         {selectedTemplate.badge}
                                     </span>
                                     <span className="flex items-center gap-1 text-xs font-bold text-slate-600 dark:text-slate-400">
@@ -429,7 +429,7 @@ export function StudyPlanTemplatesModal({
                                         Sessions
                                     </span>
                                 </div>
-                                <h3 className="mt-1.5 text-base font-black text-slate-900 dark:text-white">
+                                <h3 className="mt-1.5 text-base font-semibold text-slate-900 dark:text-white">
                                     {selectedTemplate.title}
                                 </h3>
                                 <p className="mt-1 text-xs leading-relaxed text-slate-600 dark:text-slate-300">

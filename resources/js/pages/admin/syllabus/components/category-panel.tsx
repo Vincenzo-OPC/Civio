@@ -54,7 +54,7 @@ export function CategoryPanel({
                     />
                     <button
                         type="submit"
-                        className="group shadow-3xs inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl bg-blue-600 px-4 text-sm font-bold text-white transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 active:bg-blue-800"
+                        className="group shadow-3xs inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl bg-[#5B35F5] px-4 text-sm font-bold text-white transition transition-all duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 active:bg-blue-800"
                     >
                         <Plus className="size-4" />
                     </button>
@@ -69,7 +69,7 @@ export function CategoryPanel({
                                 e.target.checked,
                             )
                         }
-                        className="size-4 cursor-pointer rounded border-border text-blue-600 focus:ring-blue-500 dark:text-blue-400"
+                        className="size-4 cursor-pointer rounded border-border text-[#5B35F5] dark:text-[#B3F52D] focus:ring-blue-500 dark:text-[#B3F52D]"
                     />
                     <span className="text-xs font-semibold text-muted-foreground">
                         Is demographic?
@@ -141,7 +141,7 @@ export function CategoryPanel({
                                             e.stopPropagation();
                                             onStartEdit(cat.id, cat.name);
                                         }}
-                                        className="cursor-pointer rounded-lg p-1 text-muted-foreground transition hover:bg-blue-50 hover:text-blue-600 dark:bg-blue-950/30 dark:text-blue-400 dark:hover:bg-blue-950/30 dark:hover:text-blue-400"
+                                        className="cursor-pointer rounded-lg p-1 text-muted-foreground transition hover:bg-blue-50 hover:text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-950/30 dark:hover:text-blue-400"
                                     >
                                         <Edit2 className="size-3.5" />
                                     </button>

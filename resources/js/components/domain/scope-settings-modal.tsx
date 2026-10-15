@@ -61,8 +61,8 @@ export function ScopeSettingsModal({
                 {/* Modal Header */}
                 <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50/50 px-4 py-4.5 sm:px-6 dark:border-slate-900 dark:bg-slate-900/35">
                     <div>
-                        <h2 className="flex items-center gap-2 text-xl font-black tracking-tight text-slate-900 dark:text-white">
-                            <Database className="size-5 text-blue-600 dark:text-blue-400 dark:text-blue-500" />
+                        <h2 className="flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
+                            <Database className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-blue-500" />
                             Dynamic Syllabus Scope Settings
                         </h2>
                         <p className="mt-0.5 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
@@ -103,7 +103,7 @@ export function ScopeSettingsModal({
                             />
                             <button
                                 type="submit"
-                                className="group shadow-3xs inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl bg-blue-600 px-4 text-sm font-bold text-white transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 active:bg-blue-800"
+                                className="group shadow-3xs inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl bg-[#5B35F5] px-4 text-sm font-bold text-white transition transition-all duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 active:bg-blue-800"
                             >
                                 <Plus className="size-4" />
                             </button>
@@ -173,7 +173,7 @@ export function ScopeSettingsModal({
                                     />
                                     <button
                                         type="submit"
-                                        className="group shadow-3xs inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl bg-blue-600 px-4 text-sm font-bold text-white transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 active:bg-blue-800"
+                                        className="group shadow-3xs inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl bg-[#5B35F5] px-4 text-sm font-bold text-white transition transition-all duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 active:bg-blue-800"
                                     >
                                         <Plus className="size-4" />
                                     </button>

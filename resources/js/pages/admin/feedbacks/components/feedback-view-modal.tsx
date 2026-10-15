@@ -145,7 +145,7 @@ export function FeedbackViewModal({
                     </h4>
                     <div className="mt-2 rounded-lg border border-blue-200 bg-blue-50/50 p-4 dark:border-blue-900/50 dark:bg-blue-900/10">
                         <div className="mb-3 flex items-center justify-between">
-                            <span className="inline-flex items-center gap-1.5 rounded-md bg-blue-100 px-2 py-1 text-xs font-bold text-blue-700 dark:bg-blue-900/40 dark:text-blue-400">
+                            <span className="inline-flex items-center gap-1.5 rounded-md bg-blue-100 px-2 py-1 text-xs font-bold text-blue-700 dark:bg-blue-900/40 dark:text-[#B3F52D]">
                                 {getContentType(feedback.flaggable_type)} #
                                 {feedback.flaggable_id}
                             </span>
@@ -159,7 +159,7 @@ export function FeedbackViewModal({
                                             : `/admin/learn/${feedback.flaggable_id}`
                                     }
                                     target="_blank"
-                                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D] hover:text-blue-700 dark:text-[#B3F52D] dark:hover:text-blue-300"
                                 >
                                     <ExternalLink className="size-3.5" />
                                     View{' '}

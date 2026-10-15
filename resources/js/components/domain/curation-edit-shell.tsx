@@ -39,7 +39,7 @@ export function CurationEditShell({
             {/* Back Link */}
             <Link
                 href={backUrl}
-                className="group flex w-fit items-center gap-1 text-xs font-black text-foreground transition duration-300 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                className="group flex w-fit items-center gap-1 text-xs font-semibold text-foreground transition duration-300 hover:text-[#5B35F5] dark:text-[#B3F52D] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
             >
                 <ChevronLeft className="size-4" />
                 {backLabel}
@@ -57,8 +57,8 @@ export function CurationEditShell({
                     className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 shadow-sm sm:gap-6 sm:p-6"
                 >
                     <div className="sticky top-0 z-10 flex items-center justify-between border-b border-border bg-card pt-4 pb-3.5">
-                        <span className="flex items-center gap-1.5 text-xs font-black text-foreground uppercase">
-                            <HeaderIcon className="size-4.5 animate-pulse text-blue-600 transition-transform group-hover:scale-110 dark:text-blue-400" />
+                        <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground uppercase">
+                            <HeaderIcon className="size-4.5 animate-pulse text-[#5B35F5] dark:text-[#B3F52D] transition-transform group-hover:scale-110 dark:text-[#B3F52D]" />
                             {headerTitle}
                         </span>
 
@@ -66,14 +66,14 @@ export function CurationEditShell({
                             {onStatusToggle && (
                                 <div className="flex items-center gap-2">
                                     {statusLabel && (
-                                        <span className="text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                                        <span className="text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                             {statusLabel}:
                                         </span>
                                     )}
                                     <button
                                         type="button"
                                         onClick={onStatusToggle}
-                                        className={`cursor-pointer rounded-lg border px-3 py-1.5 text-[10px] font-extrabold uppercase transition ${
+                                        className={`cursor-pointer rounded-lg border px-3 py-1.5 text-[10px] font-semibold uppercase transition ${
                                             statusValue
                                                 ? 'border-emerald-150 bg-emerald-50 text-emerald-700 dark:border-emerald-900/30 dark:bg-emerald-950/20 dark:text-emerald-400'
                                                 : 'border-border bg-muted text-muted-foreground'

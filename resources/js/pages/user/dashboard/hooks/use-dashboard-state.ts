@@ -74,7 +74,7 @@ const defaultStats: DashboardStats = {
         {
             name: 'Clerical',
             percentage: 85,
-            color: 'bg-blue-600 dark:bg-blue-500',
+            color: 'bg-[#5B35F5] dark:bg-[#B3F52D] dark:text-[#0A0A0A]',
             correct: 34,
             total: 40,
         },

@@ -11,20 +11,20 @@ export default function DevDocs() {
                             Civil Service Exam Reviewer Blueprint
                         </h1>
                         <div className="flex flex-wrap justify-center gap-3">
-                            <span className="rounded-full bg-blue-50 px-3.5 py-1.5 text-sm font-semibold text-blue-600 dark:bg-blue-950/30 dark:text-blue-400">
+                            <span className="rounded-full bg-blue-50 px-3.5 py-1.5 text-sm font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                 Timeline: May 23 - Jun 26, 2026
                             </span>
-                            <span className="rounded-full bg-blue-50 px-3.5 py-1.5 text-sm font-semibold text-blue-600 dark:bg-blue-950/30 dark:text-blue-400">
+                            <span className="rounded-full bg-blue-50 px-3.5 py-1.5 text-sm font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                 Stack: Laravel 13 + Inertia v3 + React 19 + Neon
                             </span>
-                            <span className="rounded-full bg-blue-50 px-3.5 py-1.5 text-sm font-semibold text-blue-600 dark:bg-blue-950/30 dark:text-blue-400">
+                            <span className="rounded-full bg-blue-50 px-3.5 py-1.5 text-sm font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                 Budget: $0
                             </span>
                         </div>
                     </header>
 
                     <section className="rounded-xl bg-white p-4 shadow-sm sm:p-6 lg:p-8 dark:bg-slate-950">
-                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-black tracking-tight text-blue-600 sm:text-4xl sm:text-5xl dark:text-blue-400">
+                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] sm:text-4xl sm:text-5xl dark:text-[#B3F52D]">
                             1. Current State Assessment
                         </h2>
                         <div className="my-6 overflow-hidden rounded-lg border border-gray-100 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.1)] dark:bg-slate-950">
@@ -159,7 +159,7 @@ export default function DevDocs() {
                     </section>
 
                     <section className="rounded-xl bg-white p-4 shadow-sm sm:p-6 lg:p-8 dark:bg-slate-950">
-                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-black tracking-tight text-blue-600 sm:text-4xl sm:text-5xl dark:text-blue-400">
+                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] sm:text-4xl sm:text-5xl dark:text-[#B3F52D]">
                             2. Architectural Design Decisions
                         </h2>
                         <ul className="mb-5 list-disc space-y-2 pl-6">
@@ -182,7 +182,7 @@ export default function DevDocs() {
                             <li>
                                 <strong>Admin Identification:</strong> Managed
                                 via{' '}
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     role
                                 </code>{' '}
                                 column (enum: user, admin) on users table.
@@ -195,10 +195,10 @@ export default function DevDocs() {
                     </section>
 
                     <section className="rounded-xl bg-white p-4 shadow-sm sm:p-6 lg:p-8 dark:bg-slate-950">
-                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-black tracking-tight text-blue-600 sm:text-4xl sm:text-5xl dark:text-blue-400">
+                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] sm:text-4xl sm:text-5xl dark:text-[#B3F52D]">
                             3. Database Schema & JSONB Structures
                         </h2>
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Key Architectural Constraint
                         </h3>
                         <p>
@@ -208,7 +208,7 @@ export default function DevDocs() {
                             <strong>
                                 all user exam answers and item states are stored
                                 as a single JSONB record within a single{' '}
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     exam_attempts
                                 </code>{' '}
                                 table row
@@ -258,14 +258,14 @@ export default function DevDocs() {
                             </code>
                         </pre>
 
-                        <h3 className="mt-8 mb-4 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-8 mb-4 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Database Schema Reference
                         </h3>
 
                         {/* 1. users */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Table:</span>
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 users
                             </code>
                         </h4>
@@ -296,7 +296,7 @@ export default function DevDocs() {
                                 <tbody>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 id
                                             </code>
                                         </td>
@@ -324,7 +324,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 name
                                             </code>
                                         </td>
@@ -352,7 +352,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 email
                                             </code>
                                         </td>
@@ -380,7 +380,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 email_verified_at
                                             </code>
                                         </td>
@@ -408,7 +408,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 password
                                             </code>
                                         </td>
@@ -436,7 +436,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 provider
                                             </code>
                                         </td>
@@ -465,7 +465,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 provider_id
                                             </code>
                                         </td>
@@ -494,7 +494,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 role
                                             </code>
                                         </td>
@@ -521,7 +521,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 remember_token
                                             </code>
                                         </td>
@@ -552,9 +552,9 @@ export default function DevDocs() {
                         </div>
 
                         {/* 2. categories */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Table:</span>
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 categories
                             </code>
                         </h4>
@@ -585,7 +585,7 @@ export default function DevDocs() {
                                 <tbody>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 id
                                             </code>
                                         </td>
@@ -613,7 +613,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 name
                                             </code>
                                         </td>
@@ -641,7 +641,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 slug
                                             </code>
                                         </td>
@@ -670,7 +670,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 is_demographic
                                             </code>
                                         </td>
@@ -699,7 +699,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 sort_order
                                             </code>
                                         </td>
@@ -730,9 +730,9 @@ export default function DevDocs() {
                         </div>
 
                         {/* 3. subcategories */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Table:</span>
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 subcategories
                             </code>
                         </h4>
@@ -763,7 +763,7 @@ export default function DevDocs() {
                                 <tbody>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 category_id
                                             </code>
                                         </td>
@@ -795,7 +795,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 name
                                             </code>
                                         </td>
@@ -823,7 +823,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 slug
                                             </code>
                                         </td>
@@ -850,7 +850,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 language
                                             </code>
                                         </td>
@@ -877,7 +877,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 sort_order
                                             </code>
                                         </td>
@@ -908,9 +908,9 @@ export default function DevDocs() {
                         </div>
 
                         {/* 4. questions */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Table:</span>
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 questions
                             </code>
                         </h4>
@@ -941,7 +941,7 @@ export default function DevDocs() {
                                 <tbody>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 subcategory_id
                                             </code>
                                         </td>
@@ -973,7 +973,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 language
                                             </code>
                                         </td>
@@ -1001,7 +1001,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 stem
                                             </code>
                                         </td>
@@ -1029,7 +1029,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 options
                                             </code>
                                         </td>
@@ -1058,7 +1058,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 correct_option
                                             </code>
                                         </td>
@@ -1086,7 +1086,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 explanation
                                             </code>
                                         </td>
@@ -1114,7 +1114,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 created_by
                                             </code>
                                         </td>
@@ -1148,9 +1148,9 @@ export default function DevDocs() {
                         </div>
 
                         {/* 5. track_configs */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Table:</span>
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 track_configs
                             </code>
                         </h4>
@@ -1181,7 +1181,7 @@ export default function DevDocs() {
                                 <tbody>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 id
                                             </code>
                                         </td>
@@ -1208,7 +1208,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 track
                                             </code>
                                         </td>
@@ -1237,7 +1237,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 category_id
                                             </code>
                                         </td>
@@ -1268,7 +1268,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 item_count
                                             </code>
                                         </td>
@@ -1296,7 +1296,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 time_limit_secs
                                             </code>
                                         </td>
@@ -1326,9 +1326,9 @@ export default function DevDocs() {
                         </div>
 
                         {/* 6. exam_attempts */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Table:</span>
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 exam_attempts
                             </code>
                         </h4>
@@ -1359,7 +1359,7 @@ export default function DevDocs() {
                                 <tbody>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 category_id
                                             </code>
                                         </td>
@@ -1388,7 +1388,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 user_id
                                             </code>
                                         </td>
@@ -1415,7 +1415,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 question_ids
                                             </code>
                                         </td>
@@ -1444,7 +1444,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 answers
                                             </code>
                                         </td>
@@ -1473,7 +1473,7 @@ export default function DevDocs() {
                                     </tr>
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3 font-medium">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 cat_scores
                                             </code>
                                         </td>
@@ -1506,7 +1506,7 @@ export default function DevDocs() {
                             </table>
                         </div>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             JSONB Column Structures
                         </h3>
 
@@ -1573,10 +1573,10 @@ export default function DevDocs() {
                     </section>
 
                     <section className="rounded-xl bg-white p-4 shadow-sm sm:p-6 lg:p-8 dark:bg-slate-950">
-                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-black tracking-tight text-blue-600 sm:text-4xl sm:text-5xl dark:text-blue-400">
+                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] sm:text-4xl sm:text-5xl dark:text-[#B3F52D]">
                             4. Configurations & Relationships
                         </h2>
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Subcategory & Distribution Seed Matrices
                         </h3>
                         <div className="my-6 overflow-hidden rounded-lg border border-gray-100 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.1)] dark:bg-slate-950">
@@ -1727,9 +1727,9 @@ export default function DevDocs() {
                             </table>
                         </div>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Timer Configuration (stored in{' '}
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 track_configs
                             </code>
                             )
@@ -1813,17 +1813,17 @@ export default function DevDocs() {
                     </section>
 
                     <section className="rounded-xl bg-white p-4 shadow-sm sm:p-6 lg:p-8 dark:bg-slate-950">
-                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-black tracking-tight text-blue-600 sm:text-4xl sm:text-5xl dark:text-blue-400">
+                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] sm:text-4xl sm:text-5xl dark:text-[#B3F52D]">
                             5. Backend Architecture
                         </h2>
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Models & Relationships
                         </h3>
 
                         {/* 1. User Model */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Model:</span>
-                            <strong className="text-blue-600 dark:text-blue-400">
+                            <strong className="text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 User
                             </strong>
                         </h4>
@@ -1849,10 +1849,10 @@ export default function DevDocs() {
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3">
                                             <div className="flex flex-col gap-1.5">
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     hasMany(ExamAttempt)
                                                 </code>
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     hasMany(Question,
                                                     'created_by')
                                                 </code>
@@ -1933,9 +1933,9 @@ export default function DevDocs() {
                         </div>
 
                         {/* 2. Category Model */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Model:</span>
-                            <strong className="text-blue-600 dark:text-blue-400">
+                            <strong className="text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 Category
                             </strong>
                         </h4>
@@ -1961,10 +1961,10 @@ export default function DevDocs() {
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3">
                                             <div className="flex flex-col gap-1.5">
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     hasMany(Subcategory)
                                                 </code>
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     hasMany(TrackConfig)
                                                 </code>
                                             </div>
@@ -2016,9 +2016,9 @@ export default function DevDocs() {
                         </div>
 
                         {/* 3. Subcategory Model */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Model:</span>
-                            <strong className="text-blue-600 dark:text-blue-400">
+                            <strong className="text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 Subcategory
                             </strong>
                         </h4>
@@ -2044,10 +2044,10 @@ export default function DevDocs() {
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3">
                                             <div className="flex flex-col gap-1.5">
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     belongsTo(Category)
                                                 </code>
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     hasMany(Question)
                                                 </code>
                                             </div>
@@ -2102,9 +2102,9 @@ export default function DevDocs() {
                         </div>
 
                         {/* 4. TrackConfig Model */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Model:</span>
-                            <strong className="text-blue-600 dark:text-blue-400">
+                            <strong className="text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 TrackConfig
                             </strong>
                         </h4>
@@ -2130,7 +2130,7 @@ export default function DevDocs() {
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3">
                                             <div className="flex flex-col gap-1.5">
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     belongsTo(Category)
                                                 </code>
                                             </div>
@@ -2191,9 +2191,9 @@ export default function DevDocs() {
                         </div>
 
                         {/* 5. Question Model */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Model:</span>
-                            <strong className="text-blue-600 dark:text-blue-400">
+                            <strong className="text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 Question
                             </strong>
                         </h4>
@@ -2219,10 +2219,10 @@ export default function DevDocs() {
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3">
                                             <div className="flex flex-col gap-1.5">
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     belongsTo(Subcategory)
                                                 </code>
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     belongsTo(User,
                                                     'created_by')
                                                 </code>
@@ -2302,9 +2302,9 @@ export default function DevDocs() {
                         </div>
 
                         {/* 6. ExamAttempt Model */}
-                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-gray-700">
+                        <h4 className="mt-6 mb-2 flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-700">
                             <span>Model:</span>
-                            <strong className="text-blue-600 dark:text-blue-400">
+                            <strong className="text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 ExamAttempt
                             </strong>
                         </h4>
@@ -2330,10 +2330,10 @@ export default function DevDocs() {
                                     <tr className="hover:bg-slate-50">
                                         <td className="border-b border-gray-200 p-3">
                                             <div className="flex flex-col gap-1.5">
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     belongsTo(User)
                                                 </code>
-                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-blue-600 dark:text-blue-400">
+                                                <code className="w-fit rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.85em] text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     belongsTo(Category)
                                                 </code>
                                             </div>
@@ -2414,51 +2414,51 @@ export default function DevDocs() {
                             </table>
                         </div>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             User Role System
                         </h3>
                         <p>
                             The{' '}
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 users.role
                             </code>{' '}
                             column uses a string enum (
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 user
                             </code>{' '}
                             |{' '}
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 admin
                             </code>
                             ). The{' '}
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 User
                             </code>{' '}
                             model exposes:
                         </p>
                         <ul className="mb-5 list-disc space-y-2 pl-6">
                             <li>
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     isAdmin(): bool
                                 </code>{' '}
                                 checks{' '}
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     $this-&gt;role === 'admin'
                                 </code>
                             </li>
                             <li>
                                 Role is shared to the frontend via{' '}
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     HandleInertiaRequests
                                 </code>{' '}
                                 middleware in{' '}
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     auth.user
                                 </code>
                             </li>
                         </ul>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Controllers
                         </h3>
                         <div className="my-6 overflow-hidden rounded-lg border border-gray-100 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.1)] dark:bg-slate-950">
@@ -2482,7 +2482,7 @@ export default function DevDocs() {
                                             <strong>DashboardController</strong>
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 index
                                             </code>
                                         </td>
@@ -2496,27 +2496,27 @@ export default function DevDocs() {
                                             <strong>ExamController</strong>
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 setup
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 assemble
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 submit
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 results
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 review
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 retake
                                             </code>
                                         </td>
@@ -2530,15 +2530,15 @@ export default function DevDocs() {
                                             <strong>DrillController</strong>
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 index
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 assemble
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 submit
                                             </code>
                                         </td>
@@ -2552,7 +2552,7 @@ export default function DevDocs() {
                                             <strong>HistoryController</strong>
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 index
                                             </code>
                                         </td>
@@ -2567,7 +2567,7 @@ export default function DevDocs() {
                                             </strong>
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 index
                                             </code>
                                         </td>
@@ -2583,27 +2583,27 @@ export default function DevDocs() {
                                             </strong>
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 index
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 create
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 store
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 edit
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 update
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 destroy
                                             </code>
                                         </td>
@@ -2618,15 +2618,15 @@ export default function DevDocs() {
                                             </strong>
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 index
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 generate
                                             </code>
                                             ,{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 commit
                                             </code>
                                         </td>
@@ -2639,7 +2639,7 @@ export default function DevDocs() {
                             </table>
                         </div>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Middleware
                         </h3>
                         <div className="my-6 overflow-hidden rounded-lg border border-gray-100 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.1)] dark:bg-slate-950">
@@ -2661,11 +2661,11 @@ export default function DevDocs() {
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
                                             Gates routes behind{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 $user-&gt;role
                                             </code>{' '}
                                             check. Usage:{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 -&gt;middleware('role:admin')
                                             </code>
                                         </td>
@@ -2674,10 +2674,10 @@ export default function DevDocs() {
                             </table>
                         </div>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Services
                         </h3>
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             1. ExamAssemblerService
                         </h3>
                         <p>
@@ -2697,22 +2697,22 @@ export default function DevDocs() {
                                 <ul className="mt-2 list-disc space-y-2 pl-6">
                                     <li>
                                         Accept{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             track
                                         </code>{' '}
                                         parameter and optional{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             exclude_attempt_id
                                         </code>{' '}
                                         (for fresh retake exclusion).
                                     </li>
                                     <li>
                                         Load all{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             track_configs
                                         </code>{' '}
                                         for that track, ordered by{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             sort_order
                                         </code>
                                         .
@@ -2735,7 +2735,7 @@ export default function DevDocs() {
                                             </li>
                                             <li>
                                                 Proportionally distribute{' '}
-                                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                     item_count
                                                 </code>{' '}
                                                 across subcategories using floor
@@ -2769,7 +2769,7 @@ export default function DevDocs() {
                                 <ul className="mt-2 list-disc space-y-2 pl-6">
                                     <li>
                                         "Retake Same Exam": Load{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             question_ids
                                         </code>{' '}
                                         from the original ExamAttempt, re-serve
@@ -2777,7 +2777,7 @@ export default function DevDocs() {
                                     </li>
                                     <li>
                                         "Take Fresh Exam": Call assembler with{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             exclude_attempt_id
                                         </code>{' '}
                                         to avoid overlap where possible.
@@ -2789,11 +2789,11 @@ export default function DevDocs() {
                                 <ul className="mt-2 list-disc space-y-2 pl-6">
                                     <li>
                                         Accept{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             category_id
                                         </code>{' '}
                                         (or{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             subcategory_id
                                         </code>
                                         ) and count.
@@ -2809,7 +2809,7 @@ export default function DevDocs() {
                             </li>
                         </ul>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             2. ScoreCalculatorService
                         </h3>
                         <p>
@@ -2822,19 +2822,19 @@ export default function DevDocs() {
                                 <ul className="mt-2 list-disc space-y-2 pl-6">
                                     <li>
                                         Accept:{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             track
                                         </code>
                                         ,{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             question_ids[]
                                         </code>
                                         ,{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             answers&#123;&#125;
                                         </code>
                                         ,{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             time_spent_seconds
                                         </code>
                                         .
@@ -2849,11 +2849,11 @@ export default function DevDocs() {
                                     </li>
                                     <li>
                                         For each scored question: compare{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             answers[question_id]
                                         </code>{' '}
                                         against{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             question.correct_option
                                         </code>
                                         .
@@ -2861,29 +2861,29 @@ export default function DevDocs() {
                                     <li>
                                         Aggregate by category and subcategory
                                         into the{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             category_scores
                                         </code>{' '}
                                         JSONB structure.
                                     </li>
                                     <li>
                                         Compute:{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             scored_items
                                         </code>{' '}
                                         (150 for Pro, 145 for SubPro),{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             correct_count
                                         </code>
                                         ,{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             score_percentage
                                         </code>
                                         .
                                     </li>
                                     <li>
                                         Apply pass threshold: passed ={' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             score_percentage &gt;= 80.00
                                         </code>
                                         .
@@ -2896,7 +2896,7 @@ export default function DevDocs() {
                             </li>
                         </ul>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             3. GeminiService
                         </h3>
                         <p>
@@ -2908,18 +2908,18 @@ export default function DevDocs() {
                                 <ul className="mt-2 list-disc space-y-2 pl-6">
                                     <li>
                                         Uses Laravel{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             Http::withToken()
                                         </code>{' '}
                                         to call{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             generativelanguage.googleapis.com
                                         </code>
                                         .
                                     </li>
                                     <li>
                                         Model:{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             gemini-2.0-flash
                                         </code>{' '}
                                         (free tier).
@@ -2927,26 +2927,26 @@ export default function DevDocs() {
                                     <li>
                                         Structured prompt requesting JSON array
                                         output with:{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             stem
                                         </code>
                                         ,{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             options[]
                                         </code>
                                         ,{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             correct_option
                                         </code>
                                         ,{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             explanation
                                         </code>
                                         .
                                     </li>
                                     <li>
                                         Validates response (exactly 4 options,{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             correct_option
                                         </code>{' '}
                                         0-3, non-empty fields).
@@ -2965,7 +2965,7 @@ export default function DevDocs() {
                                     <li>
                                         Daily call count tracked in cache table
                                         (key:{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             gemini_calls_&#123;date&#125;
                                         </code>
                                         , TTL: 24h).
@@ -2989,10 +2989,10 @@ export default function DevDocs() {
                     </section>
 
                     <section className="rounded-xl bg-white p-4 shadow-sm sm:p-6 lg:p-8 dark:bg-slate-950">
-                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-black tracking-tight text-blue-600 sm:text-4xl sm:text-5xl dark:text-blue-400">
+                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] sm:text-4xl sm:text-5xl dark:text-[#B3F52D]">
                             5. Frontend Architecture
                         </h2>
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Page Routing & Layout Map
                         </h3>
                         <div className="my-6 overflow-hidden rounded-lg border border-gray-100 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.1)] dark:bg-slate-950">
@@ -3260,7 +3260,7 @@ export default function DevDocs() {
 
                         <div className="my-5 rounded-r-lg border-l-4 border-amber-500 bg-amber-50 p-4 text-gray-800 dark:bg-amber-950/30">
                             <strong>NOTE:</strong>{' '}
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 ExamLayout
                             </code>{' '}
                             is a new minimal fullscreen layout (no sidebar, no
@@ -3269,7 +3269,7 @@ export default function DevDocs() {
                             Exam" confirmation button.
                         </div>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Sidebar Navigation Structure
                         </h3>
                         <h4 className="font-bold text-gray-800">
@@ -3398,7 +3398,7 @@ export default function DevDocs() {
                     </section>
 
                     <section className="rounded-xl bg-white p-4 shadow-sm sm:p-6 lg:p-8 dark:bg-slate-950">
-                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-black tracking-tight text-blue-600 sm:text-4xl sm:text-5xl dark:text-blue-400">
+                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] sm:text-4xl sm:text-5xl dark:text-[#B3F52D]">
                             6. Client-Side Exam State Machine
                         </h2>
 
@@ -3410,7 +3410,7 @@ export default function DevDocs() {
                             limits.
                         </div>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             State Shape (managed via useReducer)
                         </h3>
                         <pre className="my-4 overflow-x-auto rounded-lg bg-slate-800 p-4 font-mono text-sm leading-relaxed text-slate-50">
@@ -3432,7 +3432,7 @@ export default function DevDocs() {
                             </code>
                         </pre>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Reducer Actions
                         </h3>
                         <div className="my-6 overflow-hidden rounded-lg border border-gray-100 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.1)] dark:bg-slate-950">
@@ -3454,7 +3454,7 @@ export default function DevDocs() {
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
                                             Sets{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 answers[questionId] =
                                                 optionIndex
                                             </code>
@@ -3466,7 +3466,7 @@ export default function DevDocs() {
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
                                             Adds/removes questionId from{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 flagged
                                             </code>{' '}
                                             set
@@ -3478,7 +3478,7 @@ export default function DevDocs() {
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
                                             Sets{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 currentIndex
                                             </code>{' '}
                                             to target index
@@ -3490,7 +3490,7 @@ export default function DevDocs() {
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
                                             Increments/decrements{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 currentIndex
                                             </code>
                                         </td>
@@ -3501,7 +3501,7 @@ export default function DevDocs() {
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
                                             Decrements{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 timeRemaining
                                             </code>{' '}
                                             by 1
@@ -3513,7 +3513,7 @@ export default function DevDocs() {
                                         </td>
                                         <td className="border-b border-gray-200 p-3.5">
                                             Sets status to{' '}
-                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                 submitting
                                             </code>
                                             , triggers POST
@@ -3535,15 +3535,15 @@ export default function DevDocs() {
                         <ul className="mb-5 list-disc space-y-2 pl-6">
                             <li>
                                 <strong>localStorage Backup:</strong> On every{' '}
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     SELECT_ANSWER
                                 </code>{' '}
                                 and{' '}
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     TOGGLE_FLAG
                                 </code>
                                 , persist state to localStorage under{' '}
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     cse_exam_session
                                 </code>
                                 . On mount, check for existing session and offer
@@ -3556,11 +3556,11 @@ export default function DevDocs() {
                                     <li>
                                         <strong>"Retake Same Exam"</strong>{' '}
                                         navigates to{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             /exams/session
                                         </code>{' '}
                                         with{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             ?retake=&#123;attemptId&#125;
                                         </code>
                                         . Backend loads the same question_ids
@@ -3569,11 +3569,11 @@ export default function DevDocs() {
                                     <li>
                                         <strong>"Take Fresh Exam"</strong>{' '}
                                         navigates to{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             /exams/session
                                         </code>{' '}
                                         with{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             ?fresh=1&amp;exclude=&#123;attemptId&#125;
                                         </code>
                                         . Backend assembles new questions,
@@ -3584,7 +3584,7 @@ export default function DevDocs() {
                             </li>
                         </ul>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Server Awakening Handler
                         </h3>
                         <ul className="mb-5 list-disc space-y-2 pl-6">
@@ -3599,11 +3599,11 @@ export default function DevDocs() {
                                     <li>
                                         <strong>Blade-level:</strong> CSS-only
                                         pulsing animation in{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             app.blade.php
                                         </code>{' '}
                                         inside the{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             #app
                                         </code>{' '}
                                         div. React hydration replaces it
@@ -3611,7 +3611,7 @@ export default function DevDocs() {
                                     </li>
                                     <li>
                                         <strong>React-level:</strong>{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             &lt;ServerAwakeningOverlay&gt;
                                         </code>{' '}
                                         component triggered by Inertia global
@@ -3624,7 +3624,7 @@ export default function DevDocs() {
                             </li>
                         </ul>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Free-Tier Constraint Solutions
                         </h3>
                         <div className="my-6 overflow-hidden rounded-lg border border-gray-100 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.1)] dark:bg-slate-950">
@@ -3715,11 +3715,11 @@ export default function DevDocs() {
                     </section>
 
                     <section className="rounded-xl bg-white p-4 shadow-sm sm:p-6 lg:p-8 dark:bg-slate-950">
-                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-black tracking-tight text-blue-600 sm:text-4xl sm:text-5xl dark:text-blue-400">
+                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] sm:text-4xl sm:text-5xl dark:text-[#B3F52D]">
                             7. Phase-by-Phase Implementation Plan
                         </h2>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Phase 1: Database Foundation & Auth Updates (Week 1:
                             May 23 - 29)
                         </h3>
@@ -3732,7 +3732,7 @@ export default function DevDocs() {
                                 <strong>Migrations (6 new files):</strong>
                                 <ul className="mt-2 list-disc space-y-2 pl-6">
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             add_profile_fields_to_users_table
                                         </code>
                                         : Add role (string, default 'user'),
@@ -3740,7 +3740,7 @@ export default function DevDocs() {
                                         exam_date (date nullable).
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             create_categories_table
                                         </code>
                                         : id, name, slug (unique),
@@ -3748,14 +3748,14 @@ export default function DevDocs() {
                                         timestamps.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             create_subcategories_table
                                         </code>
                                         : id, category_id (FK), name, slug,
                                         language, sort_order, timestamps.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             create_track_configs_table
                                         </code>
                                         : id, track, category_id (FK),
@@ -3764,7 +3764,7 @@ export default function DevDocs() {
                                         category_id].
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             create_questions_table
                                         </code>
                                         : id, subcategory_id (FK), language,
@@ -3774,7 +3774,7 @@ export default function DevDocs() {
                                         timestamps.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             create_exam_attempts_table
                                         </code>
                                         : All fields from schema with FKs, JSONB
@@ -3793,27 +3793,27 @@ export default function DevDocs() {
                                 <strong>Seeders:</strong>
                                 <ul className="mt-2 list-disc space-y-2 pl-6">
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             CategorySeeder
                                         </code>
                                         : 6 categories with is_demographic flag.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             SubcategorySeeder
                                         </code>
                                         : All subcategories with language and
                                         sort_order.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             TrackConfigSeeder
                                         </code>
                                         : Both track mappings with exact item
                                         counts and timer values.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             DemographicQuestionSeeder
                                         </code>
                                         : 20 fixed EDQ survey questions
@@ -3826,21 +3826,21 @@ export default function DevDocs() {
                                 <ul className="mt-2 list-disc space-y-2 pl-6">
                                     <li>
                                         Modify{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             CreateNewUser
                                         </code>
                                         : accept target_track field.
                                     </li>
                                     <li>
                                         Modify{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             register.tsx
                                         </code>
                                         : add track selector dropdown.
                                     </li>
                                     <li>
                                         Update{' '}
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             HandleInertiaRequests
                                         </code>
                                         : share role and target_track in
@@ -3854,19 +3854,19 @@ export default function DevDocs() {
                             </li>
                             <li>
                                 <strong>Middleware:</strong> Create{' '}
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     EnsureRole
                                 </code>{' '}
                                 middleware, register in bootstrap/app.php.
                                 Update{' '}
-                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                     app-sidebar.tsx
                                 </code>{' '}
                                 with user nav items + conditional admin section.
                             </li>
                         </ul>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Phase 2: Admin Panel & AI Question Generator (Week
                             2: May 30 - Jun 5)
                         </h3>
@@ -3891,33 +3891,33 @@ export default function DevDocs() {
                                 <strong>Admin Pages:</strong>
                                 <ul className="mt-2 list-disc space-y-2 pl-6">
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             admin/dashboard.tsx
                                         </code>
                                         : Metric cards + coverage gap table.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             admin/questions/index.tsx
                                         </code>
                                         : Filterable data table with status
                                         badges.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             admin/questions/create.tsx
                                         </code>
                                         : Manual question form with cascade
                                         dropdowns.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             admin/questions/edit.tsx
                                         </code>
                                         : Edit form pre-populated.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             admin/generator/index.tsx
                                         </code>
                                         : Parameter dropdowns, generate button,
@@ -3927,7 +3927,7 @@ export default function DevDocs() {
                             </li>
                         </ul>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Phase 3: Exam Engine & Category Drills (Week 3: Jun
                             6 - 12)
                         </h3>
@@ -3951,26 +3951,26 @@ export default function DevDocs() {
                                 <strong>Frontend (Exam Session):</strong>
                                 <ul className="mt-2 list-disc space-y-2 pl-6">
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             useExamReducer
                                         </code>{' '}
                                         hook: Full state machine.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             ExamTimer
                                         </code>
                                         : Countdown (3:10:00 or 2:40:00),
                                         auto-submit at zero.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             QuestionPanel
                                         </code>
                                         : Stem, 4 radio options, flag toggle.
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             ItemGridNavigator
                                         </code>
                                         : Numbered grid (gray=unvisited,
@@ -3979,7 +3979,7 @@ export default function DevDocs() {
                                         green-border=current).
                                     </li>
                                     <li>
-                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                                        <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             SubmitConfirmDialog
                                         </code>
                                         : X answered, Y unanswered, Z flagged.
@@ -3996,7 +3996,7 @@ export default function DevDocs() {
                             </li>
                         </ul>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Phase 4: Results, Review & User Dashboard (Week 4:
                             Jun 13 - 19)
                         </h3>
@@ -4032,7 +4032,7 @@ export default function DevDocs() {
                             </li>
                         </ul>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Phase 5: Landing Page, Polish & Deployment (Week 5:
                             Jun 20 - 26)
                         </h3>
@@ -4070,16 +4070,16 @@ export default function DevDocs() {
                     </section>
 
                     <section className="rounded-xl bg-white p-4 shadow-sm sm:p-6 lg:p-8 dark:bg-slate-950">
-                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-black tracking-tight text-blue-600 sm:text-4xl sm:text-5xl dark:text-blue-400">
+                        <h2 className="mt-0 mb-4 border-b-2 border-gray-200 pb-3 text-2xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] sm:text-4xl sm:text-5xl dark:text-[#B3F52D]">
                             8. Verification Plan
                         </h2>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Automated Tests
                         </h3>
                         <p>
                             Run{' '}
-                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-blue-600 dark:text-blue-400">
+                            <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-[0.9em] font-medium text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 php artisan test --compact
                             </code>{' '}
                             after each phase.
@@ -4110,7 +4110,7 @@ export default function DevDocs() {
                             </li>
                         </ul>
 
-                        <h3 className="mt-7 mb-3 text-2xl font-black tracking-tight text-gray-700 sm:text-3xl">
+                        <h3 className="mt-7 mb-3 text-2xl font-semibold tracking-tight text-gray-700 sm:text-3xl">
                             Manual Verification
                         </h3>
                         <ul className="mb-5 list-disc space-y-2 pl-6">

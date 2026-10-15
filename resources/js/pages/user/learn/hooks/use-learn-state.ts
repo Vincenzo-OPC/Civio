@@ -13,7 +13,7 @@ export const categoryColors: Record<
     },
     'Verbal Ability': {
         bg: 'bg-blue-50 dark:bg-blue-950/20',
-        text: 'text-blue-700 dark:text-blue-400',
+        text: 'text-blue-700 dark:text-[#B3F52D]',
         border: 'border-blue-150 dark:border-blue-900/35',
         glow: 'shadow-blue-100/50',
     },

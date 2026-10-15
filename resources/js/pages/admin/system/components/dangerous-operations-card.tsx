@@ -23,7 +23,7 @@ export function DangerousOperationsCard({
     return (
         <Card className="border border-rose-200/50 bg-rose-50/30 backdrop-blur-xl dark:border-rose-900/30 dark:bg-rose-950/10">
             <CardHeader>
-                <CardTitle className="text-xl font-black tracking-tight text-rose-600 dark:text-rose-400">
+                <CardTitle className="text-xl font-semibold tracking-tight text-rose-600 dark:text-rose-400">
                     Dangerous Operations
                 </CardTitle>
                 <CardDescription className="text-sm font-medium text-rose-600/70 dark:text-rose-400/70">

@@ -30,7 +30,7 @@ export function CurationCreateShell({
             {/* Back Link */}
             <Link
                 href={backUrl}
-                className="group flex w-fit cursor-pointer items-center gap-1 text-xs font-black text-foreground transition transition-all duration-300 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                className="group flex w-fit cursor-pointer items-center gap-1 text-xs font-semibold text-foreground transition transition-all duration-300 hover:text-[#5B35F5] dark:text-[#B3F52D] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
             >
                 <ChevronLeft className="size-4" />
                 {backLabel}
@@ -45,19 +45,19 @@ export function CurationCreateShell({
                     <button
                         type="button"
                         onClick={() => onTabChange('ai')}
-                        className={`inline-flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 text-xs font-black tracking-wider uppercase transition ${
+                        className={`inline-flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 text-xs font-semibold tracking-wider uppercase transition ${
                             activeTab === 'ai'
                                 ? 'bg-white text-slate-950 shadow-xs dark:bg-slate-900 dark:text-white'
                                 : 'dark:text-slate-450 text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
                         }`}
                     >
-                        <Sparkles className="size-4 animate-pulse text-blue-600 dark:text-blue-400" />
+                        <Sparkles className="size-4 animate-pulse text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                         AI Generator
                     </button>
                     <button
                         type="button"
                         onClick={() => onTabChange('manual')}
-                        className={`inline-flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 text-xs font-black tracking-wider uppercase transition ${
+                        className={`inline-flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 text-xs font-semibold tracking-wider uppercase transition ${
                             activeTab === 'manual'
                                 ? 'bg-white text-slate-950 shadow-xs dark:bg-slate-900 dark:text-white'
                                 : 'dark:text-slate-450 text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'

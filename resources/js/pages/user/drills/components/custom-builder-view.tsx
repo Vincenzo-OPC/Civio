@@ -729,7 +729,7 @@ export function CustomBuilderView({
                                 onClick={() => setBuilderMode('auto')}
                                 className={`flex flex-1 items-center justify-center gap-2 rounded-xl py-2.5 text-xs font-bold transition ${
                                     builderMode === 'auto'
-                                        ? 'bg-blue-600 text-white shadow-xs'
+                                        ? 'bg-[#5B35F5] text-white shadow-xs'
                                         : 'text-muted-foreground hover:text-foreground'
                                 }`}
                             >
@@ -741,7 +741,7 @@ export function CustomBuilderView({
                                 onClick={() => setBuilderMode('manual')}
                                 className={`flex flex-1 items-center justify-center gap-2 rounded-xl py-2.5 text-xs font-bold transition ${
                                     builderMode === 'manual'
-                                        ? 'bg-blue-600 text-white shadow-xs'
+                                        ? 'bg-[#5B35F5] text-white shadow-xs'
                                         : 'text-muted-foreground hover:text-foreground'
                                 }`}
                             >
@@ -756,7 +756,7 @@ export function CustomBuilderView({
                         <div className="rounded-2xl border border-border bg-card p-5 shadow-xs sm:p-6">
                             <div className="mb-3 flex items-center justify-between">
                                 <div className="flex items-center gap-2">
-                                    <span className="flex size-5 items-center justify-center rounded-full bg-blue-600 text-[10px] font-black text-white">
+                                    <span className="flex size-5 items-center justify-center rounded-full bg-[#5B35F5] text-[10px] font-semibold text-white">
                                         1
                                     </span>
                                     <h3 className="font-heading text-sm font-bold text-foreground">
@@ -766,7 +766,7 @@ export function CustomBuilderView({
                                 <button
                                     type="button"
                                     onClick={selectAllCategories}
-                                    className="text-xs font-bold text-blue-600 transition hover:underline dark:text-blue-400"
+                                    className="text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] transition hover:underline dark:text-[#B3F52D]"
                                 >
                                     Select All
                                 </button>
@@ -814,7 +814,7 @@ export function CustomBuilderView({
                                                     <div
                                                         className={`flex size-4 items-center justify-center rounded-md border transition ${
                                                             isSelected
-                                                                ? 'border-blue-600 bg-blue-600 text-white'
+                                                                ? 'border-blue-600 bg-[#5B35F5] text-white'
                                                                 : 'border-muted-foreground/30 bg-background'
                                                         }`}
                                                     >
@@ -838,7 +838,7 @@ export function CustomBuilderView({
                         {/* Step 2: Pool Filter Mode */}
                         <div className="rounded-2xl border border-border bg-card p-5 shadow-xs sm:p-6">
                             <div className="mb-3 flex items-center gap-2">
-                                <span className="flex size-5 items-center justify-center rounded-full bg-blue-600 text-[10px] font-black text-white">
+                                <span className="flex size-5 items-center justify-center rounded-full bg-[#5B35F5] text-[10px] font-semibold text-white">
                                     2
                                 </span>
                                 <h3 className="font-heading text-sm font-bold text-foreground">
@@ -858,9 +858,9 @@ export function CustomBuilderView({
                                 >
                                     <div>
                                         <div className="mb-2 flex items-center justify-between">
-                                            <Sparkles className="size-4 text-blue-600 dark:text-blue-400" />
+                                            <Sparkles className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                             {poolFilter === 'all' && (
-                                                <span className="size-2 rounded-full bg-blue-600" />
+                                                <span className="size-2 rounded-full bg-[#5B35F5]" />
                                             )}
                                         </div>
                                         <h4 className="text-xs font-bold text-foreground">
@@ -885,7 +885,7 @@ export function CustomBuilderView({
                                     <div>
                                         <div className="mb-2 flex items-center justify-between">
                                             <RotateCcw className="size-4 text-rose-600 dark:text-rose-400" />
-                                            <span className="rounded-full bg-rose-100 px-1.5 py-0.5 text-[9px] font-black text-rose-700 dark:bg-rose-950 dark:text-rose-300">
+                                            <span className="rounded-full bg-rose-100 px-1.5 py-0.5 text-[9px] font-semibold text-rose-700 dark:bg-rose-950 dark:text-rose-300">
                                                 {wrongQuestionIds.length}{' '}
                                                 Mistakes
                                             </span>
@@ -935,7 +935,7 @@ export function CustomBuilderView({
                                 <div className="flex flex-col justify-between gap-3 border-b border-border pb-4 sm:flex-row sm:items-center">
                                     <div>
                                         <div className="flex items-center gap-2">
-                                            <span className="flex size-5 items-center justify-center rounded-full bg-blue-600 text-[10px] font-black text-white">
+                                            <span className="flex size-5 items-center justify-center rounded-full bg-[#5B35F5] text-[10px] font-semibold text-white">
                                                 3
                                             </span>
                                             <h3 className="font-heading text-sm font-bold text-foreground">
@@ -960,7 +960,7 @@ export function CustomBuilderView({
                                             onClick={() =>
                                                 setIsCreateModalOpen(true)
                                             }
-                                            className="h-8 gap-1.5 border-blue-200 bg-blue-50/50 text-xs font-bold text-blue-700 hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-blue-300"
+                                            className="h-8 gap-1.5 border-blue-200 bg-blue-50/50 text-xs font-bold text-blue-700 hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-[#B3F52D]"
                                         >
                                             <Plus className="size-3.5" />
                                             <span>Add Custom Question</span>
@@ -1106,7 +1106,7 @@ export function CustomBuilderView({
                                                 }
                                                 className={`flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-[11px] font-bold transition ${
                                                     showSelectedOnly
-                                                        ? 'bg-blue-600 text-white shadow-xs'
+                                                        ? 'bg-[#5B35F5] text-white shadow-xs'
                                                         : 'border border-border bg-background text-muted-foreground hover:bg-muted'
                                                 }`}
                                             >
@@ -1313,7 +1313,7 @@ export function CustomBuilderView({
                                                                                                 subGroup,
                                                                                             )
                                                                                         }
-                                                                                        className="rounded-lg border border-blue-200 bg-blue-50/50 px-2 py-1 text-[10px] font-bold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-blue-300"
+                                                                                        className="rounded-lg border border-blue-200 bg-blue-50/50 px-2 py-1 text-[10px] font-bold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-[#B3F52D]"
                                                                                     >
                                                                                         Select
                                                                                         All
@@ -1434,7 +1434,7 @@ export function CustomBuilderView({
                     <div className="flex flex-col gap-6">
                         <div className="rounded-2xl border border-border bg-card p-5 shadow-xs sm:p-6">
                             <div className="mb-4 flex items-center gap-2">
-                                <span className="flex size-5 items-center justify-center rounded-full bg-blue-600 text-[10px] font-black text-white">
+                                <span className="flex size-5 items-center justify-center rounded-full bg-[#5B35F5] text-[10px] font-semibold text-white">
                                     {builderMode === 'manual' ? '4' : '3'}
                                 </span>
                                 <h3 className="font-heading text-sm font-bold text-foreground">
@@ -1489,9 +1489,9 @@ export function CustomBuilderView({
                                                                             '',
                                                                         );
                                                                     }}
-                                                                    className={`min-w-[54px] flex-1 rounded-lg py-2 text-xs font-black transition ${
+                                                                    className={`min-w-[54px] flex-1 rounded-lg py-2 text-xs font-semibold transition ${
                                                                         isSelected
-                                                                            ? 'bg-blue-600 text-white shadow-xs'
+                                                                            ? 'bg-[#5B35F5] text-white shadow-xs'
                                                                             : 'border border-border bg-background text-muted-foreground hover:bg-muted'
                                                                     }`}
                                                                 >
@@ -1636,7 +1636,7 @@ export function CustomBuilderView({
                                                                     }
                                                                 }
                                                             }}
-                                                            className="w-16 [appearance:textfield] bg-transparent text-right text-xs font-black text-foreground focus:outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                                                            className="w-16 [appearance:textfield] bg-transparent text-right text-xs font-semibold text-foreground focus:outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                                                         />
                                                         <span className="text-[11px] font-semibold text-muted-foreground">
                                                             / {poolSize}
@@ -1667,7 +1667,7 @@ export function CustomBuilderView({
                                                     : 'border-border bg-background text-muted-foreground'
                                             }`}
                                         >
-                                            <Clock className="size-4 text-blue-600 dark:text-blue-400" />
+                                            <Clock className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                             <div>
                                                 <p className="text-xs font-bold text-foreground">
                                                     Timed
@@ -1719,7 +1719,7 @@ export function CustomBuilderView({
                                                 }
                                                 className={`rounded-lg py-1.5 text-xs font-bold transition ${
                                                     language === lang
-                                                        ? 'bg-foreground font-black text-background'
+                                                        ? 'bg-foreground font-semibold text-background'
                                                         : 'border border-border bg-background text-muted-foreground hover:bg-muted'
                                                 }`}
                                             >
@@ -1738,7 +1738,7 @@ export function CustomBuilderView({
                                             ? 'Manually Picked:'
                                             : 'Questions in Session:'}
                                     </span>
-                                    <span className="font-black text-foreground">
+                                    <span className="font-semibold text-foreground">
                                         {totalSelectedCount} of {poolSize}{' '}
                                         available
                                     </span>
@@ -1748,7 +1748,7 @@ export function CustomBuilderView({
                                     type="button"
                                     disabled={totalSelectedCount === 0}
                                     onClick={handleStart}
-                                    className="group flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-xs font-bold text-white shadow-sm transition hover:bg-blue-700 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
+                                    className="group flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#5B35F5] py-3 text-xs font-bold text-white shadow-sm transition hover:bg-[#4a2ad4] active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
                                 >
                                     <span>
                                         Start Custom Drill ({totalSelectedCount}
@@ -1763,7 +1763,7 @@ export function CustomBuilderView({
                                     onClick={handleOpenSaveModal}
                                     className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl border border-border bg-background py-2.5 text-xs font-bold text-foreground transition hover:bg-muted active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
                                 >
-                                    <BookmarkPlus className="size-4 text-blue-600 dark:text-blue-400" />
+                                    <BookmarkPlus className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                     <span>Save Selection as Practice Set</span>
                                 </button>
                             </div>
@@ -1776,7 +1776,7 @@ export function CustomBuilderView({
                     <div className="fixed right-4 bottom-4 left-4 z-40 mx-auto max-w-4xl rounded-2xl border border-blue-500/30 bg-card/95 p-3 shadow-xl backdrop-blur-md dark:border-blue-500/40">
                         <div className="flex flex-col items-center justify-between gap-3 sm:flex-row">
                             <div className="flex items-center gap-3">
-                                <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-xs font-black text-white">
+                                <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-[#5B35F5] text-xs font-semibold text-white">
                                     {selectedManualIds.length}
                                 </div>
                                 <div>
@@ -1815,14 +1815,14 @@ export function CustomBuilderView({
                                     onClick={handleOpenSaveModal}
                                     className="h-9 text-xs font-bold"
                                 >
-                                    <BookmarkPlus className="mr-1.5 size-3.5 text-blue-600 dark:text-blue-400" />
+                                    <BookmarkPlus className="mr-1.5 size-3.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                     <span>Save Set</span>
                                 </Button>
                                 <Button
                                     type="button"
                                     size="sm"
                                     onClick={handleStart}
-                                    className="h-9 gap-1.5 bg-blue-600 text-xs font-bold text-white hover:bg-blue-700 active:scale-95"
+                                    className="h-9 gap-1.5 bg-[#5B35F5] text-xs font-bold text-white hover:bg-[#4a2ad4] active:scale-95"
                                 >
                                     <span>Start Custom Drill</span>
                                     <ArrowRight className="size-3.5" />
@@ -1846,7 +1846,7 @@ export function CustomBuilderView({
                 <DialogContent className="sm:max-w-2xl">
                     <DialogHeader>
                         <div className="flex items-center gap-2">
-                            <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400">
+                            <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 <Bookmark className="size-4" />
                             </div>
                             <div>
@@ -1909,7 +1909,7 @@ export function CustomBuilderView({
                                 type="submit"
                                 size="sm"
                                 disabled={isSavingSet || !savedSetName.trim()}
-                                className="gap-1.5 bg-blue-600 text-xs text-white hover:bg-blue-700"
+                                className="gap-1.5 bg-[#5B35F5] text-xs text-white hover:bg-[#4a2ad4]"
                             >
                                 {isSavingSet && (
                                     <Loader2 className="size-3.5 animate-spin" />

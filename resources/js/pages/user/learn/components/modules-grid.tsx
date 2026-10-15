@@ -33,7 +33,7 @@ export function ModulesGrid({
                             key={categoryName}
                             className="flex flex-col gap-5"
                         >
-                            <h2 className="flex items-center gap-3 border-b border-border pb-3 font-heading text-xl font-black text-foreground">
+                            <h2 className="flex items-center gap-3 border-b border-border pb-3 font-heading text-xl font-semibold text-foreground">
                                 <span
                                     className={`size-3 rounded-full border ${colors.bg} ${colors.border}`}
                                 />
@@ -51,7 +51,7 @@ export function ModulesGrid({
                                                 {/* Badges row */}
                                                 <div className="flex flex-wrap items-center gap-2">
                                                     <span
-                                                        className={`rounded-full border px-2.5 py-0.5 text-[9px] font-extrabold tracking-wide uppercase ${colors.bg} ${colors.text} ${colors.border}`}
+                                                        className={`rounded-full border px-2.5 py-0.5 text-[9px] font-semibold tracking-wide uppercase ${colors.bg} ${colors.text} ${colors.border}`}
                                                     >
                                                         {mod.category}
                                                     </span>
@@ -59,14 +59,14 @@ export function ModulesGrid({
                                                         {mod.subcategory}
                                                     </span>
                                                     {mod.is_completed && (
-                                                        <span className="ml-auto flex items-center gap-1 rounded-full bg-green-50 px-2 py-0.5 text-[9px] font-black text-green-700 dark:bg-green-950/40 dark:text-green-400">
+                                                        <span className="ml-auto flex items-center gap-1 rounded-full bg-green-50 px-2 py-0.5 text-[9px] font-semibold text-green-700 dark:bg-green-950/40 dark:text-green-400">
                                                             <CheckCircle2 className="size-3" />
                                                             Completed
                                                         </span>
                                                     )}
                                                 </div>
 
-                                                <h3 className="mt-5 font-heading text-lg leading-snug font-bold text-foreground transition group-hover:text-blue-600 dark:text-blue-400 dark:group-hover:text-blue-400">
+                                                <h3 className="mt-5 font-heading text-lg leading-snug font-bold text-foreground transition group-hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:group-hover:text-blue-400">
                                                     {mod.title}
                                                 </h3>
 
@@ -93,7 +93,7 @@ export function ModulesGrid({
                                                 </div>
 
                                                 {!mod.is_completed && (
-                                                    <span className="flex items-center gap-1 text-xs font-black text-blue-600 transition-all group-hover:gap-2 dark:text-blue-400">
+                                                    <span className="flex items-center gap-1 text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D] transition-all group-hover:gap-2 dark:text-[#B3F52D]">
                                                         Start Lesson
                                                         <ArrowRight className="size-3.5" />
                                                     </span>
@@ -114,13 +114,13 @@ export function ModulesGrid({
         return (
             <div className="relative overflow-hidden rounded-2xl border-2 border-dashed border-border bg-card/70 p-12 text-center shadow-sm transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-900/50">
                 <div className="mx-auto mb-5 flex size-14 items-center justify-center rounded-xl bg-slate-100 text-muted-foreground ring-8 dark:bg-slate-900">
-                    <BookOpen className="size-6 text-blue-600 dark:text-blue-400" />
+                    <BookOpen className="size-6 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                 </div>
-                <span className="mb-3.5 inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3.5 py-1 text-[10px] font-extrabold tracking-wider text-amber-700 uppercase dark:bg-amber-950/30 dark:bg-amber-950/40 dark:text-amber-400">
+                <span className="mb-3.5 inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3.5 py-1 text-[10px] font-semibold tracking-wider text-amber-700 uppercase dark:bg-amber-950/30 dark:bg-amber-950/40 dark:text-amber-400">
                     <span className="size-1.5 rounded-full bg-amber-500" />
                     Coming Soon
                 </span>
-                <h3 className="font-heading text-xl font-black tracking-tight text-foreground">
+                <h3 className="font-heading text-xl font-semibold tracking-tight text-foreground">
                     No Learning Modules Available
                 </h3>
                 <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
@@ -134,7 +134,7 @@ export function ModulesGrid({
     return (
         <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-card py-16">
             <BookOpen className="size-12 text-muted-foreground" />
-            <h3 className="mt-4 text-sm font-black text-foreground">
+            <h3 className="mt-4 text-sm font-semibold text-foreground">
                 No learning modules match your search
             </h3>
             <p className="mt-1 max-w-2xl text-center text-sm leading-normal leading-relaxed text-muted-foreground">

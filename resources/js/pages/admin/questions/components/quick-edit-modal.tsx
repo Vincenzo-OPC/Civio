@@ -152,7 +152,7 @@ function QuickEditForm({
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                     {/* Category */}
                     <div>
-                        <label className="mb-1.5 block text-[10px] font-extrabold text-slate-400 uppercase">
+                        <label className="mb-1.5 block text-[10px] font-semibold text-slate-400 uppercase">
                             Category
                         </label>
                         <select
@@ -184,7 +184,7 @@ function QuickEditForm({
 
                     {/* Subcategory */}
                     <div>
-                        <label className="mb-1.5 block text-[10px] font-extrabold text-slate-400 uppercase">
+                        <label className="mb-1.5 block text-[10px] font-semibold text-slate-400 uppercase">
                             Subcategory
                         </label>
                         <select
@@ -213,7 +213,7 @@ function QuickEditForm({
 
                     {/* Language */}
                     <div>
-                        <label className="mb-1.5 block text-[10px] font-extrabold text-slate-400 uppercase">
+                        <label className="mb-1.5 block text-[10px] font-semibold text-slate-400 uppercase">
                             Language
                         </label>
                         <select
@@ -237,7 +237,7 @@ function QuickEditForm({
 
                 {/* Stem */}
                 <div>
-                    <label className="mb-1.5 block text-[10px] font-extrabold text-slate-400 uppercase">
+                    <label className="mb-1.5 block text-[10px] font-semibold text-slate-400 uppercase">
                         Question Stem
                     </label>
                     <textarea
@@ -256,7 +256,7 @@ function QuickEditForm({
 
                 {/* Options */}
                 <div>
-                    <label className="mb-2 block text-[10px] font-extrabold text-slate-400 uppercase">
+                    <label className="mb-2 block text-[10px] font-semibold text-slate-400 uppercase">
                         {isDemographic
                             ? 'Options'
                             : 'Distractor Options & Correct Choice'}
@@ -282,7 +282,7 @@ function QuickEditForm({
                                 )}
 
                                 <span
-                                    className={`inline-flex size-6.5 shrink-0 items-center justify-center rounded-lg text-[10px] font-black ${
+                                    className={`inline-flex size-6.5 shrink-0 items-center justify-center rounded-lg text-[10px] font-semibold ${
                                         !isDemographic && correctOption === idx
                                             ? 'bg-emerald-600 text-white'
                                             : 'bg-muted text-muted-foreground'
@@ -312,7 +312,7 @@ function QuickEditForm({
                 {/* Explanation */}
                 {!isDemographic && (
                     <div>
-                        <label className="mb-1 block text-[10px] font-extrabold text-slate-400 uppercase">
+                        <label className="mb-1 block text-[10px] font-semibold text-slate-400 uppercase">
                             Explanation
                         </label>
                         <textarea
@@ -340,7 +340,7 @@ function QuickEditForm({
                 <Button
                     onClick={handleSave}
                     disabled={isSaving}
-                    className="bg-blue-600 text-white hover:bg-blue-700"
+                    className="bg-[#5B35F5] text-white hover:bg-[#4a2ad4]"
                 >
                     {isSaving ? 'Saving...' : 'Save Changes'}
                 </Button>

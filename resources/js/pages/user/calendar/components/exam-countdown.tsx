@@ -27,14 +27,14 @@ export function ExamCountdown({ nextExam }: ExamCountdownProps) {
 
     const getExamCountdownColor = (days: number) => {
         if (days <= 14) {
-            return 'text-red-600 dark:text-red-400 font-extrabold animate-pulse';
+            return 'text-red-600 dark:text-red-400 font-semibold animate-pulse';
         }
 
         if (days <= 30) {
             return 'text-amber-600 dark:text-amber-400 dark:text-amber-400 font-bold';
         }
 
-        return 'text-blue-600 dark:text-blue-400 dark:text-blue-400 font-bold';
+        return 'text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-[#B3F52D] font-bold';
     };
 
     const getExamBadgeStyles = (days: number) => {
@@ -46,7 +46,7 @@ export function ExamCountdown({ nextExam }: ExamCountdownProps) {
             return 'bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300 border-amber-100 dark:border-amber-900/30';
         }
 
-        return 'bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300 border-blue-100 dark:border-blue-900/30';
+        return 'bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-[#B3F52D] border-blue-100 dark:border-blue-900/30';
     };
 
     return (

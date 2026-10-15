@@ -530,10 +530,10 @@ export default function AiAnalysisReport({
                 {/* Main Content States */}
                 {localStatus === 'no_data' && (
                     <Card className="flex min-h-[400px] flex-col items-center justify-center border-2 border-dashed p-12 text-center">
-                        <div className="border-blue-150 mb-5 flex size-16 items-center justify-center rounded-2xl border bg-blue-50 text-blue-600 dark:border-blue-900/40 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-blue-400">
+                        <div className="border-blue-150 mb-5 flex size-16 items-center justify-center rounded-2xl border bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:border-blue-900/40 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                             <Brain className="size-8" />
                         </div>
-                        <h3 className="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl dark:text-white">
+                        <h3 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
                             {isAiMode
                                 ? 'AI Diagnostic Report Locked'
                                 : 'Diagnostic Report Locked'}
@@ -545,7 +545,7 @@ export default function AiAnalysisReport({
                         </p>
                         <Link
                             href="/exams"
-                            className="group mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-black text-white transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                            className="group mt-6 inline-flex items-center gap-2 rounded-xl bg-[#5B35F5] px-5 py-2.5 text-sm font-semibold text-white transition transition-all duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                         >
                             Take an Exam Now
                             <ChevronRight className="size-4" />
@@ -586,14 +586,14 @@ export default function AiAnalysisReport({
                                             strokeDasharray={circumference}
                                             strokeDashoffset={strokeDashoffset}
                                             strokeLinecap="round"
-                                            className="text-blue-600 transition-all duration-300 ease-out dark:text-blue-400"
+                                            className="text-[#5B35F5] dark:text-[#B3F52D] transition-all duration-300 ease-out dark:text-[#B3F52D]"
                                         />
                                     </svg>
-                                    <span className="text-base font-black tracking-tight text-blue-600 dark:text-blue-400">
+                                    <span className="text-base font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                         {progress}%
                                     </span>
                                 </div>
-                                <h3 className="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl dark:text-white">
+                                <h3 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
                                     {isAiMode
                                         ? 'Creating Your Predictive AI Diagnostic'
                                         : 'Creating Your Predictive Diagnostic'}
@@ -612,7 +612,7 @@ export default function AiAnalysisReport({
                         <div className="border-rose-150 mb-5 flex size-16 items-center justify-center rounded-2xl border bg-rose-50 text-rose-600 dark:border-rose-900/40 dark:bg-rose-950/30 dark:bg-rose-950/40 dark:text-rose-400">
                             <AlertCircle className="size-8" />
                         </div>
-                        <h3 className="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl dark:text-white">
+                        <h3 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
                             {isAiMode
                                 ? 'AI Diagnostic Report Failed'
                                 : 'Diagnostic Report Failed'}
@@ -625,7 +625,7 @@ export default function AiAnalysisReport({
                         </p>
                         <Link
                             href="/dashboard"
-                            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-black text-white transition hover:bg-blue-700"
+                            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#5B35F5] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#4a2ad4]"
                         >
                             <ArrowLeft className="size-4" />
                             Back to Dashboard
@@ -637,21 +637,21 @@ export default function AiAnalysisReport({
                     <div className="space-y-8">
                         {/* Header Banner */}
                         <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-br from-blue-50/80 via-indigo-50/40 to-slate-50 p-4 sm:p-6 sm:p-8 dark:border-slate-800 dark:from-slate-900 dark:via-slate-900/90 dark:to-blue-950">
-                            <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-blue-500/5 blur-3xl dark:bg-blue-500/10" />
+                            <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-blue-500/5 blur-3xl dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10" />
 
                             <div className="flex flex-col justify-between gap-3 sm:gap-6 md:flex-row md:items-center">
                                 <div className="flex items-start gap-4">
-                                    <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl border border-blue-200 bg-blue-100 text-blue-600 dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-blue-500/10 dark:text-blue-400">
+                                    <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl border border-blue-200 bg-blue-100 text-[#5B35F5] dark:text-[#B3F52D] dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10 dark:text-[#B3F52D]">
                                         <Brain className="size-8 animate-pulse" />
                                     </div>
                                     <div>
                                         <div className="flex flex-wrap items-center gap-2">
-                                            <h1 className="text-xl font-black tracking-tight text-slate-900 sm:text-3xl sm:text-4xl dark:text-white">
+                                            <h1 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-3xl sm:text-4xl dark:text-white">
                                                 {isAiMode
                                                     ? 'AI Diagnostic & Predictions'
                                                     : 'Diagnostic & Predictions'}
                                             </h1>
-                                            <span className="border-indigo-150 inline-flex items-center gap-1 rounded-full border bg-indigo-50 px-2.5 py-0.5 text-[10px] font-black tracking-wider text-indigo-700 uppercase dark:border-indigo-500/20 dark:bg-indigo-500/10 dark:bg-indigo-950/30 dark:text-indigo-400">
+                                            <span className="border-indigo-150 inline-flex items-center gap-1 rounded-full border bg-indigo-50 px-2.5 py-0.5 text-[10px] font-semibold tracking-wider text-indigo-700 uppercase dark:border-indigo-500/20 dark:bg-indigo-500/10 dark:bg-indigo-950/30 dark:text-indigo-400">
                                                 <Sparkles className="size-3" />
                                                 Active Coach
                                             </span>
@@ -700,7 +700,7 @@ export default function AiAnalysisReport({
                                                         },
                                                     });
                                                 }}
-                                                className="text-rose-650 dark:bg-rose-550/10 inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-rose-500/20 bg-rose-600/10 px-2.5 py-1 text-[10px] font-black uppercase transition hover:bg-rose-600/20 dark:text-rose-400"
+                                                className="text-rose-650 dark:bg-rose-550/10 inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-rose-500/20 bg-rose-600/10 px-2.5 py-1 text-[10px] font-semibold uppercase transition hover:bg-rose-600/20 dark:text-rose-400"
                                             >
                                                 <RotateCcw className="size-3" />
                                                 Delete Analysis
@@ -719,7 +719,7 @@ export default function AiAnalysisReport({
                                                         },
                                                     );
                                                 }}
-                                                className="text-emerald-650 dark:bg-emerald-550/10 inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-emerald-500/20 bg-emerald-600/10 px-2.5 py-1 text-[10px] font-black uppercase transition hover:bg-emerald-600/20 dark:text-emerald-400"
+                                                className="text-emerald-650 dark:bg-emerald-550/10 inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-emerald-500/20 bg-emerald-600/10 px-2.5 py-1 text-[10px] font-semibold uppercase transition hover:bg-emerald-600/20 dark:text-emerald-400"
                                             >
                                                 <Sparkles className="size-3" />
                                                 Generate Again
@@ -735,7 +735,7 @@ export default function AiAnalysisReport({
                             {/* Score Gages / Primary metrics: 4 cols */}
                             <div className="space-y-6 lg:col-span-4">
                                 <Card className="flex h-full flex-col items-center justify-between bg-gradient-to-br from-white to-slate-50/50 p-4 text-center sm:p-6 dark:from-slate-900 dark:to-slate-900/60">
-                                    <span className="text-xs font-black tracking-wider text-slate-400 uppercase dark:text-slate-500">
+                                    <span className="text-xs font-semibold tracking-wider text-slate-400 uppercase dark:text-slate-500">
                                         Not a forecast
                                     </span>
 
@@ -779,7 +779,7 @@ export default function AiAnalysisReport({
                                         </svg>
                                         <div className="flex flex-col items-center justify-center">
                                             <span
-                                                className={`text-4xl font-black ${
+                                                className={`text-4xl font-semibold ${
                                                     data.pass_probability >= 80
                                                         ? 'text-emerald-600 dark:text-emerald-400'
                                                         : 'text-rose-600 dark:text-rose-400'
@@ -981,7 +981,7 @@ export default function AiAnalysisReport({
                                                                 {item.subject}
                                                             </span>
                                                             <span
-                                                                className={`rounded-full border px-2 py-0.5 text-[10px] font-black uppercase ${ratingClass}`}
+                                                                className={`rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase ${ratingClass}`}
                                                             >
                                                                 {item.rating}
                                                             </span>
@@ -991,7 +991,7 @@ export default function AiAnalysisReport({
                                                         </p>
                                                         {item.recommended_action && (
                                                             <div className="dark:bg-indigo-950/30/50 mt-3 rounded-lg border border-indigo-100 bg-indigo-50 p-3 dark:border-indigo-900/30 dark:bg-indigo-950/20">
-                                                                <span className="flex items-center gap-1.5 text-[10px] font-black tracking-wider text-indigo-600 uppercase dark:text-indigo-400">
+                                                                <span className="flex items-center gap-1.5 text-[10px] font-semibold tracking-wider text-indigo-600 uppercase dark:text-indigo-400">
                                                                     <Zap className="size-3" />
                                                                     Action Step
                                                                 </span>
@@ -1014,7 +1014,7 @@ export default function AiAnalysisReport({
                         {data.remediation_matrix &&
                             data.remediation_matrix.length > 0 && (
                                 <div>
-                                    <h3 className="mb-4 flex items-center gap-2 text-lg font-black text-slate-900 dark:text-white">
+                                    <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-white">
                                         <AlertCircle className="size-5 text-rose-500" />
                                         Subtopic Remediation Pathway
                                     </h3>
@@ -1022,7 +1022,7 @@ export default function AiAnalysisReport({
                                         <div className="overflow-x-auto">
                                             <table className="w-full border-collapse text-left text-xs">
                                                 <thead>
-                                                    <tr className="border-b border-slate-200/80 bg-slate-50/80 font-extrabold text-slate-500 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-400">
+                                                    <tr className="border-b border-slate-200/80 bg-slate-50/80 font-semibold text-slate-500 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-400">
                                                         <th className="w-1/4 p-4">
                                                             Subtopic
                                                         </th>
@@ -1053,7 +1053,7 @@ export default function AiAnalysisReport({
                                                                 </td>
                                                                 <td className="p-4">
                                                                     <span
-                                                                        className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[9px] font-black uppercase ${
+                                                                        className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[9px] font-semibold uppercase ${
                                                                             row.difficulty_level ===
                                                                             'Hard'
                                                                                 ? 'border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-900/30 dark:border-rose-900/50 dark:bg-rose-950/20 dark:bg-rose-950/30 dark:text-rose-400'
@@ -1093,14 +1093,14 @@ export default function AiAnalysisReport({
                             data.personalized_study_plan.length > 0 && (
                                 <div className="space-y-4">
                                     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                                        <h3 className="flex items-center gap-2 text-lg font-black text-slate-900 dark:text-white">
+                                        <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-white">
                                             <Calendar className="size-5 text-emerald-600 dark:text-emerald-400" />
                                             Your 7-Day Action Plan
                                         </h3>
                                         <button
                                             onClick={handleBulkToggleSchedules}
                                             disabled={isBulkActionRunning}
-                                            className={`flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2 text-xs font-black tracking-wider uppercase transition-all duration-200 disabled:opacity-50 ${
+                                            className={`flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-all duration-200 disabled:opacity-50 ${
                                                 allScheduled
                                                     ? 'border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100/70 dark:border-rose-900/40 dark:border-rose-900/50 dark:bg-rose-950/20 dark:bg-rose-950/30 dark:text-rose-400 dark:hover:bg-rose-950/35'
                                                     : 'border border-indigo-200 bg-indigo-50 text-indigo-700 hover:bg-indigo-100/70 dark:border-indigo-900/40 dark:border-indigo-900/50 dark:bg-indigo-950/20 dark:bg-indigo-950/30 dark:text-indigo-400 dark:hover:bg-indigo-950/35'
@@ -1127,7 +1127,7 @@ export default function AiAnalysisReport({
                                                 >
                                                     <div>
                                                         <div className="mb-3 flex items-center justify-between border-b border-slate-100 pb-2 dark:border-slate-800">
-                                                            <span className="text-sm font-black tracking-wider text-slate-900 uppercase dark:text-white">
+                                                            <span className="text-sm font-semibold tracking-wider text-slate-900 uppercase dark:text-white">
                                                                 {dayPlan.day}
                                                             </span>
                                                             <BookOpen className="size-4 text-slate-400" />
@@ -1185,7 +1185,7 @@ export default function AiAnalysisReport({
                                                                             .day
                                                                     ]
                                                                 }
-                                                                className="group inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-lg border border-emerald-200 bg-emerald-50 px-2 py-2 text-xs font-black tracking-wider text-emerald-700 uppercase transition-all duration-205 hover:border-rose-200 hover:bg-rose-50 hover:text-rose-700 disabled:opacity-50 dark:border-emerald-900/40 dark:border-emerald-900/50 dark:border-rose-900/50 dark:bg-emerald-500/10 dark:bg-emerald-950/30 dark:bg-rose-950/30 dark:text-emerald-400 dark:hover:border-rose-900/40 dark:hover:bg-rose-500/10 dark:hover:text-rose-400"
+                                                                className="group inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-lg border border-emerald-200 bg-emerald-50 px-2 py-2 text-xs font-semibold tracking-wider text-emerald-700 uppercase transition-all duration-205 hover:border-rose-200 hover:bg-rose-50 hover:text-rose-700 disabled:opacity-50 dark:border-emerald-900/40 dark:border-emerald-900/50 dark:border-rose-900/50 dark:bg-emerald-500/10 dark:bg-emerald-950/30 dark:bg-rose-950/30 dark:text-emerald-400 dark:hover:border-rose-900/40 dark:hover:bg-rose-500/10 dark:hover:text-rose-400"
                                                             >
                                                                 {togglingDays[
                                                                     dayPlan.day
@@ -1218,7 +1218,7 @@ export default function AiAnalysisReport({
                                                                             .day
                                                                     ]
                                                                 }
-                                                                className="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-lg border border-indigo-200 bg-indigo-50 px-2 py-2 text-xs font-black tracking-wider text-indigo-700 uppercase transition-all duration-205 hover:bg-indigo-100 disabled:opacity-50 dark:border-indigo-900/40 dark:border-indigo-900/50 dark:bg-indigo-500/10 dark:bg-indigo-950/30 dark:text-indigo-400 dark:hover:bg-indigo-500/20"
+                                                                className="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-lg border border-indigo-200 bg-indigo-50 px-2 py-2 text-xs font-semibold tracking-wider text-indigo-700 uppercase transition-all duration-205 hover:bg-indigo-100 disabled:opacity-50 dark:border-indigo-900/40 dark:border-indigo-900/50 dark:bg-indigo-500/10 dark:bg-indigo-950/30 dark:text-indigo-400 dark:hover:bg-indigo-500/20"
                                                             >
                                                                 {togglingDays[
                                                                     dayPlan.day
@@ -1266,7 +1266,7 @@ export default function AiAnalysisReport({
                                 <AlertCircle className="size-8" />
                             </div>
 
-                            <h3 className="text-xl font-black text-slate-900 dark:text-white">
+                            <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                                 {isAiMode
                                     ? 'AI Coach Under Heavy Load'
                                     : 'Diagnostic Service Under Heavy Load'}
@@ -1298,7 +1298,7 @@ export default function AiAnalysisReport({
                                     onClick={() =>
                                         setIsOverloadModalOpen(false)
                                     }
-                                    className="flex-1 cursor-pointer rounded-xl bg-slate-100 py-3 text-sm font-black text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
+                                    className="flex-1 cursor-pointer rounded-xl bg-slate-100 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
                                 >
                                     Continue Studying
                                 </button>
@@ -1315,7 +1315,7 @@ export default function AiAnalysisReport({
                                             },
                                         );
                                     }}
-                                    className="flex-1 cursor-pointer rounded-xl bg-blue-600 py-3 text-sm font-black text-white transition hover:bg-blue-700"
+                                    className="flex-1 cursor-pointer rounded-xl bg-[#5B35F5] py-3 text-sm font-semibold text-white transition hover:bg-[#4a2ad4]"
                                 >
                                     Retry Now
                                 </button>

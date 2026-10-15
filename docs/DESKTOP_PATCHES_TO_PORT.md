@@ -29,10 +29,10 @@ stop, rebuild or edit them from an agent; GT runs these himself.
 
 | What | Name |
 | --- | --- |
-| Desktop study tree | `C:\Users\GT\Desktop\Grok\CSE\Hiraya-Review` |
+| Desktop study tree | `C:\Users\GT\Desktop\Grok\CSE\previous-study` |
 | Civio clone for agents and Entire | `C:\Users\GT\Desktop\Claude\Civio` |
-| App container (`:8080`) | `hiraya-review-app` |
-| Postgres container (`:5433`) | `hiraya-review-db`, database `cse_reviewer`, user `hiraya` |
+| App container (`:8080`) | `previous-review-app` |
+| Postgres container (`:5433`) | `previous-review-db`, database `cse_reviewer`, user `app` |
 
 ## Desktop study log, 3 Oct 2026 (folded in from the old local patch log)
 
@@ -79,8 +79,8 @@ Rules (same for the command and the SQL):
 GitHub; the desktop baseline does not have it):
 
 ```bash
-docker exec hiraya-review-app php artisan civio:remove-variant-clones --dry-run
-docker exec hiraya-review-app php artisan civio:remove-variant-clones
+docker exec previous-review-app php artisan civio:remove-variant-clones --dry-run
+docker exec previous-review-app php artisan civio:remove-variant-clones
 ```
 
 **Otherwise, use SQL.** Preview first (read-only):
@@ -108,9 +108,9 @@ Then apply `scripts/seeds/remove_variant_clones.sql`. It is ASCII-only and runs
 in one transaction:
 
 ```powershell
-docker cp .\scripts\seeds\remove_variant_clones.sql hiraya-review-db:/tmp/remove_variant_clones.sql
-docker exec hiraya-review-db psql -v ON_ERROR_STOP=1 -U hiraya -d cse_reviewer -f /tmp/remove_variant_clones.sql
-docker exec hiraya-review-db rm -f /tmp/remove_variant_clones.sql
+docker cp .\scripts\seeds\remove_variant_clones.sql previous-review-db:/tmp/remove_variant_clones.sql
+docker exec previous-review-db psql -v ON_ERROR_STOP=1 -U app -d cse_reviewer -f /tmp/remove_variant_clones.sql
+docker exec previous-review-db rm -f /tmp/remove_variant_clones.sql
 ```
 
 Full SQL (same as the file):

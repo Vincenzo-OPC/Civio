@@ -190,7 +190,7 @@ export function AiReadinessBentoCard({
                             </svg>
                             <div className="absolute inset-0 flex flex-col items-center justify-center p-3 text-center">
                                 <span
-                                    className={`font-black tracking-tight ${colors.text} ${
+                                    className={`font-semibold tracking-tight ${colors.text} ${
                                         isDrillOnly
                                             ? 'text-lg sm:text-xl'
                                             : 'text-2xl sm:text-3xl'
@@ -233,7 +233,7 @@ export function AiReadinessBentoCard({
                                             <Target className="size-3.5" />
                                         </div>
                                         <div className="flex min-w-0 flex-wrap items-center gap-1.5">
-                                            <span className="shrink-0 text-[11px] font-black tracking-wide text-rose-700 uppercase dark:text-rose-300">
+                                            <span className="shrink-0 text-[11px] font-semibold tracking-wide text-rose-700 uppercase dark:text-rose-300">
                                                 Priority Focus:
                                             </span>
                                             <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
@@ -257,7 +257,7 @@ export function AiReadinessBentoCard({
 
                 {localStatus === 'generating' && (
                     <div className="space-y-3 rounded-xl border border-blue-200/60 bg-blue-50/40 p-4 text-center dark:border-blue-900/40 dark:bg-blue-950/20">
-                        <div className="flex items-center justify-center gap-2 text-xs font-bold text-blue-700 dark:text-blue-300">
+                        <div className="flex items-center justify-center gap-2 text-xs font-bold text-blue-700 dark:text-[#B3F52D]">
                             <Loader2 className="size-4 animate-spin" />
                             <span>Reading your finished attempts.</span>
                         </div>

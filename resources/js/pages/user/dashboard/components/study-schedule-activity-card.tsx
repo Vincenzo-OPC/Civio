@@ -99,7 +99,7 @@ export function StudyScheduleActivityCard({
                         </div>
                         <Link
                             href={calendarIndex()}
-                            className="font-extrabold text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                            className="font-semibold text-[#5B35F5] dark:text-[#B3F52D] hover:text-blue-700 dark:text-[#B3F52D]"
                         >
                             Resolve &rarr;
                         </Link>
@@ -109,7 +109,7 @@ export function StudyScheduleActivityCard({
                 {/* Top Section: Today's Tasks */}
                 <div>
                     <div className="mb-2 flex items-center justify-between">
-                        <span className="text-[11px] font-extrabold tracking-wider text-slate-500 uppercase dark:text-slate-400">
+                        <span className="text-[11px] font-semibold tracking-wider text-slate-500 uppercase dark:text-slate-400">
                             Today&apos;s Study Tasks
                         </span>
                         <Link
@@ -199,7 +199,7 @@ export function StudyScheduleActivityCard({
                 {/* Bottom Section: Recent Attempts */}
                 <div className="border-t border-slate-100 pt-3 dark:border-slate-800/80">
                     <div className="mb-2 flex items-center justify-between">
-                        <span className="text-[11px] font-extrabold tracking-wider text-slate-500 uppercase dark:text-slate-400">
+                        <span className="text-[11px] font-semibold tracking-wider text-slate-500 uppercase dark:text-slate-400">
                             Recent Exam Runs
                         </span>
                         <Link
@@ -247,7 +247,7 @@ export function StudyScheduleActivityCard({
 
                                     <Badge
                                         variant="outline"
-                                        className={`text-xs font-black ${
+                                        className={`text-xs font-semibold ${
                                             attempt.passed
                                                 ? 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/60 dark:bg-emerald-950/40 dark:text-emerald-300'
                                                 : 'border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-900/60 dark:bg-rose-950/40 dark:text-rose-300'

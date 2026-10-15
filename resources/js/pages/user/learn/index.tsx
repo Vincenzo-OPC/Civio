@@ -14,7 +14,7 @@ import type { LearnIndexProps } from './types';
 
 const progressBarColors: Record<string, string> = {
     'General Information': 'bg-teal-600 dark:bg-teal-500',
-    'Verbal Ability': 'bg-blue-600 dark:bg-blue-500',
+    'Verbal Ability': 'bg-[#5B35F5] dark:bg-[#B3F52D] dark:text-[#0A0A0A]',
     'Analytical Ability': 'bg-emerald-600 dark:bg-emerald-500',
     'Numerical Ability': 'bg-orange-600 dark:bg-orange-500',
     'Clerical Ability': 'bg-indigo-600 dark:bg-indigo-500',
@@ -148,17 +148,17 @@ export default function LearnIndex(props: LearnIndexProps) {
                                 <span className="font-heading text-base font-bold text-foreground">
                                     Overall Study Progress
                                 </span>
-                                <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-extrabold text-blue-700 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-blue-400">
+                                <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-semibold text-blue-700 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                     {completedCount} / {totalCount} Completed
                                 </span>
                             </div>
-                            <span className="text-base font-black text-blue-600 dark:text-blue-400">
+                            <span className="text-base font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 {progressPercent}%
                             </span>
                         </div>
                         <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
                             <div
-                                className="h-full rounded-full bg-blue-600 transition-all duration-500 dark:bg-blue-500"
+                                className="h-full rounded-full bg-[#5B35F5] transition-all duration-500 dark:bg-[#B3F52D] dark:text-[#0A0A0A]"
                                 style={{ width: `${progressPercent}%` }}
                             />
                         </div>
@@ -206,7 +206,7 @@ export default function LearnIndex(props: LearnIndexProps) {
                                                     >
                                                         {cat.name}
                                                     </span>
-                                                    <span className="ml-1 shrink-0 font-extrabold text-foreground">
+                                                    <span className="ml-1 shrink-0 font-semibold text-foreground">
                                                         {pct}%
                                                     </span>
                                                 </div>

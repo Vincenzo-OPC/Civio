@@ -62,7 +62,7 @@ export function ManualEntryForm({
                             <div className="flex items-center gap-1 rounded-lg border border-border bg-muted p-1">
                                 <button
                                     type="button"
-                                    className="group rounded px-2 py-0.5 text-xs font-black text-muted-foreground transition transition-all duration-300 select-none hover:bg-card focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                    className="group rounded px-2 py-0.5 text-xs font-semibold text-muted-foreground transition transition-all duration-300 select-none hover:bg-card focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                 >
                                     B
                                 </button>

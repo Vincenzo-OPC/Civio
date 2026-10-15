@@ -319,7 +319,7 @@ export default function AdminUsersIndex({
                 {selectedIds.size > 0 && (
                     <div className="flex flex-col gap-3 rounded-xl border border-blue-100 bg-blue-50 p-4 sm:flex-row sm:items-center sm:justify-between dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30">
                         <div className="flex items-center gap-3">
-                            <CheckSquare className="size-5 text-blue-600 dark:text-blue-400" />
+                            <CheckSquare className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                             <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
                                 {selectedIds.size} user
                                 {selectedIds.size !== 1 ? 's' : ''} selected

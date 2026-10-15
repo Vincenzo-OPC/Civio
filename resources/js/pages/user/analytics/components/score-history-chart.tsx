@@ -37,7 +37,7 @@ export function ScoreHistoryChart({
             {isDemoMode && (
                 <div className="absolute inset-0 z-10 flex items-center justify-center bg-white/60 backdrop-blur-[2px] dark:bg-slate-950/60">
                     <div className="rounded-2xl border border-slate-200 bg-white/90 px-4 py-4 text-center shadow-lg sm:px-6 dark:border-slate-700 dark:bg-slate-800/90">
-                        <h4 className="text-lg font-black text-slate-900 dark:text-white">
+                        <h4 className="text-lg font-semibold text-slate-900 dark:text-white">
                             Sample Data Displayed
                         </h4>
                         <p className="mt-1 text-base leading-relaxed font-semibold text-slate-500 dark:text-slate-400">
@@ -51,7 +51,7 @@ export function ScoreHistoryChart({
                 <div className="flex items-center gap-2">
                     <TrendingUp className="size-5 text-primary" />
                     <div>
-                        <h3 className="text-lg font-black tracking-tight text-slate-900 dark:text-white">
+                        <h3 className="text-lg font-semibold tracking-tight text-slate-900 dark:text-white">
                             Performance Trajectory
                         </h3>
                         <p className="text-sm leading-relaxed font-semibold text-slate-500 dark:text-slate-400">

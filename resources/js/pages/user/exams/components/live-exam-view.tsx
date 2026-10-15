@@ -591,7 +591,7 @@ export function LiveExamView({
                             className={`mt-2 inline-flex items-center gap-2 rounded-xl px-6 py-2.5 text-xs font-bold text-white shadow-md transition focus:outline-none ${
                                 isResumeLocked
                                     ? 'cursor-not-allowed bg-slate-400 opacity-60'
-                                    : 'bg-blue-600 hover:bg-blue-700'
+                                    : 'bg-[#5B35F5] hover:bg-[#4a2ad4]'
                             }`}
                         >
                             {isResumeLocked
@@ -1214,7 +1214,7 @@ export function LiveExamView({
                     <DialogContent className="sm:max-w-2xl">
                         <DialogHeader>
                             <DialogTitle className="flex items-center gap-2 font-heading text-lg font-bold">
-                                <Keyboard className="size-5 text-blue-600 dark:text-blue-400" />
+                                <Keyboard className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                 Keyboard Shortcuts
                             </DialogTitle>
                             <DialogDescription>
@@ -1347,8 +1347,8 @@ export function LiveExamView({
                             onClick={(e) => e.stopPropagation()}
                         >
                             <div className="mb-1 flex items-center gap-2">
-                                <Lock className="size-5 text-blue-600 dark:text-blue-400" />
-                                <h3 className="font-heading text-xl font-black tracking-tight text-slate-900 dark:text-white">
+                                <Lock className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                <h3 className="font-heading text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
                                     Premium Feature Locked
                                 </h3>
                             </div>
@@ -1368,7 +1368,7 @@ export function LiveExamView({
                                 <button
                                     type="button"
                                     onClick={handleRegisterFromFreeExam}
-                                    className="group rounded-lg bg-blue-600 px-5 py-2.5 text-xs font-bold text-white transition transition-all duration-300 hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                    className="group rounded-lg bg-[#5B35F5] px-5 py-2.5 text-xs font-bold text-white transition transition-all duration-300 hover:bg-[#4a2ad4] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                 >
                                     Register Now
                                 </button>
@@ -1388,8 +1388,8 @@ export function LiveExamView({
                             onClick={(e) => e.stopPropagation()}
                         >
                             <div className="mb-1 flex items-center gap-2">
-                                <Lock className="size-5 text-blue-600 dark:text-blue-400" />
-                                <h3 className="font-heading text-xl font-black tracking-tight text-slate-900 dark:text-white">
+                                <Lock className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                <h3 className="font-heading text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
                                     Free Preview Limit Reached
                                 </h3>
                             </div>
@@ -1414,7 +1414,7 @@ export function LiveExamView({
                                 <button
                                     type="button"
                                     onClick={handleRegisterFromFreeExam}
-                                    className="group flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-xs font-bold text-white shadow-sm transition transition-all duration-300 hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                    className="group flex items-center justify-center gap-2 rounded-lg bg-[#5B35F5] px-5 py-2.5 text-xs font-bold text-white shadow-sm transition transition-all duration-300 hover:bg-[#4a2ad4] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                 >
                                     <LogIn className="size-4" />
                                     Register Free Account

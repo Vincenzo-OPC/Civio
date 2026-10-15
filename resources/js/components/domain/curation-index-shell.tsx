@@ -22,7 +22,7 @@ export function getCategoryStyles(category: string) {
         case 'Numerical Ability':
             return 'bg-emerald-50 text-emerald-650 border-emerald-100 dark:bg-emerald-950/20 dark:text-emerald-400 dark:border-emerald-900/30';
         case 'Verbal Ability':
-            return 'bg-blue-50 text-blue-650 border-blue-100 dark:bg-blue-950/20 dark:text-blue-400 dark:border-blue-900/30';
+            return 'bg-blue-50 text-blue-650 border-blue-100 dark:bg-blue-950/20 dark:text-[#B3F52D] dark:border-blue-900/30';
         case 'Clerical Ability':
             return 'bg-amber-50 text-amber-650 border-amber-100 dark:bg-amber-950/20 dark:text-amber-400 dark:border-amber-900/30';
         case 'General Information':
@@ -249,7 +249,7 @@ export function CurationIndexShell<T>({
                             <Sparkles className="size-7" />
                         </div>
                         <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-black tracking-tight text-foreground">
+                            <h3 className="text-xl font-semibold tracking-tight text-foreground">
                                 {aiGenerator.title}
                             </h3>
                             <p className="text-base leading-relaxed text-muted-foreground">
@@ -281,7 +281,7 @@ export function CurationIndexShell<T>({
                             <PenLine className="size-7" />
                         </div>
                         <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-black tracking-tight text-foreground">
+                            <h3 className="text-xl font-semibold tracking-tight text-foreground">
                                 {manualEntry.title}
                             </h3>
                             <p className="text-base leading-relaxed text-muted-foreground">
@@ -458,7 +458,7 @@ export function CurationIndexShell<T>({
                         onBulkDeleteConfirm
                             ? (selected) => (
                                   <div className="flex items-center justify-between border-b border-border bg-blue-50/50 px-4 py-2 sm:px-6 dark:bg-blue-950/10">
-                                      <span className="text-xs font-bold text-blue-700 dark:text-blue-400">
+                                      <span className="text-xs font-bold text-blue-700 dark:text-[#B3F52D]">
                                           {selected.length} selected
                                       </span>
                                       <Button

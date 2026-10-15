@@ -30,7 +30,7 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                 <Shield className="h-6 w-6" />
                             </div>
                             <div>
-                                <h1 className="font-heading text-2xl font-black tracking-tight text-foreground sm:text-4xl sm:text-5xl md:text-4xl">
+                                <h1 className="font-heading text-2xl font-semibold tracking-tight text-foreground sm:text-4xl sm:text-5xl md:text-4xl">
                                     Privacy Policy
                                 </h1>
                                 <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
@@ -56,7 +56,7 @@ export default function Privacy({ privacy }: PrivacyProps) {
                             ) : (
                                 <div className="space-y-8">
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             1. Introduction
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
@@ -72,7 +72,7 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                     </section>
 
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             2. Information Civio
                                             Collects
                                         </h2>
@@ -140,7 +140,7 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                     </section>
 
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             3. How Civio Uses Your
                                             Information
                                         </h2>
@@ -174,7 +174,7 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                     </section>
 
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             4. Data Sharing & Security
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
@@ -191,7 +191,7 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                     </section>
 
                                     <section className="space-y-3">
-                                        <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                                        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                             5. Your Choices & Rights
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">

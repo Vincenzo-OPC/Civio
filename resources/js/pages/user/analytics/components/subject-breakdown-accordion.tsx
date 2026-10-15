@@ -55,8 +55,8 @@ function getMasteryBadge(percentage: number) {
         return {
             label: 'Proficient',
             className:
-                'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/30 dark:text-blue-300 dark:border-blue-800',
-            icon: <CheckCircle2 className="size-3 text-blue-600" />,
+                'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/30 dark:text-[#B3F52D] dark:border-blue-800',
+            icon: <CheckCircle2 className="size-3 text-[#5B35F5] dark:text-[#B3F52D]" />,
         };
     }
 
@@ -110,7 +110,7 @@ export function SubjectBreakdownAccordion({
         <Card className="border border-slate-200/80 bg-slate-50/50 p-5 sm:p-6 dark:border-slate-800 dark:bg-slate-950/40">
             <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                    <h3 className="text-base font-black text-slate-900 sm:text-lg dark:text-white">
+                    <h3 className="text-base font-semibold text-slate-900 sm:text-lg dark:text-white">
                         Subject & Subtopic Diagnostics
                     </h3>
                     <p className="text-xs font-medium text-muted-foreground sm:text-sm">
@@ -159,7 +159,7 @@ export function SubjectBreakdownAccordion({
                                     </div>
                                     <div>
                                         <div className="flex items-center gap-2">
-                                            <h4 className="text-sm font-black text-slate-900 dark:text-white">
+                                            <h4 className="text-sm font-semibold text-slate-900 dark:text-white">
                                                 {category.name}
                                             </h4>
                                             <span
@@ -179,7 +179,7 @@ export function SubjectBreakdownAccordion({
 
                                 <div className="flex items-center gap-4">
                                     <div className="hidden text-right sm:block">
-                                        <span className="font-heading text-base font-black text-slate-900 dark:text-white">
+                                        <span className="font-heading text-base font-semibold text-slate-900 dark:text-white">
                                             {category.percentage}%
                                         </span>
                                         <Progress
@@ -258,7 +258,7 @@ export function SubjectBreakdownAccordion({
                                                                         },
                                                                     },
                                                                 )}
-                                                                className="inline-flex shrink-0 items-center gap-1 rounded-md border border-blue-200 bg-blue-50 px-2.5 py-1.5 text-xs font-bold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900 dark:bg-blue-950/30 dark:text-blue-300 dark:hover:bg-blue-900/40"
+                                                                className="inline-flex shrink-0 items-center gap-1 rounded-md border border-blue-200 bg-blue-50 px-2.5 py-1.5 text-xs font-bold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900 dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-900/40"
                                                             >
                                                                 <Play className="size-3 fill-current" />
                                                                 Drill

@@ -66,10 +66,10 @@ export function getUsersTableColumns({
                     onClick={() => onSelectUser(u)}
                     className="cursor-pointer text-left hover:underline"
                 >
-                    <span className="block text-xs leading-snug font-black text-foreground">
+                    <span className="block text-xs leading-snug font-semibold text-foreground">
                         {u.name}
                         {u.id === currentUserId && (
-                            <span className="ml-1.5 rounded-sm bg-blue-100 px-1 text-[8.5px] font-extrabold text-blue-700 uppercase select-none dark:bg-blue-900/30 dark:text-blue-400">
+                            <span className="ml-1.5 rounded-sm bg-blue-100 px-1 text-[8.5px] font-semibold text-blue-700 uppercase select-none dark:bg-blue-900/30 dark:text-[#B3F52D]">
                                 You
                             </span>
                         )}
@@ -114,7 +114,7 @@ export function getUsersTableColumns({
                         title="Mock Exams"
                     >
                         <Activity className="size-3 text-blue-500" />
-                        <span className="text-xs font-black text-foreground">
+                        <span className="text-xs font-semibold text-foreground">
                             {u.mock_exams_count ?? 0}
                         </span>
                         <span className="text-[10px] font-medium text-slate-500">
@@ -123,7 +123,7 @@ export function getUsersTableColumns({
                     </div>
                     <div className="flex items-center gap-1.5" title="Drills">
                         <Activity className="size-3 text-indigo-500" />
-                        <span className="text-xs font-black text-foreground">
+                        <span className="text-xs font-semibold text-foreground">
                             {u.drills_count ?? 0}
                         </span>
                         <span className="text-[10px] font-medium text-slate-500">
@@ -138,7 +138,7 @@ export function getUsersTableColumns({
             render: (u) => (
                 <div className="flex items-center gap-1.5">
                     <FileDown className="size-3.5 text-emerald-500" />
-                    <span className="font-black text-foreground">
+                    <span className="font-semibold text-foreground">
                         {u.pdf_downloads_count ?? 0}
                     </span>
                 </div>

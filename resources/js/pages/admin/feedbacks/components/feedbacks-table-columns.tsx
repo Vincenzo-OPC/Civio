@@ -94,12 +94,12 @@ export function getFeedbacksTableColumns({
             render: (f) => (
                 <div>
                     <div className="flex items-center gap-1.5">
-                        <span className="block text-xs leading-snug font-black text-foreground">
+                        <span className="block text-xs leading-snug font-semibold text-foreground">
                             {f.reason}
                         </span>
                         {f.total_reports_count && f.total_reports_count > 1 && (
                             <span
-                                className="rounded-full bg-rose-100 px-1.5 py-0.5 text-[9px] font-black text-rose-700 dark:bg-rose-950/40 dark:text-rose-300"
+                                className="rounded-full bg-rose-100 px-1.5 py-0.5 text-[9px] font-semibold text-rose-700 dark:bg-rose-950/40 dark:text-rose-300"
                                 title={`${f.total_reports_count} total user reports submitted for this target item`}
                             >
                                 {f.total_reports_count} reports
@@ -132,7 +132,7 @@ export function getFeedbacksTableColumns({
                                     href={link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 text-[10px] font-bold text-blue-600 hover:underline dark:text-blue-400"
+                                    className="inline-flex items-center gap-1.5 text-[10px] font-bold text-[#5B35F5] dark:text-[#B3F52D] hover:underline dark:text-[#B3F52D]"
                                 >
                                     <ExternalLink className="size-3" />
                                     View {getContentType(f.flaggable_type)}
@@ -255,7 +255,7 @@ export function getFeedbacksTableColumns({
                                     <Button
                                         variant="outline"
                                         size="sm"
-                                        className="h-7 border-blue-200 bg-blue-50 px-2 text-blue-700 hover:bg-blue-100 hover:text-blue-800 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-blue-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-300"
+                                        className="h-7 border-blue-200 bg-blue-50 px-2 text-blue-700 hover:bg-blue-100 hover:text-blue-800 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-[#B3F52D] dark:hover:bg-blue-900/30 dark:hover:text-blue-300"
                                         onClick={() => onView(f)}
                                     >
                                         <Eye className="size-3.5" />

@@ -89,7 +89,7 @@ export function HubView({
                                         >
                                             <CardIcon className="size-6 transition-transform group-hover:scale-110" />
                                         </div>
-                                        <span className="flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-extrabold text-muted-foreground dark:bg-slate-800">
+                                        <span className="flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-semibold text-muted-foreground dark:bg-slate-800">
                                             <FileText className="size-3" />{' '}
                                             {actualCount} Qs
                                         </span>
@@ -120,13 +120,13 @@ export function HubView({
             ) : (
                 <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card py-20 text-center shadow-sm">
                     <div className="mx-auto mb-5 flex size-14 items-center justify-center rounded-xl bg-slate-100 text-muted-foreground ring-8 dark:bg-slate-900">
-                        <Brain className="size-6 text-blue-600 dark:text-blue-400" />
+                        <Brain className="size-6 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                     </div>
-                    <span className="mb-3.5 inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3.5 py-1 text-[10px] font-extrabold tracking-wider text-amber-700 uppercase dark:bg-amber-950/30 dark:bg-amber-950/40 dark:text-amber-400">
+                    <span className="mb-3.5 inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3.5 py-1 text-[10px] font-semibold tracking-wider text-amber-700 uppercase dark:bg-amber-950/30 dark:bg-amber-950/40 dark:text-amber-400">
                         <span className="size-1.5 rounded-full bg-amber-500" />
                         Coming Soon
                     </span>
-                    <h3 className="font-heading text-xl font-black tracking-tight text-foreground">
+                    <h3 className="font-heading text-xl font-semibold tracking-tight text-foreground">
                         No Practice Drills Available
                     </h3>
                     <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">

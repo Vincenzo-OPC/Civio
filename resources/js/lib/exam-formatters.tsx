@@ -274,7 +274,7 @@ export const formatMarkdownInline = (text: string): React.ReactNode[] => {
                 return (
                     <strong
                         key={idx}
-                        className="font-extrabold text-slate-950 dark:text-white"
+                        className="font-semibold text-slate-950 dark:text-white"
                     >
                         {formatMathInlineBase(inner)}
                     </strong>
@@ -666,11 +666,11 @@ export const renderFormattedText = (
 
                 return (
                     <div className="shadow-3xs dark:bg-blue-950/30/20 my-3.5 flex items-start gap-3 rounded-r-xl border-l-3 border-blue-500 bg-blue-50 p-3.5 dark:bg-blue-950/10">
-                        <span className="shadow-3xs mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue-600 font-mono text-xs font-black text-white select-none">
+                        <span className="shadow-3xs mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-[#5B35F5] font-mono text-xs font-semibold text-white select-none">
                             {stepNum}
                         </span>
                         <div className="flex-1">
-                            <strong className="mb-1 block text-sm font-black text-slate-950 dark:text-white">
+                            <strong className="mb-1 block text-sm font-semibold text-slate-950 dark:text-white">
                                 STEP {stepNum}
                             </strong>
                             <div className="text-[15px] leading-relaxed font-medium text-slate-900 dark:text-slate-100">
@@ -696,7 +696,7 @@ export const renderFormattedText = (
                             🧠
                         </span>
                         <div className="flex-1">
-                            <strong className="mb-1.5 block font-heading text-[13px] font-black tracking-widest text-rose-900 uppercase dark:text-rose-300">
+                            <strong className="mb-1.5 block font-heading text-[13px] font-semibold tracking-widest text-rose-900 uppercase dark:text-rose-300">
                                 {title}
                             </strong>
                             <div className="text-[14px] leading-loose font-bold text-slate-800 dark:text-slate-200">
@@ -743,7 +743,7 @@ export const renderFormattedText = (
                                         key={idx}
                                         className="flex items-start gap-3 rounded-lg border border-slate-100 bg-slate-50/40 p-3 transition hover:border-slate-200 dark:border-slate-900/60 dark:bg-slate-900/10"
                                     >
-                                        <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-md bg-blue-50 text-xs font-black text-blue-600 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-blue-400">
+                                        <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-md bg-blue-50 text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                             {item.marker.replace('.', '')}
                                         </span>
                                         <div className="mt-0.5 flex-1">
@@ -764,11 +764,11 @@ export const renderFormattedText = (
                                 key={bIdx}
                                 className="shadow-3xs dark:bg-blue-950/30/20 my-3.5 flex items-start gap-3 rounded-r-xl border-l-3 border-blue-500 bg-blue-50 p-3.5 dark:bg-blue-950/10"
                             >
-                                <span className="shadow-3xs mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue-600 font-mono text-xs font-black text-white select-none">
+                                <span className="shadow-3xs mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-[#5B35F5] font-mono text-xs font-semibold text-white select-none">
                                     {block.stepNum}
                                 </span>
                                 <div className="flex-1">
-                                    <strong className="mb-1 block text-sm font-black text-slate-950 dark:text-white">
+                                    <strong className="mb-1 block text-sm font-semibold text-slate-950 dark:text-white">
                                         STEP {block.stepNum}
                                     </strong>
                                     <div className="flex flex-col gap-2">
@@ -796,7 +796,7 @@ export const renderFormattedText = (
                                     🧠
                                 </span>
                                 <div className="flex-1">
-                                    <strong className="mb-1.5 block font-heading text-[13px] font-black tracking-widest text-rose-900 uppercase dark:text-rose-300">
+                                    <strong className="mb-1.5 block font-heading text-[13px] font-semibold tracking-widest text-rose-900 uppercase dark:text-rose-300">
                                         {block.title}
                                     </strong>
                                     <div className="flex flex-col gap-2">
@@ -845,7 +845,7 @@ export const renderFormattedText = (
                             {headers.map((h, i) => (
                                 <th
                                     key={i}
-                                    className="px-4 py-3 font-extrabold tracking-wider text-slate-500 uppercase dark:text-slate-400"
+                                    className="px-4 py-3 font-semibold tracking-wider text-slate-500 uppercase dark:text-slate-400"
                                 >
                                     {formatMarkdownInline(h)}
                                 </th>
@@ -1020,7 +1020,7 @@ export const renderFormattedText = (
                                             key={`seq-frag-${fIdx}`}
                                         >
                                             {fIdx > 0 && (
-                                                <span className="self-center text-xl font-black tracking-tight text-slate-400 select-none dark:text-slate-600">
+                                                <span className="self-center text-xl font-semibold tracking-tight text-slate-400 select-none dark:text-slate-600">
                                                     ➔
                                                 </span>
                                             )}
@@ -1028,7 +1028,7 @@ export const renderFormattedText = (
                                                 <DialogTrigger asChild>
                                                     <div className="group relative flex cursor-pointer flex-col items-center justify-center rounded-xl border border-slate-200 bg-white p-3 shadow-xs transition-all hover:scale-[1.02] active:scale-95 dark:border-slate-800 dark:bg-slate-900">
                                                         {cleanLabel && (
-                                                            <div className="mb-2 text-center text-xs font-extrabold text-slate-800 dark:text-slate-200">
+                                                            <div className="mb-2 text-center text-xs font-semibold text-slate-800 dark:text-slate-200">
                                                                 {cleanLabel}
                                                             </div>
                                                         )}
@@ -1085,7 +1085,7 @@ export const renderFormattedText = (
                                 <DialogTrigger asChild>
                                     <div className="group relative mx-auto my-4 flex w-full max-w-2xl cursor-pointer flex-col items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white p-4 transition-all hover:scale-[1.02] active:scale-95 dark:border-slate-800 dark:bg-slate-900">
                                         {cleanLabel && (
-                                            <div className="mb-2 text-center text-sm font-extrabold text-slate-800 dark:text-slate-200">
+                                            <div className="mb-2 text-center text-sm font-semibold text-slate-800 dark:text-slate-200">
                                                 {cleanLabel}
                                             </div>
                                         )}

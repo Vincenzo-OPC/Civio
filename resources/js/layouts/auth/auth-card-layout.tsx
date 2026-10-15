@@ -35,7 +35,7 @@ export default function AuthCardLayout({
                                 <AppLogoIcon className="size-10 object-contain transition-transform group-hover:scale-110" />
                             </div>
 
-                            <span className="font-heading text-xl font-black tracking-tight text-slate-900 sm:text-3xl sm:text-4xl dark:text-white">
+                            <span className="font-heading text-xl font-semibold tracking-tight text-slate-900 sm:text-3xl sm:text-4xl dark:text-white">
                                 <BrandName />
                             </span>
 

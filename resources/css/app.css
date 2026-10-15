@@ -284,11 +284,7 @@ html.lite {
 }
 
 .dark .civio-glass-wash {
-    background: radial-gradient(
-        32rem 18rem at 100% -8%,
-        color-mix(in srgb, #b3f52d 11%, transparent),
-        transparent 70%
-    );
+    display: none;
 }
 
 .civio-glass {
@@ -298,7 +294,13 @@ html.lite {
 }
 
 .dark .civio-glass {
-    background: color-mix(in srgb, #0a0a0a 58%, transparent);
+    background: #161616;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+.dark .civio-glass-selected {
+    background: #000000;
 }
 
 @media (prefers-reduced-transparency: reduce) {
@@ -322,7 +324,26 @@ html.lite .civio-glass {
 }
 
 html.lite.dark .civio-glass {
-    background: #141414;
+    background: #111111;
+}
+
+/* Dark mode keeps one bright color: the wordmark green. */
+.dark .bg-\[\#5B35F5\] {
+    background-color: #b3f52d;
+    color: #0a0a0a;
+}
+
+.dark .hover\:bg-\[\#4a2ad4\]:hover {
+    background-color: #9ed41f;
+    color: #0a0a0a;
+}
+
+.dark .text-\[\#5B35F5\] {
+    color: #b3f52d;
+}
+
+.dark .border-\[\#5B35F5\] {
+    border-color: #b3f52d;
 }
 
 /* Time dial: the ring draws once, or tracks time left. No tick marks. */

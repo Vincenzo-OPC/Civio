@@ -181,7 +181,7 @@ export function CreateDrillQuestionModal({
                 <DialogHeader>
                     <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
                         <div className="flex items-center gap-2.5">
-                            <div className="flex size-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400">
+                            <div className="flex size-10 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                 <BookOpen className="size-5" />
                             </div>
                             <div>
@@ -214,7 +214,7 @@ export function CreateDrillQuestionModal({
                                 onClick={() => setModalTab('preview')}
                                 className={`flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-xs font-bold transition ${
                                     modalTab === 'preview'
-                                        ? 'bg-blue-600 text-white shadow-2xs'
+                                        ? 'bg-[#5B35F5] text-white shadow-2xs'
                                         : 'text-muted-foreground hover:text-foreground'
                                 }`}
                             >
@@ -278,7 +278,7 @@ export function CreateDrillQuestionModal({
                                                     }
                                                     className={`rounded-xl border py-2 text-xs font-bold transition ${
                                                         language === lang
-                                                            ? 'border-blue-600 bg-blue-600 text-white shadow-xs'
+                                                            ? 'border-blue-600 bg-[#5B35F5] text-white shadow-xs'
                                                             : 'border-border bg-background text-muted-foreground hover:bg-muted'
                                                     }`}
                                                 >
@@ -339,7 +339,7 @@ export function CreateDrillQuestionModal({
                                                         setCorrectOption(idx)
                                                     }
                                                     aria-label={`Mark Option ${optionLetters[idx]} as correct`}
-                                                    className={`flex size-7 shrink-0 items-center justify-center rounded-full border text-xs font-black transition ${
+                                                    className={`flex size-7 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition ${
                                                         isCorrect
                                                             ? 'border-emerald-600 bg-emerald-600 text-white shadow-xs dark:border-emerald-500 dark:bg-emerald-500'
                                                             : 'border-border bg-background text-muted-foreground hover:border-emerald-500 hover:text-foreground'
@@ -384,7 +384,7 @@ export function CreateDrillQuestionModal({
                                     <button
                                         type="button"
                                         onClick={addOption}
-                                        className="mt-2 flex items-center gap-1 text-xs font-bold text-blue-600 transition hover:underline dark:text-blue-400"
+                                        className="mt-2 flex items-center gap-1 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] transition hover:underline dark:text-[#B3F52D]"
                                     >
                                         <Plus className="size-3.5" />
                                         <span>Add Choice</span>
@@ -395,7 +395,7 @@ export function CreateDrillQuestionModal({
                             {/* Explanation / Rationale */}
                             <div>
                                 <div className="mb-1 flex items-center gap-1.5">
-                                    <Sparkles className="size-3.5 text-blue-600 dark:text-blue-400" />
+                                    <Sparkles className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                                     <label className="text-xs font-bold text-foreground">
                                         Explanation / Rationale (Optional)
                                     </label>
@@ -456,7 +456,7 @@ export function CreateDrillQuestionModal({
                             type="submit"
                             size="sm"
                             disabled={isSubmitting}
-                            className="bg-blue-600 text-xs font-bold text-white shadow-xs hover:bg-blue-700"
+                            className="bg-[#5B35F5] text-xs font-bold text-white shadow-xs hover:bg-[#4a2ad4]"
                         >
                             {isSubmitting ? (
                                 <Loader2 className="mr-1 size-3.5 animate-spin" />

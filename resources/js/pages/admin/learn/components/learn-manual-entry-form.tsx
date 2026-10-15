@@ -94,7 +94,7 @@ export function LearnManualEntryForm({
                                     onClick={() =>
                                         setData('is_published', true)
                                     }
-                                    className={`cursor-pointer rounded-lg py-2 text-xs font-black tracking-wider uppercase transition ${
+                                    className={`cursor-pointer rounded-lg py-2 text-xs font-semibold tracking-wider uppercase transition ${
                                         data.is_published
                                             ? 'bg-white text-slate-900 shadow-xs dark:bg-slate-950 dark:text-white'
                                             : 'dark:text-slate-450 text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
@@ -107,7 +107,7 @@ export function LearnManualEntryForm({
                                     onClick={() =>
                                         setData('is_published', false)
                                     }
-                                    className={`cursor-pointer rounded-lg py-2 text-xs font-black tracking-wider uppercase transition ${
+                                    className={`cursor-pointer rounded-lg py-2 text-xs font-semibold tracking-wider uppercase transition ${
                                         !data.is_published
                                             ? 'bg-white text-slate-900 shadow-xs dark:bg-slate-950 dark:text-white'
                                             : 'dark:text-slate-450 text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'

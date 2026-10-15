@@ -211,7 +211,7 @@ export function TimePicker({ value, onChange }: TimePickerProps) {
                             </button>
                         </div>
 
-                        <div className="text-xl font-black tracking-tight text-slate-600 sm:text-3xl sm:text-4xl dark:text-slate-400">
+                        <div className="text-xl font-semibold tracking-tight text-slate-600 sm:text-3xl sm:text-4xl dark:text-slate-400">
                             :
                         </div>
 
@@ -256,7 +256,7 @@ export function TimePicker({ value, onChange }: TimePickerProps) {
                             >
                                 {period === 'AM' ? '↓' : '↑'}
                             </button>
-                            <div className="text-xl font-black tracking-tight text-slate-900 dark:text-slate-100">
+                            <div className="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
                                 {period}
                             </div>
                             <button
@@ -287,7 +287,7 @@ export function TimePicker({ value, onChange }: TimePickerProps) {
                         <button
                             type="button"
                             onClick={() => setShowPicker(false)}
-                            className="flex-1 rounded-lg bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+                            className="flex-1 rounded-lg bg-[#5B35F5] px-3 py-2 text-sm font-semibold text-white hover:bg-[#4a2ad4]"
                         >
                             Done
                         </button>

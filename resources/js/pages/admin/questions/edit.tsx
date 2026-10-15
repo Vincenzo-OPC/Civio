@@ -229,13 +229,13 @@ export default function QuestionEdit({
                 {/* Question Stem (Text) */}
                 <div>
                     <div className="mb-1.5 flex items-center justify-between">
-                        <label className="block text-[10px] font-extrabold text-slate-400 uppercase">
+                        <label className="block text-[10px] font-semibold text-slate-400 uppercase">
                             Question Stem
                         </label>
 
                         {/* Mock Formatting toolbar for premium aesthetics */}
                         <div className="flex items-center gap-1 rounded-lg border border-border bg-muted p-1">
-                            <span className="rounded px-2 py-0.5 text-[9px] font-black text-slate-500 transition select-none">
+                            <span className="rounded px-2 py-0.5 text-[9px] font-semibold text-slate-500 transition select-none">
                                 B
                             </span>
                             <span className="rounded px-2 py-0.5 text-[9px] text-slate-500 italic transition select-none">
@@ -265,7 +265,7 @@ export default function QuestionEdit({
 
                 {/* Distractor Choices */}
                 <div>
-                    <label className="mb-2 block text-[10px] font-extrabold text-slate-400 uppercase">
+                    <label className="mb-2 block text-[10px] font-semibold text-slate-400 uppercase">
                         {isDemographic
                             ? 'Options'
                             : 'Distractor Options & Correct Choice'}
@@ -294,7 +294,7 @@ export default function QuestionEdit({
                                 )}
 
                                 <span
-                                    className={`inline-flex size-6.5 shrink-0 items-center justify-center rounded-lg text-[10px] font-black ${
+                                    className={`inline-flex size-6.5 shrink-0 items-center justify-center rounded-lg text-[10px] font-semibold ${
                                         !isDemographic &&
                                         data.correct_option === idx
                                             ? 'bg-emerald-600 text-white'
@@ -326,7 +326,7 @@ export default function QuestionEdit({
                 {/* Explanation */}
                 {!isDemographic && (
                     <div>
-                        <label className="mb-1 block text-[10px] font-extrabold text-muted-foreground uppercase">
+                        <label className="mb-1 block text-[10px] font-semibold text-muted-foreground uppercase">
                             Cognitive Explanation & Rationale
                         </label>
                         <textarea

@@ -72,7 +72,7 @@ export default function AdminAttempts({
                 <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                     <div className="flex flex-col gap-1.5">
                         <div className="flex items-center gap-2">
-                            <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+                            <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                 <Database className="size-3" />
                                 Database Records
                             </span>
@@ -172,12 +172,12 @@ export default function AdminAttempts({
                                         </div>
                                         <div className="flex shrink-0 items-center gap-4">
                                             <div className="hidden text-right sm:block">
-                                                <span className="block max-w-[200px] truncate text-xs font-extrabold text-slate-500">
+                                                <span className="block max-w-[200px] truncate text-xs font-semibold text-slate-500">
                                                     {attempt.category}
                                                 </span>
                                             </div>
                                             <span
-                                                className={`inline-flex items-center rounded-md px-2.5 py-1 text-sm font-black ${
+                                                className={`inline-flex items-center rounded-md px-2.5 py-1 text-sm font-semibold ${
                                                     attempt.percentage >= 80
                                                         ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-400'
                                                         : attempt.percentage >=
@@ -258,7 +258,7 @@ export default function AdminAttempts({
                                             preserveScroll
                                             className={`shadow-3xs rounded-lg px-3 py-1.5 text-xs font-bold transition focus:outline-none ${
                                                 link.active
-                                                    ? 'bg-blue-600 text-white'
+                                                    ? 'bg-[#5B35F5] text-white'
                                                     : 'border border-border bg-white text-muted-foreground hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800 dark:hover:text-white'
                                             }`}
                                             dangerouslySetInnerHTML={{

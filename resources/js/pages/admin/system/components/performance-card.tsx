@@ -19,7 +19,7 @@ export function PerformanceCard({
     return (
         <Card className="border border-slate-200/50 bg-white/70 backdrop-blur-xl dark:border-slate-800/50 dark:bg-slate-950/50">
             <CardHeader>
-                <CardTitle className="text-xl font-black tracking-tight text-slate-900 dark:text-white">
+                <CardTitle className="text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
                     Performance & Cache
                 </CardTitle>
                 <CardDescription className="text-sm font-medium text-slate-500 dark:text-slate-400">

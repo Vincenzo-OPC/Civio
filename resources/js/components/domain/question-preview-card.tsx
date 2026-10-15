@@ -94,39 +94,39 @@ export function QuestionPreviewCard({
                                     ? 'Deselect question'
                                     : 'Select question'
                             }
-                            className="mr-1 flex items-center gap-1.5 text-xs font-bold text-blue-600 transition hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-blue-400"
+                            className="mr-1 flex items-center gap-1.5 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] transition hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-[#B3F52D]"
                         >
                             {isSelected ? (
                                 <CheckSquare className="size-4.5 fill-blue-600 text-white dark:fill-blue-500" />
                             ) : (
                                 <Square className="size-4.5 text-muted-foreground/50 hover:text-muted-foreground" />
                             )}
-                            <span className="hidden text-[11px] font-extrabold tracking-wide uppercase sm:inline">
+                            <span className="hidden text-[11px] font-semibold tracking-wide uppercase sm:inline">
                                 {isSelected ? 'Selected' : 'Select'}
                             </span>
                         </button>
                     )}
 
                     {/* Category Badge matching Live/Review Exam */}
-                    <span className="rounded-md bg-blue-50 px-2 py-0.5 text-[9px] font-extrabold text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+                    <span className="rounded-md bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                         {question.category}
                     </span>
 
                     {/* Subcategory Badge */}
-                    <span className="rounded-md bg-muted px-2 py-0.5 text-[9px] font-extrabold text-muted-foreground">
+                    <span className="rounded-md bg-muted px-2 py-0.5 text-[9px] font-semibold text-muted-foreground">
                         {question.subcategory || 'General Concepts'}
                     </span>
 
                     {/* Status Badges */}
                     {showStatusBadge && question.isCustom && (
-                        <span className="inline-flex items-center gap-1 rounded-md border border-violet-200 bg-violet-50 px-2 py-0.5 text-[9px] font-black text-violet-700 dark:border-violet-800/40 dark:bg-violet-950/40 dark:text-violet-300">
+                        <span className="inline-flex items-center gap-1 rounded-md border border-violet-200 bg-violet-50 px-2 py-0.5 text-[9px] font-semibold text-violet-700 dark:border-violet-800/40 dark:bg-violet-950/40 dark:text-violet-300">
                             <User className="size-3" />
                             Custom Question
                         </span>
                     )}
 
                     {showStatusBadge && question.isMistake && (
-                        <span className="inline-flex items-center gap-1 rounded-md border border-rose-200 bg-rose-50 px-2 py-0.5 text-[9px] font-black text-rose-700 dark:border-rose-900/30 dark:bg-rose-950/40 dark:text-rose-300">
+                        <span className="inline-flex items-center gap-1 rounded-md border border-rose-200 bg-rose-50 px-2 py-0.5 text-[9px] font-semibold text-rose-700 dark:border-rose-900/30 dark:bg-rose-950/40 dark:text-rose-300">
                             <RotateCcw className="size-3" />
                             Past Mistake
                         </span>
@@ -136,7 +136,7 @@ export function QuestionPreviewCard({
                         question.isUnseen &&
                         !question.isMistake &&
                         !question.isCustom && (
-                            <span className="inline-flex items-center gap-1 rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[9px] font-black text-emerald-700 dark:border-emerald-900/30 dark:bg-emerald-950/40 dark:text-emerald-300">
+                            <span className="inline-flex items-center gap-1 rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[9px] font-semibold text-emerald-700 dark:border-emerald-900/30 dark:bg-emerald-950/40 dark:text-emerald-300">
                                 <EyeOff className="size-3" />
                                 Fresh / Unseen
                             </span>
@@ -198,7 +198,7 @@ export function QuestionPreviewCard({
                                         }`}
                                     >
                                         <span
-                                            className={`flex size-8 shrink-0 items-center justify-center rounded-full border text-xs font-black transition ${
+                                            className={`flex size-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition ${
                                                 isCorrectOption
                                                     ? 'border-emerald-600 bg-emerald-600 text-white'
                                                     : 'border-border bg-background text-muted-foreground'
@@ -217,7 +217,7 @@ export function QuestionPreviewCard({
                                             </p>
                                             {isCorrectOption && (
                                                 <div className="flex shrink-0 items-center gap-1.5 pl-2">
-                                                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[9px] font-black tracking-wider text-emerald-800 uppercase dark:bg-emerald-950 dark:text-emerald-300">
+                                                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[9px] font-semibold tracking-wider text-emerald-800 uppercase dark:bg-emerald-950 dark:text-emerald-300">
                                                         Correct Answer
                                                     </span>
                                                     <CheckCircle2 className="size-4.5 text-emerald-600 dark:text-emerald-400" />
@@ -234,7 +234,7 @@ export function QuestionPreviewCard({
                             <div className="shadow-3xs overflow-hidden rounded-2xl border border-blue-200/70 bg-blue-50/40 text-sm leading-relaxed transition-all dark:border-blue-900/40 dark:bg-blue-950/20">
                                 <div className="flex items-center gap-2 border-b border-blue-200/50 bg-blue-100/40 px-4 py-2.5 text-xs font-bold text-blue-950 dark:border-blue-900/30 dark:bg-blue-950/40 dark:text-blue-200">
                                     <Lightbulb className="size-4 text-amber-500" />
-                                    <span className="font-heading font-black tracking-wider uppercase">
+                                    <span className="font-heading font-semibold tracking-wider uppercase">
                                         Explanation & Rationale
                                     </span>
                                 </div>

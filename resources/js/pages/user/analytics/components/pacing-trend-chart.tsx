@@ -105,7 +105,7 @@ export function PacingTrendChart({ data }: PacingTrendChartProps) {
                     <div className="flex items-center gap-2">
                         <Clock className="size-4.5 text-amber-500" />
                         <div>
-                            <h3 className="text-sm font-black text-slate-900 dark:text-white">
+                            <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
                                 Pacing vs Accuracy
                             </h3>
                             <p className="text-[10px] font-semibold text-slate-500 dark:text-slate-400">

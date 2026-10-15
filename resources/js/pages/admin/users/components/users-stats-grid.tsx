@@ -50,7 +50,7 @@ export function UsersStatsGrid({ stats }: UsersStatsGridProps) {
                 value={`${complianceRate}%`}
                 icon={CheckCircle}
                 iconBgColor="bg-blue-50 dark:bg-blue-950/20"
-                iconTextColor="text-blue-600 dark:text-blue-400 dark:text-blue-400"
+                iconTextColor="text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-[#B3F52D]"
             />
         </div>
     );

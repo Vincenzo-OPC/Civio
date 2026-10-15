@@ -21,7 +21,7 @@ export const categoryMeta: Record<
 > = {
     'Verbal Ability': {
         icon: BookOpen,
-        bgColor: 'bg-blue-600',
+        bgColor: 'bg-[#5B35F5]',
         description:
             'Test your vocabulary, reading comprehension, and error recognition through text-based scenarios.',
     },

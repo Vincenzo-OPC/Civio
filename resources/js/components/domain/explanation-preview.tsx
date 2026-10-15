@@ -29,7 +29,7 @@ export function ExplanationPreview({ text }: ExplanationPreviewProps) {
             parts.push(
                 <strong
                     key={match.index}
-                    className="font-black text-foreground"
+                    className="font-semibold text-foreground"
                 >
                     {parseLatexString(match[1])}
                 </strong>,
@@ -75,7 +75,7 @@ export function ExplanationPreview({ text }: ExplanationPreviewProps) {
                     key={`shortcut-${idx}`}
                     className="dark:bg-rose-950/30/40 my-4 rounded-xl border border-rose-200 bg-rose-50 p-4 dark:border-rose-900/40 dark:border-rose-900/50 dark:bg-rose-950/20"
                 >
-                    <span className="mb-1 block text-[11px] font-black tracking-wider text-rose-800 uppercase dark:text-rose-300">
+                    <span className="mb-1 block text-[11px] font-semibold tracking-wider text-rose-800 uppercase dark:text-rose-300">
                         🧠 Mental Math Shortcut
                     </span>
                     <p className="text-base leading-relaxed font-bold text-foreground">
@@ -97,11 +97,11 @@ export function ExplanationPreview({ text }: ExplanationPreviewProps) {
                 >
                     {nodes.map((node, nIdx) => (
                         <React.Fragment key={nIdx}>
-                            <span className="shadow-3xs inline-flex items-center justify-center rounded-lg bg-blue-600 px-3 py-1.5 text-xs font-black text-white">
+                            <span className="shadow-3xs inline-flex items-center justify-center rounded-lg bg-[#5B35F5] px-3 py-1.5 text-xs font-semibold text-white">
                                 {parseLatexString(node)}
                             </span>
                             {nIdx < nodes.length - 1 && (
-                                <ArrowRight className="size-4 shrink-0 text-blue-400 dark:text-blue-400 dark:text-blue-600" />
+                                <ArrowRight className="size-4 shrink-0 text-blue-400 dark:text-[#B3F52D] dark:text-[#5B35F5] dark:text-[#B3F52D]" />
                             )}
                         </React.Fragment>
                     ))}

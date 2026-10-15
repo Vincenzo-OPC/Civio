@@ -156,4 +156,4 @@ https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2026/ExamAnn_2026
 Within three seconds a new user understands:
 **Which exam do I need? How long is it? How many scored questions? What does the button do?**
 
-The first viewport presents a legitimate task flow and little else. The finished screen feels intentionally designed and is distinguishable from Hiraya, a generic government portal, and generated SaaS dashboards.
+The first viewport presents a legitimate task flow and little else. The finished screen feels intentionally designed and is distinguishable from a generic government portal and from generated SaaS dashboards.

@@ -25,7 +25,7 @@ export function DashboardAttemptsPanel({
 
                 <Link
                     href="/admin/attempts"
-                    className="flex items-center gap-1 text-xs font-bold text-blue-600 transition hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                    className="flex items-center gap-1 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] transition hover:text-blue-700 dark:text-[#B3F52D] dark:hover:text-blue-300"
                 >
                     View All Attempts
                     <ChevronRight className="size-3.5" />
@@ -67,12 +67,12 @@ export function DashboardAttemptsPanel({
                                 </div>
                                 <div className="flex shrink-0 items-center gap-3">
                                     <div className="hidden text-right sm:block">
-                                        <span className="block max-w-[120px] truncate text-[10px] font-extrabold text-slate-500">
+                                        <span className="block max-w-[120px] truncate text-[10px] font-semibold text-slate-500">
                                             {attempt.category}
                                         </span>
                                     </div>
                                     <span
-                                        className={`inline-flex items-center rounded-md px-2 py-1 text-xs font-black ${
+                                        className={`inline-flex items-center rounded-md px-2 py-1 text-xs font-semibold ${
                                             attempt.percentage >= 80
                                                 ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-400'
                                                 : attempt.percentage >= 70

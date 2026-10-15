@@ -113,7 +113,7 @@ export function PastPendingReminder({
                             size="sm"
                             variant="outline"
                             disabled={isProcessingBulk}
-                            className="h-7 border-blue-200 bg-blue-50/70 text-xs font-bold text-blue-700 hover:bg-blue-100 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:bg-blue-900/60"
+                            className="h-7 border-blue-200 bg-blue-50/70 text-xs font-bold text-blue-700 hover:bg-blue-100 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-[#B3F52D] dark:hover:bg-blue-900/60"
                             onClick={handleBulkReschedule}
                         >
                             <CalendarDays className="mr-1 size-3.5" />
@@ -193,7 +193,7 @@ export function PastPendingReminder({
                                     </Button>
                                     <Button
                                         size="sm"
-                                        className="h-7 bg-blue-600 px-2.5 text-xs font-bold text-white hover:bg-blue-700"
+                                        className="h-7 bg-[#5B35F5] px-2.5 text-xs font-bold text-white hover:bg-[#4a2ad4]"
                                         onClick={async () => {
                                             await handleRescheduleToToday(task);
                                             setPastPending((prev) =>
@@ -218,7 +218,7 @@ export function PastPendingReminder({
                             type="checkbox"
                             checked={snooze24h}
                             onChange={(e) => setSnooze24h(e.target.checked)}
-                            className="size-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800"
+                            className="size-4 rounded border-slate-300 text-[#5B35F5] dark:text-[#B3F52D] focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800"
                         />
                         <span>Don&apos;t remind me again for 24 hours</span>
                     </label>

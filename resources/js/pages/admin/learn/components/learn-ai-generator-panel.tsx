@@ -71,7 +71,7 @@ export function LearnAIGeneratorPanel({
 
                     <div className="mb-4 flex items-center justify-between border-b border-border pb-4">
                         <h2 className="inline-flex items-center gap-2 text-base font-bold text-foreground">
-                            <Sparkles className="size-4.5 animate-pulse text-blue-600 dark:text-blue-400" />
+                            <Sparkles className="size-4.5 animate-pulse text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
                             Syllabus Options
                         </h2>
                     </div>
@@ -172,7 +172,7 @@ export function LearnAIGeneratorPanel({
                                                                 abstract
                                                                 reasoning
                                                             </td>
-                                                            <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Flash / 3.7
                                                                 Pro
@@ -196,7 +196,7 @@ export function LearnAIGeneratorPanel({
                                                                 Data
                                                                 interpretation
                                                             </td>
-                                                            <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Flash / 3.7
                                                                 Pro
@@ -216,7 +216,7 @@ export function LearnAIGeneratorPanel({
                                                             <td className="p-3 font-bold">
                                                                 Word analogy
                                                             </td>
-                                                            <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Flash / 3.7
                                                                 Pro
@@ -237,7 +237,7 @@ export function LearnAIGeneratorPanel({
                                                                 assumptions &
                                                                 conclusions
                                                             </td>
-                                                            <td className="p-3 font-bold text-blue-600 dark:text-blue-400">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Pro / 3.7
                                                                 Flash
@@ -597,7 +597,7 @@ export function LearnAIGeneratorPanel({
                             <div className="border-emerald-250 shadow-3xs dark:bg-emerald-950/30/40 flex items-start gap-3 rounded-xl border border-l-4 border-l-emerald-500 bg-emerald-50 p-4 text-xs font-semibold text-emerald-800 dark:border-emerald-900/30 dark:bg-emerald-950/20">
                                 <CheckCircle2 className="text-emerald-650 mt-0.5 size-4.5 shrink-0" />
                                 <div className="flex flex-1 flex-col gap-1.5">
-                                    <span className="font-extrabold text-emerald-950">
+                                    <span className="font-semibold text-emerald-950">
                                         Study Module Generated!
                                     </span>
                                     <span className="leading-relaxed font-semibold text-muted-foreground">
@@ -607,7 +607,7 @@ export function LearnAIGeneratorPanel({
                                     </span>
                                     <Link
                                         href={adminLearnDrafts().url}
-                                        className="group mt-1 inline-flex items-center gap-1 font-extrabold text-emerald-700 underline transition duration-300 hover:text-emerald-900 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                                        className="group mt-1 inline-flex items-center gap-1 font-semibold text-emerald-700 underline transition duration-300 hover:text-emerald-900 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                     >
                                         Review Drafts &rarr;
                                     </Link>
@@ -671,10 +671,10 @@ export function LearnAIGeneratorPanel({
 
             <div className="flex flex-col gap-3 sm:gap-6 lg:col-span-5">
                 <div className="border-slate-250 relative overflow-hidden rounded-2xl border bg-linear-to-br from-blue-950 to-slate-900 p-4 text-white shadow-md sm:p-6">
-                    <div className="pointer-events-none absolute -top-12 -right-12 h-48 w-48 rounded-full bg-blue-600/10 blur-2xl" />
+                    <div className="pointer-events-none absolute -top-12 -right-12 h-48 w-48 rounded-full bg-[#5B35F5]/10 blur-2xl" />
                     <div className="pointer-events-none absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-emerald-600/5 blur-3xl" />
 
-                    <h2 className="mb-4 inline-flex w-full items-center gap-2 border-b border-white/10 pb-4.5 text-base font-extrabold tracking-tight">
+                    <h2 className="mb-4 inline-flex w-full items-center gap-2 border-b border-white/10 pb-4.5 text-base font-semibold tracking-tight">
                         <Cpu className="size-4.5 text-blue-400" />
                         AI Lesson Writer
                     </h2>

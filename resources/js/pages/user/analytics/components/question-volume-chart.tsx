@@ -45,7 +45,7 @@ export function QuestionVolumeChart({ categories }: QuestionVolumeChartProps) {
             <div className="mb-4 flex items-center gap-2">
                 <BarChart2 className="size-4.5 text-blue-500" />
                 <div>
-                    <h3 className="text-sm font-black text-slate-900 dark:text-white">
+                    <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
                         Study Effort
                     </h3>
                     <p className="text-[10px] font-semibold text-slate-500 dark:text-slate-400">
@@ -97,7 +97,7 @@ export function QuestionVolumeChart({ categories }: QuestionVolumeChartProps) {
                                                                 (viewBox.cy ||
                                                                     0) - 6
                                                             }
-                                                            className="fill-foreground text-2xl font-black"
+                                                            className="fill-foreground text-2xl font-semibold"
                                                         >
                                                             {totalQuestions}
                                                         </tspan>
@@ -172,7 +172,7 @@ export function QuestionVolumeChart({ categories }: QuestionVolumeChartProps) {
                                     <span className="text-[10px] font-semibold text-slate-400">
                                         {item.value}q
                                     </span>
-                                    <span className="text-sm font-extrabold text-slate-900 dark:text-white">
+                                    <span className="text-sm font-semibold text-slate-900 dark:text-white">
                                         {pct}%
                                     </span>
                                 </div>

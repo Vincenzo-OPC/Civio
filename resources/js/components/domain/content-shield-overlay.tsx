@@ -47,7 +47,7 @@ export function ContentShieldOverlay({
                     className={`mt-2 inline-flex items-center gap-2 rounded-xl px-6 py-2.5 text-xs font-bold text-white shadow-md transition focus:outline-none ${
                         isResumeLocked
                             ? 'cursor-not-allowed bg-slate-400 opacity-60'
-                            : 'bg-blue-600 hover:bg-blue-700 active:scale-95'
+                            : 'bg-[#5B35F5] hover:bg-[#4a2ad4] active:scale-95'
                     }`}
                 >
                     {isResumeLocked

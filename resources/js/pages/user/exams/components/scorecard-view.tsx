@@ -353,7 +353,7 @@ export function ScorecardView({
                     return (
                         <div className="mb-6 rounded-2xl border border-blue-200 bg-blue-50/80 p-4 dark:border-blue-900/40 dark:bg-blue-950/20">
                             <div className="flex items-start gap-3">
-                                <div className="rounded-full bg-blue-100 p-1 text-blue-600 dark:bg-blue-950 dark:text-blue-400">
+                                <div className="rounded-full bg-blue-100 p-1 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950 dark:text-[#B3F52D]">
                                     <svg
                                         className="size-4"
                                         fill="none"
@@ -369,10 +369,10 @@ export function ScorecardView({
                                     </svg>
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="text-xs font-black text-blue-800 dark:text-blue-300">
+                                    <h4 className="text-xs font-semibold text-blue-800 dark:text-[#B3F52D]">
                                         Free Guest Attempt Limit Reached
                                     </h4>
-                                    <p className="mt-1 text-xs leading-relaxed text-blue-700 dark:text-blue-400">
+                                    <p className="mt-1 text-xs leading-relaxed text-blue-700 dark:text-[#B3F52D]">
                                         You are limited to 1 free guest mock
                                         exam attempt. Please{' '}
                                         <Link
@@ -403,10 +403,10 @@ export function ScorecardView({
             {/* Header Title Section */}
             <div className="mb-6 flex flex-col gap-2 border-b border-border pb-5 md:flex-row md:items-center md:justify-between">
                 <div>
-                    <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                         <Award className="size-3" /> Performance Scorecard
                     </span>
-                    <h1 className="mt-1 font-heading text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+                    <h1 className="mt-1 font-heading text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                         {isDrillSession
                             ? 'Drill Results'
                             : 'Exam Simulation Results'}
@@ -441,7 +441,7 @@ export function ScorecardView({
                 <div className="flex items-center gap-2.5">
                     <button
                         onClick={handleReviewAll}
-                        className="flex cursor-pointer items-center gap-1.5 rounded-xl bg-blue-600 px-5 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-blue-700 active:scale-95"
+                        className="flex cursor-pointer items-center gap-1.5 rounded-xl bg-[#5B35F5] px-5 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#4a2ad4] active:scale-95"
                     >
                         <BookOpen className="size-3.5" /> Review Answers
                     </button>
@@ -532,7 +532,7 @@ export function ScorecardView({
                                     {/* Category Breakdown List */}
                                     <div className="flex w-full flex-1 flex-col">
                                         <div className="mb-2 flex items-center justify-between">
-                                            <span className="text-xs font-black tracking-wider text-muted-foreground uppercase">
+                                            <span className="text-xs font-semibold tracking-wider text-muted-foreground uppercase">
                                                 Category Breakdown
                                             </span>
                                             <span className="text-[11px] font-semibold text-muted-foreground">
@@ -570,19 +570,19 @@ export function ScorecardView({
                                                             className="group flex cursor-pointer flex-col rounded-xl border border-border bg-card p-3 transition-all duration-200 hover:border-blue-500/50 hover:bg-muted/40"
                                                         >
                                                             <div className="mb-1.5 flex items-center justify-between">
-                                                                <span className="truncate pr-2 text-xs font-bold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                                                <span className="truncate pr-2 text-xs font-bold text-foreground group-hover:text-[#5B35F5] dark:text-[#B3F52D] dark:group-hover:text-blue-400">
                                                                     {cat}
                                                                 </span>
                                                                 <div className="flex items-center gap-2">
                                                                     <span
-                                                                        className={`rounded-md px-1.5 py-0.5 text-[11px] font-black ${isCatPassed ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-400'}`}
+                                                                        className={`rounded-md px-1.5 py-0.5 text-[11px] font-semibold ${isCatPassed ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-400'}`}
                                                                     >
                                                                         {
                                                                             catFormattedPct
                                                                         }
                                                                         %
                                                                     </span>
-                                                                    <span className="text-[10px] font-bold text-blue-600 opacity-0 transition group-hover:opacity-100 dark:text-blue-400">
+                                                                    <span className="text-[10px] font-bold text-[#5B35F5] dark:text-[#B3F52D] opacity-0 transition group-hover:opacity-100 dark:text-[#B3F52D]">
                                                                         Review →
                                                                     </span>
                                                                 </div>
@@ -614,10 +614,10 @@ export function ScorecardView({
                                 {/* 4 Key Stat Metric Boxes */}
                                 <div className="mt-6 grid w-full grid-cols-2 gap-3 border-t border-border pt-6 sm:grid-cols-4">
                                     <div className="flex flex-col items-center justify-center rounded-xl border border-border bg-muted/20 p-4 text-center">
-                                        <span className="text-[11px] font-black tracking-wider text-muted-foreground uppercase">
+                                        <span className="text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
                                             Correct
                                         </span>
-                                        <p className="mt-1 text-2xl font-black text-emerald-600 sm:text-3xl dark:text-emerald-400">
+                                        <p className="mt-1 text-2xl font-semibold text-emerald-600 sm:text-3xl dark:text-emerald-400">
                                             {results.correctCount}
                                         </p>
                                         <span className="mt-0.5 text-[11px] font-bold text-muted-foreground">
@@ -625,10 +625,10 @@ export function ScorecardView({
                                         </span>
                                     </div>
                                     <div className="flex flex-col items-center justify-center rounded-xl border border-border bg-muted/20 p-4 text-center">
-                                        <span className="text-[11px] font-black tracking-wider text-muted-foreground uppercase">
+                                        <span className="text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
                                             Incorrect
                                         </span>
-                                        <p className="mt-1 text-2xl font-black text-rose-600 sm:text-3xl dark:text-rose-400">
+                                        <p className="mt-1 text-2xl font-semibold text-rose-600 sm:text-3xl dark:text-rose-400">
                                             {results.wrongCount}
                                         </p>
                                         <span className="mt-0.5 text-[11px] font-bold text-muted-foreground">
@@ -636,10 +636,10 @@ export function ScorecardView({
                                         </span>
                                     </div>
                                     <div className="flex flex-col items-center justify-center rounded-xl border border-border bg-muted/20 p-4 text-center">
-                                        <span className="text-[11px] font-black tracking-wider text-muted-foreground uppercase">
+                                        <span className="text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
                                             Skipped
                                         </span>
-                                        <p className="mt-1 text-2xl font-black text-muted-foreground sm:text-3xl">
+                                        <p className="mt-1 text-2xl font-semibold text-muted-foreground sm:text-3xl">
                                             {results.skippedCount}
                                         </p>
                                         <span className="mt-0.5 text-[11px] font-bold text-muted-foreground">
@@ -647,10 +647,10 @@ export function ScorecardView({
                                         </span>
                                     </div>
                                     <div className="flex flex-col items-center justify-center rounded-xl border border-border bg-muted/20 p-4 text-center">
-                                        <span className="text-[11px] font-black tracking-wider text-muted-foreground uppercase">
+                                        <span className="text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
                                             Time Spent
                                         </span>
-                                        <p className="mt-1 text-2xl font-black text-blue-600 sm:text-3xl dark:text-blue-400">
+                                        <p className="mt-1 text-2xl font-semibold text-[#5B35F5] dark:text-[#B3F52D] sm:text-3xl dark:text-[#B3F52D]">
                                             {elapsedText}
                                         </p>
                                         <span className="mt-0.5 w-full truncate px-1 text-[11px] font-bold text-muted-foreground">
@@ -666,7 +666,7 @@ export function ScorecardView({
                                 className="rounded-2xl border border-border bg-card p-5 shadow-xs sm:p-6"
                             >
                                 <div className="mb-4">
-                                    <h3 className="font-heading text-base font-black text-foreground">
+                                    <h3 className="font-heading text-base font-semibold text-foreground">
                                         Strengths and weaknesses
                                     </h3>
                                     <p className="text-xs font-medium text-muted-foreground">
@@ -709,11 +709,11 @@ export function ScorecardView({
                             {/* POST-EXAM ACTION HUB */}
                             <div className="rounded-2xl border border-border bg-card p-5 shadow-xs sm:p-6">
                                 <div className="mb-4 flex items-center gap-2">
-                                    <div className="flex size-7 items-center justify-center rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400">
+                                    <div className="flex size-7 items-center justify-center rounded-lg bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                         <Zap className="size-4" />
                                     </div>
                                     <div>
-                                        <h3 className="font-heading text-base font-black text-foreground">
+                                        <h3 className="font-heading text-base font-semibold text-foreground">
                                             Recommended Next Steps
                                         </h3>
                                         <p className="text-xs font-medium text-muted-foreground">
@@ -739,17 +739,17 @@ export function ScorecardView({
                                                     <BookOpen className="size-4" />
                                                 </span>
                                                 {results.wrongCount > 0 ? (
-                                                    <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-black text-rose-700 dark:bg-rose-950 dark:text-rose-300">
+                                                    <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-semibold text-rose-700 dark:bg-rose-950 dark:text-rose-300">
                                                         {results.wrongCount}{' '}
                                                         Mistakes
                                                     </span>
                                                 ) : (
-                                                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-black text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300">
+                                                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300">
                                                         100% Correct
                                                     </span>
                                                 )}
                                             </div>
-                                            <h4 className="font-heading text-sm font-bold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                            <h4 className="font-heading text-sm font-bold text-foreground group-hover:text-[#5B35F5] dark:text-[#B3F52D] dark:group-hover:text-blue-400">
                                                 {results.wrongCount > 0
                                                     ? 'Analyze Your Mistakes'
                                                     : 'Review Answer Explanations'}
@@ -760,7 +760,7 @@ export function ScorecardView({
                                                     : 'Read through complete answer explanations and concept keys.'}
                                             </p>
                                         </div>
-                                        <div className="mt-4 flex items-center text-xs font-bold text-blue-600 dark:text-blue-400">
+                                        <div className="mt-4 flex items-center text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             <span>Open Mistake Review</span>
                                             <ArrowRight className="ml-1 size-3.5 transition-transform group-hover:translate-x-1" />
                                         </div>
@@ -777,7 +777,7 @@ export function ScorecardView({
                                                     <Target className="size-4" />
                                                 </span>
                                                 {wrongQuestionIds.length > 0 ? (
-                                                    <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-black text-rose-700 dark:bg-rose-950 dark:text-rose-300">
+                                                    <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-semibold text-rose-700 dark:bg-rose-950 dark:text-rose-300">
                                                         {
                                                             wrongQuestionIds.length
                                                         }{' '}
@@ -785,7 +785,7 @@ export function ScorecardView({
                                                     </span>
                                                 ) : weakCategories.length >
                                                   0 ? (
-                                                    <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-black text-amber-700 dark:bg-amber-950 dark:text-amber-300">
+                                                    <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-950 dark:text-amber-300">
                                                         {weakCategories.length}{' '}
                                                         Weak Area
                                                         {weakCategories.length >
@@ -795,7 +795,7 @@ export function ScorecardView({
                                                     </span>
                                                 ) : null}
                                             </div>
-                                            <h4 className="font-heading text-sm font-bold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                            <h4 className="font-heading text-sm font-bold text-foreground group-hover:text-[#5B35F5] dark:text-[#B3F52D] dark:group-hover:text-blue-400">
                                                 {wrongQuestionIds.length > 0
                                                     ? 'Drill Mistake Questions'
                                                     : 'Practice Weak Areas'}
@@ -808,7 +808,7 @@ export function ScorecardView({
                                                       : 'Launch targeted practice drills to sharpen your speed.'}
                                             </p>
                                         </div>
-                                        <div className="mt-4 flex items-center text-xs font-bold text-blue-600 dark:text-blue-400">
+                                        <div className="mt-4 flex items-center text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             <span>
                                                 {wrongQuestionIds.length > 0
                                                     ? 'Start Mistake Drill'
@@ -825,14 +825,14 @@ export function ScorecardView({
                                     >
                                         <div>
                                             <div className="mb-2 flex items-center justify-between">
-                                                <span className="inline-flex size-8 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+                                                <span className="inline-flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                                     <RotateCcw className="size-4" />
                                                 </span>
-                                                <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-black text-muted-foreground">
+                                                <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold text-muted-foreground">
                                                     Fresh Pool
                                                 </span>
                                             </div>
-                                            <h4 className="font-heading text-sm font-bold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                            <h4 className="font-heading text-sm font-bold text-foreground group-hover:text-[#5B35F5] dark:text-[#B3F52D] dark:group-hover:text-blue-400">
                                                 Retake Simulation
                                             </h4>
                                             <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
@@ -841,7 +841,7 @@ export function ScorecardView({
                                                 questions.
                                             </p>
                                         </div>
-                                        <div className="mt-4 flex items-center text-xs font-bold text-blue-600 dark:text-blue-400">
+                                        <div className="mt-4 flex items-center text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                             <span>Start New Attempt</span>
                                             <ArrowRight className="ml-1 size-3.5 transition-transform group-hover:translate-x-1" />
                                         </div>
@@ -852,10 +852,10 @@ export function ScorecardView({
                             {/* Guest account conversion card */}
                             {isGuest && (
                                 <div className="overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50/80 via-background to-blue-50/30 p-6 text-center shadow-lg dark:border-blue-950/40 dark:from-slate-900 dark:to-slate-950">
-                                    <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-md shadow-blue-500/20 dark:bg-blue-500">
+                                    <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-[#5B35F5] text-white shadow-md shadow-blue-500/20 dark:bg-[#B3F52D] dark:text-[#0A0A0A]">
                                         <Trophy className="size-6 animate-pulse" />
                                     </div>
-                                    <h3 className="font-heading text-lg font-black tracking-tight text-foreground sm:text-xl">
+                                    <h3 className="font-heading text-lg font-semibold tracking-tight text-foreground sm:text-xl">
                                         {guestUnlimited
                                             ? 'Optional: Save Progress With an Account'
                                             : "Don't Lose Your Mock Exam Score!"}
@@ -868,7 +868,7 @@ export function ScorecardView({
                                     <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                                         <Link
                                             href="/register"
-                                            className="group flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-lg active:scale-95 sm:w-auto"
+                                            className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#5B35F5] px-6 py-3 text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:bg-[#4a2ad4] hover:shadow-lg active:scale-95 sm:w-auto"
                                         >
                                             <LogIn className="size-4 transition-transform group-hover:translate-x-0.5" />
                                             {guestUnlimited
@@ -887,7 +887,7 @@ export function ScorecardView({
                                         alt="Civio Logo"
                                         className="size-5 shrink-0 object-contain dark:brightness-110"
                                     />
-                                    <span className="font-heading text-xs font-black tracking-widest text-foreground uppercase">
+                                    <span className="font-heading text-xs font-semibold tracking-widest text-foreground uppercase">
                                         Civio
                                     </span>
                                 </div>
@@ -907,10 +907,10 @@ export function ScorecardView({
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className="mb-4 flex flex-col items-center text-center">
-                            <div className="mb-3 rounded-full bg-blue-50 p-3 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400">
+                            <div className="mb-3 rounded-full bg-blue-50 p-3 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/50 dark:text-[#B3F52D]">
                                 <Trophy className="size-8" />
                             </div>
-                            <h3 className="font-heading text-xl font-black tracking-tight text-foreground">
+                            <h3 className="font-heading text-xl font-semibold tracking-tight text-foreground">
                                 Mock Exam Completed!
                             </h3>
                             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -926,7 +926,7 @@ export function ScorecardView({
                         <div className="mt-6 flex flex-col gap-2.5">
                             <Link
                                 href="/register"
-                                className="group flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-xs font-bold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none active:scale-95"
+                                className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#5B35F5] py-3 text-xs font-bold text-white shadow-sm transition hover:bg-[#4a2ad4] focus:outline-none active:scale-95"
                             >
                                 <LogIn className="size-4" />
                                 Create a Free Account
@@ -965,7 +965,7 @@ function StrengthList({
     return (
         <div>
             <h4
-                className={`mb-2 text-xs font-black tracking-wider uppercase ${toneClass}`}
+                className={`mb-2 text-xs font-semibold tracking-wider uppercase ${toneClass}`}
             >
                 {title}
             </h4>

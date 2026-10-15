@@ -277,7 +277,7 @@ export default function AdminLearnIndex({
                 {/* Header */}
                 <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                     <div>
-                        <h1 className="text-2xl font-black tracking-tight text-foreground">
+                        <h1 className="text-2xl font-semibold tracking-tight text-foreground">
                             Module Management
                         </h1>
                         <p className="text-base leading-relaxed text-muted-foreground">
@@ -286,7 +286,7 @@ export default function AdminLearnIndex({
                     </div>
                     <Link
                         href={adminLearnCreate().url}
-                        className="group inline-flex cursor-pointer items-center gap-1.5 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-md transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                        className="group inline-flex cursor-pointer items-center gap-1.5 rounded-xl bg-[#5B35F5] px-5 py-2.5 text-sm font-bold text-white shadow-md transition transition-all duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                     >
                         <ChevronRight className="size-4 transition-transform group-hover:scale-110" />
                         Create New Module
@@ -476,7 +476,7 @@ export default function AdminLearnIndex({
                                 onClick={() => setViewMode('table')}
                                 className={`flex cursor-pointer items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-bold transition ${
                                     viewMode === 'table'
-                                        ? 'bg-blue-600 text-white shadow-xs'
+                                        ? 'bg-[#5B35F5] text-white shadow-xs'
                                         : 'text-muted-foreground hover:text-foreground'
                                 }`}
                                 title="Table List View"
@@ -489,7 +489,7 @@ export default function AdminLearnIndex({
                                 onClick={() => setViewMode('grid')}
                                 className={`flex cursor-pointer items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-bold transition ${
                                     viewMode === 'grid'
-                                        ? 'bg-blue-600 text-white shadow-xs'
+                                        ? 'bg-[#5B35F5] text-white shadow-xs'
                                         : 'text-muted-foreground hover:text-foreground'
                                 }`}
                                 title="Grid Card View"
@@ -505,14 +505,14 @@ export default function AdminLearnIndex({
                 {selectedIds.size > 0 && (
                     <div className="mb-4 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-blue-200 bg-blue-50 p-4 shadow-xs dark:border-blue-900/30 dark:bg-blue-950/30">
                         <div className="flex items-center gap-2">
-                            <span className="text-sm font-bold text-blue-900 dark:text-blue-300">
+                            <span className="text-sm font-bold text-blue-900 dark:text-[#B3F52D]">
                                 {selectedIds.size} module
                                 {selectedIds.size !== 1 ? 's' : ''} selected
                             </span>
                             <button
                                 type="button"
                                 onClick={() => setSelectedIds(new Set())}
-                                className="text-xs font-semibold text-blue-700 underline transition hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-200"
+                                className="text-xs font-semibold text-blue-700 underline transition hover:text-blue-900 dark:text-[#B3F52D] dark:hover:text-blue-200"
                             >
                                 Clear selection
                             </button>
@@ -704,13 +704,13 @@ export default function AdminLearnIndex({
                                                 </td>
                                                 <td className="w-36 px-4 py-3">
                                                     <span
-                                                        className={`inline-flex max-w-[130px] truncate rounded-md border px-2 py-0.5 text-[9px] font-extrabold tracking-wide uppercase ${getCategoryStyles(mod.category)}`}
+                                                        className={`inline-flex max-w-[130px] truncate rounded-md border px-2 py-0.5 text-[9px] font-semibold tracking-wide uppercase ${getCategoryStyles(mod.category)}`}
                                                     >
                                                         {mod.category}
                                                     </span>
                                                 </td>
                                                 <td className="w-40 px-4 py-3">
-                                                    <span className="inline-block max-w-[140px] truncate rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-blue-300">
+                                                    <span className="inline-block max-w-[140px] truncate rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                                         {mod.subcategory}
                                                     </span>
                                                 </td>
@@ -721,10 +721,10 @@ export default function AdminLearnIndex({
                                                 </td>
                                                 <td className="px-4 py-3">
                                                     <span
-                                                        className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[9px] font-extrabold uppercase ${
+                                                        className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[9px] font-semibold uppercase ${
                                                             mod.is_published
                                                                 ? 'border-emerald-100 bg-emerald-50 text-emerald-700 dark:border-emerald-900/30 dark:bg-emerald-950/30 dark:text-emerald-400'
-                                                                : 'border-blue-100 bg-blue-50 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-blue-400'
+                                                                : 'border-blue-100 bg-blue-50 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-[#B3F52D]'
                                                         }`}
                                                     >
                                                         {mod.is_published
@@ -743,7 +743,7 @@ export default function AdminLearnIndex({
                                                                 >
                                                                     <Link
                                                                         href={`${learnShow(mod.slug).url}?page=${currentPage}`}
-                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
+                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
                                                                     >
                                                                         <Eye className="size-4" />
                                                                     </Link>
@@ -759,7 +759,7 @@ export default function AdminLearnIndex({
                                                                 >
                                                                     <Link
                                                                         href={`${adminLearnEdit(mod.id).url}?page=${currentPage}`}
-                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-blue-600 dark:text-blue-400"
+                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
                                                                     >
                                                                         <Edit2 className="size-4" />
                                                                     </Link>
@@ -829,19 +829,19 @@ export default function AdminLearnIndex({
                                         <div className="mb-4 flex items-start justify-between gap-2 pr-8">
                                             <div className="flex flex-wrap items-center gap-1.5">
                                                 <span
-                                                    className={`inline-flex rounded-md border px-2 py-0.5 text-[9px] font-extrabold tracking-wide uppercase ${getCategoryStyles(mod.category)}`}
+                                                    className={`inline-flex rounded-md border px-2 py-0.5 text-[9px] font-semibold tracking-wide uppercase ${getCategoryStyles(mod.category)}`}
                                                 >
                                                     {mod.category}
                                                 </span>
-                                                <span className="rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-blue-300">
+                                                <span className="rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                                     {mod.subcategory}
                                                 </span>
                                             </div>
                                             <span
-                                                className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[9px] font-extrabold uppercase ${
+                                                className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[9px] font-semibold uppercase ${
                                                     mod.is_published
                                                         ? 'border-emerald-100 bg-emerald-50 text-emerald-700 dark:border-emerald-900/30 dark:bg-emerald-950/20 dark:bg-emerald-950/30 dark:text-emerald-400'
-                                                        : 'border-blue-100 bg-blue-50 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-blue-400'
+                                                        : 'border-blue-100 bg-blue-50 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-[#B3F52D]'
                                                 }`}
                                             >
                                                 {mod.is_published
@@ -884,7 +884,7 @@ export default function AdminLearnIndex({
                                                     <TooltipTrigger asChild>
                                                         <Link
                                                             href={`${learnShow(mod.slug).url}?page=${currentPage}`}
-                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-blue-600 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                                         >
                                                             <Eye className="size-4" />
                                                         </Link>
@@ -898,7 +898,7 @@ export default function AdminLearnIndex({
                                                     <TooltipTrigger asChild>
                                                         <Link
                                                             href={`${adminLearnEdit(mod.id).url}?page=${currentPage}`}
-                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-blue-600 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                                         >
                                                             <Edit2 className="size-4" />
                                                         </Link>
@@ -1018,9 +1018,9 @@ export default function AdminLearnIndex({
                                                 onClick={() =>
                                                     handlePageChange(pageNum)
                                                 }
-                                                className={`size-8 cursor-pointer rounded-lg text-xs font-black transition focus:outline-none ${
+                                                className={`size-8 cursor-pointer rounded-lg text-xs font-semibold transition focus:outline-none ${
                                                     isActive
-                                                        ? 'bg-blue-600 text-white'
+                                                        ? 'bg-[#5B35F5] text-white'
                                                         : 'border border-border bg-card text-foreground hover:bg-muted'
                                                 }`}
                                             >

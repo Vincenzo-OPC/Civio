@@ -56,7 +56,7 @@ export function SubcategoryPanel({
                         />
                         <button
                             type="submit"
-                            className="group shadow-3xs inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl bg-blue-600 px-4 text-sm font-bold text-white transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 active:bg-blue-800"
+                            className="group shadow-3xs inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl bg-[#5B35F5] px-4 text-sm font-bold text-white transition transition-all duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 active:bg-blue-800"
                         >
                             <Plus className="size-4" />
                         </button>
@@ -118,7 +118,7 @@ export function SubcategoryPanel({
                                                         sub.name,
                                                     );
                                                 }}
-                                                className="cursor-pointer rounded-lg p-1 text-muted-foreground transition hover:bg-blue-50 hover:text-blue-600 dark:bg-blue-950/30 dark:text-blue-400 dark:hover:bg-blue-950/30 dark:hover:text-blue-400"
+                                                className="cursor-pointer rounded-lg p-1 text-muted-foreground transition hover:bg-blue-50 hover:text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-950/30 dark:hover:text-blue-400"
                                             >
                                                 <Edit2 className="size-3.5" />
                                             </button>

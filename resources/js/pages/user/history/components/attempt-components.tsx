@@ -11,7 +11,7 @@ export function TrackBadge({ track }: { track: string }) {
             'bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300';
     } else if (lowerTrack.includes('professional')) {
         trackLabel = 'Professional';
-        trackClass = 'bg-blue-600 text-white dark:bg-blue-800';
+        trackClass = 'bg-[#5B35F5] text-white dark:bg-[#B3F52D] dark:text-[#0A0A0A]';
     } else {
         // Drill
         trackLabel = 'Drill';
@@ -20,7 +20,7 @@ export function TrackBadge({ track }: { track: string }) {
 
     return (
         <span
-            className={`inline-flex rounded-full px-2.5 py-0.5 text-[10px] font-extrabold uppercase ${trackClass}`}
+            className={`inline-flex rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase ${trackClass}`}
         >
             {trackLabel}
         </span>
@@ -46,14 +46,14 @@ export function StatusBadge({ status }: { status: string }) {
     } else {
         // Completed
         badgeClass =
-            'bg-blue-50 dark:bg-blue-950/30 text-blue-700 border border-blue-200 dark:border-blue-900/50 dark:bg-blue-500/10 dark:text-blue-400 dark:border-blue-500/20';
+            'bg-blue-50 dark:bg-blue-950/30 text-blue-700 border border-blue-200 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10 dark:text-[#B3F52D] dark:border-blue-500/20';
         StatusIcon = CheckCircle2;
         text = 'Completed';
     }
 
     return (
         <span
-            className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[10px] font-extrabold tracking-wide uppercase ${badgeClass}`}
+            className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[10px] font-semibold tracking-wide uppercase ${badgeClass}`}
         >
             <StatusIcon className="size-3 shrink-0 transition-transform group-hover:scale-110" />
             {text}
@@ -89,13 +89,13 @@ export function ScoreProgress({
         ? 'text-emerald-700 dark:text-emerald-400'
         : isFail
           ? 'text-rose-600 dark:text-rose-400 dark:text-rose-400'
-          : 'text-blue-600 dark:text-blue-400 dark:text-blue-400';
+          : 'text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-[#B3F52D]';
 
     const scoreBarColor = isPass
         ? 'bg-emerald-600'
         : isFail
           ? 'bg-rose-600'
-          : 'bg-blue-600';
+          : 'bg-[#5B35F5]';
 
     // Parse fraction from detail string if available (e.g. "68/170 Correct" or "11/150")
     let fraction = '';
@@ -113,7 +113,7 @@ export function ScoreProgress({
             <div className="flex items-center gap-3">
                 <div className="flex items-baseline gap-1">
                     <span
-                        className={`shrink-0 text-xs font-black ${scoreColor}`}
+                        className={`shrink-0 text-xs font-semibold ${scoreColor}`}
                     >
                         {score}%
                     </span>

@@ -47,7 +47,7 @@ export function SubjectMasteryChart({ categories }: SubjectMasteryChartProps) {
             <div className="mb-4 flex items-center gap-2">
                 <Award className="size-4.5 text-emerald-500" />
                 <div>
-                    <h3 className="text-sm font-black text-slate-900 dark:text-white">
+                    <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
                         Subject Mastery
                     </h3>
                     <p className="text-[10px] font-semibold text-slate-500 dark:text-slate-400">
@@ -114,7 +114,7 @@ export function SubjectMasteryChart({ categories }: SubjectMasteryChartProps) {
                                     {item.name}
                                 </span>
                             </div>
-                            <span className="text-sm font-extrabold text-slate-900 dark:text-white">
+                            <span className="text-sm font-semibold text-slate-900 dark:text-white">
                                 {item.percentage}%
                             </span>
                         </div>

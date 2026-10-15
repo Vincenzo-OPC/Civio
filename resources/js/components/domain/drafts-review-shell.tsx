@@ -335,12 +335,12 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                 <div>
                     <Link
                         href={backUrl}
-                        className="group flex w-fit cursor-pointer items-center gap-1 text-xs font-black text-foreground transition-all duration-300 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-blue-400"
+                        className="group flex w-fit cursor-pointer items-center gap-1 text-xs font-semibold text-foreground transition-all duration-300 hover:text-[#5B35F5] dark:text-[#B3F52D] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                     >
                         <ChevronLeft className="size-4" />
                         {backLabel}
                     </Link>
-                    <h1 className="mt-2 text-2xl font-black tracking-tight text-foreground">
+                    <h1 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
                         {title}
                     </h1>
                     <p className="text-base leading-relaxed text-muted-foreground">
@@ -679,7 +679,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
 
             {/* 2.5 DRAFT ACTIONS LEGEND */}
             {items.length > 0 && (
-                <div className="mt-4 flex flex-wrap items-center justify-end gap-3 rounded-xl border border-border bg-card p-3 text-[10px] font-extrabold tracking-wider uppercase">
+                <div className="mt-4 flex flex-wrap items-center justify-end gap-3 rounded-xl border border-border bg-card p-3 text-[10px] font-semibold tracking-wider uppercase">
                     <span className="text-muted-foreground">Legend:</span>
                     <div className="dark:bg-emerald-950/30/50 flex items-center gap-1.5 rounded-lg border border-emerald-100 bg-emerald-50 px-2 py-1 dark:border-emerald-900/20 dark:bg-emerald-950/10">
                         <span className="border-emerald-250 flex size-5.5 items-center justify-center rounded-md border bg-emerald-100 text-emerald-700 dark:border-emerald-900/30 dark:bg-emerald-950/20 dark:text-emerald-400">
@@ -698,10 +698,10 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                         </span>
                     </div>
                     <div className="dark:bg-blue-950/30/50 flex items-center gap-1.5 rounded-lg border border-blue-100 bg-blue-50 px-2 py-1 dark:border-blue-900/20 dark:bg-blue-950/10">
-                        <span className="border-blue-250 flex size-5.5 items-center justify-center rounded-md border bg-blue-100 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-blue-400">
+                        <span className="border-blue-250 flex size-5.5 items-center justify-center rounded-md border bg-blue-100 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-[#B3F52D]">
                             <Edit3 className="size-3" />
                         </span>
-                        <span className="text-blue-800 dark:text-blue-300">
+                        <span className="text-blue-800 dark:text-[#B3F52D]">
                             Edit Inline
                         </span>
                     </div>
@@ -730,7 +730,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                         <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-muted text-muted-foreground">
                             <Inbox className="size-8" />
                         </div>
-                        <h3 className="text-xl font-black tracking-tight text-foreground">
+                        <h3 className="text-xl font-semibold tracking-tight text-foreground">
                             {emptyStateTitle}
                         </h3>
                         <p className="mt-1.5 max-w-2xl text-base leading-relaxed text-muted-foreground">
@@ -738,7 +738,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                         </p>
                         <Link
                             href={emptyStateActionUrl}
-                            className="group mt-6 inline-flex cursor-pointer items-center gap-1.5 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-md transition duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                            className="group mt-6 inline-flex cursor-pointer items-center gap-1.5 rounded-xl bg-[#5B35F5] px-5 py-2.5 text-sm font-bold text-white shadow-md transition duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                         >
                             <EmptyStateActionIcon className="size-4 transition-transform group-hover:scale-110" />
                             {emptyStateActionLabel}
@@ -865,9 +865,9 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                                                             pageNum,
                                                         )
                                                     }
-                                                    className={`shadow-3xs size-8 cursor-pointer rounded-lg text-xs font-black transition focus:outline-none ${
+                                                    className={`shadow-3xs size-8 cursor-pointer rounded-lg text-xs font-semibold transition focus:outline-none ${
                                                         isActive
-                                                            ? 'bg-blue-600 text-white'
+                                                            ? 'bg-[#5B35F5] text-white'
                                                             : 'border border-border bg-card text-foreground hover:bg-muted'
                                                     }`}
                                                 >

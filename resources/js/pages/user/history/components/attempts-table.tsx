@@ -63,7 +63,7 @@ export function AttemptsTable({
             {/* Card Header with Counter and Legend */}
             <div className="flex flex-col gap-3 border-b border-border p-4 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-2">
-                    <span className="font-heading text-sm font-extrabold text-foreground">
+                    <span className="font-heading text-sm font-semibold text-foreground">
                         Attempt Records
                     </span>
                     {pagination.total > 0 && (
@@ -74,13 +74,13 @@ export function AttemptsTable({
                 </div>
 
                 {/* Legend */}
-                <div className="flex flex-wrap items-center gap-3 text-[10px] font-extrabold tracking-wider uppercase">
+                <div className="flex flex-wrap items-center gap-3 text-[10px] font-semibold tracking-wider uppercase">
                     <span className="text-muted-foreground/80">Legend:</span>
                     <div className="flex items-center gap-1.5 rounded-lg border border-blue-100 bg-blue-50 px-2 py-1 dark:border-blue-900/20 dark:bg-blue-950/10">
-                        <span className="flex size-5 items-center justify-center rounded-md border border-blue-200 bg-blue-100 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-blue-400">
+                        <span className="flex size-5 items-center justify-center rounded-md border border-blue-200 bg-blue-100 text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-[#B3F52D]">
                             <BookOpen className="size-3" />
                         </span>
-                        <span className="text-blue-800 dark:text-blue-300">
+                        <span className="text-blue-800 dark:text-[#B3F52D]">
                             Review
                         </span>
                     </div>
@@ -106,7 +106,7 @@ export function AttemptsTable({
             {/* Multi-selection banner */}
             {selectedIds.length > 0 && (
                 <div className="flex items-center justify-between border-b border-border bg-blue-50/60 px-4 py-2 sm:px-6 dark:bg-blue-950/20">
-                    <span className="text-xs font-bold text-blue-700 dark:text-blue-400">
+                    <span className="text-xs font-bold text-blue-700 dark:text-[#B3F52D]">
                         {selectedIds.length} attempt
                         {selectedIds.length > 1 ? 's' : ''} selected
                     </span>
@@ -126,7 +126,7 @@ export function AttemptsTable({
             <div className="overflow-x-auto">
                 <table className="w-full border-collapse text-left">
                     <thead>
-                        <tr className="border-b border-border bg-slate-50/60 text-[10px] font-black tracking-wider text-muted-foreground uppercase dark:bg-slate-900/40">
+                        <tr className="border-b border-border bg-slate-50/60 text-[10px] font-semibold tracking-wider text-muted-foreground uppercase dark:bg-slate-900/40">
                             <th className="w-10 px-4 py-3 sm:px-5">
                                 <Checkbox
                                     checked={
@@ -159,10 +159,10 @@ export function AttemptsTable({
                                     className="px-4 py-16 text-center sm:px-6"
                                 >
                                     <div className="mx-auto flex max-w-md flex-col items-center justify-center">
-                                        <div className="mb-3 flex size-12 items-center justify-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/30 dark:text-blue-400">
+                                        <div className="mb-3 flex size-12 items-center justify-center rounded-full bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                             <Clock className="size-6" />
                                         </div>
-                                        <h3 className="text-sm font-black text-foreground">
+                                        <h3 className="text-sm font-semibold text-foreground">
                                             No attempt records found
                                         </h3>
                                         <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
@@ -173,7 +173,7 @@ export function AttemptsTable({
                                         </p>
                                         <Button
                                             asChild
-                                            className="mt-4 bg-blue-600 text-xs font-bold text-white hover:bg-blue-700"
+                                            className="mt-4 bg-[#5B35F5] text-xs font-bold text-white hover:bg-[#4a2ad4]"
                                         >
                                             <Link href="/exams">
                                                 Start New Test
@@ -215,7 +215,7 @@ export function AttemptsTable({
 
                                             {/* DATE & TIME */}
                                             <td className="px-4 py-3.5 whitespace-nowrap sm:px-5">
-                                                <div className="text-xs font-black text-foreground">
+                                                <div className="text-xs font-semibold text-foreground">
                                                     {att.date}
                                                 </div>
                                                 <div className="mt-0.5 text-[10px] font-bold text-muted-foreground">
@@ -235,7 +235,7 @@ export function AttemptsTable({
                                                     onClick={() =>
                                                         toggleExpandRow(att.id)
                                                     }
-                                                    className="block max-w-[240px] text-left text-xs font-bold text-foreground hover:text-blue-600 hover:underline dark:hover:text-blue-400"
+                                                    className="block max-w-[240px] text-left text-xs font-bold text-foreground hover:text-[#5B35F5] dark:text-[#B3F52D] hover:underline dark:hover:text-blue-400"
                                                     title={att.category}
                                                 >
                                                     {att.category}
@@ -273,7 +273,7 @@ export function AttemptsTable({
                                                         <TooltipTrigger asChild>
                                                             <Link
                                                                 href={`/exams?attempt_id=${att.id}&from=history`}
-                                                                className="flex size-7 items-center justify-center rounded-lg border border-blue-200 bg-blue-50 text-blue-700 transition hover:bg-blue-100 hover:text-blue-800 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-blue-400 dark:hover:bg-blue-900/40"
+                                                                className="flex size-7 items-center justify-center rounded-lg border border-blue-200 bg-blue-50 text-blue-700 transition hover:bg-blue-100 hover:text-blue-800 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-900/40"
                                                             >
                                                                 <BookOpen className="size-3.5" />
                                                                 <span className="sr-only">
@@ -301,7 +301,7 @@ export function AttemptsTable({
                                                                 }
                                                                 className={`flex size-7 items-center justify-center rounded-lg border transition ${
                                                                     isExpanded
-                                                                        ? 'border-blue-200 bg-blue-100 text-blue-800 dark:border-blue-800 dark:bg-blue-900/50 dark:text-blue-300'
+                                                                        ? 'border-blue-200 bg-blue-100 text-blue-800 dark:border-blue-800 dark:bg-blue-900/50 dark:text-[#B3F52D]'
                                                                         : 'border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground'
                                                                 }`}
                                                             >
@@ -405,7 +405,7 @@ export function AttemptsTable({
                                         }
                                         className={`size-8 p-0 text-xs font-bold ${
                                             isActive
-                                                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                                                ? 'bg-[#5B35F5] text-white hover:bg-[#4a2ad4]'
                                                 : ''
                                         }`}
                                         onClick={() => {

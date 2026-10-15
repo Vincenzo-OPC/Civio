@@ -188,10 +188,10 @@ export function WeekView({
         let catId = 1;
         let matchedSubcategoryName: string | null = null;
         let colorClasses = {
-            badge: 'border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-blue-300',
+            badge: 'border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-[#B3F52D]',
             bg: 'bg-white dark:bg-slate-900',
             border: 'border-slate-200/80 dark:border-slate-800',
-            time: 'text-blue-700 dark:text-blue-400',
+            time: 'text-blue-700 dark:text-[#B3F52D]',
         };
 
         if (subcategoryId && subcategories.length > 0) {
@@ -347,7 +347,7 @@ export function WeekView({
                     >
                         <ChevronRight className="size-4" />
                     </Button>
-                    <span className="ml-2 text-sm font-black text-slate-800 dark:text-slate-200">
+                    <span className="ml-2 text-sm font-semibold text-slate-800 dark:text-slate-200">
                         {weekRangeLabel}
                     </span>
                 </div>
@@ -404,13 +404,13 @@ export function WeekView({
                                         {/* Column Day Header */}
                                         <div className="flex shrink-0 items-center justify-between border-b border-slate-200/60 pb-2 dark:border-slate-800">
                                             <div className="flex items-center gap-1.5">
-                                                <span className="text-xs font-black tracking-wider text-slate-500 uppercase dark:text-slate-400">
+                                                <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase dark:text-slate-400">
                                                     {weekdayNames[idx]}
                                                 </span>
                                                 <span
-                                                    className={`flex size-6 items-center justify-center rounded-md text-xs font-black ${
+                                                    className={`flex size-6 items-center justify-center rounded-md text-xs font-semibold ${
                                                         isCurrentDayToday
-                                                            ? 'bg-blue-600 text-white shadow-sm'
+                                                            ? 'bg-[#5B35F5] text-white shadow-sm'
                                                             : 'text-slate-800 dark:text-slate-200'
                                                     }`}
                                                 >
@@ -420,12 +420,12 @@ export function WeekView({
 
                                             <div className="flex items-center gap-1">
                                                 {isCurrentDayToday && (
-                                                    <span className="py-0.2 rounded bg-blue-100 px-1 text-[9px] font-black text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+                                                    <span className="py-0.2 rounded bg-blue-100 px-1 text-[9px] font-semibold text-blue-700 dark:bg-blue-950 dark:text-[#B3F52D]">
                                                         Today
                                                     </span>
                                                 )}
                                                 {isExamDay && (
-                                                    <span className="py-0.2 rounded bg-red-600 px-1 text-[9px] font-black text-white">
+                                                    <span className="py-0.2 rounded bg-red-600 px-1 text-[9px] font-semibold text-white">
                                                         Exam
                                                     </span>
                                                 )}
@@ -535,7 +535,7 @@ export function WeekView({
                                                                             className={`size-4 ${
                                                                                 isOverdue
                                                                                     ? 'text-rose-400 hover:text-rose-600'
-                                                                                    : 'hover:text-blue-600'
+                                                                                    : 'hover:text-[#5B35F5] dark:text-[#B3F52D]'
                                                                             }`}
                                                                         />
                                                                     )}
@@ -568,7 +568,7 @@ export function WeekView({
                                                                                         schedule,
                                                                                     );
                                                                                 }}
-                                                                                className="rounded p-1 text-blue-600 hover:bg-blue-100 dark:text-blue-400 dark:hover:bg-blue-900/40"
+                                                                                className="rounded p-1 text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-100 dark:text-[#B3F52D] dark:hover:bg-blue-900/40"
                                                                                 title="Reschedule to Today"
                                                                             >
                                                                                 <CalendarDays className="size-3.5" />
@@ -612,7 +612,7 @@ export function WeekView({
                                                                 )}
                                                                 {isOverdue &&
                                                                     !schedule.is_done && (
-                                                                        <span className="py-0.2 rounded bg-rose-200/80 px-1 text-[9px] font-extrabold text-rose-800 dark:bg-rose-900/60 dark:text-rose-300">
+                                                                        <span className="py-0.2 rounded bg-rose-200/80 px-1 text-[9px] font-semibold text-rose-800 dark:bg-rose-900/60 dark:text-rose-300">
                                                                             Overdue
                                                                         </span>
                                                                     )}
@@ -663,7 +663,7 @@ export function WeekView({
                                                                             ) =>
                                                                                 e.stopPropagation()
                                                                             }
-                                                                            className="inline-flex items-center gap-0.5 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-[10px] font-bold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-blue-300"
+                                                                            className="inline-flex items-center gap-0.5 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-[10px] font-bold text-blue-700 transition hover:bg-blue-100 dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-[#B3F52D]"
                                                                         >
                                                                             <BookOpen className="size-2.5" />
                                                                             <span className="line-clamp-1 max-w-[80px]">

@@ -130,7 +130,7 @@ export default function FeedbacksIndex({ feedbacks }: FeedbacksProps) {
                     }}
                     bulkActionRender={(selectedIds) => (
                         <div className="flex items-center justify-between border-b border-border bg-blue-50/50 px-4 py-2 dark:bg-blue-950/10">
-                            <span className="text-xs font-bold text-blue-700 dark:text-blue-400">
+                            <span className="text-xs font-bold text-blue-700 dark:text-[#B3F52D]">
                                 {selectedIds.length} selected
                             </span>
                             <div className="flex items-center gap-2">

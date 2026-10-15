@@ -103,7 +103,7 @@ export default function QuestionPalettePanel({
 
             <div className="shrink-0 space-y-3 border-b border-border bg-card p-4">
                 <div>
-                    <span className="mb-2 block text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                    <span className="mb-2 block text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                         Switch Categories
                     </span>
                     <div className="relative">
@@ -130,7 +130,7 @@ export default function QuestionPalettePanel({
                     reviewSubcategories.length > 1 &&
                     onReviewSubcategoryChange && (
                         <div>
-                            <span className="mb-2 block text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                            <span className="mb-2 block text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                                 Subcategories
                             </span>
                             <div className="relative">
@@ -156,7 +156,7 @@ export default function QuestionPalettePanel({
 
                 {mode === 'review' && onReviewStatusChange && (
                     <div>
-                        <span className="mb-2 block text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                        <span className="mb-2 block text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                             Status Filter
                         </span>
                         <div className="grid grid-cols-4 gap-1 rounded-xl bg-muted/60 p-1">
@@ -216,7 +216,7 @@ export default function QuestionPalettePanel({
 
                 {mode === 'exam' && onLiveStatusChange && (
                     <div>
-                        <span className="mb-2 block text-[10px] font-extrabold tracking-wider text-muted-foreground uppercase">
+                        <span className="mb-2 block text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
                             Status Filter
                         </span>
                         <div className="grid grid-cols-4 gap-1 rounded-xl bg-muted/60 p-1">
@@ -250,7 +250,7 @@ export default function QuestionPalettePanel({
                                 title="Show Answered"
                                 className={`rounded-lg px-0.5 py-1.5 text-center text-[10px] font-bold tracking-tight transition sm:text-[11px] ${
                                     liveStatusFilter === 'answered'
-                                        ? 'bg-background text-blue-600 shadow-2xs dark:text-blue-400'
+                                        ? 'bg-background text-[#5B35F5] dark:text-[#B3F52D] shadow-2xs dark:text-[#B3F52D]'
                                         : 'text-muted-foreground hover:text-foreground'
                                 }`}
                             >
@@ -408,11 +408,11 @@ export default function QuestionPalettePanel({
                                         isFilteredOut
                                             ? 'cursor-not-allowed border-border bg-background text-muted-foreground opacity-20 grayscale'
                                             : isActive
-                                              ? 'border-[var(--civio-violet)] font-black text-[var(--civio-violet)] ring-2 ring-[var(--civio-violet)] ring-offset-1'
+                                              ? 'border-[var(--civio-violet)] font-semibold text-[var(--civio-violet)] ring-2 ring-[var(--civio-violet)] ring-offset-1'
                                               : isAnswered
                                                 ? 'border-[var(--civio-violet)] bg-[var(--civio-violet)] text-white'
                                                 : isFlagged
-                                                  ? 'border-rose-300 bg-rose-50 font-extrabold text-rose-700 dark:border-rose-900/40 dark:bg-rose-950/30 dark:text-rose-400'
+                                                  ? 'border-rose-300 bg-rose-50 font-semibold text-rose-700 dark:border-rose-900/40 dark:bg-rose-950/30 dark:text-rose-400'
                                                   : 'border-border bg-background text-foreground hover:bg-muted'
                                     }`}
                                 >
@@ -440,7 +440,7 @@ export default function QuestionPalettePanel({
                         if (isDemographic) {
                             bgColor = isSkipped
                                 ? 'border border-border bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500'
-                                : 'border border-blue-200 dark:border-blue-900/50 bg-blue-100 text-blue-700 dark:border-blue-900/50 dark:bg-blue-900/50 dark:text-blue-400';
+                                : 'border border-blue-200 dark:border-blue-900/50 bg-blue-100 text-blue-700 dark:border-blue-900/50 dark:bg-blue-900/50 dark:text-[#B3F52D]';
                         } else {
                             bgColor = isSkipped
                                 ? 'border border-border bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500'
@@ -451,7 +451,7 @@ export default function QuestionPalettePanel({
 
                         if (currentIdx === idx) {
                             bgColor =
-                                'border-blue-600 ring-2 ring-blue-500 bg-blue-600 text-white dark:bg-blue-600';
+                                'border-blue-600 ring-2 ring-blue-500 bg-[#5B35F5] text-white dark:bg-[#B3F52D] dark:text-[#0A0A0A]';
                         }
 
                         return (
@@ -522,12 +522,12 @@ export default function QuestionPalettePanel({
 
                 <div className="flex flex-col items-center gap-3">
                     <LayoutGrid className="size-4 text-[var(--civio-violet)]" />
-                    <span className="rotate-180 text-[10px] font-extrabold tracking-widest text-muted-foreground uppercase [writing-mode:vertical-lr]">
+                    <span className="rotate-180 text-[10px] font-semibold tracking-widest text-muted-foreground uppercase [writing-mode:vertical-lr]">
                         Question Palette
                     </span>
                 </div>
 
-                <div className="size-2 rounded-full bg-blue-600/40" />
+                <div className="size-2 rounded-full bg-[#5B35F5]/40" />
             </div>
         );
     }

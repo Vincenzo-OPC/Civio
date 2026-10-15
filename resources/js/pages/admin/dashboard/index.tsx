@@ -28,7 +28,7 @@ export default function AdminDashboard({
                 <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                     <div className="flex flex-col gap-1.5">
                         <div className="flex items-center gap-2">
-                            <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-blue-600 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-blue-400">
+                            <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                 <Shield className="size-3" />
                                 System Administrator
                             </span>
@@ -37,7 +37,7 @@ export default function AdminDashboard({
                             title={
                                 <>
                                     Welcome back,{' '}
-                                    <span className="font-extrabold text-blue-600 dark:text-blue-400">
+                                    <span className="font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
                                         {adminName}
                                     </span>
                                 </>
@@ -54,7 +54,7 @@ export default function AdminDashboard({
                     <div className="flex items-center gap-3">
                         <Link
                             href={questionsIndex()}
-                            className="group flex items-center justify-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2.5 text-xs font-semibold text-white shadow-xs transition transition-all duration-300 hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
+                            className="group flex items-center justify-center gap-1.5 rounded-lg bg-[#5B35F5] px-4 py-2.5 text-xs font-semibold text-white shadow-xs transition transition-all duration-300 hover:bg-[#4a2ad4] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                         >
                             <FileQuestion className="size-3.5" />
                             Manage Questions

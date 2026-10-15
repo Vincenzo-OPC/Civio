@@ -56,7 +56,7 @@ export default function ErrorPage({ status }: ErrorPageProps) {
             <div className="mx-auto w-full max-w-2xl text-center">
                 <div className="mb-8">{icon}</div>
 
-                <h1 className="font-heading text-2xl font-black tracking-tight text-slate-900 sm:text-4xl sm:text-5xl dark:text-white">
+                <h1 className="font-heading text-2xl font-semibold tracking-tight text-slate-900 sm:text-4xl sm:text-5xl dark:text-white">
                     {title}
                 </h1>
 
@@ -89,7 +89,7 @@ export default function ErrorPage({ status }: ErrorPageProps) {
                             {auth?.user && (
                                 <Link
                                     href="/dashboard"
-                                    className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition transition-all duration-300 hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95 sm:w-auto sm:px-6"
+                                    className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#5B35F5] px-4 py-3 text-sm font-semibold text-white shadow-sm transition transition-all duration-300 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95 sm:w-auto sm:px-6"
                                 >
                                     <Home className="size-4" />
                                     Back to Home

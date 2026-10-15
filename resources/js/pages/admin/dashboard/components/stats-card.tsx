@@ -28,7 +28,7 @@ export function StatsCard({
     return (
         <Card className="p-5 shadow-xs">
             <div className="flex items-center justify-between">
-                <span className="text-[10px] font-extrabold tracking-wider text-slate-400 uppercase">
+                <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
                     {label}
                 </span>
                 <div
@@ -38,7 +38,7 @@ export function StatsCard({
                 </div>
             </div>
             <div className="mt-3 flex items-baseline gap-2">
-                <span className="text-2xl font-black text-slate-900 dark:text-white">
+                <span className="text-2xl font-semibold text-slate-900 dark:text-white">
                     {value}
                 </span>
                 {suffix && (
