@@ -1,8 +1,8 @@
 # Civio current state handoff
 
-Audit time: 16 October 2026, 1:29 PM Philippine Time. Converted from the session clock 15 October 2026, 9:29 PM PST, treated as UTC−8. This is not a server clock reading.
+The executable plan is [CIVIO_NEXT_AGENT_EXECUTION_PLAN.md](CIVIO_NEXT_AGENT_EXECUTION_PLAN.md). This file is the current-state note only.
 
-This document is the source of truth for an agent that has not seen the earlier Civio chats. It describes the code on `main` after the study-button fix in the same change set. It does not repeat the architecture or design specs. Read those files instead.
+Audit time: 16 October 2026, Philippine Time. Session start SHA `3c18ec0258ec855795654afc85a93fa435684d55`. Confirm the tip after the setup-copy commit.
 
 ## 1. Repository
 
@@ -11,7 +11,7 @@ This document is the source of truth for an agent that has not seen the earlier 
 | Repository | [Vincenzo-OPC/Civio](https://github.com/Vincenzo-OPC/Civio) |
 | Branch | `main` only. No other local or remote branches. |
 | Remote | `origin` tracks `origin/main` |
-| Synchronization | After `7741271`, local `main` is pushed to `origin/main`. Confirm with `git rev-parse HEAD` and `git rev-parse origin/main`. |
+| Synchronization | Local `main` matched `origin/main` at `3c18ec0258ec855795654afc85a93fa435684d55` before the exam-setup copy commit. Confirm both SHAs after that push. |
 
 Do not commit `app/Providers/AppServiceProvider.php` while it contains the local preview `assetRoot` override. That change is sandbox-only. It is not product code.
 
@@ -126,6 +126,7 @@ Hover tips on Flag, the question list, and cross-out exist. Their wording has no
 - The question bank is not tagged well enough for a reliable in-exam "similar item."
 - FSRS code exists in `resources/js/lib/review/fsrs.ts` and is covered by `tests/Js/fsrs.test.ts`. No exam, drill, or offline path imports it. There is no review-card table, no due queue, and no next-drill selection from a due date. See [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md).
 - This audit did not capture new screenshots of the solid buttons. Confirm them in the running Study Mock.
+- The exam booklet renderer draws an answer key from `correct_option`, but the download uses the keyless mock session. Treat a printed key as unverified until a dedicated authorized export exists. The setup screen does not claim that a key is included.
 - `app/Providers/AppServiceProvider.php` has an uncommitted local preview change. Leave it uncommitted.
 
 ## 10. What to read next

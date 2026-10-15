@@ -360,7 +360,7 @@ export function AnswerReveal({
             </p>
             {hasConflict && (
                 <p className="mt-2 text-xs">
-                    Dexter detected a possible error in the stored answer.
+                    The stored answer may not match the worked solution.
                 </p>
             )}
             {lead && (

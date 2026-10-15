@@ -1,7 +1,7 @@
 /**
  * Exam Simulation modes.
  *
- * - Study Mode: Show Explanation, Dexter, Copy Question and Ask on every item; the timer is optional.
+ * - Study Mode: Show Explanation, Copy Question, and the external assistant. The timer is optional.
  * - Exam Mode: exam rehearsal. The timer is always on and the server keeps
  *   every key locked until the mock is submitted (StrictMockLock).
  *
@@ -25,7 +25,7 @@ export function isTimerOn(mode: ExamMode, studyTimed: boolean): boolean {
     return mode === 'strict' || studyTimed;
 }
 
-/** Reveal, Dexter, Copy for AI and Ask ChatGPT show everywhere except a Strict Mock. */
+/** Reveal, Copy Question, and Ask show everywhere except a Strict Mock. */
 export function showsStudyTools(mode: ExamMode, isDrill: boolean): boolean {
     return isDrill || mode === 'study';
 }

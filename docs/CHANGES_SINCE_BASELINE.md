@@ -120,6 +120,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Report, Show Explanation, Copy Question, and Ask use a solid 36px fill. A current-state handoff is in docs/CIVIO_CURRENT_STATE_HANDOFF.md. | The translucent capsule fill still looked like text. | `7741271` |
 | The built CSS drops the unused display-p3 and lab copies of the Tailwind palette. The sRGB colors stay. | App CSS was 32.89 kB brotli against a 33 kB cap. | `6cafabb` |
 | Exam hints are shorter. The homepage sample says Question List, not Question map. FSRS is documented as unwired. | The hints were long, and the sample used a different name from the exam. | `b989319` |
+| Exam setup no longer calls Dexter a tutor. The PDF line that claimed an answer key is gone. The next-agent plan is docs/CIVIO_NEXT_AGENT_EXECUTION_PLAN.md. | The mode cards overstated Dexter, and the booklet key is not actually in the download payload. | |
 
 ### Bank and seeds
 

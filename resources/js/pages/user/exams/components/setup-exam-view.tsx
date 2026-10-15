@@ -21,8 +21,8 @@ import type { ExamMode } from '../utils/exam-mode';
 import { EXAM_MODE_LABELS, EXAM_MODES } from '../utils/exam-mode';
 
 const MODE_BLURBS: Record<ExamMode, string> = {
-    study: 'Practice the full mock with Show Explanation, Dexter, Copy Question and your chosen assistant on every item. The timer is your choice.',
-    strict: 'Exam-day rehearsal: always timed, no Show Explanation, Dexter, Copy Question or Ask. Answers unlock only after you submit.',
+    study: 'Practice at your own pace with explanations, question copying, and access to your preferred AI assistant. Choose whether to use a timer.',
+    strict: 'Rehearse exam day under timed conditions, without explanations or AI assistance. Review your answers after submitting the exam.',
 };
 
 interface SetupExamViewProps {
@@ -113,8 +113,8 @@ export function SetupExamView({
 
                         {/* Exam Simulation mode */}
                         <fieldset className="rounded-2xl border border-[#E3E5EA] bg-white p-5 dark:border-[#2a2a2a] dark:bg-[#141414]">
-                            <legend className="px-1 font-heading text-sm font-semibold tracking-tight text-[#101426] dark:text-[#FAFAF7]">
-                                Mode
+                            <legend className="sr-only">
+                                Study Mode or Exam Mode
                             </legend>
                             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                                 {EXAM_MODES.map((mode) => (
@@ -156,7 +156,7 @@ export function SetupExamView({
                                     }
                                 />
                                 {examMode === 'strict'
-                                    ? 'Timer stays on in Exam Mode'
+                                    ? 'Always timed. You cannot turn this off.'
                                     : 'Time this Study Mode'}
                             </label>
                         </fieldset>
@@ -232,22 +232,19 @@ export function SetupExamView({
                                 <button
                                     onClick={onPrint}
                                     disabled={isPrinting}
-                                    title="Download PDF Exam Booklet"
-                                    className="group flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-sm transition-all hover:border-blue-300 hover:bg-slate-50 hover:text-[#5B35F5] dark:text-[#B3F52D] disabled:opacity-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                                    title="Download PDF"
+                                    aria-label="Download PDF"
+                                    className="group flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-sm transition-all hover:border-blue-300 hover:bg-slate-50 hover:text-[#5B35F5] disabled:opacity-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
                                 >
                                     {isPrinting ? (
                                         <div className="size-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
                                     ) : (
-                                        <Download className="size-5 text-slate-500 transition-colors group-hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-slate-400" />
+                                        <Download className="size-4" />
                                     )}
+                                    Download PDF
                                 </button>
                             )}
                         </div>
-
-                        <p className="mt-3 text-center text-xs leading-relaxed text-[#101426]/60 dark:text-[#FAFAF7]/60">
-                            A PDF booklet is available when your account can
-                            download it. The answer key is included.
-                        </p>
                     </div>
                 </div>
             </PageContainer>
