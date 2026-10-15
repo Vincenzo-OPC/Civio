@@ -112,7 +112,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | The previous product name is gone from the app, the notes, and the storage code. Dark mode is flat black, with a solid selected card and the wordmark green as the only bright color. | The old name was still in notes and a storage prefix. Dark mode still carried the old blue buttons and a green fog. | `80c652c` |
 | Show Explanation becomes Hide Explanation on the same button. Try Another is gone. | A second Hide sat under the explanation, and Try Another opened a question that was not in the mock. | `896b781` |
 | Try Another opens that follow-up item in the current practice. | The old button left the mock and opened the drills list. | `b0d9141` |
-| Try Another carries the follow-up item with the explanation, so it can open even when the page did not load the whole bank. | The button looked up a question the exam page no longer sends. | |
+| Try Another carries the follow-up item with the explanation, so it can open even when the page did not load the whole bank. | The button looked up a question the exam page no longer sends. | `f739606` |
 
 ### Bank and seeds
 
