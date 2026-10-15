@@ -258,87 +258,106 @@ html.lite {
     --civio-error: #ff8a8d;
 }
 
-/* Study actions. One height, one radius, a real fill so they are not a line of text. */
-.civio-session .civio-action {
+/* Filled controls, in the Apple and Meta manner: no stroke, one gray fill, one solid primary. */
+.civio-session .civio-action,
+.civio-session .civio-nav {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.375rem;
-    height: 2rem;
-    padding: 0 0.8rem;
-    border-radius: 0.625rem;
-    border: 1px solid color-mix(in srgb, var(--civio-ink) 12%, transparent);
-    background: #fff;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(118, 118, 128, 0.12);
     color: var(--civio-ink);
-    font-size: 0.8125rem;
     font-weight: 600;
-    letter-spacing: -0.011em;
+    letter-spacing: -0.016em;
     line-height: 1;
     text-decoration: none;
-    box-shadow: 0 1px 1px rgba(16, 20, 38, 0.04);
+    box-shadow: none;
     transition:
         background-color 160ms ease,
-        border-color 160ms ease,
-        color 160ms ease;
+        transform 160ms ease;
 }
 
-.civio-session .civio-action:hover {
-    background: var(--civio-surface);
-    border-color: color-mix(in srgb, var(--civio-ink) 24%, transparent);
+.civio-session .civio-action {
+    height: 2.25rem;
+    padding: 0 0.9rem;
+    font-size: 0.875rem;
 }
 
-.civio-session .civio-action:disabled {
-    opacity: 0.45;
+.civio-session .civio-nav {
+    min-height: 2.75rem;
+    flex: 1;
+    font-size: 0.9375rem;
+}
+
+.civio-session .civio-action:hover,
+.civio-session .civio-nav:hover {
+    background: rgba(118, 118, 128, 0.2);
+}
+
+.civio-session .civio-action:active,
+.civio-session .civio-nav:active {
+    transform: scale(0.98);
+}
+
+.civio-session .civio-action:disabled,
+.civio-session .civio-nav:disabled {
+    opacity: 0.4;
+    transform: none;
 }
 
 .civio-session .civio-action[aria-expanded='true'] {
-    border-color: var(--civio-violet);
-    background: color-mix(in srgb, var(--civio-violet) 10%, #fff);
-    color: var(--civio-violet-deep);
+    background: rgba(118, 118, 128, 0.24);
 }
 
-.civio-session .civio-action-primary {
-    border-color: transparent;
-    background: var(--civio-violet);
-    color: #fff;
-    box-shadow: none;
-}
-
-.civio-session .civio-action-primary:hover {
-    background: var(--civio-violet-deep);
+.civio-session .civio-action-primary,
+.civio-session .civio-nav-primary {
+    background: #1d1d1f;
     color: #fff;
 }
 
-.dark .civio-session .civio-action {
-    border-color: #2e2e2e;
-    background: #161616;
-    box-shadow: none;
+.civio-session .civio-action-primary:hover,
+.civio-session .civio-nav-primary:hover {
+    background: #000;
+    color: #fff;
 }
 
-.dark .civio-session .civio-action:hover {
-    border-color: #3d3d3d;
-    background: #1e1e1e;
+.dark .civio-session .civio-action,
+.dark .civio-session .civio-nav {
+    background: #2c2c2e;
+}
+
+.dark .civio-session .civio-action:hover,
+.dark .civio-session .civio-nav:hover {
+    background: #3a3a3c;
 }
 
 .dark .civio-session .civio-action[aria-expanded='true'] {
-    border-color: var(--civio-lime);
-    background: color-mix(in srgb, var(--civio-lime) 14%, #161616);
-    color: var(--civio-lime);
+    background: #48484a;
 }
 
-.dark .civio-session .civio-action-primary {
-    border-color: transparent;
+.dark .civio-session .civio-action-primary,
+.dark .civio-session .civio-nav-primary {
     background: var(--civio-lime);
     color: #111;
 }
 
-.dark .civio-session .civio-action-primary:hover {
+.dark .civio-session .civio-action-primary:hover,
+.dark .civio-session .civio-nav-primary:hover {
     background: #c8ff55;
     color: #111;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .civio-session .civio-action {
+    .civio-session .civio-action,
+    .civio-session .civio-nav {
         transition: none;
+    }
+
+    .civio-session .civio-action:active,
+    .civio-session .civio-nav:active {
+        transform: none;
     }
 }
 

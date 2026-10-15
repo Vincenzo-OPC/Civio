@@ -1088,7 +1088,7 @@ export function LiveExamView({
                                             )
                                         }
                                         disabled={currentIdx === 0}
-                                        className="flex min-h-12 flex-1 items-center justify-center gap-1 rounded-lg border border-[var(--civio-line)] text-sm font-semibold disabled:opacity-40"
+                                        className="civio-nav"
                                     >
                                         <ChevronLeft className="size-4" />
                                         Previous
@@ -1101,7 +1101,7 @@ export function LiveExamView({
                                                     currentIdx + 1,
                                                 )
                                             }
-                                            className="flex min-h-12 flex-1 items-center justify-center gap-1 rounded-lg bg-[var(--civio-violet)] text-sm font-semibold text-white"
+                                            className="civio-nav civio-nav-primary"
                                         >
                                             Next
                                             <ChevronRight className="size-4" />
@@ -1111,7 +1111,7 @@ export function LiveExamView({
                                             onClick={() =>
                                                 handleSubmitExam(false)
                                             }
-                                            className="flex min-h-12 flex-1 items-center justify-center gap-1.5 rounded-lg bg-[var(--civio-violet)] text-sm font-semibold text-white"
+                                            className="civio-nav civio-nav-primary"
                                         >
                                             <CheckCircle2 className="size-4" />
                                             Submit

@@ -171,8 +171,8 @@ export function LiteExamBody({
                                     }
                                     className={
                                         revealed
-                                            ? button
-                                            : 'lite-tap rounded-lg bg-[var(--civio-violet)] px-4 text-sm font-semibold text-white'
+                                            ? 'civio-action'
+                                            : 'civio-action civio-action-primary'
                                     }
                                 >
                                     {revealed
@@ -184,18 +184,20 @@ export function LiteExamBody({
                                 <CopyForAiButton
                                     question={question}
                                     attempt={copyAttempt}
+                                    className="civio-action"
                                 />
                             )}
                             {showStudyTools && copyAttempt && (
                                 <AskAssistantButton
                                     question={question}
                                     attempt={copyAttempt}
+                                    className="civio-action"
                                 />
                             )}
                             <button
                                 type="button"
                                 onClick={() => onToggleFlag(currentIdx)}
-                                className={button}
+                                className="civio-action"
                                 aria-pressed={!!flagged[currentIdx]}
                             >
                                 {flagged[currentIdx] ? 'Unflag' : 'Flag'}
@@ -231,7 +233,7 @@ export function LiteExamBody({
                         type="button"
                         onClick={() => onNavigate(Math.max(0, currentIdx - 1))}
                         disabled={currentIdx === 0}
-                        className={`${button} flex-1 disabled:opacity-40`}
+                        className="civio-nav"
                     >
                         Previous
                     </button>
@@ -239,7 +241,7 @@ export function LiteExamBody({
                         <button
                             type="button"
                             onClick={onSubmit}
-                            className="lite-tap flex-1 rounded-lg bg-[var(--civio-violet)] px-4 text-sm font-bold text-white"
+                            className="civio-nav civio-nav-primary"
                         >
                             Submit
                         </button>
@@ -247,7 +249,7 @@ export function LiteExamBody({
                         <button
                             type="button"
                             onClick={() => onNavigate(currentIdx + 1)}
-                            className="lite-tap flex-1 rounded-lg bg-[var(--civio-violet)] px-4 text-sm font-bold text-white"
+                            className="civio-nav civio-nav-primary"
                         >
                             Next
                         </button>
