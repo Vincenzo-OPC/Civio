@@ -117,7 +117,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Report, explanation actions, Copy Question, and Ask sit on the same size chips, with space between them. | On dark, a hairline border disappeared, so the actions still looked like a line of text. | `ca1de88` |
 | Study actions share one button: a real fill, a hover state, and lime for Show Explanation in dark mode. | The chips were flat gray boxes with no hover and a purple primary that fought the dark surface. | `139da2a` |
 | Study and navigation buttons are filled capsules with no outline. Light primary is black. Dark primary is the logo green. | The bordered gray boxes still looked like form fields, not Apple or Meta controls. | `0da175f` |
-| Report, Show Explanation, Copy Question, and Ask use a solid 36px fill. A current-state handoff is in docs/CIVIO_CURRENT_STATE_HANDOFF.md. | The translucent capsule fill still looked like text. | |
+| Report, Show Explanation, Copy Question, and Ask use a solid 36px fill. A current-state handoff is in docs/CIVIO_CURRENT_STATE_HANDOFF.md. | The translucent capsule fill still looked like text. | `7741271` |
 
 ### Bank and seeds
 

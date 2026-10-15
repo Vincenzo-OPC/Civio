@@ -11,7 +11,7 @@ This document is the source of truth for an agent that has not seen the earlier 
 | Repository | [Vincenzo-OPC/Civio](https://github.com/Vincenzo-OPC/Civio) |
 | Branch | `main` only. No other local or remote branches. |
 | Remote | `origin` tracks `origin/main` |
-| Synchronization | Local `main` matches `origin/main` except the commit that adds this document and the solid study buttons. Verify the SHA at the bottom of [docs/CHANGES_SINCE_BASELINE.md](CHANGES_SINCE_BASELINE.md) after that commit is pushed. |
+| Synchronization | After `7741271`, local `main` is pushed to `origin/main`. Confirm with `git rev-parse HEAD` and `git rev-parse origin/main`. |
 
 Do not commit `app/Providers/AppServiceProvider.php` while it contains the local preview `assetRoot` override. That change is sandbox-only. It is not product code.
 
