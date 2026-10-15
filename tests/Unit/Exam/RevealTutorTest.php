@@ -1,0 +1,112 @@
+<?php
+
+declare(strict_types=1);
+
+use App\Models\Question;
+use App\Services\Exam\ExpoundService;
+use App\Services\Exam\Reveal\RevealTutor;
+
+function tutor(): RevealTutor
+{
+    return new RevealTutor(new ExpoundService);
+}
+
+function tutorQuestion(array $overrides): Question
+{
+    return new Question(array_merge([
+        'language' => 'English',
+        'options' => ['34 m', '60 m', '17 m', '24 m'],
+        'correct_option' => 0,
+        'explanation' => 'Stored work.',
+    ], $overrides));
+}
+
+it('teaches a rectangle perimeter without hard-coding one example', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'A rectangle is 12 m by 5 m. Its perimeter is:',
+    ]));
+
+    expect($tutor['concept'])->toContain('distance around')
+        ->and($tutor['steps'][0])->toBe('12 + 5 + 12 + 5 = 34 m.')
+        ->and($tutor['shortcut'])->toBe('2 × (12 + 5) = 34 m.')
+        ->and($tutor['simpler'])->toContain('paligid')
+        ->and($tutor['visual']['kind'] ?? null)->toBe('rectangle')
+        ->and($tutor['commonMistakes'][0]['choice'] ?? null)->toBe('60 m')
+        ->and($tutor['commonMistakes'][0]['why'] ?? '')->toContain('area');
+});
+
+it('teaches the bank perimeter wording the same way', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Lot 9 is a rectangle 9 meters by 4 meters. What is its perimeter?',
+        'options' => ['36 m', '26 m', '13 m', '28 m'],
+        'correct_option' => 1,
+    ]));
+
+    expect($tutor['steps'][0])->toBe('9 + 4 + 9 + 4 = 26 m.')
+        ->and($tutor['commonMistakes'])->toHaveCount(2);
+});
+
+it('refuses a perimeter explanation when the key is the area', function () {
+    $question = tutorQuestion([
+        'stem' => 'A rectangle is 12 m by 5 m. Its perimeter is:',
+        'options' => ['60 m', '34 m', '17 m', '24 m'],
+        'correct_option' => 0,
+        'explanation' => 'Stored work stays. The matching choice is “60 m.”',
+    ]);
+    $tutor = tutor();
+
+    expect($tutor->conflict($question))->toBeTrue()
+        ->and($tutor->forQuestion($question)['concept'])->toBe('Stored work stays.')
+        ->and($tutor->forQuestion($question)['visual'])->toBeNull()
+        ->and($tutor->forQuestion($question)['shortcut'])->toBeNull();
+});
+
+it('names the left-to-right miss on an order-of-operations item', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Evaluate: 15 - 3 times 4 + 6',
+        'options' => ['54', '9', '18', '3'],
+        'correct_option' => 1,
+    ]));
+
+    expect($tutor['concept'])->toContain('Multiply and divide')
+        ->and(implode(' ', $tutor['steps']))->toContain('3 × 4 = 12.')
+        ->and($tutor['shortcut'])->toBeNull()
+        ->and($tutor['commonMistakes'][0]['choice'] ?? null)->toBe('54');
+});
+
+it('checks a percent item and skips a shortcut that is not faster', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'What is 20 percent of 100 forms?',
+        'options' => ['20', '40', '2000', '19'],
+        'correct_option' => 0,
+    ]));
+
+    expect($tutor['steps'][0])->toBe('100 × 20 ÷ 100 = 20.')
+        ->and($tutor['shortcut'])->toBeNull()
+        ->and($tutor['commonMistakes'][0]['why'] ?? '')->toContain('divided by 100');
+});
+
+it('does not invent a shortcut for a stored verbal explanation', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'The word “benign” most nearly means:',
+        'options' => ['Harmless', 'Dangerous', 'Hidden', 'Required'],
+        'correct_option' => 0,
+        'explanation' => 'Benign means not harmful. The matching choice is “Harmless.” “Dangerous”, “Hidden”, “Required” do not follow the same steps.',
+    ]));
+
+    expect($tutor['concept'])->toBe('Benign means not harmful.')
+        ->and($tutor['steps'])->toBe([])
+        ->and($tutor['shortcut'])->toBeNull()
+        ->and($tutor['simpler'])->toBeNull()
+        ->and($tutor['commonMistakes'])->toBe([]);
+});
+
+it('does not add Taglish to a Filipino item', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'language' => 'Filipino',
+        'stem' => 'A rectangle is 12 m by 5 m. Its perimeter is:',
+    ]));
+
+    expect($tutor['simpler'])->toBeNull()
+        ->and($tutor['steps'])->not->toBeEmpty();
+});

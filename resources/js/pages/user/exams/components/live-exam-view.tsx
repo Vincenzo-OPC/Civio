@@ -1,4 +1,4 @@
-import { Head, usePage } from '@inertiajs/react';
+import { Head, router, usePage } from '@inertiajs/react';
 import {
     LayoutGrid,
     AlertCircle,
@@ -32,6 +32,7 @@ import {
 import { useLiteMode } from '@/hooks/use-lite-mode';
 import type { AiHandoffAttemptState } from '@/lib/ai-handoff';
 import { renderFormattedText } from '@/lib/exam-formatters';
+import { combinedStudyBias } from '@/lib/guest-study-bias';
 import { useContentShield } from '../hooks/use-content-shield';
 import type { ExamClockSnapshot } from '../hooks/use-exam-timer';
 import type { Question, SimulationDetails } from '../types';
@@ -43,7 +44,8 @@ import { ExamTimerDisplay } from './exam-timer-display';
 import { LiteExamBody } from './lite-exam-body';
 import QuestionPalettePanel from './question-palette-panel';
 import { AnswerOption } from './session/answer-option';
-import { AnswerReveal } from './session/answer-reveal';
+import { AnswerReveal, readRevealTutor } from './session/answer-reveal';
+import type { RevealTutorPayload } from './session/answer-reveal';
 import { PauseOverlay } from './session/pause-overlay';
 
 interface RevealedAnswer {
@@ -54,6 +56,7 @@ interface RevealedAnswer {
     displayIndex: number;
     explanation?: string | null;
     hasConflict?: boolean;
+    tutor?: RevealTutorPayload | null;
 }
 
 interface LiveExamViewProps {
@@ -498,6 +501,12 @@ export function LiveExamView({
         }
 
         try {
+            const chosenDisplay = answers[currentIdx];
+            const chosenOriginal =
+                chosenDisplay === undefined
+                    ? null
+                    : (activeQuestion.originalOptionIndices?.[chosenDisplay] ??
+                      chosenDisplay);
             const res = await fetch('/exams/reveal', {
                 method: 'POST',
                 headers: {
@@ -507,7 +516,12 @@ export function LiveExamView({
                             .querySelector('meta[name="csrf-token"]')
                             ?.getAttribute('content') || '',
                 },
-                body: JSON.stringify({ question_id: activeQuestion.id }),
+                body: JSON.stringify({
+                    question_id: activeQuestion.id,
+                    chosen_option: chosenOriginal,
+                    weak_subcategories:
+                        combinedStudyBias().weakSubcategories.slice(0, 20),
+                }),
             });
             const data = await res.json();
 
@@ -533,6 +547,7 @@ export function LiveExamView({
                     text: activeQuestion.options?.[displayedIndex] || '',
                     explanation: data.explanation,
                     hasConflict: data.has_conflict,
+                    tutor: readRevealTutor(data.tutor),
                 });
             } else {
                 alert(data.message || 'Could not reveal answer');
@@ -631,6 +646,18 @@ export function LiveExamView({
                                 : null
                         }
                         onHideReveal={() => setRevealedAnswer(null)}
+                        onOpenFollowUp={(id) => {
+                            const index = activeQuestions.findIndex(
+                                (item) => item.id === id,
+                            );
+                            setRevealedAnswer(null);
+
+                            if (index >= 0) {
+                                handleQuestionNavigate(index);
+                            } else {
+                                router.visit('/drills');
+                            }
+                        }}
                         copyAttempt={
                             studyTools && activeQuestion
                                 ? liveHandoffAttempt(activeQuestion.id)
@@ -913,9 +940,6 @@ export function LiveExamView({
                                                 revealedAnswer.questionId ===
                                                     activeQuestion?.id && (
                                                     <AnswerReveal
-                                                        questionId={
-                                                            activeQuestion.id
-                                                        }
                                                         letter={
                                                             revealedAnswer.letter
                                                         }
@@ -928,11 +952,45 @@ export function LiveExamView({
                                                         hasConflict={
                                                             revealedAnswer.hasConflict
                                                         }
+                                                        tutor={
+                                                            revealedAnswer.tutor
+                                                        }
+                                                        chosenIndex={
+                                                            answers[
+                                                                currentIdx
+                                                            ] ?? null
+                                                        }
+                                                        correctIndex={
+                                                            revealedAnswer.displayIndex
+                                                        }
                                                         onHide={() =>
                                                             setRevealedAnswer(
                                                                 null,
                                                             )
                                                         }
+                                                        onOpenFollowUp={(
+                                                            id,
+                                                        ) => {
+                                                            const index =
+                                                                activeQuestions.findIndex(
+                                                                    (item) =>
+                                                                        item.id ===
+                                                                        id,
+                                                                );
+                                                            setRevealedAnswer(
+                                                                null,
+                                                            );
+
+                                                            if (index >= 0) {
+                                                                handleQuestionNavigate(
+                                                                    index,
+                                                                );
+                                                            } else {
+                                                                router.visit(
+                                                                    '/drills',
+                                                                );
+                                                            }
+                                                        }}
                                                     />
                                                 )}
 

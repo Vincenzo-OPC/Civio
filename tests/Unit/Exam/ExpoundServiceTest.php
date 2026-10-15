@@ -50,6 +50,13 @@ it('keeps the stored explanation when the walk disagrees with the key', function
         ->and($expound['steps'])->toBe(['Stored work stays.']);
 });
 
+it('keeps an initialism like R.A. inside the first sentence', function () {
+    $steps = (new ExpoundService)->storedSteps('R.A. 6713 requires a public official to put the public interest first. A second sentence stays separate.');
+
+    expect($steps[0])->toBe('R.A. 6713 requires a public official to put the public interest first.')
+        ->and($steps[1])->toBe('A second sentence stays separate.');
+});
+
 it('splits a stored explanation and drops the choice boilerplate', function () {
     $question = new Question([
         'stem' => 'What is 20 percent of 200 forms?',

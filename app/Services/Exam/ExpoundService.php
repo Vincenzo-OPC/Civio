@@ -19,7 +19,7 @@ final class ExpoundService
     {
         $options = array_values($question->options ?? []);
         $choice = (string) ($options[(int) $question->correct_option] ?? '');
-        $arithmetic = $this->orderOfOperations(trim((string) $question->stem), $choice);
+        $arithmetic = $this->arithmeticSteps(trim((string) $question->stem), $choice);
 
         if ($arithmetic !== null) {
             return [
@@ -44,7 +44,43 @@ final class ExpoundService
     /**
      * @return list<string>|null
      */
-    private function orderOfOperations(string $stem, string $choice): ?array
+    public function arithmeticSteps(string $stem, string $choice): ?array
+    {
+        return $this->orderOfOperations($stem, $choice);
+    }
+
+    public function isArithmeticExpression(string $stem): bool
+    {
+        return $this->expressionTokens($stem) !== null;
+    }
+
+    /**
+     * @return list<string>
+     */
+    public function storedSteps(string $explanation): array
+    {
+        return $this->workSteps($explanation);
+    }
+
+    /**
+     * Value of an order-of-operations stem, or null when it is not one.
+     */
+    public function arithmeticValue(string $stem): ?float
+    {
+        $tokens = $this->expressionTokens($stem);
+        if ($tokens === null) {
+            return null;
+        }
+
+        $reduced = $this->reduce($tokens);
+
+        return count($reduced) === 1 ? (float) $reduced[0] : null;
+    }
+
+    /**
+     * @return list<string>|null
+     */
+    public function expressionTokens(string $stem): ?array
     {
         if (in_array(preg_match('/^evaluate\b[:\s]*/i', $stem), [0, false], true)) {
             return null;
@@ -65,7 +101,34 @@ final class ExpoundService
 
         preg_match_all('/\d+|[+\-*\/]/', $body, $matches);
         $tokens = $matches[0];
-        if (count($tokens) < 3) {
+
+        return count($tokens) >= 3 ? $tokens : null;
+    }
+
+    /**
+     * @param  list<string>  $tokens
+     * @return list<string>
+     */
+    private function reduce(array $tokens): array
+    {
+        $ignored = [];
+        if ($this->hasOperator($tokens, ['*', '/'])) {
+            $tokens = $this->collapse($tokens, ['*', '/'], $ignored);
+        }
+        if ($this->hasOperator($tokens, ['+', '-']) && count($tokens) > 1) {
+            $tokens = $this->collapse($tokens, ['+', '-'], $ignored);
+        }
+
+        return $tokens;
+    }
+
+    /**
+     * @return list<string>|null
+     */
+    private function orderOfOperations(string $stem, string $choice): ?array
+    {
+        $tokens = $this->expressionTokens($stem);
+        if ($tokens === null) {
             return null;
         }
 
@@ -197,11 +260,12 @@ final class ExpoundService
 
         $text = preg_replace('/The matching choice is “[^”]+”?\.?/u', '', $text) ?? $text;
         $text = preg_replace('/(?:“[^”]+”(?:,\s*)?)+(?:\s*do not follow the same steps)\.?/u', '', $text) ?? $text;
-        $parts = preg_split('/(?<=[.!?])\s+/u', trim($text)) ?: [];
+        $text = preg_replace_callback('/\b(?:[A-Z]\.)+/u', fn (array $match): string => str_replace('.', '∯', $match[0]), trim($text)) ?? trim($text);
+        $parts = preg_split('/(?<=[.!?])\s+/u', $text) ?: [];
         $steps = [];
 
         foreach ($parts as $part) {
-            $part = trim((string) $part);
+            $part = trim(str_replace('∯', '.', (string) $part));
             if ($part !== '') {
                 $steps[] = $part;
             }

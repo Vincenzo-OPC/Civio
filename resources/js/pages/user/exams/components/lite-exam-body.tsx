@@ -10,6 +10,7 @@ import { CopyForAiButton } from './copy-for-ai-button';
 import { ExamTimerDisplay } from './exam-timer-display';
 import { AnswerOption } from './session/answer-option';
 import { AnswerReveal } from './session/answer-reveal';
+import type { RevealTutorPayload } from './session/answer-reveal';
 
 export interface LiteRevealedAnswer {
     letter: string;
@@ -17,6 +18,7 @@ export interface LiteRevealedAnswer {
     explanation?: string | null;
     hasConflict?: boolean;
     displayIndex?: number;
+    tutor?: RevealTutorPayload | null;
 }
 
 interface LiteExamBodyProps {
@@ -45,6 +47,7 @@ interface LiteExamBodyProps {
     onReveal: () => void;
     revealed: LiteRevealedAnswer | null;
     onHideReveal: () => void;
+    onOpenFollowUp?: (questionId: number) => void;
     copyAttempt: AiHandoffAttemptState | null;
 }
 
@@ -80,6 +83,7 @@ export function LiteExamBody({
     onReveal,
     revealed,
     onHideReveal,
+    onOpenFollowUp,
     copyAttempt,
 }: LiteExamBodyProps) {
     const [showAll, setShowAll] = useState(false);
@@ -188,12 +192,15 @@ export function LiteExamBody({
 
                         {showStudyTools && revealed && question && (
                             <AnswerReveal
-                                questionId={question.id}
                                 letter={revealed.letter}
                                 text={revealed.text}
                                 explanation={revealed.explanation}
                                 hasConflict={revealed.hasConflict}
+                                tutor={revealed.tutor}
+                                chosenIndex={answers[currentIdx] ?? null}
+                                correctIndex={revealed.displayIndex ?? null}
                                 onHide={onHideReveal}
+                                onOpenFollowUp={onOpenFollowUp}
                             />
                         )}
                     </>

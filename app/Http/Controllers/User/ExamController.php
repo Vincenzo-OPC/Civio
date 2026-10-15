@@ -14,6 +14,7 @@ use App\Models\Question;
 use App\Services\Dexter\DexterEvaluationService;
 use App\Services\Exam\ExpoundService;
 use App\Services\Exam\MockSessionService;
+use App\Services\Exam\Reveal\RevealTutor;
 use App\Services\Exam\StrictMockLock;
 use App\Services\ExamService;
 use App\Support\LiteMode;
@@ -136,6 +137,9 @@ class ExamController extends Controller
     {
         $request->validate([
             'question_id' => 'required|integer|exists:questions,id',
+            'chosen_option' => 'sometimes|nullable|integer|min:0|max:7',
+            'weak_subcategories' => 'sometimes|array|max:20',
+            'weak_subcategories.*' => 'string|max:191',
         ]);
 
         if ($this->strictMockLock->isLocked((int) $request->question_id, auth()->id(), $request->session())) {
@@ -155,6 +159,16 @@ class ExamController extends Controller
         $dexter = app(DexterEvaluationService::class);
         $evaluation = $dexter->evaluate($question);
 
+        $chosen = $request->input('chosen_option');
+        $result = is_numeric($chosen)
+            ? ((int) $chosen === (int) $question->correct_option ? 'correct' : 'incorrect')
+            : 'unanswered';
+        $tutor = app(RevealTutor::class)->forQuestion(
+            $question,
+            $result,
+            array_values($request->input('weak_subcategories', [])),
+        );
+
         return response()->json([
             'success' => true,
             'question_id' => $question->id,
@@ -162,6 +176,7 @@ class ExamController extends Controller
             'explanation' => $question->explanation ?? null,
             'dexter_evaluation' => $evaluation,
             'has_conflict' => $evaluation['answerKeyConflict'] ?? false,
+            'tutor' => $tutor,
         ]);
     }
 
