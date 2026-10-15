@@ -1,4 +1,5 @@
 import { Head, Link, router, usePage } from '@inertiajs/react';
+import ExamFormat from '@/components/domain/exam-format';
 import SiteFooter from '@/components/layout/site-footer';
 import SiteHeader from '@/components/layout/site-header';
 import type { Auth } from '@/types';
@@ -139,29 +140,7 @@ export default function Welcome() {
                         </div>
                     </section>
 
-                    <section className="grid gap-4 text-sm leading-relaxed sm:grid-cols-2">
-                        <p>
-                            <strong className="font-semibold">
-                                Professional.
-                            </strong>{' '}
-                            150 scored items, 3 hours 10 minutes. For
-                            professional, technical, and supervisory posts.
-                        </p>
-                        <p>
-                            <strong className="font-semibold">
-                                Subprofessional.
-                            </strong>{' '}
-                            145 scored items, 2 hours 40 minutes. For clerical,
-                            trades, and custodial posts.
-                        </p>
-                    </section>
-
-                    <p className="text-xs leading-relaxed opacity-70">
-                        The published general passing rating is at least 80.00.
-                        Civio is not the Civil Service Commission and is not an
-                        official CSC reviewer. Practice scores are not a
-                        prediction of your exam result.
-                    </p>
+                    <ExamFormat />
                 </div>
             </main>
             <SiteFooter />

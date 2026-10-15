@@ -43,6 +43,7 @@ import { ExamTimerDisplay } from './exam-timer-display';
 import { LiteExamBody } from './lite-exam-body';
 import QuestionPalettePanel from './question-palette-panel';
 import { AnswerOption } from './session/answer-option';
+import { AnswerReveal } from './session/answer-reveal';
 import { PauseOverlay } from './session/pause-overlay';
 
 interface RevealedAnswer {
@@ -52,7 +53,6 @@ interface RevealedAnswer {
     /** Correct option as an index into the displayed (shuffled) options. */
     displayIndex: number;
     explanation?: string | null;
-    expound?: string;
     hasConflict?: boolean;
 }
 
@@ -912,119 +912,28 @@ export function LiveExamView({
                                                 revealedAnswer &&
                                                 revealedAnswer.questionId ===
                                                     activeQuestion?.id && (
-                                                    <div className="rounded-lg border border-[var(--civio-line)] p-3 text-sm">
-                                                        <div
-                                                            className={`font-bold ${revealedAnswer.hasConflict ? 'text-red-600 dark:text-red-400' : 'text-amber-700 dark:text-amber-400'}`}
-                                                        >
-                                                            {revealedAnswer.hasConflict
-                                                                ? 'Answer key conflict'
-                                                                : 'Reveal'}
-                                                            :{' '}
-                                                            {
-                                                                revealedAnswer.letter
-                                                            }{' '}
-                                                            —{' '}
-                                                            {
-                                                                revealedAnswer.text
-                                                            }
-                                                        </div>
-                                                        {revealedAnswer.hasConflict && (
-                                                            <div className="mt-1 text-xs text-red-600 dark:text-red-400">
-                                                                Dexter detected
-                                                                a possible error
-                                                                in the stored
-                                                                answer.
-                                                            </div>
-                                                        )}
-                                                        {revealedAnswer.explanation && (
-                                                            <div className="mt-1 text-amber-600 dark:text-amber-300">
-                                                                {
-                                                                    revealedAnswer.explanation
-                                                                }
-                                                            </div>
-                                                        )}
-
-                                                        {revealedAnswer.expound && (
-                                                            <div className="mt-2 border-t border-amber-200 pt-2 text-amber-700 dark:border-amber-900/50 dark:text-amber-300">
-                                                                {
-                                                                    revealedAnswer.expound
-                                                                }
-                                                            </div>
-                                                        )}
-
-                                                        <div className="mt-2 flex gap-2">
-                                                            <button
-                                                                onClick={async () => {
-                                                                    try {
-                                                                        const res =
-                                                                            await fetch(
-                                                                                '/exams/expound',
-                                                                                {
-                                                                                    method: 'POST',
-                                                                                    headers:
-                                                                                        {
-                                                                                            'Content-Type':
-                                                                                                'application/json',
-                                                                                            'X-CSRF-TOKEN':
-                                                                                                document
-                                                                                                    .querySelector(
-                                                                                                        'meta[name="csrf-token"]',
-                                                                                                    )
-                                                                                                    ?.getAttribute(
-                                                                                                        'content',
-                                                                                                    ) ||
-                                                                                                '',
-                                                                                        },
-                                                                                    body: JSON.stringify(
-                                                                                        {
-                                                                                            question_id:
-                                                                                                activeQuestion.id,
-                                                                                        },
-                                                                                    ),
-                                                                                },
-                                                                            );
-                                                                        const data =
-                                                                            await res.json();
-
-                                                                        if (
-                                                                            data.success
-                                                                        ) {
-                                                                            setRevealedAnswer(
-                                                                                (
-                                                                                    prev,
-                                                                                ) =>
-                                                                                    prev
-                                                                                        ? {
-                                                                                              ...prev,
-                                                                                              expound:
-                                                                                                  data.explanation ||
-                                                                                                  'No further explanation available.',
-                                                                                          }
-                                                                                        : null,
-                                                                            );
-                                                                        }
-                                                                    } catch {
-                                                                        alert(
-                                                                            'Expound failed',
-                                                                        );
-                                                                    }
-                                                                }}
-                                                                className="rounded bg-amber-600 px-2 py-0.5 text-xs text-white hover:bg-amber-700"
-                                                            >
-                                                                Expound
-                                                            </button>
-                                                            <button
-                                                                onClick={() =>
-                                                                    setRevealedAnswer(
-                                                                        null,
-                                                                    )
-                                                                }
-                                                                className="text-xs text-amber-600 hover:underline dark:text-amber-400"
-                                                            >
-                                                                Hide
-                                                            </button>
-                                                        </div>
-                                                    </div>
+                                                    <AnswerReveal
+                                                        questionId={
+                                                            activeQuestion.id
+                                                        }
+                                                        letter={
+                                                            revealedAnswer.letter
+                                                        }
+                                                        text={
+                                                            revealedAnswer.text
+                                                        }
+                                                        explanation={
+                                                            revealedAnswer.explanation
+                                                        }
+                                                        hasConflict={
+                                                            revealedAnswer.hasConflict
+                                                        }
+                                                        onHide={() =>
+                                                            setRevealedAnswer(
+                                                                null,
+                                                            )
+                                                        }
+                                                    />
                                                 )}
 
                                             {/* Options Grid selector stack */}

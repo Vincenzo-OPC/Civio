@@ -1,4 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
+import ExamFormat from '@/components/domain/exam-format';
 import SiteFooter from '@/components/layout/site-footer';
 import SiteHeader from '@/components/layout/site-header';
 
@@ -29,28 +30,9 @@ export default function About() {
                         </p>
                     </header>
 
-                    <section className="grid gap-4 text-sm leading-relaxed sm:grid-cols-2">
-                        <p>
-                            <strong className="font-semibold">
-                                Professional.
-                            </strong>{' '}
-                            150 scored items, 3 hours 10 minutes.
-                        </p>
-                        <p>
-                            <strong className="font-semibold">
-                                Subprofessional.
-                            </strong>{' '}
-                            145 scored items, 2 hours 40 minutes.
-                        </p>
-                    </section>
+                    <ExamFormat />
 
                     <section className="flex flex-col gap-3 text-sm leading-relaxed">
-                        <p>
-                            The published general passing rating is at least
-                            80.00. CSC does not publish a separate minimum for
-                            each subtest. A practice score is not a prediction
-                            of your result.
-                        </p>
                         <p>
                             You can study without an account. Dexter is the
                             tutor in the app. He checks an item against its

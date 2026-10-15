@@ -12,6 +12,7 @@ use App\Http\Requests\User\Exam\StoreExamAttemptRequest;
 use App\Models\ExamSession;
 use App\Models\Question;
 use App\Services\Dexter\DexterEvaluationService;
+use App\Services\Exam\ExpoundService;
 use App\Services\Exam\MockSessionService;
 use App\Services\Exam\StrictMockLock;
 use App\Services\ExamService;
@@ -183,15 +184,14 @@ class ExamController extends Controller
             return response()->json(['success' => false, 'message' => 'Question not found'], 404);
         }
 
-        // For now, return the existing explanation or a placeholder.
-        // Full AI-powered expound will use DexterEvaluationService later.
-        $explanation = $question->explanation
-            ?? 'No detailed explanation available for this item yet.';
+        $expound = app(ExpoundService::class)->forQuestion($question);
 
         return response()->json([
             'success' => true,
             'question_id' => $question->id,
-            'explanation' => $explanation,
+            'explanation' => $expound['explanation'],
+            'rule' => $expound['rule'],
+            'steps' => $expound['steps'],
         ]);
     }
 }

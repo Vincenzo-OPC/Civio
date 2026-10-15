@@ -9,6 +9,7 @@ import { answerOptionVisual } from '../utils/answer-state';
 import { CopyForAiButton } from './copy-for-ai-button';
 import { ExamTimerDisplay } from './exam-timer-display';
 import { AnswerOption } from './session/answer-option';
+import { AnswerReveal } from './session/answer-reveal';
 
 export interface LiteRevealedAnswer {
     letter: string;
@@ -185,33 +186,15 @@ export function LiteExamBody({
                             </button>
                         </div>
 
-                        {showStudyTools && revealed && (
-                            <div className="rounded-lg border border-amber-300 p-3 text-sm">
-                                <p className="font-bold">
-                                    {revealed.hasConflict
-                                        ? 'Answer key conflict'
-                                        : 'Answer'}
-                                    : {revealed.letter}. {revealed.text}
-                                </p>
-                                {revealed.hasConflict && (
-                                    <p>
-                                        Dexter detected a possible error in the
-                                        stored answer.
-                                    </p>
-                                )}
-                                {revealed.explanation && (
-                                    <p className="mt-1">
-                                        {revealed.explanation}
-                                    </p>
-                                )}
-                                <button
-                                    type="button"
-                                    onClick={onHideReveal}
-                                    className="mt-2 underline"
-                                >
-                                    Hide
-                                </button>
-                            </div>
+                        {showStudyTools && revealed && question && (
+                            <AnswerReveal
+                                questionId={question.id}
+                                letter={revealed.letter}
+                                text={revealed.text}
+                                explanation={revealed.explanation}
+                                hasConflict={revealed.hasConflict}
+                                onHide={onHideReveal}
+                            />
                         )}
                     </>
                 ) : (

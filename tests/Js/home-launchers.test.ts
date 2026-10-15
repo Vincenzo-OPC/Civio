@@ -9,6 +9,13 @@ const welcome = readFileSync(
     new URL('../../resources/js/pages/public/welcome.tsx', import.meta.url),
     'utf8',
 );
+const format = readFileSync(
+    new URL(
+        '../../resources/js/components/domain/exam-format.tsx',
+        import.meta.url,
+    ),
+    'utf8',
+);
 const about = readFileSync(
     new URL('../../resources/js/pages/public/about.tsx', import.meta.url),
     'utf8',
@@ -52,7 +59,8 @@ describe('home launchers', () => {
         assert.doesNotMatch(welcome, /Tools Built for Success/);
         assert.doesNotMatch(welcome, /guaranteed points/);
         assert.match(welcome, /Continue Studying/);
-        assert.match(welcome, /at least 80\.00/);
+        assert.match(welcome, /<ExamFormat/);
+        assert.match(format, /at least 80\.00/);
         assert.match(welcome, /The explanation comes after/);
         assert.doesNotMatch(welcome, /help you improve/);
     });
