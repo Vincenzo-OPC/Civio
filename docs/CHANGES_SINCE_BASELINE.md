@@ -71,6 +71,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | The public name is Civio, not Civio Review. About, the footer, and the exam guide state the exam facts in plain sentences and drop the founder story and the amber disclaimer box. | The leftover marketing voice did not match the product. | `8075c5f` |
 | Footer shows the 2025 BIR registration badge and RSN 000RC20250000000333, labeled as a tax registration, not a CSC approval. Copyright is Civio, all rights reserved. The project license field is proprietary. Public copy no longer promises a pass, a pass probability, or a 54-second official pace. The setup pace matches the mock: about 76 seconds on Professional and about 66 on Subprofessional. | The registration is real, and the old pages sold a result Civio cannot know. | `0023105` |
 | Dashboard, guide, study-plan cards, and the analysis text drop the command-center voice, the glow, and the forecast labels. The practice index number is unchanged. It is labeled as not a forecast. | The pages still shouted after the homepage was quieted. | `6771c56` |
+| The floating coffee support button is gone. The contact page at `/support` stays. | The button asked for optional support. Practice stays free, and there is no donation link. | this commit |
 
 ### Study and tutor
 

@@ -1,7 +1,6 @@
 import { createInertiaApp, router, usePage } from '@inertiajs/react';
 import { toast } from 'sonner';
 import { GlobalPdfExporter } from '@/components/shared/global-pdf-exporter';
-import { SupportWidget } from '@/components/shared/support-widget';
 import { TrafficOverloadGuard } from '@/components/shared/traffic-overload-guard';
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -199,7 +198,6 @@ createInertiaApp({
             <TooltipProvider delayDuration={0}>
                 {app}
                 <Toaster />
-                <SupportWidget />
                 <TrafficOverloadGuard />
                 <GlobalPdfExporter />
             </TooltipProvider>

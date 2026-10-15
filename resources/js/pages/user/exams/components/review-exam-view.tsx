@@ -495,21 +495,6 @@ export function ReviewExamView({
         setFlagged,
     ]);
 
-    // Dispatch event to hide the Support Widget when Review mode is active
-    useEffect(() => {
-        const event = new CustomEvent('review-exam-status', {
-            detail: { active: true },
-        });
-        window.dispatchEvent(event);
-
-        return () => {
-            const endEvent = new CustomEvent('review-exam-status', {
-                detail: { active: false },
-            });
-            window.dispatchEvent(endEvent);
-        };
-    }, []);
-
     const findFirstMatchingIndex = useCallback(
         (category: string, subcategory: string, status: ReviewStatusFilter) => {
             return activeQuestions.findIndex((q, idx) => {

@@ -454,23 +454,6 @@ export function useExamState(props: ExamIndexProps) {
         ),
     });
 
-    // Event listeners
-    useEffect(() => {
-        window.dispatchEvent(
-            new CustomEvent('live-exam-status', {
-                detail: { active: isExamActive },
-            }),
-        );
-
-        return () => {
-            window.dispatchEvent(
-                new CustomEvent('live-exam-status', {
-                    detail: { active: false },
-                }),
-            );
-        };
-    }, [isExamActive]);
-
     // Prevent unload warning
     useEffect(() => {
         if (!isExamActive || isExamSubmitted) {
