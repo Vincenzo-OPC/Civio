@@ -16,6 +16,8 @@ What this pass changed (Phase 1 slice):
 - A two-solution mixture is taught from the amount of substance, not by averaging the percentages, and only when that result is the stored answer.
 - Alphabetical filing is taught by sorting the written names. The lesson appears only when the stored answer is the name or sequence in that place.
 - Three grammar errors are taught only when the stored answer is the sentence that contains them: "between you and I," "me and him" as a subject, "each ... need," and "the set ... were." Other grammar items keep their stored explanation.
+- A next-number list is taught when it has one rule: a constant gap, a constant multiplier, or consecutive squares. A list that does not fit those rules keeps its stored explanation.
+- A mean, a median, a percent change, simple interest, and a greatest common factor are taught only when the recomputed value is the stored answer.
 
 Not done, and not claimed:
 

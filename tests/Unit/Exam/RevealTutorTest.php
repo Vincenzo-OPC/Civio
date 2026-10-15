@@ -219,3 +219,78 @@ it('keeps a stored explanation when the pronoun error is not a checked rule', fu
     expect($tutor['concept'])->toBe('Stored pronoun note.')
         ->and($tutor['shortcut'])->toBeNull();
 });
+
+it('teaches an arithmetic sequence when the gap is constant', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Find the next number: 2, 4, 6, 8, ___',
+        'options' => ['9', '10', '12', '16'],
+        'correct_option' => 1,
+    ]));
+
+    expect($tutor['concept'])->toContain('arithmetic')
+        ->and($tutor['steps'][1])->toBe('8 + 2 = 10.')
+        ->and($tutor['commonMistakes'][0]['choice'] ?? null)->toBe('16');
+});
+
+it('teaches consecutive squares and a shrinking geometric list', function () {
+    $squares = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Find the next number: 4, 9, 16, 25, _____',
+        'options' => ['30', '36', '49', '50'],
+        'correct_option' => 1,
+    ]));
+    $shrinking = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Find the next: 81, 27, 9, 3, _____',
+        'options' => ['0', '1', '2', '6'],
+        'correct_option' => 1,
+    ]));
+
+    expect($squares['steps'])->toContain('6 × 6 = 36.')
+        ->and($shrinking['steps'][1])->toBe('3 ÷ 3 = 1.');
+});
+
+it('leaves a second-difference sequence on its stored explanation', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Find the missing: 2, 6, 12, 20, 30, _____',
+        'options' => ['36', '40', '42', '48'],
+        'correct_option' => 2,
+        'explanation' => 'Stored pattern note.',
+    ]));
+
+    expect($tutor['concept'])->toBe('Stored pattern note.');
+});
+
+it('teaches a mean, a median, a percent change, interest, and a common factor', function () {
+    $mean = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Scores: 70, 80, 90. The mean is:',
+        'options' => ['80', '90', '240', '70'],
+        'correct_option' => 0,
+    ]));
+    $median = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Median of 3, 9, 5, 7, 11 is:',
+        'options' => ['5', '7', '9', '11'],
+        'correct_option' => 1,
+    ]));
+    $change = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Production rose from 120 to 150 units. The percent increase is:',
+        'options' => ['20%', '25%', '30%', '50%'],
+        'correct_option' => 1,
+    ]));
+    $interest = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Simple interest on 5000 pesos at 6% per year for 2 years is:',
+        'options' => ['300', '600', '5000', '60'],
+        'correct_option' => 1,
+    ]));
+    $factor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Find the GCF of 36 and 54:',
+        'options' => ['6', '9', '18', '27'],
+        'correct_option' => 2,
+    ]));
+
+    expect($mean['steps'][1])->toBe('240 ÷ 3 = 80.')
+        ->and($mean['commonMistakes'][0]['choice'] ?? null)->toBe('240')
+        ->and($median['steps'][0])->toBe('In order: 3, 5, 7, 9, 11.')
+        ->and($change['steps'][1])->toContain('25%')
+        ->and($change['commonMistakes'][0]['choice'] ?? null)->toBe('20%')
+        ->and($interest['steps'][0])->toContain('600')
+        ->and($factor['steps'][0])->toBe('The greatest common factor of 36 and 54 is 18.');
+});
