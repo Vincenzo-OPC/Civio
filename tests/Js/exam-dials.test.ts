@@ -1,8 +1,22 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { describe, it } from 'node:test';
 import { EXAM_DURATION_SECS } from '../../resources/js/lib/exam-clock';
-import { EXAM_DIALS, formatSitting } from '../../resources/js/lib/exam-dials';
+import {
+    CLOCK_TICKS,
+    clockTick,
+    EXAM_DIALS,
+    formatSitting,
+} from '../../resources/js/lib/exam-dials';
 import { EXAM_CONSTANTS } from '../../resources/js/pages/user/exams/utils/exam-utils';
+
+const dialSource = readFileSync(
+    new URL(
+        '../../resources/js/components/domain/time-dial.tsx',
+        import.meta.url,
+    ),
+    'utf8',
+);
 
 describe('exam dial sittings', () => {
     it('matches the CSC scored mock: 150 in 3 hr 10 min, 145 in 2 hr 40 min', () => {
@@ -45,5 +59,26 @@ describe('exam dial sittings', () => {
             EXAM_DIALS.subprofessional.questions,
             EXAM_CONSTANTS.SUBPROFESSIONAL_SCORED_ITEMS,
         );
+    });
+
+    it('draws a clock: 12 even marks, quarters at 12, 3, 6 and 9', () => {
+        assert.equal(CLOCK_TICKS, 12);
+        const marks = Array.from({ length: CLOCK_TICKS }, (_, index) =>
+            clockTick(index),
+        );
+        const step = 360 / CLOCK_TICKS;
+
+        marks.forEach((mark, index) => {
+            assert.equal(mark.angle, index * step);
+        });
+        assert.deepEqual(
+            marks
+                .filter((mark) => mark.role === 'cardinal')
+                .map((mark) => mark.angle),
+            [0, 90, 180, 270],
+        );
+        assert.equal(marks.filter((mark) => mark.role === 'hour').length, 8);
+        assert.match(dialSource, /CLOCK_TICKS/);
+        assert.doesNotMatch(dialSource, /total \/ 60 \/ 5/);
     });
 });

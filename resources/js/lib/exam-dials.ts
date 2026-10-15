@@ -26,6 +26,27 @@ export const EXAM_DIALS = {
 
 export type ExamDialId = keyof typeof EXAM_DIALS;
 
+/**
+ * Clock face. Twelve marks, not one mark per five minutes of the sitting.
+ * A 3 hr 10 min sitting is 38 of those five-minute marks, and 38 is not a
+ * multiple of 12, so the longer marks bunched up near 12 and left a gap.
+ */
+export const CLOCK_TICKS = 12;
+
+export type ClockTickRole = 'hour' | 'cardinal';
+
+export function clockTick(index: number): {
+    angle: number;
+    role: ClockTickRole;
+} {
+    const safe = ((index % CLOCK_TICKS) + CLOCK_TICKS) % CLOCK_TICKS;
+
+    return {
+        angle: (safe / CLOCK_TICKS) * 360,
+        role: safe % 3 === 0 ? 'cardinal' : 'hour',
+    };
+}
+
 /** "3 hr 10 min". The ring is this sitting, not a percent of a score. */
 export function formatSitting(seconds: number): string {
     const safe = Math.max(0, Math.floor(seconds));

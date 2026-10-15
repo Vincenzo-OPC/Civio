@@ -1,9 +1,10 @@
-import { formatSitting } from '@/lib/exam-dials';
+import { CLOCK_TICKS, clockTick, formatSitting } from '@/lib/exam-dials';
 
 const SIZE = 200;
 const CENTER = SIZE / 2;
 const TICK_OUTER = 92;
 const ARC_RADIUS = 64;
+const TICK_LENGTH = { hour: 8, cardinal: 14 } as const;
 
 const ARC_TONE = {
     calm: 'text-[var(--dial,var(--civio-violet,#5B35F5))]',
@@ -59,9 +60,9 @@ export function TimeDial({
         ? Math.max(0, Math.min(total, remainingSeconds))
         : total;
     const fraction = countdown ? remaining / total : 1;
+    const complete = fraction >= 1;
     const circumference = 2 * Math.PI * ARC_RADIUS;
     const dash = circumference * fraction;
-    const tickCount = Math.max(12, Math.round(total / 60 / 5));
     const faceSeconds = countdown ? remaining : total;
     const arcTone = quiet ? ARC_TONE.quiet : ARC_TONE[tone];
     const drawIn = !compact && !countdown && !quiet;
@@ -97,15 +98,15 @@ export function TimeDial({
             />
             {compact
                 ? null
-                : Array.from({ length: tickCount }, (_, index) => {
-                      const hour = index % 12 === 0;
+                : Array.from({ length: CLOCK_TICKS }, (_, index) => {
+                      const { role } = clockTick(index);
                       const inner = polar(
                           index,
-                          tickCount,
-                          TICK_OUTER - (hour ? 12 : 6),
+                          CLOCK_TICKS,
+                          TICK_OUTER - TICK_LENGTH[role],
                       );
-                      const outer = polar(index, tickCount, TICK_OUTER);
-                      const spent = countdown && index / tickCount > fraction;
+                      const outer = polar(index, CLOCK_TICKS, TICK_OUTER);
+                      const spent = countdown && index / CLOCK_TICKS > fraction;
 
                       return (
                           <line
@@ -119,15 +120,16 @@ export function TimeDial({
                               strokeOpacity={
                                   spent
                                       ? 0.16
-                                      : hour
-                                        ? 0.85
+                                      : role === 'cardinal'
+                                        ? quiet
+                                            ? 0.45
+                                            : 0.9
                                         : quiet
-                                          ? 0.35
-                                          : 0.62
+                                          ? 0.28
+                                          : 0.55
                               }
-                              strokeWidth={hour ? 1.7 : 1}
-                              strokeLinecap="round"
-                              style={{ animationDelay: `${index * 12}ms` }}
+                              strokeWidth={role === 'cardinal' ? 1.75 : 1.25}
+                              strokeLinecap="butt"
                           />
                       );
                   })}
@@ -142,8 +144,10 @@ export function TimeDial({
                 stroke="currentColor"
                 strokeOpacity={quiet ? 0.45 : 1}
                 strokeWidth={compact ? 18 : 7}
-                strokeLinecap="round"
-                strokeDasharray={`${dash} ${circumference}`}
+                strokeLinecap={complete ? 'butt' : 'round'}
+                strokeDasharray={
+                    complete ? undefined : `${dash} ${circumference}`
+                }
                 transform={`rotate(-90 ${CENTER} ${CENTER})`}
             />
             {compact ? null : (

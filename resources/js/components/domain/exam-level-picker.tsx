@@ -80,14 +80,14 @@ export function ExamLevelPicker({ value, onChange }: ExamLevelPickerProps) {
                             >
                                 {level.name}
                             </span>
-                            <span className="mt-1 text-base font-semibold tabular-nums">
-                                {formatSitting(level.seconds)}
-                            </span>
-                            <span className="mt-1 text-sm font-semibold">
-                                {level.questions} Questions
-                            </span>
-                            <span className="mt-2 max-w-[16rem] text-sm leading-relaxed opacity-70">
-                                {level.description}
+                            <span className="mt-1 text-sm leading-relaxed">
+                                <span className="font-semibold tabular-nums">
+                                    {level.questions} questions
+                                </span>
+                                <span className="mx-2 opacity-40">·</span>
+                                <span className="tabular-nums">
+                                    {formatSitting(level.seconds)}
+                                </span>
                             </span>
                         </button>
                     );

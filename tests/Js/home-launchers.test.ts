@@ -66,6 +66,10 @@ describe('home launchers', () => {
         assert.match(welcome, /<ExamFormat/);
         assert.match(format, /at least 80\.00/);
         assert.match(welcome, /The explanation comes after/);
+        assert.match(welcome, /ExamScreenPreview/);
+        assert.match(welcome, /A full mock/);
+        assert.doesNotMatch(welcome, /Interface preview/);
+        assert.doesNotMatch(welcome, /Which sentence is clearest/);
         assert.doesNotMatch(welcome, /help you improve/);
     });
 
