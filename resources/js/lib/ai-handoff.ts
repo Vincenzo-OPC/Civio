@@ -355,20 +355,34 @@ export async function copyAiHandoff(
 }
 
 /**
- * Same handoff as Copy for AI, opened the way Chrome's "Ask ChatGPT" menu
- * does: a new tab with the question in the box. ChatGPT reads `?q=`. A long
- * item is left on the clipboard and the tab opens empty, because a huge query
- * string gets dropped.
+ * Same handoff as Copy for AI, opened the way Chrome's right-click menu does:
+ * a new tab with the question in the box. ChatGPT reads `?q=`. Gemini uses
+ * the same parameter. A long item is left on the clipboard and the tab opens
+ * empty, because a huge query string gets dropped.
+ *
+ * This does not call Civio's Gemini key. That key is for the study report.
  */
 export const CHATGPT_ASK_URL = 'https://chatgpt.com/';
+export const GEMINI_ASK_URL = 'https://gemini.google.com/app';
 export const CHATGPT_ASK_LIMIT = 1500;
 
-export function chatgptAskUrl(prompt: string): string {
-    const url = new URL(CHATGPT_ASK_URL);
+export type AskAssistant = 'chatgpt' | 'gemini';
+
+export function assistantAskUrl(
+    assistant: AskAssistant,
+    prompt: string,
+): string {
+    const url = new URL(
+        assistant === 'gemini' ? GEMINI_ASK_URL : CHATGPT_ASK_URL,
+    );
 
     if (prompt.length > 0 && prompt.length <= CHATGPT_ASK_LIMIT) {
         url.searchParams.set('q', prompt);
     }
 
     return url.toString();
+}
+
+export function chatgptAskUrl(prompt: string): string {
+    return assistantAskUrl('chatgpt', prompt);
 }

@@ -39,7 +39,7 @@ import type { Question, SimulationDetails } from '../types';
 import { answerOptionVisual } from '../utils/answer-state';
 import type { ExamMode } from '../utils/exam-mode';
 import { showsStudyTools } from '../utils/exam-mode';
-import { AskChatGptButton } from './ask-chatgpt-button';
+import { AskAssistantButton } from './ask-assistant-button';
 import { CopyForAiButton } from './copy-for-ai-button';
 import { ExamTimerDisplay } from './exam-timer-display';
 import { LiteExamBody } from './lite-exam-body';
@@ -937,7 +937,7 @@ export function LiveExamView({
                                                     />
                                                 )}
                                                 {studyTools && (
-                                                    <AskChatGptButton
+                                                    <AskAssistantButton
                                                         question={
                                                             activeQuestion
                                                         }
@@ -1003,6 +1003,14 @@ export function LiveExamView({
                                                                     '/drills',
                                                                 );
                                                             }
+                                                        }}
+                                                        ask={{
+                                                            question:
+                                                                activeQuestion,
+                                                            attempt:
+                                                                liveHandoffAttempt(
+                                                                    activeQuestion.id,
+                                                                ),
                                                         }}
                                                     />
                                                 )}

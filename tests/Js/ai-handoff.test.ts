@@ -3,11 +3,13 @@ import { describe, it } from 'node:test';
 import {
     AI_HANDOFF_EXPLAIN_PROMPT,
     AI_HANDOFF_HINT_PROMPT,
+    assistantAskUrl,
     buildAiHandoffText,
     chatgptAskUrl,
     CHATGPT_ASK_LIMIT,
     toPlainText,
 } from '../../resources/js/lib/ai-handoff';
+import { parseAskAssistant } from '../../resources/js/lib/ask-assistant';
 import type {
     AiHandoffAttemptState,
     AiHandoffQuestion,
@@ -118,6 +120,18 @@ describe('Ask ChatGPT link', () => {
         assert.equal(url.origin, 'https://chatgpt.com');
         assert.equal(url.searchParams.get('q'), text);
         assert.doesNotMatch(url.searchParams.get('q') ?? '', /SECRET/);
+    });
+
+    it('opens Gemini with the same handoff, and anything else stays ChatGPT', () => {
+        const text = buildAiHandoffText(shuffledQuestion, baseAttempt);
+        const gemini = new URL(assistantAskUrl('gemini', text));
+
+        assert.equal(gemini.origin, 'https://gemini.google.com');
+        assert.equal(gemini.pathname, '/app');
+        assert.equal(gemini.searchParams.get('q'), text);
+        assert.equal(parseAskAssistant(null), 'chatgpt');
+        assert.equal(parseAskAssistant('gemini'), 'gemini');
+        assert.equal(parseAskAssistant('claude'), 'chatgpt');
     });
 
     it('leaves a long question off the address so the clipboard can carry it', () => {

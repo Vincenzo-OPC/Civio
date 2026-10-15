@@ -6,7 +6,7 @@ import { renderFormattedText } from '@/lib/exam-formatters';
 import type { ExamClockSnapshot } from '../hooks/use-exam-timer';
 import type { Question } from '../types';
 import { answerOptionVisual } from '../utils/answer-state';
-import { AskChatGptButton } from './ask-chatgpt-button';
+import { AskAssistantButton } from './ask-assistant-button';
 import { CopyForAiButton } from './copy-for-ai-button';
 import { ExamTimerDisplay } from './exam-timer-display';
 import { AnswerOption } from './session/answer-option';
@@ -185,7 +185,7 @@ export function LiteExamBody({
                                 />
                             )}
                             {showStudyTools && copyAttempt && (
-                                <AskChatGptButton
+                                <AskAssistantButton
                                     question={question}
                                     attempt={copyAttempt}
                                 />
@@ -211,6 +211,14 @@ export function LiteExamBody({
                                 correctIndex={revealed.displayIndex ?? null}
                                 onHide={onHideReveal}
                                 onOpenFollowUp={onOpenFollowUp}
+                                ask={
+                                    copyAttempt
+                                        ? {
+                                              question,
+                                              attempt: copyAttempt,
+                                          }
+                                        : null
+                                }
                             />
                         )}
                     </>

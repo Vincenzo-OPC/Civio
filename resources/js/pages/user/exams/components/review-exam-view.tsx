@@ -40,7 +40,7 @@ import type {
     ExamResults,
     ReviewStatusFilter,
 } from '../types';
-import { AskChatGptButton } from './ask-chatgpt-button';
+import { AskAssistantButton } from './ask-assistant-button';
 import { BookmarkToDrillSetDialog } from './bookmark-to-drill-set-dialog';
 import { CopyForAiButton } from './copy-for-ai-button';
 import QuestionPalettePanel from './question-palette-panel';
@@ -1299,7 +1299,7 @@ export function ReviewExamView({
                                                                     }}
                                                                     className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground transition hover:bg-muted focus:outline-none"
                                                                 />
-                                                                <AskChatGptButton
+                                                                <AskAssistantButton
                                                                     question={
                                                                         currentQuestion
                                                                     }
@@ -1665,6 +1665,42 @@ export function ReviewExamView({
                                                                         letterMap,
                                                                     )}
                                                                 </div>
+                                                                {!isDemographicItem && (
+                                                                    <div className="mt-4">
+                                                                        <AskAssistantButton
+                                                                            question={
+                                                                                currentQuestion
+                                                                            }
+                                                                            attempt={{
+                                                                                mode: 'review',
+                                                                                revealed: true,
+                                                                                selectedDisplayIndex:
+                                                                                    chosenOption ===
+                                                                                        undefined ||
+                                                                                    chosenOption ===
+                                                                                        null
+                                                                                        ? undefined
+                                                                                        : Number(
+                                                                                              chosenOption,
+                                                                                          ),
+                                                                                verifiedCorrectDisplayIndex:
+                                                                                    typeof currentQuestion.correct_option ===
+                                                                                    'number'
+                                                                                        ? currentQuestion.correct_option
+                                                                                        : undefined,
+                                                                                verifiedExplanation:
+                                                                                    currentQuestion.explanation,
+                                                                                questionNumber:
+                                                                                    currentIdx +
+                                                                                    1,
+                                                                                totalQuestions:
+                                                                                    activeQuestions.length,
+                                                                                examLevel,
+                                                                            }}
+                                                                            className="inline-flex items-center gap-1.5 font-semibold text-foreground no-underline"
+                                                                        />
+                                                                    </div>
+                                                                )}
                                                             </div>
                                                         )}
                                                     </div>

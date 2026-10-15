@@ -1,8 +1,15 @@
 import { Head, router } from '@inertiajs/react';
 import { Cpu, Sparkles, Zap, Clock, RefreshCw, Shield } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useSyncExternalStore } from 'react';
+import { AssistantMark } from '@/components/domain/assistant-mark';
 import Heading from '@/components/shared/heading';
 import { Button } from '@/components/ui/button';
+import type { AskAssistant } from '@/lib/ai-handoff';
+import {
+    readAskAssistant,
+    subscribeAskAssistant,
+    writeAskAssistant,
+} from '@/lib/ask-assistant';
 import { cn } from '@/lib/utils';
 
 type PageProps = {
@@ -65,6 +72,70 @@ const modes = [
         badge: 'Recommended',
     },
 ];
+
+const assistants: { id: AskAssistant; name: string; detail: string }[] = [
+    {
+        id: 'chatgpt',
+        name: 'ChatGPT',
+        detail: 'Opens chatgpt.com with this question.',
+    },
+    {
+        id: 'gemini',
+        name: 'Gemini',
+        detail: 'Opens Gemini with this question.',
+    },
+];
+
+function AskAssistantChoice() {
+    const selected = useSyncExternalStore(
+        subscribeAskAssistant,
+        readAskAssistant,
+        () => 'chatgpt' as const,
+    );
+
+    return (
+        <div
+            role="radiogroup"
+            aria-label="Ask ChatGPT or Gemini"
+            className="grid gap-3 sm:grid-cols-2"
+        >
+            {assistants.map((assistant) => {
+                const on = selected === assistant.id;
+
+                return (
+                    <button
+                        key={assistant.id}
+                        type="button"
+                        role="radio"
+                        aria-checked={on}
+                        onClick={() => writeAskAssistant(assistant.id)}
+                        className={cn(
+                            'flex items-center gap-3 rounded-xl border p-4 text-left',
+                            on
+                                ? 'border-[#5B35F5] ring-2 ring-[#5B35F5] dark:border-[#C4B6FF] dark:ring-[#C4B6FF]'
+                                : 'border-slate-200 hover:border-slate-300 dark:border-slate-800 dark:hover:border-slate-700',
+                        )}
+                    >
+                        <span className="flex size-9 items-center justify-center rounded-lg bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-white">
+                            <AssistantMark
+                                assistant={assistant.id}
+                                className="size-5"
+                            />
+                        </span>
+                        <span>
+                            <span className="block text-sm font-semibold text-slate-900 dark:text-white">
+                                {assistant.name}
+                            </span>
+                            <span className="mt-0.5 block text-sm text-slate-600 dark:text-slate-400">
+                                {assistant.detail}
+                            </span>
+                        </span>
+                    </button>
+                );
+            })}
+        </div>
+    );
+}
 
 export default function Preferences({ analysisMode, aiAvailable }: PageProps) {
     const [selected, setSelected] = useState<'ai' | 'instant'>(analysisMode);
@@ -273,6 +344,15 @@ export default function Preferences({ analysisMode, aiAvailable }: PageProps) {
                         </span>
                     )}
                 </div>
+            </div>
+
+            <div className="space-y-4 border-t border-slate-200 pt-6 dark:border-slate-800">
+                <Heading
+                    variant="small"
+                    title="Ask ChatGPT or Gemini"
+                    description="The button on a question opens this assistant in a new tab. It uses your account there. Civio does not send the item through its own key."
+                />
+                <AskAssistantChoice />
             </div>
         </>
     );

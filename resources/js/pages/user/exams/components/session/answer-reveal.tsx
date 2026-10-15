@@ -1,4 +1,9 @@
 import { useState } from 'react';
+import type {
+    AiHandoffAttemptState,
+    AiHandoffQuestion,
+} from '@/lib/ai-handoff';
+import { AskAssistantButton } from '../ask-assistant-button';
 
 export interface RevealTutorPayload {
     concept: string | null;
@@ -98,6 +103,10 @@ interface AnswerRevealProps {
     correctIndex?: number | null;
     onHide: () => void;
     onOpenFollowUp?: (questionId: number) => void;
+    ask?: {
+        question: AiHandoffQuestion;
+        attempt: AiHandoffAttemptState;
+    } | null;
 }
 
 type Panel = 'steps' | 'shortcut' | 'mistakes' | 'visual' | 'simpler' | 'next';
@@ -188,6 +197,7 @@ export function AnswerReveal({
     correctIndex = null,
     onHide,
     onOpenFollowUp,
+    ask = null,
 }: AnswerRevealProps) {
     const [panel, setPanel] = useState<Panel | null>(null);
     const brief = explanation ? shortWork(explanation) : '';
@@ -335,7 +345,14 @@ export function AnswerReveal({
                     )}
                 </div>
             )}
-            <div className="mt-3">
+            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+                {ask && (
+                    <AskAssistantButton
+                        question={ask.question}
+                        attempt={ask.attempt}
+                        className="inline-flex items-center gap-1.5 font-semibold no-underline"
+                    />
+                )}
                 <button type="button" onClick={onHide} className="opacity-70">
                     Hide
                 </button>
