@@ -13,9 +13,10 @@ export interface RevealTutorPayload {
     commonMistakes: { choice: string; why: string }[];
     visual: {
         kind: string;
-        length: number;
-        width: number;
-        unit: string;
+        length?: number;
+        width?: number;
+        unit?: string;
+        groups?: string[];
     } | null;
     followUp: {
         questionId: number;
@@ -63,17 +64,7 @@ export function readRevealTutor(value: unknown): RevealTutorPayload | null {
                       : [];
               })
             : [],
-        visual:
-            visual?.kind === 'rectangle' &&
-            typeof visual.length === 'number' &&
-            typeof visual.width === 'number'
-                ? {
-                      kind: 'rectangle',
-                      length: visual.length,
-                      width: visual.width,
-                      unit: typeof visual.unit === 'string' ? visual.unit : 'm',
-                  }
-                : null,
+        visual: rectangleVisual(visual) ?? filingVisual(visual),
         followUp:
             typeof followUp?.questionId === 'number' &&
             typeof followUp.stem === 'string'
@@ -91,6 +82,39 @@ export function readRevealTutor(value: unknown): RevealTutorPayload | null {
                   }
                 : null,
     };
+}
+
+function rectangleVisual(
+    visual: Record<string, unknown> | null,
+): RevealTutorPayload['visual'] {
+    if (
+        visual?.kind !== 'rectangle' ||
+        typeof visual.length !== 'number' ||
+        typeof visual.width !== 'number'
+    ) {
+        return null;
+    }
+
+    return {
+        kind: 'rectangle',
+        length: visual.length,
+        width: visual.width,
+        unit: typeof visual.unit === 'string' ? visual.unit : 'm',
+    };
+}
+
+function filingVisual(
+    visual: Record<string, unknown> | null,
+): RevealTutorPayload['visual'] {
+    if (visual?.kind !== 'filing' || !Array.isArray(visual.groups)) {
+        return null;
+    }
+
+    const groups = visual.groups.filter(
+        (group): group is string => typeof group === 'string',
+    );
+
+    return groups.length === 3 ? { kind: 'filing', groups } : null;
 }
 
 interface AnswerRevealProps {
@@ -187,6 +211,34 @@ function RectangleFigure({
     );
 }
 
+function FilingFigure({ groups }: { groups: string[] }) {
+    const roles = ['Tertiary', 'Secondary', 'Primary'];
+
+    return (
+        <div
+            className="mt-3 flex flex-wrap gap-2"
+            role="img"
+            aria-label={`Filing groups ${groups.join(', ')}. ${groups[2]} is read first.`}
+        >
+            {groups.map((group, index) => (
+                <div
+                    key={group}
+                    className={
+                        index === 2
+                            ? 'min-w-16 border border-[var(--civio-violet,#5b35f5)] px-3 py-2 text-center'
+                            : 'min-w-16 border border-[var(--civio-line,#e3e5ea)] px-3 py-2 text-center'
+                    }
+                >
+                    <p className="text-base font-semibold tabular-nums">
+                        {group}
+                    </p>
+                    <p className="mt-1 text-xs opacity-70">{roles[index]}</p>
+                </div>
+            ))}
+        </div>
+    );
+}
+
 export function AnswerReveal({
     letter,
     text,
@@ -219,30 +271,30 @@ export function AnswerReveal({
     const controls: { id: Panel; label: string }[] = [];
 
     if (tutor?.steps.length) {
-        controls.push({ id: 'steps', label: 'Steps' });
+        controls.push({ id: 'steps', label: 'Step-by-Step' });
     }
 
     if (tutor?.shortcut) {
-        controls.push({ id: 'shortcut', label: 'Shortcut' });
+        controls.push({ id: 'shortcut', label: 'Exam Tip' });
     }
 
     if (tutor?.commonMistakes.length) {
-        controls.push({ id: 'mistakes', label: 'Common miss' });
+        controls.push({ id: 'mistakes', label: 'Common Mistake' });
     }
 
-    if (tutor?.visual?.kind === 'rectangle') {
+    if (tutor?.visual) {
         controls.push({ id: 'visual', label: 'Diagram' });
     }
 
     if (tutor?.simpler) {
         controls.push({
             id: 'simpler',
-            label: showingSimpler ? 'Usual wording' : 'Explain simpler',
+            label: showingSimpler ? 'Usual Wording' : 'Explain Simpler',
         });
     }
 
     if (tutor?.followUp) {
-        controls.push({ id: 'next', label: 'Next item' });
+        controls.push({ id: 'next', label: 'Try Another' });
     }
 
     return (
@@ -265,7 +317,12 @@ export function AnswerReveal({
                     Dexter detected a possible error in the stored answer.
                 </p>
             )}
-            {lead && <p className="mt-2">{lead}</p>}
+            {lead && (
+                <div className="mt-3">
+                    <p className="font-semibold">Understand the Answer</p>
+                    <p className="mt-1">{lead}</p>
+                </div>
+            )}
             {controls.length > 0 && (
                 <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
                     {controls.map((control) => (
@@ -318,11 +375,16 @@ export function AnswerReveal({
             )}
             {panel === 'visual' && tutor?.visual?.kind === 'rectangle' && (
                 <RectangleFigure
-                    length={tutor.visual.length}
-                    width={tutor.visual.width}
-                    unit={tutor.visual.unit}
+                    length={tutor.visual.length ?? 0}
+                    width={tutor.visual.width ?? 0}
+                    unit={tutor.visual.unit ?? 'm'}
                 />
             )}
+            {panel === 'visual' &&
+                tutor?.visual?.kind === 'filing' &&
+                tutor.visual.groups && (
+                    <FilingFigure groups={tutor.visual.groups} />
+                )}
             {panel === 'next' && tutor?.followUp && (
                 <div className="mt-3">
                     <p>
@@ -340,7 +402,7 @@ export function AnswerReveal({
                             }
                             className="mt-2 font-semibold text-[var(--civio-violet,#5b35f5)]"
                         >
-                            Open it
+                            Open It
                         </button>
                     )}
                 </div>

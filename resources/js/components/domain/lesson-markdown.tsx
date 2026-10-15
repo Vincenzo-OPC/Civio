@@ -217,7 +217,7 @@ function RevealableAnswer({
                     className="flex cursor-pointer items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-sm font-bold text-blue-700 transition-colors hover:bg-blue-100 dark:border-blue-900/50 dark:bg-blue-950/30 dark:text-blue-300 dark:hover:bg-blue-900/50"
                 >
                     <HelpCircle className="size-4" />
-                    Reveal Answer & Explanation
+                    Show Explanation
                 </button>
             </div>
         );

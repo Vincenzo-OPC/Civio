@@ -10,9 +10,11 @@ use App\Models\Subcategory;
 use App\Services\Exam\ExpoundService;
 use App\Services\Exam\MockPoolSelector;
 use App\Services\Exam\Reveal\Solvers\CheckedPatternSolver;
+use App\Services\Exam\Reveal\Solvers\FibonacciSequenceSolver;
 use App\Services\Exam\Reveal\Solvers\OrderOfOperationsSolver;
 use App\Services\Exam\Reveal\Solvers\RectanglePerimeterSolver;
 use App\Services\Exam\Reveal\Solvers\RevealSolver;
+use App\Services\Exam\Reveal\Solvers\TerminalDigitFilingSolver;
 
 /**
  * Structured reveal. A pattern explanation is published only when the
@@ -28,6 +30,8 @@ final class RevealTutor
     {
         $this->solvers = [
             new RectanglePerimeterSolver,
+            new TerminalDigitFilingSolver,
+            new FibonacciSequenceSolver,
             new OrderOfOperationsSolver($expound),
             new CheckedPatternSolver,
         ];

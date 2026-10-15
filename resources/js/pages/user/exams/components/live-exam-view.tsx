@@ -922,7 +922,7 @@ export function LiveExamView({
                                                                 : 'bg-[var(--civio-violet)] text-white'
                                                         }`}
                                                     >
-                                                        Reveal Answer
+                                                        Show Explanation
                                                     </button>
                                                 )}
                                                 {/* Copy for AI: drills and Study Mocks; hidden in a Strict Mock. */}

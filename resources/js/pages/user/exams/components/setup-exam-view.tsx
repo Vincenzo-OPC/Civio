@@ -21,8 +21,8 @@ import type { ExamMode } from '../utils/exam-mode';
 import { EXAM_MODE_LABELS, EXAM_MODES } from '../utils/exam-mode';
 
 const MODE_BLURBS: Record<ExamMode, string> = {
-    study: 'Practice the full mock with Reveal, Dexter, Copy Question and your chosen assistant on every item. The timer is your choice.',
-    strict: 'Exam-day rehearsal: always timed, no Reveal, Dexter, Copy Question or Ask. Answers unlock only after you submit.',
+    study: 'Practice the full mock with Show Explanation, Dexter, Copy Question and your chosen assistant on every item. The timer is your choice.',
+    strict: 'Exam-day rehearsal: always timed, no Show Explanation, Dexter, Copy Question or Ask. Answers unlock only after you submit.',
 };
 
 interface SetupExamViewProps {

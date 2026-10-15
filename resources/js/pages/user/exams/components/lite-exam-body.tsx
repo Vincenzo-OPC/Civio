@@ -175,7 +175,7 @@ export function LiteExamBody({
                                             : 'lite-tap rounded-lg bg-[var(--civio-violet)] px-4 text-sm font-semibold text-white'
                                     }
                                 >
-                                    Reveal Answer
+                                    Show Explanation
                                 </button>
                             )}
                             {showStudyTools && copyAttempt && (

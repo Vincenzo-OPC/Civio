@@ -110,3 +110,49 @@ it('does not add Taglish to a Filipino item', function () {
     expect($tutor['simpler'])->toBeNull()
         ->and($tutor['steps'])->not->toBeEmpty();
 });
+
+it('teaches terminal-digit filing by groups when the key is the last pair', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'In terminal-digit filing of 12-34-56, which pair is read first?',
+        'options' => ['12', '34', '56', '65'],
+        'correct_option' => 2,
+    ]));
+
+    expect($tutor['concept'])->toContain('last group')
+        ->and($tutor['steps'][0])->toBe('56 is the primary group. Read it first.')
+        ->and($tutor['shortcut'])->toContain('rightmost')
+        ->and($tutor['visual']['kind'] ?? null)->toBe('filing')
+        ->and($tutor['commonMistakes'][0]['choice'] ?? null)->toBe('12');
+});
+
+it('refuses a terminal-digit item whose key is not the last group', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'In terminal-digit filing of 12-34-56, which pair is read first?',
+        'options' => ['12', '34', '56', '65'],
+        'correct_option' => 0,
+    ]));
+
+    expect($tutor['visual'])->toBeNull()
+        ->and($tutor['shortcut'])->toBeNull();
+});
+
+it('teaches a Fibonacci-type sequence only when the next term matches the key', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Find the next number: 1, 1, 2, 3, 5, 8, ___',
+        'options' => ['11', '12', '13', '16'],
+        'correct_option' => 2,
+    ]));
+
+    expect($tutor['concept'])->toContain('Fibonacci-type')
+        ->and(implode(' ', $tutor['steps']))->toContain('5 + 8 = 13.');
+});
+
+it('does not call an ordinary sequence Fibonacci', function () {
+    $tutor = tutor()->forQuestion(tutorQuestion([
+        'stem' => 'Find the next number: 2, 4, 6, 8, ___',
+        'options' => ['9', '10', '12', '16'],
+        'correct_option' => 1,
+    ]));
+
+    expect($tutor['concept'])->not->toContain('Fibonacci');
+});

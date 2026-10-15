@@ -20,7 +20,7 @@ interface RevealSolver
      *     steps: list<string>,
      *     shortcut: string|null,
      *     commonMistakes: list<array{choice: string, why: string}>,
-     *     visual: array{kind: string, length: float, width: float, unit: string}|null
+     *     visual: array<string, mixed>|null
      * }|null
      */
     public function solve(Question $question): ?array;
