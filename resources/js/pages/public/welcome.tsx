@@ -52,84 +52,93 @@ export default function Welcome() {
                     content="Practice Civil Service Exam questions with timed mocks and explanations. Civio is an independent reviewer, not the Civil Service Commission."
                 />
             </Head>
-            <SiteHeader activeNav="home" />
-            <main className="bg-[#FAFAF7] text-[#101426] dark:bg-black dark:text-[#FAFAF7]">
-                <div className="mx-auto flex w-full max-w-3xl flex-col gap-10 px-4 py-8 sm:px-6 sm:py-12">
-                    <header className="civio-rise flex flex-col gap-3">
-                        <p className="text-xs font-semibold tracking-[0.18em] text-[#5B35F5] dark:text-[#B6F72D]">
-                            PHILIPPINE CIVIL SERVICE EXAM
-                        </p>
-                        <h1 className="font-heading text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
-                            Choose Your Exam.
-                        </h1>
-                    </header>
+            <div className="civio-glass-stage">
+                <div className="civio-glass-wash" aria-hidden />
+                <div className="relative">
+                    <SiteHeader activeNav="home" />
+                    <main>
+                        <div className="mx-auto flex w-full max-w-3xl flex-col gap-10 px-4 py-8 sm:px-6 sm:py-12">
+                            <header className="civio-rise flex flex-col gap-3">
+                                <p className="text-xs font-semibold tracking-[0.18em] text-[#5B35F5] dark:text-[#B6F72D]">
+                                    PHILIPPINE CIVIL SERVICE EXAM
+                                </p>
+                                <h1 className="font-heading text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+                                    Choose Your Exam.
+                                </h1>
+                            </header>
 
-                    <ExamLevelPicker value={level} onChange={setLevel} />
+                            <ExamLevelPicker
+                                value={level}
+                                onChange={setLevel}
+                            />
 
-                    <div
-                        className="civio-rise flex flex-col gap-3 sm:flex-row sm:items-center"
-                        style={{ animationDelay: '180ms' }}
-                    >
-                        <button
-                            type="button"
-                            onClick={startExam}
-                            className="inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-[#5B35F5] px-5 py-3 text-sm font-semibold text-white transition-[transform,background-color] duration-200 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] focus-visible:outline-none active:scale-[0.98] motion-reduce:transform-none sm:w-auto dark:bg-[#B6F72D] dark:text-[#0A0A0A] dark:hover:bg-[#C6F55A] dark:focus-visible:ring-[#B6F72D] dark:focus-visible:ring-offset-black"
-                        >
-                            Continue with {name}
-                        </button>
-                        <Link
-                            href="/drills"
-                            className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border-2 border-[#E3E5EA] bg-white px-5 py-3 text-sm font-semibold transition-colors hover:border-[#5B35F5]/40 focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] focus-visible:outline-none sm:w-auto dark:border-[#2a2a2a] dark:bg-transparent dark:hover:border-[#B6F72D]/60 dark:focus-visible:ring-[#B6F72D] dark:focus-visible:ring-offset-black"
-                        >
-                            Practice by Topic
-                        </Link>
-                    </div>
+                            <div
+                                className="civio-rise flex flex-col gap-3 sm:flex-row sm:items-center"
+                                style={{ animationDelay: '180ms' }}
+                            >
+                                <button
+                                    type="button"
+                                    onClick={startExam}
+                                    className="inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-[#5B35F5] px-5 py-3 text-sm font-semibold text-white transition-[transform,background-color] duration-200 hover:bg-[#4a2ad4] focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] focus-visible:outline-none active:scale-[0.98] motion-reduce:transform-none sm:w-auto dark:bg-[#B6F72D] dark:text-[#0A0A0A] dark:hover:bg-[#C6F55A] dark:focus-visible:ring-[#B6F72D] dark:focus-visible:ring-offset-black"
+                                >
+                                    Continue with {name}
+                                </button>
+                                <Link
+                                    href="/drills"
+                                    className="civio-glass inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-white/70 px-5 py-3 text-sm font-semibold transition-colors hover:border-[#5B35F5]/40 focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] focus-visible:outline-none sm:w-auto dark:border-white/10 dark:hover:border-[#B6F72D]/60 dark:focus-visible:ring-[#B6F72D] dark:focus-visible:ring-offset-black"
+                                >
+                                    Practice by Topic
+                                </Link>
+                            </div>
 
-                    <section
-                        aria-label="Practice Modes"
-                        className="flex flex-col gap-4"
-                    >
-                        <h2 className="font-heading text-xl font-semibold tracking-tight">
-                            Practice Modes
-                        </h2>
-                        <div className="grid gap-3 sm:grid-cols-3">
-                            {MODES.map((mode) => {
-                                const Icon = mode.icon;
+                            <section
+                                aria-label="Practice Modes"
+                                className="flex flex-col gap-4"
+                            >
+                                <h2 className="font-heading text-xl font-semibold tracking-tight">
+                                    Practice Modes
+                                </h2>
+                                <div className="grid gap-3 sm:grid-cols-3">
+                                    {MODES.map((mode) => {
+                                        const Icon = mode.icon;
 
-                                return (
-                                    <Link
-                                        key={mode.name}
-                                        href={
-                                            mode.href === '/drills'
-                                                ? '/drills'
-                                                : mode.name === 'Study Mode'
-                                                  ? `/exams?start=${level}${auth?.user ? '' : '&free_attempt=1'}`
-                                                  : '/exams'
-                                        }
-                                        className="flex flex-col gap-3 rounded-2xl border border-[#E3E5EA] bg-white p-4 transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-[#5B35F5]/40 hover:shadow-sm focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:outline-none motion-reduce:transform-none dark:border-[#2a2a2a] dark:bg-[#141414] dark:hover:border-[#B6F72D]/60"
-                                    >
-                                        <Icon
-                                            className="size-5 text-[#5B35F5] dark:text-[#B6F72D]"
-                                            aria-hidden
-                                        />
-                                        <span className="font-heading text-base font-semibold tracking-tight">
-                                            {mode.name}
-                                        </span>
-                                        <span className="text-sm leading-relaxed text-[#101426]/75 dark:text-[#FAFAF7]/75">
-                                            {mode.description}
-                                        </span>
-                                    </Link>
-                                );
-                            })}
+                                        return (
+                                            <Link
+                                                key={mode.name}
+                                                href={
+                                                    mode.href === '/drills'
+                                                        ? '/drills'
+                                                        : mode.name ===
+                                                            'Study Mode'
+                                                          ? `/exams?start=${level}${auth?.user ? '' : '&free_attempt=1'}`
+                                                          : '/exams'
+                                                }
+                                                className="civio-glass flex flex-col gap-3 rounded-2xl border border-white/70 p-4 transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-[#5B35F5]/40 hover:shadow-sm focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:outline-none motion-reduce:transform-none dark:border-white/10 dark:hover:border-[#B6F72D]/60"
+                                            >
+                                                <Icon
+                                                    className="size-5 text-[#5B35F5] dark:text-[#B6F72D]"
+                                                    aria-hidden
+                                                />
+                                                <span className="font-heading text-base font-semibold tracking-tight">
+                                                    {mode.name}
+                                                </span>
+                                                <span className="text-sm leading-relaxed text-[#101426]/75 dark:text-[#FAFAF7]/75">
+                                                    {mode.description}
+                                                </span>
+                                            </Link>
+                                        );
+                                    })}
+                                </div>
+                            </section>
+
+                            <ExamScreenPreview />
+
+                            <ExamFormat />
                         </div>
-                    </section>
-
-                    <ExamScreenPreview />
-
-                    <ExamFormat />
+                    </main>
+                    <SiteFooter />
                 </div>
-            </main>
-            <SiteFooter />
+            </div>
         </>
     );
 }

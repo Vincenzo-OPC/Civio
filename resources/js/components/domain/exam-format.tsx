@@ -54,7 +54,7 @@ export default function ExamFormat() {
     return (
         <section
             aria-label="About the Exam"
-            className="civio-rise rounded-2xl border border-[#E3E5EA] bg-white p-5 text-[#101426] sm:p-6 dark:border-[#2a2a2a] dark:bg-[#141414] dark:text-[#FAFAF7]"
+            className="civio-glass civio-rise rounded-2xl border border-white/70 p-5 text-[#101426] sm:p-6 dark:border-white/10 dark:text-[#FAFAF7]"
             style={{ animationDelay: '280ms' }}
         >
             <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">

@@ -119,7 +119,7 @@ export default function SiteHeader({
             />
 
             <header
-                className={`sticky top-0 left-0 z-50 w-full border-b border-[#E3E5EA] bg-[#FAFAF7] text-sm text-[#101426] transition-all duration-300 not-has-[nav]:hidden dark:border-[#2a2a2a] dark:bg-black dark:text-[#FAFAF7] ${
+                className={`civio-glass sticky top-0 left-0 z-50 w-full border-b border-white/70 text-sm text-[#101426] transition-all duration-300 not-has-[nav]:hidden dark:border-white/10 dark:text-[#FAFAF7] ${
                     showHeader ? 'translate-y-0 shadow-sm' : '-translate-y-full'
                 }`}
             >

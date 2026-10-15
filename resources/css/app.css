@@ -258,6 +258,85 @@ html.lite {
     --civio-error: #ff8a8d;
 }
 
+/* Frosted surfaces. The wash sits behind the cards so the blur has color to catch. */
+.civio-glass-stage {
+    position: relative;
+    isolation: isolate;
+    background: #fafaf7;
+    color: #101426;
+}
+
+.dark .civio-glass-stage {
+    background: #000000;
+    color: #fafaf7;
+}
+
+.civio-glass-wash {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            42rem 24rem at 8% -8%,
+            color-mix(in srgb, #5b35f5 14%, transparent),
+            transparent 70%
+        ),
+        radial-gradient(
+            34rem 20rem at 100% 12%,
+            color-mix(in srgb, #b6f72d 18%, transparent),
+            transparent 68%
+        );
+}
+
+.dark .civio-glass-wash {
+    background:
+        radial-gradient(
+            40rem 22rem at 0% -6%,
+            color-mix(in srgb, #b6f72d 16%, transparent),
+            transparent 70%
+        ),
+        radial-gradient(
+            28rem 18rem at 100% 20%,
+            color-mix(in srgb, #ffffff 7%, transparent),
+            transparent 72%
+        );
+}
+
+.civio-glass {
+    background: color-mix(in srgb, #ffffff 64%, transparent);
+    -webkit-backdrop-filter: blur(18px) saturate(1.3);
+    backdrop-filter: blur(18px) saturate(1.3);
+}
+
+.dark .civio-glass {
+    background: color-mix(in srgb, #0a0a0a 58%, transparent);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    .civio-glass {
+        background: #ffffff;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    .dark .civio-glass {
+        background: #141414;
+    }
+
+    .civio-glass-wash {
+        display: none;
+    }
+}
+
+html.lite .civio-glass {
+    background: #ffffff;
+}
+
+html.lite.dark .civio-glass {
+    background: #141414;
+}
+
 /* Time dial: the ring draws once, or tracks time left. No tick marks. */
 @keyframes civio-arc-draw {
     from {
