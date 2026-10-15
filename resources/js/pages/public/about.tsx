@@ -47,7 +47,7 @@ export default function About() {
                             Step-by-Step, Exam Tip, Common Mistake, and Diagram
                             appear only when that part exists. Copy Question and
                             Ask send the item out. They do not grade it. A
-                            Strict Mock hides all of these until you submit.
+                            Exam Mode hides all of these until you submit.
                         </p>
                     </section>
 

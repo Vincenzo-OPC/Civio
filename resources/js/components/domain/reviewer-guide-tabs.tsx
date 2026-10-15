@@ -107,14 +107,14 @@ export function ReviewerGuideTabs({
         {
             id: 'mock-exams',
             title: 'Exam Simulation',
-            badge: 'Study Mock or Strict Mock',
+            badge: 'Study Mode or Exam Mode',
             icon: ClipboardList,
             color: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-900/40',
             summary:
                 'Realistic exam simulations matching the exact question count, subtest distribution, and strict time limits.',
             steps: [
                 'Select Professional (150 scored items, 3h 10m) or Subprofessional (145 scored items, 2h 40m). The unscored demographic items of the real exam are left out.',
-                'Choose Study Mock (Reveal on every item, timer optional) or Strict Mock (always timed, answers locked until you submit).',
+                'Choose Study Mode (Show Explanation on every item, timer optional) or Exam Mode (always timed, answers locked until you submit).',
                 'Use the interactive Question Palette on the right to track answered, skipped, and flagged items.',
                 'Use the "Flag for Review" feature to mark difficult items and revisit them before final submission.',
             ],
@@ -203,11 +203,11 @@ export function ReviewerGuideTabs({
         },
         {
             phase: 'Phase 4',
-            title: 'Strict Mock Rehearsal',
+            title: 'Exam Mode Rehearsal',
             icon: Clock,
             color: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30',
             description:
-                'Take a Strict Mock at the real time limit: 150 scored items in 3 hours 10 minutes, or 145 in 2 hours 40 minutes. The clock is practice. It does not mean you will pass.',
+                'Take Exam Mode at the real time limit: 150 scored items in 3 hours 10 minutes, or 145 in 2 hours 40 minutes. The clock is practice. It does not mean you will pass.',
             actionLabel: 'Open a mock',
             actionUrl: '/exams',
             tips: [
@@ -338,7 +338,7 @@ export function ReviewerGuideTabs({
         {
             title: 'Time per item',
             description:
-                'In Civio mocks you have about 76 seconds per item on Professional (150 items in 3h 10m) and about 66 seconds on Subprofessional (145 items in 2h 40m). Train your pace in a Strict Mock.',
+                'In Civio mocks you have about 76 seconds per item on Professional (150 items in 3h 10m) and about 66 seconds on Subprofessional (145 items in 2h 40m). Train your pace in Exam Mode.',
             icon: Clock,
             color: 'border-l-blue-500 text-blue-600 dark:text-blue-400',
         },

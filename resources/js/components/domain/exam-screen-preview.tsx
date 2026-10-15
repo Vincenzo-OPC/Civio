@@ -33,7 +33,7 @@ export function ExamScreenPreview() {
 
             <div className="flex items-center justify-between gap-3 px-3 py-2 text-xs sm:px-5">
                 <p className="min-w-0">
-                    <span className="text-sm font-semibold">Study Mock</span>
+                    <span className="text-sm font-semibold">Study Mode</span>
                     <span className="mx-1.5 opacity-40">·</span>
                     <span className="font-semibold">1 of 150</span>
                     <span className="mt-0.5 block opacity-60">
@@ -106,7 +106,7 @@ export function ExamScreenPreview() {
                 </div>
             </div>
             <figcaption className="sr-only">
-                The Study Mock screen. Item 1 of 150. Choice B is selected. This
+                The Study Mode screen. Item 1 of 150. Choice B is selected. This
                 picture is not a scored item.
             </figcaption>
         </figure>

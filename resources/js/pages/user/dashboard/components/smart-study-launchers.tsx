@@ -158,7 +158,7 @@ export function SmartStudyLaunchers({
                             Exam Simulation
                         </h3>
                         <p className="mt-0.5 line-clamp-1 text-[11px] text-slate-500 dark:text-slate-400">
-                            Study Mock or Strict Mock
+                            Study Mode or Exam Mode
                         </p>
                     </div>
                     <div className="mt-3 flex items-center gap-1 text-[11px] font-bold text-emerald-600 transition-transform group-hover:translate-x-0.5 dark:text-emerald-400">

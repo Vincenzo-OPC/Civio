@@ -491,7 +491,7 @@ export function ScorecardView({
                                                         cx="50"
                                                         cy="50"
                                                         r={radius}
-                                                        className={`fill-none transition-all duration-700 ${isPassed ? 'stroke-emerald-600 dark:stroke-emerald-500' : 'stroke-rose-600 dark:stroke-rose-500'}`}
+                                                        className="fill-none stroke-[#5B35F5] transition-all duration-700 dark:stroke-[#C4B6FF]"
                                                         strokeWidth="7"
                                                         strokeDasharray={
                                                             circumference
@@ -504,26 +504,26 @@ export function ScorecardView({
                                                 </svg>
                                                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                                                     <span
-                                                        className={`text-3xl leading-none font-black tracking-tight sm:text-4xl ${isPassed ? 'text-foreground' : 'text-rose-600 dark:text-rose-400'}`}
+                                                        className="font-heading text-3xl leading-none font-semibold tracking-tight text-[#101426] tabular-nums sm:text-4xl dark:text-[#FAFAF7]"
                                                     >
                                                         {formattedPercentage}%
                                                     </span>
-                                                    <span className="mt-1 text-[10px] font-bold tracking-wider text-muted-foreground uppercase">
-                                                        Passing: 80%
+                                                    <span className="mt-1 text-[0.65rem] tracking-[0.14em] text-[#101426]/60 uppercase dark:text-[#FAFAF7]/60">
+                                                        Passing Mark
                                                     </span>
                                                 </div>
                                             </div>
                                             <div className="mt-3 flex flex-col items-center gap-1">
                                                 <span
-                                                    className={`inline-flex rounded-full px-3 py-1 text-xs font-black tracking-wider uppercase ${isPassed ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-400'}`}
+                                                    className="inline-flex rounded-full bg-[#FAFAF7] px-3 py-1 text-xs font-semibold text-[#101426] dark:bg-[#101426] dark:text-[#FAFAF7]"
                                                 >
                                                     {isPassed
-                                                        ? 'PASSED'
-                                                        : 'FAILED'}
+                                                        ? 'At Least 80.00'
+                                                        : 'Below 80.00'}
                                                 </span>
                                                 <p className="text-center text-xs font-medium text-muted-foreground">
-                                                    Official Civil Service
-                                                    Target
+                                                    A practice rating. Not an official
+                                                    result.
                                                 </p>
                                             </div>
                                         </div>

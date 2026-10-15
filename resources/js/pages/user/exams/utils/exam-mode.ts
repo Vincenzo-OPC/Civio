@@ -1,8 +1,8 @@
 /**
  * Exam Simulation modes.
  *
- * - Study Mock: Reveal, Dexter, Copy for AI and Ask ChatGPT per item; the timer is optional.
- * - Strict Mock: exam rehearsal. The timer is always on and the server keeps
+ * - Study Mode: Show Explanation, Dexter, Copy Question and Ask on every item; the timer is optional.
+ * - Exam Mode: exam rehearsal. The timer is always on and the server keeps
  *   every key locked until the mock is submitted (StrictMockLock).
  *
  * Drills are not mocks: they always keep their study tools.
@@ -12,8 +12,8 @@ export type ExamMode = 'study' | 'strict';
 export const EXAM_MODES: readonly ExamMode[] = ['study', 'strict'];
 
 export const EXAM_MODE_LABELS: Record<ExamMode, string> = {
-    study: 'Study Mock',
-    strict: 'Strict Mock',
+    study: 'Study Mode',
+    strict: 'Exam Mode',
 };
 
 export function parseExamMode(value: unknown): ExamMode {

@@ -67,7 +67,7 @@ export function SetupExamView({
                 <div className="mb-8 flex items-start gap-3">
                     <PageHeader
                         title="Exam Simulation"
-                        description="Pick your level, then choose Study Mock (learn as you go) or Strict Mock (exam-day rehearsal)."
+                        description="Pick a level, then choose Study Mode or Exam Mode."
                         tooltip="A full-length mock built on the Civil Service Exam format. Civio is not affiliated with the CSC."
                     />
                     <div className="mt-1">
@@ -77,12 +77,12 @@ export function SetupExamView({
                                 {
                                     icon: <Clock className="size-4" />,
                                     title: 'Two Modes',
-                                    text: 'Study Mock keeps Reveal on every item and lets you turn the timer off. Strict Mock is always timed and cannot be paused.',
+                                    text: 'Study Mode keeps Show Explanation on every item and lets you turn the timer off. Exam Mode is always timed and cannot be paused.',
                                 },
                                 {
                                     icon: <BarChart className="size-4" />,
                                     title: 'Post-Exam Review',
-                                    text: 'In a Strict Mock, answers stay locked until you submit the whole exam. Then use the review to study your mistakes.',
+                                    text: 'In Exam Mode, answers stay locked until you submit the whole exam. Then use the review to study your mistakes.',
                                 },
                                 {
                                     icon: <Target className="size-4" />,
@@ -112,21 +112,21 @@ export function SetupExamView({
                         />
 
                         {/* Exam Simulation mode */}
-                        <fieldset className="rounded-xl border-2 border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
-                            <legend className="px-1 font-heading text-sm font-black tracking-tight text-slate-900 dark:text-white">
+                        <fieldset className="rounded-2xl border border-[#E3E5EA] bg-white p-5 dark:border-[#3a415c] dark:bg-[#1a1e30]">
+                            <legend className="px-1 font-heading text-sm font-semibold tracking-tight text-[#101426] dark:text-[#FAFAF7]">
                                 Mode
                             </legend>
                             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                                 {EXAM_MODES.map((mode) => (
                                     <label
                                         key={mode}
-                                        className={`flex cursor-pointer flex-col gap-1 rounded-lg border-2 p-3 ${
+                                        className={`flex cursor-pointer flex-col gap-1 rounded-xl border p-3 transition-colors ${
                                             examMode === mode
-                                                ? 'border-[#5B35F5] bg-[#F4F5F2] dark:border-[#8b74ff] dark:bg-[#1a1e30]'
-                                                : 'border-[#E3E5EA] dark:border-[#2c3148]'
+                                                ? 'border-2 border-[#5B35F5] bg-[#FAFAF7] dark:border-[#C4B6FF] dark:bg-[#101426]'
+                                                : 'border-[#E3E5EA] hover:border-[#5B35F5]/40 dark:border-[#2c3148]'
                                         }`}
                                     >
-                                        <span className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
+                                        <span className="flex items-center gap-2 text-sm font-semibold text-[#101426] dark:text-[#FAFAF7]">
                                             <input
                                                 type="radio"
                                                 name="exam-mode"
@@ -156,8 +156,8 @@ export function SetupExamView({
                                     }
                                 />
                                 {examMode === 'strict'
-                                    ? 'Timer on (always on in Strict Mock)'
-                                    : 'Time this Study Mock'}
+                                    ? 'Timer stays on in Exam Mode'
+                                    : 'Time this Study Mode'}
                             </label>
                         </fieldset>
                     </div>
@@ -177,7 +177,7 @@ export function SetupExamView({
                                         <List className="size-4 text-slate-400 dark:text-slate-500" />
                                         <span>Total Items</span>
                                     </div>
-                                    <span className="font-bold text-slate-900 dark:text-white">
+                                    <span className="font-semibold text-[#101426] tabular-nums dark:text-[#FAFAF7]">
                                         {details.totalItems}
                                     </span>
                                 </div>
@@ -188,7 +188,7 @@ export function SetupExamView({
                                         <CheckCircle2 className="size-4 text-slate-400 dark:text-slate-500" />
                                         <span>Scored Items</span>
                                     </div>
-                                    <span className="font-bold text-slate-900 dark:text-white">
+                                    <span className="font-semibold text-[#101426] tabular-nums dark:text-[#FAFAF7]">
                                         {details.scoredItems}
                                     </span>
                                 </div>
@@ -199,7 +199,7 @@ export function SetupExamView({
                                         <Clock className="size-4 text-slate-400 dark:text-slate-500" />
                                         <span>Time Limit</span>
                                     </div>
-                                    <span className="font-bold text-slate-900 dark:text-white">
+                                    <span className="font-semibold text-[#101426] tabular-nums dark:text-[#FAFAF7]">
                                         {examMode === 'study' && !studyTimed
                                             ? 'Untimed'
                                             : details.timeLimit}
@@ -212,7 +212,7 @@ export function SetupExamView({
                                         <Timer className="size-4 text-slate-400 dark:text-slate-500" />
                                         <span>Target Pace</span>
                                     </div>
-                                    <span className="font-bold text-slate-900 dark:text-white">
+                                    <span className="font-semibold text-[#101426] tabular-nums dark:text-[#FAFAF7]">
                                         {details.targetPace}
                                     </span>
                                 </div>
@@ -244,13 +244,9 @@ export function SetupExamView({
                             )}
                         </div>
 
-                        <p className="mt-2 text-center text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
-                            💡{' '}
-                            <span className="font-semibold text-slate-700 dark:text-slate-300">
-                                PDF Booklet:
-                            </span>{' '}
-                            Automatically generates a high-resolution, A4 PDF
-                            exam booklet with answer key.
+                        <p className="mt-3 text-center text-xs leading-relaxed text-[#101426]/60 dark:text-[#FAFAF7]/60">
+                            A PDF booklet is available when your account can
+                            download it. The answer key is included.
                         </p>
                     </div>
                 </div>

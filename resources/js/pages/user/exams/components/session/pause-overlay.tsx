@@ -20,7 +20,7 @@ export function PauseOverlay({ strict, onResume }: PauseOverlayProps) {
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--civio-ink)]/80">
                     {strict
-                        ? 'This Strict Mock was restored with the clock stopped. Continue when you are ready. You cannot pause during the exam.'
+                        ? 'This Exam Mode was restored with the clock stopped. Continue when you are ready. You cannot pause during the exam.'
                         : 'Pause freezes the session clock and the time on this item. It is a study convenience, not an uninterrupted official exam.'}
                 </p>
                 <button

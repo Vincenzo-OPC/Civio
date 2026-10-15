@@ -38,7 +38,7 @@ import type { ExamClockSnapshot } from '../hooks/use-exam-timer';
 import type { Question, SimulationDetails } from '../types';
 import { answerOptionVisual } from '../utils/answer-state';
 import type { ExamMode } from '../utils/exam-mode';
-import { showsStudyTools } from '../utils/exam-mode';
+import { showsStudyTools, EXAM_MODE_LABELS } from '../utils/exam-mode';
 import { AskAssistantButton } from './ask-assistant-button';
 import { CopyForAiButton } from './copy-for-ai-button';
 import { ExamTimerDisplay } from './exam-timer-display';
@@ -749,10 +749,8 @@ export function LiveExamView({
                                 <p className="min-w-0 flex-1 text-[var(--civio-ink)]">
                                     <span className="text-sm font-semibold">
                                         {isDrillSession
-                                            ? 'Drill'
-                                            : examMode === 'strict'
-                                              ? 'Strict Mock'
-                                              : 'Study Mock'}
+                                            ? 'Practice Drills'
+                                            : EXAM_MODE_LABELS[examMode]}
                                     </span>
                                     {activeQuestion && (
                                         <>

@@ -12,8 +12,8 @@ import { mockSessionBody } from '../../resources/js/pages/user/exams/utils/mock-
 describe('Exam Simulation modes', () => {
     it('labels the two modes', () => {
         assert.deepEqual(EXAM_MODE_LABELS, {
-            study: 'Study Mock',
-            strict: 'Strict Mock',
+            study: 'Study Mode',
+            strict: 'Exam Mode',
         });
     });
 

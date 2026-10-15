@@ -104,6 +104,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | A number list is taught when the rule is a constant gap, a constant multiplier, or consecutive squares. Mean, median, percent change, simple interest, and a greatest common factor are taught the same way: only when the recomputed value is the stored answer. | Most of the number items in the bank were still a stored sentence. These rules can be checked. | `9256312` |
 | The explanation engine, Dexter, Copy Question, and Ask are written up in `docs/ENGINES.md`, linked from the README and the architecture note. About has a short plain version. | The rules were in code and in phase notes, not in one place a reader could open. | `216f824` |
 | The homepage now leads with Choose Your Exam, the two sittings as question counts and durations, Practice Modes, and an 80% passing mark. The header reads CSE REVIEWER. Sign In and Create Account replace the old header labels. | The page was already the right product. The type, the numbers, and the mode names needed to be set on purpose. | `d6e673d` |
+| Setup, the live exam, the guide, and the scorecard now say Study Mode and Exam Mode. The score ring uses the same violet as the homepage and does not say Passed or Failed. | The homepage names and the exam screens had drifted. A practice rating is not an official result. | |
 
 ### Bank and seeds
 
