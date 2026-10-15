@@ -116,7 +116,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Similar Item asks the assistant for one new question and stays on the exam. Explanation actions are buttons. Auto-Next is gone. Flag, the question list, and cross-out explain themselves on hover. | Try Another left the exam and showed an item with no choices. The explanation links looked like plain text. Auto-Next and the word Palette were leftover chrome. | `abd3d53` |
 | Report, explanation actions, Copy Question, and Ask sit on the same size chips, with space between them. | On dark, a hairline border disappeared, so the actions still looked like a line of text. | `ca1de88` |
 | Study actions share one button: a real fill, a hover state, and lime for Show Explanation in dark mode. | The chips were flat gray boxes with no hover and a purple primary that fought the dark surface. | `139da2a` |
-| Study and navigation buttons are filled capsules with no outline. Light primary is black. Dark primary is the logo green. | The bordered gray boxes still looked like form fields, not Apple or Meta controls. | |
+| Study and navigation buttons are filled capsules with no outline. Light primary is black. Dark primary is the logo green. | The bordered gray boxes still looked like form fields, not Apple or Meta controls. | `0da175f` |
 
 ### Bank and seeds
 
