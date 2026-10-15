@@ -204,32 +204,18 @@ export default function SiteHeader({
                         ) : (
                             <>
                                 {guestUnlimited ? (
-                                    <>
-                                        <Button
-                                            variant="ghost"
-                                            uppercase={false}
-                                            asChild
+                                    <Button
+                                        uppercase={false}
+                                        className="bg-[#5B35F5] font-medium hover:bg-[#3D20C8]"
+                                        asChild
+                                    >
+                                        <Link
+                                            href="/exams?start=professional&free_attempt=1"
+                                            className="transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                                         >
-                                            <Link
-                                                href="/drills"
-                                                className="font-medium text-[#5B35F5]"
-                                            >
-                                                Drills
-                                            </Link>
-                                        </Button>
-                                        <Button
-                                            uppercase={false}
-                                            className="bg-[#5B35F5] font-medium hover:bg-[#3D20C8]"
-                                            asChild
-                                        >
-                                            <Link
-                                                href="/exams?start=professional&free_attempt=1"
-                                                className="transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-                                            >
-                                                Start Pro
-                                            </Link>
-                                        </Button>
-                                    </>
+                                            Start Pro
+                                        </Link>
+                                    </Button>
                                 ) : (
                                     <>
                                         <Button

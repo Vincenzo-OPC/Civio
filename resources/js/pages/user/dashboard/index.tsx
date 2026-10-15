@@ -2,7 +2,6 @@ import { Deferred, Head, usePage } from '@inertiajs/react';
 import { useEffect } from 'react';
 import { AnnouncementsBanner } from '@/components/domain/announcements-banner';
 import { PageContainer } from '@/components/layout/page-container';
-import LiteModeToggle from '@/components/shared/lite-mode-toggle';
 import { AiReadinessBentoCard } from '@/pages/user/dashboard/components/ai-readiness-bento-card';
 import { DailyGoalStreakCard } from '@/pages/user/dashboard/components/daily-goal-streak-card';
 import { DashboardHero } from '@/pages/user/dashboard/components/dashboard-hero';
@@ -40,10 +39,6 @@ export default function Dashboard({
             {/* Global Announcements Banner */}
             <AnnouncementsBanner />
 
-            <div className="-mb-2 flex justify-end sm:-mb-3">
-                <LiteModeToggle />
-            </div>
-
             {/* High-Impact Integrated Hero Banner */}
             <DashboardHero
                 firstName={firstName}
@@ -53,7 +48,7 @@ export default function Dashboard({
             />
 
             {/* Bento Grid: 4 Core Modules */}
-            <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 items-start gap-5 sm:gap-6 md:grid-cols-2">
                 {/* Card 1: AI Readiness & Coaching */}
                 {/* Lite defers the analysis prop; show a text line until it lands. */}
                 <Deferred

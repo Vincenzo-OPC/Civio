@@ -23,7 +23,7 @@ export function ExamLevelPicker({ value, onChange }: ExamLevelPickerProps) {
     };
 
     return (
-        <div className="[--dial:#5B35F5] dark:[--dial:#A594FF]">
+        <div>
             <div
                 role="radiogroup"
                 aria-label="Choose Your Exam"

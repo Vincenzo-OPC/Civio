@@ -1,12 +1,6 @@
-import { Timer } from 'lucide-react';
 import React, { useSyncExternalStore } from 'react';
 import { TimeDial } from '@/components/domain/time-dial';
-import {
-    examClockTone,
-    formatExamLeft,
-    formatItemElapsed,
-    itemClockTone,
-} from '@/lib/exam-clock';
+import { examClockTone, formatExamLeft } from '@/lib/exam-clock';
 import type { ClockTone } from '@/lib/exam-clock';
 import { formatSitting } from '@/lib/exam-dials';
 import type { ExamClockSnapshot } from '../hooks/use-exam-timer';
@@ -36,12 +30,10 @@ function toneClass(tone: ClockTone): string {
 function ClockReadout({
     isTimed,
     timeLeft,
-    itemElapsed,
     totalSeconds,
 }: {
     isTimed: boolean;
     timeLeft: number;
-    itemElapsed: number;
     totalSeconds?: number;
 }) {
     const tone = examClockTone(timeLeft);
@@ -77,16 +69,6 @@ function ClockReadout({
             ) : (
                 <span className="text-[var(--civio-ink)]/60">Untimed</span>
             )}
-            <span className="text-[var(--civio-line)]" aria-hidden>
-                ·
-            </span>
-            <span
-                className={`inline-flex items-center gap-1 ${toneClass(itemClockTone(itemElapsed))}`}
-                title="Time on this item. Resets when you move."
-            >
-                <Timer className="size-3.5 shrink-0 opacity-70" />
-                {formatItemElapsed(itemElapsed)}
-            </span>
         </div>
     );
 }
@@ -112,7 +94,6 @@ function LiveClock({
         <ClockReadout
             isTimed={isTimed}
             timeLeft={snap.timeLeft}
-            itemElapsed={snap.itemElapsed}
             totalSeconds={totalSeconds}
         />
     );
@@ -121,7 +102,6 @@ function LiveClock({
 export const ExamTimerDisplay = React.memo(function ExamTimerDisplay({
     isTimed,
     timeLeft,
-    itemElapsed,
     totalSeconds,
     subscribeClock,
     getClockSnapshot,
@@ -141,7 +121,6 @@ export const ExamTimerDisplay = React.memo(function ExamTimerDisplay({
         <ClockReadout
             isTimed={isTimed}
             timeLeft={timeLeft}
-            itemElapsed={itemElapsed}
             totalSeconds={totalSeconds}
         />
     );

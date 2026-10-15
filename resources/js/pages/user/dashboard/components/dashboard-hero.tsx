@@ -1,6 +1,7 @@
 import { Link } from '@inertiajs/react';
 import { Calendar, ChevronDown, Play, GraduationCap } from 'lucide-react';
 import React from 'react';
+import LiteModeToggle from '@/components/shared/lite-mode-toggle';
 import { Button } from '@/components/ui/button';
 import {
     DropdownMenu,
@@ -36,16 +37,19 @@ export function DashboardHero({
         <div className="rounded-2xl border border-[#E3E5EA] bg-[#FAFAF7] p-5 sm:p-7 dark:border-slate-800 dark:bg-slate-900">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="space-y-3">
-                    <div className="flex flex-wrap items-center gap-2.5">
-                        <div className="inline-flex items-center rounded-full border border-[#E3E5EA] bg-white px-3 py-1 text-xs font-medium text-[#101426] dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200">
-                            Practice
-                        </div>
-
-                        {streak > 0 && (
+                    <div className="flex flex-wrap items-center justify-between gap-2.5">
+                        <div className="flex flex-wrap items-center gap-2.5">
                             <div className="inline-flex items-center rounded-full border border-[#E3E5EA] bg-white px-3 py-1 text-xs font-medium text-[#101426] dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200">
-                                {streak} day streak
+                                Practice
                             </div>
-                        )}
+
+                            {streak > 0 && (
+                                <div className="inline-flex items-center rounded-full border border-[#E3E5EA] bg-white px-3 py-1 text-xs font-medium text-[#101426] dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200">
+                                    {streak} day streak
+                                </div>
+                            )}
+                        </div>
+                        <LiteModeToggle />
                     </div>
 
                     <div>

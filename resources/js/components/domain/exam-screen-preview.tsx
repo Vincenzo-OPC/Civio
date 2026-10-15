@@ -1,4 +1,4 @@
-import { ChevronLeft, Flag, LayoutGrid, Moon, Timer } from 'lucide-react';
+import { ChevronLeft, Flag, LayoutGrid, Moon } from 'lucide-react';
 
 const CHOICES: { letter: string; text: string; selected?: boolean }[] = [
     { letter: 'A', text: '₱150' },
@@ -19,35 +19,6 @@ export function ExamScreenPreview() {
                     <ChevronLeft className="size-5" />
                 </span>
                 <span className="min-w-0 flex-1" />
-                <span className="inline-flex shrink-0 items-center gap-1.5 text-xs font-semibold tabular-nums">
-                    <svg viewBox="0 0 36 36" className="size-5" aria-hidden>
-                        <circle
-                            cx="18"
-                            cy="18"
-                            r="12"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeOpacity="0.18"
-                            strokeWidth="5"
-                        />
-                        <circle
-                            cx="18"
-                            cy="18"
-                            r="12"
-                            fill="none"
-                            stroke="var(--civio-violet)"
-                            strokeWidth="5"
-                            strokeDasharray="70 76"
-                            transform="rotate(-90 18 18)"
-                        />
-                    </svg>
-                    <span className="text-[var(--civio-ink)]/70">3:10:00</span>
-                    <span className="text-[var(--civio-line)]">·</span>
-                    <span className="inline-flex items-center gap-1 text-[var(--civio-ink)]/70">
-                        <Timer className="size-3.5 opacity-70" />
-                        0:12
-                    </span>
-                </span>
                 <span className="flex size-9 shrink-0 items-center justify-center text-[var(--civio-ink)]/60">
                     <Moon className="size-4" />
                 </span>

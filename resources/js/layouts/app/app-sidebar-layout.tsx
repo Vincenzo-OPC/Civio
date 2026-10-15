@@ -214,7 +214,9 @@ export default function AppSidebarLayout({
         return (
             <div className="flex min-h-screen flex-col bg-slate-50/30 dark:bg-slate-950/20">
                 <SiteHeader activeNav={activeNav} />
-                <main className="flex-1 px-4 py-12 sm:px-6">{children}</main>
+                <main className="flex-1 px-4 py-6 sm:px-6 sm:py-8">
+                    {children}
+                </main>
                 <SiteFooter />
                 <CookieConsentBanner />
             </div>

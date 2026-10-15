@@ -7,7 +7,7 @@ const ARC_RADIUS = 64;
 const TICK_LENGTH = { hour: 8, cardinal: 14 } as const;
 
 const ARC_TONE = {
-    calm: 'text-[var(--dial,var(--civio-violet,#5B35F5))]',
+    calm: 'text-[#B6F72D] dark:text-[#C6F55A]',
     amber: 'text-amber-700 dark:text-amber-300',
     red: 'text-[var(--civio-error,#e5484d)]',
     quiet: 'text-current',
