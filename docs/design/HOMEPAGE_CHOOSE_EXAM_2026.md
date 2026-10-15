@@ -21,55 +21,103 @@ Make it feel like Civio's approved **Focused Learning Canvas**:
 ## Actual code to update
 
 - `resources/js/pages/public/welcome.tsx` currently renders the H1, explanatory copy, picker, CTA row, duplicate links, `ExamScreenPreview`, and `ExamFormat`.
-- `resources/js/components/domain/exam-level-picker.tsx` currently includes a decorative `TimeDial` and a line saying the ring shows duration. Replace the ring with **150 questions / 3h 10m** and **145 questions / 2h 40m** as real text. Preserve keyboard-controlled radiogroup and accessible state.
+- `resources/js/components/domain/exam-level-picker.tsx` currently includes a decorative `TimeDial` and a line saying the ring shows duration. Replace the ring with **150 Questions / 3 hr 10 min** and **145 Questions / 2 hr 40 min** as consistently spaced real text. Preserve keyboard-controlled radiogroup and accessible state.
 - `resources/js/components/domain/exam-screen-preview.tsx` is a static screenshot with question 1/150; REMOVE IT FROM THE PUBLIC HOME. The component can remain if still used elsewhere.
 - `resources/js/components/domain/exam-format.tsx` currently shows an 80.00 circle, duplicates exam data and makes rating resemble score. Replace its homepage use with compact non-graphical CSC facts, or remove this component from the homepage.
 - `resources/js/lib/exam-dials.ts` is the existing source of truth for item counts, duration, and descriptions. Reuse it.
 - `resources/js/components/layout/site-header.tsx` and `site-footer.tsx` control header/footer. Simplify the homepage header if necessary without breaking other pages.
 
-## Recommended copy and visible content
+## Locked Homepage Microcopy and Typography Standard (15 October refinement)
 
-Eyebrow: `PHILIPPINE CIVIL SERVICE EXAM`
+The copy below **supersedes all prior wording** for this homepage. Do not restore the old prototype copy. Treat capitalization, punctuation, word spacing, and label casing as product-design decisions.
 
-H1: **Choose your exam.**
+### Rules
 
-Description: `The right practice starts here. Pick your level, choose how you want to study, and get straight to the questions.`
+- Product brand: **Civio**, never `CIVIO`, `Civio.`, or `Civio.CSE REVIEWER`. No added brand dot.
+- In the brand lockup only, the tiny secondary line may read **CSE REVIEWER**, uppercase with tracking and a visible gap beneath the name.
+- Eyebrow/overline: all caps, but only for one short micro-label such as **PHILIPPINE CIVIL SERVICE EXAM**. Keep font size and tracking intentionally restrained.
+- Page title, headings, form labels, option names, navigation and buttons: **Title Case**. E.g. `Choose Your Exam`, `Time Limit`, `Practice by Topic`, `Sign In`, `Create Account`.
+- Sentences/paragraphs, explanations, notes and legal text: **sentence case**; do not Title Case every word in prose.
+- No decorative punctuation on page titles: **Choose Your Exam**, not `Choose your exam.`.
+- Timing: always **3 hr 10 min** and **2 hr 40 min** in homepage UI (space before/after units). Do not mix `3h 10m`, `3 hours 10 minutes`, and `3 hr 10 min` in the same surface.
+- Counts: keep the number and unit visually separate, e.g. **150** / **Questions**, with explicit layout gap, never `150Questions` or `150 questions3h 10m`.
+- Control/metadata groups must have consistent baseline, gap, font size, and weight. Avoid arbitrary uppercase, broken responsive wrapping, icons touching text, or glued-together links.
+- Remove duplicated helper labels, numbering like `01 / LEARN`, repeated destinations, and verbose reassurance.
+- No feature claims on homepage that aren't implemented; avoid decorative AI badges, fake metrics and generic motivational copy.
 
-Level control, two **large radio options**, no ring:
+### Exact Content Order
+
+Header wordmark: **Civio**  
+Optional tiny wordmark subtitle: **CSE REVIEWER**
+
+Header account actions:
+- **Sign In**
+- **Create Account**
+
+Eyebrow (uppercase micro-label):
+`PHILIPPINE CIVIL SERVICE EXAM`
+
+H1: **Choose Your Exam**
+
+One-sentence introduction:
+`Choose your exam level and start practicing with a full-length mock.`
+
+Two selectable exam levels, **without** redundant "Exam Level / Select One to Continue" headings:
 
 **Professional**
-For professional, technical, and supervisory positions.
-- **150 scored questions**
-- **3h 10m time limit**
+`For professional, technical, and supervisory positions.`
+- `150` + `Questions`
+- `3 hr 10 min` + `Time Limit`
 
 **Subprofessional**
-For clerical, trades, and custodial positions.
-- **145 scored questions**
-- **2h 40m time limit**
+`For clerical, trades, and custodial positions.`
+- `145` + `Questions`
+- `2 hr 40 min` + `Time Limit`
 
-Primary CTA changes based on choice:
-- `Set Up Professional Mock →`
-- `Set Up Subprofessional Mock →`
+Dynamic primary CTA:
+- **Set Up Professional Mock** (when Professional is selected)
+- **Set Up Subprofessional Mock** (when Subprofessional is selected)
 
-Route must preserve existing `/exams?start=professional` or `/exams?start=subprofessional` and guest free-attempt behavior, as appropriate.
+Secondary destination: **Practice by Topic** → `/drills`.
 
-Secondary option: `I'd rather practice by topic ↗` → `/drills`.
+Helper sentence:
+`Choose Study Mock or Strict Mock on the next screen.`
 
-Below CTA: `Next: choose Study Mock or Strict Mock. Nothing starts until you're ready.`
+Secondary editorial section H2:
+**Three Ways to Prepare**
 
-If an authenticated learner has a genuinely resumable session, **Resume Studying** can be shown contextually with the actual resume destination. Do not call `/exams` a guaranteed resume link if no session exists.
+Three minimal text columns, **no numbered pre-labels, feature cards or duplicate links**:
+- **Study Mock:** `Answer questions and reveal explanations as you go.`
+- **Strict Mock:** `Practice against the clock. Review answers after submission.`
+- **Practice Drills:** `Focus on one skill at a time and strengthen weak areas.`
 
-## Learning mode explainer below first fold
+Quiet informational section:
+- Heading: **About the Exam**
+- Copy: `The CSC publishes a general passing rating of at least 80.00. Civio mocks include only the scored questions, excluding the separate 20-item Examinee Descriptive Questionnaire. Civio is independent and not affiliated with the CSC.`
+- Link: **CSC Exam Reference**
 
-Heading: **One goal. Three ways to prepare.**
+Footer:
+`© 2026 Civio. All rights reserved.`
+- **Terms**
+- **Privacy**
+- **Support**
 
-Three succinct editorial columns, no cards:
+### Visual Composition Requirements
 
-- **Study Mock:** Answer at your pace. Reveal explanations as you go; AI tutor optional.
-- **Strict Mock:** Realistic countdown, no answers or explanations until you submit.
-- **Practice Drills:** Work on one skill at a time, e.g. Clerical Ability / spelling.
+- One restrained header with brand left and account actions right. Do not replicate a second top-level nav on this public entry page if it dilutes the single exam-choice task.
+- On desktop, title/description can live left of the two-level selector; on mobile, stack them naturally. Do not add a decorative sidebar, screen preview or information rings.
+- Selected radio gets a violet border and explicit checked marker, not lime.
+- Title Case labels must remain legible and not become tiny all-caps labels to save space.
+- Keep both **Sign In** and **Create Account** accessible on mobile without collision or horizontal scrolling.
+- Keep CSC facts and independence disclosure visually quiet, below the primary action.
 
-The public homepage is primarily an entry page. Do NOT show an entire mock exam, report button, copy for AI button, personalized analytics or a Tutor thread on it. Those belong in Study Mode, and strict exam mode does not show them during the exam.
+Route must preserve existing `/exams?start=professional` and `/exams?start=subprofessional` and appropriate guest free-attempt behavior.
+
+If an authenticated learner has a genuinely resumable session, show **Resume Studying** contextually with a real resume destination. Do not imply that `/exams` guarantees resumption when no session exists.
+
+## Learning Modes Versus Homepage
+
+Study Mode contains Reveal, optional AI Tutor and Copy for AI. Strict Mock hides answers and explanations until submission. These modes should be explained concisely on the homepage, not rendered as static faux exam screen.
 
 ## Trust and CSC facts, below the core choice
 
