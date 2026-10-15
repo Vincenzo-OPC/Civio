@@ -109,7 +109,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Dark mode is black with the logo lime, not navy and violet. The passing ring is lime in dark mode. Copy Question says Question Copied. | The old dark palette fought the wordmark. Lime is the contrast color on black. | `0a6aeef` |
 | The homepage header, exam cards, practice modes, and passing panel are frosted glass over a soft wash. The question sample stays solid. Lite mode and reduced transparency turn the frost off. | Glass only reads when something sits behind it. The question text should stay easy to read. | `1de3bc2` |
 | Dark mode lime is the wordmark green, #B3F52D. The homepage sample's back, theme, flag, map, Tools, and Pause controls respond. Practice Drills uses the same page color. | The earlier lime was brighter than the logo. The sample chrome looked clickable and did nothing. | `a915211` |
-| The previous product name is gone from the app, the notes, and the storage code. Dark mode is flat black, with a solid selected card and the wordmark green as the only bright color. | The old name was still in notes and a storage prefix. Dark mode still carried the old blue buttons and a green fog. | |
+| The previous product name is gone from the app, the notes, and the storage code. Dark mode is flat black, with a solid selected card and the wordmark green as the only bright color. | The old name was still in notes and a storage prefix. Dark mode still carried the old blue buttons and a green fog. | `80c652c` |
 
 ### Bank and seeds
 
