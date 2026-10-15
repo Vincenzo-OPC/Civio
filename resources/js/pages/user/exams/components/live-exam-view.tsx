@@ -813,7 +813,7 @@ export function LiveExamView({
                                         onClick={() =>
                                             setIsScratchpadOpen(true)
                                         }
-                                        className="h-9 rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold"
+                                        className="civio-action"
                                     >
                                         <Edit3 className="mr-1 inline size-3.5" />
                                         Notes
@@ -823,7 +823,7 @@ export function LiveExamView({
                                         onClick={() =>
                                             setShowKeyboardModal(true)
                                         }
-                                        className="hidden h-9 items-center rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold sm:inline-flex"
+                                        className="civio-action hidden sm:inline-flex"
                                     >
                                         <Keyboard className="mr-1 size-3.5" />
                                         Keys
@@ -831,7 +831,7 @@ export function LiveExamView({
                                     <button
                                         type="button"
                                         onClick={toggleFullscreen}
-                                        className="hidden h-9 items-center rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold sm:inline-flex"
+                                        className="civio-action hidden sm:inline-flex"
                                     >
                                         {isFullscreen ? (
                                             <Minimize2 className="mr-1 size-3.5" />
@@ -867,7 +867,7 @@ export function LiveExamView({
                                                             true,
                                                         )
                                                     }
-                                                    className="inline-flex h-9 items-center rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold disabled:opacity-50"
+                                                    className="civio-action"
                                                 >
                                                     {isReported
                                                         ? 'Reported'
@@ -890,12 +890,12 @@ export function LiveExamView({
 
                                                             void handleReveal();
                                                         }}
-                                                        className={`inline-flex h-9 items-center rounded-lg px-3.5 text-[13px] font-semibold ${
+                                                        className={
                                                             revealedAnswer?.questionId ===
                                                             activeQuestion.id
-                                                                ? 'border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)]'
-                                                                : 'bg-[var(--civio-violet)] text-white'
-                                                        }`}
+                                                                ? 'civio-action'
+                                                                : 'civio-action civio-action-primary'
+                                                        }
                                                     >
                                                         {revealedAnswer?.questionId ===
                                                         activeQuestion.id
@@ -911,7 +911,7 @@ export function LiveExamView({
                                                         attempt={liveHandoffAttempt(
                                                             activeQuestion.id,
                                                         )}
-                                                        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold"
+                                                        className="civio-action"
                                                     />
                                                 )}
                                                 {studyTools && (
@@ -922,7 +922,7 @@ export function LiveExamView({
                                                         attempt={liveHandoffAttempt(
                                                             activeQuestion.id,
                                                         )}
-                                                        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold no-underline"
+                                                        className="civio-action"
                                                     />
                                                 )}
                                             </div>

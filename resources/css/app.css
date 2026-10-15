@@ -258,6 +258,90 @@ html.lite {
     --civio-error: #ff8a8d;
 }
 
+/* Study actions. One height, one radius, a real fill so they are not a line of text. */
+.civio-session .civio-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    height: 2rem;
+    padding: 0 0.8rem;
+    border-radius: 0.625rem;
+    border: 1px solid color-mix(in srgb, var(--civio-ink) 12%, transparent);
+    background: #fff;
+    color: var(--civio-ink);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: -0.011em;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 1px 1px rgba(16, 20, 38, 0.04);
+    transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        color 160ms ease;
+}
+
+.civio-session .civio-action:hover {
+    background: var(--civio-surface);
+    border-color: color-mix(in srgb, var(--civio-ink) 24%, transparent);
+}
+
+.civio-session .civio-action:disabled {
+    opacity: 0.45;
+}
+
+.civio-session .civio-action[aria-expanded='true'] {
+    border-color: var(--civio-violet);
+    background: color-mix(in srgb, var(--civio-violet) 10%, #fff);
+    color: var(--civio-violet-deep);
+}
+
+.civio-session .civio-action-primary {
+    border-color: transparent;
+    background: var(--civio-violet);
+    color: #fff;
+    box-shadow: none;
+}
+
+.civio-session .civio-action-primary:hover {
+    background: var(--civio-violet-deep);
+    color: #fff;
+}
+
+.dark .civio-session .civio-action {
+    border-color: #2e2e2e;
+    background: #161616;
+    box-shadow: none;
+}
+
+.dark .civio-session .civio-action:hover {
+    border-color: #3d3d3d;
+    background: #1e1e1e;
+}
+
+.dark .civio-session .civio-action[aria-expanded='true'] {
+    border-color: var(--civio-lime);
+    background: color-mix(in srgb, var(--civio-lime) 14%, #161616);
+    color: var(--civio-lime);
+}
+
+.dark .civio-session .civio-action-primary {
+    border-color: transparent;
+    background: var(--civio-lime);
+    color: #111;
+}
+
+.dark .civio-session .civio-action-primary:hover {
+    background: #c8ff55;
+    color: #111;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .civio-session .civio-action {
+        transition: none;
+    }
+}
+
 /* Frosted surfaces. The wash sits behind the cards so the blur has color to catch. */
 .civio-glass-stage {
     position: relative;

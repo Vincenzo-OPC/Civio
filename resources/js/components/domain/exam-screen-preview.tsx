@@ -201,7 +201,7 @@ export function ExamScreenPreview() {
                         type="button"
                         aria-expanded={notesOpen}
                         onClick={() => setNotesOpen((open) => !open)}
-                        className="h-9 rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold"
+                        className="civio-action"
                     >
                         <Edit3 className="mr-1 inline size-3.5" />
                         Notes
@@ -210,7 +210,7 @@ export function ExamScreenPreview() {
                         type="button"
                         aria-expanded={keysOpen}
                         onClick={() => setKeysOpen((open) => !open)}
-                        className="h-9 rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold"
+                        className="civio-action"
                     >
                         <Keyboard className="mr-1 inline size-3.5" />
                         Keys
@@ -230,7 +230,7 @@ export function ExamScreenPreview() {
                                 void node.requestFullscreen?.();
                             }
                         }}
-                        className="h-9 rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold"
+                        className="civio-action"
                     >
                         <Maximize2 className="mr-1 inline size-3.5" />
                         Focus
@@ -240,7 +240,7 @@ export function ExamScreenPreview() {
                         role="switch"
                         aria-checked={lite}
                         onClick={toggleLite}
-                        className="h-9 rounded-lg border border-[var(--civio-line)] px-3 text-xs font-semibold"
+                        className="civio-action"
                     >
                         Lite {lite ? 'on' : 'off'}
                     </button>
@@ -267,30 +267,30 @@ export function ExamScreenPreview() {
                                 { id: 'sample-report' },
                             )
                         }
-                        className="inline-flex h-9 items-center rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold"
+                        className="civio-action"
                     >
                         Report
                     </button>
                     <button
                         type="button"
                         onClick={() => setExplained((open) => !open)}
-                        className={`inline-flex h-9 items-center rounded-lg px-3.5 text-[13px] font-semibold ${
+                        className={
                             explained
-                                ? 'border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)]'
-                                : 'bg-[var(--civio-violet)] text-white'
-                        }`}
+                                ? 'civio-action'
+                                : 'civio-action civio-action-primary'
+                        }
                     >
                         {explained ? 'Hide Explanation' : 'Show Explanation'}
                     </button>
                     <CopyForAiButton
                         question={QUESTION}
                         attempt={attempt}
-                        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold"
+                        className="civio-action"
                     />
                     <AskAssistantButton
                         question={QUESTION}
                         attempt={attempt}
-                        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface)] px-3.5 text-[13px] font-semibold no-underline"
+                        className="civio-action"
                     />
                 </div>
                 {notesOpen && (

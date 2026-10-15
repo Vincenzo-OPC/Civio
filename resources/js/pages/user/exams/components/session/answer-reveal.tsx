@@ -201,8 +201,7 @@ type Panel = 'steps' | 'shortcut' | 'mistakes' | 'visual' | 'simpler';
 const SIMILAR_ITEM_PROMPT =
     'Write one new practice question on this same skill for the Philippine Civil Service Exam. Change the numbers or the wording. Give four choices, say which one is correct, and explain it in a few lines.';
 
-const revealButton =
-    'inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--civio-ink)]/15 bg-[var(--civio-surface,#f4f5f2)] px-3.5 text-[13px] font-semibold text-[var(--civio-ink)] no-underline';
+const revealButton = 'civio-action';
 
 function shortWork(explanation: string): string {
     const work = explanation.split(/The matching choice is/i)[0] ?? '';
@@ -377,11 +376,7 @@ export function AnswerReveal({
                             key={control.id}
                             type="button"
                             onClick={() => toggle(control.id)}
-                            className={
-                                panel === control.id
-                                    ? `${revealButton} border-[var(--civio-violet,#5b35f5)] bg-[var(--civio-violet,#5b35f5)]/12`
-                                    : revealButton
-                            }
+                            className={revealButton}
                             aria-expanded={panel === control.id}
                         >
                             {control.label}
