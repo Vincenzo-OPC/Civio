@@ -36,11 +36,15 @@ it('returns a checked reveal and an easier follow-up after a miss', function () 
         'explanation' => 'One.',
     ]);
 
-    $this->postJson(route('exams.reveal'), [
+    $response = $this->postJson(route('exams.reveal'), [
         'question_id' => $hard->id,
         'chosen_option' => 1,
     ])->assertOk()
         ->assertJsonPath('tutor.steps.0', '12 + 5 + 12 + 5 = 34 m.')
         ->assertJsonPath('tutor.followUp.questionId', $easy->id)
-        ->assertJsonPath('tutor.followUp.direction', 'easier');
+        ->assertJsonPath('tutor.followUp.direction', 'easier')
+        ->assertJsonPath('tutor.followUp.question.id', $easy->id)
+        ->assertJsonPath('tutor.followUp.question.stem', 'Short?');
+
+    expect($response->json('tutor.followUp.question'))->not->toHaveKey('correct_option');
 });

@@ -49,7 +49,9 @@ interface LiteExamBodyProps {
     onReveal: () => void;
     revealed: LiteRevealedAnswer | null;
     onHideReveal: () => void;
-    onTryAnother?: (questionId: number) => void;
+    onTryAnother?: (
+        followUp: NonNullable<RevealTutorPayload['followUp']>,
+    ) => void;
     copyAttempt: AiHandoffAttemptState | null;
 }
 

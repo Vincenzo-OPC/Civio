@@ -78,7 +78,10 @@ interface LiveExamViewProps {
     answers: Record<number, number>;
     handleSelectOption: (idx: number) => void;
     handleQuestionNavigate: (idx: number) => void;
-    onTryAnother?: (questionId: number) => boolean;
+    onTryAnother?: (followUp: {
+        questionId: number;
+        question?: Question | null;
+    }) => boolean;
     isFreeAttempt: boolean;
     setShowRegisterModal: (val: boolean) => void;
     handleSubmitExam: (isTimeout: boolean) => void;
@@ -652,8 +655,8 @@ export function LiveExamView({
                         onHideReveal={() => setRevealedAnswer(null)}
                         onTryAnother={
                             onTryAnother
-                                ? (questionId) => {
-                                      const opened = onTryAnother(questionId);
+                                ? (followUp) => {
+                                      const opened = onTryAnother(followUp);
 
                                       if (opened) {
                                           setRevealedAnswer(null);
@@ -999,12 +1002,10 @@ export function LiveExamView({
                                                         }
                                                         onTryAnother={
                                                             onTryAnother
-                                                                ? (
-                                                                      questionId,
-                                                                  ) => {
+                                                                ? (followUp) => {
                                                                       const opened =
                                                                           onTryAnother(
-                                                                              questionId,
+                                                                              followUp,
                                                                           );
 
                                                                       if (

@@ -3,6 +3,7 @@ import type {
     AiHandoffAttemptState,
     AiHandoffQuestion,
 } from '@/lib/ai-handoff';
+import type { Question } from '../../types';
 import { AskAssistantButton } from '../ask-assistant-button';
 
 export interface RevealTutorPayload {
@@ -24,6 +25,7 @@ export interface RevealTutorPayload {
         stem: string;
         skill: string;
         direction: string;
+        question: Question | null;
     } | null;
 }
 
@@ -83,8 +85,40 @@ export function readRevealTutor(value: unknown): RevealTutorPayload | null {
                           typeof followUp.direction === 'string'
                               ? followUp.direction
                               : 'same',
+                      question: readFollowUpQuestion(followUp.question),
                   }
                 : null,
+    };
+}
+
+function readFollowUpQuestion(value: unknown): Question | null {
+    if (!value || typeof value !== 'object') {
+        return null;
+    }
+
+    const row = value as Record<string, unknown>;
+
+    if (
+        typeof row.id !== 'number' ||
+        typeof row.stem !== 'string' ||
+        !Array.isArray(row.options)
+    ) {
+        return null;
+    }
+
+    return {
+        id: row.id,
+        stem: row.stem,
+        options: row.options.filter(
+            (item): item is string => typeof item === 'string',
+        ),
+        category:
+            typeof row.category === 'string'
+                ? row.category
+                : 'General Information',
+        subcategory: typeof row.subcategory === 'string' ? row.subcategory : '',
+        language: typeof row.language === 'string' ? row.language : 'English',
+        isDemographic: row.isDemographic === true,
     };
 }
 
@@ -156,7 +190,9 @@ interface AnswerRevealProps {
     tutor?: RevealTutorPayload | null;
     chosenIndex?: number | null;
     correctIndex?: number | null;
-    onTryAnother?: (questionId: number) => void;
+    onTryAnother?: (
+        followUp: NonNullable<RevealTutorPayload['followUp']>,
+    ) => void;
     ask?: {
         question: AiHandoffQuestion;
         attempt: AiHandoffAttemptState;
@@ -433,9 +469,7 @@ export function AnswerReveal({
                 <p className="mt-3">
                     <button
                         type="button"
-                        onClick={() =>
-                            onTryAnother(tutor.followUp!.questionId)
-                        }
+                        onClick={() => onTryAnother(tutor.followUp!)}
                         className="font-semibold text-[var(--civio-violet,#5b35f5)]"
                     >
                         Try Another

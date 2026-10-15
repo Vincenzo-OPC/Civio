@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services\Exam\Reveal;
 
 use App\Enums\QuestionStatus;
+use App\Http\Resources\ExamQuestionResource;
 use App\Models\Question;
 use App\Models\Subcategory;
 use App\Services\Exam\ExpoundService;
@@ -297,15 +298,18 @@ final class RevealTutor
     }
 
     /**
-     * @return array{questionId: int, stem: string, skill: string, direction: string}
+     * @return array{questionId: int, stem: string, skill: string, direction: string, question: array<string, mixed>}
      */
     private function card(Question $question, string $skill, string $direction): array
     {
+        $question->loadMissing('subcategory.category');
+
         return [
             'questionId' => (int) $question->id,
             'stem' => mb_substr(trim((string) $question->stem), 0, 160),
             'skill' => $skill,
             'direction' => $direction,
+            'question' => (new ExamQuestionResource($question))->resolve(),
         ];
     }
 

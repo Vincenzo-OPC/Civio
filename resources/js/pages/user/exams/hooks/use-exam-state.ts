@@ -588,9 +588,12 @@ export function useExamState(props: ExamIndexProps) {
     }, []);
 
     const openFollowUp = useCallback(
-        (questionId: number): boolean => {
+        (followUp: {
+            questionId: number;
+            question?: Question | null;
+        }): boolean => {
             const existing = activeQuestions.findIndex(
-                (item) => item.id === questionId,
+                (item) => item.id === followUp.questionId,
             );
 
             if (existing >= 0) {
@@ -599,16 +602,22 @@ export function useExamState(props: ExamIndexProps) {
                 return true;
             }
 
-            const source = questions.find((item) => item.id === questionId);
+            const source =
+                followUp.question ??
+                questions.find((item) => item.id === followUp.questionId);
 
             if (!source) {
                 return false;
             }
 
-            const next = shuffleOptionsForQuestion(source);
+            const next = shuffleOptionsForQuestion({
+                ...source,
+                correct_option: undefined,
+                explanation: undefined,
+            });
 
             setActiveQuestions((current) =>
-                current.some((item) => item.id === questionId)
+                current.some((item) => item.id === followUp.questionId)
                     ? current
                     : [...current, next],
             );
