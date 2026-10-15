@@ -97,7 +97,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | --- | --- | --- |
 | "Copy for AI" button beside Reveal and in review; clean, semantic export formatter (`lib/ai-handoff.ts`) with tests. The key is included only when the item was revealed or the attempt is in review. | Let users paste an item into their own AI assistant without leaking live keys. | `3ab87d2`, `3ba17ab`; spec `29caf02`, `d62b7bc`, `1d4c96d` |
 | Ask ChatGPT, beside Copy for AI in study, review and offline drills. It opens chatgpt.com with the same handoff in `?q=`. A long item is copied instead. Hidden in a Strict Mock. The answer stays out until Reveal. | Same job as Chrome's right-click "Ask ChatGPT", without a second copy of the question. | `1433ecf` |
-| The same button sits under the revealed answer and inside the review explanation. It shows the ChatGPT knot or the Gemini spark. Settings → Preferences chooses which assistant opens. Civio's own Gemini key is not used. | The question row was not the answer, and the assistant should be a choice. | |
+| The same button sits under the revealed answer and inside the review explanation. It shows the ChatGPT knot or the Gemini spark. Settings → Preferences chooses which assistant opens. Civio's own Gemini key is not used. | The question row was not the answer, and the assistant should be a choice. | `4abdb40` |
 
 ### Bank and seeds
 
