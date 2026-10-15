@@ -262,17 +262,7 @@ html.lite {
     --civio-error: #ff8a8d;
 }
 
-/* Time dial: ticks arrive once. The arc draws once, or tracks time left. */
-@keyframes civio-tick-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
+/* Time dial: the ring draws once, or tracks time left. No tick marks. */
 @keyframes civio-arc-draw {
     from {
         stroke-dasharray: 0 var(--ring);
@@ -283,8 +273,14 @@ html.lite {
     }
 }
 
-.civio-tick {
-    animation: civio-tick-in 420ms ease both;
+@keyframes civio-pass-draw {
+    from {
+        stroke-dashoffset: var(--ring);
+    }
+
+    to {
+        stroke-dashoffset: calc(var(--ring) * 0.2);
+    }
 }
 
 .civio-arc {
@@ -306,9 +302,18 @@ html.lite {
         stroke-dasharray 1s linear;
 }
 
+.civio-pass {
+    stroke-dasharray: var(--ring);
+    stroke-dashoffset: calc(var(--ring) * 0.2);
+}
+
+.civio-pass-draw {
+    animation: civio-pass-draw 900ms ease both;
+}
+
 @media (prefers-reduced-motion: reduce) {
-    .civio-tick,
-    .civio-arc-draw {
+    .civio-arc-draw,
+    .civio-pass-draw {
         animation: none;
     }
 

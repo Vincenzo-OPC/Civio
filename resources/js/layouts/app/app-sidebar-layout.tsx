@@ -212,7 +212,7 @@ export default function AppSidebarLayout({
               : '';
 
         return (
-            <div className="flex min-h-screen flex-col bg-slate-50/30 dark:bg-slate-950/20">
+            <div className="flex min-h-screen flex-col bg-[#FAFAF7] text-[#101426] dark:bg-[#101426] dark:text-[#FAFAF7]">
                 <SiteHeader activeNav={activeNav} />
                 <main className="flex-1 px-4 py-6 sm:px-6 sm:py-8">
                     {children}

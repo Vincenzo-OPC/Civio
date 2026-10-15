@@ -1,10 +1,8 @@
-import { CLOCK_TICKS, clockTick, formatSitting } from '@/lib/exam-dials';
+import { formatSitting } from '@/lib/exam-dials';
 
 const SIZE = 200;
 const CENTER = SIZE / 2;
-const TICK_OUTER = 92;
 const ARC_RADIUS = 64;
-const TICK_LENGTH = { hour: 8, cardinal: 14 } as const;
 
 const ARC_TONE = {
     calm: 'text-[#B6F72D] dark:text-[#C6F55A]',
@@ -12,15 +10,6 @@ const ARC_TONE = {
     red: 'text-[var(--civio-error,#e5484d)]',
     quiet: 'text-current',
 } as const;
-
-function polar(index: number, count: number, radius: number) {
-    const angle = (index / count) * Math.PI * 2 - Math.PI / 2;
-
-    return {
-        x: CENTER + Math.cos(angle) * radius,
-        y: CENTER + Math.sin(angle) * radius,
-    };
-}
 
 function clockFace(seconds: number): string {
     const safe = Math.max(0, Math.floor(seconds));
@@ -93,46 +82,9 @@ export function TimeDial({
                 r={ARC_RADIUS}
                 fill="none"
                 stroke="currentColor"
-                strokeOpacity={0.14}
-                strokeWidth={compact ? 18 : 7}
+                strokeOpacity={0.16}
+                strokeWidth={compact ? 18 : 8}
             />
-            {compact
-                ? null
-                : Array.from({ length: CLOCK_TICKS }, (_, index) => {
-                      const { role } = clockTick(index);
-                      const inner = polar(
-                          index,
-                          CLOCK_TICKS,
-                          TICK_OUTER - TICK_LENGTH[role],
-                      );
-                      const outer = polar(index, CLOCK_TICKS, TICK_OUTER);
-                      const spent = countdown && index / CLOCK_TICKS > fraction;
-
-                      return (
-                          <line
-                              key={index}
-                              className="civio-tick"
-                              x1={inner.x}
-                              y1={inner.y}
-                              x2={outer.x}
-                              y2={outer.y}
-                              stroke="currentColor"
-                              strokeOpacity={
-                                  spent
-                                      ? 0.16
-                                      : role === 'cardinal'
-                                        ? quiet
-                                            ? 0.45
-                                            : 0.9
-                                        : quiet
-                                          ? 0.28
-                                          : 0.55
-                              }
-                              strokeWidth={role === 'cardinal' ? 1.75 : 1.25}
-                              strokeLinecap="butt"
-                          />
-                      );
-                  })}
             <circle
                 className={`civio-arc ${drawIn ? 'civio-arc-draw' : ''} ${
                     countdown ? 'civio-arc-live' : ''
@@ -143,7 +95,7 @@ export function TimeDial({
                 fill="none"
                 stroke="currentColor"
                 strokeOpacity={quiet ? 0.45 : 1}
-                strokeWidth={compact ? 18 : 7}
+                strokeWidth={compact ? 18 : 8}
                 strokeLinecap={complete ? 'butt' : 'round'}
                 strokeDasharray={
                     complete ? undefined : `${dash} ${circumference}`

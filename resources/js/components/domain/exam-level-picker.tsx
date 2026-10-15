@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { TimeDial } from '@/components/domain/time-dial';
-import { EXAM_DIALS, formatSitting } from '@/lib/exam-dials';
+import { EXAM_DIALS } from '@/lib/exam-dials';
 import type { ExamDialId } from '@/lib/exam-dials';
 
 const LEVELS = [EXAM_DIALS.professional, EXAM_DIALS.subprofessional] as const;
@@ -60,10 +60,10 @@ export function ExamLevelPicker({ value, onChange }: ExamLevelPickerProps) {
                                 buttons.current[level.id] = node;
                             }}
                             onClick={() => onChange(level.id)}
-                            className={`flex h-full flex-col items-center rounded-2xl border-2 bg-white px-4 py-5 text-center text-[#101426] transition-[transform,border-color,box-shadow] duration-200 ease-out outline-none focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] motion-reduce:transform-none motion-reduce:transition-none sm:px-5 dark:bg-[#1a1e30] dark:text-[#FAFAF7] dark:focus-visible:ring-[#A594FF] dark:focus-visible:ring-offset-[#101426] ${
+                            className={`flex h-full flex-col items-center rounded-2xl border bg-white px-4 py-5 text-center text-[#101426] transition-[transform,border-color,box-shadow] duration-200 ease-out outline-none focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] motion-reduce:transform-none motion-reduce:transition-none sm:px-5 dark:bg-[#1a1e30] dark:text-[#FAFAF7] dark:focus-visible:ring-[#C4B6FF] dark:focus-visible:ring-offset-[#101426] ${
                                 selected
-                                    ? '-translate-y-0.5 border-[#5B35F5] shadow-sm dark:border-[#A594FF]'
-                                    : 'border-[#E3E5EA] hover:-translate-y-0.5 hover:border-[#5B35F5]/40 hover:shadow-sm dark:border-[#2c3148] dark:hover:border-[#A594FF]/50'
+                                    ? '-translate-y-0.5 border-[#5B35F5] shadow-sm dark:border-[#C4B6FF]'
+                                    : 'border-[#E3E5EA] hover:-translate-y-0.5 hover:border-[#5B35F5]/40 hover:shadow-sm dark:border-[#3a415c] dark:hover:border-[#C4B6FF]/60'
                             }`}
                         >
                             <TimeDial
@@ -83,10 +83,6 @@ export function ExamLevelPicker({ value, onChange }: ExamLevelPickerProps) {
                             <span className="mt-1 text-sm leading-relaxed">
                                 <span className="font-semibold tabular-nums">
                                     {level.questions} questions
-                                </span>
-                                <span className="mx-2 opacity-40">·</span>
-                                <span className="tabular-nums">
-                                    {formatSitting(level.seconds)}
                                 </span>
                             </span>
                         </button>

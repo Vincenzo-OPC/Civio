@@ -13,16 +13,16 @@ export default function About() {
                 />
             </Head>
             <SiteHeader activeNav="about" />
-            <main className="bg-[var(--civio-paper,#fafaf7)] text-[var(--civio-ink,#101426)]">
+            <main className="bg-[#FAFAF7] text-[#101426] dark:bg-[#101426] dark:text-[#FAFAF7]">
                 <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-8 sm:px-6 sm:py-12">
                     <header className="flex flex-col gap-3">
-                        <p className="text-sm font-semibold text-[var(--civio-violet,#5b35f5)]">
+                        <p className="text-sm font-semibold text-[#5B35F5] dark:text-[#C4B6FF]">
                             Civio
                         </p>
                         <h1 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
                             A study app. Not the Commission.
                         </h1>
-                        <p className="text-base leading-relaxed text-[var(--civio-ink,#101426)]/75 sm:text-lg">
+                        <p className="text-base leading-relaxed opacity-75 sm:text-lg">
                             Civio is for people preparing for the Philippine
                             Civil Service Exam. It is not affiliated with,
                             endorsed by, or connected to the Civil Service
@@ -48,7 +48,7 @@ export default function About() {
                     <p className="text-sm">
                         <Link
                             href="/exams?start=professional&free_attempt=1"
-                            className="font-semibold text-[var(--civio-violet,#5b35f5)] underline-offset-4 hover:underline"
+                            className="font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#C4B6FF]"
                         >
                             Start Pro
                         </Link>

@@ -285,7 +285,8 @@ export function AiReadinessBentoCard({
                             asChild
                             size="sm"
                             variant="outline"
-                            className="gap-1.5 text-xs font-bold"
+                            className="gap-1.5 text-xs font-semibold"
+                            uppercase={false}
                         >
                             <Link
                                 href={

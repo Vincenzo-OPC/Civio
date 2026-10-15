@@ -61,24 +61,11 @@ describe('exam dial sittings', () => {
         );
     });
 
-    it('draws a clock: 12 even marks, quarters at 12, 3, 6 and 9', () => {
+    it('does not draw tick marks around the ring', () => {
+        assert.doesNotMatch(dialSource, /civio-tick/);
+        assert.doesNotMatch(dialSource, /CLOCK_TICKS/);
         assert.equal(CLOCK_TICKS, 12);
-        const marks = Array.from({ length: CLOCK_TICKS }, (_, index) =>
-            clockTick(index),
-        );
-        const step = 360 / CLOCK_TICKS;
-
-        marks.forEach((mark, index) => {
-            assert.equal(mark.angle, index * step);
-        });
-        assert.deepEqual(
-            marks
-                .filter((mark) => mark.role === 'cardinal')
-                .map((mark) => mark.angle),
-            [0, 90, 180, 270],
-        );
-        assert.equal(marks.filter((mark) => mark.role === 'hour').length, 8);
-        assert.match(dialSource, /CLOCK_TICKS/);
-        assert.doesNotMatch(dialSource, /total \/ 60 \/ 5/);
+        assert.equal(clockTick(0).role, 'cardinal');
+        assert.equal(clockTick(3).angle, 90);
     });
 });
