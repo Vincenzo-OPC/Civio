@@ -311,14 +311,6 @@ html.lite {
     animation: civio-pass-draw 900ms ease both;
 }
 
-.civio-exam-card {
-    background-image: radial-gradient(
-        220px circle at var(--spot-x, 50%) var(--spot-y, 20%),
-        color-mix(in srgb, #5b35f5 16%, transparent),
-        transparent 72%
-    );
-}
-
 .civio-rise {
     animation: civio-rise 480ms ease both;
 }
@@ -340,10 +332,6 @@ html.lite {
     .civio-pass-draw,
     .civio-rise {
         animation: none;
-    }
-
-    .civio-exam-card {
-        background-image: none;
     }
 
     .civio-arc,

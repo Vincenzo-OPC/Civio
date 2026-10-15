@@ -126,19 +126,8 @@ function ExamCard({
             tabIndex={selected ? 0 : -1}
             ref={setButton}
             onClick={() => onChange(level.id)}
-            onMouseMove={(event) => {
-                const rect = event.currentTarget.getBoundingClientRect();
-                event.currentTarget.style.setProperty(
-                    '--spot-x',
-                    `${event.clientX - rect.left}px`,
-                );
-                event.currentTarget.style.setProperty(
-                    '--spot-y',
-                    `${event.clientY - rect.top}px`,
-                );
-            }}
             style={{ animationDelay: `${120 + delay * 90}ms` }}
-            className={`civio-exam-card civio-rise flex h-full flex-col rounded-2xl border bg-white px-5 py-5 text-left text-[#101426] transition-[transform,border-color,box-shadow] duration-200 ease-out outline-none focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] motion-reduce:transform-none sm:px-6 dark:bg-[#1a1e30] dark:text-[#FAFAF7] dark:focus-visible:ring-[#C4B6FF] dark:focus-visible:ring-offset-[#101426] ${
+            className={`civio-rise flex h-full flex-col rounded-2xl border bg-white px-5 py-5 text-left text-[#101426] transition-[transform,border-color,box-shadow] duration-200 ease-out outline-none focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] motion-reduce:transform-none sm:px-6 dark:bg-[#1a1e30] dark:text-[#FAFAF7] dark:focus-visible:ring-[#C4B6FF] dark:focus-visible:ring-offset-[#101426] ${
                 selected
                     ? 'border-2 border-[#5B35F5] shadow-sm dark:border-[#C4B6FF]'
                     : 'border-[#E3E5EA] hover:-translate-y-0.5 hover:border-[#5B35F5]/45 hover:shadow-sm dark:border-[#3a415c] dark:hover:border-[#C4B6FF]/60'
