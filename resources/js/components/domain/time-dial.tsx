@@ -6,7 +6,7 @@ const CENTER = SIZE / 2;
 const ARC_RADIUS = 64;
 
 const ARC_TONE = {
-    calm: 'text-[#B6F72D] dark:text-[#C6F55A]',
+    calm: 'text-[#B3F52D]',
     amber: 'text-amber-700 dark:text-amber-300',
     red: 'text-[var(--civio-error,#e5484d)]',
     quiet: 'text-current',

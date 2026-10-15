@@ -491,7 +491,7 @@ export function ScorecardView({
                                                         cx="50"
                                                         cy="50"
                                                         r={radius}
-                                                        className="fill-none stroke-[#5B35F5] transition-all duration-700 dark:stroke-[#B6F72D]"
+                                                        className="fill-none stroke-[#5B35F5] transition-all duration-700 dark:stroke-[#B3F52D]"
                                                         strokeWidth="7"
                                                         strokeDasharray={
                                                             circumference

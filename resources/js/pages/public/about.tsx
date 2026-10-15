@@ -16,7 +16,7 @@ export default function About() {
             <main className="bg-[#FAFAF7] text-[#101426] dark:bg-black dark:text-[#FAFAF7]">
                 <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-8 sm:px-6 sm:py-12">
                     <header className="flex flex-col gap-3">
-                        <p className="text-sm font-semibold text-[#5B35F5] dark:text-[#B6F72D]">
+                        <p className="text-sm font-semibold text-[#5B35F5] dark:text-[#B3F52D]">
                             Civio
                         </p>
                         <h1 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -67,7 +67,7 @@ export default function About() {
                     <p className="text-sm">
                         <Link
                             href="/exams?start=professional&free_attempt=1"
-                            className="font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#B6F72D]"
+                            className="font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#B3F52D]"
                         >
                             Start Pro
                         </Link>

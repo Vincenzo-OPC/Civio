@@ -127,7 +127,7 @@ function AskAssistantChoice() {
                         className={cn(
                             'flex items-center gap-3 rounded-xl border p-4 text-left',
                             on
-                                ? 'border-[#5B35F5] ring-2 ring-[#5B35F5] dark:border-[#B6F72D] dark:ring-[#B6F72D]'
+                                ? 'border-[#5B35F5] ring-2 ring-[#5B35F5] dark:border-[#B3F52D] dark:ring-[#B3F52D]'
                                 : 'border-slate-200 hover:border-slate-300 dark:border-slate-800 dark:hover:border-slate-700',
                         )}
                     >

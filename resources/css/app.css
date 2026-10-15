@@ -164,7 +164,7 @@
     --popover: #141414;
     --popover-foreground: #f4f4f5;
 
-    --primary: #b6f72d;
+    --primary: #b3f52d;
     --primary-foreground: #0a0a0a;
 
     --secondary: #1a1a1a;
@@ -181,22 +181,22 @@
 
     --border: #2a2a2a;
     --input: #2a2a2a;
-    --ring: #b6f72d;
+    --ring: #b3f52d;
 
-    --chart-1: #b6f72d;
+    --chart-1: #b3f52d;
     --chart-2: #f4f4f5;
     --chart-3: #a1a1aa;
     --chart-4: #52525b;
-    --chart-5: #b6f72d;
+    --chart-5: #b3f52d;
 
     --sidebar: #000000;
     --sidebar-foreground: #f4f4f5;
-    --sidebar-primary: #b6f72d;
+    --sidebar-primary: #b3f52d;
     --sidebar-primary-foreground: #0a0a0a;
     --sidebar-accent: #141414;
     --sidebar-accent-foreground: #f4f4f5;
     --sidebar-border: #2a2a2a;
-    --sidebar-ring: #b6f72d;
+    --sidebar-ring: #b3f52d;
 }
 
 @layer base {
@@ -237,7 +237,7 @@ html.lite {
 .civio-session {
     --civio-violet: #5b35f5;
     --civio-violet-deep: #3d20c8;
-    --civio-lime: #b6f72d;
+    --civio-lime: #b3f52d;
     --civio-ink: #101426;
     --civio-paper: #fafaf7;
     --civio-surface: #f4f5f2;
@@ -250,7 +250,7 @@ html.lite {
 .dark .civio-session {
     --civio-violet: #8b74ff;
     --civio-violet-deep: #c4b6ff;
-    --civio-lime: #b6f72d;
+    --civio-lime: #b3f52d;
     --civio-ink: #f4f4f5;
     --civio-paper: #000000;
     --civio-surface: #141414;
@@ -276,31 +276,19 @@ html.lite {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background:
-        radial-gradient(
-            42rem 24rem at 8% -8%,
-            color-mix(in srgb, #5b35f5 14%, transparent),
-            transparent 70%
-        ),
-        radial-gradient(
-            34rem 20rem at 100% 12%,
-            color-mix(in srgb, #b6f72d 18%, transparent),
-            transparent 68%
-        );
+    background: radial-gradient(
+        28rem 16rem at 0% 0%,
+        color-mix(in srgb, #b3f52d 9%, transparent),
+        transparent 72%
+    );
 }
 
 .dark .civio-glass-wash {
-    background:
-        radial-gradient(
-            40rem 22rem at 0% -6%,
-            color-mix(in srgb, #b6f72d 16%, transparent),
-            transparent 70%
-        ),
-        radial-gradient(
-            28rem 18rem at 100% 20%,
-            color-mix(in srgb, #ffffff 7%, transparent),
-            transparent 72%
-        );
+    background: radial-gradient(
+        32rem 18rem at 100% -8%,
+        color-mix(in srgb, #b3f52d 11%, transparent),
+        transparent 70%
+    );
 }
 
 .civio-glass {

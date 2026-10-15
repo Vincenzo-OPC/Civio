@@ -95,7 +95,7 @@ export function HubView({
                                         </span>
                                     </div>
 
-                                    <h3 className="mt-5 font-heading text-2xl font-black tracking-tight text-foreground transition group-hover:text-blue-600 sm:text-3xl dark:text-blue-400 dark:group-hover:text-blue-400">
+                                    <h3 className="mt-5 font-heading text-2xl font-semibold tracking-tight text-foreground transition group-hover:text-[#5B35F5] sm:text-3xl dark:group-hover:text-[#B3F52D]">
                                         {cat.name}
                                     </h3>
                                     <p className="mt-2 text-base leading-relaxed font-medium text-slate-500 dark:text-slate-400">

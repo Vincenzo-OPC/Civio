@@ -127,10 +127,10 @@ function ExamCard({
             ref={setButton}
             onClick={() => onChange(level.id)}
             style={{ animationDelay: `${120 + delay * 90}ms` }}
-            className={`civio-glass civio-rise flex h-full flex-col rounded-2xl border px-5 py-5 text-left text-[#101426] transition-[transform,border-color,box-shadow] duration-200 ease-out outline-none focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] motion-reduce:transform-none sm:px-6 dark:text-[#FAFAF7] dark:focus-visible:ring-[#B6F72D] dark:focus-visible:ring-offset-black ${
+            className={`civio-glass civio-rise flex h-full flex-col rounded-2xl border px-5 py-5 text-left text-[#101426] transition-[transform,border-color,box-shadow] duration-200 ease-out outline-none focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAF7] motion-reduce:transform-none sm:px-6 dark:text-[#FAFAF7] dark:focus-visible:ring-[#B3F52D] dark:focus-visible:ring-offset-black ${
                 selected
-                    ? 'border-2 border-[#5B35F5] shadow-sm dark:border-[#B6F72D]'
-                    : 'border-white/70 hover:-translate-y-0.5 hover:border-[#5B35F5]/45 hover:shadow-sm dark:border-white/10 dark:hover:border-[#B6F72D]/70'
+                    ? 'border-2 border-[#5B35F5] shadow-sm dark:border-[#B3F52D]'
+                    : 'border-white/70 hover:-translate-y-0.5 hover:border-[#5B35F5]/45 hover:shadow-sm dark:border-white/10 dark:hover:border-[#B3F52D]/70'
             }`}
         >
             <span className="flex items-start justify-between gap-3">
@@ -141,7 +141,7 @@ function ExamCard({
                     aria-hidden
                     className={`size-5 shrink-0 transition-opacity ${
                         selected
-                            ? 'text-[#5B35F5] opacity-100 dark:text-[#B6F72D]'
+                            ? 'text-[#5B35F5] opacity-100 dark:text-[#B3F52D]'
                             : 'opacity-0'
                     }`}
                 />

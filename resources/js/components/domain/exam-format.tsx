@@ -75,7 +75,7 @@ export default function ExamFormat() {
                             strokeWidth={8}
                         />
                         <circle
-                            className="civio-pass civio-pass-draw text-[#5B35F5] dark:text-[#B6F72D]"
+                            className="civio-pass civio-pass-draw text-[#5B35F5] dark:text-[#B3F52D]"
                             cx={MARK_CENTER}
                             cy={MARK_CENTER}
                             r={MARK_RADIUS}
@@ -113,7 +113,7 @@ export default function ExamFormat() {
                         href={CSC_REFERENCE}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#B6F72D]"
+                        className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#B3F52D]"
                     >
                         Official CSC Reference
                         <ArrowUpRight className="size-3.5" aria-hidden />

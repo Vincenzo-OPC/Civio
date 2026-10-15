@@ -174,7 +174,7 @@ export default function Drills(props: DrillsProps) {
     return (
         <>
             <Head title="Practice Drills" />
-            <PageContainer className="bg-slate-50/30 dark:bg-slate-900/20">
+            <PageContainer className="bg-[#FAFAF7] dark:bg-black">
                 {/* Hub Navigation Tabs (Visible when not in category config screen) */}
                 {viewState === 'hub' && (
                     <div className="mb-6 flex flex-wrap items-center gap-2 border-b border-border/80 pb-3">
@@ -183,7 +183,7 @@ export default function Drills(props: DrillsProps) {
                             onClick={() => setActiveTab('categories')}
                             className={`flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2 text-xs font-bold transition-all ${
                                 activeTab === 'categories'
-                                    ? 'bg-blue-600 text-white shadow-xs'
+                                    ? 'bg-[#5B35F5] text-white dark:bg-[#B3F52D] dark:text-[#0A0A0A]'
                                     : 'border border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground'
                             }`}
                         >
@@ -196,7 +196,7 @@ export default function Drills(props: DrillsProps) {
                             onClick={() => setActiveTab('custom')}
                             className={`flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2 text-xs font-bold transition-all ${
                                 activeTab === 'custom'
-                                    ? 'bg-blue-600 text-white shadow-xs'
+                                    ? 'bg-[#5B35F5] text-white dark:bg-[#B3F52D] dark:text-[#0A0A0A]'
                                     : 'border border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground'
                             }`}
                         >
@@ -209,14 +209,14 @@ export default function Drills(props: DrillsProps) {
                             onClick={() => setActiveTab('saved')}
                             className={`flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2 text-xs font-bold transition-all ${
                                 activeTab === 'saved'
-                                    ? 'bg-blue-600 text-white shadow-xs'
+                                    ? 'bg-[#5B35F5] text-white dark:bg-[#B3F52D] dark:text-[#0A0A0A]'
                                     : 'border border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground'
                             }`}
                         >
                             <Bookmark className="size-4" />
                             <span>Saved Sets</span>
                             {savedDrillSets.length > 0 && (
-                                <span className="rounded-full bg-blue-100 px-1.5 py-0.5 text-[9px] font-black text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+                                <span className="rounded-full bg-[#5B35F5]/10 px-1.5 py-0.5 text-[9px] font-semibold text-[#5B35F5] dark:bg-[#B3F52D]/15 dark:text-[#B3F52D]">
                                     {savedDrillSets.length}
                                 </span>
                             )}

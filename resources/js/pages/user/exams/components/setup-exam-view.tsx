@@ -122,7 +122,7 @@ export function SetupExamView({
                                         key={mode}
                                         className={`flex cursor-pointer flex-col gap-1 rounded-xl border p-3 transition-colors ${
                                             examMode === mode
-                                                ? 'border-2 border-[#5B35F5] bg-[#FAFAF7] dark:border-[#B6F72D] dark:bg-black'
+                                                ? 'border-2 border-[#5B35F5] bg-[#FAFAF7] dark:border-[#B3F52D] dark:bg-black'
                                                 : 'border-[#E3E5EA] hover:border-[#5B35F5]/40 dark:border-[#2a2a2a]'
                                         }`}
                                     >
