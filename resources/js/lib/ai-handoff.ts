@@ -355,28 +355,49 @@ export async function copyAiHandoff(
 }
 
 /**
- * Same handoff as Copy for AI, opened the way Chrome's right-click menu does:
- * a new tab with the question in the box. ChatGPT reads `?q=`. Gemini uses
- * the same parameter. A long item is left on the clipboard and the tab opens
- * empty, because a huge query string gets dropped.
+ * Same handoff as Copy Question, opened the way a browser menu does: a new
+ * tab, with the question in the box when that site reads `?q=`.
+ *
+ * Copilot no longer fills its box from `?q=`, and auto-running a prompt there
+ * is unsafe, so Copilot and Grok open empty and the question stays on the
+ * clipboard. Ask AI does not open a site.
  *
  * This does not call Civio's Gemini key. That key is for the study report.
  */
 export const CHATGPT_ASK_URL = 'https://chatgpt.com/';
 export const GEMINI_ASK_URL = 'https://gemini.google.com/app';
+export const COPILOT_ASK_URL = 'https://copilot.microsoft.com/';
+export const GROK_ASK_URL = 'https://grok.com/';
 export const CHATGPT_ASK_LIMIT = 1500;
 
-export type AskAssistant = 'chatgpt' | 'gemini';
+export type AskAssistant = 'chatgpt' | 'gemini' | 'copilot' | 'grok' | 'ai';
+
+const ASK_DESTINATIONS: Record<
+    Exclude<AskAssistant, 'ai'>,
+    { base: string; prefill: boolean }
+> = {
+    chatgpt: { base: CHATGPT_ASK_URL, prefill: true },
+    gemini: { base: GEMINI_ASK_URL, prefill: true },
+    copilot: { base: COPILOT_ASK_URL, prefill: false },
+    grok: { base: GROK_ASK_URL, prefill: false },
+};
 
 export function assistantAskUrl(
     assistant: AskAssistant,
     prompt: string,
-): string {
-    const url = new URL(
-        assistant === 'gemini' ? GEMINI_ASK_URL : CHATGPT_ASK_URL,
-    );
+): string | null {
+    if (assistant === 'ai') {
+        return null;
+    }
 
-    if (prompt.length > 0 && prompt.length <= CHATGPT_ASK_LIMIT) {
+    const destination = ASK_DESTINATIONS[assistant];
+    const url = new URL(destination.base);
+
+    if (
+        destination.prefill &&
+        prompt.length > 0 &&
+        prompt.length <= CHATGPT_ASK_LIMIT
+    ) {
         url.searchParams.set('q', prompt);
     }
 
@@ -384,5 +405,5 @@ export function assistantAskUrl(
 }
 
 export function chatgptAskUrl(prompt: string): string {
-    return assistantAskUrl('chatgpt', prompt);
+    return assistantAskUrl('chatgpt', prompt) ?? CHATGPT_ASK_URL;
 }

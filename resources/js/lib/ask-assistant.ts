@@ -3,8 +3,18 @@ import type { AskAssistant } from '@/lib/ai-handoff';
 export const ASK_ASSISTANT_KEY = 'civio_ask_assistant';
 const CHANGE_EVENT = 'civio-ask-assistant';
 
+const ASSISTANTS: readonly AskAssistant[] = [
+    'chatgpt',
+    'gemini',
+    'copilot',
+    'grok',
+    'ai',
+];
+
 export function parseAskAssistant(value: string | null): AskAssistant {
-    return value === 'gemini' ? 'gemini' : 'chatgpt';
+    return ASSISTANTS.includes(value as AskAssistant)
+        ? (value as AskAssistant)
+        : 'chatgpt';
 }
 
 export function readAskAssistant(): AskAssistant {

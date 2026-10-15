@@ -124,13 +124,23 @@ describe('Ask ChatGPT link', () => {
 
     it('opens Gemini with the same handoff, and anything else stays ChatGPT', () => {
         const text = buildAiHandoffText(shuffledQuestion, baseAttempt);
-        const gemini = new URL(assistantAskUrl('gemini', text));
+        const gemini = new URL(assistantAskUrl('gemini', text) ?? '');
+        const copilot = new URL(assistantAskUrl('copilot', text) ?? '');
+        const grok = new URL(assistantAskUrl('grok', text) ?? '');
 
         assert.equal(gemini.origin, 'https://gemini.google.com');
         assert.equal(gemini.pathname, '/app');
         assert.equal(gemini.searchParams.get('q'), text);
+        assert.equal(copilot.origin, 'https://copilot.microsoft.com');
+        assert.equal(copilot.search, '');
+        assert.equal(grok.origin, 'https://grok.com');
+        assert.equal(grok.search, '');
+        assert.equal(assistantAskUrl('ai', text), null);
         assert.equal(parseAskAssistant(null), 'chatgpt');
         assert.equal(parseAskAssistant('gemini'), 'gemini');
+        assert.equal(parseAskAssistant('copilot'), 'copilot');
+        assert.equal(parseAskAssistant('grok'), 'grok');
+        assert.equal(parseAskAssistant('ai'), 'ai');
         assert.equal(parseAskAssistant('claude'), 'chatgpt');
     });
 

@@ -77,12 +77,27 @@ const assistants: { id: AskAssistant; name: string; detail: string }[] = [
     {
         id: 'chatgpt',
         name: 'ChatGPT',
-        detail: 'Opens chatgpt.com with this question.',
+        detail: 'Opens chatgpt.com with this question in the box.',
     },
     {
         id: 'gemini',
         name: 'Gemini',
         detail: 'Opens Gemini with this question.',
+    },
+    {
+        id: 'copilot',
+        name: 'Copilot',
+        detail: 'Opens Copilot. The question is copied so you can paste it.',
+    },
+    {
+        id: 'grok',
+        name: 'Grok',
+        detail: 'Opens Grok. The question is copied so you can paste it.',
+    },
+    {
+        id: 'ai',
+        name: 'Ask AI',
+        detail: 'Copies the question. It does not open a site.',
     },
 ];
 
@@ -96,7 +111,7 @@ function AskAssistantChoice() {
     return (
         <div
             role="radiogroup"
-            aria-label="Ask ChatGPT or Gemini"
+            aria-label="Choose an assistant"
             className="grid gap-3 sm:grid-cols-2"
         >
             {assistants.map((assistant) => {
@@ -349,8 +364,8 @@ export default function Preferences({ analysisMode, aiAvailable }: PageProps) {
             <div className="space-y-4 border-t border-slate-200 pt-6 dark:border-slate-800">
                 <Heading
                     variant="small"
-                    title="Ask ChatGPT or Gemini"
-                    description="The button on a question opens this assistant in a new tab. It uses your account there. Civio does not send the item through its own key."
+                    title="Ask an assistant"
+                    description="The Ask button on a question uses this choice. Copy Question still copies the text. Civio does not send the item through its own key."
                 />
                 <AskAssistantChoice />
             </div>

@@ -1,4 +1,5 @@
 import { ChevronLeft, Flag, LayoutGrid, Moon } from 'lucide-react';
+import { AssistantMark } from '@/components/domain/assistant-mark';
 
 const CHOICES: { letter: string; text: string; selected?: boolean }[] = [
     { letter: 'A', text: '₱150' },
@@ -61,8 +62,16 @@ export function ExamScreenPreview() {
                     <span className="rounded-lg bg-[var(--civio-violet)] px-2.5 py-1.5 text-[11px] font-bold text-white">
                         Reveal Answer
                     </span>
-                    <span className="opacity-70">Copy for AI</span>
-                    <span className="opacity-70">Ask ChatGPT</span>
+                    <span className="inline-flex items-center gap-1.5 opacity-70">
+                        Copy Question
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 opacity-70">
+                        <AssistantMark
+                            assistant="chatgpt"
+                            className="size-3.5"
+                        />
+                        Ask ChatGPT
+                    </span>
                 </p>
                 <div className="mt-4 flex flex-col" role="list">
                     {CHOICES.map((choice) => (

@@ -28,7 +28,7 @@ export function CopyForAiButton({
         const { ok } = await copyAiHandoff(question, attempt, options);
 
         if (ok) {
-            toast.success('Copied clean question for AI.', {
+            toast.success('Question copied.', {
                 id: 'copy-for-ai',
             });
         } else {
@@ -42,14 +42,14 @@ export function CopyForAiButton({
         <button
             type="button"
             onClick={handleCopy}
-            title="Copy this question as clean text for ChatGPT, Claude, Gemini or Grok"
+            title="Copy this question"
             className={
                 className ??
                 'inline-flex cursor-pointer items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground transition hover:bg-muted focus:outline-none'
             }
         >
             <ClipboardCopy className="size-3.5" />
-            <span>Copy for AI</span>
+            <span>Copy Question</span>
         </button>
     );
 }
