@@ -270,6 +270,7 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **QA:** `python3 scripts/batches/qa_file.py docs/research/audit/fixes/round-03-baseline-b3-drafts.json` → 44 items vs 1,656 bank items, 0 problems (after rewording stems that matched their own baseline seeds and finding the #343/000528 duplicate). `python3 scripts/batches/qa_all.py --no-fixes` → GREEN.
 - **App finding for Codex Astra:** online drills do not shuffle choices (`DrillService` + `pages/user/drills` serve stored order; only mocks and offline drills call a choice shuffle). Baseline keys are 61% position A (335/550), so this is a user-facing giveaway in drills.
 - **Flag (approved item, not edited):** CIVIO-NUM-WP-PCT-CHANGE-000528 reads "A electric fan".
+- **Explanation lint** (`scripts/batches/audit/explanation_lint.py`, new): drafts 0 flagged, positions balanced 11/11/11/11.
 - **Packet:** `audit/round-03-baseline-b3-review-request.md`; per-item CSV `audit/data/baseline-b3-verdicts-2026-10-18.csv`. Regenerate with `python3 scripts/batches/audit/baseline_b3.py`.
 - **Next:** B4 = the remaining baseline Numerical, Word problems 32 (Basic ops and sequences are done here), then Analytical 114, Verbal 130. Codex's 496-item reworded set still needs its own round.
 - **Milestone effect if CoS approves:** baseline Numerical active drops by 15 rejects (sequence 13, ops 2), widening the sequence gap (MILESTONE §5: 80 target); GI drops by 40 rejects, mostly duplicates of approved items, so the verified GI fact coverage is unchanged.
