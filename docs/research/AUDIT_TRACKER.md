@@ -149,3 +149,22 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **GitHub Actions warning (2026-10-16):** One Batch 003 tests run had PHP 8.5 job fail at the pre-existing global `npm run size` budget: aggregate lazy-included JS was **1,043,562 B against a 1,040,000 B ceiling**, over by **3,562 B**. The 91 JS unit tests shown in those logs passed. This is a bundle-size gate, **not evidence that the new GI questions were tested or failed**, since only draft JSON/docs were changed. Linter passed; later runs were still in progress when checked. Do not raise size budgets or alter application code as part of this research-only task.
 - **Reviewer watchlist:** Section VII/Article VII martial-law extension procedure; Art. IX-A versus Art. XIII CHR commission distinctions; R.A. 6713 Sec. 5(a) 15-working-day *reply* versus other statutory permit-processing deadlines; Secs. 8–9 disclosure and divestment exceptions; clean-water land-based source nuance. Scrutinize all law distractors and any formulaic why-wrong lines; some may require stronger, non-giveaway alternatives. Review each ID independently with ACCEPT / REVISE / REJECT / HOLD.
 - **Next:** Grok Bot -> Chief of Staff review; only after that, proceed to Clerical / Numerical gaps, refreshing the gap map to avoid overlap.
+
+
+## Round 03: ChatGPT batch 001 (100 Filipino Verbal), CoS verdict applied, 2026-10-13
+
+- CoS verdict: 89 pass, 11 fixed. 040029 stem giveaway removed; 040065 "sa daan ___ kabundukan"; 040092 A reworded for planning; 040013 key "may saklaw o pananagutan", o2 "nakatataas na tanggapan"; 040047 kaniyang; KWF 040033 nakadaraan, 040053 nakasasakit, 040030 nakasasabay (x2), 040008 nagmamaliit; 040043 o3, 040045 o3, 040006 o2 to FIL-SAME-FIELD; 040080 o4 to RC-NOT-IN-TEXT; 040057 o2 kawalang-hiya; 040074 o3 wording.
+- New targets: 040012 MAALAB, 040023 MATIGAS, 040027 MAAYOS, 040032 MALABAY (unique in the bank).
+- FIL-SPOKEN-FORM for all ng/nang, din/rin, daw/raw and pang-angkop errors (040061-040070, 040073). Spec 0.1.8.
+- qa.py: nakaka- and kanya/kanyang checks in every field; option-in-stem check for Filipino vocabulary. Fixed one "kanyang" in filipino-supplement-001 (0015).
+- Key/trap separation: in `MockPoolState` (session builder), with tests; `qa_fil.py` lists remaining pairs.
+- All 100 approved/passed by Chief of Staff, 2026-10-13. No deploy.
+- MSI local import PENDING: the MSI was offline at 23:00 PHT. Next time it is up: copy chatgpt-batch-001.json, filipino-supplement-001.json and app/Services/Exam/MockPoolState.php + MockSessionService.php into the civio container, run `php artisan bank:import-batch` on chatgpt-batch-001.json as active, then confirm mocks start at 150 and 145.
+
+## Round 03: Codex batch 003 (100 GI drafts) audited, 2026-10-17
+
+- qa.py ran in the full repo: 0 flags, 0 near-duplicates (0.65), 0 baseline hits. This clears the QA blocker from 9611b91.
+- All 100 keys and citations checked against LawPhil text: no legal errors.
+- Fixed: 100 padded method lines, 263 tautological why-wrong reasons (all 300 rewritten), absurd distractors replaced with real siblings, 22 long-key giveaways, 5 ambiguous stems, codes. Reproducible via `scripts/batches/fixes/b3/apply.py`.
+- Proposed: ACCEPT 77, ACCEPT as variant 8, HOLD 4, REJECT 11 (fact duplicates of approved items). Packet: `audit/round-03-chatgpt-003-review-request.md`. All stay draft.
+- Housekeeping: moved the stray root `AUDIT_TRACKER.md` (round 03 Filipino notes from 2026-10-13) into this file.
