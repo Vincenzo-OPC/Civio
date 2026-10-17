@@ -69,7 +69,10 @@ export default function Welcome() {
                                     Choose Your Exam.
                                 </h1>
                                 <p className="max-w-2xl text-sm leading-relaxed text-[#101426]/75 sm:text-base dark:text-[#FAFAF7]/75">
-                                    Civio: An independent platform helping Filipinos prepare for public service through accessible, reliable Civil Service Exam education.
+                                    Civio: An independent platform helping
+                                    Filipinos prepare for public service through
+                                    accessible, reliable Civil Service Exam
+                                    education.
                                 </p>
                             </header>
 
