@@ -63,7 +63,7 @@ Briefs are how work moves between AIs. Write the task into `docs/` as a brief, c
 7. **Retire old-stem rows.** After a reworded item is imported, set the old row to draft (history kept, never deleted). In the local DB: `UPDATE questions SET status='draft' WHERE source_group='civio' AND stem = '<old stem>';`. Baseline duplicates retire the same way, by `id`. Then clear the cache (`php artisan cache:forget questions.active`, or restart the app).
 8. **Log it** in [research/AUDIT_TRACKER.md](research/AUDIT_TRACKER.md), the single source of progress: a dated section with the counts, the decisions, the files and what's next. Update the table at the top when a round closes.
 
-**Target:** about **3,000 verified active questions**, about **2,000 of them usable in a Subprofessional mock** (every domain except Analytical). GT set this target on 17 October 2026. The local DB had 1,856 active items that day. Fill the gaps in [research/audit/COVERAGE_GAP_MAP.md](research/audit/COVERAGE_GAP_MAP.md) and Sentinel §F7 first: English reading comprehension, paragraph organization and sentence structure, plus GI peace and human rights. Ease off percent change. No filler clones (see AGENTS.md, "Question bank rule").
+**Target:** first milestone **exactly 2,000 approved questions**, a clean hundred per subject (GT, 17 October 2026). The split and the Release Collection are proposed in [research/MILESTONE_2000_PLAN.md](research/MILESTONE_2000_PLAN.md), pending GT's approval. The long-term goal stays about **3,000 verified active questions**. The local DB had 1,856 active items that day. Fill the gaps in [research/audit/COVERAGE_GAP_MAP.md](research/audit/COVERAGE_GAP_MAP.md) and Sentinel §F7 first: English reading comprehension, paragraph organization and sentence structure, plus GI peace and human rights. Ease off percent change. No filler clones (see AGENTS.md, "Question bank rule").
 
 **Open question work as of 17 October 2026** (check AUDIT_TRACKER.md for anything newer):
 - Fix the 12 baseline spelling rows by swapping in new target words.
@@ -165,6 +165,6 @@ Audit docs/research/<FILE>.json in GitHub repo Vincenzo-OPC/Civio (main) as Civi
 **(d) Weekly Sentinel**
 
 ```
-Run this week's Civio Sentinel checks from docs/HANDOFF_ANY_AI.md section 5 for repo Vincenzo-OPC/Civio: (1) CSC monitor on csc.gov.ph only, (2) security probe from docs/research/sentinel/DOSSIER_2026-10-17.md Appendix A in a scratch clone (never commit it), (3) competitor and tech scan, (4) coverage count against the 3,000 / 2,000 Subprofessional target.
+Run this week's Civio Sentinel checks from docs/HANDOFF_ANY_AI.md section 5 for repo Vincenzo-OPC/Civio: (1) CSC monitor on csc.gov.ph only, (2) security probe from docs/research/sentinel/DOSSIER_2026-10-17.md Appendix A in a scratch clone (never commit it), (3) competitor and tech scan, (4) coverage count against the 2,000 milestone in docs/research/MILESTONE_2000_PLAN.md (long-term goal about 3,000).
 Label evidence A/B/C/D. Do not edit app code, approve questions or deploy. If anything changed, write docs/research/sentinel/DOSSIER_<today>.md, add a row to docs/research/sentinel/README.md, commit with [skip netlify], pull --rebase and push normally. Then give me a 5-line summary, ranked, with links. If nothing changed, say "No change" and write nothing.
 ```
