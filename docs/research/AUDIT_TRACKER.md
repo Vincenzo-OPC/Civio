@@ -198,3 +198,12 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **Spelling swaps (pending CoS, inactive):** `audit/fixes/round-03-baseline-b1-spelling-swaps.json`, built by `scripts/batches/audit/b1_spelling_swaps.py`. It proposes 14 new targets: prerogative, referred, remittance, itinerary, pamphlet, consensus, hindrance, subpoena, forfeit, illegible, undoubtedly and inevitable for the 12 rows, plus accidentally and nuisance for #308 and #311. None is used anywhere in the bank or the baseline. Each key is a dictionary word, each foil is a real misspelling (not a dictionary word and not a keyboard slip), and each foil has an SPL code. Codex's 496-item reworded set is not a substitute; it gets its own audit round.
 - **gap-fill-004 (pending CoS, inactive):** 10 GI drafts, 2 each on R.A. 7610, 9710, 9745, 10353 and 9851. Quotes are asserted against LawPhil text; `qa_file.py` finds 0 problems. Packet: `audit/round-03-gap-fill-004-review-request.md`.
 - **B2 packet:** the duplicate count already reads 14 (fixed in 93b7eae).
+
+## 2026-10-17: Round 03 audit of ChatGPT batch 002 (100 English drafts)
+
+- `qa_file.py` finds 0 problems, but the content fails review.
+- Proposed: REJECT 75 and FIX 25.
+  - The 75 rejects are all 35 para-order items and all 40 error items. They use 4–5 sentence frames repeated with words swapped, two items have a second defensible order, and five use non-words.
+  - The 25 fixes are the RC items. They need their distractors rewritten and their padded tails trimmed, and all 25 share one theme.
+- Fixed now: two text errors (050004 and 050006). Every item stays draft.
+- Packet: `audit/round-03-chatgpt-002-review-request.md`. gap-fill-005 replaces the rejected areas.

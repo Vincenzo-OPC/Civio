@@ -202,7 +202,7 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Based only on the passage, choose the best answer.\n\nThe agriculture office in a mountain town offered farmers two training formats. One group attended a full-day workshop at the municipal hall; another received three short visits on their farms. At first, the office counted attendance and concluded that the hall workshop was more successful. A follow-up visit complicated that judgment. Some farmers who missed the workshop had nevertheless adopted the recommended soil-testing practice after the farm visits. Others had attended the entire workshop but never changed their methods. The office realized that attendance measured reach, while actual farm practice measured a different outcome. It also noticed that travel time affected who could attend the hall session. For the next round, the office planned to track both participation and adoption, while recording farm distance and prior experience so the formats could be compared with greater care. The teachers planned a follow-up with farmers who attended neither format, since lack of participation might point to scheduling, travel, or information barriers. They wanted evidence before investing in a permanent training schedule.\n\nWhat distinction is central to the office's revised evaluation?",
+      "stem": "Based only on the passage, choose the best answer.\n\nThe agriculture office in a mountain town offered farmers two training formats. One group attended a full-day workshop at the municipal hall; another received three short visits on their farms. At first, the office counted attendance and concluded that the hall workshop was more successful. A follow-up visit complicated that judgment. Some farmers who missed the workshop had nevertheless adopted the recommended soil-testing practice after the farm visits. Others had attended the entire workshop but never changed their methods. The office realized that attendance measured reach, while actual farm practice measured a different outcome. It also noticed that travel time affected who could attend the hall session. For the next round, the office planned to track both participation and adoption, while recording farm distance and prior experience so the formats could be compared with greater care. The office planned a follow-up with farmers who attended neither format, since lack of participation might point to scheduling, travel, or information barriers. They wanted evidence before investing in a permanent training schedule.\n\nWhat distinction is central to the office's revised evaluation?",
       "options": [
         {
           "option_id": "o1",
@@ -250,7 +250,7 @@
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot audit 2026-10-17: fixed 'teachers' contradicted the passage (the agriculture office runs the training). Still draft.",
       "_legacy": true
     },
     {
@@ -326,7 +326,7 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Read the passage and respond to the question.\n\nDuring a local flood drill in Cagayan de Oro, the organizers gave neighborhood volunteers a map of evacuation paths. Most groups reached the designated shelter quickly, but several participants using mobility aids struggled with a narrow ramp. The drill report initially celebrated the short average travel time. A volunteer pointed out that the average concealed a serious barrier for a smaller group. The organizers then repeated part of the drill with people who used wheelchairs and walking sticks. They measured the difficult section separately and asked participants where assistance was necessary. The town did not immediately claim that the revised route was safe for everyone. It arranged an inspection of the ramp and scheduled another exercise after the repairs. The incident changed what the team considered a successful drill: not simply a fast average, but a route people with different mobility needs could reasonably use. The team recorded whether people could reach a safe waiting area without assistance. It treated this as a separate measure from the total time needed to reach the shelter and share the results with engineers.\n\nWhat weakness did the average travel time fail to reveal?",
+      "stem": "Read the passage and respond to the question.\n\nDuring a local flood drill in Cagayan de Oro, the organizers gave neighborhood volunteers a map of evacuation paths. Most groups reached the designated shelter quickly, but several participants using mobility aids struggled with a narrow ramp. The drill report initially celebrated the short average travel time. A volunteer pointed out that the average concealed a serious barrier for a smaller group. The organizers then repeated part of the drill with people who used wheelchairs and walking sticks. They measured the difficult section separately and asked participants where assistance was necessary. The town did not immediately claim that the revised route was safe for everyone. It arranged an inspection of the ramp and scheduled another exercise after the repairs. The incident changed what the team considered a successful drill: not simply a fast average, but a route people with different mobility needs could reasonably use. The team recorded whether people could reach a safe waiting area without assistance. It treated this as a separate measure from the total time needed to reach the shelter, and it shared the results with engineers.\n\nWhat weakness did the average travel time fail to reveal?",
       "options": [
         {
           "option_id": "o1",
@@ -374,7 +374,7 @@
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot audit 2026-10-17: fixed broken verb ('and share'). Still draft.",
       "_legacy": true
     },
     {
