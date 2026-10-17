@@ -183,3 +183,12 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 ## 2026-10-17: Prompt for the next English ChatGPT batch
 
 - `CHATGPT_NEXT_PROMPT.md` asks for 100 English drafts in `chatgpt-batch-004.json` (RC 30, paragraph organization 30, error recognition 40), because `chatgpt-batch-002.json` already holds 100 unaudited English drafts in the same areas. It carries the earlier rules plus these QA checks: no keyboard typos, unique targets, no order key matching the listed order, the 25% stem cap, an honest shortcut, and KWF spelling. Batch 002 still needs a Grok Bot audit.
+
+## 2026-10-17: Round 03 CoS verdicts applied
+
+- Details are in `audit/round-03-cos-verdict-2026-10-17.md`.
+- GI batch 003: 89 approved, 11 rejected; 060009 fixed; 8 fact_id pairs. Brief for the one-per-fact mock rule: `docs/FACT_ID_MOCK_RULE_BRIEF.md`.
+- Baseline B1/B2: 3 keys corrected, 63 retired, 52 fixed. #304 is on hold because the foil CoS asked for is already a choice.
+- MSI was backed up first. It now has 1,882 active questions (civio 1,395, baseline 487).
+- QA: `qa_all.py --no-fixes` and `qa_file.py` (batch 001 and 003) are green; Pest passes 328/328.
+- Pending CoS: 14 spelling swaps (`audit/fixes/round-03-baseline-b1-spelling-swaps.json`) and gap-fill-004.
