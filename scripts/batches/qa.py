@@ -82,6 +82,15 @@ def solve_num(it):
     return None
 
 
+def _extra_analogies():
+    """Analogy registries of gap-fill batches (same row shape as analytical.ANALOGIES)."""
+    try:
+        from gapfill import gf03_analogies
+        return gf03_analogies.ANALOGIES
+    except ImportError:
+        return []
+
+
 def solve_ana(it):
     s, a = it["stem"], it["archetype"]
     if s.startswith("What comes next in the series?"):
@@ -109,6 +118,9 @@ def solve_ana(it):
             assert len(top) == 1
             order.append(top[0]); rem.discard(top[0])
         return order[1 if "Who is second" in s else 2]
+    if a == "ANA-DI-TABLE" and "\n\n" in s and " | " in s:
+        import di_grid  # pipe-table format (gap-fill-2000-03); recomputes the key from the stem text
+        return di_grid.solve(s)
     if a == "ANA-DI-TABLE":
         rows = dict(re.findall(r"(\w+): (\w+ \d+, \w+ \d+, \w+ \d+)", s))
         tab = {k: [int(x) for x in re.findall(r"\d+", v)] for k, v in rows.items()}
@@ -151,7 +163,7 @@ def solve_ana(it):
         if not m:
             return None
         a_, b_ = m.group(1).strip().lower(), m.group(2).strip().lower()
-        for t in analytical.ANALOGIES:
+        for t in analytical.ANALOGIES + _extra_analogies():
             if (t[0], t[1]) == (a_, b_):
                 return f"{t[4][0]} : {t[4][1]}"
     return None
