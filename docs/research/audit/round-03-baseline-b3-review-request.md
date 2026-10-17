@@ -19,16 +19,19 @@ ChatGPT's preliminary audit files (audit/fixes/milestone, 2026-10-18) were **not
 - **Duplicates dominate R.A. 6713:** 23 of 37 repeat facts already in the approved bank (000020, 000203, 000302, 000309, 000402, 000403, 000405, 000511, 000610, 000807, 000810, 000908; 060051-060072). Same precedent as B2: retire the baseline row to draft.
 - **Wrong law for the subtopic:** #223 (property disposal → P.D. 1445/COA), #224 (nepotism → E.O. 292 Book V Sec. 59, HOLD), #73 (whistleblowing, not in R.A. 6713), #72 (relative-owned bidder is not R.A. 6713's Sec. 3(i) conflict of interest; rewritten).
 - **Length giveaway:** in the GI subjects the key is the uniquely longest option in 52 of 64 items (median key/distractor length ratio about 1.7). The drafts balance option lengths and replace joke distractors with sibling-term traps.
-- **Positions:** stored keys are A/B only in all 64 GI items (A 49, B 15). Mocks and offline drills shuffle choices at display (`mock-pool.ts` shuffleOptionsForQuestion; `lib/offline/grader.ts`). **Online drills do not shuffle choices** (see below), so stored position IS user-facing there.
+- **Positions:** stored keys are A/B only in all 64 GI items (A 49, B 15). Mocks and offline drills shuffle choices at display (`mock-pool.ts` shuffleOptionsForQuestion; `lib/offline/grader.ts`). Online drills also shuffle choices (corrected, see below), so stored position is not user-facing.
 - **Percent-change cap:** #181, #265, #489 are percent-change items while the bank already exceeds the proposed cap of 40 (78). HOLD for a CoS category/cap decision.
 - **Number sequence:** 13 of 28 are duplicates or same-rule repeats (squares x4, doubling x4, ÷3 x2, halving x2, ...). Rejecting them widens the sequence gap (MILESTONE §5); new original sequence items should use other rules (alternating, two interleaved series, cubes).
 
 ## Online drill choice shuffling (code check)
 
+**Correction (2026-10-18 02:40 PHT):** the app agent confirmed online drills DO shuffle choices at display, so stored key position is not a user-facing giveaway in drills. The real issue was answer keys included in drills-hub payloads; that leak is fixed on branch `grok/drill-choice-shuffle` (9086e0f, d10692a). Position balance remains an editorial quality goal only. The original note below is kept for the record and is superseded.
+
+
 - `app/Services/DrillService.php` orders questions with `inRandomOrder()` only and serves `options` as stored.
 - `resources/js/pages/user/drills/**` never calls `shuffleOptionsForQuestion` or any option shuffle; `custom-builder-view.tsx` shuffles question IDs only. `originalOptionIndices` exists in `drills/types.ts` but is never set on the online path.
 - Only `mock-session.ts`, `use-exam-hydration.ts` (mocks) and `lib/offline/grader.ts` (offline drills) shuffle choices.
-- **Conclusion:** in online drills the stored answer position is shown, so the baseline A/B skew is a real giveaway. Fix is app code → Codex Astra brief (apply `shuffleOptionsForQuestion` on the drill path), not an editorial change.
+- ~~**Conclusion:** in online drills the stored answer position is shown, so the baseline A/B skew is a real giveaway. Fix is app code → Codex Astra brief (apply `shuffleOptionsForQuestion` on the drill path), not an editorial change.~~ (superseded by the correction above)
 
 ## Needs CoS approval
 
