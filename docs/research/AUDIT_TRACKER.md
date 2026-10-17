@@ -256,3 +256,9 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **MSI:**
   - Backup first: `civio_local_pre_r03c_20261017.dump`.
   - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 604, **total 1,978**.
+
+## 2026-10-18: Baseline 550 converted to the spec schema (Grok Bot)
+
+- `scripts/batches/audit/baseline_convert.py` → `audit/data/baseline-550-spec-2026-10-18.json` (501 active, 49 retired; drafts mirroring state; no status change). Report: `audit/baseline-550-spec-qa-2026-10-18.md`.
+- qa_file.py: 2,217 problems. 1,650 are schema gaps the baseline never filled, and 534 are self-matches against its own seeds. That leaves 29 intra-baseline near-duplicates, 2 duplicate stems, and 1 non-distinct option set (#462, active, needs CoS).
+- New `scripts/batches/audit/explanation_lint.py` (run on every batch): 370/550 flagged; positions A 325 / B 163 / C 53 / D 9.
