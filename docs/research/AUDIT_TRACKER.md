@@ -256,3 +256,20 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **MSI:**
   - Backup first: `civio_local_pre_r03c_20261017.dump`.
   - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 604, **total 1,978**.
+
+## 2026-10-18: gap-fill-2000-01, Filipino Verbal (99 drafts, pending CoS)
+
+- `docs/research/gap-fill-2000-01.json`, built by `scripts/batches/gapfill/gap_fill_2000_01.py`: antonyms 41, synonyms 34, idioms 24. All target words and idioms are new to the bank. Spelling follows KWF.
+- Every item has 3 coded distractors with a specific why-wrong line each. Key positions are A 25, B 25, C 25, D 24.
+- QA:
+  - `qa_file.py docs/research/gap-fill-2000-01.json` → 0 problems against 1,656 bank items.
+  - `explanation_lint.py` → 0 flagged, after lengthening the distractors of 4 synonym items that had a long-key giveaway.
+  - `qa_fil.py` → GREEN.
+- Release Collection: new `scripts/batches/release/release_manifest.py` selects exactly EV300 / FV300 / Num400 / Ana400 / Cler300 / GI300 with round subtopic quotas. It exits 1 and lists the shortfalls until every quota is met. Over-target pools are trimmed by selection only; nothing is deleted or demoted.
+- Shortfalls after this batch (approved + kept + pending drafts):
+  - FIL reading 10, FIL paragraph order 14
+  - Numerical basic operations 55, number sequence 16
+  - Analytical analogy 61, data interpretation 31
+  - Clerical filing 41
+  - R.A. 6713 32 (CoS topic-mix decision)
+- Packet: `audit/gap-fill-2000-01-review-request.md`. Next: gap-fill-2000-02 (Numerical basic operations and sequences, plus FIL reading and paragraph order).

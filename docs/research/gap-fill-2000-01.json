@@ -1,0 +1,5949 @@
+{
+ "batch": "gap-fill-2000-01",
+ "spec_version": "0.1.9",
+ "status": "draft (pending CoS)",
+ "source_group": "civio",
+ "notes": "Filipino Verbal gap fill for the 2,000 milestone: antonyms, synonyms, idioms. All targets new to the bank.",
+ "items": [
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0001",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MASAGANA\" sa pangungusap na \"MASAGANA ang ani ng palay ngayong taon dahil sa sapat na ulan.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng masagana: kakaunti.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "kakaunti"
+    },
+    {
+     "option_id": "o2",
+     "text": "marami"
+    },
+    {
+     "option_id": "o3",
+     "text": "mabigat"
+    },
+    {
+     "option_id": "o4",
+     "text": "katamtaman"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng masagana: kakaunti.",
+    "why_correct": "\"kakaunti\" ang tamang sagot. Sa pangungusap, ang \"masagana\" ay kabaligtaran ng \"kakaunti\".",
+    "why_wrong": {
+     "o2": "\"marami\" — kasingkahulugan o kahawig ng masagana, hindi kasalungat",
+     "o3": "\"mabigat\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng masagana",
+     "o4": "\"katamtaman\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0002",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAPAGKUMBABA\" sa pangungusap na \"Kahit nanalo sa halalan, nanatiling MAPAGKUMBABA ang punong-barangay.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mapagkumbaba: mapagmataas.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mababang-loob"
+    },
+    {
+     "option_id": "o2",
+     "text": "mapagmataas"
+    },
+    {
+     "option_id": "o3",
+     "text": "magalang"
+    },
+    {
+     "option_id": "o4",
+     "text": "mahiyain"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mapagkumbaba: mapagmataas.",
+    "why_correct": "\"mapagmataas\" ang tamang sagot. Sa pangungusap, ang \"mapagkumbaba\" ay kabaligtaran ng \"mapagmataas\".",
+    "why_wrong": {
+     "o1": "\"mababang-loob\" — kasingkahulugan o kahawig ng mapagkumbaba, hindi kasalungat",
+     "o3": "\"magalang\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mapagkumbaba",
+     "o4": "\"mahiyain\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0003",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MASUNURIN\" sa pangungusap na \"MASUNURIN sa batas trapiko ang mga tsuper sa bayang iyon.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng masunurin: suwail.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "tumatalima"
+    },
+    {
+     "option_id": "o2",
+     "text": "maingat"
+    },
+    {
+     "option_id": "o3",
+     "text": "suwail"
+    },
+    {
+     "option_id": "o4",
+     "text": "paminsan-minsang lumalabag"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng masunurin: suwail.",
+    "why_correct": "\"suwail\" ang tamang sagot. Sa pangungusap, ang \"masunurin\" ay kabaligtaran ng \"suwail\".",
+    "why_wrong": {
+     "o1": "\"tumatalima\" — kasingkahulugan o kahawig ng masunurin, hindi kasalungat",
+     "o2": "\"maingat\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng masunurin",
+     "o4": "\"paminsan-minsang lumalabag\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0004",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAPAGBIGAY\" sa pangungusap na \"MAPAGBIGAY ang negosyante sa mga pamilyang nasunugan.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mapagbigay: maramot.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "matulungin"
+    },
+    {
+     "option_id": "o2",
+     "text": "mayaman"
+    },
+    {
+     "option_id": "o3",
+     "text": "minsang nagbibigay"
+    },
+    {
+     "option_id": "o4",
+     "text": "maramot"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mapagbigay: maramot.",
+    "why_correct": "\"maramot\" ang tamang sagot. Sa pangungusap, ang \"mapagbigay\" ay kabaligtaran ng \"maramot\".",
+    "why_wrong": {
+     "o1": "\"matulungin\" — kasingkahulugan o kahawig ng mapagbigay, hindi kasalungat",
+     "o2": "\"mayaman\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mapagbigay",
+     "o3": "\"minsang nagbibigay\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0005",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MATAPAT\" sa pangungusap na \"MATAPAT na iniulat ng kahera ang kulang sa kaha.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng matapat: mandaraya.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mandaraya"
+    },
+    {
+     "option_id": "o2",
+     "text": "totoo"
+    },
+    {
+     "option_id": "o3",
+     "text": "masipag"
+    },
+    {
+     "option_id": "o4",
+     "text": "medyo naglilihim"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng matapat: mandaraya.",
+    "why_correct": "\"mandaraya\" ang tamang sagot. Sa pangungusap, ang \"matapat\" ay kabaligtaran ng \"mandaraya\".",
+    "why_wrong": {
+     "o2": "\"totoo\" — kasingkahulugan o kahawig ng matapat, hindi kasalungat",
+     "o3": "\"masipag\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng matapat",
+     "o4": "\"medyo naglilihim\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0006",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MABAGAL\" sa pangungusap na \"MABAGAL ang pila sa tanggapan dahil iisa ang bukas na bintana.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mabagal: mabilis.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "makupad"
+    },
+    {
+     "option_id": "o2",
+     "text": "mabilis"
+    },
+    {
+     "option_id": "o3",
+     "text": "mahaba"
+    },
+    {
+     "option_id": "o4",
+     "text": "medyo bumibilis"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mabagal: mabilis.",
+    "why_correct": "\"mabilis\" ang tamang sagot. Sa pangungusap, ang \"mabagal\" ay kabaligtaran ng \"mabilis\".",
+    "why_wrong": {
+     "o1": "\"makupad\" — kasingkahulugan o kahawig ng mabagal, hindi kasalungat",
+     "o3": "\"mahaba\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mabagal",
+     "o4": "\"medyo bumibilis\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0007",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAINGAY\" sa pangungusap na \"MAINGAY ang palengke tuwing umaga.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng maingay: tahimik.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "magulo"
+    },
+    {
+     "option_id": "o2",
+     "text": "masikip"
+    },
+    {
+     "option_id": "o3",
+     "text": "tahimik"
+    },
+    {
+     "option_id": "o4",
+     "text": "bahagyang humina ang tunog"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng maingay: tahimik.",
+    "why_correct": "\"tahimik\" ang tamang sagot. Sa pangungusap, ang \"maingay\" ay kabaligtaran ng \"tahimik\".",
+    "why_wrong": {
+     "o1": "\"magulo\" — kasingkahulugan o kahawig ng maingay, hindi kasalungat",
+     "o2": "\"masikip\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng maingay",
+     "o4": "\"bahagyang humina ang tunog\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0008",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MALAMIG\" sa pangungusap na \"MALAMIG ang pagtanggap ng konseho sa panukalang proyekto.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng malamig: mainit.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "walang-gana"
+    },
+    {
+     "option_id": "o2",
+     "text": "mabagal"
+    },
+    {
+     "option_id": "o3",
+     "text": "bahagyang interesado"
+    },
+    {
+     "option_id": "o4",
+     "text": "mainit"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng malamig: mainit.",
+    "why_correct": "\"mainit\" ang tamang sagot. Sa pangungusap, ang \"malamig\" ay kabaligtaran ng \"mainit\".",
+    "why_wrong": {
+     "o1": "\"walang-gana\" — kasingkahulugan o kahawig ng malamig, hindi kasalungat",
+     "o2": "\"mabagal\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng malamig",
+     "o3": "\"bahagyang interesado\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0009",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAKITID\" sa pangungusap na \"MAKITID ang daan papunta sa baryo kaya hindi makadaan ang trak.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng makitid: malapad.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "malapad"
+    },
+    {
+     "option_id": "o2",
+     "text": "masikip"
+    },
+    {
+     "option_id": "o3",
+     "text": "mahaba"
+    },
+    {
+     "option_id": "o4",
+     "text": "medyo lumuluwag"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng makitid: malapad.",
+    "why_correct": "\"malapad\" ang tamang sagot. Sa pangungusap, ang \"makitid\" ay kabaligtaran ng \"malapad\".",
+    "why_wrong": {
+     "o2": "\"masikip\" — kasingkahulugan o kahawig ng makitid, hindi kasalungat",
+     "o3": "\"mahaba\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng makitid",
+     "o4": "\"medyo lumuluwag\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0010",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAPANGANIB\" sa pangungusap na \"MAPANGANIB ang pagtawid sa ilog kapag malakas ang agos.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mapanganib: ligtas.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "delikado"
+    },
+    {
+     "option_id": "o2",
+     "text": "ligtas"
+    },
+    {
+     "option_id": "o3",
+     "text": "malalim"
+    },
+    {
+     "option_id": "o4",
+     "text": "bahagyang nakababahala"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mapanganib: ligtas.",
+    "why_correct": "\"ligtas\" ang tamang sagot. Sa pangungusap, ang \"mapanganib\" ay kabaligtaran ng \"ligtas\".",
+    "why_wrong": {
+     "o1": "\"delikado\" — kasingkahulugan o kahawig ng mapanganib, hindi kasalungat",
+     "o3": "\"malalim\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mapanganib",
+     "o4": "\"bahagyang nakababahala\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0011",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MASALITA\" sa pangungusap na \"MASALITA ang bagong kawani kaya madalas siyang mapagsabihan.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng masalita: walang-kibo.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "madaldal"
+    },
+    {
+     "option_id": "o2",
+     "text": "masayahin"
+    },
+    {
+     "option_id": "o3",
+     "text": "walang-kibo"
+    },
+    {
+     "option_id": "o4",
+     "text": "paminsan-minsang nagsasalita"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng masalita: walang-kibo.",
+    "why_correct": "\"walang-kibo\" ang tamang sagot. Sa pangungusap, ang \"masalita\" ay kabaligtaran ng \"walang-kibo\".",
+    "why_wrong": {
+     "o1": "\"madaldal\" — kasingkahulugan o kahawig ng masalita, hindi kasalungat",
+     "o2": "\"masayahin\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng masalita",
+     "o4": "\"paminsan-minsang nagsasalita\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0012",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MALINIS\" sa pangungusap na \"MALINIS ang talaan ng kawani: walang anumang reklamo laban sa kaniya.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng malinis: marumi.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "walang-bahid"
+    },
+    {
+     "option_id": "o2",
+     "text": "kumpleto"
+    },
+    {
+     "option_id": "o3",
+     "text": "may kaunting mantsa"
+    },
+    {
+     "option_id": "o4",
+     "text": "marumi"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng malinis: marumi.",
+    "why_correct": "\"marumi\" ang tamang sagot. Sa pangungusap, ang \"malinis\" ay kabaligtaran ng \"marumi\".",
+    "why_wrong": {
+     "o1": "\"walang-bahid\" — kasingkahulugan o kahawig ng malinis, hindi kasalungat",
+     "o2": "\"kumpleto\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng malinis",
+     "o3": "\"may kaunting mantsa\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0013",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAHIRAP\" sa pangungusap na \"MAHIRAP ang pagsusulit sa matematika kahapon.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mahirap: madali.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "madali"
+    },
+    {
+     "option_id": "o2",
+     "text": "mabigat"
+    },
+    {
+     "option_id": "o3",
+     "text": "mahaba"
+    },
+    {
+     "option_id": "o4",
+     "text": "medyo nakalilito"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mahirap: madali.",
+    "why_correct": "\"madali\" ang tamang sagot. Sa pangungusap, ang \"mahirap\" ay kabaligtaran ng \"madali\".",
+    "why_wrong": {
+     "o2": "\"mabigat\" — kasingkahulugan o kahawig ng mahirap, hindi kasalungat",
+     "o3": "\"mahaba\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mahirap",
+     "o4": "\"medyo nakalilito\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0014",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"SINAUNA\" sa pangungusap na \"SINAUNA ang mga kagamitang natagpuan sa kuweba.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng sinauna: makabago.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "makaluma"
+    },
+    {
+     "option_id": "o2",
+     "text": "makabago"
+    },
+    {
+     "option_id": "o3",
+     "text": "mahalaga"
+    },
+    {
+     "option_id": "o4",
+     "text": "may kaunting bagong bahagi"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng sinauna: makabago.",
+    "why_correct": "\"makabago\" ang tamang sagot. Sa pangungusap, ang \"sinauna\" ay kabaligtaran ng \"makabago\".",
+    "why_wrong": {
+     "o1": "\"makaluma\" — kasingkahulugan o kahawig ng sinauna, hindi kasalungat",
+     "o3": "\"mahalaga\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng sinauna",
+     "o4": "\"may kaunting bagong bahagi\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0015",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MALABO\" sa pangungusap na \"MALABO ang paliwanag ng tagapagsalita tungkol sa bagong patakaran.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng malabo: malinaw.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "magulo"
+    },
+    {
+     "option_id": "o2",
+     "text": "mahaba"
+    },
+    {
+     "option_id": "o3",
+     "text": "malinaw"
+    },
+    {
+     "option_id": "o4",
+     "text": "bahagyang naiintindihan"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng malabo: malinaw.",
+    "why_correct": "\"malinaw\" ang tamang sagot. Sa pangungusap, ang \"malabo\" ay kabaligtaran ng \"malinaw\".",
+    "why_wrong": {
+     "o1": "\"magulo\" — kasingkahulugan o kahawig ng malabo, hindi kasalungat",
+     "o2": "\"mahaba\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng malabo",
+     "o4": "\"bahagyang naiintindihan\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0016",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"PAMBIHIRA\" sa pangungusap na \"PAMBIHIRA ang ganitong uri ng orkidyas sa kagubatan.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng pambihira: karaniwan.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "bihira"
+    },
+    {
+     "option_id": "o2",
+     "text": "maganda"
+    },
+    {
+     "option_id": "o3",
+     "text": "paminsan-minsang nakikita"
+    },
+    {
+     "option_id": "o4",
+     "text": "karaniwan"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng pambihira: karaniwan.",
+    "why_correct": "\"karaniwan\" ang tamang sagot. Sa pangungusap, ang \"pambihira\" ay kabaligtaran ng \"karaniwan\".",
+    "why_wrong": {
+     "o1": "\"bihira\" — kasingkahulugan o kahawig ng pambihira, hindi kasalungat",
+     "o2": "\"maganda\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng pambihira",
+     "o3": "\"paminsan-minsang nakikita\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0017",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"NAGPATULOY\" sa pangungusap na \"NAGPATULOY ang pulong kahit malakas ang ulan.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng nagpatuloy: nahinto.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "nahinto"
+    },
+    {
+     "option_id": "o2",
+     "text": "nagtuloy-tuloy"
+    },
+    {
+     "option_id": "o3",
+     "text": "nagsimula"
+    },
+    {
+     "option_id": "o4",
+     "text": "bumagal"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng nagpatuloy: nahinto.",
+    "why_correct": "\"nahinto\" ang tamang sagot. Sa pangungusap, ang \"nagpatuloy\" ay kabaligtaran ng \"nahinto\".",
+    "why_wrong": {
+     "o2": "\"nagtuloy-tuloy\" — kasingkahulugan o kahawig ng nagpatuloy, hindi kasalungat",
+     "o3": "\"nagsimula\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng nagpatuloy",
+     "o4": "\"bumagal\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0018",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"TUMAAS\" sa pangungusap na \"TUMAAS ang presyo ng bigas noong nakaraang buwan.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng tumaas: bumaba.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "umakyat"
+    },
+    {
+     "option_id": "o2",
+     "text": "bumaba"
+    },
+    {
+     "option_id": "o3",
+     "text": "nagbago"
+    },
+    {
+     "option_id": "o4",
+     "text": "bahagyang nag-iba"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng tumaas: bumaba.",
+    "why_correct": "\"bumaba\" ang tamang sagot. Sa pangungusap, ang \"tumaas\" ay kabaligtaran ng \"bumaba\".",
+    "why_wrong": {
+     "o1": "\"umakyat\" — kasingkahulugan o kahawig ng tumaas, hindi kasalungat",
+     "o3": "\"nagbago\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng tumaas",
+     "o4": "\"bahagyang nag-iba\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0019",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"IPINAGBAWAL\" sa pangungusap na \"IPINAGBAWAL ng konseho ang paggamit ng plastik sa palengke.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng ipinagbawal: pinahintulutan.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "hinadlangan"
+    },
+    {
+     "option_id": "o2",
+     "text": "ipinatupad"
+    },
+    {
+     "option_id": "o3",
+     "text": "pinahintulutan"
+    },
+    {
+     "option_id": "o4",
+     "text": "nilimitahan"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng ipinagbawal: pinahintulutan.",
+    "why_correct": "\"pinahintulutan\" ang tamang sagot. Sa pangungusap, ang \"ipinagbawal\" ay kabaligtaran ng \"pinahintulutan\".",
+    "why_wrong": {
+     "o1": "\"hinadlangan\" — kasingkahulugan o kahawig ng ipinagbawal, hindi kasalungat",
+     "o2": "\"ipinatupad\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng ipinagbawal",
+     "o4": "\"nilimitahan\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0020",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"PUMAYAG\" sa pangungusap na \"PUMAYAG ang mga magulang sa lakbay-aral ng mga mag-aaral.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng pumayag: tumanggi.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "sumang-ayon"
+    },
+    {
+     "option_id": "o2",
+     "text": "nagtanong"
+    },
+    {
+     "option_id": "o3",
+     "text": "nag-alinlangan"
+    },
+    {
+     "option_id": "o4",
+     "text": "tumanggi"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng pumayag: tumanggi.",
+    "why_correct": "\"tumanggi\" ang tamang sagot. Sa pangungusap, ang \"pumayag\" ay kabaligtaran ng \"tumanggi\".",
+    "why_wrong": {
+     "o1": "\"sumang-ayon\" — kasingkahulugan o kahawig ng pumayag, hindi kasalungat",
+     "o2": "\"nagtanong\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng pumayag",
+     "o3": "\"nag-alinlangan\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0021",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"DUMAMI\" sa pangungusap na \"DUMAMI ang turista sa isla nang buksan ang bagong pantalan.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng dumami: umunti.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "umunti"
+    },
+    {
+     "option_id": "o2",
+     "text": "lumago"
+    },
+    {
+     "option_id": "o3",
+     "text": "dumating"
+    },
+    {
+     "option_id": "o4",
+     "text": "nanatili"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng dumami: umunti.",
+    "why_correct": "\"umunti\" ang tamang sagot. Sa pangungusap, ang \"dumami\" ay kabaligtaran ng \"umunti\".",
+    "why_wrong": {
+     "o2": "\"lumago\" — kasingkahulugan o kahawig ng dumami, hindi kasalungat",
+     "o3": "\"dumating\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng dumami",
+     "o4": "\"nanatili\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0022",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"NAGTAGUMPAY\" sa pangungusap na \"NAGTAGUMPAY ang kampanya ng barangay laban sa dengue.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng nagtagumpay: nabigo.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "nanalo"
+    },
+    {
+     "option_id": "o2",
+     "text": "nabigo"
+    },
+    {
+     "option_id": "o3",
+     "text": "natapos"
+    },
+    {
+     "option_id": "o4",
+     "text": "bahagyang umusad"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng nagtagumpay: nabigo.",
+    "why_correct": "\"nabigo\" ang tamang sagot. Sa pangungusap, ang \"nagtagumpay\" ay kabaligtaran ng \"nabigo\".",
+    "why_wrong": {
+     "o1": "\"nanalo\" — kasingkahulugan o kahawig ng nagtagumpay, hindi kasalungat",
+     "o3": "\"natapos\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng nagtagumpay",
+     "o4": "\"bahagyang umusad\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0023",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MATAPANG\" sa pangungusap na \"MATAPANG na hinarap ng bumbero ang naglalagablab na apoy.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng matapang: duwag.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "magiting"
+    },
+    {
+     "option_id": "o2",
+     "text": "malakas"
+    },
+    {
+     "option_id": "o3",
+     "text": "duwag"
+    },
+    {
+     "option_id": "o4",
+     "text": "kinakabahan"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng matapang: duwag.",
+    "why_correct": "\"duwag\" ang tamang sagot. Sa pangungusap, ang \"matapang\" ay kabaligtaran ng \"duwag\".",
+    "why_wrong": {
+     "o1": "\"magiting\" — kasingkahulugan o kahawig ng matapang, hindi kasalungat",
+     "o2": "\"malakas\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng matapang",
+     "o4": "\"kinakabahan\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0024",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MASAYA\" sa pangungusap na \"MASAYA ang mga bata sa bagong palaruan.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng masaya: malungkot.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "maligaya"
+    },
+    {
+     "option_id": "o2",
+     "text": "maingay"
+    },
+    {
+     "option_id": "o3",
+     "text": "medyo pagod"
+    },
+    {
+     "option_id": "o4",
+     "text": "malungkot"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng masaya: malungkot.",
+    "why_correct": "\"malungkot\" ang tamang sagot. Sa pangungusap, ang \"masaya\" ay kabaligtaran ng \"malungkot\".",
+    "why_wrong": {
+     "o1": "\"maligaya\" — kasingkahulugan o kahawig ng masaya, hindi kasalungat",
+     "o2": "\"maingay\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng masaya",
+     "o3": "\"medyo pagod\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0025",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAKAPAL\" sa pangungusap na \"MAKAPAL ang alikabok sa lumang aparador.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng makapal: manipis.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "manipis"
+    },
+    {
+     "option_id": "o2",
+     "text": "siksik"
+    },
+    {
+     "option_id": "o3",
+     "text": "marumi"
+    },
+    {
+     "option_id": "o4",
+     "text": "bahagyang nabawasan"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng makapal: manipis.",
+    "why_correct": "\"manipis\" ang tamang sagot. Sa pangungusap, ang \"makapal\" ay kabaligtaran ng \"manipis\".",
+    "why_wrong": {
+     "o2": "\"siksik\" — kasingkahulugan o kahawig ng makapal, hindi kasalungat",
+     "o3": "\"marumi\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng makapal",
+     "o4": "\"bahagyang nabawasan\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0026",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MALAKAS\" sa pangungusap na \"MALAKAS ang hangin bago dumating ang bagyo.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng malakas: mahina.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "marahas"
+    },
+    {
+     "option_id": "o2",
+     "text": "mahina"
+    },
+    {
+     "option_id": "o3",
+     "text": "malamig"
+    },
+    {
+     "option_id": "o4",
+     "text": "medyo humihina"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng malakas: mahina.",
+    "why_correct": "\"mahina\" ang tamang sagot. Sa pangungusap, ang \"malakas\" ay kabaligtaran ng \"mahina\".",
+    "why_wrong": {
+     "o1": "\"marahas\" — kasingkahulugan o kahawig ng malakas, hindi kasalungat",
+     "o3": "\"malamig\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng malakas",
+     "o4": "\"medyo humihina\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0027",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"KUMPLETO\" sa pangungusap na \"KUMPLETO ang mga dokumentong isinumite ng aplikante.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng kumpleto: kulang.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "ganap"
+    },
+    {
+     "option_id": "o2",
+     "text": "nakalimbag"
+    },
+    {
+     "option_id": "o3",
+     "text": "kulang"
+    },
+    {
+     "option_id": "o4",
+     "text": "halos buo"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng kumpleto: kulang.",
+    "why_correct": "\"kulang\" ang tamang sagot. Sa pangungusap, ang \"kumpleto\" ay kabaligtaran ng \"kulang\".",
+    "why_wrong": {
+     "o1": "\"ganap\" — kasingkahulugan o kahawig ng kumpleto, hindi kasalungat",
+     "o2": "\"nakalimbag\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng kumpleto",
+     "o4": "\"halos buo\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0028",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAPAYAT\" sa pangungusap na \"MAPAYAT ang asong napulot sa kalsada.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mapayat: mataba.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "patpatin"
+    },
+    {
+     "option_id": "o2",
+     "text": "maliit"
+    },
+    {
+     "option_id": "o3",
+     "text": "bahagyang tumaba"
+    },
+    {
+     "option_id": "o4",
+     "text": "mataba"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mapayat: mataba.",
+    "why_correct": "\"mataba\" ang tamang sagot. Sa pangungusap, ang \"mapayat\" ay kabaligtaran ng \"mataba\".",
+    "why_wrong": {
+     "o1": "\"patpatin\" — kasingkahulugan o kahawig ng mapayat, hindi kasalungat",
+     "o2": "\"maliit\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mapayat",
+     "o3": "\"bahagyang tumaba\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0029",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MATAMIS\" sa pangungusap na \"MATAMIS ang ngiti ng nagwagi sa paligsahan.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng matamis: mapait.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mapait"
+    },
+    {
+     "option_id": "o2",
+     "text": "kaaya-aya"
+    },
+    {
+     "option_id": "o3",
+     "text": "maganda"
+    },
+    {
+     "option_id": "o4",
+     "text": "pilit"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng matamis: mapait.",
+    "why_correct": "\"mapait\" ang tamang sagot. Sa pangungusap, ang \"matamis\" ay kabaligtaran ng \"mapait\".",
+    "why_wrong": {
+     "o2": "\"kaaya-aya\" — kasingkahulugan o kahawig ng matamis, hindi kasalungat",
+     "o3": "\"maganda\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng matamis",
+     "o4": "\"pilit\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0030",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAHABA\" sa pangungusap na \"MAHABA ang pasensiya ng guro sa mga batang makukulit.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mahaba: maikli.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "malawig"
+    },
+    {
+     "option_id": "o2",
+     "text": "maikli"
+    },
+    {
+     "option_id": "o3",
+     "text": "matiyaga"
+    },
+    {
+     "option_id": "o4",
+     "text": "katamtaman"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mahaba: maikli.",
+    "why_correct": "\"maikli\" ang tamang sagot. Sa pangungusap, ang \"mahaba\" ay kabaligtaran ng \"maikli\".",
+    "why_wrong": {
+     "o1": "\"malawig\" — kasingkahulugan o kahawig ng mahaba, hindi kasalungat",
+     "o3": "\"matiyaga\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mahaba",
+     "o4": "\"katamtaman\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0031",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAPAGBANTAY\" sa pangungusap na \"MAPAGBANTAY ang guwardiya sa pasukan ng gusali.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mapagbantay: pabaya.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "alisto"
+    },
+    {
+     "option_id": "o2",
+     "text": "matapang"
+    },
+    {
+     "option_id": "o3",
+     "text": "pabaya"
+    },
+    {
+     "option_id": "o4",
+     "text": "paminsan-minsang lumilingon"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mapagbantay: pabaya.",
+    "why_correct": "\"pabaya\" ang tamang sagot. Sa pangungusap, ang \"mapagbantay\" ay kabaligtaran ng \"pabaya\".",
+    "why_wrong": {
+     "o1": "\"alisto\" — kasingkahulugan o kahawig ng mapagbantay, hindi kasalungat",
+     "o2": "\"matapang\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mapagbantay",
+     "o4": "\"paminsan-minsang lumilingon\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0032",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MASIPAG\" sa pangungusap na \"MASIPAG ang magsasaka mula madaling-araw hanggang dapithapon.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng masipag: tamad.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "masikap"
+    },
+    {
+     "option_id": "o2",
+     "text": "malakas"
+    },
+    {
+     "option_id": "o3",
+     "text": "pagod"
+    },
+    {
+     "option_id": "o4",
+     "text": "tamad"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng masipag: tamad.",
+    "why_correct": "\"tamad\" ang tamang sagot. Sa pangungusap, ang \"masipag\" ay kabaligtaran ng \"tamad\".",
+    "why_wrong": {
+     "o1": "\"masikap\" — kasingkahulugan o kahawig ng masipag, hindi kasalungat",
+     "o2": "\"malakas\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng masipag",
+     "o3": "\"pagod\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0033",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAUNAWAIN\" sa pangungusap na \"MAUNAWAIN ang hepe sa mga kawaning may sakit.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng maunawain: mainitin ang ulo.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mainitin ang ulo"
+    },
+    {
+     "option_id": "o2",
+     "text": "mapagpasensiya"
+    },
+    {
+     "option_id": "o3",
+     "text": "mabait"
+    },
+    {
+     "option_id": "o4",
+     "text": "minsang naiinis"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng maunawain: mainitin ang ulo.",
+    "why_correct": "\"mainitin ang ulo\" ang tamang sagot. Sa pangungusap, ang \"maunawain\" ay kabaligtaran ng \"mainitin ang ulo\".",
+    "why_wrong": {
+     "o2": "\"mapagpasensiya\" — kasingkahulugan o kahawig ng maunawain, hindi kasalungat",
+     "o3": "\"mabait\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng maunawain",
+     "o4": "\"minsang naiinis\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0034",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAGULO\" sa pangungusap na \"MAGULO ang mga papeles sa mesa ng kalihim.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng magulo: nakaayos.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "kalat-kalat"
+    },
+    {
+     "option_id": "o2",
+     "text": "nakaayos"
+    },
+    {
+     "option_id": "o3",
+     "text": "marami"
+    },
+    {
+     "option_id": "o4",
+     "text": "bahagyang inayos"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng magulo: nakaayos.",
+    "why_correct": "\"nakaayos\" ang tamang sagot. Sa pangungusap, ang \"magulo\" ay kabaligtaran ng \"nakaayos\".",
+    "why_wrong": {
+     "o1": "\"kalat-kalat\" — kasingkahulugan o kahawig ng magulo, hindi kasalungat",
+     "o3": "\"marami\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng magulo",
+     "o4": "\"bahagyang inayos\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0035",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAPALAD\" sa pangungusap na \"MAPALAD ang mga pamilyang nakaligtas sa baha.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mapalad: kapus-palad.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "masuwerte"
+    },
+    {
+     "option_id": "o2",
+     "text": "masaya"
+    },
+    {
+     "option_id": "o3",
+     "text": "kapus-palad"
+    },
+    {
+     "option_id": "o4",
+     "text": "nag-aalala"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mapalad: kapus-palad.",
+    "why_correct": "\"kapus-palad\" ang tamang sagot. Sa pangungusap, ang \"mapalad\" ay kabaligtaran ng \"kapus-palad\".",
+    "why_wrong": {
+     "o1": "\"masuwerte\" — kasingkahulugan o kahawig ng mapalad, hindi kasalungat",
+     "o2": "\"masaya\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mapalad",
+     "o4": "\"nag-aalala\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0036",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAHAL\" sa pangungusap na \"MAHAL ang pamasahe sa eroplano tuwing Pasko.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mahal: mura.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "magastos"
+    },
+    {
+     "option_id": "o2",
+     "text": "malayo"
+    },
+    {
+     "option_id": "o3",
+     "text": "bahagyang tumaas"
+    },
+    {
+     "option_id": "o4",
+     "text": "mura"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mahal: mura.",
+    "why_correct": "\"mura\" ang tamang sagot. Sa pangungusap, ang \"mahal\" ay kabaligtaran ng \"mura\".",
+    "why_wrong": {
+     "o1": "\"magastos\" — kasingkahulugan o kahawig ng mahal, hindi kasalungat",
+     "o2": "\"malayo\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mahal",
+     "o3": "\"bahagyang tumaas\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0037",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"SUMULONG\" sa pangungusap na \"SUMULONG ang proyekto matapos maaprubahan ang pondo.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng sumulong: umatras.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "umatras"
+    },
+    {
+     "option_id": "o2",
+     "text": "umusad"
+    },
+    {
+     "option_id": "o3",
+     "text": "nagsimula"
+    },
+    {
+     "option_id": "o4",
+     "text": "huminto sandali"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng sumulong: umatras.",
+    "why_correct": "\"umatras\" ang tamang sagot. Sa pangungusap, ang \"sumulong\" ay kabaligtaran ng \"umatras\".",
+    "why_wrong": {
+     "o2": "\"umusad\" — kasingkahulugan o kahawig ng sumulong, hindi kasalungat",
+     "o3": "\"nagsimula\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng sumulong",
+     "o4": "\"huminto sandali\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0038",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"BUKAS\" sa pangungusap na \"BUKAS ang tanggapan ng munisipyo hanggang alas-singko.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng bukas: sarado.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "handang tumanggap"
+    },
+    {
+     "option_id": "o2",
+     "text": "sarado"
+    },
+    {
+     "option_id": "o3",
+     "text": "abala"
+    },
+    {
+     "option_id": "o4",
+     "text": "bahagyang nakasara"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng bukas: sarado.",
+    "why_correct": "\"sarado\" ang tamang sagot. Sa pangungusap, ang \"bukas\" ay kabaligtaran ng \"sarado\".",
+    "why_wrong": {
+     "o1": "\"handang tumanggap\" — kasingkahulugan o kahawig ng bukas, hindi kasalungat",
+     "o3": "\"abala\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng bukas",
+     "o4": "\"bahagyang nakasara\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0039",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MAINIT\" sa pangungusap na \"MAINIT ang sabaw na inihain sa mga bisita.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng mainit: malamig.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "umuusok"
+    },
+    {
+     "option_id": "o2",
+     "text": "masarap"
+    },
+    {
+     "option_id": "o3",
+     "text": "malamig"
+    },
+    {
+     "option_id": "o4",
+     "text": "maligamgam"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng mainit: malamig.",
+    "why_correct": "\"malamig\" ang tamang sagot. Sa pangungusap, ang \"mainit\" ay kabaligtaran ng \"malamig\".",
+    "why_wrong": {
+     "o1": "\"umuusok\" — kasingkahulugan o kahawig ng mainit, hindi kasalungat",
+     "o2": "\"masarap\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng mainit",
+     "o4": "\"maligamgam\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0040",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MATALINO\" sa pangungusap na \"MATALINO ang mag-aaral na nanalo sa paligsahan sa agham.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng matalino: mangmang.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "marunong"
+    },
+    {
+     "option_id": "o2",
+     "text": "masipag"
+    },
+    {
+     "option_id": "o3",
+     "text": "karaniwan"
+    },
+    {
+     "option_id": "o4",
+     "text": "mangmang"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng matalino: mangmang.",
+    "why_correct": "\"mangmang\" ang tamang sagot. Sa pangungusap, ang \"matalino\" ay kabaligtaran ng \"mangmang\".",
+    "why_wrong": {
+     "o1": "\"marunong\" — kasingkahulugan o kahawig ng matalino, hindi kasalungat",
+     "o2": "\"masipag\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng matalino",
+     "o3": "\"karaniwan\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0041",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "antonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang kasalungat ng \"MATANDA\" sa pangungusap na \"MATANDA na ang punong mangga sa plasa.\"?",
+   "shortcut": "Hanapin ang kabaligtaran ng matanda: bata.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "bata"
+    },
+    {
+     "option_id": "o2",
+     "text": "luma"
+    },
+    {
+     "option_id": "o3",
+     "text": "malaki"
+    },
+    {
+     "option_id": "o4",
+     "text": "may edad"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+    "shortcut": "Hanapin ang kabaligtaran ng matanda: bata.",
+    "why_correct": "\"bata\" ang tamang sagot. Sa pangungusap, ang \"matanda\" ay kabaligtaran ng \"bata\".",
+    "why_wrong": {
+     "o2": "\"luma\" — kasingkahulugan o kahawig ng matanda, hindi kasalungat",
+     "o3": "\"malaki\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng matanda",
+     "o4": "\"may edad\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0001",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MATAIMTIM na nagdasal ang mga deboto sa simbahan.\" ano ang pinakamalapit na kahulugan ng \"MATAIMTIM\"?",
+   "shortcut": "Palitan ang mataimtim ng taos-puso; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pabaya"
+    },
+    {
+     "option_id": "o2",
+     "text": "taos-puso"
+    },
+    {
+     "option_id": "o3",
+     "text": "malakas"
+    },
+    {
+     "option_id": "o4",
+     "text": "mabilis"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang mataimtim ng taos-puso; tugma pa rin ang pangungusap.",
+    "why_correct": "\"taos-puso\" ang tamang sagot. Sa konteksto, ang \"mataimtim\" ay nangangahulugang taos-puso.",
+    "why_wrong": {
+     "o1": "\"pabaya\" — kabaligtaran ng mataimtim",
+     "o3": "\"malakas\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"mabilis\" — ibang katangian, hindi kahulugan ng mataimtim"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0002",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MASAKIM ang negosyanteng nagtago ng bigas para tumaas ang presyo.\" ano ang pinakamalapit na kahulugan ng \"MASAKIM\"?",
+   "shortcut": "Palitan ang masakim ng gahaman; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mapagbigay"
+    },
+    {
+     "option_id": "o2",
+     "text": "mayaman"
+    },
+    {
+     "option_id": "o3",
+     "text": "gahaman"
+    },
+    {
+     "option_id": "o4",
+     "text": "matalino"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang masakim ng gahaman; tugma pa rin ang pangungusap.",
+    "why_correct": "\"gahaman\" ang tamang sagot. Sa konteksto, ang \"masakim\" ay nangangahulugang gahaman.",
+    "why_wrong": {
+     "o1": "\"mapagbigay\" — kabaligtaran ng masakim",
+     "o2": "\"mayaman\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"matalino\" — ibang katangian, hindi kahulugan ng masakim"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0003",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"HUMUPA ang baha kinaumagahan matapos ang malakas na ulan.\" ano ang pinakamalapit na kahulugan ng \"HUMUPA\"?",
+   "shortcut": "Palitan ang humupa ng bumaba; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "tumaas"
+    },
+    {
+     "option_id": "o2",
+     "text": "lumamig"
+    },
+    {
+     "option_id": "o3",
+     "text": "luminaw"
+    },
+    {
+     "option_id": "o4",
+     "text": "bumaba"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang humupa ng bumaba; tugma pa rin ang pangungusap.",
+    "why_correct": "\"bumaba\" ang tamang sagot. Sa konteksto, ang \"humupa\" ay nangangahulugang bumaba.",
+    "why_wrong": {
+     "o1": "\"tumaas\" — kabaligtaran ng humupa",
+     "o2": "\"lumamig\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o3": "\"luminaw\" — ibang katangian, hindi kahulugan ng humupa"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0004",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"NAGPUPUYOS sa galit ang may-ari ng nasirang sasakyan.\" ano ang pinakamalapit na kahulugan ng \"NAGPUPUYOS\"?",
+   "shortcut": "Palitan ang nagpupuyos ng nag-aalab; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "nag-aalab"
+    },
+    {
+     "option_id": "o2",
+     "text": "mahinahon"
+    },
+    {
+     "option_id": "o3",
+     "text": "nalulungkot"
+    },
+    {
+     "option_id": "o4",
+     "text": "nagmamadali"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang nagpupuyos ng nag-aalab; tugma pa rin ang pangungusap.",
+    "why_correct": "\"nag-aalab\" ang tamang sagot. Sa konteksto, ang \"nagpupuyos\" ay nangangahulugang nag-aalab.",
+    "why_wrong": {
+     "o2": "\"mahinahon\" — kabaligtaran ng nagpupuyos",
+     "o3": "\"nalulungkot\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"nagmamadali\" — ibang katangian, hindi kahulugan ng nagpupuyos"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0005",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAPAGKAKATIWALAAN ang ingat-yaman ng samahan.\" ano ang pinakamalapit na kahulugan ng \"MAPAGKAKATIWALAAN\"?",
+   "shortcut": "Palitan ang mapagkakatiwalaan ng maaasahan; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "taksil"
+    },
+    {
+     "option_id": "o2",
+     "text": "maaasahan"
+    },
+    {
+     "option_id": "o3",
+     "text": "mayaman"
+    },
+    {
+     "option_id": "o4",
+     "text": "masayahin"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang mapagkakatiwalaan ng maaasahan; tugma pa rin ang pangungusap.",
+    "why_correct": "\"maaasahan\" ang tamang sagot. Sa konteksto, ang \"mapagkakatiwalaan\" ay nangangahulugang maaasahan.",
+    "why_wrong": {
+     "o1": "\"taksil\" — kabaligtaran ng mapagkakatiwalaan",
+     "o3": "\"mayaman\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"masayahin\" — ibang katangian, hindi kahulugan ng mapagkakatiwalaan"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0006",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"DALISAY ang tubig na umaagos mula sa bukal.\" ano ang pinakamalapit na kahulugan ng \"DALISAY\"?",
+   "shortcut": "Palitan ang dalisay ng malinis; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "marumi"
+    },
+    {
+     "option_id": "o2",
+     "text": "malamig"
+    },
+    {
+     "option_id": "o3",
+     "text": "malinis"
+    },
+    {
+     "option_id": "o4",
+     "text": "masagana"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang dalisay ng malinis; tugma pa rin ang pangungusap.",
+    "why_correct": "\"malinis\" ang tamang sagot. Sa konteksto, ang \"dalisay\" ay nangangahulugang malinis.",
+    "why_wrong": {
+     "o1": "\"marumi\" — kabaligtaran ng dalisay",
+     "o2": "\"malamig\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"masagana\" — ibang katangian, hindi kahulugan ng dalisay"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0007",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAKUPAD kumilos ang bagong katulong sa kusina.\" ano ang pinakamalapit na kahulugan ng \"MAKUPAD\"?",
+   "shortcut": "Palitan ang makupad ng mabagal; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "maliksi"
+    },
+    {
+     "option_id": "o2",
+     "text": "mahina"
+    },
+    {
+     "option_id": "o3",
+     "text": "tahimik"
+    },
+    {
+     "option_id": "o4",
+     "text": "mabagal"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang makupad ng mabagal; tugma pa rin ang pangungusap.",
+    "why_correct": "\"mabagal\" ang tamang sagot. Sa konteksto, ang \"makupad\" ay nangangahulugang mabagal.",
+    "why_wrong": {
+     "o1": "\"maliksi\" — kabaligtaran ng makupad",
+     "o2": "\"mahina\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o3": "\"tahimik\" — ibang katangian, hindi kahulugan ng makupad"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0008",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"PALASAK na ang ganitong biro sa mga talumpati.\" ano ang pinakamalapit na kahulugan ng \"PALASAK\"?",
+   "shortcut": "Palitan ang palasak ng gasgas; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "gasgas"
+    },
+    {
+     "option_id": "o2",
+     "text": "bago"
+    },
+    {
+     "option_id": "o3",
+     "text": "nakatatawa"
+    },
+    {
+     "option_id": "o4",
+     "text": "mahaba"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang palasak ng gasgas; tugma pa rin ang pangungusap.",
+    "why_correct": "\"gasgas\" ang tamang sagot. Sa konteksto, ang \"palasak\" ay nangangahulugang gasgas.",
+    "why_wrong": {
+     "o2": "\"bago\" — kabaligtaran ng palasak",
+     "o3": "\"nakatatawa\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"mahaba\" — ibang katangian, hindi kahulugan ng palasak"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0009",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"TIWALAG na sa samahan ang dating kasapi.\" ano ang pinakamalapit na kahulugan ng \"TIWALAG\"?",
+   "shortcut": "Palitan ang tiwalag ng hiwalay; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "kasapi pa"
+    },
+    {
+     "option_id": "o2",
+     "text": "hiwalay"
+    },
+    {
+     "option_id": "o3",
+     "text": "tahimik"
+    },
+    {
+     "option_id": "o4",
+     "text": "galit"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang tiwalag ng hiwalay; tugma pa rin ang pangungusap.",
+    "why_correct": "\"hiwalay\" ang tamang sagot. Sa konteksto, ang \"tiwalag\" ay nangangahulugang hiwalay.",
+    "why_wrong": {
+     "o1": "\"kasapi pa\" — kabaligtaran ng tiwalag",
+     "o3": "\"tahimik\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"galit\" — ibang katangian, hindi kahulugan ng tiwalag"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0010",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Naghanda ang barangay sa anumang SAKUNA ngayong tag-ulan.\" ano ang pinakamalapit na kahulugan ng \"SAKUNA\"?",
+   "shortcut": "Palitan ang sakuna ng kalamidad; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "biyaya"
+    },
+    {
+     "option_id": "o2",
+     "text": "bagyo"
+    },
+    {
+     "option_id": "o3",
+     "text": "kalamidad"
+    },
+    {
+     "option_id": "o4",
+     "text": "pagsasanay"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang sakuna ng kalamidad; tugma pa rin ang pangungusap.",
+    "why_correct": "\"kalamidad\" ang tamang sagot. Sa konteksto, ang \"sakuna\" ay nangangahulugang kalamidad.",
+    "why_wrong": {
+     "o1": "\"biyaya\" — kabaligtaran ng sakuna",
+     "o2": "\"bagyo\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"pagsasanay\" — ibang katangian, hindi kahulugan ng sakuna"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0011",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Sa SIMBUYO ng damdamin, agad siyang nagbitiw sa trabaho.\" ano ang pinakamalapit na kahulugan ng \"SIMBUYO\"?",
+   "shortcut": "Palitan ang simbuyo ng bugso; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pagtitimpi"
+    },
+    {
+     "option_id": "o2",
+     "text": "lungkot"
+    },
+    {
+     "option_id": "o3",
+     "text": "plano"
+    },
+    {
+     "option_id": "o4",
+     "text": "bugso"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang simbuyo ng bugso; tugma pa rin ang pangungusap.",
+    "why_correct": "\"bugso\" ang tamang sagot. Sa konteksto, ang \"simbuyo\" ay nangangahulugang bugso.",
+    "why_wrong": {
+     "o1": "\"pagtitimpi\" — kabaligtaran ng simbuyo",
+     "o2": "\"lungkot\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o3": "\"plano\" — ibang katangian, hindi kahulugan ng simbuyo"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0012",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Lumaki ang bata sa KALINGA ng kaniyang lola.\" ano ang pinakamalapit na kahulugan ng \"KALINGA\"?",
+   "shortcut": "Palitan ang kalinga ng pag-aaruga; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pag-aaruga"
+    },
+    {
+     "option_id": "o2",
+     "text": "pagpapabaya"
+    },
+    {
+     "option_id": "o3",
+     "text": "tahanan"
+    },
+    {
+     "option_id": "o4",
+     "text": "utos"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang kalinga ng pag-aaruga; tugma pa rin ang pangungusap.",
+    "why_correct": "\"pag-aaruga\" ang tamang sagot. Sa konteksto, ang \"kalinga\" ay nangangahulugang pag-aaruga.",
+    "why_wrong": {
+     "o2": "\"pagpapabaya\" — kabaligtaran ng kalinga",
+     "o3": "\"tahanan\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"utos\" — ibang katangian, hindi kahulugan ng kalinga"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0013",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Pinakinggan ng alkalde ang HINAING ng mga tindero sa palengke.\" ano ang pinakamalapit na kahulugan ng \"HINAING\"?",
+   "shortcut": "Palitan ang hinaing ng reklamo; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "papuri"
+    },
+    {
+     "option_id": "o2",
+     "text": "reklamo"
+    },
+    {
+     "option_id": "o3",
+     "text": "pulong"
+    },
+    {
+     "option_id": "o4",
+     "text": "panukala"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang hinaing ng reklamo; tugma pa rin ang pangungusap.",
+    "why_correct": "\"reklamo\" ang tamang sagot. Sa konteksto, ang \"hinaing\" ay nangangahulugang reklamo.",
+    "why_wrong": {
+     "o1": "\"papuri\" — kabaligtaran ng hinaing",
+     "o3": "\"pulong\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"panukala\" — ibang katangian, hindi kahulugan ng hinaing"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0014",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Isang LIPON ng mga ibon ang lumipad sa ibabaw ng palayan.\" ano ang pinakamalapit na kahulugan ng \"LIPON\"?",
+   "shortcut": "Palitan ang lipon ng kawan; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "iisa"
+    },
+    {
+     "option_id": "o2",
+     "text": "pugad"
+    },
+    {
+     "option_id": "o3",
+     "text": "kawan"
+    },
+    {
+     "option_id": "o4",
+     "text": "awit"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang lipon ng kawan; tugma pa rin ang pangungusap.",
+    "why_correct": "\"kawan\" ang tamang sagot. Sa konteksto, ang \"lipon\" ay nangangahulugang kawan.",
+    "why_wrong": {
+     "o1": "\"iisa\" — kabaligtaran ng lipon",
+     "o2": "\"pugad\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"awit\" — ibang katangian, hindi kahulugan ng lipon"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0015",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Tinulungan ng simbahan ang mga DUKHA sa pamayanan.\" ano ang pinakamalapit na kahulugan ng \"DUKHA\"?",
+   "shortcut": "Palitan ang dukha ng mahirap; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mayaman"
+    },
+    {
+     "option_id": "o2",
+     "text": "maysakit"
+    },
+    {
+     "option_id": "o3",
+     "text": "matanda"
+    },
+    {
+     "option_id": "o4",
+     "text": "mahirap"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang dukha ng mahirap; tugma pa rin ang pangungusap.",
+    "why_correct": "\"mahirap\" ang tamang sagot. Sa konteksto, ang \"dukha\" ay nangangahulugang mahirap.",
+    "why_wrong": {
+     "o1": "\"mayaman\" — kabaligtaran ng dukha",
+     "o2": "\"maysakit\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o3": "\"matanda\" — ibang katangian, hindi kahulugan ng dukha"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0016",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Nagsalita siya nang may PITAGAN sa harap ng hukom.\" ano ang pinakamalapit na kahulugan ng \"PITAGAN\"?",
+   "shortcut": "Palitan ang pitagan ng paggalang; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "paggalang"
+    },
+    {
+     "option_id": "o2",
+     "text": "kawalang-galang"
+    },
+    {
+     "option_id": "o3",
+     "text": "takot"
+    },
+    {
+     "option_id": "o4",
+     "text": "bilis"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang pitagan ng paggalang; tugma pa rin ang pangungusap.",
+    "why_correct": "\"paggalang\" ang tamang sagot. Sa konteksto, ang \"pitagan\" ay nangangahulugang paggalang.",
+    "why_wrong": {
+     "o2": "\"kawalang-galang\" — kabaligtaran ng pitagan",
+     "o3": "\"takot\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"bilis\" — ibang katangian, hindi kahulugan ng pitagan"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0017",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MALUMANAY na ipinaliwanag ng nars ang gamutan sa pasyente.\" ano ang pinakamalapit na kahulugan ng \"MALUMANAY\"?",
+   "shortcut": "Palitan ang malumanay ng mahinahon; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pabalang"
+    },
+    {
+     "option_id": "o2",
+     "text": "mahinahon"
+    },
+    {
+     "option_id": "o3",
+     "text": "maikli"
+    },
+    {
+     "option_id": "o4",
+     "text": "malakas"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang malumanay ng mahinahon; tugma pa rin ang pangungusap.",
+    "why_correct": "\"mahinahon\" ang tamang sagot. Sa konteksto, ang \"malumanay\" ay nangangahulugang mahinahon.",
+    "why_wrong": {
+     "o1": "\"pabalang\" — kabaligtaran ng malumanay",
+     "o3": "\"maikli\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"malakas\" — ibang katangian, hindi kahulugan ng malumanay"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0018",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"TUMALIMA ang mga kawani sa bagong memorandum ng direktor.\" ano ang pinakamalapit na kahulugan ng \"TUMALIMA\"?",
+   "shortcut": "Palitan ang tumalima ng sumunod; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "sumuway"
+    },
+    {
+     "option_id": "o2",
+     "text": "nagbasa"
+    },
+    {
+     "option_id": "o3",
+     "text": "sumunod"
+    },
+    {
+     "option_id": "o4",
+     "text": "nagreklamo"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang tumalima ng sumunod; tugma pa rin ang pangungusap.",
+    "why_correct": "\"sumunod\" ang tamang sagot. Sa konteksto, ang \"tumalima\" ay nangangahulugang sumunod.",
+    "why_wrong": {
+     "o1": "\"sumuway\" — kabaligtaran ng tumalima",
+     "o2": "\"nagbasa\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"nagreklamo\" — ibang katangian, hindi kahulugan ng tumalima"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0019",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Itinuring na SUKAB ang kasamang nagbunyag ng lihim sa kalaban.\" ano ang pinakamalapit na kahulugan ng \"SUKAB\"?",
+   "shortcut": "Palitan ang sukab ng taksil; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "tapat"
+    },
+    {
+     "option_id": "o2",
+     "text": "duwag"
+    },
+    {
+     "option_id": "o3",
+     "text": "mayabang"
+    },
+    {
+     "option_id": "o4",
+     "text": "taksil"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang sukab ng taksil; tugma pa rin ang pangungusap.",
+    "why_correct": "\"taksil\" ang tamang sagot. Sa konteksto, ang \"sukab\" ay nangangahulugang taksil.",
+    "why_wrong": {
+     "o1": "\"tapat\" — kabaligtaran ng sukab",
+     "o2": "\"duwag\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o3": "\"mayabang\" — ibang katangian, hindi kahulugan ng sukab"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0020",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Sa HIKAYAT ng guro, sumali si Ben sa paligsahan sa pagsulat.\" ano ang pinakamalapit na kahulugan ng \"HIKAYAT\"?",
+   "shortcut": "Palitan ang hikayat ng udyok; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "udyok"
+    },
+    {
+     "option_id": "o2",
+     "text": "pagpigil"
+    },
+    {
+     "option_id": "o3",
+     "text": "utos"
+    },
+    {
+     "option_id": "o4",
+     "text": "papuri"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang hikayat ng udyok; tugma pa rin ang pangungusap.",
+    "why_correct": "\"udyok\" ang tamang sagot. Sa konteksto, ang \"hikayat\" ay nangangahulugang udyok.",
+    "why_wrong": {
+     "o2": "\"pagpigil\" — kabaligtaran ng hikayat",
+     "o3": "\"utos\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"papuri\" — ibang katangian, hindi kahulugan ng hikayat"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0021",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAPANGLAW ang kalye nang mawalan ng kuryente ang buong bayan.\" ano ang pinakamalapit na kahulugan ng \"MAPANGLAW\"?",
+   "shortcut": "Palitan ang mapanglaw ng malungkot; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "masigla"
+    },
+    {
+     "option_id": "o2",
+     "text": "malungkot"
+    },
+    {
+     "option_id": "o3",
+     "text": "madilim"
+    },
+    {
+     "option_id": "o4",
+     "text": "maingay"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang mapanglaw ng malungkot; tugma pa rin ang pangungusap.",
+    "why_correct": "\"malungkot\" ang tamang sagot. Sa konteksto, ang \"mapanglaw\" ay nangangahulugang malungkot.",
+    "why_wrong": {
+     "o1": "\"masigla\" — kabaligtaran ng mapanglaw",
+     "o3": "\"madilim\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"maingay\" — ibang katangian, hindi kahulugan ng mapanglaw"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0022",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Sa matiyagang PAGSUYO, napapayag niya ang kapatid na umuwi.\" ano ang pinakamalapit na kahulugan ng \"PAGSUYO\"?",
+   "shortcut": "Palitan ang pagsuyo ng pakikiusap; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pamimilit"
+    },
+    {
+     "option_id": "o2",
+     "text": "regalo"
+    },
+    {
+     "option_id": "o3",
+     "text": "pakikiusap"
+    },
+    {
+     "option_id": "o4",
+     "text": "pagsisinungaling"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang pagsuyo ng pakikiusap; tugma pa rin ang pangungusap.",
+    "why_correct": "\"pakikiusap\" ang tamang sagot. Sa konteksto, ang \"pagsuyo\" ay nangangahulugang pakikiusap.",
+    "why_wrong": {
+     "o1": "\"pamimilit\" — kabaligtaran ng pagsuyo",
+     "o2": "\"regalo\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"pagsisinungaling\" — ibang katangian, hindi kahulugan ng pagsuyo"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0023",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"YAMOT na yamot si Lito sa napakahabang pila.\" ano ang pinakamalapit na kahulugan ng \"YAMOT\"?",
+   "shortcut": "Palitan ang yamot ng inis; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "tuwa"
+    },
+    {
+     "option_id": "o2",
+     "text": "pagod"
+    },
+    {
+     "option_id": "o3",
+     "text": "gutom"
+    },
+    {
+     "option_id": "o4",
+     "text": "inis"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang yamot ng inis; tugma pa rin ang pangungusap.",
+    "why_correct": "\"inis\" ang tamang sagot. Sa konteksto, ang \"yamot\" ay nangangahulugang inis.",
+    "why_wrong": {
+     "o1": "\"tuwa\" — kabaligtaran ng yamot",
+     "o2": "\"pagod\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o3": "\"gutom\" — ibang katangian, hindi kahulugan ng yamot"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0024",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"TIKOM ang bibig ng saksi sa buong imbestigasyon.\" ano ang pinakamalapit na kahulugan ng \"TIKOM\"?",
+   "shortcut": "Palitan ang tikom ng sarado; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "sarado"
+    },
+    {
+     "option_id": "o2",
+     "text": "bukas"
+    },
+    {
+     "option_id": "o3",
+     "text": "takot"
+    },
+    {
+     "option_id": "o4",
+     "text": "pagod"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang tikom ng sarado; tugma pa rin ang pangungusap.",
+    "why_correct": "\"sarado\" ang tamang sagot. Sa konteksto, ang \"tikom\" ay nangangahulugang sarado.",
+    "why_wrong": {
+     "o2": "\"bukas\" — kabaligtaran ng tikom",
+     "o3": "\"takot\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"pagod\" — ibang katangian, hindi kahulugan ng tikom"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0025",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAPUSOK ang kabataang agad nagpasiya nang hindi nag-iisip.\" ano ang pinakamalapit na kahulugan ng \"MAPUSOK\"?",
+   "shortcut": "Palitan ang mapusok ng padalos-dalos; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pinag-iisipan muna"
+    },
+    {
+     "option_id": "o2",
+     "text": "padalos-dalos"
+    },
+    {
+     "option_id": "o3",
+     "text": "matapang"
+    },
+    {
+     "option_id": "o4",
+     "text": "masaya"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang mapusok ng padalos-dalos; tugma pa rin ang pangungusap.",
+    "why_correct": "\"padalos-dalos\" ang tamang sagot. Sa konteksto, ang \"mapusok\" ay nangangahulugang padalos-dalos.",
+    "why_wrong": {
+     "o1": "\"pinag-iisipan muna\" — kabaligtaran ng mapusok",
+     "o3": "\"matapang\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"masaya\" — ibang katangian, hindi kahulugan ng mapusok"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0026",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"NAPAWI ang uhaw ng mga manggagawa sa malamig na tubig.\" ano ang pinakamalapit na kahulugan ng \"NAPAWI\"?",
+   "shortcut": "Palitan ang napawi ng nawala; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "lumala"
+    },
+    {
+     "option_id": "o2",
+     "text": "napuno"
+    },
+    {
+     "option_id": "o3",
+     "text": "nawala"
+    },
+    {
+     "option_id": "o4",
+     "text": "lumamig"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang napawi ng nawala; tugma pa rin ang pangungusap.",
+    "why_correct": "\"nawala\" ang tamang sagot. Sa konteksto, ang \"napawi\" ay nangangahulugang nawala.",
+    "why_wrong": {
+     "o1": "\"lumala\" — kabaligtaran ng napawi",
+     "o2": "\"napuno\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"lumamig\" — ibang katangian, hindi kahulugan ng napawi"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0027",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Buhay pa sa GUNITA ng lola ang mga araw ng digmaan.\" ano ang pinakamalapit na kahulugan ng \"GUNITA\"?",
+   "shortcut": "Palitan ang gunita ng alaala; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "limot"
+    },
+    {
+     "option_id": "o2",
+     "text": "kuwento"
+    },
+    {
+     "option_id": "o3",
+     "text": "pangarap"
+    },
+    {
+     "option_id": "o4",
+     "text": "alaala"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang gunita ng alaala; tugma pa rin ang pangungusap.",
+    "why_correct": "\"alaala\" ang tamang sagot. Sa konteksto, ang \"gunita\" ay nangangahulugang alaala.",
+    "why_wrong": {
+     "o1": "\"limot\" — kabaligtaran ng gunita",
+     "o2": "\"kuwento\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o3": "\"pangarap\" — ibang katangian, hindi kahulugan ng gunita"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0028",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Ano ang PAKAY mo sa pagpunta sa munisipyo ngayong umaga?\" ano ang pinakamalapit na kahulugan ng \"PAKAY\"?",
+   "shortcut": "Palitan ang pakay ng layunin; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "layunin"
+    },
+    {
+     "option_id": "o2",
+     "text": "kawalan ng dahilan"
+    },
+    {
+     "option_id": "o3",
+     "text": "oras"
+    },
+    {
+     "option_id": "o4",
+     "text": "kasama"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang pakay ng layunin; tugma pa rin ang pangungusap.",
+    "why_correct": "\"layunin\" ang tamang sagot. Sa konteksto, ang \"pakay\" ay nangangahulugang layunin.",
+    "why_wrong": {
+     "o2": "\"kawalan ng dahilan\" — kabaligtaran ng pakay",
+     "o3": "\"oras\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"kasama\" — ibang katangian, hindi kahulugan ng pakay"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0029",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Narinig sa buong baryo ang TAGHOY ng inang nawalan ng anak.\" ano ang pinakamalapit na kahulugan ng \"TAGHOY\"?",
+   "shortcut": "Palitan ang taghoy ng pagtangis; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "malakas na halakhak"
+    },
+    {
+     "option_id": "o2",
+     "text": "pagtangis"
+    },
+    {
+     "option_id": "o3",
+     "text": "sigaw"
+    },
+    {
+     "option_id": "o4",
+     "text": "awit"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang taghoy ng pagtangis; tugma pa rin ang pangungusap.",
+    "why_correct": "\"pagtangis\" ang tamang sagot. Sa konteksto, ang \"taghoy\" ay nangangahulugang pagtangis.",
+    "why_wrong": {
+     "o1": "\"malakas na halakhak\" — kabaligtaran ng taghoy",
+     "o3": "\"sigaw\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"awit\" — ibang katangian, hindi kahulugan ng taghoy"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0030",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAPAGMATYAG ang mga tanod tuwing gabi sa looban.\" ano ang pinakamalapit na kahulugan ng \"MAPAGMATYAG\"?",
+   "shortcut": "Palitan ang mapagmatyag ng alisto; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pabaya"
+    },
+    {
+     "option_id": "o2",
+     "text": "matapang"
+    },
+    {
+     "option_id": "o3",
+     "text": "alisto"
+    },
+    {
+     "option_id": "o4",
+     "text": "masipag"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang mapagmatyag ng alisto; tugma pa rin ang pangungusap.",
+    "why_correct": "\"alisto\" ang tamang sagot. Sa konteksto, ang \"mapagmatyag\" ay nangangahulugang alisto.",
+    "why_wrong": {
+     "o1": "\"pabaya\" — kabaligtaran ng mapagmatyag",
+     "o2": "\"matapang\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"masipag\" — ibang katangian, hindi kahulugan ng mapagmatyag"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0031",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Malaki ang AMBAG ng mga manggagawa sa ibang bansa sa ekonomiya.\" ano ang pinakamalapit na kahulugan ng \"AMBAG\"?",
+   "shortcut": "Palitan ang ambag ng kontribusyon; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "kabawasan"
+    },
+    {
+     "option_id": "o2",
+     "text": "buwanang sahod"
+    },
+    {
+     "option_id": "o3",
+     "text": "utang"
+    },
+    {
+     "option_id": "o4",
+     "text": "kontribusyon"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang ambag ng kontribusyon; tugma pa rin ang pangungusap.",
+    "why_correct": "\"kontribusyon\" ang tamang sagot. Sa konteksto, ang \"ambag\" ay nangangahulugang kontribusyon.",
+    "why_wrong": {
+     "o1": "\"kabawasan\" — kabaligtaran ng ambag",
+     "o2": "\"buwanang sahod\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o3": "\"utang\" — ibang katangian, hindi kahulugan ng ambag"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0032",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"May PANGAMBA ang mga residente sa paparating na bagyo.\" ano ang pinakamalapit na kahulugan ng \"PANGAMBA\"?",
+   "shortcut": "Palitan ang pangamba ng takot; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "takot"
+    },
+    {
+     "option_id": "o2",
+     "text": "katiyakan"
+    },
+    {
+     "option_id": "o3",
+     "text": "galit"
+    },
+    {
+     "option_id": "o4",
+     "text": "pag-asa"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang pangamba ng takot; tugma pa rin ang pangungusap.",
+    "why_correct": "\"takot\" ang tamang sagot. Sa konteksto, ang \"pangamba\" ay nangangahulugang takot.",
+    "why_wrong": {
+     "o2": "\"katiyakan\" — kabaligtaran ng pangamba",
+     "o3": "\"galit\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"pag-asa\" — ibang katangian, hindi kahulugan ng pangamba"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0033",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAHUSAY ang paglalahad ng tagapagsalita sa pulong.\" ano ang pinakamalapit na kahulugan ng \"MAHUSAY\"?",
+   "shortcut": "Palitan ang mahusay ng magaling; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "palpak"
+    },
+    {
+     "option_id": "o2",
+     "text": "magaling"
+    },
+    {
+     "option_id": "o3",
+     "text": "mahaba"
+    },
+    {
+     "option_id": "o4",
+     "text": "malakas"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang mahusay ng magaling; tugma pa rin ang pangungusap.",
+    "why_correct": "\"magaling\" ang tamang sagot. Sa konteksto, ang \"mahusay\" ay nangangahulugang magaling.",
+    "why_wrong": {
+     "o1": "\"palpak\" — kabaligtaran ng mahusay",
+     "o3": "\"mahaba\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"malakas\" — ibang katangian, hindi kahulugan ng mahusay"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0034",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "synonyms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAALWAN ang buhay nila mula nang magkaroon ng sariling negosyo.\" ano ang pinakamalapit na kahulugan ng \"MAALWAN\"?",
+   "shortcut": "Palitan ang maalwan ng maginhawa; tugma pa rin ang pangungusap.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "naghihikahos"
+    },
+    {
+     "option_id": "o2",
+     "text": "masaya"
+    },
+    {
+     "option_id": "o3",
+     "text": "maginhawa"
+    },
+    {
+     "option_id": "o4",
+     "text": "abala"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang kasingkahulugan ay salitang may katulad na kahulugan.",
+    "shortcut": "Palitan ang maalwan ng maginhawa; tugma pa rin ang pangungusap.",
+    "why_correct": "\"maginhawa\" ang tamang sagot. Sa konteksto, ang \"maalwan\" ay nangangahulugang maginhawa.",
+    "why_wrong": {
+     "o1": "\"naghihikahos\" — kabaligtaran ng maalwan",
+     "o2": "\"masaya\" — kaugnay ng sitwasyon ngunit iba ang kahulugan",
+     "o4": "\"abala\" — ibang katangian, hindi kahulugan ng maalwan"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0001",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"Si Mang Jose ang HALIGI NG TAHANAN mula nang magkasakit ang kaniyang asawa.\" Ano ang ibig sabihin ng sawikaing \"HALIGI NG TAHANAN\" dito?",
+   "shortcut": "Huwag basahin nang literal ang haligi ng tahanan: pangunahing nagtataguyod ng pamilya.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "matibay na poste ng bahay"
+    },
+    {
+     "option_id": "o2",
+     "text": "pinakabunsong anak sa pamilya"
+    },
+    {
+     "option_id": "o3",
+     "text": "kapitbahay na laging tumutulong"
+    },
+    {
+     "option_id": "o4",
+     "text": "pangunahing nagtataguyod ng pamilya"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang haligi ng tahanan: pangunahing nagtataguyod ng pamilya.",
+    "why_correct": "\"pangunahing nagtataguyod ng pamilya\" ang tamang sagot. Matalinghaga ang \"haligi ng tahanan\"; sa pangungusap, ito ay pangunahing nagtataguyod ng pamilya.",
+    "why_wrong": {
+     "o1": "\"matibay na poste ng bahay\" — literal na pagbasa ng sawikain",
+     "o2": "\"pinakabunsong anak sa pamilya\" — kabaligtaran ng tunay na kahulugan",
+     "o3": "\"kapitbahay na laging tumutulong\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0002",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"Pinarangalan si Aling Rosa bilang ILAW NG TAHANAN ng taon sa kanilang bayan.\" Ano ang ibig sabihin ng sawikaing \"ILAW NG TAHANAN\" dito?",
+   "shortcut": "Huwag basahin nang literal ang ilaw ng tahanan: ina ng pamilya.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "ina ng pamilya"
+    },
+    {
+     "option_id": "o2",
+     "text": "bombilya sa salas"
+    },
+    {
+     "option_id": "o3",
+     "text": "panauhing dumadalaw"
+    },
+    {
+     "option_id": "o4",
+     "text": "pinakamatandang kapatid"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang ilaw ng tahanan: ina ng pamilya.",
+    "why_correct": "\"ina ng pamilya\" ang tamang sagot. Matalinghaga ang \"ilaw ng tahanan\"; sa pangungusap, ito ay ina ng pamilya.",
+    "why_wrong": {
+     "o2": "\"bombilya sa salas\" — literal na pagbasa ng sawikain",
+     "o3": "\"panauhing dumadalaw\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"pinakamatandang kapatid\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0003",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"BUKAMBIBIG ni Lolo ang kaniyang kabataan sa probinsiya.\" Ano ang ibig sabihin ng sawikaing \"BUKAMBIBIG\" dito?",
+   "shortcut": "Huwag basahin nang literal ang bukambibig: palaging binabanggit.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "laging nakabuka ang bibig"
+    },
+    {
+     "option_id": "o2",
+     "text": "palaging binabanggit"
+    },
+    {
+     "option_id": "o3",
+     "text": "bihirang pag-usapan"
+    },
+    {
+     "option_id": "o4",
+     "text": "minsang naikuwento"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang bukambibig: palaging binabanggit.",
+    "why_correct": "\"palaging binabanggit\" ang tamang sagot. Matalinghaga ang \"bukambibig\"; sa pangungusap, ito ay palaging binabanggit.",
+    "why_wrong": {
+     "o1": "\"laging nakabuka ang bibig\" — literal na pagbasa ng sawikain",
+     "o3": "\"bihirang pag-usapan\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"minsang naikuwento\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0004",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"MAHABA ANG BUNTOT ng batang laki sa layaw kaya ayaw sumunod sa utos.\" Ano ang ibig sabihin ng sawikaing \"MAHABA ANG BUNTOT\" dito?",
+   "shortcut": "Huwag basahin nang literal ang mahaba ang buntot: sanay sa layaw at mahirap utusan.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "may buntot na mahaba"
+    },
+    {
+     "option_id": "o2",
+     "text": "masunurin at madaling utusan"
+    },
+    {
+     "option_id": "o3",
+     "text": "sanay sa layaw at mahirap utusan"
+    },
+    {
+     "option_id": "o4",
+     "text": "matangkad para sa edad niya"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang mahaba ang buntot: sanay sa layaw at mahirap utusan.",
+    "why_correct": "\"sanay sa layaw at mahirap utusan\" ang tamang sagot. Matalinghaga ang \"mahaba ang buntot\"; sa pangungusap, ito ay sanay sa layaw at mahirap utusan.",
+    "why_wrong": {
+     "o1": "\"may buntot na mahaba\" — literal na pagbasa ng sawikain",
+     "o2": "\"masunurin at madaling utusan\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"matangkad para sa edad niya\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0005",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"Ipinaglaban ng unyon ang karapatan ng mga ANAK-PAWIS sa pabrika.\" Ano ang ibig sabihin ng sawikaing \"ANAK-PAWIS\" dito?",
+   "shortcut": "Huwag basahin nang literal ang anak-pawis: mga manggagawang nagbabanat ng buto.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mga batang laging pinagpapawisan"
+    },
+    {
+     "option_id": "o2",
+     "text": "mga may-ari ng malalaking pabrika"
+    },
+    {
+     "option_id": "o3",
+     "text": "mga kawaning bagong pasok"
+    },
+    {
+     "option_id": "o4",
+     "text": "mga manggagawang nagbabanat ng buto"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang anak-pawis: mga manggagawang nagbabanat ng buto.",
+    "why_correct": "\"mga manggagawang nagbabanat ng buto\" ang tamang sagot. Matalinghaga ang \"anak-pawis\"; sa pangungusap, ito ay mga manggagawang nagbabanat ng buto.",
+    "why_wrong": {
+     "o1": "\"mga batang laging pinagpapawisan\" — literal na pagbasa ng sawikain",
+     "o2": "\"mga may-ari ng malalaking pabrika\" — kabaligtaran ng tunay na kahulugan",
+     "o3": "\"mga kawaning bagong pasok\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0006",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"MAKATI ANG PAA ni Carlo kaya bihira siyang nasa bahay tuwing Sabado.\" Ano ang ibig sabihin ng sawikaing \"MAKATI ANG PAA\" dito?",
+   "shortcut": "Huwag basahin nang literal ang makati ang paa: mahilig gumala.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mahilig gumala"
+    },
+    {
+     "option_id": "o2",
+     "text": "may kati sa paa"
+    },
+    {
+     "option_id": "o3",
+     "text": "laging nasa bahay"
+    },
+    {
+     "option_id": "o4",
+     "text": "mahilig mag-ehersisyo"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang makati ang paa: mahilig gumala.",
+    "why_correct": "\"mahilig gumala\" ang tamang sagot. Matalinghaga ang \"makati ang paa\"; sa pangungusap, ito ay mahilig gumala.",
+    "why_wrong": {
+     "o2": "\"may kati sa paa\" — literal na pagbasa ng sawikain",
+     "o3": "\"laging nasa bahay\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"mahilig mag-ehersisyo\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0007",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"Huwag mo munang ipagkatiwala ang proyekto sa kaniya; MAY GATAS PA SA LABI siya.\" Ano ang ibig sabihin ng sawikaing \"MAY GATAS PA SA LABI\" dito?",
+   "shortcut": "Huwag basahin nang literal ang may gatas pa sa labi: bata pa at kulang sa karanasan.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "may natirang gatas sa bibig"
+    },
+    {
+     "option_id": "o2",
+     "text": "bata pa at kulang sa karanasan"
+    },
+    {
+     "option_id": "o3",
+     "text": "bihasa at subok na sa trabaho"
+    },
+    {
+     "option_id": "o4",
+     "text": "mahilig uminom ng gatas"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang may gatas pa sa labi: bata pa at kulang sa karanasan.",
+    "why_correct": "\"bata pa at kulang sa karanasan\" ang tamang sagot. Matalinghaga ang \"may gatas pa sa labi\"; sa pangungusap, ito ay bata pa at kulang sa karanasan.",
+    "why_wrong": {
+     "o1": "\"may natirang gatas sa bibig\" — literal na pagbasa ng sawikain",
+     "o3": "\"bihasa at subok na sa trabaho\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"mahilig uminom ng gatas\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0008",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"Nang dumating ang doktor, PANTAY NA ANG PAA ng matandang maysakit.\" Ano ang ibig sabihin ng sawikaing \"PANTAY NA ANG PAA\" dito?",
+   "shortcut": "Huwag basahin nang literal ang pantay na ang paa: patay na.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "magkasinghaba ang mga paa"
+    },
+    {
+     "option_id": "o2",
+     "text": "magaling na at nakatayo"
+    },
+    {
+     "option_id": "o3",
+     "text": "patay na"
+    },
+    {
+     "option_id": "o4",
+     "text": "malubha pa ang kalagayan"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang pantay na ang paa: patay na.",
+    "why_correct": "\"patay na\" ang tamang sagot. Matalinghaga ang \"pantay na ang paa\"; sa pangungusap, ito ay patay na.",
+    "why_wrong": {
+     "o1": "\"magkasinghaba ang mga paa\" — literal na pagbasa ng sawikain",
+     "o2": "\"magaling na at nakatayo\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"malubha pa ang kalagayan\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0009",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"ABOT-TANAW na ng koponan ang kampeonato matapos ang ikalimang panalo.\" Ano ang ibig sabihin ng sawikaing \"ABOT-TANAW\" dito?",
+   "shortcut": "Huwag basahin nang literal ang abot-tanaw: malapit nang makamit.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "natatanaw mula sa malayo"
+    },
+    {
+     "option_id": "o2",
+     "text": "imposible nang makamit"
+    },
+    {
+     "option_id": "o3",
+     "text": "pinag-uusapan pa lamang"
+    },
+    {
+     "option_id": "o4",
+     "text": "malapit nang makamit"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang abot-tanaw: malapit nang makamit.",
+    "why_correct": "\"malapit nang makamit\" ang tamang sagot. Matalinghaga ang \"abot-tanaw\"; sa pangungusap, ito ay malapit nang makamit.",
+    "why_wrong": {
+     "o1": "\"natatanaw mula sa malayo\" — literal na pagbasa ng sawikain",
+     "o2": "\"imposible nang makamit\" — kabaligtaran ng tunay na kahulugan",
+     "o3": "\"pinag-uusapan pa lamang\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0010",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"Mag-ingat ka sa lalaking iyon; MAITIM ANG BUTO niya.\" Ano ang ibig sabihin ng sawikaing \"MAITIM ANG BUTO\" dito?",
+   "shortcut": "Huwag basahin nang literal ang maitim ang buto: masama ang ugali o balak.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "masama ang ugali o balak"
+    },
+    {
+     "option_id": "o2",
+     "text": "kulay itim ang buto"
+    },
+    {
+     "option_id": "o3",
+     "text": "mabuti ang kalooban"
+    },
+    {
+     "option_id": "o4",
+     "text": "mahiyain sa ibang tao"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang maitim ang buto: masama ang ugali o balak.",
+    "why_correct": "\"masama ang ugali o balak\" ang tamang sagot. Matalinghaga ang \"maitim ang buto\"; sa pangungusap, ito ay masama ang ugali o balak.",
+    "why_wrong": {
+     "o2": "\"kulay itim ang buto\" — literal na pagbasa ng sawikain",
+     "o3": "\"mabuti ang kalooban\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"mahiyain sa ibang tao\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0011",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"Ayaw ng mga tindero sa opisyal na BUWAYA SA KATIHAN na laging humihingi ng lagay.\" Ano ang ibig sabihin ng sawikaing \"BUWAYA SA KATIHAN\" dito?",
+   "shortcut": "Huwag basahin nang literal ang buwaya sa katihan: mapagsamantalang sakim.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "buwayang nasa pampang"
+    },
+    {
+     "option_id": "o2",
+     "text": "mapagsamantalang sakim"
+    },
+    {
+     "option_id": "o3",
+     "text": "matapat na lingkod-bayan"
+    },
+    {
+     "option_id": "o4",
+     "text": "mahigpit pero patas na tagasuri"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang buwaya sa katihan: mapagsamantalang sakim.",
+    "why_correct": "\"mapagsamantalang sakim\" ang tamang sagot. Matalinghaga ang \"buwaya sa katihan\"; sa pangungusap, ito ay mapagsamantalang sakim.",
+    "why_wrong": {
+     "o1": "\"buwayang nasa pampang\" — literal na pagbasa ng sawikain",
+     "o3": "\"matapat na lingkod-bayan\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"mahigpit pero patas na tagasuri\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0012",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"SANTONG-PASPASAN ang pagpipinta ng bakod kaya may mga bahaging hindi napinturahan.\" Ano ang ibig sabihin ng sawikaing \"SANTONG-PASPASAN\" dito?",
+   "shortcut": "Huwag basahin nang literal ang santong-paspasan: minadali at hindi pulido.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "binasbasan ng pari"
+    },
+    {
+     "option_id": "o2",
+     "text": "maingat at masinsin"
+    },
+    {
+     "option_id": "o3",
+     "text": "minadali at hindi pulido"
+    },
+    {
+     "option_id": "o4",
+     "text": "ginawa nang sama-sama"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang santong-paspasan: minadali at hindi pulido.",
+    "why_correct": "\"minadali at hindi pulido\" ang tamang sagot. Matalinghaga ang \"santong-paspasan\"; sa pangungusap, ito ay minadali at hindi pulido.",
+    "why_wrong": {
+     "o1": "\"binasbasan ng pari\" — literal na pagbasa ng sawikain",
+     "o2": "\"maingat at masinsin\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"ginawa nang sama-sama\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0013",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"TULOG-MANOK lang ang nanay habang binabantayan ang anak na may lagnat.\" Ano ang ibig sabihin ng sawikaing \"TULOG-MANOK\" dito?",
+   "shortcut": "Huwag basahin nang literal ang tulog-manok: mababaw ang tulog.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "natutulog sa kulungan ng manok"
+    },
+    {
+     "option_id": "o2",
+     "text": "mahimbing ang tulog"
+    },
+    {
+     "option_id": "o3",
+     "text": "natutulog sa tanghali"
+    },
+    {
+     "option_id": "o4",
+     "text": "mababaw ang tulog"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang tulog-manok: mababaw ang tulog.",
+    "why_correct": "\"mababaw ang tulog\" ang tamang sagot. Matalinghaga ang \"tulog-manok\"; sa pangungusap, ito ay mababaw ang tulog.",
+    "why_wrong": {
+     "o1": "\"natutulog sa kulungan ng manok\" — literal na pagbasa ng sawikain",
+     "o2": "\"mahimbing ang tulog\" — kabaligtaran ng tunay na kahulugan",
+     "o3": "\"natutulog sa tanghali\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0014",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"BUTO'T BALAT na ang aso nang matagpuan ng mga tagapagligtas.\" Ano ang ibig sabihin ng sawikaing \"BUTO'T BALAT\" dito?",
+   "shortcut": "Huwag basahin nang literal ang buto't balat: napakapayat.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "napakapayat"
+    },
+    {
+     "option_id": "o2",
+     "text": "kalansay na lamang"
+    },
+    {
+     "option_id": "o3",
+     "text": "malusog at mataba"
+    },
+    {
+     "option_id": "o4",
+     "text": "maliit ang pangangatawan"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang buto't balat: napakapayat.",
+    "why_correct": "\"napakapayat\" ang tamang sagot. Matalinghaga ang \"buto't balat\"; sa pangungusap, ito ay napakapayat.",
+    "why_wrong": {
+     "o2": "\"kalansay na lamang\" — literal na pagbasa ng sawikain",
+     "o3": "\"malusog at mataba\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"maliit ang pangangatawan\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0015",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"LUMAKI ANG ULO ng bagong manedyer nang mapromote siya.\" Ano ang ibig sabihin ng sawikaing \"LUMAKI ANG ULO\" dito?",
+   "shortcut": "Huwag basahin nang literal ang lumaki ang ulo: yumabang.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "namaga ang ulo"
+    },
+    {
+     "option_id": "o2",
+     "text": "yumabang"
+    },
+    {
+     "option_id": "o3",
+     "text": "naging mapagkumbaba"
+    },
+    {
+     "option_id": "o4",
+     "text": "naging mas masipag"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang lumaki ang ulo: yumabang.",
+    "why_correct": "\"yumabang\" ang tamang sagot. Matalinghaga ang \"lumaki ang ulo\"; sa pangungusap, ito ay yumabang.",
+    "why_wrong": {
+     "o1": "\"namaga ang ulo\" — literal na pagbasa ng sawikain",
+     "o3": "\"naging mapagkumbaba\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"naging mas masipag\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0016",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"Inilipat ang kahera nang mabistong MAHABA ANG KAMAY niya.\" Ano ang ibig sabihin ng sawikaing \"MAHABA ANG KAMAY\" dito?",
+   "shortcut": "Huwag basahin nang literal ang mahaba ang kamay: mahilig magnakaw.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mahaba ang mga braso"
+    },
+    {
+     "option_id": "o2",
+     "text": "matapat sa pera"
+    },
+    {
+     "option_id": "o3",
+     "text": "mahilig magnakaw"
+    },
+    {
+     "option_id": "o4",
+     "text": "mabilis magtrabaho"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang mahaba ang kamay: mahilig magnakaw.",
+    "why_correct": "\"mahilig magnakaw\" ang tamang sagot. Matalinghaga ang \"mahaba ang kamay\"; sa pangungusap, ito ay mahilig magnakaw.",
+    "why_wrong": {
+     "o1": "\"mahaba ang mga braso\" — literal na pagbasa ng sawikain",
+     "o2": "\"matapat sa pera\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"mabilis magtrabaho\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0017",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"BALAT-KAYO lamang ang kabaitan ng manloloko sa matatanda.\" Ano ang ibig sabihin ng sawikaing \"BALAT-KAYO\" dito?",
+   "shortcut": "Huwag basahin nang literal ang balat-kayo: pagkukunwari.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "damit na balat"
+    },
+    {
+     "option_id": "o2",
+     "text": "tunay na ugali"
+    },
+    {
+     "option_id": "o3",
+     "text": "panandaliang ugali"
+    },
+    {
+     "option_id": "o4",
+     "text": "pagkukunwari"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang balat-kayo: pagkukunwari.",
+    "why_correct": "\"pagkukunwari\" ang tamang sagot. Matalinghaga ang \"balat-kayo\"; sa pangungusap, ito ay pagkukunwari.",
+    "why_wrong": {
+     "o1": "\"damit na balat\" — literal na pagbasa ng sawikain",
+     "o2": "\"tunay na ugali\" — kabaligtaran ng tunay na kahulugan",
+     "o3": "\"panandaliang ugali\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0018",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"ALOG NA ANG BABA ni Lolo Pedring pero masigla pa rin siyang magtanim.\" Ano ang ibig sabihin ng sawikaing \"ALOG NA ANG BABA\" dito?",
+   "shortcut": "Huwag basahin nang literal ang alog na ang baba: matanda na.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "matanda na"
+    },
+    {
+     "option_id": "o2",
+     "text": "nanginginig ang baba"
+    },
+    {
+     "option_id": "o3",
+     "text": "bata pa"
+    },
+    {
+     "option_id": "o4",
+     "text": "maysakit"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang alog na ang baba: matanda na.",
+    "why_correct": "\"matanda na\" ang tamang sagot. Matalinghaga ang \"alog na ang baba\"; sa pangungusap, ito ay matanda na.",
+    "why_wrong": {
+     "o2": "\"nanginginig ang baba\" — literal na pagbasa ng sawikain",
+     "o3": "\"bata pa\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"maysakit\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0019",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"NAMUTI ANG MATA ni Ana sa paghihintay sa dyip na hindi dumating.\" Ano ang ibig sabihin ng sawikaing \"NAMUTI ANG MATA\" dito?",
+   "shortcut": "Huwag basahin nang literal ang namuti ang mata: napakatagal naghintay.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "nagkasakit sa mata"
+    },
+    {
+     "option_id": "o2",
+     "text": "napakatagal naghintay"
+    },
+    {
+     "option_id": "o3",
+     "text": "agad na nakasakay"
+    },
+    {
+     "option_id": "o4",
+     "text": "bahagyang nainip"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang namuti ang mata: napakatagal naghintay.",
+    "why_correct": "\"napakatagal naghintay\" ang tamang sagot. Matalinghaga ang \"namuti ang mata\"; sa pangungusap, ito ay napakatagal naghintay.",
+    "why_wrong": {
+     "o1": "\"nagkasakit sa mata\" — literal na pagbasa ng sawikain",
+     "o3": "\"agad na nakasakay\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"bahagyang nainip\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0020",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"PUSONG-BATO ang may-ari na nagpaalis sa nangungupahang maysakit.\" Ano ang ibig sabihin ng sawikaing \"PUSONG-BATO\" dito?",
+   "shortcut": "Huwag basahin nang literal ang pusong-bato: walang awa.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "may sakit sa puso"
+    },
+    {
+     "option_id": "o2",
+     "text": "maawain"
+    },
+    {
+     "option_id": "o3",
+     "text": "walang awa"
+    },
+    {
+     "option_id": "o4",
+     "text": "mahigpit sa kontrata"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang pusong-bato: walang awa.",
+    "why_correct": "\"walang awa\" ang tamang sagot. Matalinghaga ang \"pusong-bato\"; sa pangungusap, ito ay walang awa.",
+    "why_wrong": {
+     "o1": "\"may sakit sa puso\" — literal na pagbasa ng sawikain",
+     "o2": "\"maawain\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"mahigpit sa kontrata\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0021",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"Naging TINIK SA LALAMUNAN ng sindikato ang matapang na mamamahayag.\" Ano ang ibig sabihin ng sawikaing \"TINIK SA LALAMUNAN\" dito?",
+   "shortcut": "Huwag basahin nang literal ang tinik sa lalamunan: hadlang sa balak.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "tinik ng isda sa lalamunan"
+    },
+    {
+     "option_id": "o2",
+     "text": "katuwang sa balak"
+    },
+    {
+     "option_id": "o3",
+     "text": "bagong kasapi"
+    },
+    {
+     "option_id": "o4",
+     "text": "hadlang sa balak"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang tinik sa lalamunan: hadlang sa balak.",
+    "why_correct": "\"hadlang sa balak\" ang tamang sagot. Matalinghaga ang \"tinik sa lalamunan\"; sa pangungusap, ito ay hadlang sa balak.",
+    "why_wrong": {
+     "o1": "\"tinik ng isda sa lalamunan\" — literal na pagbasa ng sawikain",
+     "o2": "\"katuwang sa balak\" — kabaligtaran ng tunay na kahulugan",
+     "o3": "\"bagong kasapi\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0022",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"SALING-PUSA lang si Totoy sa laro kaya hindi binibilang ang puntos niya.\" Ano ang ibig sabihin ng sawikaing \"SALING-PUSA\" dito?",
+   "shortcut": "Huwag basahin nang literal ang saling-pusa: hindi tunay na kasali.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "hindi tunay na kasali"
+    },
+    {
+     "option_id": "o2",
+     "text": "pusang sumasali sa laro"
+    },
+    {
+     "option_id": "o3",
+     "text": "pinuno ng koponan"
+    },
+    {
+     "option_id": "o4",
+     "text": "pinakamagaling na manlalaro"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang saling-pusa: hindi tunay na kasali.",
+    "why_correct": "\"hindi tunay na kasali\" ang tamang sagot. Matalinghaga ang \"saling-pusa\"; sa pangungusap, ito ay hindi tunay na kasali.",
+    "why_wrong": {
+     "o2": "\"pusang sumasali sa laro\" — literal na pagbasa ng sawikain",
+     "o3": "\"pinuno ng koponan\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"pinakamagaling na manlalaro\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0023",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"MAKAPAL ANG BULSA ni Don Andres kaya siya ang sumagot sa pista.\" Ano ang ibig sabihin ng sawikaing \"MAKAPAL ANG BULSA\" dito?",
+   "shortcut": "Huwag basahin nang literal ang makapal ang bulsa: mayaman.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "makapal ang tela ng bulsa"
+    },
+    {
+     "option_id": "o2",
+     "text": "mayaman"
+    },
+    {
+     "option_id": "o3",
+     "text": "walang pera"
+    },
+    {
+     "option_id": "o4",
+     "text": "matipid sa gastos"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang makapal ang bulsa: mayaman.",
+    "why_correct": "\"mayaman\" ang tamang sagot. Matalinghaga ang \"makapal ang bulsa\"; sa pangungusap, ito ay mayaman.",
+    "why_wrong": {
+     "o1": "\"makapal ang tela ng bulsa\" — literal na pagbasa ng sawikain",
+     "o3": "\"walang pera\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"matipid sa gastos\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K01-VFIL-WIKAIN-0024",
+   "track": "both",
+   "domain": "verbal_fil",
+   "competency": "Word meaning",
+   "concept": "idioms",
+   "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+   "archetype": "VFIL-WIKAIN",
+   "difficulty": "medium",
+   "est_seconds": 35,
+   "language": "fil",
+   "stem": "Basahin: \"Araw-araw NAGBABANAT NG BUTO si Mang Ben sa konstruksiyon para sa pamilya.\" Ano ang ibig sabihin ng sawikaing \"NAGBABANAT NG BUTO\" dito?",
+   "shortcut": "Huwag basahin nang literal ang nagbabanat ng buto: nagtatrabaho nang mabigat.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "nag-iinat ng katawan"
+    },
+    {
+     "option_id": "o2",
+     "text": "nagpapahinga sa bahay"
+    },
+    {
+     "option_id": "o3",
+     "text": "nagtatrabaho nang mabigat"
+    },
+    {
+     "option_id": "o4",
+     "text": "nag-eehersisyo sa umaga"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+    "shortcut": "Huwag basahin nang literal ang nagbabanat ng buto: nagtatrabaho nang mabigat.",
+    "why_correct": "\"nagtatrabaho nang mabigat\" ang tamang sagot. Matalinghaga ang \"nagbabanat ng buto\"; sa pangungusap, ito ay nagtatrabaho nang mabigat.",
+    "why_wrong": {
+     "o1": "\"nag-iinat ng katawan\" — literal na pagbasa ng sawikain",
+     "o2": "\"nagpapahinga sa bahay\" — kabaligtaran ng tunay na kahulugan",
+     "o4": "\"nag-eehersisyo sa umaga\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-LITERAL",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:30:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-01 (Filipino Verbal). Pending CoS."
+  }
+ ]
+}
