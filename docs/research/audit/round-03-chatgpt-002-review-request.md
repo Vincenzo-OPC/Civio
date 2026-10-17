@@ -143,3 +143,14 @@ Mix: {'VEN-RC-INFER': 20, 'VEN-RC-DETAIL': 2, 'VEN-RC-MAIN': 3, 'VEN-PARA-ORDER'
 1. Approve rejecting the 75 templated para-order and error items, with gap-fill-005 as the replacement.
 2. For the 25 RC items, choose between (a) Grok Bot rewriting the weak distractors and trimming the tails, then bringing them back for a pass, and (b) keeping only about 10 of them because of the single theme.
 3. Ask ChatGPT not to reuse batch 002's frames in batch 004 (`CHATGPT_NEXT_PROMPT.md` already bans copying 002).
+
+## CoS verdict (2026-10-17), applied
+
+- **Rejected (88):** all 75 para-order and error items, plus 13 RC items. In 050075 the key is also semantically odd. Every rejected item stays draft with review_status `rejected`.
+- **Kept and fixed (12 RC):** 050002, 003, 005, 007, 011, 012, 015, 019, 020, 022, 023 and 025. The fixes were made by `scripts/batches/audit/chatgpt_002_verdict.py`:
+  - The padded closing sentences are trimmed, keeping each passage at 150 words or more (now 150–167).
+  - Every distractor is rewritten as a plausible but unsupported or contradicted reading and recoded. For example, 050003's distractors are now RC-OPPOSITE, because each one contradicts a stated design choice.
+  - The why lines are rewritten.
+  - Keys are spread across positions (o1 2, o2 4, o3 3, o4 3), and the key is the longest option in only 1 of 12.
+- **Theme tag:** 8 of the 12 items carry `"theme": "first-measure-misleads"`. A mock may serve at most 2 of them. That is app code, written up in `docs/FACT_ID_MOCK_RULE_BRIEF.md` for Codex.
+- **Activated:** the 12 approved items are imported as active on the MSI local DB.

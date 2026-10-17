@@ -219,3 +219,23 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
   - the proposed codes `VEN-RUN-ON`, `VEN-FRAGMENT` and `VEN-MODIFIER-PLACE` (spec v0.1.9);
   - RC passages run 96–129 words, below the spec's 150–250.
 - Packet: `audit/round-03-gap-fill-005-review-request.md`.
+
+## 2026-10-17 (3:11 and 3:14 PM): more CoS verdicts applied and activated on the MSI
+
+- **#304:** the new foil is 'Indispencible', with the explanation rewritten. It is active.
+- **Spelling swaps (all 14 approved and active):**
+  - #292 is now Compelled (foils Compeled, Complelled, Compelld).
+  - #312 is now Conscientiously (foils Concientiously, Conscientously, Conscienciously).
+  - #298's foil Subpena became Subpoene.
+  - #311's Nusiance is recoded SPL-SOUND.
+  - Note: the base word "conscientious" is also the target of baseline #301. CoS chose this word.
+- **gap-fill-004:** all 10 are approved and active. 0001 o4 now reads "12 is a special victim-age threshold (Secs. 5 and 7), not the definition of a child." Every item has a `FACT-RA…` fact_id.
+- **chatgpt-batch-002:**
+  - 12 RC items kept, fixed, recoded, approved and active.
+  - 88 rejected.
+  - 8 items tagged with the theme `first-measure-misleads`. The cap of 2 per mock is in the fact-ID brief for Codex.
+- **Spec v0.1.9:** the VEN codes are approved, and §10.8 adds the passage-set rule and the `fact_id` and `theme` fields.
+- **gap-fill-005 (still draft):** RC rebuilt as 7 passages of 162–183 words with 2–3 questions each. `qa.py` gains a sibling exemption. The packet is updated.
+- **MSI:**
+  - Backups first: `civio_local_pre_304_20261017.dump` and `civio_local_pre_r03b_20261017.dump`.
+  - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 544, **total 1,918** (civio 1,417, baseline 501).

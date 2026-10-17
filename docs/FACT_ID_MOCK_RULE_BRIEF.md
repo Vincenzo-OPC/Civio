@@ -31,6 +31,18 @@ CoS accepted 8 GI items from `docs/research/chatgpt-batch-003.json` as **variant
 4. Expose `fact_id` in the selector row (server-side only, like `correct`) so the rule can run.
 5. Add a Pest test: build a pool where two items share a fact_id and are the only items in their subcategory quota, then assert that a mock never contains both, including when the quota falls back.
 
+## Addendum (CoS 2026-10-17): more fact IDs and a theme cap
+
+**More fact IDs.** The 10 gap-fill-004 items (`docs/research/gap-fill-004.json`) each carry a `FACT-RA…` fact_id. None has a twin yet, but the importer should save them.
+
+**Theme cap.** CoS ruled that no mock may serve more than 2 items with the same `theme`. Today one theme is tagged: `first-measure-misleads`, on 8 of the 12 approved chatgpt-batch-002 RC items (050002, 050005, 050011, 050012, 050015, 050020, 050022, 050023). Spec v0.1.9 §10.8 defines the field.
+
+6. Add a migration for a nullable, indexed `questions.theme` column (string, 100), and have `civio:import-batch` save `$item['theme'] ?? null`. Re-importing chatgpt-batch-002 backfills it, because the importer matches on stem.
+7. In `MockPoolSelector` / `MockPoolState`, count picks per non-null theme and skip a candidate once its theme has 2 picks in the session. The rule applies to every mock and to the quota fallback, the same way as the fact_id rule. A null theme means no constraint.
+8. Add a Pest test: in a pool with 5 same-theme RC items, every mock holds at most 2 of them.
+
+Until this ships, a Verbal mock could draw more than 2 of the 8 themed items. They are among about 590 active Verbal items, so the risk is low.
+
 ## Not in scope
 
 - No change to approved item text.
