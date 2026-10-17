@@ -40,6 +40,12 @@ git log --oneline HEAD..upstream-baseline/main     # upstream commits Civio lack
 Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 `d3f0368` from GT's MSI tree (see the desktop section).
 
+### Homepage positioning (18 October 2026)
+
+| What changed | Why | Commits |
+| --- | --- | --- |
+| Added the approved public-service education positioning beneath the homepage exam selection headline. | Clarifies Civio's independent mission without implying endorsement or changing the exam workflow. | this commit |
+
 ### PDF integrity (17 October 2026)
 
 | What changed | Why | Commits |

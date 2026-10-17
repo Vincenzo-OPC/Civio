@@ -68,6 +68,9 @@ export default function Welcome() {
                                 <h1 className="font-heading text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
                                     Choose Your Exam.
                                 </h1>
+                                <p className="max-w-2xl text-sm leading-relaxed text-[#101426]/75 sm:text-base dark:text-[#FAFAF7]/75">
+                                    Civio: An independent platform helping Filipinos prepare for public service through accessible, reliable Civil Service Exam education.
+                                </p>
                             </header>
 
                             <ExamLevelPicker
