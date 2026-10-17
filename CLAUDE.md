@@ -14,6 +14,8 @@ GitHub `Vincenzo-OPC/Civio` is the durable record — not any one chat history.
 
 ## Read order before acting
 
+Pending Astra handoff (17 Oct 2026): read `docs/ASTRA_PENDING_HANDOFF.md` first (security and exam-integrity fixes, then learning features).
+
 0. `docs/CODEX_HANDOFF_PLAN.md` — start here: record by phase, invariants, gaps, next phases.
 1. `AGENTS.md` — product locks, MSI Docker protection, branch/push rules, phase status.
 2. This file.

@@ -10,6 +10,8 @@ disagree, the code and tests win, then `AGENTS.md`.
 
 ## 0. Learning Features (next)
 
+> **Pending Astra handoff (17 Oct 2026):** read [ASTRA_PENDING_HANDOFF.md](ASTRA_PENDING_HANDOFF.md) first. It puts the Sentinel security and exam-integrity findings (F1, F2, F6, then F3) ahead of this section, and gives each learning feature an honest status. The 2,000-question milestone proposal is in [research/MILESTONE_2000_PLAN.md](research/MILESTONE_2000_PLAN.md).
+
 Added 13 Oct 2026 for Grok Build or Codex. This is a brief only; none of it is built yet.
 Stack: Laravel 13 / Inertia / React 19 / TS / Tailwind 4 / Pest (+ Vitest for TS).
 Every meter and message must come from real stored data, never decoration.
