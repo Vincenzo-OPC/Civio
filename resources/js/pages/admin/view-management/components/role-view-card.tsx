@@ -33,7 +33,7 @@ export function RoleViewCard({
         <Card className="flex flex-col border border-slate-200/50 bg-white/70 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/5 dark:border-slate-800/50 dark:bg-slate-950/50">
             <CardHeader className="border-b border-border/50 bg-muted/20 pb-4">
                 <CardTitle className="flex items-center gap-2 text-xl font-semibold tracking-tight capitalize">
-                    <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                    <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#5B35F5] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                         <Settings className="size-4 transition-transform duration-300 group-hover:rotate-45" />
                     </div>
                     {role} Role Views

@@ -97,7 +97,7 @@ export function ExamDatesTable({
                                                         onClick={() =>
                                                             onEdit(exam)
                                                         }
-                                                        className="rounded-md p-1.5 text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-50 dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-950/30"
+                                                        className="rounded-md p-1.5 text-[#5B35F5] hover:bg-blue-50 dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-950/30"
                                                     >
                                                         <Edit2 className="h-4 w-4" />
                                                     </button>

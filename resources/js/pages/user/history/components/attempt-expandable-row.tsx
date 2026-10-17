@@ -92,7 +92,7 @@ export function AttemptExpandableRow({ attempt }: AttemptExpandableRowProps) {
                                 className="h-8 gap-1.5 text-xs font-bold"
                             >
                                 <Link href={retakeUrl}>
-                                    <RotateCcw className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                    <RotateCcw className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                     Retake {isDrill ? 'Drill' : 'Exam'}
                                 </Link>
                             </Button>

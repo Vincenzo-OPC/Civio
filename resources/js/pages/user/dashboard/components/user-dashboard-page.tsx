@@ -42,7 +42,7 @@ export function UserDashboardPage({ stats, aiAnalysis }: DashboardProps) {
                         <>
                             Welcome back,
                             <br />
-                            <span className="font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                            <span className="font-semibold text-[#5B35F5] dark:text-[#B3F52D]">
                                 {firstName}
                             </span>
                         </>
@@ -67,7 +67,7 @@ export function UserDashboardPage({ stats, aiAnalysis }: DashboardProps) {
                                 query: { start: 'subprofessional' },
                             }).url
                         }
-                        className="group dark:bg-blue-950/30/50 flex items-center justify-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D] transition transition-all duration-300 hover:bg-blue-100/50 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:border-blue-900/50 dark:bg-blue-950/20 dark:text-[#B3F52D] dark:hover:bg-blue-900/30"
+                        className="group dark:bg-blue-950/30/50 flex items-center justify-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-xs font-semibold text-[#5B35F5] transition transition-all duration-300 hover:bg-blue-100/50 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:border-blue-900/50 dark:bg-blue-950/20 dark:text-[#B3F52D] dark:hover:bg-blue-900/30"
                     >
                         Start Subprofessional Exam
                     </Link>
@@ -88,7 +88,7 @@ export function UserDashboardPage({ stats, aiAnalysis }: DashboardProps) {
                 {/* Learn Card */}
                 <Card className="flex flex-col justify-between p-4 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 sm:p-6 dark:bg-slate-900/60">
                     <div className="flex items-start gap-4">
-                        <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                        <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#5B35F5] dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                             <BookOpen className="size-5" />
                         </div>
                         <div>
@@ -103,7 +103,7 @@ export function UserDashboardPage({ stats, aiAnalysis }: DashboardProps) {
                     </div>
                     <Link
                         href={learnIndex()}
-                        className="group mt-4 inline-flex items-center gap-1 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] transition-all duration-300 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D] dark:hover:text-blue-300"
+                        className="group mt-4 inline-flex items-center gap-1 text-xs font-bold text-[#5B35F5] transition-all duration-300 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D] dark:hover:text-blue-300"
                     >
                         Learn Modules <ChevronRight className="size-3.5" />
                     </Link>

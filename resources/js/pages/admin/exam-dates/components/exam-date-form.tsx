@@ -77,7 +77,7 @@ export function ExamDateForm({
                         id="is_active"
                         checked={data.is_active}
                         onChange={(e) => onActiveChange(e.target.checked)}
-                        className="h-4 w-4 rounded border-gray-300 text-[#5B35F5] dark:text-[#B3F52D] focus:ring-blue-500 dark:text-[#B3F52D]"
+                        className="h-4 w-4 rounded border-gray-300 text-[#5B35F5] focus:ring-blue-500 dark:text-[#B3F52D]"
                     />
                     <label
                         htmlFor="is_active"

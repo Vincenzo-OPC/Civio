@@ -4,7 +4,6 @@ namespace App\Services;
 
 use App\Models\ExamAttempt;
 use App\Models\Question;
-use App\Services\ExamGradingService;
 
 class ExamAttemptFormatter
 {

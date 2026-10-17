@@ -312,7 +312,7 @@ export function AgendaView({
                             type="checkbox"
                             checked={isSelected}
                             onChange={() => toggleSelectSchedule(task.id)}
-                            className="mt-1 size-4 shrink-0 cursor-pointer rounded border-slate-300 text-[#5B35F5] dark:text-[#B3F52D] focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800"
+                            className="mt-1 size-4 shrink-0 cursor-pointer rounded border-slate-300 text-[#5B35F5] focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800 dark:text-[#B3F52D]"
                             aria-label={`Select ${task.title}`}
                         />
                     )}
@@ -574,7 +574,7 @@ export function AgendaView({
                     </div>
                 ) : (
                     <Card className="flex flex-col items-center justify-center border-dashed p-8 text-center">
-                        <div className="mb-2 flex size-10 items-center justify-center rounded-xl bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                        <div className="mb-2 flex size-10 items-center justify-center rounded-xl bg-blue-50 text-[#5B35F5] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                             <Sparkles className="size-5" />
                         </div>
                         <p className="text-sm font-bold text-slate-800 dark:text-slate-200">
@@ -665,7 +665,7 @@ export function AgendaView({
                                     <button
                                         type="button"
                                         onClick={() => openModal(dateStr)}
-                                        className="text-[11px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] hover:text-blue-700 dark:text-[#B3F52D]"
+                                        className="text-[11px] font-semibold text-[#5B35F5] hover:text-blue-700 dark:text-[#B3F52D]"
                                     >
                                         + Add Task
                                     </button>

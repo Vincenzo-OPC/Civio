@@ -90,7 +90,7 @@ export function ConfigView({
                 onClick={makeBackOnClick({
                     onFallback: handleBack,
                 })}
-                className="flex w-fit cursor-pointer items-center gap-1 text-xs font-semibold text-foreground transition hover:text-[#5B35F5] dark:text-[#B3F52D] focus:outline-none dark:text-[#B3F52D] dark:hover:text-blue-400"
+                className="flex w-fit cursor-pointer items-center gap-1 text-xs font-semibold text-foreground transition hover:text-[#5B35F5] focus:outline-none dark:text-[#B3F52D] dark:hover:text-blue-400"
             >
                 <ChevronLeft className="size-4" />
                 {backLabel}
@@ -177,7 +177,7 @@ export function ConfigView({
                                 <ListOrdered className="size-3" />
                                 <span>Question Count</span>
                             </div>
-                            <span className="dark:bg-blue-950/30/50 rounded-md bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/20 dark:text-[#B3F52D]">
+                            <span className="dark:bg-blue-950/30/50 rounded-md bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-[#5B35F5] dark:bg-blue-950/20 dark:text-[#B3F52D]">
                                 Total Questions:{' '}
                                 {questionCount === 'all'
                                     ? filteredQCount
@@ -361,7 +361,7 @@ export function ConfigView({
                                                     onChange={() =>
                                                         setLanguage(lang)
                                                     }
-                                                    className="size-4 border-border text-[#5B35F5] dark:text-[#B3F52D] focus:ring-blue-500 dark:border-slate-800 dark:bg-slate-900 dark:text-[#B3F52D]"
+                                                    className="size-4 border-border text-[#5B35F5] focus:ring-blue-500 dark:border-slate-800 dark:bg-slate-900 dark:text-[#B3F52D]"
                                                 />
                                                 {lang === 'Both'
                                                     ? 'Both (Mixed)'

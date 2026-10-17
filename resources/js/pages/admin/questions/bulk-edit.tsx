@@ -576,10 +576,10 @@ export default function BulkEditQuestions({
             >
                 <div className="mb-4 rounded-xl border border-purple-200 bg-purple-50 p-4 dark:border-purple-900/30 dark:bg-purple-950/20">
                     <p className="text-sm font-semibold text-purple-800 dark:text-purple-300">
-                        <span className="font-semibold">Multi-Edit Tip:</span> Hold{' '}
-                        <strong>Alt</strong> and click on multiple inputs (text
-                        boxes, options, dropdowns) to link them. Typing in one
-                        will magically update all linked fields at the same
+                        <span className="font-semibold">Multi-Edit Tip:</span>{' '}
+                        Hold <strong>Alt</strong> and click on multiple inputs
+                        (text boxes, options, dropdowns) to link them. Typing in
+                        one will magically update all linked fields at the same
                         time!
                     </p>
                     {linkedFields.size > 0 && (

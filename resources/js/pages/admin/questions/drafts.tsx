@@ -499,7 +499,7 @@ export default function DraftsQuestionList({
                                                                 )
                                                             }
                                                             title="Quick Preview"
-                                                            className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
+                                                            className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D]"
                                                         >
                                                             <FileImage className="size-4" />
                                                         </button>
@@ -511,7 +511,7 @@ export default function DraftsQuestionList({
                                                                 )
                                                             }
                                                             title="Edit"
-                                                            className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
+                                                            className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D]"
                                                         >
                                                             <Edit3 className="size-4" />
                                                         </button>
@@ -590,7 +590,7 @@ export default function DraftsQuestionList({
                                                 onClick={() =>
                                                     setPreviewQuestion(q)
                                                 }
-                                                className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
+                                                className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D]"
                                             >
                                                 <FileImage className="size-4" />
                                             </button>
@@ -607,7 +607,7 @@ export default function DraftsQuestionList({
                                                 onClick={() =>
                                                     setEditModalQuestion(q)
                                                 }
-                                                className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
+                                                className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D]"
                                             >
                                                 <Edit3 className="size-4" />
                                             </button>
@@ -833,7 +833,7 @@ export default function DraftsQuestionList({
                                 {previewQuestion.explanation && (
                                     <div className="shadow-3xs mt-2 overflow-hidden rounded-2xl border border-border bg-card text-sm leading-relaxed text-muted-foreground transition-all">
                                         <div className="flex w-full items-center gap-2 p-4 font-bold text-foreground sm:p-5">
-                                            <HelpCircle className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                            <HelpCircle className="size-4 text-[#5B35F5] dark:text-[#B3F52D]" />
                                             <span>
                                                 Explanation &amp; Rationale
                                             </span>

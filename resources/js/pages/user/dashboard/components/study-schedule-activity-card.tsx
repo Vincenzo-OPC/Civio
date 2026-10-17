@@ -99,7 +99,7 @@ export function StudyScheduleActivityCard({
                         </div>
                         <Link
                             href={calendarIndex()}
-                            className="font-semibold text-[#5B35F5] dark:text-[#B3F52D] hover:text-blue-700 dark:text-[#B3F52D]"
+                            className="font-semibold text-[#5B35F5] hover:text-blue-700 dark:text-[#B3F52D]"
                         >
                             Resolve &rarr;
                         </Link>

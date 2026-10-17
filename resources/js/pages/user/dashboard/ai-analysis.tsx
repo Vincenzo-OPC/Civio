@@ -530,7 +530,7 @@ export default function AiAnalysisReport({
                 {/* Main Content States */}
                 {localStatus === 'no_data' && (
                     <Card className="flex min-h-[400px] flex-col items-center justify-center border-2 border-dashed p-12 text-center">
-                        <div className="border-blue-150 mb-5 flex size-16 items-center justify-center rounded-2xl border bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:border-blue-900/40 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                        <div className="border-blue-150 mb-5 flex size-16 items-center justify-center rounded-2xl border bg-blue-50 text-[#5B35F5] dark:border-blue-900/40 dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                             <Brain className="size-8" />
                         </div>
                         <h3 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
@@ -586,10 +586,10 @@ export default function AiAnalysisReport({
                                             strokeDasharray={circumference}
                                             strokeDashoffset={strokeDashoffset}
                                             strokeLinecap="round"
-                                            className="text-[#5B35F5] dark:text-[#B3F52D] transition-all duration-300 ease-out dark:text-[#B3F52D]"
+                                            className="text-[#5B35F5] transition-all duration-300 ease-out dark:text-[#B3F52D]"
                                         />
                                     </svg>
-                                    <span className="text-base font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                    <span className="text-base font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D]">
                                         {progress}%
                                     </span>
                                 </div>
@@ -641,7 +641,7 @@ export default function AiAnalysisReport({
 
                             <div className="flex flex-col justify-between gap-3 sm:gap-6 md:flex-row md:items-center">
                                 <div className="flex items-start gap-4">
-                                    <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl border border-blue-200 bg-blue-100 text-[#5B35F5] dark:text-[#B3F52D] dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10 dark:text-[#B3F52D]">
+                                    <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl border border-blue-200 bg-blue-100 text-[#5B35F5] dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10 dark:text-[#B3F52D]">
                                         <Brain className="size-8 animate-pulse" />
                                     </div>
                                     <div>

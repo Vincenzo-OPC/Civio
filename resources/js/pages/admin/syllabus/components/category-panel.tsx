@@ -69,7 +69,7 @@ export function CategoryPanel({
                                 e.target.checked,
                             )
                         }
-                        className="size-4 cursor-pointer rounded border-border text-[#5B35F5] dark:text-[#B3F52D] focus:ring-blue-500 dark:text-[#B3F52D]"
+                        className="size-4 cursor-pointer rounded border-border text-[#5B35F5] focus:ring-blue-500 dark:text-[#B3F52D]"
                     />
                     <span className="text-xs font-semibold text-muted-foreground">
                         Is demographic?
@@ -141,7 +141,7 @@ export function CategoryPanel({
                                             e.stopPropagation();
                                             onStartEdit(cat.id, cat.name);
                                         }}
-                                        className="cursor-pointer rounded-lg p-1 text-muted-foreground transition hover:bg-blue-50 hover:text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-950/30 dark:hover:text-blue-400"
+                                        className="cursor-pointer rounded-lg p-1 text-muted-foreground transition hover:bg-blue-50 hover:text-[#5B35F5] dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-950/30 dark:hover:text-blue-400"
                                     >
                                         <Edit2 className="size-3.5" />
                                     </button>

@@ -767,7 +767,7 @@ export default function DraftsLearnList({
                                                         (previewMode[m.id] ||
                                                             'preview') ===
                                                         'preview'
-                                                            ? 'shadow-3xs bg-card text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-white'
+                                                            ? 'shadow-3xs bg-card text-[#5B35F5] dark:text-[#B3F52D] dark:text-white'
                                                             : 'text-muted-foreground hover:text-foreground'
                                                     }`}
                                                 >
@@ -786,7 +786,7 @@ export default function DraftsLearnList({
                                                     className={`cursor-pointer rounded-md px-2 py-1 text-[9.5px] font-semibold uppercase transition ${
                                                         previewMode[m.id] ===
                                                         'raw'
-                                                            ? 'shadow-3xs bg-card text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-white'
+                                                            ? 'shadow-3xs bg-card text-[#5B35F5] dark:text-[#B3F52D] dark:text-white'
                                                             : 'text-muted-foreground hover:text-foreground'
                                                     }`}
                                                 >

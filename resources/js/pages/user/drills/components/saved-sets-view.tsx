@@ -124,7 +124,7 @@ export function SavedSetsView({
             {/* Header / Intro */}
             <div className="flex flex-col justify-between gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs sm:flex-row sm:items-center sm:p-6">
                 <div className="flex items-start gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                    <div className="flex size-10 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D]">
                         <Bookmark className="size-5" />
                     </div>
                     <div>
@@ -189,7 +189,7 @@ export function SavedSetsView({
                             >
                                 <div>
                                     <div className="flex items-start justify-between">
-                                        <div className="flex size-10 items-center justify-center rounded-xl bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                                        <div className="flex size-10 items-center justify-center rounded-xl bg-blue-50 text-[#5B35F5] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                             <Folder className="size-5" />
                                         </div>
                                         <div className="flex items-center gap-1.5">
@@ -206,7 +206,7 @@ export function SavedSetsView({
                                                     setSetForEdit(set);
                                                 }}
                                                 title="Edit Set & Questions"
-                                                className="cursor-pointer rounded-lg p-1 text-muted-foreground opacity-70 transition hover:bg-blue-50 hover:text-[#5B35F5] dark:text-[#B3F52D] hover:opacity-100 dark:hover:bg-blue-950/40"
+                                                className="cursor-pointer rounded-lg p-1 text-muted-foreground opacity-70 transition hover:bg-blue-50 hover:text-[#5B35F5] hover:opacity-100 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
                                             >
                                                 <Pencil className="size-3.5" />
                                             </button>

@@ -70,7 +70,7 @@ export default function Login({
                                     {canResetPassword && (
                                         <TextLink
                                             href={request()}
-                                            className="ml-auto text-sm font-semibold text-[#5B35F5] dark:text-[#B3F52D] hover:text-blue-500 dark:text-[#B3F52D] dark:hover:text-blue-300"
+                                            className="ml-auto text-sm font-semibold text-[#5B35F5] hover:text-blue-500 dark:text-[#B3F52D] dark:hover:text-blue-300"
                                             tabIndex={5}
                                         >
                                             Forgot password?
@@ -187,7 +187,7 @@ export default function Login({
                             <TextLink
                                 href={register()}
                                 tabIndex={5}
-                                className="font-semibold text-[#5B35F5] dark:text-[#B3F52D] hover:text-blue-500 dark:text-[#B3F52D] dark:hover:text-blue-300"
+                                className="font-semibold text-[#5B35F5] hover:text-blue-500 dark:text-[#B3F52D] dark:hover:text-blue-300"
                             >
                                 Register
                             </TextLink>

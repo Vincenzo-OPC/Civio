@@ -335,7 +335,7 @@ export function DraftsReviewShell<T extends BaseDraftItem>({
                 <div>
                     <Link
                         href={backUrl}
-                        className="group flex w-fit cursor-pointer items-center gap-1 text-xs font-semibold text-foreground transition-all duration-300 hover:text-[#5B35F5] dark:text-[#B3F52D] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
+                        className="group flex w-fit cursor-pointer items-center gap-1 text-xs font-semibold text-foreground transition-all duration-300 hover:text-[#5B35F5] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                     >
                         <ChevronLeft className="size-4" />
                         {backLabel}

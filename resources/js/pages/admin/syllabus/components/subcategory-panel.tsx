@@ -118,7 +118,7 @@ export function SubcategoryPanel({
                                                         sub.name,
                                                     );
                                                 }}
-                                                className="cursor-pointer rounded-lg p-1 text-muted-foreground transition hover:bg-blue-50 hover:text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-950/30 dark:hover:text-blue-400"
+                                                className="cursor-pointer rounded-lg p-1 text-muted-foreground transition hover:bg-blue-50 hover:text-[#5B35F5] dark:bg-blue-950/30 dark:text-[#B3F52D] dark:hover:bg-blue-950/30 dark:hover:text-blue-400"
                                             >
                                                 <Edit2 className="size-3.5" />
                                             </button>

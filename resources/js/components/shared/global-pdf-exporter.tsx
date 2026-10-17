@@ -67,17 +67,17 @@ export function GlobalPdfExporter() {
     return (
         <Suspense fallback={null}>
             <PrintableExam
-            questions={payload.questions}
-            title={payload.title}
-            onComplete={() => {
-                setPayload(null);
+                questions={payload.questions}
+                title={payload.title}
+                onComplete={() => {
+                    setPayload(null);
 
-                if (typeof window !== 'undefined') {
-                    window.dispatchEvent(
-                        new CustomEvent('civio:export-pdf-done'),
-                    );
-                }
-            }}
+                    if (typeof window !== 'undefined') {
+                        window.dispatchEvent(
+                            new CustomEvent('civio:export-pdf-done'),
+                        );
+                    }
+                }}
             />
         </Suspense>
     );

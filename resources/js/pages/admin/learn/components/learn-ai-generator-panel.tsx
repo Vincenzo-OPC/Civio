@@ -71,7 +71,7 @@ export function LearnAIGeneratorPanel({
 
                     <div className="mb-4 flex items-center justify-between border-b border-border pb-4">
                         <h2 className="inline-flex items-center gap-2 text-base font-bold text-foreground">
-                            <Sparkles className="size-4.5 animate-pulse text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                            <Sparkles className="size-4.5 animate-pulse text-[#5B35F5] dark:text-[#B3F52D]" />
                             Syllabus Options
                         </h2>
                     </div>
@@ -172,7 +172,7 @@ export function LearnAIGeneratorPanel({
                                                                 abstract
                                                                 reasoning
                                                             </td>
-                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Flash / 3.7
                                                                 Pro
@@ -196,7 +196,7 @@ export function LearnAIGeneratorPanel({
                                                                 Data
                                                                 interpretation
                                                             </td>
-                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Flash / 3.7
                                                                 Pro
@@ -216,7 +216,7 @@ export function LearnAIGeneratorPanel({
                                                             <td className="p-3 font-bold">
                                                                 Word analogy
                                                             </td>
-                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Flash / 3.7
                                                                 Pro
@@ -237,7 +237,7 @@ export function LearnAIGeneratorPanel({
                                                                 assumptions &
                                                                 conclusions
                                                             </td>
-                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                                            <td className="p-3 font-bold text-[#5B35F5] dark:text-[#B3F52D]">
                                                                 Google Gemini
                                                                 3.7 Pro / 3.7
                                                                 Flash

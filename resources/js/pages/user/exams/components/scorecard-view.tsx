@@ -353,7 +353,7 @@ export function ScorecardView({
                     return (
                         <div className="mb-6 rounded-2xl border border-blue-200 bg-blue-50/80 p-4 dark:border-blue-900/40 dark:bg-blue-950/20">
                             <div className="flex items-start gap-3">
-                                <div className="rounded-full bg-blue-100 p-1 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950 dark:text-[#B3F52D]">
+                                <div className="rounded-full bg-blue-100 p-1 text-[#5B35F5] dark:bg-blue-950 dark:text-[#B3F52D]">
                                     <svg
                                         className="size-4"
                                         fill="none"
@@ -403,7 +403,7 @@ export function ScorecardView({
             {/* Header Title Section */}
             <div className="mb-6 flex flex-col gap-2 border-b border-border pb-5 md:flex-row md:items-center md:justify-between">
                 <div>
-                    <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-[#5B35F5] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                         <Award className="size-3" /> Performance Scorecard
                     </span>
                     <h1 className="mt-1 font-heading text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
@@ -503,9 +503,7 @@ export function ScorecardView({
                                                     />
                                                 </svg>
                                                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                                                    <span
-                                                        className="font-heading text-3xl leading-none font-semibold tracking-tight text-[#101426] tabular-nums sm:text-4xl dark:text-[#FAFAF7]"
-                                                    >
+                                                    <span className="font-heading text-3xl leading-none font-semibold tracking-tight text-[#101426] tabular-nums sm:text-4xl dark:text-[#FAFAF7]">
                                                         {formattedPercentage}%
                                                     </span>
                                                     <span className="mt-1 text-[0.65rem] tracking-[0.14em] text-[#101426]/60 uppercase dark:text-[#FAFAF7]/60">
@@ -514,16 +512,14 @@ export function ScorecardView({
                                                 </div>
                                             </div>
                                             <div className="mt-3 flex flex-col items-center gap-1">
-                                                <span
-                                                    className="inline-flex rounded-full bg-[#FAFAF7] px-3 py-1 text-xs font-semibold text-[#101426] dark:bg-black dark:text-[#FAFAF7]"
-                                                >
+                                                <span className="inline-flex rounded-full bg-[#FAFAF7] px-3 py-1 text-xs font-semibold text-[#101426] dark:bg-black dark:text-[#FAFAF7]">
                                                     {isPassed
                                                         ? 'At Least 80.00'
                                                         : 'Below 80.00'}
                                                 </span>
                                                 <p className="text-center text-xs font-medium text-muted-foreground">
-                                                    A practice rating. Not an official
-                                                    result.
+                                                    A practice rating. Not an
+                                                    official result.
                                                 </p>
                                             </div>
                                         </div>
@@ -582,7 +578,7 @@ export function ScorecardView({
                                                                         }
                                                                         %
                                                                     </span>
-                                                                    <span className="text-[10px] font-bold text-[#5B35F5] dark:text-[#B3F52D] opacity-0 transition group-hover:opacity-100 dark:text-[#B3F52D]">
+                                                                    <span className="text-[10px] font-bold text-[#5B35F5] opacity-0 transition group-hover:opacity-100 dark:text-[#B3F52D]">
                                                                         Review →
                                                                     </span>
                                                                 </div>
@@ -650,7 +646,7 @@ export function ScorecardView({
                                         <span className="text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
                                             Time Spent
                                         </span>
-                                        <p className="mt-1 text-2xl font-semibold text-[#5B35F5] dark:text-[#B3F52D] sm:text-3xl dark:text-[#B3F52D]">
+                                        <p className="mt-1 text-2xl font-semibold text-[#5B35F5] sm:text-3xl dark:text-[#B3F52D]">
                                             {elapsedText}
                                         </p>
                                         <span className="mt-0.5 w-full truncate px-1 text-[11px] font-bold text-muted-foreground">
@@ -709,7 +705,7 @@ export function ScorecardView({
                             {/* POST-EXAM ACTION HUB */}
                             <div className="rounded-2xl border border-border bg-card p-5 shadow-xs sm:p-6">
                                 <div className="mb-4 flex items-center gap-2">
-                                    <div className="flex size-7 items-center justify-center rounded-lg bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                    <div className="flex size-7 items-center justify-center rounded-lg bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D]">
                                         <Zap className="size-4" />
                                     </div>
                                     <div>
@@ -760,7 +756,7 @@ export function ScorecardView({
                                                     : 'Read through complete answer explanations and concept keys.'}
                                             </p>
                                         </div>
-                                        <div className="mt-4 flex items-center text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                        <div className="mt-4 flex items-center text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D]">
                                             <span>Open Mistake Review</span>
                                             <ArrowRight className="ml-1 size-3.5 transition-transform group-hover:translate-x-1" />
                                         </div>
@@ -808,7 +804,7 @@ export function ScorecardView({
                                                       : 'Launch targeted practice drills to sharpen your speed.'}
                                             </p>
                                         </div>
-                                        <div className="mt-4 flex items-center text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                        <div className="mt-4 flex items-center text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D]">
                                             <span>
                                                 {wrongQuestionIds.length > 0
                                                     ? 'Start Mistake Drill'
@@ -825,7 +821,7 @@ export function ScorecardView({
                                     >
                                         <div>
                                             <div className="mb-2 flex items-center justify-between">
-                                                <span className="inline-flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                                                <span className="inline-flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#5B35F5] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                                     <RotateCcw className="size-4" />
                                                 </span>
                                                 <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold text-muted-foreground">
@@ -841,7 +837,7 @@ export function ScorecardView({
                                                 questions.
                                             </p>
                                         </div>
-                                        <div className="mt-4 flex items-center text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                        <div className="mt-4 flex items-center text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D]">
                                             <span>Start New Attempt</span>
                                             <ArrowRight className="ml-1 size-3.5 transition-transform group-hover:translate-x-1" />
                                         </div>
@@ -907,7 +903,7 @@ export function ScorecardView({
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className="mb-4 flex flex-col items-center text-center">
-                            <div className="mb-3 rounded-full bg-blue-50 p-3 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/50 dark:text-[#B3F52D]">
+                            <div className="mb-3 rounded-full bg-blue-50 p-3 text-[#5B35F5] dark:bg-blue-950/50 dark:text-[#B3F52D]">
                                 <Trophy className="size-8" />
                             </div>
                             <h3 className="font-heading text-xl font-semibold tracking-tight text-foreground">

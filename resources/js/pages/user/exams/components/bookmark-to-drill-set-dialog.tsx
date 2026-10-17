@@ -175,7 +175,7 @@ function BookmarkForm({
     return (
         <form onSubmit={handleSave} className="space-y-4">
             <DialogHeader className="space-y-1.5">
-                <div className="flex items-center gap-2 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                <div className="flex items-center gap-2 text-[#5B35F5] dark:text-[#B3F52D]">
                     <div className="rounded-xl border border-blue-200 bg-blue-50 p-2 dark:border-blue-800 dark:bg-blue-950/50">
                         <BookmarkPlus className="size-5" />
                     </div>

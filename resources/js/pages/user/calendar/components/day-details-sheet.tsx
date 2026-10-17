@@ -76,7 +76,7 @@ export function DayDetailsSheet({
                     {/* Header */}
                     <SheetHeader className="border-b border-slate-200/80 bg-slate-50/50 p-6 dark:border-slate-800/80 dark:bg-slate-900/50">
                         <div className="flex items-center justify-between gap-2">
-                            <div className="flex items-center gap-1.5 text-xs font-bold tracking-wider text-[#5B35F5] dark:text-[#B3F52D] uppercase dark:text-[#B3F52D]">
+                            <div className="flex items-center gap-1.5 text-xs font-bold tracking-wider text-[#5B35F5] uppercase dark:text-[#B3F52D]">
                                 <Calendar className="size-4" />
                                 <span>Day Inspector</span>
                             </div>
@@ -125,7 +125,7 @@ export function DayDetailsSheet({
                                         onAddNew(dateStr);
                                         onOpenChange(false);
                                     }}
-                                    className="mt-4 h-8 gap-1 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-50 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
+                                    className="mt-4 h-8 gap-1 text-xs font-bold text-[#5B35F5] hover:bg-blue-50 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
                                 >
                                     <Plus className="size-3.5" />
                                     <span>Schedule Session</span>

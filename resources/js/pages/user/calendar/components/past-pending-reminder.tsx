@@ -218,7 +218,7 @@ export function PastPendingReminder({
                             type="checkbox"
                             checked={snooze24h}
                             onChange={(e) => setSnooze24h(e.target.checked)}
-                            className="size-4 rounded border-slate-300 text-[#5B35F5] dark:text-[#B3F52D] focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800"
+                            className="size-4 rounded border-slate-300 text-[#5B35F5] focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800 dark:text-[#B3F52D]"
                         />
                         <span>Don&apos;t remind me again for 24 hours</span>
                     </label>

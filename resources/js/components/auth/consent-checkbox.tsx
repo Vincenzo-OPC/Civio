@@ -28,14 +28,14 @@ export default function ConsentCheckbox({
                 I have read and agree to the{' '}
                 <Link
                     href="/terms"
-                    className="group font-medium text-[#5B35F5] dark:text-[#B3F52D] underline underline-offset-2 transition-all duration-300 hover:text-blue-500 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D] dark:hover:text-blue-300"
+                    className="group font-medium text-[#5B35F5] underline underline-offset-2 transition-all duration-300 hover:text-blue-500 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D] dark:hover:text-blue-300"
                 >
                     Terms of Service
                 </Link>{' '}
                 and{' '}
                 <Link
                     href="/privacy"
-                    className="group font-medium text-[#5B35F5] dark:text-[#B3F52D] underline underline-offset-2 transition-all duration-300 hover:text-blue-500 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D] dark:hover:text-blue-300"
+                    className="group font-medium text-[#5B35F5] underline underline-offset-2 transition-all duration-300 hover:text-blue-500 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D] dark:hover:text-blue-300"
                 >
                     Privacy Policy
                 </Link>

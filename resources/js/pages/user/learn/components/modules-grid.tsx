@@ -66,7 +66,7 @@ export function ModulesGrid({
                                                     )}
                                                 </div>
 
-                                                <h3 className="mt-5 font-heading text-lg leading-snug font-bold text-foreground transition group-hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:group-hover:text-blue-400">
+                                                <h3 className="mt-5 font-heading text-lg leading-snug font-bold text-foreground transition group-hover:text-[#5B35F5] dark:text-[#B3F52D] dark:group-hover:text-blue-400">
                                                     {mod.title}
                                                 </h3>
 
@@ -93,7 +93,7 @@ export function ModulesGrid({
                                                 </div>
 
                                                 {!mod.is_completed && (
-                                                    <span className="flex items-center gap-1 text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D] transition-all group-hover:gap-2 dark:text-[#B3F52D]">
+                                                    <span className="flex items-center gap-1 text-xs font-semibold text-[#5B35F5] transition-all group-hover:gap-2 dark:text-[#B3F52D]">
                                                         Start Lesson
                                                         <ArrowRight className="size-3.5" />
                                                     </span>
@@ -114,7 +114,7 @@ export function ModulesGrid({
         return (
             <div className="relative overflow-hidden rounded-2xl border-2 border-dashed border-border bg-card/70 p-12 text-center shadow-sm transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-900/50">
                 <div className="mx-auto mb-5 flex size-14 items-center justify-center rounded-xl bg-slate-100 text-muted-foreground ring-8 dark:bg-slate-900">
-                    <BookOpen className="size-6 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                    <BookOpen className="size-6 text-[#5B35F5] dark:text-[#B3F52D]" />
                 </div>
                 <span className="mb-3.5 inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3.5 py-1 text-[10px] font-semibold tracking-wider text-amber-700 uppercase dark:bg-amber-950/30 dark:bg-amber-950/40 dark:text-amber-400">
                     <span className="size-1.5 rounded-full bg-amber-500" />
@@ -124,8 +124,8 @@ export function ModulesGrid({
                     No Learning Modules Available
                 </h3>
                 <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                    Civio is currently designing bite-sized conceptual
-                    lessons, strategy guides, and detailed category rationales.
+                    Civio is currently designing bite-sized conceptual lessons,
+                    strategy guides, and detailed category rationales.
                 </p>
             </div>
         );

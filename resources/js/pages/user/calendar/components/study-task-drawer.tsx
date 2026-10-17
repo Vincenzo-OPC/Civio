@@ -224,7 +224,7 @@ export function StudyTaskDrawer({
                                             className="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 text-xs font-semibold text-slate-800 shadow-2xs transition hover:border-blue-300 hover:bg-blue-50/50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-blue-700 dark:hover:bg-blue-950/30"
                                         >
                                             <div className="flex items-center gap-2 truncate pr-2">
-                                                <BookOpen className="size-4 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                                <BookOpen className="size-4 shrink-0 text-[#5B35F5] dark:text-[#B3F52D]" />
                                                 <span className="truncate">
                                                     {mod.title}
                                                 </span>

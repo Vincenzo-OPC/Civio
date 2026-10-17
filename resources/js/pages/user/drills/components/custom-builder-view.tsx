@@ -766,7 +766,7 @@ export function CustomBuilderView({
                                 <button
                                     type="button"
                                     onClick={selectAllCategories}
-                                    className="text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] transition hover:underline dark:text-[#B3F52D]"
+                                    className="text-xs font-bold text-[#5B35F5] transition hover:underline dark:text-[#B3F52D]"
                                 >
                                     Select All
                                 </button>
@@ -858,7 +858,7 @@ export function CustomBuilderView({
                                 >
                                     <div>
                                         <div className="mb-2 flex items-center justify-between">
-                                            <Sparkles className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                            <Sparkles className="size-4 text-[#5B35F5] dark:text-[#B3F52D]" />
                                             {poolFilter === 'all' && (
                                                 <span className="size-2 rounded-full bg-[#5B35F5]" />
                                             )}
@@ -1667,7 +1667,7 @@ export function CustomBuilderView({
                                                     : 'border-border bg-background text-muted-foreground'
                                             }`}
                                         >
-                                            <Clock className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                            <Clock className="size-4 text-[#5B35F5] dark:text-[#B3F52D]" />
                                             <div>
                                                 <p className="text-xs font-bold text-foreground">
                                                     Timed
@@ -1763,7 +1763,7 @@ export function CustomBuilderView({
                                     onClick={handleOpenSaveModal}
                                     className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl border border-border bg-background py-2.5 text-xs font-bold text-foreground transition hover:bg-muted active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
                                 >
-                                    <BookmarkPlus className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                    <BookmarkPlus className="size-4 text-[#5B35F5] dark:text-[#B3F52D]" />
                                     <span>Save Selection as Practice Set</span>
                                 </button>
                             </div>
@@ -1815,7 +1815,7 @@ export function CustomBuilderView({
                                     onClick={handleOpenSaveModal}
                                     className="h-9 text-xs font-bold"
                                 >
-                                    <BookmarkPlus className="mr-1.5 size-3.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                    <BookmarkPlus className="mr-1.5 size-3.5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                     <span>Save Set</span>
                                 </Button>
                                 <Button
@@ -1846,7 +1846,7 @@ export function CustomBuilderView({
                 <DialogContent className="sm:max-w-2xl">
                     <DialogHeader>
                         <div className="flex items-center gap-2">
-                            <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                            <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D]">
                                 <Bookmark className="size-4" />
                             </div>
                             <div>

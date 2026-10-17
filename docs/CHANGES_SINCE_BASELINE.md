@@ -44,8 +44,8 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 
 | What changed | Why | Commits |
 | --- | --- | --- |
-| Dedicated authorized, throttled PDF export selects its own questions, preserves stored option order, blocks active Strict Mocks, and returns private/no-store keyed payloads. Normal mock sessions remain keyless. The renderer omits the entire answer-key page for any missing or invalid key; permission-gated copy now says Download PDF & Answer Key. | The old export used a keyless mock payload and fabricated A for missing keys. Stored A/B/C/D positions, authorization and Strict Mock protections now have regression tests. | this commit |
-| Astra context assessed against actual code; bounded return-to-mistakes recommendation documented in LEARNING_DELIVERY_RECOMMENDATION.md. | Separate shipped functionality and partial foundations from research ambitions. | this commit |
+| Dedicated authorized, throttled PDF export selects its own questions, preserves stored option order, blocks active Strict Mocks, and returns private/no-store keyed payloads. Normal mock sessions remain keyless. The renderer omits the entire answer-key page for any missing or invalid key; permission-gated copy now says Download PDF & Answer Key. | The old export used a keyless mock payload and fabricated A for missing keys. Stored A/B/C/D positions, authorization and Strict Mock protections now have regression tests. | `698ba7c` |
+| Astra context assessed against actual code; bounded return-to-mistakes recommendation documented in LEARNING_DELIVERY_RECOMMENDATION.md. | Separate shipped functionality and partial foundations from research ambitions. | `698ba7c` |
 
 ### Security and scoring
 
@@ -169,6 +169,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 
 | What changed | Why | Commits |
 | --- | --- | --- |
+| Formatting backlog cleared: Prettier on 81 files under `resources/`, Pint on 5 PHP files (trailing newlines, `!` spacing, unused imports, `scripts/_check_demo.php` encoding). No logic changes. | `npm run format:check` and `composer lint:check` now pass, so CI can enforce them. | this commit |
 | `AGENTS.md`, `CLAUDE.md`, `ENTIRE.md`, `.entire/`; Entire hooks for Codex (`.codex/hooks.json`) and Claude Code (`.claude/settings.json`) plus committed git hooks in `.githooks/` (the earlier `.cursor/hooks.json` was dropped); docs for architecture, deploy, libraries, audit plan, build brief, question design spec, AI study system, AI product standard, external AI handoff, desktop patches. | Repeatable agent work and decisions on record. | `d66d2aa`, `5fe2d40`, `9fe51a4`, `e4e3d4c`…`1d4c96d`, `9ab859c`, `9f3891c`, `9bf7508` |
 | Pest coverage for server scoring, Unicode round-trip, bank repair, clone removal, tutor stub; JS tests (`npm run test:js`) for clocks, study bias, home launchers, AI handoff, FSRS, mock pools, Lite mode. Pest for the server mock selector, mock sessions and Lite prop trimming. tsc/eslint green. | The baseline had no tests for these paths. | `d19afda`, `22fc855`, `4bce08e`, `ed5aa64`, `acedd26`, others above |
 | `CHANGELOG.md` via git-cliff (`npm run changelog`), bundle budgets via size-limit (`npm run size`), `docs/LITE_MODE_PLAN.md`. | Track releases and page weight. | this doc's commit series |

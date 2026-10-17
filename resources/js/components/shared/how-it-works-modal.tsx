@@ -52,7 +52,7 @@ export function HowItWorksModal({
             <DialogContent className="sm:max-w-2xl">
                 <DialogHeader>
                     <DialogTitle className="flex items-center gap-2 text-xl">
-                        <HelpCircle className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                        <HelpCircle className="size-5 text-[#5B35F5] dark:text-[#B3F52D]" />
                         {title}
                     </DialogTitle>
                     <DialogDescription className="pt-2 text-sm">

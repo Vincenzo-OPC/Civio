@@ -250,7 +250,7 @@ export default function QuestionPalettePanel({
                                 title="Show Answered"
                                 className={`rounded-lg px-0.5 py-1.5 text-center text-[10px] font-bold tracking-tight transition sm:text-[11px] ${
                                     liveStatusFilter === 'answered'
-                                        ? 'bg-background text-[#5B35F5] dark:text-[#B3F52D] shadow-2xs dark:text-[#B3F52D]'
+                                        ? 'bg-background text-[#5B35F5] shadow-2xs dark:text-[#B3F52D]'
                                         : 'text-muted-foreground hover:text-foreground'
                                 }`}
                             >

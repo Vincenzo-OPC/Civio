@@ -181,7 +181,7 @@ export function CreateDrillQuestionModal({
                 <DialogHeader>
                     <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
                         <div className="flex items-center gap-2.5">
-                            <div className="flex size-10 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                            <div className="flex size-10 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D]">
                                 <BookOpen className="size-5" />
                             </div>
                             <div>
@@ -384,7 +384,7 @@ export function CreateDrillQuestionModal({
                                     <button
                                         type="button"
                                         onClick={addOption}
-                                        className="mt-2 flex items-center gap-1 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] transition hover:underline dark:text-[#B3F52D]"
+                                        className="mt-2 flex items-center gap-1 text-xs font-bold text-[#5B35F5] transition hover:underline dark:text-[#B3F52D]"
                                     >
                                         <Plus className="size-3.5" />
                                         <span>Add Choice</span>
@@ -395,7 +395,7 @@ export function CreateDrillQuestionModal({
                             {/* Explanation / Rationale */}
                             <div>
                                 <div className="mb-1 flex items-center gap-1.5">
-                                    <Sparkles className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                    <Sparkles className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                     <label className="text-xs font-bold text-foreground">
                                         Explanation / Rationale (Optional)
                                     </label>

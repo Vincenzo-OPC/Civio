@@ -396,7 +396,7 @@ export function CalendarGrid({
                                                                     }}
                                                                     className="rounded p-1 opacity-100 transition-opacity hover:bg-blue-100 lg:opacity-0 lg:group-hover:opacity-100 dark:hover:bg-blue-900/30"
                                                                 >
-                                                                    <Plus className="h-4 w-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                                                    <Plus className="h-4 w-4 text-[#5B35F5] dark:text-[#B3F52D]" />
                                                                 </button>
                                                             </TooltipTrigger>
                                                             <TooltipContent>
@@ -566,7 +566,7 @@ export function CalendarGrid({
                                                                                         schedule,
                                                                                     );
                                                                                 }}
-                                                                                className="rounded p-1 text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-100 dark:text-[#B3F52D] dark:hover:bg-blue-900/40"
+                                                                                className="rounded p-1 text-[#5B35F5] hover:bg-blue-100 dark:text-[#B3F52D] dark:hover:bg-blue-900/40"
                                                                                 title="Reschedule to Today"
                                                                             >
                                                                                 <CalendarDays className="size-3.5" />

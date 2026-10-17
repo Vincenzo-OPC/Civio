@@ -74,15 +74,15 @@ export default function Terms({ terms }: TermsProps) {
                                             2. Description of Service
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Civio provides practice
-                                            exams, category-specific drills,
+                                            Civio provides practice exams,
+                                            category-specific drills,
                                             AI-assisted question generation, and
                                             score analytics tailored for the
                                             Philippine Civil Service Exam
                                             (Professional and Sub-Professional
-                                            levels). Civio provides both
-                                            free base resources and customizable
-                                            exam simulators.
+                                            levels). Civio provides both free
+                                            base resources and customizable exam
+                                            simulators.
                                         </p>
                                     </section>
 
@@ -124,9 +124,9 @@ export default function Terms({ terms }: TermsProps) {
                                                 your login credentials secure.
                                             </li>
                                             <li>
-                                                Civio reserves the right
-                                                to suspend accounts that show
-                                                signs of automated bot abuse,
+                                                Civio reserves the right to
+                                                suspend accounts that show signs
+                                                of automated bot abuse,
                                                 scraping, or commercial resale.
                                             </li>
                                         </ul>
@@ -137,8 +137,8 @@ export default function Terms({ terms }: TermsProps) {
                                             5. Fair Use & Prohibited Acts
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Civio's question bank and
-                                            study materials are protected by
+                                            Civio's question bank and study
+                                            materials are protected by
                                             intellectual property guidelines.
                                             You are prohibited from using
                                             web-scrapers, spiders, or automated
@@ -156,16 +156,15 @@ export default function Terms({ terms }: TermsProps) {
                                             Service
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Civio reserves the right to
-                                            modify, suspend, discontinue, or
-                                            completely close this project and
-                                            terminate the service (or any
-                                            portion thereof) at any time, for
-                                            any reason, with or without prior
-                                            notice, and without any form of
-                                            liability to you. As a free
-                                            educational platform, you agree that
-                                            Civio has no obligation to
+                                            Civio reserves the right to modify,
+                                            suspend, discontinue, or completely
+                                            close this project and terminate the
+                                            service (or any portion thereof) at
+                                            any time, for any reason, with or
+                                            without prior notice, and without
+                                            any form of liability to you. As a
+                                            free educational platform, you agree
+                                            that Civio has no obligation to
                                             maintain, host, or guarantee
                                             continuous availability of the
                                             platform or your historical practice

@@ -109,12 +109,12 @@ export function ExamCountdown({
                         className={`flex size-14 shrink-0 items-center justify-center rounded-full border backdrop-blur-md ${isUrgent ? 'border-amber-200 bg-amber-100/50 dark:border-amber-500/30 dark:bg-amber-500/20' : 'border-blue-200 bg-blue-100/50 dark:border-blue-500/30 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/20'}`}
                     >
                         <Clock
-                            className={`size-7 ${isUrgent ? 'animate-pulse text-amber-600 dark:text-amber-400' : 'text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]'}`}
+                            className={`size-7 ${isUrgent ? 'animate-pulse text-amber-600 dark:text-amber-400' : 'text-[#5B35F5] dark:text-[#B3F52D]'}`}
                         />
                     </div>
                     <div>
                         <span
-                            className={`text-[10px] font-bold tracking-widest uppercase ${isUrgent ? 'text-amber-600 dark:text-amber-400' : 'text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]'}`}
+                            className={`text-[10px] font-bold tracking-widest uppercase ${isUrgent ? 'text-amber-600 dark:text-amber-400' : 'text-[#5B35F5] dark:text-[#B3F52D]'}`}
                         >
                             {isUrgent
                                 ? '⚠️ EXAM Nearing COUNTDOWN'
@@ -181,7 +181,7 @@ export function ExamCountdown({
 
                         {/* Seconds */}
                         <div className="flex flex-col items-center">
-                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-[#B3F52D]">
+                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-semibold tracking-tight text-[#5B35F5] backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-[#B3F52D]">
                                 {padZero(timeLeft.seconds)}
                             </div>
                             <span className="mt-1.5 text-[9px] font-bold text-slate-500 uppercase sm:text-[10px] dark:text-slate-400">

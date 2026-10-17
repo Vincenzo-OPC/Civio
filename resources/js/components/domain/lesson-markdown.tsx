@@ -500,7 +500,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
 
                         return (
                             <div key={i} className="flex items-center">
-                                <div className="w-12 shrink-0 text-right text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                <div className="w-12 shrink-0 text-right text-[#5B35F5] dark:text-[#B3F52D]">
                                     {divisor}
                                 </div>
                                 <div
@@ -713,7 +713,7 @@ export function LessonMarkdown({ content = '' }: LessonMarkdownProps) {
                             key={`h3-${idx}`}
                             className="mt-7 mb-3 flex items-center gap-2 text-lg leading-snug font-semibold text-slate-900 dark:text-white"
                         >
-                            <BookOpen className="size-5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                            <BookOpen className="size-5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D]" />
                             {parseLineContent(headerText)}
                         </h3>,
                     );

@@ -152,7 +152,7 @@ export default function LearnIndex(props: LearnIndexProps) {
                                     {completedCount} / {totalCount} Completed
                                 </span>
                             </div>
-                            <span className="text-base font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                            <span className="text-base font-semibold text-[#5B35F5] dark:text-[#B3F52D]">
                                 {progressPercent}%
                             </span>
                         </div>

@@ -11,7 +11,8 @@ export function TrackBadge({ track }: { track: string }) {
             'bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300';
     } else if (lowerTrack.includes('professional')) {
         trackLabel = 'Professional';
-        trackClass = 'bg-[#5B35F5] text-white dark:bg-[#B3F52D] dark:text-[#0A0A0A]';
+        trackClass =
+            'bg-[#5B35F5] text-white dark:bg-[#B3F52D] dark:text-[#0A0A0A]';
     } else {
         // Drill
         trackLabel = 'Drill';

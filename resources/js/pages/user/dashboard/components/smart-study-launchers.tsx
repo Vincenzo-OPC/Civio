@@ -29,8 +29,8 @@ export function SmartStudyLaunchers({
             {/* Header */}
             <div className="flex shrink-0 items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                    <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-400/10 dark:text-[#B3F52D]">
-                        <Sparkles className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                    <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:bg-blue-400/10 dark:text-[#B3F52D]">
+                        <Sparkles className="size-5 text-[#5B35F5] dark:text-[#B3F52D]" />
                     </div>
                     <div>
                         <h2 className="text-sm font-bold text-slate-900 dark:text-white">

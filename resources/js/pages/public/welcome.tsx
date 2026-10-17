@@ -58,7 +58,10 @@ export default function Welcome() {
                     <SiteHeader activeNav="home" />
                     <main>
                         <div className="mx-auto flex w-full max-w-3xl flex-col gap-10 px-4 py-8 sm:px-6 sm:py-12">
-                            <header id="choose-exam" className="civio-rise flex flex-col gap-3">
+                            <header
+                                id="choose-exam"
+                                className="civio-rise flex flex-col gap-3"
+                            >
                                 <p className="text-xs font-semibold tracking-[0.18em] text-[#5B35F5] dark:text-[#B3F52D]">
                                     PHILIPPINE CIVIL SERVICE EXAM
                                 </p>

@@ -25,7 +25,7 @@ export function DashboardAttemptsPanel({
 
                 <Link
                     href="/admin/attempts"
-                    className="flex items-center gap-1 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] transition hover:text-blue-700 dark:text-[#B3F52D] dark:hover:text-blue-300"
+                    className="flex items-center gap-1 text-xs font-bold text-[#5B35F5] transition hover:text-blue-700 dark:text-[#B3F52D] dark:hover:text-blue-300"
                 >
                     View All Attempts
                     <ChevronRight className="size-3.5" />

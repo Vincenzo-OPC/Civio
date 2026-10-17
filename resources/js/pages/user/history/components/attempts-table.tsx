@@ -159,7 +159,7 @@ export function AttemptsTable({
                                     className="px-4 py-16 text-center sm:px-6"
                                 >
                                     <div className="mx-auto flex max-w-md flex-col items-center justify-center">
-                                        <div className="mb-3 flex size-12 items-center justify-center rounded-full bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:text-[#B3F52D]">
+                                        <div className="mb-3 flex size-12 items-center justify-center rounded-full bg-blue-50 text-[#5B35F5] dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                             <Clock className="size-6" />
                                         </div>
                                         <h3 className="text-sm font-semibold text-foreground">
@@ -235,7 +235,7 @@ export function AttemptsTable({
                                                     onClick={() =>
                                                         toggleExpandRow(att.id)
                                                     }
-                                                    className="block max-w-[240px] text-left text-xs font-bold text-foreground hover:text-[#5B35F5] dark:text-[#B3F52D] hover:underline dark:hover:text-blue-400"
+                                                    className="block max-w-[240px] text-left text-xs font-bold text-foreground hover:text-[#5B35F5] hover:underline dark:text-[#B3F52D] dark:hover:text-blue-400"
                                                     title={att.category}
                                                 >
                                                     {att.category}

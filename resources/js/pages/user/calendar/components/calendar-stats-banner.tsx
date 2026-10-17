@@ -132,10 +132,10 @@ export function CalendarStatsBanner({
                     <div className="flex flex-col justify-between rounded-xl border border-slate-200/70 bg-white p-3.5 dark:border-slate-800 dark:bg-slate-900">
                         <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">
-                                <Target className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                <Target className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                 <span>This Week&apos;s Goal</span>
                             </div>
-                            <span className="text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                            <span className="text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D]">
                                 {weekStats.completed} / {weekStats.total} Done
                             </span>
                         </div>

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Models\Question;
-use Illuminate\Support\Collection;
 
 /**
  * Server-authoritative exam grading.

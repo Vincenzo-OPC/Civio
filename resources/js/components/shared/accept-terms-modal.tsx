@@ -60,14 +60,13 @@ export default function AcceptTermsModal({ isOpen }: Props) {
                                     Terms of Service
                                 </h3>
                                 <p className="text-sm leading-relaxed">
-                                    By using Civio, you agree to comply
-                                    with the terms and policies. You are
-                                    responsible for maintaining account
-                                    confidentiality and all activities under
-                                    your account.{' '}
+                                    By using Civio, you agree to comply with the
+                                    terms and policies. You are responsible for
+                                    maintaining account confidentiality and all
+                                    activities under your account.{' '}
                                     <Link
                                         href="/terms"
-                                        className="group text-[#5B35F5] dark:text-[#B3F52D] underline transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
+                                        className="group text-[#5B35F5] underline transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                     >
                                         Read full terms of service →
                                     </Link>
@@ -79,14 +78,13 @@ export default function AcceptTermsModal({ isOpen }: Props) {
                                     Privacy Policy
                                 </h3>
                                 <p className="text-sm leading-relaxed">
-                                    Civio collects and processes
-                                    personal data to provide and improve the
-                                    services. Your data is protected and will
-                                    not be shared with third parties without
-                                    consent.{' '}
+                                    Civio collects and processes personal data
+                                    to provide and improve the services. Your
+                                    data is protected and will not be shared
+                                    with third parties without consent.{' '}
                                     <Link
                                         href="/privacy"
-                                        className="group text-[#5B35F5] dark:text-[#B3F52D] underline transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
+                                        className="group text-[#5B35F5] underline transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                     >
                                         Read full privacy policy →
                                     </Link>

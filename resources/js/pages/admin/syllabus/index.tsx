@@ -103,7 +103,7 @@ export default function AdminSyllabusIndex({
                     <div className="flex items-center justify-between border-b border-border bg-muted/50 px-4 py-4.5 sm:px-6">
                         <div>
                             <h2 className="flex items-center gap-2 text-xl font-semibold tracking-tight text-foreground">
-                                <Database className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:text-blue-500" />
+                                <Database className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-blue-500" />
                                 Dynamic Syllabus Management
                             </h2>
                         </div>

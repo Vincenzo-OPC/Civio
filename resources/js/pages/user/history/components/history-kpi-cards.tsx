@@ -38,7 +38,7 @@ export function HistoryKpiCards({ stats }: HistoryKpiCardsProps) {
                     <span className="text-xs font-bold text-muted-foreground uppercase">
                         Completed Runs
                     </span>
-                    <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                    <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#5B35F5] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                         <BookCheck className="size-4" />
                     </div>
                 </div>
@@ -47,7 +47,7 @@ export function HistoryKpiCards({ stats }: HistoryKpiCardsProps) {
                         {total_attempts}
                     </span>
                     <div className="flex items-center gap-1.5 text-[11px] font-bold text-muted-foreground">
-                        <span className="text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                        <span className="text-[#5B35F5] dark:text-[#B3F52D]">
                             {total_exams} exams
                         </span>
                         <span>•</span>

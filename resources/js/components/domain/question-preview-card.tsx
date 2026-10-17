@@ -94,7 +94,7 @@ export function QuestionPreviewCard({
                                     ? 'Deselect question'
                                     : 'Select question'
                             }
-                            className="mr-1 flex items-center gap-1.5 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] transition hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-[#B3F52D]"
+                            className="mr-1 flex items-center gap-1.5 text-xs font-bold text-[#5B35F5] transition hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-[#B3F52D]"
                         >
                             {isSelected ? (
                                 <CheckSquare className="size-4.5 fill-blue-600 text-white dark:fill-blue-500" />
@@ -108,7 +108,7 @@ export function QuestionPreviewCard({
                     )}
 
                     {/* Category Badge matching Live/Review Exam */}
-                    <span className="rounded-md bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                    <span className="rounded-md bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-[#5B35F5] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                         {question.category}
                     </span>
 

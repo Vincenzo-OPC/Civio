@@ -568,7 +568,7 @@ export function WeekView({
                                                                                         schedule,
                                                                                     );
                                                                                 }}
-                                                                                className="rounded p-1 text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-100 dark:text-[#B3F52D] dark:hover:bg-blue-900/40"
+                                                                                className="rounded p-1 text-[#5B35F5] hover:bg-blue-100 dark:text-[#B3F52D] dark:hover:bg-blue-900/40"
                                                                                 title="Reschedule to Today"
                                                                             >
                                                                                 <CalendarDays className="size-3.5" />

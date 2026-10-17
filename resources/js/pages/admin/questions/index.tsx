@@ -915,7 +915,7 @@ export default function QuestionsIndex({
                                                                 >
                                                                     <Link
                                                                         href={`${questionsShow(q.id).url}?page=${currentPage}`}
-                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
+                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D]"
                                                                     >
                                                                         <Eye className="size-4" />
                                                                     </Link>
@@ -950,7 +950,7 @@ export default function QuestionsIndex({
                                                                 >
                                                                     <Link
                                                                         href={`${questionsEdit(q.id).url}?page=${currentPage}`}
-                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
+                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D]"
                                                                     >
                                                                         <Edit2 className="size-4" />
                                                                     </Link>
@@ -1088,7 +1088,7 @@ export default function QuestionsIndex({
                                                     <TooltipTrigger asChild>
                                                         <Link
                                                             href={`${questionsShow(q.id).url}?page=${currentPage}`}
-                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
+                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                                         >
                                                             <Eye className="size-4" />
                                                         </Link>
@@ -1121,7 +1121,7 @@ export default function QuestionsIndex({
                                                     <TooltipTrigger asChild>
                                                         <Link
                                                             href={`${questionsEdit(q.id).url}?page=${currentPage}`}
-                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
+                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                                         >
                                                             <Edit2 className="size-4" />
                                                         </Link>
@@ -1428,7 +1428,7 @@ export default function QuestionsIndex({
                                 {previewQuestion.explanation && (
                                     <div className="shadow-3xs mt-2 overflow-hidden rounded-2xl border border-border bg-card text-sm leading-relaxed text-muted-foreground transition-all">
                                         <div className="flex w-full items-center gap-2 p-4 font-bold text-foreground sm:p-5">
-                                            <HelpCircle className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                            <HelpCircle className="size-4 text-[#5B35F5] dark:text-[#B3F52D]" />
                                             <span>
                                                 Explanation &amp; Rationale
                                             </span>

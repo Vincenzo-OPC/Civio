@@ -3,12 +3,9 @@ import {
     fsrs,
     generatorParameters,
     Rating,
-    State
-    
-    
-    
+    State,
 } from 'ts-fsrs';
-import type {Card, Grade, RecordLogItem} from 'ts-fsrs';
+import type { Card, Grade, RecordLogItem } from 'ts-fsrs';
 
 export type ReviewRating = 'again' | 'hard' | 'good' | 'easy';
 

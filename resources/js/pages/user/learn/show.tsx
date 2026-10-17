@@ -81,15 +81,18 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
             echo.channel('learn-modules').listen(
                 'LearnModulePublished',
                 (e: any) => {
-                    toast.success(`New study module available: ${e.module.title}`, {
-                        duration: 10000,
-                        action: {
-                            label: 'Go to module',
-                            onClick: () => {
-                                router.visit(`/learn/${e.module.slug}`);
+                    toast.success(
+                        `New study module available: ${e.module.title}`,
+                        {
+                            duration: 10000,
+                            action: {
+                                label: 'Go to module',
+                                onClick: () => {
+                                    router.visit(`/learn/${e.module.slug}`);
+                                },
                             },
                         },
-                    });
+                    );
                 },
             );
 
@@ -104,10 +107,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
             <Head>
                 <title>{`${module.title} | Civio`}</title>
                 <meta name="description" content={module.summary} />
-                <meta
-                    property="og:title"
-                    content={`${module.title} | Civio`}
-                />
+                <meta property="og:title" content={`${module.title} | Civio`} />
                 <meta property="og:description" content={module.summary} />
                 <meta property="og:type" content="article" />
             </Head>
@@ -136,7 +136,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                         <Link
                             href={backUrl}
                             onClick={makeBackOnClick()}
-                            className="group flex w-fit items-center gap-1 text-sm font-semibold text-foreground transition transition-all duration-300 hover:text-[#5B35F5] dark:text-[#B3F52D] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D] dark:hover:text-blue-400"
+                            className="group flex w-fit items-center gap-1 text-sm font-semibold text-foreground transition transition-all duration-300 hover:text-[#5B35F5] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D] dark:hover:text-blue-400"
                         >
                             <ChevronLeft className="size-4" />
                             {label}
@@ -194,73 +194,75 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                                             content={module.content}
                                         />
                                         {isLoggedIn && (
-                                        <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
-                                            {(() => {
-                                                if (
-                                                    reportStatus === 'pending'
-                                                ) {
-                                                    return (
-                                                        <span className="inline-flex items-center gap-1.5 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700 dark:border-amber-900/40 dark:bg-amber-950/30 dark:text-amber-400">
-                                                            <Clock className="size-4 text-amber-600 dark:text-amber-400" />
-                                                            Report Pending
-                                                        </span>
-                                                    );
-                                                }
+                                            <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
+                                                {(() => {
+                                                    if (
+                                                        reportStatus ===
+                                                        'pending'
+                                                    ) {
+                                                        return (
+                                                            <span className="inline-flex items-center gap-1.5 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700 dark:border-amber-900/40 dark:bg-amber-950/30 dark:text-amber-400">
+                                                                <Clock className="size-4 text-amber-600 dark:text-amber-400" />
+                                                                Report Pending
+                                                            </span>
+                                                        );
+                                                    }
 
-                                                return (
-                                                    <Button
-                                                        variant="destructive"
-                                                        onClick={() =>
-                                                            setIsReportModalOpen(
-                                                                true,
-                                                            )
-                                                        }
-                                                        className="bg-red-500 font-bold text-white hover:bg-red-600"
-                                                    >
-                                                        <Flag className="mr-2 size-4" />
-                                                        Report Issue
-                                                    </Button>
-                                                );
-                                            })()}
-                                            <Button
-                                                onClick={() => {
-                                                    const isCompleting =
-                                                        !module.is_completed;
-                                                    router.post(
-                                                        `/learn/${module.slug}/complete`,
-                                                        {},
-                                                        {
-                                                            preserveScroll:
-                                                                !isCompleting,
-                                                            onSuccess: () => {
-                                                                if (
-                                                                    isCompleting
-                                                                ) {
-                                                                    window.scrollTo(
-                                                                        {
-                                                                            top: 0,
-                                                                            behavior:
-                                                                                'smooth',
-                                                                        },
-                                                                    );
-                                                                }
-                                                            },
-                                                        },
+                                                    return (
+                                                        <Button
+                                                            variant="destructive"
+                                                            onClick={() =>
+                                                                setIsReportModalOpen(
+                                                                    true,
+                                                                )
+                                                            }
+                                                            className="bg-red-500 font-bold text-white hover:bg-red-600"
+                                                        >
+                                                            <Flag className="mr-2 size-4" />
+                                                            Report Issue
+                                                        </Button>
                                                     );
-                                                }}
-                                                variant={
-                                                    module.is_completed
-                                                        ? 'outline'
-                                                        : 'success'
-                                                }
-                                                className="flex items-center gap-2 font-bold"
-                                            >
-                                                <CheckCircle2 className="size-4" />
-                                                {module.is_completed
-                                                    ? 'Mark as Incomplete'
-                                                    : 'Mark as Complete'}
-                                            </Button>
-                                        </div>
+                                                })()}
+                                                <Button
+                                                    onClick={() => {
+                                                        const isCompleting =
+                                                            !module.is_completed;
+                                                        router.post(
+                                                            `/learn/${module.slug}/complete`,
+                                                            {},
+                                                            {
+                                                                preserveScroll:
+                                                                    !isCompleting,
+                                                                onSuccess:
+                                                                    () => {
+                                                                        if (
+                                                                            isCompleting
+                                                                        ) {
+                                                                            window.scrollTo(
+                                                                                {
+                                                                                    top: 0,
+                                                                                    behavior:
+                                                                                        'smooth',
+                                                                                },
+                                                                            );
+                                                                        }
+                                                                    },
+                                                            },
+                                                        );
+                                                    }}
+                                                    variant={
+                                                        module.is_completed
+                                                            ? 'outline'
+                                                            : 'success'
+                                                    }
+                                                    className="flex items-center gap-2 font-bold"
+                                                >
+                                                    <CheckCircle2 className="size-4" />
+                                                    {module.is_completed
+                                                        ? 'Mark as Incomplete'
+                                                        : 'Mark as Complete'}
+                                                </Button>
+                                            </div>
                                         )}
                                     </>
                                 ) : (
@@ -313,7 +315,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                     <aside className="group flex min-w-0 flex-col gap-3 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none sm:gap-6">
                         <Card className="p-5 shadow-xs">
                             <div className="flex items-center gap-2 border-b border-border pb-3">
-                                <BookMarked className="size-4 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                <BookMarked className="size-4 text-[#5B35F5] dark:text-[#B3F52D]" />
                                 <span className="text-sm font-semibold text-foreground uppercase">
                                     Syllabus Overview
                                 </span>
@@ -371,7 +373,7 @@ export default function LearnShow({ module, recommended }: LearnShowProps) {
                                             href={`/learn/${rec.slug}`}
                                             className="group group block border-b border-border/40 pb-3 transition-all duration-300 last:border-0 last:pb-0 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95"
                                         >
-                                            <h4 className="line-clamp-2 text-sm font-semibold text-foreground transition hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] dark:hover:text-blue-400">
+                                            <h4 className="line-clamp-2 text-sm font-semibold text-foreground transition hover:text-[#5B35F5] dark:text-[#B3F52D] dark:hover:text-blue-400">
                                                 {rec.title}
                                             </h4>
                                             <span className="mt-1 flex items-center gap-1.5 text-xs font-bold text-muted-foreground uppercase">

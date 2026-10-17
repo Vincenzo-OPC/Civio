@@ -752,9 +752,7 @@ export function ReviewExamView({
                 <X className="size-3.5 text-rose-600 dark:text-rose-400" />
                 <span>
                     <span className="hidden md:inline">Incorrect: </span>
-                    <strong className="font-semibold">
-                        {stats.incorrect}
-                    </strong>
+                    <strong className="font-semibold">{stats.incorrect}</strong>
                 </span>
             </span>
             <span className="inline-flex h-8 items-center gap-1.5 rounded-full border border-slate-200 bg-slate-100 px-2.5 text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
@@ -873,7 +871,7 @@ export function ReviewExamView({
                                     }
                                     className={`inline-flex h-8 items-center gap-1.5 rounded-full border px-2.5 text-xs font-bold transition ${
                                         showPerformanceCard
-                                            ? 'border-blue-500 bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]'
+                                            ? 'border-blue-500 bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D]'
                                             : 'border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground'
                                     }`}
                                 >
@@ -1142,7 +1140,7 @@ export function ReviewExamView({
                                                                             t.total
                                                                         }
                                                                     </span>
-                                                                    <span className="text-[#5B35F5] dark:text-[#B3F52D] opacity-0 transition group-hover:opacity-100 dark:text-[#B3F52D]">
+                                                                    <span className="text-[#5B35F5] opacity-0 transition group-hover:opacity-100 dark:text-[#B3F52D]">
                                                                         Filter →
                                                                     </span>
                                                                 </div>
@@ -1157,7 +1155,7 @@ export function ReviewExamView({
                                     <div className="shadow-3xs relative rounded-2xl border border-border bg-card p-4 sm:p-6">
                                         <div className="-mx-4 -mt-4 mb-4 flex flex-wrap items-center justify-between gap-2 rounded-t-2xl border-b border-border/60 bg-muted/30 px-4 py-3 sm:-mx-6 sm:-mt-6 sm:px-6">
                                             <div className="flex flex-wrap items-center gap-2">
-                                                <span className="rounded-md bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:text-[#B3F52D]">
+                                                <span className="rounded-md bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-[#5B35F5] dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                                     {currentQuestion.category}
                                                 </span>
                                                 <span className="rounded-md bg-muted px-2 py-0.5 text-[9px] font-semibold text-muted-foreground">
@@ -1221,7 +1219,7 @@ export function ReviewExamView({
                                                         }
                                                         className="inline-flex items-center gap-1.5 rounded-md border border-blue-200 bg-blue-50 px-2.5 py-0.5 text-[10px] font-semibold text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-[#B3F52D]"
                                                     >
-                                                        <Clock className="size-3 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                                        <Clock className="size-3 text-[#5B35F5] dark:text-[#B3F52D]" />
                                                         <span>
                                                             {formattedTimeSpent}
                                                         </span>
@@ -1358,7 +1356,7 @@ export function ReviewExamView({
                                                                             true,
                                                                         )
                                                                     }
-                                                                    className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] font-bold text-[#5B35F5] dark:text-[#B3F52D] transition hover:border-blue-200 hover:bg-blue-50 focus:outline-none dark:text-[#B3F52D] dark:hover:border-blue-900/50 dark:hover:bg-blue-950/20"
+                                                                    className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] font-bold text-[#5B35F5] transition hover:border-blue-200 hover:bg-blue-50 focus:outline-none dark:text-[#B3F52D] dark:hover:border-blue-900/50 dark:hover:bg-blue-950/20"
                                                                 >
                                                                     {savedBookmarks[
                                                                         currentQuestion

@@ -72,7 +72,7 @@ export default function AdminAttempts({
                 <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                     <div className="flex flex-col gap-1.5">
                         <div className="flex items-center gap-2">
-                            <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                            <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-[#5B35F5] dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                 <Database className="size-3" />
                                 Database Records
                             </span>

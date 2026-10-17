@@ -743,7 +743,7 @@ export const renderFormattedText = (
                                         key={idx}
                                         className="flex items-start gap-3 rounded-lg border border-slate-100 bg-slate-50/40 p-3 transition hover:border-slate-200 dark:border-slate-900/60 dark:bg-slate-900/10"
                                     >
-                                        <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-md bg-blue-50 text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
+                                        <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-md bg-blue-50 text-xs font-semibold text-[#5B35F5] dark:bg-blue-950/30 dark:bg-blue-950/40 dark:text-[#B3F52D]">
                                             {item.marker.replace('.', '')}
                                         </span>
                                         <div className="mt-0.5 flex-1">

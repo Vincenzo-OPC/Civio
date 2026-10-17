@@ -300,7 +300,7 @@ function EditSavedSetModalBody({
             <DialogHeader className="border-b border-border p-5 pb-4">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
-                        <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                        <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:text-[#B3F52D]">
                             <Bookmark className="size-4" />
                         </div>
                         <div>
@@ -527,7 +527,7 @@ function EditSavedSetModalBody({
                                                 onClick={() =>
                                                     handleAddQuestion(q.id)
                                                 }
-                                                className="shrink-0 gap-1 border-blue-200 text-xs text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-50 dark:border-blue-800 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
+                                                className="shrink-0 gap-1 border-blue-200 text-xs text-[#5B35F5] hover:bg-blue-50 dark:border-blue-800 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
                                             >
                                                 {addingQuestionId === q.id ? (
                                                     <Loader2 className="size-3.5 animate-spin" />

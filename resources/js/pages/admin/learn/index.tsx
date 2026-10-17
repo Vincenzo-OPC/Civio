@@ -743,7 +743,7 @@ export default function AdminLearnIndex({
                                                                 >
                                                                     <Link
                                                                         href={`${learnShow(mod.slug).url}?page=${currentPage}`}
-                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
+                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D]"
                                                                     >
                                                                         <Eye className="size-4" />
                                                                     </Link>
@@ -759,7 +759,7 @@ export default function AdminLearnIndex({
                                                                 >
                                                                     <Link
                                                                         href={`${adminLearnEdit(mod.id).url}?page=${currentPage}`}
-                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
+                                                                        className="cursor-pointer rounded-lg p-1.5 text-muted-foreground transition hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D]"
                                                                     >
                                                                         <Edit2 className="size-4" />
                                                                     </Link>
@@ -884,7 +884,7 @@ export default function AdminLearnIndex({
                                                     <TooltipTrigger asChild>
                                                         <Link
                                                             href={`${learnShow(mod.slug).url}?page=${currentPage}`}
-                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
+                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                                         >
                                                             <Eye className="size-4" />
                                                         </Link>
@@ -898,7 +898,7 @@ export default function AdminLearnIndex({
                                                     <TooltipTrigger asChild>
                                                         <Link
                                                             href={`${adminLearnEdit(mod.id).url}?page=${currentPage}`}
-                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] dark:text-[#B3F52D] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
+                                                            className="group/btn cursor-pointer rounded-lg p-1.5 text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-[#5B35F5] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                                                         >
                                                             <Edit2 className="size-4" />
                                                         </Link>

@@ -60,26 +60,24 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                             1. Introduction
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Welcome to the Civio portal.
-                                            Civio values your privacy
-                                            and is committed to protecting your
-                                            personal data. This Privacy Policy
-                                            outlines how Civio collects,
-                                            uses, and safeguards your
-                                            information when you use the
+                                            Welcome to the Civio portal. Civio
+                                            values your privacy and is committed
+                                            to protecting your personal data.
+                                            This Privacy Policy outlines how
+                                            Civio collects, uses, and safeguards
+                                            your information when you use the
                                             platform for your CSE preparation.
                                         </p>
                                     </section>
 
                                     <section className="space-y-3">
                                         <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-                                            2. Information Civio
-                                            Collects
+                                            2. Information Civio Collects
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
                                             To provide mock exams, custom study
-                                            logs, and AI analytics, Civio
-                                            Review collects:
+                                            logs, and AI analytics, Civio Review
+                                            collects:
                                         </p>
                                         <ul className="list-disc space-y-2 pl-5 text-sm text-muted-foreground">
                                             <li>
@@ -96,13 +94,12 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                                 </strong>{' '}
                                                 Civio offers third-party
                                                 authentication via Google. When
-                                                you use Google to sign in,
-                                                Civio receives and
-                                                securely stores basic profile
-                                                details (such as your name and
-                                                email address) to personalize
-                                                your account and metrics
-                                                dashboard. Civio will
+                                                you use Google to sign in, Civio
+                                                receives and securely stores
+                                                basic profile details (such as
+                                                your name and email address) to
+                                                personalize your account and
+                                                metrics dashboard. Civio will
                                                 never post or publish to your
                                                 social feed.
                                             </li>
@@ -141,12 +138,11 @@ export default function Privacy({ privacy }: PrivacyProps) {
 
                                     <section className="space-y-3">
                                         <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-                                            3. How Civio Uses Your
-                                            Information
+                                            3. How Civio Uses Your Information
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Civio uses the gathered
-                                            information to:
+                                            Civio uses the gathered information
+                                            to:
                                         </p>
                                         <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
                                             <li>
@@ -178,10 +174,10 @@ export default function Privacy({ privacy }: PrivacyProps) {
                                             4. Data Sharing & Security
                                         </h2>
                                         <p className="text-base leading-relaxed text-muted-foreground">
-                                            Civio does not sell, rent,
-                                            or trade your personal data with
-                                            third parties. Your account records
-                                            and score history are fully
+                                            Civio does not sell, rent, or trade
+                                            your personal data with third
+                                            parties. Your account records and
+                                            score history are fully
                                             confidential. Civio utilizes
                                             standard SSL/TLS encryption and
                                             strict Laravel Sanctum sessions to

@@ -126,7 +126,7 @@ export function CalendarToolbar({
                             onClick={() => setActiveView('month')}
                             className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all ${
                                 activeView === 'month'
-                                    ? 'bg-white text-[#5B35F5] dark:text-[#B3F52D] shadow-2xs dark:bg-slate-900 dark:text-[#B3F52D]'
+                                    ? 'bg-white text-[#5B35F5] shadow-2xs dark:bg-slate-900 dark:text-[#B3F52D]'
                                     : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
                             }`}
                         >
@@ -139,7 +139,7 @@ export function CalendarToolbar({
                             onClick={() => setActiveView('week')}
                             className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all ${
                                 activeView === 'week'
-                                    ? 'bg-white text-[#5B35F5] dark:text-[#B3F52D] shadow-2xs dark:bg-slate-900 dark:text-[#B3F52D]'
+                                    ? 'bg-white text-[#5B35F5] shadow-2xs dark:bg-slate-900 dark:text-[#B3F52D]'
                                     : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
                             }`}
                         >
@@ -152,7 +152,7 @@ export function CalendarToolbar({
                             onClick={() => setActiveView('agenda')}
                             className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all ${
                                 activeView === 'agenda'
-                                    ? 'bg-white text-[#5B35F5] dark:text-[#B3F52D] shadow-2xs dark:bg-slate-900 dark:text-[#B3F52D]'
+                                    ? 'bg-white text-[#5B35F5] shadow-2xs dark:bg-slate-900 dark:text-[#B3F52D]'
                                     : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
                             }`}
                         >
@@ -231,7 +231,7 @@ export function CalendarToolbar({
                             size="sm"
                             onClick={handleToday}
                             disabled={isCurrentMonth && activeView !== 'week'}
-                            className="h-7 px-2 text-[11px] font-bold text-[#5B35F5] dark:text-[#B3F52D] hover:bg-blue-50 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
+                            className="h-7 px-2 text-[11px] font-bold text-[#5B35F5] hover:bg-blue-50 dark:text-[#B3F52D] dark:hover:bg-blue-950/40"
                         >
                             Today
                         </Button>
@@ -298,9 +298,9 @@ export function CalendarToolbar({
                             </DropdownMenuItem>
                             <DropdownMenuItem
                                 onClick={onOpenShiftModal}
-                                className="cursor-pointer gap-2 py-2 text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]"
+                                className="cursor-pointer gap-2 py-2 text-xs font-semibold text-[#5B35F5] dark:text-[#B3F52D]"
                             >
-                                <RotateCw className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                <RotateCw className="size-3.5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                 <span>Shift / Auto Catch-Up</span>
                             </DropdownMenuItem>
                             <DropdownMenuItem

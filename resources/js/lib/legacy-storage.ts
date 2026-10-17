@@ -37,7 +37,10 @@ export function migrateKeys(
     storage: KeyValueStorage,
     suffixes: readonly string[],
 ): number {
-    if (typeof storage.key !== 'function' || typeof storage.length !== 'number') {
+    if (
+        typeof storage.key !== 'function' ||
+        typeof storage.length !== 'number'
+    ) {
         return 0;
     }
 

@@ -66,7 +66,7 @@ export function ShiftScheduleModal({
         <Dialog open={isOpen} onOpenChange={onOpenChange}>
             <DialogContent className="max-w-2xl">
                 <DialogHeader>
-                    <div className="flex items-center gap-2 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                    <div className="flex items-center gap-2 text-[#5B35F5] dark:text-[#B3F52D]">
                         <CalendarDays className="size-5" />
                         <span className="text-xs font-bold tracking-wider uppercase">
                             Schedule Catch-Up & Rebalance

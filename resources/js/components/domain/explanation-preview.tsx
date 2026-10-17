@@ -101,7 +101,7 @@ export function ExplanationPreview({ text }: ExplanationPreviewProps) {
                                 {parseLatexString(node)}
                             </span>
                             {nIdx < nodes.length - 1 && (
-                                <ArrowRight className="size-4 shrink-0 text-blue-400 dark:text-[#B3F52D] dark:text-[#5B35F5] dark:text-[#B3F52D]" />
+                                <ArrowRight className="size-4 shrink-0 text-blue-400 dark:text-[#5B35F5] dark:text-[#B3F52D]" />
                             )}
                         </React.Fragment>
                     ))}

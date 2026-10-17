@@ -52,7 +52,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                     return (
                         <Link
                             href={`${questionsIndex().url}?page=${page}`}
-                            className="group flex w-fit items-center gap-1 text-xs font-semibold text-foreground transition transition-all duration-300 hover:text-[#5B35F5] dark:text-[#B3F52D] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
+                            className="group flex w-fit items-center gap-1 text-xs font-semibold text-foreground transition transition-all duration-300 hover:text-[#5B35F5] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-95 dark:text-[#B3F52D]"
                         >
                             <ChevronLeft className="size-4" />
                             Back to Curation Manager
@@ -86,7 +86,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                         <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-6">
                             <div className="mb-5 flex items-center justify-between border-b border-border pb-3.5">
                                 <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground uppercase">
-                                    <HelpCircle className="size-4.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                    <HelpCircle className="size-4.5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                     Exam Practice Question
                                 </span>
 
@@ -159,7 +159,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                         {/* 2. Rationale Card */}
                         <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-6">
                             <h2 className="mb-4 flex items-center gap-1.5 border-b border-border pb-3.5 text-sm font-semibold text-foreground uppercase">
-                                <Sparkles className="size-4.5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                <Sparkles className="size-4.5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                 Cognitive Explanation & Rationale
                             </h2>
                             <div className="text-sm leading-relaxed text-muted-foreground">
@@ -197,7 +197,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                                             Active
                                         </span>
                                     ) : (
-                                        <span className="inline-flex items-center gap-1 rounded-md border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] uppercase dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-[#B3F52D]">
+                                        <span className="inline-flex items-center gap-1 rounded-md border border-blue-100 bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-[#5B35F5] uppercase dark:border-blue-900/30 dark:bg-blue-950/20 dark:bg-blue-950/30 dark:text-[#B3F52D]">
                                             Draft
                                         </span>
                                     )}
@@ -234,7 +234,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
 
                             <div className="space-y-3.5 text-xs leading-relaxed font-semibold text-muted-foreground">
                                 <div className="flex gap-2">
-                                    <Layers className="mt-0.5 size-4.5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                    <Layers className="mt-0.5 size-4.5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D]" />
                                     <p>
                                         Always align practice questions directly
                                         to the official syllabus structure for
@@ -242,7 +242,7 @@ export default function QuestionShow({ question }: QuestionShowProps) {
                                     </p>
                                 </div>
                                 <div className="flex gap-2">
-                                    <Activity className="mt-0.5 size-4.5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                    <Activity className="mt-0.5 size-4.5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D]" />
                                     <p>
                                         Ensure distractor options are authentic
                                         and that rationales detail standard

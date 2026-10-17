@@ -192,7 +192,7 @@ export default function AiReadinessCard({
 
                 <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
                     <div className="flex flex-col items-center gap-4 md:flex-row">
-                        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10 dark:bg-blue-950/30 dark:text-[#B3F52D]">
+                        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 text-[#5B35F5] dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:bg-blue-950/30 dark:text-[#0A0A0A]/10 dark:text-[#B3F52D]">
                             <Brain className="size-6 animate-pulse" />
                         </div>
                         <div>
@@ -200,7 +200,7 @@ export default function AiReadinessCard({
                                 {analysisMode === 'ai'
                                     ? 'AI Readiness Report'
                                     : 'Readiness Report'}
-                                <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700 dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10 dark:bg-rose-950/30 dark:text-[#B3F52D]">
+                                <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700 dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:bg-rose-950/30 dark:text-[#0A0A0A]/10 dark:text-[#B3F52D]">
                                     Locked
                                 </span>
                             </h3>
@@ -254,10 +254,10 @@ export default function AiReadinessCard({
                                 strokeDasharray={circumference}
                                 strokeDashoffset={strokeDashoffset}
                                 strokeLinecap="round"
-                                className="text-[#5B35F5] dark:text-[#B3F52D] transition-all duration-300 ease-out dark:text-[#B3F52D]"
+                                className="text-[#5B35F5] transition-all duration-300 ease-out dark:text-[#B3F52D]"
                             />
                         </svg>
-                        <span className="text-xs font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                        <span className="text-xs font-semibold tracking-tight text-[#5B35F5] dark:text-[#B3F52D]">
                             {progress}%
                         </span>
                     </div>
@@ -324,7 +324,7 @@ export default function AiReadinessCard({
                 {/* Header */}
                 <div className="mb-6 flex flex-col gap-4 border-b border-slate-200/80 pb-4 sm:flex-row sm:items-center sm:justify-between dark:border-slate-800/80">
                     <div className="flex items-center gap-3">
-                        <div className="flex size-10 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 text-[#5B35F5] dark:text-[#B3F52D] dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10 dark:bg-blue-950/30 dark:text-[#B3F52D]">
+                        <div className="flex size-10 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 text-[#5B35F5] dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:bg-blue-950/30 dark:text-[#0A0A0A]/10 dark:text-[#B3F52D]">
                             <Brain className="size-5" />
                         </div>
                         <div>

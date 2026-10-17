@@ -55,8 +55,8 @@ export default function Support() {
                                     Contact Support
                                 </h1>
                                 <p className="mt-1.5 text-base leading-relaxed text-muted-foreground">
-                                    Have a question or feedback? Civio
-                                    is here to help you succeed.
+                                    Have a question or feedback? Civio is here
+                                    to help you succeed.
                                 </p>
                             </div>
                         </div>
@@ -89,11 +89,11 @@ export default function Support() {
                                             Unofficial Portal Note
                                         </h3>
                                         <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                                            Please note that Civio
-                                            cannot answer official Civil Service
-                                            Commission schedule or processing
-                                            questions. Contact the CSC directly
-                                            for exam filing dates.
+                                            Please note that Civio cannot answer
+                                            official Civil Service Commission
+                                            schedule or processing questions.
+                                            Contact the CSC directly for exam
+                                            filing dates.
                                         </p>
                                     </div>
                                 </Card>

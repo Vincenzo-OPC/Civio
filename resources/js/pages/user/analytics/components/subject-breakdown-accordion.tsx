@@ -56,7 +56,9 @@ function getMasteryBadge(percentage: number) {
             label: 'Proficient',
             className:
                 'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/30 dark:text-[#B3F52D] dark:border-blue-800',
-            icon: <CheckCircle2 className="size-3 text-[#5B35F5] dark:text-[#B3F52D]" />,
+            icon: (
+                <CheckCircle2 className="size-3 text-[#5B35F5] dark:text-[#B3F52D]" />
+            ),
         };
     }
 

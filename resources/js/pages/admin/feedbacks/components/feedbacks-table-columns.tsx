@@ -132,7 +132,7 @@ export function getFeedbacksTableColumns({
                                     href={link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 text-[10px] font-bold text-[#5B35F5] dark:text-[#B3F52D] hover:underline dark:text-[#B3F52D]"
+                                    className="inline-flex items-center gap-1.5 text-[10px] font-bold text-[#5B35F5] hover:underline dark:text-[#B3F52D]"
                                 >
                                     <ExternalLink className="size-3" />
                                     View {getContentType(f.flaggable_type)}

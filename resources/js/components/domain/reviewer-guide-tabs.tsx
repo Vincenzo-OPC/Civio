@@ -401,7 +401,7 @@ export function ReviewerGuideTabs({
             {activeTab === 'features' && (
                 <div className="space-y-8">
                     <div className="flex items-start gap-3.5 rounded-2xl border border-blue-100 bg-blue-50/80 p-5 dark:border-blue-900/30 dark:bg-blue-950/20">
-                        <Sparkles className="mt-0.5 size-5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                        <Sparkles className="mt-0.5 size-5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D]" />
                         <div className="space-y-1">
                             <h3 className="text-sm font-bold text-blue-950 dark:text-blue-200">
                                 How the tools work
@@ -512,7 +512,7 @@ export function ReviewerGuideTabs({
             {activeTab === 'flow' && (
                 <div className="space-y-6">
                     <div className="dark:bg-blue-950/30/20 flex items-start gap-3.5 rounded-xl border border-blue-100 bg-blue-50 p-5 dark:border-blue-900/30 dark:bg-blue-950/10">
-                        <Info className="mt-0.5 size-5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                        <Info className="mt-0.5 size-5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D]" />
                         <div>
                             <h3 className="text-sm font-semibold text-blue-900 dark:text-[#B3F52D]">
                                 Study order
@@ -599,7 +599,7 @@ export function ReviewerGuideTabs({
                         <Card className="space-y-6 border border-border bg-card p-4 sm:p-6">
                             <div className="space-y-1.5 border-b border-border pb-4">
                                 <h3 className="flex items-center gap-2 font-heading text-xl font-semibold text-foreground">
-                                    <Award className="size-5 text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]" />
+                                    <Award className="size-5 text-[#5B35F5] dark:text-[#B3F52D]" />
                                     {examStructure.professional.title}
                                 </h3>
                                 <p className="text-sm leading-relaxed text-muted-foreground">
@@ -650,7 +650,7 @@ export function ReviewerGuideTabs({
                                                     <span className="text-sm font-bold text-foreground">
                                                         {scope.name}
                                                     </span>
-                                                    <span className="text-[10px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                                    <span className="text-[10px] font-semibold text-[#5B35F5] dark:text-[#B3F52D]">
                                                         ({scope.lang})
                                                     </span>
                                                 </div>
@@ -728,7 +728,7 @@ export function ReviewerGuideTabs({
                                                     <span className="text-sm font-bold text-foreground">
                                                         {scope.name}
                                                     </span>
-                                                    <span className="text-[10px] font-semibold text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D]">
+                                                    <span className="text-[10px] font-semibold text-[#5B35F5] dark:text-[#B3F52D]">
                                                         ({scope.lang})
                                                     </span>
                                                 </div>
