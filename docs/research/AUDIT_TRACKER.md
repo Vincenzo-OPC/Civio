@@ -239,3 +239,20 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **MSI:**
   - Backups first: `civio_local_pre_304_20261017.dump` and `civio_local_pre_r03b_20261017.dump`.
   - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 544, **total 1,918** (civio 1,417, baseline 501).
+
+## 2026-10-17 (3:43 and 3:44 PM): gap-fill-005 approved and activated; #312 changed; spec 10.8 relaxed
+
+- **Spec 10.8 relaxed:** each passage needs at least 1 main-idea or detail question and at least 1 inference or vocabulary question.
+- **gap-fill-005:**
+  - RC rebalanced to main 4, detail 5, inference 6, vocabulary 5 across the 7 passages. The 3 new questions (P01 detail, P04 main, P07 detail) replaced 2 vocabulary items and 1 inference item and were written after CoS's review.
+  - CoS fixes applied:
+    - 0005's key now reads "cannot quietly pile up";
+    - 0037 o4 recoded to LOG-IGNORED-CLUE;
+    - 0047 o2's reason rewritten.
+  - All 60 approved and imported as active. `qa_file` finds 0 problems; `qa_all` is green.
+- **#312:** CoS asked for Questionnaire, but it is already a bank target (CIVIO-CLR-20261013-0033) and was baseline #296's old target. I used the untested word **Sergeant** instead (foils Sargeant, Sergant, Seargant). It is applied and active. Flagged for CoS.
+- **`passage_id`:** now a real field request for Codex in `docs/FACT_ID_MOCK_RULE_BRIEF.md`, addendum 2. The `notes` tag stays until it ships.
+- **Next batch:** `CHATGPT_NEXT_PROMPT.md` and the spec now require passage sets and varied sentence-structure option sets.
+- **MSI:**
+  - Backup first: `civio_local_pre_r03c_20261017.dump`.
+  - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 604, **total 1,978**.

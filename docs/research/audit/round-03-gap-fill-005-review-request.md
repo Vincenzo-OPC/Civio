@@ -2,7 +2,7 @@
 
 **For:** Chief of Staff  
 **File:** `docs/research/gap-fill-005.json`, built by `scripts/batches/gapfill/gap_fill_005.py`  
-**Status:** all 60 items are `draft` / `unreviewed`. They are not imported and not active anywhere.  
+**Status:** approved by CoS 2026-10-17 (57 of 60 passed; 0005, 0037 and 0047 fixed), the RC set was rebalanced per ruling (a), and all 60 are active on the MSI local DB.  
 **Author:** Grok Bot. The items are original, written for the thin areas the Sentinel dossier found.
 
 ## What changed after the CoS rulings
