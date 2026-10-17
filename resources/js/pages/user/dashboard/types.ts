@@ -114,4 +114,12 @@ export interface DashboardProps {
     overdueTasksCount?: number;
     recentAttempts?: RecentAttemptItem[];
     nextModule?: NextModuleItem | null;
+    studyTotals?: StudyTotals | null;
+}
+
+/** Counts from stored attempts only (DashboardService::getStudyTotals). */
+export interface StudyTotals {
+    sessions: number;
+    questionsAnswered: number;
+    sessionsThisWeek: number;
 }
