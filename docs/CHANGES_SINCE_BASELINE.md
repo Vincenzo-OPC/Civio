@@ -47,6 +47,12 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | Dedicated authorized, throttled PDF export selects its own questions, preserves stored option order, blocks active Strict Mocks, and returns private/no-store keyed payloads. Normal mock sessions remain keyless. The renderer omits the entire answer-key page for any missing or invalid key; permission-gated copy now says Download PDF & Answer Key. | The old export used a keyless mock payload and fabricated A for missing keys. Stored A/B/C/D positions, authorization and Strict Mock protections now have regression tests. | `698ba7c` |
 | Astra context assessed against actual code; bounded return-to-mistakes recommendation documented in LEARNING_DELIVERY_RECOMMENDATION.md. | Separate shipped functionality and partial foundations from research ambitions. | `698ba7c` |
 
+### Public pages (17 October 2026)
+
+| What changed | Why | Commits |
+| --- | --- | --- |
+| New public page `/cse-2027-dates` (footer link, sitemap). Dates come from `App\Support\CseExamDates`, copied from CSC Examination Announcement No. 05, s. 2026 and checked on 17 October 2026: filing opens 2 Nov 2026 and the exam is 14 Mar 2027 (both confirmed); results 11 May 2027 are a CSC target; the closing date and the detailed announcement are shown as unconfirmed. Every row links its CSC source and shows a last-checked date. | Scout's deadline-tracker idea, approved by GT. Brings search visitors to practice. No new dependency; the page is a lazy chunk. | this commit |
+
 ### Security and scoring
 
 | What changed | Why | Commits |

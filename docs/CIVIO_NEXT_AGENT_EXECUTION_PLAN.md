@@ -69,3 +69,11 @@ Do them in order. One slice each.
 ## Delivery recommendation
 
 See [LEARNING_DELIVERY_RECOMMENDATION.md](LEARNING_DELIVERY_RECOMMENDATION.md) for the evidence-based Astra assessment. The highest-value next learning slice is a persistent, owner-scoped return-to-mistakes queue from server-graded drills, with assisted answers distinguished from independent recall. FSRS scheduling follows reliable review-event persistence. No mastery/readiness model, Complete Reviewer, or sample chapter is claimed.
+
+## CSE 2027 dates page (17 October 2026)
+
+`/cse-2027-dates` is live in the app (not deployed). Its rows live in `app/Support/CseExamDates.php`. Re-read the CSC Examination Advisories page and update `LAST_CHECKED` on every check. When the CSC publishes the detailed announcement for the 14 March 2027 sitting, replace the unconfirmed row with its date and link. Never take a date from a reviewer, news site or social media. `tests/Feature/Public/CseDatesTest.php` enforces official CSC sources, last-checked dates, and no confirmed row without a date. PRC and scholarship pages wait for GT.
+
+## Next learning slice
+
+Build [REVIEW_MISTAKES_BRIEF.md](REVIEW_MISTAKES_BRIEF.md). All JS is 1,037,038 of 1,040,000 B after the dates page.

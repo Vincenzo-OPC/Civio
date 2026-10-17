@@ -44,6 +44,7 @@ Route::middleware('throttle:global-views')->group(function () {
     Route::get('terms', [PublicController::class, 'terms'])->name('terms');
     Route::get('support', [PublicController::class, 'support'])->name('support');
     Route::get('guide', [PublicController::class, 'guide'])->name('guide');
+    Route::get('cse-2027-dates', [PublicController::class, 'cseDates'])->name('cse-dates');
     Route::inertia('account-inactive', 'account-inactive', [
         'adminEmail' => env('MAIL_FROM_ADDRESS', env('DEV_EMAIL')),
     ])->name('account-inactive');

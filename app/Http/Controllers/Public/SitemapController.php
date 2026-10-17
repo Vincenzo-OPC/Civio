@@ -26,6 +26,7 @@ class SitemapController extends Controller
             $staticRoutes = [
                 '/' => ['priority' => '1.0', 'changefreq' => 'daily'],
                 '/guide' => ['priority' => '0.8', 'changefreq' => 'weekly'],
+                '/cse-2027-dates' => ['priority' => '0.8', 'changefreq' => 'weekly'],
                 '/exams' => ['priority' => '0.8', 'changefreq' => 'weekly'],
                 '/support' => ['priority' => '0.3', 'changefreq' => 'monthly'],
                 '/privacy' => ['priority' => '0.1', 'changefreq' => 'monthly'],

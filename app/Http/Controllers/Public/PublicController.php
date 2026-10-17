@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Public;
 use App\Enums\LegalContentType;
 use App\Http\Controllers\Controller;
 use App\Repositories\LegalContentRepositoryInterface;
+use App\Support\CseExamDates;
 
 class PublicController extends Controller
 {
@@ -32,6 +33,14 @@ class PublicController extends Controller
     public function guide()
     {
         return $this->render('guide');
+    }
+
+    public function cseDates()
+    {
+        return $this->render('public/cse-dates', [
+            'dates' => CseExamDates::all(),
+            'lastChecked' => CseExamDates::LAST_CHECKED,
+        ]);
     }
 
     public function privacy()
