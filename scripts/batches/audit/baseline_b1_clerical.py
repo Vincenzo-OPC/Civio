@@ -1,0 +1,112 @@
+"""Round 03 baseline batch B1: the 81 baseline Clerical items (MSI local DB, source_group='baseline').
+Findings only; nothing in the DB or the bank is changed. Writes docs/research/audit/round-03-baseline-b1-clerical-review-request.md.
+Input: an export of the baseline rows (id, cat, sub, stem, options, correct_option, explanation) at /workspace/tmp/baseline550.json."""
+import json, sys
+SRC = sys.argv[1] if len(sys.argv) > 1 else "docs/research/audit/data/baseline-550-2026-10-17.json"
+K, F, D, OK = "KEY ERROR", "FIX", "DUPLICATE", "OK"
+PH = "Placeholder explanation ('Local practice item for Docker study.')."
+F_ = {
+277: (K, "With the prefix joined and filed letter by letter (ARMA Rule 6), the order is Dela Cruz, Del Mundo, Delos Santos, Del Rosario (dela < delm < delo < delr). The key puts Del Rosario before Delos Santos, and no option has the right order.", "Replace option 2 with 'Dela Cruz; Del Mundo; Delos Santos; Del Rosario', make it the key, and fix the explanation."),
+287: (K, "The key (Bayanihan Center; Bayani Foundation; Bazaars Inc.; Bayview Office) puts Bayanihan before Bayani and Baz before Bay. Nothing-before-something gives option 1: Bayani Foundation; Bayanihan Center; Bayview Office; Bazaars Inc. The explanation already describes option 1.", "Set correct_option to index 0."),
+282: (K, "'Leave Application' files before 'Leave Credits' (A before C), so the key 'Under L, before Leave Application' is wrong and no option is right.", "Change the key text to 'Under L, after \"Leave Application\"'."),
+51: (F, PH, "Write a real explanation: G comes before R, S and T."),
+52: (F, PH, "Real explanation: Li comes before Lo; Lu and Ly come after."),
+53: (D, PH + " Target 'accommodation' repeats #292/#509 (accommodate) and a bank target.", "Retire."),
+54: (D, PH + " 'Bureaukracy' is not a real misspelling; 'bureaucracy' is a bank target.", "Retire."),
+55: (D, PH + " 'separate' repeats #294, #511 and the bank; 'Seperete' is implausible.", "Retire."),
+211: (OK, "11 before 101, 110, 1001.", ""),
+212: (F, "Joke distractors (birthday, ink color, lottery).", "Use real methods as distractors: date received, correspondent's name, file number."),
+213: (F, "Joke distractors (broken stamps, destroying records weekly).", "Use real file types: transfer file, index file, archive file."),
+214: (OK, "Nothing before something: Brown, Browne, Browning.", ""),
+215: (D, "Cross-reference repeated in #283 and #507; joke distractors.", "Keep #283; retire #215."),
+216: (F, "Joke distractors (weather, stamp price, shoe size).", "Use real alternatives: date sent only, sender's own name, file number only."),
+217: (F, "Joke distractors (shoe size, hash, ink brand).", "Use real methods: alphabetic, subject, numeric."),
+218: (OK, "Keep; #273 duplicates it (retire those).", ""),
+273: (D, "Exact duplicate of #218; explanation says 'given given names'.", "Retire."),
+274: (OK, "Same surname: Ana, Ben, Carlo, Dina.", ""),
+275: (F, "Stem asks for a 'sequence' but the options are single surnames.", "Stem: 'Which surname is filed first?' (Abad: d before l)."),
+276: (OK, "Keep; #500 duplicates it (retire those).", ""),
+278: (OK, "Surname is the first unit.", ""),
+279: (OK, "Keep; #502 duplicates it (retire those).", ""),
+280: (OK, "Keep; #503, #544 duplicates it (retire those).", ""),
+281: (OK, "Keep; #508 duplicates it (retire those).", ""),
+283: (OK, "Cross-reference points to the primary file.", "Replace the joke distractors."),
+284: (OK, "Keep; #506 duplicates it (retire those).", ""),
+285: (OK, "Keep; #504, #545 duplicates it (retire those).", ""),
+286: (OK, "009 then 010.", ""),
+288: (OK, "Date of the correspondence.", "Replace 'Date the clerk took lunch' with 'Date the paper was filed'."),
+289: (OK, "Keep; #505 duplicates it (retire those).", ""),
+290: (F, "Joke distractors (favorite color, advertisement).", "Use real index fields: retention period, location only, date only."),
+291: (OK, "Broad to narrow.", ""),
+292: (OK, "Keep as the one 'accommodate' item (retire #53, #509).", "Check against the bank's 'accommodation' target; if CoS counts them as one word, retire this too."),
+293: (D, "'maintenance' repeats #513 and the bank.", "Retire."),
+294: (D, "'separate' repeats #55, #511 and the bank.", "Retire."),
+295: (D, "'privilege' repeats #512 and the bank.", "Retire."),
+296: (D, "'questionnaire' repeats #514 and the bank; 'Questioneer' is implausible.", "Retire."),
+297: (D, "'occurrence' repeats #510, #547 and the bank.", "Retire."),
+298: (D, "'liaison' is a bank target; 'Liaision' is implausible.", "Retire."),
+299: (F, "'Milleniun' is a keyboard slip, not a real misspelling.", "Replace it with 'Milenium'."),
+300: (D, "'embarrass' repeats #516 and the bank; 'Embarres' is implausible.", "Retire."),
+301: (F, "'conscientious' repeats #515. Explanation says 'the first option', which breaks when choices are shuffled.", "Keep this one, retire #515; reword the explanation without a position."),
+302: (OK, "Keep as the one 'entrepreneur' item (retire #546).", ""),
+303: (OK, "Heirarchy and Hierachy are real misspellings.", ""),
+304: (F, "'Indispensabel' is not a real misspelling.", "Replace it with 'Indespensable'."),
+305: (F, "'miscellaneous' repeats #518; 'Misceallaneous' is implausible.", "Keep this one, retire #518; replace that foil with 'Miscellanious'."),
+306: (D, "'necessary' is a bank target.", "Retire."),
+307: (OK, "Foils are real misspellings.", ""),
+308: (F, "'Supercede' is listed as a variant in major dictionaries, so marking it wrong is arguable; 'Supersied' is implausible.", "Pick a different target, or retire."),
+309: (F, "'Reconcilitation' is implausible.", "Replace it with 'Reconsiliation'."),
+310: (OK, "Exagerate and Exagerrate are real.", "Optional: replace 'Exaggerete'."),
+311: (F, "'Publically' is a recorded variant (CoS ruled it out as a wrong form in round 02); 'Publikly' is implausible.", "Pick a different target, or retire."),
+312: (D, "'definitely' repeats #517 and the bank.", "Retire."),
+313: (F, "'Pronunciashun' is a joke spelling.", "Replace it with 'Pronounciasion'."),
+499: (F, "Key correct; explanation boilerplate lacks a period ('Aquino Therefore'). Same in #499-#550.", "Fix punctuation, drop 'The other choices fail because the other choices'."),
+500: (D, "Same task as #276.", "Retire."),
+501: (OK, "De Leon before Delos Reyes (dele < delo).", "Explanation punctuation."),
+502: (D, "Same task as #279.", "Retire."),
+503: (D, "Same task as #280.", "Retire."),
+504: (D, "Same task as #285; joke distractors ('Claims maybe').", "Retire."),
+505: (D, "Same task as #289.", "Retire."),
+506: (D, "Same task as #284.", "Retire."),
+507: (D, "Same task as #283.", "Retire."),
+508: (D, "Same task as #281.", "Retire."),
+509: (D, "'accommodate' repeat; vague stem.", "Retire."),
+510: (D, "'occurrence' repeat; vague stem.", "Retire."),
+511: (D, "'separate' repeat.", "Retire."),
+512: (D, "'privilege' repeat.", "Retire."),
+513: (D, "'maintenance' repeat.", "Retire."),
+514: (D, "'questionnaire' repeat.", "Retire."),
+515: (D, "'conscientious' repeat.", "Retire."),
+516: (D, "'embarrass' repeat; stem says 'item 8'.", "Retire."),
+517: (D, "'definitely' repeat; stem says 'item 9'.", "Retire."),
+518: (D, "'miscellaneous' repeat; stem says 'item 10'.", "Retire."),
+543: (OK, "Garcia, Liza first.", "Explanation punctuation."),
+544: (D, "Same task as #280.", "Retire."),
+545: (D, "Same task as #285; joke distractors.", "Retire."),
+546: (D, "'entrepreneur' repeat; stem 'for the first term' is meaningless.", "Retire."),
+547: (D, "'occurrence', third copy.", "Retire."),
+548: (F, "Explanation says receive follows 'i-before-e after c'; the rule is the reverse (e before i after c).", "Explanation: 'i before e except after c: rec-ei-ve.'"),
+550: (D, "'calendar' is a bank target.", "Retire."),
+}
+b = [x for x in json.load(open(SRC)) if x["cat"] == "Clerical Ability"]
+assert {x["id"] for x in b} == set(F_), sorted({x["id"] for x in b} ^ set(F_))
+from collections import Counter
+c = Counter(v[0] for v in F_.values())
+L = ["# Round 03 baseline audit, batch B1: Clerical (81 items), review request for Chief of Staff", "",
+     "Grok Bot, 2026-10-17. Source: the 81 `source_group='baseline'` Clerical rows (Filing 42, Spelling 39) in the MSI local Civio DB, exported read-only. **No content was changed** in the DB or the repo; these are findings and proposals for CoS.", "",
+     "## Summary", "",
+     f"- **{c[K]} key errors** (#277, #287, #282): wrong answer marked, live in active mocks today.",
+     f"- **{c[D]} duplicates to retire**: same filing task repeated (#499-#550 restate #274-#313 almost item for item), and 11 spelling targets used 2-3 times. 12 spelling targets also repeat targets already in the bank (CoS rule: unique targets).",
+     f"- **{c[F]} fixes**: 5 placeholder explanations ('Local practice item for Docker study.'), joke distractors on filing-concept items, implausible misspellings (CoS rule: only real misspellings), one wrong spelling rule in an explanation, broken explanation punctuation.",
+     f"- **{c[OK]} OK** as they stand (some with optional polish).", "",
+     f"If CoS accepts every proposal, {c[OK] + c[F] + c[K]} baseline Clerical items stay active ({c[K]} with corrected keys, {c[F]} fixed) and {c[D]} retire to draft (history kept, as in round 02).", "",
+     "## Note on the paraphrase set (988d862)", "",
+     "`scripts/seeds/baseline_reparameterized.json` (Codex, 2026-10-13) would draft each baseline row and add a new Civio item matched by prior stem. It is **not applied** on the MSI (no rows with `replaces_question_id`). Its 76 Clerical items are new items rather than paraphrases (for example #277 becomes 'which surname comes first: Bajo, Baluyot...'), so they need their own audit. Quick look: spelling targets such as calendar, necessary, publicly and maintenance repeat bank targets, 'Publically' is used as a wrong form, and explanations end with the boilerplate 'do not follow the same steps.' **Ask:** should round 03 fix the baseline rows, or audit the paraphrase set and retire the baseline instead?", "",
+     "## Per item", "", "| ID | Sub | Key now | Finding | Verdict | Proposal |", "|---|---|---|---|---|---|"]
+for x in sorted(b, key=lambda x: x["id"]):
+    v, why, prop = F_[x["id"]]
+    key = x["options"][x["correct_option"]]
+    L.append(f"| {x['id']} | {x['sub']} | {key.replace('|','/')} | {why.replace('|','/')} | {v} | {prop.replace('|','/')} |")
+L += ["", "## Asks for CoS", "", "1. Approve the 3 key corrections (they affect active mocks now).", "2. Approve retiring the duplicates (set to draft, not deleted).", "3. Approve the fixes, or ask for rewritten items in a gap-fill file instead.", "4. Rule on the paraphrase set (note above)."]
+open("docs/research/audit/round-03-baseline-b1-clerical-review-request.md", "w").write("\n".join(L) + "\n")
+print(c)

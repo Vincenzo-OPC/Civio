@@ -168,3 +168,18 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - Fixed: 100 padded method lines, 263 tautological why-wrong reasons (all 300 rewritten), absurd distractors replaced with real siblings, 22 long-key giveaways, 5 ambiguous stems, codes. Reproducible via `scripts/batches/fixes/b3/apply.py`.
 - Proposed: ACCEPT 77, ACCEPT as variant 8, HOLD 4, REJECT 11 (fact duplicates of approved items). Packet: `audit/round-03-chatgpt-003-review-request.md`. All stay draft.
 - Housekeeping: moved the stray root `AUDIT_TRACKER.md` (round 03 Filipino notes from 2026-10-13) into this file.
+
+## 2026-10-17: Round 03 baseline audit, B1 Clerical and B2 GI (Grok Bot)
+
+- Export: a read-only copy of the 550 `source_group='baseline'` rows from the MSI local DB, saved at `audit/data/baseline-550-2026-10-17.json`. No DB rows were changed.
+- **B1 Clerical (81 items):** 3 KEY ERROR, 18 FIX, 37 DUPLICATE (retire to draft), 23 OK. Packet: `audit/round-03-baseline-b1-clerical-review-request.md`.
+  - Key errors: #277 (the correct order Dela Cruz; Del Mundo; Delos Santos; Del Rosario matches no option, so the options need rewriting); #287 (the key should be the first listed order); #282 ("Leave Application" files before "Leave Credits").
+  - Fixes: placeholder explanations on #51-55, joke distractors, implausible misspellings, the wrong ie/ei rule in #548, punctuation in #499-550.
+  - 12 baseline spelling targets repeat targets already in the bank. **Question for CoS:** fix these baseline rows, or audit Codex's paraphrase set (`scripts/seeds/baseline_reparameterized.json`, 496 matched by stem, not applied) instead?
+- **B2 GI, Constitution and Peace/HR (70 items):** 0 key errors, 23 FIX, 14 DUPLICATE (8 repeat approved bank items, 6 repeat other baseline items), 33 OK. Packet: `audit/round-03-baseline-b2-gi-review-request.md`. Gap: there are no items on RA 9851, 9745, 10353, 9710 or 7610.
+- Scripts: `scripts/batches/audit/baseline_b1_clerical.py` and `baseline_b2_gi.py` regenerate the packets. Nothing is applied until CoS rules.
+- Next: B3 GI (RA 6713, 37 items; Environment, 27 items), then the other domains.
+
+## 2026-10-17: Prompt for the next English ChatGPT batch
+
+- `CHATGPT_NEXT_PROMPT.md` asks for 100 English drafts in `chatgpt-batch-004.json` (RC 30, paragraph organization 30, error recognition 40), because `chatgpt-batch-002.json` already holds 100 unaudited English drafts in the same areas. It carries the earlier rules plus these QA checks: no keyboard typos, unique targets, no order key matching the listed order, the 25% stem cap, an honest shortcut, and KWF spelling. Batch 002 still needs a Grok Bot audit.
