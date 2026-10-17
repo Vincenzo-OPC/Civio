@@ -103,3 +103,24 @@ test('an optional item-level shortcut leads the Reveal and the worked steps foll
     $with = ImportBatchCommand::explanation($item, $texts);
     expect($with)->toContain("Shortcut: {$item['shortcut']}\nMethod: {$item['reveal']['shortcut']}");
 });
+
+test('fact_id and theme tags are saved, and an untagged re-import keeps them', function () {
+    $source = base_path('docs/batches/batch-001.json');
+    $data = json_decode((string) file_get_contents($source), true);
+    $data['items'][0]['fact_id'] = 'FACT-TEST-0001';
+    $data['items'][0]['theme'] = 'test-theme';
+    $tagged = tempnam(sys_get_temp_dir(), 'batch');
+    file_put_contents($tagged, json_encode($data));
+
+    $this->artisan('civio:import-batch', ['path' => $tagged])->assertSuccessful();
+
+    $q = Question::where('stem', $data['items'][0]['stem'])->firstOrFail();
+    expect($q->fact_id)->toBe('FACT-TEST-0001')
+        ->and($q->theme)->toBe('test-theme')
+        ->and(Question::whereNull('fact_id')->count())->toBe(9);
+
+    $this->artisan('civio:import-batch', ['path' => $source])->assertSuccessful();
+
+    expect($q->fresh()->fact_id)->toBe('FACT-TEST-0001')
+        ->and($q->fresh()->theme)->toBe('test-theme');
+});

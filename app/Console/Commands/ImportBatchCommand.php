@@ -150,16 +150,28 @@ class ImportBatchCommand extends Command
         $texts = array_column($item['options'], 'text', 'option_id');
         $correct = array_search($item['answer_option_id'], array_keys($texts), true);
 
+        $values = [
+            'subcategory_id' => $subcategory->id,
+            'language' => ($item['language'] ?? 'en') === 'fil' ? 'Filipino' : 'English',
+            'options' => array_values($texts),
+            'correct_option' => (int) $correct,
+            'explanation' => self::explanation($item, $texts),
+            'status' => $status,
+        ];
+
+        // Spec tags. Saved only when the file carries them, so re-importing an
+        // untagged twin never clears a tag another batch set.
+        foreach (['fact_id', 'theme'] as $tag) {
+            $value = trim((string) ($item[$tag] ?? ''));
+
+            if ($value !== '') {
+                $values[$tag] = mb_substr($value, 0, 100);
+            }
+        }
+
         return Question::updateOrCreate(
             ['source_group' => QuestionSourceGroup::Civio->value, 'stem' => $item['stem']],
-            [
-                'subcategory_id' => $subcategory->id,
-                'language' => ($item['language'] ?? 'en') === 'fil' ? 'Filipino' : 'English',
-                'options' => array_values($texts),
-                'correct_option' => (int) $correct,
-                'explanation' => self::explanation($item, $texts),
-                'status' => $status,
-            ],
+            $values,
         );
     }
 
