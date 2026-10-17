@@ -256,3 +256,13 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **MSI:**
   - Backup first: `civio_local_pre_r03c_20261017.dump`.
   - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 604, **total 1,978**.
+
+## 2026-10-18: Round 03 baseline B4, Numerical word problems (32), pending CoS
+
+- KEEP 20, FIX 4, REJECT 6, HOLD 2. 0 key errors: 32/32 recomputed (`scripts/batches/audit/baseline_b4.py`).
+- REJECT: #48, #49, #197 and #198 duplicate other baseline rows. #50 duplicates the discount frame. #199 duplicates an approved "office chair, 15% off" item and falls under the percent cap.
+- FIX: #201, #206 and #209 have explanations with no method. #349 has a malformed option, ' sixty-four'.
+- HOLD under the percent-change cap: #350, #495.
+- Drafts: `audit/fixes/round-03-baseline-b4-drafts.json` (5). `qa_file.py` → 0 problems. `explanation_lint.py` → 0 flagged.
+- Packet: `audit/round-03-baseline-b4-review-request.md`.
+- This finishes the baseline Numerical audit (B3 + B4 = 91). Next: Analytical 114 (B5), then Verbal 130 (B6).
