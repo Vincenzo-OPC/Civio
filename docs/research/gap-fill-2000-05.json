@@ -1,0 +1,909 @@
+{
+ "batch": "gap-fill-2000-05",
+ "spec_version": "0.1.9",
+ "status": "draft (pending CoS)",
+ "source_group": "civio",
+ "notes": "English Verbal paragraph organization + reading comprehension gap fill for the exact-2,000 Release Collection.",
+ "items": [
+  {
+   "id": "CIVIO-GF2K05-PO-0001",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Paragraph organization",
+   "concept": "ordering",
+   "micro_skill": "sequence sentences by time and cause-effect clues",
+   "archetype": "VEN-PARA-ORDER",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Which order makes a coherent paragraph about a barangay water interruption.\nP. On Friday evening, residents filled pails and drums with enough water for the day.\nQ. By Saturday night, the water was back on and the tanker left.\nR. During the repair, a tanker truck parked at the barangay hall for those who ran short.\nS. The water district announced a twelve-hour interruption for pipe repairs on Saturday.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "S-P-R-Q"
+    },
+    {
+     "option_id": "o2",
+     "text": "Q-S-P-R"
+    },
+    {
+     "option_id": "o3",
+     "text": "S-R-P-Q"
+    },
+    {
+     "option_id": "o4",
+     "text": "S-P-Q-R"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A coherent paragraph moves from the starting situation through the steps in time order to the result.",
+    "shortcut": "Find the opener (the situation or trigger) and the closer (the result); then order the middle by time words.",
+    "why_correct": "Answer: \"S-P-R-Q\". S sets up the situation, P and R are the next steps in time order, and Q gives the result.",
+    "why_wrong": {
+     "o2": "\"Q-S-P-R\" puts the closing outcome (Q) first; the paragraph must open with S.",
+     "o3": "\"S-R-P-Q\" swaps P and R; P has to happen before R.",
+     "o4": "\"S-P-Q-R\" places the outcome (Q) before the step it follows (R)."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "PO-OPENER-MISPLACED",
+    "o3": "LOG-ORDER-SWAP",
+    "o4": "PO-TRANSITION-IGNORED"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-PO-0002",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Paragraph organization",
+   "concept": "ordering",
+   "micro_skill": "sequence sentences by time and cause-effect clues",
+   "archetype": "VEN-PARA-ORDER",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Choose the best sequence for a paragraph about renewing a driver's license.\nP. At the LTO office, he first passed the medical examination.\nQ. He left the office with a new license valid for ten years.\nR. Ramon booked an online appointment two weeks before his license expired.\nS. He then paid the renewal fee at the cashier and had his photo taken.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Q-R-P-S"
+    },
+    {
+     "option_id": "o2",
+     "text": "R-P-S-Q"
+    },
+    {
+     "option_id": "o3",
+     "text": "R-S-P-Q"
+    },
+    {
+     "option_id": "o4",
+     "text": "R-P-Q-S"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A coherent paragraph moves from the starting situation through the steps in time order to the result.",
+    "shortcut": "Find the opener (the situation or trigger) and the closer (the result); then order the middle by time words.",
+    "why_correct": "Answer: \"R-P-S-Q\". R sets up the situation, P and S are the next steps in time order, and Q gives the result.",
+    "why_wrong": {
+     "o1": "\"Q-R-P-S\" puts the closing outcome (Q) first; the paragraph must open with R.",
+     "o3": "\"R-S-P-Q\" swaps P and S; P has to happen before S.",
+     "o4": "\"R-P-Q-S\" places the outcome (Q) before the step it follows (S)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "PO-OPENER-MISPLACED",
+    "o3": "LOG-ORDER-SWAP",
+    "o4": "PO-TRANSITION-IGNORED"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-PO-0003",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Paragraph organization",
+   "concept": "ordering",
+   "micro_skill": "sequence sentences by time and cause-effect clues",
+   "archetype": "VEN-PARA-ORDER",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Put these sentences in order to describe a new filing system.\nP. Since then, retrieval time has dropped from minutes to seconds.\nQ. Over one weekend, the staff relabeled and moved all the folders.\nR. The supervisor proposed filing every folder by client surname instead.\nS. The records unit kept losing folders because files were stored by date received.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "P-S-R-Q"
+    },
+    {
+     "option_id": "o2",
+     "text": "S-Q-R-P"
+    },
+    {
+     "option_id": "o3",
+     "text": "S-R-Q-P"
+    },
+    {
+     "option_id": "o4",
+     "text": "S-R-P-Q"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A coherent paragraph moves from the starting situation through the steps in time order to the result.",
+    "shortcut": "Find the opener (the situation or trigger) and the closer (the result); then order the middle by time words.",
+    "why_correct": "Answer: \"S-R-Q-P\". S sets up the situation, R and Q are the next steps in time order, and P gives the result.",
+    "why_wrong": {
+     "o1": "\"P-S-R-Q\" puts the closing outcome (P) first; the paragraph must open with S.",
+     "o2": "\"S-Q-R-P\" swaps R and Q; R has to happen before Q.",
+     "o4": "\"S-R-P-Q\" places the outcome (P) before the step it follows (Q)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "PO-OPENER-MISPLACED",
+    "o2": "LOG-ORDER-SWAP",
+    "o4": "PO-TRANSITION-IGNORED"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-PO-0004",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Paragraph organization",
+   "concept": "ordering",
+   "micro_skill": "sequence sentences by time and cause-effect clues",
+   "archetype": "VEN-PARA-ORDER",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Arrange the sentences into a logical paragraph about a school feeding program.\nP. Starting in June, every pupil received bread and milk before the first class.\nQ. The school then asked parents and a local bakery to help.\nR. Teachers noticed that many pupils came to class without breakfast.\nS. By the end of the quarter, attendance and attention in class had improved.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "S-R-Q-P"
+    },
+    {
+     "option_id": "o2",
+     "text": "R-P-Q-S"
+    },
+    {
+     "option_id": "o3",
+     "text": "R-Q-S-P"
+    },
+    {
+     "option_id": "o4",
+     "text": "R-Q-P-S"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A coherent paragraph moves from the starting situation through the steps in time order to the result.",
+    "shortcut": "Find the opener (the situation or trigger) and the closer (the result); then order the middle by time words.",
+    "why_correct": "Answer: \"R-Q-P-S\". R sets up the situation, Q and P are the next steps in time order, and S gives the result.",
+    "why_wrong": {
+     "o1": "\"S-R-Q-P\" puts the closing outcome (S) first; the paragraph must open with R.",
+     "o2": "\"R-P-Q-S\" swaps Q and P; Q has to happen before P.",
+     "o3": "\"R-Q-S-P\" places the outcome (S) before the step it follows (P)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "PO-OPENER-MISPLACED",
+    "o2": "LOG-ORDER-SWAP",
+    "o3": "PO-TRANSITION-IGNORED"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-PO-0005",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Paragraph organization",
+   "concept": "ordering",
+   "micro_skill": "sequence sentences by time and cause-effect clues",
+   "archetype": "VEN-PARA-ORDER",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Which order makes a coherent paragraph about a typhoon response.\nP. Once the winds eased, linemen restored electricity within two days.\nQ. PAGASA raised a wind signal over the province on Tuesday afternoon.\nR. The typhoon made landfall early Wednesday and toppled several power posts.\nS. That night, the municipal disaster office moved coastal families to the gym.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Q-S-R-P"
+    },
+    {
+     "option_id": "o2",
+     "text": "P-Q-S-R"
+    },
+    {
+     "option_id": "o3",
+     "text": "Q-R-S-P"
+    },
+    {
+     "option_id": "o4",
+     "text": "Q-S-P-R"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A coherent paragraph moves from the starting situation through the steps in time order to the result.",
+    "shortcut": "Find the opener (the situation or trigger) and the closer (the result); then order the middle by time words.",
+    "why_correct": "Answer: \"Q-S-R-P\". Q sets up the situation, S and R are the next steps in time order, and P gives the result.",
+    "why_wrong": {
+     "o2": "\"P-Q-S-R\" puts the closing outcome (P) first; the paragraph must open with Q.",
+     "o3": "\"Q-R-S-P\" swaps S and R; S has to happen before R.",
+     "o4": "\"Q-S-P-R\" places the outcome (P) before the step it follows (R)."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "PO-OPENER-MISPLACED",
+    "o3": "LOG-ORDER-SWAP",
+    "o4": "PO-TRANSITION-IGNORED"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-PO-0006",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Paragraph organization",
+   "concept": "ordering",
+   "micro_skill": "sequence sentences by time and cause-effect clues",
+   "archetype": "VEN-PARA-ORDER",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Choose the best sequence for a paragraph about an office energy-saving drive.\nP. The agency's electricity bill rose sharply over the summer.\nQ. She found air conditioners and computers left running overnight.\nR. A shutdown checklist was posted, and the next bill fell by a fifth.\nS. To find out why, the admin officer checked every floor after office hours.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "R-P-S-Q"
+    },
+    {
+     "option_id": "o2",
+     "text": "P-S-Q-R"
+    },
+    {
+     "option_id": "o3",
+     "text": "P-Q-S-R"
+    },
+    {
+     "option_id": "o4",
+     "text": "P-S-R-Q"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A coherent paragraph moves from the starting situation through the steps in time order to the result.",
+    "shortcut": "Find the opener (the situation or trigger) and the closer (the result); then order the middle by time words.",
+    "why_correct": "Answer: \"P-S-Q-R\". P sets up the situation, S and Q are the next steps in time order, and R gives the result.",
+    "why_wrong": {
+     "o1": "\"R-P-S-Q\" puts the closing outcome (R) first; the paragraph must open with P.",
+     "o3": "\"P-Q-S-R\" swaps S and Q; S has to happen before Q.",
+     "o4": "\"P-S-R-Q\" places the outcome (R) before the step it follows (Q)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "PO-OPENER-MISPLACED",
+    "o3": "LOG-ORDER-SWAP",
+    "o4": "PO-TRANSITION-IGNORED"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-PO-0007",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Paragraph organization",
+   "concept": "ordering",
+   "micro_skill": "sequence sentences by time and cause-effect clues",
+   "archetype": "VEN-PARA-ORDER",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Put these sentences in order to describe a citizen's complaint.\nP. A resident wrote to the city hall about a broken streetlight near the school.\nQ. The crew replaced the faulty bulb and its wiring the next morning.\nR. The engineering office logged the letter and sent a crew to inspect the post.\nS. The office then wrote back to tell the resident the repair was done.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "S-P-R-Q"
+    },
+    {
+     "option_id": "o2",
+     "text": "P-Q-R-S"
+    },
+    {
+     "option_id": "o3",
+     "text": "P-R-Q-S"
+    },
+    {
+     "option_id": "o4",
+     "text": "P-R-S-Q"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A coherent paragraph moves from the starting situation through the steps in time order to the result.",
+    "shortcut": "Find the opener (the situation or trigger) and the closer (the result); then order the middle by time words.",
+    "why_correct": "Answer: \"P-R-Q-S\". P sets up the situation, R and Q are the next steps in time order, and S gives the result.",
+    "why_wrong": {
+     "o1": "\"S-P-R-Q\" puts the closing outcome (S) first; the paragraph must open with P.",
+     "o2": "\"P-Q-R-S\" swaps R and Q; R has to happen before Q.",
+     "o4": "\"P-R-S-Q\" places the outcome (S) before the step it follows (Q)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "PO-OPENER-MISPLACED",
+    "o2": "LOG-ORDER-SWAP",
+    "o4": "PO-TRANSITION-IGNORED"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-PO-0008",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Paragraph organization",
+   "concept": "ordering",
+   "micro_skill": "sequence sentences by time and cause-effect clues",
+   "archetype": "VEN-PARA-ORDER",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Arrange the sentences into a logical paragraph about a community garden.\nP. They then planted pechay, tomatoes and eggplant in raised beds.\nQ. An empty lot behind the health center had become a dumping site.\nR. Volunteers cleared the trash and tested the soil with help from the agriculture office.\nS. Today the harvest goes to the center's nutrition classes for mothers.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "S-Q-R-P"
+    },
+    {
+     "option_id": "o2",
+     "text": "Q-P-R-S"
+    },
+    {
+     "option_id": "o3",
+     "text": "Q-R-S-P"
+    },
+    {
+     "option_id": "o4",
+     "text": "Q-R-P-S"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A coherent paragraph moves from the starting situation through the steps in time order to the result.",
+    "shortcut": "Find the opener (the situation or trigger) and the closer (the result); then order the middle by time words.",
+    "why_correct": "Answer: \"Q-R-P-S\". Q sets up the situation, R and P are the next steps in time order, and S gives the result.",
+    "why_wrong": {
+     "o1": "\"S-Q-R-P\" puts the closing outcome (S) first; the paragraph must open with Q.",
+     "o2": "\"Q-P-R-S\" swaps R and P; R has to happen before P.",
+     "o3": "\"Q-R-S-P\" places the outcome (S) before the step it follows (P)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "PO-OPENER-MISPLACED",
+    "o2": "LOG-ORDER-SWAP",
+    "o3": "PO-TRANSITION-IGNORED"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-RCD-0001",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "comprehension",
+   "micro_skill": "identify what the passage states or supports",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage.\nThe city opened a weekend lane at its civil registry for working residents. In the first month, the lane handled about 300 requests, most of them for birth certificates. Staff noticed, however, that many applicants arrived without a valid ID and had to come back. The registry now posts the list of requirements on its social media page every Friday.\n\nWhy does the registry now post the requirements every Friday?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Many weekend applicants lacked a valid ID and had to return."
+    },
+    {
+     "option_id": "o2",
+     "text": "Applicants complained that the weekend lane was always empty."
+    },
+    {
+     "option_id": "o3",
+     "text": "The registry wanted to stop issuing birth certificates on weekends."
+    },
+    {
+     "option_id": "o4",
+     "text": "Every applicant in the first month came without a valid ID."
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "The correct answer is stated in the passage or follows directly from it.",
+    "shortcut": "Check each choice against a specific sentence in the passage; reject any choice with no support or that overstates.",
+    "why_correct": "Answer: \"Many weekend applicants lacked a valid ID and had to return.\" The passage links the Friday posts to the many applicants who came without a valid ID and had to come back.",
+    "why_wrong": {
+     "o2": "\"Applicants complained that the weekend lane was always empty.\" says the opposite of the passage.",
+     "o3": "\"The registry wanted to stop issuing birth certificates on weekends.\" is not mentioned in the passage.",
+     "o4": "\"Every applicant in the first month came without a valid ID.\" overstates the passage; it goes further than what is said."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-OPPOSITE",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-EXTREME"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-RCI-0001",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "comprehension",
+   "micro_skill": "identify what the passage states or supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage.\nMangrove seedlings planted in the wrong zone often die within months. Seedlings placed too low on the shore are drowned by the tide twice a day, while those placed too high dry out. Groups that first study where wild mangroves already grow tend to see far more of their seedlings survive.\n\nWhat can be inferred about successful mangrove planting?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Planting more seedlings guarantees success in any part of the shore."
+    },
+    {
+     "option_id": "o2",
+     "text": "Choosing the right spot on the shore matters as much as planting."
+    },
+    {
+     "option_id": "o3",
+     "text": "Mangrove seedlings grow best when they are watered by hand daily."
+    },
+    {
+     "option_id": "o4",
+     "text": "Seedlings planted low on the shore always survive the tides."
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "The correct answer is stated in the passage or follows directly from it.",
+    "shortcut": "Check each choice against a specific sentence in the passage; reject any choice with no support or that overstates.",
+    "why_correct": "Answer: \"Choosing the right spot on the shore matters as much as planting.\" Seedlings die when placed too low or too high, and groups that copy where wild mangroves grow see more survive, so location is key.",
+    "why_wrong": {
+     "o1": "\"Planting more seedlings guarantees success in any part of the shore.\" says the opposite of the passage.",
+     "o3": "\"Mangrove seedlings grow best when they are watered by hand daily.\" is not mentioned in the passage.",
+     "o4": "\"Seedlings planted low on the shore always survive the tides.\" overstates the passage; it goes further than what is said."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-EXTREME"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-RCM-0001",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "comprehension",
+   "micro_skill": "identify what the passage states or supports",
+   "archetype": "VEN-RC-MAIN",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage.\nBefore the new queue system, clients at the municipal treasury stood in one long line regardless of their transaction. Now a guard gives each client a numbered stub for one of three windows: payments, certifications and inquiries. Average waiting time fell from about an hour to twenty minutes, although clients with several transactions must now line up more than once.\n\nWhich statement best summarizes the passage?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The new queue system made waiting time at the treasury longer than before."
+    },
+    {
+     "option_id": "o2",
+     "text": "The treasury hired more guards to handle complaints about the old line."
+    },
+    {
+     "option_id": "o3",
+     "text": "Separate windows cut waiting time, though some clients queue more than once."
+    },
+    {
+     "option_id": "o4",
+     "text": "Clients now wait twenty minutes for each of their several transactions."
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "The correct answer is stated in the passage or follows directly from it.",
+    "shortcut": "Check each choice against a specific sentence in the passage; reject any choice with no support or that overstates.",
+    "why_correct": "Answer: \"Separate windows cut waiting time, though some clients queue more than once.\" The summary must keep both the main result (waiting fell from an hour to twenty minutes) and the stated drawback (several transactions mean several lines).",
+    "why_wrong": {
+     "o1": "\"The new queue system made waiting time at the treasury longer than before.\" says the opposite of the passage.",
+     "o2": "\"The treasury hired more guards to handle complaints about the old line.\" is not mentioned in the passage.",
+     "o4": "\"Clients now wait twenty minutes for each of their several transactions.\" covers only one detail, not the whole passage."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o2": "RC-NOT-IN-TEXT",
+    "o4": "RC-TOO-NARROW"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-RCV-0001",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "comprehension",
+   "micro_skill": "identify what the passage states or supports",
+   "archetype": "VEN-RC-VOCAB",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage.\nIn the memo, the director asked division chiefs to \"temper\" their requests for new equipment because the budget for the coming year had been reduced. Chiefs were told to list only items needed to keep current services running.\n\nAs used in the memo, \"temper\" most nearly means",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "increase or expand greatly"
+    },
+    {
+     "option_id": "o2",
+     "text": "harden by heating and cooling"
+    },
+    {
+     "option_id": "o3",
+     "text": "express in an angry mood"
+    },
+    {
+     "option_id": "o4",
+     "text": "moderate or scale down"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "The correct answer is stated in the passage or follows directly from it.",
+    "shortcut": "Check each choice against a specific sentence in the passage; reject any choice with no support or that overstates.",
+    "why_correct": "Answer: \"moderate or scale down\". The budget was reduced and chiefs must list only essential items, so \"temper\" means to moderate or scale down the requests.",
+    "why_wrong": {
+     "o1": "\"increase or expand greatly\" says the opposite of the passage.",
+     "o2": "\"harden by heating and cooling\" is another sense of the word that does not fit.",
+     "o3": "\"express in an angry mood\" is another sense of \"temper\" (anger) that does not fit the memo."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "VRB-ANTONYM-TRAP",
+    "o2": "VRB-SYNONYM-TRAP",
+    "o3": "VRB-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-RCI-0002",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "comprehension",
+   "micro_skill": "identify what the passage states or supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage.\nA rural health unit began sending text reminders to mothers two days before their children's vaccination dates. Over six months, the share of children who missed a scheduled dose fell from one in four to one in ten. Nurses say some mothers still miss visits because the nearest jeepney stop is far from their homes.\n\nBased on the passage, which statement is best supported?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Reminders helped, but distance still keeps some mothers from visits."
+    },
+    {
+     "option_id": "o2",
+     "text": "The text reminders had no effect on missed vaccination doses at all."
+    },
+    {
+     "option_id": "o3",
+     "text": "The health unit has started a free jeepney service for mothers."
+    },
+    {
+     "option_id": "o4",
+     "text": "Text reminders have completely ended missed vaccination doses."
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "The correct answer is stated in the passage or follows directly from it.",
+    "shortcut": "Check each choice against a specific sentence in the passage; reject any choice with no support or that overstates.",
+    "why_correct": "Answer: \"Reminders helped, but distance still keeps some mothers from visits.\" Missed doses fell from one in four to one in ten, but nurses say distance still causes some missed visits, so both parts are supported.",
+    "why_wrong": {
+     "o2": "\"The text reminders had no effect on missed vaccination doses at all.\" says the opposite of the passage.",
+     "o3": "\"The health unit has started a free jeepney service for mothers.\" is not mentioned in the passage.",
+     "o4": "\"Text reminders have completely ended missed vaccination doses.\" overstates the passage; it goes further than what is said."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-OPPOSITE",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-EXTREME"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-RCD-0002",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "comprehension",
+   "micro_skill": "identify what the passage states or supports",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage.\nUnder the new rule, government offices must act on simple transactions within three working days. A simple transaction is one that needs only a routine check of submitted documents. Requests that require a technical evaluation, such as a building permit, follow longer timelines set by each office.\n\nAccording to the passage, which request follows a longer timeline?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "A simple request needing only a routine document check"
+    },
+    {
+     "option_id": "o2",
+     "text": "A building permit that needs a technical evaluation"
+    },
+    {
+     "option_id": "o3",
+     "text": "A request filed at an office outside the city hall"
+    },
+    {
+     "option_id": "o4",
+     "text": "Every request filed during the three-day period"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "The correct answer is stated in the passage or follows directly from it.",
+    "shortcut": "Check each choice against a specific sentence in the passage; reject any choice with no support or that overstates.",
+    "why_correct": "Answer: \"A building permit that needs a technical evaluation\". The passage names building permits as requests that need technical evaluation and so follow longer timelines.",
+    "why_wrong": {
+     "o1": "\"A simple request needing only a routine document check\" says the opposite of the passage.",
+     "o3": "\"A request filed at an office outside the city hall\" is not mentioned in the passage.",
+     "o4": "\"Every request filed during the three-day period\" is too broad; the passage singles out one kind of request."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-TOO-BROAD"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  },
+  {
+   "id": "CIVIO-GF2K05-RCM-0002",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "comprehension",
+   "micro_skill": "identify what the passage states or supports",
+   "archetype": "VEN-RC-MAIN",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage.\nA fishing cooperative in Bohol began keeping a logbook of every catch: the species, its size and where it was caught. After two years, the records showed that juvenile fish were caught most often near a single reef. The members voted to stop fishing there for six months each year.\n\nWhat is the main idea of the passage?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The cooperative stopped keeping records because they were not useful."
+    },
+    {
+     "option_id": "o2",
+     "text": "The cooperative moved its members to a new town in another province."
+    },
+    {
+     "option_id": "o3",
+     "text": "Catch records helped the cooperative decide how to protect young fish."
+    },
+    {
+     "option_id": "o4",
+     "text": "The logbook recorded only the species and size of each catch."
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "The correct answer is stated in the passage or follows directly from it.",
+    "shortcut": "Check each choice against a specific sentence in the passage; reject any choice with no support or that overstates.",
+    "why_correct": "Answer: \"Catch records helped the cooperative decide how to protect young fish.\" The passage moves from keeping records, to what they showed about juvenile fish, to the decision to close the reef seasonally.",
+    "why_wrong": {
+     "o1": "\"The cooperative stopped keeping records because they were not useful.\" says the opposite of the passage.",
+     "o2": "\"The cooperative moved its members to a new town in another province.\" is not mentioned in the passage.",
+     "o4": "\"The logbook recorded only the species and size of each catch.\" covers only one detail, not the whole passage."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o2": "RC-NOT-IN-TEXT",
+    "o4": "RC-TOO-NARROW"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "_legacy": true,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "gap-fill-2000-05 (English Verbal). Pending CoS."
+  }
+ ]
+}

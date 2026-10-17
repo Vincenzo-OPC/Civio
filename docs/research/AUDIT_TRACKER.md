@@ -256,3 +256,25 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **MSI:**
   - Backup first: `civio_local_pre_r03c_20261017.dump`.
   - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 604, **total 1,978**.
+
+## 2026-10-18: gap-fill-2000-05, English Verbal drafts (15) and EV lint fixes (117), pending CoS
+
+- **Correction (drill shuffle):** online drills already shuffle the answer choices. The real leak was answer keys sent in the drills-hub payloads, and it is fixed on `grok/drill-choice-shuffle`. The earlier claim that online drills do not shuffle is now marked superseded on `grok/batch-3-independent-audit` (tracker + B3 packet) and `grok/baseline-550-spec-convert` (QA doc). Stored key position is an editorial balance goal, not a user-facing giveaway.
+- **Part A drafts:** `docs/research/gap-fill-2000-05.json`, from `scripts/batches/gapfill/gap_fill_2000_05.py`.
+  - VEN-PARA-ORDER 8 (need 6).
+  - Reading comprehension 7 (need 5): VEN-RC-DETAIL/INFER/MAIN 2 each, VEN-RC-VOCAB 1.
+  - QA: `qa_file.py` 0 problems; `explanation_lint.py` 0 flagged.
+- **Part B lint fixes:** `docs/research/audit/fixes/gap-fill-2000-05-lintfix.json`, from `scripts/batches/gapfill/lintfix_2000_05.py` + `lintfix_2000_05_baseline.py`.
+  - 117 full-item fix drafts (`<id>-LINTFIX`, `fix_of`) for English Verbal Release picks that fail explanation_lint: sentence structure 27, error recognition 11, paragraph organization 36, reading comprehension 43.
+  - Originals are untouched.
+  - The 41 baseline items in the set are completed to full spec (terms, shortcut, coded why-wrong).
+  - Wrong options were lengthened on 22 long-key items, with the same error and code.
+  - 4 stems were clarified to clear false near-duplicates.
+  - QA:
+    - New checker `scripts/batches/audit/qa_fixfile.py`, which runs the qa_file checks but does not compare a fix with its own original: 0 problems.
+    - `explanation_lint.py`: 0 flagged.
+- **Not fixed (CoS):**
+  - `CIVIO-BASELINE-0466` is a Filipino item classified as English Verbal.
+  - The passage set `CIVIO-GAP1-VEN-RC-0014..0017` (approved) shares a passage shorter than the 400-character sibling floor, so it already fails qa_file.
+  - `CIVIO-GAP2-VEN-ERROR-0002` and `-0005` (approved) have identical stems.
+- **Release projection** (approved + kept + pending drafts incl. gap-fill-01/02/05): **EV 300, FV 300 and Num 400 exact.** Still short: Analytical analogy 61 and data interpretation 31; Clerical filing 41; R.A. 6713 32. These are on gap-fill-03/04 (other agents).
