@@ -13,7 +13,7 @@ def BP(e):
     return e
 RETIRE = {i for i, v in b1.items() if v[0] == "DUPLICATE"} | {292} | {308, 311}  # 308/311: "pick a different target, or retire": retired; new targets go to the pending swap file
 RETIRE |= {i for i, v in b2.items() if v[0] == "DUPLICATE"} | {77, 79, 226, 227, 400, 403, 404, 415, 549}  # rewrite-or-retire items: retired; 77/226/227 topics are covered by gap-fill-004
-HOLD = {304: "CoS asked for 'Indispensible', but that is already one of the four choices (and 'Indespensable', my original proposal, is too). Left unchanged until CoS names a different foil."}
+HOLD = {}  # 304 was held (CoS foil 'Indispensible' was already a choice); CoS ruled 'Indispencible' at 3:11 PM, applied below
 U = {}  # id -> dict of new fields
 def opt(i, idx, text):
     U.setdefault(i, {}).setdefault("options", list(B[i]["options"]))[idx] = text
@@ -32,6 +32,7 @@ set_(216, options=["Name of addressee or subject per office rules", "Date sent o
 set_(217, options=["Date order", "Alphabetic order of the author", "Subject or topic", "Numeric file code"], explanation="Chronological filing arranges records by date. Alphabetic, subject and numeric filing are different methods.")
 set_(275, stem="Which surname is filed first?", explanation="All four start with A. In the second letter, b (Abad, Abalos) comes before q (Aquino) and r (Arce). Abad and Abalos share A-B-A; in the fourth letter, d comes before l, so Abad is filed first.")
 set_(290, options=["A retrieval description or subject", "The number of pages in the record", "The name of the clerk who encoded it", "The paper size of the record"], explanation="An index is used to find a record, so beside the identifier it needs a description or subject that a searcher can look up. Page count, the encoder's name and paper size do not help anyone locate the record.")
+opt(304, 3, "Indispencible"); set_(304, explanation="Indispensable is in-dis-pens-able: the middle is -pens- (with s, not c), and the ending is -able, not -ible.")
 opt(299, 3, "Milenium")
 set_(301, explanation="Conscientious is built on science: con-sci-en-tious. Keep the sc and the t before -ious.")
 opt(305, 3, "Miscellanious")

@@ -67,9 +67,7 @@
   549,
   550
  ],
- "hold": {
-  "304": "CoS asked for 'Indispensible', but that is already one of the four choices (and 'Indespensable', my original proposal, is too). Left unchanged until CoS names a different foil."
- },
+ "hold": {},
  "updates": [
   {
    "id": 1,
@@ -338,6 +336,27 @@
    },
    "new": {
     "explanation": "Conscientious is built on science: con-sci-en-tious. Keep the sc and the t before -ious."
+   }
+  },
+  {
+   "id": 304,
+   "old": {
+    "options": [
+     "Indispensable",
+     "Indispensible",
+     "Indespensable",
+     "Indispensabel"
+    ],
+    "explanation": "Indispensable ends in “-able,” not “-ible.”"
+   },
+   "new": {
+    "options": [
+     "Indispensable",
+     "Indispensible",
+     "Indespensable",
+     "Indispencible"
+    ],
+    "explanation": "Indispensable is in-dis-pens-able: the middle is -pens- (with s, not c), and the ending is -able, not -ible."
    }
   },
   {

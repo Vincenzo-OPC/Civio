@@ -1,6 +1,6 @@
 # Civio CSE Question Design Spec
 
-Version: 0.1.8 (CoS round 03 Filipino rulings in 10.7; optional item-level `shortcut` field, see §6 and 10.6; CoS round 02 rulings in 10.5)
+Version: 0.1.9 (CoS round 03 rulings of 2026-10-17 in 10.8; CoS round 03 Filipino rulings in 10.7; optional item-level `shortcut` field, see §6 and 10.6; CoS round 02 rulings in 10.5)
 Date: 5 Oct 2026 (Asia/Manila); approved 7 Oct 2026
 Owner: GT
 Status: **Approved by GT on 7 Oct 2026.** The canonical copy lives in GT's Obsidian vault; this repo copy
@@ -241,9 +241,9 @@ Distractor codes:
 - `VRB-ANTONYM-TRAP` a word that means the opposite of what is asked (v0.1.4)
 - `PO-OPENER-MISPLACED` topic sentence not first
 - `PO-TRANSITION-IGNORED` sentence with a link word placed before what it links to
-- `VEN-RUN-ON` two complete sentences joined with only a comma or with nothing at all (comma splice or fused sentence) (proposed v0.1.9, pending CoS; used only by gap-fill-005 drafts)
-- `VEN-FRAGMENT` a group of words punctuated as a sentence that has no main clause (proposed v0.1.9, pending CoS)
-- `VEN-MODIFIER-PLACE` a describing word, phrase or clause attached to the wrong word, either dangling or misplaced (proposed v0.1.9, pending CoS)
+- `VEN-RUN-ON` two complete sentences joined with only a comma or with nothing at all (comma splice or fused sentence) (v0.1.9, approved by CoS 2026-10-17)
+- `VEN-FRAGMENT` a group of words punctuated as a sentence that has no main clause (v0.1.9, approved by CoS 2026-10-17)
+- `VEN-MODIFIER-PLACE` a describing word, phrase or clause attached to the wrong word, either dangling or misplaced (v0.1.9, approved by CoS 2026-10-17)
 
 Suggested Civio mix (English half of Verbal): word meaning 15%, sentence completion 20%, error recognition 20%, sentence structure 10%, paragraph organization 15%, reading comprehension 20%.
 
@@ -738,3 +738,10 @@ them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 - A Filipino vocabulary stem must not contain any of its options, so the stem cannot give the answer away (`qa.py`).
 - `FIL-SPOKEN-FORM` covers every ng/nang, din/rin, daw/raw and pang-angkop error.
 - Targets are unique across the Filipino bank. When one item's key is another item's distractor, the mock builder keeps the two apart (`MockPoolState`, Filipino word options only); `scripts/batches/qa_fil.py` lists such pairs.
+
+### 10.8 CoS round 03 rulings (2026-10-17, v0.1.9)
+
+- **Sentence-structure codes adopted:** `VEN-RUN-ON`, `VEN-FRAGMENT`, `VEN-MODIFIER-PLACE` (Section 3, English distractor codes).
+- **Reading passages follow Section 3:** 150–250 words, with 2–3 questions per passage that mix main idea, detail and inference. The rule that each passage includes an inference item still applies. The app has no passage sets, so each item carries the full passage in its stem, followed by its own question. Stems therefore stay unique, because the importer matches on stem. Sibling items name their passage in `notes` ("Passage <batch>-P<n>, question k of m"). `qa.py` allows near-duplicate stems only between siblings with an identical passage block and different questions.
+- **`fact_id` (optional string):** items that test the same fact in different formats share a fact ID, and a mock serves one item per fact ID. Enforcing this is app code; see `docs/FACT_ID_MOCK_RULE_BRIEF.md`.
+- **`theme` (optional string):** a content-theme tag, for example `first-measure-misleads`. A mock serves at most 2 items with the same theme. Enforcing this is app code (same brief).
