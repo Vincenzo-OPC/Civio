@@ -2,6 +2,7 @@ import DOMPurify from 'dompurify';
 import React, { useEffect, useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { toast } from 'sonner';
+import { pdfAnswerLetters } from '@/lib/pdf-answer-key';
 import type { Question } from '../types';
 
 interface PrintableExamProps {
@@ -426,7 +427,9 @@ export function PrintableExam({
     }, [questions]);
 
     const answerKeyColumns = useMemo(() => {
-        if (questions.length === 0) {
+        const letters = pdfAnswerLetters(questions);
+
+        if (letters === null) {
             return [] as { num: number; answer: string }[][];
         }
 
@@ -443,9 +446,7 @@ export function PrintableExam({
             ) {
                 column.push({
                     num: i + 1,
-                    answer: String.fromCharCode(
-                        65 + (questions[i].correct_option ?? 0),
-                    ),
+                    answer: letters[i],
                 });
             }
 
@@ -1493,50 +1494,53 @@ export function PrintableExam({
                     </div>
                 </div>
 
-                {/* Answer Key Page */}
-                <div className="exam-page">
-                    <div className="print-header">
-                        <h1>Answer Key</h1>
-                        <p
-                            style={{
-                                textTransform: 'uppercase',
-                                letterSpacing: '0.05em',
-                            }}
-                        >
-                            Strictly for checking purposes only
-                        </p>
-                    </div>
-
-                    {/* Answer Key reads top-to-down (column-major): fills each column down
-                        before moving to the next column to the right. */}
-                    <div className="answer-key-grid">
-                        {answerKeyColumns.map((column, colIdx) => (
-                            <div
-                                key={`keycol-${colIdx}`}
-                                className="answer-key-col"
+                {/* Answer Key Page: only when every printed item has a valid key. */}
+                {answerKeyColumns.length > 0 && (
+                    <div className="exam-page">
+                        <div className="print-header">
+                            <h1>Answer Key</h1>
+                            <p
+                                style={{
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.05em',
+                                }}
                             >
-                                {column.map((row) => (
-                                    <div
-                                        key={`key-${row.num}`}
-                                        className="answer-key-row"
-                                    >
-                                        <span className="key-num">
-                                            {row.num}.
-                                        </span>
-                                        <span className="key-ans">
-                                            {row.answer}
-                                        </span>
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
+                                Strictly for checking purposes only
+                            </p>
+                        </div>
 
-                    <div className="print-running-footer">
-                        Civio &bull; Mock Examination &bull; NOT FOR SALE &bull;
-                        Unauthorized reproduction is strictly prohibited
+                        {/* Answer Key reads top-to-down (column-major): fills each column down
+                        before moving to the next column to the right. */}
+                        <div className="answer-key-grid">
+                            {answerKeyColumns.map((column, colIdx) => (
+                                <div
+                                    key={`keycol-${colIdx}`}
+                                    className="answer-key-col"
+                                >
+                                    {column.map((row) => (
+                                        <div
+                                            key={`key-${row.num}`}
+                                            className="answer-key-row"
+                                        >
+                                            <span className="key-num">
+                                                {row.num}.
+                                            </span>
+                                            <span className="key-ans">
+                                                {row.answer}
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="print-running-footer">
+                            Civio &bull; Mock Examination &bull; NOT FOR SALE
+                            &bull; Unauthorized reproduction is strictly
+                            prohibited
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
         </div>
     );

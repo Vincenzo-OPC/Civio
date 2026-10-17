@@ -232,8 +232,8 @@ export function SetupExamView({
                                 <button
                                     onClick={onPrint}
                                     disabled={isPrinting}
-                                    title="Download PDF"
-                                    aria-label="Download PDF"
+                                    title="Download PDF & Answer Key"
+                                    aria-label="Download PDF & Answer Key"
                                     className="group flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-sm transition-all hover:border-blue-300 hover:bg-slate-50 hover:text-[#5B35F5] disabled:opacity-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
                                 >
                                     {isPrinting ? (
@@ -241,7 +241,7 @@ export function SetupExamView({
                                     ) : (
                                         <Download className="size-4" />
                                     )}
-                                    Download PDF
+                                    Download PDF &amp; Answer Key
                                 </button>
                             )}
                         </div>

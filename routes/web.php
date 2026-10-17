@@ -145,6 +145,10 @@ Route::middleware(['auth.or.fail', 'verified'])->group(function () {
     });
 
     // --- USER EXAMS & HISTORY ---
+    Route::post('exams/export-pdf', [ExamController::class, 'exportPdf'])
+        ->name('exams.exportPdf')
+        ->middleware('throttle:pdf-export');
+
     Route::post('exams/export-pdf-check', [ExamController::class, 'checkPdfExportLimit'])
         ->name('exams.exportPdfCheck')
         ->middleware('throttle:pdf-export');

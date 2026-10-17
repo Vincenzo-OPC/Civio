@@ -26,7 +26,7 @@ import {
     EXAM_CONSTANTS,
     apiPost,
 } from '../utils/exam-utils';
-import { shortMockNotice } from '../utils/mock-pool';
+import { mockLevelForExam, shortMockNotice } from '../utils/mock-pool';
 import { startMockSession } from '../utils/mock-session';
 import { useExamHydration } from './use-exam-hydration';
 import { useExamPersistence } from './use-exam-persistence';
@@ -672,27 +672,6 @@ export function useExamState(props: ExamIndexProps) {
     }, [isDrillSession, setConfirmModal]);
 
     const handlePrintExam = useCallback(async () => {
-        let pool: Question[] = [];
-
-        try {
-            pool = (await startMockSession(selectedExamId)).questions;
-        } catch {
-            pool = [];
-        }
-
-        if (!pool || pool.length === 0) {
-            toast.error(
-                'Unable to generate exam pool for export. Please try again.',
-            );
-            setIsPrinting(false);
-
-            if (typeof window !== 'undefined') {
-                window.sessionStorage.removeItem('isPdfExporting');
-            }
-
-            return;
-        }
-
         toast.loading('Verifying export limits...', { id: 'pdf-export-toast' });
         setIsPrinting(true);
 
@@ -701,9 +680,16 @@ export function useExamState(props: ExamIndexProps) {
         }
 
         try {
-            const data: any = await apiPost('/exams/export-pdf-check', {});
+            const data = await apiPost<{
+                success: boolean;
+                message?: string;
+                questions: Question[];
+                export_token: string;
+            }>('/exams/export-pdf', {
+                track: mockLevelForExam(selectedExamId),
+            });
 
-            if (!data.success) {
+            if (!data.success || !data.questions?.length) {
                 toast.error(data.message || 'PDF export rate limit reached.', {
                     id: 'pdf-export-toast',
                     duration: 6000,
@@ -721,7 +707,7 @@ export function useExamState(props: ExamIndexProps) {
                 id: 'pdf-export-toast',
             });
             triggerPdfExport({
-                questions: pool,
+                questions: data.questions,
                 title: details.title || 'Civil Service Examination',
                 exportToken: data.export_token,
             });

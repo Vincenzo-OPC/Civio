@@ -31,21 +31,13 @@ Light violet `#5B35F5`. Logo green `#B3F52D`. Dark paper `#000000`. Solid study 
 
 Approved homepage lines, if you touch that screen: "PHILIPPINE CIVIL SERVICE EXAM", "Choose Your Exam." No subtitle. Professional: 150 questions, 3 h 10 m. Subprofessional: 145 questions, 2 h 40 m.
 
-## Next task: stop the booklet from printing a fake answer key
+## PDF answer-key fix completed (17 October 2026)
 
-The setup screen no longer says the PDF includes an answer key. The renderer still does.
+The dedicated `POST /exams/export-pdf` route calls `checkPdfExportLimit` before returning keys and shares the existing daily throttle. It uses server-selected items in stored option order, accepts no question/session selector, and refuses export while the requesting learner has any active Strict Mock (including guest sessions retained after login). Its response is private/no-store. The response token only deduplicates client rendering; it grants no server access.
 
-[printable-exam.tsx](../resources/js/pages/user/exams/components/printable-exam.tsx) builds a key from `correct_option`. [handlePrintExam](../resources/js/pages/user/exams/hooks/use-exam-state.ts) loads questions with [startMockSession](../resources/js/pages/user/exams/utils/mock-session.ts), and [MockSessionService.php](../app/Services/Exam/MockSessionService.php) withholds keys. Missing `correct_option` becomes `0`, so the printed key can be all A.
+Normal `POST /exams/sessions` remains keyless. The booklet omits the whole key page unless every item has an integer key inside its actual options. The permission-gated button now says "Download PDF & Answer Key". PDF code remains lazy.
 
-Do this:
-
-1. Omit the answer-key pages unless the payload includes real keys.
-2. Add a server export that returns keys only after `checkPdfExportLimit` succeeds for that user. Do not put keys in `POST /exams/sessions`.
-3. Keep the button hidden unless `auth.user.role === 'admin'` or `can_download_pdf`.
-4. Label it "Download PDF & Answer Key" only after a test proves the letters match the stored keys.
-5. Do not load the PDF libraries into the exam bundle.
-
-Tests: a feature test that a normal session payload has no `correct_option`, and that the authorized export's letters match the database. Run `php artisan test`, `npm run types:check`, `npm run test:js`, `npm run build`, `npm run size`.
+Evidence: `tests/Feature/User/PdfAnswerKeyTest.php` covers stored A/B/C/D keys and printed option order, keyless sessions, guests, permission denial, arbitrary selectors, Strict Mock locks, expired locks, invalid database keys, and throttling. `tests/Js/pdf-answer-key.test.ts` covers missing/invalid keys and renderer wiring. Verified on 17 October 2026 from a fresh clone: `php artisan test` 323 passed (7,478 assertions), `npm run test:js` 94 passed, and `types:check`, `lint:check`, `build` and `size` passed (exam chunk 10.22 kB of 11 kB; all JS 1,035,732 B of 1,040,000 B). The PDF libraries (`jspdf`, `html2canvas`) build as separate lazy chunks, not into the exam chunk.
 
 ## Later phases
 
@@ -55,11 +47,11 @@ Do them in order. One slice each.
 | --- | --- | --- | --- |
 | 1. CI | [tests.yml](../.github/workflows/tests.yml) runs Pest, build, types, JS tests, and size. [lint.yml](../.github/workflows/lint.yml) is read-only and uses `npm ci`. | Formatting is not enforced. `npm run format:check` fails on 81 existing files. `composer lint:check` fails on 5 PHP files. Switching CI to those commands would turn `main` red. | Format those files in one commit, then change lint.yml from `composer lint`, `npm run format`, and `npm run lint` to `composer lint:check`, `npm run format:check`, and `npm run lint:check`. |
 | 2. Performance | Lite Mode already turns on for Save-Data and slow-2g, 2g, or 3g. A manual on or off beats that. CSS is 28.58 kB brotli of 33 kB. | There is no separate Enhanced tier. Confirm a connection change cannot rebuild an exam in progress. | Read [LITE_MODE_PLAN.md](LITE_MODE_PLAN.md) and [lite-mode.ts](../resources/js/lib/lite-mode.ts). Do not add a second mode system. |
-| 3. Exam setup | Study Mode and Exam Mode copy no longer mentions Dexter. The "Mode" legend is screen-reader only. The PDF sentence is gone. | The false printed key, above. | [setup-exam-view.tsx](../resources/js/pages/user/exams/components/setup-exam-view.tsx). |
+| 3. Exam setup | Study Mode and Exam Mode copy no longer mentions Dexter. PDF export now has an authorized keyed payload and a fail-closed answer-key page. | PDF integrity fix complete; no new mode changes. | [setup-exam-view.tsx](../resources/js/pages/user/exams/components/setup-exam-view.tsx). |
 | 4. Visual polish | Time dials, the 80% mark, and solid buttons exist. | Hover copy on the homepage sample is a `title`, not the exam tooltip. | Do not add Motion. Reuse CSS. |
 | 5. Exam workspace | The live exam is the source of truth. | No rendered screenshot was captured in the last session. | Compare [exam-screen-preview.tsx](../resources/js/components/domain/exam-screen-preview.tsx) with the live exam when you change a control. |
 | 6. Teaching | Reveal checks perimeter, PEMDAS, sequences, filing, mixture, grammar, mean, median, percent, interest, and factors against the key. | Many items still show only the stored explanation. | Add one solver in [RevealTutor.php](../app/Services/Exam/Reveal/RevealTutor.php) with a Pest test. Never publish a lesson that disagrees with the key. |
-| 7. FSRS | Wrapper and unit tests only. | No table, no write on answer, no due queue, no offline sync. | Do not start until the PDF key bug is fixed. Schema, then one drill write, then a due list. |
+| 7. FSRS | Wrapper and unit tests only. | No table, no write on answer, no due queue, no offline sync. | PDF prerequisite complete. Establish durable server-graded review events before scheduling; see the delivery recommendation. |
 | 8. Dashboard | History, drills, and the calendar exist. | Meters must come from stored data. No fake readiness. | [CODEX_HANDOFF_PLAN.md](CODEX_HANDOFF_PLAN.md) section 0.2 is the brief, not a claim that it exists. |
 | 9. Book architecture | The exam booklet generator exists. The Complete Reviewer does not. | Separate content from print. Do not import the typesetter into the exam bundle. | Research Vivliostyle, Paged.js, or Typst. Pick one. |
 | 10. Sample chapter | Not started. | One verified chapter: terminal-digit filing, from the definition through worked items. | Write the lesson before the layout. |
@@ -73,3 +65,7 @@ Do them in order. One slice each.
 - Do not commit `.env`, databases, or the local asset-root override.
 - Do not force-push.
 - Do not touch protected MSI containers or Hermes.
+
+## Delivery recommendation
+
+See [LEARNING_DELIVERY_RECOMMENDATION.md](LEARNING_DELIVERY_RECOMMENDATION.md) for the evidence-based Astra assessment. The highest-value next learning slice is a persistent, owner-scoped return-to-mistakes queue from server-graded drills, with assisted answers distinguished from independent recall. FSRS scheduling follows reliable review-event persistence. No mastery/readiness model, Complete Reviewer, or sample chapter is claimed.

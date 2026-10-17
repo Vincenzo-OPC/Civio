@@ -40,6 +40,13 @@ git log --oneline HEAD..upstream-baseline/main     # upstream commits Civio lack
 Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 `d3f0368` from GT's MSI tree (see the desktop section).
 
+### PDF integrity (17 October 2026)
+
+| What changed | Why | Commits |
+| --- | --- | --- |
+| Dedicated authorized, throttled PDF export selects its own questions, preserves stored option order, blocks active Strict Mocks, and returns private/no-store keyed payloads. Normal mock sessions remain keyless. The renderer omits the entire answer-key page for any missing or invalid key; permission-gated copy now says Download PDF & Answer Key. | The old export used a keyless mock payload and fabricated A for missing keys. Stored A/B/C/D positions, authorization and Strict Mock protections now have regression tests. | this commit |
+| Astra context assessed against actual code; bounded return-to-mistakes recommendation documented in LEARNING_DELIVERY_RECOMMENDATION.md. | Separate shipped functionality and partial foundations from research ambitions. | this commit |
+
 ### Security and scoring
 
 | What changed | Why | Commits |

@@ -8,12 +8,14 @@ use App\Actions\Exam\SubmitExamAttemptAction;
 use App\DTOs\Exam\ExamSessionQueryData;
 use App\DTOs\Exam\SubmitExamAttemptData;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\User\Exam\ExportPdfRequest;
 use App\Http\Requests\User\Exam\StoreExamAttemptRequest;
 use App\Models\ExamSession;
 use App\Models\Question;
 use App\Services\Dexter\DexterEvaluationService;
 use App\Services\Exam\ExpoundService;
 use App\Services\Exam\MockSessionService;
+use App\Services\Exam\PdfExamExportService;
 use App\Services\Exam\Reveal\RevealTutor;
 use App\Services\Exam\StrictMockLock;
 use App\Services\ExamService;
@@ -114,6 +116,28 @@ class ExamController extends Controller
             'message' => 'PDF export authorized.',
             'export_token' => Str::random(40),
         ]);
+    }
+
+    /** Authorize and generate a separate booklet, never an active attempt's keys. */
+    public function exportPdf(ExportPdfRequest $request, PdfExamExportService $export): JsonResponse
+    {
+        $authorization = $this->checkPdfExportLimit($request);
+        if ($authorization->getStatusCode() !== 200) {
+            return $authorization;
+        }
+
+        $data = $request->validated();
+
+        if ($this->strictMockLock->lockedQuestionIds($request->user()->id, $request->session()) !== []) {
+            return response()->json(['success' => false, 'message' => StrictMockLock::MESSAGE], 423);
+        }
+
+        return response()->json([
+            'success' => true,
+            // A client deduplication ID only; never accepted as authorization.
+            'export_token' => Str::uuid()->toString(),
+            'questions' => $export->questions($data['track']),
+        ])->header('Cache-Control', 'private, no-store');
     }
 
     /**
