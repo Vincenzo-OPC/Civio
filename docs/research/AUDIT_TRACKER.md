@@ -273,3 +273,11 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
   - Clerical filing 41
   - R.A. 6713 32 (CoS topic-mix decision)
 - Packet: `audit/gap-fill-2000-01-review-request.md`. Next: gap-fill-2000-02 (Numerical basic operations and sequences, plus FIL reading and paragraph order).
+
+## 2026-10-18: gap-fill-2000-06, lint fixes for FV / Analytical / Clerical / GI Release Collection picks (247 + 7, pending CoS)
+
+- File: `docs/research/audit/fixes/gap-fill-2000-06-lintfix.json`, built by `scripts/batches/gapfill/lintfix_2000_06.py` with data in `lintfix_2000_06_data.py`. Each fix is an `<id>-LINTFIX` copy with `fix_of`, status draft/unreviewed. Originals are untouched.
+- Fixes by subject: Filipino Verbal 39, Analytical 96, Clerical 58, GI 54. There are also 7 Filipino passage-set companions, because five short passages were lengthened to the 400-character sibling floor.
+- Series, data-interpretation and numeric/date filing explanations are generated and key-checked by code. GI fixes cite LawPhil sections; all 61 quoted spans were verified against the LawPhil text.
+- QA on `integration/2000`: `explanation_lint` 0 flagged; `qa_fixfile` 0 problems against 1,811 bank items.
+- Packet: `audit/gap-fill-2000-06-lintfix-review-request.md`. It includes 7 CoS decisions, among them the R.A. 6713 Sec. 2→1 citation in 000302 and the arma_solver "business" mismatch on GAP3-0020.
