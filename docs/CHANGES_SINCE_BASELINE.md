@@ -151,6 +151,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 
 | What changed | Why | Commits |
 | --- | --- | --- |
+| `pages/dev-docs.tsx` opts out of the React Compiler (`'use no memo'`). | On Node 22 the compiler memoized this large static page and added about 7.8 kB brotli, which pushed the all-chunks budget to 1,043,665 B of 1,040,000 B and failed the CI `size` step (eca4268, 716dc94, 9611b91, fb71fb5). Node 20 bailed out, so local runs passed. Builds are now 1,035,527 B on Node 20 and 22. | this commit |
 | Inertia pages lazy-loaded (no eager `import.meta.glob`), so routes split into chunks. | The main bundle was ~3 MB eager. | `6277c17` |
 | Hand-written `public/sw.js` replaced by vite-plugin-pwa `injectManifest` (`resources/js/sw.ts`): exams, auth, dashboard and other sensitive routes are NetworkOnly; prompt-to-update. | Old SW risked caching exam payloads. | `9fe51a4`, `647e484` |
 | Lite L0: PDF export (jspdf, html2canvas-pro) and the printable booklet load only when exporting/printing; realtime (Echo + Pusher) loads on demand via `lib/realtime.ts`; hero served as AVIF/WebP with PNG fallback; 3.5 KB logo mark for header and favicon; unused Instrument Sans web fonts and their 6 preloads removed; PWA precache trimmed to the app shell + critical routes, other hashed chunks cached on first use. | First-load JS was 436–496 KB gzip on every page; now 213–284 KB. Lighthouse mobile landing 70 → 85, exam 61 → 77. | `5ea1cd5` |
@@ -169,7 +170,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 
 | What changed | Why | Commits |
 | --- | --- | --- |
-| Formatting backlog cleared: Prettier on 81 files under `resources/`, Pint on 5 PHP files (trailing newlines, `!` spacing, unused imports, `scripts/_check_demo.php` encoding). No logic changes. | `npm run format:check` and `composer lint:check` now pass, so CI can enforce them. | this commit |
+| Formatting backlog cleared: Prettier on 81 files under `resources/`, Pint on 5 PHP files (trailing newlines, `!` spacing, unused imports, `scripts/_check_demo.php` encoding). No logic changes. | `npm run format:check` and `composer lint:check` now pass, so CI can enforce them. | `fb71fb5` |
 | `AGENTS.md`, `CLAUDE.md`, `ENTIRE.md`, `.entire/`; Entire hooks for Codex (`.codex/hooks.json`) and Claude Code (`.claude/settings.json`) plus committed git hooks in `.githooks/` (the earlier `.cursor/hooks.json` was dropped); docs for architecture, deploy, libraries, audit plan, build brief, question design spec, AI study system, AI product standard, external AI handoff, desktop patches. | Repeatable agent work and decisions on record. | `d66d2aa`, `5fe2d40`, `9fe51a4`, `e4e3d4c`…`1d4c96d`, `9ab859c`, `9f3891c`, `9bf7508` |
 | Pest coverage for server scoring, Unicode round-trip, bank repair, clone removal, tutor stub; JS tests (`npm run test:js`) for clocks, study bias, home launchers, AI handoff, FSRS, mock pools, Lite mode. Pest for the server mock selector, mock sessions and Lite prop trimming. tsc/eslint green. | The baseline had no tests for these paths. | `d19afda`, `22fc855`, `4bce08e`, `ed5aa64`, `acedd26`, others above |
 | `CHANGELOG.md` via git-cliff (`npm run changelog`), bundle budgets via size-limit (`npm run size`), `docs/LITE_MODE_PLAN.md`. | Track releases and page weight. | this doc's commit series |

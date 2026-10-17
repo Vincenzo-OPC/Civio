@@ -1,6 +1,9 @@
 import { Head } from '@inertiajs/react';
 
 export default function DevDocs() {
+    // Static page: memoizing it only adds bundle weight, and the compiler output differs by Node version.
+    'use no memo';
+
     return (
         <>
             <Head title="Developer Docs" />
