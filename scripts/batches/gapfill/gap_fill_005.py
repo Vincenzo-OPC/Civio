@@ -19,12 +19,12 @@ def add(arch, comp, concept, micro, diff, secs, stem, choices, terms, method, sc
           "reveal": {"terms": terms, "shortcut": method, "why_correct": choices[IDS.index(k)][2],
                      "why_wrong": {IDS[i]: c[2] for i, c in enumerate(choices) if c[1]}},
           "distractor_reasoning": {IDS[i]: c[1] for i, c in enumerate(choices) if c[1]},
-          "source": "Original, Civio", "source_url": None, "source_group": "civio", "status": "draft", "review_status": "unreviewed",
-          "reviewer": None, "reviewed_at": None,
+          "source": "Original, Civio", "source_url": None, "source_group": "civio", "status": "approved", "review_status": "passed",
+          "reviewer": "Chief of Staff (final approval, delegated by GT)", "reviewed_at": "2026-10-17",
           "provenance": {"author": "Grok Bot", "method": "ai_assisted", "created_at": "2026-10-17T16:30:00+08:00", "spec_version": "0.1.9"},
           "_legacy": True}
     if sc: it["shortcut"] = sc
-    if notes: it["notes"] = notes
+    it["notes"] = (notes + " | " if notes else "") + "Approved by CoS 2026-10-17."
     items.append(it)
 MICRO = {"VEN-RC-MAIN": "identify the main idea or best title", "VEN-RC-DETAIL": "locate a stated detail", "VEN-RC-INFER": "draw a supported inference", "VEN-RC-VOCAB": "use context to find a word's meaning"}
 SECS = {"VEN-RC-MAIN": 75, "VEN-RC-DETAIL": 60, "VEN-RC-INFER": 80, "VEN-RC-VOCAB": 55}
@@ -45,6 +45,6 @@ for j, (diff, special, key, wrong, method) in enumerate(SS):
         method, None, rotate=(j + 2) % 4)
 from collections import Counter
 print(len(items), Counter(i["archetype"] for i in items), Counter(i["answer_option_id"] for i in items))
-json.dump({"batch": "gap-fill-005", "spec_version": "0.1.9", "status": "draft (awaiting CoS)", "source_group": "civio",
+json.dump({"batch": "gap-fill-005", "spec_version": "0.1.9", "status": "approved (CoS 2026-10-17)", "source_group": "civio",
            "notes": "Original English Verbal drafts for thin areas (Sentinel dossier) and to replace the rejected batch-002 para-order and error items. Sentence-structure codes VEN-RUN-ON, VEN-FRAGMENT, VEN-MODIFIER-PLACE approved by CoS (spec 0.1.9). Reading comprehension: 7 passages of 150-250 words with 2-3 questions each (spec 10.8); siblings share a passage tag in notes. _legacy: hand-written, so no generator solver applies.",
            "items": items}, open("docs/research/gap-fill-005.json", "w"), ensure_ascii=False, indent=2)

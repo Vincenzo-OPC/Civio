@@ -2,7 +2,7 @@
  "round": "03",
  "batch": "baseline-b1",
  "date": "2026-10-17",
- "note": "Approved by CoS 2026-10-17 (10 as proposed; #292 Compelled, #312 Conscientiously, #298 foil Subpoene, #311 Nusiance recoded SPL-SOUND). Applied to the MSI local DB. Rows keep their id; the remaining duplicates of these old targets (#53, #55, #509-#514, #516, #517, #547) still retire.",
+ "note": "Approved by CoS 2026-10-17 (10 as proposed; #292 Compelled, #312 Sergeant (CoS asked for Questionnaire, already a bank target), #298 foil Subpoene, #311 Nusiance recoded SPL-SOUND). Applied to the MSI local DB. Rows keep their id; the remaining duplicates of these old targets (#53, #55, #509-#514, #516, #517, #547) still retire.",
  "swaps": [
   {
    "baseline_id": 54,
@@ -273,21 +273,21 @@
     "Definitly",
     "Definetely"
    ],
-   "new_target": "Conscientiously",
-   "stem": "Which spelling is correct in the sentence “She checked every entry _____ before signing”?",
+   "new_target": "Sergeant",
+   "stem": "Which spelling is correct in the sentence “The desk _____ signed the police blotter”?",
    "options": [
-    "Concientiously",
-    "Conscientously",
-    "Conscientiously",
-    "Conscienciously"
+    "Sargeant",
+    "Sergant",
+    "Sergeant",
+    "Seargant"
    ],
    "correct_option": 2,
    "foil_codes": {
-    "Concientiously": "SPL-SILENT",
-    "Conscientously": "SPL-DROP",
-    "Conscienciously": "SPL-SOUND"
+    "Sargeant": "SPL-SOUND",
+    "Sergant": "SPL-DROP",
+    "Seargant": "SPL-SOUND"
    },
-   "explanation": "Conscientiously is conscientious + -ly: con-sci-en-tious-ly. Keep the sc of science, the i before -ous, and the t that sounds like sh.",
+   "explanation": "Sergeant is ser-geant: it starts with ser- even though it sounds like sar-, and the ending is -geant, with e before a.",
    "status": "approved (CoS 2026-10-17)"
   },
   {

@@ -224,7 +224,7 @@ Informed by: URLs 4, 5, 6 (URL 19 failed).
 | VEN-RC-INFER | What the passage implies | 2 | Goes beyond the text; extreme words | 70 |
 | VEN-RC-VOCAB | Word meaning in the passage | 1 | Dictionary meaning that does not fit here | 40 |
 
-Wording level: sentences 10–25 words; passages 150–250 words (shorter than some reviewers, to keep the clock realistic); topics are civic, workplace, health, environment, community. Note: URL 6 was almost all literal recall. Civio RC sets must include at least one inference and one vocabulary-in-context item per passage.
+Wording level: sentences 10–25 words; passages 150–250 words (shorter than some reviewers, to keep the clock realistic); topics are civic, workplace, health, environment, community. Note: URL 6 was almost all literal recall. Civio RC sets must include at least one main-idea or detail item and at least one inference or vocabulary-in-context item per passage (v0.1.9, §10.8).
 
 Distractor codes:
 - `VEN-NEAREST-NOUN` verb agrees with the closest noun, not the subject
@@ -742,6 +742,10 @@ them (see `docs/QUESTION_SOURCE_GROUPS.md`).
 ### 10.8 CoS round 03 rulings (2026-10-17, v0.1.9)
 
 - **Sentence-structure codes adopted:** `VEN-RUN-ON`, `VEN-FRAGMENT`, `VEN-MODIFIER-PLACE` (Section 3, English distractor codes).
-- **Reading passages follow Section 3:** 150–250 words, with 2–3 questions per passage that mix main idea, detail and inference. The rule that each passage includes an inference item still applies. The app has no passage sets, so each item carries the full passage in its stem, followed by its own question. Stems therefore stay unique, because the importer matches on stem. Sibling items name their passage in `notes` ("Passage <batch>-P<n>, question k of m"). `qa.py` allows near-duplicate stems only between siblings with an identical passage block and different questions.
+- **Reading passages follow Section 3:** 150–250 words, with 2–3 questions per passage. *(Relaxed by CoS 2026-10-17, 3:43 PM:)* each passage needs at least 1 main-idea or detail question and at least 1 inference or vocabulary question; this replaces the Section 3 rule of one inference and one vocabulary item per passage. The app has no passage sets, so each item carries the full passage in its stem, followed by its own question. Stems therefore stay unique, because the importer matches on stem. Sibling items name their passage in `notes` ("Passage <batch>-P<n>, question k of m") until a real `passage_id` field ships (app work, see `docs/FACT_ID_MOCK_RULE_BRIEF.md`). `qa.py` allows near-duplicate stems only between siblings with an identical passage block and different questions.
 - **`fact_id` (optional string):** items that test the same fact in different formats share a fact ID, and a mock serves one item per fact ID. Enforcing this is app code; see `docs/FACT_ID_MOCK_RULE_BRIEF.md`.
 - **`theme` (optional string):** a content-theme tag, for example `first-measure-misleads`. A mock serves at most 2 items with the same theme. Enforcing this is app code (same brief).
+- **Sentence-structure option sets must vary (CoS 2026-10-17, for the next batches).** Do not build every item from one comma splice, one fragment and one dangling modifier around the key. Mix in:
+  - items whose wrong choices include two errors of the same type (for example two different run-ons);
+  - "Which sentence is NOT correctly constructed?" items, where three choices are correct and the key holds the error;
+  - keys with less obvious but correct structures (inverted order, a long introductory phrase, a correctly punctuated semicolon or colon, a correct sentence that looks like a fragment).

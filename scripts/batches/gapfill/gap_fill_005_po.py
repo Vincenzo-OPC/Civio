@@ -108,7 +108,7 @@ INSERT = [
  "Almost every part of the fruit can be put to use.", 1,
  {2: ("LOG-IGNORED-CLUE", "\"For one\" in sentence 2 starts a list, so the statement it illustrates must come first."),
   3: ("LOG-IGNORED-CLUE", "Placed here, the general statement would interrupt the list of examples."),
-  4: ("PO-OPENER-MISPLACED", "\"For one\" in sentence 2 needs the general statement before the examples, not after them.")},
+  4: ("LOG-IGNORED-CLUE", "\"For one\" in sentence 2 needs the general statement before the examples, not after them.")},
  "The new sentence states the general idea, and \"for one\" in sentence 2 begins the examples of it.",
  "Sentence insertion: a general statement goes before the examples that illustrate it.", "\"For one\" signals the first example of something already stated.", None),
 ("medium", "(1) Jeepney drivers usually pay a daily \"boundary\" to the owner of the vehicle. (2) Whatever they earn above that amount, after fuel, is their income for the day. (3) On slow days, however, a driver may work twelve hours and still take home very little. (4) This system helps explain why some drivers race to pick up passengers ahead of their rivals.",

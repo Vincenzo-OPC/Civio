@@ -43,6 +43,16 @@ CoS accepted 8 GI items from `docs/research/chatgpt-batch-003.json` as **variant
 
 Until this ships, a Verbal mock could draw more than 2 of the 8 themed items. They are among about 590 active Verbal items, so the risk is low.
 
+## Addendum 2 (CoS 2026-10-17, 3:43 PM): a real `passage_id` field
+
+Reading passages now come in sets of 2–3 questions (spec v0.1.9, §10.8). Each item carries the full passage in its stem, and today siblings are tagged only in `notes` ("Passage gap-fill-005-P01, question 1 of 3"). gap-fill-005 has 7 sets, all active on the MSI.
+
+9. Add a migration for a nullable, indexed `questions.passage_id` column (string, 100). `civio:import-batch` should save `$item['passage_id'] ?? null`, and, until the batch files carry the field, parse it from the `notes` tag `Passage <id>, question k of m`.
+10. Mock rule: serve at most one question per `passage_id` per mock, so a reader never sees the same passage twice in one session. Alternatively, serve the whole set together, if the UI can show a shared passage. The simpler version is one per mock. Drills can serve whole sets.
+11. Add a Pest test: in a pool with one 3-question set, a mock contains at most 1 of the 3.
+
+Grok Bot keeps the `notes` tag until this ships, then backfills `passage_id` into the batch JSON.
+
 ## Not in scope
 
 - No change to approved item text.

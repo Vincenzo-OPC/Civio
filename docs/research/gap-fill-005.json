@@ -1,7 +1,7 @@
 {
   "batch": "gap-fill-005",
   "spec_version": "0.1.9",
-  "status": "draft (awaiting CoS)",
+  "status": "approved (CoS 2026-10-17)",
   "source_group": "civio",
   "notes": "Original English Verbal drafts for thin areas (Sentinel dossier) and to replace the rejected batch-002 para-order and error items. Sentence-structure codes VEN-RUN-ON, VEN-FRAGMENT, VEN-MODIFIER-PLACE approved by CoS (spec 0.1.9). Reading comprehension: 7 passages of 150-250 words with 2-3 questions each (spec 10.8); siblings share a passage tag in notes. _legacy: hand-written, so no generator solver applies.",
   "items": [
@@ -54,10 +54,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -66,61 +66,61 @@
       },
       "_legacy": true,
       "shortcut": "For a main-idea item, the right answer must cover every part of the passage.",
-      "notes": "Passage gap-fill-005-P01, question 1 of 3"
+      "notes": "Passage gap-fill-005-P01, question 1 of 3 | Approved by CoS 2026-10-17."
     },
     {
-      "id": "CIVIO-GAP5-VEN-RC-INFER-0002",
+      "id": "CIVIO-GAP5-VEN-RC-DETAIL-0002",
       "track": "both",
       "domain": "verbal_en",
       "competency": "Reading comprehension",
       "concept": "reading comprehension",
-      "micro_skill": "draw a supported inference",
-      "archetype": "VEN-RC-INFER",
-      "difficulty": "medium",
-      "est_seconds": 80,
+      "micro_skill": "locate a stated detail",
+      "archetype": "VEN-RC-DETAIL",
+      "difficulty": "easy",
+      "est_seconds": 60,
       "language": "en",
-      "stem": "Read the passage and answer the question that follows.\n\nAlong the coast of Bohol, fishing families once cut mangroves for firewood and cleared them to build fishponds. The loss seemed small at first, because the trees grew in muddy places that few people visited. When strong typhoons arrived, however, the difference became clear. Villages that had lost their mangroves often saw more homes damaged by storm surge, while villages behind thick stands of trees suffered less. Mangrove roots slow incoming waves and trap mud, so the shoreline wears away more slowly. The trees also shelter young fish and crabs, which later support the catch of the same families who once cut them down. Since the 1990s, several towns have replanted mangroves with help from schools and fisherfolk associations. Not every effort succeeded. Seedlings planted on sandy beaches or in the wrong tidal zone often died within months. The projects that lasted chose species suited to each site and planted where mangroves had grown before. They also asked residents to tend the young trees until they were established.\n\nWhy would cutting the mangroves eventually hurt the families' own fishing, according to what the passage implies?",
+      "stem": "Read the passage and answer the question that follows.\n\nAlong the coast of Bohol, fishing families once cut mangroves for firewood and cleared them to build fishponds. The loss seemed small at first, because the trees grew in muddy places that few people visited. When strong typhoons arrived, however, the difference became clear. Villages that had lost their mangroves often saw more homes damaged by storm surge, while villages behind thick stands of trees suffered less. Mangrove roots slow incoming waves and trap mud, so the shoreline wears away more slowly. The trees also shelter young fish and crabs, which later support the catch of the same families who once cut them down. Since the 1990s, several towns have replanted mangroves with help from schools and fisherfolk associations. Not every effort succeeded. Seedlings planted on sandy beaches or in the wrong tidal zone often died within months. The projects that lasted chose species suited to each site and planted where mangroves had grown before. They also asked residents to tend the young trees until they were established.\n\nAccording to the passage, why did many replanted seedlings die?",
       "options": [
         {
           "option_id": "o1",
-          "text": "Without the trees, fewer young fish and crabs survive to be caught later."
+          "text": "They were planted on sandy beaches or in the wrong tidal zone."
         },
         {
           "option_id": "o2",
-          "text": "Fishponds built on the cleared land took the place of open fishing grounds."
+          "text": "Fishing families cut them for firewood before they could grow."
         },
         {
           "option_id": "o3",
-          "text": "Storm surge destroyed every fishing boat in the villages without mangroves."
+          "text": "Storm surge from strong typhoons washed the young trees away."
         },
         {
           "option_id": "o4",
-          "text": "The families stopped fishing and turned to selling firewood."
+          "text": "They were species chosen to suit each planting site."
         }
       ],
       "answer_option_id": "o1",
       "reveal": {
-        "terms": "Inference: a conclusion the passage supports without stating it word for word.",
-        "shortcut": "Link two facts: the trees shelter young fish, and those fish later support the catch.",
-        "why_correct": "The trees shelter young fish and crabs that later support the catch, so losing the trees means a smaller catch later.",
+        "terms": "Detail question: the answer is stated in the passage.",
+        "shortcut": "Find the sentence after \"Not every effort succeeded.\"",
+        "why_correct": "The passage says seedlings planted on sandy beaches or in the wrong tidal zone often died within months.",
         "why_wrong": {
-          "o2": "The passage never says the fishponds replaced fishing grounds.",
-          "o3": "The passage says more homes were damaged; it says nothing about every boat.",
-          "o4": "The passage says the same families still depend on the catch."
+          "o2": "Cutting for firewood is what happened to the old mangroves, not the seedlings.",
+          "o3": "The passage never says typhoons destroyed seedlings.",
+          "o4": "Choosing suitable species is what made the lasting projects succeed."
         }
       },
       "distractor_reasoning": {
         "o2": "RC-NOT-IN-TEXT",
-        "o3": "RC-EXTREME",
+        "o3": "RC-NOT-IN-TEXT",
         "o4": "RC-OPPOSITE"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -128,7 +128,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P01, question 2 of 3"
+      "notes": "Passage gap-fill-005-P01, question 2 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-VOCAB-0003",
@@ -179,10 +179,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -191,7 +191,7 @@
       },
       "_legacy": true,
       "shortcut": "Read the whole sentence around the word before choosing a meaning.",
-      "notes": "Passage gap-fill-005-P01, question 3 of 3"
+      "notes": "Passage gap-fill-005-P01, question 3 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-DETAIL-0004",
@@ -242,10 +242,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -253,7 +253,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P02, question 1 of 3"
+      "notes": "Passage gap-fill-005-P02, question 1 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-INFER-0005",
@@ -274,7 +274,7 @@
         },
         {
           "option_id": "o2",
-          "text": "Small debts never pile up into the kind that makes neighbors avoid each other."
+          "text": "Small debts cannot quietly pile up into the kind that makes neighbors avoid each other."
         },
         {
           "option_id": "o3",
@@ -304,10 +304,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -315,7 +315,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P02, question 2 of 3"
+      "notes": "Passage gap-fill-005-P02, question 2 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-VOCAB-0006",
@@ -366,10 +366,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -377,7 +377,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P02, question 3 of 3"
+      "notes": "Passage gap-fill-005-P02, question 3 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-MAIN-0007",
@@ -428,10 +428,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -439,7 +439,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P03, question 1 of 3"
+      "notes": "Passage gap-fill-005-P03, question 1 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-INFER-0008",
@@ -490,10 +490,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -501,7 +501,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P03, question 2 of 3"
+      "notes": "Passage gap-fill-005-P03, question 2 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-VOCAB-0009",
@@ -552,10 +552,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -563,10 +563,72 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P03, question 3 of 3"
+      "notes": "Passage gap-fill-005-P03, question 3 of 3 | Approved by CoS 2026-10-17."
     },
     {
-      "id": "CIVIO-GAP5-VEN-RC-DETAIL-0010",
+      "id": "CIVIO-GAP5-VEN-RC-MAIN-0010",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "identify the main idea or best title",
+      "archetype": "VEN-RC-MAIN",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Read the selection below, then answer the question.\n\nDengue cases in the Philippines usually rise during the rainy months, from June to October. The virus is carried by the Aedes mosquito, which bites mostly during the day, especially in the early morning and late afternoon. Unlike many other mosquitoes, it breeds in clean, still water rather than in swamps or canals. Old tires, flower vases, uncovered drums and even bottle caps can hold enough water for its eggs. The eggs can survive for months on the dry wall of a container and hatch once rain fills it again. For this reason, health workers ask every household to follow a simple routine. Once a week, search the house and yard for containers that collect water, then empty, scrub, cover or throw them away. Scrubbing matters because emptying a container does not remove the eggs stuck to its sides. Spraying insecticide can kill adult mosquitoes, but it does little if breeding sites remain. A new generation soon replaces the ones that died.\n\nWhich statement best expresses the main idea of this passage on dengue?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Preventing dengue depends on clearing breeding water at home every week."
+        },
+        {
+          "option_id": "o2",
+          "text": "The Aedes mosquito bites mostly in the early morning and late afternoon."
+        },
+        {
+          "option_id": "o3",
+          "text": "Insecticide spraying is the most effective way to prevent dengue."
+        },
+        {
+          "option_id": "o4",
+          "text": "Mosquito-borne diseases are the leading health problem in the country."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Main idea: the one statement that covers the whole passage.",
+        "shortcut": "The passage builds toward the weekly routine; the facts about breeding explain why it works.",
+        "why_correct": "The passage explains where the mosquito breeds and why the weekly search-and-scrub routine matters more than spraying.",
+        "why_wrong": {
+          "o2": "True, but it is one detail; the passage is about breeding sites and how to remove them.",
+          "o3": "The passage says spraying does little while breeding sites remain.",
+          "o4": "The passage makes no such comparison and covers only dengue."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-TOO-NARROW",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-TOO-BROAD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "_legacy": true,
+      "notes": "Passage gap-fill-005-P04, question 1 of 3 | Approved by CoS 2026-10-17."
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-DETAIL-0011",
       "track": "both",
       "domain": "verbal_en",
       "competency": "Reading comprehension",
@@ -580,44 +642,44 @@
       "options": [
         {
           "option_id": "o1",
-          "text": "In clean, still water held by containers"
-        },
-        {
-          "option_id": "o2",
           "text": "In swamps and drainage canals"
         },
         {
-          "option_id": "o3",
+          "option_id": "o2",
           "text": "In tall grass near rice fields"
         },
         {
-          "option_id": "o4",
+          "option_id": "o3",
           "text": "In any standing water, clean or dirty"
+        },
+        {
+          "option_id": "o4",
+          "text": "In clean, still water held by containers"
         }
       ],
-      "answer_option_id": "o1",
+      "answer_option_id": "o4",
       "reveal": {
         "terms": "Detail question: the answer is stated in the passage.",
         "shortcut": "Find the sentence that starts \"Unlike many other mosquitoes\".",
         "why_correct": "The passage names clean, still water in tires, vases, drums and bottle caps.",
         "why_wrong": {
-          "o2": "The passage says it breeds in clean, still water rather than in swamps or canals.",
-          "o3": "Grass and rice fields are not mentioned.",
-          "o4": "The passage limits it to clean, still water."
+          "o1": "The passage says it breeds in clean, still water rather than in swamps or canals.",
+          "o2": "Grass and rice fields are not mentioned.",
+          "o3": "The passage limits it to clean, still water."
         }
       },
       "distractor_reasoning": {
-        "o2": "RC-OPPOSITE",
-        "o3": "RC-NOT-IN-TEXT",
-        "o4": "RC-TOO-BROAD"
+        "o1": "RC-OPPOSITE",
+        "o2": "RC-NOT-IN-TEXT",
+        "o3": "RC-TOO-BROAD"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -625,10 +687,10 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P04, question 1 of 3"
+      "notes": "Passage gap-fill-005-P04, question 2 of 3 | Approved by CoS 2026-10-17."
     },
     {
-      "id": "CIVIO-GAP5-VEN-RC-INFER-0011",
+      "id": "CIVIO-GAP5-VEN-RC-INFER-0012",
       "track": "both",
       "domain": "verbal_en",
       "competency": "Reading comprehension",
@@ -650,14 +712,14 @@
         },
         {
           "option_id": "o3",
-          "text": "It should spray insecticide instead of emptying the drum."
+          "text": "The drum may still breed mosquitoes once it is refilled."
         },
         {
           "option_id": "o4",
-          "text": "The drum may still breed mosquitoes once it is refilled."
+          "text": "It should spray insecticide instead of emptying the drum."
         }
       ],
-      "answer_option_id": "o4",
+      "answer_option_id": "o3",
       "reveal": {
         "terms": "Inference: apply what the passage says to a new case.",
         "shortcut": "Connect two sentences: eggs stick to the walls, and emptying does not remove them.",
@@ -665,21 +727,21 @@
         "why_wrong": {
           "o1": "Emptying alone does not remove the eggs, so a breeding site remains.",
           "o2": "The passage does not say the dry months are safe; eggs wait for rain.",
-          "o3": "The passage says spraying does little while breeding sites remain."
+          "o4": "The passage says spraying does little while breeding sites remain."
         }
       },
       "distractor_reasoning": {
         "o1": "RC-EXTREME",
         "o2": "RC-NOT-IN-TEXT",
-        "o3": "RC-OPPOSITE"
+        "o4": "RC-OPPOSITE"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -687,69 +749,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P04, question 2 of 3"
-    },
-    {
-      "id": "CIVIO-GAP5-VEN-RC-VOCAB-0012",
-      "track": "both",
-      "domain": "verbal_en",
-      "competency": "Reading comprehension",
-      "concept": "reading comprehension",
-      "micro_skill": "use context to find a word's meaning",
-      "archetype": "VEN-RC-VOCAB",
-      "difficulty": "easy",
-      "est_seconds": 55,
-      "language": "en",
-      "stem": "Read the selection below, then answer the question.\n\nDengue cases in the Philippines usually rise during the rainy months, from June to October. The virus is carried by the Aedes mosquito, which bites mostly during the day, especially in the early morning and late afternoon. Unlike many other mosquitoes, it breeds in clean, still water rather than in swamps or canals. Old tires, flower vases, uncovered drums and even bottle caps can hold enough water for its eggs. The eggs can survive for months on the dry wall of a container and hatch once rain fills it again. For this reason, health workers ask every household to follow a simple routine. Once a week, search the house and yard for containers that collect water, then empty, scrub, cover or throw them away. Scrubbing matters because emptying a container does not remove the eggs stuck to its sides. Spraying insecticide can kill adult mosquitoes, but it does little if breeding sites remain. A new generation soon replaces the ones that died.\n\nAs used in the passage, the word \"routine\" refers to:",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "a dull task that people dislike doing"
-        },
-        {
-          "option_id": "o2",
-          "text": "a medical test for dengue"
-        },
-        {
-          "option_id": "o3",
-          "text": "a set of steps repeated on a schedule"
-        },
-        {
-          "option_id": "o4",
-          "text": "an emergency action taken once"
-        }
-      ],
-      "answer_option_id": "o3",
-      "reveal": {
-        "terms": "Vocabulary in context: the sentence after the word often explains it.",
-        "shortcut": "The next sentence begins \"Once a week\", which shows the routine is repeated.",
-        "why_correct": "The routine is the weekly search-and-empty steps described right after the word.",
-        "why_wrong": {
-          "o1": "That is the adjective sense, \"routine work\"; here it names a schedule of steps.",
-          "o2": "No test is mentioned.",
-          "o4": "The steps are repeated every week, the opposite of a single action."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "VRB-SYNONYM-TRAP",
-        "o2": "RC-NOT-IN-TEXT",
-        "o4": "VRB-ANTONYM-TRAP"
-      },
-      "source": "Original, Civio",
-      "source_url": null,
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "Grok Bot",
-        "method": "ai_assisted",
-        "created_at": "2026-10-17T16:30:00+08:00",
-        "spec_version": "0.1.9"
-      },
-      "_legacy": true,
-      "notes": "Passage gap-fill-005-P04, question 3 of 3"
+      "notes": "Passage gap-fill-005-P04, question 3 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-MAIN-0013",
@@ -800,10 +800,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -811,7 +811,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P05, question 1 of 3"
+      "notes": "Passage gap-fill-005-P05, question 1 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-INFER-0014",
@@ -862,10 +862,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -873,7 +873,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P05, question 2 of 3"
+      "notes": "Passage gap-fill-005-P05, question 2 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-VOCAB-0015",
@@ -924,10 +924,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -935,7 +935,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P05, question 3 of 3"
+      "notes": "Passage gap-fill-005-P05, question 3 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-DETAIL-0016",
@@ -986,10 +986,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -997,7 +997,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P06, question 1 of 3"
+      "notes": "Passage gap-fill-005-P06, question 1 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-INFER-0017",
@@ -1048,10 +1048,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -1059,7 +1059,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P06, question 2 of 3"
+      "notes": "Passage gap-fill-005-P06, question 2 of 3 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-RC-VOCAB-0018",
@@ -1110,10 +1110,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -1121,10 +1121,72 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P06, question 3 of 3"
+      "notes": "Passage gap-fill-005-P06, question 3 of 3 | Approved by CoS 2026-10-17."
     },
     {
-      "id": "CIVIO-GAP5-VEN-RC-INFER-0019",
+      "id": "CIVIO-GAP5-VEN-RC-DETAIL-0019",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "locate a stated detail",
+      "archetype": "VEN-RC-DETAIL",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nA text message says that a package could not be delivered and asks the recipient to click a link to pay a small redelivery fee. The link opens a page that looks like a real courier's website, complete with its logo and a tracking number. The page asks for card details or an e-wallet one-time PIN. Scammers rely on the small amount, because people are less careful with fifty pesos than with five thousand. Once the PIN is entered, however, the scammer can use it to empty the account, taking far more than the fee. Banks and e-wallet companies repeat the same rule: a legitimate company will never ask for your one-time PIN by text, call or link. Couriers also say that real redelivery fees are paid at their branches or in their official apps. Many victims later admit that they already knew the rule. They say the message arrived while they were rushing between tasks, and they clicked before they had time to think.\n\nAccording to the passage, where do couriers say real redelivery fees are paid?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Through the link sent in the text message"
+        },
+        {
+          "option_id": "o2",
+          "text": "To the delivery rider at the customer's door"
+        },
+        {
+          "option_id": "o3",
+          "text": "On a bank's page that asks for a one-time PIN"
+        },
+        {
+          "option_id": "o4",
+          "text": "At their branches or in their official apps"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Detail question: the answer is stated in the passage.",
+        "shortcut": "Scan for \"Couriers also say\".",
+        "why_correct": "The passage states this directly.",
+        "why_wrong": {
+          "o1": "The link is the scam; couriers say real fees are paid elsewhere.",
+          "o2": "Paying the rider is never mentioned.",
+          "o3": "The passage warns that no legitimate company asks for a one-time PIN."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o2": "RC-NOT-IN-TEXT",
+        "o3": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "_legacy": true,
+      "notes": "Passage gap-fill-005-P07, question 1 of 2 | Approved by CoS 2026-10-17."
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-INFER-0020",
       "track": "both",
       "domain": "verbal_en",
       "competency": "Reading comprehension",
@@ -1146,14 +1208,14 @@
         },
         {
           "option_id": "o3",
-          "text": "cannot tell a courier's website from a bank's"
+          "text": "act in a hurry without applying what they already know"
         },
         {
           "option_id": "o4",
-          "text": "act in a hurry without applying what they already know"
+          "text": "cannot tell a courier's website from a bank's"
         }
       ],
-      "answer_option_id": "o4",
+      "answer_option_id": "o3",
       "reveal": {
         "terms": "Inference from two sentences: combine what the victims knew with what they were doing.",
         "shortcut": "\"Knew the rule\" rules out ignorance; \"rushing\" gives the real cause.",
@@ -1161,21 +1223,21 @@
         "why_wrong": {
           "o1": "The victims say they already knew the rule.",
           "o2": "The scam works because the fee is small.",
-          "o3": "The passage does not compare courier and bank websites."
+          "o4": "The passage does not compare courier and bank websites."
         }
       },
       "distractor_reasoning": {
         "o1": "RC-OPPOSITE",
         "o2": "RC-OPPOSITE",
-        "o3": "RC-NOT-IN-TEXT"
+        "o4": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -1183,69 +1245,7 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "notes": "Passage gap-fill-005-P07, question 1 of 2"
-    },
-    {
-      "id": "CIVIO-GAP5-VEN-RC-VOCAB-0020",
-      "track": "both",
-      "domain": "verbal_en",
-      "competency": "Reading comprehension",
-      "concept": "reading comprehension",
-      "micro_skill": "use context to find a word's meaning",
-      "archetype": "VEN-RC-VOCAB",
-      "difficulty": "easy",
-      "est_seconds": 55,
-      "language": "en",
-      "stem": "Read the passage and answer the question that follows.\n\nA text message says that a package could not be delivered and asks the recipient to click a link to pay a small redelivery fee. The link opens a page that looks like a real courier's website, complete with its logo and a tracking number. The page asks for card details or an e-wallet one-time PIN. Scammers rely on the small amount, because people are less careful with fifty pesos than with five thousand. Once the PIN is entered, however, the scammer can use it to empty the account, taking far more than the fee. Banks and e-wallet companies repeat the same rule: a legitimate company will never ask for your one-time PIN by text, call or link. Couriers also say that real redelivery fees are paid at their branches or in their official apps. Many victims later admit that they already knew the rule. They say the message arrived while they were rushing between tasks, and they clicked before they had time to think.\n\nAs used in the passage, the word \"legitimate\" most nearly means:",
-      "options": [
-        {
-          "option_id": "o1",
-          "text": "large and well known"
-        },
-        {
-          "option_id": "o2",
-          "text": "born to married parents"
-        },
-        {
-          "option_id": "o3",
-          "text": "genuine and operating lawfully"
-        },
-        {
-          "option_id": "o4",
-          "text": "fake or pretending"
-        }
-      ],
-      "answer_option_id": "o3",
-      "reveal": {
-        "terms": "Vocabulary in context: look for the contrast the sentence draws.",
-        "shortcut": "The passage sets a real company against the scammer, so \"legitimate\" means genuine.",
-        "why_correct": "The sentence contrasts real companies with the scammer's fake page.",
-        "why_wrong": {
-          "o1": "Size and fame are not the point; the rule applies to every real company.",
-          "o2": "That is the family-law sense; here the word describes a company.",
-          "o4": "This is the opposite: the scammer is the fake one."
-        }
-      },
-      "distractor_reasoning": {
-        "o1": "RC-NOT-IN-TEXT",
-        "o2": "VRB-SYNONYM-TRAP",
-        "o4": "VRB-ANTONYM-TRAP"
-      },
-      "source": "Original, Civio",
-      "source_url": null,
-      "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
-      "provenance": {
-        "author": "Grok Bot",
-        "method": "ai_assisted",
-        "created_at": "2026-10-17T16:30:00+08:00",
-        "spec_version": "0.1.9"
-      },
-      "_legacy": true,
-      "notes": "Passage gap-fill-005-P07, question 2 of 2"
+      "notes": "Passage gap-fill-005-P07, question 2 of 2 | Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0021",
@@ -1296,10 +1296,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -1307,7 +1307,8 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "shortcut": "Put \"these/this\" sentences right after what they refer to."
+      "shortcut": "Put \"these/this\" sentences right after what they refer to.",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0022",
@@ -1358,17 +1359,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0023",
@@ -1419,17 +1421,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0024",
@@ -1480,17 +1483,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0025",
@@ -1541,17 +1545,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0026",
@@ -1602,10 +1607,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -1613,7 +1618,8 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "shortcut": "Signal words like first, next and then give the order."
+      "shortcut": "Signal words like first, next and then give the order.",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0027",
@@ -1664,17 +1670,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0028",
@@ -1725,17 +1732,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0029",
@@ -1786,17 +1794,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0030",
@@ -1847,17 +1856,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0031",
@@ -1908,17 +1918,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-ORDER-0032",
@@ -1969,17 +1980,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-INSERT-0033",
@@ -2030,10 +2042,10 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -2041,7 +2053,8 @@
         "spec_version": "0.1.9"
       },
       "_legacy": true,
-      "shortcut": "Find the pointer word in the new sentence and place it right after what it points to."
+      "shortcut": "Find the pointer word in the new sentence and place it right after what it points to.",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-INSERT-0034",
@@ -2092,17 +2105,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-INSERT-0035",
@@ -2153,17 +2167,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-INSERT-0036",
@@ -2214,17 +2229,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-INSERT-0037",
@@ -2270,22 +2286,23 @@
       "distractor_reasoning": {
         "o2": "LOG-IGNORED-CLUE",
         "o3": "LOG-IGNORED-CLUE",
-        "o4": "PO-OPENER-MISPLACED"
+        "o4": "LOG-IGNORED-CLUE"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-INSERT-0038",
@@ -2336,17 +2353,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-INSERT-0039",
@@ -2397,17 +2415,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-PARA-INSERT-0040",
@@ -2458,17 +2477,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0041",
@@ -2519,17 +2539,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0042",
@@ -2580,17 +2601,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0043",
@@ -2641,17 +2663,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0044",
@@ -2702,17 +2725,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0045",
@@ -2763,17 +2787,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0046",
@@ -2824,17 +2849,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0047",
@@ -2872,7 +2898,7 @@
         "shortcut": "Place \"only\" directly before the word it limits; here it limits who may enter.",
         "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. Place \"only\" directly before the word it limits; here it limits who may enter.",
         "why_wrong": {
-          "o2": "\"Only\" now limits \"enter\": it says these employees may do nothing else there, not that others are kept out.",
+          "o2": "Here \"only\" limits where these employees may go (the records room and nowhere else); it does not say that people without valid IDs are kept out.",
           "o3": "There is no main verb; it is a noun with a description.",
           "o4": "Two complete sentences are joined by only a comma."
         }
@@ -2885,17 +2911,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0048",
@@ -2946,17 +2973,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0049",
@@ -3007,17 +3035,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0050",
@@ -3068,17 +3097,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0051",
@@ -3129,17 +3159,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0052",
@@ -3190,17 +3221,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0053",
@@ -3251,17 +3283,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0054",
@@ -3312,17 +3345,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0055",
@@ -3373,17 +3407,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0056",
@@ -3434,17 +3469,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0057",
@@ -3495,17 +3531,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0058",
@@ -3556,17 +3593,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0059",
@@ -3617,17 +3655,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0060",
@@ -3678,17 +3717,18 @@
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T16:30:00+08:00",
         "spec_version": "0.1.9"
       },
-      "_legacy": true
+      "_legacy": true,
+      "notes": "Approved by CoS 2026-10-17."
     }
   ]
 }

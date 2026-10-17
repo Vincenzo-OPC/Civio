@@ -1,6 +1,6 @@
 # Prompt for ChatGPT: next English Verbal batch
 
-GT: paste everything below the line into ChatGPT. **Note:** `docs/research/chatgpt-batch-002.json` already holds 100 English drafts covering these same three areas. They are still `draft` / `unreviewed`, and Grok Bot hasn't audited them yet. So this prompt asks for a **new** file, `chatgpt-batch-004.json` (003 is Codex's GI batch). It also tells ChatGPT not to repeat any passage, topic or sentence from 002. If you meant for ChatGPT to redo 002 itself, change the file name in step 1.
+GT: paste everything below the line into ChatGPT. **Note:** `docs/research/chatgpt-batch-002.json` already holds 100 English drafts covering these same three areas. Batch 002 has since been audited. CoS kept 12 of its RC items and rejected the other 88, because they were templated and all carried one "first measure misleads" theme. So this prompt asks for a **new** file, `chatgpt-batch-004.json` (003 is Codex's GI batch). It also tells ChatGPT not to repeat any passage, topic or sentence from 002. If you meant for ChatGPT to redo 002 itself, change the file name in step 1.
 
 ---
 
@@ -9,7 +9,7 @@ You are writing practice questions for **Civio**, a reviewer for the Philippine 
 ## Task
 
 1. Create `docs/research/chatgpt-batch-004.json` with **100 English Verbal draft items**, using the same top-level keys as `chatgpt-batch-002.json` (`batch`, `spec_version`, `status`, `source_group`, `notes`, `items`):
-   - **30 reading comprehension:** 30 new passages, one question each. Archetypes: about 8 `VEN-RC-MAIN`, 8 `VEN-RC-DETAIL`, 10 `VEN-RC-INFER`, 4 `VEN-RC-VOCAB`. Passages run 120 to 220 words and use Philippine office, community or public-service settings. They must be original, with no copied text.
+   - **30 reading comprehension:** 12 new passages of 150–250 words, each with 2–3 questions (spec v0.1.9, §10.8). Each passage needs at least one main-idea or detail question and at least one inference or vocabulary question. Aim for about 7 `VEN-RC-MAIN`, 8 `VEN-RC-DETAIL`, 8 `VEN-RC-INFER` and 7 `VEN-RC-VOCAB`. Every item carries the full passage in its stem, then its own question. Tag siblings in `notes` as "Passage chatgpt-batch-004-P<n>, question k of m". Use Philippine office, community or public-service settings. Passages must be original with no copied text, and each passage needs its own theme: no lesson may repeat across passages.
    - **30 paragraph organization:** about 20 `VEN-PARA-ORDER` and 10 `VEN-PARA-INSERT`. Use 4 or 5 sentences each, and mix the labels (A-D, 1-4, or P-Q-R-S).
    - **40 error recognition:** about 12 `VEN-ERROR-AGREE`, 10 `VEN-ERROR-TENSE`, 10 `VEN-ERROR-MODIFIER` and 8 `VEN-SENT-STRUCTURE`. Spread these across pronoun case, collective nouns, either/or, tense signals, adjective vs adverb, comparisons, parallelism, dangling or misplaced modifiers, run-ons and fragments.
 2. IDs: `CIVIO-<ARCHETYPE>-07xxxx`, starting at 070001. Every item has `status: "draft"`, `review_status: "unreviewed"`, `reviewer: null`, `reviewed_at: null`, `source_group: "civio"`, `track: "both"`, `domain: "verbal_en"`, `language: "en"`, and `provenance` = {author, method: "ai_assisted", created_at (ISO 8601 with +08:00), spec_version}.
@@ -20,7 +20,7 @@ You are writing practice questions for **Civio**, a reviewer for the Philippine 
 - Exactly 4 options, all different, with one correct answer and no second defensible answer. `answer_option_id` names the key. Spread keys evenly over o1-o4.
 - The required fields from the spec: `id, track, domain, competency, concept, micro_skill, archetype, difficulty, est_seconds, language, stem, options, answer_option_id, reveal, distractor_reasoning, source, source_url, source_group, status, review_status, provenance`.
 - `reveal` has `terms`, `shortcut` (the worked method, shown as "Method"), `why_correct`, and `why_wrong` with **one specific reason per wrong option**. Each reason says what that option gets wrong. Never write a template like "concerns a different concept", and never repeat the option text as the whole reason.
-- `distractor_reasoning` gives every wrong option a code from the spec: `VEN-NEAREST-NOUN`, `VEN-TENSE`, `VEN-FORM`, `VEN-HOMOPHONE`, `VEN-PARTICLE`, `VEN-REGISTER`, `RC-NOT-IN-TEXT`, `RC-TOO-BROAD`, `RC-TOO-NARROW`, `RC-EXTREME`, `RC-OPPOSITE`, `RC-SUPPORTED-NOT-ASKED`, `LOG-ORDER-SWAP`, `LOG-ORDER-REVERSED`, `LOG-IGNORED-CLUE`. The code must describe the actual error in that option. Don't invent codes; if none fits, say so in `notes`.
+- `distractor_reasoning` gives every wrong option a code from the spec: `VEN-NEAREST-NOUN`, `VEN-TENSE`, `VEN-FORM`, `VEN-HOMOPHONE`, `VEN-PARTICLE`, `VEN-REGISTER`, `RC-NOT-IN-TEXT`, `RC-TOO-BROAD`, `RC-TOO-NARROW`, `RC-EXTREME`, `RC-OPPOSITE`, `RC-SUPPORTED-NOT-ASKED`, `LOG-ORDER-SWAP`, `LOG-ORDER-REVERSED`, `LOG-IGNORED-CLUE`, `PO-OPENER-MISPLACED`, `PO-TRANSITION-IGNORED`, `VEN-RUN-ON`, `VEN-FRAGMENT`, `VEN-MODIFIER-PLACE`. The code must describe the actual error in that option. Don't invent codes; if none fits, say so in `notes`.
 - Distractors must be plausible to a real examinee. No joke options. A wrong option should come from a real misreading or a common grammar mistake.
 - Never name a choice by letter or position ("option B", "the first choice") in any explanation. Choices are shuffled in the app.
 - Use person names with matching pronouns, and use Filipino names and settings naturally.
@@ -35,6 +35,13 @@ You are writing practice questions for **Civio**, a reviewer for the Philippine 
 - **One defensible answer in inference items.** Every RC inference must be supported by the passage. Wrong options should go beyond the text, overstate it with words like always/never/completely, or reverse it.
 - **Shortcut honesty.** A shortcut must give the right answer when applied to the item. If it doesn't, leave it out.
 - **KWF spelling (Filipino text only).** If any Filipino words appear (names of places or offices are fine), follow KWF: use reduplicated forms like *nakasasakit*, never *nakaka-*, and write *kaniya/kaniyang*, never *kanya/kanyang*.
+
+## Sentence structure: vary the option sets (CoS 2026-10-17)
+
+- Don't build every `VEN-SENT-STRUCTURE` item from one comma splice, one fragment and one dangling modifier around the key. A set that always looks like that teaches the pattern instead of the skill.
+- Mix in items whose wrong choices share an error type (for example, two different run-ons, or a fragment plus a subordinate-clause fragment).
+- Include "Which sentence is NOT correctly constructed?" items, where three choices are correct and the key holds the error.
+- Use keys with less obvious but correct structures: inverted order, a long introductory phrase, a correct semicolon or colon, or a short sentence that looks like a fragment but is complete.
 
 ## What not to do
 

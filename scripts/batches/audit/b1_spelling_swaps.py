@@ -34,9 +34,9 @@ S = [  # row, old target, stem, options, key index, codes for the foils, explana
  (306, "necessary", "Which spelling is correct in the sentence \u201cThe signature on the form is _____\u201d?", ["Illegable", "Ilegible", "Illegible", "Illegeble"], 2,
   {"Illegable": "SPL-SOUND", "Ilegible": "SPL-DOUBLE", "Illegeble": "SPL-SOUND"},
   "Illegible is il- + legible: the l doubles where the prefix meets legible, and legible ends in -ible."),
- (312, "definitely", "Which spelling is correct in the sentence \u201cShe checked every entry _____ before signing\u201d?", ["Concientiously", "Conscientously", "Conscientiously", "Conscienciously"], 2,
-  {"Concientiously": "SPL-SILENT", "Conscientously": "SPL-DROP", "Conscienciously": "SPL-SOUND"},
-  "Conscientiously is conscientious + -ly: con-sci-en-tious-ly. Keep the sc of science, the i before -ous, and the t that sounds like sh."),  # CoS 2026-10-17: Conscientiously replaces Undoubtedly
+ (312, "definitely", "Which spelling is correct in the sentence \u201cThe desk _____ signed the police blotter\u201d?", ["Sargeant", "Sergant", "Sergeant", "Seargant"], 2,
+  {"Sargeant": "SPL-SOUND", "Sergant": "SPL-DROP", "Seargant": "SPL-SOUND"},
+  "Sergeant is ser-geant: it starts with ser- even though it sounds like sar-, and the ending is -geant, with e before a."),  # CoS 3:43 PM asked for Questionnaire, but it is already a bank target (CIVIO-CLR-20261013-0033) and was baseline #296's old target; Sergeant is untested
  (550, "calendar", "Which spelling correctly completes \u201cWith only two clerks on duty, delays were _____\u201d?", ["Inevitable", "Inevitible", "Inevatable", "Innevitable"], 0,
   {"Inevitible": "SPL-SOUND", "Inevatable": "SPL-SOUND", "Innevitable": "SPL-DOUBLE"},
   "Inevitable is in- + evitable (avoidable), with a single n and the -able ending."),
@@ -79,5 +79,5 @@ for row, old, stem, opts, k, codes, why in S:
                 "foil_codes": codes, "explanation": why, "status": "approved (CoS 2026-10-17)"})
 print(errs or "swaps OK:", len(out))
 if errs: sys.exit(1)
-json.dump({"round": "03", "batch": "baseline-b1", "date": "2026-10-17", "note": "Approved by CoS 2026-10-17 (10 as proposed; #292 Compelled, #312 Conscientiously, #298 foil Subpoene, #311 Nusiance recoded SPL-SOUND). Applied to the MSI local DB. Rows keep their id; the remaining duplicates of these old targets (#53, #55, #509-#514, #516, #517, #547) still retire.", "swaps": out},
+json.dump({"round": "03", "batch": "baseline-b1", "date": "2026-10-17", "note": "Approved by CoS 2026-10-17 (10 as proposed; #292 Compelled, #312 Sergeant (CoS asked for Questionnaire, already a bank target), #298 foil Subpoene, #311 Nusiance recoded SPL-SOUND). Applied to the MSI local DB. Rows keep their id; the remaining duplicates of these old targets (#53, #55, #509-#514, #516, #517, #547) still retire.", "swaps": out},
           open("docs/research/audit/fixes/round-03-baseline-b1-spelling-swaps.json", "w"), ensure_ascii=False, indent=1)

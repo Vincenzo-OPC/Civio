@@ -38,7 +38,7 @@ SS = [
   ("Before submitting the report, the figures were checked carefully as the supervisor asked.", M, "\"Before submitting the report\" attaches to \"the figures\", which cannot submit anything.")],
  "If a sentence opens with an -ing phrase, the next noun must be the person doing it."),
 ("hard", "Which sentence states clearly that no one without a valid ID may enter the records room?", "Only employees with valid IDs may enter the records room.",
- [("Employees with valid IDs may only enter the records room.", M, "\"Only\" now limits \"enter\": it says these employees may do nothing else there, not that others are kept out."),
+ [("Employees with valid IDs may only enter the records room.", M, "Here \"only\" limits where these employees may go (the records room and nowhere else); it does not say that people without valid IDs are kept out."),
   ("Employees with valid IDs, the only ones allowed into the records room.", F, "There is no main verb; it is a noun with a description."),
   ("Only employees may enter the records room, they must have valid IDs.", R, "Two complete sentences are joined by only a comma.")],
  "Place \"only\" directly before the word it limits; here it limits who may enter."),
