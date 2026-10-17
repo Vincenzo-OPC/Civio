@@ -11,7 +11,7 @@
   - **#462 (active, Filipino error recognition): options are not distinct.** It reads `pinagkakakitaan` ×2 and `pinagkakitaan` ×2. This is user-visible, needs CoS, and is a proposed retire/fix.
 - **explanation_lint.py:** 370 of 550 flagged.
   - By check: BOILERPLATE 163, LONG-KEY 141, KEY-NOT-STATED 95, PLACEHOLDER 76, GI-NO-SECTION 27.
-  - Key positions: A 325, B 163, C 53, D 9. This matters in online drills, which don't shuffle choices.
+  - Key positions: A 325, B 163, C 53, D 9. Choices are shuffled at display in mocks and in online and offline drills, so this is an editorial balance issue, not a user-facing giveaway (corrected 2026-10-18; the drills-hub key leak is fixed on `grok/drill-choice-shuffle`).
   - Per-domain counts and IDs are in `audit/data/baseline-550-explanation-lint-2026-10-18.csv`.
   - Biggest remaining: Verbal EN (active) has LONG-KEY 40, KEY-NOT-STATED 36 and BOILERPLATE 53. Analytical (active) has PLACEHOLDER 27, KEY-NOT-STATED 24 and LONG-KEY 23.
 - **Use:** later baseline batches (B4 word problems, Analytical, Verbal) should start from this file, filling codes and why_wrong item by item. It is not for import.
