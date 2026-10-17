@@ -405,6 +405,52 @@ def check_round(items, prior_stems, near=0.9):
     return out
 
 
+FACT_ID_RE = re.compile(r"^FACT-[A-Z0-9]+(?:-[A-Z0-9]+)*$")
+THEME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+
+
+def check_fact_ids(items, others=(), near=0.65):
+    """Spec v0.1.9 fact_id / theme tags (docs/FACT_ID_MOCK_RULE_BRIEF.md).
+    items: the file under QA; others: every other bank item (for cross-file twins).
+    Fails on a malformed tag (DB columns are string(100)) and on two items that share a
+    fact_id yet are the same format: a duplicate or near-duplicate stem, or the same
+    archetype. Twins must test the fact in different formats (recall vs applied).
+    A shared archetype is only a warning: CoS approved some twins that share one.
+    Returns (errors, warnings), each a list of (id, message)."""
+    out = []
+    warn = []
+    for it in items:
+        for tag, rx in (("fact_id", FACT_ID_RE), ("theme", THEME_RE)):
+            v = it.get(tag)
+            if v is None:
+                continue
+            if not isinstance(v, str) or not v.strip():
+                out.append((it["id"], f"{tag} must be a non-empty string"))
+            elif len(v) > 100:
+                out.append((it["id"], f"{tag} longer than 100 characters"))
+            elif not rx.match(v):
+                out.append((it["id"], f"{tag} '{v}' does not match {rx.pattern}"))
+    mine = {id(i) for i in items}
+    groups = {}
+    for it in list(items) + [o for o in others if id(o) not in mine]:
+        if isinstance(it.get("fact_id"), str) and it["fact_id"].strip():
+            groups.setdefault(it["fact_id"], []).append(it)
+    for fid, group in groups.items():
+        for a_i, a in enumerate(group):
+            if id(a) not in mine:
+                continue
+            for b in group[:a_i] + group[a_i + 1:]:
+                if id(b) in mine and group.index(b) < a_i:
+                    continue  # pair already reported from the other side
+                if norm_stem(a["stem"]) == norm_stem(b["stem"]):
+                    out.append((a["id"], f"{fid}: exact duplicate of {b.get('id')}"))
+                elif jaccard(a["stem"], b["stem"]) >= near and not siblings(a["stem"], b["stem"]):
+                    out.append((a["id"], f"{fid}: near-duplicate of {b.get('id')}; twins must differ in format"))
+                elif a.get("archetype") and a.get("archetype") == b.get("archetype"):
+                    warn.append((a["id"], f"{fid}: same archetype as {b.get('id')} ({a['archetype']}); check the formats differ"))
+    return out, warn
+
+
 def check_gi_evidence(items, cache="/workspace/gi"):
     """Check each GI quote against the fetched official text, when the cache is present."""
     paths = {gi_facts.C: os.path.join(cache, "cons1987.html.txt"), gi_facts.R: os.path.join(cache, "ra_6713_1989.html.txt")}
