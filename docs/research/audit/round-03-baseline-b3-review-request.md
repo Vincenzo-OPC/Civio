@@ -163,3 +163,7 @@ ChatGPT's preliminary audit files (audit/fixes/milestone, 2026-10-18) were **not
 | NUM-SEQ | 492 | 6 | KEEP | Key 6 recomputed. |  |  |
 | NUM-SEQ | 493 | 48 | KEEP | Key 48 recomputed (missing middle term, a distinct format). |  |  |
 | NUM-SEQ | 541 | 30 | REJECT | Duplicate of baseline #192 (growing subtraction, same rule). | Retire; keep #192. |  |
+
+## Update 2026-10-18: explanation lint
+
+`python3 scripts/batches/audit/explanation_lint.py docs/research/audit/fixes/round-03-baseline-b3-drafts.json` → 44 items, **0 flagged**, key positions A 11 / B 11 / C 11 / D 11. The first lint run flagged 24 drafts: 9 explanations didn't name the keyed answer, 6 keys were the longest option, and 11 numerical explanations were very short (the threshold has since been relaxed for numerical). Positions were A 27 / B 9 / C 8 / D 0. Fixes: every why_correct now opens with "Answer: <key>.", distractors were lengthened, and options were reordered without changing content. Option IDs were remapped consistently, and `qa_file.py` still reports 0 problems.

@@ -39,7 +39,7 @@
    "reveal": {
     "terms": "SALN: sworn statement of assets, liabilities, net worth and business interests (Sec. 8).",
     "shortcut": "30 in, April 30 yearly, 30 out.",
-    "why_correct": "Sec. 8(A) sets three filing points: (a) within 30 days after assumption of office, (b) on or before April 30 of every year thereafter, and (c) within 30 days after separation from the service.",
+    "why_correct": "Answer: Within 30 days after assuming office, on or before April 30 every year, and within 30 days after leaving the service. Sec. 8(A) sets three filing points: (a) within 30 days after assumption of office, (b) on or before April 30 of every year thereafter, and (c) within 30 days after separation from the service.",
     "why_wrong": {
      "o2": "60 days is the Sec. 9 divestment period, and April 15 is the income-tax deadline, not the SALN date.",
      "o3": "December 31 is the as-of date of the figures, not the filing deadline; separation filing is 30 days, not one year.",
@@ -88,11 +88,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "A conflict of interest"
+     "text": "Undue favor to a relative"
     },
     {
      "option_id": "o2",
-     "text": "Undue favor to a relative"
+     "text": "A conflict of interest"
     },
     {
      "option_id": "o3",
@@ -103,19 +103,19 @@
      "text": "Outside employment during incumbency"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o2",
    "reveal": {
     "terms": "Conflict of interest: an official who is a board member, officer or substantial stockholder of a business whose interest may be opposed to or affected by faithful performance of duty (Sec. 3(i)).",
     "shortcut": "Own stake + your decision affects it = conflict of interest.",
-    "why_correct": "A substantial stockholding in a business that her official decision can affect is exactly the Sec. 3(i) definition; Sec. 9 then requires resignation or divestment.",
+    "why_correct": "Answer: A conflict of interest. A substantial stockholding in a business that her official decision can affect is exactly the Sec. 3(i) definition; Sec. 9 then requires resignation or divestment.",
     "why_wrong": {
-     "o2": "Sec. 4(A)(c) concerns favors to relatives; here the interest is the officer's own.",
+     "o1": "Sec. 4(A)(c) concerns favors to relatives; here the interest is the officer's own.",
      "o3": "Divestment (Sec. 3(j)) is the cure for the conflict, not its name.",
      "o4": "Sec. 7(b) outside employment concerns working for a regulated firm; owning shares is not employment."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SIBLING-TERM",
+    "o1": "GI-SIBLING-TERM",
     "o3": "GI-SIBLING-TERM",
     "o4": "GI-SIBLING-TERM"
    },
@@ -156,35 +156,35 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Opposed to or affected by the faithful performance of official duty"
-    },
-    {
-     "option_id": "o2",
      "text": "Regulated by any other government agency"
     },
     {
-     "option_id": "o3",
+     "option_id": "o2",
      "text": "Owned partly by the official's relatives within the fourth degree"
+    },
+    {
+     "option_id": "o3",
+     "text": "Opposed to or affected by the faithful performance of official duty"
     },
     {
      "option_id": "o4",
      "text": "Larger than the official's annual salary"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o3",
    "reveal": {
     "terms": "Conflict of interest (Sec. 3(i)).",
     "shortcut": "Ask: can my official duty affect this business?",
-    "why_correct": "Sec. 3(i) ties the conflict to a business interest that 'may be opposed to or affected by the faithful performance of official duty'.",
+    "why_correct": "Answer: Opposed to or affected by the faithful performance of official duty. Sec. 3(i) ties the conflict to a business interest that 'may be opposed to or affected by the faithful performance of official duty'.",
     "why_wrong": {
-     "o2": "Regulation by another agency does not involve the official's own duty.",
-     "o3": "Relatives matter under Sec. 4(A)(c) and Sec. 8(B), not the Sec. 3(i) definition.",
+     "o1": "Regulation by another agency does not involve the official's own duty.",
+     "o2": "Relatives matter under Sec. 4(A)(c) and Sec. 8(B), not the Sec. 3(i) definition.",
      "o4": "The Act sets no salary-size test; the test is the effect on official duty."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SOUNDS-RIGHT",
-    "o3": "GI-SIBLING-TERM",
+    "o1": "GI-SOUNDS-RIGHT",
+    "o2": "GI-SIBLING-TERM",
     "o4": "GI-SOUNDS-RIGHT"
    },
    "source": "R.A. 6713, Sec. 3(i)",
@@ -224,36 +224,36 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Divestment must be in favor of someone other than the spouse and relatives"
-    },
-    {
-     "option_id": "o2",
      "text": "Divestment must be made only to the government"
     },
     {
-     "option_id": "o3",
+     "option_id": "o2",
      "text": "Shares can never be divested, only declared in the SALN"
     },
     {
-     "option_id": "o4",
+     "option_id": "o3",
      "text": "Divestment requires resigning from government first"
+    },
+    {
+     "option_id": "o4",
+     "text": "Divestment must be in favor of someone other than the spouse and relatives"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o4",
    "reveal": {
     "terms": "Divestment (Sec. 3(j)): transfer of title by voluntarily, completely and actually giving up the right to it, to a person other than one's spouse and relatives.",
     "shortcut": "Divest = give it away outside the family.",
-    "why_correct": "Sec. 3(j) excludes transfers to the spouse and relatives, so moving shares to a wife leaves the conflict in the family.",
+    "why_correct": "Answer: Divestment must be in favor of someone other than the spouse and relatives. Sec. 3(j) excludes transfers to the spouse and relatives, so moving shares to a wife leaves the conflict in the family.",
     "why_wrong": {
-     "o2": "The Act does not require transfer to the government; any person other than spouse and relatives qualifies.",
-     "o3": "Sec. 9 expressly requires divesting shareholdings within 60 days; declaring alone is not enough.",
-     "o4": "Sec. 9 requires resigning from the private enterprise, not from government."
+     "o1": "The Act does not require transfer to the government; any person other than spouse and relatives qualifies.",
+     "o2": "Sec. 9 expressly requires divesting shareholdings within 60 days; declaring alone is not enough.",
+     "o3": "Sec. 9 requires resigning from the private enterprise, not from government."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SOUNDS-RIGHT",
-    "o3": "GI-SIBLING-TERM",
-    "o4": "GI-SIBLING-TERM"
+    "o1": "GI-SOUNDS-RIGHT",
+    "o2": "GI-SIBLING-TERM",
+    "o3": "GI-SIBLING-TERM"
    },
    "source": "R.A. 6713, Sec. 3(j) and Sec. 9",
    "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
@@ -311,7 +311,7 @@
    "reveal": {
     "terms": "Administration and enforcement: issuing rules and acting on violations of the Act.",
     "shortcut": "Civil service ethics law → Civil Service Commission.",
-    "why_correct": "Sec. 12 gives the Civil Service Commission primary responsibility for administration and enforcement and the power to promulgate rules.",
+    "why_correct": "Answer: Civil Service Commission. Sec. 12 gives the Civil Service Commission primary responsibility for administration and enforcement and the power to promulgate rules.",
     "why_wrong": {
      "o2": "The Ombudsman co-chairs the awards committee (Sec. 6) and receives prosecutions, but Sec. 12 names the CSC.",
      "o3": "COA audits government accounts; it is not named in Sec. 12.",
@@ -360,34 +360,34 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "The position is strictly confidential or on the mayor's personal staff, coterminous with him"
+     "text": "The nephew passed the civil service examination and meets every qualification of the position"
     },
     {
      "option_id": "o2",
-     "text": "The nephew passed a civil service examination"
+     "text": "The position is strictly confidential or on the mayor's personal staff, coterminous with him"
     },
     {
      "option_id": "o3",
-     "text": "The nephew agrees to serve without pay for six months"
+     "text": "The nephew agrees to serve without any pay for the first six months of the appointment"
     },
     {
      "option_id": "o4",
-     "text": "The appointment is announced on the city's website"
+     "text": "The appointment is announced publicly on the city's website and posted at city hall"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o2",
    "reveal": {
     "terms": "Undue favor on account of office (Sec. 4(A)(c), justness and sincerity).",
     "shortcut": "Exception = confidential or coterminous personal staff.",
-    "why_correct": "Sec. 4(A)(c) bars undue favors to relatives except appointments to strictly confidential positions or to personal staff whose terms are coterminous with the official.",
+    "why_correct": "Answer: The position is strictly confidential or on the mayor's personal staff, coterminous with him. Sec. 4(A)(c) bars undue favors to relatives except appointments to strictly confidential positions or to personal staff whose terms are coterminous with the official.",
     "why_wrong": {
-     "o2": "Eligibility is a separate requirement; it does not create the statutory exception.",
+     "o1": "Eligibility is a separate requirement; it does not create the statutory exception.",
      "o3": "Serving without pay is not an exception in the Act.",
      "o4": "Publicity does not cure an undue favor."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SOUNDS-RIGHT",
+    "o1": "GI-SOUNDS-RIGHT",
     "o3": "GI-SOUNDS-RIGHT",
     "o4": "GI-SOUNDS-RIGHT"
    },
@@ -428,35 +428,35 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "His spouse and unmarried children under 18 living in his household"
-    },
-    {
-     "option_id": "o2",
      "text": "All relatives within the fourth civil degree"
     },
     {
+     "option_id": "o2",
+     "text": "His spouse only, since children file their own statements"
+    },
+    {
      "option_id": "o3",
-     "text": "His spouse only"
+     "text": "His spouse and unmarried children under 18 living in his household"
     },
     {
      "option_id": "o4",
-     "text": "All children regardless of age or residence"
+     "text": "All of his children, regardless of their age or where they live"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o3",
    "reveal": {
     "terms": "Declaration under oath of assets, liabilities, net worth and financial and business interests (Sec. 8).",
     "shortcut": "Spouse + unmarried minors at home.",
-    "why_correct": "Sec. 8 extends the declaration to the spouse and unmarried children under eighteen living in the household.",
+    "why_correct": "Answer: His spouse and unmarried children under 18 living in his household. Sec. 8 extends the declaration to the spouse and unmarried children under eighteen living in the household.",
     "why_wrong": {
-     "o2": "The fourth civil degree defines 'relatives' for the separate Sec. 8(B) disclosure of relatives in government.",
-     "o3": "Sec. 8 also covers unmarried minor children in the household.",
+     "o1": "The fourth civil degree defines 'relatives' for the separate Sec. 8(B) disclosure of relatives in government.",
+     "o2": "Sec. 8 also covers unmarried minor children in the household.",
      "o4": "Only unmarried children under 18 living in the household are covered."
     }
    },
    "distractor_reasoning": {
+    "o1": "GI-SIBLING-TERM",
     "o2": "GI-SIBLING-TERM",
-    "o3": "GI-SIBLING-TERM",
     "o4": "GI-NEIGHBOR-NUMBER"
    },
    "source": "R.A. 6713, Sec. 8",
@@ -496,36 +496,36 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "A gift of nominal value received as a souvenir or mark of courtesy"
-    },
-    {
-     "option_id": "o2",
      "text": "A gift of any value if reported in the next SALN"
     },
     {
-     "option_id": "o3",
+     "option_id": "o2",
      "text": "Cash below one month's salary for official travel"
     },
     {
-     "option_id": "o4",
+     "option_id": "o3",
      "text": "A gift accepted on behalf of a relative"
+    },
+    {
+     "option_id": "o4",
+     "text": "A gift of nominal value received as a souvenir or mark of courtesy"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o4",
    "reveal": {
     "terms": "Congressional consent to certain foreign-government gifts (Sec. 7(d)).",
     "shortcut": "Foreign gift: nominal souvenir, scholarship, medical, travel grant.",
-    "why_correct": "Sec. 7(d) lists consented foreign-government gifts: nominal-value souvenirs or marks of courtesy, scholarship/fellowship or medical treatment, and certain travel grants.",
+    "why_correct": "Answer: A gift of nominal value received as a souvenir or mark of courtesy. Sec. 7(d) lists consented foreign-government gifts: nominal-value souvenirs or marks of courtesy, scholarship/fellowship or medical treatment, and certain travel grants.",
     "why_wrong": {
-     "o2": "Reporting does not make a valuable gift acceptable; only the listed categories are consented.",
-     "o3": "The Act consents to certain travel grants and expenses, not to cash gifts.",
-     "o4": "Accepting through a relative is still indirect acceptance, barred by Sec. 7(d)."
+     "o1": "Reporting does not make a valuable gift acceptable; only the listed categories are consented.",
+     "o2": "The Act consents to certain travel grants and expenses, not to cash gifts.",
+     "o3": "Accepting through a relative is still indirect acceptance, barred by Sec. 7(d)."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SOUNDS-RIGHT",
-    "o3": "GI-SIBLING-TERM",
-    "o4": "GI-SOUNDS-RIGHT"
+    "o1": "GI-SOUNDS-RIGHT",
+    "o2": "GI-SIBLING-TERM",
+    "o3": "GI-SOUNDS-RIGHT"
    },
    "source": "R.A. 6713, Sec. 7(d)",
    "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
@@ -568,22 +568,22 @@
     },
     {
      "option_id": "o2",
-     "text": "File a criminal case at once"
+     "text": "File a criminal case against the official at once"
     },
     {
      "option_id": "o3",
-     "text": "Publish the statement with the errors marked"
+     "text": "Publish the statement online with the errors marked"
     },
     {
      "option_id": "o4",
-     "text": "Return the statement and treat it as never filed"
+     "text": "Return the statement and treat it as if it was never filed"
     }
    ],
    "answer_option_id": "o1",
    "reveal": {
     "terms": "Review and compliance procedure (Sec. 10).",
     "shortcut": "Incomplete SALN → told to correct it.",
-    "why_correct": "Sec. 10(a) says that when a statement is not timely, complete or in proper form, the reviewing body shall inform the reporting individual and direct corrective action.",
+    "why_correct": "Answer: Inform the official and direct him to take corrective action. Sec. 10(a) says that when a statement is not timely, complete or in proper form, the reviewing body shall inform the reporting individual and direct corrective action.",
     "why_wrong": {
      "o2": "Prosecution is not the first step for an incomplete statement under Sec. 10(a).",
      "o3": "Sec. 10(a) does not provide for publishing marked errors.",
@@ -632,34 +632,34 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Compromising the ability of future generations to meet their own needs"
+     "text": "Using any natural resources to support present economic growth"
     },
     {
      "option_id": "o2",
-     "text": "Using natural resources for economic growth"
+     "text": "Compromising the ability of future generations to meet their own needs"
     },
     {
      "option_id": "o3",
-     "text": "Allowing private companies to operate in protected areas"
+     "text": "Allowing private companies to operate inside protected areas"
     },
     {
      "option_id": "o4",
-     "text": "Increasing a country's population"
+     "text": "Allowing a country's population to increase over the next decades"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o2",
    "reveal": {
     "terms": "Sustainable development (Brundtland Commission, 1987); R.A. 9003, Sec. 2(c) requires ecologically sustainable development principles.",
     "shortcut": "Now, without stealing from the future.",
-    "why_correct": "The standard definition: meeting the needs of the present without compromising the ability of future generations to meet their own needs.",
+    "why_correct": "Answer: Compromising the ability of future generations to meet their own needs. The standard definition: meeting the needs of the present without compromising the ability of future generations to meet their own needs.",
     "why_wrong": {
-     "o2": "Sustainable development allows resource use; it limits use that harms future generations.",
+     "o1": "Sustainable development allows resource use; it limits use that harms future generations.",
      "o3": "Private activity is regulated by protected-area law, not excluded by the definition.",
      "o4": "Population growth is not part of the definition."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SOUNDS-RIGHT",
+    "o1": "GI-SOUNDS-RIGHT",
     "o3": "GI-SIBLING-TERM",
     "o4": "GI-SOUNDS-RIGHT"
    },
@@ -700,35 +700,35 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "To assess a covered project's likely environmental effects before it proceeds"
-    },
-    {
-     "option_id": "o2",
      "text": "To audit a project's pollution only after it starts operating"
     },
     {
-     "option_id": "o3",
+     "option_id": "o2",
      "text": "To replace the local business and building permits"
+    },
+    {
+     "option_id": "o3",
+     "text": "To assess a covered project's likely environmental effects before it proceeds"
     },
     {
      "option_id": "o4",
      "text": "To grant tax incentives to environment-friendly firms"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o3",
    "reveal": {
     "terms": "EIS System: covered projects need an Environmental Compliance Certificate (ECC) after impact assessment.",
     "shortcut": "EIS = look before you build.",
-    "why_correct": "P.D. 1586 requires environmentally critical projects or projects in critical areas to undergo assessment and secure an ECC before operation.",
+    "why_correct": "Answer: To assess a covered project's likely environmental effects before it proceeds. P.D. 1586 requires environmentally critical projects or projects in critical areas to undergo assessment and secure an ECC before operation.",
     "why_wrong": {
-     "o2": "Assessment is done before, not only after, the project starts.",
-     "o3": "An ECC does not replace LGU permits.",
+     "o1": "Assessment is done before, not only after, the project starts.",
+     "o2": "An ECC does not replace LGU permits.",
      "o4": "Tax incentives are not the EIS System's function."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SOUNDS-RIGHT",
-    "o3": "GI-SIBLING-TERM",
+    "o1": "GI-SOUNDS-RIGHT",
+    "o2": "GI-SIBLING-TERM",
     "o4": "GI-SOUNDS-RIGHT"
    },
    "source": "P.D. 1586 (Philippine Environmental Impact Statement System), Secs. 2 and 4",
@@ -768,36 +768,36 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Water and pollutants move through a drainage area toward a common outlet"
-    },
-    {
-     "option_id": "o2",
      "text": "Watersheds are the only places where factories may operate"
     },
     {
-     "option_id": "o3",
+     "option_id": "o2",
      "text": "Watersheds collect only rainwater that cannot be polluted"
     },
     {
-     "option_id": "o4",
+     "option_id": "o3",
      "text": "Watersheds follow barangay boundaries exactly"
+    },
+    {
+     "option_id": "o4",
+     "text": "Water and pollutants move through a drainage area toward a common outlet"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o4",
    "reveal": {
     "terms": "Watershed: land area that drains to a common outlet.",
     "shortcut": "Water flows downhill together; manage it together.",
-    "why_correct": "R.A. 9275 Sec. 5 designates management areas using physiographic units such as watersheds and river basins, because water and its pollutants move through a shared drainage area.",
+    "why_correct": "Answer: Water and pollutants move through a drainage area toward a common outlet. R.A. 9275 Sec. 5 designates management areas using physiographic units such as watersheds and river basins, because water and its pollutants move through a shared drainage area.",
     "why_wrong": {
-     "o2": "Watersheds are not factory zones.",
-     "o3": "Runoff picks up pollutants; that is why they are managed.",
-     "o4": "Watersheds follow terrain, not political boundaries; that is why LGUs must cooperate."
+     "o1": "Watersheds are not factory zones.",
+     "o2": "Runoff picks up pollutants; that is why they are managed.",
+     "o3": "Watersheds follow terrain, not political boundaries; that is why LGUs must cooperate."
     }
    },
    "distractor_reasoning": {
+    "o1": "GI-SOUNDS-RIGHT",
     "o2": "GI-SOUNDS-RIGHT",
-    "o3": "GI-SOUNDS-RIGHT",
-    "o4": "GI-SOUNDS-RIGHT"
+    "o3": "GI-SOUNDS-RIGHT"
    },
    "source": "R.A. 9275 (Philippine Clean Water Act of 2004), Sec. 5",
    "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
@@ -855,7 +855,7 @@
    "reveal": {
     "terms": "Open dump: disposal area where waste is indiscriminately thrown without planning or health standards (Sec. 3(t)).",
     "shortcut": "Open dumps: banned.",
-    "why_correct": "Sec. 37 prohibits establishing or operating open dumps and set a conversion/closure schedule; Sec. 48(9) penalizes it.",
+    "why_correct": "Answer: They are prohibited and existing ones must be closed or converted. Sec. 37 prohibits establishing or operating open dumps and set a conversion/closure schedule; Sec. 48(9) penalizes it.",
     "why_wrong": {
      "o2": "No barangay approval makes an open dump lawful under Sec. 37.",
      "o3": "The Act requires closure, not open dumps.",
@@ -904,11 +904,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Ecological Solid Waste Management Act of 2000"
+     "text": "Philippine Clean Air Act of 1999"
     },
     {
      "option_id": "o2",
-     "text": "Philippine Clean Air Act of 1999"
+     "text": "Ecological Solid Waste Management Act of 2000"
     },
     {
      "option_id": "o3",
@@ -919,19 +919,19 @@
      "text": "Toxic Substances and Hazardous and Nuclear Wastes Control Act of 1990"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o2",
    "reveal": {
     "terms": "R.A. 9003 (amended by R.A. 11898, the EPR Act of 2022; short title unchanged).",
     "shortcut": "9003 → waste (2000).",
-    "why_correct": "Sec. 1 gives the short title 'Ecological Solid Waste Management Act of 2000'.",
+    "why_correct": "Answer: Ecological Solid Waste Management Act of 2000. Sec. 1 gives the short title 'Ecological Solid Waste Management Act of 2000'.",
     "why_wrong": {
-     "o2": "That is R.A. 8749.",
+     "o1": "That is R.A. 8749.",
      "o3": "That is R.A. 9275.",
      "o4": "That is R.A. 6969."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SIBLING-TERM",
+    "o1": "GI-SIBLING-TERM",
     "o3": "GI-SIBLING-TERM",
     "o4": "GI-SIBLING-TERM"
    },
@@ -972,35 +972,35 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Philippine Clean Air Act of 1999"
-    },
-    {
-     "option_id": "o2",
      "text": "Ecological Solid Waste Management Act of 2000"
     },
     {
-     "option_id": "o3",
+     "option_id": "o2",
      "text": "Philippine Clean Water Act of 2004"
+    },
+    {
+     "option_id": "o3",
+     "text": "Philippine Clean Air Act of 1999"
     },
     {
      "option_id": "o4",
      "text": "Climate Change Act of 2009"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o3",
    "reveal": {
     "terms": "R.A. 8749.",
     "shortcut": "8749 → air (1999).",
-    "why_correct": "Sec. 1 gives the short title 'Philippine Clean Air Act of 1999'.",
+    "why_correct": "Answer: Philippine Clean Air Act of 1999. Sec. 1 gives the short title 'Philippine Clean Air Act of 1999'.",
     "why_wrong": {
-     "o2": "That is R.A. 9003.",
-     "o3": "That is R.A. 9275.",
+     "o1": "That is R.A. 9003.",
+     "o2": "That is R.A. 9275.",
      "o4": "That is R.A. 9729."
     }
    },
    "distractor_reasoning": {
+    "o1": "GI-SIBLING-TERM",
     "o2": "GI-SIBLING-TERM",
-    "o3": "GI-SIBLING-TERM",
     "o4": "GI-SIBLING-TERM"
    },
    "source": "R.A. 8749, Sec. 1",
@@ -1040,36 +1040,36 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Preventive action against a serious threat even without full scientific certainty"
+     "text": "Taking action only after the harm is proven beyond reasonable doubt"
     },
     {
      "option_id": "o2",
-     "text": "Action only after harm is proven beyond reasonable doubt"
+     "text": "Making the polluter pay for the cleanup after the damage has already occurred"
     },
     {
      "option_id": "o3",
-     "text": "Making the polluter pay for cleanup after damage occurs"
+     "text": "Shifting all of the costs of climate action to developed countries alone"
     },
     {
      "option_id": "o4",
-     "text": "Shifting all climate costs to developed countries"
+     "text": "Preventive action against a serious threat even without full scientific certainty"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o4",
    "reveal": {
     "terms": "Precautionary Principle.",
     "shortcut": "Don't wait for proof to prevent serious harm.",
-    "why_correct": "R.A. 9729 Sec. 2 names the Precautionary Principle; lack of full scientific certainty is not a reason to postpone preventive measures (see also Rule 20, A.M. No. 09-6-8-SC).",
+    "why_correct": "Answer: Preventive action against a serious threat even without full scientific certainty. R.A. 9729 Sec. 2 names the Precautionary Principle; lack of full scientific certainty is not a reason to postpone preventive measures (see also Rule 20, A.M. No. 09-6-8-SC).",
     "why_wrong": {
-     "o2": "That is the opposite of precaution.",
-     "o3": "That is the polluter-pays principle.",
-     "o4": "That distorts common but differentiated responsibilities, a separate Sec. 2 principle."
+     "o1": "That is the opposite of precaution.",
+     "o2": "That is the polluter-pays principle.",
+     "o3": "That distorts common but differentiated responsibilities, a separate Sec. 2 principle."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SOUNDS-RIGHT",
-    "o3": "GI-SIBLING-TERM",
-    "o4": "GI-SIBLING-TERM"
+    "o1": "GI-SOUNDS-RIGHT",
+    "o2": "GI-SIBLING-TERM",
+    "o3": "GI-SIBLING-TERM"
    },
    "source": "R.A. 9729 (Climate Change Act of 2009), Sec. 2",
    "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
@@ -1127,7 +1127,7 @@
    "reveal": {
     "terms": "Segregation at source (Sec. 21); prohibited acts (Sec. 48).",
     "shortcut": "Segregate, don't dump.",
-    "why_correct": "Sec. 21 requires segregation at the source, and Sec. 48(1) prohibits dumping waste in canals and esteros.",
+    "why_correct": "Answer: Require segregation at source and stop dumping in canals. Sec. 21 requires segregation at the source, and Sec. 48(1) prohibits dumping waste in canals and esteros.",
     "why_wrong": {
      "o2": "Open burning is prohibited by Sec. 48(3).",
      "o3": "Collecting unsorted waste is prohibited by Sec. 48(4).",
@@ -1176,11 +1176,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "To conserve biological diversity and maintain ecological processes"
+     "text": "To set aside land for future housing projects"
     },
     {
      "option_id": "o2",
-     "text": "To set aside land for future housing projects"
+     "text": "To conserve biological diversity and maintain ecological processes"
     },
     {
      "option_id": "o3",
@@ -1191,19 +1191,19 @@
      "text": "To create tourism zones that are exempt from regulation"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o2",
    "reveal": {
     "terms": "NIPAS: National Integrated Protected Areas System.",
     "shortcut": "Protected area = protect biodiversity.",
-    "why_correct": "R.A. 11038 Sec. 2 (amending R.A. 7586 Sec. 2) establishes NIPAS for biologically important areas, to be managed consistently with biological diversity and sustainable development.",
+    "why_correct": "Answer: To conserve biological diversity and maintain ecological processes. R.A. 11038 Sec. 2 (amending R.A. 7586 Sec. 2) establishes NIPAS for biologically important areas, to be managed consistently with biological diversity and sustainable development.",
     "why_wrong": {
-     "o2": "Protected areas are not housing reserves.",
+     "o1": "Protected areas are not housing reserves.",
      "o3": "Commercial exploitation is restricted, not the purpose.",
      "o4": "Tourism in protected areas is regulated, not exempt."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SOUNDS-RIGHT",
+    "o1": "GI-SOUNDS-RIGHT",
     "o3": "GI-SOUNDS-RIGHT",
     "o4": "GI-SOUNDS-RIGHT"
    },
@@ -1244,35 +1244,35 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Department of Environment and Natural Resources"
-    },
-    {
-     "option_id": "o2",
      "text": "Department of Agriculture"
     },
     {
-     "option_id": "o3",
+     "option_id": "o2",
      "text": "Department of the Interior and Local Government"
+    },
+    {
+     "option_id": "o3",
+     "text": "Department of Environment and Natural Resources"
     },
     {
      "option_id": "o4",
      "text": "Department of Energy"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o3",
    "reveal": {
     "terms": "DENR (E.O. 192, 1987).",
     "shortcut": "Environment + natural resources = DENR.",
-    "why_correct": "E.O. 192 (1987) makes the DENR the primary government agency for the environment and natural resources; the EMB is one of its bureaus.",
+    "why_correct": "Answer: Department of Environment and Natural Resources. E.O. 192 (1987) makes the DENR the primary government agency for the environment and natural resources; the EMB is one of its bureaus.",
     "why_wrong": {
-     "o2": "The DA handles agriculture and, through BFAR, fisheries.",
-     "o3": "The DILG supervises LGUs, which implement local waste rules.",
+     "o1": "The DA handles agriculture and, through BFAR, fisheries.",
+     "o2": "The DILG supervises LGUs, which implement local waste rules.",
      "o4": "The DOE handles energy resources."
     }
    },
    "distractor_reasoning": {
+    "o1": "GI-WRONG-BODY",
     "o2": "GI-WRONG-BODY",
-    "o3": "GI-WRONG-BODY",
     "o4": "GI-WRONG-BODY"
    },
    "source": "E.O. 192 (1987), Sec. 4",
@@ -1312,36 +1312,36 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Keep products and materials in use longer through design, servicing and recovery"
+     "text": "Collect all of a city's waste in one large circular landfill"
     },
     {
      "option_id": "o2",
-     "text": "Collect all waste in a single circular landfill"
+     "text": "Recycle materials only after they reach final disposal sites"
     },
     {
      "option_id": "o3",
-     "text": "Recycle materials only after final disposal"
+     "text": "Ban the production and sale of all plastic products nationwide"
     },
     {
      "option_id": "o4",
-     "text": "Ban the production of all plastic products"
+     "text": "Keep products and materials in use longer through design, servicing and recovery"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o4",
    "reveal": {
     "terms": "Circular economy (R.A. 9003 Sec. 3(d-1), as amended by R.A. 11898).",
     "shortcut": "Circular = keep it in use.",
-    "why_correct": "The amended Sec. 3(d-1) describes creating value by extending product lifespan through improved design and servicing, so resources stay in continual use.",
+    "why_correct": "Answer: Keep products and materials in use longer through design, servicing and recovery. The amended Sec. 3(d-1) describes creating value by extending product lifespan through improved design and servicing, so resources stay in continual use.",
     "why_wrong": {
-     "o2": "Landfilling is the end of a linear model, not a circular one.",
-     "o3": "Recovery happens before disposal, not after.",
-     "o4": "The EPR Act regulates plastic packaging; it does not ban all plastic."
+     "o1": "Landfilling is the end of a linear model, not a circular one.",
+     "o2": "Recovery happens before disposal, not after.",
+     "o3": "The EPR Act regulates plastic packaging; it does not ban all plastic."
     }
    },
    "distractor_reasoning": {
+    "o1": "GI-SOUNDS-RIGHT",
     "o2": "GI-SOUNDS-RIGHT",
-    "o3": "GI-SOUNDS-RIGHT",
-    "o4": "GI-SOUNDS-RIGHT"
+    "o3": "GI-SOUNDS-RIGHT"
    },
    "source": "R.A. 9003, Sec. 3(d-1), as amended by R.A. 11898 (EPR Act of 2022)",
    "source_url": "https://lawphil.net/statutes/repacts/ra2022/ra_11898_2022.html",
@@ -1399,7 +1399,7 @@
    "reveal": {
     "terms": "Waste hierarchy: avoidance and volume reduction before collection, treatment and disposal.",
     "shortcut": "Reduce, reuse, recover, then dispose.",
-    "why_correct": "Sec. 2(c) sets targets for avoidance and volume reduction through source reduction, composting, recycling, re-use and recovery before collection, treatment and disposal.",
+    "why_correct": "Answer: Reduce and reuse first, recycle and recover next, dispose last. Sec. 2(c) sets targets for avoidance and volume reduction through source reduction, composting, recycling, re-use and recovery before collection, treatment and disposal.",
     "why_wrong": {
      "o2": "Disposal is the last step, not the first.",
      "o3": "Reduction comes before recycling.",
@@ -1448,11 +1448,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "They provide fish nursery habitat and reduce wave and erosion damage"
+     "text": "They supply most of the freshwater used by coastal towns"
     },
     {
      "option_id": "o2",
-     "text": "They supply most of the freshwater used by coastal towns"
+     "text": "They provide fish nursery habitat and reduce wave and erosion damage"
     },
     {
      "option_id": "o3",
@@ -1463,19 +1463,19 @@
      "text": "They prevent typhoons from forming near the coast"
     }
    ],
-   "answer_option_id": "o1",
+   "answer_option_id": "o2",
    "reveal": {
     "terms": "Mangroves: salt-tolerant coastal forests.",
     "shortcut": "Mangroves: nursery + natural seawall.",
-    "why_correct": "Mangrove roots shelter young fish and shellfish and absorb wave energy, reducing erosion and storm-surge damage.",
+    "why_correct": "Answer: They provide fish nursery habitat and reduce wave and erosion damage. Mangrove roots shelter young fish and shellfish and absorb wave energy, reducing erosion and storm-surge damage.",
     "why_wrong": {
-     "o2": "Mangroves grow in brackish water; they are not a main freshwater source.",
+     "o1": "Mangroves grow in brackish water; they are not a main freshwater source.",
      "o3": "They store carbon AND support fisheries.",
      "o4": "No forest prevents typhoons from forming; mangroves only reduce damage."
     }
    },
    "distractor_reasoning": {
-    "o2": "GI-SOUNDS-RIGHT",
+    "o1": "GI-SOUNDS-RIGHT",
     "o3": "GI-SOUNDS-RIGHT",
     "o4": "GI-SOUNDS-RIGHT"
    },
@@ -1516,35 +1516,35 @@
    "options": [
     {
      "option_id": "n1",
-     "text": "42"
-    },
-    {
-     "option_id": "n2",
      "text": "32"
     },
     {
-     "option_id": "n3",
+     "option_id": "n2",
      "text": "52"
+    },
+    {
+     "option_id": "n3",
+     "text": "42"
     },
     {
      "option_id": "n4",
      "text": "41"
     }
    ],
-   "answer_option_id": "n1",
+   "answer_option_id": "n3",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "Add tens then ones: 10 + 20 = 30, 5 + 7 = 12, total 42.",
-    "why_correct": "15 + 27 = 42 (5 + 7 = 12, carry 1; 1 + 2 + 1 = 4).",
+    "why_correct": "Answer: 42. 15 + 27 = 42 (5 + 7 = 12, carry 1; 1 + 2 + 1 = 4).",
     "why_wrong": {
-     "n2": "Forgot the carried 1.",
-     "n3": "Carried 1 twice.",
+     "n1": "Forgot the carried 1.",
+     "n2": "Carried 1 twice.",
      "n4": "Off by one."
     }
    },
    "distractor_reasoning": {
-    "n2": "NUM-PARTIAL",
-    "n3": "NUM-EXTRA-STEP",
+    "n1": "NUM-PARTIAL",
+    "n2": "NUM-EXTRA-STEP",
     "n4": "NUM-OFF-BY-ONE"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
@@ -1582,36 +1582,36 @@
    "options": [
     {
      "option_id": "n1",
-     "text": "12"
-    },
-    {
-     "option_id": "n2",
      "text": "8"
     },
     {
-     "option_id": "n3",
+     "option_id": "n2",
      "text": "16"
     },
     {
-     "option_id": "n4",
+     "option_id": "n3",
      "text": "11"
+    },
+    {
+     "option_id": "n4",
+     "text": "12"
     }
    ],
-   "answer_option_id": "n1",
+   "answer_option_id": "n4",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "Halve three times: 96 → 48 → 24 → 12.",
-    "why_correct": "8 × 12 = 96, so 96 ÷ 8 = 12.",
+    "why_correct": "Answer: 12. 8 × 12 = 96, so 96 ÷ 8 = 12.",
     "why_wrong": {
-     "n2": "Repeats the divisor.",
-     "n3": "96 ÷ 6, wrong divisor.",
-     "n4": "Off by one."
+     "n1": "Repeats the divisor.",
+     "n2": "96 ÷ 6, wrong divisor.",
+     "n3": "Off by one."
     }
    },
    "distractor_reasoning": {
-    "n2": "NUM-GIVEN-REUSED",
-    "n3": "NUM-WRONG-BASE",
-    "n4": "NUM-OFF-BY-ONE"
+    "n1": "NUM-GIVEN-REUSED",
+    "n2": "NUM-WRONG-BASE",
+    "n3": "NUM-OFF-BY-ONE"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
    "source_url": null,
@@ -1667,7 +1667,7 @@
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "7 × 10 − 7 = 63.",
-    "why_correct": "7 × 9 = 63.",
+    "why_correct": "Answer: 63. 7 × 9 = 63.",
     "why_wrong": {
      "n2": "7 × 8.",
      "n3": "8 × 9.",
@@ -1714,11 +1714,11 @@
    "options": [
     {
      "option_id": "n1",
-     "text": "63"
+     "text": "73"
     },
     {
      "option_id": "n2",
-     "text": "73"
+     "text": "63"
     },
     {
      "option_id": "n3",
@@ -1729,19 +1729,19 @@
      "text": "53"
     }
    ],
-   "answer_option_id": "n1",
+   "answer_option_id": "n2",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "Count up: 37 → 40 is 3, 40 → 100 is 60; 63.",
-    "why_correct": "100 − 37 = 63.",
+    "why_correct": "Answer: 63. 100 − 37 = 63.",
     "why_wrong": {
-     "n2": "Borrowing error in the tens.",
+     "n1": "Borrowing error in the tens.",
      "n3": "Subtracted 33 instead of 37 (digits swapped in the ones step).",
      "n4": "Borrowed twice."
     }
    },
    "distractor_reasoning": {
-    "n2": "NUM-PARTIAL",
+    "n1": "NUM-PARTIAL",
     "n3": "NUM-DECIMAL",
     "n4": "NUM-EXTRA-STEP"
    },
@@ -1784,31 +1784,31 @@
     },
     {
      "option_id": "n2",
-     "text": "81"
+     "text": "90"
     },
     {
      "option_id": "n3",
-     "text": "90"
+     "text": "81"
     },
     {
      "option_id": "n4",
      "text": "99"
     }
    ],
-   "answer_option_id": "n2",
+   "answer_option_id": "n3",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "10% = 45; 20% = 90; subtract 2% (9): 81.",
-    "why_correct": "0.18 × 450 = 81 (10% = 45, 8% = 36; 45 + 36 = 81).",
+    "why_correct": "Answer: 81. 0.18 × 450 = 81 (10% = 45, 8% = 36; 45 + 36 = 81).",
     "why_wrong": {
      "n1": "16% of 450.",
-     "n3": "20% of 450.",
+     "n2": "20% of 450.",
      "n4": "22% of 450."
     }
    },
    "distractor_reasoning": {
     "n1": "NUM-WRONG-BASE",
-    "n3": "NUM-WRONG-BASE",
+    "n2": "NUM-WRONG-BASE",
     "n4": "NUM-WRONG-BASE"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
@@ -1850,32 +1850,32 @@
     },
     {
      "option_id": "n2",
-     "text": "100"
-    },
-    {
-     "option_id": "n3",
      "text": "110"
     },
     {
-     "option_id": "n4",
+     "option_id": "n3",
      "text": "1,000"
+    },
+    {
+     "option_id": "n4",
+     "text": "100"
     }
    ],
-   "answer_option_id": "n2",
+   "answer_option_id": "n4",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "0.8 = 4/5; 125 ÷ 5 × 4 = 100.",
-    "why_correct": "125 × 0.8 = 125 × 8 ÷ 10 = 1,000 ÷ 10 = 100.",
+    "why_correct": "Answer: 100. 125 × 0.8 = 125 × 8 ÷ 10 = 1,000 ÷ 10 = 100.",
     "why_wrong": {
      "n1": "Subtracted 35 by estimate.",
-     "n3": "Subtracted only 15.",
-     "n4": "Forgot to move the decimal point."
+     "n2": "Subtracted only 15.",
+     "n3": "Forgot to move the decimal point."
     }
    },
    "distractor_reasoning": {
     "n1": "NUM-WRONG-BASE",
-    "n3": "NUM-PARTIAL",
-    "n4": "NUM-DECIMAL"
+    "n2": "NUM-PARTIAL",
+    "n3": "NUM-DECIMAL"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
    "source_url": null,
@@ -1912,35 +1912,35 @@
    "options": [
     {
      "option_id": "n1",
-     "text": "10"
+     "text": "32"
     },
     {
      "option_id": "n2",
-     "text": "16"
+     "text": "10"
     },
     {
      "option_id": "n3",
-     "text": "32"
+     "text": "16"
     },
     {
      "option_id": "n4",
      "text": "25"
     }
    ],
-   "answer_option_id": "n3",
+   "answer_option_id": "n1",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "Double five times: 2, 4, 8, 16, 32.",
-    "why_correct": "2 × 2 × 2 × 2 × 2 = 32.",
+    "why_correct": "Answer: 32. 2 × 2 × 2 × 2 × 2 = 32.",
     "why_wrong": {
-     "n1": "Multiplied 2 × 5.",
-     "n2": "Only four factors of 2.",
+     "n2": "Multiplied 2 × 5.",
+     "n3": "Only four factors of 2.",
      "n4": "5 squared, base and exponent swapped."
     }
    },
    "distractor_reasoning": {
-    "n1": "NUM-OP-SWAP",
-    "n2": "NUM-OFF-BY-ONE",
+    "n2": "NUM-OP-SWAP",
+    "n3": "NUM-OFF-BY-ONE",
     "n4": "NUM-OP-SWAP"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
@@ -1997,7 +1997,7 @@
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "LCM = product ÷ GCF = 48 ÷ 2 = 24.",
-    "why_correct": "Multiples of 8: 8, 16, 24; 24 is the first divisible by 6.",
+    "why_correct": "Answer: 24. Multiples of 8: 8, 16, 24; 24 is the first divisible by 6.",
     "why_wrong": {
      "n1": "A multiple of 6 but not of 8.",
      "n3": "The product 6 × 8, a common multiple but not the least.",
@@ -2063,7 +2063,7 @@
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "GCF(36, 54) = GCF(36, 18) = 18.",
-    "why_correct": "36 = 2 × 18, 54 = 3 × 18; 18 is the largest common factor.",
+    "why_correct": "Answer: 18. 36 = 2 × 18, 54 = 3 × 18; 18 is the largest common factor.",
     "why_wrong": {
      "n1": "A common factor, but not the greatest.",
      "n2": "A common factor, but not the greatest.",
@@ -2114,32 +2114,32 @@
     },
     {
      "option_id": "n2",
-     "text": "1/8"
-    },
-    {
-     "option_id": "n3",
      "text": "1/4"
     },
     {
-     "option_id": "n4",
+     "option_id": "n3",
      "text": "125/100"
+    },
+    {
+     "option_id": "n4",
+     "text": "1/8"
     }
    ],
-   "answer_option_id": "n2",
+   "answer_option_id": "n4",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "Halve 1/4 (0.25) to get 1/8 (0.125).",
-    "why_correct": "0.125 = 125/1000 = 1/8.",
+    "why_correct": "Answer: 1/8. 0.125 = 125/1000 = 1/8.",
     "why_wrong": {
      "n1": "0.2.",
-     "n3": "0.25.",
-     "n4": "Wrong place value (that is 1.25)."
+     "n2": "0.25.",
+     "n3": "Wrong place value (that is 1.25)."
     }
    },
    "distractor_reasoning": {
     "n1": "NUM-WRONG-BASE",
-    "n3": "NUM-DECIMAL",
-    "n4": "NUM-DECIMAL"
+    "n2": "NUM-DECIMAL",
+    "n3": "NUM-DECIMAL"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
    "source_url": null,
@@ -2176,11 +2176,11 @@
    "options": [
     {
      "option_id": "n1",
-     "text": "23%"
+     "text": "30%"
     },
     {
      "option_id": "n2",
-     "text": "30%"
+     "text": "23%"
     },
     {
      "option_id": "n3",
@@ -2191,19 +2191,19 @@
      "text": "130%"
     }
    ],
-   "answer_option_id": "n2",
+   "answer_option_id": "n1",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "Change ÷ original: 60 ÷ 200 = 30%.",
-    "why_correct": "Increase 60 ÷ original 200 = 0.30 = 30%.",
+    "why_correct": "Answer: 30%. Increase 60 ÷ original 200 = 0.30 = 30%.",
     "why_wrong": {
-     "n1": "Divided by the new price 260.",
+     "n2": "Divided by the new price 260.",
      "n3": "Used the peso increase as the percent.",
      "n4": "New price as a percent of old."
     }
    },
    "distractor_reasoning": {
-    "n1": "NUM-WRONG-BASE",
+    "n2": "NUM-WRONG-BASE",
     "n3": "NUM-GIVEN-REUSED",
     "n4": "NUM-EXTRA-STEP"
    },
@@ -2261,7 +2261,7 @@
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "Part ÷ (sum of parts).",
-    "why_correct": "3 + 5 = 8 parts; pens are 3 of 8 = 3/8.",
+    "why_correct": "Answer: 3/8. 3 + 5 = 8 parts; pens are 3 of 8 = 3/8.",
     "why_wrong": {
      "n1": "Pens over pencils, not over the total.",
      "n3": "Pencils' share.",
@@ -2312,31 +2312,31 @@
     },
     {
      "option_id": "n2",
-     "text": "20"
+     "text": "25"
     },
     {
      "option_id": "n3",
-     "text": "25"
+     "text": "20"
     },
     {
      "option_id": "n4",
      "text": "200"
     }
    ],
-   "answer_option_id": "n2",
+   "answer_option_id": "n3",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "1% = 8, so 2.5% = 20.",
-    "why_correct": "1% of 800 = 8; 2.5 × 8 = 20.",
+    "why_correct": "Answer: 20. 1% of 800 = 8; 2.5 × 8 = 20.",
     "why_wrong": {
      "n1": "Decimal moved one place too far.",
-     "n3": "Took 2.5% of 1,000.",
+     "n2": "Took 2.5% of 1,000.",
      "n4": "Decimal moved one place the wrong way (25%)."
     }
    },
    "distractor_reasoning": {
     "n1": "NUM-DECIMAL",
-    "n3": "NUM-WRONG-BASE",
+    "n2": "NUM-WRONG-BASE",
     "n4": "NUM-DECIMAL"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
@@ -2378,32 +2378,32 @@
     },
     {
      "option_id": "n2",
-     "text": "14"
-    },
-    {
-     "option_id": "n3",
      "text": "16"
     },
     {
-     "option_id": "n4",
+     "option_id": "n3",
      "text": "98"
+    },
+    {
+     "option_id": "n4",
+     "text": "14"
     }
    ],
-   "answer_option_id": "n2",
+   "answer_option_id": "n4",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "196 ends in 6, so the root ends in 4 or 6; 14² = 196.",
     "why_correct": "14 × 14 = 196.",
     "why_wrong": {
      "n1": "13 × 13 = 169.",
-     "n3": "16 × 16 = 256.",
-     "n4": "Halved instead of taking the root."
+     "n2": "16 × 16 = 256.",
+     "n3": "Halved instead of taking the root."
     }
    },
    "distractor_reasoning": {
     "n1": "NUM-OFF-BY-ONE",
-    "n3": "NUM-WRONG-BASE",
-    "n4": "NUM-OP-SWAP"
+    "n2": "NUM-WRONG-BASE",
+    "n3": "NUM-OP-SWAP"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
    "source_url": null,
@@ -2440,35 +2440,35 @@
    "options": [
     {
      "option_id": "n1",
-     "text": "180"
+     "text": "210"
     },
     {
      "option_id": "n2",
-     "text": "200"
+     "text": "180"
     },
     {
      "option_id": "n3",
-     "text": "210"
+     "text": "200"
     },
     {
      "option_id": "n4",
      "text": "350"
     }
    ],
-   "answer_option_id": "n3",
+   "answer_option_id": "n1",
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "3 h = 180, half hour = 30; 210.",
-    "why_correct": "3.5 × 60 = 210.",
+    "why_correct": "Answer: 210. 3.5 × 60 = 210.",
     "why_wrong": {
-     "n1": "Dropped the half hour.",
-     "n2": "Treated .5 h as 20 min.",
+     "n2": "Dropped the half hour.",
+     "n3": "Treated .5 h as 20 min.",
      "n4": "Used 100 minutes per hour."
     }
    },
    "distractor_reasoning": {
-    "n1": "NUM-PARTIAL",
-    "n2": "NUM-UNIT",
+    "n2": "NUM-PARTIAL",
+    "n3": "NUM-UNIT",
     "n4": "NUM-UNIT"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
@@ -2525,7 +2525,7 @@
    "reveal": {
     "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
     "shortcut": "Divide by 1.2: 180 ÷ 1.2 = 150.",
-    "why_correct": "1.2 × n = 180, so n = 150. Check: 150 + 30 = 180.",
+    "why_correct": "Answer: 150. 1.2 × n = 180, so n = 150. Check: 150 + 30 = 180.",
     "why_wrong": {
      "n1": "Took 20% off 180 (wrong base).",
      "n3": "Subtracted 20 instead of 20%.",
@@ -2572,35 +2572,35 @@
    "options": [
     {
      "option_id": "n1",
-     "text": "15"
-    },
-    {
-     "option_id": "n2",
      "text": "14"
     },
     {
-     "option_id": "n3",
+     "option_id": "n2",
      "text": "18"
+    },
+    {
+     "option_id": "n3",
+     "text": "15"
     },
     {
      "option_id": "n4",
      "text": "24"
     }
    ],
-   "answer_option_id": "n1",
+   "answer_option_id": "n3",
    "reveal": {
     "terms": "Sequence: find the rule between terms, then apply it once more.",
     "shortcut": "Constant difference 3.",
-    "why_correct": "Add 3 each time: 12 + 3 = 15.",
+    "why_correct": "Answer: 15. Add 3 each time: 12 + 3 = 15.",
     "why_wrong": {
-     "n2": "Added 2.",
-     "n3": "Added 6.",
+     "n1": "Added 2.",
+     "n2": "Added 6.",
      "n4": "Doubled the last term."
     }
    },
    "distractor_reasoning": {
-    "n2": "NUM-OFF-BY-ONE",
-    "n3": "NUM-SEQ-OTHER-RULE",
+    "n1": "NUM-OFF-BY-ONE",
+    "n2": "NUM-SEQ-OTHER-RULE",
     "n4": "NUM-SEQ-OTHER-RULE"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
@@ -2645,28 +2645,28 @@
     },
     {
      "option_id": "n3",
-     "text": "13"
+     "text": "16"
     },
     {
      "option_id": "n4",
-     "text": "16"
+     "text": "13"
     }
    ],
-   "answer_option_id": "n3",
+   "answer_option_id": "n4",
    "reveal": {
     "terms": "Sequence: find the rule between terms, then apply it once more.",
     "shortcut": "Fibonacci: add the last two terms.",
-    "why_correct": "Each term is the sum of the two before it: 5 + 8 = 13.",
+    "why_correct": "Answer: 13. Each term is the sum of the two before it: 5 + 8 = 13.",
     "why_wrong": {
      "n1": "Added the last difference 3.",
      "n2": "Added 4.",
-     "n4": "Doubled 8."
+     "n3": "Doubled 8."
     }
    },
    "distractor_reasoning": {
     "n1": "NUM-SEQ-OTHER-RULE",
     "n2": "NUM-OFF-BY-ONE",
-    "n4": "NUM-SEQ-OTHER-RULE"
+    "n3": "NUM-SEQ-OTHER-RULE"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
    "source_url": null,
@@ -2703,35 +2703,35 @@
    "options": [
     {
      "option_id": "n1",
-     "text": "84"
+     "text": "112"
     },
     {
      "option_id": "n2",
-     "text": "98"
+     "text": "84"
     },
     {
      "option_id": "n3",
-     "text": "112"
+     "text": "98"
     },
     {
      "option_id": "n4",
      "text": "70"
     }
    ],
-   "answer_option_id": "n3",
+   "answer_option_id": "n1",
    "reveal": {
     "terms": "Sequence: find the rule between terms, then apply it once more.",
     "shortcut": "Ratio 2.",
-    "why_correct": "Multiply by 2: 56 × 2 = 112.",
+    "why_correct": "Answer: 112. Multiply by 2: 56 × 2 = 112.",
     "why_wrong": {
-     "n1": "Added 28 (the previous term).",
-     "n2": "Added 42.",
+     "n2": "Added 28 (the previous term).",
+     "n3": "Added 42.",
      "n4": "Added 14 (the first difference)."
     }
    },
    "distractor_reasoning": {
-    "n1": "NUM-SEQ-OTHER-RULE",
     "n2": "NUM-SEQ-OTHER-RULE",
+    "n3": "NUM-SEQ-OTHER-RULE",
     "n4": "NUM-SEQ-OTHER-RULE"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
@@ -2772,31 +2772,31 @@
     },
     {
      "option_id": "n2",
-     "text": "34"
+     "text": "36"
     },
     {
      "option_id": "n3",
-     "text": "36"
+     "text": "34"
     },
     {
      "option_id": "n4",
      "text": "49"
     }
    ],
-   "answer_option_id": "n3",
+   "answer_option_id": "n2",
    "reveal": {
     "terms": "Sequence: find the rule between terms, then apply it once more.",
     "shortcut": "Differences 3, 5, 7, 9, then 11.",
-    "why_correct": "Squares 1², 2², ..., 5²; next is 6² = 36.",
+    "why_correct": "Answer: 36. Squares 1², 2², ..., 5²; next is 6² = 36.",
     "why_wrong": {
      "n1": "Added 5 again.",
-     "n2": "Added 9, the previous odd difference.",
+     "n3": "Added 9, the previous odd difference.",
      "n4": "Skipped to 7²."
     }
    },
    "distractor_reasoning": {
     "n1": "NUM-SEQ-OTHER-RULE",
-    "n2": "NUM-OFF-BY-ONE",
+    "n3": "NUM-OFF-BY-ONE",
     "n4": "NUM-OFF-BY-ONE"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
@@ -2852,7 +2852,7 @@
    "reveal": {
     "terms": "Sequence: find the rule between terms, then apply it once more.",
     "shortcut": "List primes: 23, 29.",
-    "why_correct": "Consecutive primes; the prime after 23 is 29.",
+    "why_correct": "Answer: 29. Consecutive primes; the prime after 23 is 29.",
     "why_wrong": {
      "n1": "Added 2 (25 = 5 × 5 is not prime).",
      "n2": "Added 4 (27 = 3 × 9).",
@@ -2907,28 +2907,28 @@
     },
     {
      "option_id": "n3",
-     "text": "120"
+     "text": "144"
     },
     {
      "option_id": "n4",
-     "text": "144"
+     "text": "120"
     }
    ],
-   "answer_option_id": "n3",
+   "answer_option_id": "n4",
    "reveal": {
     "terms": "Sequence: find the rule between terms, then apply it once more.",
     "shortcut": "Factorials: 5! = 120.",
-    "why_correct": "Multiply by 2, 3, 4, then 5: 24 × 5 = 120.",
+    "why_correct": "Answer: 120. Multiply by 2, 3, 4, then 5: 24 × 5 = 120.",
     "why_wrong": {
      "n1": "Multiplied by 2.",
      "n2": "Multiplied by 4 again.",
-     "n4": "Multiplied by 6."
+     "n3": "Multiplied by 6."
     }
    },
    "distractor_reasoning": {
     "n1": "NUM-SEQ-OTHER-RULE",
     "n2": "NUM-SEQ-OTHER-RULE",
-    "n4": "NUM-OFF-BY-ONE"
+    "n3": "NUM-OFF-BY-ONE"
    },
    "source": "Civio baseline, rewritten (Grok Bot B3)",
    "source_url": null,

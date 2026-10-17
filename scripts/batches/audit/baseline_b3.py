@@ -213,7 +213,7 @@ gi(393, R6, "GI-WHO-HOLDS-POWER", "Which body has the primary responsibility for
    {1: "GI-WRONG-BODY", 2: "GI-WRONG-BODY", 3: "GI-WRONG-BODY"}, "R.A. 6713, Sec. 12", L6713,
    "The Civil Service Commission shall have the primary responsibility for the administration and enforcement of this Act.", "FACT-RA6713-12-CSC-ENFORCES", "Civil service ethics law → Civil Service Commission."),
 gi(395, R6, "GI-SCENARIO-APPLY", "A mayor appoints his nephew to a position. Under R.A. 6713, Sec. 4(A)(c), in which case is this NOT an undue favor to a relative?",
-   ["The position is strictly confidential or on the mayor's personal staff, coterminous with him", "The nephew passed a civil service examination", "The nephew agrees to serve without pay for six months", "The appointment is announced on the city's website"], 0,
+   ["The position is strictly confidential or on the mayor's personal staff, coterminous with him", "The nephew passed the civil service examination and meets every qualification of the position", "The nephew agrees to serve without any pay for the first six months of the appointment", "The appointment is announced publicly on the city's website and posted at city hall"], 0,
    "Undue favor on account of office (Sec. 4(A)(c), justness and sincerity).",
    "Sec. 4(A)(c) bars undue favors to relatives except appointments to strictly confidential positions or to personal staff whose terms are coterminous with the official.",
    {1: "Eligibility is a separate requirement; it does not create the statutory exception.", 2: "Serving without pay is not an exception in the Act.", 3: "Publicity does not cure an undue favor."},
@@ -221,7 +221,7 @@ gi(395, R6, "GI-SCENARIO-APPLY", "A mayor appoints his nephew to a position. Und
    "except with respect to appointments of such relatives to positions considered strictly confidential or as members of their personal staff whose terms are coterminous with theirs",
    "FACT-RA6713-4C-RELATIVES-EXCEPTION", "Exception = confidential or coterminous personal staff."),
 gi(396, R6, "GI-TERM-MATCH", "Under R.A. 6713, Sec. 8, a public official's declaration covers his own assets and interests and also those of whom?",
-   ["His spouse and unmarried children under 18 living in his household", "All relatives within the fourth civil degree", "His spouse only", "All children regardless of age or residence"], 0,
+   ["His spouse and unmarried children under 18 living in his household", "All relatives within the fourth civil degree", "His spouse only, since children file their own statements", "All of his children, regardless of their age or where they live"], 0,
    "Declaration under oath of assets, liabilities, net worth and financial and business interests (Sec. 8).",
    "Sec. 8 extends the declaration to the spouse and unmarried children under eighteen living in the household.",
    {1: "The fourth civil degree defines 'relatives' for the separate Sec. 8(B) disclosure of relatives in government.", 2: "Sec. 8 also covers unmarried minor children in the household.", 3: "Only unmarried children under 18 living in the household are covered."},
@@ -235,7 +235,7 @@ gi(397, R6, "GI-TERM-MATCH", "Under R.A. 6713, Sec. 7(d), which gift from a fore
    {1: "GI-SOUNDS-RIGHT", 2: "GI-SIBLING-TERM", 3: "GI-SOUNDS-RIGHT"}, "R.A. 6713, Sec. 7(d)", L6713,
    "The acceptance and retention by a public official or employee of a gift of nominal value tendered and received as a souvenir or mark of courtesy", "FACT-RA6713-7D-FOREIGN-GIFT", "Foreign gift: nominal souvenir, scholarship, medical, travel grant."),
 gi(526, R6, "GI-SCENARIO-APPLY", "The reviewing body finds an official's statement incomplete. Under R.A. 6713, Sec. 10(a), what must it do?",
-   ["Inform the official and direct him to take corrective action", "File a criminal case at once", "Publish the statement with the errors marked", "Return the statement and treat it as never filed"], 0,
+   ["Inform the official and direct him to take corrective action", "File a criminal case against the official at once", "Publish the statement online with the errors marked", "Return the statement and treat it as if it was never filed"], 0,
    "Review and compliance procedure (Sec. 10).",
    "Sec. 10(a) says that when a statement is not timely, complete or in proper form, the reviewing body shall inform the reporting individual and direct corrective action.",
    {1: "Prosecution is not the first step for an incomplete statement under Sec. 10(a).", 2: "Sec. 10(a) does not provide for publishing marked errors.", 3: "The law directs correction, not treating the filing as void."},
@@ -243,7 +243,7 @@ gi(526, R6, "GI-SCENARIO-APPLY", "The reviewing body finds an official's stateme
    "the appropriate Committee shall so inform the reporting individual and direct him to take the necessary corrective action", "FACT-RA6713-10A-CORRECTIVE-ACTION", "Incomplete SALN → told to correct it."),
 # Environment
 gi(11, EN, "GI-ENV-PRINCIPLE", "Sustainable development is development that meets present needs without doing what?",
-   ["Compromising the ability of future generations to meet their own needs", "Using natural resources for economic growth", "Allowing private companies to operate in protected areas", "Increasing a country's population"], 0,
+   ["Compromising the ability of future generations to meet their own needs", "Using any natural resources to support present economic growth", "Allowing private companies to operate inside protected areas", "Allowing a country's population to increase over the next decades"], 0,
    "Sustainable development (Brundtland Commission, 1987); R.A. 9003, Sec. 2(c) requires ecologically sustainable development principles.",
    "The standard definition: meeting the needs of the present without compromising the ability of future generations to meet their own needs.",
    {1: "Sustainable development allows resource use; it limits use that harms future generations.", 2: "Private activity is regulated by protected-area law, not excluded by the definition.", 3: "Population growth is not part of the definition."},
@@ -281,7 +281,7 @@ gi(408, EN, "GI-TERM-MATCH", "Which short title belongs to Republic Act No. 8749
    {1: "That is R.A. 9003.", 2: "That is R.A. 9275.", 3: "That is R.A. 9729."}, {1: "GI-SIBLING-TERM", 2: "GI-SIBLING-TERM", 3: "GI-SIBLING-TERM"},
    "R.A. 8749, Sec. 1", L8749, "This Act shall be known as the \" Philippine Clean Air Act of 1999. \"", "FACT-RA8749-1-TITLE", "8749 → air (1999).", "easy", 15),
 gi(410, EN, "GI-ENV-PRINCIPLE", "R.A. 9729 adopts the Precautionary Principle to guide climate risk decisions. What does that principle allow?",
-   ["Preventive action against a serious threat even without full scientific certainty", "Action only after harm is proven beyond reasonable doubt", "Making the polluter pay for cleanup after damage occurs", "Shifting all climate costs to developed countries"], 0,
+   ["Preventive action against a serious threat even without full scientific certainty", "Taking action only after the harm is proven beyond reasonable doubt", "Making the polluter pay for the cleanup after the damage has already occurred", "Shifting all of the costs of climate action to developed countries alone"], 0,
    "Precautionary Principle.", "R.A. 9729 Sec. 2 names the Precautionary Principle; lack of full scientific certainty is not a reason to postpone preventive measures (see also Rule 20, A.M. No. 09-6-8-SC).",
    {1: "That is the opposite of precaution.", 2: "That is the polluter-pays principle.", 3: "That distorts common but differentiated responsibilities, a separate Sec. 2 principle."},
    {1: "GI-SOUNDS-RIGHT", 2: "GI-SIBLING-TERM", 3: "GI-SIBLING-TERM"}, "R.A. 9729 (Climate Change Act of 2009), Sec. 2", L9729,
@@ -307,7 +307,7 @@ gi(414, EN, "GI-WHO-HOLDS-POWER", "Which department is primarily responsible for
    {1: "GI-WRONG-BODY", 2: "GI-WRONG-BODY", 3: "GI-WRONG-BODY"}, "E.O. 192 (1987), Sec. 4", "https://lawphil.net/executive/execord/eo1987/eo_192_1987.html",
    "TO BE QUOTED after LawPhil check (E.O. 192 Sec. 4)", "FACT-EO192-DENR-PRIMARY", "Environment + natural resources = DENR.", "easy", 15),
 gi(417, EN, "GI-TERM-MATCH", "R.A. 11898 added a definition of 'circular economy' to R.A. 9003. What does a circular economy aim to do?",
-   ["Keep products and materials in use longer through design, servicing and recovery", "Collect all waste in a single circular landfill", "Recycle materials only after final disposal", "Ban the production of all plastic products"], 0,
+   ["Keep products and materials in use longer through design, servicing and recovery", "Collect all of a city's waste in one large circular landfill", "Recycle materials only after they reach final disposal sites", "Ban the production and sale of all plastic products nationwide"], 0,
    "Circular economy (R.A. 9003 Sec. 3(d-1), as amended by R.A. 11898).",
    "The amended Sec. 3(d-1) describes creating value by extending product lifespan through improved design and servicing, so resources stay in continual use.",
    {1: "Landfilling is the end of a linear model, not a circular one.", 2: "Recovery happens before disposal, not after.", 3: "The EPR Act regulates plastic packaging; it does not ban all plastic."},
@@ -369,6 +369,22 @@ num(193, "NUM-SEQ-DIFF", NS, "What number comes next? 1, 4, 9, 16, 25, ___", ["3
 num(196, "NUM-SEQ-DIFF", NS, "Which number should follow 11, 13, 17, 19, 23?", ["25", "27", "29", "31"], 2, "Consecutive primes; the prime after 23 is 29.", {0: "Added 2 (25 = 5 × 5 is not prime).", 1: "Added 4 (27 = 3 × 9).", 3: "Skipped the prime 29."}, {0: "NUM-SEQ-OTHER-RULE", 1: "NUM-SEQ-OTHER-RULE", 3: O}, "List primes: 23, 29."),
 num(267, "NUM-SEQ-MULT", NS, "In the series 1, 2, 6, 24, each term is a product of the one before. What is the fifth term?", ["48", "96", "120", "144"], 2, "Multiply by 2, 3, 4, then 5: 24 × 5 = 120.", {0: "Multiplied by 2.", 1: "Multiplied by 4 again.", 3: "Multiplied by 6."}, {0: "NUM-SEQ-OTHER-RULE", 1: "NUM-SEQ-OTHER-RULE", 3: O}, "Factorials: 5! = 120."),
 ]
+
+# ---------- post-process: state the key in why_correct; spread key positions (content unchanged) ----------
+for n, it in enumerate(D):
+    k = next(o["text"] for o in it["options"] if o["option_id"] == it["answer_option_id"])
+    if not it["reveal"]["why_correct"].lower().startswith(k.lower()[:20]):
+        it["reveal"]["why_correct"] = f"Answer: {k}. " + it["reveal"]["why_correct"]
+    texts = [o["text"] for o in it["options"]]; ids = [o["option_id"] for o in it["options"]]
+    ki = ids.index(it["answer_option_id"]); slot = n % 4
+    order = [t for i, t in enumerate(texts) if i != ki]; order.insert(slot, texts[ki])
+    old = {o["text"]: o["option_id"] for o in it["options"]}
+    newid = {t: ids[i] for i, t in enumerate(order)}
+    remap = {old[t]: newid[t] for t in texts}
+    it["options"] = [{"option_id": ids[i], "text": t} for i, t in enumerate(order)]
+    it["answer_option_id"] = remap[it["answer_option_id"]]
+    it["reveal"]["why_wrong"] = {remap[o]: w for o, w in it["reveal"]["why_wrong"].items()}
+    it["distractor_reasoning"] = {remap[o]: c for o, c in it["distractor_reasoning"].items()}
 
 # ---------- outputs ----------
 json.dump({"batch": "round-03-baseline-b3-drafts", "spec_version": "0.1.9", "status": "draft (pending CoS)", "source_group": "civio",
