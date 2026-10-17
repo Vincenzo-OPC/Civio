@@ -1,0 +1,803 @@
+{
+ "round": "03",
+ "date": "2026-10-17",
+ "verdict": "Chief of Staff (final approval, delegated by GT)",
+ "retire": [
+  2,
+  3,
+  4,
+  9,
+  53,
+  54,
+  55,
+  58,
+  59,
+  74,
+  77,
+  79,
+  215,
+  222,
+  226,
+  227,
+  273,
+  292,
+  293,
+  294,
+  295,
+  296,
+  297,
+  298,
+  300,
+  306,
+  308,
+  311,
+  312,
+  360,
+  361,
+  365,
+  366,
+  369,
+  400,
+  402,
+  403,
+  404,
+  415,
+  500,
+  502,
+  503,
+  504,
+  505,
+  506,
+  507,
+  508,
+  509,
+  510,
+  511,
+  512,
+  513,
+  514,
+  515,
+  516,
+  517,
+  518,
+  544,
+  545,
+  546,
+  547,
+  549,
+  550
+ ],
+ "hold": {
+  "304": "CoS asked for 'Indispensible', but that is already one of the four choices (and 'Indespensable', my original proposal, is too). Left unchanged until CoS names a different foil."
+ },
+ "updates": [
+  {
+   "id": 1,
+   "old": {
+    "explanation": "Local practice item for Docker study."
+   },
+   "new": {
+    "explanation": "The Constitution is the fundamental and supreme law; the Civil Code, the Penal Code and the Local Government Code are statutes that must conform to it. The 1987 Constitution took effect on its ratification in a plebiscite (Art. XVIII, Sec. 27)."
+   }
+  },
+  {
+   "id": 5,
+   "old": {
+    "stem": "The Bill of Rights is found mainly in:",
+    "explanation": "Local practice item for Docker study."
+   },
+   "new": {
+    "stem": "The Bill of Rights is found in:",
+    "explanation": "Article III of the 1987 Constitution is the Bill of Rights. Article II is the Declaration of Principles and State Policies, Article VI the Legislative Department, and Article VII the Executive Department."
+   }
+  },
+  {
+   "id": 10,
+   "old": {
+    "explanation": "Local practice item for Docker study."
+   },
+   "new": {
+    "explanation": "Art. XIII, Sec. 17(1) creates “an independent office called the Commission on Human Rights.” It is not a Cabinet department, a private NGO or a local government unit."
+   }
+  },
+  {
+   "id": 51,
+   "old": {
+    "explanation": "Local practice item for Docker study."
+   },
+   "new": {
+    "explanation": "Compare the first letter of each surname: G (Garcia) comes before R (Reyes), S (Santos) and T (Torres), so Garcia, Ana is filed first."
+   }
+  },
+  {
+   "id": 52,
+   "old": {
+    "explanation": "Local practice item for Docker study."
+   },
+   "new": {
+    "explanation": "All five names start with L, so compare the second letter. The i in Lim comes before the o in Lopez, while Luna and Luz (u) and Lyons (y) come after it. Only Lim is filed before Lopez."
+   }
+  },
+  {
+   "id": 212,
+   "old": {
+    "options": [
+     "Topic or subject matter",
+     "Employee birthday only",
+     "Ink color",
+     "Random lottery"
+    ],
+    "explanation": "Subject filing organizes by topic."
+   },
+   "new": {
+    "options": [
+     "Topic or subject matter",
+     "Date the record was received",
+     "Name of the correspondent",
+     "Assigned file number"
+    ],
+    "explanation": "Subject filing groups records by topic. Filing by date received is chronological, by correspondent name is alphabetic, and by file number is numeric."
+   }
+  },
+  {
+   "id": 213,
+   "old": {
+    "options": [
+     "Reminder or follow-up by date",
+     "Permanent archives only",
+     "Destroying records weekly",
+     "Storing broken stamps"
+    ],
+    "explanation": "Tickler files prompt action on future dates."
+   },
+   "new": {
+    "options": [
+     "Reminder or follow-up by date",
+     "Moving inactive records to storage",
+     "Listing where every record is kept",
+     "Keeping permanent records only"
+    ],
+    "explanation": "A tickler file is arranged by future date so the clerk is reminded to act on time. Moving inactive records is a transfer file, listing locations is an index, and keeping permanent records is an archive; none of them prompts follow-up."
+   }
+  },
+  {
+   "id": 216,
+   "old": {
+    "options": [
+     "Name of addressee or subject per office rules",
+     "Weather on mailing day",
+     "Stamp price only",
+     "Courier shoe size"
+    ],
+    "explanation": "Offices typically file by correspondent name or subject."
+   },
+   "new": {
+    "options": [
+     "Name of addressee or subject per office rules",
+     "Date sent only, with no name or subject",
+     "Name of the sending office",
+     "File number only, with no index"
+    ],
+    "explanation": "Outgoing letters are filed under the addressee or the subject so they sit with the matching incoming letters. Date alone or number alone cannot be searched without an index, and the sending office's own name would put every letter in one folder."
+   }
+  },
+  {
+   "id": 217,
+   "old": {
+    "options": [
+     "Date order",
+     "Author shoe size",
+     "Random hash only",
+     "Ink brand"
+    ],
+    "explanation": "Chronological means by date."
+   },
+   "new": {
+    "options": [
+     "Date order",
+     "Alphabetic order of the author",
+     "Subject or topic",
+     "Numeric file code"
+    ],
+    "explanation": "Chronological filing arranges records by date. Alphabetic, subject and numeric filing are different methods."
+   }
+  },
+  {
+   "id": 219,
+   "old": {
+    "stem": "The President may grant reprieves, commutations, and pardons, except in cases of:",
+    "options": [
+     "All criminal offenses without limit",
+     "Impeachment",
+     "Traffic violations only",
+     "Tax evasion exclusively"
+    ],
+    "explanation": "Pardon power generally excludes impeachment cases."
+   },
+   "new": {
+    "stem": "Art. VII, Sec. 19 names which case as the one where the President may not grant reprieves, commutations and pardons?",
+    "options": [
+     "Violations of election law without COMELEC recommendation",
+     "Impeachment",
+     "Traffic violations only",
+     "Tax evasion exclusively"
+    ],
+    "explanation": "Art. VII, Sec. 19 opens: “Except in cases of impeachment, or as otherwise provided in this Constitution.” Impeachment is the case it names. The election-law limit is a different rule in Art. IX-C, Sec. 5, and it is conditional: the President may pardon such violations with COMELEC's favorable recommendation. Traffic violations and tax evasion are not exceptions."
+   }
+  },
+  {
+   "id": 275,
+   "old": {
+    "stem": "Which sequence correctly files these surnames?",
+    "explanation": "Compare the surnames from left to right: Abad, Abalos, Aquino, and Arce are in ascending alphabetic order."
+   },
+   "new": {
+    "stem": "Which surname is filed first?",
+    "explanation": "All four start with A. In the second letter, b (Abad, Abalos) comes before q (Aquino) and r (Arce). Abad and Abalos share A-B-A; in the fourth letter, d comes before l, so Abad is filed first."
+   }
+  },
+  {
+   "id": 277,
+   "old": {
+    "options": [
+     "Dela Cruz; Del Mundo; Del Rosario; Delos Santos",
+     "Del Mundo; Dela Cruz; Delos Santos; Del Rosario",
+     "Delos Santos; Del Rosario; Del Mundo; Dela Cruz",
+     "Del Rosario; Delos Santos; Dela Cruz; Del Mundo"
+    ],
+    "correct_option": 0,
+    "explanation": "Ignore spaces for the comparison and compare letter by letter: Dela, Del M, Del R, Delos."
+   },
+   "new": {
+    "options": [
+     "Dela Cruz; Del Mundo; Del Rosario; Delos Santos",
+     "Dela Cruz; Del Mundo; Delos Santos; Del Rosario",
+     "Delos Santos; Del Rosario; Del Mundo; Dela Cruz",
+     "Del Rosario; Delos Santos; Dela Cruz; Del Mundo"
+    ],
+    "correct_option": 1,
+    "explanation": "Treat each prefix as part of the surname and compare letter by letter (ARMA Rule 6): DELACRUZ, DELMUNDO, DELOSSANTOS, DELROSARIO. After D-E-L the next letters are a, m, o and r, so the order is Dela Cruz, Del Mundo, Delos Santos, Del Rosario."
+   }
+  },
+  {
+   "id": 282,
+   "old": {
+    "options": [
+     "Under L, before “Leave Application”",
+     "Under A, because application is a form",
+     "Under C, because credits are numbers",
+     "At the end of the cabinet regardless of subject"
+    ],
+    "explanation": "Subject filing uses the principal subject; “Leave Credits” belongs under L and is compared with other Leave entries."
+   },
+   "new": {
+    "options": [
+     "Under L, after “Leave Application”",
+     "Under A, because application is a form",
+     "Under C, because credits are numbers",
+     "At the end of the cabinet regardless of subject"
+    ],
+    "explanation": "Subject filing uses the main subject, so the memo goes under L. Among the Leave entries, compare the second word: Application (A) comes before Credits (C), so “Leave Credits” is filed after “Leave Application”."
+   }
+  },
+  {
+   "id": 287,
+   "old": {
+    "correct_option": 1,
+    "explanation": "Compare character by character: the shorter Bayani precedes Bayanihan; both Bay names precede Baz, and Bayview follows the Baya-n entries."
+   },
+   "new": {
+    "correct_option": 0,
+    "explanation": "Compare letter by letter. Bayani is shorter than Bayanihan and nothing comes before something, so Bayani Foundation is first and Bayanihan Center second. Bayview comes next (v after a in the fourth letter), and Bazaars is last (z after y in the third letter)."
+   }
+  },
+  {
+   "id": 290,
+   "old": {
+    "options": [
+     "A retrieval description or subject",
+     "The clerk’s favorite color",
+     "An unrelated advertisement",
+     "Only the paper weight"
+    ],
+    "explanation": "An index maps identifiers to searchable subjects or descriptions, allowing a record to be located efficiently."
+   },
+   "new": {
+    "options": [
+     "A retrieval description or subject",
+     "The number of pages in the record",
+     "The name of the clerk who encoded it",
+     "The paper size of the record"
+    ],
+    "explanation": "An index is used to find a record, so beside the identifier it needs a description or subject that a searcher can look up. Page count, the encoder's name and paper size do not help anyone locate the record."
+   }
+  },
+  {
+   "id": 299,
+   "old": {
+    "options": [
+     "Millennium",
+     "Millenium",
+     "Milennium",
+     "Milleniun"
+    ]
+   },
+   "new": {
+    "options": [
+     "Millennium",
+     "Millenium",
+     "Milennium",
+     "Milenium"
+    ]
+   }
+  },
+  {
+   "id": 301,
+   "old": {
+    "explanation": "Conscientious contains “sci-ent-i-ous”; the first option follows the standard spelling."
+   },
+   "new": {
+    "explanation": "Conscientious is built on science: con-sci-en-tious. Keep the sc and the t before -ious."
+   }
+  },
+  {
+   "id": 305,
+   "old": {
+    "options": [
+     "Miscellaneous",
+     "Miscelaneous",
+     "Miscellanous",
+     "Misceallaneous"
+    ]
+   },
+   "new": {
+    "options": [
+     "Miscellaneous",
+     "Miscelaneous",
+     "Miscellanous",
+     "Miscellanious"
+    ]
+   }
+  },
+  {
+   "id": 309,
+   "old": {
+    "options": [
+     "Reconciliation",
+     "Reconcilation",
+     "Reconcilliation",
+     "Reconcilitation"
+    ]
+   },
+   "new": {
+    "options": [
+     "Reconciliation",
+     "Reconcilation",
+     "Reconcilliation",
+     "Reconsiliation"
+    ]
+   }
+  },
+  {
+   "id": 313,
+   "old": {
+    "options": [
+     "Pronounciation",
+     "Pronunciation",
+     "Pronounciaton",
+     "Pronunciashun"
+    ]
+   },
+   "new": {
+    "options": [
+     "Pronounciation",
+     "Pronunciation",
+     "Pronounciaton",
+     "Pronounciasion"
+    ]
+   }
+  },
+  {
+   "id": 354,
+   "old": {
+    "options": [
+     "Public accountability",
+     "Private ownership of agencies",
+     "Hereditary succession",
+     "Military supremacy"
+    ],
+    "explanation": "Public accountability makes officials answerable for the exercise of public power Therefore, the correct option is \"Public accountability.\" The other choices fail because the other choices replace democratic accountability with private, hereditary, or military control."
+   },
+   "new": {
+    "options": [
+     "Public accountability",
+     "Separation of powers",
+     "Local autonomy",
+     "Civilian supremacy"
+    ],
+    "explanation": "Art. XI, Sec. 1: public office is a public trust, and public officers and employees must at all times be accountable to the people. Separation of powers divides authority among the branches, local autonomy gives powers to local governments, and civilian supremacy places civilian authority over the military; none of them is the duty to answer to the people."
+   }
+  },
+  {
+   "id": 355,
+   "old": {
+    "options": [
+     "The legislative branch",
+     "The executive branch",
+     "The judicial branch",
+     "Local school boards"
+    ],
+    "explanation": "Congress, the legislative branch, exercises legislative power under Article VI Therefore, the correct option is \"The legislative branch.\" The other choices fail because the executive and judicial branches implement or interpret law, while school boards are not a national branch."
+   },
+   "new": {
+    "options": [
+     "The legislative branch",
+     "The executive branch",
+     "The judicial branch",
+     "The constitutional commissions"
+    ],
+    "explanation": "Art. VI, Sec. 1 vests legislative power in the Congress. The executive branch carries out laws, the judicial branch interprets them, and the constitutional commissions are independent bodies that do not pass statutes."
+   }
+  },
+  {
+   "id": 356,
+   "old": {
+    "explanation": "The Senate has the sole power to try and decide impeachment cases after the House initiates them Therefore, the correct option is \"The Senate.\" The other choices fail because the House initiates, while COA and the Supreme Court do not act as the impeachment trial body."
+   },
+   "new": {
+    "explanation": "The Senate has the sole power to try and decide impeachment cases after the House initiates them. Therefore, the correct option is \"The Senate.\" The other choices fail because the House initiates, while COA and the Supreme Court do not act as the impeachment trial body."
+   }
+  },
+  {
+   "id": 357,
+   "old": {
+    "options": [
+     "The armed forces of the Philippines",
+     "All private corporations",
+     "Every foreign military",
+     "The independent constitutional commissions"
+    ],
+    "explanation": "Article VII makes the President commander-in-chief of the armed forces Therefore, the correct option is \"The armed forces of the Philippines.\" The other choices fail because the other choices are outside that constitutional command relationship."
+   },
+   "new": {
+    "options": [
+     "The armed forces of the Philippines",
+     "The Philippine National Police",
+     "The Cabinet",
+     "The independent constitutional commissions"
+    ],
+    "explanation": "Art. VII, Sec. 18: the President is the Commander-in-Chief of all armed forces of the Philippines. The police force is civilian in character (Art. XVI, Sec. 6), the Cabinet heads departments under the President's control, and the constitutional commissions are independent; none of them is a military command."
+   }
+  },
+  {
+   "id": 358,
+   "old": {
+    "options": [
+     "Freedom of the press",
+     "Right to travel only",
+     "Right against double jeopardy",
+     "Right to form a family"
+    ],
+    "explanation": "Freedom of the press protects publication and criticism subject to lawful limits Therefore, the correct option is \"Freedom of the press.\" The other choices fail because the other rights do not directly concern publication of criticism."
+   },
+   "new": {
+    "options": [
+     "Freedom of the press",
+     "Right to information on matters of public concern",
+     "Freedom of assembly",
+     "Privacy of communication"
+    ],
+    "explanation": "Art. III, Sec. 4 bars any law abridging the freedom of speech, of expression, or of the press. Stopping a newspaper from printing criticism restrains the press. The right to information (Sec. 7) concerns access to official records, peaceable assembly concerns gatherings, and privacy of communication (Sec. 3) protects private messages."
+   }
+  },
+  {
+   "id": 359,
+   "old": {
+    "explanation": "The Bill of Rights protects persons and homes from unreasonable searches and seizures Therefore, the correct option is \"Right against unreasonable searches and seizures.\" The other choices fail because the alternatives concern information, voting, or property compensation rather than search procedure."
+   },
+   "new": {
+    "explanation": "The Bill of Rights protects persons and homes from unreasonable searches and seizures. Therefore, the correct option is \"Right against unreasonable searches and seizures.\" The other choices fail because the alternatives concern information, voting, or property compensation rather than search procedure."
+   }
+  },
+  {
+   "id": 362,
+   "old": {
+    "explanation": "The Civil Service Commission administers the government personnel system Therefore, the correct option is \"Civil Service Commission.\" The other choices fail because COA audits, COMELEC administers elections, and CHR investigates human-rights concerns."
+   },
+   "new": {
+    "explanation": "The Civil Service Commission administers the government personnel system. Therefore, the correct option is \"Civil Service Commission.\" The other choices fail because COA audits, COMELEC administers elections, and CHR investigates human-rights concerns."
+   }
+  },
+  {
+   "id": 363,
+   "old": {
+    "options": [
+     "Arbitrary government action",
+     "All private disagreements",
+     "Every tax obligation",
+     "Routine filing errors"
+    ],
+    "explanation": "Due process requires fair legal procedures and a lawful basis before deprivation Therefore, the correct option is \"Arbitrary government action.\" The other choices fail because the alternatives are not the constitutional mischief targeted by due process."
+   },
+   "new": {
+    "options": [
+     "Arbitrary government action",
+     "Unequal treatment of people in the same class",
+     "Taking private property without payment",
+     "Punishment under a law passed after the act"
+    ],
+    "explanation": "Art. III, Sec. 1: no person shall be deprived of life, liberty, or property without due process of law, which guards against arbitrary government action. Unequal treatment is the concern of equal protection, taking property without payment is barred by the just-compensation rule (Sec. 9), and punishing past acts is an ex post facto law (Sec. 22)."
+   }
+  },
+  {
+   "id": 364,
+   "old": {
+    "explanation": "The judiciary resolves actual controversies and may review grave abuse or constitutional conflicts Therefore, the correct option is \"It settles actual controversies involving enforceable rights.\" The other choices fail because budgeting, local appointments, and election administration belong primarily to other institutions."
+   },
+   "new": {
+    "explanation": "The judiciary resolves actual controversies and may review grave abuse or constitutional conflicts. Therefore, the correct option is \"It settles actual controversies involving enforceable rights.\" The other choices fail because budgeting, local appointments, and election administration belong primarily to other institutions."
+   }
+  },
+  {
+   "id": 367,
+   "old": {
+    "stem": "A valid classification for equal-protection purposes should be related to the law purpose and apply to:",
+    "explanation": "Equal protection requires a reasonable classification that applies alike to all in the same class Therefore, the correct option is \"All members of the same class.\" The other choices fail because the other choices are arbitrary limits and do not describe equal treatment."
+   },
+   "new": {
+    "stem": "A valid classification for equal-protection purposes should be related to the purpose of the law and apply to:",
+    "explanation": "Equal protection requires a reasonable classification that applies alike to all in the same class. Therefore, the correct option is \"All members of the same class.\" The other choices fail because they are arbitrary limits and do not describe equal treatment."
+   }
+  },
+  {
+   "id": 368,
+   "old": {
+    "explanation": "Eminent domain is the taking of private property for public use with just compensation Therefore, the correct option is \"Eminent domain.\" The other choices fail because the alternatives do not describe a compensated public-use taking."
+   },
+   "new": {
+    "explanation": "Eminent domain is the taking of private property for public use with just compensation. Therefore, the correct option is \"Eminent domain.\" The other choices fail because the alternatives do not describe a compensated public-use taking."
+   }
+  },
+  {
+   "id": 370,
+   "old": {
+    "explanation": "The Constitution requires a senator to be at least 35 years old on election day Therefore, the correct option is \"At least 35 years old on election day.\" The other choices fail because the other choices are not universal constitutional qualifications."
+   },
+   "new": {
+    "explanation": "The Constitution requires a senator to be at least 35 years old on election day. Therefore, the correct option is \"At least 35 years old on election day.\" The other choices fail because they are not universal constitutional qualifications."
+   }
+  },
+  {
+   "id": 371,
+   "old": {
+    "explanation": "Suffrage is the constitutional right to vote subject to legal qualifications Therefore, the correct option is \"Suffrage.\" The other choices fail because the alternatives concern information, contracts, or criminal procedure."
+   },
+   "new": {
+    "explanation": "Suffrage is the constitutional right to vote subject to legal qualifications. Therefore, the correct option is \"Suffrage.\" The other choices fail because the alternatives concern information, contracts, or criminal procedure."
+   }
+  },
+  {
+   "id": 372,
+   "old": {
+    "explanation": "An ex post facto law retroactively makes conduct criminal or increases its punishment Therefore, the correct option is \"Punish an act that was not criminal when done.\" The other choices fail because the other choices are not retroactive criminal punishment."
+   },
+   "new": {
+    "explanation": "An ex post facto law retroactively makes conduct criminal or increases its punishment. Therefore, the correct option is \"Punish an act that was not criminal when done.\" The other choices fail because they are not retroactive criminal punishment."
+   }
+  },
+  {
+   "id": 373,
+   "old": {
+    "stem": "Which constitutional office is designed to investigate and prosecute illegal acts of public officials?",
+    "options": [
+     "The Office of the Ombudsman",
+     "The Philippine Sports Commission",
+     "The National Library",
+     "The Weather Bureau"
+    ],
+    "explanation": "The Ombudsman investigates and prosecutes alleged illegal acts or omissions of public officials as provided by law Therefore, the correct option is \"The Office of the Ombudsman.\" The other choices fail because the other offices do not have that constitutional accountability function."
+   },
+   "new": {
+    "stem": "Which constitutional office investigates illegal acts of public officials and, as provided by law, prosecutes them?",
+    "options": [
+     "The Office of the Ombudsman",
+     "The Commission on Audit",
+     "The Civil Service Commission",
+     "The Commission on Human Rights"
+    ],
+    "explanation": "Art. XI, Sec. 13(1) empowers the Ombudsman to investigate any act or omission of a public official that appears illegal, unjust, improper or inefficient, and R.A. 6770, Sec. 15(1), as provided by law, gives the Office the power to investigate and prosecute. COA audits government accounts, the CSC is the central personnel agency, and the CHR investigates human rights violations; none of them prosecutes officials."
+   }
+  },
+  {
+   "id": 374,
+   "old": {
+    "options": [
+     "Manage local affairs within the Constitution and national law",
+     "Ignore every national statute",
+     "Declare war independently",
+     "Print national currency"
+    ],
+    "explanation": "Local autonomy allows self-government within constitutional and statutory limits Therefore, the correct option is \"Manage local affairs within the Constitution and national law.\" The other choices fail because the alternatives claim powers reserved to the national government or prohibited by law."
+   },
+   "new": {
+    "options": [
+     "Manage local affairs within the Constitution and national law",
+     "Ignore every national statute",
+     "Govern as independent federal states",
+     "Act free from the general supervision of the President"
+    ],
+    "explanation": "Art. X, Sec. 2 guarantees local autonomy, and Sec. 4 keeps local governments under the President's general supervision. Autonomy means managing local affairs within the Constitution and national law; it does not let a local government ignore national statutes, act as a federal state, or escape presidential supervision."
+   }
+  },
+  {
+   "id": 375,
+   "old": {
+    "explanation": "COMELEC administers and enforces election laws Therefore, the correct option is \"Commission on Elections.\" The other choices fail because the other bodies audit, manage civil service, or handle fiscal administration."
+   },
+   "new": {
+    "explanation": "COMELEC administers and enforces election laws. Therefore, the correct option is \"Commission on Elections.\" The other choices fail because the other bodies audit, manage civil service, or handle fiscal administration."
+   }
+  },
+  {
+   "id": 376,
+   "old": {
+    "explanation": "The right to information covers matters of public concern subject to constitutional and statutory limits Therefore, the correct option is \"Matters of public concern subject to lawful limitations.\" The other choices fail because the other choices ignore privacy, privilege, or other lawful restrictions."
+   },
+   "new": {
+    "explanation": "The right to information covers matters of public concern subject to constitutional and statutory limits. Therefore, the correct option is \"Matters of public concern subject to lawful limitations.\" The other choices fail because they ignore privacy, privilege, or other lawful restrictions."
+   }
+  },
+  {
+   "id": 377,
+   "old": {
+    "explanation": "Presumption of innocence places the burden of proof on the prosecution Therefore, the correct option is \"The accused is presumed innocent until the contrary is proved.\" The other choices fail because the other choices reverse the burden or treat unreliable material as conclusive."
+   },
+   "new": {
+    "explanation": "Presumption of innocence places the burden of proof on the prosecution. Therefore, the correct option is \"The accused is presumed innocent until the contrary is proved.\" The other choices fail because they reverse the burden or treat unreliable material as conclusive."
+   }
+  },
+  {
+   "id": 378,
+   "old": {
+    "explanation": "Public funds require legal appropriation and proper public accountability Therefore, the correct option is \"Pursuant to an appropriation made by law.\" The other choices fail because the other choices bypass the legal and accounting safeguards."
+   },
+   "new": {
+    "explanation": "Public funds require legal appropriation and proper public accountability. Therefore, the correct option is \"Pursuant to an appropriation made by law.\" The other choices fail because they bypass the legal and accounting safeguards."
+   }
+  },
+  {
+   "id": 399,
+   "old": {
+    "explanation": "Human rights attach to all persons and must not be denied through unjust discrimination Therefore, the correct option is \"All people without unjust discrimination.\" The other choices fail because the other choices improperly limit rights by status or circumstance."
+   },
+   "new": {
+    "explanation": "Human rights attach to all persons and must not be denied through unjust discrimination. Therefore, the correct option is \"All people without unjust discrimination.\" The other choices fail because they improperly limit rights by status or circumstance."
+   }
+  },
+  {
+   "id": 401,
+   "old": {
+    "explanation": "Habeas data provides a remedy concerning unlawful gathering, storage, or use of personal data affecting privacy Therefore, the correct option is \"Privacy and information about a person.\" The other choices fail because the other choices concern unrelated legal subjects."
+   },
+   "new": {
+    "explanation": "Habeas data provides a remedy concerning unlawful gathering, storage, or use of personal data affecting privacy. Therefore, the correct option is \"Privacy and information about a person.\" The other choices fail because they concern unrelated legal subjects."
+   }
+  },
+  {
+   "id": 416,
+   "old": {
+    "explanation": "Non-refoulement protects against transfer to a place of serious persecution or comparable grave harm Therefore, the correct option is \"A place where they face serious persecution or harm.\" The other choices fail because the other choices do not describe the protection concern."
+   },
+   "new": {
+    "explanation": "Non-refoulement protects against transfer to a place of serious persecution or comparable grave harm. Therefore, the correct option is \"A place where they face serious persecution or harm.\" The other choices fail because they do not describe the protection concern."
+   }
+  },
+  {
+   "id": 499,
+   "old": {
+    "explanation": "Compare letters from left to right: Alonzo precedes Alvarado, then Amador, then Aquino Therefore, the correct option is \"Alonzo, Alvarado, Amador, Aquino.\" The other choices fail because the other sequences place a later letter before an earlier one."
+   },
+   "new": {
+    "explanation": "Compare letters from left to right: Alonzo precedes Alvarado, then Amador, then Aquino. Therefore, the correct option is \"Alonzo, Alvarado, Amador, Aquino.\" The other choices fail because the other sequences place a later letter before an earlier one."
+   }
+  },
+  {
+   "id": 501,
+   "old": {
+    "explanation": "The space-free comparison begins De L before Del, so De Leon comes first Therefore, the correct option is \"De Leon, Carla.\" The other choices fail because the other choices ignore the alphabetic comparison or introduce an irrelevant date."
+   },
+   "new": {
+    "explanation": "The space-free comparison begins De L before Del, so De Leon comes first. Therefore, the correct option is \"De Leon, Carla.\" The other choices fail because they ignore the alphabetic comparison or introduce an irrelevant date."
+   }
+  },
+  {
+   "id": 519,
+   "old": {
+    "explanation": "A bill of attainder is a legislative act that declares a person or group guilty and imposes punishment without a judicial trial Therefore, the correct option is \"Government may not legislatively declare a person guilty and punish them.\" The other choices fail because the other choices describe unrelated legislative or international matters."
+   },
+   "new": {
+    "explanation": "A bill of attainder is a legislative act that declares a person or group guilty and imposes punishment without a judicial trial. Therefore, the correct option is \"Government may not legislatively declare a person guilty and punish them.\" The other choices fail because they describe unrelated legislative or international matters."
+   }
+  },
+  {
+   "id": 520,
+   "old": {
+    "explanation": "Punishing lawful criticism implicates expression and arbitrary unequal treatment Therefore, the correct option is \"Freedom of expression and equal protection.\" The other choices fail because the other choices do not address retaliation for speech."
+   },
+   "new": {
+    "explanation": "Punishing lawful criticism implicates expression and arbitrary unequal treatment. Therefore, the correct option is \"Freedom of expression and equal protection.\" The other choices fail because they do not address retaliation for speech."
+   }
+  },
+  {
+   "id": 521,
+   "old": {
+    "options": [
+     "Congress",
+     "The Supreme Court alone",
+     "A private bank",
+     "A barangay sports club"
+    ],
+    "explanation": "Appropriation is a legislative function exercised by Congress through law Therefore, the correct option is \"Congress.\" The other choices fail because the other choices do not enact the national budget."
+   },
+   "new": {
+    "options": [
+     "Congress",
+     "The President",
+     "The Department of Budget and Management",
+     "The Commission on Audit"
+    ],
+    "explanation": "Art. VI, Sec. 29(1): no money shall be paid out of the Treasury except in pursuance of an appropriation made by law, and Congress makes the laws. The President submits the budget proposal (Art. VII, Sec. 22), the DBM prepares and releases funds, and COA audits how they are spent."
+   }
+  },
+  {
+   "id": 522,
+   "old": {
+    "options": [
+     "Takes private property for public use",
+     "Publishes a weather bulletin",
+     "Conducts a public hearing",
+     "Counts election ballots"
+    ],
+    "explanation": "Just compensation accompanies a public-use taking under eminent domain Therefore, the correct option is \"Takes private property for public use.\" The other choices fail because the other choices do not involve taking private property."
+   },
+   "new": {
+    "options": [
+     "Takes private property for public use",
+     "Imposes a tax on the property",
+     "Conducts a public hearing",
+     "Regulates a business through a permit"
+    ],
+    "explanation": "Art. III, Sec. 9: private property shall not be taken for public use without just compensation. A tax and a police-power permit regulate or burden property without taking it, so no compensation is owed, and a public hearing takes nothing."
+   }
+  },
+  {
+   "id": 523,
+   "old": {
+    "explanation": "The Constitution protects free exercise and bars government establishment of religion Therefore, the correct option is \"The state may not establish a religion or prohibit its free exercise, subject to lawful limits.\" The other choices fail because the other choices impose preference, immunity, or discrimination."
+   },
+   "new": {
+    "explanation": "The Constitution protects free exercise and bars government establishment of religion. Therefore, the correct option is \"The state may not establish a religion or prohibit its free exercise, subject to lawful limits.\" The other choices fail because they impose preference, immunity, or discrimination."
+   }
+  },
+  {
+   "id": 543,
+   "old": {
+    "explanation": "Compare the surname first; Garcia precedes Gomez and Gonzales, and Liza precedes Mila Therefore, the correct option is \"Garcia, Liza.\" The other choices fail because the other choices come later by surname or given name."
+   },
+   "new": {
+    "explanation": "Compare the surname first; Garcia precedes Gomez and Gonzales, and Liza precedes Mila. Therefore, the correct option is \"Garcia, Liza.\" The other choices fail because they come later by surname or given name."
+   }
+  },
+  {
+   "id": 548,
+   "old": {
+    "stem": "Which spelling is correct for the third term?",
+    "explanation": "Receive follows the common i-before-e pattern after c Therefore, the correct option is \"Receive.\" The other choices fail because the other choices reverse or omit letters."
+   },
+   "new": {
+    "stem": "Which spelling is correct for the word meaning to get or accept something given?",
+    "explanation": "Receive follows the rule “i before e, except after c”: after the c, write ei, as in rec-ei-ve."
+   }
+  }
+ ]
+}

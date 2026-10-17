@@ -54,10 +54,10 @@
       "source": "1987 Constitution, Art. II, Sec. 3",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -66,7 +66,8 @@
       },
       "gen_frame": "GI-GOV-0",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17.",
+      "fact_id": "FACT-CONST-II-3-CIVILIAN-SUPREMACY"
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060002",
@@ -117,10 +118,10 @@
       "source": "1987 Constitution, Art. II, Sec. 4",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -129,7 +130,7 @@
       },
       "gen_frame": "GI-GOV-1",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060003",
@@ -180,10 +181,10 @@
       "source": "1987 Constitution, Art. II, Sec. 14",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -192,7 +193,7 @@
       },
       "gen_frame": "GI-GOV-2",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-060004",
@@ -243,10 +244,10 @@
       "source": "1987 Constitution, Art. II, Sec. 25",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -255,7 +256,7 @@
       },
       "gen_frame": "GI-GOV-3",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-060005",
@@ -306,10 +307,10 @@
       "source": "1987 Constitution, Art. II, Sec. 28",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -318,7 +319,7 @@
       },
       "gen_frame": "GI-GOV-4",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060006",
@@ -369,10 +370,10 @@
       "source": "1987 Constitution, Art. VI, Sec. 1",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -381,7 +382,7 @@
       },
       "gen_frame": "GI-GOV-5",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060007",
@@ -432,10 +433,10 @@
       "source": "1987 Constitution, Art. VI, Sec. 24",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -444,7 +445,7 @@
       },
       "gen_frame": "GI-GOV-6",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060008",
@@ -496,9 +497,9 @@
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -507,7 +508,7 @@
       },
       "gen_frame": "GI-GOV-7",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-060009",
@@ -536,7 +537,7 @@
         },
         {
           "option_id": "o4",
-          "text": "A tax exemption needs a majority of all members of Congress."
+          "text": "A tax exemption needs two-thirds of all members of Congress."
         }
       ],
       "answer_option_id": "o2",
@@ -547,21 +548,21 @@
         "why_wrong": {
           "o1": "\"Congress shall evolve a regressive system of taxation.\" is incorrect. Sec. 28(1) directs a progressive system, not a regressive one.",
           "o3": "\"Taxation must have identical peso amounts for every resident.\" is incorrect. Uniform means the same rule for the same class of taxpayers, not the same peso amount for everyone.",
-          "o4": "\"A tax exemption needs a majority of all members of Congress.\" is incorrect. That is Sec. 28(4), a voting rule for tax exemptions, not the uniformity and equity rule."
+          "o4": "\"A tax exemption needs two-thirds of all members of Congress.\" is incorrect. Sec. 28(4) asks for a majority of all the Members of Congress, not two-thirds, and it is a voting rule for exemptions, not the uniformity and equity rule."
         }
       },
       "distractor_reasoning": {
         "o1": "GI-SIBLING-TERM",
         "o3": "GI-SOUNDS-RIGHT",
-        "o4": "GI-SIBLING-TERM"
+        "o4": "GI-NEIGHBOR-NUMBER"
       },
       "source": "1987 Constitution, Art. VI, Sec. 28(1)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -570,7 +571,7 @@
       },
       "gen_frame": "GI-GOV-8",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17. | CoS 2026-10-17: o4 was true under Art. VI, Sec. 28(4) (majority); changed to 'two-thirds'."
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-060010",
@@ -621,10 +622,10 @@
       "source": "1987 Constitution, Art. VI, Sec. 32",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -633,7 +634,7 @@
       },
       "gen_frame": "GI-GOV-9",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060011",
@@ -684,10 +685,10 @@
       "source": "1987 Constitution, Art. VII, Sec. 1",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -696,7 +697,7 @@
       },
       "gen_frame": "GI-GOV-0",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060012",
@@ -747,10 +748,10 @@
       "source": "1987 Constitution, Art. VII, Sec. 21",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -759,7 +760,7 @@
       },
       "gen_frame": "GI-GOV-1",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060013",
@@ -810,10 +811,10 @@
       "source": "1987 Constitution, Art. VII, Sec. 18",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -822,7 +823,7 @@
       },
       "gen_frame": "GI-GOV-2",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-060014",
@@ -873,10 +874,10 @@
       "source": "1987 Constitution, Art. VIII, Sec. 1",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -885,7 +886,7 @@
       },
       "gen_frame": "GI-GOV-3",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060015",
@@ -937,9 +938,9 @@
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -948,7 +949,7 @@
       },
       "gen_frame": "GI-GOV-4",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-060016",
@@ -999,10 +1000,10 @@
       "source": "1987 Constitution, Art. IX-A, Sec. 1",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1011,7 +1012,7 @@
       },
       "gen_frame": "GI-GOV-5",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060017",
@@ -1062,10 +1063,10 @@
       "source": "1987 Constitution, Art. IX-B, Sec. 2(2)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1074,7 +1075,8 @@
       },
       "gen_frame": "GI-GOV-6",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17.",
+      "fact_id": "FACT-CONST-IXB-2-2-MERIT-APPOINTMENT"
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060018",
@@ -1125,10 +1127,10 @@
       "source": "1987 Constitution, Art. IX-B, Sec. 2(3)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1137,7 +1139,7 @@
       },
       "gen_frame": "GI-GOV-7",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060019",
@@ -1188,10 +1190,10 @@
       "source": "1987 Constitution, Art. IX-B, Sec. 2(4)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1200,7 +1202,8 @@
       },
       "gen_frame": "GI-GOV-8",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17.",
+      "fact_id": "FACT-CONST-IXB-2-4-NO-PARTISAN-POLITICS"
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060020",
@@ -1251,10 +1254,10 @@
       "source": "1987 Constitution, Art. IX-B, Sec. 2(5)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1263,7 +1266,8 @@
       },
       "gen_frame": "GI-GOV-9",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17.",
+      "fact_id": "FACT-CONST-IXB-2-5-SELF-ORGANIZATION"
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060021",
@@ -1314,10 +1318,10 @@
       "source": "1987 Constitution, Art. IX-C, Sec. 2(1)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1326,7 +1330,7 @@
       },
       "gen_frame": "GI-GOV-0",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060022",
@@ -1378,9 +1382,9 @@
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1389,7 +1393,7 @@
       },
       "gen_frame": "GI-GOV-1",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 1 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 1 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-060023",
@@ -1440,10 +1444,10 @@
       "source": "1987 Constitution, Art. XI, Sec. 1",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1452,7 +1456,7 @@
       },
       "gen_frame": "GI-GOV-2",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060024",
@@ -1504,9 +1508,9 @@
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1515,7 +1519,7 @@
       },
       "gen_frame": "GI-GOV-3",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060025",
@@ -1566,10 +1570,10 @@
       "source": "1987 Constitution, Art. XI, Sec. 3(6)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1578,7 +1582,7 @@
       },
       "gen_frame": "GI-GOV-4",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060026",
@@ -1629,10 +1633,10 @@
       "source": "1987 Constitution, Art. III, Sec. 1",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1641,7 +1645,7 @@
       },
       "gen_frame": "GI-RIGHTS-5",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: stem; 1 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: stem; 1 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060027",
@@ -1692,10 +1696,10 @@
       "source": "1987 Constitution, Art. III, Sec. 1",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1704,7 +1708,7 @@
       },
       "gen_frame": "GI-RIGHTS-6",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060028",
@@ -1755,10 +1759,10 @@
       "source": "1987 Constitution, Art. III, Sec. 2",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1767,7 +1771,7 @@
       },
       "gen_frame": "GI-RIGHTS-7",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060029",
@@ -1818,10 +1822,10 @@
       "source": "1987 Constitution, Art. III, Sec. 2",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1830,7 +1834,7 @@
       },
       "gen_frame": "GI-RIGHTS-8",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060030",
@@ -1881,10 +1885,10 @@
       "source": "1987 Constitution, Art. III, Sec. 3(1)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1893,7 +1897,7 @@
       },
       "gen_frame": "GI-RIGHTS-9",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060031",
@@ -1944,10 +1948,10 @@
       "source": "1987 Constitution, Art. III, Sec. 3(2)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -1956,7 +1960,7 @@
       },
       "gen_frame": "GI-RIGHTS-0",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060032",
@@ -2007,10 +2011,10 @@
       "source": "1987 Constitution, Art. III, Sec. 4",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2019,7 +2023,7 @@
       },
       "gen_frame": "GI-RIGHTS-1",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060033",
@@ -2070,10 +2074,10 @@
       "source": "1987 Constitution, Art. III, Sec. 4",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2082,7 +2086,7 @@
       },
       "gen_frame": "GI-RIGHTS-2",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060034",
@@ -2133,10 +2137,10 @@
       "source": "1987 Constitution, Art. III, Sec. 5",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2145,7 +2149,7 @@
       },
       "gen_frame": "GI-RIGHTS-3",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060035",
@@ -2196,10 +2200,10 @@
       "source": "1987 Constitution, Art. III, Sec. 5",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2208,7 +2212,7 @@
       },
       "gen_frame": "GI-RIGHTS-4",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060036",
@@ -2259,10 +2263,10 @@
       "source": "1987 Constitution, Art. III, Sec. 6",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2271,7 +2275,7 @@
       },
       "gen_frame": "GI-RIGHTS-5",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060037",
@@ -2322,10 +2326,10 @@
       "source": "1987 Constitution, Art. III, Sec. 7",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2334,7 +2338,7 @@
       },
       "gen_frame": "GI-RIGHTS-6",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060038",
@@ -2385,10 +2389,10 @@
       "source": "1987 Constitution, Art. III, Sec. 8",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2397,7 +2401,7 @@
       },
       "gen_frame": "GI-RIGHTS-7",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060039",
@@ -2448,10 +2452,10 @@
       "source": "1987 Constitution, Art. III, Sec. 9",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2460,7 +2464,7 @@
       },
       "gen_frame": "GI-RIGHTS-8",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060040",
@@ -2511,10 +2515,10 @@
       "source": "1987 Constitution, Art. III, Sec. 11",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2523,7 +2527,7 @@
       },
       "gen_frame": "GI-RIGHTS-9",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060041",
@@ -2574,10 +2578,10 @@
       "source": "1987 Constitution, Art. III, Sec. 12(1)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2586,7 +2590,7 @@
       },
       "gen_frame": "GI-RIGHTS-0",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060042",
@@ -2637,10 +2641,10 @@
       "source": "1987 Constitution, Art. III, Sec. 12(2)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2649,7 +2653,7 @@
       },
       "gen_frame": "GI-RIGHTS-1",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060043",
@@ -2700,10 +2704,10 @@
       "source": "1987 Constitution, Art. III, Sec. 13",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2712,7 +2716,7 @@
       },
       "gen_frame": "GI-RIGHTS-2",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: stem; key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: stem; key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060044",
@@ -2763,10 +2767,10 @@
       "source": "1987 Constitution, Art. III, Sec. 14(2)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2775,7 +2779,7 @@
       },
       "gen_frame": "GI-RIGHTS-3",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: stem; 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: stem; 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060045",
@@ -2826,10 +2830,10 @@
       "source": "1987 Constitution, Art. III, Sec. 14(2)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2838,7 +2842,7 @@
       },
       "gen_frame": "GI-RIGHTS-4",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060046",
@@ -2889,10 +2893,10 @@
       "source": "1987 Constitution, Art. III, Sec. 15",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2901,7 +2905,7 @@
       },
       "gen_frame": "GI-RIGHTS-5",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060047",
@@ -2952,10 +2956,10 @@
       "source": "1987 Constitution, Art. III, Sec. 16",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -2964,7 +2968,7 @@
       },
       "gen_frame": "GI-RIGHTS-6",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: stem; 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: stem; 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060048",
@@ -3015,10 +3019,10 @@
       "source": "1987 Constitution, Art. III, Sec. 17",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3027,7 +3031,7 @@
       },
       "gen_frame": "GI-RIGHTS-7",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-RIGHTS-APPLY-060049",
@@ -3078,10 +3082,10 @@
       "source": "1987 Constitution, Art. III, Sec. 20",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3090,7 +3094,7 @@
       },
       "gen_frame": "GI-RIGHTS-8",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-060050",
@@ -3141,10 +3145,10 @@
       "source": "1987 Constitution, Art. XIII, Sec. 18(1)",
       "source_url": "https://lawphil.net/consti/cons1987.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3153,7 +3157,7 @@
       },
       "gen_frame": "GI-RIGHTS-9",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060051",
@@ -3204,10 +3208,10 @@
       "source": "R.A. 6713, Sec. 4(A)(a)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3216,7 +3220,7 @@
       },
       "gen_frame": "GI-ETHICS-0",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060052",
@@ -3267,10 +3271,10 @@
       "source": "R.A. 6713, Sec. 4(A)(b)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3279,7 +3283,7 @@
       },
       "gen_frame": "GI-ETHICS-1",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060053",
@@ -3330,10 +3334,10 @@
       "source": "R.A. 6713, Sec. 4(A)(c)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3342,7 +3346,7 @@
       },
       "gen_frame": "GI-ETHICS-2",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060054",
@@ -3393,10 +3397,10 @@
       "source": "R.A. 6713, Sec. 4(A)(d)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3405,7 +3409,7 @@
       },
       "gen_frame": "GI-ETHICS-3",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060055",
@@ -3456,10 +3460,10 @@
       "source": "R.A. 6713, Sec. 4(A)(e)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3468,7 +3472,7 @@
       },
       "gen_frame": "GI-ETHICS-4",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060056",
@@ -3519,10 +3523,10 @@
       "source": "R.A. 6713, Sec. 4(A)(f)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3531,7 +3535,7 @@
       },
       "gen_frame": "GI-ETHICS-5",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 1 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 1 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060057",
@@ -3582,10 +3586,10 @@
       "source": "R.A. 6713, Sec. 4(A)(g)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3594,7 +3598,8 @@
       },
       "gen_frame": "GI-ETHICS-6",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17.",
+      "fact_id": "FACT-RA6713-4A-G-ACCOUNTABILITY"
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060058",
@@ -3645,10 +3650,10 @@
       "source": "R.A. 6713, Sec. 4(A)(h)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3657,7 +3662,7 @@
       },
       "gen_frame": "GI-ETHICS-7",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 1 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 1 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-060059",
@@ -3709,9 +3714,9 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3720,7 +3725,7 @@
       },
       "gen_frame": "GI-ETHICS-8",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060060",
@@ -3771,10 +3776,10 @@
       "source": "R.A. 6713, Sec. 5(a)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3783,7 +3788,7 @@
       },
       "gen_frame": "GI-ETHICS-9",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 1 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 1 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-060061",
@@ -3834,10 +3839,10 @@
       "source": "R.A. 6713, Sec. 5(b)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3846,7 +3851,7 @@
       },
       "gen_frame": "GI-ETHICS-0",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-060062",
@@ -3897,10 +3902,10 @@
       "source": "R.A. 6713, Sec. 5(c)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3909,7 +3914,7 @@
       },
       "gen_frame": "GI-ETHICS-1",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060063",
@@ -3960,10 +3965,10 @@
       "source": "R.A. 6713, Sec. 5(d)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -3972,7 +3977,7 @@
       },
       "gen_frame": "GI-ETHICS-2",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060064",
@@ -4023,10 +4028,10 @@
       "source": "R.A. 6713, Sec. 5(e)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4035,7 +4040,7 @@
       },
       "gen_frame": "GI-ETHICS-3",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060065",
@@ -4086,10 +4091,10 @@
       "source": "R.A. 6713, Sec. 7(a)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4098,7 +4103,7 @@
       },
       "gen_frame": "GI-ETHICS-4",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060066",
@@ -4149,10 +4154,10 @@
       "source": "R.A. 6713, Sec. 7(b)(1)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4161,7 +4166,7 @@
       },
       "gen_frame": "GI-ETHICS-5",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060067",
@@ -4212,10 +4217,10 @@
       "source": "R.A. 6713, Sec. 7(b)(2)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4224,7 +4229,7 @@
       },
       "gen_frame": "GI-ETHICS-6",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060068",
@@ -4275,10 +4280,10 @@
       "source": "R.A. 6713, Sec. 7(b)(3)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4287,7 +4292,7 @@
       },
       "gen_frame": "GI-ETHICS-7",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060069",
@@ -4338,10 +4343,10 @@
       "source": "R.A. 6713, Sec. 7(c)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4350,7 +4355,7 @@
       },
       "gen_frame": "GI-ETHICS-8",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-SCENARIO-APPLY-060070",
@@ -4401,10 +4406,10 @@
       "source": "R.A. 6713, Sec. 7(d)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4413,7 +4418,7 @@
       },
       "gen_frame": "GI-ETHICS-9",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-060071",
@@ -4464,10 +4469,10 @@
       "source": "R.A. 6713, Sec. 8(A)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4476,7 +4481,7 @@
       },
       "gen_frame": "GI-ETHICS-0",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-060072",
@@ -4527,10 +4532,10 @@
       "source": "R.A. 6713, Sec. 8(A)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4539,7 +4544,7 @@
       },
       "gen_frame": "GI-ETHICS-1",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 1 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 1 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-060073",
@@ -4591,9 +4596,9 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4602,7 +4607,7 @@
       },
       "gen_frame": "GI-ETHICS-2",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-060074",
@@ -4654,9 +4659,9 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4665,7 +4670,7 @@
       },
       "gen_frame": "GI-ETHICS-3",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-060075",
@@ -4716,10 +4721,10 @@
       "source": "R.A. 6713, Sec. 9",
       "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4728,7 +4733,8 @@
       },
       "gen_frame": "GI-ETHICS-4",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Approved by CoS 2026-10-17.",
+      "fact_id": "FACT-RA6713-9-DIVESTMENT-60-DAYS"
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060076",
@@ -4779,10 +4785,10 @@
       "source": "R.A. 9003, Sec. 3(jj)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4791,7 +4797,8 @@
       },
       "gen_frame": "GI-ENVIRONMENT-5",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17.",
+      "fact_id": "FACT-RA9003-SEGREGATION-AT-SOURCE"
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060077",
@@ -4842,10 +4849,10 @@
       "source": "R.A. 9003, Sec. 22(b)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4854,7 +4861,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-6",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060078",
@@ -4905,10 +4912,10 @@
       "source": "R.A. 9003, Sec. 10",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4917,7 +4924,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-7",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060079",
@@ -4969,9 +4976,9 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -4980,7 +4987,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-8",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060080",
@@ -5031,10 +5038,10 @@
       "source": "R.A. 9003, Sec. 10",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5043,7 +5050,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-9",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060081",
@@ -5094,10 +5101,10 @@
       "source": "R.A. 9003, Sec. 3(r)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5106,7 +5113,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-0",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060082",
@@ -5157,10 +5164,10 @@
       "source": "R.A. 9003, Sec. 3(f)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5169,7 +5176,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-1",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060083",
@@ -5220,10 +5227,10 @@
       "source": "R.A. 9003, Sec. 48(3)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5232,7 +5239,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-2",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060084",
@@ -5283,10 +5290,10 @@
       "source": "R.A. 8749, Sec. 2",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5295,7 +5302,8 @@
       },
       "gen_frame": "GI-ENVIRONMENT-3",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17.",
+      "fact_id": "FACT-RA8749-2-PRINCIPLE"
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060085",
@@ -5346,10 +5354,10 @@
       "source": "R.A. 8749, Sec. 4(a)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5358,7 +5366,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-4",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: stem; 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: stem; 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060086",
@@ -5409,10 +5417,10 @@
       "source": "R.A. 8749, Sec. 4(c)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5421,7 +5429,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-5",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060087",
@@ -5472,10 +5480,10 @@
       "source": "R.A. 8749, Sec. 4(e)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5484,7 +5492,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-6",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060088",
@@ -5535,10 +5543,10 @@
       "source": "R.A. 8749, Sec. 3(c)",
       "source_url": "https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5547,7 +5555,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-7",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060089",
@@ -5599,9 +5607,9 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5610,7 +5618,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-8",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060090",
@@ -5661,10 +5669,10 @@
       "source": "R.A. 9275, Sec. 3",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5673,7 +5681,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-9",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060091",
@@ -5724,10 +5732,10 @@
       "source": "R.A. 9275, Sec. 2(g)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5736,7 +5744,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-0",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060092",
@@ -5787,10 +5795,10 @@
       "source": "R.A. 9275, Sec. 4(a)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5799,7 +5807,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-1",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 2 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060093",
@@ -5850,10 +5858,10 @@
       "source": "R.A. 9275, Sec. 2(h)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5862,7 +5870,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-2",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060094",
@@ -5914,9 +5922,9 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5925,7 +5933,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-3",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060095",
@@ -5976,10 +5984,10 @@
       "source": "R.A. 9729, Sec. 3(a)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -5988,7 +5996,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-4",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060096",
@@ -6040,9 +6048,9 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -6051,7 +6059,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-5",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS. | CoS 2026-10-17: rejected (fact duplicate / mirror). Not imported."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060097",
@@ -6102,10 +6110,10 @@
       "source": "R.A. 9729, Sec. 9(a)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -6114,7 +6122,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-6",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: key wording (same answer); 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060098",
@@ -6165,10 +6173,10 @@
       "source": "R.A. 9729, Sec. 2",
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -6177,7 +6185,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-7",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060099",
@@ -6228,10 +6236,10 @@
       "source": "R.A. 9147, Sec. 2",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -6240,7 +6248,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-8",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GI-ENV-PRINCIPLE-060100",
@@ -6291,10 +6299,10 @@
       "source": "R.A. 9147, Sec. 2(b)",
       "source_url": "https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
@@ -6303,7 +6311,7 @@
       },
       "gen_frame": "GI-ENVIRONMENT-9",
       "_legacy": true,
-      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Still draft for CoS."
+      "notes": "Original legally anchored practice question; expert source verification and choice-level pedagogical QA required before promotion. | Grok Bot audit 2026-10-17: 3 distractor(s) replaced; why-wrong rewritten; method line. Approved by CoS 2026-10-17."
     }
   ]
 }

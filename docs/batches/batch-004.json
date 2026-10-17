@@ -5957,7 +5957,8 @@
       },
       "notes": "",
       "gen_fact": 28,
-      "gen_sig": "GI:Under the 1987 Constitution, may a civil service officer or employee engage in partisan political campaigns?"
+      "gen_sig": "GI:Under the 1987 Constitution, may a civil service officer or employee engage in partisan political campaigns?",
+      "fact_id": "FACT-CONST-IXB-2-4-NO-PARTISAN-POLITICS"
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-000304",

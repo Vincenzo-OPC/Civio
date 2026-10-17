@@ -5906,7 +5906,8 @@
       },
       "notes": "",
       "gen_fact": 95,
-      "gen_sig": "GI:Under R.A. 6713, when a conflict of interest arises, within how many days from assuming office must an official divest his or her shareholdings or interest?"
+      "gen_sig": "GI:Under R.A. 6713, when a conflict of interest arises, within how many days from assuming office must an official divest his or her shareholdings or interest?",
+      "fact_id": "FACT-RA6713-9-DIVESTMENT-60-DAYS"
     },
     {
       "id": "CIVIO-GI-WHO-HOLDS-POWER-000503",
@@ -6221,7 +6222,8 @@
       },
       "notes": "",
       "gen_fact": 54,
-      "gen_sig": "GI:According to the 1987 Constitution, civilian authority is supreme over what?"
+      "gen_sig": "GI:According to the 1987 Constitution, civilian authority is supreme over what?",
+      "fact_id": "FACT-CONST-II-3-CIVILIAN-SUPREMACY"
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-000508",

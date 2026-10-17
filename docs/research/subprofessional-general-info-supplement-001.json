@@ -126,7 +126,8 @@
       "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
       "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
-      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "fact_id": "FACT-RA9003-SEGREGATION-AT-SOURCE"
     },
     {
       "id": "CIVIO-GI-20261013-0003",
@@ -498,7 +499,8 @@
       "notes": "Primary legal source supplied; human factual/legal/editorial review pending before activation.",
       "reviewer": "Chief of Staff (final approval, delegated by GT)",
       "reviewed_at": "2026-10-13",
-      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)"
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "fact_id": "FACT-RA8749-2-PRINCIPLE"
     },
     {
       "id": "CIVIO-GI-20261013-0009",

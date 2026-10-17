@@ -1,0 +1,372 @@
+{
+ "round": "03",
+ "batch": "baseline-b1",
+ "date": "2026-10-17",
+ "note": "Proposed fixes only. Apply after CoS approves. Rows keep their id; the remaining duplicates of these old targets (#53, #55, #509-#514, #516, #517, #547) still retire.",
+ "swaps": [
+  {
+   "baseline_id": 54,
+   "old_target": "bureaucracy",
+   "old_options": [
+    "Bureaucracy",
+    "Beaurocracy",
+    "Bureacracy",
+    "Bureaukracy"
+   ],
+   "new_target": "Prerogative",
+   "stem": "Choose the correctly spelled word for a special right that comes with an office:",
+   "options": [
+    "Perogative",
+    "Prerogative",
+    "Prerogitive",
+    "Prerrogative"
+   ],
+   "correct_option": 1,
+   "foil_codes": {
+    "Perogative": "SPL-DROP",
+    "Prerogitive": "SPL-SOUND",
+    "Prerrogative": "SPL-DOUBLE"
+   },
+   "explanation": "Prerogative starts with pre- (before), then -rog- (ask), then -ative. People often drop the first r (perogative) or hear the second vowel as i.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 292,
+   "old_target": "accommodate",
+   "old_options": [
+    "Accomodate",
+    "Acommodate",
+    "Accommodate",
+    "Accommadate"
+   ],
+   "new_target": "Referred",
+   "stem": "Which spelling correctly completes this sentence: The clerk _____ the complaint to the legal unit yesterday.",
+   "options": [
+    "Refered",
+    "Reffered",
+    "Referred",
+    "Refferred"
+   ],
+   "correct_option": 2,
+   "foil_codes": {
+    "Refered": "SPL-DOUBLE",
+    "Reffered": "SPL-DOUBLE",
+    "Refferred": "SPL-DOUBLE"
+   },
+   "explanation": "Refer is stressed on the last syllable, so the final r doubles before -ed: referred. The f never doubles.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 293,
+   "old_target": "maintenance",
+   "old_options": [
+    "Maintenance",
+    "Maintainance",
+    "Maintenence",
+    "Maintanance"
+   ],
+   "new_target": "Remittance",
+   "stem": "Select the correctly spelled word for money sent to pay a bill.",
+   "options": [
+    "Remitance",
+    "Remmitance",
+    "Remittence",
+    "Remittance"
+   ],
+   "correct_option": 3,
+   "foil_codes": {
+    "Remitance": "SPL-DOUBLE",
+    "Remmitance": "SPL-DOUBLE",
+    "Remittence": "SPL-SOUND"
+   },
+   "explanation": "Remit is stressed on -mit, so the t doubles before -ance: remittance. The m stays single, and the ending is -ance, not -ence.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 294,
+   "old_target": "separate",
+   "old_options": [
+    "Separate",
+    "Seperate",
+    "Seperrate",
+    "Separete"
+   ],
+   "new_target": "Itinerary",
+   "stem": "Which spelling is correct in the instruction “Attach your travel _____ to the request”?",
+   "options": [
+    "Itinerary",
+    "Itinery",
+    "Itenerary",
+    "Itinerery"
+   ],
+   "correct_option": 0,
+   "foil_codes": {
+    "Itinery": "SPL-DROP",
+    "Itenerary": "SPL-SOUND",
+    "Itinerery": "SPL-SOUND"
+   },
+   "explanation": "Itinerary has five syllables, i-tin-er-ar-y. Saying each one keeps the -ar- that people drop (itinery) and the i vowels.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 295,
+   "old_target": "privilege",
+   "old_options": [
+    "Privilege",
+    "Privelege",
+    "Priviledge",
+    "Privilage"
+   ],
+   "new_target": "Pamphlet",
+   "stem": "Which word is correctly spelled in the phrase “a health _____ for every household”?",
+   "options": [
+    "Pamflet",
+    "Pamphlet",
+    "Pamplet",
+    "Pamphlit"
+   ],
+   "correct_option": 1,
+   "foil_codes": {
+    "Pamflet": "SPL-SOUND",
+    "Pamplet": "SPL-DROP",
+    "Pamphlit": "SPL-SOUND"
+   },
+   "explanation": "Pamphlet spells the f sound with ph and ends in -let.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 296,
+   "old_target": "questionnaire",
+   "old_options": [
+    "Questionnaire",
+    "Questionaire",
+    "Questionnare",
+    "Questioneer"
+   ],
+   "new_target": "Consensus",
+   "stem": "An agreement reached by the whole group is a _____; choose the correct spelling.",
+   "options": [
+    "Concensus",
+    "Consencus",
+    "Consensus",
+    "Consensous"
+   ],
+   "correct_option": 2,
+   "foil_codes": {
+    "Concensus": "SPL-SOUND",
+    "Consencus": "SPL-SOUND",
+    "Consensous": "SPL-SOUND"
+   },
+   "explanation": "Consensus comes from consent, so both s sounds are spelled with s: con-sen-sus. It is not related to census.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 297,
+   "old_target": "occurrence",
+   "old_options": [
+    "Occurrence",
+    "Occurence",
+    "Occurrance",
+    "Ocurrence"
+   ],
+   "new_target": "Hindrance",
+   "stem": "Choose the correct spelling in the phrase “a _____ to fast service.”",
+   "options": [
+    "Hinderance",
+    "Hindrence",
+    "Hinderence",
+    "Hindrance"
+   ],
+   "correct_option": 3,
+   "foil_codes": {
+    "Hinderance": "SPL-SOUND",
+    "Hindrence": "SPL-SOUND",
+    "Hinderence": "SPL-SOUND"
+   },
+   "explanation": "Hindrance drops the e of hinder (hind-rance) and ends in -ance.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 298,
+   "old_target": "liaison",
+   "old_options": [
+    "Liaison",
+    "Liason",
+    "Liaision",
+    "Liasion"
+   ],
+   "new_target": "Subpoena",
+   "stem": "Which spelling is correct for a written order to appear in court?",
+   "options": [
+    "Subpoena",
+    "Supoena",
+    "Subpena",
+    "Subpeona"
+   ],
+   "correct_option": 0,
+   "foil_codes": {
+    "Supoena": "SPL-SILENT",
+    "Subpena": "SPL-DROP",
+    "Subpeona": "SPL-IE-EI"
+   },
+   "explanation": "Subpoena keeps the silent b of sub- and the Latin -poena (o before e).",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 300,
+   "old_target": "embarrass",
+   "old_options": [
+    "Embarrass",
+    "Embarass",
+    "Embarrase",
+    "Embarres"
+   ],
+   "new_target": "Forfeit",
+   "stem": "Which spelling completes the instruction “Late applicants _____ their slot”?",
+   "options": [
+    "Forfiet",
+    "Forfeit",
+    "Forfit",
+    "Forefeit"
+   ],
+   "correct_option": 1,
+   "foil_codes": {
+    "Forfiet": "SPL-IE-EI",
+    "Forfit": "SPL-DROP",
+    "Forefeit": "SPL-SOUND"
+   },
+   "explanation": "Forfeit is one of the exceptions to the i-before-e rule, spelled -feit. The prefix is for-, not fore-.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 306,
+   "old_target": "necessary",
+   "old_options": [
+    "Necessary",
+    "Necesary",
+    "Neccessary",
+    "Necessery"
+   ],
+   "new_target": "Illegible",
+   "stem": "Which spelling is correct in the sentence “The signature on the form is _____”?",
+   "options": [
+    "Illegable",
+    "Ilegible",
+    "Illegible",
+    "Illegeble"
+   ],
+   "correct_option": 2,
+   "foil_codes": {
+    "Illegable": "SPL-SOUND",
+    "Ilegible": "SPL-DOUBLE",
+    "Illegeble": "SPL-SOUND"
+   },
+   "explanation": "Illegible is il- + legible: the l doubles where the prefix meets legible, and legible ends in -ible.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 312,
+   "old_target": "definitely",
+   "old_options": [
+    "Definitely",
+    "Definately",
+    "Definitly",
+    "Definetely"
+   ],
+   "new_target": "Undoubtedly",
+   "stem": "Which spelling is correct in the phrase “The new form is _____ faster”?",
+   "options": [
+    "Undoubtably",
+    "Undoutedly",
+    "Undoubtly",
+    "Undoubtedly"
+   ],
+   "correct_option": 3,
+   "foil_codes": {
+    "Undoubtably": "SPL-SOUND",
+    "Undoutedly": "SPL-SILENT",
+    "Undoubtly": "SPL-DROP"
+   },
+   "explanation": "Undoubtedly is un- + doubted + -ly. It keeps the silent b of doubt and the -ed.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 550,
+   "old_target": "calendar",
+   "old_options": [
+    "Calendar",
+    "Calender",
+    "Calandar",
+    "Callendar"
+   ],
+   "new_target": "Inevitable",
+   "stem": "Which spelling correctly completes “With only two clerks on duty, delays were _____”?",
+   "options": [
+    "Inevitable",
+    "Inevitible",
+    "Inevatable",
+    "Innevitable"
+   ],
+   "correct_option": 0,
+   "foil_codes": {
+    "Inevitible": "SPL-SOUND",
+    "Inevatable": "SPL-SOUND",
+    "Innevitable": "SPL-DOUBLE"
+   },
+   "explanation": "Inevitable is in- + evitable (avoidable), with a single n and the -able ending.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 308,
+   "old_target": "supersede",
+   "old_options": [
+    "Supersede",
+    "Supercede",
+    "Superscede",
+    "Supersied"
+   ],
+   "new_target": "Accidentally",
+   "stem": "Which spelling is correct in the sentence “The clerk _____ deleted the wrong file”?",
+   "options": [
+    "Accedentally",
+    "Accidentaly",
+    "Accidentally",
+    "Acidentally"
+   ],
+   "correct_option": 2,
+   "foil_codes": {
+    "Accedentally": "SPL-SOUND",
+    "Accidentaly": "SPL-DOUBLE",
+    "Acidentally": "SPL-DOUBLE"
+   },
+   "explanation": "Accidentally is accidental + -ly, so it keeps -al- and ends in -lly. The double c of accident stays.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  },
+  {
+   "baseline_id": 311,
+   "old_target": "publicly",
+   "old_options": [
+    "Publicly",
+    "Publically",
+    "Publikly",
+    "Publicaly"
+   ],
+   "new_target": "Nuisance",
+   "stem": "Choose the correctly spelled word for something that annoys or causes trouble.",
+   "options": [
+    "Nuisence",
+    "Nusiance",
+    "Nuisanse",
+    "Nuisance"
+   ],
+   "correct_option": 3,
+   "foil_codes": {
+    "Nuisence": "SPL-SOUND",
+    "Nusiance": "SPL-IE-EI",
+    "Nuisanse": "SPL-SOUND"
+   },
+   "explanation": "Nuisance is spelled nui-sance: u before i, and the ending is -ance with a c.",
+   "status": "proposed (CoS verdict pending; no DB change)"
+  }
+ ]
+}

@@ -5916,7 +5916,8 @@
       },
       "notes": "",
       "gen_fact": 29,
-      "gen_sig": "GI:Under the 1987 Constitution, the right of government employees to do what shall not be denied?"
+      "gen_sig": "GI:Under the 1987 Constitution, the right of government employees to do what shall not be denied?",
+      "fact_id": "FACT-CONST-IXB-2-5-SELF-ORGANIZATION"
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-000903",
@@ -6357,7 +6358,8 @@
       },
       "notes": "",
       "gen_fact": 26,
-      "gen_sig": "GI:Under the 1987 Constitution, appointments in the civil service shall be made only according to what?"
+      "gen_sig": "GI:Under the 1987 Constitution, appointments in the civil service shall be made only according to what?",
+      "fact_id": "FACT-CONST-IXB-2-2-MERIT-APPOINTMENT"
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-000910",

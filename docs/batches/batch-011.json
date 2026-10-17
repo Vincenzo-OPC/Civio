@@ -5997,7 +5997,8 @@
       },
       "notes": "",
       "gen_fact": 103,
-      "gen_sig": "GI:Under R.A. 6713, upholding the principle of public accountability and the supremacy of civilian authority over the military is which norm?"
+      "gen_sig": "GI:Under R.A. 6713, upholding the principle of public accountability and the supremacy of civilian authority over the military is which norm?",
+      "fact_id": "FACT-RA6713-4A-G-ACCOUNTABILITY"
     },
     {
       "id": "CIVIO-GI-TERM-MATCH-001004",
@@ -6312,7 +6313,8 @@
       },
       "notes": "",
       "gen_fact": 90,
-      "gen_sig": "GI:Under R.A. 6713, within how many days must an official resign from a private business after assuming office, when there is a conflict of interest?"
+      "gen_sig": "GI:Under R.A. 6713, within how many days must an official resign from a private business after assuming office, when there is a conflict of interest?",
+      "fact_id": "FACT-RA6713-9-DIVESTMENT-60-DAYS"
     },
     {
       "id": "CIVIO-GI-DEADLINE-NUMBER-001009",
