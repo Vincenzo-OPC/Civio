@@ -1,7 +1,7 @@
 {
   "batch": "chatgpt-batch-002",
   "spec_version": "0.1.7",
-  "status": "draft",
+  "status": "reviewed by CoS 2026-10-17 (12 approved, 88 rejected)",
   "source_group": "civio",
   "notes": "English Verbal Ability gaps: 25 unique passage-based reading comprehension, 35 paragraph organization, 40 grammar/error-recognition. Independent item-level review required. No auto approval.",
   "items": [
@@ -55,16 +55,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -78,56 +78,57 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Use the paragraph below to answer.\n\nA coastal cooperative in Sorsogon sold dried fish through three neighborhood stalls. Each stall recorded how much stock arrived, how much sold, and how much remained. One stall appeared to perform poorly because it had more unsold stock than the others. The manager initially proposed cutting its allocation. During a review, however, workers showed that the stall had received a much larger shipment on the final day of the reporting period. Those boxes had not yet been displayed for sale. Once the manager separated stock available for several days from stock delivered just before closing, the apparent gap narrowed. The cooperative decided to report sell-through rates using stock that had actually been offered to customers, while still keeping a separate record of all deliveries. The goal was not to make every stall appear successful, but to compare performance fairly. The cooperative asked each vendor to record when a shipment first reached the display shelf. This extra detail would help the next review distinguish goods available to shoppers from boxes still waiting in storage.\n\nWhy was the original comparison between stalls potentially misleading?",
+      "stem": "Use the paragraph below to answer.\n\nA coastal cooperative in Sorsogon sold dried fish through three neighborhood stalls. Each stall recorded how much stock arrived, how much sold, and how much remained. One stall appeared to perform poorly because it had more unsold stock than the others. The manager initially proposed cutting its allocation. During a review, however, workers showed that the stall had received a much larger shipment on the final day of the reporting period. Those boxes had not yet been displayed for sale. Once the manager separated stock available for several days from stock delivered just before closing, the apparent gap narrowed. The cooperative decided to report sell-through rates using stock that had actually been offered to customers, while still keeping a separate record of all deliveries. The goal was not to make every stall appear successful, but to compare performance fairly. The cooperative asked each vendor to record when a shipment first reached the display shelf.\n\nWhy was the original comparison between stalls potentially misleading?",
       "options": [
         {
           "option_id": "o1",
-          "text": "All three stalls received the same shipment at the same time."
+          "text": "The stall's vendors had recorded their daily sales carelessly."
         },
         {
           "option_id": "o2",
-          "text": "The final report excluded all deliveries from its records."
+          "text": "The other two stalls had hidden some unsold boxes from the manager."
         },
         {
           "option_id": "o3",
-          "text": "The cooperative counted sales only at stalls with no remaining stock."
+          "text": "One stall's late shipment had not yet been put out for sale."
         },
         {
           "option_id": "o4",
-          "text": "One stall had received extra goods too late for them to have a comparable chance to sell."
+          "text": "The manager had already cut that stall's allocation before the review."
         }
       ],
-      "answer_option_id": "o4",
+      "answer_option_id": "o3",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "Stock delivered at the end of the period had less selling time, so raw leftovers gave an unfair comparison.",
-        "why_correct": "\"One stall had received extra goods too late for them to have a comparable chance to sell.\" is correct. Stock delivered at the end of the period had less selling time, so raw leftovers gave an unfair comparison.",
+        "terms": "Inference: a conclusion the passage supports without stating it word for word.",
+        "shortcut": "Look for the sentence with \"however\": it names what the first comparison missed.",
+        "why_correct": "The larger shipment arrived on the last day and was never displayed, so those leftovers had no fair chance to sell.",
         "why_wrong": {
-          "o1": "\"All three stalls received the same shipment at the same time.\" is not correct: A much larger late shipment went to one stall.",
-          "o2": "\"The final report excluded all deliveries from its records.\" is not correct: Deliveries were still recorded separately.",
-          "o3": "\"The cooperative counted sales only at stalls with no remaining stock.\" is not correct: The passage does not say that sales were selectively counted."
+          "o1": "The passage never questions the vendors' records; the problem was timing.",
+          "o2": "Nothing suggests any stall hid stock.",
+          "o4": "He only proposed the cut; the review came first and changed the plan."
         }
       },
       "distractor_reasoning": {
-        "o1": "RC-OPPOSITE",
-        "o2": "RC-OPPOSITE",
-        "o3": "RC-NOT-IN-TEXT"
+        "o1": "RC-NOT-IN-TEXT",
+        "o2": "RC-NOT-IN-TEXT",
+        "o4": "RC-OPPOSITE"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
-      "_legacy": true
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
+      "_legacy": true,
+      "theme": "first-measure-misleads"
     },
     {
       "id": "CIVIO-VEN-RC-DETAIL-050003",
@@ -144,51 +145,51 @@
       "options": [
         {
           "option_id": "o1",
-          "text": "Publishing unverified corrections as soon as they are submitted."
+          "text": "Letting business owners post corrections without a volunteer's review"
         },
         {
           "option_id": "o2",
-          "text": "Showing only the street names without operating information."
+          "text": "Showing the date and hour each station was last checked"
         },
         {
           "option_id": "o3",
-          "text": "Displaying when a volunteer last checked each station."
+          "text": "Adding automatic user reports so the map updates more often"
         },
         {
           "option_id": "o4",
-          "text": "Removing every location that closes for one afternoon."
+          "text": "Marking each station as permanently open or permanently closed"
         }
       ],
-      "answer_option_id": "o3",
+      "answer_option_id": "o2",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "A last-checked timestamp lets users judge freshness instead of assuming permanent availability.",
-        "why_correct": "\"Displaying when a volunteer last checked each station.\" is correct. A last-checked timestamp lets users judge freshness instead of assuming permanent availability.",
+        "terms": "Detail question: the answer is stated in the passage.",
+        "shortcut": "Match the risk (a station open in the morning may close later) to the feature that answers it.",
+        "why_correct": "The makers added the date and hour of the last observation so users can judge how fresh each entry is.",
         "why_wrong": {
-          "o1": "\"Publishing unverified corrections as soon as they are submitted.\" is not correct: The team requires volunteer confirmation before updates appear.",
-          "o2": "\"Showing only the street names without operating information.\" is not correct: Street names do not indicate when availability was observed.",
-          "o4": "\"Removing every location that closes for one afternoon.\" is not correct: Temporary closures did not mean a station must be permanently removed."
+          "o1": "The passage requires a volunteer to confirm every correction first.",
+          "o3": "The team postponed automatic reports until it could stop false submissions.",
+          "o4": "The makers chose not to label points as permanently available."
         }
       },
       "distractor_reasoning": {
         "o1": "RC-OPPOSITE",
-        "o2": "RC-TOO-NARROW",
-        "o4": "RC-EXTREME"
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-OPPOSITE"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
       "_legacy": true
     },
     {
@@ -241,16 +242,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot audit 2026-10-17: fixed 'teachers' contradicted the passage (the agriculture office runs the training). Still draft.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot audit 2026-10-17: fixed 'teachers' contradicted the passage (the agriculture office runs the training). Still draft. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -264,56 +265,57 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Study this brief report before answering.\n\nA community clinic replaced its handwritten appointment board with a digital display near the entrance. Visitors could see which consultation number was being called without crowding the reception counter. Staff said fewer people asked for queue updates during the pilot week. Yet older visitors sometimes could not read the small text from their seats, and the screen stopped working during a brief power interruption. The clinic did not cancel the display. It enlarged the numbers, kept a printed backup list, and assigned a staff member to make audible announcements when necessary. Afterward, the team tested the system during a busy morning rather than relying only on the quiet hours when the first trial had been conducted. The manager argued that a tool should be judged by whether different patients can use it under ordinary conditions, not merely by whether it works perfectly in a demonstration. The revised display also used sufficiently large contrast labels and did not require users to tap a screen. A reception worker explained that patients should be able to obtain queue information without needing personal devices.\n\nWhich principle best explains the clinic's adjustments?",
+      "stem": "Study this brief report before answering.\n\nA community clinic replaced its handwritten appointment board with a digital display near the entrance. Visitors could see which consultation number was being called without crowding the reception counter. Staff said fewer people asked for queue updates during the pilot week. Yet older visitors sometimes could not read the small text from their seats, and the screen stopped working during a brief power interruption. The clinic did not cancel the display. It enlarged the numbers, kept a printed backup list, and assigned a staff member to make audible announcements when necessary. Afterward, the team tested the system during a busy morning rather than relying only on the quiet hours when the first trial had been conducted. The manager argued that a tool should be judged by whether different patients can use it under ordinary conditions, not merely by whether it works perfectly in a demonstration. The revised display also used sufficiently large contrast labels and did not require users to tap a screen.\n\nWhich principle best explains the clinic's adjustments?",
       "options": [
         {
           "option_id": "o1",
-          "text": "A service improvement should remain accessible and functional under realistic conditions."
+          "text": "Digital displays should replace staff announcements in busy clinics."
         },
         {
           "option_id": "o2",
-          "text": "Digital displays can never assist patients in clinics."
+          "text": "New systems are best tested during quiet hours to avoid disruption."
         },
         {
           "option_id": "o3",
-          "text": "The clinic should test new systems only when few people are present."
+          "text": "Clinics should cut down how often patients need to speak with reception."
         },
         {
           "option_id": "o4",
-          "text": "Printed lists should be the sole appointment system in all facilities."
+          "text": "A new service should work for all patients in everyday conditions."
         }
       ],
-      "answer_option_id": "o1",
+      "answer_option_id": "o4",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "The clinic addressed readability, power loss, and real-world use rather than judging by the initial demonstration alone.",
-        "why_correct": "\"A service improvement should remain accessible and functional under realistic conditions.\" is correct. The clinic addressed readability, power loss, and real-world use rather than judging by the initial demonstration alone.",
+        "terms": "Main idea: the principle that explains every change, not just one of them.",
+        "shortcut": "Find the manager's sentence that states the rule: judge a tool by whether different patients can use it in ordinary conditions.",
+        "why_correct": "Every adjustment (bigger numbers, a printed backup, spoken announcements, a busy-morning test) makes the display work for different patients in ordinary use.",
         "why_wrong": {
-          "o2": "\"Digital displays can never assist patients in clinics.\" is not correct: The display reduced some queue inquiries during the pilot.",
-          "o3": "\"The clinic should test new systems only when few people are present.\" is not correct: The team deliberately tested during a busy morning.",
-          "o4": "\"Printed lists should be the sole appointment system in all facilities.\" is not correct: The clinic retained the display and added a backup."
+          "o1": "The clinic added spoken announcements alongside the display.",
+          "o2": "The team moved its test to a busy morning on purpose.",
+          "o3": "Fewer queue questions was one early benefit, not the principle behind the changes."
         }
       },
       "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
         "o2": "RC-OPPOSITE",
-        "o3": "RC-OPPOSITE",
-        "o4": "RC-EXTREME"
+        "o3": "RC-TOO-NARROW"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
-      "_legacy": true
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
+      "_legacy": true,
+      "theme": "first-measure-misleads"
     },
     {
       "id": "CIVIO-VEN-RC-INFER-050006",
@@ -365,16 +367,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot audit 2026-10-17: fixed broken verb ('and share'). Still draft.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot audit 2026-10-17: fixed broken verb ('and share'). Still draft. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -388,55 +390,55 @@
       "difficulty": "medium",
       "est_seconds": 45,
       "language": "en",
-      "stem": "Use the paragraph below to answer.\n\nAn art center in Iloilo began lending audio recorders so elders could preserve stories about their neighborhoods. Volunteers were instructed to ask for permission before recording and to explain where the files might be stored. Many elders agreed, but a few preferred to tell stories without being recorded. The center respected both choices and still invited those elders to future storytelling sessions. Later, researchers asked whether the audio files could be posted publicly. The center reviewed the original permissions first because agreeing to a recording for local archiving did not necessarily mean agreeing to unlimited online publication. It also offered narrators an opportunity to correct names and dates in accompanying notes. The project director said preserving history was not merely collecting as much material as possible. It also required treating narrators as participants with continuing interests in how their memories were used. Because memories can change over time, the center allowed a narrator to request a note of correction without erasing earlier files silently. This policy helped listeners distinguish revised information from the original archived version.\n\nWhy did the center review permission again before publishing recordings online?",
+      "stem": "Use the paragraph below to answer.\n\nAn art center in Iloilo began lending audio recorders so elders could preserve stories about their neighborhoods. Volunteers were instructed to ask for permission before recording and to explain where the files might be stored. Many elders agreed, but a few preferred to tell stories without being recorded. The center respected both choices and still invited those elders to future storytelling sessions. Later, researchers asked whether the audio files could be posted publicly. The center reviewed the original permissions first because agreeing to a recording for local archiving did not necessarily mean agreeing to unlimited online publication. It also offered narrators an opportunity to correct names and dates in accompanying notes. The project director said preserving history was not merely collecting as much material as possible. It also required treating narrators as participants with continuing interests in how their memories were used. Because memories can change over time, the center allowed a narrator to request a note of correction without erasing earlier files silently.\n\nWhy did the center review permission again before publishing recordings online?",
       "options": [
         {
           "option_id": "o1",
-          "text": "Consent for local archiving did not necessarily include unrestricted public sharing."
+          "text": "Agreeing to local archiving was not the same as agreeing to online posting."
         },
         {
           "option_id": "o2",
-          "text": "Permission was required only when equipment was purchased."
+          "text": "Researchers had offered to correct the names and dates in the notes."
         },
         {
           "option_id": "o3",
-          "text": "The recordings contained no stories about the community."
+          "text": "Some elders had told their stories without allowing any recording."
         },
         {
           "option_id": "o4",
-          "text": "All narrators had refused to be recorded."
+          "text": "A new rule required a separate permit for every file posted online."
         }
       ],
       "answer_option_id": "o1",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "The intended use changed from local storage to online distribution, so the center checked the scope of consent.",
-        "why_correct": "\"Consent for local archiving did not necessarily include unrestricted public sharing.\" is correct. The intended use changed from local storage to online distribution, so the center checked the scope of consent.",
+        "terms": "Detail question: the reason is stated in the passage.",
+        "shortcut": "The word \"because\" in the review sentence gives the reason directly.",
+        "why_correct": "The passage says consent to a recording for local archiving did not necessarily mean consent to unlimited online publication.",
         "why_wrong": {
-          "o2": "\"Permission was required only when equipment was purchased.\" is not correct: The passage discusses recording and publication permissions, not purchasing.",
-          "o3": "\"The recordings contained no stories about the community.\" is not correct: They were collected precisely to preserve neighborhood stories.",
-          "o4": "\"All narrators had refused to be recorded.\" is not correct: Many elders had agreed to recording."
+          "o2": "The center offered the narrators, not the researchers, a chance to correct the notes.",
+          "o3": "True, but those stories were never recorded, so they were not part of the posting question.",
+          "o4": "No such rule is mentioned; the review was the center's own choice."
         }
       },
       "distractor_reasoning": {
         "o2": "RC-NOT-IN-TEXT",
-        "o3": "RC-OPPOSITE",
-        "o4": "RC-OPPOSITE"
+        "o3": "RC-NOT-IN-TEXT",
+        "o4": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
       "_legacy": true
     },
     {
@@ -489,16 +491,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -551,16 +553,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -613,16 +615,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -636,56 +638,57 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Read the passage and respond to the question.\n\nThe public hospital in Legazpi began asking patients whether they received their laboratory results within the promised time. A simple satisfaction survey first showed unusually high approval. A clerk later noticed that survey forms were offered only at the counter where completed results were collected. Patients still waiting for results rarely passed that counter, so their experiences were missing. The quality team moved the survey link to appointment slips and allowed patients to answer even when a result was delayed. It also added an option to say that the result had not yet arrived. After that change, the reported percentage of timely results fell, although the hospital's laboratory procedures had not changed during the same week. The director explained that a more complete sample can make performance look worse while producing a more accurate measure. She instructed staff to review the delays rather than blame patients for giving negative feedback. The evaluation team also tracked how many survey invitations were sent, not just how many responses were received. They noted that a higher response count is not necessarily a more representative response without considering who could answer.\n\nWhat best explains the decrease in the reported on-time result rate?",
+      "stem": "Read the passage and respond to the question.\n\nThe public hospital in Legazpi began asking patients whether they received their laboratory results within the promised time. A simple satisfaction survey first showed unusually high approval. A clerk later noticed that survey forms were offered only at the counter where completed results were collected. Patients still waiting for results rarely passed that counter, so their experiences were missing. The quality team moved the survey link to appointment slips and allowed patients to answer even when a result was delayed. It also added an option to say that the result had not yet arrived. After that change, the reported percentage of timely results fell, although the hospital's laboratory procedures had not changed during the same week. The director explained that a more complete sample can make performance look worse while producing a more accurate measure. She instructed staff to review the delays rather than blame patients for giving negative feedback.\n\nWhat best explains the decrease in the reported on-time result rate?",
       "options": [
         {
           "option_id": "o1",
-          "text": "The revised survey included patients who had not yet received their results."
+          "text": "The laboratory took longer to release results that same week."
         },
         {
           "option_id": "o2",
-          "text": "Patients began receiving results earlier than before."
+          "text": "Patients still waiting for results could now answer the survey."
         },
         {
           "option_id": "o3",
-          "text": "The hospital stopped accepting feedback from patients with completed results."
+          "text": "Patients gave negative answers to protest the new appointment slips."
         },
         {
           "option_id": "o4",
-          "text": "The laboratory stopped processing every test during the week."
+          "text": "Fewer patients answered once the survey moved to appointment slips."
         }
       ],
-      "answer_option_id": "o1",
+      "answer_option_id": "o2",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "The first survey excluded people still waiting. Including them made the performance estimate more representative.",
-        "why_correct": "\"The revised survey included patients who had not yet received their results.\" is correct. The first survey excluded people still waiting. Including them made the performance estimate more representative.",
+        "terms": "Inference: explain a result using what the passage states.",
+        "shortcut": "Ask who could answer before and after the change.",
+        "why_correct": "Moving the survey to appointment slips let waiting patients answer, so the sample now included the delays the first survey missed.",
         "why_wrong": {
-          "o2": "\"Patients began receiving results earlier than before.\" is not correct: Earlier results would not explain the decline as described.",
-          "o3": "\"The hospital stopped accepting feedback from patients with completed results.\" is not correct: The new approach expanded participation; it did not exclude these patients.",
-          "o4": "\"The laboratory stopped processing every test during the week.\" is not correct: The procedures were unchanged and no complete shutdown was reported."
+          "o1": "The passage says laboratory procedures had not changed that week.",
+          "o3": "No protest is mentioned; the director told staff not to blame patients.",
+          "o4": "The passage never says the number of answers fell."
         }
       },
       "distractor_reasoning": {
-        "o2": "RC-OPPOSITE",
-        "o3": "RC-OPPOSITE",
-        "o4": "RC-EXTREME"
+        "o1": "RC-OPPOSITE",
+        "o3": "RC-NOT-IN-TEXT",
+        "o4": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
-      "_legacy": true
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
+      "_legacy": true,
+      "theme": "first-measure-misleads"
     },
     {
       "id": "CIVIO-VEN-RC-INFER-050012",
@@ -698,56 +701,57 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Use the paragraph below to answer.\n\nA group of science teachers in Butuan asked students to measure how much rain fell in containers placed around the school. The students used identical containers, but one was placed below a roof edge that sometimes poured extra water into it. That container consistently recorded higher levels after a storm. Some students immediately concluded that the western side of the campus always received more rainfall. Their teacher pointed out the drainage channel above the container and asked whether the setup was measuring rainfall alone. The class moved the container to an open space and repeated the observation over several storms. The difference became smaller, although the students still found some variation between sites. In their report, the class separated what was measured directly from explanations that remained tentative. They described the placement problem as a source of bias rather than dismissing all their work. The class recorded the exact position of each container and kept photographs of the setup for future students. The teacher encouraged groups to explain possible sources of error even when the final result was not what they expected.\n\nWhich factor most clearly undermined the original comparison?",
+      "stem": "Use the paragraph below to answer.\n\nA group of science teachers in Butuan asked students to measure how much rain fell in containers placed around the school. The students used identical containers, but one was placed below a roof edge that sometimes poured extra water into it. That container consistently recorded higher levels after a storm. Some students immediately concluded that the western side of the campus always received more rainfall. Their teacher pointed out the drainage channel above the container and asked whether the setup was measuring rainfall alone. The class moved the container to an open space and repeated the observation over several storms. The difference became smaller, although the students still found some variation between sites. In their report, the class separated what was measured directly from explanations that remained tentative. They described the placement problem as a source of bias rather than dismissing all their work. The class recorded the exact position of each container and kept photographs of the setup for future students.\n\nWhich factor most clearly undermined the original comparison?",
       "options": [
         {
           "option_id": "o1",
-          "text": "The students used containers of different sizes at every location."
+          "text": "The western side of the campus really does receive more rain."
         },
         {
           "option_id": "o2",
-          "text": "One container received runoff from a roof as well as direct rainfall."
+          "text": "The students read the containers at different times after each storm."
         },
         {
           "option_id": "o3",
-          "text": "The school had no suitable place to repeat the observations."
+          "text": "Water from the roof edge added to one container's rainfall."
         },
         {
           "option_id": "o4",
-          "text": "Rainfall could never vary between places on one campus."
+          "text": "One container was a different size from the others that were used."
         }
       ],
-      "answer_option_id": "o2",
+      "answer_option_id": "o3",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "A container below a roof edge captured more than the rainfall falling directly on that location.",
-        "why_correct": "\"One container received runoff from a roof as well as direct rainfall.\" is correct. A container below a roof edge captured more than the rainfall falling directly on that location.",
+        "terms": "Inference: identify what weakened a comparison.",
+        "shortcut": "The teacher's question (was it measuring rainfall alone?) points to the cause.",
+        "why_correct": "The container below the roof edge caught runoff as well as rain, so it measured more than the rainfall at that spot.",
         "why_wrong": {
-          "o1": "\"The students used containers of different sizes at every location.\" is not correct: The containers were identical.",
-          "o3": "\"The school had no suitable place to repeat the observations.\" is not correct: The students moved a container to an open area.",
-          "o4": "\"Rainfall could never vary between places on one campus.\" is not correct: Some variation remained after the setup was corrected."
+          "o1": "The passage treats that conclusion as hasty; the gap shrank once the container was moved.",
+          "o2": "Reading times are never mentioned.",
+          "o4": "The students used identical containers."
         }
       },
       "distractor_reasoning": {
-        "o1": "RC-OPPOSITE",
-        "o3": "RC-OPPOSITE",
-        "o4": "RC-EXTREME"
+        "o1": "RC-NOT-IN-TEXT",
+        "o2": "RC-NOT-IN-TEXT",
+        "o4": "RC-OPPOSITE"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
-      "_legacy": true
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
+      "_legacy": true,
+      "theme": "first-measure-misleads"
     },
     {
       "id": "CIVIO-VEN-RC-INFER-050013",
@@ -799,16 +803,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -861,16 +865,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -884,56 +888,57 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Study this brief report before answering.\n\nThe records unit of a city hall in Bacolod introduced a numbering system for incoming letters. Each letter received a reference number, and the receiving clerk scanned its cover page. The system made it easier to locate missing files, but two departments sometimes entered the same reference number because their old registers used separate sequences. Staff initially thought the scanning process was defective. An audit showed that the scans were accurate: the problem was the way numbers were assigned. The unit created a central register and required departments to check whether a number had already been used before assigning another. It kept the original entries for audit purposes instead of silently deleting them. The new process also recorded who corrected a duplicate and when. The department head stressed that accurate digital copies cannot compensate for inconsistent identifiers in the underlying records. The audit team trained one representative from each department to check the central register before saving a new record. It preferred a small verification step over correcting conflicting reference numbers after files had circulated.\n\nWhich change directly addressed the source of the duplicate records?",
+      "stem": "Study this brief report before answering.\n\nThe records unit of a city hall in Bacolod introduced a numbering system for incoming letters. Each letter received a reference number, and the receiving clerk scanned its cover page. The system made it easier to locate missing files, but two departments sometimes entered the same reference number because their old registers used separate sequences. Staff initially thought the scanning process was defective. An audit showed that the scans were accurate: the problem was the way numbers were assigned. The unit created a central register and required departments to check whether a number had already been used before assigning another. It kept the original entries for audit purposes instead of silently deleting them. The new process also recorded who corrected a duplicate and when. The department head stressed that accurate digital copies cannot compensate for inconsistent identifiers in the underlying records. The audit team trained one representative from each department to check the central register before saving a new record.\n\nWhich change directly addressed the source of the duplicate records?",
       "options": [
         {
           "option_id": "o1",
-          "text": "Making scanned pages higher resolution."
+          "text": "Rescanning every cover page at a higher resolution"
         },
         {
           "option_id": "o2",
-          "text": "Allowing each department to restart its numbering every month."
+          "text": "Letting each department keep its own separate numbering sequence"
         },
         {
           "option_id": "o3",
-          "text": "Assigning and checking reference numbers through a shared central register."
+          "text": "Deleting the duplicate entries so that only one copy of each remains"
         },
         {
           "option_id": "o4",
-          "text": "Deleting every earlier scanned letter."
+          "text": "A central register that departments check before assigning a number"
         }
       ],
-      "answer_option_id": "o3",
+      "answer_option_id": "o4",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "The duplicate identifiers were caused by separate numbering sequences, not scanning errors.",
-        "why_correct": "\"Assigning and checking reference numbers through a shared central register.\" is correct. The duplicate identifiers were caused by separate numbering sequences, not scanning errors.",
+        "terms": "Inference: match a fix to the cause the passage identifies.",
+        "shortcut": "Find the cause the audit named (how numbers were assigned), then the change aimed at it.",
+        "why_correct": "The duplicates came from separate numbering sequences, and a shared register checked before each new number removes that cause.",
         "why_wrong": {
-          "o1": "\"Making scanned pages higher resolution.\" is not correct: Scan quality was not the source of the problem.",
-          "o2": "\"Allowing each department to restart its numbering every month.\" is not correct: Separate sequences had contributed to the duplication.",
-          "o4": "\"Deleting every earlier scanned letter.\" is not correct: The unit kept earlier entries for audit purposes."
+          "o1": "The audit found the scans were accurate; scanning was not the cause.",
+          "o2": "Separate sequences were what produced the duplicates.",
+          "o3": "The unit kept the original entries for audit instead of deleting them."
         }
       },
       "distractor_reasoning": {
-        "o1": "RC-NOT-IN-TEXT",
+        "o1": "RC-OPPOSITE",
         "o2": "RC-OPPOSITE",
-        "o4": "RC-OPPOSITE"
+        "o3": "RC-OPPOSITE"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
-      "_legacy": true
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
+      "_legacy": true,
+      "theme": "first-measure-misleads"
     },
     {
       "id": "CIVIO-VEN-RC-INFER-050016",
@@ -985,16 +990,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -1047,16 +1052,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -1109,16 +1114,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -1132,55 +1137,55 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Based only on the passage, choose the best answer.\n\nThe provincial archives in La Union invited residents to submit photographs of old streets. Many contributors remembered where a photo had been taken but not the exact year. Instead of assigning a date based solely on the age of the buildings, the archivist recorded approximate time ranges and explained the uncertainty. When two photographs appeared to show the same celebration, volunteers compared shop signs, clothing, and the newspaper visible in one frame. They discovered that the pictures had been taken at similar events several years apart. The archives kept both images but revised their captions. At a public presentation, the archivist explained that preserving local history requires a clear distinction between a remembered account, a supported estimate, and a verified date. She encouraged contributors to share additional evidence while emphasizing that corrections would be documented openly rather than made without a record. Original photographs were stored separately from edited presentation copies. This made it possible to reverse a mistaken caption without altering the underlying historical record that future researchers might need to examine again.\n\nWhy did the archivist use approximate date ranges on some captions?",
+      "stem": "Based only on the passage, choose the best answer.\n\nThe provincial archives in La Union invited residents to submit photographs of old streets. Many contributors remembered where a photo had been taken but not the exact year. Instead of assigning a date based solely on the age of the buildings, the archivist recorded approximate time ranges and explained the uncertainty. When two photographs appeared to show the same celebration, volunteers compared shop signs, clothing, and the newspaper visible in one frame. They discovered that the pictures had been taken at similar events several years apart. The archives kept both images but revised their captions. At a public presentation, the archivist explained that preserving local history requires a clear distinction between a remembered account, a supported estimate, and a verified date. She encouraged contributors to share additional evidence while emphasizing that corrections would be documented openly rather than made without a record. Original photographs were stored separately from edited presentation copies.\n\nWhy did the archivist use approximate date ranges on some captions?",
       "options": [
         {
           "option_id": "o1",
-          "text": "Historical images cannot be dated under any circumstances."
+          "text": "The evidence could not support an exact year for some photos."
         },
         {
           "option_id": "o2",
-          "text": "The archives wanted to make the captions deliberately misleading."
+          "text": "Contributors had asked that their photos carry no exact dates."
         },
         {
           "option_id": "o3",
-          "text": "The evidence did not justify a precise year for every photograph."
+          "text": "The age of the buildings already showed the precise year of each photo."
         },
         {
           "option_id": "o4",
-          "text": "Every submitted photograph lacked any information about its location."
+          "text": "Ranges let the archives avoid having to revise any captions later."
         }
       ],
-      "answer_option_id": "o3",
+      "answer_option_id": "o1",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "A range is more accurate than inventing precision where the supporting evidence is incomplete.",
-        "why_correct": "\"The evidence did not justify a precise year for every photograph.\" is correct. A range is more accurate than inventing precision where the supporting evidence is incomplete.",
+        "terms": "Inference: explain a choice from the facts the passage gives.",
+        "shortcut": "Find what contributors could not remember, then why a range is used instead.",
+        "why_correct": "Contributors often remembered places but not years, so the archivist recorded ranges rather than claim a precision the evidence lacked.",
         "why_wrong": {
-          "o1": "\"Historical images cannot be dated under any circumstances.\" is not correct: The archivist verified or revised dates when evidence allowed.",
-          "o2": "\"The archives wanted to make the captions deliberately misleading.\" is not correct: The project explicitly documented uncertainty to avoid false certainty.",
-          "o4": "\"Every submitted photograph lacked any information about its location.\" is not correct: Many contributors remembered the locations."
+          "o2": "No contributor made such a request.",
+          "o3": "The archivist declined to date photos from building age alone.",
+          "o4": "The archives did revise captions, and corrections are documented openly."
         }
       },
       "distractor_reasoning": {
-        "o1": "RC-EXTREME",
-        "o2": "RC-OPPOSITE",
+        "o2": "RC-NOT-IN-TEXT",
+        "o3": "RC-OPPOSITE",
         "o4": "RC-OPPOSITE"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
       "_legacy": true
     },
     {
@@ -1194,56 +1199,57 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Study this brief report before answering.\n\nA barangay in Iligan installed solar lights along a footpath used by students and vendors. The first inspection found that every lamp switched on at dusk. Two months later, residents reported that some sections were dark despite functioning bulbs. Workers discovered that newly grown branches were shading several panels during the day. The lights had too little stored energy to operate through the night. The maintenance plan was updated to include checks of sunlight exposure, battery condition, and the path itself. Residents were also given an easy way to report which lamp had failed and when. The chairperson said installation was only the beginning of public service. Equipment must continue working in changing conditions, and maintenance records are essential when deciding whether the design needs improvement or a repair is sufficient. The maintenance team asked residents to report the specific lamp location instead of simply saying that the path was dark. More precise reports made it easier to determine whether the same equipment failed repeatedly.\n\nWhat caused some lights to fail despite working bulbs?",
+      "stem": "Study this brief report before answering.\n\nA barangay in Iligan installed solar lights along a footpath used by students and vendors. The first inspection found that every lamp switched on at dusk. Two months later, residents reported that some sections were dark despite functioning bulbs. Workers discovered that newly grown branches were shading several panels during the day. The lights had too little stored energy to operate through the night. The maintenance plan was updated to include checks of sunlight exposure, battery condition, and the path itself. Residents were also given an easy way to report which lamp had failed and when. The chairperson said installation was only the beginning of public service. Equipment must continue working in changing conditions, and maintenance records are essential when deciding whether the design needs improvement or a repair is sufficient. The maintenance team asked residents to report the specific lamp location instead of simply saying that the path was dark.\n\nWhat caused some lights to fail despite working bulbs?",
       "options": [
         {
           "option_id": "o1",
-          "text": "All solar bulbs had stopped working after installation."
+          "text": "The batteries were the wrong type for the lamps installed."
         },
         {
           "option_id": "o2",
-          "text": "Shaded panels were not charging their batteries sufficiently."
+          "text": "Shaded panels could not store enough energy for the night."
         },
         {
           "option_id": "o3",
-          "text": "The barangay had deliberately disconnected every lamp."
+          "text": "Residents had switched off some lamps to save electricity."
         },
         {
           "option_id": "o4",
-          "text": "The footpath had been permanently closed to students."
+          "text": "The first inspection had missed lamps that never switched on."
         }
       ],
       "answer_option_id": "o2",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "Branches blocked sunlight, reducing energy stored for nighttime lighting.",
-        "why_correct": "\"Shaded panels were not charging their batteries sufficiently.\" is correct. Branches blocked sunlight, reducing energy stored for nighttime lighting.",
+        "terms": "Inference: trace a stated cause and effect.",
+        "shortcut": "Follow the chain the workers found: branches, shade, too little stored energy.",
+        "why_correct": "New branches shaded the panels during the day, so the batteries held too little energy to light the lamps all night.",
         "why_wrong": {
-          "o1": "\"All solar bulbs had stopped working after installation.\" is not correct: The bulbs still functioned; charging was insufficient.",
-          "o3": "\"The barangay had deliberately disconnected every lamp.\" is not correct: The text attributes some failures to new branch growth.",
-          "o4": "\"The footpath had been permanently closed to students.\" is not correct: The passage describes ongoing users and reports."
+          "o1": "Battery type is never mentioned; battery checks were added only later.",
+          "o3": "Nothing says residents turned lamps off.",
+          "o4": "The first inspection found every lamp switched on at dusk."
         }
       },
       "distractor_reasoning": {
-        "o1": "RC-OPPOSITE",
+        "o1": "RC-NOT-IN-TEXT",
         "o3": "RC-NOT-IN-TEXT",
-        "o4": "RC-NOT-IN-TEXT"
+        "o4": "RC-OPPOSITE"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
-      "_legacy": true
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
+      "_legacy": true,
+      "theme": "first-measure-misleads"
     },
     {
       "id": "CIVIO-VEN-RC-INFER-050021",
@@ -1295,16 +1301,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -1322,52 +1328,53 @@
       "options": [
         {
           "option_id": "o1",
-          "text": "Assuming every buyer collected rice without charge."
+          "text": "Adding a short summary so members could scan the bulletin quickly"
         },
         {
           "option_id": "o2",
-          "text": "Using the largest price as the guaranteed final payment."
+          "text": "Showing only the highest offer from each buyer every week"
         },
         {
           "option_id": "o3",
-          "text": "Removing prices from the bulletin altogether."
+          "text": "Listing each offer's delivery, moisture, payment and deductions"
         },
         {
           "option_id": "o4",
-          "text": "Displaying the conditions and deductions attached to each buyer's offer."
+          "text": "Asking buyers to post one price that covers every delivery term"
         }
       ],
-      "answer_option_id": "o4",
+      "answer_option_id": "o3",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "A price is not truly comparable without knowing which delivery and payment conditions it includes.",
-        "why_correct": "\"Displaying the conditions and deductions attached to each buyer's offer.\" is correct. A price is not truly comparable without knowing which delivery and payment conditions it includes.",
+        "terms": "Inference: match a fix to the problem the passage describes.",
+        "shortcut": "Find the stated unfairness (prices under different conditions), then the change that exposes those conditions.",
+        "why_correct": "Prices only became comparable once the bulletin showed the conditions behind each one.",
         "why_wrong": {
-          "o1": "\"Assuming every buyer collected rice without charge.\" is not correct: Transport conditions varied and had to be specified.",
-          "o2": "\"Using the largest price as the guaranteed final payment.\" is not correct: Offers and completed sales were explicitly distinguished.",
-          "o3": "\"Removing prices from the bulletin altogether.\" is not correct: The cooperative retained prices and added context."
+          "o1": "The summary made the bulletin easier to read; the passage does not credit it with fairness.",
+          "o2": "The cooperative never limited the bulletin to top offers.",
+          "o4": "The passage describes no such request to buyers."
         }
       },
       "distractor_reasoning": {
-        "o1": "RC-OPPOSITE",
-        "o2": "RC-OPPOSITE",
-        "o3": "RC-OPPOSITE"
+        "o1": "RC-NOT-IN-TEXT",
+        "o2": "RC-NOT-IN-TEXT",
+        "o4": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
-      "_legacy": true
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
+      "_legacy": true,
+      "theme": "first-measure-misleads"
     },
     {
       "id": "CIVIO-VEN-RC-INFER-050023",
@@ -1380,56 +1387,57 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Consider the following account.\n\nA town's disaster office tested a short radio message that told households what to do when a nearby river rose. During a practice broadcast, listeners remembered the warning but confused the meeting point with a similarly named street. The office shortened the message and repeated the exact school name twice. It then asked a new group of residents to describe the instructions without prompting. The revised message produced fewer location mistakes. The office did not claim that repetition alone was always the best method of public communication. It planned to test the same message with different dialect speakers and people who relied on written updates rather than radio. In its report, staff said a message succeeds not when it sounds official, but when intended listeners can understand and act on its instructions. They also kept a longer reference version for responders who needed detailed procedures. The office kept a note of which words listeners misunderstood most often. This allowed editors to change confusing expressions rather than merely increasing the volume or length of every later broadcast.\n\nWhat outcome did the office use to judge whether the revision worked?",
+      "stem": "Consider the following account.\n\nA town's disaster office tested a short radio message that told households what to do when a nearby river rose. During a practice broadcast, listeners remembered the warning but confused the meeting point with a similarly named street. The office shortened the message and repeated the exact school name twice. It then asked a new group of residents to describe the instructions without prompting. The revised message produced fewer location mistakes. The office did not claim that repetition alone was always the best method of public communication. It planned to test the same message with different dialect speakers and people who relied on written updates rather than radio. In its report, staff said a message succeeds not when it sounds official, but when intended listeners can understand and act on its instructions. They also kept a longer reference version for responders who needed detailed procedures. The office kept a note of which words listeners misunderstood most often.\n\nWhat outcome did the office use to judge whether the revision worked?",
       "options": [
         {
           "option_id": "o1",
-          "text": "Whether listeners could accurately repeat the intended meeting location."
+          "text": "Whether the message sounded more official than before"
         },
         {
           "option_id": "o2",
-          "text": "Whether every resident owned the same radio model."
+          "text": "Whether more households tuned in to the practice broadcast"
         },
         {
           "option_id": "o3",
-          "text": "Whether the announcement sounded more formal than before."
+          "text": "Whether dialect speakers understood the message as well as others"
         },
         {
           "option_id": "o4",
-          "text": "How many technical terms were included in the warning."
+          "text": "Whether listeners could name the right meeting point unprompted"
         }
       ],
-      "answer_option_id": "o1",
+      "answer_option_id": "o4",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "The practice test measured recall of the meeting point, the original source of confusion.",
-        "why_correct": "\"Whether listeners could accurately repeat the intended meeting location.\" is correct. The practice test measured recall of the meeting point, the original source of confusion.",
+        "terms": "Inference: identify the measure of success the passage describes.",
+        "shortcut": "Look for the test after the revision and what it counted.",
+        "why_correct": "The office asked new residents to describe the instructions without prompting and counted location mistakes.",
         "why_wrong": {
-          "o2": "\"Whether every resident owned the same radio model.\" is not correct: No such equipment requirement was mentioned.",
-          "o3": "\"Whether the announcement sounded more formal than before.\" is not correct: The office specifically valued actionable understanding over official tone.",
-          "o4": "\"How many technical terms were included in the warning.\" is not correct: Staff focused on comprehension, not jargon count."
+          "o1": "Staff said a message succeeds when listeners can act on it, not when it sounds official.",
+          "o2": "Audience size is never mentioned.",
+          "o3": "That test was only planned for later; it did not judge this revision."
         }
       },
       "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
         "o2": "RC-NOT-IN-TEXT",
-        "o3": "RC-OPPOSITE",
-        "o4": "RC-NOT-IN-TEXT"
+        "o3": "RC-NOT-IN-TEXT"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
-      "_legacy": true
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
+      "_legacy": true,
+      "theme": "first-measure-misleads"
     },
     {
       "id": "CIVIO-VEN-RC-INFER-050024",
@@ -1481,16 +1489,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: RC item not kept (single-theme batch; 12 of 25 RC kept).",
       "_legacy": true
     },
     {
@@ -1504,55 +1512,55 @@
       "difficulty": "medium",
       "est_seconds": 70,
       "language": "en",
-      "stem": "Study this brief report before answering.\n\nOn an island municipality, the local health office maintained a list of families needing regular medicine deliveries. When roads flooded, deliveries sometimes arrived late. A volunteer suggested assigning every household the same priority to appear fair. The nurse explained that equal treatment does not always mean identical scheduling: some patients had only one day's supply left while others had enough for several weeks. The office began recording remaining medicine, accessibility of each route, and the date of the next expected delivery. Staff continued to explain how priorities were set and allowed households to report errors in their records. During an emergency, the nurse said, transparent criteria were important both for urgent care and public trust. The office still sought to serve all households, but the order of delivery reflected the severity of immediate need and the feasibility of safe transport. The nurse emphasized that a transparent priority rule should still allow correction when a record is outdated. A household whose medicine supply suddenly changed could then request a review without disrupting the entire delivery system.\n\nWhy did the nurse reject identical delivery priority for all households?",
+      "stem": "Study this brief report before answering.\n\nOn an island municipality, the local health office maintained a list of families needing regular medicine deliveries. When roads flooded, deliveries sometimes arrived late. A volunteer suggested assigning every household the same priority to appear fair. The nurse explained that equal treatment does not always mean identical scheduling: some patients had only one day's supply left while others had enough for several weeks. The office began recording remaining medicine, accessibility of each route, and the date of the next expected delivery. Staff continued to explain how priorities were set and allowed households to report errors in their records. During an emergency, the nurse said, transparent criteria were important both for urgent care and public trust. The office still sought to serve all households, but the order of delivery reflected the severity of immediate need and the feasibility of safe transport. The nurse emphasized that a transparent priority rule should still allow correction when a record is outdated.\n\nWhy did the nurse reject identical delivery priority for all households?",
       "options": [
         {
           "option_id": "o1",
-          "text": "The urgency of need differed according to remaining medicine and access constraints."
+          "text": "Giving every household the same priority would make the records too long to keep."
         },
         {
           "option_id": "o2",
-          "text": "Every patient had exactly the same number of doses remaining."
+          "text": "Households differed in medicine left and in how safely they could be reached."
         },
         {
           "option_id": "o3",
-          "text": "The office had decided never to deliver medicine to remote households."
+          "text": "Remote households had asked to be served after the town center."
         },
         {
           "option_id": "o4",
-          "text": "The nurse wanted to avoid recording delivery decisions."
+          "text": "Treating everyone identically is unfair in every situation."
         }
       ],
-      "answer_option_id": "o1",
+      "answer_option_id": "o2",
       "reveal": {
-        "terms": "A supported answer follows from the passage without adding an unmentioned fact.",
-        "shortcut": "Priorities were based on differences in immediate need and safe delivery conditions, not favoritism.",
-        "why_correct": "\"The urgency of need differed according to remaining medicine and access constraints.\" is correct. Priorities were based on differences in immediate need and safe delivery conditions, not favoritism.",
+        "terms": "Inference: explain a decision from the reasons the passage states.",
+        "shortcut": "The nurse's explanation follows the colon: supplies differed.",
+        "why_correct": "Some patients had one day's supply and others several weeks, and routes differed in safety, so equal treatment did not mean identical scheduling.",
         "why_wrong": {
-          "o2": "\"Every patient had exactly the same number of doses remaining.\" is not correct: The passage explicitly says supplies differed.",
-          "o3": "\"The office had decided never to deliver medicine to remote households.\" is not correct: It still aimed to serve all households.",
-          "o4": "\"The nurse wanted to avoid recording delivery decisions.\" is not correct: The office introduced more documentation and transparent criteria."
+          "o1": "Record length is never given as a reason.",
+          "o3": "No household made such a request.",
+          "o4": "The nurse said equal treatment does not always mean identical scheduling, not that it is never fair."
         }
       },
       "distractor_reasoning": {
-        "o2": "RC-OPPOSITE",
-        "o3": "RC-OPPOSITE",
-        "o4": "RC-OPPOSITE"
+        "o1": "RC-NOT-IN-TEXT",
+        "o3": "RC-NOT-IN-TEXT",
+        "o4": "RC-EXTREME"
       },
       "source": "Original, Civio",
       "source_url": null,
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Grok Bot fix 2026-10-17: padded tail trimmed, every distractor rewritten and recoded, whys rewritten. Approved by CoS 2026-10-17.",
       "_legacy": true
     },
     {
@@ -1605,16 +1613,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -1667,16 +1675,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -1729,16 +1737,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -1791,16 +1799,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -1853,16 +1861,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -1915,16 +1923,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -1977,16 +1985,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2039,16 +2047,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2101,16 +2109,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2163,16 +2171,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2225,16 +2233,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2287,16 +2295,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2349,16 +2357,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2411,16 +2419,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2473,16 +2481,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2535,16 +2543,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2597,16 +2605,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2659,16 +2667,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2721,16 +2729,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2783,16 +2791,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2845,16 +2853,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2907,16 +2915,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -2969,16 +2977,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3031,16 +3039,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3093,16 +3101,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3155,16 +3163,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3217,16 +3225,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3279,16 +3287,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3341,16 +3349,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3403,16 +3411,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3465,16 +3473,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3527,16 +3535,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3589,16 +3597,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3651,16 +3659,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3713,16 +3721,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3775,16 +3783,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3837,16 +3845,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3899,16 +3907,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -3961,16 +3969,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4023,16 +4031,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4085,16 +4093,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4147,16 +4155,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4209,16 +4217,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4271,16 +4279,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4333,16 +4341,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4395,16 +4403,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4457,16 +4465,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4519,16 +4527,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4581,16 +4589,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4643,16 +4651,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: the key is also semantically odd; templated item.",
       "_legacy": true
     },
     {
@@ -4705,16 +4713,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4767,16 +4775,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4829,16 +4837,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4891,16 +4899,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -4953,16 +4961,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5015,16 +5023,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5077,16 +5085,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5139,16 +5147,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5201,16 +5209,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5263,16 +5271,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5325,16 +5333,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5387,16 +5395,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5449,16 +5457,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5511,16 +5519,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5573,16 +5581,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5635,16 +5643,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5697,16 +5705,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5759,16 +5767,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5821,16 +5829,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5883,16 +5891,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -5945,16 +5953,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -6007,16 +6015,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -6069,16 +6077,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -6131,16 +6139,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     },
     {
@@ -6193,16 +6201,16 @@
       "source_url": null,
       "source_group": "civio",
       "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "review_status": "rejected",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "OpenAI GPT-6",
         "method": "ai_assisted",
         "created_at": "2026-10-13T23:14:00+08:00",
         "spec_version": "0.1.7"
       },
-      "notes": "English Verbal gap-fill; independently review before approval.",
+      "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
       "_legacy": true
     }
   ]

@@ -7,7 +7,7 @@ from gap_fill_005_po import ORDER, INSERT
 from gap_fill_005_ss import SS, STEMS, TOPIC
 IDS = ["o1", "o2", "o3", "o4"]
 items = []
-def add(arch, comp, concept, micro, diff, secs, stem, choices, terms, method, sc, rotate=None):
+def add(arch, comp, concept, micro, diff, secs, stem, choices, terms, method, sc, rotate=None, notes=None):
     if rotate is not None:  # place the key at a fixed position to balance keys
         key = next(c for c in choices if c[1] is None); rest = [c for c in choices if c[1] is not None]
         choices = rest[:rotate] + [key] + rest[rotate:]
@@ -21,14 +21,16 @@ def add(arch, comp, concept, micro, diff, secs, stem, choices, terms, method, sc
           "distractor_reasoning": {IDS[i]: c[1] for i, c in enumerate(choices) if c[1]},
           "source": "Original, Civio", "source_url": None, "source_group": "civio", "status": "draft", "review_status": "unreviewed",
           "reviewer": None, "reviewed_at": None,
-          "provenance": {"author": "Grok Bot", "method": "ai_assisted", "created_at": "2026-10-17T16:30:00+08:00", "spec_version": "0.1.8"},
+          "provenance": {"author": "Grok Bot", "method": "ai_assisted", "created_at": "2026-10-17T16:30:00+08:00", "spec_version": "0.1.9"},
           "_legacy": True}
     if sc: it["shortcut"] = sc
+    if notes: it["notes"] = notes
     items.append(it)
 MICRO = {"VEN-RC-MAIN": "identify the main idea or best title", "VEN-RC-DETAIL": "locate a stated detail", "VEN-RC-INFER": "draw a supported inference", "VEN-RC-VOCAB": "use context to find a word's meaning"}
 SECS = {"VEN-RC-MAIN": 75, "VEN-RC-DETAIL": 60, "VEN-RC-INFER": 80, "VEN-RC-VOCAB": 55}
-for j, (arch, diff, lead, passage, q, ch, terms, method, sc) in enumerate(RC):
-    add(arch, "Reading comprehension", "reading comprehension", MICRO[arch], diff, SECS[arch], f"{lead}\n\n{passage}\n\n{q}", ch, terms, method, sc, rotate=(j * 3 + 1) % 4)
+for j, (pid, lead, passage, k, m, (arch, diff, q, ch, terms, method, sc)) in enumerate(RC):
+    add(arch, "Reading comprehension", "reading comprehension", MICRO[arch], diff, SECS[arch], f"{lead}\n\n{passage}\n\n{q}", ch, terms, method, sc, rotate=(j * 3 + 1) % 4,
+        notes=f"Passage gap-fill-005-{pid}, question {k} of {m}")
 for diff, stem, ch, terms, method, sc in ORDER:
     add("VEN-PARA-ORDER", "Paragraph organization", "ordering", "order sentences using topic sentences, pointer words and transitions", diff, 75, stem, ch, terms, method, sc)
 for diff, para, ins, key, wrong, why_ok, terms, method, sc in INSERT:
@@ -43,6 +45,6 @@ for j, (diff, special, key, wrong, method) in enumerate(SS):
         method, None, rotate=(j + 2) % 4)
 from collections import Counter
 print(len(items), Counter(i["archetype"] for i in items), Counter(i["answer_option_id"] for i in items))
-json.dump({"batch": "gap-fill-005", "spec_version": "0.1.8", "status": "draft (awaiting CoS)", "source_group": "civio",
-           "notes": "Original English Verbal drafts for thin areas (Sentinel dossier) and to replace the rejected batch-002 para-order and error items. Sentence-structure codes VEN-RUN-ON, VEN-FRAGMENT, VEN-MODIFIER-PLACE are proposed (spec 0.1.9, pending CoS). _legacy: hand-written, so no generator solver applies.",
+json.dump({"batch": "gap-fill-005", "spec_version": "0.1.9", "status": "draft (awaiting CoS)", "source_group": "civio",
+           "notes": "Original English Verbal drafts for thin areas (Sentinel dossier) and to replace the rejected batch-002 para-order and error items. Sentence-structure codes VEN-RUN-ON, VEN-FRAGMENT, VEN-MODIFIER-PLACE approved by CoS (spec 0.1.9). Reading comprehension: 7 passages of 150-250 words with 2-3 questions each (spec 10.8); siblings share a passage tag in notes. _legacy: hand-written, so no generator solver applies.",
            "items": items}, open("docs/research/gap-fill-005.json", "w"), ensure_ascii=False, indent=2)

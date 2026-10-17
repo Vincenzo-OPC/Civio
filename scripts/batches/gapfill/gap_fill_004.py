@@ -14,7 +14,7 @@ I = [
  [("Fifteen (15) years", "GI-NEIGHBOR-NUMBER", "Fifteen is the age used in the Act's rules on working children (Sec. 12), not the definition of a child."),
   ("Eighteen (18) years", None, "Sec. 3(a) defines children as persons below eighteen (18) years of age, plus those over 18 who cannot fully protect themselves because of a disability or condition."),
   ("Twenty-one (21) years", "GI-OLD-RULE", "Twenty-one was the old age of majority before R.A. 6809 lowered it to 18; R.A. 7610 uses below 18."),
-  ("Twelve (12) years", "GI-NEIGHBOR-NUMBER", "Twelve appears in the Act only as an aggravating age of the victim (for example in Sec. 7 on trafficking), not as the definition of a child.")],
+  ("Twelve (12) years", "GI-NEIGHBOR-NUMBER", "12 is a special victim-age threshold (Secs. 5 and 7), not the definition of a child.")],
  "\"Children\" refers to person below eighteen (18) years of age or those over but are unable to fully take care of themselves or protect themselves from abuse, neglect, cruelty, exploitation or discrimination because of a physical or mental disability or condition",
  "Child: below 18, or over 18 but unable to protect oneself because of a disability or condition.", "Sec. 3(a): below 18, the same age of majority used in Philippine law since R.A. 6809.", "Child under R.A. 7610 = below 18, the age of majority."),
 ("7610", "Sec. 3(b)", "GI-SCENARIO-APPLY", "medium", 35,
@@ -93,6 +93,12 @@ I = [
 SECOND = {9: "official capacity as a head of state or government, a member of a government or parliament, an elected representative or a government official shall in no case exempt a person from criminal responsibility under this Act, nor shall it, in and of itself, constitute a ground for reduction of sentence"}
 norm = lambda s: re.sub(r"\s+", " ", s).lower().replace("bight", "right")
 items, ARCH_N = [], {}
+# CoS 2026-10-17: 9 of 10 passed and 0001 passes with its o4 reason reworded; fact IDs added; all 10 approved for activation.
+FACT = ["FACT-RA7610-3A-CHILD-DEFINITION", "FACT-RA7610-3B-PSYCHOLOGICAL-MALTREATMENT", "FACT-RA9710-18-GYNECOLOGICAL-LEAVE",
+        "FACT-RA9710-11B-DEV-COUNCIL-40PCT-WOMEN", "FACT-RA9745-6-TORTURE-ABSOLUTE", "FACT-RA9745-8-TORTURE-EVIDENCE-INADMISSIBLE",
+        "FACT-RA10353-5-ORDER-OF-BATTLE-UNLAWFUL", "FACT-RA10353-22-PRESCRIPTION-25-YEARS", "FACT-RA9851-5A-GENOCIDE",
+        "FACT-RA9851-9-11-NO-PRESCRIPTION-NO-IMMUNITY"]
+REVIEW = {"status": "approved", "review_status": "passed", "reviewer": "Chief of Staff (final approval, delegated by GT)", "reviewed_at": "2026-10-17"}
 for n, (law, sec, arch, diff, secs, stem, opts, quote, terms, method, sc) in enumerate(I):
     f, url, name = LAW[law]
     txt = norm(open(f"/workspace/gi/{f}.html.txt").read())
@@ -112,9 +118,12 @@ for n, (law, sec, arch, diff, secs, stem, opts, quote, terms, method, sc) in enu
           "provenance": {"author": "Grok Bot", "method": "ai_assisted", "created_at": "2026-10-17T15:30:00+08:00", "spec_version": "0.1.8"},
           "_legacy": True}
     if sc: it["shortcut"] = sc
+    it["fact_id"] = FACT[n]
+    it.update(REVIEW)
+    it["notes"] = "Approved by CoS 2026-10-17."
     items.append(it)
 from collections import Counter
 print(Counter(i["answer_option_id"] for i in items))
-json.dump({"batch": "gap-fill-004", "spec_version": "0.1.8", "status": "draft (awaiting CoS)", "source_group": "civio",
+json.dump({"batch": "gap-fill-004", "spec_version": "0.1.8", "status": "approved (CoS 2026-10-17)", "source_group": "civio",
            "notes": "GI gap-fill for laws missing from the bank (round 03 baseline B2): R.A. 7610, 9710, 9745, 10353, 9851. Quotes checked against LawPhil text fetched 2026-10-17. _legacy marks GI items outside gi_facts (checked by source_quote instead).",
            "items": items}, open("docs/research/gap-fill-004.json", "w"), ensure_ascii=False, indent=2)

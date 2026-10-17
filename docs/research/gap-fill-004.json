@@ -1,7 +1,7 @@
 {
   "batch": "gap-fill-004",
   "spec_version": "0.1.8",
-  "status": "draft (awaiting CoS)",
+  "status": "approved (CoS 2026-10-17)",
   "source_group": "civio",
   "notes": "GI gap-fill for laws missing from the bank (round 03 baseline B2): R.A. 7610, 9710, 9745, 10353, 9851. Quotes checked against LawPhil text fetched 2026-10-17. _legacy marks GI items outside gi_facts (checked by source_quote instead).",
   "items": [
@@ -43,7 +43,7 @@
         "why_wrong": {
           "o1": "Fifteen is the age used in the Act's rules on working children (Sec. 12), not the definition of a child.",
           "o3": "Twenty-one was the old age of majority before R.A. 6809 lowered it to 18; R.A. 7610 uses below 18.",
-          "o4": "Twelve appears in the Act only as an aggravating age of the victim (for example in Sec. 7 on trafficking), not as the definition of a child."
+          "o4": "12 is a special victim-age threshold (Secs. 5 and 7), not the definition of a child."
         }
       },
       "distractor_reasoning": {
@@ -55,10 +55,10 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra1992/ra_7610_1992.html",
       "source_quote": "\"Children\" refers to person below eighteen (18) years of age or those over but are unable to fully take care of themselves or protect themselves from abuse, neglect, cruelty, exploitation or discrimination because of a physical or mental disability or condition",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -66,7 +66,9 @@
         "spec_version": "0.1.8"
       },
       "_legacy": true,
-      "shortcut": "Child under R.A. 7610 = below 18, the age of majority."
+      "shortcut": "Child under R.A. 7610 = below 18, the age of majority.",
+      "fact_id": "FACT-RA7610-3A-CHILD-DEFINITION",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP4-GI-SCENARIO-APPLY-0002",
@@ -118,17 +120,19 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra1992/ra_7610_1992.html",
       "source_quote": "Any act by deeds or words which debases, degrades or demeans the intrinsic worth and dignity of a child as a human being",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T15:30:00+08:00",
         "spec_version": "0.1.8"
       },
-      "_legacy": true
+      "_legacy": true,
+      "fact_id": "FACT-RA7610-3B-PSYCHOLOGICAL-MALTREATMENT",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP4-GI-DEADLINE-NUMBER-0003",
@@ -180,10 +184,10 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9710_2009.html",
       "source_quote": "shall be entitled to a special leave benefit of two (2) months with full pay based on her gross monthly compensation following surgery caused by gynecological disorders",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -191,7 +195,9 @@
         "spec_version": "0.1.8"
       },
       "_legacy": true,
-      "shortcut": "R.A. 9710 special leave: 2 months, full pay; 6 and 12 are the service rule."
+      "shortcut": "R.A. 9710 special leave: 2 months, full pay; 6 and 12 are the service rule.",
+      "fact_id": "FACT-RA9710-18-GYNECOLOGICAL-LEAVE",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP4-GI-DEADLINE-NUMBER-0004",
@@ -243,17 +249,19 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9710_2009.html",
       "source_quote": "at least forty percent (40%) of membership of all development councils from the regional, provincial, city, municipal and barangay levels shall be composed of women",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T15:30:00+08:00",
         "spec_version": "0.1.8"
       },
-      "_legacy": true
+      "_legacy": true,
+      "fact_id": "FACT-RA9710-11B-DEV-COUNCIL-40PCT-WOMEN",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP4-GI-RIGHTS-APPLY-0005",
@@ -305,10 +313,10 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9745_2009.html",
       "source_quote": "A state of war or a threat of war, internal political instability, or any other public emergency, or a document or any determination comprising an \"order of battle\" shall not and can never be invoked as a justification for torture",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -316,7 +324,9 @@
         "spec_version": "0.1.8"
       },
       "_legacy": true,
-      "shortcut": "Freedom from torture is absolute: no emergency or order excuses it."
+      "shortcut": "Freedom from torture is absolute: no emergency or order excuses it.",
+      "fact_id": "FACT-RA9745-6-TORTURE-ABSOLUTE",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP4-GI-SCENARIO-APPLY-0006",
@@ -368,17 +378,19 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9745_2009.html",
       "source_quote": "Any confession, admission or statement obtained as a result of torture shall be inadmissible in evidence in any proceedings, except if the same is used as evidence against a person or persons accused of committing torture",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T15:30:00+08:00",
         "spec_version": "0.1.8"
       },
-      "_legacy": true
+      "_legacy": true,
+      "fact_id": "FACT-RA9745-8-TORTURE-EVIDENCE-INADMISSIBLE",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP4-GI-RIGHTS-APPLY-0007",
@@ -430,17 +442,19 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2012/ra_10353_2012.html",
       "source_quote": "An \"Order of Battle\" or any order of similar nature, official or otherwise, from a superior officer or a public authority causing the commission of enforced or involuntary disappearance is unlawful and cannot be invoked as a justifying or exempting circumstance. Any person receiving such an order shall have the right to disobey it",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T15:30:00+08:00",
         "spec_version": "0.1.8"
       },
-      "_legacy": true
+      "_legacy": true,
+      "fact_id": "FACT-RA10353-5-ORDER-OF-BATTLE-UNLAWFUL",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP4-GI-DEADLINE-NUMBER-0008",
@@ -492,17 +506,19 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2012/ra_10353_2012.html",
       "source_quote": "The prosecution of persons responsible for enforced or involuntary disappearance shall not prescribe unless the victim surfaces alive. In which case, the prescriptive period shall be twenty-five (25) years from the date of such reappearance",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T15:30:00+08:00",
         "spec_version": "0.1.8"
       },
-      "_legacy": true
+      "_legacy": true,
+      "fact_id": "FACT-RA10353-22-PRESCRIPTION-25-YEARS",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP4-GI-TERM-MATCH-0009",
@@ -554,10 +570,10 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9851_2009.html",
       "source_quote": "\"genocide\" means any of the following acts with intent to destroy, in whole or in part, a national, ethnic, racial, religious, social or any other similar stable and permanent group as such",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
@@ -565,7 +581,9 @@
         "spec_version": "0.1.8"
       },
       "_legacy": true,
-      "shortcut": "Intent to destroy a group = genocide."
+      "shortcut": "Intent to destroy a group = genocide.",
+      "fact_id": "FACT-RA9851-5A-GENOCIDE",
+      "notes": "Approved by CoS 2026-10-17."
     },
     {
       "id": "CIVIO-GAP4-GI-SCENARIO-APPLY-0010",
@@ -617,17 +635,19 @@
       "source_url": "https://lawphil.net/statutes/repacts/ra2009/ra_9851_2009.html",
       "source_quote": "The crimes defined and penalized under this Act, their prosecution, and the execution of sentences imposed on their account, shall not be subject to any prescription",
       "source_group": "civio",
-      "status": "draft",
-      "review_status": "unreviewed",
-      "reviewer": null,
-      "reviewed_at": null,
+      "status": "approved",
+      "review_status": "passed",
+      "reviewer": "Chief of Staff (final approval, delegated by GT)",
+      "reviewed_at": "2026-10-17",
       "provenance": {
         "author": "Grok Bot",
         "method": "ai_assisted",
         "created_at": "2026-10-17T15:30:00+08:00",
         "spec_version": "0.1.8"
       },
-      "_legacy": true
+      "_legacy": true,
+      "fact_id": "FACT-RA9851-9-11-NO-PRESCRIPTION-NO-IMMUNITY",
+      "notes": "Approved by CoS 2026-10-17."
     }
   ]
 }

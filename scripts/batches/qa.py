@@ -371,6 +371,15 @@ def norm_stem(s):
     return re.sub(r"\s+", " ", s.strip().lower())
 
 
+def siblings(a, b):
+    """Spec 10.8: items of one passage set carry the same passage block and differ only in the question after the last blank line."""
+    if "\n\n" not in a or "\n\n" not in b:
+        return False
+    pa, qa_ = a.rsplit("\n\n", 1)
+    pb, qb = b.rsplit("\n\n", 1)
+    return pa == pb and len(pa) >= 400 and norm_stem(qa_) != norm_stem(qb)
+
+
 def check_round(items, prior_stems, near=0.9):
     """Return list of (id, error). prior_stems: stems from earlier batches and the dev DB."""
     out = []
@@ -384,6 +393,8 @@ def check_round(items, prior_stems, near=0.9):
             out.append((it["id"], "duplicate stem"))
         else:
             for p in seen:
+                if siblings(p, it["stem"]):
+                    continue
                 if jaccard(p, it["stem"]) >= near:
                     out.append((it["id"], f"near-duplicate of: {p[:70]}"))
                     break

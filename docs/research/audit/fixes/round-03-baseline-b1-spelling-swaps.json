@@ -2,7 +2,7 @@
  "round": "03",
  "batch": "baseline-b1",
  "date": "2026-10-17",
- "note": "Proposed fixes only. Apply after CoS approves. Rows keep their id; the remaining duplicates of these old targets (#53, #55, #509-#514, #516, #517, #547) still retire.",
+ "note": "Approved by CoS 2026-10-17 (10 as proposed; #292 Compelled, #312 Conscientiously, #298 foil Subpoene, #311 Nusiance recoded SPL-SOUND). Applied to the MSI local DB. Rows keep their id; the remaining duplicates of these old targets (#53, #55, #509-#514, #516, #517, #547) still retire.",
  "swaps": [
   {
    "baseline_id": 54,
@@ -28,7 +28,7 @@
     "Prerrogative": "SPL-DOUBLE"
    },
    "explanation": "Prerogative starts with pre- (before), then -rog- (ask), then -ative. People often drop the first r (perogative) or hear the second vowel as i.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 292,
@@ -39,22 +39,22 @@
     "Accommodate",
     "Accommadate"
    ],
-   "new_target": "Referred",
-   "stem": "Which spelling correctly completes this sentence: The clerk _____ the complaint to the legal unit yesterday.",
+   "new_target": "Compelled",
+   "stem": "Which spelling correctly completes this sentence: The heavy rain _____ the office to close early.",
    "options": [
-    "Refered",
-    "Reffered",
-    "Referred",
-    "Refferred"
+    "Compeled",
+    "Complelled",
+    "Compelled",
+    "Compelld"
    ],
    "correct_option": 2,
    "foil_codes": {
-    "Refered": "SPL-DOUBLE",
-    "Reffered": "SPL-DOUBLE",
-    "Refferred": "SPL-DOUBLE"
+    "Compeled": "SPL-DOUBLE",
+    "Complelled": "SPL-DOUBLE",
+    "Compelld": "SPL-DROP"
    },
-   "explanation": "Refer is stressed on the last syllable, so the final r doubles before -ed: referred. The f never doubles.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "explanation": "Compel is stressed on its last syllable, -pel, so the final l doubles before -ed: com-pelled. Only the l after the e doubles.",
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 293,
@@ -80,7 +80,7 @@
     "Remittence": "SPL-SOUND"
    },
    "explanation": "Remit is stressed on -mit, so the t doubles before -ance: remittance. The m stays single, and the ending is -ance, not -ence.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 294,
@@ -106,7 +106,7 @@
     "Itinerery": "SPL-SOUND"
    },
    "explanation": "Itinerary has five syllables, i-tin-er-ar-y. Saying each one keeps the -ar- that people drop (itinery) and the i vowels.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 295,
@@ -132,7 +132,7 @@
     "Pamphlit": "SPL-SOUND"
    },
    "explanation": "Pamphlet spells the f sound with ph and ends in -let.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 296,
@@ -158,7 +158,7 @@
     "Consensous": "SPL-SOUND"
    },
    "explanation": "Consensus comes from consent, so both s sounds are spelled with s: con-sen-sus. It is not related to census.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 297,
@@ -184,7 +184,7 @@
     "Hinderence": "SPL-SOUND"
    },
    "explanation": "Hindrance drops the e of hinder (hind-rance) and ends in -ance.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 298,
@@ -200,17 +200,17 @@
    "options": [
     "Subpoena",
     "Supoena",
-    "Subpena",
+    "Subpoene",
     "Subpeona"
    ],
    "correct_option": 0,
    "foil_codes": {
     "Supoena": "SPL-SILENT",
-    "Subpena": "SPL-DROP",
+    "Subpoene": "SPL-SOUND",
     "Subpeona": "SPL-IE-EI"
    },
-   "explanation": "Subpoena keeps the silent b of sub- and the Latin -poena (o before e).",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "explanation": "Subpoena keeps the silent b of sub- and the Latin -poena: o before e, and it ends in a.",
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 300,
@@ -236,7 +236,7 @@
     "Forefeit": "SPL-SOUND"
    },
    "explanation": "Forfeit is one of the exceptions to the i-before-e rule, spelled -feit. The prefix is for-, not fore-.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 306,
@@ -262,7 +262,7 @@
     "Illegeble": "SPL-SOUND"
    },
    "explanation": "Illegible is il- + legible: the l doubles where the prefix meets legible, and legible ends in -ible.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 312,
@@ -273,22 +273,22 @@
     "Definitly",
     "Definetely"
    ],
-   "new_target": "Undoubtedly",
-   "stem": "Which spelling is correct in the phrase “The new form is _____ faster”?",
+   "new_target": "Conscientiously",
+   "stem": "Which spelling is correct in the sentence “She checked every entry _____ before signing”?",
    "options": [
-    "Undoubtably",
-    "Undoutedly",
-    "Undoubtly",
-    "Undoubtedly"
+    "Concientiously",
+    "Conscientously",
+    "Conscientiously",
+    "Conscienciously"
    ],
-   "correct_option": 3,
+   "correct_option": 2,
    "foil_codes": {
-    "Undoubtably": "SPL-SOUND",
-    "Undoutedly": "SPL-SILENT",
-    "Undoubtly": "SPL-DROP"
+    "Concientiously": "SPL-SILENT",
+    "Conscientously": "SPL-DROP",
+    "Conscienciously": "SPL-SOUND"
    },
-   "explanation": "Undoubtedly is un- + doubted + -ly. It keeps the silent b of doubt and the -ed.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "explanation": "Conscientiously is conscientious + -ly: con-sci-en-tious-ly. Keep the sc of science, the i before -ous, and the t that sounds like sh.",
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 550,
@@ -314,7 +314,7 @@
     "Innevitable": "SPL-DOUBLE"
    },
    "explanation": "Inevitable is in- + evitable (avoidable), with a single n and the -able ending.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 308,
@@ -340,7 +340,7 @@
     "Acidentally": "SPL-DOUBLE"
    },
    "explanation": "Accidentally is accidental + -ly, so it keeps -al- and ends in -lly. The double c of accident stays.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   },
   {
    "baseline_id": 311,
@@ -362,11 +362,11 @@
    "correct_option": 3,
    "foil_codes": {
     "Nuisence": "SPL-SOUND",
-    "Nusiance": "SPL-IE-EI",
+    "Nusiance": "SPL-SOUND",
     "Nuisanse": "SPL-SOUND"
    },
    "explanation": "Nuisance is spelled nui-sance: u before i, and the ending is -ance with a c.",
-   "status": "proposed (CoS verdict pending; no DB change)"
+   "status": "approved (CoS 2026-10-17)"
   }
  ]
 }
