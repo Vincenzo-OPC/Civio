@@ -17,7 +17,8 @@ export interface QuestionPreviewData {
     id: number;
     stem: string;
     options: string[];
-    correct_option: number;
+    /** Absent for bank items: keys stay on the server. */
+    correct_option?: number;
     explanation?: string | null;
     category: string;
     subcategory?: string | null;

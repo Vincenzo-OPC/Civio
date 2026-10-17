@@ -2,8 +2,9 @@ export interface Question {
     id: number;
     stem: string;
     options: string[];
-    correct_option: number;
-    explanation: string;
+    /** Only present on the learner's own custom questions. */
+    correct_option?: number;
+    explanation?: string;
     category: string;
     subcategory: string;
     language: string;
