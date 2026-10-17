@@ -54,6 +54,7 @@ npm run format:check
 
 - `docs/ENGINES.md` — explanation engine, Dexter, Copy Question, and Ask
 - `docs/CODEX_HANDOFF_PLAN.md` — start here: what is built, what must not break, what is next
+- `docs/HANDOFF_ANY_AI.md` — how ChatGPT or another AI takes over Grok Bot's Civio jobs
 - `AGENTS.md` / `CLAUDE.md` — rules for agents and contributors
 - `docs/CODE_STANDARD.md` — coding standard and modernization backlog
 - `docs/ARCHITECTURE.md` · `docs/DEPLOY.md` · `docs/LIBRARIES.md`

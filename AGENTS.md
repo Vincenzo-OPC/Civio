@@ -16,6 +16,7 @@ is no `.cursor/` folder (hooks or rules); do not add one.
 ## Read first, every session
 
 0. `docs/CODEX_HANDOFF_PLAN.md` — start here: record, invariants, gaps, next phases.
+0a. `docs/HANDOFF_ANY_AI.md` — how ChatGPT or any AI takes over every Grok Bot job (audits, question pipeline, Sentinel).
 1. This file (`AGENTS.md`) — locked product and workflow rules.
 2. `docs/CIVIO_CODEX_BUILD_BRIEF.md` — phased build plan (Gate 0 → Phase 0 → 0.5 → 1 → Bank).
 3. `docs/ARCHITECTURE.md` — system shape (create/update if missing; do not invent hosting).
