@@ -1,0 +1,3676 @@
+{
+  "batch": "gap-fill-005",
+  "spec_version": "0.1.8",
+  "status": "draft (awaiting CoS)",
+  "source_group": "civio",
+  "notes": "Original English Verbal drafts for thin areas (Sentinel dossier) and to replace the rejected batch-002 para-order and error items. Sentence-structure codes VEN-RUN-ON, VEN-FRAGMENT, VEN-MODIFIER-PLACE are proposed (spec 0.1.9, pending CoS). _legacy: hand-written, so no generator solver applies.",
+  "items": [
+    {
+      "id": "CIVIO-GAP5-VEN-RC-MAIN-0001",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "identify the main idea or best title",
+      "archetype": "VEN-RC-MAIN",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nAlong the coast of Bohol, fishing families once cut mangroves for firewood and cleared them for fishponds. When typhoons struck, villages without mangroves often lost more homes to storm surge, while villages behind thick stands of trees suffered less damage. Mangrove roots slow incoming waves and trap mud, so the shoreline erodes more slowly. The trees also shelter young fish and crabs, which later support the catch of the same families who once cut them down. Since the 1990s, several towns have replanted mangroves with help from schools and fisherfolk associations. Not every effort succeeded: seedlings planted on sandy beaches or in the wrong tidal zone often died within months. The projects that lasted chose species suited to each site and involved residents in caring for the young trees.\n\nWhich statement best expresses the main idea of the passage?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Mangrove roots slow incoming waves and trap mud."
+        },
+        {
+          "option_id": "o2",
+          "text": "Mangroves protect coastal villages and support fishing, but replanting works only when it suits the site and involves residents."
+        },
+        {
+          "option_id": "o3",
+          "text": "Typhoons in Bohol have grown stronger since the 1990s."
+        },
+        {
+          "option_id": "o4",
+          "text": "Forests of every kind protect Philippine communities from natural disasters."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Main idea: the one statement that covers the whole passage, not just one part of it.",
+        "shortcut": "Check each choice against the first half (benefits) and the second half (replanting). Only the key covers both.",
+        "why_correct": "It covers both halves of the passage: what mangroves do for villages, and what made replanting succeed or fail.",
+        "why_wrong": {
+          "o1": "True, but it is one supporting detail; it leaves out the fishing benefit and the whole replanting story.",
+          "o3": "The passage never compares the strength of typhoons over time.",
+          "o4": "The passage is about mangroves on the Bohol coast, not all forests in the country."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-TOO-NARROW",
+        "o3": "RC-NOT-IN-TEXT",
+        "o4": "RC-TOO-BROAD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true,
+      "shortcut": "For a main-idea item, the right answer must cover every part of the passage."
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-INFER-0002",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "draw a supported inference",
+      "archetype": "VEN-RC-INFER",
+      "difficulty": "medium",
+      "est_seconds": 80,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nMany sari-sari stores let regular customers buy on credit, writing each purchase in a small notebook called a listahan. For the store owner, this arrangement is both a service and a risk. It keeps neighbors loyal, because a family short of cash until payday can still buy rice and cooking oil. But unpaid balances tie up money the owner needs to restock. Aling Rosa, who runs a store in Marikina, sets a simple rule: no new credit until the previous week's balance is paid, except during emergencies such as illness in the family. She says the rule protects friendships as much as it protects her income, because small debts that pile up quietly are what make neighbors start avoiding each other.\n\nWhy does Aling Rosa believe her rule protects friendships?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Keeping debts from piling up spares neighbors the embarrassment that makes them avoid each other."
+        },
+        {
+          "option_id": "o2",
+          "text": "It forces every customer to pay in cash."
+        },
+        {
+          "option_id": "o3",
+          "text": "It lets her refuse credit when a family has an emergency."
+        },
+        {
+          "option_id": "o4",
+          "text": "Customers who buy on credit spend more than those who pay in cash."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Inference: a conclusion the passage supports without stating it word for word.",
+        "shortcut": "Find her reason in the last sentence: piled-up debts make neighbors avoid each other. The rule keeps debts from piling up.",
+        "why_correct": "The last sentence says quietly growing debts are what make neighbors avoid each other; a weekly limit keeps debts small.",
+        "why_wrong": {
+          "o2": "The rule still allows credit; it only limits new credit until last week's balance is paid.",
+          "o3": "Emergencies are the exception: the rule is relaxed for them, not enforced.",
+          "o4": "The passage never compares how much credit and cash customers spend."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-OPPOSITE",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-VOCAB-0003",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "use context to find a word's meaning",
+      "archetype": "VEN-RC-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 55,
+      "language": "en",
+      "stem": "Read the selection below, then answer the question.\n\nThe rice terraces of Ifugao were carved into the mountains by hand over many generations. Each terrace depends on the ones above it: water is led from the forest at the summit through channels and bamboo pipes, then flows down from field to field. Because the system is shared, a family that neglects its walls can harm its neighbors below, so maintenance has long been a communal duty. In recent decades, many young people have left for jobs in the lowlands, and some terraces have collapsed for lack of hands to repair them. Local groups now pair elders with students during the planting season, hoping to pass on both the techniques and the sense of obligation that kept the terraces whole for centuries.\n\nIn the passage, the phrase \"for lack of hands\" means a shortage of:",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "hand tools for farming"
+        },
+        {
+          "option_id": "o2",
+          "text": "skill among the elders"
+        },
+        {
+          "option_id": "o3",
+          "text": "rain to fill the channels"
+        },
+        {
+          "option_id": "o4",
+          "text": "people available to do the work"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Vocabulary in context: the meaning a word has in this sentence, which may differ from its usual meaning.",
+        "shortcut": "Read the sentence around the phrase: terraces collapse because young people left. \"Hands\" here means workers.",
+        "why_correct": "The sentence links the collapse to young people leaving for the lowlands, so \"hands\" means workers.",
+        "why_wrong": {
+          "o1": "This is the literal sense of \"hands\"; the passage is about people leaving, not missing tools.",
+          "o2": "The elders are the ones who still have the skills; they are now teaching students.",
+          "o3": "Water comes from the forest at the summit; the passage mentions no shortage of rain."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VRB-SYNONYM-TRAP",
+        "o2": "RC-OPPOSITE",
+        "o3": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true,
+      "shortcut": "Read the whole sentence around the word before choosing a meaning."
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-DETAIL-0004",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "locate a stated detail",
+      "archetype": "VEN-RC-DETAIL",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nDengue cases in the Philippines usually rise during the rainy months, from June to October. The virus is carried by the Aedes mosquito, which bites mostly during the day, especially in the early morning and late afternoon. Unlike many other mosquitoes, it breeds in clean, still water rather than in swamps or canals. Old tires, flower vases, uncovered drums and even bottle caps can hold enough water for its eggs. For this reason, health workers ask households to follow a simple routine: search for containers that collect water, and empty or destroy them at least once a week. Spraying insecticide can kill adult mosquitoes, but it does little if breeding sites around the house remain.\n\nAccording to the passage, where does the Aedes mosquito lay its eggs?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "In swamps and drainage canals"
+        },
+        {
+          "option_id": "o2",
+          "text": "In tall grass near rice fields"
+        },
+        {
+          "option_id": "o3",
+          "text": "In small amounts of clean, still water around the house"
+        },
+        {
+          "option_id": "o4",
+          "text": "In any standing water, clean or dirty"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Detail question: the answer is stated in the passage.",
+        "shortcut": "Find the sentence that starts \"Unlike many other mosquitoes\" and the list of containers after it.",
+        "why_correct": "The passage names clean, still water in tires, vases, drums and bottle caps.",
+        "why_wrong": {
+          "o1": "The passage says it breeds in clean, still water rather than in swamps or canals.",
+          "o2": "Grass and rice fields are not mentioned as breeding sites.",
+          "o4": "The passage limits it to clean, still water; it is not any water at all."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o2": "RC-NOT-IN-TEXT",
+        "o4": "RC-TOO-BROAD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-INFER-0005",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "draw a supported inference",
+      "archetype": "VEN-RC-INFER",
+      "difficulty": "medium",
+      "est_seconds": 80,
+      "language": "en",
+      "stem": "Read the selection below, then answer the question.\n\nPAGASA reports not only the air temperature but also the heat index, a measure of how hot the body actually feels when humidity is taken into account. On a humid afternoon in Metro Manila, an air temperature of 33°C can produce a heat index above 40°C. At that level, the body struggles to cool itself through sweating, because moist air slows the evaporation of sweat from the skin. Outdoor workers such as traffic enforcers, construction crews and vendors face the greatest risk. Some local governments have responded by shortening outdoor shifts at midday and setting up water stations along busy roads.\n\nWhich conclusion is best supported by the passage?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The heat index is always at least seven degrees above the air temperature."
+        },
+        {
+          "option_id": "o2",
+          "text": "On two days with the same air temperature, the more humid day is likely to feel hotter."
+        },
+        {
+          "option_id": "o3",
+          "text": "Office workers face more heat risk than traffic enforcers."
+        },
+        {
+          "option_id": "o4",
+          "text": "Shorter midday shifts lower the heat index in Metro Manila."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Heat index: how hot it feels once humidity is counted.",
+        "shortcut": "Hold temperature constant and vary humidity: the passage says humidity is what makes it feel hotter.",
+        "why_correct": "The heat index adds humidity to temperature, and moist air slows cooling by sweat, so more humidity means the body feels hotter.",
+        "why_wrong": {
+          "o1": "The 33°C and 40°C figures are one example on a humid afternoon; the passage gives no fixed gap.",
+          "o3": "The passage says outdoor workers such as traffic enforcers face the greatest risk.",
+          "o4": "Shorter shifts reduce workers' exposure; nothing in the passage says they change the heat index."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-EXTREME",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-MAIN-0006",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "identify the main idea or best title",
+      "archetype": "VEN-RC-MAIN",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nBamboo grows quickly in most parts of the Philippines, and some species can be harvested three to five years after planting, far sooner than timber trees. It is light, flexible and strong for its weight, which helps bamboo houses survive earthquakes. Its main weaknesses are insects and moisture. Untreated poles may be eaten by beetles or rot within a few years, which is why many people see bamboo as a material only for poor or temporary housing. Engineers and builders have challenged that view by treating poles with borax solutions, raising them off the ground on concrete footings and protecting them with wide roofs. Treated this way, bamboo structures can last for decades.\n\nThe passage is mainly about:",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "how treatment and careful design can make bamboo a lasting building material"
+        },
+        {
+          "option_id": "o2",
+          "text": "the history of housing in the Philippines"
+        },
+        {
+          "option_id": "o3",
+          "text": "the insects that attack untreated poles"
+        },
+        {
+          "option_id": "o4",
+          "text": "why bamboo houses are safer than concrete houses"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Main idea: the point that the whole passage builds toward.",
+        "shortcut": "Notice the turn at \"Engineers and builders have challenged that view\": the passage exists to show how bamboo's weaknesses are overcome.",
+        "why_correct": "The passage moves from bamboo's strengths, to its weaknesses, to the methods that let it last for decades.",
+        "why_wrong": {
+          "o2": "The passage discusses one material, bamboo, not housing history in general.",
+          "o3": "Insects are one weakness mentioned in passing.",
+          "o4": "The passage never compares bamboo with concrete houses."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-TOO-BROAD",
+        "o3": "RC-TOO-NARROW",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-VOCAB-0007",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "use context to find a word's meaning",
+      "archetype": "VEN-RC-VOCAB",
+      "difficulty": "medium",
+      "est_seconds": 55,
+      "language": "en",
+      "stem": "Read the selection below, then answer the question.\n\nSince 2016, people may request records from offices under the Executive branch through the government's Freedom of Information program. A request should identify the record as precisely as possible, such as the title of a report, the office that produced it and the period it covers. Offices are expected to respond within fifteen working days, although this may be extended in some cases. A request can be denied if the record falls under an exception, for instance information that would endanger national security or invade personal privacy. Applicants who are denied may appeal. Vague requests, such as asking for \"all documents about roads,\" tend to cause delays, because staff must first contact the applicant to find out what is actually needed.\n\nAs used in the passage, the word \"exception\" refers to:",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "an objection raised by the applicant"
+        },
+        {
+          "option_id": "o2",
+          "text": "an urgent request that is answered first"
+        },
+        {
+          "option_id": "o3",
+          "text": "a record that the office has lost"
+        },
+        {
+          "option_id": "o4",
+          "text": "a kind of information that the rules allow an office to withhold"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Vocabulary in context: use the examples that follow the word.",
+        "shortcut": "The phrase \"for instance\" right after the word gives two examples of information that can be withheld.",
+        "why_correct": "The examples given, national security and personal privacy, are kinds of information that can be withheld.",
+        "why_wrong": {
+          "o1": "That is the sense in \"to take exception\"; here the word names a category of records.",
+          "o2": "That borrows the idea of an \"exceptional\" case; the passage says nothing about urgent requests.",
+          "o3": "Lost records are not mentioned."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VRB-SYNONYM-TRAP",
+        "o2": "VRB-SYNONYM-TRAP",
+        "o3": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true,
+      "shortcut": "When a word is followed by \"for instance\" or \"such as\", use the examples to decode it."
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-DETAIL-0008",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "locate a stated detail",
+      "archetype": "VEN-RC-DETAIL",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nThe Philippine eagle is one of the largest eagles in the world, and it is found nowhere else. A breeding pair needs a territory of thousands of hectares of forest to find enough prey, such as flying lemurs, monkeys and snakes. The female lays a single egg only once every two years, and the parents care for the young eagle for many months after it hatches. Because the species reproduces so slowly, the loss of even a few adults can set back a local population for years. The main threats are forest clearing and hunting. Some conservation programs in Mindanao now hire local residents as forest guards, turning former hunters into protectors of nesting sites.\n\nAccording to the passage, why can the loss of a few adult eagles harm a local population for years?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Young eagles leave their parents soon after hatching."
+        },
+        {
+          "option_id": "o2",
+          "text": "Adult eagles compete with residents for the same food."
+        },
+        {
+          "option_id": "o3",
+          "text": "A pair raises only one young every two years."
+        },
+        {
+          "option_id": "o4",
+          "text": "The eagles live only in Mindanao."
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Detail question: the reason is stated in the passage.",
+        "shortcut": "The sentence starting \"Because the species reproduces so slowly\" points back to the sentence before it: one egg every two years.",
+        "why_correct": "The passage says the female lays one egg every two years, so the species reproduces slowly and lost adults are replaced slowly.",
+        "why_wrong": {
+          "o1": "The parents care for the young eagle for many months.",
+          "o2": "The passage does not say that eagles and people compete for food.",
+          "o4": "The passage says they live only in the Philippines, and it mentions Mindanao only for the guard programs."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o2": "RC-NOT-IN-TEXT",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-INFER-0009",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "draw a supported inference",
+      "archetype": "VEN-RC-INFER",
+      "difficulty": "hard",
+      "est_seconds": 80,
+      "language": "en",
+      "stem": "Read the selection below, then answer the question.\n\nFor many families of overseas Filipino workers, the monthly remittance arrives on a predictable day, and spending often follows the same rhythm: bills and school fees are paid first, then groceries, then smaller wants. Financial literacy trainers have noticed a problem with this pattern. When the money runs out before the next transfer, families borrow, and the interest eats into the following month's remittance. Trainers now encourage households to set aside a fixed amount as soon as the money arrives, before any spending begins, even if the amount is small. Families who try this report that the hardest part is not the arithmetic but agreeing, as a household, on which wants can wait.\n\nWhich statement can be inferred from the passage?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Families of overseas workers earn less than other households."
+        },
+        {
+          "option_id": "o2",
+          "text": "Borrowing to cover a shortfall makes the next month's budget even tighter."
+        },
+        {
+          "option_id": "o3",
+          "text": "Saving works only when the amount set aside is large."
+        },
+        {
+          "option_id": "o4",
+          "text": "Most families find budgeting arithmetic too difficult."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Inference: a conclusion that follows from what the passage states.",
+        "shortcut": "Follow the chain: money runs out, the family borrows, the interest \"eats into\" next month.",
+        "why_correct": "The interest on the loan is paid out of the following month's remittance, leaving less to spend.",
+        "why_wrong": {
+          "o1": "The passage makes no comparison of incomes.",
+          "o3": "Trainers encourage saving \"even if the amount is small.\"",
+          "o4": "Families say the hardest part is agreeing on wants, not the arithmetic."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-NOT-IN-TEXT",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-MAIN-0010",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "identify the main idea or best title",
+      "archetype": "VEN-RC-MAIN",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nPAGASA's tropical cyclone wind signals are often misunderstood as a measure of how strong a storm is. In fact, each signal describes the strength of the winds expected in a particular area and how soon they may arrive. A province under Signal No. 1 can expect strong winds within 36 hours, while Signal No. 5, the highest level, warns of typhoon-force winds within 12 hours. This means the same storm can place one province under Signal No. 4 and a distant province under Signal No. 1 at the same time. Residents who think only in terms of the storm's overall strength may relax too early, or panic when there is no need. Local disaster offices therefore advise people to check the signal raised for their own municipality.\n\nWhat is the main point of the passage?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Wind signals describe expected local winds, so residents should check the signal for their own area."
+        },
+        {
+          "option_id": "o2",
+          "text": "A storm's strength decides the signal raised in every province."
+        },
+        {
+          "option_id": "o3",
+          "text": "Signal No. 5 is the highest wind signal."
+        },
+        {
+          "option_id": "o4",
+          "text": "Local disaster offices raise the wind signals."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Main idea: often stated after a phrase such as \"In fact\" that corrects a common belief.",
+        "shortcut": "The passage opens with a misunderstanding and corrects it with \"In fact\"; the key pairs that correction with the closing advice.",
+        "why_correct": "The passage corrects a common misunderstanding and ends with the advice that follows from it.",
+        "why_wrong": {
+          "o2": "The passage says one storm can bring different signals to different provinces.",
+          "o3": "True, but it is one detail used to explain the main point.",
+          "o4": "PAGASA raises the signals; local offices only advise residents to check them."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-OPPOSITE",
+        "o3": "RC-TOO-NARROW",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-VOCAB-0011",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "use context to find a word's meaning",
+      "archetype": "VEN-RC-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 55,
+      "language": "en",
+      "stem": "Read the selection below, then answer the question.\n\nDuring the dry months of a strong El Niño year, the water level in Angat Dam can fall sharply, and Metro Manila's water concessionaires may announce rotating service interruptions. These schedules are meant to spread the shortage fairly across neighborhoods rather than leave a few areas completely dry. Households can soften the impact by storing water in covered containers before a scheduled interruption and by fixing leaks, which waste more water than most people expect. Residents are also asked not to hoard far more than they need, since filling every available container at once can drain the pipelines and make the shortage worse for their neighbors.\n\nAs used in the passage, \"soften the impact\" most nearly means:",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "make the water less hard"
+        },
+        {
+          "option_id": "o2",
+          "text": "avoid the shortage completely"
+        },
+        {
+          "option_id": "o3",
+          "text": "postpone the interruption"
+        },
+        {
+          "option_id": "o4",
+          "text": "make the effects less severe"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Vocabulary in context.",
+        "shortcut": "Ask what storing water and fixing leaks actually achieve: they ease the effects, they do not end the shortage.",
+        "why_correct": "Storing water and fixing leaks do not stop the interruption; they make it easier to live through.",
+        "why_wrong": {
+          "o1": "\"Soft water\" is a different sense; the passage is about coping with interruptions, not water quality.",
+          "o2": "The shortage still happens; households only reduce its effects.",
+          "o3": "Nothing households do changes the schedule."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VRB-SYNONYM-TRAP",
+        "o2": "RC-EXTREME",
+        "o3": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-INFER-0012",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "draw a supported inference",
+      "archetype": "VEN-RC-INFER",
+      "difficulty": "medium",
+      "est_seconds": 80,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nA text message says that a package could not be delivered and asks the recipient to click a link to pay a small redelivery fee. The link opens a page that looks like a real courier's website and asks for card details or an e-wallet one-time PIN. Scammers rely on the small amount, since people are less careful with ₱50 than with ₱5,000. Once the PIN is entered, however, the scammer can use it to take far more than the fee. Banks and e-wallet companies repeat the same rule: a legitimate company will never ask for your one-time PIN. Many victims say they already knew the rule but were rushing between tasks when the message arrived.\n\nThe last sentence suggests that many people fall for the scam mainly because they:",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "have never heard that companies do not ask for PINs"
+        },
+        {
+          "option_id": "o2",
+          "text": "think the redelivery fee is too large to ignore"
+        },
+        {
+          "option_id": "o3",
+          "text": "act in a hurry without applying what they already know"
+        },
+        {
+          "option_id": "o4",
+          "text": "cannot tell a courier's website from a bank's"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Inference from one sentence: combine what the victims knew with what they were doing.",
+        "shortcut": "\"Knew the rule\" rules out ignorance; \"rushing\" gives the real cause.",
+        "why_correct": "Knowing the rule but \"rushing between tasks\" means haste, not ignorance, is the problem.",
+        "why_wrong": {
+          "o1": "The victims say they already knew the rule.",
+          "o2": "The scam works because the fee is small.",
+          "o4": "The passage does not compare courier and bank websites."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o2": "RC-OPPOSITE",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-DETAIL-0013",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "locate a stated detail",
+      "archetype": "VEN-RC-DETAIL",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Read the selection below, then answer the question.\n\nTubbataha Reefs Natural Park lies in the middle of the Sulu Sea, about 150 kilometers southeast of Puerto Princesa. Because it is so far from shore, no one lives there except park rangers, who stay at a small station for weeks at a time. The rangers patrol against illegal fishing, record the condition of the reefs and guide the dive boats, which are allowed to visit only from about mid-March to mid-June, when the sea is calm. Studies have found far more fish in Tubbataha than on reefs near crowded coasts. Scientists believe the park also acts as a nursery: fish and coral larvae drift from it to other reefs in the Sulu Sea, helping to restock fishing grounds elsewhere.\n\nAccording to the passage, when may dive boats visit the park?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "All year, as long as rangers guide them"
+        },
+        {
+          "option_id": "o2",
+          "text": "From about mid-March to mid-June, when the sea is calm"
+        },
+        {
+          "option_id": "o3",
+          "text": "During the rainy season, when fish are most plentiful"
+        },
+        {
+          "option_id": "o4",
+          "text": "Whenever the rangers are away from their station"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Detail question.",
+        "shortcut": "Scan for a time expression: \"from about mid-March to mid-June.\"",
+        "why_correct": "The passage states this window directly.",
+        "why_wrong": {
+          "o1": "The passage limits visits to a season; ranger guidance does not open the rest of the year.",
+          "o3": "The visiting season is chosen for calm seas; the passage does not tie it to rain or fish numbers.",
+          "o4": "The rangers guide the boats; the passage never mentions visits while they are away."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-NOT-IN-TEXT",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-INFER-0014",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "draw a supported inference",
+      "archetype": "VEN-RC-INFER",
+      "difficulty": "medium",
+      "est_seconds": 80,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nHealth workers in a town in Iloilo found that most children had received their first dose of measles vaccine, but many had not come back for the second. Parents often skipped it because the child looked healthy and the health center was a long jeepney ride away. Measles spreads so easily that one dose leaves some children unprotected. The town began sending barangay health workers from house to house with a list of children who had missed the second dose. It also held vaccination days in barangay halls instead of only at the main health center.\n\nThe town's new approach suggests that it saw the main barrier as:",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "distance and inconvenience rather than distrust of vaccines"
+        },
+        {
+          "option_id": "o2",
+          "text": "a shortage of vaccine supplies"
+        },
+        {
+          "option_id": "o3",
+          "text": "families' refusal of the first dose"
+        },
+        {
+          "option_id": "o4",
+          "text": "side effects that children had after the first dose"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Inference from actions: what a solution fixes shows what problem was assumed.",
+        "shortcut": "Ask what the solution fixes: moving vaccination closer fixes distance.",
+        "why_correct": "Bringing vaccination to barangay halls and to homes targets the long trip and the effort of returning.",
+        "why_wrong": {
+          "o2": "Supplies are never mentioned as a problem.",
+          "o3": "Most children had already received the first dose.",
+          "o4": "The passage says the child \"looked healthy\"; it mentions no side effects."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-NOT-IN-TEXT",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true,
+      "shortcut": "To find the problem someone assumed, look at what their solution fixes."
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-MAIN-0015",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "identify the main idea or best title",
+      "archetype": "VEN-RC-MAIN",
+      "difficulty": "easy",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Read the selection below, then answer the question.\n\nLong before jeepneys filled the streets, Manila had a tram system. Horse-drawn trams began running in the 1880s, and electric streetcars, run by the Manila Electric Railroad and Light Company, took over in 1905. The tracks ran along many of the city's main roads, linking districts such as Intramuros, Tondo, Malate and Santa Ana. The trams were cheap and frequent, and they shaped where people lived and worked. World War II ended this era: much of the network was destroyed in the fighting of 1945, and it was never rebuilt. In the years that followed, surplus military jeeps, converted to carry passengers, filled the gap.\n\nWhich title best fits the passage?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The Battle of Manila, 1945"
+        },
+        {
+          "option_id": "o2",
+          "text": "A History of Philippine Transportation"
+        },
+        {
+          "option_id": "o3",
+          "text": "How Costly Trams Lost to Cheaper Jeepneys"
+        },
+        {
+          "option_id": "o4",
+          "text": "From Tram to Jeepney: Manila's Lost Streetcars"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Best title: as broad as the passage and no broader.",
+        "shortcut": "Test each title against the first and last sentences: trams at the start, jeepneys at the end.",
+        "why_correct": "The title covers the rise of the trams, their end and what replaced them.",
+        "why_wrong": {
+          "o1": "The war appears in one sentence as the event that ended the trams.",
+          "o2": "The passage covers Manila's trams and what replaced them, not all transport in the country.",
+          "o3": "The trams were cheap; they ended because the war destroyed them."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-TOO-NARROW",
+        "o2": "RC-TOO-BROAD",
+        "o3": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-VOCAB-0016",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "use context to find a word's meaning",
+      "archetype": "VEN-RC-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 55,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nThe new records policy requires every unit to keep a log of documents released to other offices. The log need not be elaborate: a bound notebook or a simple spreadsheet will do, provided it shows the date, the document's title, the receiving office and the name of the person who received it. The aim is not to add paperwork for its own sake. When a document goes missing, staff often spend hours retracing its path from desk to desk, and a short entry made at the moment of release can settle the question in minutes. Units that already use a tracking system may keep it, as long as it records the same details. Supervisors will review the logs every quarter to see where documents tend to be delayed.\n\nAs used in the passage, \"elaborate\" most nearly means:",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "to explain further"
+        },
+        {
+          "option_id": "o2",
+          "text": "simple and plain"
+        },
+        {
+          "option_id": "o3",
+          "text": "detailed and complicated"
+        },
+        {
+          "option_id": "o4",
+          "text": "officially approved"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Vocabulary in context: a colon often introduces an explanation of the word before it.",
+        "shortcut": "After the colon, \"a simple spreadsheet will do\" explains what \"need not be elaborate\" means.",
+        "why_correct": "The contrast with \"a bound notebook or a simple spreadsheet will do\" shows the log does not have to be complex.",
+        "why_wrong": {
+          "o1": "That is the verb \"elaborate on\"; here the word is an adjective describing the log.",
+          "o2": "This is the opposite: the sentence says the log need not be elaborate, and a simple one will do.",
+          "o4": "Approval is not what the sentence is about."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VRB-SYNONYM-TRAP",
+        "o2": "VRB-ANTONYM-TRAP",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-INFER-0017",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "draw a supported inference",
+      "archetype": "VEN-RC-INFER",
+      "difficulty": "medium",
+      "est_seconds": 80,
+      "language": "en",
+      "stem": "Read the selection below, then answer the question.\n\nMany people believe that lightning never strikes the same place twice, but tall, isolated objects such as towers, lone trees and flagpoles may be struck many times in a single season. During a thunderstorm, the safest place is inside a closed building or a hard-topped vehicle with the windows up. Open sheds and tents offer little protection, because they do not carry the electric current safely around the people inside. If no shelter is available, there is no truly safe place outdoors, but standing under a lone tree is one of the worst choices. Safety guides advise moving away from tall, isolated objects and high ground, and waiting at least 30 minutes after the last thunder before resuming outdoor work.\n\nBased on the passage, what should a farmer do who is caught in an open field during a thunderstorm, with no building or vehicle nearby?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Take shelter under the lone mango tree at the edge of the field"
+        },
+        {
+          "option_id": "o2",
+          "text": "Move away from the lone tree and the high ground, and wait well after the last thunder"
+        },
+        {
+          "option_id": "o3",
+          "text": "Go back to work as soon as the rain stops"
+        },
+        {
+          "option_id": "o4",
+          "text": "Wait in the open nipa shed beside the field"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Applying a passage: use its advice for a new case.",
+        "shortcut": "Strike every choice that matches something the passage warns against: lone tree, open shed, returning too early.",
+        "why_correct": "This follows the passage's advice when no shelter is available.",
+        "why_wrong": {
+          "o1": "The passage calls standing under a lone tree one of the worst choices.",
+          "o3": "The passage says to wait at least 30 minutes after the last thunder, not the end of the rain.",
+          "o4": "Open sheds give little protection, according to the passage."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-DETAIL-0018",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "locate a stated detail",
+      "archetype": "VEN-RC-DETAIL",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nA birth that is not registered within 30 days is considered a late registration. Late registration is still possible, but it needs more documents: usually an affidavit explaining the delay, and records that show the person's name and date of birth, such as a baptismal certificate or school records. The application is handled by the local civil registrar of the city or municipality where the birth took place. Many adults discover that their birth was never registered only when they apply for a passport or a government job. Registrars advise parents to register a birth promptly, since the supporting documents for late registration become harder to find as the years pass.\n\nAccording to the passage, which office handles a late birth registration?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The local civil registrar where the birth took place"
+        },
+        {
+          "option_id": "o2",
+          "text": "The office that issues passports"
+        },
+        {
+          "option_id": "o3",
+          "text": "The church where the person was baptized"
+        },
+        {
+          "option_id": "o4",
+          "text": "Any government office the applicant chooses"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Detail question.",
+        "shortcut": "Find the sentence that begins \"The application is handled by\".",
+        "why_correct": "The passage says this office handles the application.",
+        "why_wrong": {
+          "o2": "Passports are mentioned only as the reason many adults discover the problem.",
+          "o3": "A baptismal certificate is a supporting document; the church does not register births.",
+          "o4": "The passage names one specific office."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-NOT-IN-TEXT",
+        "o3": "RC-NOT-IN-TEXT",
+        "o4": "RC-TOO-BROAD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-MAIN-0019",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "identify the main idea or best title",
+      "archetype": "VEN-RC-MAIN",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Read the selection below, then answer the question.\n\nA barangay in Quezon City began collecting kitchen scraps separately from other garbage and turning them into compost at a small facility beside its covered court. Within a year, the amount of waste the barangay sent to the city's trucks had fallen noticeably, and the compost was given to residents for their backyard gardens. The program depended on cooperation at home. Scraps mixed with plastic were useless for composting, so collectors returned unsorted bags with a printed reminder instead of accepting them. At first some residents complained, but sorting became routine once neighbors saw the gardens that the compost supported.\n\nWhich statement best expresses the main idea of the passage?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Residents complained when their unsorted bags were returned."
+        },
+        {
+          "option_id": "o2",
+          "text": "Composting can solve the waste problems of every Philippine city."
+        },
+        {
+          "option_id": "o3",
+          "text": "The city's garbage trucks did not collect waste often enough."
+        },
+        {
+          "option_id": "o4",
+          "text": "Sorting at home made the barangay's composting program work, cutting waste and supplying gardens."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Main idea.",
+        "shortcut": "Look for the sentence the rest depends on: \"The program depended on cooperation at home.\"",
+        "why_correct": "It joins the program's results with the condition the passage says it depended on.",
+        "why_wrong": {
+          "o1": "This is one moment in the story, not its point.",
+          "o2": "The passage reports one barangay's program and makes no claim about every city.",
+          "o3": "Collection frequency is never discussed."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-TOO-NARROW",
+        "o2": "RC-TOO-BROAD",
+        "o3": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-RC-INFER-0020",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Reading comprehension",
+      "concept": "reading comprehension",
+      "micro_skill": "draw a supported inference",
+      "archetype": "VEN-RC-INFER",
+      "difficulty": "hard",
+      "est_seconds": 80,
+      "language": "en",
+      "stem": "Read the passage and answer the question that follows.\n\nBaybayin, a script used in parts of the Philippines before and during the early Spanish period, writes each consonant with the vowel sound \"a\" attached. A small mark called a kudlit, placed above or below the character, changes that vowel to \"e or i\" or to \"o or u.\" In its traditional form, the script had no way to show a consonant at the end of a syllable, so the word \"bundok\" was written the same way as \"budo.\" Readers relied on the rest of the sentence to choose the right word. Spanish friars later added a cross-shaped mark that cancels the vowel, which made it possible to write final consonants. Today, artists and designers often use the modified form, while some purists prefer the older one.\n\nIt can be inferred that, for readers of traditional Baybayin, a single written word:",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "always had exactly one possible reading"
+        },
+        {
+          "option_id": "o2",
+          "text": "could not show any vowel sounds"
+        },
+        {
+          "option_id": "o3",
+          "text": "could stand for more than one spoken word, depending on the sentence"
+        },
+        {
+          "option_id": "o4",
+          "text": "was written with Spanish letters for its final consonants"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Inference from an example.",
+        "shortcut": "The \"bundok\" and \"budo\" example plus \"relied on the rest of the sentence\" means one spelling, several readings.",
+        "why_correct": "Final consonants were not written, so readers used context to decide which word was meant.",
+        "why_wrong": {
+          "o1": "The \"bundok\" and \"budo\" example shows that one spelling could stand for two words.",
+          "o2": "Every character carried a vowel, and the kudlit changed it.",
+          "o4": "The traditional script had no final consonants; the friars' mark came later and was not a Spanish letter."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o2": "RC-OPPOSITE",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0021",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Arrange the sentences to form a logical paragraph.\nP. These figures, however, hide wide differences between regions.\nQ. Filipino families have changed a great deal in two generations.\nR. In some provinces, families are now smaller than the national average, while in others they remain much larger.\nS. On average, women today have fewer children than their mothers did.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Q-S-P-R"
+        },
+        {
+          "option_id": "o2",
+          "text": "S-Q-P-R"
+        },
+        {
+          "option_id": "o3",
+          "text": "Q-P-S-R"
+        },
+        {
+          "option_id": "o4",
+          "text": "R-P-S-Q"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Paragraph order: a topic sentence, then support; words like \"these\" and \"however\" must follow what they refer to.",
+        "shortcut": "Find the sentence that needs nothing before it (Q). Then place P right after the figure that \"these figures\" points to (S).",
+        "why_correct": "Q introduces the topic, S gives the national average, P (\"These figures, however\") qualifies that average, and R gives the regional detail.",
+        "why_wrong": {
+          "o2": "S is a supporting figure; the general statement Q must come before it.",
+          "o3": "\"These figures\" in P has nothing to point back to until S has given a figure.",
+          "o4": "This runs the paragraph backward, ending with the topic sentence."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "LOG-ORDER-SWAP",
+        "o3": "PO-TRANSITION-IGNORED",
+        "o4": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true,
+      "shortcut": "Put \"these/this\" sentences right after what they refer to."
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0022",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "easy",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Which sentence should come FIRST in the paragraph?\n1. As a result, the town market now closes an hour earlier during the rainy season.\n2. Flooding along the river road has become more frequent in recent years.\n3. Vendors who stay late risk being trapped when the water rises after dark.\n4. The market sits beside that road, at the lowest point in town.\n5. The council hopes a new drainage canal will let normal hours return.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Sentence 2"
+        },
+        {
+          "option_id": "o2",
+          "text": "Sentence 4"
+        },
+        {
+          "option_id": "o3",
+          "text": "Sentence 1"
+        },
+        {
+          "option_id": "o4",
+          "text": "Sentence 5"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Opening sentence: the one that refers to nothing earlier.",
+        "shortcut": "Strike any sentence with a pointer word (\"that road\", \"As a result\"); the one left standing opens the paragraph.",
+        "why_correct": "Sentence 2 introduces the flooding, and every other sentence depends on it.",
+        "why_wrong": {
+          "o2": "\"That road\" points back to a road already mentioned, so sentence 4 cannot open the paragraph.",
+          "o3": "\"As a result\" needs a cause stated before it.",
+          "o4": "Sentence 5 looks ahead to a solution, so it closes the paragraph."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "LOG-IGNORED-CLUE",
+        "o3": "PO-TRANSITION-IGNORED",
+        "o4": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0023",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Arrange the sentences in the best order.\nA. Instead, she copied each sale by hand into a notebook every evening.\nB. When Lorna opened her sari-sari store, she could not afford a computer.\nC. Within a year, the notebook showed her which products sold best in each season.\nD. She used that knowledge to stock up on school supplies before June.\nE. It was slow work, but it made her look closely at every sale.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "A-B-E-C-D"
+        },
+        {
+          "option_id": "o2",
+          "text": "B-E-A-C-D"
+        },
+        {
+          "option_id": "o3",
+          "text": "B-A-C-E-D"
+        },
+        {
+          "option_id": "o4",
+          "text": "B-A-E-C-D"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Paragraph order: follow the pointer words (instead, it, that knowledge).",
+        "shortcut": "Chain the pointers: \"Instead\" follows B; \"It was slow work\" follows A; \"that knowledge\" follows C.",
+        "why_correct": "B sets the problem, A gives her solution, E comments on it, C gives the result, and D says how she used it.",
+        "why_wrong": {
+          "o1": "\"Instead\" in A replaces something already mentioned (a computer), so A cannot come first.",
+          "o2": "\"It was slow work\" comes before any work has been described.",
+          "o3": "E comments on the copying in A, so it belongs right after A, not after the result in C."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "PO-TRANSITION-IGNORED",
+        "o2": "LOG-IGNORED-CLUE",
+        "o3": "LOG-ORDER-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0024",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "easy",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Which sentence should come LAST in the paragraph?\nA. The answer lies in what the plant eats.\nB. Many visitors are surprised that the pitcher plants of Palawan can live on poor, rocky soil.\nC. Instead of drawing all their nutrients from the ground, they trap insects in cups filled with liquid.\nD. The insects are slowly broken down, and the plant absorbs what it needs.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Sentence C"
+        },
+        {
+          "option_id": "o2",
+          "text": "Sentence B"
+        },
+        {
+          "option_id": "o3",
+          "text": "Sentence D"
+        },
+        {
+          "option_id": "o4",
+          "text": "Sentence A"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Closing sentence: completes the last step.",
+        "shortcut": "Order the whole paragraph first (puzzle, answer, trap, digestion), then read off the last sentence.",
+        "why_correct": "D finishes the process that C begins, so it closes the paragraph: B (puzzle), A (answer), C (trap), D (digestion).",
+        "why_wrong": {
+          "o1": "C sets up the trapping, which D then completes, so C comes just before the end.",
+          "o2": "B raises the puzzle, so it opens the paragraph.",
+          "o4": "\"The answer\" responds to the puzzle in B and leads into C, so it cannot be last."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-ORDER-SWAP",
+        "o2": "LOG-ORDER-REVERSED",
+        "o4": "LOG-IGNORED-CLUE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0025",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Choose the best order for the sentences.\n1. This is why the old building on Rizal Street is now being studied by engineers.\n2. In 1990, a strong earthquake damaged many buildings in Baguio.\n3. Engineers later found that buildings with weak, open ground floors were especially likely to collapse.\n4. Structures like it, with shops on an open ground floor, may need extra walls or bracing.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "2-1-3-4"
+        },
+        {
+          "option_id": "o2",
+          "text": "3-2-1-4"
+        },
+        {
+          "option_id": "o3",
+          "text": "2-3-1-4"
+        },
+        {
+          "option_id": "o4",
+          "text": "4-1-3-2"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Cause-and-effect order.",
+        "shortcut": "\"This is why\" must follow the reason (3); \"like it\" must follow the building (1).",
+        "why_correct": "Event (2), lesson learned (3), why one building is studied (1), what such buildings need (4).",
+        "why_wrong": {
+          "o1": "\"This is why\" in sentence 1 needs the lesson in sentence 3 before it.",
+          "o2": "The finding in 3 came after the earthquake in 2, so 2 must come first.",
+          "o4": "This reverses the paragraph and puts \"like it\" before the building it refers to."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "PO-TRANSITION-IGNORED",
+        "o2": "LOG-ORDER-SWAP",
+        "o4": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0026",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "easy",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Arrange the sentences to show the correct order.\nA. If both houses approve the same version, it is sent to the President.\nB. A bill is first filed and read in either the House of Representatives or the Senate.\nC. The President may then sign it into law or veto it.\nD. It is next studied by a committee and debated on the floor.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "D-B-A-C"
+        },
+        {
+          "option_id": "o2",
+          "text": "B-A-D-C"
+        },
+        {
+          "option_id": "o3",
+          "text": "B-D-A-C"
+        },
+        {
+          "option_id": "o4",
+          "text": "C-A-D-B"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Process order: follow first, next, then.",
+        "shortcut": "Underline first, next and then; they give the order.",
+        "why_correct": "The signal words \"first\", \"next\" and \"then\" give the order: filing, committee and debate, approval, the President's action.",
+        "why_wrong": {
+          "o1": "D begins with \"It is next\", so it cannot open the paragraph.",
+          "o2": "Approval by both houses (A) comes after committee study and debate (D).",
+          "o4": "This runs the process backward."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "PO-OPENER-MISPLACED",
+        "o2": "LOG-ORDER-SWAP",
+        "o4": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true,
+      "shortcut": "Signal words like first, next and then give the order."
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0027",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Which sentence should come SECOND in the paragraph?\n1. The trick is to pick the fruit when its skin gives slightly under the thumb.\n2. Jackfruit is one of the largest fruits that grow on trees, and some weigh more than 20 kilograms.\n3. Picked too early, it never ripens properly; picked too late, it may split and attract insects.\n4. Knowing when to harvest it, however, is harder than it looks.\n5. A ripe jackfruit also gives off a strong, sweet smell.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Sentence 4"
+        },
+        {
+          "option_id": "o2",
+          "text": "Sentence 3"
+        },
+        {
+          "option_id": "o3",
+          "text": "Sentence 1"
+        },
+        {
+          "option_id": "o4",
+          "text": "Sentence 5"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Paragraph order: problem, explanation, solution.",
+        "shortcut": "After the topic sentence (2), look for the sentence that raises the problem the others answer.",
+        "why_correct": "Order: 2 (the fruit), 4 (harvest timing is hard), 3 (why), 1 (the trick), 5 (another sign).",
+        "why_wrong": {
+          "o2": "Sentence 3 explains the difficulty raised in 4, so it comes third.",
+          "o3": "\"The trick\" solves a difficulty that has not been raised yet.",
+          "o4": "\"Also\" adds a second sign of ripeness, so it must follow the first one, in sentence 1."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "LOG-ORDER-SWAP",
+        "o3": "LOG-IGNORED-CLUE",
+        "o4": "PO-TRANSITION-IGNORED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0028",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Arrange the sentences to form a coherent paragraph.\nW. Others argue that the money would be better spent on hiring more teachers.\nX. Some parents believe that every public school student should have a tablet.\nY. Both sides agree, however, that devices are useless without reliable internet.\nZ. They point out that many lessons and textbooks are now available online.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "X-Z-W-Y"
+        },
+        {
+          "option_id": "o2",
+          "text": "W-Z-X-Y"
+        },
+        {
+          "option_id": "o3",
+          "text": "X-W-Z-Y"
+        },
+        {
+          "option_id": "o4",
+          "text": "Y-W-Z-X"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Two-sided paragraph: view, its reason, opposing view, common ground.",
+        "shortcut": "\"Some ... Others ... Both sides\" gives the frame; slot Z where \"They\" means the parents.",
+        "why_correct": "X states one view, Z gives its reason (\"They\" refers to the parents in X), W gives the other view, and Y closes with what both sides agree on.",
+        "why_wrong": {
+          "o2": "\"Others\" implies a first group already introduced, so W cannot open.",
+          "o3": "With W in between, \"They\" in Z would refer to the teacher-hiring side, whose argument has nothing to do with lessons online.",
+          "o4": "\"Both sides\" can only come after both sides have been presented."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "PO-OPENER-MISPLACED",
+        "o3": "LOG-IGNORED-CLUE",
+        "o4": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0029",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Choose the order that makes the paragraph logical.\nA. As the warm air rises, it cools, and the water vapor in it condenses into clouds.\nB. In the early afternoon, the sun heats the ground and the air just above it.\nC. By late afternoon, heavy rain falls, often with thunder.\nD. When the clouds grow tall enough, their droplets become too heavy to stay up.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "A-B-D-C"
+        },
+        {
+          "option_id": "o2",
+          "text": "B-D-A-C"
+        },
+        {
+          "option_id": "o3",
+          "text": "C-D-A-B"
+        },
+        {
+          "option_id": "o4",
+          "text": "B-A-D-C"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Process order in science: each step causes the next.",
+        "shortcut": "Use the time words (early afternoon, late afternoon) and \"the\" nouns (the warm air, the clouds) to chain the steps.",
+        "why_correct": "Heating (B), rising and cooling into clouds (A), heavy droplets (D), rain (C).",
+        "why_wrong": {
+          "o1": "A says \"the warm air\" rises, but the air is warmed only in B.",
+          "o2": "D speaks of \"the clouds\" before A explains how they form.",
+          "o3": "This runs the process from rain back to sunshine."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-ORDER-SWAP",
+        "o2": "LOG-IGNORED-CLUE",
+        "o3": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0030",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "easy",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Which sentence should come FIRST?\n1. Second, it gives employers a quick way to check what an applicant has learned.\n2. For this reason, applicants should keep the original safe and bring copies to interviews.\n3. A training certificate serves two purposes.\n4. First, it is proof that the holder completed the course.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Sentence 4"
+        },
+        {
+          "option_id": "o2",
+          "text": "Sentence 3"
+        },
+        {
+          "option_id": "o3",
+          "text": "Sentence 1"
+        },
+        {
+          "option_id": "o4",
+          "text": "Sentence 2"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Opening sentence: announces what the list will cover.",
+        "shortcut": "A sentence that announces \"two purposes\" comes before First and Second.",
+        "why_correct": "Sentence 3 announces the two purposes that sentences 4 and 1 then list.",
+        "why_wrong": {
+          "o1": "\"First\" lists the first of the two purposes, so it comes right after the sentence that announces them.",
+          "o3": "\"Second\" needs a first item before it.",
+          "o4": "\"For this reason\" draws a conclusion, so it ends the paragraph."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-ORDER-SWAP",
+        "o3": "PO-TRANSITION-IGNORED",
+        "o4": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0031",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Arrange the sentences in the most logical order.\nA. She found that each form was being stamped twice, once at intake and again at the records desk.\nB. Last month, the permit office received complaints that applications took more than a week.\nC. The chief asked Grace, a senior clerk, to follow one application from start to finish.\nD. Removing the second stamp cut processing time to three days.\nE. Each stamp added a day, because forms sat in a tray until the stamping clerk was free.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "B-A-C-E-D"
+        },
+        {
+          "option_id": "o2",
+          "text": "B-C-A-D-E"
+        },
+        {
+          "option_id": "o3",
+          "text": "C-B-A-E-D"
+        },
+        {
+          "option_id": "o4",
+          "text": "B-C-A-E-D"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Problem-solution order.",
+        "shortcut": "Place the person before the pronoun (Grace before \"She\"), and the explanation before the fix.",
+        "why_correct": "Complaint (B), assignment (C), finding (A), why it mattered (E), result (D).",
+        "why_wrong": {
+          "o1": "\"She\" in A appears before Grace is introduced in C.",
+          "o2": "E explains why the double stamp slowed things, so it must come before the fix in D.",
+          "o3": "The complaint in B is the reason the chief acted, so B opens the paragraph."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-IGNORED-CLUE",
+        "o2": "LOG-ORDER-SWAP",
+        "o3": "PO-OPENER-MISPLACED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-ORDER-0032",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using topic sentences, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "easy",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Arrange the sentences to describe the process in order.\n1. The fibers are then washed and hung to dry.\n2. Piña cloth is woven from fibers taken from the leaves of the pineapple plant.\n3. Finally, the dried fibers are knotted together, one by one, into a long thread for the loom.\n4. First, each leaf is scraped by hand to expose the fibers.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "4-2-1-3"
+        },
+        {
+          "option_id": "o2",
+          "text": "2-4-1-3"
+        },
+        {
+          "option_id": "o3",
+          "text": "2-1-4-3"
+        },
+        {
+          "option_id": "o4",
+          "text": "3-1-4-2"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Process order: topic sentence, then the signalled steps.",
+        "shortcut": "Topic sentence first, then follow First, then, Finally.",
+        "why_correct": "Topic (2), then First (4), then (1), Finally (3).",
+        "why_wrong": {
+          "o1": "The topic sentence (2) must open the paragraph, before the steps begin with \"First\".",
+          "o3": "\"Then\" in 1 cannot come before the \"First\" step.",
+          "o4": "This puts the steps in reverse and the topic sentence last."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "PO-OPENER-MISPLACED",
+        "o3": "PO-TRANSITION-IGNORED",
+        "o4": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-INSERT-0033",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "sentence insertion",
+      "micro_skill": "place an added sentence using its pointer words",
+      "archetype": "VEN-PARA-INSERT",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Where does the following sentence best fit in the paragraph?\n\"Some lose regular customers during that time and never fully recover their sales.\"\n\n(1) Public markets in many Philippine towns are owned by the local government. (2) Vendors rent their stalls from the municipality and pay daily or monthly fees. (3) When a market is renovated, vendors may have to move to a temporary site for months. (4) For this reason, many councils now consult vendor associations before approving a renovation plan.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "After sentence 1"
+        },
+        {
+          "option_id": "o2",
+          "text": "After sentence 2"
+        },
+        {
+          "option_id": "o3",
+          "text": "After sentence 3"
+        },
+        {
+          "option_id": "o4",
+          "text": "After sentence 4"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Sentence insertion: match the new sentence's pointer words to the sentence before it.",
+        "shortcut": "Find \"that time\" and ask which sentence mentions a period of time: sentence 3.",
+        "why_correct": "The new sentence describes what happens \"during that time\" (the temporary move in 3), and it gives the reason that \"For this reason\" in 4 points back to.",
+        "why_wrong": {
+          "o1": "\"During that time\" has no period to refer to until the move in sentence 3.",
+          "o2": "Sentence 2 is about fees; no period of time has been mentioned yet.",
+          "o4": "\"For this reason\" in sentence 4 needs the hardship stated before it, so the new sentence must come before 4, not after."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-IGNORED-CLUE",
+        "o2": "LOG-IGNORED-CLUE",
+        "o4": "PO-TRANSITION-IGNORED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true,
+      "shortcut": "Find the pointer word in the new sentence and place it right after what it points to."
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-INSERT-0034",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "sentence insertion",
+      "micro_skill": "place an added sentence using its pointer words",
+      "archetype": "VEN-PARA-INSERT",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Where does the following sentence best fit in the paragraph?\n\"Among the oldest are words from Hokkien Chinese, brought by traders long before the Spanish arrived.\"\n\n(1) Many Filipino words for food come from other languages. (2) \"Pansit,\" for instance, is usually traced to a Hokkien phrase for food that is quickly cooked. (3) \"Leche flan\" comes from Spanish, and so does the name \"adobo,\" though the dish itself is older than its name. (4) American influence added words such as \"hamburger\" and \"hotdog,\" for dishes that Filipino cooks adapted to local taste.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "After sentence 1"
+        },
+        {
+          "option_id": "o2",
+          "text": "After sentence 2"
+        },
+        {
+          "option_id": "o3",
+          "text": "After sentence 3"
+        },
+        {
+          "option_id": "o4",
+          "text": "After sentence 4"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Sentence insertion.",
+        "shortcut": "Sentence 2 says \"for instance\" about Hokkien, so Hokkien has to be introduced just before it.",
+        "why_correct": "The new sentence introduces Hokkien, and sentence 2 then gives an example (\"for instance\"). It also starts the paragraph's oldest-to-newest order.",
+        "why_wrong": {
+          "o2": "Sentence 2 already gives a Hokkien example with \"for instance\"; Hokkien must be introduced before that example.",
+          "o3": "After sentence 3 the paragraph has moved on to Spanish; going back to the oldest borrowings breaks the order.",
+          "o4": "Placed last, \"Among the oldest\" would end the paragraph after the newest borrowings."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "LOG-IGNORED-CLUE",
+        "o3": "LOG-IGNORED-CLUE",
+        "o4": "PO-TRANSITION-IGNORED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-INSERT-0035",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "sentence insertion",
+      "micro_skill": "place an added sentence using its pointer words",
+      "archetype": "VEN-PARA-INSERT",
+      "difficulty": "easy",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Where does the following sentence best fit in the paragraph?\n\"One reason is that local production has not always kept pace with demand.\"\n\n(1) Rice is the staple food of most Filipinos. (2) For decades the country has imported part of its supply. (3) Typhoons and droughts can also cut local harvests sharply in a single season. (4) Imports help keep prices steady when that happens, but they also compete with local farmers' produce.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "After sentence 1"
+        },
+        {
+          "option_id": "o2",
+          "text": "After sentence 2"
+        },
+        {
+          "option_id": "o3",
+          "text": "After sentence 3"
+        },
+        {
+          "option_id": "o4",
+          "text": "After sentence 4"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Sentence insertion.",
+        "shortcut": "\"One reason\" needs a fact to explain, and sentence 3's \"also\" needs a first reason before it: both point to after sentence 2.",
+        "why_correct": "\"One reason\" explains the imports in sentence 2, and \"also\" in sentence 3 then adds a second reason.",
+        "why_wrong": {
+          "o1": "Nothing in sentence 1 needs a reason yet; imports have not been mentioned.",
+          "o3": "Sentence 3 begins with \"also\", adding a second reason, so the first reason must come before it.",
+          "o4": "After sentence 4 the reason would arrive after the effects of imports have already been discussed."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-IGNORED-CLUE",
+        "o3": "LOG-IGNORED-CLUE",
+        "o4": "PO-TRANSITION-IGNORED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-INSERT-0036",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "sentence insertion",
+      "micro_skill": "place an added sentence using its pointer words",
+      "archetype": "VEN-PARA-INSERT",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Where does the following sentence best fit in the paragraph?\n\"This allowance is set by each barangay, so the amount differs from place to place.\"\n\n(1) Barangay tanod are volunteers who help keep peace and order in their communities. (2) They patrol at night, respond to disturbances and assist the police when needed. (3) Most receive only a small monthly allowance. (4) Because the pay is so small, many tanod hold other jobs during the day. (5) Some barangays have begun offering them training in first aid and mediation.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "After sentence 2"
+        },
+        {
+          "option_id": "o2",
+          "text": "After sentence 3"
+        },
+        {
+          "option_id": "o3",
+          "text": "After sentence 4"
+        },
+        {
+          "option_id": "o4",
+          "text": "After sentence 5"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Sentence insertion.",
+        "shortcut": "\"This allowance\" must sit right after the first mention of the allowance.",
+        "why_correct": "\"This allowance\" points to the allowance in sentence 3, and sentence 4 still follows: the pay is small, so many hold other jobs.",
+        "why_wrong": {
+          "o1": "\"This allowance\" has no allowance to refer to until sentence 3.",
+          "o3": "After sentence 4, \"This allowance\" would point back past the sentence about other jobs to sentence 3.",
+          "o4": "After sentence 5 the paragraph is about training; \"This allowance\" would point back too far."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-IGNORED-CLUE",
+        "o3": "LOG-IGNORED-CLUE",
+        "o4": "LOG-IGNORED-CLUE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-INSERT-0037",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "sentence insertion",
+      "micro_skill": "place an added sentence using its pointer words",
+      "archetype": "VEN-PARA-INSERT",
+      "difficulty": "easy",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Where does the following sentence best fit in the paragraph?\n\"Almost every part of the fruit can be put to use.\"\n\n(1) Coconut trees grow in nearly every province of the Philippines. (2) The meat, for one, is dried into copra and pressed for oil. (3) The husk can be made into coir for ropes, mats and erosion-control nets. (4) Even the shell is burned to make charcoal.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "After sentence 1"
+        },
+        {
+          "option_id": "o2",
+          "text": "After sentence 2"
+        },
+        {
+          "option_id": "o3",
+          "text": "After sentence 3"
+        },
+        {
+          "option_id": "o4",
+          "text": "After sentence 4"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Sentence insertion: a general statement goes before the examples that illustrate it.",
+        "shortcut": "\"For one\" signals the first example of something already stated.",
+        "why_correct": "The new sentence states the general idea, and \"for one\" in sentence 2 begins the examples of it.",
+        "why_wrong": {
+          "o2": "\"For one\" in sentence 2 starts a list, so the statement it illustrates must come first.",
+          "o3": "Placed here, the general statement would interrupt the list of examples.",
+          "o4": "\"For one\" in sentence 2 needs the general statement before the examples, not after them."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "LOG-IGNORED-CLUE",
+        "o3": "LOG-IGNORED-CLUE",
+        "o4": "PO-OPENER-MISPLACED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-INSERT-0038",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "sentence insertion",
+      "micro_skill": "place an added sentence using its pointer words",
+      "archetype": "VEN-PARA-INSERT",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Where does the following sentence best fit in the paragraph?\n\"On busy days, the arrangement can pay well.\"\n\n(1) Jeepney drivers usually pay a daily \"boundary\" to the owner of the vehicle. (2) Whatever they earn above that amount, after fuel, is their income for the day. (3) On slow days, however, a driver may work twelve hours and still take home very little. (4) This system helps explain why some drivers race to pick up passengers ahead of their rivals.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "After sentence 1"
+        },
+        {
+          "option_id": "o2",
+          "text": "After sentence 2"
+        },
+        {
+          "option_id": "o3",
+          "text": "After sentence 3"
+        },
+        {
+          "option_id": "o4",
+          "text": "After sentence 4"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Sentence insertion around a contrast word.",
+        "shortcut": "\"However\" in sentence 3 needs an opposite idea just before it, which is the busy-day sentence.",
+        "why_correct": "Busy days (new sentence) set up the contrast that \"On slow days, however\" in sentence 3 needs.",
+        "why_wrong": {
+          "o1": "\"The arrangement\" is not explained until sentence 2 describes how the driver earns.",
+          "o3": "\"However\" in sentence 3 contrasts slow days with something good, so the good news must come before it.",
+          "o4": "After sentence 4 the paragraph has moved to the drivers' behavior; going back to busy days breaks the logic."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-IGNORED-CLUE",
+        "o3": "PO-TRANSITION-IGNORED",
+        "o4": "LOG-IGNORED-CLUE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-INSERT-0039",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "sentence insertion",
+      "micro_skill": "place an added sentence using its pointer words",
+      "archetype": "VEN-PARA-INSERT",
+      "difficulty": "easy",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Where does the following sentence best fit in the paragraph?\n\"Each of these should match the rates set by law or by the employee's own loan agreements.\"\n\n(1) Reading a payslip carefully can save an employee from costly mistakes. (2) The top section shows gross pay, the amount earned before anything is taken out. (3) Below it are the deductions, such as withholding tax and contributions to GSIS or SSS, PhilHealth and Pag-IBIG. (4) What remains is the net pay, the amount actually received.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "After sentence 1"
+        },
+        {
+          "option_id": "o2",
+          "text": "After sentence 2"
+        },
+        {
+          "option_id": "o3",
+          "text": "After sentence 3"
+        },
+        {
+          "option_id": "o4",
+          "text": "After sentence 4"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Sentence insertion.",
+        "shortcut": "\"Each of these\" needs a list right before it: the deductions in sentence 3.",
+        "why_correct": "\"Each of these\" refers to the deductions listed in sentence 3.",
+        "why_wrong": {
+          "o1": "\"Each of these\" needs a list; sentence 1 has none.",
+          "o2": "Gross pay is one amount, not a list of items that \"each of these\" could refer to.",
+          "o4": "After sentence 4, \"these\" would refer to the net pay, which is a single amount."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-IGNORED-CLUE",
+        "o2": "LOG-IGNORED-CLUE",
+        "o4": "LOG-IGNORED-CLUE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-PARA-INSERT-0040",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "sentence insertion",
+      "micro_skill": "place an added sentence using its pointer words",
+      "archetype": "VEN-PARA-INSERT",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Where does the following sentence best fit in the paragraph?\n\"Such names make a file hard to find months later.\"\n\n(1) Many offices now accept documents by email. (2) This saves applicants a trip, but it creates a new problem for records staff. (3) Emailed files arrive under many different names, such as \"scan001.pdf\" or \"final-final.docx.\" (4) To fix this, some offices now ask applicants to name each file with their surname and the type of document.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "After sentence 1"
+        },
+        {
+          "option_id": "o2",
+          "text": "After sentence 2"
+        },
+        {
+          "option_id": "o3",
+          "text": "After sentence 3"
+        },
+        {
+          "option_id": "o4",
+          "text": "After sentence 4"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Sentence insertion.",
+        "shortcut": "\"Such names\" goes right after the example names in sentence 3.",
+        "why_correct": "\"Such names\" refers to the examples in sentence 3, and \"To fix this\" in sentence 4 then answers the problem.",
+        "why_wrong": {
+          "o1": "No file names have been mentioned yet for \"such names\" to refer to.",
+          "o2": "Sentence 2 mentions a problem but no names; \"such names\" needs the examples in 3.",
+          "o4": "After sentence 4, \"such names\" would refer to the new surname-and-type names, which are the solution, not the problem."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-IGNORED-CLUE",
+        "o2": "LOG-IGNORED-CLUE",
+        "o4": "PO-TRANSITION-IGNORED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0041",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about the printer and the emailed report is correctly constructed?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The printer was out of toner, the clerk sent the report by email."
+        },
+        {
+          "option_id": "o2",
+          "text": "Because the printer was out of toner and the report was due before noon."
+        },
+        {
+          "option_id": "o3",
+          "text": "Because the printer was out of toner, the clerk sent the report by email."
+        },
+        {
+          "option_id": "o4",
+          "text": "Being out of toner, the clerk sent the report by email."
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "Check three things: a main clause, proper joining, and an opening phrase that fits the word right after the comma.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. Check three things: a main clause, proper joining, and an opening phrase that fits the word right after the comma.",
+        "why_wrong": {
+          "o1": "Two complete sentences are joined by only a comma (a comma splice).",
+          "o2": "It is all a \"Because\" clause; no main clause says what happened.",
+          "o4": "\"Being out of toner\" attaches to \"the clerk\", so the sentence says the clerk was out of toner."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-RUN-ON",
+        "o2": "VEN-FRAGMENT",
+        "o4": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0042",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Choose the best-built sentence about Mr. Santos and the dark streetlights.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Walking to the barangay hall, the streetlights were off."
+        },
+        {
+          "option_id": "o2",
+          "text": "Mr. Santos walked to the barangay hall, he noticed that the streetlights were off."
+        },
+        {
+          "option_id": "o3",
+          "text": "While Mr. Santos was walking to the barangay hall and noticing the streetlights."
+        },
+        {
+          "option_id": "o4",
+          "text": "Walking to the barangay hall, Mr. Santos noticed that the streetlights were off."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "Ask who is doing the action in the opening phrase; that person must come right after the comma.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. Ask who is doing the action in the opening phrase; that person must come right after the comma.",
+        "why_wrong": {
+          "o1": "\"Walking to the barangay hall\" attaches to \"the streetlights\", as if the lights were walking.",
+          "o2": "Two complete sentences are joined by only a comma.",
+          "o3": "It is one long \"While\" clause with no main clause."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-MODIFIER-PLACE",
+        "o2": "VEN-RUN-ON",
+        "o3": "VEN-FRAGMENT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0043",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about the office closing on Monday is complete and correctly punctuated?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The office will be closed on Monday; however, online requests will still be processed."
+        },
+        {
+          "option_id": "o2",
+          "text": "The office will be closed on Monday, however, online requests will still be processed."
+        },
+        {
+          "option_id": "o3",
+          "text": "The office will be closed on Monday. However, online requests that will still be processed."
+        },
+        {
+          "option_id": "o4",
+          "text": "Closed on Monday, online requests will still be processed by the office."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "\"However\" between two full sentences takes a semicolon or a period, not a comma.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. \"However\" between two full sentences takes a semicolon or a period, not a comma.",
+        "why_wrong": {
+          "o2": "\"However\" cannot join two sentences with commas; it needs a semicolon or a period before it.",
+          "o3": "The second part (\"online requests that will still be processed\") has no main verb.",
+          "o4": "\"Closed on Monday\" attaches to \"online requests\", but it is the office that is closed."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "VEN-RUN-ON",
+        "o3": "VEN-FRAGMENT",
+        "o4": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0044",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about applicants with incomplete forms has no error in structure?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The applicants were asked to return on Friday who submitted incomplete forms."
+        },
+        {
+          "option_id": "o2",
+          "text": "The applicants who submitted incomplete forms were asked to return on Friday."
+        },
+        {
+          "option_id": "o3",
+          "text": "The applicants who submitted incomplete forms, asked to return on Friday."
+        },
+        {
+          "option_id": "o4",
+          "text": "The applicants submitted incomplete forms they were asked to return on Friday."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "Keep a \"who\" clause right next to the noun it describes.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. Keep a \"who\" clause right next to the noun it describes.",
+        "why_wrong": {
+          "o1": "The \"who\" clause is separated from \"applicants\" and seems to describe Friday.",
+          "o3": "With \"were\" missing, there is no main verb, only a subject and descriptions.",
+          "o4": "Two sentences run together with no punctuation or joining word."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-MODIFIER-PLACE",
+        "o3": "VEN-FRAGMENT",
+        "o4": "VEN-RUN-ON"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0045",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Select the correctly written sentence about the relief truck on a flooded road.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The road was flooded, the relief truck still reached the evacuation center by noon."
+        },
+        {
+          "option_id": "o2",
+          "text": "Although the road was flooded and the relief truck was delayed for hours."
+        },
+        {
+          "option_id": "o3",
+          "text": "Although the road was flooded, the relief truck reached the evacuation center by noon."
+        },
+        {
+          "option_id": "o4",
+          "text": "Flooded for hours, the relief truck reached the evacuation center by noon."
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "An \"Although\" clause needs a main clause after the comma.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. An \"Although\" clause needs a main clause after the comma.",
+        "why_wrong": {
+          "o1": "Two complete sentences are joined by only a comma.",
+          "o2": "It is all an \"Although\" clause; nothing completes the thought.",
+          "o4": "\"Flooded for hours\" attaches to \"the relief truck\" instead of the road."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-RUN-ON",
+        "o2": "VEN-FRAGMENT",
+        "o4": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0046",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about the supervisor's instructions on checking figures is correctly constructed?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The supervisor asked us to check the figures carefully, we had to do it before submitting the report."
+        },
+        {
+          "option_id": "o2",
+          "text": "Checking the figures carefully before submitting the report, as the supervisor asked us."
+        },
+        {
+          "option_id": "o3",
+          "text": "Before submitting the report, the figures were checked carefully as the supervisor asked."
+        },
+        {
+          "option_id": "o4",
+          "text": "The supervisor asked us to check the figures carefully before submitting the report."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "If a sentence opens with an -ing phrase, the next noun must be the person doing it.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. If a sentence opens with an -ing phrase, the next noun must be the person doing it.",
+        "why_wrong": {
+          "o1": "Two complete sentences are joined by only a comma.",
+          "o2": "There is no subject and main verb; it is all phrases.",
+          "o3": "\"Before submitting the report\" attaches to \"the figures\", which cannot submit anything."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-RUN-ON",
+        "o2": "VEN-FRAGMENT",
+        "o3": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0047",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "hard",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence states clearly that no one without a valid ID may enter the records room?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Only employees with valid IDs may enter the records room."
+        },
+        {
+          "option_id": "o2",
+          "text": "Employees with valid IDs may only enter the records room."
+        },
+        {
+          "option_id": "o3",
+          "text": "Employees with valid IDs, the only ones allowed into the records room."
+        },
+        {
+          "option_id": "o4",
+          "text": "Only employees may enter the records room, they must have valid IDs."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "Place \"only\" directly before the word it limits; here it limits who may enter.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. Place \"only\" directly before the word it limits; here it limits who may enter.",
+        "why_wrong": {
+          "o2": "\"Only\" now limits \"enter\": it says these employees may do nothing else there, not that others are kept out.",
+          "o3": "There is no main verb; it is a noun with a description.",
+          "o4": "Two complete sentences are joined by only a comma."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "VEN-MODIFIER-PLACE",
+        "o3": "VEN-FRAGMENT",
+        "o4": "VEN-RUN-ON"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0048",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about volunteers clearing branches after a typhoon is complete and correctly punctuated?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "After the typhoon passed, the fallen branches were cleared, volunteers did the work."
+        },
+        {
+          "option_id": "o2",
+          "text": "After the typhoon passed, volunteers cleared the fallen branches from the road."
+        },
+        {
+          "option_id": "o3",
+          "text": "After the typhoon passed and the volunteers had cleared the fallen branches from the road."
+        },
+        {
+          "option_id": "o4",
+          "text": "Having passed, volunteers cleared the fallen branches from the road after the typhoon."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "A time clause (\"After ...\") needs a main clause after it.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. A time clause (\"After ...\") needs a main clause after it.",
+        "why_wrong": {
+          "o1": "Two complete sentences are joined by only a comma.",
+          "o3": "It is all an \"After\" clause; no main clause follows.",
+          "o4": "\"Having passed\" attaches to \"volunteers\", but it was the typhoon that passed."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-RUN-ON",
+        "o3": "VEN-FRAGMENT",
+        "o4": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0049",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about leaving the office at day's end has no error in structure?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Before leaving the office, the air conditioner should be turned off and the windows locked."
+        },
+        {
+          "option_id": "o2",
+          "text": "Turn off the air conditioner before you leave the office, lock the windows too."
+        },
+        {
+          "option_id": "o3",
+          "text": "Before you leave the office, turn off the air conditioner and lock the windows."
+        },
+        {
+          "option_id": "o4",
+          "text": "Before you leave the office and after you turn off the air conditioner."
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "In instructions, keep the person (\"you\") as the one doing the action in the opening phrase.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. In instructions, keep the person (\"you\") as the one doing the action in the opening phrase.",
+        "why_wrong": {
+          "o1": "\"Before leaving the office\" attaches to \"the air conditioner\", as if it were leaving.",
+          "o2": "Two commands are joined by only a comma.",
+          "o4": "Two time clauses and no main clause."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-MODIFIER-PLACE",
+        "o2": "VEN-RUN-ON",
+        "o4": "VEN-FRAGMENT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0050",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Select the correctly written sentence about the clinic that opened in March.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The new clinic opened in March, it serves residents of three barangays."
+        },
+        {
+          "option_id": "o2",
+          "text": "The new clinic, which opened in March and serves residents of three barangays."
+        },
+        {
+          "option_id": "o3",
+          "text": "Opened in March, residents of three barangays are served by the new clinic."
+        },
+        {
+          "option_id": "o4",
+          "text": "The new clinic, which opened in March, serves residents of three barangays."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "Cover the \"which\" clause with your thumb: what is left must still be a full sentence.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. Cover the \"which\" clause with your thumb: what is left must still be a full sentence.",
+        "why_wrong": {
+          "o1": "Two complete sentences are joined by only a comma.",
+          "o2": "Everything after \"clinic\" is inside the \"which\" clause, so the subject has no main verb.",
+          "o3": "\"Opened in March\" attaches to \"residents\" instead of the clinic."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-RUN-ON",
+        "o2": "VEN-FRAGMENT",
+        "o3": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0051",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about an unpaid application fee is correctly constructed?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "If the payment is not received by Friday, the application will be cancelled."
+        },
+        {
+          "option_id": "o2",
+          "text": "If the payment is not received by Friday. The application will be cancelled."
+        },
+        {
+          "option_id": "o3",
+          "text": "The payment must be received by Friday, otherwise the application will be cancelled."
+        },
+        {
+          "option_id": "o4",
+          "text": "Not received by Friday, the applicant will have the application cancelled."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "An \"If\" clause cannot stand alone; join it to the main clause with a comma.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. An \"If\" clause cannot stand alone; join it to the main clause with a comma.",
+        "why_wrong": {
+          "o2": "\"If the payment is not received by Friday\" is cut off as its own sentence, with no main clause.",
+          "o3": "\"Otherwise\" cannot join two sentences with a comma; it needs a semicolon or a period.",
+          "o4": "\"Not received by Friday\" attaches to \"the applicant\" instead of the payment."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "VEN-FRAGMENT",
+        "o3": "VEN-RUN-ON",
+        "o4": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0052",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "hard",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence makes clear that it was the volunteers who worked through the night?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The mayor thanked the volunteers, many of them had worked through the night."
+        },
+        {
+          "option_id": "o2",
+          "text": "The mayor thanked the volunteers, many of whom had worked through the night."
+        },
+        {
+          "option_id": "o3",
+          "text": "The mayor, thanking the volunteers, many of whom had worked through the night."
+        },
+        {
+          "option_id": "o4",
+          "text": "Having worked through the night, the mayor thanked the volunteers."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "\"Many of whom\" joins a description to a sentence; \"many of them\" starts a new sentence.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. \"Many of whom\" joins a description to a sentence; \"many of them\" starts a new sentence.",
+        "why_wrong": {
+          "o1": "\"Many of them had worked\" is a full sentence joined by only a comma; \"of whom\" is needed.",
+          "o3": "\"The mayor\" has no main verb; \"thanking\" is not a finished verb.",
+          "o4": "The opening phrase now describes the mayor, so the sentence says the mayor worked through the night."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-RUN-ON",
+        "o3": "VEN-FRAGMENT",
+        "o4": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0053",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about a training postponed by a cancelled flight is complete and correctly punctuated?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The training was postponed, the speaker's flight was cancelled."
+        },
+        {
+          "option_id": "o2",
+          "text": "Because the speaker's flight from Davao was cancelled that morning."
+        },
+        {
+          "option_id": "o3",
+          "text": "The training was postponed because the speaker's flight was cancelled."
+        },
+        {
+          "option_id": "o4",
+          "text": "Cancelled that morning, the training was postponed because of the speaker's flight."
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "Join cause and effect with \"because\" rather than a comma.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. Join cause and effect with \"because\" rather than a comma.",
+        "why_wrong": {
+          "o1": "Two complete sentences are joined by only a comma, and the cause is not shown.",
+          "o2": "A \"Because\" clause alone is not a sentence.",
+          "o4": "\"Cancelled that morning\" attaches to \"the training\", which was postponed, not cancelled."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-RUN-ON",
+        "o2": "VEN-FRAGMENT",
+        "o4": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0054",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence is best for a formal memo to all staff?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Hi everyone, pls send ur time records by the 5th working day."
+        },
+        {
+          "option_id": "o2",
+          "text": "All staff are reminded to submit their time records, the deadline is the fifth working day of the month."
+        },
+        {
+          "option_id": "o3",
+          "text": "All staff who are reminded to submit their time records by the fifth working day of the month."
+        },
+        {
+          "option_id": "o4",
+          "text": "All staff are reminded to submit their time records by the fifth working day of the month."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "A formal memo needs both a complete sentence and a formal tone.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. A formal memo needs both a complete sentence and a formal tone.",
+        "why_wrong": {
+          "o1": "The meaning is right, but the tone and the abbreviations (pls, ur) are too casual for a memo.",
+          "o2": "Two complete sentences are joined by only a comma.",
+          "o3": "The \"who\" clause leaves \"All staff\" with no main verb."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-REGISTER",
+        "o2": "VEN-RUN-ON",
+        "o3": "VEN-FRAGMENT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0055",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "hard",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Select the correctly written sentence about scholarship application requirements.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "To apply for the scholarship, students must submit their grades and a recommendation letter."
+        },
+        {
+          "option_id": "o2",
+          "text": "To apply for the scholarship, grades and a recommendation letter must be submitted."
+        },
+        {
+          "option_id": "o3",
+          "text": "Students who want to apply for the scholarship and who have their grades and a recommendation letter."
+        },
+        {
+          "option_id": "o4",
+          "text": "Students must submit their grades to apply for the scholarship, a recommendation letter is also required."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "An opening \"To ...\" phrase must be followed by the person who has that goal.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. An opening \"To ...\" phrase must be followed by the person who has that goal.",
+        "why_wrong": {
+          "o2": "\"To apply for the scholarship\" attaches to \"grades\", which cannot apply for anything.",
+          "o3": "Two \"who\" clauses describe \"Students\", but there is no main verb.",
+          "o4": "Two complete sentences are joined by only a comma."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "VEN-MODIFIER-PLACE",
+        "o3": "VEN-FRAGMENT",
+        "o4": "VEN-RUN-ON"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0056",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about the guard's bag inspection at the entrance is correctly constructed?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The guard checked every bag carefully the line moved slowly."
+        },
+        {
+          "option_id": "o2",
+          "text": "The guard checked every bag carefully, so the line moved slowly."
+        },
+        {
+          "option_id": "o3",
+          "text": "The guard, who checked every bag carefully so that the line moved slowly."
+        },
+        {
+          "option_id": "o4",
+          "text": "Checking every bag carefully, the line moved slowly."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "A comma plus \"so\" correctly joins two sentences.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. A comma plus \"so\" correctly joins two sentences.",
+        "why_wrong": {
+          "o1": "Two sentences run together with no punctuation or joining word.",
+          "o3": "\"The guard\" has no main verb outside the \"who\" clause.",
+          "o4": "\"Checking every bag carefully\" attaches to \"the line\" instead of the guard."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-RUN-ON",
+        "o3": "VEN-FRAGMENT",
+        "o4": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0057",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Choose the best-built sentence about Ms. Reyes and the budget proposal.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Ms. Reyes heads the budget unit, she will present the proposal tomorrow."
+        },
+        {
+          "option_id": "o2",
+          "text": "Ms. Reyes, who heads the budget unit and will present the proposal tomorrow."
+        },
+        {
+          "option_id": "o3",
+          "text": "Ms. Reyes, who heads the budget unit, will present the proposal tomorrow."
+        },
+        {
+          "option_id": "o4",
+          "text": "Heading the budget unit, the proposal will be presented by Ms. Reyes tomorrow."
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "Cover the \"who\" clause: \"Ms. Reyes will present the proposal tomorrow\" must remain.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. Cover the \"who\" clause: \"Ms. Reyes will present the proposal tomorrow\" must remain.",
+        "why_wrong": {
+          "o1": "Two complete sentences are joined by only a comma.",
+          "o2": "Both verbs are inside the \"who\" clause, so \"Ms. Reyes\" has no main verb.",
+          "o4": "\"Heading the budget unit\" attaches to \"the proposal\" instead of Ms. Reyes."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-RUN-ON",
+        "o2": "VEN-FRAGMENT",
+        "o4": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0058",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about counting ballots during a power outage is complete and correctly punctuated?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "When the power went out, flashlights were used, the staff finished counting the ballots."
+        },
+        {
+          "option_id": "o2",
+          "text": "When the power went out and the staff had to use flashlights."
+        },
+        {
+          "option_id": "o3",
+          "text": "Using flashlights, the ballots were counted when the power went out."
+        },
+        {
+          "option_id": "o4",
+          "text": "When the power went out, the staff used flashlights to finish counting the ballots."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "After a \"When\" clause and a comma, a full main clause must follow.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. After a \"When\" clause and a comma, a full main clause must follow.",
+        "why_wrong": {
+          "o1": "Two complete sentences are joined by only a comma.",
+          "o2": "It is all a \"When\" clause, with no main clause.",
+          "o3": "\"Using flashlights\" attaches to \"the ballots\" instead of the staff."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-RUN-ON",
+        "o2": "VEN-FRAGMENT",
+        "o3": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0059",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which sentence about a report with a data annex has no error in structure?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "The report includes a summary of the findings; the full data are in the annex."
+        },
+        {
+          "option_id": "o2",
+          "text": "The report includes a summary of the findings, the full data are in the annex."
+        },
+        {
+          "option_id": "o3",
+          "text": "A summary of the findings in the report, with the full data in the annex."
+        },
+        {
+          "option_id": "o4",
+          "text": "Placed in the annex, the report gives a summary of the full data and findings."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "A semicolon can join two closely related complete sentences.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. A semicolon can join two closely related complete sentences.",
+        "why_wrong": {
+          "o2": "Two complete sentences are joined by only a comma; a semicolon or period is needed.",
+          "o3": "There is no main verb, only noun phrases.",
+          "o4": "\"Placed in the annex\" attaches to \"the report\", but it is the data that are in the annex."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "VEN-RUN-ON",
+        "o3": "VEN-FRAGMENT",
+        "o4": "VEN-MODIFIER-PLACE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    },
+    {
+      "id": "CIVIO-GAP5-VEN-SENT-STRUCTURE-0060",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Sentence structure",
+      "concept": "sentence structure",
+      "micro_skill": "recognize run-ons, fragments and misplaced modifiers",
+      "archetype": "VEN-SENT-STRUCTURE",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Select the correctly written sentence about fishers who go out at night.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Fishers must carry a working light and a radio who go out at night."
+        },
+        {
+          "option_id": "o2",
+          "text": "Fishers who go out at night must carry a working light and a radio."
+        },
+        {
+          "option_id": "o3",
+          "text": "Fishers who go out at night and carry a working light and a radio."
+        },
+        {
+          "option_id": "o4",
+          "text": "Fishers who go out at night must carry a working light, they must also carry a radio."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Run-on: two sentences joined with only a comma or nothing. Fragment: words punctuated as a sentence without a main clause. Misplaced or dangling modifier: a describing phrase attached to the wrong word.",
+        "shortcut": "Keep the \"who\" clause next to the noun and make sure a main verb follows it.",
+        "why_correct": "It is the only choice that is one complete, correctly joined sentence with every describing phrase in place. Keep the \"who\" clause next to the noun and make sure a main verb follows it.",
+        "why_wrong": {
+          "o1": "The \"who\" clause is far from \"Fishers\" and seems to describe the radio.",
+          "o3": "Both verbs are inside the \"who\" clause, so \"Fishers\" has no main verb.",
+          "o4": "Two complete sentences are joined by only a comma."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "VEN-MODIFIER-PLACE",
+        "o3": "VEN-FRAGMENT",
+        "o4": "VEN-RUN-ON"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Grok Bot",
+        "method": "ai_assisted",
+        "created_at": "2026-10-17T16:30:00+08:00",
+        "spec_version": "0.1.8"
+      },
+      "_legacy": true
+    }
+  ]
+}

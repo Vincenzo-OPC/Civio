@@ -207,3 +207,15 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
   - The 25 fixes are the RC items. They need their distractors rewritten and their padded tails trimmed, and all 25 share one theme.
 - Fixed now: two text errors (050004 and 050006). Every item stays draft.
 - Packet: `audit/round-03-chatgpt-002-review-request.md`. gap-fill-005 replaces the rejected areas.
+
+## 2026-10-17: gap-fill-005 (60 original English drafts, pending CoS)
+
+- `docs/research/gap-fill-005.json`, built by `scripts/batches/gapfill/gap_fill_005.py`.
+  - Reading comprehension, 20: main idea 5, detail 4, inference 7, vocabulary 4.
+  - Paragraph organization, 20: order 12, insert 8.
+  - Sentence structure, 20.
+- Every item is draft/unreviewed and inactive. `qa_file.py` finds 0 problems against 1,684 bank items. `qa_all` is green and Pest passes 328/328.
+- Pending CoS:
+  - the proposed codes `VEN-RUN-ON`, `VEN-FRAGMENT` and `VEN-MODIFIER-PLACE` (spec v0.1.9);
+  - RC passages run 96–129 words, below the spec's 150–250.
+- Packet: `audit/round-03-gap-fill-005-review-request.md`.

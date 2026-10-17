@@ -241,6 +241,9 @@ Distractor codes:
 - `VRB-ANTONYM-TRAP` a word that means the opposite of what is asked (v0.1.4)
 - `PO-OPENER-MISPLACED` topic sentence not first
 - `PO-TRANSITION-IGNORED` sentence with a link word placed before what it links to
+- `VEN-RUN-ON` two complete sentences joined with only a comma or with nothing at all (comma splice or fused sentence) (proposed v0.1.9, pending CoS; used only by gap-fill-005 drafts)
+- `VEN-FRAGMENT` a group of words punctuated as a sentence that has no main clause (proposed v0.1.9, pending CoS)
+- `VEN-MODIFIER-PLACE` a describing word, phrase or clause attached to the wrong word, either dangling or misplaced (proposed v0.1.9, pending CoS)
 
 Suggested Civio mix (English half of Verbal): word meaning 15%, sentence completion 20%, error recognition 20%, sentence structure 10%, paragraph organization 15%, reading comprehension 20%.
 
