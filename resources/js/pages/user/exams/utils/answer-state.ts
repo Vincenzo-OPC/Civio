@@ -23,7 +23,7 @@ export function answerOptionVisual(input: {
         typeof input.correctIndex === 'number';
 
     if (showKey && input.optionIndex === input.correctIndex && selected) {
-        return { visual: 'correct', status: 'Correct' };
+        return { visual: 'correct', status: 'Your answer · Correct' };
     }
 
     if (showKey && input.optionIndex === input.correctIndex) {
@@ -31,7 +31,7 @@ export function answerOptionVisual(input: {
     }
 
     if (showKey && selected) {
-        return { visual: 'incorrect', status: 'Your answer' };
+        return { visual: 'incorrect', status: 'Your answer · Incorrect' };
     }
 
     if (selected) {
