@@ -15,6 +15,8 @@ Stack: Laravel 13 / Inertia / React 19 / TS / Tailwind 4 / Pest (+ Vitest for TS
 Every meter and message must come from real stored data, never decoration.
 Write one small commit per item, and keep CI green.
 
+Start with [REVIEW_MISTAKES_BRIEF.md](REVIEW_MISTAKES_BRIEF.md) (17 Oct 2026). FSRS waits for its stored review events.
+
 ### 0.1 Visible FSRS spaced review (`ts-fsrs`, already a dependency)
 - **Next-review card** after each answer: "Next review in 3 days because you answered fast and correct."
   - AC: the interval and the reason come from the ts-fsrs scheduler and the stored review log (rating from correct + response time).
@@ -295,6 +297,9 @@ Each task: tick it only when the acceptance line is true and checks pass.
       before Reveal/submit.
 
 ### 9.4 FSRS review
+
+Build [Review Mistakes](REVIEW_MISTAKES_BRIEF.md) first: it stores the server-graded review events FSRS will need.
+
 
 - [ ] Review queue on `ts-fsrs` (`resources/js/lib/review/fsrs.ts`) with server
       storage. **Done when** missed items come back on schedule and dues show on the
