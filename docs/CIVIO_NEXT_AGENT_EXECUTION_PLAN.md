@@ -77,3 +77,7 @@ See [LEARNING_DELIVERY_RECOMMENDATION.md](LEARNING_DELIVERY_RECOMMENDATION.md) f
 ## Next learning slice
 
 Build [REVIEW_MISTAKES_BRIEF.md](REVIEW_MISTAKES_BRIEF.md). All JS is 1,037,038 of 1,040,000 B after the dates page.
+
+## Review queue continuation — 18 October 2026
+
+GT's current handoff requires feature-branch PRs and owner review: no pushes to main, merges, force-pushes, or deployments. Sixteen draft PRs were opened in the supplied order. The first branch, `grok/fix-welcome-format` at `cf00b8a`, passed every required check plus Pint: 328 PHP tests and 94 JS tests. Total JS measured 1,037,085 of 1,040,000 B on Node 22. Real desktop/phone light/dark welcome screenshots and check details are in [the review evidence](review/2026-10-18/README.md). Other PRs remain draft with validation and screenshots pending; the drills-preview decision and editorial approvals remain with GT/Chief of Staff. This is not exam-workspace or Lite-mode browser verification.
