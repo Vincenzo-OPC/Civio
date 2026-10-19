@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Resources;
 
 use App\Enums\QuestionLanguage;
+use App\Enums\QuestionStatus;
 use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -48,13 +49,13 @@ class DrillQuestionResource extends JsonResource
         // weakness drill only need stems, choices and IDs. Drills run on
         // /exams with shuffled choices, keyless items and server grading, and
         // a key here would also expose Strict Mock items. A learner still
-        // sees the key of a question they wrote themselves.
+        // sees the key of an unpublished question they wrote themselves.
         $ownerId = $request->user()?->id;
 
         if ($this->created_by !== null) {
             $data['isCustom'] = true;
 
-            if ($ownerId !== null && (int) $this->created_by === (int) $ownerId) {
+            if ($ownerId !== null && (int) $this->created_by === (int) $ownerId && $this->status === QuestionStatus::Draft) {
                 $data['correct_option'] = (int) $this->correct_option;
                 $data['explanation'] = $this->explanation ?? '';
             }

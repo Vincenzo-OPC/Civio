@@ -77,3 +77,11 @@ See [LEARNING_DELIVERY_RECOMMENDATION.md](LEARNING_DELIVERY_RECOMMENDATION.md) f
 ## Next learning slice
 
 Build [REVIEW_MISTAKES_BRIEF.md](REVIEW_MISTAKES_BRIEF.md). All JS is 1,037,038 of 1,040,000 B after the dates page.
+
+## PR queue review — 19 October 2026
+
+Latest GT instructions override the older main-only workflow: use feature PRs, do not push main, merge or deploy, and include `[skip netlify]` in each new commit. Main remains last fetched at `f2766db`; the old conflicted checkout and its stash are preserved.
+
+PR #2 review closed an active-author key leak: drill resources return keys only for an owner's unpublished draft. Active bank items stay keyless on hub, saved-set and weakness routes, including during Strict Mock. Formatting prerequisite `a077dd7` is separate. Full validation: 342 PHP tests / 7,628 assertions, 94 JS tests, types, ESLint, Prettier, Pint, build and size all pass. All JS is 1,037,085 / 1,040,000 B. See [the review evidence](review/2026-10-19/README.md) for regression results and actual desktop/phone light/dark screenshots.
+
+PR #2 stays draft until GT decides whether hiding bank answers in the custom-builder preview is acceptable. Do not add an ad hoc key endpoint. PR #1 is ready for review; nothing has been merged. Next bounded technical review is PR #3 fact metadata/import QA, preserving its open mock-selection policy and all editorial gates.
