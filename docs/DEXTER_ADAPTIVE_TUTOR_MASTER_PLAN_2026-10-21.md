@@ -1,6 +1,10 @@
 # Dexter: adaptive tutor and perfect-practice implementation master plan
 **Status:** GT-directed product requirements; NOT implementation evidence. **Date:** 21 October 2026 (Asia/Manila).
-**Owner:** Civio. **Execution:** Codex on next user-initiated repository session, via AGENTS.md / docs/CODEX_HANDOFF_PLAN.md. This plan does NOT start Codex, deploy anything, run paid inference or approve a bank batch.
+**Owner:** Civio.
+
+**Latest GT directive, 21 October 2026:** [Astra-reviewed timing and evals brief](DEXTER_TIMING_AND_EVALS_2026-10-21.md) is mandatory reading. Consider a nonpunitive per-question interactive pace bar, comparing *independent correct answers on comparable unseen questions* rather than celebrating a fast guess; link timing to difficulty, hints, forgetting, mastery and follow-up lessons. GT's 10-second answer vs 60-second target is an **illustration**, not a scientifically established or CSC-published universal time standard. Existing questionTimes/client telemetry is non-authoritative; do not use as a proctored score. Research pedagogy and model-based/hybrid graders with human golden examples before shipping new AI behavior. **Astra is the product/architecture review authority**, free to improve, defer, reject or restructure proposals; produce an ADR, assess evidence, then have Codex implement the first eligible bounded verified slice under existing security gates. Treat older paste prompts as superseded by the new integrated prompt below. The new brief does not authorize paid AI, deployment, question-bank mutation or unattended operations.
+
+ **Execution:** Codex on next user-initiated repository session, via AGENTS.md / docs/CODEX_HANDOFF_PLAN.md. This plan does NOT start Codex, deploy anything, run paid inference or approve a bank batch.
 
 Read in this order:
 1. [AGENTS.md](../AGENTS.md), [next-agent execution plan](CIVIO_NEXT_AGENT_EXECUTION_PLAN.md), [Astra security handoff](ASTRA_PENDING_HANDOFF.md), [bank approval](BANK_IMPORT_APPROVAL.md).
