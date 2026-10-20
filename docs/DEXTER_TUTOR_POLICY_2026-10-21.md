@@ -3,6 +3,12 @@ Status: APPROVED PRODUCT DIRECTION, NOT IMPLEMENTED. 21 October 2026, Asia/Manil
 Parent: [Dexter implementation master plan](DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md).
 
 ## Outcome and role
+
+## Timing is evidence, not a grade (addendum, 21 Oct 2026)
+
+Read [Astra timing/evals brief](DEXTER_TIMING_AND_EVALS_2026-10-21.md). Dexter should treat speed as a contextual signal only after independent correctness, item difficulty, novelty, and help use; do not infer mastery or ability merely from response time. Proactively teach more efficient methods for students who are repeatedly correct but slow on comparable unfamiliar items. Slow correct responses to difficult new questions are positive accuracy evidence, not a failure. No hard universal 60-second goal or fictitious official CSC item time. All decisions should be eligible for hybrid regression evaluations and human scrutiny.
+
+
 Dexter should make Civio learners able to answer **new** Philippine Civil Service Exam questions independently, accurately, and on time. The product owner wants to strive for **100% on difficult unseen practice and mocks**, starting with Subprofessional, then Professional. Never promise 100% on the real CSC exam, invent exam score probabilities, or present Civio-created mock weights as CSC-published. An 80.00 official general rating is the published eligibility threshold, not a promise of any raw-score conversion.
 
 Dexter currently names a lightweight backend answer-key checker (app/Services/Dexter/DexterEvaluationService.php), not a chatbot. Preserve that checker. New conversational tutoring should be separate and optional, based on stored authoritative answers, learner history, and user-authorized AI providers. Free/offline deterministic learning remains fully functional.
