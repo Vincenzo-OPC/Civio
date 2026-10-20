@@ -1,0 +1,61 @@
+# Dexter: adaptive tutor and perfect-practice implementation master plan
+**Status:** GT-directed product requirements; NOT implementation evidence. **Date:** 21 October 2026 (Asia/Manila).
+**Owner:** Civio. **Execution:** Codex on next user-initiated repository session, via AGENTS.md / docs/CODEX_HANDOFF_PLAN.md. This plan does NOT start Codex, deploy anything, run paid inference or approve a bank batch.
+
+Read in this order:
+1. [AGENTS.md](../AGENTS.md), [next-agent execution plan](CIVIO_NEXT_AGENT_EXECUTION_PLAN.md), [Astra security handoff](ASTRA_PENDING_HANDOFF.md), [bank approval](BANK_IMPORT_APPROVAL.md).
+2. [Tutoring policy](DEXTER_TUTOR_POLICY_2026-10-21.md).
+3. [Provider and monetization research](DEXTER_AI_ACCESS_AND_BUSINESS_2026-10-21.md).
+4. [100%-practice CSE research and skill plan](CSE_PERFECT_SCORE_RESEARCH_2026-10-21.md).
+5. [Previous adaptive analysis](ADAPTIVE_LEARNING.md), [next delivery recommendation](LEARNING_DELIVERY_RECOMMENDATION.md), [mistake recovery brief](REVIEW_MISTAKES_BRIEF.md), [engines](ENGINES.md), [external handoff](EXTERNAL_AI_HANDOFF.md), [design spec](CSE-Question-Design-Spec.md).
+
+## North star, unambiguous
+Build a Philippine CSE tutor **as personalized as an excellent private teacher**, not an answer-dispensing chatbot, and aim for **100% on independently answered unseen practice**, starting Subprofessional and extending to Professional. For the project owner, prioritize measurement and remediation of math (fractions, percentages, operations, ratios, word problems), spelling/filing, overconfidence in 'easy' subjects, exam difficulty variance, pace and fatigue. Do not promise 100% on CSC, top rank, or fabricated predictive probabilities. No official CSC affiliation.
+
+Student loop: DIAGNOSE -> independently ATTEMPT -> tutor detects observed error -> HINT/TEACH -> independent FRESH TRANSFER -> SAVE evidence -> SPACED REVIEW -> unseen STRICT MOCK -> revise. The platform remembers every *consented meaningful learning fact* and improves selection; another exact repeat is not proof of mastery. Preserve fast, available, free, low-data learning at all times. 'Ask ChatGPT' should supply an optimized interactive tutor prompt and allowed compact context, not just the question.
+
+## Verified current state from repository (21 Oct 2026)
+- Already built: Laravel 13 / React/Inertia, PostgreSQL-oriented models/migrations and optional SQLite tests, exam attempts, study schedule, AI analysis tables, server-side grading, Study/Strict mocks, basic weakness analysis, external Ask/Copy, Reveal checked solvers, offline/Lite packs.
+- DexterEvaluationService checks limited key conflicts. NullTutorProvider is fallback, not a live personal tutor; AI analysis job (Gemini/Cloudflare) rewrites coaching text, not persistent individualized conversations.
+- FSRS TS wrapper exists; no persisted card/review queue. Review Mistakes remains a documented brief, not proven shipped. There is no trustworthy concept-level learner model or validated score predictor.
+- Existing deterministic analysis calculates a heuristic pass_probability from mock mean (approximately avg * 0.9 with trend adjustments). Treat as unvalidated and follow active roadmap to remove/hide fabricated readiness; do NOT propagate heuristic to student-facing paid claims.
+- Exact live approved bank count, provider keys, hosting, partner status and user study records NOT verified by GitHub code. Bank documents report conflicting historical snapshots and unapproved drafts. No live DB mutation or deployment authorized.
+
+## Execution order and gates
+**Gate 0. Reverify tip and security first.** Follow 20 Oct roadmap: outstanding F1/F2/F6, signed import authorization, fabricated-readiness removal, Review Mistakes, mock composition and repetition first. Confirm done in current HEAD before moving; never repeat work blindly. Preserve routes and client/server scoring/StrictMockLock, consent, signed bank approval, question secrecy, per-user isolation, offline pack ban from mock and bundle budgets. Do NOT touch MSI Docker or Hermes, deploy, authorize payment, approve/import content, or incur AI fees. Keep changes small on main (normal push, no force) with green checks, [skip netlify], and docs/CHANGES_SINCE_BASELINE.md for behavior changes.
+
+**Slice A (lowest-risk first, external AI):** Strengthen existing resources/js/lib/ai-handoff.ts and AskAssistantButton. Construct safe interactive tutoring policy + structured user/context for pre-Reveal vs post-Reveal/review, with output copied as intact text for long content. Prioritize zero-API-bill external ChatGPT/Gemini/Copilot/Grok. No fake personalized history, no hidden answer keys, no external handoff in active Strict Mock. Tests: long prompt clipboard preserves instructions; explicit consent for compact history; no cross-user data; strict lock. One logical commit.
+
+**Slice B (durable mistake events):** Follow docs/REVIEW_MISTAKES_BRIEF.md exactly; write server-graded events in transaction, idempotent and owner-scoped, record assisted vs independent, proper auth and scope, pending/resolved mistake list. No learning-score claims yet. One or more small tested commits. Support Lite. Do not count offline as verified online before reconciliation.
+
+**Slice C (FSRS real pipeline):** Persist review_events and review_cards using stable question/concept IDs and scheduler version. On validated drill/practice submission map incorrect/revealed/hint/independent responses to ratings (not speed-only) under explicit rules, with idempotency. Due Today/This week/Later queue, reviewer, recall, interrupt, offline conflict reconciliation, retake. Never send answer key to study payload pre-reveal. Store scheduling timestamps on server and backfill safely. Tests fixed clocks, edge cases, idempotency, locale Asia/Manila.
+
+**Slice D (concept/knowledge graph):** Editorially reviewed concept IDs, prerequisite graph, question-to-concept linking, difficulty/skill/distractor error codes, learner_skill_state versioning and evidence sample counts. Explicit distinction between raw empirical accuracy and model-estimated recall/mastery; no premature 'mastered' on one item. Automated misconception classification requires confidence+verification, with uncertain default. Existing bank must be mapped by review; no silent item mutation/activation. Next-question selector balances weak prerequisites, due recall, unseen transfer, coverage, difficulty and exam blueprint. Exclude held-out test families and answer-contaminated practice from readiness.
+
+**Slice E (Dexter conversational in-app optional):** Pluggable TutorProvider with NullTutorProvider always valid; start with deterministic hint ladder and verified explanations, then consented optional provider integration. State machine in tutor policy. Schema-enforced requests, bounded turns, retry caps, per-user budget, authorized history selection, source grounding and stored session summaries rather than endless transcripts. Prompt injection tests; never allow model to modify bank, correct_option, official sources, grades or student record directly. AI suggestions require server validation and learner answer. Expose small contextual tutor panel without bloating exam JS.
+
+**Slice F (evaluation / CSE study studio):** source-grounded lesson sheets, practice/flashcards/concept diagrams as small optional additions when source-safe. Author numerical foundation program and spelling/filing program first; independent held-out fresh questions, time management, interleaving, confidence calibration, offline-friendly high-quality content. Pilot study and benchmark in CSE research doc. Only use approved questions in canonical sets; generated examples are provisional, labeled, checked and not automatically imported.
+
+**Slice G (provider funding and commercial options):** see separate provider study. External handoff first, then assess OpenRouter user-funded OAuth and optional permitted ChatGPT SIWC partner integration. Google login alone is not Gemini API billing. OpenCode is not a commercial API gateway. No zero-cost assurances for quota-limited provider API. No automatic money deduction, subscription payment, new keys, hosting spend or commission claims without GT approval. SIWC plan usage must be available free in Civio if supported, user-controlled local token restrictions respected. Monetize original learning value, not resold subscription minutes.
+
+## Architecture contract (proposed; each schema reviewed before migration)
+- learner_profiles: user_id, exam_track, target_date, permitted tutor language, explicit external-sharing consents and version.
+- concepts + concept_prerequisites + question_concepts: approved ID, track/scope, strength of linkage, authored rule references, language, version/approval.
+- learner_skill_events: user_id, concept_id, question_id, attempt_id, first-time/seen, selected option, server correctness, help_used, response_ms if authoritative, confidence if provided, source_mode, created_at, idempotency reference. Subject-level analytics are views of these, not substitutes.
+- review_cards + review_logs: owner, concept/question references, FSRS state/version, due, grade provenance, timestamps and offline reconciliation.
+- learner_skill_states: aggregate with observed independent counts, new-item accuracy, assists, elapsed days, estimated retention with uncertainty, error taxonomy and last evidence.
+- tutor_sessions + tutor_summaries: consent and provider, session state (not hidden keys), bounded encrypted/pseudonymized summary, expiry/erasure controls. Avoid raw transcript persistence unless expressly opted in.
+- ai_connections: separate identity/provider authorization; user funding source, consent, budget/cap, encrypted delegated keys **only where permitted**; ChatGPT SIWC tokens must never be stored on Civio backend. AI output cannot authorize writes or changes without validated actions.
+- Keep strict server authorization checks on *every* entry point, including query/history APIs. GDPR/PH Data Privacy Act practices: notice, opt-out, export and deletion, secure owner scope, backups and retention assessment.
+
+## Quality bar / definition of done for each slice
+- Correct code + regression tests (Pest + JS), typing, lint, formatting, build, size, Pint; treat file docs not proof of completed behavior.
+- Security: no answer-key leaks in mocks or AI payloads; cross-user and guest isolation; consent honored; prompts sanitized/untrusted; no model-generated grades; no AI provider error can block ordinary drill or submission.
+- Eval: test policy with known misconceptions, assisted-correct, confident-wrong, first-correct then delayed-wrong, unsupported legal claim, fabricated citation, no-history, older phone, offline, exhausted AI, long handoff; pass/fail artifacts in docs with counts.
+- Learning outcomes: independent unseen transfer and delayed retention tested over time, not just in-session satisfaction, total item answered or same-item repeat accuracy.
+- Mock assessment: held-out clean unseen pool family separation, official scope with Civio-specific weights transparently labeled; track unverified readiness as raw mock history not probability.
+- Economics: user who declines all AI can use full basic learning. No hidden provider spend. No SIWC charge/access toll. Premium billing or partnerships stay behind a GT approval gate.
+- Scope: no unsanctioned deployments, question-bank activations, subscriptions, real money charges, auth token sharing, new service purchases or autonomous agent commits outside user-initiated Codex sessions.
+
+## Immediate next Codex invocation (copyable)
+Read AGENTS.md, docs/CODEX_HANDOFF_PLAN.md, docs/CIVIO_NEXT_AGENT_EXECUTION_PLAN.md, and docs/DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md plus its three linked specialist docs. Inspect current main and outstanding security/learning gates. Implement the **first eligible small, safe, testable slice** without changing approved question content, billing, deployment or protected MSI services. Verify tests/types/lint/build/size, record evidence, update execution docs and baseline change log for behavioral changes, commit normally on main with [skip netlify], and report what shipped versus blocked. Continue slice-by-slice in later sessions; never claim all phases complete or silently incur costs.
