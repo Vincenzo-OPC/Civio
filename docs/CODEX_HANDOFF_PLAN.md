@@ -1,5 +1,8 @@
 # Codex handoff plan
 
+> **Superseding GT addition, 21 Oct 2026:** Read [Dexter timing and AI evaluations](DEXTER_TIMING_AND_EVALS_2026-10-21.md) alongside the master Dexter plan. Research and design optional question pacing/interactive bar, separate accuracy from speed and item familiarity, and use human-calibrated hybrid AI tutoring evals. **Astra reviews the architecture and can veto/improve proposals**; Codex must prepare ADR and perform only first eligible tested change after security gates. Existing earlier copy-paste prompts are superseded. No deployment, billing, unauthorized question access or live-service mutation.
+
+
 > **New GT directive, 21 October 2026:** Mandatory Codex startup reading: [Dexter adaptive tutor master plan](DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md), [tutor policy](DEXTER_TUTOR_POLICY_2026-10-21.md), [AI funding/access](DEXTER_AI_ACCESS_AND_BUSINESS_2026-10-21.md), and [near-perfect CSE research](CSE_PERFECT_SCORE_RESEARCH_2026-10-21.md). GT wants 100% on independent unseen practice (especially Numerical and spelling), a durable learner model, proactive Socratic Dexter, and inference costs funded by opt-in user accounts where legitimately supported. **These are plans, not shipped features or permission to incur costs.** Maintain the latest security -> import -> analytics credibility -> Review Mistakes ordering in [next-agent execution plan](CIVIO_NEXT_AGENT_EXECUTION_PLAN.md), and implement the first safe slice only after current tip verification. ChatGPT SIWC plan access cannot be resold or gated behind a Civio payment. Existing phases remain valid.
 
 
