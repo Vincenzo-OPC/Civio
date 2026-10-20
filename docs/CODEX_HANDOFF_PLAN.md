@@ -54,7 +54,7 @@ Start with [REVIEW_MISTAKES_BRIEF.md](REVIEW_MISTAKES_BRIEF.md) (17 Oct 2026). F
 - Normal pushes only, never force-push; CI green.
 
 ### 0.5 Other open items
-- **Deploy:** Koyeb free + Neon Free (Singapore) + Netlify static landing, once GT creates the accounts. No spend.
+- **Deploy:** Hosting undecided pending GT. Cloud Run and Koyeb/Neon/Netlify are historical alternatives; no deployment or spending is authorized.
 - **Bank:** import the 1,000-item bank into production with `php artisan civio:import-batch` (batches 002–011, `--status=active` after QA) at deploy.
 - **Old desktop app:** item 1530 is untouched; GT skipped it.
 
@@ -97,7 +97,7 @@ npx prettier --check <touched resources/ files>
 ```
 
 Push rules: normal `git push origin main` only. Never force-push, never
-`--no-verify`, no branches. `git pull --ff-only origin main` first.
+`--no-verify`, no branches. `git pull --rebase origin main` first.
 
 ## 4. What has been built (by phase, with commits)
 

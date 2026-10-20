@@ -19,7 +19,7 @@ No `.env`, credentials, or databases are part of this handoff.
 
 ## 2. Stack
 
-Laravel, Inertia, React, TypeScript, Vite, Tailwind CSS v4. Motion is mostly CSS. Framer Motion is not the exam-workspace foundation. Question data lives in MySQL. Reveal grading and the answer key stay on the server.
+Laravel, Inertia, React, TypeScript, Vite, Tailwind CSS v4. Motion is mostly CSS. Framer Motion is not the exam-workspace foundation. PostgreSQL is the MSI study database; tests use isolated SQLite. Reveal grading and the answer key stay on the server.
 
 Read [ARCHITECTURE.md](ARCHITECTURE.md), [CODE_STANDARD.md](CODE_STANDARD.md), [LIBRARIES.md](LIBRARIES.md), and [LITE_MODE_PLAN.md](LITE_MODE_PLAN.md).
 
@@ -126,8 +126,8 @@ Hover tips on Flag, the question list, and cross-out exist. Their wording has no
 - The question bank is not tagged well enough for a reliable in-exam "similar item."
 - FSRS code exists in `resources/js/lib/review/fsrs.ts` and is covered by `tests/Js/fsrs.test.ts`. No exam, drill, or offline path imports it. There is no review-card table, no due queue, and no next-drill selection from a due date. See [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md).
 - This audit did not capture new screenshots of the solid buttons. Confirm them in the running Study Mock.
-- The exam booklet renderer draws an answer key from `correct_option`, but the download uses the keyless mock session. Treat a printed key as unverified until a dedicated authorized export exists. The setup screen does not claim that a key is included.
-- `app/Providers/AppServiceProvider.php` has an uncommitted local preview change. Leave it uncommitted.
+- Dedicated authorized POST /exams/export-pdf is implemented; ordinary POST /exams/sessions remains keyless. The prior keyless-export warning is superseded by the PDF integrity fix.
+- Preserve a local asset-root override if one appears. None was present in the verified clean MSI checkout at this session's start.
 
 ## 10. What to read next
 
@@ -145,3 +145,7 @@ Hover tips on Flag, the question list, and cross-out exist. Their wording has no
 3. Whether FSRS is wired into the drills the learner actually opens.
 4. Hover-tip copy. Make it shorter. Do not add a new tooltip system until that copy is decided.
 5. Homepage sample versus the real exam. The sample must not drift from the real controls.
+
+## Execution refresh - 20 October 2026
+
+The earlier repository/stack table is historical. MSI main was clean at efc0d81, then fast-forwarded to fetched f2766db; security commits follow that tip. PRs 1-16 were still OPEN and unmerged when checked. Deployment is unverified and no deployment was performed. Current service boundaries and hosting uncertainty are in DEPLOY.md. The current execution checkpoint is in CIVIO_NEXT_AGENT_EXECUTION_PLAN.md.

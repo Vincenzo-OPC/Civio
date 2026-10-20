@@ -45,9 +45,9 @@ Do not treat old chat handoffs as operating instructions.
 
 - Backend: PHP 8.4, Laravel 13, Inertia v3, Fortify, Socialite, Wayfinder, Pest 4, Pint
 - Frontend: React 19, TypeScript, Vite, Tailwind 4, shadcn/Radix
-- DB: Postgres preferred (Neon in deploy plan); SQLite in-memory for tests
+- DB: Postgres preferred (hosting provider undecided); SQLite in-memory for tests
 - AI: optional server-side providers (stub default). **Never** put provider keys in `VITE_*`
-- Docker: `Dockerfile` + `docker-compose.yml` (app `:8080`, Postgres `:5433`)
+- Current MSI Civio: app 8090 / PostgreSQL 5434 (civio-local-app / civio-local-db), configured by docker-compose.local.yml. No study-service operations or database access during development. The older protected application uses 8080/5433; Hermes uses 8642.
 
 ## How to run / test / lint / build
 
@@ -71,10 +71,10 @@ Formatting fixes go in a **separate commit** from functional changes.
 
 ## Docker / MSI protection (non-negotiable)
 
-- Never touch GT's MSI Docker study containers (app `:8080`, Postgres `:5433`; names
+- Never touch GT's MSI Docker study containers (app `:8090`, Postgres `:5434`; names
   in `docs/DESKTOP_PATCHES_TO_PORT.md`).
 - Never touch Hermes on port **8642**.
-- Local MSI study app on `localhost:8080` stays the stable study surface.
+- Local MSI study app on `localhost:8090` stays the stable study surface.
 - Do not break guest unlimited study (`CIVIO_GUEST_UNLIMITED`) without GT approval.
 
 ## Branch and commit rules
@@ -139,10 +139,9 @@ the equivalent Postgres SQL (`scripts/seeds/remove_variant_clones.sql`).
 - **Next:** Learning Features (next), see `docs/CODEX_HANDOFF_PLAN.md` §0; then modernization backlog (`docs/CODE_STANDARD.md`) → Phase 1
   foundation → Phase Bank.
 
-## Hosting intent (not yet executed)
+## Hosting intent (undecided)
 
-Google Cloud Run (scale to zero, instance cap, budget alert) + Neon free Postgres +
-Cloudflare (DNS/CDN, Turnstile, analytics). See `docs/DEPLOY.md`.
+Hosting is pending GT's selection. Cloud Run and Koyeb/Neon/Netlify are historical proposals, not an approved target. No deployment, paid service, billing activation or Netlify credits are authorized. Keep existing Netlify build-skip settings. Every new commit must include [skip netlify].
 
 ## Agent tooling
 

@@ -15,7 +15,7 @@ Laravel 13
   ├─ App\Ai\Contracts\TutorProvider (Null default; Prism installed for later)
   └─ Optional Sentry (SENTRY_LARAVEL_DSN)
 
-Postgres (Neon planned) / SQLite (tests)
+Postgres (hosting/provider undecided) / SQLite (tests)
 ```
 
 Exam flow: active pool → ExamQuestionResource **without** keys → client shuffle
