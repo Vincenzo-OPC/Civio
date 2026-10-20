@@ -1,4 +1,7 @@
 # Next-agent execution plan
+
+> **GT adaptive learning directive (21 Oct 2026):** After verifying the existing 20 Oct security / bank approval / fabricated-readiness gates and completing the first eligible Review Mistakes slice, execute [Dexter adaptive tutor master plan](DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md) in independently tested steps. Read [tutor policy](DEXTER_TUTOR_POLICY_2026-10-21.md), [AI access and monetization](DEXTER_AI_ACCESS_AND_BUSINESS_2026-10-21.md), [100%-practice CSE research](CSE_PERFECT_SCORE_RESEARCH_2026-10-21.md). User wants Subprofessional first and math/spelling emphasis; prioritize independent unseen mastery, not assisted success or invented pass odds. Upgrade Ask AI policy without answer leaks; follow persistent mistake events, FSRS, concept model, then optional in-app Dexter. **No billing activation, OAuth partner activation, production spend, deployment, live DB mutation, or question-bank changes have been approved.**
+
 > Execution refresh, 20 October 2026: follow GT's current order: F1/F2/F6 security, importer review gate, fabricated-readiness removal, Review Mistakes, mock composition, mock repetition. Earlier learning/visual roadmaps below are historical context. Security implementation and verification checkpoints are at the end of this file. No bank approval, live study mutation, or deployment is authorized.
 
 
