@@ -3,6 +3,12 @@ Research snapshot: 21 October 2026, Philippines. STATUS: educational research + 
 Parent: [Dexter implementation master plan](DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md).
 
 ## Product-owner learning target
+
+## October 21 learning-speed and AI quality research expansion
+
+See [Dexter timing/evals/Astra decision brief](DEXTER_TIMING_AND_EVALS_2026-10-21.md). GT proposes measuring each question's active response duration, visualizing an optional pace bar, and using independent correct responses on comparable *new* questions to guide teaching, pace training and repeated concept review. The 10-second/60-second illustration is not an official norm. Research classroom and psychometric literature, calibrate for question difficulty and reading load, and validate AI tutor prompts with golden student cases, programmatic math/source checks, sampled human labels and multi-turn behavioral evaluation before claiming improved teaching. Focus on math and spelling while testing all CSC subjects.
+
+
 GT wants to aim for **100% on difficult, independent, novel practice** and maximum preparedness for whatever the official CSE presents, not merely an 80% practice passing threshold. Initial study track: **Subprofessional**, then **Professional**. Self-reported highest-risk areas: **Numerical Ability (math, especially confidence in unfamiliar problem setups), Clerical spelling**, and calibrated confidence under harder-than-reviewer unseen questions. Other subjects feel easier but should still be tested to detect overconfidence. Adapt the roadmap without exposing identifying student information to other learners or external providers.
 
 Do not guarantee a real 100% CSE score, top rank, official raw-score conversions or actual leaked/unauthorized questions. CSC reports 80.00 minimum general rating for eligibility. Officially published scope and calendar are stronger evidence than review-center guesses and reddit anecdotes.
