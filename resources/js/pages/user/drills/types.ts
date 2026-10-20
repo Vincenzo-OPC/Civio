@@ -2,8 +2,8 @@ export interface Question {
     id: number;
     stem: string;
     options: string[];
-    correct_option: number;
-    explanation: string;
+    correct_option?: number;
+    explanation?: string;
     category: string;
     subcategory: string;
     language: string;
@@ -34,6 +34,7 @@ export interface SavedDrillSet {
 }
 
 export interface DrillsProps {
+    bankPage?: { current: number; last: number };
     questions: Question[];
     categories: Category[];
     savedDrillSets?: SavedDrillSet[];

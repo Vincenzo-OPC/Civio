@@ -17,6 +17,7 @@ use App\Services\Exam\ExpoundService;
 use App\Services\Exam\MockSessionService;
 use App\Services\Exam\PdfExamExportService;
 use App\Services\Exam\Reveal\RevealTutor;
+use App\Services\Exam\ServedPracticeQuestions;
 use App\Services\Exam\StrictMockLock;
 use App\Services\ExamService;
 use App\Support\LiteMode;
@@ -42,6 +43,12 @@ class ExamController extends Controller
         $query = ExamSessionQueryData::fromRequest($request);
         $data = $this->examService->getExamSessionData($query, auth()->id(), LiteMode::enabled($request));
 
+        if (($query->isDrill || $data['retakeSource'] !== null) && $data['savedAttempt'] === null) {
+            app(ServedPracticeQuestions::class)->remember(
+                $request->session(), auth()->id(), array_column($data['questions'], 'id')
+            );
+        }
+
         return $this->render('user/exams/index', $data);
     }
 
@@ -65,6 +72,17 @@ class ExamController extends Controller
                     'message' => 'This mock session was not found for you. Start a new mock.',
                 ], 422);
             }
+        }
+
+        if ($examSession === null
+            && ! app(ServedPracticeQuestions::class)->allows($request->session(), $userId, $dto->questionIds)) {
+            return response()->json(['success' => false, 'message' => 'Start a practice session before submitting its answers.'], 422);
+        }
+
+        $ids = $examSession !== null ? $examSession->question_ids : $dto->questionIds;
+        $locked = $this->strictMockLock->lockedQuestionIds($userId, $request->session(), $examSession?->id);
+        if (array_intersect($ids, $locked) !== []) {
+            return response()->json(['success' => false, 'message' => StrictMockLock::MESSAGE], 423);
         }
 
         $result = $this->submitAttemptAction->execute(
@@ -170,7 +188,7 @@ class ExamController extends Controller
             return response()->json(['success' => false, 'locked' => true, 'message' => StrictMockLock::MESSAGE], 423);
         }
 
-        $question = Question::find($request->question_id);
+        $question = Question::where('status', 'active')->find($request->question_id);
 
         if (! $question) {
             return response()->json([
@@ -217,7 +235,7 @@ class ExamController extends Controller
             return response()->json(['success' => false, 'locked' => true, 'message' => StrictMockLock::MESSAGE], 423);
         }
 
-        $question = Question::find($request->question_id);
+        $question = Question::where('status', 'active')->find($request->question_id);
 
         if (! $question) {
             return response()->json(['success' => false, 'message' => 'Question not found'], 404);

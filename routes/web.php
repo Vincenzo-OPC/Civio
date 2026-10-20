@@ -56,7 +56,7 @@ Route::middleware('throttle:global-views')->group(function () {
     });
 
     // Publicly accessible Exams (with free_attempt bypass)
-    Route::get('exams', [ExamController::class, 'index'])
+    Route::get('exams', [ExamController::class, 'index'])->middleware('throttle:bank-access')
         ->name('exams.index')
         ->middleware('throttle:global-views', 'free.attempt');
 
@@ -71,11 +71,11 @@ Route::middleware('throttle:global-views')->group(function () {
 
     Route::post('exams/reveal', [ExamController::class, 'revealAnswer'])
         ->name('exams.reveal')
-        ->middleware('throttle:global-views');
+        ->middleware('throttle:bank-access');
 
     Route::post('exams/expound', [ExamController::class, 'expoundAnswer'])
         ->name('exams.expound')
-        ->middleware('throttle:global-views');
+        ->middleware('throttle:bank-access');
 
     // Lite L2: offline drill packs (offline-eligible items only; never in mocks)
     Route::get('offline', [OfflinePackController::class, 'page'])->name('offline.index');
@@ -92,7 +92,7 @@ Route::middleware('throttle:global-views')->group(function () {
 
     // Local study: guest-readable study pages (empty OK) when CIVIO_GUEST_UNLIMITED
     Route::middleware('guest.study')->group(function () {
-        Route::get('drills', [DrillController::class, 'index'])->name('drills.index');
+        Route::get('drills', [DrillController::class, 'index'])->name('drills.index')->middleware('throttle:bank-access');
         Route::get('history', [ExamHistoryController::class, 'index'])->name('history.index');
         Route::get('analytics', [AnalyticsController::class, 'index'])->name('analytics.index');
         Route::get('dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
@@ -127,10 +127,10 @@ Route::middleware(['auth.or.fail', 'verified'])->group(function () {
 
     // --- USER DASHBOARD & ANALYTICS ---
     Route::middleware('throttle:global-views')->group(function () {
-        Route::get('drills/smart-weakness', [DrillController::class, 'smartWeakness'])->name('drills.smartWeakness');
+        Route::get('drills/smart-weakness', [DrillController::class, 'smartWeakness'])->middleware('throttle:bank-access')->name('drills.smartWeakness');
         Route::post('drills/custom-questions', [DrillController::class, 'storeCustomQuestion'])->name('drills.custom-questions.store')->middleware('throttle:global-mutations');
 
-        Route::controller(SavedDrillSetController::class)->prefix('drills/saved-sets')->name('drills.saved-sets.')->group(function () {
+        Route::controller(SavedDrillSetController::class)->middleware('throttle:bank-access')->prefix('drills/saved-sets')->name('drills.saved-sets.')->group(function () {
             Route::get('/', 'index')->name('index');
             Route::post('/', 'store')->name('store');
             Route::put('{savedDrillSet}', 'update')->name('update');

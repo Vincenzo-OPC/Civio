@@ -235,3 +235,13 @@ the Docker autostart task, the desktop start shortcut, and any files
 4. Regenerate the changelog with `npm run changelog` (add `-- --tag vX.Y.Z` when
    cutting a release), then tag with an annotated tag and `git push origin <tag>`.
 5. Never push to `upstream-baseline`; it is a local, read-only remote.
+
+## Security execution checkpoint - 20 October 2026
+
+Verified MSI main was clean at efc0d81 and fast-forwarded it to fetched origin/main f2766db. GitHub PRs 1-16 were all OPEN and unmerged. No live service, study database, protected stack, question approval, or deployment was changed.
+
+Implemented F1/F6 answer-access slice: sessionless online drills/retakes require a browser- and principal-scoped served batch (20 recent batches, 300 items each, 24-hour expiry); arbitrary IDs cannot turn submission into a key endpoint. Active status and actual option bounds are checked again before grading. Session-backed mocks grade their entire served set, including blank items, and submissions re-read the session under a database row lock. Client track labels cannot turn drills into mocks. Strict locks cover other submissions and historical question feedback. Reveal/Expound reject inactive items. Reused PR #2's bank-key withholding while preserving an author's own draft response. Cached pool members are revalidated for current active status. Drill browsing is paged at 100; exam candidates and saved-set question responses are bounded at 300; saved-set summaries exclude inactive items. Bank-access limits apply in testing/local environments too, with distinct account/IP identity namespaces.
+
+F2 remains PARTIAL: complete-set scoring and stale-model duplicate protection are implemented; authoritative deadline enforcement, answer autosave, late-final grading from saved answers, and absolute UI recovery clocks are still pending. Do not present Strict Mock timing as protected until that work ships.
+
+Next: finish F2 before the importer review gate, readiness removal, Review Mistakes, composition and repetition work. The 496-item reparameterized file was not imported or approved. No current live-bank count was obtained (live database access is out of scope). Browser screenshots have not been captured.

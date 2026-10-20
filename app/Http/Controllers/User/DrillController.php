@@ -25,7 +25,7 @@ class DrillController extends Controller
     public function index(Request $request): InertiaResponse
     {
         $userId = auth()->id();
-        $data = $this->drillService->getDrillsIndexData($userId);
+        $data = $this->drillService->getDrillsIndexData($userId, max(1, $request->integer('page', 1)));
 
         return $this->render('user/drills/index', $data);
     }
