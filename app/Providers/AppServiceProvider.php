@@ -123,6 +123,11 @@ class AppServiceProvider extends ServiceProvider
 
         // Lite L2 offline packs: always on (also outside production) so the
         // limits are tested; sizes in config/civio.php.
+        RateLimiter::for('exam-progress', function (Request $request) {
+            return Limit::perMinute((int) config('civio.progress_per_minute', 180))
+                ->by('exam-progress:'.($request->user() ? 'user:'.$request->user()->id : 'ip:'.$request->ip()));
+        });
+
         RateLimiter::for('bank-access', function (Request $request) {
             return Limit::perMinute((int) config('civio.bank_access_per_minute', 30))
                 ->by('bank-access:'.($request->user() ? 'user:'.$request->user()->id : 'ip:'.$request->ip()));

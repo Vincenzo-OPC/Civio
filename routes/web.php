@@ -23,6 +23,7 @@ use App\Http\Controllers\User\DashboardController as UserDashboardController;
 use App\Http\Controllers\User\DrillController;
 use App\Http\Controllers\User\ExamController;
 use App\Http\Controllers\User\ExamHistoryController;
+use App\Http\Controllers\User\ExamProgressController;
 use App\Http\Controllers\User\ExamSessionController;
 use App\Http\Controllers\User\LearnController as UserLearnController;
 use App\Http\Controllers\User\OfflinePackController;
@@ -61,13 +62,16 @@ Route::middleware('throttle:global-views')->group(function () {
         ->middleware('throttle:global-views', 'free.attempt');
 
     Route::post('exams/attempts', [ExamController::class, 'storeAttempt'])
-        ->name('exams.attempts.store')
+        ->name('exams.attempts.store')->middleware('throttle:bank-access')
         ->middleware('throttle:global-mutations');
 
     // Lite L1: server-picked mocks (only the chosen items, keys withheld)
     Route::post('exams/sessions', [ExamSessionController::class, 'store'])
-        ->name('exams.sessions.store')
+        ->name('exams.sessions.store')->middleware('throttle:bank-access')
         ->middleware('throttle:global-mutations');
+
+    Route::post('exams/sessions/progress', ExamProgressController::class)
+        ->name('exams.sessions.progress')->middleware('throttle:exam-progress');
 
     Route::post('exams/reveal', [ExamController::class, 'revealAnswer'])
         ->name('exams.reveal')

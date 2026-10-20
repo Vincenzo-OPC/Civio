@@ -1,4 +1,6 @@
 # Next-agent execution plan
+> Execution refresh, 20 October 2026: follow GT's current order: F1/F2/F6 security, importer review gate, fabricated-readiness removal, Review Mistakes, mock composition, mock repetition. Earlier learning/visual roadmaps below are historical context. Security implementation and verification checkpoints are at the end of this file. No bank approval, live study mutation, or deployment is authorized.
+
 
 This is the only roadmap to follow. [CIVIO_CURRENT_STATE_HANDOFF.md](CIVIO_CURRENT_STATE_HANDOFF.md) is the current-state note. Specialized docs stay where they are. If this file and the code disagree, the code and tests win.
 
@@ -87,3 +89,15 @@ Implemented F1/F6 answer-access slice: sessionless online drills/retakes require
 F2 remains PARTIAL: complete-set scoring and stale-model duplicate protection are implemented; authoritative deadline enforcement, answer autosave, late-final grading from saved answers, and absolute UI recovery clocks are still pending. Do not present Strict Mock timing as protected until that work ships.
 
 Next: finish F2 before the importer review gate, readiness removal, Review Mistakes, composition and repetition work. The 496-item reparameterized file was not imported or approved. No current live-bank count was obtained (live database access is out of scope). Browser screenshots have not been captured.
+## Strict deadline checkpoint - 20 October 2026
+
+This supersedes the earlier PARTIAL F2 checkpoint. New Strict sessions persist started_at and deadline_at. Legacy sessions keep the deadline implied by original created_at and track. The authenticated/guest owner can save original-option answer patches with an optimistic save_version; stale writes, unserved IDs, inactive items, invalid options, expiry and submission all fail closed. Final grading uses the complete served set; at or after the exclusive deadline it ignores final-request answers and uses only saved server answers, leaving other items blank. The ten-minute grace protects visibility only and grants no answer-write time.
+
+Strict UI selections save serially, shuffled options map back to stored indices, and recovery fetches the server deadline and saved choices. Remaining time follows the absolute deadline rather than interval ticks or saved timeLeft. A failed save stops further answer changes until recovery and explains that late submission uses saved answers only. Study pause/untimed behavior and offline drills remain separate.
+
+Strict starts are serialized per learner/browser and a second protected Strict session is refused. Guest sessions also carry a server-only hash of their browser session identity, and protected guest session IDs survive the recent-session cap and login. This closes the ownership-list eviction bypass. Starts/submissions now share the always-on bank-access limiter; answer saves have a separate 180/minute limiter.
+
+Verification so far: full PHP suite 368 tests / 7,824 assertions; 96 JS tests and TypeScript passed. Final lint/format/build/size results are recorded below when complete. SQLite regressions cover stale models and revisions; a real concurrent PostgreSQL load test has not been run. No rendered browser screenshots or live migration/deployment are claimed.
+
+Shipped-to-source scope: F1/F2/F6 engineering. Still pending: fail-closed reparameterization importer and independent review gate; removal of fabricated readiness; Review Mistakes; fact/theme/passage composition; item exposure balancing. Do not approve or import the 496-item set. Editorial bank quality is not established by these security fixes. Next bounded slice is the importer review gate. Hosting remains GT's decision. See PAPER_PRACTICE_ASSESSMENT.md for the paper-booklet assessment; no paper flow or Complete Reviewer was built.
+Final security verification (20 October 2026): php artisan test passed 369 tests / 7,829 assertions; npm run types:check, npm run test:js (98 tests), npm run lint:check (no warnings), npm run format:check, composer lint:check, npm run build and npm run size all passed in the isolated test checkout. Exam JS is 10,944 / 11,000 bytes; aggregate JS is 1,038,071 / 1,040,000 bytes (Brotli). Budgets were not changed. A pre-existing homepage formatting issue was isolated in 43f9922; the first answer-access security commit is a390683. No rendered browser or real concurrent PostgreSQL load test is claimed. The new migration has only run against test SQLite, not the live study database. No question-bank source or approval status changed.

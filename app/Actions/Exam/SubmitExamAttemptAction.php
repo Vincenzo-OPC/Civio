@@ -10,6 +10,7 @@ use App\Enums\ExamMode;
 use App\Models\ExamSession;
 use App\Models\Question;
 use App\Repositories\ExamAttemptRepositoryInterface;
+use App\Services\Exam\MockPoolSelector;
 use App\Services\ExamGradingService;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -56,12 +57,14 @@ class SubmitExamAttemptAction
 
                 // Re-check the database, not the cached pool. A withdrawn item
                 // must not be graded or return a key even if it was served earlier.
-                $active = Question::whereIn('id', $ids)->where('status', 'active')->lockForUpdate()->get()->keyBy('id');
+                $active = Question::whereIn('id', $ids)->where('status', 'active')->orderBy('id')->lockForUpdate()->get()->keyBy('id');
                 if ($active->count() !== count($ids)) {
                     return new SubmitExamAttemptResult(false, 422, message: 'A practice item is no longer available. Start a new session.');
                 }
 
-                $answers = $this->gradingService->normalizeAnswers($data->questionIds, $data->answers);
+                $answers = $session?->isExpired()
+                    ? (array) ($session->saved_answers ?? [])
+                    : $this->gradingService->normalizeAnswers($data->questionIds, $data->answers);
                 foreach ($answers as $id => $chosen) {
                     if ($chosen !== null && ! array_key_exists($chosen, (array) $active[$id]->options)) {
                         return new SubmitExamAttemptResult(false, 422, message: 'An answer does not match the available options.');
@@ -87,6 +90,15 @@ class SubmitExamAttemptAction
                 $answers = array_replace(array_fill_keys($ids, null), $answers);
                 $meta = $data->clientMetadata;
                 $meta['track'] = $session?->track ?? 'Drill';
+                if ($session?->isStrict()) {
+                    $meta['is_timed'] = true;
+                    $meta['deadline_at'] = $session->deadline()?->toISOString();
+                    $meta['submitted_after_deadline'] = $session->isExpired();
+                    $meta['duration_secs'] = min(
+                        MockPoolSelector::timeLimitFor(MockPoolSelector::levelFor($session->track)),
+                        max(0, (int) $session->created_at->diffInSeconds(now()))
+                    );
+                }
                 $graded = $this->gradingService->grade($ids, $answers, $meta);
                 $attempt = $this->repository->create([
                     'user_id' => $userId,
