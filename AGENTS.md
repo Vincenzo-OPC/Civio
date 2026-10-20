@@ -1,5 +1,8 @@
 # Civio repository rules
 
+> **COPY/PASTE HANDOFF SOURCE OF TRUTH:** [docs/DEXTER_CODEX_PROMPT_CURRENT.md](docs/DEXTER_CODEX_PROMPT_CURRENT.md). This supersedes previous prompts. Codex must consult it at session startup along with the master Dexter plan and Astra-reviewed pacing/evals brief. Keep the user's older instructions and the current security roadmap intact.
+
+
 ## Current GT directive: Dexter adaptive tutor and 100%-practice roadmap (21 Oct 2026)
 
 ## Latest addition: Astra-reviewed pacing and AI evaluations (21 Oct 2026)
