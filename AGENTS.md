@@ -1,5 +1,10 @@
 # Civio repository rules
 
+## Current GT directive: Dexter adaptive tutor and 100%-practice roadmap (21 Oct 2026)
+
+**Codex must read [docs/DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md](docs/DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md) and its three linked specialist documents at startup.** This records GT's goal of near-perfect independent CSE practice (Subprofessional first, with math and spelling as priority), a real memory-driven tutor, safer Ask ChatGPT scaffolding, and **zero surprise AI costs**. Execute in small verified slices only **after** completing/confirming the existing security and bank-import gates. No paid API connection, customer billing, hosted SIWC flow, deployment, question-bank approval/import or protected live-study DB mutation is authorized by this note. See the current next-agent plan for ordering. Keep existing rules below.
+
+
 ## Future self-improvement experiments (2026-10-08)
 
 When working on agent-assisted coding quality or Dexter tutor experimentation, read [`docs/AI_SELF_IMPROVEMENT.md`](docs/AI_SELF_IMPROVEMENT.md). Civio is an opt-in **evaluation target**, not an independent RSI engine. THE-MACHINE owns agent/meta-agent evolution; keep grading, questions, answer keys, Lite/offline safeguards and held-out evaluations independent. First deliver the current product roadmap; do not launch autonomous mutations or deployments based on this note. Claude agents must read the matching note in `CLAUDE.md`.
