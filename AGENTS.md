@@ -2,6 +2,12 @@
 
 ## Current GT directive: Dexter adaptive tutor and 100%-practice roadmap (21 Oct 2026)
 
+## Latest addition: Astra-reviewed pacing and AI evaluations (21 Oct 2026)
+
+Mandatory read: [docs/DEXTER_TIMING_AND_EVALS_2026-10-21.md](docs/DEXTER_TIMING_AND_EVALS_2026-10-21.md). GT proposes an optional pacing bar, tracked timing improvement on independent fresh questions, and a rigorous educational AI evaluation harness with human calibration. Astra decides architecture after research, not by blindly implementing this spec. Do not conflate speed with mastery; 10s and 60s are illustrative, not CSC official. Preserve current security-first gates, Lite performance, no spend, no deployment. **Previous Codex paste prompt is superseded by the integrated new prompt in this brief and Issue #17.**
+
+
+
 **Codex must read [docs/DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md](docs/DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md) and its three linked specialist documents at startup.** This records GT's goal of near-perfect independent CSE practice (Subprofessional first, with math and spelling as priority), a real memory-driven tutor, safer Ask ChatGPT scaffolding, and **zero surprise AI costs**. Execute in small verified slices only **after** completing/confirming the existing security and bank-import gates. No paid API connection, customer billing, hosted SIWC flow, deployment, question-bank approval/import or protected live-study DB mutation is authorized by this note. See the current next-agent plan for ordering. Keep existing rules below.
 
 
