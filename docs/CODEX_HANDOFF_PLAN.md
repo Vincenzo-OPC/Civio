@@ -1,5 +1,8 @@
 # Codex handoff plan
 
+> **New GT directive, 21 October 2026:** Mandatory Codex startup reading: [Dexter adaptive tutor master plan](DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md), [tutor policy](DEXTER_TUTOR_POLICY_2026-10-21.md), [AI funding/access](DEXTER_AI_ACCESS_AND_BUSINESS_2026-10-21.md), and [near-perfect CSE research](CSE_PERFECT_SCORE_RESEARCH_2026-10-21.md). GT wants 100% on independent unseen practice (especially Numerical and spelling), a durable learner model, proactive Socratic Dexter, and inference costs funded by opt-in user accounts where legitimately supported. **These are plans, not shipped features or permission to incur costs.** Maintain the latest security -> import -> analytics credibility -> Review Mistakes ordering in [next-agent execution plan](CIVIO_NEXT_AGENT_EXECUTION_PLAN.md), and implement the first safe slice only after current tip verification. ChatGPT SIWC plan access cannot be resold or gated behind a Civio payment. Existing phases remain valid.
+
+
 > **Long-range AI research (2026-10-08):** `docs/AI_SELF_IMPROVEMENT.md` defines a future opt-in, independently benchmarked Civio testbed for THE-MACHINE's evolutionary agents. It does not change the current ranked product phases, security rules, or authorization gates.
 
 Read this first. It says what Civio is, what has been built (with commits), what
