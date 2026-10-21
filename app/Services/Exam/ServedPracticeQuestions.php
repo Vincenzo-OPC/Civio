@@ -9,15 +9,69 @@ use Illuminate\Contracts\Session\Session;
 /** Browser-owned, bounded eligibility for legacy drill and retake submissions. */
 final class ServedPracticeQuestions
 {
-    public function remember(Session $session, ?int $userId, array $ids): void
+    public function remember(Session $session, ?int $userId, array $ids): string
     {
-        $batches = array_filter((array) $session->get($this->key($userId), []),
-            fn ($batch) => is_array($batch) && ($batch['until'] ?? 0) > now()->timestamp);
+        $batches = array_values(array_filter((array) $session->get($this->key($userId), []),
+            fn ($batch) => is_array($batch) && ($batch['until'] ?? 0) > now()->timestamp));
+        $id = bin2hex(random_bytes(16));
         $batches[] = [
+            'id' => $id,
             'ids' => array_slice(array_values(array_unique(array_map('intval', $ids))), 0, 300),
             'until' => now()->addDay()->timestamp,
         ];
-        $session->put($this->key($userId), array_slice(array_values($batches), -20));
+        $session->put($this->key($userId), array_slice($batches, -20));
+
+        return $id;
+    }
+
+    /** Newest served batch whose items include every submitted id. */
+    public function coveringBatchId(Session $session, ?int $userId, array $questionIds): ?string
+    {
+        $wanted = array_map('intval', $questionIds);
+        $found = null;
+
+        foreach ($this->openBatches($session, $userId) as $batch) {
+            if (array_diff($wanted, $batch['ids']) === []) {
+                $found = $batch['id'];
+            }
+        }
+
+        return $found;
+    }
+
+    /** Newest served batch that included this one item. */
+    public function questionBatchId(Session $session, ?int $userId, int $questionId): ?string
+    {
+        $found = null;
+
+        foreach ($this->openBatches($session, $userId) as $batch) {
+            if (in_array($questionId, $batch['ids'], true)) {
+                $found = $batch['id'];
+            }
+        }
+
+        return $found;
+    }
+
+    /**
+     * @return list<array{id: string, ids: array<int, int>}>
+     */
+    private function openBatches(Session $session, ?int $userId): array
+    {
+        $open = [];
+
+        foreach ((array) $session->get($this->key($userId), []) as $batch) {
+            if (! is_array($batch) || ($batch['until'] ?? 0) <= now()->timestamp || ! is_string($batch['id'] ?? null)) {
+                continue;
+            }
+
+            $open[] = [
+                'id' => $batch['id'],
+                'ids' => array_map('intval', (array) ($batch['ids'] ?? [])),
+            ];
+        }
+
+        return $open;
     }
 
     public function allows(Session $session, ?int $userId, array $ids): bool

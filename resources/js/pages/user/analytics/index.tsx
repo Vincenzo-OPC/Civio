@@ -59,7 +59,7 @@ export default function AnalyticsIndex({ stats, aiAnalysis }: AnalyticsProps) {
                         tips={[
                             {
                                 icon: <BarChart className="size-4" />,
-                                title: 'CSC Readiness Index',
+                                title: 'Practice average',
                                 text: 'Tracks your practice against the published general passing rating of at least 80.00. Civio does not apply an official per-subtest cutoff.',
                             },
                             {

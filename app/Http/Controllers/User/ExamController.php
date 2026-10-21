@@ -7,6 +7,7 @@ namespace App\Http\Controllers\User;
 use App\Actions\Exam\SubmitExamAttemptAction;
 use App\DTOs\Exam\ExamSessionQueryData;
 use App\DTOs\Exam\SubmitExamAttemptData;
+use App\Enums\ExamMode;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Exam\ExportPdfRequest;
 use App\Http\Requests\User\Exam\StoreExamAttemptRequest;
@@ -92,7 +93,7 @@ class ExamController extends Controller
             clientIp: $request->ip(),
             hasPendingGuestAttempt: $hasPendingGuest,
             examSession: $examSession,
-            reviewSessionHash: app(ReviewMistakeRecorder::class)->sittingHash($request->session()),
+            reviewSessionHash: $this->helpToken($request, $dto->questionIds, $examSession),
         );
 
         if (! auth()->check() && $result->attemptId) {
@@ -216,7 +217,7 @@ class ExamController extends Controller
         app(ReviewMistakeRecorder::class)->noteHelp(
             $request->user()?->id,
             (int) $question->id,
-            app(ReviewMistakeRecorder::class)->sittingHash($request->session()),
+            $this->helpToken($request, [(int) $question->id]),
         );
 
         return response()->json([
@@ -254,7 +255,7 @@ class ExamController extends Controller
         app(ReviewMistakeRecorder::class)->noteHelp(
             $request->user()?->id,
             (int) $question->id,
-            app(ReviewMistakeRecorder::class)->sittingHash($request->session()),
+            $this->helpToken($request, [(int) $question->id]),
         );
 
         return response()->json([
@@ -264,5 +265,49 @@ class ExamController extends Controller
             'rule' => $expound['rule'],
             'steps' => $expound['steps'],
         ]);
+    }
+
+    /**
+     * Server-owned identity for one practice batch or one open Study Mock.
+     * A second drill in the same browser gets a new batch id.
+     *
+     * @param  array<int, int>  $questionIds
+     */
+    private function helpToken(Request $request, array $questionIds, ?ExamSession $examSession = null): ?string
+    {
+        if ($examSession !== null) {
+            return $examSession->isStrict() ? null : hash('sha256', 'exam:'.$examSession->id);
+        }
+
+        $userId = $request->user()?->id;
+
+        if ($userId === null) {
+            return null;
+        }
+
+        $served = app(ServedPracticeQuestions::class);
+        $ids = array_values(array_map('intval', $questionIds));
+
+        if (count($ids) === 1) {
+            $batch = $served->questionBatchId($request->session(), $userId, $ids[0]);
+
+            if ($batch !== null) {
+                return hash('sha256', 'batch:'.$batch);
+            }
+
+            $study = ExamSession::query()
+                ->where('user_id', $userId)
+                ->where('mode', ExamMode::Study->value)
+                ->whereNull('exam_attempt_id')
+                ->orderByDesc('created_at')
+                ->get(['id', 'question_ids'])
+                ->first(fn (ExamSession $session): bool => in_array($ids[0], array_map('intval', (array) $session->question_ids), true));
+
+            return $study === null ? null : hash('sha256', 'exam:'.$study->id);
+        }
+
+        $batch = $served->coveringBatchId($request->session(), $userId, $ids);
+
+        return $batch === null ? null : hash('sha256', 'batch:'.$batch);
     }
 }

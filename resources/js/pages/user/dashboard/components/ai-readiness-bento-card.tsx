@@ -142,7 +142,7 @@ export function AiReadinessBentoCard({
                     </div>
                     <div>
                         <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                            AI Readiness Predictor
+                            Practice average
                         </h3>
                         <p className="text-[11px] text-slate-500 dark:text-slate-400">
                             Based on your latest practice attempts
@@ -153,7 +153,7 @@ export function AiReadinessBentoCard({
                 {localStatus === 'ready' && data && (
                     <span className="inline-flex items-center gap-1 rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-0.5 text-[11px] font-bold text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300">
                         <Sparkles className="size-3 fill-current" />
-                        AI Synced
+                        Saved
                     </span>
                 )}
             </div>

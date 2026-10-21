@@ -20,7 +20,7 @@ Analytics no longer shows a Top 50% rank when fewer than six attempts exist or t
 
 Bank signature tests need the PHP sodium extension. This environment does not have it, so those tests were not treated as a regression. No question was imported or activated. No deploy.
 
-Help on Review Mistakes is scoped to the browser session that opened the explanation. A skipped item does not consume that help. The list pages at 20. The mock percentage shown in analysis is the raw practice average, not a pass forecast. FSRS is still not wired.
+Help on Review Mistakes follows the served drill batch, or the open Study Mock when no drill batch exists. A second drill in the same browser does not inherit the first explanation. The practice percentage is the stored correct-item count, not a weighted category formula. FSRS is still not wired.
 
 Session start SHA: `3c18ec0258ec855795654afc85a93fa435684d55`. The setup-copy commit is `d8d1714`. Confirm the tip with `git rev-parse origin/main` after the docs commit that records it.
 

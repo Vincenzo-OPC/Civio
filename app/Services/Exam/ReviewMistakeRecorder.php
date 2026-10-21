@@ -7,13 +7,12 @@ namespace App\Services\Exam;
 use App\Models\Question;
 use App\Models\ReviewHelp;
 use App\Models\ReviewItem;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Collection;
 
 /**
  * Remembers a signed-in learner's wrong practice answers.
- * A Strict Mock writes nothing. Help counts only inside the browser session
- * that saw the explanation, and only for an answer that was actually submitted.
+ * A Strict Mock writes nothing. Help counts only for the served batch or
+ * Study Mock that showed the explanation, and only when that item is answered.
  */
 final class ReviewMistakeRecorder
 {
@@ -142,22 +141,5 @@ final class ReviewMistakeRecorder
             'question_id' => $questionId,
             'session_hash' => $sessionHash,
         ]);
-    }
-
-    /** Stable for one signed-in sitting, including a rotated cookie. */
-    public function sittingHash(?Session $session): ?string
-    {
-        if ($session === null) {
-            return null;
-        }
-
-        $token = $session->get('civio_review_sitting');
-
-        if (! is_string($token) || strlen($token) < 16) {
-            $token = bin2hex(random_bytes(16));
-            $session->put('civio_review_sitting', $token);
-        }
-
-        return hash('sha256', $token);
     }
 }

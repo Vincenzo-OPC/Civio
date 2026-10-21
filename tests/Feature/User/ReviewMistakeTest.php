@@ -73,14 +73,18 @@ test('a wrong drill answer is remembered once and a correct one is not', functio
     expect(ReviewItem::query()->where('question_id', $right->id)->exists())->toBeFalse();
 });
 
-test('an explanation keeps a later correct answer from clearing the mistake', function () {
+test('an explanation blocks only the drill that showed it', function () {
     $user = User::factory()->create();
     $question = reviewQuestion();
     $this->actingAs($user);
 
     answerDrill($question, 0)->assertOk();
     $this->postJson(route('exams.reveal'), ['question_id' => $question->id])->assertOk();
-    answerDrill($question, 1)->assertOk();
+    $this->postJson(route('exams.attempts.store'), [
+        'question_ids' => [$question->id],
+        'answers' => [(string) $question->id => 1],
+        'metadata' => ['track' => 'Drill', 'duration_secs' => 12, 'is_timed' => false],
+    ])->assertOk();
 
     expect(ReviewItem::query()->where('question_id', $question->id)->first()->status)->toBe('pending');
 
@@ -171,19 +175,25 @@ test('an empty review list and a draft stay out of the practice history', functi
     $this->get(route('reviews.mistakes.index'))->assertOk()->assertDontSee('Hidden draft stem');
 });
 
-test('a skipped item keeps its explanation, and another session can clear it', function () {
+test('a skipped item keeps its explanation until that same drill is answered', function () {
     $user = User::factory()->create();
     $other = reviewQuestion(['stem' => 'Answered companion?']);
     $missed = reviewQuestion(['stem' => 'Seen but skipped?']);
     $this->actingAs($user);
 
-    answerDrill($missed, 0)->assertOk();
-    $this->postJson(route('exams.reveal'), ['question_id' => $missed->id])->assertOk();
-
     $this->get(route('exams.index', [
         'drill' => 'true',
         'custom_question_ids' => json_encode([$other->id, $missed->id]),
     ]))->assertOk();
+    $this->postJson(route('exams.attempts.store'), [
+        'question_ids' => [$other->id, $missed->id],
+        'answers' => [
+            (string) $other->id => 0,
+            (string) $missed->id => 0,
+        ],
+        'metadata' => ['track' => 'Drill', 'duration_secs' => 12, 'is_timed' => false],
+    ])->assertOk();
+    $this->postJson(route('exams.reveal'), ['question_id' => $missed->id])->assertOk();
     $this->postJson(route('exams.attempts.store'), [
         'question_ids' => [$other->id, $missed->id],
         'answers' => [
@@ -195,43 +205,18 @@ test('a skipped item keeps its explanation, and another session can clear it', f
 
     expect(ReviewHelp::query()->where('question_id', $missed->id)->exists())->toBeTrue();
 
-    answerDrill($missed, 1)->assertOk();
+    $this->postJson(route('exams.attempts.store'), [
+        'question_ids' => [$missed->id],
+        'answers' => [(string) $missed->id => 1],
+        'metadata' => ['track' => 'Drill', 'duration_secs' => 12, 'is_timed' => false],
+    ])->assertOk();
     expect(ReviewItem::query()->where('question_id', $missed->id)->first()->status)->toBe('pending');
 
-    $fresh = ExamAttempt::create([
-        'user_id' => $user->id,
-        'question_ids' => [$missed->id],
-        'answers' => [1],
-        'cat_scores' => [],
-    ]);
-    $missed->load('subcategory.category');
-    app(ReviewMistakeRecorder::class)->record(
-        $user->id,
-        $fresh->id,
-        false,
-        [$missed->id => 1],
-        new Collection([$missed]),
-        'a-different-browser-session',
-    );
-
+    answerDrill($missed, 1)->assertOk();
     $item = ReviewItem::query()->where('question_id', $missed->id)->first();
     expect($item->status)->toBe('resolved');
 
-    $again = ExamAttempt::create([
-        'user_id' => $user->id,
-        'question_ids' => [$missed->id],
-        'answers' => [0],
-        'cat_scores' => [],
-    ]);
-    app(ReviewMistakeRecorder::class)->record(
-        $user->id,
-        $again->id,
-        false,
-        [$missed->id => 0],
-        new Collection([$missed]),
-        'a-different-browser-session',
-    );
-
+    answerDrill($missed, 0)->assertOk();
     expect($item->fresh()->status)->toBe('pending')
         ->and($item->fresh()->wrong_count)->toBe(2);
 });
@@ -286,4 +271,45 @@ test('older mistakes stay reachable and a locked item cannot be retried', functi
     $this->postJson(route('reviews.mistakes.start'), [
         'question_ids' => [$locked->id],
     ])->assertNotFound();
+});
+
+test('a study mock explanation does not assist the next drill', function () {
+    $user = User::factory()->create();
+    $question = reviewQuestion();
+    $seed = ExamAttempt::create([
+        'user_id' => $user->id,
+        'question_ids' => [$question->id],
+        'answers' => [0],
+        'cat_scores' => [],
+    ]);
+    ReviewItem::query()->create([
+        'user_id' => $user->id,
+        'question_id' => $question->id,
+        'source_attempt_id' => $seed->id,
+        'first_wrong_at' => now(),
+        'last_result_at' => now(),
+        'wrong_count' => 1,
+        'status' => 'pending',
+        'last_attempt_id' => $seed->id,
+    ]);
+    $session = ExamSession::create([
+        'user_id' => $user->id,
+        'track' => 'Professional',
+        'mode' => 'study',
+        'question_ids' => [$question->id],
+        'started_at' => now(),
+        'deadline_at' => now()->addHour(),
+    ]);
+    $this->actingAs($user);
+    $this->postJson(route('exams.reveal'), ['question_id' => $question->id])->assertOk();
+    $this->postJson(route('exams.attempts.store'), [
+        'exam_session_id' => $session->id,
+        'question_ids' => [$question->id],
+        'answers' => [(string) $question->id => 1],
+    ])->assertOk();
+
+    expect(ReviewItem::query()->where('question_id', $question->id)->first()->status)->toBe('pending');
+
+    answerDrill($question, 1)->assertOk();
+    expect(ReviewItem::query()->where('question_id', $question->id)->first()->status)->toBe('resolved');
 });

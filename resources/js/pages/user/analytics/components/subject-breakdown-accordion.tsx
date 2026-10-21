@@ -44,7 +44,7 @@ function getSubjectIcon(name: string) {
 function getMasteryBadge(percentage: number) {
     if (percentage >= 80) {
         return {
-            label: 'Mastered',
+            label: '80%+',
             className:
                 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/30 dark:text-emerald-300 dark:border-emerald-800',
             icon: <CheckCircle2 className="size-3 text-emerald-600" />,
@@ -53,7 +53,7 @@ function getMasteryBadge(percentage: number) {
 
     if (percentage >= 65) {
         return {
-            label: 'Proficient',
+            label: '65%+',
             className:
                 'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/30 dark:text-[#B3F52D] dark:border-blue-800',
             icon: (

@@ -281,3 +281,7 @@ Published the recovered research commits, then added a signed-in mistake list. A
 ## Review help stays with the sitting, 22 October 2026
 
 An explanation now counts only in the browser session that opened it, and only when that item is actually answered. Skipping the item no longer erases the help. Another sitting can clear the mistake. The list is paged at 20, so older mistakes stay reachable. A locked Strict Mock item cannot be started from the list. The displayed mock percentage is the raw practice average. It is not adjusted into a pass chance, and the analytics index is no longer capped at 65 or 75.
+
+## Help follows the drill, not the browser, 22 October 2026
+
+Opening a second drill in the same browser no longer inherits an explanation from the first. Help is tied to the server-created served batch, or to the open Study Mock when there is no drill batch. A correct answer on a different drill can resolve the mistake. The practice percentage is the stored count of correct items, not a weighted category formula. Scorecards, analytics, and history say practice score rather than a readiness prediction or a mastered rank.
