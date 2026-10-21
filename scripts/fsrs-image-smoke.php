@@ -50,7 +50,7 @@ $app = require __DIR__.'/../bootstrap/app.php';
 $kernel = $app->make(Kernel::class);
 $kernel->bootstrap();
 
-set_exception_handler(function (\Throwable $exception): void {
+set_exception_handler(function (Throwable $exception): void {
     fwrite(STDERR, $exception::class.': '.$exception->getMessage()."\n");
     exit(1);
 });

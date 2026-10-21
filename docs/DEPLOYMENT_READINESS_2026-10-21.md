@@ -24,14 +24,14 @@ No protected study database was migrated. A first server process did not receive
 | --- | --- |
 | App timezone | **VERIFIED** `Asia/Manila`. `/ping` returned `+08:00`. A stored due instant `2026-10-21 23:36:41` rendered as "Oct 21, 2026 11:36 PM" |
 | Node used by the browser checks | **VERIFIED** v22.23.2. Wrong answers scheduled. `/bin/false` left the event unscheduled |
-| ts-fsrs | **VERIFIED** in the app path used by those requests (`ts-fsrs` 5.4.2 is the committed dependency). Not verified inside a built image |
-| Sodium in the production image | **NOT VERIFIED**. The image was not built. The Dockerfile still requests sodium |
+| Sodium in the production image | **VERIFIED** on the GitHub image (`sodium loaded`, PHP 8.4.26). Not on this sandbox's host PHP |
+| ts-fsrs inside the image | **VERIFIED**. The smoke keeps only `node_modules/ts-fsrs` and schedules with Node 22.23.2 |
 | Host Pest `ReviewMistakeTest` | **VERIFIED** 23 passed, 311 assertions |
 | Host Pest `PdfAnswerKeyTest` | **VERIFIED** 12 passed, 62 assertions |
 
 ## Docker image
 
-**BLOCKED.** Not an application defect.
+This sandbox still cannot unpack image layers. That remains **BLOCKED** here, and it is not an application defect.
 
 ```text
 docker build -t civio-fsrs-smoke /workspace/civio
@@ -43,15 +43,26 @@ failed to register layer: failed to Lchown "/etc/gshadow" for UID 0, GID 42
 lchown /etc/gshadow: invalid argument
 ```
 
-`/proc/self/uid_map` is `0 0 1`. `scripts/fsrs-image-smoke.sh` was not run, because it starts with that build. A filesystem or chroot check was not treated as a passed image.
+`/proc/self/uid_map` is `0 0 1`. A filesystem or chroot check is not a passed image.
 
-On a Docker host that can unpack layers:
+The production image was built on a GitHub-hosted Ubuntu runner by the manual `image smoke` workflow. It does not run on push. It does not push the image, publish a port, or deploy.
 
-```sh
-scripts/fsrs-image-smoke.sh
-```
+| Check | Result |
+| --- | --- |
+| First dispatch [run 39631088212](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631088212) | **NOT** a pass. The image built, then the smoke stopped on a missing `Collection` import. Laravel's console handler returned, so PHP exited 0 and the job went green. That run does not count |
+| Corrected dispatch [run 39631539498](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631539498) | **VERIFIED** pass. Job [119330755082](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631539498/job/119330755082). The log ends with `php 8.4.26`, `node v22.23.2`, `sodium loaded`, and `fsrs image smoke passed` |
+| Wrong answer, later independent correct, failed reminder, recovery | **VERIFIED** inside that image, on disposable sqlite at `/tmp/civio-smoke.sqlite`. No protected database |
+| Image pushed or a port published | **VERIFIED** neither happened |
 
-That script builds `civio-fsrs-smoke` and runs `scripts/fsrs-image-smoke.php` inside it. It does not deploy.
+These are three different milestones:
+
+| Milestone | Result |
+| --- | --- |
+| Production image verified | **VERIFIED** by run 39631539498 only |
+| Production application deployed | **NOT** done. No host was selected and nothing was published |
+| Production application operationally verified | **NOT** done. No staging or production traffic was exercised |
+
+A passing image smoke does not authorize deployment and does not make Smart Review production-ready.
 
 ## Multi-instance scheduling
 
@@ -149,7 +160,7 @@ Take a database dump before `migrate --force`. The entrypoint does not run `migr
 
 ### I. Operational risks
 
-The image has not been built here. The exam chunk has little room (see bundle below). File maintenance mode does not coordinate instances. Smart Review holds a per-learner lock during Node, up to the lock TTL. A stuck Node is capped at 5 seconds and leaves the reminder unfinished. Login and PDF routes are throttled.
+The image has been built on GitHub Actions and the Smart Review smoke passed there. It has not been deployed. The exam chunk has little room (see bundle below). File maintenance mode does not coordinate instances. Smart Review holds a per-learner lock during Node, up to the lock TTL. A stuck Node is capped at 5 seconds and leaves the reminder unfinished. Login and PDF routes are throttled.
 
 ### J. Smart Review health
 
@@ -165,15 +176,16 @@ Recorded above. Screenshots from this run are local artifacts, not committed.
 
 ### M. Blockers
 
-1. **BLOCKED:** `docker build` cannot unpack layers in this sandbox.
-2. **NOT VERIFIED:** sodium, Node, and `ts-fsrs` inside the actual image.
-3. **NOT VERIFIED:** multi-host PostgreSQL locking.
-4. **NOT VERIFIED:** phone, Lite Mode in the browser, offline reload, logout round-trip, and the Save the reminder click after a forced failure.
-5. Hosting is undecided. No deploy is authorized.
+1. **BLOCKED** in this sandbox: `docker build` cannot unpack layers. The GitHub-hosted runner can.
+2. **VERIFIED** image, not a deployment: [image smoke run 39631539498](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631539498). PHP 8.4.26, sodium, Node 22.23.2, and `ts-fsrs` passed inside the image. Run 39631088212 is not a pass.
+3. **NOT** deployed. **NOT** operationally verified.
+4. **NOT VERIFIED:** multi-host PostgreSQL locking.
+5. **NOT VERIFIED:** phone, Lite Mode in the browser, offline reload, logout round-trip, and the Save the reminder click after a forced failure.
+6. Hosting is undecided. No deploy is authorized.
 
 ### N. Staging sequence
 
-1. On a normal Docker host, run `scripts/fsrs-image-smoke.sh`. Do not continue if it fails.
+1. The production image smoke passed on GitHub Actions ([run 39631539498](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631539498)). That does not authorize a deploy.
 2. Start one staging instance with a new empty database, `CACHE_STORE=database`, `SESSION_DRIVER=database`, `APP_DEBUG=false`, browser migrations off.
 3. Confirm `/ping`, register a staging user, miss a fixture or approved item, see a Manila due time, answer it again without an explanation, and see the due time move.
 4. Stop Node, miss another item, confirm the failure sentence, restore Node, and use Save the reminder.
@@ -196,4 +208,4 @@ The exam chunk still has little room. Do not add to it casually. The published C
 
 ## Catalog
 
-Smart Review: **IMPLEMENTED, NOT PRODUCTION VERIFIED**. Dexter is not a chat tutor. This check does not approve question-bank content and does not promise a CSC result.
+Smart Review: **IMPLEMENTED, NOT PRODUCTION VERIFIED**. The image smoke is not deployment and is not operational verification. Dexter is not a chat tutor. This check does not approve question-bank content and does not promise a CSC result.

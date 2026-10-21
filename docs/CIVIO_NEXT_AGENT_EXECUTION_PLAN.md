@@ -12,7 +12,7 @@ This is the only roadmap to follow. [CIVIO_CURRENT_STATE_HANDOFF.md](CIVIO_CURRE
 
 ## Engineering slice, 22 October 2026
 
-Pre-deployment check, same day: [DEPLOYMENT_READINESS_2026-10-21.md](DEPLOYMENT_READINESS_2026-10-21.md). The sandbox still cannot unpack image layers. A manual `image smoke` workflow builds the Dockerfile on a GitHub-hosted Ubuntu runner. Smart Review stays implemented, not production verified, even if that image smoke passes. No deploy.
+Pre-deployment check, same day: [DEPLOYMENT_READINESS_2026-10-21.md](DEPLOYMENT_READINESS_2026-10-21.md). The sandbox still cannot unpack image layers. The manual `image smoke` workflow passed on GitHub as [run 39631539498](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631539498). That verifies the image only. Smart Review stays implemented, not production verified. No deploy.
 
 Astra's 21 October research is on `main` as `3c1fd91` and `b51c311`. It is research only. The ten numerical drafts stay unapproved and inactive.
 
