@@ -28,12 +28,12 @@ export function AiDiagnosticBanner({ aiAnalysis }: AiDiagnosticBannerProps) {
                     <div>
                         <div className="flex items-center gap-2">
                             <h4 className="text-sm font-semibold text-slate-900 sm:text-base dark:text-white">
-                                AI Diagnostic Report & Personalized Strategy
+                                Practice summary
                             </h4>
                             {status === 'ready' && (
                                 <span className="inline-flex items-center gap-1 rounded-full border border-indigo-200 bg-indigo-50 px-2 py-0.5 text-[10px] font-bold text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300">
                                     <CheckCircle2 className="size-2.5" />
-                                    Diagnostic Ready
+                                    Saved
                                 </span>
                             )}
                             {status === 'generating' && (
@@ -47,8 +47,8 @@ export function AiDiagnosticBanner({ aiAnalysis }: AiDiagnosticBannerProps) {
                             {encouragement
                                 ? encouragement
                                 : topWeakness
-                                  ? `AI diagnosed your primary target area: ${topWeakness}. Access predictive question modeling and adaptive schedules.`
-                                  : 'Access full cognitive gap diagnosis, predictive pass probability, and multi-week study calendars tailored to your exam target.'}
+                                  ? `More misses in ${topWeakness}. This is a practice count, not a pass forecast.`
+                                  : 'A count of the items you got right. Not a pass forecast and not an official rating.'}
                         </p>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ export function AiDiagnosticBanner({ aiAnalysis }: AiDiagnosticBannerProps) {
                         })}
                         className="inline-flex items-center gap-1.5 rounded-xl border border-indigo-200 bg-white px-4 py-2.5 text-xs font-bold text-indigo-700 shadow-2xs transition hover:bg-indigo-50 active:scale-95 dark:border-indigo-800 dark:bg-slate-900 dark:text-indigo-300 dark:hover:bg-slate-800"
                     >
-                        <span>Open AI Diagnostic</span>
+                        <span>Open practice summary</span>
                         <ArrowRight className="size-3.5" />
                     </Link>
                 </div>

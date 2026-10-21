@@ -344,8 +344,8 @@ export default function AiReadinessCard({
                                 </Link>
                             </h3>
                             <p className="text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                                Smart coaching insights tailored to your exam
-                                history
+                                Counts from the attempts you finished. Not a
+                                forecast.
                             </p>
                         </div>
                     </div>

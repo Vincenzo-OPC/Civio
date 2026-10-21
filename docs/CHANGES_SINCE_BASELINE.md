@@ -285,3 +285,7 @@ An explanation now counts only in the browser session that opened it, and only w
 ## Help follows the drill, not the browser, 22 October 2026
 
 Opening a second drill in the same browser no longer inherits an explanation from the first. Help is tied to the server-created served batch, or to the open Study Mock when there is no drill batch. A correct answer on a different drill can resolve the mistake. The practice percentage is the stored count of correct items, not a weighted category formula. Scorecards, analytics, and history say practice score rather than a readiness prediction or a mastered rank.
+
+## Practice labels stay factual, 22 October 2026
+
+The attempt average (mean of each finished run) and the mock-item percentage (correct mock items divided by mock items) are labeled as different counts. A subject with no items is "Not practiced", not a zero and not a critical weakness. The analytics page no longer shows a Top percent rank. "Passing Rate", "Subject Mastery", "Critical Concern", and stage names such as "Exam-Day Simulation" are not shown. A mock score of zero stays zero. "No mock yet" stays an empty ring, not a fake score. Stored attempt rows were not rewritten. Help attribution was rechecked: two drills in one browser do not share an explanation.

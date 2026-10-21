@@ -41,7 +41,16 @@ function getSubjectIcon(name: string) {
     return <Globe2 className="size-4.5 text-indigo-500" />;
 }
 
-function getMasteryBadge(percentage: number) {
+function getPracticeBadge(percentage: number, total: number) {
+    if (total <= 0) {
+        return {
+            label: 'Not practiced',
+            className:
+                'bg-slate-50 text-slate-600 border-slate-200 dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700',
+            icon: <Target className="size-3 text-slate-500" />,
+        };
+    }
+
     if (percentage >= 80) {
         return {
             label: '80%+',
@@ -64,7 +73,7 @@ function getMasteryBadge(percentage: number) {
 
     if (percentage >= 50) {
         return {
-            label: 'Review Needed',
+            label: 'Below 65%',
             className:
                 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/30 dark:text-amber-300 dark:border-amber-800',
             icon: <Target className="size-3 text-amber-600" />,
@@ -72,7 +81,7 @@ function getMasteryBadge(percentage: number) {
     }
 
     return {
-        label: 'Critical Weakness',
+        label: 'Below 50%',
         className:
             'bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-950/30 dark:text-rose-300 dark:border-rose-800',
         icon: <AlertTriangle className="size-3 text-rose-600" />,
@@ -142,7 +151,10 @@ export function SubjectBreakdownAccordion({
                 {categories.map((category) => {
                     const isExpanded = !!expandedCategories[category.name];
                     const subcats = category.subcategories || [];
-                    const mastery = getMasteryBadge(category.percentage);
+                    const mastery = getPracticeBadge(
+                        category.percentage,
+                        category.total,
+                    );
 
                     return (
                         <div
@@ -182,7 +194,9 @@ export function SubjectBreakdownAccordion({
                                 <div className="flex items-center gap-4">
                                     <div className="hidden text-right sm:block">
                                         <span className="font-heading text-base font-semibold text-slate-900 dark:text-white">
-                                            {category.percentage}%
+                                            {category.total > 0
+                                                ? `${category.percentage}%`
+                                                : '—'}
                                         </span>
                                         <Progress
                                             value={category.percentage}
@@ -206,8 +220,9 @@ export function SubjectBreakdownAccordion({
                                             {subcats.map(
                                                 (sub: SubcategoryAnalytics) => {
                                                     const subMastery =
-                                                        getMasteryBadge(
+                                                        getPracticeBadge(
                                                             sub.percentage,
+                                                            sub.total,
                                                         );
 
                                                     return (

@@ -42,7 +42,7 @@ export default function AnalyticsIndex({ stats, aiAnalysis }: AnalyticsProps) {
             <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between print:hidden">
                 <PageHeader
                     title="Performance Analytics"
-                    description={`Hi ${firstName}, track your learning path, mock exam results, and subject mastery.`}
+                    description={`Hi ${firstName}, these are practice scores from finished mocks and drills.`}
                 />
                 <div className="flex flex-wrap items-center gap-2">
                     <Button
