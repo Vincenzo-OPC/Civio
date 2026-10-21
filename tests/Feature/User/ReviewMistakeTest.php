@@ -17,6 +17,7 @@ use App\Support\ReviewCopy;
 use App\Support\ReviewDueLabel;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Testing\TestResponse;
 use Inertia\Testing\AssertableInertia as Assert;
 
@@ -669,4 +670,144 @@ test('due reviews stay reachable after the first page', function () {
         'question_ids' => [$ids[20]],
     ])->assertOk()
         ->assertJsonPath('questions.0.id', $ids[20]);
+});
+
+test('repeated scheduler failures leave every pending reminder unfinished', function () {
+    $user = User::factory()->create();
+    $first = reviewQuestion(['stem' => 'First miss while scheduling was down?']);
+    $second = reviewQuestion(['stem' => 'Second miss while scheduling was down?']);
+    $this->actingAs($user);
+    config(['civio.fsrs_node' => '/bin/false']);
+
+    try {
+        answerDrill($first, 0)->assertJsonPath('review_schedule', ReviewScheduleApplier::FAILED);
+        answerDrill($second, 0)->assertJsonPath('review_schedule', ReviewScheduleApplier::FAILED);
+        $this->postJson(route('reviews.schedules.retry'))
+            ->assertOk()
+            ->assertJsonPath('review_schedule', ReviewScheduleApplier::FAILED)
+            ->assertJsonPath('review_notice', ReviewCopy::REMINDER_FAILED);
+
+        expect(ReviewCard::query()->count())->toBe(0)
+            ->and(ReviewEvent::query()->where('scheduled', false)->count())->toBe(2)
+            ->and(ReviewEvent::query()->where('rating', 'again')->count())->toBe(2);
+
+        config(['civio.fsrs_node' => 'node']);
+
+        $this->postJson(route('reviews.schedules.retry'))
+            ->assertOk()
+            ->assertJsonPath('review_schedule', ReviewScheduleApplier::SAVED);
+    } finally {
+        config(['civio.fsrs_node' => 'node']);
+    }
+
+    expect(ReviewCard::query()->count())->toBe(2)
+        ->and(ReviewEvent::query()->where('scheduled', false)->count())->toBe(0)
+        ->and(ReviewCard::query()->where('last_rating', 'again')->count())->toBe(2)
+        ->and(ReviewCard::query()->where('due_at', '>', now())->count())->toBe(2);
+});
+
+test('recovery applies earlier ratings first and leaves assisted and strict results alone', function () {
+    $user = User::factory()->create();
+    $independent = reviewQuestion(['stem' => 'Independent chain?']);
+    $assisted = reviewQuestion(['stem' => 'Assisted chain?']);
+    $strict = reviewQuestion(['stem' => 'Strict chain?']);
+    $this->actingAs($user);
+    config(['civio.fsrs_node' => '/bin/false']);
+
+    try {
+        answerDrill($independent, 0)->assertOk();
+        answerDrill($independent, 1)->assertOk();
+        answerDrill($assisted, 0)->assertOk();
+        $this->postJson(route('exams.reveal'), ['question_id' => $assisted->id])->assertOk();
+        $this->postJson(route('exams.attempts.store'), [
+            'question_ids' => [$assisted->id],
+            'answers' => [(string) $assisted->id => 1],
+            'metadata' => ['track' => 'Drill', 'duration_secs' => 12, 'is_timed' => false],
+        ])->assertOk();
+
+        $session = ExamSession::create([
+            'user_id' => $user->id,
+            'track' => 'Professional',
+            'mode' => 'strict',
+            'question_ids' => [$strict->id],
+            'started_at' => now(),
+            'deadline_at' => now()->addHour(),
+        ]);
+        $this->postJson(route('exams.attempts.store'), [
+            'exam_session_id' => $session->id,
+            'question_ids' => [$strict->id],
+            'answers' => [(string) $strict->id => 0],
+        ])->assertOk();
+
+        expect(ReviewCard::query()->count())->toBe(0)
+            ->and(ReviewEvent::query()->where('question_id', $strict->id)->exists())->toBeFalse();
+
+        config(['civio.fsrs_node' => 'node']);
+        $this->postJson(route('reviews.schedules.retry'))
+            ->assertOk()
+            ->assertJsonPath('review_schedule', ReviewScheduleApplier::SAVED);
+    } finally {
+        config(['civio.fsrs_node' => 'node']);
+    }
+
+    $independentEvents = ReviewEvent::query()
+        ->where('question_id', $independent->id)
+        ->orderBy('id')
+        ->get();
+    $independentCard = ReviewCard::query()->where('question_id', $independent->id)->first();
+    $assistedCard = ReviewCard::query()->where('question_id', $assisted->id)->first();
+    $assistedEvent = ReviewEvent::query()
+        ->where('question_id', $assisted->id)
+        ->where('outcome', 'assisted_correct')
+        ->first();
+
+    expect($independentEvents)->toHaveCount(2)
+        ->and($independentEvents[0]->rating)->toBe('again')
+        ->and($independentEvents[0]->scheduled)->toBeTrue()
+        ->and($independentEvents[0]->card_before)->toBeNull()
+        ->and($independentEvents[1]->rating)->toBe('good')
+        ->and($independentEvents[1]->scheduled)->toBeTrue()
+        ->and($independentEvents[1]->card_before)->not->toBeNull()
+        ->and($independentCard->last_rating)->toBe('good')
+        ->and($independentCard->reps)->toBe(2)
+        ->and($assistedCard->last_rating)->toBe('again')
+        ->and($assistedCard->reps)->toBe(1)
+        ->and($assistedEvent->scheduled)->toBeFalse()
+        ->and($assistedEvent->rating)->toBeNull()
+        ->and(ReviewEvent::query()->where('question_id', $strict->id)->exists())->toBeFalse()
+        ->and(ReviewCard::query()->where('question_id', $strict->id)->exists())->toBeFalse();
+});
+
+test('a schedule request that cannot take the learner lock does not claim success', function () {
+    $user = User::factory()->create();
+    $question = reviewQuestion(['stem' => 'Locked reminder?']);
+    $this->actingAs($user);
+    config(['civio.fsrs_node' => '/bin/false']);
+    answerDrill($question, 0)->assertOk();
+    config([
+        'civio.fsrs_node' => 'node',
+        'civio.fsrs_lock_wait' => 0,
+    ]);
+    $held = Cache::lock('review-schedule:'.$user->id, 20);
+    expect($held->get())->toBeTrue();
+
+    try {
+        $this->postJson(route('reviews.schedules.retry'))
+            ->assertOk()
+            ->assertJsonPath('review_schedule', ReviewScheduleApplier::FAILED)
+            ->assertJsonPath('review_notice', ReviewCopy::REMINDER_FAILED);
+
+        expect(ReviewCard::query()->count())->toBe(0)
+            ->and(ReviewEvent::query()->first()->scheduled)->toBeFalse();
+    } finally {
+        $held->release();
+        config(['civio.fsrs_lock_wait' => 10]);
+    }
+
+    $this->postJson(route('reviews.schedules.retry'))
+        ->assertOk()
+        ->assertJsonPath('review_schedule', ReviewScheduleApplier::SAVED);
+
+    expect(ReviewCard::query()->first()->due_at->greaterThan(now()))->toBeTrue()
+        ->and(ReviewEvent::query()->first()->scheduled)->toBeTrue();
 });

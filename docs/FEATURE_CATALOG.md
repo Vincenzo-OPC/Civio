@@ -11,6 +11,7 @@ Checked against the routes, controllers, and tests on 22 October 2026. Statuses:
 - **EXPERIMENTAL** — present, not a product promise.
 - **DISABLED** — kept from doing the thing it used to imply.
 - **BLOCKED** — cannot finish without a decision or a missing dependency.
+- **IMPLEMENTED, NOT PRODUCTION VERIFIED** — behavior is tested. The production image has not been built and the feature is not deployed.
 
 Public wording lives in [WEBSITE_FEATURE_COPY.md](WEBSITE_FEATURE_COPY.md).
 
@@ -35,7 +36,7 @@ Public wording lives in [WEBSITE_FEATURE_COPY.md](WEBSITE_FEATURE_COPY.md).
 | Copy Question | Copy the visible question for an outside assistant | Examinee | Both | Exam actions | `copy-for-ai-button.tsx` | Copy tests | IMPLEMENTED, NOT END-TO-END VERIFIED | Does not call Reveal. Does not grade | Free | Yes, as Copy Question |
 | Ask | Open the assistant chosen in Settings | Examinee | Both | Exam actions and Settings | Ask buttons, settings | Settings tests if present | IMPLEMENTED, NOT END-TO-END VERIFIED | No Civio API call. No answer key is added by the button | Free | Yes, as Ask |
 | Review Mistakes | Remember a wrong practice answer and let the learner retry without the key | Signed-in learner | Both | `/reviews/mistakes` | `ReviewMistakeRecorder` | `ReviewMistakeTest` | VERIFIED IMPLEMENTED | Strict Mock writes nothing. An explanation blocks that drill from clearing the mistake. Resolved is not mastered | Account | Yes |
-| Smart Review | Remind the learner to practice a missed question again before they forget it | Signed-in learner | Both | `/reviews/mistakes` | `FsrsScheduler`, `scripts/fsrs-apply.mjs`, `review_cards`, `review_events` | `ReviewMistakeTest` | VERIFIED IMPLEMENTED | Online only. The production image keeps Node 22 and `ts-fsrs`, removes npm, and includes PHP sodium. Scheduling runs after the grade is saved. A failed reminder stays unfinished and is not shown as Review Complete. Due Today is paged at 20. Not deployed | Account | No. Not deployed |
+| Smart Review | Remind the learner to practice a missed question again before they forget it | Signed-in learner | Both | `/reviews/mistakes` | `FsrsScheduler`, `scripts/fsrs-apply.mjs`, `review_cards`, `review_events` | `ReviewMistakeTest` | IMPLEMENTED, NOT PRODUCTION VERIFIED | Online only. Needs Node and `ts-fsrs` beside PHP. A failed reminder stays unfinished, including after repeated failures, and is not Review Complete. Assisted answers and Strict Mocks do not move a due date. Due Today is paged at 20. The image was not built here and is not deployed | Account | No. Not production verified |
 
 ## Improve
 

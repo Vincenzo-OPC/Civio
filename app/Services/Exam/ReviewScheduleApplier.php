@@ -36,10 +36,13 @@ final class ReviewScheduleApplier
 
     public function apply(int $userId): string
     {
-        $lock = Cache::lock('review-schedule:'.$userId, 20);
+        $lock = Cache::lock(
+            'review-schedule:'.$userId,
+            max(1, (int) config('civio.fsrs_lock_seconds', 20)),
+        );
 
         try {
-            $lock->block(10);
+            $lock->block(max(0, (int) config('civio.fsrs_lock_wait', 10)));
         } catch (Throwable $exception) {
             report($exception);
 

@@ -33,7 +33,7 @@ FSRS, updated 22 October 2026:
 
 Signed-in drills and Study Mocks now persist a review card and an append-only review event. The server runs the existing `ts-fsrs` 5.4.2 package (`scripts/fsrs-apply.mjs`). The browser does not choose the due date. Policy `civio-fsrs-policy-1`: a wrong answer is Again, an independent correct answer is Good, and an assisted correct answer does not move the date. Speed never selects Hard or Easy. Due reviews are listed at `/reviews/mistakes`, 20 at a time. A Strict Mock writes nothing. The client wrapper in `resources/js/lib/review/fsrs.ts` remains for unit tests and is not what grades a learner.
 
-The grade is committed before Node runs, so a scheduler failure does not roll back the answer. The Node call times out after 5 seconds and does not hold the question row lock. The event stays unscheduled. Review Mistakes says the reminder was not saved, and the next saved answer or "Save the reminder" tries again. That is not a success until a due time is stored.
+The grade is committed before Node runs, so a scheduler failure does not roll back the answer. The Node call times out after 5 seconds and does not hold the question row lock. A per-learner lock is held only while that scheduling runs, so two requests cannot apply the same old card. If the lock or Node fails, the event stays unscheduled. Repeating the failure does not invent a due date. Review Mistakes says the reminder was not saved, and the next saved answer or "Save the reminder" tries again. That is not a success until a due time is stored. An assisted correct answer and a Strict Mock are not part of that retry.
 
 The production image keeps the Node 22 binary and `node_modules/ts-fsrs` only. npm is removed. The image is not deployed.
 

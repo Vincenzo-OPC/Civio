@@ -60,5 +60,6 @@ Do not say "FSRS" on the public site. Do not say a question is mastered.
 - Dexter is an AI tutor.
 - Dexter is the tutor.
 - Smart Review is deployed.
+- Smart Review is production verified.
 - Smart Review works offline.
 - A score here is your exam result.
