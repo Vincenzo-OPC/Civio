@@ -20,6 +20,7 @@ use App\Models\User;
 use App\Services\Exam\ReviewMistakeRecorder;
 use App\Services\Exam\ReviewScheduleApplier;
 use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Process;
 
 foreach ([
@@ -49,6 +50,11 @@ $app = require __DIR__.'/../bootstrap/app.php';
 $kernel = $app->make(Kernel::class);
 $kernel->bootstrap();
 
+set_exception_handler(function (\Throwable $exception): void {
+    fwrite(STDERR, $exception::class.': '.$exception->getMessage()."\n");
+    exit(1);
+});
+
 function smokeFail(string $message): never
 {
     fwrite(STDERR, $message."\n");
@@ -69,6 +75,10 @@ $nodeVersion = trim($node->output());
 if (! $node->successful() || ! str_starts_with($nodeVersion, 'v22.')) {
     smokeFail('Node 22 was not retained. Found: '.$nodeVersion.$node->errorOutput());
 }
+
+fwrite(STDOUT, 'php '.PHP_VERSION."\n");
+fwrite(STDOUT, 'node '.$nodeVersion."\n");
+fwrite(STDOUT, "sodium loaded\n");
 
 if (is_file('/usr/local/bin/npm') || is_file('/usr/bin/npm')) {
     smokeFail('npm must not remain in the production image.');
@@ -175,7 +185,4 @@ if ($recovered !== ReviewScheduleApplier::SAVED || $recoveredCard === null || $r
     smokeFail('The reminder did not recover after the scheduler worked again.');
 }
 
-fwrite(STDOUT, 'php '.PHP_VERSION."\n");
-fwrite(STDOUT, 'node '.$nodeVersion."\n");
-fwrite(STDOUT, "sodium loaded\n");
 fwrite(STDOUT, "fsrs image smoke passed\n");

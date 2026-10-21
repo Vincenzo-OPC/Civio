@@ -17,10 +17,20 @@ if ! command -v openssl >/dev/null 2>&1; then
     exit 1
 fi
 APP_KEY="base64:$(openssl rand -base64 32 | tr -d '\n')"
+log="$(mktemp)"
+trap 'rm -f "$log"' EXIT
 
 docker build -t "$IMAGE" .
+set +e
 docker run --rm \
     -e APP_KEY="$APP_KEY" \
     --entrypoint php \
     "$IMAGE" \
-    scripts/fsrs-image-smoke.php
+    scripts/fsrs-image-smoke.php > "$log" 2>&1
+status="$?"
+set -e
+cat "$log"
+if [ "$status" -ne 0 ] || ! grep -q 'fsrs image smoke passed' "$log"; then
+    echo "The image smoke did not pass." >&2
+    exit 1
+fi
