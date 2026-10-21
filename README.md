@@ -19,6 +19,10 @@ Subprofessional mocks, practice drills, learn modules, and the Dexter tutor.
   when back online (the server re-checks every answer; offline items never
   appear in mocks).
 - Guest study without an account (`CIVIO_GUEST_UNLIMITED`).
+- Review Mistakes and Smart Review for a signed-in learner: a missed question
+  can be tried again, and Civio schedules the next reminder on the server.
+  Smart Review needs a connection. One correct retry is not mastery. See
+  `docs/FEATURE_CATALOG.md`.
 
 ## Stack
 

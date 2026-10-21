@@ -20,7 +20,9 @@ Analytics no longer shows a Top 50% rank when fewer than six attempts exist or t
 
 Bank signature tests need the PHP sodium extension. This environment does not have it, so those tests were not treated as a regression. No question was imported or activated. No deploy.
 
-Help on Review Mistakes follows the served drill batch, or the open Study Mock when no drill batch exists. A second drill in the same browser does not inherit the first explanation. The practice percentage is the stored correct-item count, not a weighted category formula. FSRS is still not wired.
+Help on Review Mistakes follows the served drill batch, or the open Study Mock when no drill batch exists. A second drill in the same browser does not inherit the first explanation. A later overlapping drill also does not erase the first drill's explanation. The practice percentage is the stored correct-item count, not a weighted category formula.
+
+Smart Review is wired for signed-in online practice. See [FEATURE_CATALOG.md](FEATURE_CATALOG.md). It is not offline, and it is not a mastery model. FSRS parameters are not trained. The next learning slice is Astra's curriculum work, not another scheduler.
 
 Session start SHA: `3c18ec0258ec855795654afc85a93fa435684d55`. The setup-copy commit is `d8d1714`. Confirm the tip with `git rev-parse origin/main` after the docs commit that records it.
 
@@ -38,7 +40,7 @@ Session start SHA: `3c18ec0258ec855795654afc85a93fa435684d55`. The setup-copy co
 - Show Explanation / Hide Explanation, checked Reveal, Copy Question, Ask. [answer-reveal.tsx](../resources/js/pages/user/exams/components/session/answer-reveal.tsx), [RevealTutor.php](../app/Services/Exam/Reveal/RevealTutor.php).
 - Dexter is a backend key check at [DexterEvaluationService.php](../app/Services/Exam/DexterEvaluationService.php). It is not a chat tutor. Do not describe it as one.
 - Flag, Question List, Notes, timer, pause where allowed, guest study, Lite Mode, offline drill packs.
-- FSRS math only: [fsrs.ts](../resources/js/lib/review/fsrs.ts). Not wired. See [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md).
+- Smart Review for signed-in online practice: [FsrsScheduler.php](../app/Services/Exam/FsrsScheduler.php). Not offline. See [FEATURE_CATALOG.md](FEATURE_CATALOG.md).
 - Exam booklet PDF for admin and `can_download_pdf` accounts. Libraries stay out of the main bundle. [global-pdf-exporter.tsx](../resources/js/components/shared/global-pdf-exporter.tsx).
 
 ## Do not restore
@@ -71,7 +73,7 @@ Do them in order. One slice each.
 | 4. Visual polish | Time dials, the 80% mark, and solid buttons exist. | Hover copy on the homepage sample is a `title`, not the exam tooltip. | Do not add Motion. Reuse CSS. |
 | 5. Exam workspace | The live exam is the source of truth. | No rendered screenshot was captured in the last session. | Compare [exam-screen-preview.tsx](../resources/js/components/domain/exam-screen-preview.tsx) with the live exam when you change a control. |
 | 6. Teaching | Reveal checks perimeter, PEMDAS, sequences, filing, mixture, grammar, mean, median, percent, interest, and factors against the key. | Many items still show only the stored explanation. | Add one solver in [RevealTutor.php](../app/Services/Exam/Reveal/RevealTutor.php) with a Pest test. Never publish a lesson that disagrees with the key. |
-| 7. FSRS | Wrapper and unit tests only. | No table, no write on answer, no due queue, no offline sync. | PDF prerequisite complete. Establish durable server-graded review events before scheduling; see the delivery recommendation. |
+| 7. FSRS | Signed-in online Smart Review. Server runs ts-fsrs. Due list is Review Mistakes. | No offline sync. No trained parameters. Resolved is not mastered. | [FEATURE_CATALOG.md](FEATURE_CATALOG.md) and [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md). |
 | 8. Dashboard | History, drills, and the calendar exist. | Meters must come from stored data. No fake readiness. | [CODEX_HANDOFF_PLAN.md](CODEX_HANDOFF_PLAN.md) section 0.2 is the brief, not a claim that it exists. |
 | 9. Book architecture | The exam booklet generator exists. The Complete Reviewer does not. | Separate content from print. Do not import the typesetter into the exam bundle. | Research Vivliostyle, Paged.js, or Typst. Pick one. |
 | 10. Sample chapter | Not started. | One verified chapter: terminal-digit filing, from the definition through worked items. | Write the lesson before the layout. |

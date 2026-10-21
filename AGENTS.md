@@ -171,7 +171,7 @@ See `docs/LIBRARIES.md` for researched options and verdicts.
 Adopted now:
 
 - **vite-plugin-pwa** — generated SW (`resources/js/sw.ts`), NetworkOnly for `/exams`, prompt update
-- **ts-fsrs** — `resources/js/lib/review/fsrs.ts` (scheduler only; UI later); `npm run test:js`
+- **ts-fsrs** — server scheduling via `scripts/fsrs-apply.mjs` and `App\Services\Exam\FsrsScheduler` (policy `civio-fsrs-policy-1`). The browser wrapper `resources/js/lib/review/fsrs.ts` stays for unit tests. Online only.
 - **prism-php/prism** — installed; `App\Ai\Contracts\TutorProvider` + `NullTutorProvider` default
 - **sentry/sentry-laravel** — no-op unless `SENTRY_LARAVEL_DSN` is set
 
