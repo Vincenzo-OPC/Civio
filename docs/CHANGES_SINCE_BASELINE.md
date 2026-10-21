@@ -289,3 +289,12 @@ Opening a second drill in the same browser no longer inherits an explanation fro
 ## Practice labels stay factual, 22 October 2026
 
 The attempt average (mean of each finished run) and the mock-item percentage (correct mock items divided by mock items) are labeled as different counts. A subject with no items is "Not practiced", not a zero and not a critical weakness. The analytics page no longer shows a Top percent rank. "Passing Rate", "Subject Mastery", "Critical Concern", and stage names such as "Exam-Day Simulation" are not shown. A mock score of zero stays zero. "No mock yet" stays an empty ring, not a fake score. Stored attempt rows were not rewritten. Help attribution was rechecked: two drills in one browser do not share an explanation.
+
+## Help stays on the drill that was submitted, 22 October 2026
+
+A later drill that also contains an item no longer makes the earlier drill look unassisted. Submit uses the batch the page claims, then the batch whose ids match exactly. Reveal can claim the open Study Mock with its session id, so a newer drill does not take that explanation. A second drill still does not inherit the first explanation.
+
+## Smart Review, 22 October 2026
+
+A signed-in miss now stores one review card and one append-only review event. The server runs the existing ts-fsrs 5.4.2 package. A wrong answer is Again. An independent correct answer is Good and moves the due time. An assisted correct answer does not. A blank answer and a repeated submit do not add a success. Strict Mocks write nothing. Due reviews appear on Review Mistakes in Philippine time. The reminder is online only. Resolved still does not mean mastered. The public homepage says so in one short section. The catalog is `docs/FEATURE_CATALOG.md`.
+

@@ -39,6 +39,45 @@ final class ServedPracticeQuestions
         return $found;
     }
 
+    /** Newest served batch whose ids are exactly the submitted set. */
+    public function exactBatchId(Session $session, ?int $userId, array $questionIds): ?string
+    {
+        $wanted = array_values(array_unique(array_map('intval', $questionIds)));
+        sort($wanted);
+        $found = null;
+
+        foreach ($this->openBatches($session, $userId) as $batch) {
+            $ids = array_values(array_unique($batch['ids']));
+            sort($ids);
+
+            if ($ids === $wanted) {
+                $found = $batch['id'];
+            }
+        }
+
+        return $found;
+    }
+
+    /** The claimed batch belongs to this browser and contains every submitted id. */
+    public function ownsBatch(Session $session, ?int $userId, string $batchId, array $questionIds): bool
+    {
+        if (strlen($batchId) !== 32) {
+            return false;
+        }
+
+        $wanted = array_map('intval', $questionIds);
+
+        foreach ($this->openBatches($session, $userId) as $batch) {
+            if (! hash_equals($batch['id'], $batchId)) {
+                continue;
+            }
+
+            return array_diff($wanted, $batch['ids']) === [];
+        }
+
+        return false;
+    }
+
     /** Newest served batch that included this one item. */
     public function questionBatchId(Session $session, ?int $userId, int $questionId): ?string
     {

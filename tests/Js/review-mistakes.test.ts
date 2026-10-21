@@ -3,12 +3,18 @@ import { describe, it } from 'node:test';
 import { reviewMistakesCopy } from '../../resources/js/lib/review-mistakes.ts';
 
 describe('review mistakes copy', () => {
-    it('calls the list practice history and does not claim mastery or readiness', () => {
+    it('explains the reminder and does not claim mastery or readiness', () => {
         const copy = reviewMistakesCopy();
-        const text = `${copy.title} ${copy.note}`.toLowerCase();
+        const text =
+            `${copy.title} ${copy.note} ${copy.due} ${copy.upcoming} ${copy.needs} ${copy.complete} ${copy.empty}`.toLowerCase();
 
-        assert.match(text, /practice history/);
+        assert.match(text, /before you forget/);
+        assert.match(text, /due today/);
+        assert.match(text, /upcoming reviews/);
+        assert.match(text, /needs review/);
+        assert.match(text, /review complete/);
         assert.equal(text.includes('mastery'), false);
         assert.equal(text.includes('readiness'), false);
+        assert.equal(text.includes('fsrs'), false);
     });
 });

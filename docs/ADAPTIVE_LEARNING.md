@@ -25,22 +25,12 @@ What this pass changed (Phase 1 slice):
 Not done, and not claimed:
 
 - A concept library shared across questions.
-- Persistent mastery, spaced review, and a diagnostic that changes the next item for every skill.
+- A diagnostic that changes the next item for every skill.
 - Pass probabilities.
+- Offline spaced review.
 
-FSRS, traced on 16 October 2026 against `main`:
+FSRS, updated 22 October 2026:
 
-The scheduler in `resources/js/lib/review/fsrs.ts` can create a card and compute the next due date. `tests/Js/fsrs.test.ts` covers that function. Nothing else imports `initCard`, `scheduleAfterAnswer`, or `previewRatings`.
+Signed-in drills and Study Mocks now persist a review card and an append-only review event. The server runs the existing `ts-fsrs` 5.4.2 package (`scripts/fsrs-apply.mjs`). The browser does not choose the due date. Policy `civio-fsrs-policy-1`: a wrong answer is Again, an independent correct answer is Good, and an assisted correct answer does not move the date. Speed never selects Hard or Easy. Due reviews are listed at `/reviews/mistakes`. A Strict Mock writes nothing. The client wrapper in `resources/js/lib/review/fsrs.ts` remains for unit tests and is not what grades a learner.
 
-| Link | Status |
-| --- | --- |
-| A learner finishes a question | The exam and drills save an attempt. They do not call the scheduler. |
-| A persistent review record | No review-card table. The card state is not stored. |
-| A computed next-review date | Computed only inside the unused wrapper. |
-| A due-review queue | Not built. The study calendar is a task list, not FSRS. |
-| The next drill the learner opens | Chosen by topic, weakness, or a saved set. Not by due cards. |
-| Offline review and sync | Offline packs sync answers. They do not sync FSRS cards. |
-
-The smallest next slice is one table for card state, one write when a drill item is answered, and one due list. That is a separate change, with its own tests. It is not part of the exam typography pass.
-
-Those stay later. The scoring, mock timer, and strict-mode lock (no explanation until submit) are unchanged.
+The 16 October 2026 trace, which found no card table, is historical. Offline packs still do not sync review cards.

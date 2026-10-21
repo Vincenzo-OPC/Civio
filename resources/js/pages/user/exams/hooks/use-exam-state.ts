@@ -241,6 +241,7 @@ export function useExamState(props: ExamIndexProps) {
             answerChanges,
             selectedExamId,
             examSessionId,
+            practiceBatchId: props.practiceBatchId ?? null,
             isTimed,
             sessionTimeLimitSecs,
             timeLeft,
@@ -852,5 +853,6 @@ export function useExamState(props: ExamIndexProps) {
         setIsPaused,
         subscribeClock,
         getClockSnapshot,
+        examSessionId,
     };
 }

@@ -4,11 +4,17 @@ use App\Models\Category;
 use App\Models\ExamAttempt;
 use App\Models\ExamSession;
 use App\Models\Question;
+use App\Models\ReviewCard;
+use App\Models\ReviewEvent;
 use App\Models\ReviewHelp;
 use App\Models\ReviewItem;
 use App\Models\Subcategory;
 use App\Models\User;
+use App\Services\Exam\FsrsScheduler;
 use App\Services\Exam\ReviewMistakeRecorder;
+use App\Support\ReviewCopy;
+use App\Support\ReviewDueLabel;
+use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Testing\TestResponse;
 use Inertia\Testing\AssertableInertia as Assert;
@@ -125,7 +131,7 @@ test('review mistakes stay with the owner and hide the answer key', function () 
         ->assertOk()
         ->assertInertia(fn (Assert $page) => $page
             ->component('user/drills/mistakes')
-            ->where('note', 'This is practice history. A later correct answer, given without an explanation, clears the item.')
+            ->where('note', ReviewCopy::NOTE)
             ->where('items.0.stem', 'Which value is larger?')
             ->missing('items.0.correct_option'));
 
@@ -152,7 +158,7 @@ test('an empty review list and a draft stay out of the practice history', functi
         ->assertInertia(fn (Assert $page) => $page
             ->component('user/drills/mistakes')
             ->has('items', 0)
-            ->where('note', 'This is practice history. A later correct answer, given without an explanation, clears the item.'));
+            ->where('note', ReviewCopy::NOTE));
 
     $draft = reviewQuestion(['status' => 'draft', 'stem' => 'Hidden draft stem']);
     $attemptId = ExamAttempt::create([
@@ -312,4 +318,223 @@ test('a study mock explanation does not assist the next drill', function () {
 
     answerDrill($question, 1)->assertOk();
     expect(ReviewItem::query()->where('question_id', $question->id)->first()->status)->toBe('resolved');
+});
+
+test('a later overlapping drill does not drop the explanation on the first drill', function () {
+    $user = User::factory()->create();
+    $first = reviewQuestion(['stem' => 'First drill item?']);
+    $second = reviewQuestion(['stem' => 'Second drill item?']);
+    $this->actingAs($user);
+
+    answerDrill($first, 0)->assertOk();
+    $this->postJson(route('exams.reveal'), ['question_id' => $first->id])->assertOk();
+    $this->get(route('exams.index', [
+        'drill' => 'true',
+        'custom_question_ids' => json_encode([$first->id, $second->id]),
+    ]))->assertOk();
+    $this->postJson(route('exams.attempts.store'), [
+        'question_ids' => [$first->id],
+        'answers' => [(string) $first->id => 1],
+        'metadata' => ['track' => 'Drill', 'duration_secs' => 12, 'is_timed' => false],
+    ])->assertOk();
+
+    expect(ReviewItem::query()->where('question_id', $first->id)->first()->status)->toBe('pending');
+});
+
+test('the open drill can claim its own batch after a newer one exists', function () {
+    $user = User::factory()->create();
+    $question = reviewQuestion();
+    $this->actingAs($user);
+
+    answerDrill($question, 0)->assertOk();
+    $first = session('civio_practice_served_'.$user->id)[0]['id'];
+    $this->postJson(route('exams.reveal'), [
+        'question_id' => $question->id,
+        'practice_batch_id' => $first,
+    ])->assertOk();
+    $this->get(route('exams.index', [
+        'drill' => 'true',
+        'custom_question_ids' => json_encode([$question->id]),
+    ]))->assertOk();
+    $this->postJson(route('exams.attempts.store'), [
+        'question_ids' => [$question->id],
+        'answers' => [(string) $question->id => 1],
+        'practice_batch_id' => $first,
+        'metadata' => ['track' => 'Drill', 'duration_secs' => 12, 'is_timed' => false],
+    ])->assertOk();
+
+    expect(ReviewItem::query()->where('question_id', $question->id)->first()->status)->toBe('pending');
+});
+
+test('a study mock can claim its own explanation after a newer drill', function () {
+    $user = User::factory()->create();
+    $question = reviewQuestion();
+    $this->actingAs($user);
+    answerDrill($question, 0)->assertOk();
+    $session = ExamSession::create([
+        'user_id' => $user->id,
+        'track' => 'Subprofessional',
+        'mode' => 'study',
+        'question_ids' => [$question->id],
+        'started_at' => now(),
+        'deadline_at' => now()->addHour(),
+    ]);
+    $this->get(route('exams.index', [
+        'drill' => 'true',
+        'custom_question_ids' => json_encode([$question->id]),
+    ]))->assertOk();
+    $this->postJson(route('exams.reveal'), [
+        'question_id' => $question->id,
+        'exam_session_id' => $session->id,
+    ])->assertOk();
+    $this->postJson(route('exams.attempts.store'), [
+        'exam_session_id' => $session->id,
+        'question_ids' => [$question->id],
+        'answers' => [(string) $question->id => 1],
+    ])->assertOk();
+
+    expect(ReviewItem::query()->where('question_id', $question->id)->first()->status)->toBe('pending');
+});
+
+test('a wrong answer schedules a review and an independent correct moves it later', function () {
+    $user = User::factory()->create();
+    $question = reviewQuestion();
+    $this->actingAs($user);
+
+    answerDrill($question, 0)->assertOk();
+    $card = ReviewCard::query()->where('question_id', $question->id)->first();
+    $firstDue = $card->due_at->copy();
+
+    expect($card->scheduler_version)->toBe(FsrsScheduler::VERSION)
+        ->and($card->policy_version)->toBe('civio-fsrs-policy-1')
+        ->and($card->last_rating)->toBe('again')
+        ->and($firstDue->greaterThan(now()))->toBeTrue()
+        ->and(ReviewEvent::query()->where('outcome', 'incorrect')->count())->toBe(1);
+
+    $this->travel(2)->minutes();
+    auth()->logout();
+    $this->actingAs($user)->get(route('reviews.mistakes.index'))
+        ->assertOk()
+        ->assertInertia(fn (Assert $page) => $page
+            ->where('dueLabel', 'Due Today')
+            ->where('due.0.question_id', $question->id)
+            ->where('due.0.status_label', 'Due for Review')
+            ->where('total', 0)
+            ->missing('due.0.correct_option'));
+
+    $this->actingAs(User::factory()->create())->getJson(route('reviews.mistakes.index'))
+        ->assertOk()
+        ->assertJsonCount(0, 'due')
+        ->assertJsonCount(0, 'items');
+
+    $this->actingAs($user);
+    answerDrill($question, 1)->assertOk();
+    $card->refresh();
+
+    expect(ReviewItem::query()->first()->status)->toBe('resolved')
+        ->and($card->due_at->greaterThan($firstDue))->toBeTrue()
+        ->and($card->last_rating)->toBe('good')
+        ->and(ReviewEvent::query()->where('outcome', 'independent_correct')->count())->toBe(1)
+        ->and(ReviewCard::query()->count())->toBe(1);
+});
+
+test('an assisted correct answer does not move the review date', function () {
+    $user = User::factory()->create();
+    $question = reviewQuestion();
+    $this->actingAs($user);
+    answerDrill($question, 0)->assertOk();
+    $due = ReviewCard::query()->first()->due_at->copy();
+    $this->postJson(route('exams.reveal'), ['question_id' => $question->id])->assertOk();
+    $this->postJson(route('exams.attempts.store'), [
+        'question_ids' => [$question->id],
+        'answers' => [(string) $question->id => 1],
+        'metadata' => ['track' => 'Drill', 'duration_secs' => 4, 'is_timed' => false],
+    ])->assertOk();
+
+    $event = ReviewEvent::query()->where('outcome', 'assisted_correct')->first();
+
+    expect(ReviewItem::query()->first()->status)->toBe('pending')
+        ->and(ReviewCard::query()->first()->due_at->equalTo($due))->toBeTrue()
+        ->and($event->rating)->toBeNull()
+        ->and($event->scheduled)->toBeFalse()
+        ->and(ReviewEvent::query()->count())->toBe(2);
+});
+
+test('a skipped answer and a repeated attempt do not add a successful review', function () {
+    $user = User::factory()->create();
+    $question = reviewQuestion();
+    $this->actingAs($user);
+    $response = answerDrill($question, 0)->assertOk();
+    $attemptId = (int) $response->json('attempt_id');
+    $loaded = Question::query()->with('subcategory.category')->findOrFail($question->id);
+
+    $this->postJson(route('exams.attempts.store'), [
+        'question_ids' => [$question->id],
+        'answers' => [(string) $question->id => null],
+        'metadata' => ['track' => 'Drill', 'duration_secs' => 4, 'is_timed' => false],
+    ])->assertOk();
+
+    expect(ReviewEvent::query()->count())->toBe(1);
+
+    app(ReviewMistakeRecorder::class)->record(
+        $user->id,
+        $attemptId,
+        false,
+        [$question->id => 0],
+        new Collection([$loaded]),
+        null,
+    );
+
+    expect(ReviewEvent::query()->count())->toBe(1)
+        ->and(ReviewCard::query()->count())->toBe(1);
+});
+
+test('an inactive question leaves the due list and a strict mock schedules nothing', function () {
+    $user = User::factory()->create();
+    $question = reviewQuestion();
+    $this->actingAs($user);
+    answerDrill($question, 0)->assertOk();
+    $question->forceFill(['status' => 'draft'])->save();
+    $this->travel(2)->minutes();
+
+    $this->get(route('reviews.mistakes.index'))
+        ->assertOk()
+        ->assertDontSee($question->stem);
+
+    $strict = reviewQuestion(['stem' => 'Strict item?']);
+    $session = ExamSession::create([
+        'user_id' => $user->id,
+        'track' => 'Professional',
+        'mode' => 'strict',
+        'question_ids' => [$strict->id],
+        'started_at' => now(),
+        'deadline_at' => now()->addHour(),
+    ]);
+    $this->postJson(route('exams.attempts.store'), [
+        'exam_session_id' => $session->id,
+        'question_ids' => [$strict->id],
+        'answers' => [(string) $strict->id => 0],
+    ])->assertOk();
+
+    expect(ReviewCard::query()->where('question_id', $strict->id)->exists())->toBeFalse()
+        ->and(ReviewEvent::query()->where('question_id', $strict->id)->exists())->toBeFalse();
+});
+
+test('a review time just after midnight in Manila uses that calendar day', function () {
+    expect(ReviewDueLabel::format(Carbon::parse('2026-10-21T16:30:00Z')))
+        ->toBe('Oct 22, 2026 12:30 AM');
+});
+
+test('the same graded card and clock produce the same due instant', function () {
+    $now = Carbon::parse('2026-10-21T04:00:00Z');
+    $scheduler = app(FsrsScheduler::class);
+    $first = $scheduler->applyMany([
+        ['key' => '9', 'card' => null, 'rating' => 'again'],
+    ], $now);
+    $second = $scheduler->applyMany([
+        ['key' => '9', 'card' => null, 'rating' => 'again'],
+    ], $now);
+
+    expect($first['9']['due'])->toBe($second['9']['due'])
+        ->and($first['9']['state'])->toBe('learning');
 });

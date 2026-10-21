@@ -46,7 +46,7 @@ class ExamController extends Controller
         $data = $this->examService->getExamSessionData($query, auth()->id(), LiteMode::enabled($request));
 
         if (($query->isDrill || $data['retakeSource'] !== null) && $data['savedAttempt'] === null) {
-            app(ServedPracticeQuestions::class)->remember(
+            $data['practiceBatchId'] = app(ServedPracticeQuestions::class)->remember(
                 $request->session(), auth()->id(), array_column($data['questions'], 'id')
             );
         }
@@ -93,7 +93,13 @@ class ExamController extends Controller
             clientIp: $request->ip(),
             hasPendingGuestAttempt: $hasPendingGuest,
             examSession: $examSession,
-            reviewSessionHash: $this->helpToken($request, $dto->questionIds, $examSession),
+            reviewSessionHash: $this->helpToken(
+                $request,
+                $dto->questionIds,
+                $examSession,
+                'submit',
+                $dto->practiceBatchId,
+            ),
         );
 
         if (! auth()->check() && $result->attemptId) {
@@ -185,6 +191,8 @@ class ExamController extends Controller
             'chosen_option' => 'sometimes|nullable|integer|min:0|max:7',
             'weak_subcategories' => 'sometimes|array|max:20',
             'weak_subcategories.*' => 'string|max:191',
+            'practice_batch_id' => 'sometimes|nullable|string|size:32',
+            'exam_session_id' => 'sometimes|nullable|string|size:26',
         ]);
 
         if ($this->strictMockLock->isLocked((int) $request->question_id, auth()->id(), $request->session())) {
@@ -217,7 +225,13 @@ class ExamController extends Controller
         app(ReviewMistakeRecorder::class)->noteHelp(
             $request->user()?->id,
             (int) $question->id,
-            $this->helpToken($request, [(int) $question->id]),
+            $this->helpToken(
+                $request,
+                [(int) $question->id],
+                $this->claimedStudySession($request, (int) $question->id),
+                'reveal',
+                $request->string('practice_batch_id')->toString() ?: null,
+            ),
         );
 
         return response()->json([
@@ -238,6 +252,8 @@ class ExamController extends Controller
     {
         $request->validate([
             'question_id' => 'required|integer|exists:questions,id',
+            'practice_batch_id' => 'sometimes|nullable|string|size:32',
+            'exam_session_id' => 'sometimes|nullable|string|size:26',
         ]);
 
         if ($this->strictMockLock->isLocked((int) $request->question_id, auth()->id(), $request->session())) {
@@ -255,7 +271,13 @@ class ExamController extends Controller
         app(ReviewMistakeRecorder::class)->noteHelp(
             $request->user()?->id,
             (int) $question->id,
-            $this->helpToken($request, [(int) $question->id]),
+            $this->helpToken(
+                $request,
+                [(int) $question->id],
+                $this->claimedStudySession($request, (int) $question->id),
+                'reveal',
+                $request->string('practice_batch_id')->toString() ?: null,
+            ),
         );
 
         return response()->json([
@@ -269,12 +291,18 @@ class ExamController extends Controller
 
     /**
      * Server-owned identity for one practice batch or one open Study Mock.
-     * A second drill in the same browser gets a new batch id.
+     * A submit prefers the batch the page claimed, then an exact id match,
+     * so a later overlapping drill does not steal or drop the explanation.
      *
      * @param  array<int, int>  $questionIds
      */
-    private function helpToken(Request $request, array $questionIds, ?ExamSession $examSession = null): ?string
-    {
+    private function helpToken(
+        Request $request,
+        array $questionIds,
+        ?ExamSession $examSession = null,
+        string $purpose = 'submit',
+        ?string $claimedBatch = null,
+    ): ?string {
         if ($examSession !== null) {
             return $examSession->isStrict() ? null : hash('sha256', 'exam:'.$examSession->id);
         }
@@ -286,12 +314,28 @@ class ExamController extends Controller
         }
 
         $served = app(ServedPracticeQuestions::class);
-        $ids = array_values(array_map('intval', $questionIds));
+        $ids = array_values(array_unique(array_map('intval', $questionIds)));
+
+        if ($claimedBatch !== null && $served->ownsBatch($request->session(), $userId, $claimedBatch, $ids)) {
+            return hash('sha256', 'batch:'.$claimedBatch);
+        }
+
+        if ($purpose === 'submit') {
+            $exact = $served->exactBatchId($request->session(), $userId, $ids);
+
+            if ($exact !== null) {
+                return hash('sha256', 'batch:'.$exact);
+            }
+        }
 
         if (count($ids) === 1) {
             $batch = $served->questionBatchId($request->session(), $userId, $ids[0]);
 
-            if ($batch !== null) {
+            if ($batch !== null && $purpose === 'reveal') {
+                return hash('sha256', 'batch:'.$batch);
+            }
+
+            if ($batch !== null && $purpose === 'submit') {
                 return hash('sha256', 'batch:'.$batch);
             }
 
@@ -309,5 +353,32 @@ class ExamController extends Controller
         $batch = $served->coveringBatchId($request->session(), $userId, $ids);
 
         return $batch === null ? null : hash('sha256', 'batch:'.$batch);
+    }
+
+    private function claimedStudySession(Request $request, int $questionId): ?ExamSession
+    {
+        if ($request->filled('practice_batch_id')) {
+            return null;
+        }
+
+        $id = $request->input('exam_session_id');
+
+        if (! is_string($id) || strlen($id) !== 26) {
+            return null;
+        }
+
+        $session = ExamSession::query()->find($id);
+
+        if (! $session instanceof ExamSession || $session->isStrict()) {
+            return null;
+        }
+
+        if (! $this->mockSessionService->owns($session, $request->user()?->id, $request->session())) {
+            return null;
+        }
+
+        $ids = array_map('intval', (array) $session->question_ids);
+
+        return in_array($questionId, $ids, true) ? $session : null;
     }
 }
