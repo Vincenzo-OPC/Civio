@@ -12,6 +12,8 @@ This is the only roadmap to follow. [CIVIO_CURRENT_STATE_HANDOFF.md](CIVIO_CURRE
 
 ## Engineering slice, 22 October 2026
 
+Pre-deployment check, same day: [DEPLOYMENT_READINESS_2026-10-21.md](DEPLOYMENT_READINESS_2026-10-21.md). Docker image build is blocked in this sandbox (`lchown` / uid map). Smart Review stays implemented, not production verified. No deploy.
+
 Astra's 21 October research is on `main` as `3c1fd91` and `b51c311`. It is research only. The ten numerical drafts stay unapproved and inactive.
 
 Review Mistakes now exists for signed-in drills and Study Mocks. A wrong server-graded answer creates one `review_items` row. Reveal or Expound marks the answer assisted, so a later correct answer does not clear it. A Strict Mock writes nothing. The list is `/reviews/mistakes`. It does not include the key. FSRS is still not wired.

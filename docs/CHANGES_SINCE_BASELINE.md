@@ -5,6 +5,10 @@ The living record of how Civio differs from the baseline (commit `d3f0368`, tag
 as any change that makes Civio behave differently from the baseline (see "How to
 keep this current" below).
 
+## Pre-deployment check, 22 October 2026
+
+The exam screen now receives `can_download_pdf`, so an allowed account can see Download PDF & Answer Key. At 320px the exam setup header wraps instead of clipping How it works. The readiness note is [DEPLOYMENT_READINESS_2026-10-21.md](DEPLOYMENT_READINESS_2026-10-21.md). Smart Review was not deployed.
+
 ## Baseline
 
 | | |

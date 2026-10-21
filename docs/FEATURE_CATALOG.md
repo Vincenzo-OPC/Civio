@@ -64,7 +64,7 @@ Public wording lives in [WEBSITE_FEATURE_COPY.md](WEBSITE_FEATURE_COPY.md).
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Login and account | Register, sign in, passkeys, terms | Learner | Both | Fortify and auth routes | Fortify, `AuthController` | Auth tests | IMPLEMENTED, NOT END-TO-END VERIFIED | OAuth routes exist. Do not activate a paid provider | Account | Yes |
 | Civil Service information | Public dates and a reviewer guide | Examinee | Both | `/cse-2027-dates`, `/guide` | `PublicController` | Not re-run here | IMPLEMENTED, NOT END-TO-END VERIFIED | Not a CSC announcement | Free | Yes, as Civio's own notes |
-| PDF booklet | Download a booklet and, when allowed, an answer key | Authorized account | Both | `POST /exams/export-pdf` | `PdfExamExportService` | `PdfAnswerKeyTest` | IMPLEMENTED, NOT END-TO-END VERIFIED | Permission and daily throttle. Refuses export during an open Strict Mock | Restricted | Only for accounts that can download |
+| PDF booklet | Download a booklet and, when allowed, an answer key | Authorized account | Both | `POST /exams/export-pdf` | `PdfExamExportService` | `PdfAnswerKeyTest`, `PdfExportTest` | IMPLEMENTED, NOT END-TO-END VERIFIED | The exam screen receives `can_download_pdf`. Permission, daily throttle, and an open Strict Mock still apply. An isolated browser made a 4-page JPEG PDF from fixtures. Not checked in a production image | Restricted | Only for accounts that can download |
 | Support form | Send a message | Public | Both | `/support` | `SupportController` | Not re-run here | IMPLEMENTED, NOT END-TO-END VERIFIED | Not a tutoring service | Free | Yes, as contact |
 
 ## Administration
