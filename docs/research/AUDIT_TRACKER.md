@@ -256,3 +256,7 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **MSI:**
   - Backup first: `civio_local_pre_r03c_20261017.dump`.
   - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 604, **total 1,978**.
+
+## 21 October 2026 curriculum audit checkpoint
+
+Repository evidence at `dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1`: 1,478 approved-labeled primary records, not a runtime count. Independently checked 497 existing keys (400 numerical, 41 data tables, 44 syllogisms, 12 explicit sorts); all matched. Mechanically screened 2,127 main/export records; 83 quality flags, including historical #462 duplicate choices. All 45 Vera IDs reconciled; nine lack a correct listed option. Ten original numerical drafts remain unreviewed; existing full QA cannot parse their novel structures. No approvals, imports or activations. See [current assessment](curriculum/CURRENT_BANK_ASSESSMENT.md), [Vera ledger](curriculum/VERA_45_QUESTION_AUDIT.md), [production plan](curriculum/QUESTION_QUALITY_AND_PRODUCTION_PLAN.md), and [scope evidence](curriculum/CSC_COMPETENCY_GAP_MAP.md). The 2,000 milestone is incomplete; exact eligible release count unknown.
