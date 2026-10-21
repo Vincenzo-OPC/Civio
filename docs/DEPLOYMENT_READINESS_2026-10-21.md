@@ -180,19 +180,19 @@ Recorded above. Screenshots from this run are local artifacts, not committed.
 5. Open a Strict Mock and confirm PDF export is refused until submit. Download one PDF as an allowed account.
 6. Only then ask GT which host to use. Do not enable billing, Turnstile-as-a-paid product, or a tutor provider in that step.
 
-## Bundle after the 320px wrap
+## Bundle after the header fix
 
-Measured in this workspace after `npm run build`. Budgets were not raised.
+`cc09140` put `flex-wrap` in the exam chunk. GitHub CI measured that chunk 6 bytes over 11,000 and did not run Pest. The wrap now lives in CSS (`.civio-setup-head`). Local `npm run build` after that move:
 
 | Chunk | Brotli bytes | Limit |
 | --- | ---: | ---: |
-| Main | 45,396 | 48,000 |
+| Main | 45,407 | 48,000 |
 | Vendor | 119,212 | 122,000 |
-| CSS | 28,660 | 33,000 |
-| Exam | 10,983 | 11,000 |
-| All JS | 1,002,704 | 1,040,000 |
+| CSS | 28,694 | 33,000 |
+| Exam | 10,964 | 11,000 |
+| All JS | 1,002,547 | 1,040,000 |
 
-The exam chunk has 17 bytes of headroom. Do not add to that chunk casually.
+The exam chunk still has little room. Do not add to it casually. The published CI result is the one on the final commit, not this local table alone.
 
 ## Catalog
 

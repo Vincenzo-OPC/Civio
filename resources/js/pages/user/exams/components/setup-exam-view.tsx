@@ -64,7 +64,7 @@ export function SetupExamView({
 
             <PageContainer>
                 {/* Header Information Section */}
-                <div className="mb-8 flex flex-wrap items-start gap-3">
+                <div className="civio-setup-head">
                     <PageHeader
                         title="Exam Simulation"
                         description="Pick a level, then choose Study Mode or Exam Mode."
