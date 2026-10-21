@@ -78,3 +78,7 @@ Historical documentation reports 1,978 active and 227 draft database rows on 17 
 Checkpoint tests: 407 Pest tests passed, 3,960 assertions; TypeScript, ESLint, production build and size checks passed. All 98 JavaScript tests passed using `node --import tsx --test tests/Js/*.test.ts`; the npm wrapper was blocked by this environment's IPC socket permission. Initial checks before build/key setup failed from missing generated routes/assets/application key and were rerun after isolated setup. No PHP or frontend application files changed. QA and these results do not approve content.
 
 Product continuation: [educational/product handoff](CODEX_EDUCATIONAL_HANDOFF.md) records scoring disagreement, guest/exposure limits, existing features, design references and prioritized recommendations. [Personal mastery plan](SUBPRO_MASTERY_AND_FORECAST.md) and the 44-node blueprint are proposals, not measured learner results.
+
+## Publication reconciliation, 22 October 2026
+
+Confirmed on remote main `99ebe099376ca18c5a9338876c928fbea7519536`: the research was published by the concurrent Codex session in `3c1fd91` and `b51c311`. All curriculum evidence and the read-only auditor match the prepared checkpoint. The question audit remains pinned to `dbdf2bc`; newer engineering work does not independently approve content or establish a live bank count. See the handoff snapshot note and current feature catalog before planning implementation.

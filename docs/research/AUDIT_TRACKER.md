@@ -264,3 +264,7 @@ Repository evidence at `dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1`: 1,478 approve
 ### Product research continuation, 21 October 2026
 
 The [educational/product handoff](curriculum/CODEX_EDUCATIONAL_HANDOFF.md) extends this checkpoint: raw versus weighted score disagreement reproduced, unsupported percentile/pass-prediction outputs identified, guest-history and exposure limitations traced, existing graphs/Lite/FSRS reviewed. A 44-node curriculum blueprint and private Subprofessional diagnostic protocol are prepared. Three open-source UI repositories were pinned and evaluated; no dependency or feature was added. Recommendations follow existing security and Review Mistakes priorities. GitHub push was authentication-blocked; local commits are not remote publication.
+
+## Publication reconciliation, 22 October 2026
+
+Remote main `99ebe099376ca18c5a9338876c928fbea7519536` contains the research from commits `3c1fd91` and `b51c311`. Of 20 prepared files, 19 exactly match local checkpoint `57d79fa`; the baseline changes log has later engineering additions. No duplicate import or old-tree overwrite is needed. The audit baseline and content approval limits remain unchanged. Later Review Mistakes, FSRS and scoring work must be read through `docs/FEATURE_CATALOG.md`; this is publication verification, not a new test or live bank audit. GT authorized the connected GitHub integration for the documentation follow-up.
