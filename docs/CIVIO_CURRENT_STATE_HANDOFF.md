@@ -149,3 +149,7 @@ Hover tips on Flag, the question list, and cross-out exist. Their wording has no
 ## Execution refresh - 20 October 2026
 
 The earlier repository/stack table is historical. MSI main was clean at efc0d81, then fast-forwarded to fetched f2766db; security commits follow that tip. PRs 1-16 were still OPEN and unmerged when checked. Deployment is unverified and no deployment was performed. Current service boundaries and hosting uncertainty are in DEPLOY.md. The current execution checkpoint is in CIVIO_NEXT_AGENT_EXECUTION_PLAN.md.
+
+## Curriculum and product research, 21 October 2026
+
+See [current bank assessment](research/curriculum/CURRENT_BANK_ASSESSMENT.md) and [educational/product handoff](research/curriculum/CODEX_EDUCATIONAL_HANDOFF.md) for pinned evidence, all 45 Vera dispositions, scoring inconsistencies, existing-feature status and founder testing proposals. Research only; no implementation, deployment or question activation. Existing security and Review Mistakes ordering remains in force.

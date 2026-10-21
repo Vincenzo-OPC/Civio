@@ -43,3 +43,11 @@ All sources below were retrieved or inspected on 21 October 2026. Sources are ev
 | S10 | [Testing Standards, open-access publisher site](https://www.testingstandards.net/open-access-files.html) | Validity, reliability and fairness framework. Does not validate Civio scores or predict CSC outcomes. |
 
 No confidential CSC questions, leaked material, claimed official weights, or unconsented examinee data were used. Reviewer sites repeating one another are not independent frequency evidence. Vera is a founder-supplied case study, not an official source or representative sample of exam frequency.
+
+## Operational competency blueprint
+
+The [44-node blueprint](data/competency-blueprint.json) records exam level, subject, skill, subskill, micro-skill, prerequisites, archetypes, common misconceptions, objectives, cognitive demand and mastery assessment. It comprises 22 numerical nodes, 12 bilingual verbal nodes, four analytical, two clerical and four GI nodes. The micro-skills are educational recommendations within the published scope, not additional official CSC subject lists.
+
+Every official verbal area appears separately for English and Filipino. An error-recognition item must not silently satisfy sentence-structure coverage; a vocabulary question embedded in a passage is not automatically a reading-inference assessment. A tag is a proposed mapping until the complete item is reviewed.
+
+Map eligible item versions to these nodes before assigning quotas. Count conceptual, applied, multi-step and unfamiliar-transfer tasks separately; one item can support several prerequisites but counts once toward 2,000. Reserve entire passage/fact/solution families across teaching and held-out evaluation, not merely different IDs. Reading-family holdouts need new texts; math transfer needs changed representations and unknowns, not just different numbers.

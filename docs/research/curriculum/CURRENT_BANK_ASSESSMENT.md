@@ -76,3 +76,5 @@ Historical documentation reports 1,978 active and 227 draft database rows on 17 
 - Ten original foundational numerical drafts are saved under `data/`, separate from active bank locations. All remain `draft/unreviewed`, authored by this session and therefore requiring a different reviewer.
 
 Checkpoint tests: 407 Pest tests passed, 3,960 assertions; TypeScript, ESLint, production build and size checks passed. All 98 JavaScript tests passed using `node --import tsx --test tests/Js/*.test.ts`; the npm wrapper was blocked by this environment's IPC socket permission. Initial checks before build/key setup failed from missing generated routes/assets/application key and were rerun after isolated setup. No PHP or frontend application files changed. QA and these results do not approve content.
+
+Product continuation: [educational/product handoff](CODEX_EDUCATIONAL_HANDOFF.md) records scoring disagreement, guest/exposure limits, existing features, design references and prioritized recommendations. [Personal mastery plan](SUBPRO_MASTERY_AND_FORECAST.md) and the 44-node blueprint are proposals, not measured learner results.
