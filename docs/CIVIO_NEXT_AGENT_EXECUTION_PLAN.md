@@ -10,6 +10,16 @@
 
 This is the only roadmap to follow. [CIVIO_CURRENT_STATE_HANDOFF.md](CIVIO_CURRENT_STATE_HANDOFF.md) is the current-state note. Specialized docs stay where they are. If this file and the code disagree, the code and tests win.
 
+## Engineering slice, 22 October 2026
+
+Astra's 21 October research is on `main` as `3c1fd91` and `b51c311`. It is research only. The ten numerical drafts stay unapproved and inactive.
+
+Review Mistakes now exists for signed-in drills and Study Mocks. A wrong server-graded answer creates one `review_items` row. Reveal or Expound marks the answer assisted, so a later correct answer does not clear it. A Strict Mock writes nothing. The list is `/reviews/mistakes`. It does not include the key. FSRS is still not wired.
+
+Analytics no longer shows a Top 50% rank when fewer than six attempts exist or the average is zero. A subject missing from an attempt is null in the breakdown, not a zero. The dashboard still has a heuristic pass index in `DeterministicAnalysisService`. That formula was not replaced.
+
+Bank signature tests need the PHP sodium extension. This environment does not have it, so those tests were not treated as a regression. No question was imported or activated. No deploy.
+
 Session start SHA: `3c18ec0258ec855795654afc85a93fa435684d55`. The setup-copy commit is `d8d1714`. Confirm the tip with `git rev-parse origin/main` after the docs commit that records it.
 
 ## Startup

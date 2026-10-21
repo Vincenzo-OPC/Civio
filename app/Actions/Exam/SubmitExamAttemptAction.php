@@ -11,6 +11,7 @@ use App\Models\ExamSession;
 use App\Models\Question;
 use App\Repositories\ExamAttemptRepositoryInterface;
 use App\Services\Exam\MockPoolSelector;
+use App\Services\Exam\ReviewMistakeRecorder;
 use App\Services\ExamGradingService;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -57,7 +58,13 @@ class SubmitExamAttemptAction
 
                 // Re-check the database, not the cached pool. A withdrawn item
                 // must not be graded or return a key even if it was served earlier.
-                $active = Question::whereIn('id', $ids)->where('status', 'active')->orderBy('id')->lockForUpdate()->get()->keyBy('id');
+                $active = Question::with('subcategory.category')
+                    ->whereIn('id', $ids)
+                    ->where('status', 'active')
+                    ->orderBy('id')
+                    ->lockForUpdate()
+                    ->get()
+                    ->keyBy('id');
                 if ($active->count() !== count($ids)) {
                     return new SubmitExamAttemptResult(false, 422, message: 'A practice item is no longer available. Start a new session.');
                 }
@@ -109,6 +116,14 @@ class SubmitExamAttemptAction
                     'cat_scores' => $graded['cat_scores'],
                 ]);
                 $session?->forceFill(['exam_attempt_id' => $attempt->id])->save();
+
+                app(ReviewMistakeRecorder::class)->record(
+                    $userId,
+                    (int) $attempt->id,
+                    $session?->isStrict() ?? false,
+                    $answers,
+                    $active,
+                );
 
                 return new SubmitExamAttemptResult(
                     success: true,

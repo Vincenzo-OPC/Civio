@@ -27,7 +27,7 @@ interface CseReadinessCardProps {
 export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
     const readinessIndex = stats.cseReadinessIndex ?? stats.avgScore ?? 0;
     const hasSubtestRisk = stats.hasSubtestRisk ?? false;
-    const percentile = stats.percentileRank ?? 50;
+    const percentile = stats.percentileRank;
     const subtestThresholds = stats.subtestThresholds ?? [];
     const daysUntilExam = stats.daysUntilExam;
     const examDate = stats.examDate;
@@ -102,11 +102,17 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                                 {statusBadge.text}
                             </span>
 
-                            {percentile > 0 && (
-                                <span className="inline-flex items-center gap-1 rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-0.5 text-xs font-bold text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300">
-                                    <Users className="size-3" />
-                                    Top {Math.max(1, 100 - percentile)}%
+                            {percentile == null ? (
+                                <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-xs font-bold text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
+                                    Insufficient data
                                 </span>
+                            ) : (
+                                percentile > 0 && (
+                                    <span className="inline-flex items-center gap-1 rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-0.5 text-xs font-bold text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300">
+                                        <Users className="size-3" />
+                                        Top {Math.max(1, 100 - percentile)}%
+                                    </span>
+                                )
                             )}
                         </div>
 

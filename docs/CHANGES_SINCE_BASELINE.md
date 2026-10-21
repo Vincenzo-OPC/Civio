@@ -273,3 +273,7 @@ See [bank review queue](research/bank/REVIEW_QUEUE_2026-10-20.md) for source has
 ## Research tooling checkpoint, 21 October 2026
 
 Added a read-only curriculum auditor with exact arithmetic and finite set-model checks, plus digest-bound evidence and an unapproved ten-item authoring packet. This changes research tooling only; no application behavior, active questions, database, access policy or deployment changed. See `docs/research/curriculum/CURRENT_BANK_ASSESSMENT.md`.
+
+## Review Mistakes and analytics honesty, 22 October 2026
+
+Published the recovered research commits, then added a signed-in mistake list. A wrong drill or Study Mock answer is stored once per question. An explanation seen on the server blocks that item from clearing. Strict Mocks are ignored. A thin percentile is no longer reported as Top 50%, and a subject that was not in an attempt is left blank instead of scored as zero. The ten numerical drafts were not activated. FSRS was not started.

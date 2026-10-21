@@ -28,6 +28,7 @@ use App\Http\Controllers\User\ExamSessionController;
 use App\Http\Controllers\User\LearnController as UserLearnController;
 use App\Http\Controllers\User\OfflinePackController;
 use App\Http\Controllers\User\OfflinePracticeController;
+use App\Http\Controllers\User\ReviewMistakeController;
 use App\Http\Controllers\User\SavedDrillSetController;
 use App\Http\Controllers\User\StudyScheduleController;
 use App\Http\Controllers\User\StudySuggestionController;
@@ -132,6 +133,8 @@ Route::middleware(['auth.or.fail', 'verified'])->group(function () {
     // --- USER DASHBOARD & ANALYTICS ---
     Route::middleware('throttle:global-views')->group(function () {
         Route::get('drills/smart-weakness', [DrillController::class, 'smartWeakness'])->middleware('throttle:bank-access')->name('drills.smartWeakness');
+        Route::get('reviews/mistakes', [ReviewMistakeController::class, 'index'])->name('reviews.mistakes.index');
+        Route::post('reviews/mistakes/start', [ReviewMistakeController::class, 'start'])->name('reviews.mistakes.start');
         Route::post('drills/custom-questions', [DrillController::class, 'storeCustomQuestion'])->name('drills.custom-questions.store')->middleware('throttle:global-mutations');
 
         Route::controller(SavedDrillSetController::class)->middleware('throttle:bank-access')->prefix('drills/saved-sets')->name('drills.saved-sets.')->group(function () {

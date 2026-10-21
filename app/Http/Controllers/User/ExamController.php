@@ -17,6 +17,7 @@ use App\Services\Exam\ExpoundService;
 use App\Services\Exam\MockSessionService;
 use App\Services\Exam\PdfExamExportService;
 use App\Services\Exam\Reveal\RevealTutor;
+use App\Services\Exam\ReviewMistakeRecorder;
 use App\Services\Exam\ServedPracticeQuestions;
 use App\Services\Exam\StrictMockLock;
 use App\Services\ExamService;
@@ -211,6 +212,8 @@ class ExamController extends Controller
             array_values($request->input('weak_subcategories', [])),
         );
 
+        app(ReviewMistakeRecorder::class)->noteHelp($request->user()?->id, (int) $question->id);
+
         return response()->json([
             'success' => true,
             'question_id' => $question->id,
@@ -242,6 +245,8 @@ class ExamController extends Controller
         }
 
         $expound = app(ExpoundService::class)->forQuestion($question);
+
+        app(ReviewMistakeRecorder::class)->noteHelp($request->user()?->id, (int) $question->id);
 
         return response()->json([
             'success' => true,
