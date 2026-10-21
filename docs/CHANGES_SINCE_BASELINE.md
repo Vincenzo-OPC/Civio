@@ -277,3 +277,7 @@ Added a read-only curriculum auditor with exact arithmetic and finite set-model 
 ## Review Mistakes and analytics honesty, 22 October 2026
 
 Published the recovered research commits, then added a signed-in mistake list. A wrong drill or Study Mock answer is stored once per question. An explanation seen on the server blocks that item from clearing. Strict Mocks are ignored. A thin percentile is no longer reported as Top 50%, and a subject that was not in an attempt is left blank instead of scored as zero. The ten numerical drafts were not activated. FSRS was not started.
+
+## Review help stays with the sitting, 22 October 2026
+
+An explanation now counts only in the browser session that opened it, and only when that item is actually answered. Skipping the item no longer erases the help. Another sitting can clear the mistake. The list is paged at 20, so older mistakes stay reachable. A locked Strict Mock item cannot be started from the list. The displayed mock percentage is the raw practice average. It is not adjusted into a pass chance, and the analytics index is no longer capped at 65 or 75.

@@ -293,15 +293,6 @@ class AnalyticsService
             }
         }
 
-        $isIncompleteSyllabus = ($mockExamCount === 0 && $coveredCategoriesCount < 3);
-
-        $cseReadinessIndex = $avgScore;
-        if ($isIncompleteSyllabus && $cseReadinessIndex > 65) {
-            $cseReadinessIndex = 65;
-        } elseif ($hasSubtestRisk && $cseReadinessIndex > 75) {
-            $cseReadinessIndex = 75;
-        }
-
         return [
             'totalExams' => $totalExams,
             'mockExamCount' => $mockExamCount,
@@ -319,7 +310,7 @@ class AnalyticsService
             'examDate' => $examDate,
             'examDateRaw' => $examDateRaw,
             'daysUntilExam' => $daysUntilExam,
-            'cseReadinessIndex' => $cseReadinessIndex,
+            'cseReadinessIndex' => $avgScore,
             'subtestThresholds' => $subtestThresholds,
             'hasSubtestRisk' => $hasSubtestRisk,
             'coveredCategoriesCount' => $coveredCategoriesCount,

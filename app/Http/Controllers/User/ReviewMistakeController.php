@@ -19,13 +19,15 @@ class ReviewMistakeController extends Controller
 
     public function index(Request $request): Response|JsonResponse
     {
-        $user = $this->requireUser();
-        $items = $this->pending($request);
+        $pending = $this->pending($request);
 
         $payload = [
             'title' => 'Review Mistakes',
             'note' => 'This is practice history. A later correct answer, given without an explanation, clears the item.',
-            'items' => $items,
+            'items' => $pending['items'],
+            'page' => $pending['page'],
+            'lastPage' => $pending['last_page'],
+            'total' => $pending['total'],
         ];
 
         if ($request->wantsJson()) {
@@ -65,22 +67,25 @@ class ReviewMistakeController extends Controller
     }
 
     /**
-     * @return list<array{question_id: int, stem: string, subject: string, wrong_count: int}>
+     * @return array{items: list<array{question_id: int, stem: string, subject: string, wrong_count: int}>, page: int, last_page: int, total: int}
      */
     private function pending(Request $request): array
     {
         $user = $this->requireUser();
         $locked = $this->strictMockLock->lockedQuestionIds($user->id, $request->session());
 
-        return ReviewItem::query()
+        $paginator = ReviewItem::query()
             ->where('user_id', $user->id)
             ->where('status', 'pending')
             ->whereHas('question', fn ($query) => $query->where('status', 'active'))
             ->when($locked !== [], fn ($query) => $query->whereNotIn('question_id', $locked))
             ->with('question.subcategory.category')
             ->orderByDesc('last_result_at')
-            ->limit(50)
-            ->get()
+            ->orderByDesc('id')
+            ->paginate(20)
+            ->withQueryString();
+
+        $items = $paginator->getCollection()
             ->map(function (ReviewItem $item): array {
                 $question = $item->question;
 
@@ -93,5 +98,12 @@ class ReviewMistakeController extends Controller
             })
             ->values()
             ->all();
+
+        return [
+            'items' => $items,
+            'page' => $paginator->currentPage(),
+            'last_page' => $paginator->lastPage(),
+            'total' => $paginator->total(),
+        ];
     }
 }

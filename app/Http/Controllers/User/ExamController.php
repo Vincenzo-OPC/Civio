@@ -92,6 +92,7 @@ class ExamController extends Controller
             clientIp: $request->ip(),
             hasPendingGuestAttempt: $hasPendingGuest,
             examSession: $examSession,
+            reviewSessionHash: app(ReviewMistakeRecorder::class)->sittingHash($request->session()),
         );
 
         if (! auth()->check() && $result->attemptId) {
@@ -212,7 +213,11 @@ class ExamController extends Controller
             array_values($request->input('weak_subcategories', [])),
         );
 
-        app(ReviewMistakeRecorder::class)->noteHelp($request->user()?->id, (int) $question->id);
+        app(ReviewMistakeRecorder::class)->noteHelp(
+            $request->user()?->id,
+            (int) $question->id,
+            app(ReviewMistakeRecorder::class)->sittingHash($request->session()),
+        );
 
         return response()->json([
             'success' => true,
@@ -246,7 +251,11 @@ class ExamController extends Controller
 
         $expound = app(ExpoundService::class)->forQuestion($question);
 
-        app(ReviewMistakeRecorder::class)->noteHelp($request->user()?->id, (int) $question->id);
+        app(ReviewMistakeRecorder::class)->noteHelp(
+            $request->user()?->id,
+            (int) $question->id,
+            app(ReviewMistakeRecorder::class)->sittingHash($request->session()),
+        );
 
         return response()->json([
             'success' => true,

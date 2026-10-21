@@ -4,6 +4,7 @@ use App\Models\Category;
 use App\Models\ExamAttempt;
 use App\Models\ExamSession;
 use App\Models\Question;
+use App\Models\ReviewHelp;
 use App\Models\ReviewItem;
 use App\Models\Subcategory;
 use App\Models\User;
@@ -168,4 +169,121 @@ test('an empty review list and a draft stay out of the practice history', functi
     ]);
 
     $this->get(route('reviews.mistakes.index'))->assertOk()->assertDontSee('Hidden draft stem');
+});
+
+test('a skipped item keeps its explanation, and another session can clear it', function () {
+    $user = User::factory()->create();
+    $other = reviewQuestion(['stem' => 'Answered companion?']);
+    $missed = reviewQuestion(['stem' => 'Seen but skipped?']);
+    $this->actingAs($user);
+
+    answerDrill($missed, 0)->assertOk();
+    $this->postJson(route('exams.reveal'), ['question_id' => $missed->id])->assertOk();
+
+    $this->get(route('exams.index', [
+        'drill' => 'true',
+        'custom_question_ids' => json_encode([$other->id, $missed->id]),
+    ]))->assertOk();
+    $this->postJson(route('exams.attempts.store'), [
+        'question_ids' => [$other->id, $missed->id],
+        'answers' => [
+            (string) $other->id => 1,
+            (string) $missed->id => null,
+        ],
+        'metadata' => ['track' => 'Drill', 'duration_secs' => 12, 'is_timed' => false],
+    ])->assertOk();
+
+    expect(ReviewHelp::query()->where('question_id', $missed->id)->exists())->toBeTrue();
+
+    answerDrill($missed, 1)->assertOk();
+    expect(ReviewItem::query()->where('question_id', $missed->id)->first()->status)->toBe('pending');
+
+    $fresh = ExamAttempt::create([
+        'user_id' => $user->id,
+        'question_ids' => [$missed->id],
+        'answers' => [1],
+        'cat_scores' => [],
+    ]);
+    $missed->load('subcategory.category');
+    app(ReviewMistakeRecorder::class)->record(
+        $user->id,
+        $fresh->id,
+        false,
+        [$missed->id => 1],
+        new Collection([$missed]),
+        'a-different-browser-session',
+    );
+
+    $item = ReviewItem::query()->where('question_id', $missed->id)->first();
+    expect($item->status)->toBe('resolved');
+
+    $again = ExamAttempt::create([
+        'user_id' => $user->id,
+        'question_ids' => [$missed->id],
+        'answers' => [0],
+        'cat_scores' => [],
+    ]);
+    app(ReviewMistakeRecorder::class)->record(
+        $user->id,
+        $again->id,
+        false,
+        [$missed->id => 0],
+        new Collection([$missed]),
+        'a-different-browser-session',
+    );
+
+    expect($item->fresh()->status)->toBe('pending')
+        ->and($item->fresh()->wrong_count)->toBe(2);
+});
+
+test('older mistakes stay reachable and a locked item cannot be retried', function () {
+    $user = User::factory()->create();
+    $this->actingAs($user);
+    $questions = [];
+
+    for ($i = 0; $i < 21; $i++) {
+        $question = reviewQuestion(['stem' => "Mistake {$i}"]);
+        $attemptId = ExamAttempt::create([
+            'user_id' => $user->id,
+            'question_ids' => [$question->id],
+            'answers' => [0],
+            'cat_scores' => [],
+        ])->id;
+        ReviewItem::query()->create([
+            'user_id' => $user->id,
+            'question_id' => $question->id,
+            'source_attempt_id' => $attemptId,
+            'first_wrong_at' => now()->subMinutes(21 - $i),
+            'last_result_at' => now()->subMinutes(21 - $i),
+            'wrong_count' => 1,
+            'status' => 'pending',
+            'last_attempt_id' => $attemptId,
+        ]);
+        $questions[] = $question;
+    }
+
+    $this->get(route('reviews.mistakes.index'))
+        ->assertOk()
+        ->assertInertia(fn (Assert $page) => $page
+            ->has('items', 20)
+            ->where('lastPage', 2)
+            ->where('total', 21));
+
+    $this->get(route('reviews.mistakes.index', ['page' => 2]))
+        ->assertOk()
+        ->assertInertia(fn (Assert $page) => $page->has('items', 1));
+
+    $locked = $questions[0];
+    ExamSession::create([
+        'user_id' => $user->id,
+        'track' => 'Professional',
+        'mode' => 'strict',
+        'question_ids' => [$locked->id],
+        'started_at' => now(),
+        'deadline_at' => now()->addHour(),
+    ]);
+
+    $this->postJson(route('reviews.mistakes.start'), [
+        'question_ids' => [$locked->id],
+    ])->assertNotFound();
 });

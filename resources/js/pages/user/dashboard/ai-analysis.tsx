@@ -788,7 +788,7 @@ export default function AiAnalysisReport({
                                                 {data.pass_probability}%
                                             </span>
                                             <span className="mt-1 text-[10px] font-medium text-slate-500">
-                                                Practice index
+                                                Practice average
                                             </span>
                                         </div>
                                     </div>
@@ -798,23 +798,8 @@ export default function AiAnalysisReport({
                                             <span className="font-medium text-slate-400">
                                                 Confidence Level
                                             </span>
-                                            <span
-                                                className={`font-bold capitalize ${
-                                                    data.predictive_metrics
-                                                        ?.mock_pass_confidence ===
-                                                    'high'
-                                                        ? 'text-emerald-600 dark:text-emerald-400'
-                                                        : data
-                                                                .predictive_metrics
-                                                                ?.mock_pass_confidence ===
-                                                            'moderate'
-                                                          ? 'text-amber-600 dark:text-amber-400'
-                                                          : 'text-rose-600 dark:text-rose-400'
-                                                }`}
-                                            >
-                                                {data.predictive_metrics
-                                                    ?.mock_pass_confidence ||
-                                                    'moderate'}
+                                            <span className="font-bold text-slate-500">
+                                                Not a forecast
                                             </span>
                                         </div>
                                     </div>

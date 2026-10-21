@@ -7,7 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
 
-#[Fillable(['user_id', 'question_id'])]
+#[Fillable(['user_id', 'question_id', 'session_hash'])]
 class ReviewHelp extends Model
 {
     public $timestamps = false;

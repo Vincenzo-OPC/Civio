@@ -29,6 +29,7 @@ class SubmitExamAttemptAction
         ?string $clientIp = null,
         bool $hasPendingGuestAttempt = false,
         ?ExamSession $examSession = null,
+        ?string $reviewSessionHash = null,
     ): SubmitExamAttemptResult {
         $lockKey = $examSession !== null
             ? 'exam-submit:'.$examSession->id
@@ -40,7 +41,7 @@ class SubmitExamAttemptAction
         }
 
         try {
-            return DB::transaction(function () use ($data, $userId, $hasPendingGuestAttempt, $examSession) {
+            return DB::transaction(function () use ($data, $userId, $hasPendingGuestAttempt, $examSession, $reviewSessionHash) {
                 // Re-read under the row lock: a previously loaded model is not
                 // evidence that another request has not already submitted it.
                 $session = $examSession !== null
@@ -123,6 +124,7 @@ class SubmitExamAttemptAction
                     $session?->isStrict() ?? false,
                     $answers,
                     $active,
+                    $reviewSessionHash,
                 );
 
                 return new SubmitExamAttemptResult(

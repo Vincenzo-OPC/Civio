@@ -376,7 +376,7 @@ class DeterministicAnalysisService
                 $insight = $this->pickTemplate('insight_no_data', compact('subject'));
                 $action = $this->pickTemplate('action_no_data', compact('subject'));
             } elseif ($pct >= 80) {
-                $rating = 'Mastered';
+                $rating = 'Practice 80+';
                 $color = 'emerald';
                 $insight = $this->pickTemplate('insight_mastered', compact('subject', 'pct'));
                 $action = $this->pickTemplate('action_mastered', compact('subject'));
@@ -506,17 +506,9 @@ class DeterministicAnalysisService
         }
 
         $mockAvg = (int) round(($mockTotalCorrect / $mockTotalQuestions) * 100);
-        $passProbability = (int) round($mockAvg * 0.9);
-        if ($trend === 'improving') {
-            $passProbability = min(98, $passProbability + 5);
-        } elseif ($trend === 'declining') {
-            $passProbability = max(5, $passProbability - 8);
-        }
-        $passProbability = max(0, min(100, $passProbability));
+        $passProbability = $mockAvg;
 
-        $estimatedMin = max(0, $mockAvg - 4);
-        $estimatedMax = min(100, $mockAvg + 4);
-        $estimatedExamScore = "Practice range {$estimatedMin}%–{$estimatedMax}% around a {$mockAvg}% mock average. Not an official score.";
+        $estimatedExamScore = "Practice average {$mockAvg}% on submitted mocks. Not an official score.";
 
         if ($daysUntilExam <= 7) {
             if ($daysUntilExam <= 1) {
