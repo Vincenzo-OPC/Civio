@@ -20,7 +20,7 @@ use App\Models\User;
 use App\Services\Exam\ReviewMistakeRecorder;
 use App\Services\Exam\ReviewScheduleApplier;
 use Illuminate\Contracts\Console\Kernel;
-use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Process;
 
 foreach ([
     'APP_ENV' => 'local',
@@ -55,8 +55,19 @@ function smokeFail(string $message): never
     exit(1);
 }
 
+if (PHP_MAJOR_VERSION !== 8 || PHP_MINOR_VERSION !== 4) {
+    smokeFail('PHP 8.4 is required in the production image. Found '.PHP_VERSION);
+}
+
 if (! extension_loaded('sodium')) {
     smokeFail('sodium is missing from the production image.');
+}
+
+$node = Process::timeout(5)->run(['node', '-v']);
+$nodeVersion = trim($node->output());
+
+if (! $node->successful() || ! str_starts_with($nodeVersion, 'v22.')) {
+    smokeFail('Node 22 was not retained. Found: '.$nodeVersion.$node->errorOutput());
 }
 
 if (is_file('/usr/local/bin/npm') || is_file('/usr/bin/npm')) {
@@ -164,4 +175,7 @@ if ($recovered !== ReviewScheduleApplier::SAVED || $recoveredCard === null || $r
     smokeFail('The reminder did not recover after the scheduler worked again.');
 }
 
+fwrite(STDOUT, 'php '.PHP_VERSION."\n");
+fwrite(STDOUT, 'node '.$nodeVersion."\n");
+fwrite(STDOUT, "sodium loaded\n");
 fwrite(STDOUT, "fsrs image smoke passed\n");

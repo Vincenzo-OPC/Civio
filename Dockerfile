@@ -19,9 +19,13 @@ COPY --chown=www-data:www-data . .
 
 ENV APP_NAME="Civio"
 
-RUN composer install --no-dev --optimize-autoloader
+# A disposable key lets Composer and Wayfinder boot. It is not the runtime key.
+RUN export APP_KEY="base64:$(php -r 'echo base64_encode(random_bytes(32));')" \
+    && composer install --no-dev --optimize-autoloader
 
-RUN npm ci && npm run build \
+# Same kind of disposable key. The entrypoint does not reuse it.
+RUN export APP_KEY="base64:$(php -r 'echo base64_encode(random_bytes(32));')" \
+    && npm ci && npm run build \
     && mkdir -p /tmp/fsrs-keep \
     && cp -a node_modules/ts-fsrs /tmp/fsrs-keep/ts-fsrs \
     && rm -rf node_modules /root/.npm \
