@@ -8,7 +8,7 @@
 
 ## Provenance
 
-Civio builds on the baseline codebase at `d3f0368` (CSE mocks, drills, Dexter tutor).
+Civio builds on the baseline codebase at `d3f0368` (CSE mocks, drills, and a stored-key check named Dexter).
 Work continues across Codex, Grok Build, Grok Bot, Claude and human contributors.
 GitHub `Vincenzo-OPC/Civio` is the durable record — not any one chat history.
 
@@ -29,8 +29,8 @@ When documents conflict: live code/tests → build brief → AGENTS.md → histo
 
 ## What Civio is
 
-Philippine Civil Service Exam study app. Brand **Civio** (Title Case). Tutor
-**Dexter**. **Not** official CSC. Lowercase `civio` only in identifiers/URLs/env.
+Philippine Civil Service Exam study app. Brand **Civio** (Title Case). Dexter
+is a stored-key check, not a chat tutor. **Not** official CSC. Lowercase `civio` only in identifiers/URLs/env.
 
 ## Non-negotiable
 

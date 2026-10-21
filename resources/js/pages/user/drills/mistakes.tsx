@@ -9,6 +9,22 @@ interface ReviewRow {
     due_label?: string;
 }
 
+function listHref(page: number, duePage: number): string {
+    const params = new URLSearchParams();
+
+    if (page > 1) {
+        params.set('page', String(page));
+    }
+
+    if (duePage > 1) {
+        params.set('due_page', String(duePage));
+    }
+
+    const query = params.toString();
+
+    return query === '' ? '/reviews/mistakes' : `/reviews/mistakes?${query}`;
+}
+
 function retryHref(ids: number[]): string {
     return `/exams?drill=true&custom_question_ids=${encodeURIComponent(JSON.stringify(ids))}`;
 }
@@ -50,9 +66,13 @@ export default function ReviewMistakes({
     dueLabel,
     upcomingLabel,
     needsLabel,
+    scheduleNotice,
+    scheduleRetryLabel,
     state,
     due,
     dueTotal,
+    duePage,
+    dueLastPage,
     upcoming,
     nextDueLabel,
     completedCount,
@@ -68,9 +88,13 @@ export default function ReviewMistakes({
     dueLabel: string;
     upcomingLabel: string;
     needsLabel: string;
+    scheduleNotice: string | null;
+    scheduleRetryLabel: string;
     state: 'empty' | 'open' | 'complete';
     due: ReviewRow[];
     dueTotal: number;
+    duePage: number;
+    dueLastPage: number;
     upcoming: ReviewRow[];
     nextDueLabel: string | null;
     completedCount: number;
@@ -92,6 +116,21 @@ export default function ReviewMistakes({
                     <p className="max-w-2xl text-sm leading-relaxed text-[var(--civio-ink)]/70">
                         {note}
                     </p>
+                    {scheduleNotice ? (
+                        <div className="flex flex-col gap-3 rounded-xl border border-[var(--civio-line)] px-4 py-4">
+                            <p className="text-sm leading-relaxed">
+                                {scheduleNotice}
+                            </p>
+                            <Link
+                                href="/reviews/schedules/retry"
+                                method="post"
+                                as="button"
+                                className="inline-flex min-h-11 items-center justify-center rounded-lg border border-[var(--civio-line)] px-4 text-sm font-semibold"
+                            >
+                                {scheduleRetryLabel}
+                            </Link>
+                        </div>
+                    ) : null}
                     {completedCount > 0 ? (
                         <p className="text-xs text-[var(--civio-ink)]/60 tabular-nums">
                             Completed reviews {completedCount}
@@ -118,6 +157,9 @@ export default function ReviewMistakes({
                         </h2>
                         <p className="text-xs text-[var(--civio-ink)]/60 tabular-nums">
                             {dueTotal} ready now.
+                            {dueLastPage > 1
+                                ? ` Page ${duePage} of ${dueLastPage}.`
+                                : ''}
                         </p>
                         <ul className="flex flex-col gap-3">
                             {due.map((item) => (
@@ -135,6 +177,26 @@ export default function ReviewMistakes({
                             >
                                 Review Due
                             </Link>
+                        ) : null}
+                        {dueLastPage > 1 ? (
+                            <nav className="flex gap-3">
+                                {duePage > 1 ? (
+                                    <Link
+                                        href={listHref(page, duePage - 1)}
+                                        className="inline-flex min-h-11 flex-1 items-center justify-center rounded-lg border border-[var(--civio-line)] px-4 text-sm font-semibold"
+                                    >
+                                        Previous
+                                    </Link>
+                                ) : null}
+                                {duePage < dueLastPage ? (
+                                    <Link
+                                        href={listHref(page, duePage + 1)}
+                                        className="inline-flex min-h-11 flex-1 items-center justify-center rounded-lg border border-[var(--civio-line)] px-4 text-sm font-semibold"
+                                    >
+                                        Next
+                                    </Link>
+                                ) : null}
+                            </nav>
                         ) : null}
                     </section>
                 ) : null}
@@ -189,7 +251,10 @@ export default function ReviewMistakes({
                                     <nav className="flex gap-3">
                                         {page > 1 && (
                                             <Link
-                                                href={`/reviews/mistakes?page=${page - 1}`}
+                                                href={listHref(
+                                                    page - 1,
+                                                    duePage,
+                                                )}
                                                 className="inline-flex min-h-11 flex-1 items-center justify-center rounded-lg border border-[var(--civio-line)] px-4 text-sm font-semibold"
                                             >
                                                 Newer
@@ -197,7 +262,10 @@ export default function ReviewMistakes({
                                         )}
                                         {page < lastPage && (
                                             <Link
-                                                href={`/reviews/mistakes?page=${page + 1}`}
+                                                href={listHref(
+                                                    page + 1,
+                                                    duePage,
+                                                )}
                                                 className="inline-flex min-h-11 flex-1 items-center justify-center rounded-lg border border-[var(--civio-line)] px-4 text-sm font-semibold"
                                             >
                                                 Older

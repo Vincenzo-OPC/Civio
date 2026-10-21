@@ -298,3 +298,7 @@ A later drill that also contains an item no longer makes the earlier drill look 
 
 A signed-in miss now stores one review card and one append-only review event. The server runs the existing ts-fsrs 5.4.2 package. A wrong answer is Again. An independent correct answer is Good and moves the due time. An assisted correct answer does not. A blank answer and a repeated submit do not add a success. Strict Mocks write nothing. Due reviews appear on Review Mistakes in Philippine time. The reminder is online only. Resolved still does not mean mastered. The public homepage says so in one short section. The catalog is `docs/FEATURE_CATALOG.md`.
 
+## Smart Review runtime, 22 October 2026
+
+The production image no longer deletes Node after the frontend build. It keeps the Node 22 binary and `ts-fsrs`, removes npm, and installs PHP sodium. The scheduler runs after the answer is saved, with a 5 second timeout, and does not hold the question lock while Node runs. If it fails, the answer stays saved, the reminder stays unfinished, and Review Mistakes does not say Review Complete. Due Today is paged at 20. This sandbox cannot unpack OCI layers, so `docker build` was not run. The same base filesystem (`serversideup/php:8.4-fpm-nginx`) plus the Node 22.23.2 binary and only `node_modules/ts-fsrs` was checked in a chroot: a wrong answer stored a future due date, an independent correct answer moved it, a missing Node binary left the reminder unscheduled, and restoring Node saved it. PHP sodium was loaded. It is not deployed.
+

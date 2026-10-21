@@ -22,7 +22,7 @@ Bank signature tests need the PHP sodium extension. This environment does not ha
 
 Help on Review Mistakes follows the served drill batch, or the open Study Mock when no drill batch exists. A second drill in the same browser does not inherit the first explanation. A later overlapping drill also does not erase the first drill's explanation. The practice percentage is the stored correct-item count, not a weighted category formula.
 
-Smart Review is wired for signed-in online practice. See [FEATURE_CATALOG.md](FEATURE_CATALOG.md). It is not offline, and it is not a mastery model. FSRS parameters are not trained. The next learning slice is Astra's curriculum work, not another scheduler.
+Smart Review is wired for signed-in online practice. The production image keeps Node for `ts-fsrs` and removes npm. A failed reminder is not shown as saved. It is not deployed. See [FEATURE_CATALOG.md](FEATURE_CATALOG.md). FSRS parameters are not trained. The next learning slice is Astra's curriculum work, not another scheduler.
 
 Session start SHA: `3c18ec0258ec855795654afc85a93fa435684d55`. The setup-copy commit is `d8d1714`. Confirm the tip with `git rev-parse origin/main` after the docs commit that records it.
 
@@ -40,7 +40,7 @@ Session start SHA: `3c18ec0258ec855795654afc85a93fa435684d55`. The setup-copy co
 - Show Explanation / Hide Explanation, checked Reveal, Copy Question, Ask. [answer-reveal.tsx](../resources/js/pages/user/exams/components/session/answer-reveal.tsx), [RevealTutor.php](../app/Services/Exam/Reveal/RevealTutor.php).
 - Dexter is a backend key check at [DexterEvaluationService.php](../app/Services/Exam/DexterEvaluationService.php). It is not a chat tutor. Do not describe it as one.
 - Flag, Question List, Notes, timer, pause where allowed, guest study, Lite Mode, offline drill packs.
-- Smart Review for signed-in online practice: [FsrsScheduler.php](../app/Services/Exam/FsrsScheduler.php). Not offline. See [FEATURE_CATALOG.md](FEATURE_CATALOG.md).
+- Smart Review for signed-in online practice: [FsrsScheduler.php](../app/Services/Exam/FsrsScheduler.php). The production image keeps Node and drops npm. Not deployed. Not offline. See [FEATURE_CATALOG.md](FEATURE_CATALOG.md).
 - Exam booklet PDF for admin and `can_download_pdf` accounts. Libraries stay out of the main bundle. [global-pdf-exporter.tsx](../resources/js/components/shared/global-pdf-exporter.tsx).
 
 ## Do not restore

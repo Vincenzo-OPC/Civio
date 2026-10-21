@@ -16,6 +16,7 @@ use App\Observers\ExamDateObserver;
 use App\Observers\LearnModuleObserver;
 use App\Observers\QuestionObserver;
 use App\Observers\SubcategoryObserver;
+use App\Services\Exam\ReviewScheduleReport;
 use Carbon\CarbonImmutable;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Cache\RateLimiting\Limit;
@@ -41,6 +42,8 @@ class AppServiceProvider extends ServiceProvider
             // Future: resolve Gemini/OpenAI/xAI via Prism when CIVIO_TUTOR_PROVIDER != null
             return new NullTutorProvider;
         });
+
+        $this->app->singleton(ReviewScheduleReport::class);
 
         //
     }

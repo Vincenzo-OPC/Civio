@@ -1,7 +1,7 @@
 # Civio
 
 **Civio** is a Philippine Civil Service Exam study app: Professional and
-Subprofessional mocks, practice drills, learn modules, and the Dexter tutor.
+Subprofessional mocks, practice drills, and explanations.
 **Civio is not an official Civil Service Commission (CSC) product.**
 
 ## Features
@@ -21,8 +21,9 @@ Subprofessional mocks, practice drills, learn modules, and the Dexter tutor.
 - Guest study without an account (`CIVIO_GUEST_UNLIMITED`).
 - Review Mistakes and Smart Review for a signed-in learner: a missed question
   can be tried again, and Civio schedules the next reminder on the server.
-  Smart Review needs a connection. One correct retry is not mastery. See
-  `docs/FEATURE_CATALOG.md`.
+  Smart Review needs a connection and Node beside PHP. A failed reminder is
+  shown as not saved. One correct retry is not mastery. It is not deployed.
+  See `docs/FEATURE_CATALOG.md`.
 
 ## Stack
 

@@ -12,9 +12,12 @@ use App\Models\Question;
 use App\Repositories\ExamAttemptRepositoryInterface;
 use App\Services\Exam\MockPoolSelector;
 use App\Services\Exam\ReviewMistakeRecorder;
+use App\Services\Exam\ReviewScheduleApplier;
+use App\Services\Exam\ReviewScheduleReport;
 use App\Services\ExamGradingService;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Throwable;
 
 class SubmitExamAttemptAction
 {
@@ -118,7 +121,7 @@ class SubmitExamAttemptAction
                 ]);
                 $session?->forceFill(['exam_attempt_id' => $attempt->id])->save();
 
-                app(ReviewMistakeRecorder::class)->record(
+                $staged = app(ReviewMistakeRecorder::class)->record(
                     $userId,
                     (int) $attempt->id,
                     $session?->isStrict() ?? false,
@@ -126,6 +129,10 @@ class SubmitExamAttemptAction
                     $active,
                     $reviewSessionHash,
                 );
+
+                if ($staged && $userId !== null) {
+                    $this->deferSchedule($userId);
+                }
 
                 return new SubmitExamAttemptResult(
                     success: true,
@@ -144,5 +151,27 @@ class SubmitExamAttemptAction
         } finally {
             $lock->release();
         }
+    }
+
+    private function deferSchedule(int $userId): void
+    {
+        $apply = function () use ($userId): void {
+            $report = app(ReviewScheduleReport::class);
+
+            try {
+                $report->status = app(ReviewScheduleApplier::class)->apply($userId);
+            } catch (Throwable $exception) {
+                report($exception);
+                $report->status = ReviewScheduleApplier::FAILED;
+            }
+        };
+
+        if (app()->runningUnitTests()) {
+            $apply();
+
+            return;
+        }
+
+        DB::afterCommit($apply);
     }
 }

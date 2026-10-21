@@ -20,4 +20,8 @@ final class ReviewCopy
     public const UPCOMING = 'Upcoming Reviews';
 
     public const NEEDS = 'Needs Review';
+
+    public const REMINDER_FAILED = 'Your answer was saved. The next reminder was not. Try again.';
+
+    public const REMINDER_RETRY = 'Save the reminder';
 }

@@ -48,8 +48,8 @@ Do not treat old chat handoffs as operating instructions.
 
 ## What Civio is
 
-**Civio** (Title Case) is a Philippine Civil Service Exam study app. Tutor name:
-**Dexter**. It is **not** official CSC software and must never claim affiliation.
+**Civio** (Title Case) is a Philippine Civil Service Exam study app.
+Dexter is a stored-key check, not a chat tutor. It is **not** official CSC software and must never claim affiliation.
 
 - Lowercase `civio` / `civio.ph` only in identifiers, URLs, package names, env prefixes.
 - Avoid all-caps **CIVIO** in UI, metadata, README, and docs.

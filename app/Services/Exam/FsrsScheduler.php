@@ -16,6 +16,8 @@ final class FsrsScheduler
 {
     public const VERSION = 'ts-fsrs@5.4.2';
 
+    public const TIMEOUT_SECONDS = 5;
+
     /**
      * @param  list<array{key: string, card: array<string, mixed>|null, rating: string}>  $reviews
      * @return array<string, array<string, mixed>>
@@ -26,14 +28,20 @@ final class FsrsScheduler
             return [];
         }
 
-        $process = Process::timeout(15)->path(base_path())->input(json_encode([
+        $node = (string) config('civio.fsrs_node', 'node');
+
+        if ($node === '') {
+            throw new RuntimeException('FSRS node is not configured.');
+        }
+
+        $process = Process::timeout(self::TIMEOUT_SECONDS)->path(base_path())->input(json_encode([
             'now' => Carbon::parse($now)->utc()->toISOString(),
             'reviews' => array_map(fn (array $review): array => [
                 'key' => $review['key'],
                 'card' => $review['card'],
                 'rating' => $review['rating'],
             ], $reviews),
-        ], JSON_THROW_ON_ERROR))->run(['node', base_path('scripts/fsrs-apply.mjs')]);
+        ], JSON_THROW_ON_ERROR))->run([$node, base_path('scripts/fsrs-apply.mjs')]);
 
         if (! $process->successful()) {
             throw new RuntimeException('FSRS scheduler failed. '.$process->errorOutput());

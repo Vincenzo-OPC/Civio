@@ -5,13 +5,10 @@ declare(strict_types=1);
 namespace App\Services\Exam;
 
 use App\Models\Question;
-use App\Models\ReviewCard;
 use App\Models\ReviewEvent;
 use App\Models\ReviewHelp;
 use App\Models\ReviewItem;
-use Carbon\Carbon;
 use Illuminate\Support\Collection;
-use Throwable;
 
 /**
  * Remembers a signed-in learner's wrong practice answers.
@@ -21,14 +18,12 @@ use Throwable;
  */
 final class ReviewMistakeRecorder
 {
-    public function __construct(
-        private readonly FsrsScheduler $scheduler,
-        private readonly FsrsRatingPolicy $policy,
-    ) {}
+    public function __construct(private readonly FsrsRatingPolicy $policy) {}
 
     /**
      * @param  array<int|string, mixed>  $chosenByQuestionId
      * @param  Collection<int, Question>  $questions
+     * @return bool True when a reminder still needs the scheduler.
      */
     public function record(
         ?int $userId,
@@ -37,9 +32,9 @@ final class ReviewMistakeRecorder
         array $chosenByQuestionId,
         Collection $questions,
         ?string $sessionHash = null,
-    ): void {
+    ): bool {
         if ($userId === null || $strict || $questions->isEmpty()) {
-            return;
+            return false;
         }
 
         $ids = $questions->map(fn (Question $question): int => (int) $question->id)->all();
@@ -143,7 +138,7 @@ final class ReviewMistakeRecorder
                 ->delete();
         }
 
-        $this->scheduleMany($userId, $attemptId, $jobs);
+        return $this->stageEvents($userId, $attemptId, $jobs);
     }
 
     public function noteHelp(?int $userId, int $questionId, ?string $sessionHash): void
@@ -162,10 +157,10 @@ final class ReviewMistakeRecorder
     /**
      * @param  list<array{question: Question, correct: bool, assisted: bool}>  $jobs
      */
-    private function scheduleMany(int $userId, int $attemptId, array $jobs): void
+    private function stageEvents(int $userId, int $attemptId, array $jobs): bool
     {
         if ($jobs === []) {
-            return;
+            return false;
         }
 
         $already = array_flip(ReviewEvent::query()
@@ -182,100 +177,37 @@ final class ReviewMistakeRecorder
         ));
 
         if ($jobs === []) {
-            return;
+            return false;
         }
 
-        $reviews = [];
-
-        foreach ($jobs as $job) {
-            $rating = $this->policy->rating($job['correct'], $job['assisted']);
-
-            if ($rating === null) {
-                continue;
-            }
-
-            $reviews[] = [
-                'key' => (string) $job['question']->id,
-                'card' => null,
-                'rating' => $rating,
-            ];
-        }
-
-        $cards = ReviewCard::query()
-            ->where('user_id', $userId)
-            ->whereIn('question_id', array_map(fn (array $job): int => (int) $job['question']->id, $jobs))
-            ->lockForUpdate()
-            ->get()
-            ->keyBy(fn (ReviewCard $card): int => (int) $card->question_id);
-
-        foreach ($reviews as $index => $review) {
-            $existing = $cards->get((int) $review['key']);
-            $reviews[$index]['card'] = is_array($existing?->card_state) ? $existing->card_state : null;
-        }
-
-        $scheduled = [];
-
-        if ($reviews !== []) {
-            try {
-                $scheduled = $this->scheduler->applyMany($reviews, now());
-            } catch (Throwable $exception) {
-                report($exception);
-            }
-        }
+        $needsScheduler = false;
 
         foreach ($jobs as $job) {
             $question = $job['question'];
-            $questionId = (int) $question->id;
             $rating = $this->policy->rating($job['correct'], $job['assisted']);
-            $card = $cards->get($questionId);
-            $before = is_array($card?->card_state) ? $card->card_state : null;
-            $next = $scheduled[(string) $questionId] ?? null;
-            $applied = is_array($next) ? $rating : null;
-            $due = $card?->due_at;
-
-            if (is_array($next)) {
-                $due = Carbon::parse($next['due'])->timezone(config('app.timezone'));
-                $payload = [
-                    'scheduler_version' => FsrsScheduler::VERSION,
-                    'policy_version' => FsrsRatingPolicy::VERSION,
-                    'card_state' => $next['card'],
-                    'due_at' => $due,
-                    'state' => (string) $next['state'],
-                    'last_rating' => $rating,
-                    'last_reviewed_at' => now(),
-                    'reps' => (int) ($next['reps'] ?? 0),
-                    'lapses' => (int) ($next['lapses'] ?? 0),
-                    'question_fingerprint' => $this->fingerprint($question),
-                ];
-
-                if ($card === null) {
-                    ReviewCard::query()->create([
-                        'user_id' => $userId,
-                        'question_id' => $questionId,
-                        ...$payload,
-                    ]);
-                } else {
-                    $card->forceFill($payload)->save();
-                }
-            }
-
             ReviewEvent::query()->create([
                 'user_id' => $userId,
-                'question_id' => $questionId,
+                'question_id' => (int) $question->id,
                 'source_attempt_id' => $attemptId,
                 'outcome' => $this->outcome($job['correct'], $job['assisted']),
-                'rating' => $applied,
+                'rating' => $rating,
                 'assisted' => $job['assisted'],
-                'scheduled' => $applied !== null,
-                'due_at' => $due,
+                'scheduled' => false,
+                'due_at' => null,
                 'reviewed_at' => now(),
                 'scheduler_version' => FsrsScheduler::VERSION,
                 'policy_version' => FsrsRatingPolicy::VERSION,
-                'card_before' => $before,
-                'card_after' => is_array($next) ? $next['card'] : $before,
+                'card_before' => null,
+                'card_after' => null,
                 'question_fingerprint' => $this->fingerprint($question),
             ]);
+
+            if ($rating !== null) {
+                $needsScheduler = true;
+            }
         }
+
+        return $needsScheduler;
     }
 
     private function outcome(bool $correct, bool $assisted): string

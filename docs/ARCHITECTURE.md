@@ -1,7 +1,7 @@
 # Civio architecture
 
 **Civio** is a Laravel 13 + Inertia/React study app for the Philippine Civil Service Exam.
-Tutor: **Dexter**. Not official CSC.
+Dexter is a stored-key check, not a chat tutor. Not official CSC.
 
 ```
 Browser (Inertia/React 19 + Vite)

@@ -58,5 +58,7 @@ Do not say "FSRS" on the public site. Do not say a question is mastered.
 - Your chance of passing is a percent.
 - Official CSC reviewer.
 - Dexter is an AI tutor.
+- Dexter is the tutor.
+- Smart Review is deployed.
 - Smart Review works offline.
 - A score here is your exam result.

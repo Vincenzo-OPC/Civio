@@ -12,6 +12,7 @@ use App\Models\Subcategory;
 use App\Models\User;
 use App\Services\Exam\FsrsScheduler;
 use App\Services\Exam\ReviewMistakeRecorder;
+use App\Services\Exam\ReviewScheduleApplier;
 use App\Support\ReviewCopy;
 use App\Support\ReviewDueLabel;
 use Carbon\Carbon;
@@ -401,7 +402,7 @@ test('a wrong answer schedules a review and an independent correct moves it late
     $question = reviewQuestion();
     $this->actingAs($user);
 
-    answerDrill($question, 0)->assertOk();
+    answerDrill($question, 0)->assertOk()->assertJsonPath('review_schedule', ReviewScheduleApplier::SAVED);
     $card = ReviewCard::query()->where('question_id', $question->id)->first();
     $firstDue = $card->due_at->copy();
 
@@ -458,6 +459,10 @@ test('an assisted correct answer does not move the review date', function () {
         ->and($event->rating)->toBeNull()
         ->and($event->scheduled)->toBeFalse()
         ->and(ReviewEvent::query()->count())->toBe(2);
+
+    $this->get(route('reviews.mistakes.index'))
+        ->assertOk()
+        ->assertInertia(fn (Assert $page) => $page->where('scheduleNotice', null));
 });
 
 test('a skipped answer and a repeated attempt do not add a successful review', function () {
@@ -537,4 +542,131 @@ test('the same graded card and clock produce the same due instant', function () 
 
     expect($first['9']['due'])->toBe($second['9']['due'])
         ->and($first['9']['state'])->toBe('learning');
+});
+
+test('a scheduler failure keeps the answer and a later try saves the reminder', function () {
+    $user = User::factory()->create();
+    $question = reviewQuestion();
+    $this->actingAs($user);
+    config(['civio.fsrs_node' => '/bin/false']);
+
+    try {
+        answerDrill($question, 0)
+            ->assertOk()
+            ->assertJsonPath('success', true)
+            ->assertJsonPath('review_schedule', ReviewScheduleApplier::FAILED)
+            ->assertJsonPath('review_notice', ReviewCopy::REMINDER_FAILED);
+
+        expect(ReviewCard::query()->count())->toBe(0)
+            ->and(ReviewItem::query()->first()->status)->toBe('pending')
+            ->and(ReviewEvent::query()->first()->scheduled)->toBeFalse()
+            ->and(ReviewEvent::query()->first()->rating)->toBe('again');
+
+        $this->get(route('reviews.mistakes.index'))
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->where('state', 'open')
+                ->where('scheduleNotice', ReviewCopy::REMINDER_FAILED)
+                ->where('due', [])
+                ->has('items', 1));
+
+        config(['civio.fsrs_node' => 'node']);
+
+        $this->postJson(route('reviews.schedules.retry'))
+            ->assertOk()
+            ->assertJsonPath('review_schedule', ReviewScheduleApplier::SAVED)
+            ->assertJsonPath('review_notice', null);
+
+        $card = ReviewCard::query()->first();
+
+        expect($card)->not->toBeNull()
+            ->and($card->due_at->greaterThan(now()))->toBeTrue()
+            ->and($card->last_rating)->toBe('again')
+            ->and(ReviewEvent::query()->first()->scheduled)->toBeTrue();
+    } finally {
+        config(['civio.fsrs_node' => 'node']);
+    }
+});
+
+test('the next saved answer finishes a reminder the scheduler missed', function () {
+    $user = User::factory()->create();
+    $missed = reviewQuestion(['stem' => 'Missed while the scheduler was down?']);
+    $later = reviewQuestion(['stem' => 'Answered after the scheduler recovered?']);
+    $this->actingAs($user);
+    config(['civio.fsrs_node' => '/bin/false']);
+
+    try {
+        answerDrill($missed, 0)->assertJsonPath('review_schedule', ReviewScheduleApplier::FAILED);
+        config(['civio.fsrs_node' => 'node']);
+        answerDrill($later, 0)->assertJsonPath('review_schedule', ReviewScheduleApplier::SAVED);
+    } finally {
+        config(['civio.fsrs_node' => 'node']);
+    }
+
+    expect(ReviewCard::query()->where('question_id', $missed->id)->where('due_at', '>', now())->exists())->toBeTrue()
+        ->and(ReviewCard::query()->where('question_id', $later->id)->exists())->toBeTrue()
+        ->and(ReviewEvent::query()->where('scheduled', false)->where('assisted', false)->count())->toBe(0);
+});
+
+test('due reviews stay reachable after the first page', function () {
+    $user = User::factory()->create();
+    $this->actingAs($user);
+    $attempt = ExamAttempt::query()->create([
+        'user_id' => $user->id,
+        'mode' => 'study',
+        'question_ids' => [1],
+        'answers' => [],
+        'cat_scores' => [],
+    ]);
+    $ids = [];
+
+    foreach (range(1, 21) as $number) {
+        $question = reviewQuestion(['stem' => "Due item $number"]);
+        $ids[] = (int) $question->id;
+        ReviewItem::query()->create([
+            'user_id' => $user->id,
+            'question_id' => $question->id,
+            'source_attempt_id' => $attempt->id,
+            'first_wrong_at' => now(),
+            'last_result_at' => now(),
+            'wrong_count' => 1,
+            'status' => 'pending',
+            'last_attempt_id' => $attempt->id,
+        ]);
+        ReviewCard::query()->create([
+            'user_id' => $user->id,
+            'question_id' => $question->id,
+            'scheduler_version' => FsrsScheduler::VERSION,
+            'policy_version' => 'civio-fsrs-policy-1',
+            'card_state' => ['state' => 1],
+            'due_at' => now()->subMinutes(40 - $number),
+            'state' => 'learning',
+            'last_rating' => 'again',
+            'last_reviewed_at' => now(),
+            'reps' => 1,
+            'lapses' => 1,
+        ]);
+    }
+
+    $this->get(route('reviews.mistakes.index'))
+        ->assertOk()
+        ->assertInertia(fn (Assert $page) => $page
+            ->has('due', 20)
+            ->where('dueTotal', 21)
+            ->where('duePage', 1)
+            ->where('dueLastPage', 2)
+            ->where('total', 0)
+            ->where('scheduleNotice', null));
+
+    $this->get(route('reviews.mistakes.index', ['due_page' => 2]))
+        ->assertOk()
+        ->assertInertia(fn (Assert $page) => $page
+            ->has('due', 1)
+            ->where('due.0.question_id', $ids[20])
+            ->where('total', 0));
+
+    $this->postJson(route('reviews.mistakes.start'), [
+        'question_ids' => [$ids[20]],
+    ])->assertOk()
+        ->assertJsonPath('questions.0.id', $ids[20]);
 });

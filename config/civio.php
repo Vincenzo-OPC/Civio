@@ -23,6 +23,10 @@ return [
 
     'allow_browser_migrations' => (bool) env('CIVIO_ALLOW_BROWSER_MIGRATIONS', false),
 
+    // Node binary that runs scripts/fsrs-apply.mjs. The production image
+    // keeps this binary and ts-fsrs, and does not keep npm.
+    'fsrs_node' => env('CIVIO_FSRS_NODE', 'node'),
+
     // Lite L2 offline drill packs: request limits per user (or IP) per minute.
     'offline' => [
         'packs_per_minute' => (int) env('CIVIO_OFFLINE_PACKS_PER_MINUTE', 60),

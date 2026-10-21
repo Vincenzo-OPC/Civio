@@ -8,7 +8,7 @@ Stats checked via GitHub API on **2026-10-05** (Asia/Manila). Only repos actuall
 | Library | Repo | Stars | Last push | License | Why / status |
 | --- | --- | --- | --- | --- | --- |
 | **vite-plugin-pwa** | [vite-pwa/vite-plugin-pwa](https://github.com/vite-pwa/vite-plugin-pwa) | 4281 | 2026-10-04 | MIT | Replace hand-written `public/sw.js` with injectManifest SW: versioned precache, NetworkFirst HTML, **NetworkOnly for `/exams` and auth**. Prompt-to-update. **Adopted.** |
-| **ts-fsrs** | [open-spaced-repetition/ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) | 806 | 2026-10-03 | MIT | Server scheduler for signed-in Smart Review. PHP calls `scripts/fsrs-apply.mjs`. Pin **5.4.2**. Not a second algorithm. |
+| **ts-fsrs** | [open-spaced-repetition/ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) | 806 | 2026-10-03 | MIT | Server scheduler for signed-in Smart Review. PHP calls `scripts/fsrs-apply.mjs` with Node 22. The production image keeps that binary and this package only. Pin **5.4.2**. Not a second algorithm. |
 | **Prism** | [prism-php/prism](https://github.com/prism-php/prism) | 2426 | 2026-03-20 | MIT | Unified Laravel LLM interface (OpenAI/Anthropic/Gemini/xAI/…). Installed; Civio uses `App\Ai\Contracts\TutorProvider` with **NullTutorProvider** default (no keys). Live Prism drivers later. **Adopted (foundation).** |
 | **sentry-laravel** | [getsentry/sentry-laravel](https://github.com/getsentry/sentry-laravel) | 1351 | 2026-10-05 | MIT | Error monitoring. **Disabled unless `SENTRY_LARAVEL_DSN` is set.** **Adopted (opt-in).** |
 
