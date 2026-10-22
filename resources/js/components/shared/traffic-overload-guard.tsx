@@ -1,6 +1,7 @@
 import { router } from '@inertiajs/react';
 import { AlertCircle, RefreshCw } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { createGuardedFetch } from '@/lib/guarded-fetch';
 
 export function TrafficOverloadGuard() {
     const [isOpen, setIsOpen] = useState(false);
@@ -30,96 +31,16 @@ export function TrafficOverloadGuard() {
             }
         });
 
-        // 2. Intercept global fetch requests with active self-healing retries
+        // 2. Guard global fetch: only GET/HEAD are retried; writes go
+        // straight back to their caller's recovery logic.
         const originalFetch = window.fetch;
-        window.fetch = async function (...args) {
-            let retries = 0;
-            const maxRetries = 3;
-            let delay = 1000; // start with 1 second delay
-
-            const executeWithRetry = async (): Promise<Response> => {
-                try {
-                    const response = await originalFetch(...args);
-
-                    const isFailureStatus =
-                        response.status === 429 ||
-                        response.status === 502 ||
-                        response.status === 504 ||
-                        (response.status === 503 &&
-                            !response.headers.get('x-inertia'));
-
-                    if (isFailureStatus) {
-                        if (retries < maxRetries) {
-                            retries++;
-                            setIsRetrying(true);
-                            // Wait with exponential backoff delay
-                            await new Promise((resolve) =>
-                                setTimeout(resolve, delay),
-                            );
-                            delay *= 2;
-
-                            return executeWithRetry();
-                        } else {
-                            setIsRetrying(false);
-
-                            if (response.status === 429) {
-                                setErrorType('rate_limit');
-                            } else {
-                                setErrorType('overload');
-                            }
-
-                            setIsOpen(true);
-                        }
-                    } else {
-                        // Request succeeded on a retry
-                        setIsRetrying(false);
-                    }
-
-                    return response;
-                } catch (error) {
-                    // Offline is not overload: fail at once so callers (e.g.
-                    // Strict-mock autosave) can hold the answer, and never
-                    // show the "server busy" dialog for a dropped connection.
-                    // A write whose response was lost may already be saved:
-                    // never resend it blindly. The caller owns recovery.
-                    const method = (
-                        (args[1]?.method ??
-                            (args[0] instanceof Request
-                                ? args[0].method
-                                : 'GET')) as string
-                    ).toUpperCase();
-
-                    if (
-                        (method !== 'GET' && method !== 'HEAD') ||
-                        (typeof navigator !== 'undefined' &&
-                            navigator.onLine === false)
-                    ) {
-                        setIsRetrying(false);
-
-                        throw error;
-                    }
-
-                    if (retries < maxRetries) {
-                        retries++;
-                        setIsRetrying(true);
-                        await new Promise((resolve) =>
-                            setTimeout(resolve, delay),
-                        );
-                        delay *= 2;
-
-                        return executeWithRetry();
-                    } else {
-                        setIsRetrying(false);
-                        setErrorType('overload');
-                        setIsOpen(true);
-
-                        throw error;
-                    }
-                }
-            };
-
-            return executeWithRetry();
-        };
+        window.fetch = createGuardedFetch(originalFetch.bind(window), {
+            onRetrying: setIsRetrying,
+            onFailure: (type) => {
+                setErrorType(type);
+                setIsOpen(true);
+            },
+        });
 
         return () => {
             unregisterHttpException();
