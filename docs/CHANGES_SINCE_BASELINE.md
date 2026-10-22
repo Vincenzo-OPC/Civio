@@ -353,3 +353,7 @@ The autosave "page hidden" listener was never removed, so old copies kept firing
 ## Focus level and honest fresh empty state, 22 October 2026
 
 The Drills page gets the learner's level from recent attempts and shows one Today's Focus launcher per level, with the learner's own level first and marked. Each launcher passes `track` so the server picks only eligible subjects. A direct fresh same-skill link with nothing new left now redirects to Review Mistakes with the message "No new questions are left on these skills yet" instead of opening an empty drill. Guests are sent to login.
+
+## Study streak counts real study days, 22 October 2026
+
+The dashboard streak already existed. Repairs: a day counts only if at least one item was answered, so a blank submission no longer keeps a streak. "Questions today" counts answered items, not served items. The 60-day lookback that silently capped long streaks is now 400 days. Days use the app timezone (Asia/Manila). Tests in `StudyStreakTest`.

@@ -102,35 +102,31 @@ class DashboardService
      */
     protected function getDailyGoalStats(int $userId): array
     {
-        $attemptDates = ExamAttempt::where('user_id', $userId)
-            ->where('created_at', '>=', now()->subDays(60))
-            ->selectRaw('DATE(created_at) as activity_date')
-            ->pluck('activity_date');
-
-        $activeDates = $attemptDates->unique()->sortDesc()->values();
+        // A study day needs at least one answered item: opening and submitting
+        // a blank drill does not keep a streak alive or count toward the goal.
+        $answeredByDay = [];
+        ExamAttempt::where('user_id', $userId)
+            ->where('created_at', '>=', now()->subDays(400))
+            ->select(['id', 'created_at', 'answers'])
+            ->chunkById(500, function ($rows) use (&$answeredByDay) {
+                foreach ($rows as $attempt) {
+                    $answered = count(array_filter((array) $attempt->answers, fn ($v) => $v !== null && $v !== ''));
+                    if ($answered > 0) {
+                        $day = $attempt->created_at->timezone(config('app.timezone'))->toDateString();
+                        $answeredByDay[$day] = ($answeredByDay[$day] ?? 0) + $answered;
+                    }
+                }
+            });
 
         $streak = 0;
-        $todayStr = now()->toDateString();
-        $yesterdayStr = now()->subDay()->toDateString();
-        $startCheck = $activeDates->contains($todayStr) ? now() : ($activeDates->contains($yesterdayStr) ? now()->subDay() : null);
+        $cursor = isset($answeredByDay[now()->toDateString()]) ? now() : (isset($answeredByDay[now()->subDay()->toDateString()]) ? now()->subDay() : null);
 
-        if ($startCheck) {
-            $cursor = $startCheck;
-            while ($activeDates->contains($cursor->toDateString()) && $streak < 60) {
-                $streak++;
-                $cursor = $cursor->subDay();
-            }
+        while ($cursor !== null && isset($answeredByDay[$cursor->toDateString()])) {
+            $streak++;
+            $cursor = $cursor->subDay();
         }
 
-        $todayAttempts = ExamAttempt::where('user_id', $userId)
-            ->whereDate('created_at', Carbon::today())
-            ->get();
-
-        $questionsToday = 0;
-        foreach ($todayAttempts as $attempt) {
-            $meta = $attempt->cat_scores['metadata'] ?? [];
-            $questionsToday += (int) ($meta['total_questions'] ?? count($attempt->question_ids ?? []));
-        }
+        $questionsToday = $answeredByDay[now()->toDateString()] ?? 0;
 
         return [
             'streak' => $streak,
