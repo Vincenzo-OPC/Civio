@@ -153,3 +153,21 @@ The earlier repository/stack table is historical. MSI main was clean at efc0d81,
 ## Curriculum and product research, 21 October 2026
 
 See [current bank assessment](research/curriculum/CURRENT_BANK_ASSESSMENT.md) and [educational/product handoff](research/curriculum/CODEX_EDUCATIONAL_HANDOFF.md) for pinned evidence, all 45 Vera dispositions, scoring inconsistencies, existing-feature status and founder testing proposals. Research only; no implementation, deployment or question activation. Existing security and Review Mistakes ordering remains in force.
+
+## Bank state update — 2026-10-22 (exact-flat)
+
+**Unique stems (official scope):** 2,100  
+**Domain targets met exactly:** Numerical 400, Analytical 400, Verbal EN 400, Verbal Filipino 300, Clerical 300, General Information 300.
+
+### Added this session
+- 122 residual drafts: `docs/research/civio-exact-flat-cleaned-2026-10-22.json`
+- Trim/exclusion lists (drafts only): `docs/research/civio-trim-lists-2026-10-22.json`
+- Review request: `docs/research/civio-exact-flat-review-request-2026-10-22.md`
+- Full log: `docs/research/AUDIT_TRACKER.md` (2026-10-22 section)
+- Pointer: `AGENTS.md` (Bank state 2026-10-22)
+
+### Rules for Codex
+- All 122 items are `status: draft`. Do not import or activate.
+- Trim lists exclude drafts from the flat count; they do not delete approved items.
+- Activation still requires independent review + GT Ed25519 signed approval (`docs/BANK_IMPORT_APPROVAL.md`).
+- Commit `c5ea772` on `main`. No Netlify builds triggered.

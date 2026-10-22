@@ -1,4 +1,7 @@
 # Current Codex prompt for Astra-led Civio development
+
+**Bank note (2026-10-22):** Unique stems are now 2,100 with every domain on its clean hundred target. See `docs/research/AUDIT_TRACKER.md` (2026-10-22) and `docs/research/civio-exact-flat-review-request-2026-10-22.md`. All new items are draft. Do not activate.
+
 **Replaces the October 21 earlier pasted Codex prompt.** This is the prompt GT can paste in a newly started Codex session; reading AGENTS.md should independently lead to the same priorities. Do not interpret this document as a background job or deployment authorization.
 
 ## Copy-paste into Codex
