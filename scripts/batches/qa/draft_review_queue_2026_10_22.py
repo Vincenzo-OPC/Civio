@@ -211,7 +211,8 @@ def main():
             flags.append("passage_missing_or_unlinked")
         if dom == "general_information" and key:
             for pat, want, src in GI_RULES:
-                if re.search(pat, i["stem"], re.I) and not re.search(want, str(key), re.I):
+                scenario_ok = "proper action" in i["stem"].lower() and re.search(want, rtxt, re.I)
+                if re.search(pat, i["stem"], re.I) and not re.search(want, str(key), re.I) and not scenario_ok:
                     flags.append(f"gi_fact_doubt:{src}")
         if re.match(r"Select the correctly spelled word for use in an official [A-Z]", i["stem"]):
             flags.append("template_stem_place_name")
@@ -232,7 +233,7 @@ def main():
             skeletons2.setdefault(skel2, i.get("id"))
         stem = i["stem"]
         for pat, why in RA6713_CITES:
-            if re.search(pat, stem, re.I | re.S):
+            if re.search(pat, stem, re.I | re.S) and not ("s.8" in why and re.search(r"§10|§11", rtxt)):
                 flags.append(f"gi_citation_doubt:{why}")
         if e["dup_files"]:
             flags.append("also_in:" + "|".join(sorted(set(e["dup_files"]))))

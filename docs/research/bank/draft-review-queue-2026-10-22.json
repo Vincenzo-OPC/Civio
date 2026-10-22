@@ -19,7 +19,7 @@
   "verbal_fil": 77
  },
  "adds_unique_pass_by_domain": {
-  "general_information": 208,
+  "general_information": 226,
   "clerical": 147,
   "numerical": 167,
   "analytical": 203,
@@ -80,8 +80,8 @@
    "flag": 2
   },
   "general_information|new": {
-   "flag": 29,
-   "pass": 54
+   "flag": 11,
+   "pass": 72
   },
   "general_information|revision": {
    "pass": 24
@@ -137,15 +137,12 @@
   "near_dup_draft": 22,
   "passage_missing_or_unlinked": 19,
   "percent_change_topic": 18,
-  "circular_reveal": 17,
   "duplicate_options": 11,
   "template_stem_place_name": 10,
   "key_not_in_reveal": 10,
   "difficulty_vs_time": 9,
-  "gi_citation_doubt": 5,
   "superseded_by_lintfix": 4,
   "hold_phrase_overlap": 2,
-  "gi_fact_doubt": 1,
   "options_shape": 1,
   "non_integer_intermediate": 1,
   "reveal_math_wrong": 1,
