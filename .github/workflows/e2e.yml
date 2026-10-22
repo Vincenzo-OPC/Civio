@@ -25,14 +25,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      # The only database this job uses: a fresh file in the runner's temp dir.
-      # tests/E2E/db-guard.mjs aborts the run if anything points elsewhere.
-      E2E_DB: ${{ runner.temp }}/civio-e2e.sqlite
       CI: 'true'
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
+
+      # The only database this job uses: a fresh file in the runner's temp dir.
+      # tests/E2E/db-guard.mjs aborts the run if anything points elsewhere.
+      - name: Throwaway SQLite path
+        run: echo "E2E_DB=$RUNNER_TEMP/civio-e2e.sqlite" >> "$GITHUB_ENV"
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
