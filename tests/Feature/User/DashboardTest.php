@@ -196,3 +196,37 @@ test('dashboard returns streak, today tasks, and recent attempts', function () {
         ->has('recentAttempts', 1)
     );
 });
+
+test('dashboard study totals are plain counts from the learner\'s own attempts', function () {
+    $user = User::factory()->create();
+    $other = User::factory()->create();
+
+    $make = fn (User $u, int $n) => ExamAttempt::create([
+        'user_id' => $u->id,
+        'category_id' => null,
+        'question_ids' => range(1, $n),
+        'answers' => [],
+        'cat_scores' => ['categoryScoreMap' => [], 'metadata' => ['track' => 'Drill', 'total_questions' => $n]],
+    ]);
+
+    $make($user, 3);
+    $old = $make($user, 5);
+    $old->forceFill(['created_at' => now()->subDays(10)])->save();
+    $make($other, 50);
+
+    $this->actingAs($user)->get(route('dashboard.index'))
+        ->assertOk()
+        ->assertInertia(fn (Assert $page) => $page
+            ->where('studyTotals.sessions', 2)
+            ->where('studyTotals.questionsAnswered', 8)
+            ->where('studyTotals.sessionsThisWeek', 1)
+        );
+});
+
+test('guest dashboard has no study totals', function () {
+    config(['civio.guest_unlimited' => true]);
+
+    $this->withoutVite()->get(route('dashboard.index'))
+        ->assertOk()
+        ->assertInertia(fn (Assert $page) => $page->where('studyTotals', null));
+});

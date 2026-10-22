@@ -88,6 +88,9 @@ export interface AiAnalysisData {
     priority_action: string;
     recommended_modules: string[];
     encouragement: string;
+    predictive_metrics?: {
+        estimated_exam_score?: string;
+    };
     subject_mastery?: Array<{
         subject: string;
         rating: string;
@@ -114,4 +117,12 @@ export interface DashboardProps {
     overdueTasksCount?: number;
     recentAttempts?: RecentAttemptItem[];
     nextModule?: NextModuleItem | null;
+    studyTotals?: StudyTotals | null;
+}
+
+/** Counts from stored attempts only (DashboardService::getStudyTotals). */
+export interface StudyTotals {
+    sessions: number;
+    questionsAnswered: number;
+    sessionsThisWeek: number;
 }

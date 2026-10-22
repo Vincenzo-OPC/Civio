@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Enums\ExamMode;
+use App\Services\Exam\MockPoolSelector;
+use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
@@ -24,7 +26,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property array<int, int> $question_ids
  * @property int|null $exam_attempt_id
  */
-#[Fillable(['user_id', 'track', 'mode', 'question_ids', 'exam_attempt_id'])]
+#[Fillable(['user_id', 'track', 'mode', 'question_ids', 'exam_attempt_id', 'started_at', 'deadline_at', 'saved_answers', 'save_version', 'owner_session_hash'])]
 class ExamSession extends Model
 {
     use HasUlids;
@@ -35,6 +37,10 @@ class ExamSession extends Model
     protected function casts(): array
     {
         return [
+            'started_at' => 'immutable_datetime',
+            'deadline_at' => 'immutable_datetime',
+            'saved_answers' => 'array',
+            'save_version' => 'integer',
             'user_id' => 'integer',
             'mode' => ExamMode::class,
             'question_ids' => 'array',
@@ -50,6 +56,25 @@ class ExamSession extends Model
     public function isStrict(): bool
     {
         return $this->mode === ExamMode::Strict;
+    }
+
+    /** Legacy sessions retain the deadline implied by their original creation. */
+    public function deadline(): ?CarbonInterface
+    {
+        if (! $this->isStrict()) {
+            return null;
+        }
+
+        return $this->deadline_at ?? $this->created_at?->copy()->addSeconds(
+            MockPoolSelector::timeLimitFor(
+                MockPoolSelector::levelFor($this->track)
+            )
+        );
+    }
+
+    public function isExpired(): bool
+    {
+        return $this->deadline()?->lessThanOrEqualTo(now()) ?? false;
     }
 
     public function isOpen(): bool

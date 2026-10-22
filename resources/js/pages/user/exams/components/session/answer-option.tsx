@@ -1,3 +1,4 @@
+import { Check, X } from 'lucide-react';
 import type { ReactNode } from 'react';
 import type { AnswerVisual } from '../../utils/answer-state';
 
@@ -46,7 +47,8 @@ export function AnswerOption({
 }: AnswerOptionProps) {
     return (
         <div
-            className={`flex min-h-12 items-start gap-3 border-b px-1 py-3.5 ${
+            data-answer-state={visual}
+            className={`flex min-h-12 items-start gap-3 border-b px-1 py-3.5 transition-colors duration-150 motion-reduce:transition-none ${
                 eliminated ? 'border-dashed opacity-45' : SHELL[visual]
             } border-x-0 border-t-0`}
         >
@@ -67,10 +69,16 @@ export function AnswerOption({
                 >
                     {letter}
                 </span>
-                <span className="min-w-0 flex-1 text-sm leading-relaxed md:text-base">
+                <span className="min-w-0 flex-1 text-[0.9375rem] leading-relaxed text-pretty [overflow-wrap:anywhere] md:text-base">
                     {children}
                     {status && (
-                        <span className="mt-1 block text-xs font-semibold tracking-wide uppercase">
+                        <span className="mt-1 flex items-center gap-1 text-xs font-semibold tracking-wide uppercase">
+                            {visual === 'correct' ||
+                            visual === 'correct-unselected' ? (
+                                <Check className="size-3.5" aria-hidden />
+                            ) : visual === 'incorrect' ? (
+                                <X className="size-3.5" aria-hidden />
+                            ) : null}
                             {status}
                         </span>
                     )}

@@ -33,6 +33,10 @@ function seedExamQuestions(int $count = 3): array
         ]);
     }
 
+    test()->withoutVite()->get(route('exams.index', [
+        'drill' => 'true', 'custom_question_ids' => json_encode(array_column($questions, 'id')),
+    ]))->assertOk();
+
     return $questions;
 }
 

@@ -98,7 +98,7 @@ Civio items are counted by `archetype` in the approved batch JSON (`docs/batches
 
 ### 3.4 Baseline items not yet audited
 
-Round 03 audited baseline Clerical (B1, 81 items: 3 key errors, 37 duplicates retired) and baseline GI Constitution plus Peace and Human Rights (B2, 70 items: 14 duplicates). See [AUDIT_TRACKER.md](AUDIT_TRACKER.md). These are **not audited yet**: Analytical 114, Verbal 130, Numerical 91, and GI R.A. 6713 plus Environment 64, about **399 items**. Codex's 496-item reworded set (`scripts/seeds/baseline_reparameterized.json`) is unapplied and gets its own audit round. **Proposal:** a baseline item joins the Release Collection only after it passes its round-03 audit.
+Round 03 audited baseline Clerical (B1, 81 items: 3 key errors, 37 duplicates retired) and baseline GI Constitution plus Peace and Human Rights (B2, 70 items: 14 duplicates). See [AUDIT_TRACKER.md](AUDIT_TRACKER.md). These are **not audited yet**: Analytical 114, Verbal 130, Numerical 91, and GI R.A. 6713 plus Environment 64, about **399 items**. Codex's 495-item reworded set (`scripts/seeds/baseline_reparameterized.json`) is unapplied and gets its own audit round. **Proposal:** a baseline item joins the Release Collection only after it passes its round-03 audit.
 
 ### 3.5 Mock composition follows subcategory labels, not CSC topics (new finding)
 
