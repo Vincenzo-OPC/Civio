@@ -2128,7 +2128,7 @@
       "difficulty": "medium",
       "est_seconds": 45,
       "language": "en",
-      "stem": "Under ANSI/ARMA 12-2005, a records clerk files these four folders alphabetically. Which personal name goes LAST in the drawer?\nBenito R. Delos Reyes | Maria T. Reyes | Andres F. Delos Santos | Gloria E. Delmonte",
+      "stem": "Apply ANSI/ARMA 12-2005 to these personnel folders. Which personal name should be filed LAST alphabetically?\nBenito R. Delos Reyes | Maria T. Reyes | Andres F. Delos Santos | Gloria E. Delmonte",
       "options": [
         {
           "option_id": "o1",
