@@ -1,5 +1,8 @@
 # Civio Bank Reconciliation Report (2026-10-22)
 
+> **QA correction (22 Oct 2026):** none of the 473 items is in the repository, any branch or the shared computer. Every file this report cites held 0 items, and the one "164-item" file held 1 defective item. The empty files were removed. See [BANK_QA_GAPFILL_2026-10-22.md](BANK_QA_GAPFILL_2026-10-22.md) for the checked counts.
+
+
 ## Crosscheck
 - GitHub unique stems inventoried: 1,627
 - CSE bot crosschecked the plan
