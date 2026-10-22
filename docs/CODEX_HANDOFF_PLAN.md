@@ -1,5 +1,11 @@
 # Codex handoff plan
 
+> **Superseding GT addition, 21 Oct 2026:** Read [Dexter timing and AI evaluations](DEXTER_TIMING_AND_EVALS_2026-10-21.md) alongside the master Dexter plan. Research and design optional question pacing/interactive bar, separate accuracy from speed and item familiarity, and use human-calibrated hybrid AI tutoring evals. **Astra reviews the architecture and can veto/improve proposals**; Codex must prepare ADR and perform only first eligible tested change after security gates. Existing earlier copy-paste prompts are superseded. No deployment, billing, unauthorized question access or live-service mutation.
+
+
+> **New GT directive, 21 October 2026:** Mandatory Codex startup reading: [Dexter adaptive tutor master plan](DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md), [tutor policy](DEXTER_TUTOR_POLICY_2026-10-21.md), [AI funding/access](DEXTER_AI_ACCESS_AND_BUSINESS_2026-10-21.md), and [near-perfect CSE research](CSE_PERFECT_SCORE_RESEARCH_2026-10-21.md). GT wants 100% on independent unseen practice (especially Numerical and spelling), a durable learner model, proactive Socratic Dexter, and inference costs funded by opt-in user accounts where legitimately supported. **These are plans, not shipped features or permission to incur costs.** Maintain the latest security -> import -> analytics credibility -> Review Mistakes ordering in [next-agent execution plan](CIVIO_NEXT_AGENT_EXECUTION_PLAN.md), and implement the first safe slice only after current tip verification. ChatGPT SIWC plan access cannot be resold or gated behind a Civio payment. Existing phases remain valid.
+
+
 > **Long-range AI research (2026-10-08):** `docs/AI_SELF_IMPROVEMENT.md` defines a future opt-in, independently benchmarked Civio testbed for THE-MACHINE's evolutionary agents. It does not change the current ranked product phases, security rules, or authorization gates.
 
 Read this first. It says what Civio is, what has been built (with commits), what
@@ -54,7 +60,7 @@ Start with [REVIEW_MISTAKES_BRIEF.md](REVIEW_MISTAKES_BRIEF.md) (17 Oct 2026). F
 - Normal pushes only, never force-push; CI green.
 
 ### 0.5 Other open items
-- **Deploy:** Koyeb free + Neon Free (Singapore) + Netlify static landing, once GT creates the accounts. No spend.
+- **Deploy:** Hosting undecided pending GT. Cloud Run and Koyeb/Neon/Netlify are historical alternatives; no deployment or spending is authorized.
 - **Bank:** import the 1,000-item bank into production with `php artisan civio:import-batch` (batches 002–011, `--status=active` after QA) at deploy.
 - **Old desktop app:** item 1530 is untouched; GT skipped it.
 
@@ -97,7 +103,7 @@ npx prettier --check <touched resources/ files>
 ```
 
 Push rules: normal `git push origin main` only. Never force-push, never
-`--no-verify`, no branches. `git pull --ff-only origin main` first.
+`--no-verify`, no branches. `git pull --rebase origin main` first.
 
 ## 4. What has been built (by phase, with commits)
 

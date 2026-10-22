@@ -8,7 +8,7 @@
 
 ## Provenance
 
-Civio builds on the baseline codebase at `d3f0368` (CSE mocks, drills, Dexter tutor).
+Civio builds on the baseline codebase at `d3f0368` (CSE mocks, drills, and a stored-key check named Dexter).
 Work continues across Codex, Grok Build, Grok Bot, Claude and human contributors.
 GitHub `Vincenzo-OPC/Civio` is the durable record — not any one chat history.
 
@@ -29,13 +29,13 @@ When documents conflict: live code/tests → build brief → AGENTS.md → histo
 
 ## What Civio is
 
-Philippine Civil Service Exam study app. Brand **Civio** (Title Case). Tutor
-**Dexter**. **Not** official CSC. Lowercase `civio` only in identifiers/URLs/env.
+Philippine Civil Service Exam study app. Brand **Civio** (Title Case). Dexter
+is a stored-key check, not a chat tutor. **Not** official CSC. Lowercase `civio` only in identifiers/URLs/env.
 
 ## Non-negotiable
 
 - Never force-push `main`. Never touch Hermes `:8642` or the MSI Docker study
-  containers (app `:8080`, Postgres `:5433`).
+  containers (app `:8090`, Postgres `:5434`).
 - Never expose API keys client-side (`VITE_*` secrets forbidden).
 - Never add bank questions without an approved design-spec pass.
 - Server grades exam attempts; do not trust client `cat_scores`.
@@ -53,3 +53,7 @@ Laravel 13 + Inertia/React 19 + Postgres/SQLite + optional server AI (Dexter stu
 
 `vendor/bin/pint --test`, `npm run types:check`, `npm run lint:check`, `npm run build`,
 `php artisan test`.
+
+## Current execution boundary - 20 October 2026
+
+Civio study services are civio-local-app / civio-local-db at 8090/5434. The separate protected application is 8080/5433; Hermes is 8642. Do not operate or query any of these services for development. Use isolated test infrastructure. GT authorizes normal verified pushes to main; pull --rebase first, never force-push or bypass hooks, stop on rejection. Every new commit includes [skip netlify]. Hosting remains undecided; no deployment or spending is authorized.

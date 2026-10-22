@@ -198,7 +198,7 @@ class AnalyticsService
                         }
                     }
                     if (! $found) {
-                        $breakdown[$short] = 0;
+                        $breakdown[$short] = null;
                     }
                 }
                 $attemptBreakdowns[] = $breakdown;
@@ -293,15 +293,6 @@ class AnalyticsService
             }
         }
 
-        $isIncompleteSyllabus = ($mockExamCount === 0 && $coveredCategoriesCount < 3);
-
-        $cseReadinessIndex = $avgScore;
-        if ($isIncompleteSyllabus && $cseReadinessIndex > 65) {
-            $cseReadinessIndex = 65;
-        } elseif ($hasSubtestRisk && $cseReadinessIndex > 75) {
-            $cseReadinessIndex = 75;
-        }
-
         return [
             'totalExams' => $totalExams,
             'mockExamCount' => $mockExamCount,
@@ -319,7 +310,7 @@ class AnalyticsService
             'examDate' => $examDate,
             'examDateRaw' => $examDateRaw,
             'daysUntilExam' => $daysUntilExam,
-            'cseReadinessIndex' => $cseReadinessIndex,
+            'cseReadinessIndex' => $avgScore,
             'subtestThresholds' => $subtestThresholds,
             'hasSubtestRisk' => $hasSubtestRisk,
             'coveredCategoriesCount' => $coveredCategoriesCount,
@@ -332,13 +323,14 @@ class AnalyticsService
     }
 
     /**
-     * Compute global percentile rank against all system attempts safely using chunked queries.
+     * Rank against other attempts only when there is enough of them to mean something.
+     * A thin pool is null, not a pretend 50th percentile.
      */
-    public function calculatePercentileRank(float $avgScore): int
+    public function calculatePercentileRank(float $avgScore): ?int
     {
         $totalSystemAttempts = ExamAttempt::count();
         if ($totalSystemAttempts <= 5 || $avgScore <= 0) {
-            return 50;
+            return null;
         }
 
         $lowerCount = 0;

@@ -68,6 +68,7 @@ test('analytics service calculates metrics and percentile rank safely without me
     $metrics = $service->getAnalyticsMetrics($user->id, new AnalyticsFilterData(track: 'Professional', runs: 'all'));
 
     expect($metrics)->toHaveKey('percentileRank')
+        ->and($metrics['percentileRank'])->toBeNull()
         ->and($metrics)->toHaveKey('filters')
         ->and($metrics['filters']['track'])->toBe('Professional');
 

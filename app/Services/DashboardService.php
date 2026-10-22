@@ -29,7 +29,8 @@ class DashboardService
      *     todayTasks: Collection<int, array<string, mixed>>,
      *     overdueTasksCount: int,
      *     recentAttempts: Collection<int, array<string, mixed>>,
-     *     nextModule: array<string, mixed>|null
+     *     nextModule: array<string, mixed>|null,
+     *     studyTotals: array{sessions: int, questionsAnswered: int, sessionsThisWeek: int}
      * }
      */
     public function getDashboardData(int $userId, bool $includeAnalysis = true): array
@@ -41,6 +42,7 @@ class DashboardService
             'overdueTasksCount' => $this->getOverdueTasksCount($userId),
             'recentAttempts' => $this->getRecentAttempts($userId),
             'nextModule' => $this->getNextModule($userId),
+            'studyTotals' => $this->getStudyTotals($userId),
         ];
 
         if ($includeAnalysis) {
@@ -189,6 +191,28 @@ class DashboardService
                     'created_at_human' => $attempt->created_at ? $attempt->created_at->diffForHumans() : 'Recently',
                 ];
             });
+    }
+
+    /**
+     * Plain counts from stored, submitted attempts. No scores, rates or forecasts.
+     *
+     * @return array{sessions: int, questionsAnswered: int, sessionsThisWeek: int}
+     */
+    protected function getStudyTotals(int $userId): array
+    {
+        $attempts = ExamAttempt::where('user_id', $userId)
+            ->get(['id', 'question_ids', 'cat_scores', 'created_at']);
+        $weekAgo = now()->subDays(7);
+
+        return [
+            'sessions' => $attempts->count(),
+            'questionsAnswered' => (int) $attempts->sum(
+                fn (ExamAttempt $a): int => (int) ($a->cat_scores['metadata']['total_questions'] ?? count($a->question_ids ?? [])),
+            ),
+            'sessionsThisWeek' => $attempts->filter(
+                fn (ExamAttempt $a): bool => $a->created_at !== null && $a->created_at->greaterThanOrEqualTo($weekAgo),
+            )->count(),
+        ];
     }
 
     /**

@@ -17,7 +17,7 @@ export interface QuestionPreviewData {
     id: number;
     stem: string;
     options: string[];
-    correct_option: number;
+    correct_option?: number;
     explanation?: string | null;
     category: string;
     subcategory?: string | null;

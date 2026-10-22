@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import type { SetStateAction } from 'react';
 import { toast } from 'sonner';
 import { shouldRunExamClock } from '../utils/answer-state';
+import { secondsUntil } from '../utils/server-clock';
 
 export interface ExamClockSnapshot {
     timeLeft: number;
@@ -16,6 +17,7 @@ interface UseExamTimerProps {
     currentIdx: number;
     isPaused?: boolean;
     onTimerExpired: () => void;
+    deadlineMs?: number | null;
 }
 
 /**
@@ -31,6 +33,7 @@ export function useExamTimer({
     currentIdx,
     isPaused = false,
     onTimerExpired,
+    deadlineMs = null,
 }: UseExamTimerProps) {
     const [timeLeft, setTimeLeftState] = useState(sessionTimeLimitSecs);
     const [questionTimes, setQuestionTimesState] = useState<
@@ -128,7 +131,7 @@ export function useExamTimer({
             !shouldRunExamClock({
                 isExamActive,
                 isExamSubmitted,
-                isPaused,
+                isPaused: deadlineMs !== null ? false : isPaused,
             })
         ) {
             return;
@@ -149,9 +152,12 @@ export function useExamTimer({
             };
 
             if (isTimed) {
-                const prev = timeLeftRef.current;
+                const prev =
+                    deadlineMs !== null
+                        ? secondsUntil(deadlineMs, Date.now())
+                        : timeLeftRef.current;
 
-                if (prev <= 1) {
+                if (prev <= (deadlineMs !== null ? 0 : 1)) {
                     if (timerRef.current) {
                         clearInterval(timerRef.current);
                     }
@@ -163,7 +169,7 @@ export function useExamTimer({
                     return;
                 }
 
-                const next = prev - 1;
+                const next = deadlineMs !== null ? prev : prev - 1;
                 publishClock(next, nextElapsed);
 
                 if (next === 600 && !warned10MinRef.current) {
@@ -211,6 +217,7 @@ export function useExamTimer({
         isTimed,
         isPaused,
         onTimerExpired,
+        deadlineMs,
         publishClock,
     ]);
 

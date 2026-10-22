@@ -1,8 +1,17 @@
 <?php
 
+use App\Models\Category;
 use App\Models\ExamAttempt;
+use App\Models\Question;
 use App\Models\User;
 
+beforeEach(function () {
+    Question::factory()->count(3)->create(['status' => 'active']);
+    Category::query()->update(['is_demographic' => false]);
+    $this->withoutVite()->get(route('exams.index', [
+        'drill' => 'true', 'custom_question_ids' => '[1,2,3]',
+    ]))->assertOk();
+});
 test('guests can store an exam attempt', function () {
     $response = $this->postJson(route('exams.attempts.store'), [
         'question_ids' => [1, 2, 3],
@@ -28,6 +37,9 @@ test('guests can store an exam attempt', function () {
 test('authenticated users can store a timed exam attempt', function () {
     $user = User::factory()->create();
     $this->actingAs($user);
+    $this->withoutVite()->get(route('exams.index', [
+        'drill' => 'true', 'custom_question_ids' => '[1,2,3]',
+    ]))->assertOk();
 
     $response = $this->postJson(route('exams.attempts.store'), [
         'category_id' => null,
@@ -62,6 +74,9 @@ test('authenticated users can store a timed exam attempt', function () {
 test('authenticated users can store an untimed exam attempt', function () {
     $user = User::factory()->create();
     $this->actingAs($user);
+    $this->withoutVite()->get(route('exams.index', [
+        'drill' => 'true', 'custom_question_ids' => '[1,2,3]',
+    ]))->assertOk();
 
     $response = $this->postJson(route('exams.attempts.store'), [
         'category_id' => null,
@@ -91,6 +106,9 @@ test('authenticated users can store an untimed exam attempt', function () {
 test('authenticated users can access the drills list page', function () {
     $user = User::factory()->create();
     $this->actingAs($user);
+    $this->withoutVite()->get(route('exams.index', [
+        'drill' => 'true', 'custom_question_ids' => '[1,2,3]',
+    ]))->assertOk();
 
     $response = $this->get(route('drills.index'));
     $response->assertOk();
@@ -99,6 +117,9 @@ test('authenticated users can access the drills list page', function () {
 test('authenticated users can access past attempts history', function () {
     $user = User::factory()->create();
     $this->actingAs($user);
+    $this->withoutVite()->get(route('exams.index', [
+        'drill' => 'true', 'custom_question_ids' => '[1,2,3]',
+    ]))->assertOk();
 
     $response = $this->get(route('history.index'));
     $response->assertOk();
