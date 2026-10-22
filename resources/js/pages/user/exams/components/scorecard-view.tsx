@@ -27,6 +27,7 @@ import type {
     ReviewStatusFilter,
     Question,
 } from '../types';
+import { retiredNotice } from '../utils/retired-notice';
 
 interface ScorecardViewProps {
     details: SimulationDetails;
@@ -117,6 +118,11 @@ export function ScorecardView({
             : 0;
 
     const elapsedText = formatDuration(elapsedSecs);
+    const retiredText = retiredNotice(
+        results?.retiredCount,
+        results?.total ?? 0,
+    );
+
     const underLimitText = !isActuallyTimed
         ? 'Self-paced (Untimed)'
         : remainingSecs > 0
@@ -654,6 +660,15 @@ export function ScorecardView({
                                         </span>
                                     </div>
                                 </div>
+                                {retiredText && (
+                                    <p
+                                        role="note"
+                                        data-testid="retired-notice"
+                                        className="mt-4 rounded-xl border border-amber-300/60 bg-amber-50 px-4 py-3 text-sm text-amber-900 dark:border-amber-500/40 dark:bg-amber-950/40 dark:text-amber-200"
+                                    >
+                                        {retiredText}
+                                    </p>
+                                )}
                             </div>
 
                             {/* Strength vs weakness from this attempt */}

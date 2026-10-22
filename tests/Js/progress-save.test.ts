@@ -2,6 +2,10 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import {
     httpStatusOf,
+    mergeResumed,
+    pendingKey,
+    persistPending,
+    readPending,
     saveProgressPatch,
     settleSave,
     withoutWithdrawn,
@@ -276,4 +280,100 @@ test('UI: a submitted mock closes saving and a hard failure throws', () => {
     assert.deepEqual(h.ui.closed, [true]);
     assert.equal(h.state.pending.size, 0);
     assert.throws(() => h.settle({ kind: 'failed' }, { 7: 1 }));
+});
+
+function memoryStorage() {
+    const data = new Map<string, string>();
+    return {
+        data,
+        getItem: (k: string) => data.get(k) ?? null,
+        setItem: (k: string, v: string) => void data.set(k, v),
+        removeItem: (k: string) => void data.delete(k),
+    };
+}
+
+test('resume: offline answers survive a reload and are newer when the server is unchanged', () => {
+    const storage = memoryStorage();
+    const h = harness({ 7: 1 });
+    Object.assign(h.state, {
+        sessionId: 'S',
+        storage,
+        server: { 7: 1, 8: null },
+    });
+
+    h.settle({ kind: 'offline' }, { 7: 3 });
+    h.settle({ kind: 'offline' }, { 8: 0 });
+    assert.deepEqual(readPending('S', storage), { 7: [3, 1], 8: [0, null] });
+
+    // A second offline change to item 7 keeps the original server base.
+    h.state.pending.set(7, 2);
+    h.settle({ kind: 'offline' }, { 7: 2 });
+    assert.deepEqual(readPending('S', storage)[7], [2, 1]);
+
+    // Reload: the server still has the old values, so local answers win and are resent.
+    const merged = mergeResumed(
+        res({ answers: { 7: 1 }, save_version: 4 }),
+        readPending('S', storage),
+        [7, 8, 9],
+    );
+    assert.deepEqual(merged.answers, { 7: 2, 8: 0 });
+    assert.deepEqual(merged.resend, { 7: 2, 8: 0 });
+    assert.deepEqual(merged.superseded, []);
+});
+
+test('resume: a change saved elsewhere after the offline answer wins', () => {
+    const merged = mergeResumed(
+        res({ answers: { 7: 0, 8: 1 } }),
+        { 7: [2, 1], 8: [1, null] },
+        [7, 8],
+    );
+    assert.deepEqual(merged.answers, { 7: 0, 8: 1 });
+    assert.deepEqual(
+        merged.resend,
+        {},
+        'item 8 already matches; item 7 changed on the server',
+    );
+    assert.deepEqual(merged.superseded, [7]);
+});
+
+test('resume: after the deadline or submit nothing local is applied or resent', () => {
+    for (const server of [
+        res({ answers: { 7: 1 }, server_now: '2026-10-22T10:00:00Z' }),
+        res({ answers: { 7: 1 }, submitted: true }),
+    ]) {
+        const merged = mergeResumed(server, { 7: [3, 1] }, [7]);
+        assert.deepEqual(merged.answers, { 7: 1 });
+        assert.deepEqual(merged.resend, {});
+    }
+});
+
+test('resume: unserved, malformed or tampered local entries are ignored', () => {
+    const storage = memoryStorage();
+    storage.setItem(
+        pendingKey('S'),
+        JSON.stringify({
+            7: [1, null],
+            99: [0, null],
+            x: [1, 1],
+            8: ['a', 1],
+            9: [1],
+        }),
+    );
+    const local = readPending('S', storage);
+    assert.deepEqual(local, { 7: [1, null], 99: [0, null] });
+    assert.deepEqual(mergeResumed(res(), local, [7]).resend, { 7: 1 });
+    storage.setItem(pendingKey('S'), '{not json');
+    assert.deepEqual(readPending('S', storage), {});
+});
+
+test('resume: storage is cleared once everything is saved, and on withdrawal', () => {
+    const storage = memoryStorage();
+    const h = harness();
+    Object.assign(h.state, { sessionId: 'S', storage, server: {} });
+    h.settle({ kind: 'offline' }, { 7: 1, 9: 2 });
+    h.settle({ kind: 'saved', version: 2, withdrawn: [9] }, { 7: 1, 9: 2 });
+    assert.equal(storage.data.has(pendingKey('S')), false);
+    assert.deepEqual(h.state.server, { 7: 1 });
+    persistPending(h.state);
+    assert.equal(storage.data.size, 0);
 });

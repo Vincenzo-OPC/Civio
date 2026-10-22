@@ -228,3 +228,18 @@ test('an on-time submit that still carries an answer to a retired item grades th
     $this->postJson(route('exams.sessions.progress'), ['exam_session_id' => $session->id])
         ->assertOk()->assertJson(['submitted' => true]);
 });
+
+test('the submit response reports withdrawn items so the scorecard can explain them', function () {
+    $user = User::factory()->create();
+    // Keep question ids above the served-position range (0-2) so the
+    // answer schema is unambiguous, as it is with real bank ids.
+    Question::factory()->count(5)->create();
+    $session = deadlineSession($user->id);
+    [$a, $b, $retired] = $session->question_ids;
+    Question::whereKey($retired)->update(['status' => 'retired']);
+
+    $this->actingAs($user)->postJson(route('exams.attempts.store'), deadlineFinal($session, [$a => 1, $b => 1]))
+        ->assertOk()
+        ->assertJson(['retired_count' => 1, 'total_questions' => 2, 'skipped_count' => 0, 'wrong_count' => 0, 'score' => 100])
+        ->assertJsonMissing(['id' => $retired]);
+});

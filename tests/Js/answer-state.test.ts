@@ -6,6 +6,7 @@ import {
     recoveredSessionStartsPaused,
     shouldRunExamClock,
 } from '../../resources/js/pages/user/exams/utils/answer-state';
+import { retiredNotice } from '../../resources/js/pages/user/exams/utils/retired-notice';
 
 describe('answer option visuals', () => {
     it('stays neutral until a choice is selected', () => {
@@ -120,4 +121,17 @@ describe('exam pause', () => {
         assert.equal(recoveredSessionStartsPaused(false, 40), true);
         assert.equal(recoveredSessionStartsPaused(true, 0), false);
     });
+});
+
+it('scorecard explains withdrawn items without counting them wrong or skipped', () => {
+    assert.equal(retiredNotice(0, 150), null);
+    assert.equal(retiredNotice(undefined, 150), null);
+    assert.equal(
+        retiredNotice(1, 149),
+        '1 item was withdrawn by Civio after this mock started. It is not counted as wrong or skipped: your score is out of 149, not 150.',
+    );
+    assert.match(
+        retiredNotice(2, 148) ?? '',
+        /^2 items were withdrawn .* They are not counted .* out of 148, not 150\.$/,
+    );
 });

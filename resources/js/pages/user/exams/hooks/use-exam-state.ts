@@ -207,7 +207,7 @@ export function useExamState(props: ExamIndexProps) {
         setAnswers,
         // A refresh after submit (or a submit from another tab) must not
         // leave a completed Strict mock on screen as if it could resume.
-        () => setIsExamActive(false),
+        setIsExamActive,
     );
 
     // Sub-hook 2: Timer

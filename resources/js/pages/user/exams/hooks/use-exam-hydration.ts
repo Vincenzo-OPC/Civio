@@ -227,6 +227,7 @@ export function useExamHydration({
             correctCount,
             wrongCount,
             skippedCount,
+            retiredCount: meta.retired_count ?? 0,
             categoryScoreMap: activeCatMap,
             elapsedSecs,
         };

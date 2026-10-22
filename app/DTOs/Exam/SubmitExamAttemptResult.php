@@ -24,6 +24,7 @@ readonly class SubmitExamAttemptResult
         public ?array $catScores = null,
         public ?array $answerKeys = null,
         public ?array $answers = null,
+        public int $retiredCount = 0,
     ) {}
 
     /**
@@ -46,6 +47,8 @@ readonly class SubmitExamAttemptResult
             $data['correct_count'] = $this->correctCount;
             $data['wrong_count'] = $this->wrongCount;
             $data['skipped_count'] = $this->skippedCount;
+            // Items withdrawn after serving: shown on the scorecard, never scored.
+            $data['retired_count'] = $this->retiredCount;
             $data['total_questions'] = $this->totalQuestions;
             $data['cat_scores'] = $this->catScores;
             $data['answer_keys'] = $this->answerKeys;

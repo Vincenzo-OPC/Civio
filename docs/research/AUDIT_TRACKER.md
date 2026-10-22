@@ -426,3 +426,11 @@ Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
 - **(d) Method-first explanations:** 76 numerical drafts in place; -R1 proposals (content and key unchanged) for 257 approved and 38 reviewed rows in `audit/fixes/method-first-r1-proposals-2026-10-22.json`. The 38 reviewed (Subpro fundamentals) are hand-written; the approved use per-family builders that recompute from the stem numbers and are checked against the key. The 59 pattern-built proposals from the morning were hand-checked: all correct.
 - **Approved-bank flag:** approved Numerical rows are heavily templated (about 30 order-of-operations, 27 percent-change, 35 work-rate, 34 ratio-share rows on fixed frames). Approved items are immutable; replacing them needs GT/CoS.
 - **Spec proposals for GT (pending):** archetypes CLR-CHRONOLOGICAL and CLR-COPY-CHECK; distractor code CLR-COPY-MISMATCH; the VFIL passage-length question above.
+
+### Engine: reload/resume merge and retired-item scorecard (current directive)
+- **Defect:** after a reload, answers made offline and not yet saved were overwritten by the server copy and lost.
+- **Fix:** unsent answers are kept per session in localStorage with their base server value. On reload a three-way merge keeps the local answer when the server is unchanged and resends it; a change saved on the server since wins; after the deadline or submit the server copy is final.
+- **Defect:** the scorecard never mentioned items withdrawn mid-mock, so totals looked short with no explanation.
+- **Fix:** `retired_count` is in the submit response and on the scorecard, with plain wording: not wrong, not skipped, and out of how many items the score is.
+- **Tests:** `tests/Js/progress-save.test.ts` (5 resume cases), `tests/Js/answer-state.test.ts` (wording), `ExamDeadlineTest` (`retired_count` in the response).
+- **Scenario status:** the reload and resume scenarios (5 and 6) are now covered by unit tests of the merge. Not yet checked end to end in a real browser.

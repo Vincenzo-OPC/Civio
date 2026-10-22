@@ -15,20 +15,13 @@ interface Progress {
     submitted: boolean;
 }
 
-function forgetLocalSession(): void {
-    try {
-        localStorage.removeItem('active_exam_session_v1');
-    } catch {
-        /* storage unavailable */
-    }
-}
-
 export function useServerExamProgress(
     sessionId: string | null,
     enabled: boolean,
     questions: Question[],
     setAnswers: Dispatch<SetStateAction<Record<number, number>>>,
-    onSubmitted?: () => void,
+    /** Stable setter: a submitted mock must leave the exam screen. */
+    setExamActive?: (active: boolean) => void,
 ) {
     const [readyId, setReadyId] = useState<string | null>(null);
     const [deadline, setDeadline] = useState<number | null>(null);
@@ -37,11 +30,18 @@ export function useServerExamProgress(
     const canSave = useRef(false);
     const queue = useRef<Promise<void>>(Promise.resolve());
     const questionsRef = useRef(questions);
-    const onSubmittedRef = useRef(onSubmitted);
     useEffect(() => {
         questionsRef.current = questions;
-        onSubmittedRef.current = onSubmitted;
     });
+
+    // Answers the server has not confirmed because the connection dropped.
+    // Kept per item (latest choice wins) and resent on reconnect.
+    // Items reported withdrawn are never resent.
+    const [state] = useState<SaveState>(() => ({
+        pending: new Map(),
+        withdrawnIds: new Set(),
+        offline: { current: false },
+    }));
 
     useEffect(() => {
         const current = ++generation.current;
@@ -56,21 +56,38 @@ export function useServerExamProgress(
         void apiPost<Progress>('/exams/sessions/progress', {
             exam_session_id: sessionId,
         })
-            .then((data) => {
+            .then(async (data) => {
                 if (generation.current !== current) {
                     return;
                 }
 
+                state.sessionId = sessionId;
+
+                // Merge answers made offline before a reload: a local answer
+                // wins only if the server still holds the value it replaced.
+                // A submitted or expired mock keeps only the server copy.
+                const save = await import('../utils/progress-save');
+
+                if (generation.current !== current) {
+                    return;
+                }
+
+                const merged = save.resumeFromServer(
+                    data,
+                    state,
+                    questions.map((q) => q.id),
+                );
+
                 if (data.submitted) {
-                    forgetLocalSession();
-                    onSubmittedRef.current?.();
-                    toast.error('Mock submitted. Open its scorecard.');
+                    save.forgetLocalSession();
+                    setExamActive?.(false);
+                    toast.error(save.progressNotices.submitted);
 
                     return;
                 }
 
                 version.current = data.save_version;
-                setAnswers(restoreAnswerPositions(questions, data.answers));
+                setAnswers(restoreAnswerPositions(questions, merged.answers));
                 setDeadline(
                     data.deadline_at
                         ? localDeadline(
@@ -82,6 +99,12 @@ export function useServerExamProgress(
                 );
                 canSave.current = true;
                 setReadyId(sessionId);
+
+                for (const [level, message] of merged.notices) {
+                    toast[level](message);
+                }
+                // Restored answers sit in the pending queue (and storage) and
+                // go out with the next flush: on reconnect or within 20 s.
             })
             .catch(() =>
                 toast.error('Reconnect and reload to recover saved answers.'),
@@ -91,16 +114,7 @@ export function useServerExamProgress(
             generation.current = current + 1;
             canSave.current = false;
         };
-    }, [sessionId, enabled, questions, setAnswers]);
-
-    // Answers the server has not confirmed because the connection dropped.
-    // Kept per item (latest choice wins) and resent on reconnect.
-    // Items reported withdrawn are never resent.
-    const [state] = useState<SaveState>(() => ({
-        pending: new Map(),
-        withdrawnIds: new Set(),
-        offline: { current: false },
-    }));
+    }, [sessionId, enabled, questions, setAnswers, state, setExamActive]);
 
     const send = useCallback(
         (batch: Record<number, number | null>) => {
@@ -153,8 +167,8 @@ export function useServerExamProgress(
                             canSave.current = false;
 
                             if (submitted) {
-                                forgetLocalSession();
-                                onSubmittedRef.current?.();
+                                save.forgetLocalSession();
+                                setExamActive?.(false);
                             }
                         },
                     });
@@ -163,19 +177,19 @@ export function useServerExamProgress(
                         version.current = next;
                     }
                 })
-                .catch(() => {
+                .catch(async () => {
                     if (generation.current !== current) {
                         return;
                     }
 
                     canSave.current = false;
                     setReadyId(null);
-                    toast.error(
-                        'Save failed. Reload to recover server answers. Late submission uses saved answers only.',
-                    );
+                    // Cached: hydration loaded this module at mock start.
+                    const save = await import('../utils/progress-save');
+                    toast.error(save.progressNotices.saveFailed);
                 });
         },
-        [enabled, sessionId, setAnswers, state],
+        [enabled, sessionId, setAnswers, state, setExamActive],
     );
 
     const saveAnswer = useCallback(

@@ -153,6 +153,7 @@ class SubmitExamAttemptAction
                     catScores: $graded['cat_scores'],
                     answerKeys: $graded['answer_keys'],
                     answers: $graded['answers'],
+                    retiredCount: (int) ($graded['cat_scores']['metadata']['retired_count'] ?? 0),
                 );
             });
         } finally {

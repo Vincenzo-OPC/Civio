@@ -40,6 +40,7 @@ export interface AttemptMetadata {
     correct_count?: number;
     total_questions?: number;
     skipped_count?: number;
+    retired_count?: number;
     duration_secs?: number;
     is_timed?: boolean;
     question_times?: Record<number, number>;
@@ -93,6 +94,8 @@ export interface ExamResults {
     correctCount: number;
     wrongCount: number;
     skippedCount: number;
+    /** Items withdrawn after serving: excluded from the score. */
+    retiredCount?: number;
     categoryScoreMap: Record<string, CategoryScore>;
     elapsedSecs: number;
     cat_scores?: SavedAttempt['cat_scores'];

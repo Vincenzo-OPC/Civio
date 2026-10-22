@@ -381,3 +381,12 @@ Before this fix, retiring one served item during an open Strict mock made every 
 - Answers made while offline are held and saved in one patch on reconnect. A version conflict from another tab re-reads the server state and retries once.
 - A refresh after submit leaves the exam and clears the local resume copy.
 - The save logic loads with the first answer, which keeps the exam chunk at 10.96 kB, under the 11 kB budget.
+
+## Strict mock: offline answers survive a reload; scorecard explains withdrawn items (22 October 2026)
+
+- Answers that couldn't be sent are kept in localStorage (`civio_strict_pending:<session>`), each with the server value it replaced. On reload a per-item three-way merge runs:
+  - if the server still holds that value, the local answer is newer: it is restored and resent on the next flush (on reconnect or within 20 s), and submit always sends it anyway;
+  - if the server value changed since (another tab or device), the server wins and the examinee is told;
+  - after the deadline or submit, nothing local is applied, since the server copy is final.
+  Malformed or unserved stored entries are ignored. The stored copy is cleared once everything is saved, and on submit.
+- The submit response now includes `retired_count`. When it is above zero, the scorecard explains: "1 item was withdrawn by Civio after this mock started. It is not counted as wrong or skipped: your score is out of 149, not 150." Reopened attempts read the same count from the attempt metadata.
