@@ -257,6 +257,12 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
   - Backup first: `civio_local_pre_r03c_20261017.dump`.
   - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 604, **total 1,978**.
 
+## 2026-10-18 — gap-fill-2000-02: Numerical basic ops + sequences, Filipino reading + paragraph order (108 drafts, pending CoS)
+
+- `docs/research/gap-fill-2000-02.json` (generator `scripts/batches/gapfill/gap_fill_2000_02.py`): NUM-OPS-ORDER 60, NUM-SEQ-DIFF 11, NUM-SEQ-MULT 9, VFIL-PAGBASA 12, VFIL-PAGSUSUNOD 16. Numerical stems avoid near-duplicates: the generator rejects any stem with Jaccard ≥ 0.6 to an existing numerical stem. No percent items.
+- QA: `qa_file.py` 0 problems vs 1,755 bank items, with solver-recomputed keys on all 80 numerical items. `explanation_lint.py` 0 flagged. Positions 27/27/27/27. `qa_fil.py` GREEN.
+- Release projection (approved + kept + pending drafts incl. gap-fill-01/02): **FV 300 exact, Num 400 exact.** Remaining shortfalls: Analytical analogy 61, data interpretation 31; Clerical filing 41; R.A. 6713 32; EV paragraph organization 6, reading comprehension 5. Gap-fill-03 (Analytical) and -04 (Clerical filing + R.A. 6713) are being drafted on their own branches.
+
 ## 2026-10-18: gap-fill-2000-01, Filipino Verbal (99 drafts, pending CoS)
 
 - `docs/research/gap-fill-2000-01.json`, built by `scripts/batches/gapfill/gap_fill_2000_01.py`: antonyms 41, synonyms 34, idioms 24. All target words and idioms are new to the bank. Spelling follows KWF.
