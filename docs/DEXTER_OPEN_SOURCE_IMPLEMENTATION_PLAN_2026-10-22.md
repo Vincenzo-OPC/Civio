@@ -1,6 +1,6 @@
 # Civio / Dexter: open-source-informed execution plan (22 October 2026)
 
-**Status:** Product/engineering proposal for GT + Astra review. **No feature implementation, live DB mutation, paid inference, deployment, or bank approval is authorized by this document.** This is a scoped companion to the **canonical execution order** in [CIVIO_NEXT_AGENT_EXECUTION_PLAN.md](CIVIO_NEXT_AGENT_EXECUTION_PLAN.md), not a second competing master roadmap. [Issue #17](https://github.com/Vincenzo-OPC/Civio/issues/17) remains Dexter's parent; the tracking issue for this plan is created separately.
+**Status:** Product/engineering proposal for GT + Astra review. **No feature implementation, live DB mutation, paid inference, deployment, or bank approval is authorized by this document.** This is a scoped companion to the **canonical execution order** in [CIVIO_NEXT_AGENT_EXECUTION_PLAN.md](CIVIO_NEXT_AGENT_EXECUTION_PLAN.md), not a second competing master roadmap. [Issue #17](https://github.com/Vincenzo-OPC/Civio/issues/17) remains Dexter's parent; the tracking issue is [Epic #19](https://github.com/Vincenzo-OPC/Civio/issues/19) with scoped [BKT #20](https://github.com/Vincenzo-OPC/Civio/issues/20), [Strict selection #21](https://github.com/Vincenzo-OPC/Civio/issues/21), [metadata pilot #22](https://github.com/Vincenzo-OPC/Civio/issues/22), and [Rescue #23](https://github.com/Vincenzo-OPC/Civio/issues/23).
 
 ## North star, product scope, and red lines
 
@@ -34,7 +34,7 @@ Checked on main around commits `12cda0d`, `f8717ae`, `6163412`, `1a4412d`; re-fe
 
 **Owner:** Codex engineering; Grok Bot independent CI read; Astra review gate; GT retains deployment approval.
 
-- Rebase on current main and confirm green `tests`, `linter`, `size`, plus Playwright Chromium **E2E** from a *throwaway guarded SQLite DB* (never MSI database or protected ports). The 22 Oct E2E workflow was initially invalid because `runner.temp` was used in job `env`; commit `1a4412d` changed setup. Treat subsequent CI status as the evidence, not the presence of `e2e.yml`.
+- Rebase on current main and confirm green `tests`, `linter`, `size`, plus Playwright Chromium **E2E** from a *throwaway guarded SQLite DB* (never MSI database or protected ports). The [first passing Chromium CI run after the repair](https://github.com/Vincenzo-OPC/Civio/actions/runs/39751013201) completed successfully on commit `1a4412d` (later commits must be checked independently). The 22 Oct E2E workflow was initially invalid because `runner.temp` was used in job `env`; commit `1a4412d` changed setup. Treat subsequent CI status as the evidence, not the presence of `e2e.yml`.
 - Keep strict mock offline/reload, multi-tab, server deadline, double-submit, withdrawn-item no-key, guest/owner and keyless UI tests. Add checks if new selector routes touch these flows. Stop if CI is red; **don't raise bundle limits to suppress failures**.
 - Preserve `OwnerAiSpendLock`, zero AI egress architecture test, default OFF and no secrets. Confirm open Issue #18 is genuinely satisfied before closing, but do not reimplement it.
 - **Acceptance:** latest source commit has all required checks green (or clearly marked as blocked with reproducible logs); no real HTTP to model providers; test DB guard aborts for protected ports. Document SHA/run URLs and measured main/vendor/exam/CSS sizes.
