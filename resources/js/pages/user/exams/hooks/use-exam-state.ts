@@ -18,7 +18,10 @@ import type {
     ExamIndexProps,
     SimulationDetails,
 } from '../types';
-import { recoveredSessionStartsPaused } from '../utils/answer-state';
+import {
+    recoveredSessionStartsPaused,
+    restoreAnswerPositions,
+} from '../utils/answer-state';
 import type { ExamMode } from '../utils/exam-mode';
 import { isTimerOn, parseExamMode } from '../utils/exam-mode';
 import {
@@ -32,6 +35,7 @@ import { useExamHydration } from './use-exam-hydration';
 import { useExamPersistence } from './use-exam-persistence';
 import { useExamSubmission } from './use-exam-submission';
 import { useExamTimer } from './use-exam-timer';
+import { useServerExamProgress } from './use-server-exam-progress';
 
 const emptySubscribe = () => () => {};
 
@@ -196,6 +200,13 @@ export function useExamState(props: ExamIndexProps) {
         }
     }, [isFreeAttempt, guestUnlimited]);
 
+    const serverProgress = useServerExamProgress(
+        examSessionId,
+        isExamActive && !isExamSubmitted && examMode === 'strict',
+        activeQuestions,
+        setAnswers,
+    );
+
     // Sub-hook 2: Timer
     const {
         timeLeft,
@@ -217,6 +228,7 @@ export function useExamState(props: ExamIndexProps) {
         currentIdx,
         isPaused,
         onTimerExpired: onTimerExpiredCallback,
+        deadlineMs: serverProgress.deadline,
     });
 
     // Sub-hook 3: Submission
@@ -229,6 +241,7 @@ export function useExamState(props: ExamIndexProps) {
             answerChanges,
             selectedExamId,
             examSessionId,
+            practiceBatchId: props.practiceBatchId ?? null,
             isTimed,
             sessionTimeLimitSecs,
             timeLeft,
@@ -426,10 +439,12 @@ export function useExamState(props: ExamIndexProps) {
                 setTimeLeft(restoredData.timeLeft);
                 setIsTimed(restoredData.isTimed);
                 setIsPaused(
-                    recoveredSessionStartsPaused(
-                        restoredData.isTimed,
-                        restoredData.timeLeft,
-                    ),
+                    restoredData.examMode === 'strict'
+                        ? false
+                        : recoveredSessionStartsPaused(
+                              restoredData.isTimed,
+                              restoredData.timeLeft,
+                          ),
                 );
                 setIsExamActive(true);
                 setIsExamSubmitted(false);
@@ -505,6 +520,12 @@ export function useExamState(props: ExamIndexProps) {
                 answers?: Record<string, number | null>;
             };
 
+            if (detail?.answers) {
+                setAnswers(
+                    restoreAnswerPositions(activeQuestions, detail.answers),
+                );
+            }
+
             if (!detail?.keys) {
                 return;
             }
@@ -538,7 +559,7 @@ export function useExamState(props: ExamIndexProps) {
 
         return () =>
             window.removeEventListener('civio:exam-answer-keys', handler);
-    }, []);
+    }, [activeQuestions]);
 
     const handleBeginExam = useCallback(() => {
         void startServerMock(selectedExamId);
@@ -546,8 +567,16 @@ export function useExamState(props: ExamIndexProps) {
 
     const handleSelectOption = useCallback(
         (optionIndex: number) => {
-            if (isPaused) {
+            if ((isPaused && examMode !== 'strict') || !serverProgress.ready) {
                 return;
+            }
+
+            const question = activeQuestions[currentIdx];
+            const nextChosen =
+                answers[currentIdx] === optionIndex ? null : optionIndex;
+
+            if (question) {
+                serverProgress.saveAnswer(question, nextChosen);
             }
 
             setAnswers((prev) => {
@@ -573,7 +602,14 @@ export function useExamState(props: ExamIndexProps) {
                 };
             });
         },
-        [currentIdx, isPaused],
+        [
+            currentIdx,
+            isPaused,
+            examMode,
+            serverProgress,
+            activeQuestions,
+            answers,
+        ],
     );
 
     const toggleFlag = useCallback((qIndex: number) => {
@@ -817,5 +853,6 @@ export function useExamState(props: ExamIndexProps) {
         setIsPaused,
         subscribeClock,
         getClockSnapshot,
+        examSessionId,
     };
 }

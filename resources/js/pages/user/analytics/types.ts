@@ -38,11 +38,11 @@ export interface PacingTrend {
 export interface AttemptBreakdown {
     name: string;
     date: string;
-    Verbal: number;
-    Clerical: number;
-    General: number;
-    Numerical: number;
-    Analytical: number;
+    Verbal: number | null;
+    Clerical: number | null;
+    General: number | null;
+    Numerical: number | null;
+    Analytical: number | null;
 }
 
 export interface AnalyticsCategory {
@@ -71,7 +71,7 @@ export interface AnalyticsStats {
     cseReadinessIndex?: number;
     subtestThresholds?: SubtestThreshold[];
     hasSubtestRisk?: boolean;
-    percentileRank?: number;
+    percentileRank?: number | null;
     isIncompleteSyllabus?: boolean;
     coveredCategoriesCount?: number;
     mockExamCount?: number;

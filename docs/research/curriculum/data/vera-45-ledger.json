@@ -1,0 +1,1542 @@
+{
+  "repository_sha": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+  "date": "2026-10-21",
+  "records": [
+    {
+      "source_id": "VERA-001",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "combined work and relative efficiency",
+      "preliminary_answer": "4.8 days; no choice",
+      "verified_answer": "4.8 days; no choice",
+      "verification": "1/12+1.5/12=5/24 job/day; inverse=24/5. Check 4.8/12+1.5*4.8/12=1.",
+      "defects": "Missing correct option; assume equal job units, independent constant additive rates.",
+      "no_correct_listed_option": true,
+      "wording_assessment": "Missing correct option; assume equal job units, independent constant additive rates.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-NUM-WP-RATE-000011",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "53ccac05a490d1bcec856c680bc76b27fef893c4c4471a075fbd140785e529b1",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-008; convert relative efficiency into a rate before adding.",
+      "bank_item_id": [
+        "CIVIO-NUM-WP-RATE-000011"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-008; convert relative efficiency into a rate before adding. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-002",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "fractional change of a whole",
+      "preliminary_answer": "800 liters; no choice",
+      "verified_answer": "800 liters; no choice",
+      "verification": "9/10-3/4=3/20; 120/(3/20)=800. Check 600+120=720.",
+      "defects": "Missing correct option.",
+      "no_correct_listed_option": true,
+      "wording_assessment": "Missing correct option.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 200,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "9dda960a9ece4f0026e0115b365cd9c87a41f70c4d6fa897b3ab73a7d61becdb",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        },
+        {
+          "bank_item_id": 497,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "04bef5c789cfb3532a5d7a2a2d0f825f811a3fd958a3c1ec009ecbabb3612800",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-003; infer a budget from a change in its spent fraction.",
+      "bank_item_id": [
+        200,
+        497
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-003; infer a budget from a change in its spent fraction. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-003",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "percentage discount",
+      "preliminary_answer": "B: 680 pesos",
+      "verified_answer": "B: 680 pesos",
+      "verification": "850*(1-20/100)=680; discount=170.",
+      "defects": "Sound key; basic one-step application.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound key; basic one-step application.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "db8cf6adf1f1e312a336b00cc35cef83ff671c5743d23f80675dd80a5eecce94",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Link existing discount coverage after editorial review; no duplicate needed.",
+      "bank_item_id": [
+        "CIVIO-NUM-WP-PCT-CHANGE-000030"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Link existing discount coverage after editorial review; no duplicate needed. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-004",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "analytical",
+      "exam_level": "pro",
+      "competency": "Drawing conclusions",
+      "subskill": "stated cause versus evidence for cause",
+      "preliminary_answer": "A within the stated premise",
+      "verified_answer": "A within the stated premise",
+      "verification": "The premise explicitly attributes the reduction to the scheme. A restates that premise; other options add unsupported facts.",
+      "defects": "Do not teach that before/after association alone proves causation. For reading practice, ask what the passage claims; for analytical practice, ask what evidence would strengthen causality.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Do not teach that before/after association alone proves causation. For reading practice, ask what the passage claims; for analytical practice, ask what evidence would strengthen causality.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 331,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "7acb7c19ce7958e47b9c9e121170ee6a4cfb40554e5b2c97817aaa9c05fd3af9",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "Author a comparison-group causal-evidence item; distinguish from VERA-024.",
+      "bank_item_id": [
+        331
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Author a comparison-group causal-evidence item; distinguish from VERA-024. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-005",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "verbal_en",
+      "exam_level": "both",
+      "competency": "Word meaning",
+      "subskill": "synonym",
+      "preliminary_answer": "C: hardworking",
+      "verified_answer": "C: hardworking",
+      "verification": "Diligent describes sustained careful effort; hardworking is the closest available meaning.",
+      "defects": "Acceptable elementary vocabulary; context would improve discrimination.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Acceptable elementary vocabulary; context would improve discrimination.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-VEN-WORD-MEANING-000268",
+          "path": "docs/batches/batch-004.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "9cec99c07d405d90f20fc6053523c0a4542bce6be1519fa3e0a4befa8feb280a",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Link existing diligent item; retain unseen vocabulary for transfer.",
+      "bank_item_id": [
+        "CIVIO-VEN-WORD-MEANING-000268"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Link existing diligent item; retain unseen vocabulary for transfer. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-006",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "direct proportional work",
+      "preliminary_answer": "D: 24 days",
+      "verified_answer": "D: 24 days",
+      "verification": "Four equal jobs at six days each require 4*6=24 days.",
+      "defects": "State four identical tasks done sequentially at the same constant rate.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "State four identical tasks done sequentially at the same constant rate.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 198,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "05793b73ac861186b8021be99809fa64d457f291cd1815a5011d9a3d78ad5807",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        },
+        {
+          "bank_item_id": 269,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "f4fc22d4883b7d0fc73c73655c9dff13bdfa94e0d54e9aa11eb0a20c722626b2",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "Use production units and a changed work quantity; current examples are partial rate coverage.",
+      "bank_item_id": [
+        198,
+        269
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Use production units and a changed work quantity; current examples are partial rate coverage. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-007",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "multiply then add costs",
+      "preliminary_answer": "195 pesos; no choice",
+      "verified_answer": "195 pesos; no choice",
+      "verification": "5*30+3*15=150+45=195.",
+      "defects": "Missing correct option.",
+      "no_correct_listed_option": true,
+      "wording_assessment": "Missing correct option.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 48,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "1d9d7d90a5dda6cc1087a8b5c841b53828d8830f5c5de02279604938a4049d93",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        },
+        {
+          "bank_item_id": 203,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "9c4f23bb250339503eee7a60ef3afa6b09dea3be164cf83a9c848734b1dcfae3",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-004; evaluate a fixed fee plus a per-unit charge, not another notebook purchase.",
+      "bank_item_id": [
+        48,
+        203
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-004; evaluate a fixed fee plus a per-unit charge, not another notebook purchase. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-008",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "distance at constant speed",
+      "preliminary_answer": "C: 200 km",
+      "verified_answer": "C: 200 km",
+      "verification": "120/3=40 km/h; 40*5=200.",
+      "defects": "Sound assuming constant speed.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound assuming constant speed.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 351,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "1397f13b5d14b71a71ae503a495a7b30422194f83e9fb4a81833e6f00acc52cb",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        },
+        {
+          "bank_item_id": 496,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "5c51cf18f35adca49b8f0b420526f85350a0edd71ddc541d77de9f4ce292cb2c",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "Link historical distance items only after identity and approval reconciliation.",
+      "bank_item_id": [
+        351,
+        496
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Link historical distance items only after identity and approval reconciliation. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-009",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "percentage discount",
+      "preliminary_answer": "B: 320 pesos",
+      "verified_answer": "B: 320 pesos",
+      "verification": "400*0.8=320; check 80+320=400.",
+      "defects": "Same competency as VERA-003 and 043; do not count three coverage gaps.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Same competency as VERA-003 and 043; do not count three coverage gaps.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "db8cf6adf1f1e312a336b00cc35cef83ff671c5743d23f80675dd80a5eecce94",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Reuse existing discount family; prioritize reverse percentage instead.",
+      "bank_item_id": [
+        "CIVIO-NUM-WP-PCT-CHANGE-000030"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Reuse existing discount family; prioritize reverse percentage instead. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-010",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "elapsed clock time",
+      "preliminary_answer": "C: 2 hours 45 minutes",
+      "verified_answer": "C: 2 hours 45 minutes",
+      "verification": "11:15 minus 08:30 = 165 minutes.",
+      "defects": "Sound for same-day travel.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound for same-day travel.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 264,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "178b8c629ea9659ba4581d6aaa607d8ec73adcd255bc189b16b7dde83b8e5f44",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-006; cross noon explicitly, with hours-to-minutes checking.",
+      "bank_item_id": [
+        264
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-006; cross noon explicitly, with hours-to-minutes checking. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-011",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "staffing and inverse proportion",
+      "preliminary_answer": "C: 6 workers",
+      "verified_answer": "C: 6 workers",
+      "verification": "3*8=24 worker-days; 24/4=6.",
+      "defects": "Assume identical daily output, equal hours and perfect divisibility of work.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Assume identical daily output, equal hours and perfect divisibility of work.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-NUM-WP-RATE-000011",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "53ccac05a490d1bcec856c680bc76b27fef893c4c4471a075fbd140785e529b1",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        },
+        {
+          "bank_item_id": 494,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "b308641dbab0ed98d9339b22d8700247466344c5c36227ce5925ae596fe10971",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-009; explicit staff-hours capacity rather than unsupported real-world scalability.",
+      "bank_item_id": [
+        "CIVIO-NUM-WP-RATE-000011",
+        494
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-009; explicit staff-hours capacity rather than unsupported real-world scalability. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-012",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Number sequence",
+      "subskill": "arithmetic progression",
+      "preliminary_answer": "C: 17 under the intended +3 rule",
+      "verified_answer": "C: 17 under the intended +3 rule",
+      "verification": "Successive differences are 3; 14+3=17.",
+      "defects": "Use the simplest consistent rule; a finite sequence alone cannot logically determine every continuation.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Use the simplest consistent rule; a finite sequence alone cannot logically determine every continuation.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 45,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "25e935d0ca47f5db4cc4abce61588ff11dac570f1bfc02edd42248fd1ad34eb4",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        },
+        {
+          "bank_item_id": "CIVIO-NUM-SEQ-DIFF-000002",
+          "path": "docs/batches/batch-001.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "3ae4d4dd82078948130fd37e5574476b697720d3b078f842c4277b85076515ff",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Link historical basic and current second-difference items; test rule explanation.",
+      "bank_item_id": [
+        45,
+        "CIVIO-NUM-SEQ-DIFF-000002"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Link historical basic and current second-difference items; test rule explanation. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-013",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "cost then change",
+      "preliminary_answer": "C: 140 pesos",
+      "verified_answer": "C: 140 pesos",
+      "verification": "500-8*45=500-360=140.",
+      "defects": "Sound.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 203,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "9c4f23bb250339503eee7a60ef3afa6b09dea3be164cf83a9c848734b1dcfae3",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "Add a distinct mixed-cost change task only after baseline reconciliation.",
+      "bank_item_id": [
+        203
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Add a distinct mixed-cost change task only after baseline reconciliation. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-014",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "elementary probability complement",
+      "preliminary_answer": "1/2; no choice",
+      "verified_answer": "1/2; no choice",
+      "verification": "Non-red count=3+2=5; total=10; probability=5/10.",
+      "defects": "Missing correct option; equal selection chance assumed. Probability is not separately named in the retrieved CSC scope.",
+      "no_correct_listed_option": true,
+      "wording_assessment": "Missing correct option; equal selection chance assumed. Probability is not separately named in the retrieved CSC scope.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [],
+      "original_replacement_or_variation": "Hold as supporting/enrichment arithmetic pending scope decision; original unequal category complement task.",
+      "bank_item_id": [],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Hold as supporting/enrichment arithmetic pending scope decision; original unequal category complement task. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-015",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "perimeter constraint to area",
+      "preliminary_answer": "70 square meters; no choice",
+      "verified_answer": "70 square meters; no choice",
+      "verification": "2(w+w+3)=34 gives w=7, length=10; area=70.",
+      "defects": "Missing correct option; distinguish area from perimeter.",
+      "no_correct_listed_option": true,
+      "wording_assessment": "Missing correct option; distinguish area from perimeter.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 206,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "3f84f71029b9a72da1e5bb167dfa5aa95a23bc478aa98f473924f95451f5f2d6",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-010; derive area of a mat from edge length and a dimension difference.",
+      "bank_item_id": [
+        206
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-010; derive area of a mat from edge length and a dimension difference. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-016",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Basic operations",
+      "subskill": "substitute into an expression",
+      "preliminary_answer": "C: 26",
+      "verified_answer": "C: 26",
+      "verification": "2*3+4*5=6+20=26.",
+      "defects": "Sound.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [],
+      "original_replacement_or_variation": "CURR-004; substitution followed by order of operations.",
+      "bank_item_id": [],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-004; substitution followed by order of operations. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-017",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "average speed",
+      "preliminary_answer": "C: 60 km/h",
+      "verified_answer": "C: 60 km/h",
+      "verification": "120/2=60 km/h.",
+      "defects": "Sound; average speed uses total distance divided by total elapsed time.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound; average speed uses total distance divided by total elapsed time.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 197,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "a0f46445bd7049ca624fe4e061d39dd732beb4192d2e2102413464bbd835de72",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "Link baseline; later add stops and unequal journey segments.",
+      "bank_item_id": [
+        197
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Link baseline; later add stops and unequal journey segments. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-018",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "translate less than a multiple",
+      "preliminary_answer": "A: 28",
+      "verified_answer": "A: 28",
+      "verification": "3*12-8=28, not 3*(12-8).",
+      "defects": "Sound; explicit expression helps explanation.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound; explicit expression helps explanation.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-NUM-WP-ALGEBRA-000025",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "8cf684e2536df30460144d120a60576e99fedb9e02b06558bd53069cc9f5e540",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-004 is prerequisite only; add a fresh translation task without the implausible age context.",
+      "bank_item_id": [
+        "CIVIO-NUM-WP-ALGEBRA-000025"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-004 is prerequisite only; add a fresh translation task without the implausible age context. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-019",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "elementary probability sample space",
+      "preliminary_answer": "C: 3/15, equal to 1/5",
+      "verified_answer": "C: 3/15, equal to 1/5",
+      "verification": "3 blue out of 5+3+7=15; only C equals 1/5.",
+      "defects": "Unsimplified fraction is valid. Same scope caution as VERA-014.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Unsimplified fraction is valid. Same scope caution as VERA-014.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [],
+      "original_replacement_or_variation": "Scope hold with VERA-014; do not create two redundant introductory probability items.",
+      "bank_item_id": [],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Scope hold with VERA-014; do not create two redundant introductory probability items. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-020",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "rectangular area",
+      "preliminary_answer": "C: 96 square meters",
+      "verified_answer": "C: 96 square meters",
+      "verification": "12*8=96; square units required.",
+      "defects": "Sound.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 206,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "3f84f71029b9a72da1e5bb167dfa5aa95a23bc478aa98f473924f95451f5f2d6",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-010 is a harder application; add foundational area-versus-perimeter guided practice.",
+      "bank_item_id": [
+        206
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-010 is a harder application; add foundational area-versus-perimeter guided practice. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-021",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Basic operations",
+      "subskill": "distributive linear equation",
+      "preliminary_answer": "22; no choice",
+      "verified_answer": "22; no choice",
+      "verification": "3x-12=2x+10 => x=22. Substitute: both sides=54.",
+      "defects": "Missing correct option.",
+      "no_correct_listed_option": true,
+      "wording_assessment": "Missing correct option.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-NUM-WP-ALGEBRA-000025",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "8cf684e2536df30460144d120a60576e99fedb9e02b06558bd53069cc9f5e540",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-005; direct distribution and collect-like-terms task.",
+      "bank_item_id": [
+        "CIVIO-NUM-WP-ALGEBRA-000025"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-005; direct distribution and collect-like-terms task. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-022",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "unit speed then distance",
+      "preliminary_answer": "C: 300 km",
+      "verified_answer": "C: 300 km",
+      "verification": "120/2*5=300.",
+      "defects": "Sound; duplicates the competency of VERA-008, not an additional gap.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound; duplicates the competency of VERA-008, not an additional gap.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 351,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "1397f13b5d14b71a71ae503a495a7b30422194f83e9fb4a81833e6f00acc52cb",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        },
+        {
+          "bank_item_id": 496,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "5c51cf18f35adca49b8f0b420526f85350a0edd71ddc541d77de9f4ce292cb2c",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "Reconcile baseline IDs; no additional distance clone.",
+      "bank_item_id": [
+        351,
+        496
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Reconcile baseline IDs; no additional distance clone. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-023",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "general_information",
+      "exam_level": "both",
+      "competency": "Philippine Constitution",
+      "subskill": "congressional war power",
+      "preliminary_answer": "C, with the joint-session qualification",
+      "verified_answer": "C, with the joint-session qualification",
+      "verification": "Article VI Section 23(1): Congress alone; two-thirds of both Houses; assembled in joint session; voting separately.",
+      "defects": "Key points to the correct body but choice omits a constitutionally material procedure.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Key points to the correct body but choice omits a constitutionally material procedure.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-GI-DEADLINE-NUMBER-000805",
+          "path": "docs/batches/batch-009.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "488a839bc820c84c9349901e96aaeae5837f42a7f130e7903a24a78463891f15",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Existing item states the full rule; legal reviewer confirms source and eligibility.",
+      "bank_item_id": [
+        "CIVIO-GI-DEADLINE-NUMBER-000805"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Existing item states the full rule; legal reviewer confirms source and eligibility. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-024",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "analytical",
+      "exam_level": "pro",
+      "competency": "Identifying assumptions",
+      "subskill": "causal inference",
+      "preliminary_answer": "B: post hoc reasoning",
+      "verified_answer": "B: post hoc reasoning",
+      "verification": "Temporal order alone does not establish cause; alternative explanations are not excluded.",
+      "defects": "Sound as an assessment of the evidence offered; the conclusion could still happen to be true.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound as an assessment of the evidence offered; the conclusion could still happen to be true.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 331,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "7acb7c19ce7958e47b9c9e121170ee6a4cfb40554e5b2c97817aaa9c05fd3af9",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "One original controlled-comparison task with VERA-004; do not reproduce the police scenario.",
+      "bank_item_id": [
+        331
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "One original controlled-comparison task with VERA-004; do not reproduce the police scenario. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-025",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "fractional equation",
+      "preliminary_answer": "43.2; no choice",
+      "verified_answer": "43.2; no choice",
+      "verification": "(2/3-1/4)x=18 => (5/12)x=18 => x=216/5. Check 28.8-10.8=18.",
+      "defects": "Missing correct option; a noninteger answer is legitimate.",
+      "no_correct_listed_option": true,
+      "wording_assessment": "Missing correct option; a noninteger answer is legitimate.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0006",
+          "path": "docs/research/gap-fill-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "885ea7d3cb71672eda6dedc0a0cb7c09d313b44578eefe9c6570119d338aa2e7",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-003 applies a fractional difference; CURR-005 supplies equation prerequisites.",
+      "bank_item_id": [
+        "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0006"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-003 applies a fractional difference; CURR-005 supplies equation prerequisites. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-026",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "successive percentage changes",
+      "preliminary_answer": "C: 9% less, for a positive starting quantity",
+      "verified_answer": "C: 9% less, for a positive starting quantity",
+      "verification": "1.30*0.70=0.91; final amount is 91% of original.",
+      "defects": "Specify a positive price or amount: zero remains zero; negative values complicate comparative wording.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Specify a positive price or amount: zero remains zero; negative values complicate comparative wording.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+          "path": "docs/batches/batch-001.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "691e2f0e80f02ca8ce38fda1f7691e5c4ff0773c721971c277c0b277928187ec",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Existing positive-price item is preferable; no redundant pair of changes.",
+      "bank_item_id": [
+        "CIVIO-NUM-WP-PCT-CHANGE-000001"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Existing positive-price item is preferable; no redundant pair of changes. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-027",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "verbal_en",
+      "exam_level": "both",
+      "competency": "Word meaning",
+      "subskill": "semantic grouping",
+      "preliminary_answer": "D: arbitrary",
+      "verified_answer": "D: arbitrary",
+      "verification": "Impartial, objective and neutral cluster around unbiased judgment; arbitrary lacks a consistent reason or principle.",
+      "defects": "Least-related judgments need context; not every use of neutral means impartial.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Least-related judgments need context; not every use of neutral means impartial.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 94,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "564464be24e77868f84ec367e4c9d4adaa7724d0e84e0a6d3c9689bb131ec34f",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        },
+        {
+          "bank_item_id": 425,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "c87d5434f7038be9957ed7f68e801aef3aeb26e36d9e75f9247b5ad9de79d53c",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "Use a fresh sentence contrasting evidence-based and arbitrary decisions, not word-list memorization.",
+      "bank_item_id": [
+        94,
+        425
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Use a fresh sentence contrasting evidence-based and arbitrary decisions, not word-list memorization. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-028",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "general_information",
+      "exam_level": "both",
+      "competency": "Supplemental civics",
+      "subskill": "local executive authority",
+      "preliminary_answer": "B: provincial governor",
+      "verified_answer": "B: provincial governor",
+      "verification": "R.A. 7160 Sections 465 and 41(a): governor is provincial chief executive and elected at large.",
+      "defects": "Replace administrative head with chief executive to avoid confusion with provincial administrator. LGU detail is not a separately named CSC topic.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Replace administrative head with chief executive to avoid confusion with provincial administrator. LGU detail is not a separately named CSC topic.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [],
+      "original_replacement_or_variation": "Retain source in ledger; hold an original LGU item pending curriculum-scope approval.",
+      "bank_item_id": [],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Retain source in ledger; hold an original LGU item pending curriculum-scope approval. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-029",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "analytical",
+      "exam_level": "pro",
+      "competency": "Word analogy",
+      "subskill": "producer and product",
+      "preliminary_answer": "A: judge and verdict",
+      "verified_answer": "A: judge and verdict",
+      "verification": "A legislator makes law; a judge renders a verdict. Other pairs describe workplace or participation.",
+      "defects": "Best available analogy; relationships simplify institutional processes. Professional analytical topic.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Best available analogy; relationships simplify institutional processes. Professional analytical topic.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-ANA-ANALOGY-FUNCTION-000057",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "79219082140e13134d1fffeeaf2059ede4118423a1c4caf92d6aa3f7c34956f4",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Existing worker/workplace item is related but does not close producer/product coverage; review analogy pool before drafting.",
+      "bank_item_id": [
+        "CIVIO-ANA-ANALOGY-FUNCTION-000057"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Existing worker/workplace item is related but does not close producer/product coverage; review analogy pool before drafting. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-030",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "general_information",
+      "exam_level": "both",
+      "competency": "Philippine Constitution",
+      "subskill": "CSC mandate",
+      "preliminary_answer": "C is the best offered option, but overbroad",
+      "verified_answer": "C is the best offered option, but overbroad",
+      "verification": "Article IX-B Section 3 and CSC mandate identify a central personnel agency with career-service, merit and HR responsibilities.",
+      "defects": "Do not imply the CSC personally recruits or appoints every government employee.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Do not imply the CSC personally recruits or appoints every government employee.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [],
+      "original_replacement_or_variation": "Prepare a source-based distinction between personnel standards and agency appointing authority.",
+      "bank_item_id": [],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Prepare a source-based distinction between personnel standards and agency appointing authority. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-031",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "general_information",
+      "exam_level": "both",
+      "competency": "Supplemental civics",
+      "subskill": "barangay council composition",
+      "preliminary_answer": "B: seven regular members",
+      "verified_answer": "B: seven regular members",
+      "verification": "R.A. 7160 Sections 387 and 390 specify seven regular sangguniang barangay members; population is irrelevant here.",
+      "defects": "Distinguish seven regular kagawads from the whole council including its presiding punong barangay and SK chair.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Distinguish seven regular kagawads from the whole council including its presiding punong barangay and SK chair.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [],
+      "original_replacement_or_variation": "Scope hold with VERA-028; avoid treating a whole-council count as seven.",
+      "bank_item_id": [],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Scope hold with VERA-028; avoid treating a whole-council count as seven. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-032",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "general_information",
+      "exam_level": "both",
+      "competency": "R.A. 6713",
+      "subskill": "public accountability",
+      "preliminary_answer": "C: answerable for actions and decisions",
+      "verified_answer": "C: answerable for actions and decisions",
+      "verification": "Accountability involves being answerable; Article XI Section 1 and R.A. 6713 Section 2 support public accountability.",
+      "defects": "Sound but recall-level; add a concrete reporting and correction scenario.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound but recall-level; add a concrete reporting and correction scenario.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-GI-TERM-MATCH-001003",
+          "path": "docs/batches/batch-011.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "1d2e5187826d7bdad11afafb4b032e0a1eb37e49f46ffb6f6d68bf1369b856a6",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Related democracy-norm item is partial coverage; design an accountability application.",
+      "bank_item_id": [
+        "CIVIO-GI-TERM-MATCH-001003"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Related democracy-norm item is partial coverage; design an accountability application. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-033",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "analytical",
+      "exam_level": "pro",
+      "competency": "Drawing conclusions",
+      "subskill": "identify a recommendation",
+      "preliminary_answer": "C: adopt the appointment system",
+      "verified_answer": "C: adopt the appointment system",
+      "verification": "The recommendation is supported by the offered queue and efficiency reasons.",
+      "defects": "Sound. Ordering items tagged ANA-CONCLUSION do not automatically cover argument conclusions.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound. Ordering items tagged ANA-CONCLUSION do not automatically cover argument conclusions.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-ANA-CONCLUSION-000047",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "7c9ba1cdb7a9aecad65b55c285c5a9efb5a28513475e849b4304f2c4749efb78",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Author argument structure, not another ordering chain; inspect baseline verbal inferences first.",
+      "bank_item_id": [
+        "CIVIO-ANA-CONCLUSION-000047"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Author argument structure, not another ordering chain; inspect baseline verbal inferences first. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-034",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "clerical",
+      "exam_level": "sub",
+      "competency": "Filing",
+      "subskill": "multiword surname convention",
+      "preliminary_answer": "A if spaces ignored; D under word-by-word sorting",
+      "verified_answer": "A if spaces ignored; D under word-by-word sorting",
+      "verification": "Letter strings: delacruz < delapena < deleon < delrosario. With separate words, De la Cruz precedes De Leon, then Dela, then Del Rosario.",
+      "defects": "No unique unconditional key without the filing convention. Neither convention is established here as an official CSC rule.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "No unique unconditional key without the filing convention. Neither convention is established here as an official CSC rule.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-GAP1-CLR-FILE-ORDER-0021",
+          "path": "docs/research/gap-fill-001.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "bd7991ebe5484f7a95877aebf7fdec1ec823a3657c2e7a047cc571f4c0f4b2a9",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "State surname-first, letter-by-letter, ignore spaces/punctuation, treatment of accents; use wholly new names.",
+      "bank_item_id": [
+        "CIVIO-GAP1-CLR-FILE-ORDER-0021"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "State surname-first, letter-by-letter, ignore spaces/punctuation, treatment of accents; use wholly new names. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-035",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "general_information",
+      "exam_level": "both",
+      "competency": "Philippine Constitution",
+      "subskill": "due process",
+      "preliminary_answer": "B: right to due process",
+      "verified_answer": "B: right to due process",
+      "verification": "Article III Section 1 protects life, liberty and property against deprivation without due process.",
+      "defects": "Sound but nearly tautological; scenario-based application gives better evidence of understanding.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound but nearly tautological; scenario-based application gives better evidence of understanding.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 363,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "5c8b0686c51b13c11b529108e9158fdf1d6deadf98a81187eacf8487e9e0c1fc",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "Reconcile baseline legal item; create a notice-and-opportunity scenario only if coverage remains weak.",
+      "bank_item_id": [
+        363
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Reconcile baseline legal item; create a notice-and-opportunity scenario only if coverage remains weak. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-036",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "general_information",
+      "exam_level": "both",
+      "competency": "Environment management",
+      "subskill": "urban drainage and waste",
+      "preliminary_answer": "B: waste disposal and drainage maintenance",
+      "verified_answer": "B: waste disposal and drainage maintenance",
+      "verification": "Keeping waste out of waterways and maintaining drainage reduces blockage-related flooding; DENR-NCR supports this mechanism.",
+      "defects": "Best offered practice; does not guarantee prevention of all flooding.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Best offered practice; does not guarantee prevention of all flooding.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-GI-ENV-PRINCIPLE-060095",
+          "path": "docs/research/chatgpt-batch-003.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "f17574c247fe706ad31582bc72898f24b7df91242ae5ec52ff7a0e1e3f5e10b7",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Current flood-adaptation item is related, not identical; verify disposal coverage before adding.",
+      "bank_item_id": [
+        "CIVIO-GI-ENV-PRINCIPLE-060095"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Current flood-adaptation item is related, not identical; verify disposal coverage before adding. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-037",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "general_information",
+      "exam_level": "both",
+      "competency": "R.A. 6713",
+      "subskill": "gifts connected to duties",
+      "preliminary_answer": "C is the safest best choice in the given client setting",
+      "verified_answer": "C is the safest best choice in the given client setting",
+      "verification": "Sections 3(c), 3(d), 7(d) distinguish prohibited official-connection gifts and statutory qualifications.",
+      "defects": "Bare gift wording overgeneralizes. Low cost alone does not establish an exception; specify a pending transaction and requested favor.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Bare gift wording overgeneralizes. Low cost alone does not establish an exception; specify a pending transaction and requested favor.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-GI-TERM-MATCH-000405",
+          "path": "docs/batches/batch-005.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "d00dbfa198b34502ed5f7e507e054336a84d545c1661e875a33b4ae7f62b26fd",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Use the existing official-transaction scenario; retain exception nuance in explanation.",
+      "bank_item_id": [
+        "CIVIO-GI-TERM-MATCH-000405"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Use the existing official-transaction scenario; retain exception nuance in explanation. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-038",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "analytical",
+      "exam_level": "pro",
+      "competency": "Symbolic logic",
+      "subskill": "preserve the predicate in deduction",
+      "preliminary_answer": "A intended; not strictly entailed as worded",
+      "verified_answer": "A intended; not strictly entailed as worded",
+      "verification": "A comparative more productive predicate does not by itself establish an absolute productive classification.",
+      "defects": "Repair the premise or conclusion so they use the same predicate; no causal assumption about early arrival.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Repair the premise or conclusion so they use the same predicate; no causal assumption about early arrival.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-ANA-SYLLOGISM-000755",
+          "path": "docs/batches/batch-009.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "6f79c0b9c26792df642086ff0da7119863af33733afa24bf654f2b82d6d38d69",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Use existing all-A/all-B chain; new variation only if it tests a distinct quantifier.",
+      "bank_item_id": [
+        "CIVIO-ANA-SYLLOGISM-000755"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Use existing all-A/all-B chain; new variation only if it tests a distinct quantifier. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-039",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "verbal_en",
+      "exam_level": "both",
+      "competency": "Word meaning",
+      "subskill": "credible in context",
+      "preliminary_answer": "B: convincing, closest available",
+      "verified_answer": "B: convincing, closest available",
+      "verification": "Credible primarily means believable or worthy of belief; convincing is closest among the choices.",
+      "defects": "Use credible testimony without an unnecessary article; believable is a sharper target than convincing.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Use credible testimony without an unnecessary article; believable is a sharper target than convincing.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": 98,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "d780f958daf480e5d3556d206ecf1e0e41998e1afee95158f0d81bbed9a19de9",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "Reconcile baseline synonym; original evidence-reliability context if a new item is justified.",
+      "bank_item_id": [
+        98
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Reconcile baseline synonym; original evidence-reliability context if a new item is justified. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-040",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "analytical",
+      "exam_level": "pro",
+      "competency": "Symbolic logic",
+      "subskill": "letter-position sequence",
+      "preliminary_answer": "A after explicit alphabet wrapping; absent from choices",
+      "verified_answer": "A after explicit alphabet wrapping; absent from choices",
+      "verification": "Positions 2,5,9,14,20 have increments 3,4,5,6; next=27. In a cyclic alphabet 27 maps to A.",
+      "defects": "Missing correct option under the intended rule and unspecified wrapping. No wrap means no letter at position 27.",
+      "no_correct_listed_option": true,
+      "wording_assessment": "Missing correct option under the intended rule and unspecified wrapping. No wrap means no letter at position 27.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [],
+      "original_replacement_or_variation": "Use a stated cyclic alphabet or keep all positions within 26; review existing symbol-series families.",
+      "bank_item_id": [],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Use a stated cyclic alphabet or keep all positions within 26; review existing symbol-series families. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-041",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "General Information",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "fixed worker-days",
+      "preliminary_answer": "4.5 days; no choice",
+      "verified_answer": "4.5 days; no choice",
+      "verification": "3*12=36 worker-days; 36/8=4.5. Check 8*4.5=36.",
+      "defects": "Missing correct option and source category error; do not round to an offered choice.",
+      "no_correct_listed_option": true,
+      "wording_assessment": "Missing correct option and source category error; do not round to an offered choice.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-NUM-WP-RATE-000011",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "53ccac05a490d1bcec856c680bc76b27fef893c4c4471a075fbd140785e529b1",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        },
+        {
+          "bank_item_id": 494,
+          "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "b308641dbab0ed98d9339b22d8700247466344c5c36227ce5925ae596fe10971",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "historical snapshot, runtime unknown",
+          "review_status": "not stored"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-009 covers staff-hours with explicit assumptions; same competency as VERA-011.",
+      "bank_item_id": [
+        "CIVIO-NUM-WP-RATE-000011",
+        494
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-009 covers staff-hours with explicit assumptions; same competency as VERA-011. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-042",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "general_information",
+      "exam_level": "both",
+      "competency": "Philippine Constitution",
+      "subskill": "Senate term and tenure limit",
+      "preliminary_answer": "D: six years for one term",
+      "verified_answer": "D: six years for one term",
+      "verification": "Article VI Section 4 distinguishes six-year terms from at most two consecutive terms.",
+      "defects": "Replace maximum length with duration of a regular term; avoid confusing 6 with 12 years.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Replace maximum length with duration of a regular term; avoid confusing 6 with 12 years.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-GI-DEADLINE-NUMBER-000106",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "161a1aeab2a419643f9d4645ba51102b1780d119fdd0eef7693c7c1523d42e9e",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "approved",
+          "review_status": "passed"
+        },
+        {
+          "bank_item_id": "CIVIO-GI-DEADLINE-NUMBER-000709",
+          "path": "docs/batches/batch-008.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "c34c74d9d0688a861a527617b3c2ef7ee584377b41ed984806e8d00d69ebd664",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "NOT_INDEPENDENTLY_CHECKED",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Link existing term and consecutive-limit items as a fact family, separated across mocks.",
+      "bank_item_id": [
+        "CIVIO-GI-DEADLINE-NUMBER-000106",
+        "CIVIO-GI-DEADLINE-NUMBER-000709"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Link existing term and consecutive-limit items as a fact family, separated across mocks. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-043",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "General Information",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "percentage discount",
+      "preliminary_answer": "A: 23800 pesos",
+      "verified_answer": "A: 23800 pesos",
+      "verification": "28000*0.85=23800; 10%=2800 and 5%=1400, so subtract4200.",
+      "defects": "Source category error; otherwise sound.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Source category error; otherwise sound.",
+      "difficulty_assessment": "easy; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+          "path": "docs/batches/batch-002.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "db8cf6adf1f1e312a336b00cc35cef83ff671c5743d23f80675dd80a5eecce94",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "Same discount coverage as VERA-003 and 009; no new clone.",
+      "bank_item_id": [
+        "CIVIO-NUM-WP-PCT-CHANGE-000030"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Same discount coverage as VERA-003 and 009; no new clone. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-044",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "numerical",
+      "exam_level": "both",
+      "competency": "Word problems",
+      "subskill": "recover total from one ratio share",
+      "preliminary_answer": "B: 8000 pesos",
+      "verified_answer": "B: 8000 pesos",
+      "verification": "Five parts=4000, one part=800, ten parts=8000.",
+      "defects": "Sound; distinguish known-share inversion from splitting a known total.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Sound; distinguish known-share inversion from splitting a known total.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [
+        {
+          "bank_item_id": "CIVIO-NUM-WP-RATIO-000003",
+          "path": "docs/batches/batch-001.json",
+          "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+          "item_sha256": "7a844b529b0e76180a7e6c7ebe5a542200efb5c92844f29422f204a630307e40",
+          "relationship": "related competency candidate; adequacy requires item-specific review",
+          "answer_check": "KEY_MATCH",
+          "status": "approved",
+          "review_status": "passed"
+        }
+      ],
+      "original_replacement_or_variation": "CURR-007 tests the missing unit-part step and a different requested subtotal.",
+      "bank_item_id": [
+        "CIVIO-NUM-WP-RATIO-000003"
+      ],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "CURR-007 tests the missing unit-part step and a different requested subtotal. Independent editorial verification and GT approval required for any new or corrected bank item."
+    },
+    {
+      "source_id": "VERA-045",
+      "source": "Vera Language & Review Center; founder-supplied transcription of Facebook practice material; images and publication URLs not supplied",
+      "source_category": "not supplied",
+      "corrected_civio_category": "general_information",
+      "exam_level": "both",
+      "competency": "Philippine Constitution",
+      "subskill": "confirmation of specified appointments",
+      "preliminary_answer": "C, limited to appointments requiring its consent",
+      "verified_answer": "C, limited to appointments requiring its consent",
+      "verification": "Article VI Section 18 and Article VII Section 16: Commission on Appointments consent applies to specified presidential appointments.",
+      "defects": "Not all presidential appointments require confirmation; distinguish JBC nominations and other appointments.",
+      "no_correct_listed_option": false,
+      "wording_assessment": "Not all presidential appointments require confirmation; distinguish JBC nominations and other appointments.",
+      "difficulty_assessment": "medium; editorial estimate, not empirical calibration",
+      "existing_civio_matches": [],
+      "original_replacement_or_variation": "Prepare a source-based appointment-category item after legal review; a CA distractor elsewhere is not coverage.",
+      "bank_item_id": [],
+      "approval_status": "RESEARCH_ONLY; no source text authorized for publication; no bank activation or new item approval",
+      "remaining_action": "Prepare a source-based appointment-category item after legal review; a CA distractor elsewhere is not coverage. Independent editorial verification and GT approval required for any new or corrected bank item."
+    }
+  ]
+}

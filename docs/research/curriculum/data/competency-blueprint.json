@@ -1,0 +1,807 @@
+{
+  "version": "proposal-2026-10-21",
+  "warning": "Educational decomposition, not official CSC weights. No item metadata or target allocation has been changed.",
+  "skills": [
+    {
+      "id": "N01",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Arithmetic",
+      "subskill": "place value",
+      "micro_skill": "interpret tenths and hundreds",
+      "prerequisites": [],
+      "question_archetype": "NUM-OPS-ORDER",
+      "common_misconception": "Digit value equals the digit alone",
+      "learning_objective": "Explain a digit value and estimate a total",
+      "mastery_assessment": "Unseen place-value and estimation tasks",
+      "cognitive_demand": "understand",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N02",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Arithmetic",
+      "subskill": "multiplication/division",
+      "micro_skill": "connect equal groups and inverse operations",
+      "prerequisites": [
+        "N01"
+      ],
+      "question_archetype": "NUM-OPS-ORDER",
+      "common_misconception": "Division always makes a smaller number",
+      "learning_objective": "Solve equal-group and missing-factor tasks",
+      "mastery_assessment": "Compute and reverse-check two formats",
+      "cognitive_demand": "understand/apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N03",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Arithmetic",
+      "subskill": "signed values and precedence",
+      "micro_skill": "apply operation hierarchy including brackets",
+      "prerequisites": [
+        "N02"
+      ],
+      "question_archetype": "NUM-OPS-ORDER",
+      "common_misconception": "Always compute strictly left to right",
+      "learning_objective": "Explain why multiplication precedes addition",
+      "mastery_assessment": "Evaluate and critique a worked error",
+      "cognitive_demand": "apply/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N04",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Fractions",
+      "subskill": "unit fractions and whole",
+      "micro_skill": "identify what one whole and equal parts mean",
+      "prerequisites": [
+        "N02"
+      ],
+      "question_archetype": "NUM-FRAC-DEC",
+      "common_misconception": "Different-sized wholes are directly comparable",
+      "learning_objective": "Interpret a fraction as a number and quantity",
+      "mastery_assessment": "Explain a part-whole example then locate relative to 0 and 1",
+      "cognitive_demand": "understand",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N05",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Fractions",
+      "subskill": "factors and equivalent fractions",
+      "micro_skill": "scale both parts by the same factor",
+      "prerequisites": [
+        "N02",
+        "N04"
+      ],
+      "question_archetype": "NUM-FRAC-DEC",
+      "common_misconception": "Change denominator without numerator",
+      "learning_objective": "Generate and justify equivalent representations",
+      "mastery_assessment": "Convert and reject a false equivalence",
+      "cognitive_demand": "understand/apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N06",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Fractions",
+      "subskill": "comparison and common denominators",
+      "micro_skill": "rename unlike units before comparison",
+      "prerequisites": [
+        "N05"
+      ],
+      "question_archetype": "NUM-FRAC-DEC",
+      "common_misconception": "Larger denominator means larger fraction",
+      "learning_objective": "Compare fractions using a common unit or benchmark",
+      "mastery_assessment": "Order new fractions and explain without a memorized key",
+      "cognitive_demand": "apply/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N07",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Fractions",
+      "subskill": "addition/subtraction",
+      "micro_skill": "combine quantities with the same whole",
+      "prerequisites": [
+        "N06"
+      ],
+      "question_archetype": "NUM-FRAC-DEC",
+      "common_misconception": "Add or subtract denominators",
+      "learning_objective": "Compute and estimate a fraction sum or difference",
+      "mastery_assessment": "Fresh symbolic and measurement problems",
+      "cognitive_demand": "apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N08",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Fractions",
+      "subskill": "multiplication/division",
+      "micro_skill": "find a fraction of an amount and number of groups",
+      "prerequisites": [
+        "N05",
+        "N02"
+      ],
+      "question_archetype": "NUM-FRAC-DEC",
+      "common_misconception": "Multiply makes bigger; invert the wrong operand",
+      "learning_objective": "Explain scaling and division with equal groups",
+      "mastery_assessment": "Unit fraction, improper fraction and word forms",
+      "cognitive_demand": "understand/apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N09",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Fractions",
+      "subskill": "mixed numbers",
+      "micro_skill": "rename whole-plus-fraction quantities",
+      "prerequisites": [
+        "N07",
+        "N08"
+      ],
+      "question_archetype": "NUM-FRAC-DEC",
+      "common_misconception": "Treat mixed notation as multiplication",
+      "learning_objective": "Compute and compare mixed numbers",
+      "mastery_assessment": "Independent mixed-number and quantity tasks",
+      "cognitive_demand": "apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N10",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Decimals",
+      "subskill": "conversion and operations",
+      "micro_skill": "connect place value to rational operations",
+      "prerequisites": [
+        "N01",
+        "N05",
+        "N07"
+      ],
+      "question_archetype": "NUM-FRAC-DEC",
+      "common_misconception": "Misalign decimal places or shift only divisor",
+      "learning_objective": "Convert, compute and estimate magnitude",
+      "mastery_assessment": "Novel multiplication/division and fraction conversion",
+      "cognitive_demand": "apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N11",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Percentages",
+      "subskill": "part/base/rate",
+      "micro_skill": "identify the 100-percent reference quantity",
+      "prerequisites": [
+        "N08",
+        "N10"
+      ],
+      "question_archetype": "NUM-PCT-BASIC",
+      "common_misconception": "Use the part as the percentage base",
+      "learning_objective": "Solve all three unknown positions",
+      "mastery_assessment": "Part, rate and whole tasks with explanation",
+      "cognitive_demand": "apply/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N12",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Percentages",
+      "subskill": "changes and reversal",
+      "micro_skill": "apply multipliers and recover original value",
+      "prerequisites": [
+        "N11"
+      ],
+      "question_archetype": "NUM-WP-PCT-CHANGE",
+      "common_misconception": "Opposite changes cancel; subtract discount from final price",
+      "learning_objective": "Distinguish discount amount, sale price and original price",
+      "mastery_assessment": "Successive and reverse tasks in fresh contexts",
+      "cognitive_demand": "apply/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N13",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Ratio",
+      "subskill": "unit parts and proportion",
+      "micro_skill": "derive a part from a known share",
+      "prerequisites": [
+        "N02",
+        "N08"
+      ],
+      "question_archetype": "NUM-WP-RATIO",
+      "common_misconception": "Divide by only one ratio term",
+      "learning_objective": "Solve total-to-share and share-to-total/subtotal",
+      "mastery_assessment": "Switch the unknown and justify the unit-part value",
+      "cognitive_demand": "apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N14",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Algebra",
+      "subskill": "substitution and translation",
+      "micro_skill": "preserve word order and expression structure",
+      "prerequisites": [
+        "N03",
+        "N07"
+      ],
+      "question_archetype": "NUM-WP-ALGEBRA",
+      "common_misconception": "Three less than twice becomes twice the difference",
+      "learning_objective": "Write expressions then substitute values",
+      "mastery_assessment": "Translate new situations without choices first",
+      "cognitive_demand": "understand/apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N15",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Algebra",
+      "subskill": "linear equations",
+      "micro_skill": "distribute and maintain equality",
+      "prerequisites": [
+        "N14"
+      ],
+      "question_archetype": "NUM-WP-ALGEBRA",
+      "common_misconception": "Move a term without sign change",
+      "learning_objective": "Solve and verify equations by substitution",
+      "mastery_assessment": "Unseen bracket and fractional-coefficient equations",
+      "cognitive_demand": "apply/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N16",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Rates",
+      "subskill": "unit conversions and travel",
+      "micro_skill": "connect distance, time and speed with units",
+      "prerequisites": [
+        "N10",
+        "N13"
+      ],
+      "question_archetype": "NUM-WP-RATE",
+      "common_misconception": "Average two speeds regardless of journey time",
+      "learning_objective": "Use total distance and total time appropriately",
+      "mastery_assessment": "Novel unit changes, stops and unequal segments",
+      "cognitive_demand": "apply/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N17",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Rates",
+      "subskill": "work and efficiency",
+      "micro_skill": "add rates and preserve fixed work",
+      "prerequisites": [
+        "N08",
+        "N13",
+        "N15"
+      ],
+      "question_archetype": "NUM-WP-RATE",
+      "common_misconception": "Add completion times; assume more workers take longer",
+      "learning_objective": "Solve combined work, staffing and relative output",
+      "mastery_assessment": "Choose a model for unfamiliar rate tasks",
+      "cognitive_demand": "apply/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N18",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Measurement",
+      "subskill": "elapsed time",
+      "micro_skill": "cross hour/noon/midnight boundaries",
+      "prerequisites": [
+        "N02"
+      ],
+      "question_archetype": "NUM-WP-RATE",
+      "common_misconception": "Treat clock times as decimals",
+      "learning_objective": "Calculate duration with explicit dates when needed",
+      "mastery_assessment": "Two fresh clock problems and an inverse finish-time task",
+      "cognitive_demand": "apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N19",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Measurement",
+      "subskill": "perimeter/area",
+      "micro_skill": "infer dimensions and keep units distinct",
+      "prerequisites": [
+        "N15"
+      ],
+      "question_archetype": "NUM-WP-GEOM",
+      "common_misconception": "Use perimeter as area",
+      "learning_objective": "Distinguish boundary, area and cost",
+      "mastery_assessment": "Direct measurement plus constrained-dimension transfer",
+      "cognitive_demand": "apply/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N20",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Statistics foundations",
+      "subskill": "mean and totals",
+      "micro_skill": "recover missing values and weight group sizes",
+      "prerequisites": [
+        "N02",
+        "N13"
+      ],
+      "question_archetype": "NUM-WP-AVERAGE",
+      "common_misconception": "Average averages without group sizes",
+      "learning_objective": "Reason from total divided by count",
+      "mastery_assessment": "Missing value, changed count and weighted group tasks",
+      "cognitive_demand": "apply/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N21",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Patterns",
+      "subskill": "sequences",
+      "micro_skill": "compare first/second differences and recurrence",
+      "prerequisites": [
+        "N03"
+      ],
+      "question_archetype": "NUM-SEQ-DIFF / NUM-SEQ-MULT / NUM-SEQ-ALT",
+      "common_misconception": "Continue one visible gap without checking all terms",
+      "learning_objective": "State the simplest consistent rule and check transitions",
+      "mastery_assessment": "New additive, multiplicative and alternating structures",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "N22",
+      "exam_level": "both",
+      "subject": "numerical",
+      "skill": "Word problems",
+      "subskill": "model selection and checking",
+      "micro_skill": "identify unknown, relevant data and a reasonableness check",
+      "prerequisites": [
+        "N12",
+        "N13",
+        "N15",
+        "N16",
+        "N17",
+        "N19",
+        "N20"
+      ],
+      "question_archetype": "mixed NUM-WP",
+      "common_misconception": "Select a formula from surface nouns",
+      "learning_objective": "Translate a new context, solve with units and check",
+      "mastery_assessment": "Held-out mixed tasks with changed representations",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "E1",
+      "exam_level": "both",
+      "subject": "verbal_en",
+      "skill": "meaning",
+      "subskill": "contextual sense",
+      "micro_skill": "use context and word relationships",
+      "prerequisites": [],
+      "question_archetype": "VEN-WORD-MEANING",
+      "common_misconception": "Unknown word means ignore surrounding sentence",
+      "learning_objective": "Explain a word in its specific passage",
+      "mastery_assessment": "Meaning and contrast in new contexts",
+      "cognitive_demand": "understand",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "E2",
+      "exam_level": "both",
+      "subject": "verbal_en",
+      "skill": "completion",
+      "subskill": "semantic and grammatical fit",
+      "micro_skill": "integrate a missing word or phrase",
+      "prerequisites": [
+        "E1"
+      ],
+      "question_archetype": "VEN-SENT-COMP",
+      "common_misconception": "Any synonym fits the register and grammar",
+      "learning_objective": "Choose a completion satisfying meaning and structure",
+      "mastery_assessment": "Fresh cloze with near-synonym distractors",
+      "cognitive_demand": "apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "E3",
+      "exam_level": "both",
+      "subject": "verbal_en",
+      "skill": "errors",
+      "subskill": "agreement and form",
+      "micro_skill": "locate and explain a genuine error",
+      "prerequisites": [
+        "E1"
+      ],
+      "question_archetype": "VEN-ERROR",
+      "common_misconception": "Nearest noun controls agreement",
+      "learning_objective": "Correct grammar while preserving meaning",
+      "mastery_assessment": "Error identification plus corrected rewrite",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "E4",
+      "exam_level": "both",
+      "subject": "verbal_en",
+      "skill": "structure",
+      "subskill": "complete and coherent sentences",
+      "micro_skill": "distinguish fragments, clauses and modifiers",
+      "prerequisites": [
+        "E1"
+      ],
+      "question_archetype": "VEN-SENT-STRUCTURE",
+      "common_misconception": "Long sentence means grammatical sentence",
+      "learning_objective": "Choose a complete unambiguous construction",
+      "mastery_assessment": "Fresh fragment/run-on/modifier contrast",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "E5",
+      "exam_level": "both",
+      "subject": "verbal_en",
+      "skill": "paragraphs",
+      "subskill": "cohesion and organization",
+      "micro_skill": "use reference, transitions and main/detail structure",
+      "prerequisites": [
+        "E1"
+      ],
+      "question_archetype": "VEN-PARA-ORDER",
+      "common_misconception": "First plausible sentence makes entire order correct",
+      "learning_objective": "Explain ordering dependencies",
+      "mastery_assessment": "Unseen paragraph ordering and sentence insertion",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "E6",
+      "exam_level": "both",
+      "subject": "verbal_en",
+      "skill": "reading",
+      "subskill": "literal, main idea and inference",
+      "micro_skill": "separate textual support from outside knowledge",
+      "prerequisites": [
+        "E1"
+      ],
+      "question_archetype": "VEN-RC",
+      "common_misconception": "A plausible opinion is a supported inference",
+      "learning_objective": "Locate evidence and qualify an inference",
+      "mastery_assessment": "New passages, including purpose and competing interpretations",
+      "cognitive_demand": "understand/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "F1",
+      "exam_level": "both",
+      "subject": "verbal_fil",
+      "skill": "meaning",
+      "subskill": "contextual sense",
+      "micro_skill": "use context and word relationships",
+      "prerequisites": [],
+      "question_archetype": "VFIL-WORD-MEANING",
+      "common_misconception": "Unknown word means ignore surrounding sentence",
+      "learning_objective": "Explain a word in its specific passage",
+      "mastery_assessment": "Meaning and contrast in new contexts",
+      "cognitive_demand": "understand",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "F2",
+      "exam_level": "both",
+      "subject": "verbal_fil",
+      "skill": "completion",
+      "subskill": "semantic and grammatical fit",
+      "micro_skill": "integrate a missing word or phrase",
+      "prerequisites": [
+        "F1"
+      ],
+      "question_archetype": "VFIL-SENT-COMP",
+      "common_misconception": "Any synonym fits the register and grammar",
+      "learning_objective": "Choose a completion satisfying meaning and structure",
+      "mastery_assessment": "Fresh cloze with near-synonym distractors",
+      "cognitive_demand": "apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "F3",
+      "exam_level": "both",
+      "subject": "verbal_fil",
+      "skill": "errors",
+      "subskill": "agreement and form",
+      "micro_skill": "locate and explain a genuine error",
+      "prerequisites": [
+        "F1"
+      ],
+      "question_archetype": "VFIL-ERROR",
+      "common_misconception": "Nearest noun controls agreement",
+      "learning_objective": "Correct grammar while preserving meaning",
+      "mastery_assessment": "Error identification plus corrected rewrite",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "F4",
+      "exam_level": "both",
+      "subject": "verbal_fil",
+      "skill": "structure",
+      "subskill": "complete and coherent sentences",
+      "micro_skill": "distinguish fragments, clauses and modifiers",
+      "prerequisites": [
+        "F1"
+      ],
+      "question_archetype": "VFIL-SENT-STRUCTURE",
+      "common_misconception": "Long sentence means grammatical sentence",
+      "learning_objective": "Choose a complete unambiguous construction",
+      "mastery_assessment": "Fresh fragment/run-on/modifier contrast",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "F5",
+      "exam_level": "both",
+      "subject": "verbal_fil",
+      "skill": "paragraphs",
+      "subskill": "cohesion and organization",
+      "micro_skill": "use reference, transitions and main/detail structure",
+      "prerequisites": [
+        "F1"
+      ],
+      "question_archetype": "VFIL-PARA-ORDER",
+      "common_misconception": "First plausible sentence makes entire order correct",
+      "learning_objective": "Explain ordering dependencies",
+      "mastery_assessment": "Unseen paragraph ordering and sentence insertion",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "F6",
+      "exam_level": "both",
+      "subject": "verbal_fil",
+      "skill": "reading",
+      "subskill": "literal, main idea and inference",
+      "micro_skill": "separate textual support from outside knowledge",
+      "prerequisites": [
+        "F1"
+      ],
+      "question_archetype": "VFIL-RC",
+      "common_misconception": "A plausible opinion is a supported inference",
+      "learning_objective": "Locate evidence and qualify an inference",
+      "mastery_assessment": "New passages, including purpose and competing interpretations",
+      "cognitive_demand": "understand/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "A1",
+      "exam_level": "pro",
+      "subject": "analytical",
+      "skill": "Analogy",
+      "subskill": "relationship and direction",
+      "micro_skill": "name the same relation in both pairs",
+      "prerequisites": [
+        "E1"
+      ],
+      "question_archetype": "ANA-ANALOGY",
+      "common_misconception": "Same topic means same relationship",
+      "learning_objective": "Distinguish function, part-whole, degree and producer-product",
+      "mastery_assessment": "Unseen relation types; explain rejected pairs",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "A2",
+      "exam_level": "pro",
+      "subject": "analytical",
+      "skill": "Symbolic reasoning",
+      "subskill": "quantifiers and abstract rules",
+      "micro_skill": "distinguish necessary from possible conclusions",
+      "prerequisites": [],
+      "question_archetype": "ANA-SYLLOGISM / ANA-SYMBOL-SERIES",
+      "common_misconception": "Converse or existential-import error",
+      "learning_objective": "Validate every premise without importing outside facts",
+      "mastery_assessment": "Counterexample generation and fresh quantifier/rule tasks",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "A3",
+      "exam_level": "pro",
+      "subject": "analytical",
+      "skill": "Arguments",
+      "subskill": "assumptions and conclusions",
+      "micro_skill": "separate reasons, conclusion and causal evidence",
+      "prerequisites": [
+        "E6"
+      ],
+      "question_archetype": "ANA-ASSUME-I-II / ANA-CONCLUSION",
+      "common_misconception": "After means because; recommendation equals evidence",
+      "learning_objective": "Identify a missing premise or overstrong inference",
+      "mastery_assessment": "Fresh arguments including weakening and qualified conclusions",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "A4",
+      "exam_level": "pro",
+      "subject": "analytical",
+      "skill": "Data interpretation",
+      "subskill": "tables and comparisons",
+      "micro_skill": "choose denominator and recognize insufficient evidence",
+      "prerequisites": [
+        "N11",
+        "N20"
+      ],
+      "question_archetype": "ANA-DI-TABLE",
+      "common_misconception": "Largest count means largest rate",
+      "learning_objective": "Interpret totals, proportions, trends and limits",
+      "mastery_assessment": "Unseen table plus statement evaluation",
+      "cognitive_demand": "analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "C1",
+      "exam_level": "sub",
+      "subject": "clerical",
+      "skill": "Filing",
+      "subskill": "alphabetic/numeric/date conventions",
+      "micro_skill": "apply a stated key consistently",
+      "prerequisites": [],
+      "question_archetype": "CLR-FILE-ORDER / CLR-NUMERIC / CLR-CHRONOLOGICAL",
+      "common_misconception": "Treat space, prefix or digit inconsistently",
+      "learning_objective": "Sort records and find a position using explicit rules",
+      "mastery_assessment": "Fresh prefixes, ties, numbers and dates with rule stated",
+      "cognitive_demand": "apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "C2",
+      "exam_level": "sub",
+      "subject": "clerical",
+      "skill": "Spelling",
+      "subskill": "orthographic patterns",
+      "micro_skill": "recognize correct forms without relying on sound",
+      "prerequisites": [
+        "E1"
+      ],
+      "question_archetype": "CLR-SPELL-RIGHT / CLR-SPELL-WRONG",
+      "common_misconception": "Plausible pronunciation proves spelling",
+      "learning_objective": "Explain and recognize spelling distinctions",
+      "mastery_assessment": "New words from the same pattern plus delayed dictation",
+      "cognitive_demand": "remember/apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "G1",
+      "exam_level": "both",
+      "subject": "general_information",
+      "skill": "Constitution",
+      "subskill": "rights and institutional powers",
+      "micro_skill": "retain legal qualifications and distinguish similar bodies",
+      "prerequisites": [
+        "E6"
+      ],
+      "question_archetype": "GI-WHO-HOLDS-POWER / GI-RIGHTS-APPLY",
+      "common_misconception": "All appointments need CA consent",
+      "learning_objective": "Apply constitutional provisions to precise cases",
+      "mastery_assessment": "Recall and new scenario with cited provision",
+      "cognitive_demand": "remember/apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "G2",
+      "exam_level": "both",
+      "subject": "general_information",
+      "skill": "R.A. 6713",
+      "subskill": "ethics and conflicts",
+      "micro_skill": "apply a rule and its qualifications",
+      "prerequisites": [
+        "E6"
+      ],
+      "question_archetype": "GI-SCENARIO-APPLY",
+      "common_misconception": "An inexpensive duty-connected gift is always allowed",
+      "learning_objective": "Distinguish duties, prohibited acts and exceptions",
+      "mastery_assessment": "New service scenario with explanation and provision",
+      "cognitive_demand": "apply/analyze",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "G3",
+      "exam_level": "both",
+      "subject": "general_information",
+      "skill": "Peace and human rights",
+      "subskill": "dignity, equality and lawful process",
+      "micro_skill": "distinguish protected rights and proportionate conduct",
+      "prerequisites": [
+        "E6"
+      ],
+      "question_archetype": "GI-RIGHTS-APPLY",
+      "common_misconception": "Popular purpose cancels individual rights",
+      "learning_objective": "Explain an applicable right and justified procedure",
+      "mastery_assessment": "Fresh public-service case with authoritative evidence",
+      "cognitive_demand": "understand/apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    },
+    {
+      "id": "G4",
+      "exam_level": "both",
+      "subject": "general_information",
+      "skill": "Environment",
+      "subskill": "protection and management",
+      "micro_skill": "connect action to environmental mechanism",
+      "prerequisites": [
+        "E6"
+      ],
+      "question_archetype": "GI-ENV-PRINCIPLE",
+      "common_misconception": "One intervention guarantees all outcomes",
+      "learning_objective": "Choose appropriate waste, water and conservation practices",
+      "mastery_assessment": "New scenario comparing prevention and mitigation",
+      "cognitive_demand": "understand/apply",
+      "scope_status": "educational decomposition of official scope",
+      "coverage_status": "Requires item-level mapping and independent review; not certified complete"
+    }
+  ]
+}

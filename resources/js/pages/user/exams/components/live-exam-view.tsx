@@ -94,6 +94,8 @@ interface LiveExamViewProps {
     onResume?: () => void;
     subscribeClock?: (listener: () => void) => () => void;
     getClockSnapshot?: () => ExamClockSnapshot;
+    practiceBatchId?: string | null;
+    examSessionId?: string | null;
 }
 
 export function LiveExamView({
@@ -131,6 +133,8 @@ export function LiveExamView({
     onResume,
     subscribeClock,
     getClockSnapshot,
+    practiceBatchId = null,
+    examSessionId = null,
 }: LiveExamViewProps) {
     const activeQuestion = activeQuestions[currentIdx];
     const studyTools = showsStudyTools(examMode, isDrillSession);
@@ -507,6 +511,8 @@ export function LiveExamView({
                     chosen_option: chosenOriginal,
                     weak_subcategories:
                         combinedStudyBias().weakSubcategories.slice(0, 20),
+                    practice_batch_id: practiceBatchId,
+                    exam_session_id: examSessionId,
                 }),
             });
             const data = await res.json();
@@ -743,27 +749,47 @@ export function LiveExamView({
                             </div>
 
                             <div className="flex items-center justify-between gap-3 px-3 pb-1.5 text-xs sm:px-5">
-                                <p className="min-w-0 flex-1 text-[var(--civio-ink)]">
-                                    <span className="text-sm font-semibold">
-                                        {isDrillSession
-                                            ? 'Practice Drills'
-                                            : EXAM_MODE_LABELS[examMode]}
-                                    </span>
-                                    {activeQuestion && (
-                                        <>
-                                            <span className="mx-1.5 text-[var(--civio-ink)]/40">
-                                                ·
-                                            </span>
-                                            <span className="font-semibold">
-                                                {currentIdx + 1} of{' '}
-                                                {activeQuestions.length}
-                                            </span>
-                                        </>
-                                    )}
-                                    <span className="mt-0.5 block truncate text-[var(--civio-ink)]/60">
+                                <nav
+                                    aria-label="Question context"
+                                    className="min-w-0 flex-1 text-[var(--civio-ink)]"
+                                >
+                                    <ol className="flex min-w-0 items-baseline gap-1.5 leading-5">
+                                        <li className="shrink-0 text-sm font-semibold">
+                                            {isDrillSession
+                                                ? 'Practice Drills'
+                                                : EXAM_MODE_LABELS[examMode]}
+                                        </li>
+                                        {activeQuestion?.category && (
+                                            <li className="flex min-w-0 items-baseline gap-1.5 text-[var(--civio-ink)]/70">
+                                                <span
+                                                    aria-hidden
+                                                    className="text-[var(--civio-ink)]/35"
+                                                >
+                                                    /
+                                                </span>
+                                                <span className="truncate">
+                                                    {activeQuestion.category}
+                                                </span>
+                                            </li>
+                                        )}
+                                        {activeQuestion?.subcategory && (
+                                            <li className="hidden min-w-0 items-baseline gap-1.5 text-[var(--civio-ink)]/60 sm:flex">
+                                                <span
+                                                    aria-hidden
+                                                    className="text-[var(--civio-ink)]/35"
+                                                >
+                                                    /
+                                                </span>
+                                                <span className="truncate">
+                                                    {activeQuestion.subcategory}
+                                                </span>
+                                            </li>
+                                        )}
+                                    </ol>
+                                    <span className="mt-0.5 block truncate text-[var(--civio-ink)]/55">
                                         {details.title}
                                     </span>
-                                </p>
+                                </nav>
                                 <div className="flex shrink-0 items-center">
                                     <button
                                         type="button"
@@ -855,7 +881,14 @@ export function LiveExamView({
                                 <div className="mx-auto w-full max-w-[42rem]">
                                     {activeQuestion ? (
                                         <div className="flex flex-col gap-5">
-                                            <div className="text-lg leading-relaxed tracking-tight text-foreground md:text-xl">
+                                            <p className="text-xs font-semibold tracking-[0.08em] text-[var(--civio-ink)]/60 uppercase tabular-nums">
+                                                Question {currentIdx + 1}
+                                                <span className="text-[var(--civio-ink)]/40">
+                                                    {' '}
+                                                    of {activeQuestions.length}
+                                                </span>
+                                            </p>
+                                            <div className="max-w-[65ch] text-[1.0625rem] leading-[1.7] tracking-[-0.005em] text-pretty [overflow-wrap:anywhere] text-foreground md:text-xl md:leading-[1.65]">
                                                 {renderFormattedText(
                                                     activeQuestion.stem,
                                                     true,

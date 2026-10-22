@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-210001",
+      "alias": "CURR-001",
+      "expression": "9/10-3/5",
+      "expected_exact": "3/10",
+      "cross_check": "Adding the removed 6/10 meter to the remaining 3/10 meter recovers 9/10 meter.",
+      "verification_role": "AUTHOR_SELF_CHECK_ONLY",
+      "independent_reviewer": null,
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-210002",
+      "alias": "CURR-002",
+      "expression": "5/8",
+      "expected_exact": "25/40",
+      "cross_check": "25/40 reduces to 5/8 when both numbers are divided by 5.",
+      "verification_role": "AUTHOR_SELF_CHECK_ONLY",
+      "independent_reviewer": null,
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-210003",
+      "alias": "CURR-003",
+      "expression": "92/(7/12-1/5)",
+      "expected_exact": "240",
+      "cross_check": "Initially 48 pesos was spent. Adding 92 gives 140 pesos, and 7/12 of 240 is 140.",
+      "verification_role": "AUTHOR_SELF_CHECK_ONLY",
+      "independent_reviewer": null,
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-210004",
+      "alias": "CURR-004",
+      "expression": "18+7*6",
+      "expected_exact": "60",
+      "cross_check": "Six copies cost 42 pesos. Adding the one-time 18-peso fee gives 60 pesos.",
+      "verification_role": "AUTHOR_SELF_CHECK_ONLY",
+      "independent_reviewer": null,
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-210005",
+      "alias": "CURR-005",
+      "expression": "(34-5*2)/(5-3)",
+      "expected_exact": "12",
+      "cross_check": "Substitute 12: 5*(12+2)-3*12 = 70-36 = 34.",
+      "verification_role": "AUTHOR_SELF_CHECK_ONLY",
+      "independent_reviewer": null,
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-210006",
+      "alias": "CURR-006",
+      "expression": "(13*60+23)-(11*60+48)",
+      "expected_exact": "95",
+      "cross_check": "In 24-hour form, 13:23 is 803 minutes after midnight and 11:48 is 708. Their difference is 95.",
+      "verification_role": "AUTHOR_SELF_CHECK_ONLY",
+      "independent_reviewer": null,
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-210007",
+      "alias": "CURR-007",
+      "expression": "18/3*(4+6)",
+      "expected_exact": "60",
+      "cross_check": "There are 24 manuals and 36 storybooks; 24+36=60. Their counts with 18 atlases simplify to 3:4:6.",
+      "verification_role": "AUTHOR_SELF_CHECK_ONLY",
+      "independent_reviewer": null,
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-210008",
+      "alias": "CURR-008",
+      "expression": "(12+12*1.5)*2.5",
+      "expected_exact": "75",
+      "cross_check": "The first labels 30 cases and the second 45 cases. Their outputs sum to 75.",
+      "verification_role": "AUTHOR_SELF_CHECK_ONLY",
+      "independent_reviewer": null,
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-210009",
+      "alias": "CURR-009",
+      "expression": "5*6/8",
+      "expected_exact": "15/4",
+      "cross_check": "Eight clerks working 15/4 hours supply 8*15/4=30 clerk-hours, matching the original task.",
+      "verification_role": "AUTHOR_SELF_CHECK_ONLY",
+      "independent_reviewer": null,
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "id": "CIVIO-NUM-WP-GEOM-210010",
+      "alias": "CURR-010",
+      "expression": "((28/2-2)/2)*((28/2+2)/2)",
+      "expected_exact": "48",
+      "cross_check": "The dimensions satisfy both conditions: 8-6=2 and 8+6+8+6=28.",
+      "verification_role": "AUTHOR_SELF_CHECK_ONLY",
+      "independent_reviewer": null,
+      "approval": "NOT_APPROVED"
+    }
+  ]
+}

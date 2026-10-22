@@ -99,6 +99,7 @@ export default function ExamIndex(props: ExamIndexProps) {
         setIsPaused,
         subscribeClock,
         getClockSnapshot,
+        examSessionId,
     } = useExamState(props);
 
     const customConfirmModal = (
@@ -184,6 +185,8 @@ export default function ExamIndex(props: ExamIndexProps) {
                     onResume={() => setIsPaused(false)}
                     subscribeClock={subscribeClock}
                     getClockSnapshot={getClockSnapshot}
+                    practiceBatchId={props.practiceBatchId ?? null}
+                    examSessionId={examSessionId}
                 />
             </ExamSessionProvider>
         );

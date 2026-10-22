@@ -140,6 +140,52 @@ export default function Welcome() {
                                 </div>
                             </section>
 
+                            <section
+                                aria-label="How Civio Helps"
+                                className="flex flex-col gap-3"
+                            >
+                                <h2 className="font-heading text-xl font-semibold tracking-tight">
+                                    How Civio Helps
+                                </h2>
+                                <ul className="flex flex-col gap-3 text-sm leading-relaxed text-[#101426]/80 dark:text-[#FAFAF7]/80">
+                                    <li>
+                                        <span className="font-semibold text-[#101426] dark:text-[#FAFAF7]">
+                                            Practice.
+                                        </span>{' '}
+                                        Full mocks and focused drills for
+                                        Professional and Subprofessional.
+                                    </li>
+                                    <li>
+                                        <span className="font-semibold text-[#101426] dark:text-[#FAFAF7]">
+                                            Learn.
+                                        </span>{' '}
+                                        An explanation after you answer, and a
+                                        list of questions you missed.
+                                    </li>
+                                    <li>
+                                        <span className="font-semibold text-[#101426] dark:text-[#FAFAF7]">
+                                            Improve.
+                                        </span>{' '}
+                                        Saved progress and your practice
+                                        history. Smart Review reminds a
+                                        signed-in learner to try a missed
+                                        question again.
+                                    </li>
+                                    <li>
+                                        <span className="font-semibold text-[#101426] dark:text-[#FAFAF7]">
+                                            Study anywhere.
+                                        </span>{' '}
+                                        A lighter layout on a slow connection,
+                                        and offline drills for selected topics.
+                                    </li>
+                                </ul>
+                                <p className="text-sm leading-relaxed text-[#101426]/70 dark:text-[#FAFAF7]/70">
+                                    Civio is not the Civil Service Commission. A
+                                    practice score is not your exam result.
+                                    Smart Review needs a connection.
+                                </p>
+                            </section>
+
                             <ExamScreenPreview />
 
                             <ExamFormat />

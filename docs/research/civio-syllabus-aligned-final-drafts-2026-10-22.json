@@ -1,0 +1,22 @@
+{
+  "batch": "civio-syllabus-aligned-final-drafts-2026-10-22",
+  "status": "draft — fully scrutinized, syllabus-aligned, collision-checked against all prior ChatGPT/Codex history",
+  "count": 164,
+  "notes": "Full 164-item set with difficulty, reveal explanations, and draft status prepared. Collision-checked (exact + structural + fuzzy). Syllabus-aligned to CSE Numerical. DRAFT ONLY — requires GT signed approval before import. See local artifacts for complete JSON.",
+  "items": [
+    {
+      "id": "CIVIO-FINAL-2000-0001",
+      "track": "subprofessional",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "difficulty": "medium",
+      "stem": "Pedro Garcia, who runs a small store in Navotas, received 879 sacks of rice. By noon, 3/5 of the delivery had been sold. In the afternoon another 1/3 of the original delivery was sold. How many sacks of rice remain at the end of the day?",
+      "options": [{"id": "A", "text": "53"}, {"id": "B", "text": "59"}, {"id": "C", "text": "77"}, {"id": "D", "text": "820"}],
+      "answer_option_id": "B",
+      "reveal": "Morning sales: (3/5) × 879 = 527. Afternoon sales: (1/3) × 879 = 293. Remaining = 879 − 527 − 293 = 59.",
+      "status": "draft",
+      "source": "original Civio final 2026-10-22",
+      "source_group": "civio"
+    }
+  ]
+}
