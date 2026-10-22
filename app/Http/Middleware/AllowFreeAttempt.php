@@ -20,6 +20,17 @@ class AllowFreeAttempt
         $startingFresh = $request->has('start')
             || ($request->query('free_attempt') == '1' && ! $request->has('attempt_id'));
 
+        // A limited guest who already submitted keeps that marker: 'start' or
+        // 'free_attempt=1' in the URL must not hand out another free attempt.
+        // Signed-in users and local-study (guest_unlimited) may start fresh.
+        $usedFreeAttempt = ! Auth::check()
+            && ! config('civio.guest_unlimited')
+            && $request->session()->has('pending_guest_attempt_id');
+
+        if ($startingFresh && $usedFreeAttempt) {
+            $startingFresh = false;
+        }
+
         if ($startingFresh) {
             $request->session()->forget('pending_guest_attempt_id');
             $request->session()->put('is_free_attempt_active', true);

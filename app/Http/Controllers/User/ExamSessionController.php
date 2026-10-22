@@ -22,6 +22,16 @@ class ExamSessionController extends Controller
      */
     public function store(StartExamSessionRequest $request): JsonResponse
     {
+        // Public free-attempt policy: a limited guest who already submitted
+        // cannot open more mock sessions (they could not submit them anyway).
+        if (auth()->guest() && ! config('civio.guest_unlimited')
+            && $request->session()->has('pending_guest_attempt_id')) {
+            return response()->json([
+                'success' => false,
+                'message' => 'You have already completed your free guest attempt.',
+            ], 403);
+        }
+
         $validated = $request->validated();
         $bias = (array) ($validated['bias'] ?? []);
 

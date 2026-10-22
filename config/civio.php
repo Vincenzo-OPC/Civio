@@ -9,8 +9,12 @@ declare(strict_types=1);
 return [
     // When true: guests may start unlimited mocks, submit, see scorecard/review,
     // and start another mock without forced register redirects.
+    // Unset defaults to true only for APP_ENV=local/testing (local study);
+    // any other environment (production, staging) defaults to false so a
+    // missing variable never opens unlimited guest access. Docker study
+    // stacks set CIVIO_GUEST_UNLIMITED=true explicitly.
     'guest_unlimited' => filter_var(
-        env('CIVIO_GUEST_UNLIMITED', true),
+        env('CIVIO_GUEST_UNLIMITED', in_array(env('APP_ENV', 'production'), ['local', 'testing'], true)),
         FILTER_VALIDATE_BOOLEAN
     ),
 
