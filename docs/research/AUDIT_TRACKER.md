@@ -381,5 +381,5 @@ CoS on `0622a31`: 117 accept, 4 revise, 1 reject. Only these five changed. The o
 
 The five stems now use one format. Nothing activated. Recheck only 0002, 0012, 0032, 0042, and 0045.
 
-`fe38b06` had already retired 0115 from this file as a filler clone of `CIVIO-FINAL-0119`. That retirement is left in place. This file is 121 drafts (General Information 17). 2033 − 55 + 121 = 2099.
+`fe38b06` had already retired 0115 from this file as a filler clone of `CIVIO-FINAL-0119`. GT later approved restoring 0115 unchanged as a draft. This file is 122 drafts (General Information 18). 2033 − 55 + 122 = 2100: Numerical 400, Analytical 400, Verbal EN 400, Verbal Fil 300, Clerical 300, GI 300. The 2,000/523 plan is dropped.
 

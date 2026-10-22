@@ -1,14 +1,14 @@
 {
   "batch": "civio-flat-2100-2026-10-22",
   "status": "draft — repaired after CoS review of 86608c1, not approved",
-  "count": 121,
+  "count": 122,
   "domains": {
     "analytical": 48,
     "verbal_en": 11,
     "clerical": 45,
-    "general_information": 17
+    "general_information": 18
   },
-  "math": "2033 base − 40 numerical drafts − 15 non-reading verbal_fil drafts + 121 items now in this file = 2099. CIVIO-2100-0115 was retired in fe38b06 as a filler clone of CIVIO-FINAL-0119.",
+  "math": "2033 base − 40 numerical drafts − 15 non-reading verbal_fil drafts + 122 items = 2100. CIVIO-2100-0115 was restored unchanged on 2026-10-22 (GT approved) after its retirement in fe38b06.",
   "targets": {
     "numerical": 400,
     "analytical": 400,
@@ -3792,6 +3792,39 @@
       ]
     },
     {
+      "id": "CIVIO-2100-0115",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 80,
+      "language": "en",
+      "stem": "Under R.A. 6713 §5: A records officer ignores a document request for 45 days. What is the proper action?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Deny it without a written reason"
+        },
+        {
+          "option_id": "n2",
+          "text": "Ask the requester to get a court order"
+        },
+        {
+          "option_id": "n3",
+          "text": "Act on the request or issue a formal denial with legal basis"
+        },
+        {
+          "option_id": "n4",
+          "text": "Wait until the requester follows up"
+        }
+      ],
+      "answer_option_id": "n3",
+      "reveal": "Under §5, the proper action is to act on the request or issue a formal denial with legal basis.",
+      "source": "original Civio flat-2100 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
       "id": "CIVIO-2100-0116",
       "track": "both",
       "domain": "general_information",
@@ -4023,5 +4056,5 @@
       "status": "draft"
     }
   ],
-  "retired_note": "2026-10-22: 1 filler clone (CIVIO-2100-0115, clone of CIVIO-FINAL-0119) moved to docs/research/bank/retired/filler-clones-2026-10-22.json (GT approved)."
+  "retired_note": "2026-10-22: CIVIO-2100-0115 was retired in fe38b06 as a filler clone of CIVIO-FINAL-0119, then restored unchanged the same day (GT approved). It stays draft. The 2,000/523 plan was dropped, so the target is the flat 2,100."
 }

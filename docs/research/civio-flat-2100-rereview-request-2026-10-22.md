@@ -16,7 +16,7 @@ CoS: 117 accept, 4 revise, 1 reject. The other 117 items were not rewritten. The
 | 0042 | revise | "actor" removed. A filmography lists films. Poster, camera, and ticket do not |
 | 0045 | revise | "egg" removed. A shell is worn by a turtle. Beach, claw, and slow are not |
 
-`fe38b06` (GT approved) removed 0115 from this file before the rebase, as a filler clone of `CIVIO-FINAL-0119`. It is not restored. This file now has 121 drafts, and General Information here is 17. `CIVIO-FINAL-0119` is in the superseded rewrite and labels that same records request as §9, not §5.
+`fe38b06` (GT approved) removed 0115 from this file before the rebase, as a filler clone of `CIVIO-FINAL-0119`. On 2026-10-22 GT approved restoring it unchanged (still draft), so this file has 122 drafts and General Information here is 18. The 2,000/523 plan is dropped; the target is the flat 2,100. `CIVIO-FINAL-0119` is in the superseded rewrite and labels that same records request as §9, not §5.
 
 ## What CoS found on 86608c1
 
@@ -26,7 +26,7 @@ CoS: 117 accept, 4 revise, 1 reject. The other 117 items were not rewritten. The
 
 | Group | IDs | Treatment |
 | --- | --- | --- |
-| Accepted GI, unchanged | 0105, 0106, 0107, 0108, 0109, 0110, 0113, 0114, 0116, 0117, 0118, 0121 | Left as accepted. 0115 was later retired by `fe38b06` |
+| Accepted GI, unchanged | 0105, 0106, 0107, 0108, 0109, 0110, 0113, 0114, 0116, 0117, 0118, 0121 | Left as accepted. 0115 was retired by `fe38b06`, then restored unchanged (GT approved) |
 | GI section repair | 0111, 0112, 0119, 0120, 0122 | Same skill, statute label and facts aligned |
 | Analogies | 0001–0048 | Replaced. Filler options, repeated base words, nine non-parallel pairs, and the three bank pairs could not be saved in place |
 | Antonyms | 0049–0059 | Replaced. Every old item used "similar", "unrelated", or the stem word. Five also matched the bank by word or meaning |

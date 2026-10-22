@@ -3,7 +3,7 @@
   "status": "retired: never import",
   "reason": "filler_clone: same stem with only a place, amount or Set/Item number changed, and the same key or options. One representative per group stays in its source file and goes through normal review.",
   "approved_by": "GT (retirement only), 2026-10-22",
-  "count": 196,
+  "count": 195,
   "items": [
     {
       "id": "CIVIO-EXACT-0002",
@@ -7413,44 +7413,6 @@
       "retired_reason": "filler_clone",
       "clone_of": "CIVIO-CLEAN-C015",
       "retired_from": "docs/research/civio-fixed-flat-final-2026-10-22.json",
-      "retired_at": "2026-10-22"
-    },
-    {
-      "id": "CIVIO-2100-0115",
-      "track": "both",
-      "domain": "general_information",
-      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
-      "difficulty": "medium",
-      "est_seconds": 80,
-      "language": "en",
-      "stem": "Under R.A. 6713 §5: A records officer ignores a document request for 45 days. What is the proper action?",
-      "options": [
-        {
-          "option_id": "n1",
-          "text": "Deny it without a written reason"
-        },
-        {
-          "option_id": "n2",
-          "text": "Ask the requester to get a court order"
-        },
-        {
-          "option_id": "n3",
-          "text": "Act on the request or issue a formal denial with legal basis"
-        },
-        {
-          "option_id": "n4",
-          "text": "Wait until the requester follows up"
-        }
-      ],
-      "answer_option_id": "n3",
-      "reveal": "Under §5, the proper action is to act on the request or issue a formal denial with legal basis.",
-      "source": "original Civio flat-2100 2026-10-22",
-      "source_group": "civio",
-      "status": "retired",
-      "review_status": "rejected",
-      "retired_reason": "filler_clone",
-      "clone_of": "CIVIO-FINAL-0119",
-      "retired_from": "docs/research/civio-flat-2100-2026-10-22.json",
       "retired_at": "2026-10-22"
     }
   ]

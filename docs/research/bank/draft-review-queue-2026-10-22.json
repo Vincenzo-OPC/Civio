@@ -1,6 +1,6 @@
 {
- "raw_non_approved_rows": 1828,
- "unique_drafts": 1753,
+ "raw_non_approved_rows": 1829,
+ "unique_drafts": 1754,
  "approved_unique": 1477,
  "approved_by_domain": {
   "numerical": 309,
@@ -80,7 +80,7 @@
    "flag": 2
   },
   "general_information|new": {
-   "flag": 11,
+   "flag": 12,
    "pass": 72
   },
   "general_information|revision": {
@@ -134,7 +134,7 @@
   "bad_difficulty": 419,
   "near_dup_approved": 246,
   "previously_rejected": 99,
-  "near_dup_draft": 22,
+  "near_dup_draft": 23,
   "passage_missing_or_unlinked": 19,
   "percent_change_topic": 18,
   "duplicate_options": 11,
