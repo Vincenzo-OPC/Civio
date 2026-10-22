@@ -15,7 +15,13 @@ import {
 // One throwaway DB, one server: run the scenarios one at a time.
 test.describe.configure({ mode: 'serial' });
 
-test('offline answer survives closing the tab and reaches the server after reconnect', async ({
+// Scenario 1 is split in two. Emulated offline cannot prove a write never
+// reached Laravel: a response can be lost after the server commits. Each
+// test decides the fate of the one offline write explicitly.
+const writes = (body: string | null, qid: number, value: number) =>
+    (body ?? '').includes(`"${qid}":${value}`);
+
+test('1a: an answer that never reached the server is restored after reopening and saved once on reconnect', async ({
     context,
 }) => {
     const { sid, q, p: first } = await startStrict(context);
@@ -23,38 +29,118 @@ test('offline answer survives closing the tab and reaches the server after recon
     expect((await answerOnline(p, 'Bravo', q[0].id, 1)).answers[q[0].id]).toBe(
         1,
     );
+    const before = await progress(p, sid);
 
-    await context.setOffline(true);
+    let intercepted = 0;
+    await p.route('**/exams/sessions/progress', (route) => {
+        if (writes(route.request().postData(), q[1].id, 2)) {
+            intercepted++;
+
+            return route.abort('internetdisconnected');
+        }
+
+        return route.continue();
+    });
     await p.getByRole('button', { name: 'Next' }).click();
     await pick(p, 'Charlie');
+
+    await expect.poll(() => intercepted).toBeGreaterThanOrEqual(1);
     await expect
         .poll(async () => JSON.parse((await pending(p, sid)) ?? 'null'))
         .toEqual({ [q[1].id]: [2, null] });
     expect(await toasts(p)).toEqual(
         expect.arrayContaining([expect.stringMatching(/Connection lost/)]),
     );
+    const held = await progress(p, sid);
+    expect(held.answers[q[1].id] ?? null, 'server never got it').toBeNull();
+    expect(held.save_version, 'no write committed').toBe(before.save_version);
 
     await p.close();
-    await context.setOffline(false);
     p = await context.newPage();
-    const resent = p.waitForResponse(
-        (r) =>
-            isProgress(r) &&
-            (r.request().postData() ?? '').includes(`"${q[1].id}":2`),
-        { timeout: 30_000 },
-    );
     await p.goto('/exams');
     await expect(
         p.getByText(/Restored 1 answer made while offline/),
     ).toBeVisible({ timeout: 10_000 });
-    await resent;
+
+    const resent = p.waitForResponse(
+        (r) => isProgress(r) && writes(r.request().postData(), q[1].id, 2),
+    );
+    await p.evaluate(() => window.dispatchEvent(new Event('online')));
+    expect((await resent).status()).toBe(200);
 
     const server = await progress(p, sid);
     expect(server.answers[q[0].id], 'online answer kept').toBe(1);
     expect(server.answers[q[1].id], 'offline answer saved after reopen').toBe(
         2,
     );
-    expect(await pending(p, sid), 'local copy cleared').toBeNull();
+    expect(server.save_version, 'exactly one more write').toBe(
+        before.save_version + 1,
+    );
+    await expect
+        .poll(() => pending(p, sid), { message: 'local copy cleared' })
+        .toBeNull();
+});
+
+test('1b: an answer the server committed but whose response was lost is not restored or written twice', async ({
+    context,
+}) => {
+    const { sid, q, p: first } = await startStrict(context);
+    let p = first;
+    expect((await answerOnline(p, 'Bravo', q[0].id, 1)).answers[q[0].id]).toBe(
+        1,
+    );
+    const before = await progress(p, sid);
+
+    let committed: { status: number; body: any } | null = null;
+    await p.route('**/exams/sessions/progress', async (route) => {
+        if (!writes(route.request().postData(), q[1].id, 2)) {
+            return route.continue();
+        }
+
+        const response = await route.fetch();
+        committed = {
+            status: response.status(),
+            body: await response.json(),
+        };
+
+        return route.abort('internetdisconnected');
+    });
+    await p.getByRole('button', { name: 'Next' }).click();
+    await pick(p, 'Charlie');
+
+    await expect.poll(() => committed?.status ?? 0).toBe(200);
+    expect(committed!.body.answers[q[1].id]).toBe(2);
+    await expect
+        .poll(async () => JSON.parse((await pending(p, sid)) ?? 'null'))
+        .toEqual({ [q[1].id]: [2, null] });
+    const after = await progress(p, sid);
+    expect(after.answers[q[1].id], 'server committed it').toBe(2);
+    expect(after.save_version).toBe(before.save_version + 1);
+
+    await p.close();
+    p = await context.newPage();
+    const writesAfterReopen: string[] = [];
+    p.on('request', (r) => {
+        if (isProgress(r) && writes(r.postData(), q[1].id, 2)) {
+            writesAfterReopen.push(r.postData() ?? '');
+        }
+    });
+    await p.goto('/exams');
+    await waitForExam(p);
+    await expect
+        .poll(() => pending(p, sid), { message: 'pending copy reconciled' })
+        .toBeNull();
+    await p.evaluate(() => window.dispatchEvent(new Event('online')));
+    await p.waitForTimeout(1000);
+
+    expect(await toasts(p)).not.toEqual(
+        expect.arrayContaining([expect.stringMatching(/Restored/)]),
+    );
+    expect(writesAfterReopen, 'no duplicate write').toEqual([]);
+    const server = await progress(p, sid);
+    expect(server.answers[q[0].id]).toBe(1);
+    expect(server.answers[q[1].id]).toBe(2);
+    expect(server.save_version, 'no extra write').toBe(after.save_version);
 });
 
 test('two tabs: a stale tab save re-reads, retries once and keeps both answers', async ({

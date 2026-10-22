@@ -80,9 +80,19 @@ export function TrafficOverloadGuard() {
                     // Offline is not overload: fail at once so callers (e.g.
                     // Strict-mock autosave) can hold the answer, and never
                     // show the "server busy" dialog for a dropped connection.
+                    // A write whose response was lost may already be saved:
+                    // never resend it blindly. The caller owns recovery.
+                    const method = (
+                        (args[1]?.method ??
+                            (args[0] instanceof Request
+                                ? args[0].method
+                                : 'GET')) as string
+                    ).toUpperCase();
+
                     if (
-                        typeof navigator !== 'undefined' &&
-                        navigator.onLine === false
+                        (method !== 'GET' && method !== 'HEAD') ||
+                        (typeof navigator !== 'undefined' &&
+                            navigator.onLine === false)
                     ) {
                         setIsRetrying(false);
 
