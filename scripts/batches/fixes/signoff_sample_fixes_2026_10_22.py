@@ -123,6 +123,8 @@ def main():
         for iid, field, new, why in edits:
             i = find(d, iid)
             assert i.get("status") == "draft", iid
+            if new == SPELL_STEM:  # bank convention: list the words in the stem
+                new = SPELL_STEM + "  " + " | ".join(o["text"] for o in i["options"])
             if i[field] != new:
                 note(i, why, {field: i[field]})
                 i[field] = new

@@ -2007,7 +2007,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which word is spelled correctly?",
+      "stem": "Which word is spelled correctly?  artic | arctik | arctic | artcic",
       "options": [
         {
           "option_id": "n1",
@@ -2116,7 +2116,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which word is spelled correctly?",
+      "stem": "Which word is spelled correctly?  consience | conscience | consciense | concience",
       "options": [
         {
           "option_id": "n1",
@@ -2489,7 +2489,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which word is spelled correctly?",
+      "stem": "Which word is spelled correctly?  mischievous | mischievious | mischevious | mischivous",
       "options": [
         {
           "option_id": "n1",
@@ -2631,7 +2631,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which word is spelled correctly?",
+      "stem": "Which word is spelled correctly?  absence | absense | abcense | absance",
       "options": [
         {
           "option_id": "n1",
@@ -3004,7 +3004,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which word is spelled correctly?",
+      "stem": "Which word is spelled correctly?  buisness | busness | bussiness | business",
       "options": [
         {
           "option_id": "n1",
@@ -3179,7 +3179,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which word is spelled correctly?",
+      "stem": "Which word is spelled correctly?  comparison | comparision | comparrison | compairison",
       "options": [
         {
           "option_id": "n1",
@@ -3321,7 +3321,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which word is spelled correctly?",
+      "stem": "Which word is spelled correctly?  decision | descision | decison | desicion",
       "options": [
         {
           "option_id": "n1",

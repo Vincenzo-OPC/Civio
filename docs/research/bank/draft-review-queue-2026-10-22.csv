@@ -383,8 +383,10 @@ clerical,CIVIO-CLEAN-C011,docs/research/civio-fixed-flat-final-2026-10-22.json,n
 clerical,CIVIO-CLEAN-C012,docs/research/civio-fixed-flat-final-2026-10-22.json,new,subprofessional,easy,30,draft,,flag,duplicate_options,"An applicant preparing documents for a Cebu City government office must choose the correct spelling of ""privilege"".",no,no
 clerical,CIVIO-CLEAN-C015,docs/research/civio-fixed-flat-final-2026-10-22.json,new,subprofessional,easy,30,draft,,flag,duplicate_options,"An applicant preparing documents for a Iloilo government office must choose the correct spelling of ""accommodate"".",no,no
 clerical,CIVIO-2100-0060,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which of these four spellings is right?,yes,no
+clerical,CIVIO-2100-0061,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which word is spelled correctly?  artic | arctik | arctic | artcic,yes,no
 clerical,CIVIO-2100-0062,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,A clerk must copy one form of the word. Which attempt has no error?,yes,no
 clerical,CIVIO-2100-0063,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Identify the spelling that needs no correction.,yes,no
+clerical,CIVIO-2100-0064,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which word is spelled correctly?  consience | conscience | consciense | concience,yes,no
 clerical,CIVIO-2100-0065,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which choice matches the accepted form?,yes,no
 clerical,CIVIO-2100-0066,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Find the option with every letter in its proper place.,yes,no
 clerical,CIVIO-2100-0067,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which entry can go into the record unchanged?,yes,no
@@ -395,9 +397,11 @@ clerical,CIVIO-2100-0071,docs/research/civio-flat-2100-2026-10-22.json,new,subpr
 clerical,CIVIO-2100-0072,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which form would you keep after a spelling check?,yes,no
 clerical,CIVIO-2100-0073,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,The other three attempts fail. Which one succeeds?,yes,no
 clerical,CIVIO-2100-0074,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which option uses the letters in the correct sequence?,yes,no
+clerical,CIVIO-2100-0075,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which word is spelled correctly?  mischievous | mischievious | mischevious | mischivous,yes,no
 clerical,CIVIO-2100-0076,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which spelling passes review?,yes,no
 clerical,CIVIO-2100-0077,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which of these writings is accurate?,yes,no
 clerical,CIVIO-2100-0078,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Choose the form that is not wrong.,yes,no
+clerical,CIVIO-2100-0079,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which word is spelled correctly?  absence | absense | abcense | absance,yes,no
 clerical,CIVIO-2100-0080,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which choice should replace the mistaken ones?,yes,no
 clerical,CIVIO-2100-0081,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which spelling is fit for an official paper?,yes,no
 clerical,CIVIO-2100-0082,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which of the four attempts is accurate?,yes,no
@@ -408,14 +412,16 @@ clerical,CIVIO-2100-0086,docs/research/civio-flat-2100-2026-10-22.json,new,subpr
 clerical,CIVIO-2100-0087,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which alternative would you leave unmarked?,yes,no
 clerical,CIVIO-2100-0088,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which of these is the proper written form?,yes,no
 clerical,CIVIO-2100-0089,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which entry avoids a spelling mistake?,yes,no
+clerical,CIVIO-2100-0090,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which word is spelled correctly?  buisness | busness | bussiness | business,yes,no
 clerical,CIVIO-2100-0091,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which choice is the correct written form?,yes,no
 clerical,CIVIO-2100-0092,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which spelling can be signed off?,yes,no
 clerical,CIVIO-2100-0093,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which of the following writings has no error?,yes,no
 clerical,CIVIO-2100-0094,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Identify the attempt that is written right.,yes,no
+clerical,CIVIO-2100-0095,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which word is spelled correctly?  comparison | comparision | comparrison | compairison,yes,no
 clerical,CIVIO-2100-0096,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which option would survive a dictionary check?,yes,no
 clerical,CIVIO-2100-0097,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which form is spelled in the standard manner?,yes,no
 clerical,CIVIO-2100-0098,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which alternative contains no letter mistake?,yes,no
-clerical,CIVIO-2100-0099,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,also_in:docs/research/civio-flat-2100-2026-10-22.json,Which word is spelled correctly?,yes,no
+clerical,CIVIO-2100-0099,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which word is spelled correctly?  decision | descision | decison | desicion,yes,no
 clerical,CIVIO-2100-0100,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which of these attempts should be kept?,yes,no
 clerical,CIVIO-2100-0101,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Choose the spelling that an editor would pass.,yes,no
 clerical,CIVIO-2100-0102,docs/research/civio-flat-2100-2026-10-22.json,new,subprofessional,easy,35,draft,,pass,,Which entry is the accurate one?,yes,no
