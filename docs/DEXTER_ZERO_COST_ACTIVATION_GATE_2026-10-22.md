@@ -2,6 +2,15 @@
 
 **Status:** Binding product and engineering constraint, not evidence that in-app generative AI is built, active, free at scale, or approved for any provider. This decision supersedes speculative provider activation language elsewhere. It does not stop ongoing bank QA, deterministic teaching, external Ask/Copy, Review Mistakes, FSRS, learner-model research or testable disabled-by-default code. User explicitly says **if Civio must pay for inference, the answer is NO for now**.
 
+
+## Founder-side failure case that GT explicitly wants to avoid
+
+GT cited the common case of an independent creator giving away AI editing functions, then facing disparaging comments despite absorbing per-generation bills. The important engineering lesson is **unit cost × users × requests**. If a model costs even a fraction of a cent per request, simultaneous use by thousands of free learners (plus retries, long explanations and prompt context) can turn a free product into an unbounded owner expense. Complaints/support volume and quality expectations can increase as users scale; user gratitude is not a funding mechanism. **Do not rely on nominal per-call costs, voluntary tips, advertising or good behavior to fund Dexter.**
+
+Civio must default to a **no-provider-call MCQ experience**; if first-party AI is not available, show brief honest availability copy and offer the existing external Ask/Copy option. Civio already has a support page: user bug reports should go there rather than require the founder to triage unstructured public complaints. Do not build a new ticket system solely due to this anecdote. An app may be *free to the learner* while being *expensive to run*: Civio must not repeat that economics.
+
+The **₱0 ceiling is for generative inference paid by GT**. This statement does not claim all Civio hosting, storage or bandwidth is free. Control those costs separately before any public launch; no deployment is authorized here.
+
 ## Product decision
 
 - **Owner-funded generative inference budget: ₱0.** Do not sign up for billed developer APIs, add automatic billing, configure pay-as-you-go/overages, buy credits, activate a billable provider, accept a trial that can auto-upgrade to paid, or incur hosting/inference fees on GT's behalf. If uncertain whether a request would cost GT money: **do not make the request**.
