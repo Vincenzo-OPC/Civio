@@ -1,5 +1,8 @@
 # Current Codex prompt for Astra-led Civio development
 
+**Oct 22 user refinement (mandatory):** Read [the StudyStash / Civio MCQ-only brief](research/STUDYSTASH_MCQ_ADAPTIVE_LEARNING_REVIEW_2026-10-22.md). Civio should learn from adaptive practice, feedback and personalization, **NOT copy StudyStash's flashcards, matching, podcasts or mini-games**. All questions stay multiple choice. Diagnose -> explain checked options -> independently solve a different approved MCQ -> schedule verified recall -> adapt the next MCQ. Avoid building duplicate Review Mistakes/FSRS. Grok Bot owns competitor research and independent QA, Astra approves architecture and Codex owns implementation when user-started. Reconcile against current main, preserve all gates, no deploy or paid work.
+
+
 **Bank note (2026-10-22):** Unique stems are now 2,100 with every domain on its clean hundred target. See `docs/research/AUDIT_TRACKER.md` (2026-10-22) and `docs/research/civio-exact-flat-review-request-2026-10-22.md`. All new items are draft. Do not activate.
 
 **Replaces the October 21 earlier pasted Codex prompt.** This is the prompt GT can paste in a newly started Codex session; reading AGENTS.md should independently lead to the same priorities. Do not interpret this document as a background job or deployment authorization.
