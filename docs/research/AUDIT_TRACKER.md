@@ -403,3 +403,10 @@ The needs-metadata tier is gone. 88 Verbal EN and 21 Numerical baseline drafts w
 - Split: Verbal EN 39 easy and 49 medium; Numerical 8 easy, 9 medium and 4 hard.
 - The manifest is still 2,100: 1,414 approved, 644 draft, 42 reviewed.
 Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
+
+### Engine: Strict mock save with a retired item (directive 3, engine section)
+- **Defect:** a progress patch that included an answer to an item retired mid-mock was rejected whole with 422, so the active answers in the same patch were not saved. The browser treated any error as fatal: it stopped saving and asked for a reload.
+- **Fix, server:** retired items are dropped from the patch and returned as `withdrawn_ids`; the active answers in the same patch save. Unserved items and invalid options still return 422. A patch made only of retired items changes nothing.
+- **Fix, browser:** withdrawn answers are cleared with one notice ("One item was withdrawn by Civio and will not be scored…") and never resent, so there is no 422 loop. A 422 is a hard failure and is never retried. Answers made during a dropped connection are held and sent as one patch on reconnect. A version conflict re-reads the server state and retries once. A submitted mock leaves the exam screen and clears the local resume copy.
+- **Tests:** `ExamDeadlineTest` (mixed patch, resend, on-time submit with a retired answer, second submit returns 409) and `tests/Js/progress-save.test.ts` (13 cases).
+- **Scenario status:** 1-4, 7, 8, 10 and 11 are covered by tests. 5 and 6 (reload and resume) are traced in the code, not tested in a browser. 9 (deadline passes while offline): the server refuses late saves and grades only what was saved before the deadline, by design.

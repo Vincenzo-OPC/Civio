@@ -26,6 +26,7 @@ final class ExamProgressController extends Controller
         ]);
 
         return DB::transaction(function () use ($request, $data, $sessions) {
+            $withdrawn = [];
             $session = ExamSession::whereKey($data['exam_session_id'])->lockForUpdate()->firstOrFail();
             abort_unless($sessions->owns($session, $request->user()?->id, $request->session()), 404);
 
@@ -40,18 +41,23 @@ final class ExamProgressController extends Controller
                 foreach (array_keys($patch) as $id) {
                     abort_unless((string) (int) $id === (string) $id, 422);
                 }
-                // Only the patched items must be active: an item retired mid-mock
-                // must not block saving answers to every other item.
+                // An item withdrawn mid-mock must never block the rest of the
+                // patch: its answer is dropped and reported, the others save.
                 $items = Question::whereIn('id', array_keys($patch))->where('status', 'active')->get()->keyBy('id');
-                abort_unless($items->count() === count($patch), 422, 'An item is no longer available.');
+                $withdrawn = array_values(array_map('intval', array_filter(
+                    array_keys($patch), fn ($id) => ! $items->has((int) $id)
+                )));
+                $patch = array_filter($patch, fn ($id) => $items->has((int) $id), ARRAY_FILTER_USE_KEY);
                 foreach ($patch as $id => $answer) {
                     abort_if($answer !== null && ! array_key_exists($answer, (array) $items[$id]->options), 422);
                 }
 
-                $session->forceFill([
-                    'saved_answers' => array_replace((array) ($session->saved_answers ?? []), $patch),
-                    'save_version' => (int) $session->save_version + 1,
-                ])->save();
+                if ($patch !== [] || $withdrawn === []) {
+                    $session->forceFill([
+                        'saved_answers' => array_replace((array) ($session->saved_answers ?? []), $patch),
+                        'save_version' => (int) $session->save_version + 1,
+                    ])->save();
+                }
             }
 
             return response()->json([
@@ -61,6 +67,7 @@ final class ExamProgressController extends Controller
                 'answers' => (object) ($session->saved_answers ?? []),
                 'save_version' => (int) $session->save_version,
                 'submitted' => ! $session->isOpen(),
+                'withdrawn_ids' => $withdrawn ?? [],
             ])->header('Cache-Control', 'private, no-store');
         });
     }

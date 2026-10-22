@@ -76,7 +76,7 @@ test('stale progress patches cannot overwrite a newer answer and clears are pers
     expect($session->fresh()->saved_answers)->toBe([$id => null]);
 });
 
-test('progress rejects unserved inactive and invalid-option patches without mutation', function () {
+test('progress rejects unserved and invalid-option patches, and an inactive-only patch changes nothing', function () {
     $session = deadlineSession();
     $this->withSession([ExamSession::GUEST_SESSION_KEY => [$session->id]]);
     $payload = ['exam_session_id' => $session->id, 'expected_version' => 0];
@@ -84,8 +84,9 @@ test('progress rejects unserved inactive and invalid-option patches without muta
         $this->postJson(route('exams.sessions.progress'), [...$payload, 'answers' => $answers])->assertUnprocessable();
     }
     Question::whereKey($session->question_ids[0])->update(['status' => 'draft']);
-    $this->postJson(route('exams.sessions.progress'), [...$payload, 'answers' => [$session->question_ids[0] => 1]])->assertUnprocessable();
-    expect($session->fresh()->save_version)->toBe(0);
+    $this->postJson(route('exams.sessions.progress'), [...$payload, 'answers' => [$session->question_ids[0] => 1]])
+        ->assertOk()->assertJson(['withdrawn_ids' => [$session->question_ids[0]], 'save_version' => 0]);
+    expect($session->fresh()->save_version)->toBe(0)->and($session->fresh()->saved_answers)->toBeNull();
 });
 
 test('late final submission grades only previously saved answers over the complete served set', function (bool $guest) {
@@ -176,20 +177,23 @@ test('even an empty progress patch requires a revision and integer inputs are ca
     expect($session->fresh()->saved_answers)->toBe([$session->question_ids[0] => 1]);
 });
 
-test('an item retired mid-mock does not block saving the other answers', function () {
+test('a patch mixing active and retired answers saves the active ones and reports the retired one', function () {
     $user = User::factory()->create();
     $session = deadlineSession($user->id);
     [$a, $b, $retired] = $session->question_ids;
     Question::whereKey($retired)->update(['status' => 'retired']);
 
     $this->actingAs($user)->postJson(route('exams.sessions.progress'), [
-        'exam_session_id' => $session->id, 'answers' => [$retired => 2], 'expected_version' => 0,
-    ])->assertUnprocessable();
-    $this->postJson(route('exams.sessions.progress'), [
-        'exam_session_id' => $session->id, 'answers' => [$a => 1], 'expected_version' => 0,
-    ])->assertOk()->assertJson(['save_version' => 1])->assertJsonMissingPath('correct_option');
+        'exam_session_id' => $session->id, 'answers' => [$a => 1, $b => 0, $retired => 2], 'expected_version' => 0,
+    ])->assertOk()->assertJson(['save_version' => 1, 'withdrawn_ids' => [$retired]])
+        ->assertJsonMissingPath('correct_option');
+    expect($session->fresh()->saved_answers)->toBe([$a => 1, $b => 0]);
 
-    expect($session->fresh()->saved_answers)->toBe([$a => 1]);
+    // Resending the same mixed patch does not 422-loop either.
+    $this->postJson(route('exams.sessions.progress'), [
+        'exam_session_id' => $session->id, 'answers' => [$a => 2, $retired => 2], 'expected_version' => 1,
+    ])->assertOk()->assertJson(['save_version' => 2, 'withdrawn_ids' => [$retired]]);
+    expect($session->fresh()->saved_answers)->toBe([$a => 2, $b => 0]);
 });
 
 test('an expired strict mock with a retired item still grades the saved answers', function () {
@@ -205,4 +209,22 @@ test('an expired strict mock with a retired item still grades the saved answers'
     $attempt = ExamAttempt::where('user_id', $user->id)->latest('id')->firstOrFail();
     expect($session->fresh()->exam_attempt_id)->toBe($attempt->id)
         ->and($attempt->cat_scores['metadata']['retired_count'])->toBe(1);
+});
+
+test('an on-time submit that still carries an answer to a retired item grades the rest once', function () {
+    $user = User::factory()->create();
+    $session = deadlineSession($user->id);
+    [$a, $b, $retired] = $session->question_ids;
+    Question::whereKey($retired)->update(['status' => 'retired']);
+
+    $this->actingAs($user)->postJson(route('exams.attempts.store'), deadlineFinal($session, [$a => 1, $b => 0, $retired => 1]))
+        ->assertOk();
+    $this->postJson(route('exams.attempts.store'), deadlineFinal($session, [$a => 1, $b => 1]))->assertConflict();
+
+    $attempt = ExamAttempt::where('user_id', $user->id)->sole();
+    expect(array_keys(array_filter($attempt->answers, fn ($a) => $a !== null)))->not->toContain($retired)
+        ->and($attempt->cat_scores['metadata']['retired_count'])->toBe(1)
+        ->and($session->fresh()->isOpen())->toBeFalse();
+    $this->postJson(route('exams.sessions.progress'), ['exam_session_id' => $session->id])
+        ->assertOk()->assertJson(['submitted' => true]);
 });

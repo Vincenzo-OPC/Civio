@@ -373,3 +373,11 @@ The independent-accuracy card now lists the five skills (subcategories) to work 
 ## Strict mock with an item retired mid-exam, 22 October 2026
 
 Before this fix, retiring one served item during an open Strict mock made every later progress save fail with 422 and made the final submit fail, so the whole attempt was lost. Now only a save that touches the retired item is rejected. Submitting a server-held mock grades the remaining items, and the retired one is recorded as `retired_count`, outside the score. Practice drills that have no session keep the earlier strict check. Tests in `ExamDeadlineTest`.
+
+## Strict mock autosave: retired items, offline answers and conflicts (22 October 2026)
+
+- `POST /exams/sessions/progress` now saves the active answers in a patch and returns retired ones in `withdrawn_ids`; it no longer rejects the whole patch with 422. Unserved items and invalid options still return 422.
+- The browser clears a withdrawn answer, shows one notice and never resends it.
+- Answers made while offline are held and saved in one patch on reconnect. A version conflict from another tab re-reads the server state and retries once.
+- A refresh after submit leaves the exam and clears the local resume copy.
+- The save logic loads with the first answer, which keeps the exam chunk at 10.96 kB, under the 11 kB budget.
