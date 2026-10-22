@@ -329,3 +329,19 @@ Applied the specific editorial fixes to the existing PR #8 draft branch `grok/ga
 - Preserved all statuses as `draft` / `unreviewed`; no approval, activation, import or merge.
 
 On the updated PR commit, `python scripts/batches/qa_file.py docs/research/gap-fill-2000-02.json` again reports **108 items, 1,656 comparison-bank items, 0 problems**. The independent numerical recomputation again returns **80/80 correct** (60 mixed-operation expressions and 20 sequences), with the 35-second targets verified and keys balanced 20 per option position. This still does not complete the full PR-required software test/build/bundle suite, source-by-source originality check, or content approval.
+
+
+## 2026-10-22: Independent audit of gap-fill-2000-03 (open PR #9)
+
+**Scope:** Reviewed PR #9's 101 draft items at original head `026519163498df7e47b49f5069a59f23cd4728d5`: 67 word analogies and 34 data-interpretation tables. The PR remained draft throughout; no activation, import or merge was performed.
+
+**Checks on the revised branch head `f54f8df2b88eeb6b3e4e8c6adc1c939dce82e0f4`:**
+- Repository `qa_file.py`: **101 items, 1,656 comparison items, 0 problems**.
+- Repository `explanation_lint.py`: **101 items, 0 flagged**; key positions A 26, B 26, C 25, D 24.
+- Independent audit: all 34 table keys recomputed from their displayed data; all 67 analogy keys reviewed against the stated semantic/form relationship. No wrong key or duplicate-choice defect found.
+- Found and corrected a calculation explanation missed by lint: `CIVIO-GF2K03-ANA-DI-TABLE-0024` has a 160-to-100 decrease, so 60 ÷ 160 = **0.375 (37.5%)**, not 0.38. The keyed 37.5% was already correct. Updated explanation is in the open PR branch commit above.
+- Recheck on the updated head: table solver reports **34/34** key matches and all displayed percentage decimals agree with the keyed percentages. Both the repository batch QA and explanation lint pass. All 101 items remain `draft/unreviewed`.
+
+**Release planning evidence (PR #9 head only):** The existing release manifest reports **1,401 selected / 2,000** from approved content plus the baseline, a 599 shortfall. With `--include-drafts` on this one PR head, it reports **1,502 / 2,000**, still 498 short. These are manifest projections from PR #9's checkout, not current live-bank counts; they do not incorporate all other open PRs and do not confer approval. Significant subtopic gaps persist in English paragraph organization/reading, Filipino vocabulary/idioms, numerical operations/sequences, clerical filing/spelling and General Information. Do not call the 2,000 milestone complete.
+
+**Disposition:** Corrected the one detected numerical explanation defect in PR #9. The questions remain unapproved drafts pending full independent/source-rights review, author-independent content approval and the repository release/import requirements. Full software type/lint/format/test/build/bundle checks required by the PR were not run.
