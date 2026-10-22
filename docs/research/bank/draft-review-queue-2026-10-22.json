@@ -1,6 +1,6 @@
 {
- "raw_non_approved_rows": 1859,
- "unique_drafts": 1783,
+ "raw_non_approved_rows": 2348,
+ "unique_drafts": 2272,
  "approved_unique": 1477,
  "approved_by_domain": {
   "numerical": 309,
@@ -18,12 +18,12 @@
   "verbal_en": 126
  },
  "adds_unique_pass_by_domain": {
-  "general_information": 226,
-  "clerical": 203,
-  "numerical": 237,
-  "analytical": 296,
-  "verbal_en": 139,
-  "verbal_fil": 128
+  "general_information": 316,
+  "clerical": 253,
+  "numerical": 310,
+  "analytical": 423,
+  "verbal_en": 238,
+  "verbal_fil": 178
  },
  "projected_if_signed": {
   "verbal": 600,
@@ -52,7 +52,7 @@
    "flag": 21
   },
   "analytical|new": {
-   "pass": 203,
+   "pass": 330,
    "flag": 2
   },
   "analytical|revision": {
@@ -67,7 +67,7 @@
    "flag": 24
   },
   "clerical|new": {
-   "pass": 147,
+   "pass": 197,
    "flag": 17
   },
   "clerical|revision": {
@@ -81,8 +81,8 @@
    "flag": 2
   },
   "general_information|new": {
-   "flag": 11,
-   "pass": 72
+   "pass": 162,
+   "flag": 11
   },
   "general_information|revision": {
    "pass": 24
@@ -95,7 +95,7 @@
    "pass": 70
   },
   "numerical|new": {
-   "pass": 140,
+   "pass": 213,
    "flag": 1
   },
   "numerical|revision": {
@@ -109,8 +109,8 @@
    "flag": 38
   },
   "verbal_en|new": {
-   "flag": 88,
-   "pass": 49
+   "pass": 148,
+   "flag": 88
   },
   "verbal_en|revision": {
    "flag": 4,
@@ -124,7 +124,7 @@
    "pass": 1
   },
   "verbal_fil|new": {
-   "pass": 127
+   "pass": 177
   },
   "verbal_fil|revision": {
    "pass": 21,

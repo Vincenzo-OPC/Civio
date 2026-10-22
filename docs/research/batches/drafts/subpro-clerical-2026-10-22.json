@@ -1,0 +1,3266 @@
+{
+ "batch": "subpro-clerical-2026-10-22",
+ "date": "2026-10-22",
+ "status": "draft",
+ "spec_version": "0.1.9",
+ "authority": "GT approval 2026-10-22 and MASTER directive 2026-10-22; drafts only, nothing approved, signed or imported",
+ "count": 50,
+ "items": [
+  {
+   "id": "CIVIO-D1022-SPCLR-0001",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is spelled correctly?  acumulate | accumalate | accumulate | accummulate",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "accumalate"
+    },
+    {
+     "option_id": "o2",
+     "text": "accummulate"
+    },
+    {
+     "option_id": "o3",
+     "text": "acumulate"
+    },
+    {
+     "option_id": "o4",
+     "text": "accumulate"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "\"accumulate\" means to gather or pile up over time.",
+    "shortcut": "Say the word slowly by syllable and picture each part: ac-cu-mu-la-te.",
+    "why_correct": "\"accumulate\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o1": "\"accumalate\" spells the word the way it sounds; the standard spelling is \"accumulate\".",
+     "o2": "\"accummulate\" doubles or undoubles a letter; the standard spelling is \"accumulate\".",
+     "o3": "\"acumulate\" doubles or undoubles a letter; the standard spelling is \"accumulate\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "SPL-SOUND",
+    "o2": "SPL-DOUBLE",
+    "o3": "SPL-DOUBLE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: ac-cu-mu-la-te."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0002",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is spelled correctly?  acquital | aquittal | acquitall | acquittal",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "aquittal"
+    },
+    {
+     "option_id": "o2",
+     "text": "acquital"
+    },
+    {
+     "option_id": "o3",
+     "text": "acquittal"
+    },
+    {
+     "option_id": "o4",
+     "text": "acquitall"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"acquittal\" means a court's finding that the accused is not guilty.",
+    "shortcut": "Say the word slowly by syllable and picture each part: ac-quit-tal.",
+    "why_correct": "\"acquittal\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o1": "\"aquittal\" drops a silent letter; the standard spelling is \"acquittal\".",
+     "o2": "\"acquital\" doubles or undoubles a letter; the standard spelling is \"acquittal\".",
+     "o4": "\"acquitall\" doubles or undoubles a letter; the standard spelling is \"acquittal\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "SPL-SILENT",
+    "o2": "SPL-DOUBLE",
+    "o4": "SPL-DOUBLE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: ac-quit-tal."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0003",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is spelled correctly?  auxilary | auxiliary | auxiliery | auxillary",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "auxiliary"
+    },
+    {
+     "option_id": "o2",
+     "text": "auxiliery"
+    },
+    {
+     "option_id": "o3",
+     "text": "auxilary"
+    },
+    {
+     "option_id": "o4",
+     "text": "auxillary"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "\"auxiliary\" means giving extra help or support.",
+    "shortcut": "Say the word slowly by syllable and picture each part: au-xi-liar.",
+    "why_correct": "\"auxiliary\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o2": "\"auxiliery\" spells the word the way it sounds; the standard spelling is \"auxiliary\".",
+     "o3": "\"auxilary\" drops a letter; the standard spelling is \"auxiliary\".",
+     "o4": "\"auxillary\" spells the word the way it sounds; the standard spelling is \"auxiliary\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "SPL-SOUND",
+    "o3": "SPL-DROP",
+    "o4": "SPL-SOUND"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: au-xi-liar."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0004",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is spelled correctly?  bankrupcy | bankrupty | bankruptcy | bankruptsy",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "bankruptcy"
+    },
+    {
+     "option_id": "o2",
+     "text": "bankrupty"
+    },
+    {
+     "option_id": "o3",
+     "text": "bankrupcy"
+    },
+    {
+     "option_id": "o4",
+     "text": "bankruptsy"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "\"bankruptcy\" means the legal state of being unable to pay debts.",
+    "shortcut": "Say the word slowly by syllable and picture each part: ban-krup.",
+    "why_correct": "\"bankruptcy\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o2": "\"bankrupty\" drops a letter; the standard spelling is \"bankruptcy\".",
+     "o3": "\"bankrupcy\" drops a letter; the standard spelling is \"bankruptcy\".",
+     "o4": "\"bankruptsy\" spells the word the way it sounds; the standard spelling is \"bankruptcy\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "SPL-DROP",
+    "o3": "SPL-DROP",
+    "o4": "SPL-SOUND"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: ban-krup."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0005",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is spelled correctly?  burau | bureu | bureau | beaureau",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "bureu"
+    },
+    {
+     "option_id": "o2",
+     "text": "beaureau"
+    },
+    {
+     "option_id": "o3",
+     "text": "bureau"
+    },
+    {
+     "option_id": "o4",
+     "text": "burau"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"bureau\" means a government office or department.",
+    "shortcut": "Say the word slowly by syllable and picture each part: bu-reau.",
+    "why_correct": "\"bureau\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o1": "\"bureu\" drops a letter; the standard spelling is \"bureau\".",
+     "o2": "\"beaureau\" spells the word the way it sounds; the standard spelling is \"bureau\".",
+     "o4": "\"burau\" drops a letter; the standard spelling is \"bureau\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "SPL-DROP",
+    "o2": "SPL-SOUND",
+    "o4": "SPL-DROP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: bu-reau."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0006",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is spelled correctly?  comemorate | commemerate | commemorate | commemmorate",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "comemorate"
+    },
+    {
+     "option_id": "o2",
+     "text": "commemmorate"
+    },
+    {
+     "option_id": "o3",
+     "text": "commemorate"
+    },
+    {
+     "option_id": "o4",
+     "text": "commemerate"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"commemorate\" means to honor the memory of an event or person.",
+    "shortcut": "Say the word slowly by syllable and picture each part: com-me-mo-ra-te.",
+    "why_correct": "\"commemorate\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o1": "\"comemorate\" doubles or undoubles a letter; the standard spelling is \"commemorate\".",
+     "o2": "\"commemmorate\" doubles or undoubles a letter; the standard spelling is \"commemorate\".",
+     "o4": "\"commemerate\" spells the word the way it sounds; the standard spelling is \"commemorate\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "SPL-DOUBLE",
+    "o2": "SPL-DOUBLE",
+    "o4": "SPL-SOUND"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: com-me-mo-ra-te."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0007",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is spelled correctly?  deductable | deductibel | deductible | deducktible",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "deducktible"
+    },
+    {
+     "option_id": "o2",
+     "text": "deductable"
+    },
+    {
+     "option_id": "o3",
+     "text": "deductible"
+    },
+    {
+     "option_id": "o4",
+     "text": "deductibel"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"deductible\" means able to be subtracted, as from taxable income.",
+    "shortcut": "Say the word slowly by syllable and picture each part: de-duc-tib-le.",
+    "why_correct": "\"deductible\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o1": "\"deducktible\" spells the word the way it sounds; the standard spelling is \"deductible\".",
+     "o2": "\"deductable\" spells the word the way it sounds; the standard spelling is \"deductible\".",
+     "o4": "\"deductibel\" spells the word the way it sounds; the standard spelling is \"deductible\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "SPL-SOUND",
+    "o2": "SPL-SOUND",
+    "o4": "SPL-SOUND"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: de-duc-tib-le."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0008",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "spot the misspelled word among correct ones",
+   "archetype": "CLR-SPELL-WRONG",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is misspelled?  indictment | memorandum | discrepency | procurement",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "procurement"
+    },
+    {
+     "option_id": "o2",
+     "text": "discrepency"
+    },
+    {
+     "option_id": "o3",
+     "text": "memorandum"
+    },
+    {
+     "option_id": "o4",
+     "text": "indictment"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "\"discrepancy\" means a difference between things that should match. The misspelling here spells the word the way it sounds.",
+    "shortcut": "Say the word slowly by syllable and picture each part: dis-cre-pan.",
+    "why_correct": "\"discrepency\" is misspelled: it spells the word the way it sounds. The standard spelling is \"discrepancy\" (Merriam-Webster). The other three words are spelled correctly, so they are foils.",
+    "why_wrong": {
+     "o1": "\"procurement\" is spelled correctly, so it is not the answer.",
+     "o3": "\"memorandum\" is spelled correctly, so it is not the answer.",
+     "o4": "\"indictment\" is spelled correctly, so it is not the answer."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-SPELL-CORRECT-FOIL",
+    "o3": "CLR-SPELL-CORRECT-FOIL",
+    "o4": "CLR-SPELL-CORRECT-FOIL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: dis-cre-pan.",
+   "error_code": "SPL-SOUND"
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0009",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "spot the misspelled word among correct ones",
+   "archetype": "CLR-SPELL-WRONG",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is misspelled?  voucher | treasurer | laboratory | disatisfied",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "laboratory"
+    },
+    {
+     "option_id": "o2",
+     "text": "treasurer"
+    },
+    {
+     "option_id": "o3",
+     "text": "disatisfied"
+    },
+    {
+     "option_id": "o4",
+     "text": "voucher"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"dissatisfied\" means not pleased. The misspelling here doubles or undoubles a letter.",
+    "shortcut": "Say the word slowly by syllable and picture each part: dis-sa-tis-fied.",
+    "why_correct": "\"disatisfied\" is misspelled: it doubles or undoubles a letter. The standard spelling is \"dissatisfied\" (Merriam-Webster). The other three words are spelled correctly, so they are foils.",
+    "why_wrong": {
+     "o1": "\"laboratory\" is spelled correctly, so it is not the answer.",
+     "o2": "\"treasurer\" is spelled correctly, so it is not the answer.",
+     "o4": "\"voucher\" is spelled correctly, so it is not the answer."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-SPELL-CORRECT-FOIL",
+    "o2": "CLR-SPELL-CORRECT-FOIL",
+    "o4": "CLR-SPELL-CORRECT-FOIL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: dis-sa-tis-fied.",
+   "error_code": "SPL-DOUBLE"
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0010",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "spot the misspelled word among correct ones",
+   "archetype": "CLR-SPELL-WRONG",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is misspelled?  embasy | affidavit | quarantine | receptionist",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "receptionist"
+    },
+    {
+     "option_id": "o2",
+     "text": "quarantine"
+    },
+    {
+     "option_id": "o3",
+     "text": "affidavit"
+    },
+    {
+     "option_id": "o4",
+     "text": "embasy"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "\"embassy\" means the office of an ambassador in a foreign country. The misspelling here doubles or undoubles a letter.",
+    "shortcut": "Say the word slowly by syllable and picture each part: em-bas.",
+    "why_correct": "\"embasy\" is misspelled: it doubles or undoubles a letter. The standard spelling is \"embassy\" (Merriam-Webster). The other three words are spelled correctly, so they are foils.",
+    "why_wrong": {
+     "o1": "\"receptionist\" is spelled correctly, so it is not the answer.",
+     "o2": "\"quarantine\" is spelled correctly, so it is not the answer.",
+     "o3": "\"affidavit\" is spelled correctly, so it is not the answer."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-SPELL-CORRECT-FOIL",
+    "o2": "CLR-SPELL-CORRECT-FOIL",
+    "o3": "CLR-SPELL-CORRECT-FOIL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: em-bas.",
+   "error_code": "SPL-DOUBLE"
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0011",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "en",
+   "stem": "Which spelling belongs in the blank? \"Attach a ____ of the signed contract.\"  facsimle | facsimile | fascimile | facsimilie",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "facsimilie"
+    },
+    {
+     "option_id": "o2",
+     "text": "facsimile"
+    },
+    {
+     "option_id": "o3",
+     "text": "fascimile"
+    },
+    {
+     "option_id": "o4",
+     "text": "facsimle"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "\"facsimile\" means an exact copy, especially one sent by fax.",
+    "shortcut": "Say the word slowly by syllable and picture each part: fac-si-mi-le.",
+    "why_correct": "\"facsimile\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o1": "\"facsimilie\" spells the word the way it sounds; the standard spelling is \"facsimile\".",
+     "o3": "\"fascimile\" spells the word the way it sounds; the standard spelling is \"facsimile\".",
+     "o4": "\"facsimle\" drops a letter; the standard spelling is \"facsimile\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "SPL-SOUND",
+    "o3": "SPL-SOUND",
+    "o4": "SPL-DROP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: fac-si-mi-le."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0012",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "en",
+   "stem": "Which spelling belongs in the blank? \"The engineers said the bridge repair is ____ within the budget.\"  fesible | feasable | feasibel | feasible",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "feasable"
+    },
+    {
+     "option_id": "o2",
+     "text": "feasible"
+    },
+    {
+     "option_id": "o3",
+     "text": "fesible"
+    },
+    {
+     "option_id": "o4",
+     "text": "feasibel"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "\"feasible\" means possible and practical to do.",
+    "shortcut": "Say the word slowly by syllable and picture each part: fea-sib-le.",
+    "why_correct": "\"feasible\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o1": "\"feasable\" spells the word the way it sounds; the standard spelling is \"feasible\".",
+     "o3": "\"fesible\" drops a letter; the standard spelling is \"feasible\".",
+     "o4": "\"feasibel\" spells the word the way it sounds; the standard spelling is \"feasible\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "SPL-SOUND",
+    "o3": "SPL-DROP",
+    "o4": "SPL-SOUND"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: fea-sib-le."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0013",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "en",
+   "stem": "Which spelling belongs in the blank? \"The clerk stamped the ____ before sending it to the court.\"  inditment | endictment | indictmant | indictment",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "indictment"
+    },
+    {
+     "option_id": "o2",
+     "text": "inditment"
+    },
+    {
+     "option_id": "o3",
+     "text": "indictmant"
+    },
+    {
+     "option_id": "o4",
+     "text": "endictment"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "\"indictment\" means a formal charge of a serious crime.",
+    "shortcut": "Say the word slowly by syllable and picture each part: in-dic-tmen.",
+    "why_correct": "\"indictment\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o2": "\"inditment\" drops a silent letter; the standard spelling is \"indictment\".",
+     "o3": "\"indictmant\" spells the word the way it sounds; the standard spelling is \"indictment\".",
+     "o4": "\"endictment\" spells the word the way it sounds; the standard spelling is \"indictment\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "SPL-SILENT",
+    "o3": "SPL-SOUND",
+    "o4": "SPL-SOUND"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: in-dic-tmen."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0014",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "en",
+   "stem": "Which spelling belongs in the blank? \"Water samples go to the provincial ____ for testing.\"  labratory | laboratary | laboratory | laboritory",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "laboratory"
+    },
+    {
+     "option_id": "o2",
+     "text": "laboritory"
+    },
+    {
+     "option_id": "o3",
+     "text": "laboratary"
+    },
+    {
+     "option_id": "o4",
+     "text": "labratory"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "\"laboratory\" means a room for scientific tests.",
+    "shortcut": "Say the word slowly by syllable and picture each part: la-bo-ra-tor.",
+    "why_correct": "\"laboratory\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o2": "\"laboritory\" spells the word the way it sounds; the standard spelling is \"laboratory\".",
+     "o3": "\"laboratary\" spells the word the way it sounds; the standard spelling is \"laboratory\".",
+     "o4": "\"labratory\" drops a letter; the standard spelling is \"laboratory\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "SPL-SOUND",
+    "o3": "SPL-SOUND",
+    "o4": "SPL-DROP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: la-bo-ra-tor."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0015",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "en",
+   "stem": "Which spelling belongs in the blank? \"Arriving livestock must stay in ____ for seven days.\"  quaranteen | quarantene | quarantine | quarentine",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "quarantene"
+    },
+    {
+     "option_id": "o2",
+     "text": "quaranteen"
+    },
+    {
+     "option_id": "o3",
+     "text": "quarentine"
+    },
+    {
+     "option_id": "o4",
+     "text": "quarantine"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "\"quarantine\" means a period of isolation to stop disease from spreading.",
+    "shortcut": "Say the word slowly by syllable and picture each part: qua-ran-ti-ne.",
+    "why_correct": "\"quarantine\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o1": "\"quarantene\" spells the word the way it sounds; the standard spelling is \"quarantine\".",
+     "o2": "\"quaranteen\" spells the word the way it sounds; the standard spelling is \"quarantine\".",
+     "o3": "\"quarentine\" spells the word the way it sounds; the standard spelling is \"quarantine\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "SPL-SOUND",
+    "o2": "SPL-SOUND",
+    "o3": "SPL-SOUND"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: qua-ran-ti-ne."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0016",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "en",
+   "stem": "Which spelling belongs in the blank? \"The emergency drill had a full ____ on Friday.\"  reharsal | rehersal | rehearsal | rehearsel",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "rehearsel"
+    },
+    {
+     "option_id": "o2",
+     "text": "rehearsal"
+    },
+    {
+     "option_id": "o3",
+     "text": "rehersal"
+    },
+    {
+     "option_id": "o4",
+     "text": "reharsal"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "\"rehearsal\" means a practice session before a performance or event.",
+    "shortcut": "Say the word slowly by syllable and picture each part: re-hear-sal.",
+    "why_correct": "\"rehearsal\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o1": "\"rehearsel\" spells the word the way it sounds; the standard spelling is \"rehearsal\".",
+     "o3": "\"rehersal\" drops a letter; the standard spelling is \"rehearsal\".",
+     "o4": "\"reharsal\" drops a letter; the standard spelling is \"rehearsal\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "SPL-SOUND",
+    "o3": "SPL-DROP",
+    "o4": "SPL-DROP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: re-hear-sal."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0017",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "recognize the standard spelling of a commonly misspelled word",
+   "archetype": "CLR-SPELL-RIGHT",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "en",
+   "stem": "Which spelling belongs in the blank? \"A local bank agreed to ____ the reading program.\"  sponser | sponsor | sponsur | sponssor",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "sponsur"
+    },
+    {
+     "option_id": "o2",
+     "text": "sponsor"
+    },
+    {
+     "option_id": "o3",
+     "text": "sponssor"
+    },
+    {
+     "option_id": "o4",
+     "text": "sponser"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "\"sponsor\" means a person or group that supports an activity.",
+    "shortcut": "Say the word slowly by syllable and picture each part: spon-sor.",
+    "why_correct": "\"sponsor\" is the standard spelling (Merriam-Webster). Each other choice is a real-world misspelling: one letter pattern is changed, dropped or doubled. Check doubled letters and vowel pairs first; they are where most spelling errors happen.",
+    "why_wrong": {
+     "o1": "\"sponsur\" spells the word the way it sounds; the standard spelling is \"sponsor\".",
+     "o3": "\"sponssor\" doubles or undoubles a letter; the standard spelling is \"sponsor\".",
+     "o4": "\"sponser\" spells the word the way it sounds; the standard spelling is \"sponsor\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "SPL-SOUND",
+    "o3": "SPL-DOUBLE",
+    "o4": "SPL-SOUND"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: spon-sor."
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0018",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "spot the misspelled word among correct ones",
+   "archetype": "CLR-SPELL-WRONG",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is misspelled?  auxiliary | supercede | memorandum | procurement",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "supercede"
+    },
+    {
+     "option_id": "o2",
+     "text": "procurement"
+    },
+    {
+     "option_id": "o3",
+     "text": "memorandum"
+    },
+    {
+     "option_id": "o4",
+     "text": "auxiliary"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "\"supersede\" means to replace something older. The misspelling here spells the word the way it sounds.",
+    "shortcut": "Say the word slowly by syllable and picture each part: su-per-se-de.",
+    "why_correct": "\"supercede\" is misspelled: it spells the word the way it sounds. The standard spelling is \"supersede\" (Merriam-Webster). The other three words are spelled correctly, so they are foils.",
+    "why_wrong": {
+     "o2": "\"procurement\" is spelled correctly, so it is not the answer.",
+     "o3": "\"memorandum\" is spelled correctly, so it is not the answer.",
+     "o4": "\"auxiliary\" is spelled correctly, so it is not the answer."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-SPELL-CORRECT-FOIL",
+    "o3": "CLR-SPELL-CORRECT-FOIL",
+    "o4": "CLR-SPELL-CORRECT-FOIL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: su-per-se-de.",
+   "error_code": "SPL-SOUND"
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0019",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "spot the misspelled word among correct ones",
+   "archetype": "CLR-SPELL-WRONG",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is misspelled?  voucher | treasurer | bankruptcy | suseptible",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "suseptible"
+    },
+    {
+     "option_id": "o2",
+     "text": "bankruptcy"
+    },
+    {
+     "option_id": "o3",
+     "text": "treasurer"
+    },
+    {
+     "option_id": "o4",
+     "text": "voucher"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "\"susceptible\" means easily affected or harmed. The misspelling here drops a silent letter.",
+    "shortcut": "Say the word slowly by syllable and picture each part: sus-cep-tib-le.",
+    "why_correct": "\"suseptible\" is misspelled: it drops a silent letter. The standard spelling is \"susceptible\" (Merriam-Webster). The other three words are spelled correctly, so they are foils.",
+    "why_wrong": {
+     "o2": "\"bankruptcy\" is spelled correctly, so it is not the answer.",
+     "o3": "\"treasurer\" is spelled correctly, so it is not the answer.",
+     "o4": "\"voucher\" is spelled correctly, so it is not the answer."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-SPELL-CORRECT-FOIL",
+    "o3": "CLR-SPELL-CORRECT-FOIL",
+    "o4": "CLR-SPELL-CORRECT-FOIL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: sus-cep-tib-le.",
+   "error_code": "SPL-SILENT"
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0020",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Spelling",
+   "concept": "spelling",
+   "micro_skill": "spot the misspelled word among correct ones",
+   "archetype": "CLR-SPELL-WRONG",
+   "difficulty": "easy",
+   "est_seconds": 15,
+   "language": "en",
+   "stem": "Which word is misspelled?  bureau | affidavit | unecessary | receptionist",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "affidavit"
+    },
+    {
+     "option_id": "o2",
+     "text": "unecessary"
+    },
+    {
+     "option_id": "o3",
+     "text": "bureau"
+    },
+    {
+     "option_id": "o4",
+     "text": "receptionist"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "\"unnecessary\" means not needed. The misspelling here doubles or undoubles a letter.",
+    "shortcut": "Say the word slowly by syllable and picture each part: un-ne-ces-sar.",
+    "why_correct": "\"unecessary\" is misspelled: it doubles or undoubles a letter. The standard spelling is \"unnecessary\" (Merriam-Webster). The other three words are spelled correctly, so they are foils.",
+    "why_wrong": {
+     "o1": "\"affidavit\" is spelled correctly, so it is not the answer.",
+     "o3": "\"bureau\" is spelled correctly, so it is not the answer.",
+     "o4": "\"receptionist\" is spelled correctly, so it is not the answer."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-SPELL-CORRECT-FOIL",
+    "o3": "CLR-SPELL-CORRECT-FOIL",
+    "o4": "CLR-SPELL-CORRECT-FOIL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Say the word slowly by syllable and picture each part: un-ne-ces-sar.",
+   "error_code": "SPL-DOUBLE"
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0021",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 6 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Under ANSI/ARMA 12-2005, a clerk files these folders alphabetically. Which name goes FIRST?\nAna dela Cruz | Ben Del Rosario | Carlo De Guzman | Dina Delos Reyes",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Ben Del Rosario"
+    },
+    {
+     "option_id": "o2",
+     "text": "Dina Delos Reyes"
+    },
+    {
+     "option_id": "o3",
+     "text": "Carlo De Guzman"
+    },
+    {
+     "option_id": "o4",
+     "text": "Ana dela Cruz"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Carlo De Guzman\" is filed first. Indexed order: DEGUZMAN / CARLO; DELACRUZ / ANA; DELOSREYES / DINA; DELROSARIO / BEN. A surname prefix (de, dela, del, delos, san) joins the rest of the surname as one unit, and Mc is spelled as written (ARMA Rule 6). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Ben Del Rosario\" indexes as DELROSARIO / BEN and files fourth, so it is not first. Picking it ignores this: a prefix joins the rest of the surname as one unit.",
+     "o2": "\"Dina Delos Reyes\" indexes as DELOSREYES / DINA and files third, so it is not first. Picking it ignores this: a prefix joins the rest of the surname as one unit.",
+     "o4": "\"Ana dela Cruz\" indexes as DELACRUZ / ANA and files second, so it is not first. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o1": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+    "o2": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0022",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 5 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A records officer indexes four personal names using the ARMA filing rules. Which name is filed LAST?\nDr. Elena Ramos | Atty. Felix Ramos | Engr. Gina Ramirez | Hon. Ivan Ramos",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Dr. Elena Ramos"
+    },
+    {
+     "option_id": "o2",
+     "text": "Engr. Gina Ramirez"
+    },
+    {
+     "option_id": "o3",
+     "text": "Atty. Felix Ramos"
+    },
+    {
+     "option_id": "o4",
+     "text": "Hon. Ivan Ramos"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Hon. Ivan Ramos\" is filed last. Indexed order: RAMIREZ / GINA / ENGR; RAMOS / ELENA / DR; RAMOS / FELIX / ATTY; RAMOS / IVAN / HON. A title (Dr., Atty.) or suffix (Jr., II) is the last unit; numeric suffixes file before alphabetic ones (ARMA Rule 5). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Dr. Elena Ramos\" indexes as RAMOS / ELENA / DR and files second, so it is not last. Picking it ignores this: a title or suffix is the last unit.",
+     "o2": "\"Engr. Gina Ramirez\" indexes as RAMIREZ / GINA / ENGR and files first, so it is not last. Picking it ignores this: a title or suffix is the last unit.",
+     "o3": "\"Atty. Felix Ramos\" indexes as RAMOS / FELIX / ATTY and files third, so it is not last. Picking it ignores this: a title or suffix is the last unit."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o1": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title or suffix is the last unit)",
+    "o3": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title or suffix is the last unit)",
+    "o2": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title or suffix is the last unit)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0023",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 1 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Applying the ARMA simplified filing rules, which of these personal names comes THIRD in the drawer?\nMark Santos | Marko Santos | Mark A. Santos | Marco Santos",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Marco Santos"
+    },
+    {
+     "option_id": "o2",
+     "text": "Mark A. Santos"
+    },
+    {
+     "option_id": "o3",
+     "text": "Mark Santos"
+    },
+    {
+     "option_id": "o4",
+     "text": "Marko Santos"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Mark A. Santos\" is filed third. Indexed order: SANTOS / MARCO; SANTOS / MARK; SANTOS / MARK / A; SANTOS / MARKO. Index each name into units and compare unit by unit, letter by letter; nothing comes before something (ARMA Rule 1). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Marco Santos\" indexes as SANTOS / MARCO and files first, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Mark Santos\" indexes as SANTOS / MARK and files second, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"Marko Santos\" indexes as SANTOS / MARKO and files fourth, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0024",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 3 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A municipal records section sorts new folders by ARMA rules. Which personal name should be placed LAST?\nLea Reyes-Tan | Lea Reyes | Lea Reyesa | Leo Reyes",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Lea Reyes-Tan"
+    },
+    {
+     "option_id": "o2",
+     "text": "Leo Reyes"
+    },
+    {
+     "option_id": "o3",
+     "text": "Lea Reyes"
+    },
+    {
+     "option_id": "o4",
+     "text": "Lea Reyesa"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Lea Reyes-Tan\" is filed last. Indexed order: REYES / LEA; REYES / LEO; REYESA / LEA; REYESTAN / LEA. Ignore punctuation; a hyphenated or possessive name is one unit with the marks removed (ARMA Rule 3). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 3), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o2": "\"Leo Reyes\" indexes as REYES / LEO and files second, so it is not last. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Lea Reyes\" indexes as REYES / LEA and files first, so it is not last. Picking it ignores this: a hyphenated name is one unit.",
+     "o4": "\"Lea Reyesa\" indexes as REYESA / LEA and files third, so it is not last. Picking it ignores this: a hyphenated name is one unit."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 3 (a hyphenated name is one unit)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 3 (a hyphenated name is one unit)",
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0025",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 6 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Under ANSI/ARMA 12-2005, a clerk files these folders alphabetically. Which name goes THIRD?\nPaolo San Diego | Paolo Sandoval | Paolo Santiago | Paolo San Jose",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Paolo San Jose"
+    },
+    {
+     "option_id": "o2",
+     "text": "Paolo San Diego"
+    },
+    {
+     "option_id": "o3",
+     "text": "Paolo Sandoval"
+    },
+    {
+     "option_id": "o4",
+     "text": "Paolo Santiago"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Paolo San Jose\" is filed third. Indexed order: SANDIEGO / PAOLO; SANDOVAL / PAOLO; SANJOSE / PAOLO; SANTIAGO / PAOLO. A surname prefix (de, dela, del, delos, san) joins the rest of the surname as one unit, and Mc is spelled as written (ARMA Rule 6). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o2": "\"Paolo San Diego\" indexes as SANDIEGO / PAOLO and files first, so it is not third. Picking it ignores this: a prefix joins the rest of the surname as one unit.",
+     "o3": "\"Paolo Sandoval\" indexes as SANDOVAL / PAOLO and files second, so it is not third. Picking it ignores this: a prefix joins the rest of the surname as one unit.",
+     "o4": "\"Paolo Santiago\" indexes as SANTIAGO / PAOLO and files fourth, so it is not third. Picking it ignores this: a prefix joins the rest of the surname as one unit."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o2": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+    "o3": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+    "o4": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0026",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 1 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A records officer indexes four personal names using the ARMA filing rules. Which name is filed SECOND?\nZeny Abad | Adela Zamora | Bert Yap | Yolly Bautista",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Adela Zamora"
+    },
+    {
+     "option_id": "o2",
+     "text": "Zeny Abad"
+    },
+    {
+     "option_id": "o3",
+     "text": "Bert Yap"
+    },
+    {
+     "option_id": "o4",
+     "text": "Yolly Bautista"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Yolly Bautista\" is filed second. Indexed order: ABAD / ZENY; BAUTISTA / YOLLY; YAP / BERT; ZAMORA / ADELA. Index each name into units and compare unit by unit, letter by letter; nothing comes before something (ARMA Rule 1). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Adela Zamora\" indexes as ZAMORA / ADELA and files fourth, so it is not second. Picking it ignores this: personal names are indexed surname first.",
+     "o2": "\"Zeny Abad\" indexes as ABAD / ZENY and files first, so it is not second. Picking it ignores this: personal names are indexed surname first.",
+     "o3": "\"Bert Yap\" indexes as YAP / BERT and files third, so it is not second. Picking it ignores this: personal names are indexed surname first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o2": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
+    "o1": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
+    "o3": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0027",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 5 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Applying the ARMA simplified filing rules, which of these personal names comes SECOND in the drawer?\nDr. Rosa Lim | Rosa Lim | Rosa Lim-Ong | Rosa Limbo",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Dr. Rosa Lim"
+    },
+    {
+     "option_id": "o2",
+     "text": "Rosa Limbo"
+    },
+    {
+     "option_id": "o3",
+     "text": "Rosa Lim-Ong"
+    },
+    {
+     "option_id": "o4",
+     "text": "Rosa Lim"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Dr. Rosa Lim\" is filed second. Indexed order: LIM / ROSA; LIM / ROSA / DR; LIMBO / ROSA; LIMONG / ROSA. A title (Dr., Atty.) or suffix (Jr., II) is the last unit; numeric suffixes file before alphabetic ones (ARMA Rule 5). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o2": "\"Rosa Limbo\" indexes as LIMBO / ROSA and files third, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Rosa Lim-Ong\" indexes as LIMONG / ROSA and files fourth, so it is not second. Picking it ignores this: a hyphenated name is one unit.",
+     "o4": "\"Rosa Lim\" indexes as LIM / ROSA and files first, so it is not second. Picking it ignores this: a title or suffix is the last unit."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o4": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title or suffix is the last unit)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 3 (a hyphenated name is one unit)",
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0028",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 2 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "A municipal records section sorts new folders by ARMA rules. Which business name should be placed THIRD?\nThe Sampaguita Bakery | Sampaguita Bakeshop | Sampaguita Bakery and Cafe | Sampaguita Bake House",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Sampaguita Bakery and Cafe"
+    },
+    {
+     "option_id": "o2",
+     "text": "Sampaguita Bakeshop"
+    },
+    {
+     "option_id": "o3",
+     "text": "The Sampaguita Bakery"
+    },
+    {
+     "option_id": "o4",
+     "text": "Sampaguita Bake House"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"The Sampaguita Bakery\" is filed third. Indexed order: SAMPAGUITA / BAKE / HOUSE; SAMPAGUITA / BAKERY / AND / CAFE; SAMPAGUITA / BAKERY / THE; SAMPAGUITA / BAKESHOP. Read & as \"and\" and treat a leading \"The\" as the last unit (ARMA Rule 2). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 2), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Sampaguita Bakery and Cafe\" indexes as SAMPAGUITA / BAKERY / AND / CAFE and files second, so it is not third. Picking it ignores this: a leading \"The\" is the last unit.",
+     "o2": "\"Sampaguita Bakeshop\" indexes as SAMPAGUITA / BAKESHOP and files fourth, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"Sampaguita Bake House\" indexes as SAMPAGUITA / BAKE / HOUSE and files first, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o1": "CLR-ARTICLE-COUNTED: breaks ARMA Rule 2 (a leading \"The\" is the last unit)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0029",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 2 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Under ANSI/ARMA 12-2005, a clerk files these folders alphabetically. Which business name goes SECOND?\nCruz & Sons Hardware | Cruz Andres Trading | Cruz Hardware | Cruz and Daughters Store",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Cruz & Sons Hardware"
+    },
+    {
+     "option_id": "o2",
+     "text": "Cruz and Daughters Store"
+    },
+    {
+     "option_id": "o3",
+     "text": "Cruz Andres Trading"
+    },
+    {
+     "option_id": "o4",
+     "text": "Cruz Hardware"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Cruz & Sons Hardware\" is filed second. Indexed order: CRUZ / AND / DAUGHTERS / STORE; CRUZ / AND / SONS / HARDWARE; CRUZ / ANDRES / TRADING; CRUZ / HARDWARE. Read & as \"and\" and treat a leading \"The\" as the last unit (ARMA Rule 2). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 2), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o2": "\"Cruz and Daughters Store\" indexes as CRUZ / AND / DAUGHTERS / STORE and files first, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Cruz Andres Trading\" indexes as CRUZ / ANDRES / TRADING and files third, so it is not second. Picking it ignores this: the symbol & is indexed as the word \"and\".",
+     "o4": "\"Cruz Hardware\" indexes as CRUZ / HARDWARE and files fourth, so it is not second. Picking it ignores this: the symbol & is indexed as the word \"and\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 2 (the symbol & is indexed as the word \"and\")",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 2 (the symbol & is indexed as the word \"and\")",
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0030",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 3 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Under ANSI/ARMA 12-2005, a clerk files these folders alphabetically. Which business name goes SECOND?\nNena's Carinderia | Nenas Laundry Shop | Nena Carinderia | Nenita's Salon",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Nenita's Salon"
+    },
+    {
+     "option_id": "o2",
+     "text": "Nena's Carinderia"
+    },
+    {
+     "option_id": "o3",
+     "text": "Nena Carinderia"
+    },
+    {
+     "option_id": "o4",
+     "text": "Nenas Laundry Shop"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Nena's Carinderia\" is filed second. Indexed order: NENA / CARINDERIA; NENAS / CARINDERIA; NENAS / LAUNDRY / SHOP; NENITAS / SALON. Ignore punctuation; a hyphenated or possessive name is one unit with the marks removed (ARMA Rule 3). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 3), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Nenita's Salon\" indexes as NENITAS / SALON and files fourth, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Nena Carinderia\" indexes as NENA / CARINDERIA and files first, so it is not second. Picking it ignores this: drop the apostrophe but keep the s: Nena's = NENAS.",
+     "o4": "\"Nenas Laundry Shop\" indexes as NENAS / LAUNDRY / SHOP and files third, so it is not second. Picking it ignores this: drop the apostrophe but keep the s: Nena's = NENAS."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 3 (drop the apostrophe but keep the s: Nena's = NENAS)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 3 (drop the apostrophe but keep the s: Nena's = NENAS)",
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0031",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 8 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Applying the ARMA simplified filing rules, which of these organization names comes SECOND in the drawer?\nPhilippine Red Cross | Red Bank Lending | Philippine Ports Authority | Redwood Tutorial Center",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Red Bank Lending"
+    },
+    {
+     "option_id": "o2",
+     "text": "Redwood Tutorial Center"
+    },
+    {
+     "option_id": "o3",
+     "text": "Philippine Ports Authority"
+    },
+    {
+     "option_id": "o4",
+     "text": "Philippine Red Cross"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Philippine Red Cross\" is filed second. Indexed order: PHILIPPINE / PORTS / AUTHORITY; PHILIPPINE / RED / CROSS; RED / BANK / LENDING; REDWOOD / TUTORIAL / CENTER. Index an organization's name as written, starting with its first word (ARMA Rule 8). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 8), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Red Bank Lending\" indexes as RED / BANK / LENDING and files third, so it is not second. Picking it ignores this: an organization is indexed as written, starting with its first word.",
+     "o2": "\"Redwood Tutorial Center\" indexes as REDWOOD / TUTORIAL / CENTER and files fourth, so it is not second. Picking it ignores this: an organization is indexed as written, starting with its first word.",
+     "o3": "\"Philippine Ports Authority\" indexes as PHILIPPINE / PORTS / AUTHORITY and files first, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 8 (an organization is indexed as written, starting with its first word)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 8 (an organization is indexed as written, starting with its first word)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0032",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 1 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A municipal records section sorts new folders by ARMA rules. Which personal name should be placed SECOND?\nCarmela Ortiz | Carmelo Ortiz | Carmen Ortiz | Carmina Ortega",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Carmina Ortega"
+    },
+    {
+     "option_id": "o2",
+     "text": "Carmelo Ortiz"
+    },
+    {
+     "option_id": "o3",
+     "text": "Carmen Ortiz"
+    },
+    {
+     "option_id": "o4",
+     "text": "Carmela Ortiz"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Carmela Ortiz\" is filed second. Indexed order: ORTEGA / CARMINA; ORTIZ / CARMELA; ORTIZ / CARMELO; ORTIZ / CARMEN. Index each name into units and compare unit by unit, letter by letter; nothing comes before something (ARMA Rule 1). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Carmina Ortega\" indexes as ORTEGA / CARMINA and files first, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o2": "\"Carmelo Ortiz\" indexes as ORTIZ / CARMELO and files third, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Carmen Ortiz\" indexes as ORTIZ / CARMEN and files fourth, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0033",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 1 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Under ANSI/ARMA 12-2005, a clerk files these folders alphabetically. Which name goes FIRST?\nNoel B. Villar | Noel Villar | Noel Bautista Villar | Noelle Villar",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Noelle Villar"
+    },
+    {
+     "option_id": "o2",
+     "text": "Noel B. Villar"
+    },
+    {
+     "option_id": "o3",
+     "text": "Noel Villar"
+    },
+    {
+     "option_id": "o4",
+     "text": "Noel Bautista Villar"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Noel Villar\" is filed first. Indexed order: VILLAR / NOEL; VILLAR / NOEL / B; VILLAR / NOEL / BAUTISTA; VILLAR / NOELLE. Index each name into units and compare unit by unit, letter by letter; nothing comes before something (ARMA Rule 1). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Noelle Villar\" indexes as VILLAR / NOELLE and files fourth, so it is not first. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o2": "\"Noel B. Villar\" indexes as VILLAR / NOEL / B and files second, so it is not first. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"Noel Bautista Villar\" indexes as VILLAR / NOEL / BAUTISTA and files third, so it is not first. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0034",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 1 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A records officer indexes four personal names using the ARMA filing rules. Which name is filed LAST?\nGil Pascual | Pascual Gil | Gilda Pascua | Gil Pascua",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Gilda Pascua"
+    },
+    {
+     "option_id": "o2",
+     "text": "Gil Pascual"
+    },
+    {
+     "option_id": "o3",
+     "text": "Gil Pascua"
+    },
+    {
+     "option_id": "o4",
+     "text": "Pascual Gil"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Gil Pascual\" is filed last. Indexed order: GIL / PASCUAL; PASCUA / GIL; PASCUA / GILDA; PASCUAL / GIL. Index each name into units and compare unit by unit, letter by letter; nothing comes before something (ARMA Rule 1). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Gilda Pascua\" indexes as PASCUA / GILDA and files third, so it is not last. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Gil Pascua\" indexes as PASCUA / GIL and files second, so it is not last. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"Pascual Gil\" indexes as GIL / PASCUAL and files first, so it is not last. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0035",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 1 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Applying the ARMA simplified filing rules, which of these personal names comes THIRD in the drawer?\nRey Tolentino | Tess Tolentino | Rey Tolentin | Ruth Tolentino",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Ruth Tolentino"
+    },
+    {
+     "option_id": "o2",
+     "text": "Tess Tolentino"
+    },
+    {
+     "option_id": "o3",
+     "text": "Rey Tolentin"
+    },
+    {
+     "option_id": "o4",
+     "text": "Rey Tolentino"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Ruth Tolentino\" is filed third. Indexed order: TOLENTIN / REY; TOLENTINO / REY; TOLENTINO / RUTH; TOLENTINO / TESS. Index each name into units and compare unit by unit, letter by letter; nothing comes before something (ARMA Rule 1). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o2": "\"Tess Tolentino\" indexes as TOLENTINO / TESS and files fourth, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Rey Tolentin\" indexes as TOLENTIN / REY and files first, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"Rey Tolentino\" indexes as TOLENTINO / REY and files second, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0036",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 1 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A municipal records section sorts new folders by ARMA rules. Which personal name should be placed SECOND?\nLorna Abaya | Abaya Lorna | Lorena Abayan | Lorna Abad",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Lorena Abayan"
+    },
+    {
+     "option_id": "o2",
+     "text": "Lorna Abaya"
+    },
+    {
+     "option_id": "o3",
+     "text": "Lorna Abad"
+    },
+    {
+     "option_id": "o4",
+     "text": "Abaya Lorna"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Lorna Abaya\" is filed second. Indexed order: ABAD / LORNA; ABAYA / LORNA; ABAYAN / LORENA; LORNA / ABAYA. Index each name into units and compare unit by unit, letter by letter; nothing comes before something (ARMA Rule 1). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Lorena Abayan\" indexes as ABAYAN / LORENA and files third, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Lorna Abad\" indexes as ABAD / LORNA and files first, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"Abaya Lorna\" indexes as LORNA / ABAYA and files fourth, so it is not second. Picking it ignores this: personal names are indexed surname first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o4": "CLR-FIRSTNAME-FIRST: breaks ARMA Rule 1 (personal names are indexed surname first)",
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0037",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 5 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Under ANSI/ARMA 12-2005, a clerk files these folders alphabetically. Which name goes FIRST?\nHon. Pia Buenaventura | Pia Buenavista | Engr. Pio Buenaventura | Pia Buenaventura",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Engr. Pio Buenaventura"
+    },
+    {
+     "option_id": "o2",
+     "text": "Hon. Pia Buenaventura"
+    },
+    {
+     "option_id": "o3",
+     "text": "Pia Buenaventura"
+    },
+    {
+     "option_id": "o4",
+     "text": "Pia Buenavista"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Pia Buenaventura\" is filed first. Indexed order: BUENAVENTURA / PIA; BUENAVENTURA / PIA / HON; BUENAVENTURA / PIO / ENGR; BUENAVISTA / PIA. A title (Dr., Atty.) or suffix (Jr., II) is the last unit; numeric suffixes file before alphabetic ones (ARMA Rule 5). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Engr. Pio Buenaventura\" indexes as BUENAVENTURA / PIO / ENGR and files third, so it is not first. Picking it ignores this: a title or suffix is the last unit.",
+     "o2": "\"Hon. Pia Buenaventura\" indexes as BUENAVENTURA / PIA / HON and files second, so it is not first. Picking it ignores this: a title or suffix is the last unit.",
+     "o4": "\"Pia Buenavista\" indexes as BUENAVISTA / PIA and files fourth, so it is not first. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o2": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title or suffix is the last unit)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o1": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title or suffix is the last unit)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0038",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 6 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A records officer indexes four personal names using the ARMA filing rules. Which name is filed SECOND?\nArnel de Vera | Arnel Dejesus | Arnel Deveza | Arnel De Venecia",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Arnel de Vera"
+    },
+    {
+     "option_id": "o2",
+     "text": "Arnel Deveza"
+    },
+    {
+     "option_id": "o3",
+     "text": "Arnel Dejesus"
+    },
+    {
+     "option_id": "o4",
+     "text": "Arnel De Venecia"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Arnel De Venecia\" is filed second. Indexed order: DEJESUS / ARNEL; DEVENECIA / ARNEL; DEVERA / ARNEL; DEVEZA / ARNEL. A surname prefix (de, dela, del, delos, san) joins the rest of the surname as one unit, and Mc is spelled as written (ARMA Rule 6). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Arnel de Vera\" indexes as DEVERA / ARNEL and files third, so it is not second. Picking it ignores this: a prefix joins the rest of the surname as one unit.",
+     "o2": "\"Arnel Deveza\" indexes as DEVEZA / ARNEL and files fourth, so it is not second. Picking it ignores this: a prefix joins the rest of the surname as one unit.",
+     "o3": "\"Arnel Dejesus\" indexes as DEJESUS / ARNEL and files first, so it is not second. Picking it ignores this: a prefix joins the rest of the surname as one unit."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o1": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+    "o3": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+    "o2": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0039",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 6 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Applying the ARMA simplified filing rules, which of these personal names comes LAST in the drawer?\nSusan Santa Maria | Susan Santamarina | Susan Santana | Susan Sant",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Susan Santamarina"
+    },
+    {
+     "option_id": "o2",
+     "text": "Susan Santa Maria"
+    },
+    {
+     "option_id": "o3",
+     "text": "Susan Santana"
+    },
+    {
+     "option_id": "o4",
+     "text": "Susan Sant"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Susan Santana\" is filed last. Indexed order: SANT / SUSAN; SANTAMARIA / SUSAN; SANTAMARINA / SUSAN; SANTANA / SUSAN. A surname prefix (de, dela, del, delos, san) joins the rest of the surname as one unit, and Mc is spelled as written (ARMA Rule 6). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Susan Santamarina\" indexes as SANTAMARINA / SUSAN and files third, so it is not last. Picking it ignores this: a prefix joins the rest of the surname as one unit.",
+     "o2": "\"Susan Santa Maria\" indexes as SANTAMARIA / SUSAN and files second, so it is not last. Picking it ignores this: a prefix joins the rest of the surname as one unit.",
+     "o4": "\"Susan Sant\" indexes as SANT / SUSAN and files first, so it is not last. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o2": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+    "o1": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0040",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 2 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "A municipal records section sorts new folders by ARMA rules. Which business name should be placed LAST?\nThe Green Leaf Market | Green Field Movers | Greenhills Dental | Green Leaf Catering",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Green Leaf Catering"
+    },
+    {
+     "option_id": "o2",
+     "text": "Greenhills Dental"
+    },
+    {
+     "option_id": "o3",
+     "text": "Green Field Movers"
+    },
+    {
+     "option_id": "o4",
+     "text": "The Green Leaf Market"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Greenhills Dental\" is filed last. Indexed order: GREEN / FIELD / MOVERS; GREEN / LEAF / CATERING; GREEN / LEAF / MARKET / THE; GREENHILLS / DENTAL. Read & as \"and\" and treat a leading \"The\" as the last unit (ARMA Rule 2). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 2), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Green Leaf Catering\" indexes as GREEN / LEAF / CATERING and files second, so it is not last. Picking it ignores this: a leading \"The\" is the last unit.",
+     "o3": "\"Green Field Movers\" indexes as GREEN / FIELD / MOVERS and files first, so it is not last. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"The Green Leaf Market\" indexes as GREEN / LEAF / MARKET / THE and files third, so it is not last. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o1": "CLR-ARTICLE-COUNTED: breaks ARMA Rule 2 (a leading \"The\" is the last unit)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0041",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 2 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Under ANSI/ARMA 12-2005, a clerk files these folders alphabetically. Which business name goes FIRST?\nLopez & Rivera Law Office | Lopez Andrada Clinic | Lopez Auto Supply | Lopez and Reyes Bakery",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Lopez Auto Supply"
+    },
+    {
+     "option_id": "o2",
+     "text": "Lopez Andrada Clinic"
+    },
+    {
+     "option_id": "o3",
+     "text": "Lopez and Reyes Bakery"
+    },
+    {
+     "option_id": "o4",
+     "text": "Lopez & Rivera Law Office"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Lopez and Reyes Bakery\" is filed first. Indexed order: LOPEZ / AND / REYES / BAKERY; LOPEZ / AND / RIVERA / LAW / OFFICE; LOPEZ / ANDRADA / CLINIC; LOPEZ / AUTO / SUPPLY. Read & as \"and\" and treat a leading \"The\" as the last unit (ARMA Rule 2). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 2), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Lopez Auto Supply\" indexes as LOPEZ / AUTO / SUPPLY and files fourth, so it is not first. Picking it ignores this: the symbol & is indexed as the word \"and\".",
+     "o2": "\"Lopez Andrada Clinic\" indexes as LOPEZ / ANDRADA / CLINIC and files third, so it is not first. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"Lopez & Rivera Law Office\" indexes as LOPEZ / AND / RIVERA / LAW / OFFICE and files second, so it is not first. Picking it ignores this: the symbol & is indexed as the word \"and\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 2 (the symbol & is indexed as the word \"and\")",
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 2 (the symbol & is indexed as the word \"and\")"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0042",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 1 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Under ANSI/ARMA 12-2005, a clerk files these folders alphabetically. Which business name goes SECOND?\nMabuhay Pawnshop | Mabuhay Pharmacy | Mabuhay Pawn and Lending | Mabuhay Print Center",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Mabuhay Pharmacy"
+    },
+    {
+     "option_id": "o2",
+     "text": "Mabuhay Pawn and Lending"
+    },
+    {
+     "option_id": "o3",
+     "text": "Mabuhay Print Center"
+    },
+    {
+     "option_id": "o4",
+     "text": "Mabuhay Pawnshop"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Mabuhay Pawnshop\" is filed second. Indexed order: MABUHAY / PAWN / AND / LENDING; MABUHAY / PAWNSHOP; MABUHAY / PHARMACY; MABUHAY / PRINT / CENTER. Index each name into units and compare unit by unit, letter by letter; nothing comes before something (ARMA Rule 1). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Mabuhay Pharmacy\" indexes as MABUHAY / PHARMACY and files third, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o2": "\"Mabuhay Pawn and Lending\" indexes as MABUHAY / PAWN / AND / LENDING and files first, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Mabuhay Print Center\" indexes as MABUHAY / PRINT / CENTER and files fourth, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0043",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 1 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Applying the ARMA simplified filing rules, which of these business names comes THIRD in the drawer?\nSunrise Water Refilling | Sun Rise Bakery | Sunrise Bakery | Sunray Motors",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Sunrise Bakery"
+    },
+    {
+     "option_id": "o2",
+     "text": "Sunrise Water Refilling"
+    },
+    {
+     "option_id": "o3",
+     "text": "Sun Rise Bakery"
+    },
+    {
+     "option_id": "o4",
+     "text": "Sunray Motors"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Sunrise Bakery\" is filed third. Indexed order: SUN / RISE / BAKERY; SUNRAY / MOTORS; SUNRISE / BAKERY; SUNRISE / WATER / REFILLING. Index each name into units and compare unit by unit, letter by letter; nothing comes before something (ARMA Rule 1). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o2": "\"Sunrise Water Refilling\" indexes as SUNRISE / WATER / REFILLING and files fourth, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Sun Rise Bakery\" indexes as SUN / RISE / BAKERY and files first, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"Sunray Motors\" indexes as SUNRAY / MOTORS and files second, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0044",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 8 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "A municipal records section sorts new folders by ARMA rules. Which organization name should be placed SECOND?\nNational Food Authority | National Irrigation Administration | Nation Builders Cooperative | Natural Farming Association",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Nation Builders Cooperative"
+    },
+    {
+     "option_id": "o2",
+     "text": "National Irrigation Administration"
+    },
+    {
+     "option_id": "o3",
+     "text": "Natural Farming Association"
+    },
+    {
+     "option_id": "o4",
+     "text": "National Food Authority"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"National Food Authority\" is filed second. Indexed order: NATION / BUILDERS / COOPERATIVE; NATIONAL / FOOD / AUTHORITY; NATIONAL / IRRIGATION / ADMINISTRATION; NATURAL / FARMING / ASSOCIATION. Index an organization's name as written, starting with its first word (ARMA Rule 8). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 8), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Nation Builders Cooperative\" indexes as NATION / BUILDERS / COOPERATIVE and files first, so it is not second. Picking it ignores this: an organization is indexed as written, starting with its first word.",
+     "o2": "\"National Irrigation Administration\" indexes as NATIONAL / IRRIGATION / ADMINISTRATION and files third, so it is not second. Picking it ignores this: an organization is indexed as written, starting with its first word.",
+     "o3": "\"Natural Farming Association\" indexes as NATURAL / FARMING / ASSOCIATION and files fourth, so it is not second. Picking it ignores this: an organization is indexed as written, starting with its first word."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 8 (an organization is indexed as written, starting with its first word)",
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 8 (an organization is indexed as written, starting with its first word)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 8 (an organization is indexed as written, starting with its first word)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0045",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 8 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Under ANSI/ARMA 12-2005, a clerk files these folders alphabetically. Which organization name goes THIRD?\nLand Bank of the Philippines | Land Transportation Office | Landmark Realty | Land Registration Authority",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Land Transportation Office"
+    },
+    {
+     "option_id": "o2",
+     "text": "Land Registration Authority"
+    },
+    {
+     "option_id": "o3",
+     "text": "Landmark Realty"
+    },
+    {
+     "option_id": "o4",
+     "text": "Land Bank of the Philippines"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Land Transportation Office\" is filed third. Indexed order: LAND / BANK / OF / THE / PHILIPPINES; LAND / REGISTRATION / AUTHORITY; LAND / TRANSPORTATION / OFFICE; LANDMARK / REALTY. Index an organization's name as written, starting with its first word (ARMA Rule 8). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 8), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o2": "\"Land Registration Authority\" indexes as LAND / REGISTRATION / AUTHORITY and files second, so it is not third. Picking it ignores this: an organization is indexed as written, starting with its first word.",
+     "o3": "\"Landmark Realty\" indexes as LANDMARK / REALTY and files fourth, so it is not third. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"Land Bank of the Philippines\" indexes as LAND / BANK / OF / THE / PHILIPPINES and files first, so it is not third. Picking it ignores this: an organization is indexed as written, starting with its first word."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 8 (an organization is indexed as written, starting with its first word)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 8 (an organization is indexed as written, starting with its first word)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0046",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 2 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Under ANSI/ARMA 12-2005, a clerk files these folders alphabetically. Which business name goes SECOND?\nThe Daily Grind Cafe | Daily Bread Bakery | Daily Fresh Grocery | Dailyn Boutique",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Daily Bread Bakery"
+    },
+    {
+     "option_id": "o2",
+     "text": "Daily Fresh Grocery"
+    },
+    {
+     "option_id": "o3",
+     "text": "Dailyn Boutique"
+    },
+    {
+     "option_id": "o4",
+     "text": "The Daily Grind Cafe"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Daily Fresh Grocery\" is filed second. Indexed order: DAILY / BREAD / BAKERY; DAILY / FRESH / GROCERY; DAILY / GRIND / CAFE / THE; DAILYN / BOUTIQUE. Read & as \"and\" and treat a leading \"The\" as the last unit (ARMA Rule 2). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 2), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "\"Daily Bread Bakery\" indexes as DAILY / BREAD / BAKERY and files first, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Dailyn Boutique\" indexes as DAILYN / BOUTIQUE and files fourth, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"The Daily Grind Cafe\" indexes as DAILY / GRIND / CAFE / THE and files third, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0047",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 5 when indexing",
+   "archetype": "CLR-FILE-POSITION",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Applying the ARMA simplified filing rules, which of these personal names comes LAST in the drawer?\nAtty. Lito Agustin | Lito Agustin | Dr. Lita Agustin | Lito Agustines",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Lito Agustines"
+    },
+    {
+     "option_id": "o2",
+     "text": "Dr. Lita Agustin"
+    },
+    {
+     "option_id": "o3",
+     "text": "Atty. Lito Agustin"
+    },
+    {
+     "option_id": "o4",
+     "text": "Lito Agustin"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Lito Agustines\" is filed last. Indexed order: AGUSTIN / LITA / DR; AGUSTIN / LITO; AGUSTIN / LITO / ATTY; AGUSTINES / LITO. A title (Dr., Atty.) or suffix (Jr., II) is the last unit; numeric suffixes file before alphabetic ones (ARMA Rule 5). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 5), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o2": "\"Dr. Lita Agustin\" indexes as AGUSTIN / LITA / DR and files first, so it is not last. Picking it ignores this: a title or suffix is the last unit.",
+     "o3": "\"Atty. Lito Agustin\" indexes as AGUSTIN / LITO / ATTY and files third, so it is not last. Picking it ignores this: a title or suffix is the last unit.",
+     "o4": "\"Lito Agustin\" indexes as AGUSTIN / LITO and files second, so it is not last. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o3": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title or suffix is the last unit)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o2": "CLR-TITLE-COUNTED: breaks ARMA Rule 5 (a title or suffix is the last unit)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0048",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 1 when indexing",
+   "archetype": "CLR-FILE-BUSINESS",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "A municipal records section sorts new folders by ARMA rules. Which business name should be placed SECOND?\nBayan Water District | Bayani Cooperative | Bayan Rural Bank | Bayanihan Clinic",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Bayan Water District"
+    },
+    {
+     "option_id": "o2",
+     "text": "Bayani Cooperative"
+    },
+    {
+     "option_id": "o3",
+     "text": "Bayan Rural Bank"
+    },
+    {
+     "option_id": "o4",
+     "text": "Bayanihan Clinic"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units: surname, given name, middle initial for people; words as written for businesses. Compare unit by unit, letter by letter.",
+    "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+    "why_correct": "\"Bayan Water District\" is filed second. Indexed order: BAYAN / RURAL / BANK; BAYAN / WATER / DISTRICT; BAYANI / COOPERATIVE; BAYANIHAN / CLINIC. Index each name into units and compare unit by unit, letter by letter; nothing comes before something (ARMA Rule 1). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 1), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o2": "\"Bayani Cooperative\" indexes as BAYANI / COOPERATIVE and files third, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o3": "\"Bayan Rural Bank\" indexes as BAYAN / RURAL / BANK and files first, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something.",
+     "o4": "\"Bayanihan Clinic\" indexes as BAYANIHAN / CLINIC and files fourth, so it is not second. Picking it ignores this: compare unit by unit, letter by letter; nothing comes before something."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Rewrite each name in indexed form first, then sort the rewritten forms.",
+   "distractor_subreason": {
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o3": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0049",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 6 to a full sequence",
+   "archetype": "CLR-FILE-ORDER",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Arrange these personal names in ARMA filing order. Which sequence is correct?\n1. Rosa delos Santos\n2. Rosa Delgado\n3. Rosa de Leon\n4. Rosa Del Rosario",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "3, 2, 1, 4"
+    },
+    {
+     "option_id": "o2",
+     "text": "2, 3, 1, 4"
+    },
+    {
+     "option_id": "o3",
+     "text": "2, 3, 4, 1"
+    },
+    {
+     "option_id": "o4",
+     "text": "3, 2, 4, 1"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units; a full sequence is right only if every pair is in order.",
+    "shortcut": "Index all four names first, then sort; check the two closest names letter by letter.",
+    "why_correct": "Correct sequence 3, 2, 1, 4. Indexed order: DELEON / ROSA; DELGADO / ROSA; DELOSSANTOS / ROSA; DELROSARIO / ROSA. A surname prefix (de, dela, del, delos, san) joins the rest of the surname as one unit, and Mc is spelled as written (ARMA Rule 6). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 6), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o2": "This sequence puts DELGADO before DELEON; E comes before G.",
+     "o3": "This sequence files under the part after the prefix (Leon, Rosario, Santos).",
+     "o4": "This sequence puts DELROSARIO before DELOSSANTOS; compare letter by letter: O comes before R."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Index all four names first, then sort; check the two closest names letter by letter.",
+   "distractor_subreason": {
+    "o3": "CLR-PREFIX-SPLIT: breaks ARMA Rule 6 (a prefix joins the rest of the surname as one unit)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)",
+    "o2": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPCLR-0050",
+   "track": "subprofessional",
+   "domain": "clerical",
+   "competency": "Filing",
+   "concept": "alphabetic filing (ARMA rules)",
+   "micro_skill": "apply ARMA Rule 2 to a full sequence",
+   "archetype": "CLR-FILE-ORDER",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Arrange these business names in ARMA filing order. Which sequence is correct?\n1. The Bay Leaf Cafe\n2. Bay Area Movers\n3. B & B Pharmacy\n4. Baywalk Inn",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "1, 2, 3, 4"
+    },
+    {
+     "option_id": "o2",
+     "text": "3, 2, 1, 4"
+    },
+    {
+     "option_id": "o3",
+     "text": "3, 2, 4, 1"
+    },
+    {
+     "option_id": "o4",
+     "text": "2, 3, 1, 4"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Indexing writes a name as filing units; a full sequence is right only if every pair is in order.",
+    "shortcut": "Index all four names first, then sort; check the two closest names letter by letter.",
+    "why_correct": "Correct sequence 3, 2, 1, 4. Indexed order: B / AND / B / PHARMACY; BAY / AREA / MOVERS; BAY / LEAF / CAFE / THE; BAYWALK / INN. Read & as \"and\" and treat a leading \"The\" as the last unit (ARMA Rule 2). This follows the standard office filing rule (ARMA International Simplified Filing Standard Rules, Rule 2), not a rule published by the CSC. Source standard: ANSI/ARMA 12-2005.",
+    "why_wrong": {
+     "o1": "This sequence keeps the order as listed without indexing.",
+     "o3": "This sequence files The Bay Leaf Cafe under T.",
+     "o4": "This sequence drops the & so B & B Pharmacy loses its first-unit place."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "CLR-FILE-ORDER",
+    "o3": "CLR-FILE-ORDER",
+    "o4": "CLR-FILE-ORDER"
+   },
+   "source": "Civio Filing Rules v2 / ANSI/ARMA 12-2005",
+   "source_url": "https://webstore.ansi.org/standards/arma/ansiarma122005",
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Index all four names first, then sort; check the two closest names letter by letter.",
+   "distractor_subreason": {
+    "o3": "CLR-ARTICLE-COUNTED: breaks ARMA Rule 2 (a leading \"The\" is the last unit)",
+    "o4": "CLR-LETTER-ORDER: breaks ARMA Rule 2 (the symbol & is indexed as the word \"and\")",
+    "o1": "CLR-LETTER-ORDER: breaks ARMA Rule 1 (compare unit by unit, letter by letter; nothing comes before something)"
+   }
+  }
+ ]
+}

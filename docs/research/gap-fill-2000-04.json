@@ -3220,7 +3220,7 @@
         "o4": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 3(a)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "including government-owned or controlled corporations, and their subsidiaries",
       "source_group": "civio",
       "status": "draft",
@@ -3233,7 +3233,7 @@
       },
       "fact_id": "FACT-RA6713-3A-GOVERNMENT-GOCC",
       "shortcut": "If the State owns or controls it, including a GOCC's subsidiary, it is \"Government\".",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0002",
@@ -3282,7 +3282,7 @@
         "o3": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 3(c)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "It shall not include an unsolicited gift of nominal or insignificant value not given in anticipation of, or in exchange for, a favor",
       "source_group": "civio",
       "status": "draft",
@@ -3295,7 +3295,7 @@
       },
       "fact_id": "FACT-RA6713-3C-GIFT-NOMINAL-EXCLUDED",
       "shortcut": "Unsolicited + insignificant value + no favor expected = not a \"gift\" under the Act.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0003",
@@ -3344,7 +3344,7 @@
         "o4": "GI-SIBLING-TERM"
       },
       "source": "R.A. 6713, Sec. 3(c)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "shall include a simulated sale or an ostensibly onerous disposition thereof",
       "source_group": "civio",
       "status": "draft",
@@ -3357,7 +3357,7 @@
       },
       "fact_id": "FACT-RA6713-3C-SIMULATED-SALE",
       "shortcut": "A ₱1.2 million car for ₱10,000 is a gift dressed as a sale.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0004",
@@ -3406,7 +3406,7 @@
         "o4": "GI-SIBLING-TERM"
       },
       "source": "R.A. 6713, Sec. 3(d)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "even on the occasion of a family celebration or national festivity like Christmas, if the value of the gift is neither nominal nor insignificant",
       "source_group": "civio",
       "status": "draft",
@@ -3419,7 +3419,7 @@
       },
       "fact_id": "FACT-RA6713-3D-CHRISTMAS-NOT-EXEMPT",
       "shortcut": "Christmas is not a loophole: check the value and the favor, not the date.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-TERM-MATCH-0005",
@@ -3468,7 +3468,7 @@
         "o4": "GI-SIBLING-TERM"
       },
       "source": "R.A. 6713, Sec. 3(e)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "covers both simple loan and commodatum as well as guarantees, financing arrangements or accommodations intended to ensure its approval",
       "source_group": "civio",
       "status": "draft",
@@ -3481,7 +3481,7 @@
       },
       "fact_id": "FACT-RA6713-3E-LOAN-SCOPE",
       "shortcut": "Loan here is broad: money, things lent for use, and guarantees.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-TERM-MATCH-0006",
@@ -3530,7 +3530,7 @@
         "o3": "GI-SIBLING-TERM"
       },
       "source": "R.A. 6713, Sec. 3(f)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "shares of stock sufficient to elect a director of a corporation",
       "source_group": "civio",
       "status": "draft",
@@ -3543,7 +3543,7 @@
       },
       "fact_id": "FACT-RA6713-3F-SUBSTANTIAL-STOCKHOLDER",
       "shortcut": "Can your shares elect one director? Then you are a substantial stockholder.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0007",
@@ -3592,7 +3592,7 @@
         "o4": "GI-SIBLING-TERM"
       },
       "source": "R.A. 6713, Sec. 3(k)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "within the fourth civil degree of consanguinity or affinity, including bilas, inso and balae",
       "source_group": "civio",
       "status": "draft",
@@ -3605,7 +3605,7 @@
       },
       "fact_id": "FACT-RA6713-3K-RELATIVES-DEGREE",
       "shortcut": "Four degrees, blood or marriage.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-TERM-MATCH-0008",
@@ -3654,7 +3654,7 @@
         "o4": "GI-NEIGHBOR-NUMBER"
       },
       "source": "R.A. 6713, Sec. 4(B)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "workshops authorizing merit increases beyond regular progression steps, to a limited number of employees recognized by their office colleagues to be outstanding",
       "source_group": "civio",
       "status": "draft",
@@ -3667,7 +3667,7 @@
       },
       "fact_id": "FACT-RA6713-4B-MERIT-INCREASES",
       "shortcut": "4(B) = CSC rewards ethics with pay steps beyond the normal ladder.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0009",
@@ -3716,7 +3716,7 @@
         "o4": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 5(c)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "In the absence of duly authorized signatories, the official next-in-rank or officer in charge shall sign for and in their behalf.",
       "source_group": "civio",
       "status": "draft",
@@ -3729,7 +3729,7 @@
       },
       "fact_id": "FACT-RA6713-5C-NEXT-IN-RANK-SIGNS",
       "shortcut": "Absent signatory? Next-in-rank or OIC signs, so the paper keeps moving.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0010",
@@ -3778,7 +3778,7 @@
         "o3": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 6",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "the Chairman of the Commission on Audit, and two government employees to be appointed by the President, as members",
       "source_group": "civio",
       "status": "draft",
@@ -3791,7 +3791,7 @@
       },
       "fact_id": "FACT-RA6713-6-COA-CHAIR-MEMBER",
       "shortcut": "Ombudsman + CSC lead; COA joins with two presidential appointees.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-TERM-MATCH-0011",
@@ -3840,7 +3840,7 @@
         "o4": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 6",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "the obscurity of the position, the level of salary, the unique and exemplary quality of a certain achievement, and the risks or temptations inherent in the work",
       "source_group": "civio",
       "status": "draft",
@@ -3853,7 +3853,7 @@
       },
       "fact_id": "FACT-RA6713-6-AWARD-CRITERIA",
       "shortcut": "Sec. 6 favors the unseen, low-paid, tempted worker.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-TERM-MATCH-0012",
@@ -3902,7 +3902,7 @@
         "o4": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 6",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "They shall likewise be automatically promoted to the next higher position with the commensurate salary suitable to their qualifications.",
       "source_group": "civio",
       "status": "draft",
@@ -3915,7 +3915,7 @@
       },
       "fact_id": "FACT-RA6713-6-AUTO-PROMOTION",
       "shortcut": "Awardee of the year moves one rung up, automatically.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-TERM-MATCH-0013",
@@ -3964,7 +3964,7 @@
         "o4": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 6",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "may take the form of bonuses, citations, directorships in government-owned or controlled corporations, local and foreign scholarship grants, paid vacations and the like",
       "source_group": "civio",
       "status": "draft",
@@ -3977,7 +3977,7 @@
       },
       "fact_id": "FACT-RA6713-6-REWARD-FORMS",
       "shortcut": "Think recognition and opportunity, never exemption or immunity.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0014",
@@ -4026,7 +4026,7 @@
         "o3": "GI-NEIGHBOR-NUMBER"
       },
       "source": "R.A. 6713, Sec. 7(b)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "the professional concerned cannot practice his profession in connection with any matter before the office he used to be with, in which case the one-year prohibition shall likewise apply",
       "source_group": "civio",
       "status": "draft",
@@ -4039,7 +4039,7 @@
       },
       "fact_id": "FACT-RA6713-7B-FORMER-OFFICE-PRACTICE",
       "shortcut": "Left the office? Wait one year before appearing against it.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0015",
@@ -4088,7 +4088,7 @@
         "o4": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 7(d)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "The acceptance by a public official or employee of a gift in the nature of a scholarship or fellowship grant or medical treatment",
       "source_group": "civio",
       "status": "draft",
@@ -4101,7 +4101,7 @@
       },
       "fact_id": "FACT-RA6713-7D-FOREIGN-FELLOWSHIP",
       "shortcut": "Learning and healing from abroad are allowed: scholarships, fellowships, medical treatment.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0016",
@@ -4150,7 +4150,7 @@
         "o4": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 7(d)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "permitted by the head of office, branch or agency to which he belongs",
       "source_group": "civio",
       "status": "draft",
@@ -4163,7 +4163,7 @@
       },
       "fact_id": "FACT-RA6713-7D-TRAVEL-GRANT-HEAD-PERMIT",
       "shortcut": "Foreign-paid trip abroad: the boss must say yes.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0017",
@@ -4212,7 +4212,7 @@
         "o4": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 7(d)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "The Ombudsman shall prescribe such regulations as may be necessary to carry out the purpose of this subsection, including pertinent reporting and disclosure requirements.",
       "source_group": "civio",
       "status": "draft",
@@ -4225,7 +4225,7 @@
       },
       "fact_id": "FACT-RA6713-7D-OMBUDSMAN-REGULATIONS",
       "shortcut": "Foreign gifts: the Ombudsman writes the reporting rules.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-TERM-MATCH-0018",
@@ -4274,7 +4274,7 @@
         "o3": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 8(A)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "except those who serve in an honorary capacity, laborers and casual or temporary workers",
       "source_group": "civio",
       "status": "draft",
@@ -4287,7 +4287,7 @@
       },
       "fact_id": "FACT-RA6713-8A-SALN-EXEMPT",
       "shortcut": "Exempt from the SALN: honorary, laborers, casual or temporary. Everyone else files.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0019",
@@ -4336,7 +4336,7 @@
         "o4": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 8(A)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "Husband and wife who are both public officials or employees may file the required statements jointly or separately.",
       "source_group": "civio",
       "status": "draft",
@@ -4349,7 +4349,7 @@
       },
       "fact_id": "FACT-RA6713-8A-SPOUSES-JOINT-OR-SEPARATE",
       "shortcut": "Both in government? Their choice: one joint SALN or two.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0020",
@@ -4398,7 +4398,7 @@
         "o4": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 8(A)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "Justices, with the Clerk of Court of the Supreme Court; Judges, with the Court Administrator",
       "source_group": "civio",
       "status": "draft",
@@ -4411,7 +4411,7 @@
       },
       "fact_id": "FACT-RA6713-8A-JUDGE-FILES-COURT-ADMIN",
       "shortcut": "Justices to the SC Clerk of Court; judges to the Court Administrator.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0021",
@@ -4460,7 +4460,7 @@
         "o4": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 8(A)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "Regional and local officials and employees, with the Deputy Ombudsman in their respective regions",
       "source_group": "civio",
       "status": "draft",
@@ -4473,7 +4473,7 @@
       },
       "fact_id": "FACT-RA6713-8A-LOCAL-FILES-DEPUTY-OMB",
       "shortcut": "Local official? File with the Deputy Ombudsman of the region.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0022",
@@ -4522,7 +4522,7 @@
         "o3": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 8(A)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "Officers of the armed forces from the rank of colonel or naval captain, with the Office of the President",
       "source_group": "civio",
       "status": "draft",
@@ -4535,7 +4535,7 @@
       },
       "fact_id": "FACT-RA6713-8A-AFP-COLONEL-FILES-OP",
       "shortcut": "Colonel and up: Office of the President. Below: Deputy Ombudsman.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0023",
@@ -4584,7 +4584,7 @@
         "o4": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 8(A)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "All other public officials and employees, defined in Republic Act No. 3019, as amended, with the Civil Service Commission",
       "source_group": "civio",
       "status": "draft",
@@ -4597,7 +4597,7 @@
       },
       "fact_id": "FACT-RA6713-8A-OTHERS-FILE-CSC",
       "shortcut": "Not a justice, judge, local, national elective, executive or senior AFP officer? File with the CSC.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-TERM-MATCH-0024",
@@ -4646,7 +4646,7 @@
         "o4": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 8(C)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "Any person requesting a copy of a statement shall be required to pay a reasonable fee to cover the cost of reproduction and mailing of such statement, as well as the cost of certification.",
       "source_group": "civio",
       "status": "draft",
@@ -4659,7 +4659,7 @@
       },
       "fact_id": "FACT-RA6713-8C-COPY-FEE",
       "shortcut": "Copies are public but not free: you pay the cost.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0025",
@@ -4708,7 +4708,7 @@
         "o4": "GI-NEIGHBOR-NUMBER"
       },
       "source": "R.A. 6713, Sec. 8(C)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "Any statement filed under this Act shall be available to the public for a period of ten (10) years after receipt of the statement.",
       "source_group": "civio",
       "status": "draft",
@@ -4721,7 +4721,7 @@
       },
       "fact_id": "FACT-RA6713-8C-TEN-YEARS-AVAILABLE",
       "shortcut": "Ten working days to copy, ten years to keep.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0026",
@@ -4770,7 +4770,7 @@
         "o3": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 8(D)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "any commercial purpose other than by news and communications media for dissemination to the general public",
       "source_group": "civio",
       "status": "draft",
@@ -4783,7 +4783,7 @@
       },
       "fact_id": "FACT-RA6713-8D-COMMERCIAL-USE-BARRED",
       "shortcut": "Read it for accountability or news; never to sell something.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0027",
@@ -4832,7 +4832,7 @@
         "o4": "GI-NEIGHBOR-NUMBER"
       },
       "source": "R.A. 6713, Sec. 11(d)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "may assess against such person a penalty in any amount not to exceed twenty-five thousand pesos (P25,000)",
       "source_group": "civio",
       "status": "draft",
@@ -4845,7 +4845,7 @@
       },
       "fact_id": "FACT-RA6713-11D-MISUSE-PENALTY-25K",
       "shortcut": "Misusing a SALN: up to ₱25,000.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0028",
@@ -4894,7 +4894,7 @@
         "o4": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 9",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "The same rule shall apply where the public official or employee is a partner in a partnership.",
       "source_group": "civio",
       "status": "draft",
@@ -4907,7 +4907,7 @@
       },
       "fact_id": "FACT-RA6713-9-PARTNERSHIP-COVERED",
       "shortcut": "Corporation or partnership, the divestment rule is the same.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0029",
@@ -4956,7 +4956,7 @@
         "o4": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 10(b)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "who, after issuance of the opinion acts in good faith in accordance with it shall not be subject to any sanction provided in this Act",
       "source_group": "civio",
       "status": "draft",
@@ -4969,7 +4969,7 @@
       },
       "fact_id": "FACT-RA6713-10B-GOOD-FAITH-OPINION",
       "shortcut": "Followed an approved official opinion in good faith? No sanction.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0030",
@@ -5018,7 +5018,7 @@
         "o3": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 11(a)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "suspension not exceeding one (1) year",
       "source_group": "civio",
       "status": "draft",
@@ -5031,7 +5031,7 @@
       },
       "fact_id": "FACT-RA6713-11A-SUSPENSION-ONE-YEAR",
       "shortcut": "Fine: 6 months' pay. Suspension: 1 year. Prison: 5 years.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0031",
@@ -5080,7 +5080,7 @@
         "o4": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 11(b)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "Any violation hereof proven in a proper administrative proceeding shall be sufficient cause for removal or dismissal of a public official or employee, even if no criminal prosecution is instituted against him.",
       "source_group": "civio",
       "status": "draft",
@@ -5093,7 +5093,7 @@
       },
       "fact_id": "FACT-RA6713-11B-ADMIN-PROOF-ENOUGH",
       "shortcut": "Admin case proven = enough to dismiss, criminal case or not.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0032",
@@ -5142,7 +5142,7 @@
         "o4": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 11(c)",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "shall be subject to the same penal liabilities as the public officials or employees and shall be tried jointly with them",
       "source_group": "civio",
       "status": "draft",
@@ -5155,7 +5155,7 @@
       },
       "fact_id": "FACT-RA6713-11C-PRIVATE-CONSPIRATORS",
       "shortcut": "Conspire with an official, share the official's penalty.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0033",
@@ -5204,7 +5204,7 @@
         "o4": "GI-WRONG-BODY"
       },
       "source": "R.A. 6713, Sec. 12",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "The Ombudsman shall likewise take steps to protect citizens who denounce acts or omissions of public officials and employees which are in violation of this Act.",
       "source_group": "civio",
       "status": "draft",
@@ -5217,7 +5217,7 @@
       },
       "fact_id": "FACT-RA6713-12-OMBUDSMAN-PROTECTS-WHISTLEBLOWERS",
       "shortcut": "CSC runs the Act; the Ombudsman shields those who report.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-SCENARIO-APPLY-0034",
@@ -5266,7 +5266,7 @@
         "o3": "GI-SOUNDS-RIGHT"
       },
       "source": "R.A. 6713, Sec. 13",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "Nothing in this Act shall be construed to derogate from any law, or any regulation prescribed by any body or agency, which provides for more stringent standards for its official and employees.",
       "source_group": "civio",
       "status": "draft",
@@ -5279,7 +5279,7 @@
       },
       "fact_id": "FACT-RA6713-13-STRICTER-STANDARDS",
       "shortcut": "R.A. 6713 is a floor, not a ceiling.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     },
     {
       "id": "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0035",
@@ -5328,7 +5328,7 @@
         "o4": "GI-NEIGHBOR-NUMBER"
       },
       "source": "R.A. 6713, Sec. 17",
-      "source_url": "https://www.comelec.gov.ph/index.html?r=References/RelatedLaws/OtherRelatedLaws/RA6713",
+      "source_url": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html",
       "source_quote": "This Act shall take effect after thirty (30) days following the completion of its publication in the Official Gazette or in two (2) national newspapers of general circulation.",
       "source_group": "civio",
       "status": "draft",
@@ -5341,7 +5341,7 @@
       },
       "fact_id": "FACT-RA6713-17-EFFECTIVITY",
       "shortcut": "Approved Feb. 20, 1989; effective 30 days after publication.",
-      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS."
+      "notes": "gap-fill-2000-04 (R.A. 6713). Quote checked verbatim against LawPhil. Pending CoS. | 2026-10-22: source_url moved from a COMELEC mirror to the lawphil.net text (spec 3.6 allowed source); quote re-verified."
     }
   ]
 }

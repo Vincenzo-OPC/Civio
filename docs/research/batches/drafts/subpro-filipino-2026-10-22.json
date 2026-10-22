@@ -1,0 +1,3118 @@
+{
+ "batch": "subpro-filipino-2026-10-22",
+ "date": "2026-10-22",
+ "status": "draft",
+ "spec_version": "0.1.9",
+ "authority": "GT approval 2026-10-22 and MASTER directive 2026-10-22; drafts only, nothing approved, signed or imported",
+ "count": 50,
+ "items": [
+  {
+   "id": "CIVIO-D1022-SPFIL-0001",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Dahil MASIKAP si Aling Nena, natapos niya ang pagtatahi ng limampung uniporme bago ang pista.\" ano ang pinakamalapit na kahulugan ng \"MASIKAP\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "masipag"
+    },
+    {
+     "option_id": "o2",
+     "text": "tamad"
+    },
+    {
+     "option_id": "o3",
+     "text": "mabilis"
+    },
+    {
+     "option_id": "o4",
+     "text": "matalino"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang masikap ay matiyaga at hindi tumitigil sa paggawa hanggang matapos.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"masipag\" ang tumutugma ng \"masikap\" sa pangungusap. Ang masikap ay matiyaga at hindi tumitigil sa paggawa hanggang matapos. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o2": "Ito ang kabaligtaran: ang tamad ay umiiwas sa gawain.",
+     "o3": "Maaaring mabilis ang masikap, pero ang diin ay ang tiyaga sa trabaho.",
+     "o4": "Ibang katangian ito; ang pangungusap ay tungkol sa sipag, hindi sa talino."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0002",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Isang DALUBHASA sa batas-pandagat ang inanyayahan upang ipaliwanag ang bagong kasunduan sa pangingisda.\" ano ang pinakamalapit na kahulugan ng \"DALUBHASA\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "eksperto"
+    },
+    {
+     "option_id": "o2",
+     "text": "tagapagsalita"
+    },
+    {
+     "option_id": "o3",
+     "text": "baguhan"
+    },
+    {
+     "option_id": "o4",
+     "text": "tanyag"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang dalubhasa ay may malalim at espesyal na kaalaman sa isang larangan.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"eksperto\" ang tumutugma ng \"dalubhasa\" sa pangungusap. Ang dalubhasa ay may malalim at espesyal na kaalaman sa isang larangan. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o2": "Nagsalita nga siya, pero ang salita ay tumutukoy sa lalim ng kaalaman, hindi sa papel sa programa.",
+     "o3": "Ang baguhan ay nagsisimula pa lamang; kabaligtaran ito ng dalubhasa.",
+     "o4": "Ang tanyag ay kilala ng marami; hindi ito nangangahulugang marunong."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0003",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Nagbigay ang simbahan ng libreng bigas sa mga pamilyang MARALITA sa tabing-ilog.\" ano ang pinakamalapit na kahulugan ng \"MARALITA\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mahirap"
+    },
+    {
+     "option_id": "o2",
+     "text": "matipid"
+    },
+    {
+     "option_id": "o3",
+     "text": "mayaman"
+    },
+    {
+     "option_id": "o4",
+     "text": "maysakit"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang maralita ay salat sa pera at kabuhayan.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"mahirap\" ang tumutugma ng \"maralita\" sa pangungusap. Ang maralita ay salat sa pera at kabuhayan. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o2": "Ang matipid ay maingat gumastos; hindi ito tumutukoy sa kakulangan sa yaman.",
+     "o3": "Kabaligtaran ito ng maralita.",
+     "o4": "Maaaring tulungan din ang maysakit, pero ang maralita ay tungkol sa kabuhayan."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-OTHER-TRAIT",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-SAME-FIELD"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0004",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Binalaan ng pulisya ang mga mamimili laban sa isang MAPANLINLANG na tindero na nagbebenta ng pekeng gamot.\" ano ang pinakamalapit na kahulugan ng \"MAPANLINLANG\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "tapat"
+    },
+    {
+     "option_id": "o2",
+     "text": "mandaraya"
+    },
+    {
+     "option_id": "o3",
+     "text": "masungit"
+    },
+    {
+     "option_id": "o4",
+     "text": "madaldal"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang mapanlinlang ay nanloloko o nandaraya sa kapwa.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"mandaraya\" ang tumutugma ng \"mapanlinlang\" sa pangungusap. Ang mapanlinlang ay nanloloko o nandaraya sa kapwa. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o1": "Ang tapat ay hindi nanloloko, kabaligtaran ng mapanlinlang.",
+     "o3": "Ang masungit ay mainitin ang ulo, ibang ugali.",
+     "o4": "Ang madaldal ay maraming sinasabi; hindi ito nangangahulugang nanloloko."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0005",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Nang sumikat ang araw, NAGLAHO ang makapal na hamog sa bukid.\" ano ang pinakamalapit na kahulugan ng \"NAGLAHO\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "lumitaw"
+    },
+    {
+     "option_id": "o2",
+     "text": "lumipat"
+    },
+    {
+     "option_id": "o3",
+     "text": "lumabo"
+    },
+    {
+     "option_id": "o4",
+     "text": "nawala"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang naglaho ay tuluyang nawala sa paningin.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"nawala\" ang tumutugma ng \"naglaho\" sa pangungusap. Ang naglaho ay tuluyang nawala sa paningin. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o1": "Kabaligtaran ito: lumitaw ang isang bagay na dati ay hindi makita.",
+     "o2": "Walang paglipat ng lugar; ang hamog ay tuluyang nawala.",
+     "o3": "Ang lumabo ay humina lamang ang linaw; ang naglaho ay tuluyang nawala."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-LITERAL",
+    "o3": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0006",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Ayon sa kuwento, SALAWAHAN ang binata dahil iba-iba ang nililigawan niya bawat linggo.\" ano ang pinakamalapit na kahulugan ng \"SALAWAHAN\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "maramdamin"
+    },
+    {
+     "option_id": "o2",
+     "text": "tapat sa pangako"
+    },
+    {
+     "option_id": "o3",
+     "text": "mapusok"
+    },
+    {
+     "option_id": "o4",
+     "text": "pabago-bago ang pasya"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang salawahan ay hindi matatag ang damdamin o pasya; pabago-bago.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"pabago-bago ang pasya\" ang tumutugma ng \"salawahan\" sa pangungusap. Ang salawahan ay hindi matatag ang damdamin o pasya; pabago-bago. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o1": "Ang maramdamin ay madaling masaktan, ibang katangian.",
+     "o2": "Kabaligtaran ito; ang salawahan ay hindi nananatili sa isang pasya o tao.",
+     "o3": "Ang mapusok ay padalos-dalos; hindi ito ang ibig sabihin ng salawahan."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-OTHER-TRAIT",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0007",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"KAWANGIS ng kaniyang lola ang batang si Mira, lalo na sa hugis ng mata at ngiti.\" ano ang pinakamalapit na kahulugan ng \"KAWANGIS\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "kamukha"
+    },
+    {
+     "option_id": "o2",
+     "text": "kaiba"
+    },
+    {
+     "option_id": "o3",
+     "text": "kaapu-apuhan"
+    },
+    {
+     "option_id": "o4",
+     "text": "kasama"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang kawangis ay kahawig o kamukha.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"kamukha\" ang tumutugma ng \"kawangis\" sa pangungusap. Ang kawangis ay kahawig o kamukha. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o2": "Kabaligtaran ito; ang kaiba ay hindi kahawig.",
+     "o3": "Ugnayang pampamilya ito, hindi pagkakahawig.",
+     "o4": "Ang kasama ay kasabay sa isang lugar, hindi kahawig."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-SAME-FIELD",
+    "o4": "FIL-LITERAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0008",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"TIGIB ng luha ang mga mata ng ina nang makita niyang ligtas ang anak pagkatapos ng baha.\" ano ang pinakamalapit na kahulugan ng \"TIGIB\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "tuyo"
+    },
+    {
+     "option_id": "o2",
+     "text": "kulang"
+    },
+    {
+     "option_id": "o3",
+     "text": "puno"
+    },
+    {
+     "option_id": "o4",
+     "text": "pagod"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang tigib ay lipos o punong-puno.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"puno\" ang tumutugma ng \"tigib\" sa pangungusap. Ang tigib ay lipos o punong-puno. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o1": "Ang tuyo ay walang luha; kabaligtaran ng sinasabi ng pangungusap.",
+     "o2": "Kabaligtaran ito ng tigib.",
+     "o4": "Damdamin ito na maaaring kasabay ng pag-iyak, pero hindi kahulugan ng tigib."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-SAME-FIELD"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0009",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"PINAGTIBAY ng Sangguniang Bayan ang ordinansa laban sa paggamit ng plastik sa palengke.\" ano ang pinakamalapit na kahulugan ng \"PINAGTIBAY\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pinag-aralan"
+    },
+    {
+     "option_id": "o2",
+     "text": "ibinasura"
+    },
+    {
+     "option_id": "o3",
+     "text": "ipinaskil"
+    },
+    {
+     "option_id": "o4",
+     "text": "inaprubahan"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang pinagtibay ay inaprubahan o ginawang opisyal.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"inaprubahan\" ang tumutugma ng \"pinagtibay\" sa pangungusap. Ang pinagtibay ay inaprubahan o ginawang opisyal. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o1": "Bahagi ng proseso ito, pero ang pinagtibay ay ang pag-apruba mismo.",
+     "o2": "Kabaligtaran ito; ang ibinasura ay tinanggihan.",
+     "o3": "Ang ipinaskil ay idinikit para mabasa; hindi ito pag-apruba."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SAME-FIELD",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-LITERAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0010",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"NAGSUMAMO ang matanda sa guwardiya na papasukin siya upang makuha ang kaniyang pensiyon.\" ano ang pinakamalapit na kahulugan ng \"NAGSUMAMO\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "nagpasalamat"
+    },
+    {
+     "option_id": "o2",
+     "text": "nag-utos"
+    },
+    {
+     "option_id": "o3",
+     "text": "nagreklamo"
+    },
+    {
+     "option_id": "o4",
+     "text": "nagmakaawa"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang nagsumamo ay buong-pusong nakiusap o nagmakaawa.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"nagmakaawa\" ang tumutugma ng \"nagsumamo\" sa pangungusap. Ang nagsumamo ay buong-pusong nakiusap o nagmakaawa. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o1": "Pagpapahayag din ito sa kapwa, pero iba ang layunin.",
+     "o2": "Ang nag-utos ay may kapangyarihan; ang nagsumamo ay nakikiusap nang may pagpapakumbaba.",
+     "o3": "Ang nagreklamo ay nagpahayag ng hinaing, hindi nakiusap."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SAME-FIELD",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0011",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Ramdam sa awit ang HINAGPIS ng mga naulila ng bagyo.\" ano ang pinakamalapit na kahulugan ng \"HINAGPIS\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "kaunting lungkot"
+    },
+    {
+     "option_id": "o2",
+     "text": "matinding galit"
+    },
+    {
+     "option_id": "o3",
+     "text": "matinding tuwa"
+    },
+    {
+     "option_id": "o4",
+     "text": "matinding pighati"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang hinagpis ay matinding dalamhati o pighati.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"matinding pighati\" ang tumutugma ng \"hinagpis\" sa pangungusap. Ang hinagpis ay matinding dalamhati o pighati. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o1": "Lungkot nga, pero masyadong mahina; ang hinagpis ay matindi.",
+     "o2": "Ibang damdamin ang galit.",
+     "o3": "Kabaligtaran ito ng hinagpis."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-INTENSITY",
+    "o2": "FIL-OTHER-TRAIT",
+    "o3": "FIL-ANTONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0012",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Pagkaraan ng unang ulan, SUMIBOL ang mga bagong dahon sa mga punong itinanim ng mga mag-aaral.\" ano ang pinakamalapit na kahulugan ng \"SUMIBOL\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "nalagas"
+    },
+    {
+     "option_id": "o2",
+     "text": "umusbong"
+    },
+    {
+     "option_id": "o3",
+     "text": "lumago"
+    },
+    {
+     "option_id": "o4",
+     "text": "nalanta"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang sumibol ay unang tumubo o umusbong.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"umusbong\" ang tumutugma ng \"sumibol\" sa pangungusap. Ang sumibol ay unang tumubo o umusbong. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o1": "Ang nalagas ay nahulog na mga dahon, kabaligtaran ng pagtubo.",
+     "o3": "Ang lumago ay paglaki ng dati nang tumubo; ang sumibol ay ang unang paglitaw.",
+     "o4": "Kabaligtaran ito; ang nalanta ay natuyo at nanghina."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-ANTONYM-TRAP",
+    "o3": "FIL-INTENSITY",
+    "o4": "FIL-ANTONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0013",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Hindi pinagkatiwalaan ng mga kasapi ang MAPAGPANGGAP na pinunong laging nagkukunwaring abala.\" ano ang pinakamalapit na kahulugan ng \"MAPAGPANGGAP\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mapagkunwari"
+    },
+    {
+     "option_id": "o2",
+     "text": "mayabang"
+    },
+    {
+     "option_id": "o3",
+     "text": "totoo sa sarili"
+    },
+    {
+     "option_id": "o4",
+     "text": "mahiyain"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang mapagpanggap ay nagkukunwari o nagpapakita ng hindi totoo.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"mapagkunwari\" ang tumutugma ng \"mapagpanggap\" sa pangungusap. Ang mapagpanggap ay nagkukunwari o nagpapakita ng hindi totoo. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o2": "Ang mayabang ay nagmamalaki; maaaring totoo ang ipinagmamalaki niya.",
+     "o3": "Kabaligtaran ito ng mapagpanggap.",
+     "o4": "Ang mahiyain ay umiiwas sa pansin; hindi siya nagkukunwari."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-OTHER-TRAIT",
+    "o3": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0014",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"TALAMAK ang ilegal na pagtotroso sa bundok kaya nagpadala ng dagdag na bantay ang pamahalaan.\" ano ang pinakamalapit na kahulugan ng \"TALAMAK\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mapanganib"
+    },
+    {
+     "option_id": "o2",
+     "text": "bihira"
+    },
+    {
+     "option_id": "o3",
+     "text": "laganap"
+    },
+    {
+     "option_id": "o4",
+     "text": "lihim"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang talamak ay laganap at matagal nang nangyayari.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"laganap\" ang tumutugma ng \"talamak\" sa pangungusap. Ang talamak ay laganap at matagal nang nangyayari. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o1": "Maaaring mapanganib ang pagtotroso, pero ang talamak ay tungkol sa dalas at lawak.",
+     "o2": "Kabaligtaran ito; ang bihira ay madalang mangyari.",
+     "o4": "Maaaring lihim ang gawain, pero hindi iyon ang kahulugan ng salita."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-OTHER-TRAIT",
+    "o2": "FIL-ANTONYM-TRAP",
+    "o4": "FIL-SAME-FIELD"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0015",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasingkahulugan",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASINGKAHULUGAN",
+   "difficulty": "easy",
+   "est_seconds": 20,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Pinainom ng nars ang bata ng MALIGAMGAM na tubig na may kaunting asin.\" ano ang pinakamalapit na kahulugan ng \"MALIGAMGAM\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "katamtamang init"
+    },
+    {
+     "option_id": "o2",
+     "text": "malinis"
+    },
+    {
+     "option_id": "o3",
+     "text": "kumukulo"
+    },
+    {
+     "option_id": "o4",
+     "text": "nagyeyelo"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasingkahulugan: salitang pareho ang ibig sabihin. Ang maligamgam ay may katamtamang init, hindi malamig at hindi kumukulo.",
+    "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap.",
+    "why_correct": "Ang \"katamtamang init\" ang tumutugma ng \"maligamgam\" sa pangungusap. Ang maligamgam ay may katamtamang init, hindi malamig at hindi kumukulo. Kapag ipinalit ito sa pangungusap, nananatili ang diwa.",
+    "why_wrong": {
+     "o2": "Kalinisan ito ng tubig, hindi temperatura.",
+     "o3": "Sobra ito; ang maligamgam ay hindi mainit na mainit.",
+     "o4": "Kabaligtaran ito; ang maligamgam ay may kaunting init."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-OTHER-TRAIT",
+    "o3": "FIL-INTENSITY",
+    "o4": "FIL-ANTONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Palitan ang salitang nakasulat sa malalaking titik ng bawat sagot; ang tamang pamalit ay hindi dapat magpabago ng diwa ng pangungusap."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0016",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MARAMOT ang may-ari ng tindahan; ni minsan ay hindi siya nagbigay ng tulong sa mga nasunugan.\" ano ang kasalungat ng \"MARAMOT\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mahirap"
+    },
+    {
+     "option_id": "o2",
+     "text": "masungit"
+    },
+    {
+     "option_id": "o3",
+     "text": "kuripot"
+    },
+    {
+     "option_id": "o4",
+     "text": "mapagbigay"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Ang maramot ay ayaw magbahagi; ang kasalungat ay mapagbigay.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"mapagbigay\" ang kabaligtaran ng \"maramot\" sa pangungusap. Ang maramot ay ayaw magbahagi; ang kasalungat ay mapagbigay. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o1": "Kalagayan sa buhay ito, hindi ugali sa pagbibigay.",
+     "o2": "Ibang ugali ito; puwedeng masungit ang taong mapagbigay.",
+     "o3": "Kasingkahulugan ito ng maramot, hindi kasalungat."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-OTHER-TRAIT",
+    "o2": "FIL-OTHER-TRAIT",
+    "o3": "FIL-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0017",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAHINA ang signal ng telepono sa itaas ng bundok kaya hindi makatawag ang mga turista.\" ano ang kasalungat ng \"MAHINA\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "marupok"
+    },
+    {
+     "option_id": "o2",
+     "text": "malabo"
+    },
+    {
+     "option_id": "o3",
+     "text": "malakas"
+    },
+    {
+     "option_id": "o4",
+     "text": "mabagal"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Mahina ↔ malakas ang tuwirang magkasalungat.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"malakas\" ang kabaligtaran ng \"mahina\" sa pangungusap. Mahina ↔ malakas ang tuwirang magkasalungat. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o1": "Malapit sa kahulugan ng mahina, kaya hindi ito kasalungat.",
+     "o2": "Kahawig ito ng mahinang signal, hindi kasalungat.",
+     "o4": "Bilis ito, hindi lakas."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o2": "FIL-SYNONYM-TRAP",
+    "o4": "FIL-SAME-FIELD"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0018",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Ipinahayag ng mga magsasaka ang kanilang PAGSANG-AYON sa planong patubig ng bayan.\" ano ang kasalungat ng \"PAGSANG-AYON\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pagtutol"
+    },
+    {
+     "option_id": "o2",
+     "text": "pagtatanong"
+    },
+    {
+     "option_id": "o3",
+     "text": "pagpayag"
+    },
+    {
+     "option_id": "o4",
+     "text": "pag-aalinlangan"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Ang kasalungat ng pagsang-ayon ay pagtutol.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"pagtutol\" ang kabaligtaran ng \"pagsang-ayon\" sa pangungusap. Ang kasalungat ng pagsang-ayon ay pagtutol. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o2": "Ang pagtatanong ay paghingi ng impormasyon, hindi pagtanggi.",
+     "o3": "Kasingkahulugan ito, hindi kasalungat.",
+     "o4": "Ito ay pagdududa, hindi pa tahasang pagtutol."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-OTHER-TRAIT",
+    "o3": "FIL-SYNONYM-TRAP",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0019",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Dahil sa tagtuyot, nagkaroon ng KAKAPUSAN sa tubig sa tatlong barangay.\" ano ang kasalungat ng \"KAKAPUSAN\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "kahirapan"
+    },
+    {
+     "option_id": "o2",
+     "text": "kakulangan"
+    },
+    {
+     "option_id": "o3",
+     "text": "katipiran"
+    },
+    {
+     "option_id": "o4",
+     "text": "kasaganaan"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Kakapusan (kulang) ↔ kasaganaan (sobra o sapat na sapat).",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"kasaganaan\" ang kabaligtaran ng \"kakapusan\" sa pangungusap. Kakapusan (kulang) ↔ kasaganaan (sobra o sapat na sapat). Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o1": "Kaugnay na kalagayan ito, hindi kabaligtaran.",
+     "o2": "Kasingkahulugan ito ng kakapusan.",
+     "o3": "Paraan ito ng paggamit, hindi dami ng suplay."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SAME-FIELD",
+    "o2": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0020",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MASUNGIT ang bantay sa tarangkahan kaya nag-aatubiling magtanong ang mga bisita.\" ano ang kasalungat ng \"MASUNGIT\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "suplado"
+    },
+    {
+     "option_id": "o2",
+     "text": "magiliw"
+    },
+    {
+     "option_id": "o3",
+     "text": "tahimik"
+    },
+    {
+     "option_id": "o4",
+     "text": "mahiyain"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Ang masungit ay mainit ang ulo; ang magiliw ay malugod at palakaibigan.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"magiliw\" ang kabaligtaran ng \"masungit\" sa pangungusap. Ang masungit ay mainit ang ulo; ang magiliw ay malugod at palakaibigan. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o1": "Kasingkahulugan ito ng masungit.",
+     "o3": "Ang tahimik ay hindi maingay; maaari pa ring masungit.",
+     "o4": "Ang mahiyain ay umiiwas, hindi naman masungit o magiliw."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0021",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MATAMLAY ang mga mag-aaral sa huling klase dahil sa matinding init ng hapon.\" ano ang kasalungat ng \"MATAMLAY\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "nanghihina"
+    },
+    {
+     "option_id": "o2",
+     "text": "masigla"
+    },
+    {
+     "option_id": "o3",
+     "text": "seryoso"
+    },
+    {
+     "option_id": "o4",
+     "text": "malungkot"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Matamlay (walang sigla) ↔ masigla.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"masigla\" ang kabaligtaran ng \"matamlay\" sa pangungusap. Matamlay (walang sigla) ↔ masigla. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o1": "Kasingkahulugan ito ng matamlay.",
+     "o3": "Ibang katangian; puwedeng seryoso ang masigla.",
+     "o4": "Damdamin ito; ang matamlay ay tungkol sa sigla ng katawan."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SYNONYM-TRAP",
+    "o3": "FIL-OTHER-TRAIT",
+    "o4": "FIL-SAME-FIELD"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0022",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"LIGTAS na ang mga residente matapos silang ilikas sa paaralan bago dumating ang bagyo.\" ano ang kasalungat ng \"LIGTAS\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "nawawala"
+    },
+    {
+     "option_id": "o2",
+     "text": "protektado"
+    },
+    {
+     "option_id": "o3",
+     "text": "nanganganib"
+    },
+    {
+     "option_id": "o4",
+     "text": "sugatan"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Ligtas ↔ nanganganib o nasa panganib.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"nanganganib\" ang kabaligtaran ng \"ligtas\" sa pangungusap. Ligtas ↔ nanganganib o nasa panganib. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o1": "Ibang kalagayan ang nawawala.",
+     "o2": "Kasingkahulugan ito ng ligtas.",
+     "o4": "Maaaring kinalabasan ng panganib ito, pero hindi tuwirang kasalungat."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-OTHER-TRAIT",
+    "o2": "FIL-SYNONYM-TRAP",
+    "o4": "FIL-INTENSITY"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0023",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAKABAGO ang disenyo ng bagong munisipyo, may solar panel at bukás na bulwagan.\" ano ang kasalungat ng \"MAKABAGO\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "makaluma"
+    },
+    {
+     "option_id": "o2",
+     "text": "mamahalin"
+    },
+    {
+     "option_id": "o3",
+     "text": "malaki"
+    },
+    {
+     "option_id": "o4",
+     "text": "moderno"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Makabago (moderno) ↔ makaluma.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"makaluma\" ang kabaligtaran ng \"makabago\" sa pangungusap. Makabago (moderno) ↔ makaluma. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o2": "Presyo ito, hindi panahon ng estilo.",
+     "o3": "Sukat ito, hindi estilo.",
+     "o4": "Kasingkahulugan ito ng makabago."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-OTHER-TRAIT",
+    "o3": "FIL-OTHER-TRAIT",
+    "o4": "FIL-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0024",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"PANSAMANTALA lamang ang pagsasara ng tulay habang inaayos ang mga poste nito.\" ano ang kasalungat ng \"PANSAMANTALA\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "permanente"
+    },
+    {
+     "option_id": "o2",
+     "text": "madalian"
+    },
+    {
+     "option_id": "o3",
+     "text": "paminsan-minsan"
+    },
+    {
+     "option_id": "o4",
+     "text": "panandalian"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Pansamantala (sa maikling panahon) ↔ permanente.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"permanente\" ang kabaligtaran ng \"pansamantala\" sa pangungusap. Pansamantala (sa maikling panahon) ↔ permanente. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o2": "Bilis ng gawain ito, hindi haba ng panahon.",
+     "o3": "Dalas ito, hindi haba ng bisa.",
+     "o4": "Kasingkahulugan ito ng pansamantala."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-OTHER-TRAIT",
+    "o4": "FIL-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0025",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"Iniwasan ng mga katrabaho ang MAPAGMATAAS na kawaning laging nagmamalaki sa kaniyang posisyon.\" ano ang kasalungat ng \"MAPAGMATAAS\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "masungit"
+    },
+    {
+     "option_id": "o2",
+     "text": "hambog"
+    },
+    {
+     "option_id": "o3",
+     "text": "mapagpakumbaba"
+    },
+    {
+     "option_id": "o4",
+     "text": "matapang"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Mapagmataas ↔ mapagpakumbaba.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"mapagpakumbaba\" ang kabaligtaran ng \"mapagmataas\" sa pangungusap. Mapagmataas ↔ mapagpakumbaba. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o1": "Ibang ugali ito.",
+     "o2": "Kasingkahulugan ito ng mapagmataas.",
+     "o4": "Ang matapang ay walang takot; hindi ito tungkol sa pagmamalaki."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-OTHER-TRAIT",
+    "o2": "FIL-SYNONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0026",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAGASTOS ang paghahanda ng handaan kaya nagpasya ang pamilya na magpakain na lamang ng kaunting bisita.\" ano ang kasalungat ng \"MAGASTOS\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "matipid"
+    },
+    {
+     "option_id": "o2",
+     "text": "maramot"
+    },
+    {
+     "option_id": "o3",
+     "text": "bulagsak"
+    },
+    {
+     "option_id": "o4",
+     "text": "mayaman"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Magastos ↔ matipid.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"matipid\" ang kabaligtaran ng \"magastos\" sa pangungusap. Magastos ↔ matipid. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o2": "Ugali ito sa pagbibigay sa iba, hindi dami ng gastos.",
+     "o3": "Kahawig ng magastos ang bulagsak, hindi kasalungat.",
+     "o4": "Kalagayan ito, hindi paraan ng paggastos."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-OTHER-TRAIT",
+    "o3": "FIL-SYNONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0027",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"LUMUWAG ang trapiko sa EDSA nang matapos ang pagkukumpuni ng kalsada.\" ano ang kasalungat ng \"LUMUWAG\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "bumagal"
+    },
+    {
+     "option_id": "o2",
+     "text": "sumikip"
+    },
+    {
+     "option_id": "o3",
+     "text": "gumaan"
+    },
+    {
+     "option_id": "o4",
+     "text": "tumahimik"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Lumuwag ↔ sumikip.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"sumikip\" ang kabaligtaran ng \"lumuwag\" sa pangungusap. Lumuwag ↔ sumikip. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o1": "Kaugnay ito, pero ang kasalungat ng luwag ay sikip.",
+     "o3": "Kahawig ito ng lumuwag na trapiko.",
+     "o4": "Ingay ito, hindi luwag ng daan."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SAME-FIELD",
+    "o3": "FIL-SYNONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0028",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"BUMABA ang presyo ng gulay sa palengke nang dumating ang ani mula sa lalawigan.\" ano ang kasalungat ng \"BUMABA\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "tumaas"
+    },
+    {
+     "option_id": "o2",
+     "text": "nagbago"
+    },
+    {
+     "option_id": "o3",
+     "text": "bumagsak"
+    },
+    {
+     "option_id": "o4",
+     "text": "tumatag"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Bumaba ↔ tumaas.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"tumaas\" ang kabaligtaran ng \"bumaba\" sa pangungusap. Bumaba ↔ tumaas. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o2": "Masyadong pangkalahatan ito.",
+     "o3": "Kasingkahulugan ito ng bumaba.",
+     "o4": "Ang tumatag ay hindi na nagbago, hindi kabaligtaran ng pagbaba."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SAME-FIELD",
+    "o3": "FIL-SYNONYM-TRAP",
+    "o4": "FIL-OTHER-TRAIT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0029",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"MAINIPIN si Jun kaya umalis siya sa pila bago pa siya natawag.\" ano ang kasalungat ng \"MAINIPIN\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "matiyaga"
+    },
+    {
+     "option_id": "o2",
+     "text": "masipag"
+    },
+    {
+     "option_id": "o3",
+     "text": "maagap"
+    },
+    {
+     "option_id": "o4",
+     "text": "atat"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Mainipin ↔ matiyaga o mapagtiis maghintay.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"matiyaga\" ang kabaligtaran ng \"mainipin\" sa pangungusap. Mainipin ↔ matiyaga o mapagtiis maghintay. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o2": "Ibang katangian; ang tiyaga sa paghihintay ang kasalungat.",
+     "o3": "Ang maagap ay maaga, hindi kasalungat ng pagkainip.",
+     "o4": "Kahawig ito ng mainipin."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-OTHER-TRAIT",
+    "o3": "FIL-OTHER-TRAIT",
+    "o4": "FIL-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0030",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Talasalitaan",
+   "concept": "kasalungat",
+   "micro_skill": "gamitin ang konteksto ng pangungusap",
+   "archetype": "VFIL-KASALUNGAT",
+   "difficulty": "medium",
+   "est_seconds": 25,
+   "language": "fil",
+   "stem": "Sa pangungusap na \"PINAYAGAN ng punong-guro ang mga mag-aaral na gamitin ang silid-aklatan tuwing Sabado.\" ano ang kasalungat ng \"PINAYAGAN\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "ipinagpaliban"
+    },
+    {
+     "option_id": "o2",
+     "text": "pinahintulutan"
+    },
+    {
+     "option_id": "o3",
+     "text": "ipinagbawal"
+    },
+    {
+     "option_id": "o4",
+     "text": "iminungkahi"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Kasalungat: salitang kabaligtaran ang ibig sabihin. Pinayagan ↔ ipinagbawal.",
+    "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita.",
+    "why_correct": "Ang \"ipinagbawal\" ang kabaligtaran ng \"pinayagan\" sa pangungusap. Pinayagan ↔ ipinagbawal. Kapag ipinalit ito sa pangungusap, bumabaligtad ang diwa.",
+    "why_wrong": {
+     "o1": "Ang ipinagpaliban ay inilipat sa ibang araw, hindi tinanggihan.",
+     "o2": "Kasingkahulugan ito ng pinayagan.",
+     "o4": "Ang iminungkahi ay inilapit bilang ideya pa lamang."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-OTHER-TRAIT",
+    "o2": "FIL-SYNONYM-TRAP",
+    "o4": "FIL-SAME-FIELD"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tanungin: alin ang magbabaligtad ng diwa ng pangungusap? Iwasan muna ang mga sagot na kapareho ng salita."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0031",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "nang/ng",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Piliin ang wastong salita: \"Tumakbo ____ mabilis ang atleta upang maabutan ang kalaban.\"",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "nung"
+    },
+    {
+     "option_id": "o2",
+     "text": "nang"
+    },
+    {
+     "option_id": "o3",
+     "text": "nag"
+    },
+    {
+     "option_id": "o4",
+     "text": "ng"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ginagamit ang \"nang\" bilang pang-angkop sa pandiwa at pang-abay (paano ginawa).",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"nang\" dahil sa tuntuning ito: Ginagamit ang \"nang\" bilang pang-angkop sa pandiwa at pang-abay (paano ginawa).",
+    "why_wrong": {
+     "o1": "Pabalbal na anyo ng \"noong\" ito at walang kinalaman sa paraan ng pagtakbo.",
+     "o3": "Unlapi ang \"nag-\"; hindi ito nakatayong salita.",
+     "o4": "Ang \"ng\" ay pananda ng layon o pagmamay-ari; bago ang pang-abay na \"mabilis\" ay \"nang\" ang tama."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SPOKEN-FORM",
+    "o3": "FIL-SPOKEN-FORM",
+    "o4": "FIL-SPOKEN-FORM"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0032",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "nang/ng",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Piliin ang wastong salita: \"Bumili ____ bagong sapatos si Liza para sa kaniyang unang araw sa trabaho.\"",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "ng"
+    },
+    {
+     "option_id": "o2",
+     "text": "na"
+    },
+    {
+     "option_id": "o3",
+     "text": "sa"
+    },
+    {
+     "option_id": "o4",
+     "text": "nang"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ang \"ng\" ay nauuna sa pangngalang layon ng pandiwa (bumili ng ano?).",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"ng\" dahil sa tuntuning ito: Ang \"ng\" ay nauuna sa pangngalang layon ng pandiwa (bumili ng ano?).",
+    "why_wrong": {
+     "o2": "Pang-angkop ang \"na\"; hindi nito naipapakilala ang layon ng pandiwa.",
+     "o3": "Pang-ukol ng lugar o direksiyon ang \"sa\"; hindi lugar ang sapatos.",
+     "o4": "Ang \"nang\" ay para sa paraan o panahon; ang sapatos ay layon ng pandiwa kaya \"ng\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SPOKEN-FORM",
+    "o3": "FIL-SPOKEN-FORM",
+    "o4": "FIL-SPOKEN-FORM"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0033",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "rin/din",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang wastong pangungusap tungkol sa mga bata sa bagong palaruan?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Masaya din ang mga bata sa bagong palaruan."
+    },
+    {
+     "option_id": "o2",
+     "text": "Masaya ring ang mga bata sa bagong palaruan."
+    },
+    {
+     "option_id": "o3",
+     "text": "Masaya rin ang mga bata sa bagong palaruan."
+    },
+    {
+     "option_id": "o4",
+     "text": "Masaya rin din ang mga bata sa bagong palaruan."
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Rin/din: \"rin\" pagkatapos ng patinig o malapatinig (w, y); \"din\" pagkatapos ng katinig.",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"Masaya rin ang mga bata sa bagong palaruan.\" dahil sa tuntuning ito: Rin/din: \"rin\" pagkatapos ng patinig o malapatinig (w, y); \"din\" pagkatapos ng katinig.",
+    "why_wrong": {
+     "o1": "Nagtatapos sa patinig ang \"masaya\", kaya \"rin\" ang dapat.",
+     "o2": "Walang pang-angkop na kailangan dito; hindi tama ang \"ring\" bago ang \"ang\".",
+     "o4": "Inuulit nang walang dahilan ang pananda."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SPOKEN-FORM",
+    "o2": "FIL-SPOKEN-FORM",
+    "o4": "FIL-SPOKEN-FORM"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0034",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "daw/raw",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Piliin ang wastong salita: \"Darating ____ ang inspektor mula sa probinsiya bukas ng umaga.\"",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "daw"
+    },
+    {
+     "option_id": "o2",
+     "text": "pa"
+    },
+    {
+     "option_id": "o3",
+     "text": "raw"
+    },
+    {
+     "option_id": "o4",
+     "text": "ba"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Daw/raw: \"raw\" pagkatapos ng patinig o w/y; \"daw\" pagkatapos ng katinig.",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"daw\" dahil sa tuntuning ito: Daw/raw: \"raw\" pagkatapos ng patinig o w/y; \"daw\" pagkatapos ng katinig.",
+    "why_wrong": {
+     "o2": "Nagbabago ang diwa: ang \"pa\" ay nagsasabing hindi pa ito nangyayari, hindi na may nagsabi lamang.",
+     "o3": "Nagtatapos sa katinig na \"g\" ang \"darating\", kaya \"daw\" ang tama.",
+     "o4": "Pananong ang \"ba\"; hindi ito pangungusap na patanong."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SPOKEN-FORM",
+    "o3": "FIL-SPOKEN-FORM",
+    "o4": "FIL-SPOKEN-FORM"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0035",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "may/mayroon",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Piliin ang wastong salita: \"____ bagong patakaran ang tanggapan tungkol sa pagpasok ng mga bisita.\"",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "May"
+    },
+    {
+     "option_id": "o2",
+     "text": "Mayron"
+    },
+    {
+     "option_id": "o3",
+     "text": "Meron"
+    },
+    {
+     "option_id": "o4",
+     "text": "Mayroon"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ginagamit ang \"may\" kapag sinusundan ng pangngalan, pandiwa o pang-uri; \"mayroon\" kapag may panghalip o kataga sa pagitan.",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"May\" dahil sa tuntuning ito: Ginagamit ang \"may\" kapag sinusundan ng pangngalan, pandiwa o pang-uri; \"mayroon\" kapag may panghalip o kataga sa pagitan.",
+    "why_wrong": {
+     "o2": "Maling baybay ng \"mayroon\".",
+     "o3": "Pabalbal na baybay ito ng \"mayroon\".",
+     "o4": "Kailangan ng \"mayroong\" (may -ng) kung susundan ng pang-uri; ang \"Mayroon bagong\" ay mali."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SPOKEN-FORM",
+    "o3": "FIL-SPOKEN-FORM",
+    "o4": "FIL-SPOKEN-FORM"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0036",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "-in/-an",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Piliin ang wastong salita: \"____ mo ang mga tuyong dahon at ilagay sa sako.\"",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Magwalis"
+    },
+    {
+     "option_id": "o2",
+     "text": "Walisan"
+    },
+    {
+     "option_id": "o3",
+     "text": "Walisin"
+    },
+    {
+     "option_id": "o4",
+     "text": "Winalis"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Hulaping -in: ang bagay na tinatanggal o ginagawan; hulaping -an: ang lugar na ginagawan.",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"Walisin\" dahil sa tuntuning ito: Hulaping -in: ang bagay na tinatanggal o ginagawan; hulaping -an: ang lugar na ginagawan.",
+    "why_wrong": {
+     "o1": "Hindi tugma ang \"mo\" sa anyong \"magwalis\".",
+     "o2": "Ang \"walisan\" ay para sa lugar na nililinis (walisan ang bakuran); ang dahon ang tinatanggal kaya \"walisin\".",
+     "o4": "Naganap na ito; utos ang pangungusap."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SPOKEN-FORM",
+    "o2": "FIL-SPOKEN-FORM",
+    "o4": "VEN-TENSE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0037",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "-in/-an",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Piliin ang wastong salita: \"Kailangang ____ si Lito sa susunod na linggo dahil sa apendisitis.\"",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "mag-opera"
+    },
+    {
+     "option_id": "o2",
+     "text": "inoperahan"
+    },
+    {
+     "option_id": "o3",
+     "text": "operahin"
+    },
+    {
+     "option_id": "o4",
+     "text": "operahan"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Operahan ang tao (pinaggagawan); operahin ang bahagi ng katawan na inaayos.",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"operahan\" dahil sa tuntuning ito: Operahan ang tao (pinaggagawan); operahin ang bahagi ng katawan na inaayos.",
+    "why_wrong": {
+     "o1": "Ang doktor ang nag-oopera; si Lito ang ooperahan.",
+     "o2": "Naganap na ito; ang pangungusap ay tungkol sa susunod na linggo.",
+     "o3": "Ang \"operahin\" ay para sa bahaging aalisin o aayusin (operahin ang bukol); ang tao ay \"operahan\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SPOKEN-FORM",
+    "o2": "VEN-TENSE",
+    "o3": "FIL-SPOKEN-FORM"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0038",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "pinto/pintuan",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Piliin ang wastong salita: \"Nakatayo ang guwardiya sa ____ ng bulwagan upang salubungin ang mga panauhin.\"",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pintuan"
+    },
+    {
+     "option_id": "o2",
+     "text": "pinto"
+    },
+    {
+     "option_id": "o3",
+     "text": "pintuhan"
+    },
+    {
+     "option_id": "o4",
+     "text": "bintana"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Pinto: ang isinasara at binubuksan. Pintuan: ang daanan o puwang na kinalalagyan nito.",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"pintuan\" dahil sa tuntuning ito: Pinto: ang isinasara at binubuksan. Pintuan: ang daanan o puwang na kinalalagyan nito.",
+    "why_wrong": {
+     "o2": "Ang \"pinto\" ay ang mismong tabla na isinasara at binubuksan; ang daanan o lugar ay \"pintuan\".",
+     "o3": "Maling anyo ito ng \"pintuan\".",
+     "o4": "Hindi daanan ng tao ang bintana."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SPOKEN-FORM",
+    "o3": "FIL-SPOKEN-FORM",
+    "o4": "FIL-SPOKEN-FORM"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0039",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "aspekto",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Piliin ang wastong anyo ng pandiwa: \"Bukas ng hapon ____ ang pulong ng konseho sa bulwagan.\"",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "ganapin"
+    },
+    {
+     "option_id": "o2",
+     "text": "ginaganap"
+    },
+    {
+     "option_id": "o3",
+     "text": "ginanap"
+    },
+    {
+     "option_id": "o4",
+     "text": "gaganapin"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Aspekto ng pandiwa: perpektibo (naganap na), imperpektibo (nagaganap), kontemplatibo (gaganapin pa).",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"gaganapin\" dahil sa tuntuning ito: Aspekto ng pandiwa: perpektibo (naganap na), imperpektibo (nagaganap), kontemplatibo (gaganapin pa).",
+    "why_wrong": {
+     "o1": "Pawatas o utos ito, hindi aspekto ng pandiwa.",
+     "o2": "Kasalukuyang nagaganap ito (imperpektibo).",
+     "o3": "Naganap na ito (perpektibo); \"bukas\" ang panahon kaya kontemplatibo."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SPOKEN-FORM",
+    "o2": "VEN-TENSE",
+    "o3": "VEN-TENSE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0040",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "kay/sa",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Piliin ang wastong salita: \"Ayon ____ Kapitan Reyes, sarado ang kalsada hanggang Biyernes.\"",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "kay"
+    },
+    {
+     "option_id": "o2",
+     "text": "sa"
+    },
+    {
+     "option_id": "o3",
+     "text": "ni"
+    },
+    {
+     "option_id": "o4",
+     "text": "kina"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Ayon sa + karaniwang pangngalan; ayon kay + pangalan ng isang tao; ayon kina + pangalan ng dalawa o higit pa.",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"kay\" dahil sa tuntuning ito: Ayon sa + karaniwang pangngalan; ayon kay + pangalan ng isang tao; ayon kina + pangalan ng dalawa o higit pa.",
+    "why_wrong": {
+     "o2": "Ang \"ayon sa\" ay para sa karaniwang pangngalan (ayon sa ulat); sa pangalan ng tao ay \"ayon kay\".",
+     "o3": "Hindi ginagamit ang \"ni\" pagkatapos ng \"ayon\".",
+     "o4": "Pangmaramihan ang \"kina\"; iisa lamang ang kapitan."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SPOKEN-FORM",
+    "o3": "FIL-SPOKEN-FORM",
+    "o4": "FIL-SPOKEN-FORM"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0041",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "kina/nina",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Piliin ang wastong salita: \"Ipinadala ng kalihim ang paanyaya ____ Ana at Ben.\"",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "kina"
+    },
+    {
+     "option_id": "o2",
+     "text": "sina"
+    },
+    {
+     "option_id": "o3",
+     "text": "kay"
+    },
+    {
+     "option_id": "o4",
+     "text": "nina"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Kina: pinag-uukulan na dalawa o higit pa. Nina: gumagawa. Sina: paksa.",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"kina\" dahil sa tuntuning ito: Kina: pinag-uukulan na dalawa o higit pa. Nina: gumagawa. Sina: paksa.",
+    "why_wrong": {
+     "o2": "Pananda ng paksa ang \"sina\"; ang paanyaya ang paksa ng pangungusap.",
+     "o3": "Pang-isahan ang \"kay\"; dalawa ang tatanggap.",
+     "o4": "Ang \"nina\" ay pananda ng gumagawa (ipinadala nina Ana); dito sila ang tatanggap kaya \"kina\"."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "FIL-SPOKEN-FORM",
+    "o3": "FIL-SPOKEN-FORM",
+    "o4": "FIL-SPOKEN-FORM"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0042",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Balarila",
+   "concept": "gitling",
+   "micro_skill": "pumili ng wastong gamit ayon sa tuntunin",
+   "archetype": "VFIL-BALARILA",
+   "difficulty": "medium",
+   "est_seconds": 30,
+   "language": "fil",
+   "stem": "Alin ang wastong baybay ayon sa tuntunin ng gitling?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "magaaral"
+    },
+    {
+     "option_id": "o2",
+     "text": "mag-aaral"
+    },
+    {
+     "option_id": "o3",
+     "text": "mag aaral"
+    },
+    {
+     "option_id": "o4",
+     "text": "mag-araal"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Ginigitlingan ang unlaping nagtatapos sa katinig kapag sinusundan ng ugat na nagsisimula sa patinig (mag-aral, mag-aaral).",
+    "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama.",
+    "why_correct": "Tama ang \"mag-aaral\" dahil sa tuntuning ito: Ginigitlingan ang unlaping nagtatapos sa katinig kapag sinusundan ng ugat na nagsisimula sa patinig (mag-aral, mag-aaral).",
+    "why_wrong": {
+     "o1": "Kailangan ng gitling kapag ang unlaping nagtatapos sa katinig ay sinusundan ng salitang-ugat na nagsisimula sa patinig.",
+     "o3": "Hindi hinihiwalay ng puwang ang unlapi sa salitang-ugat.",
+     "o4": "Mali ang pag-uulit: ang inuulit ay ang unang pantig ng ugat (a), kaya mag-aaral."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "FIL-SPOKEN-FORM",
+    "o3": "FIL-SPOKEN-FORM",
+    "o4": "FIL-SPOKEN-FORM"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Tingnan ang salitang kasunod o nauuna: ito ang nagsasabi kung aling anyo ang tama."
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0043",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Pag-unawa sa binasa",
+   "concept": "pangunahing ideya",
+   "micro_skill": "unawain ang detalye at hinuha mula sa talata",
+   "archetype": "VFIL-PAGBASA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "fil",
+   "stem": "Basahin ang talata at sagutin ang tanong.\n\nSa bayan ng San Isidro, sinimulan ng pamahalaang lokal ang programang \"Gulayan sa Bakuran\" noong tag-ulan. Binigyan ang bawat pamilyang kasali ng binhi ng pechay, talong at kamatis, pati ng maikling pagsasanay sa paggawa ng abono mula sa tirang pagkain. Sa unang tatlong buwan, mahigit dalawang daang bakuran ang natamnan. Napansin ng mga nanay na nakatipid sila sa pamamalengke, at may ilan pang nakapagbenta ng sobrang ani sa kapitbahay. Ayon sa agriculturist ng bayan, mas masigasig ang mga pamilyang may kasamang bata dahil ang mga bata ang nagpapaalala sa araw-araw na pagdidilig. Gayunman, hindi lahat ay nagtagumpay. Ang mga pamilyang nakatira sa masisikip na eskinita ay walang sapat na lupa o sikat ng araw. Para sa kanila, nagbukas ang barangay ng isang pampublikong taniman sa likod ng paaralan, kung saan maaari silang maghati-hati sa maliliit na tumpok ng lupa. Sa ngayon, pinag-aaralan ng munisipyo kung paano ito gagawing tuloy-tuloy kahit sa tag-araw, kapag kakaunti ang tubig.\n\nAno ang pangunahing paksa ng talata?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Ang mataas na presyo ng gulay sa mga palengke"
+    },
+    {
+     "option_id": "o2",
+     "text": "Ang paggawa ng abono mula sa tirang pagkain"
+    },
+    {
+     "option_id": "o3",
+     "text": "Ang programang pantaniman ng bayan, ang mga bunga nito at ang mga hamong hinarap"
+    },
+    {
+     "option_id": "o4",
+     "text": "Ang kakulangan ng tubig sa buong lalawigan tuwing tag-araw"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Detalye: tahasang sinabi sa talata. Hinuha: makatwirang konklusyon mula sa sinabi, hindi hula.",
+    "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+    "why_correct": "Ang tamang sagot ay \"Ang programang pantaniman ng bayan, ang mga bunga nito at ang mga hamong hinarap\" dahil ito ang tuwirang sinusuportahan ng talata, hindi lamang bahagi nito o labis na pahayag.",
+    "why_wrong": {
+     "o1": "Pagtitipid ang sinabi, hindi presyo sa palengke.",
+     "o2": "Bahagi lamang ng pagsasanay ang abono; hindi ito ang buong talata.",
+     "o4": "Binanggit ang tubig sa dulo bilang alalahanin, hindi bilang paksa, at walang sinabing buong lalawigan."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-TOO-NARROW",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "Passage CIVIO-D1022-SPFIL-P1, question 1 of 2. New original draft, 22 Oct 2026 (GT approved).",
+   "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+   "passage_id": "CIVIO-D1022-SPFIL-P1"
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0044",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Pag-unawa sa binasa",
+   "concept": "hinuha",
+   "micro_skill": "unawain ang detalye at hinuha mula sa talata",
+   "archetype": "VFIL-PAGBASA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "fil",
+   "stem": "Basahin ang talata at sagutin ang tanong.\n\nSa bayan ng San Isidro, sinimulan ng pamahalaang lokal ang programang \"Gulayan sa Bakuran\" noong tag-ulan. Binigyan ang bawat pamilyang kasali ng binhi ng pechay, talong at kamatis, pati ng maikling pagsasanay sa paggawa ng abono mula sa tirang pagkain. Sa unang tatlong buwan, mahigit dalawang daang bakuran ang natamnan. Napansin ng mga nanay na nakatipid sila sa pamamalengke, at may ilan pang nakapagbenta ng sobrang ani sa kapitbahay. Ayon sa agriculturist ng bayan, mas masigasig ang mga pamilyang may kasamang bata dahil ang mga bata ang nagpapaalala sa araw-araw na pagdidilig. Gayunman, hindi lahat ay nagtagumpay. Ang mga pamilyang nakatira sa masisikip na eskinita ay walang sapat na lupa o sikat ng araw. Para sa kanila, nagbukas ang barangay ng isang pampublikong taniman sa likod ng paaralan, kung saan maaari silang maghati-hati sa maliliit na tumpok ng lupa. Sa ngayon, pinag-aaralan ng munisipyo kung paano ito gagawing tuloy-tuloy kahit sa tag-araw, kapag kakaunti ang tubig.\n\nBakit nagbukas ang barangay ng pampublikong taniman sa likod ng paaralan?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Upang doon na lamang magtanim ang lahat ng pamilya"
+    },
+    {
+     "option_id": "o2",
+     "text": "Dahil nabigo ang lahat ng bakuran sa unang tatlong buwan"
+    },
+    {
+     "option_id": "o3",
+     "text": "Para may dagdag na kita ang paaralan"
+    },
+    {
+     "option_id": "o4",
+     "text": "Para may mataniman ang mga pamilyang walang sapat na lupa o araw sa kanilang tirahan"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Detalye: tahasang sinabi sa talata. Hinuha: makatwirang konklusyon mula sa sinabi, hindi hula.",
+    "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+    "why_correct": "Ang tamang sagot ay \"Para may mataniman ang mga pamilyang walang sapat na lupa o araw sa kanilang tirahan\" dahil ito ang tuwirang sinusuportahan ng talata, hindi lamang bahagi nito o labis na pahayag.",
+    "why_wrong": {
+     "o1": "Para lamang ito sa mga walang sapat na lupa, hindi sa lahat.",
+     "o2": "Mahigit dalawang daang bakuran ang natamnan; hindi lahat nabigo.",
+     "o3": "Walang binanggit na kita ng paaralan."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-EXTREME",
+    "o2": "RC-EXTREME",
+    "o3": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "Passage CIVIO-D1022-SPFIL-P1, question 2 of 2. New original draft, 22 Oct 2026 (GT approved).",
+   "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+   "passage_id": "CIVIO-D1022-SPFIL-P1"
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0045",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Pag-unawa sa binasa",
+   "concept": "detalye",
+   "micro_skill": "unawain ang detalye at hinuha mula sa talata",
+   "archetype": "VFIL-PAGBASA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "fil",
+   "stem": "Basahin ang talata at sagutin ang tanong.\n\nTuwing Lunes, maaga pa lamang ay mahaba na ang pila sa tanggapan ng sibil na rehistro. Karamihan sa mga nakapila ay kumukuha ng kopya ng sertipiko ng kapanganakan para sa trabaho o pasaporte. Upang mabawasan ang paghihintay, naglagay ang tanggapan ng isang mesa ng paunang pagsusuri sa may pintuan. Doon, sinisiyasat ng isang kawani kung kumpleto ang mga dala ng aplikante bago pa siya pumila. Ang mga kulang ang papeles ay agad na sinasabihan kung ano ang kailangan, sa halip na malaman pa nila ito pagkatapos ng dalawang oras na paghihintay. Ayon sa tala ng tanggapan, bumaba sa kalahati ang karaniwang oras ng paghihintay pagkaraan ng isang buwan. May ilang aplikanteng nagreklamo noong una dahil inakala nilang dagdag na pila lamang ang mesa, ngunit nang makita nila ang bilis ng serbisyo, nawala ang kanilang reklamo. Balak ngayon ng tanggapan na ipaskil sa internet ang listahan ng mga kailangang dokumento, upang mas kaunti pa ang bumabalik dahil kulang ang dala.\n\nAno ang ginagawa sa mesa ng paunang pagsusuri?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Doon itinatala ang mga reklamo ng aplikante"
+    },
+    {
+     "option_id": "o2",
+     "text": "Doon na mismo inilalabas ang sertipiko ng kapanganakan"
+    },
+    {
+     "option_id": "o3",
+     "text": "Tinitingnan kung kumpleto ang dalang dokumento bago pumila ang aplikante"
+    },
+    {
+     "option_id": "o4",
+     "text": "Doon tinatanggap ang bayad para sa pasaporte"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Detalye: tahasang sinabi sa talata. Hinuha: makatwirang konklusyon mula sa sinabi, hindi hula.",
+    "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+    "why_correct": "Ang tamang sagot ay \"Tinitingnan kung kumpleto ang dalang dokumento bago pumila ang aplikante\" dahil ito ang tuwirang sinusuportahan ng talata, hindi lamang bahagi nito o labis na pahayag.",
+    "why_wrong": {
+     "o1": "May reklamo noong una, pero hindi iyon ang tungkulin ng mesa.",
+     "o2": "Pagsusuri lamang ng papeles ang ginagawa roon, hindi paglalabas ng sertipiko.",
+     "o4": "Walang binanggit na bayad sa pasaporte."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-SUPPORTED-NOT-ASKED",
+    "o2": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "Passage CIVIO-D1022-SPFIL-P2, question 1 of 2. New original draft, 22 Oct 2026 (GT approved).",
+   "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+   "passage_id": "CIVIO-D1022-SPFIL-P2"
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0046",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Pag-unawa sa binasa",
+   "concept": "hinuha",
+   "micro_skill": "unawain ang detalye at hinuha mula sa talata",
+   "archetype": "VFIL-PAGBASA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "fil",
+   "stem": "Basahin ang talata at sagutin ang tanong.\n\nTuwing Lunes, maaga pa lamang ay mahaba na ang pila sa tanggapan ng sibil na rehistro. Karamihan sa mga nakapila ay kumukuha ng kopya ng sertipiko ng kapanganakan para sa trabaho o pasaporte. Upang mabawasan ang paghihintay, naglagay ang tanggapan ng isang mesa ng paunang pagsusuri sa may pintuan. Doon, sinisiyasat ng isang kawani kung kumpleto ang mga dala ng aplikante bago pa siya pumila. Ang mga kulang ang papeles ay agad na sinasabihan kung ano ang kailangan, sa halip na malaman pa nila ito pagkatapos ng dalawang oras na paghihintay. Ayon sa tala ng tanggapan, bumaba sa kalahati ang karaniwang oras ng paghihintay pagkaraan ng isang buwan. May ilang aplikanteng nagreklamo noong una dahil inakala nilang dagdag na pila lamang ang mesa, ngunit nang makita nila ang bilis ng serbisyo, nawala ang kanilang reklamo. Balak ngayon ng tanggapan na ipaskil sa internet ang listahan ng mga kailangang dokumento, upang mas kaunti pa ang bumabalik dahil kulang ang dala.\n\nAno ang mahihinuha kung bakit nawala ang reklamo ng mga aplikante?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Pinagbawalan silang magreklamo ng mga kawani"
+    },
+    {
+     "option_id": "o2",
+     "text": "Lumipat sila sa ibang tanggapan na walang pila"
+    },
+    {
+     "option_id": "o3",
+     "text": "Inalis na ng tanggapan ang mesa ng paunang pagsusuri"
+    },
+    {
+     "option_id": "o4",
+     "text": "Nakita nilang napabilis ng mesa ang kanilang pagkuha ng serbisyo"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Detalye: tahasang sinabi sa talata. Hinuha: makatwirang konklusyon mula sa sinabi, hindi hula.",
+    "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+    "why_correct": "Ang tamang sagot ay \"Nakita nilang napabilis ng mesa ang kanilang pagkuha ng serbisyo\" dahil ito ang tuwirang sinusuportahan ng talata, hindi lamang bahagi nito o labis na pahayag.",
+    "why_wrong": {
+     "o1": "Walang ganitong sinabi ang talata.",
+     "o2": "Walang binanggit na ibang tanggapan.",
+     "o3": "Walang sinabing inalis ang mesa; ang balak pa nga ay dagdagan ang tulong sa internet."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-NOT-IN-TEXT",
+    "o3": "RC-OPPOSITE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "Passage CIVIO-D1022-SPFIL-P2, question 2 of 2. New original draft, 22 Oct 2026 (GT approved).",
+   "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+   "passage_id": "CIVIO-D1022-SPFIL-P2"
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0047",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Pag-unawa sa binasa",
+   "concept": "detalye",
+   "micro_skill": "unawain ang detalye at hinuha mula sa talata",
+   "archetype": "VFIL-PAGBASA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "fil",
+   "stem": "Basahin ang talata at sagutin ang tanong.\n\nIsa sa pinakamatandang tradisyon sa mga baybaying nayon ang bayanihan sa paglulunsad ng bangka. Kapag may bagong bangkang yari sa kahoy, nagtitipon ang mga kalalakihan upang buhatin ito mula sa pagawaan hanggang sa dalampasigan. Karaniwang ginagawa ito sa umaga, bago tumaas ang tubig, habang umaawit ang matatanda upang magsabay-sabay ang hakbang ng mga nagbubuhat. Ang mga kababaihan naman ay naghahanda ng nilagang saging at kape para sa lahat. Walang bayad ang tulong; ang inaasahan lamang ay ang pagbabalik ng pabor kapag ang ibang pamilya naman ang may ilulunsad. Sa paglipas ng panahon, napalitan ng fiberglass ang maraming bangka, at mas magaan na ang mga ito. Hindi na kailangan ang dalawampung katao para buhatin ang isang bangka. Gayunpaman, ipinagpapatuloy pa rin ng ilang nayon ang pagtitipon. Para sa matatanda, ang mahalaga ay hindi na ang bigat ng bangka kundi ang pagkakataong magkita-kita ang magkakapitbahay at ipakita sa kabataan kung paano nagtutulungan ang isang komunidad.\n\nAyon sa talata, bakit ipinagpapatuloy pa rin ang pagtitipon kahit magaan na ang mga bangka?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Upang kumita ang mga kalalakihan sa pagbubuhat"
+    },
+    {
+     "option_id": "o2",
+     "text": "Dahil mabigat pa rin ang mga bangkang fiberglass"
+    },
+    {
+     "option_id": "o3",
+     "text": "Upang mapanatili ang samahan ng magkakapitbahay at maipasa ang pagtutulungan sa kabataan"
+    },
+    {
+     "option_id": "o4",
+     "text": "Dahil iniuutos ito ng pamahalaang lokal"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Detalye: tahasang sinabi sa talata. Hinuha: makatwirang konklusyon mula sa sinabi, hindi hula.",
+    "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+    "why_correct": "Ang tamang sagot ay \"Upang mapanatili ang samahan ng magkakapitbahay at maipasa ang pagtutulungan sa kabataan\" dahil ito ang tuwirang sinusuportahan ng talata, hindi lamang bahagi nito o labis na pahayag.",
+    "why_wrong": {
+     "o1": "Walang bayad ang tulong ayon sa talata.",
+     "o2": "Sinabi ng talata na mas magaan na ang mga ito.",
+     "o4": "Walang binanggit na utos ng pamahalaan."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o2": "RC-OPPOSITE",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "Passage CIVIO-D1022-SPFIL-P3, question 1 of 2. New original draft, 22 Oct 2026 (GT approved).",
+   "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+   "passage_id": "CIVIO-D1022-SPFIL-P3"
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0048",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Pag-unawa sa binasa",
+   "concept": "kahulugan sa konteksto",
+   "micro_skill": "unawain ang detalye at hinuha mula sa talata",
+   "archetype": "VFIL-PAGBASA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "fil",
+   "stem": "Basahin ang talata at sagutin ang tanong.\n\nIsa sa pinakamatandang tradisyon sa mga baybaying nayon ang bayanihan sa paglulunsad ng bangka. Kapag may bagong bangkang yari sa kahoy, nagtitipon ang mga kalalakihan upang buhatin ito mula sa pagawaan hanggang sa dalampasigan. Karaniwang ginagawa ito sa umaga, bago tumaas ang tubig, habang umaawit ang matatanda upang magsabay-sabay ang hakbang ng mga nagbubuhat. Ang mga kababaihan naman ay naghahanda ng nilagang saging at kape para sa lahat. Walang bayad ang tulong; ang inaasahan lamang ay ang pagbabalik ng pabor kapag ang ibang pamilya naman ang may ilulunsad. Sa paglipas ng panahon, napalitan ng fiberglass ang maraming bangka, at mas magaan na ang mga ito. Hindi na kailangan ang dalawampung katao para buhatin ang isang bangka. Gayunpaman, ipinagpapatuloy pa rin ng ilang nayon ang pagtitipon. Para sa matatanda, ang mahalaga ay hindi na ang bigat ng bangka kundi ang pagkakataong magkita-kita ang magkakapitbahay at ipakita sa kabataan kung paano nagtutulungan ang isang komunidad.\n\nSa talata, ano ang ibig sabihin ng \"pagbabalik ng pabor\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Pagtulong din sa pamilyang tumulong sa iyo kapag sila naman ang nangangailangan"
+    },
+    {
+     "option_id": "o2",
+     "text": "Pagbabayad ng utang sa pagawaan"
+    },
+    {
+     "option_id": "o3",
+     "text": "Paghingi ng tawad sa matatanda"
+    },
+    {
+     "option_id": "o4",
+     "text": "Pagsasauli ng hiniram na bangka"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Detalye: tahasang sinabi sa talata. Hinuha: makatwirang konklusyon mula sa sinabi, hindi hula.",
+    "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+    "why_correct": "Ang tamang sagot ay \"Pagtulong din sa pamilyang tumulong sa iyo kapag sila naman ang nangangailangan\" dahil ito ang tuwirang sinusuportahan ng talata, hindi lamang bahagi nito o labis na pahayag.",
+    "why_wrong": {
+     "o2": "Walang utang na binanggit.",
+     "o3": "Walang kinalaman ang paghingi ng tawad sa pagtutulungan.",
+     "o4": "Walang hiniram na bangka sa talata; tulong ang ibinabalik."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-NOT-IN-TEXT",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "Passage CIVIO-D1022-SPFIL-P3, question 2 of 2. New original draft, 22 Oct 2026 (GT approved).",
+   "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+   "passage_id": "CIVIO-D1022-SPFIL-P3"
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0049",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Pag-unawa sa binasa",
+   "concept": "detalye",
+   "micro_skill": "unawain ang detalye at hinuha mula sa talata",
+   "archetype": "VFIL-PAGBASA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "fil",
+   "stem": "Basahin ang talata at sagutin ang tanong.\n\nNoong nakaraang taon, nagpasya ang isang pampublikong mataas na paaralan sa Quezon na ipagbawal ang paggamit ng cellphone sa loob ng silid-aralan. Hindi kinumpiska ang mga telepono; sa halip, inilalagay ang mga ito sa isang kahon sa harap ng klase at ibinabalik tuwing oras ng pahinga at uwian. Sa simula, maraming mag-aaral ang tumutol dahil ginagamit daw nila ang telepono sa pananaliksik. Ilang guro rin ang nag-alinlangan dahil baka mahirapan silang bantayan ang kahon araw-araw. Kaya pinayagan ng paaralan ang paggamit nito sa mga takdang gawain na may pahintulot ng guro. Pagkaraan ng isang semestre, napansin ng mga guro na mas aktibo ang talakayan at mas kaunti ang nahuhuli sa pagsusumite ng takdang-aralin. Sinabi naman ng ilang magulang na mas madalas nang nakikipag-usap ang kanilang mga anak sa hapag-kainan. Hindi pa tiyak kung ang mga pagbabagong ito ay dahil lamang sa patakaran, ngunit balak ng paaralan na ituloy ito at pag-aralan nang mas maigi sa susunod na taon.\n\nAno ang ginawa ng paaralan matapos tumutol ang mga mag-aaral?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Tuluyang kinumpiska ang lahat ng telepono"
+    },
+    {
+     "option_id": "o2",
+     "text": "Inalis na ang buong patakaran"
+    },
+    {
+     "option_id": "o3",
+     "text": "Pinayagan ang paggamit ng telepono sa mga gawaing may pahintulot ng guro"
+    },
+    {
+     "option_id": "o4",
+     "text": "Pinatawag ang mga magulang sa paaralan"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Detalye: tahasang sinabi sa talata. Hinuha: makatwirang konklusyon mula sa sinabi, hindi hula.",
+    "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+    "why_correct": "Ang tamang sagot ay \"Pinayagan ang paggamit ng telepono sa mga gawaing may pahintulot ng guro\" dahil ito ang tuwirang sinusuportahan ng talata, hindi lamang bahagi nito o labis na pahayag.",
+    "why_wrong": {
+     "o1": "Hindi kinumpiska ang mga telepono, ayon sa talata.",
+     "o2": "Balak pa ngang ituloy ang patakaran.",
+     "o4": "Walang binanggit na pagpapatawag sa magulang."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o2": "RC-OPPOSITE",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "Passage CIVIO-D1022-SPFIL-P4, question 1 of 2. New original draft, 22 Oct 2026 (GT approved).",
+   "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+   "passage_id": "CIVIO-D1022-SPFIL-P4"
+  },
+  {
+   "id": "CIVIO-D1022-SPFIL-0050",
+   "track": "subprofessional",
+   "domain": "verbal_fil",
+   "competency": "Pag-unawa sa binasa",
+   "concept": "hinuha",
+   "micro_skill": "unawain ang detalye at hinuha mula sa talata",
+   "archetype": "VFIL-PAGBASA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "fil",
+   "stem": "Basahin ang talata at sagutin ang tanong.\n\nNoong nakaraang taon, nagpasya ang isang pampublikong mataas na paaralan sa Quezon na ipagbawal ang paggamit ng cellphone sa loob ng silid-aralan. Hindi kinumpiska ang mga telepono; sa halip, inilalagay ang mga ito sa isang kahon sa harap ng klase at ibinabalik tuwing oras ng pahinga at uwian. Sa simula, maraming mag-aaral ang tumutol dahil ginagamit daw nila ang telepono sa pananaliksik. Ilang guro rin ang nag-alinlangan dahil baka mahirapan silang bantayan ang kahon araw-araw. Kaya pinayagan ng paaralan ang paggamit nito sa mga takdang gawain na may pahintulot ng guro. Pagkaraan ng isang semestre, napansin ng mga guro na mas aktibo ang talakayan at mas kaunti ang nahuhuli sa pagsusumite ng takdang-aralin. Sinabi naman ng ilang magulang na mas madalas nang nakikipag-usap ang kanilang mga anak sa hapag-kainan. Hindi pa tiyak kung ang mga pagbabagong ito ay dahil lamang sa patakaran, ngunit balak ng paaralan na ituloy ito at pag-aralan nang mas maigi sa susunod na taon.\n\nAno ang pinakaangkop na hinuha tungkol sa mga resulta ng patakaran?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Napatunayang ang patakaran lamang ang dahilan ng lahat ng pagbabago"
+    },
+    {
+     "option_id": "o2",
+     "text": "Walang naging epekto ang patakaran"
+    },
+    {
+     "option_id": "o3",
+     "text": "Mukhang nakatulong ito, ngunit kailangan pang pag-aralan kung ito talaga ang sanhi"
+    },
+    {
+     "option_id": "o4",
+     "text": "Lumala ang pagsusumite ng takdang-aralin"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Detalye: tahasang sinabi sa talata. Hinuha: makatwirang konklusyon mula sa sinabi, hindi hula.",
+    "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+    "why_correct": "Ang tamang sagot ay \"Mukhang nakatulong ito, ngunit kailangan pang pag-aralan kung ito talaga ang sanhi\" dahil ito ang tuwirang sinusuportahan ng talata, hindi lamang bahagi nito o labis na pahayag.",
+    "why_wrong": {
+     "o1": "Sinabi mismo ng talata na hindi pa tiyak kung dahil lamang sa patakaran.",
+     "o2": "May napansing pagbabago ang mga guro at magulang.",
+     "o4": "Mas kaunti ang nahuhuli, ayon sa talata."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-EXTREME",
+    "o2": "RC-OPPOSITE",
+    "o4": "RC-OPPOSITE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "Passage CIVIO-D1022-SPFIL-P4, question 2 of 2. New original draft, 22 Oct 2026 (GT approved).",
+   "shortcut": "Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
+   "passage_id": "CIVIO-D1022-SPFIL-P4"
+  }
+ ]
+}

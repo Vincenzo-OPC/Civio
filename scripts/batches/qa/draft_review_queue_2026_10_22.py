@@ -170,6 +170,9 @@ def main():
                     flags.append("near_dup_approved"); break
             for j in range(idx):
                 t2 = pool_toks[j]
+                pj = pool_list[j]["item"].get("passage_id")
+                if pj and pj == i.get("passage_id"):
+                    continue  # questions of one passage set share the passage text by design
                 if len(t2) >= 6 and len(t & t2) / len(t | t2) >= 0.9:
                     flags.append(f"near_dup_draft:{pool_list[j]['item'].get('id')}"); break
         d, s = i.get("difficulty"), i.get("est_seconds")

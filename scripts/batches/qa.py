@@ -172,6 +172,9 @@ def solve_ana(it):
 from fixes import spell_words
 CORRECT = set(clerical.WORDS) | {w for w, _ in spell_words.T} | set(spell_words.FOILS)
 MISSPELT = {m: (w, c) for w, ms in spell_words.T for m, c in ms}
+from drafts.spell_2026_10_22 import SPELL as _SPELL22  # 22 Oct 2026 draft targets
+CORRECT |= {w for w, *_ in _SPELL22}
+MISSPELT.update({m: (w, c) for w, ms, *_ in _SPELL22 for m, c in ms})
 
 
 def solve_cler(it):
@@ -357,7 +360,14 @@ def check_item(it):
     if it.get("concept") in ("synonyms", "antonyms") and "RC-OPPOSITE" in codes:
         errs.append("synonym/antonym traps must use VRB-SYNONYM-TRAP / VRB-ANTONYM-TRAP")
     d = it["domain"]
-    if d == "general_information" and not it.get("_legacy"):
+    if d == "general_information" and "_fact22" in it:  # 22 Oct 2026 applied GI drafts: verified row table, quote checked by the build
+        from drafts import gi_2026_10_22 as _g22
+        f = _g22.ALL[it["_fact22"]]
+        if it["source_url"] != f[0] or it["source_url"] not in _g22.URLS:
+            errs.append("GI url not verified")
+        if it["stem"] != f[3] or key_text(it) != f[4] or it.get("source_quote") != f[6]:
+            errs.append("GI key mismatch")
+    elif d == "general_information" and not it.get("_legacy"):
         if it["source_url"] not in GI_URLS:
             errs.append("GI url not verified")
         f = gi_facts.F[it["_fact"]] if "_fact" in it else next((x for x in gi_facts.F if x[2] == it["stem"]), None)
@@ -367,6 +377,9 @@ def check_item(it):
         if not any(ARMA.format(n) in it["reveal"]["why_correct"] for n in range(1, 9)):
             errs.append("filing item lacks ARMA note")
     solver = None if it.get("_legacy") else {"numerical": solve_num, "analytical": solve_ana, "clerical": solve_cler, "verbal_en": solve_verb}.get(d)
+    if solver and it.get("recipe"):  # 22 Oct 2026 drafts: recompute through the item's recipe (drafts/solver_2026_10_22.py)
+        from drafts import solver_2026_10_22 as _s22
+        solver = None if it["recipe"].get("op") == "judgment" else _s22.solve
     if solver:
         exp = solver(it)
         if exp is None:

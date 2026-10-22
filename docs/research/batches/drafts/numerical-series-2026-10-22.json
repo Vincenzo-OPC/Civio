@@ -1,0 +1,998 @@
+{
+ "batch": "numerical-series-2026-10-22",
+ "date": "2026-10-22",
+ "status": "draft",
+ "spec_version": "0.1.9",
+ "authority": "GT approval 2026-10-22 and MASTER directive 2026-10-22; drafts only, nothing approved, signed or imported",
+ "count": 13,
+ "items": [
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0001",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Find the next number in the series: 7, 12, 17, 22, 27, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "32"
+    },
+    {
+     "option_id": "o2",
+     "text": "54"
+    },
+    {
+     "option_id": "o3",
+     "text": "31"
+    },
+    {
+     "option_id": "o4",
+     "text": "35"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: add 5 each time. Applied to 27, the next term is 32. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o2": "54 doubles the last term.",
+     "o3": "31 adds 4 instead of 5.",
+     "o4": "35 adds 8, a step not in the series."
+    },
+    "method_steps": {
+     "1_asked": "Find the next number in the series: 7, 12, 17, 22, 27, ___",
+     "2_givens": "7,, 12,, 17,, 22,, 27,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: add 5 each time. Applied to 27, the next term is 32. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 32 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "54: 54 doubles the last term. 31: 31 adds 4 instead of 5. 35: 35 adds 8, a step not in the series.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0002",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next: 3, 5, 9, 15, 23, ___?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "32"
+    },
+    {
+     "option_id": "o2",
+     "text": "33"
+    },
+    {
+     "option_id": "o3",
+     "text": "31"
+    },
+    {
+     "option_id": "o4",
+     "text": "46"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: the differences grow by 2 (2, 4, 6, 8, so next +10). Applied to 23, the next term is 33. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o1": "32 adds 9; the gaps grow by 2, not 1.",
+     "o3": "31 repeats the last difference of 8.",
+     "o4": "46 doubles the last term."
+    },
+    "method_steps": {
+     "1_asked": "What number comes next: 3, 5, 9, 15, 23, ___?",
+     "2_givens": "3,, 5,, 9,, 15,, 23,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: the differences grow by 2 (2, 4, 6, 8, so next +10). Applied to 23, the next term is 33. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 33 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "32: 32 adds 9; the gaps grow by 2, not 1. 31: 31 repeats the last difference of 8. 46: 46 doubles the last term.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o3": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0003",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Complete the series with the most logical number: 2, 6, 18, 54, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "90"
+    },
+    {
+     "option_id": "o2",
+     "text": "162"
+    },
+    {
+     "option_id": "o3",
+     "text": "160"
+    },
+    {
+     "option_id": "o4",
+     "text": "108"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: multiply by 3. Applied to 54, the next term is 162. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o1": "90 adds 36 as if the gap were constant.",
+     "o3": "160 slips by 2 in the multiplication.",
+     "o4": "108 multiplies by 2."
+    },
+    "method_steps": {
+     "1_asked": "Complete the series with the most logical number: 2, 6, 18, 54, ___",
+     "2_givens": "2,, 6,, 18,, 54,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: multiply by 3. Applied to 54, the next term is 162. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 162 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "90: 90 adds 36 as if the gap were constant. 160: 160 slips by 2 in the multiplication. 108: 108 multiplies by 2.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0004",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Study the pattern and supply the missing term: 4, 9, 19, 39, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "79"
+    },
+    {
+     "option_id": "o2",
+     "text": "78"
+    },
+    {
+     "option_id": "o3",
+     "text": "80"
+    },
+    {
+     "option_id": "o4",
+     "text": "59"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: double and add 1. Applied to 39, the next term is 79. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o2": "78 doubles but forgets the +1.",
+     "o3": "80 doubles and adds 2.",
+     "o4": "59 adds the last gap of 20 again."
+    },
+    "method_steps": {
+     "1_asked": "Study the pattern and supply the missing term: 4, 9, 19, 39, ___",
+     "2_givens": "4,, 9,, 19,, 39,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: double and add 1. Applied to 39, the next term is 79. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 79 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "78: 78 doubles but forgets the +1. 80: 80 doubles and adds 2. 59: 59 adds the last gap of 20 again.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0005",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Which number continues this sequence best: 2, 7, 22, 67, ___?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "112"
+    },
+    {
+     "option_id": "o2",
+     "text": "135"
+    },
+    {
+     "option_id": "o3",
+     "text": "202"
+    },
+    {
+     "option_id": "o4",
+     "text": "201"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: multiply by 3 and add 1. Applied to 67, the next term is 202. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o1": "112 adds the last gap of 45 again.",
+     "o2": "135 doubles and adds 1.",
+     "o4": "201 multiplies by 3 but forgets the +1."
+    },
+    "method_steps": {
+     "1_asked": "Which number continues this sequence best: 2, 7, 22, 67, ___?",
+     "2_givens": "2,, 7,, 22,, 67,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: multiply by 3 and add 1. Applied to 67, the next term is 202. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 202 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "112: 112 adds the last gap of 45 again. 135: 135 doubles and adds 1. 201: 201 multiplies by 3 but forgets the +1.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0006",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-ALT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Find the next number in the series: 6, 30, 9, 27, 12, 24, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "14"
+    },
+    {
+     "option_id": "o2",
+     "text": "21"
+    },
+    {
+     "option_id": "o3",
+     "text": "15"
+    },
+    {
+     "option_id": "o4",
+     "text": "36"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: two series take turns: 6, 9, 12 (+3) and 30, 27, 24 (−3). Applied to 24, the next term is 15. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o1": "14 adds 2 instead of 3 to the first series.",
+     "o2": "21 continues the second series, but the next position belongs to the first.",
+     "o4": "36 adds 12 to the last term."
+    },
+    "method_steps": {
+     "1_asked": "Find the next number in the series: 6, 30, 9, 27, 12, 24, ___",
+     "2_givens": "6,, 30,, 9,, 27,, 12,, 24,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: two series take turns: 6, 9, 12 (+3) and 30, 27, 24 (−3). Applied to 24, the next term is 15. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 15 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "14: 14 adds 2 instead of 3 to the first series. 21: 21 continues the second series, but the next position belongs to the first. 36: 36 adds 12 to the last term.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0007",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next: 2, 3, 5, 8, 13, 21, ___?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "29"
+    },
+    {
+     "option_id": "o2",
+     "text": "33"
+    },
+    {
+     "option_id": "o3",
+     "text": "34"
+    },
+    {
+     "option_id": "o4",
+     "text": "42"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: each term is the sum of the two before it. Applied to 21, the next term is 34. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o1": "29 adds the last gap of 8 again.",
+     "o2": "33 adds 12, one short of 13.",
+     "o4": "42 doubles the last term."
+    },
+    "method_steps": {
+     "1_asked": "What number comes next: 2, 3, 5, 8, 13, 21, ___?",
+     "2_givens": "2,, 3,, 5,, 8,, 13,, 21,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: each term is the sum of the two before it. Applied to 21, the next term is 34. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 34 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "29: 29 adds the last gap of 8 again. 33: 33 adds 12, one short of 13. 42: 42 doubles the last term.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0008",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Complete the series with the most logical number: 3, 6, 11, 18, 27, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "36"
+    },
+    {
+     "option_id": "o2",
+     "text": "54"
+    },
+    {
+     "option_id": "o3",
+     "text": "38"
+    },
+    {
+     "option_id": "o4",
+     "text": "37"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: square of the position plus 2 (gaps 3, 5, 7, 9, so next +11). Applied to 27, the next term is 38. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o1": "36 repeats the last gap of 9.",
+     "o2": "54 doubles the last term.",
+     "o4": "37 adds 10; the gaps are odd numbers."
+    },
+    "method_steps": {
+     "1_asked": "Complete the series with the most logical number: 3, 6, 11, 18, 27, ___",
+     "2_givens": "3,, 6,, 11,, 18,, 27,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: square of the position plus 2 (gaps 3, 5, 7, 9, so next +11). Applied to 27, the next term is 38. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 38 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "36: 36 repeats the last gap of 9. 54: 54 doubles the last term. 37: 37 adds 10; the gaps are odd numbers.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0009",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Study the pattern and supply the missing term: 1, 8, 27, 64, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "101"
+    },
+    {
+     "option_id": "o2",
+     "text": "100"
+    },
+    {
+     "option_id": "o3",
+     "text": "125"
+    },
+    {
+     "option_id": "o4",
+     "text": "128"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: cubes of 1, 2, 3, 4, so next is 5 × 5 × 5. Applied to 64, the next term is 125. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o1": "101 adds 37, the last gap.",
+     "o2": "100 takes 10 squared.",
+     "o4": "128 doubles the last term."
+    },
+    "method_steps": {
+     "1_asked": "Study the pattern and supply the missing term: 1, 8, 27, 64, ___",
+     "2_givens": "1,, 8,, 27,, 64,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: cubes of 1, 2, 3, 4, so next is 5 × 5 × 5. Applied to 64, the next term is 125. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 125 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "101: 101 adds 37, the last gap. 100: 100 takes 10 squared. 128: 128 doubles the last term.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0010",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Which number continues this sequence best: 100, 96, 88, 76, ___?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "56"
+    },
+    {
+     "option_id": "o2",
+     "text": "64"
+    },
+    {
+     "option_id": "o3",
+     "text": "62"
+    },
+    {
+     "option_id": "o4",
+     "text": "60"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: subtract 4, 8, 12, so next subtract 16. Applied to 76, the next term is 60. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o1": "56 subtracts 20, one step too far.",
+     "o2": "64 subtracts 12 again.",
+     "o3": "62 subtracts 14."
+    },
+    "method_steps": {
+     "1_asked": "Which number continues this sequence best: 100, 96, 88, 76, ___?",
+     "2_givens": "100,, 96,, 88,, 76,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: subtract 4, 8, 12, so next subtract 16. Applied to 76, the next term is 60. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 60 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "56: 56 subtracts 20, one step too far. 64: 64 subtracts 12 again. 62: 62 subtracts 14.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0011",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "Find the next number in the series: 81, 72, 64, 57, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "51"
+    },
+    {
+     "option_id": "o2",
+     "text": "50"
+    },
+    {
+     "option_id": "o3",
+     "text": "52"
+    },
+    {
+     "option_id": "o4",
+     "text": "49"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: subtract 9, 8, 7, so next subtract 6. Applied to 57, the next term is 51. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o2": "50 subtracts 7 again.",
+     "o3": "52 subtracts 5.",
+     "o4": "49 jumps to a perfect square."
+    },
+    "method_steps": {
+     "1_asked": "Find the next number in the series: 81, 72, 64, 57, ___",
+     "2_givens": "81,, 72,, 64,, 57,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: subtract 9, 8, 7, so next subtract 6. Applied to 57, the next term is 51. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 51 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "50: 50 subtracts 7 again. 52: 52 subtracts 5. 49: 49 jumps to a perfect square.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0012",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next: 3, 4, 8, 17, 33, ___?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "66"
+    },
+    {
+     "option_id": "o2",
+     "text": "58"
+    },
+    {
+     "option_id": "o3",
+     "text": "57"
+    },
+    {
+     "option_id": "o4",
+     "text": "49"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: add 1, 4, 9, 16 (square numbers), so next add 25. Applied to 33, the next term is 58. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o1": "66 doubles the last term.",
+     "o3": "57 adds 24, one short of 25.",
+     "o4": "49 adds 16 again."
+    },
+    "method_steps": {
+     "1_asked": "What number comes next: 3, 4, 8, 17, 33, ___?",
+     "2_givens": "3,, 4,, 8,, 17,, 33,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: add 1, 4, 9, 16 (square numbers), so next add 25. Applied to 33, the next term is 58. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 58 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "66: 66 doubles the last term. 57: 57 adds 24, one short of 25. 49: 49 adds 16 again.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-NUMSEQ-0013",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number series",
+   "concept": "number series",
+   "micro_skill": "find the rule from the gaps between terms",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Complete the series with the most logical number: 1458, 486, 162, 54, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "45"
+    },
+    {
+     "option_id": "o2",
+     "text": "18"
+    },
+    {
+     "option_id": "o3",
+     "text": "6"
+    },
+    {
+     "option_id": "o4",
+     "text": "27"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+    "shortcut": "Write the differences under the terms; most series show their rule there.",
+    "why_correct": "The rule is: divide by 3. Applied to 54, the next term is 18. Each wrong choice comes from a rule that fits only part of the series.",
+    "why_wrong": {
+     "o1": "45 subtracts 9 instead of dividing by 3.",
+     "o3": "6 divides by 9.",
+     "o4": "27 divides by 2."
+    },
+    "method_steps": {
+     "1_asked": "Complete the series with the most logical number: 1458, 486, 162, 54, ___",
+     "2_givens": "1458,, 486,, 162,, 54,",
+     "3_method": "A series follows one rule. Test the gaps first; if the gaps change, test the gaps of the gaps, then multiplication, then two series taking turns.",
+     "4_why": "The method matches what is asked: a series follows one rule.",
+     "5_solve_by_hand": "The rule is: divide by 3. Applied to 54, the next term is 18. Each wrong choice comes from a rule that fits only part of the series.",
+     "6_check": "Put 18 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "45: 45 subtracts 9 instead of dividing by 3. 6: 6 divides by 9. 27: 27 divides by 2.",
+     "8_shortcut": "Write the differences under the terms; most series show their rule there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o3": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own. Moved from Analytical to Numerical (MASTER directive: number sequences belong to Numerical).",
+   "shortcut": "Write the differences under the terms; most series show their rule there.",
+   "recipe": {
+    "op": "seq",
+    "fmt": "num"
+   }
+  }
+ ]
+}

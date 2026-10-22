@@ -1,0 +1,1095 @@
+{
+ "date": "2026-10-22",
+ "manifest": "docs/research/bank/civio-flat-2100-manifest-2026-10-22.json",
+ "count": 2100,
+ "by_domain": {
+  "numerical": 400,
+  "analytical": 400,
+  "verbal_en": 400,
+  "verbal_fil": 300,
+  "clerical": 300,
+  "general_information": 300
+ },
+ "by_status": {
+  "approved": 1377,
+  "draft": 681,
+  "reviewed": 42
+ },
+ "percent_change_numerical": 40,
+ "items_with_issues": 0,
+ "resolved_by_sheet": 162,
+ "issues": {},
+ "resolved": {
+  "CIVIO-ANA-ANALOGY-PART-WHOLE-000009": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-ANA-ASSUME-I-II-000016": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-ANA-SYLLOGISM-000015": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-ANA-SYLLOGISM-000945": [
+   "near-dup 0.87 reviewed: different premise chain and different valid conclusion"
+  ],
+  "CIVIO-ANA-SYLLOGISM-000956": [
+   "near-dup 0.89 reviewed: first premise differs (No vs All), so the valid conclusion differs"
+  ],
+  "CIVIO-ANA-SYMBOL-SERIES-000017": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0001": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0002": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0003": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0004": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0005": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0006": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0007": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0008": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0009": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0010": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0011": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0012": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0013": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0014": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0015": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0016": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0017": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0018": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0019": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0020": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0021": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0022": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0023": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0024": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0025": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0026": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0027": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0028": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0029": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0030": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0031": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0032": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0033": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0034": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0035": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0036": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0037": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0038": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0039": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-CLR-20261013-0040": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP1-GI-SCENARIO-APPLY-0004": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GAP1-GI-SCENARIO-APPLY-0005": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GAP1-GI-TERM-MATCH-0001": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GAP1-GI-TERM-MATCH-0002": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GAP1-GI-WHO-HOLDS-POWER-0003": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GAP1-VEN-PO-0018": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP1-VEN-PO-0019": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP1-VEN-PO-0020": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP1-VEN-RC-0014": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP1-VEN-RC-0015": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP1-VEN-RC-0016": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP1-VEN-RC-0017": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0006": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0007": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0008": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0009": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0010": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0011": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP2-VEN-ERROR-0001": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP2-VEN-ERROR-0002": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP2-VEN-ERROR-0003": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GAP2-VEN-ERROR-0004": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0007": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0025": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0027": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0030": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0035": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0002": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0003": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0004": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0014": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0015": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0016": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0019": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0026": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0028": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0029": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0031": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0032": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-SCENARIO-APPLY-0034": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-TERM-MATCH-0001": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-TERM-MATCH-0005": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-TERM-MATCH-0006": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-TERM-MATCH-0008": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-TERM-MATCH-0011": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-TERM-MATCH-0012": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-TERM-MATCH-0013": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-TERM-MATCH-0018": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-TERM-MATCH-0024": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0009": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0010": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0017": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0020": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0021": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0022": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0023": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0033": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GI-20261013-0001": [
+   "verified by audit/verified_keys_2026_10_22.py: GI url not verified",
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GI-20261013-0006": [
+   "verified by audit/verified_keys_2026_10_22.py: GI url not verified",
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GI-20261013-0011": [
+   "verified by audit/verified_keys_2026_10_22.py: GI url not verified",
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GI-20261013-0016": [
+   "verified by audit/verified_keys_2026_10_22.py: GI url not verified",
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GI-20261013-0021": [
+   "verified by audit/verified_keys_2026_10_22.py: GI url not verified",
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GI-20261013-0025": [
+   "verified by audit/verified_keys_2026_10_22.py: GI url not verified",
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GI-20261013-0029": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GI-DEADLINE-NUMBER-000020": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GI-SCENARIO-APPLY-000008": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-GI-WHO-HOLDS-POWER-000007": [
+   "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926001": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926002": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926003": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926004": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926005": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926006": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926007": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926008": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926009": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926010": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926011": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-FRAC-DEC-926012": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-PCT-BASIC-926013": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-PCT-BASIC-926014": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-PCT-BASIC-926015": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-PCT-BASIC-926018": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-PCT-BASIC-926019": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-PCT-BASIC-926022": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926033": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926034": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926035": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926036": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926038": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926039": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926040": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926041": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926042": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926048": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-ALGEBRA-926051": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-AVERAGE-000012": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-AVERAGE-926049": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATE-000011": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATE-926029": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATE-926030": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATE-926031": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATE-926043": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATE-926044": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATE-926045": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATE-926046": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATE-926047": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATIO-926025": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-WP-RATIO-926026": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-WP-RATIO-926027": [
+   "qa status rule predates 'reviewed' (valid intermediate status)",
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-NUM-WP-RATIO-926028": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-NUM-WP-RATIO-926032": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
+  ],
+  "CIVIO-VEN-ERROR-TENSE-000019": [
+   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: IndexError"
+  ],
+  "CIVIO-VEN-SENT-COMP-PHRASAL-000005": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-VEN-SENT-COMP-WORD-000006": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ],
+  "CIVIO-VEN-WORD-MEANING-000004": [
+   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
+  ]
+ },
+ "numeric_variant_clusters": [
+  {
+   "size": 20,
+   "domain": "numerical",
+   "frame": "N number comes next?  # # # # # ___",
+   "ids": [
+    "CIVIO-NUM-SEQ-MULT-000035",
+    "CIVIO-NUM-SEQ-MULT-000129",
+    "CIVIO-NUM-SEQ-MULT-000137",
+    "CIVIO-NUM-SEQ-MULT-000138",
+    "CIVIO-NUM-SEQ-MULT-000214",
+    "CIVIO-NUM-SEQ-MULT-000241",
+    "CIVIO-NUM-SEQ-MULT-000334",
+    "CIVIO-NUM-SEQ-MULT-000335",
+    "CIVIO-NUM-SEQ-MULT-000337",
+    "CIVIO-NUM-SEQ-MULT-000438",
+    "CIVIO-NUM-SEQ-MULT-000529",
+    "CIVIO-NUM-SEQ-MULT-000538",
+    "CIVIO-NUM-SEQ-MULT-000539",
+    "CIVIO-NUM-SEQ-MULT-000616",
+    "CIVIO-NUM-SEQ-MULT-000617",
+    "CIVIO-NUM-SEQ-MULT-000619",
+    "CIVIO-NUM-SEQ-MULT-000717",
+    "CIVIO-NUM-SEQ-MULT-000840",
+    "CIVIO-NUM-SEQ-MULT-000919",
+    "CIVIO-NUM-SEQ-MULT-000938"
+   ]
+  },
+  {
+   "size": 19,
+   "domain": "numerical",
+   "frame": "N number comes next in the series?  # # # # # ___",
+   "ids": [
+    "CIVIO-NUM-SEQ-DIFF-000002",
+    "CIVIO-NUM-SEQ-DIFF-000117",
+    "CIVIO-NUM-SEQ-DIFF-000220",
+    "CIVIO-NUM-SEQ-DIFF-000238",
+    "CIVIO-NUM-SEQ-DIFF-000332",
+    "CIVIO-NUM-SEQ-DIFF-000336",
+    "CIVIO-NUM-SEQ-DIFF-000425",
+    "CIVIO-NUM-SEQ-DIFF-000532",
+    "CIVIO-NUM-SEQ-DIFF-000615",
+    "CIVIO-NUM-SEQ-DIFF-000627",
+    "CIVIO-NUM-SEQ-DIFF-000715",
+    "CIVIO-NUM-SEQ-DIFF-000731",
+    "CIVIO-NUM-SEQ-DIFF-000824",
+    "CIVIO-NUM-SEQ-DIFF-000939",
+    "CIVIO-GF2K02-SEQD-0001",
+    "CIVIO-GF2K02-SEQD-0005",
+    "CIVIO-GF2K02-SEQD-0009",
+    "CIVIO-GF2K02-SEQM-0013",
+    "CIVIO-GF2K02-SEQM-0017"
+   ]
+  },
+  {
+   "size": 8,
+   "domain": "numerical",
+   "frame": "N number should come next?  # # # # # ___",
+   "ids": [
+    "CIVIO-NUM-SEQ-DIFF-000044",
+    "CIVIO-NUM-SEQ-DIFF-000122",
+    "CIVIO-NUM-SEQ-DIFF-000222",
+    "CIVIO-NUM-SEQ-DIFF-000316",
+    "CIVIO-NUM-SEQ-DIFF-000427",
+    "CIVIO-NUM-SEQ-DIFF-000513",
+    "CIVIO-NUM-SEQ-DIFF-000836",
+    "CIVIO-NUM-SEQ-DIFF-000915"
+   ]
+  },
+  {
+   "size": 7,
+   "domain": "numerical",
+   "frame": "N the next number in the series#  # # # # # ___",
+   "ids": [
+    "CIVIO-NUM-SEQ-DIFF-000023",
+    "CIVIO-NUM-SEQ-DIFF-000123",
+    "CIVIO-NUM-SEQ-DIFF-000420",
+    "CIVIO-NUM-SEQ-DIFF-000533",
+    "CIVIO-NUM-SEQ-DIFF-000614",
+    "CIVIO-NUM-SEQ-DIFF-000737",
+    "CIVIO-NUM-SEQ-DIFF-000817"
+   ]
+  },
+  {
+   "size": 6,
+   "domain": "numerical",
+   "frame": "N the value of # × (# − #) + #?",
+   "ids": [
+    "CIVIO-GF2K02-NUMOPS-0047",
+    "CIVIO-GF2K02-NUMOPS-0048",
+    "CIVIO-GF2K02-NUMOPS-0049",
+    "CIVIO-GF2K02-NUMOPS-0051",
+    "CIVIO-GF2K02-NUMOPS-0052",
+    "CIVIO-GF2K02-NUMOPS-0053"
+   ]
+  },
+  {
+   "size": 6,
+   "domain": "numerical",
+   "frame": "N the value of # × # ÷ (# − #)?",
+   "ids": [
+    "CIVIO-GF2K02-NUMOPS-0054",
+    "CIVIO-GF2K02-NUMOPS-0055",
+    "CIVIO-GF2K02-NUMOPS-0056",
+    "CIVIO-GF2K02-NUMOPS-0058",
+    "CIVIO-GF2K02-NUMOPS-0059",
+    "CIVIO-GF2K02-NUMOPS-0060"
+   ]
+  },
+  {
+   "size": 6,
+   "domain": "numerical",
+   "frame": "N and N will share ₱# of cleanup fund in the ratio # : # N much is N's share?",
+   "ids": [
+    "CIVIO-NUM-WP-RATIO-000126",
+    "CIVIO-NUM-WP-RATIO-000327",
+    "CIVIO-NUM-WP-RATIO-000434",
+    "CIVIO-NUM-WP-RATIO-000519",
+    "CIVIO-NUM-WP-RATIO-000522",
+    "CIVIO-NUM-WP-RATIO-000629"
+   ]
+  },
+  {
+   "size": 6,
+   "domain": "numerical",
+   "frame": "A backpack is priced at ₱# N is sold at #% off# N much does a buyer pay?",
+   "ids": [
+    "CIVIO-NUM-WP-PCT-CHANGE-000036",
+    "CIVIO-NUM-WP-PCT-CHANGE-000121",
+    "CIVIO-NUM-WP-PCT-CHANGE-000139",
+    "CIVIO-NUM-WP-PCT-CHANGE-000230",
+    "CIVIO-NUM-WP-PCT-CHANGE-000340",
+    "CIVIO-NUM-WP-PCT-CHANGE-000341"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N the value of # − # ÷ # + #?",
+   "ids": [
+    "CIVIO-GF2K02-NUMOPS-0041",
+    "CIVIO-GF2K02-NUMOPS-0043",
+    "CIVIO-GF2K02-NUMOPS-0044",
+    "CIVIO-GF2K02-NUMOPS-0045",
+    "CIVIO-GF2K02-NUMOPS-0046"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N number should replace the blank?  # # # # # ___",
+   "ids": [
+    "CIVIO-GF2K02-SEQD-0004",
+    "CIVIO-GF2K02-SEQD-0008",
+    "CIVIO-GF2K02-SEQM-0012",
+    "CIVIO-GF2K02-SEQM-0016",
+    "CIVIO-GF2K02-SEQM-0020"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N number continues the pattern?  # # # # # ___",
+   "ids": [
+    "CIVIO-GF2K02-SEQD-0002",
+    "CIVIO-GF2K02-SEQD-0006",
+    "CIVIO-GF2K02-SEQD-0010",
+    "CIVIO-GF2K02-SEQM-0014",
+    "CIVIO-GF2K02-SEQM-0018"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N is the value of (# × # + #) ÷ #?",
+   "ids": [
+    "CIVIO-NUM-OPS-ORDER-000135",
+    "CIVIO-NUM-OPS-ORDER-000322",
+    "CIVIO-NUM-OPS-ORDER-000536",
+    "CIVIO-NUM-OPS-ORDER-000729",
+    "CIVIO-NUM-OPS-ORDER-000932"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N is the value of (# + #) × # − #?",
+   "ids": [
+    "CIVIO-NUM-OPS-ORDER-000039",
+    "CIVIO-NUM-OPS-ORDER-000235",
+    "CIVIO-NUM-OPS-ORDER-000416",
+    "CIVIO-NUM-OPS-ORDER-000638",
+    "CIVIO-NUM-OPS-ORDER-000833"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N is the value of # − # × # + #?",
+   "ids": [
+    "CIVIO-NUM-OPS-ORDER-000118",
+    "CIVIO-NUM-OPS-ORDER-000319",
+    "CIVIO-NUM-OPS-ORDER-000520",
+    "CIVIO-NUM-OPS-ORDER-000719",
+    "CIVIO-NUM-OPS-ORDER-000912"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N is the value of # × # − # ÷ #?",
+   "ids": [
+    "CIVIO-NUM-OPS-ORDER-000041",
+    "CIVIO-NUM-OPS-ORDER-000240",
+    "CIVIO-NUM-OPS-ORDER-000433",
+    "CIVIO-NUM-OPS-ORDER-000640",
+    "CIVIO-NUM-OPS-ORDER-000839"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N is the value of # + # × (# − #)?",
+   "ids": [
+    "CIVIO-NUM-OPS-ORDER-000131",
+    "CIVIO-NUM-OPS-ORDER-000321",
+    "CIVIO-NUM-OPS-ORDER-000525",
+    "CIVIO-NUM-OPS-ORDER-000720",
+    "CIVIO-NUM-OPS-ORDER-000914"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N is the value of # + # × # − #?",
+   "ids": [
+    "CIVIO-NUM-OPS-ORDER-000031",
+    "CIVIO-NUM-OPS-ORDER-000213",
+    "CIVIO-NUM-OPS-ORDER-000412",
+    "CIVIO-NUM-OPS-ORDER-000618",
+    "CIVIO-NUM-OPS-ORDER-000830"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N is the next number in the sequence?  # # # # # ___",
+   "ids": [
+    "CIVIO-GF2K02-SEQD-0003",
+    "CIVIO-GF2K02-SEQD-0007",
+    "CIVIO-GF2K02-SEQD-0011",
+    "CIVIO-GF2K02-SEQM-0015",
+    "CIVIO-GF2K02-SEQM-0019"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "numerical",
+   "frame": "N can paint a classroom in # hours# N can do the same job in # hours# N together# how long",
+   "ids": [
+    "CIVIO-NUM-WP-RATE-000317",
+    "CIVIO-NUM-WP-RATE-000631",
+    "CIVIO-NUM-WP-RATE-000718",
+    "CIVIO-NUM-WP-RATE-000722",
+    "CIVIO-NUM-WP-RATE-000935"
+   ]
+  },
+  {
+   "size": 5,
+   "domain": "analytical",
+   "frame": "N staff members are compared# N scored higher than N# N scored higher than N# N scored hig",
+   "ids": [
+    "CIVIO-ANA-CONCLUSION-000048",
+    "CIVIO-ANA-CONCLUSION-000266",
+    "CIVIO-ANA-CONCLUSION-000561",
+    "CIVIO-ANA-CONCLUSION-000656",
+    "CIVIO-ANA-CONCLUSION-000849"
+   ]
+  },
+  {
+   "size": 4,
+   "domain": "numerical",
+   "frame": "N can label the census boxes in # hours# N can do the same job in # hours# N together# how",
+   "ids": [
+    "CIVIO-NUM-WP-RATE-000239",
+    "CIVIO-NUM-WP-RATE-000325",
+    "CIVIO-NUM-WP-RATE-000721",
+    "CIVIO-NUM-WP-RATE-000812"
+   ]
+  },
+  {
+   "size": 4,
+   "domain": "numerical",
+   "frame": "A barangay had # bags of cement# N gave out #/# of them on N and #/# of the remaining bags",
+   "ids": [
+    "CIVIO-NUM-FRAC-DEC-000231",
+    "CIVIO-NUM-FRAC-DEC-000237",
+    "CIVIO-NUM-FRAC-DEC-000540",
+    "CIVIO-NUM-FRAC-DEC-000541"
+   ]
+  },
+  {
+   "size": 4,
+   "domain": "clerical",
+   "frame": "A filing clerk arranges records alphabetically by surname# then given name# N folder shoul",
+   "ids": [
+    "CIVIO-CLR-20261013-0001",
+    "CIVIO-CLR-20261013-0003",
+    "CIVIO-CLR-20261013-0005",
+    "CIVIO-CLR-20261013-0007"
+   ]
+  },
+  {
+   "size": 4,
+   "domain": "analytical",
+   "frame": "N use of toner (units) by office (N: N # N # N #; N: N # N # N #; N: N # N # N #)# N many ",
+   "ids": [
+    "CIVIO-ANA-DI-TABLE-000365",
+    "CIVIO-ANA-DI-TABLE-000742",
+    "CIVIO-ANA-DI-TABLE-000743",
+    "CIVIO-ANA-DI-TABLE-000942"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "N is # × #?",
+   "ids": [
+    "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0007",
+    "CIVIO-B3-NUM-DECIMAL-0175",
+    "CIVIO-B3-NUM-PROPERTY-0043"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "N can sort a sack of mail in # hours# N can do the same job in # hours# N together# how lo",
+   "ids": [
+    "CIVIO-NUM-WP-RATE-000313",
+    "CIVIO-NUM-WP-RATE-000814",
+    "CIVIO-NUM-WP-RATE-000922"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "N can repack the relief goods in # hours# N can do the same job in # hours# N together# ho",
+   "ids": [
+    "CIVIO-NUM-WP-RATE-000120",
+    "CIVIO-NUM-WP-RATE-000430",
+    "CIVIO-NUM-WP-RATE-000524"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "N can paint a classroom in # hours# N N can do the same job in # hours# N together# how lo",
+   "ids": [
+    "CIVIO-NUM-WP-RATE-000116-R1",
+    "CIVIO-NUM-WP-RATE-000212",
+    "CIVIO-NUM-WP-RATE-000518"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "N and N will share ₱# of prize money in the ratio # : # N much is N's share?",
+   "ids": [
+    "CIVIO-NUM-WP-RATIO-000021",
+    "CIVIO-NUM-WP-RATIO-000022",
+    "CIVIO-NUM-WP-RATIO-000933"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "N and N will share ₱# of harvest income in the ratio # : # N much is N's share?",
+   "ids": [
+    "CIVIO-NUM-WP-RATIO-000516",
+    "CIVIO-NUM-WP-RATIO-000714",
+    "CIVIO-NUM-WP-RATIO-000816"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "N and N will share ₱# of allowance fund in the ratio # : # N much is N's share?",
+   "ids": [
+    "CIVIO-NUM-WP-RATIO-000312",
+    "CIVIO-NUM-WP-RATIO-000320",
+    "CIVIO-NUM-WP-RATIO-000740"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "A vendor borrows ₱# at #% simple interest per year# N much interest is due after # years a",
+   "ids": [
+    "CIVIO-NUM-WP-PCT-CHANGE-000029",
+    "CIVIO-NUM-WP-PCT-CHANGE-000119",
+    "CIVIO-NUM-WP-PCT-CHANGE-000218"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "A rice cooker is priced at ₱# N is sold at #% off# N much does a buyer pay?",
+   "ids": [
+    "CIVIO-NUM-WP-PCT-CHANGE-000224",
+    "CIVIO-NUM-WP-PCT-CHANGE-000417",
+    "CIVIO-NUM-WP-PCT-CHANGE-000421"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "A barangay had # notebooks# N gave out #/# of them on N and #/# of the remaining notebooks",
+   "ids": [
+    "CIVIO-NUM-FRAC-DEC-000314",
+    "CIVIO-NUM-FRAC-DEC-000741",
+    "CIVIO-NUM-FRAC-DEC-000841"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "numerical",
+   "frame": "A barangay had # liters of fuel# N gave out #/# of them on N and #/# of the remaining lite",
+   "ids": [
+    "CIVIO-NUM-FRAC-DEC-000034",
+    "CIVIO-NUM-FRAC-DEC-000140",
+    "CIVIO-NUM-FRAC-DEC-000141"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "clerical",
+   "frame": "N registry uses ascending numerical filing by the full five-digit reference number# N reco",
+   "ids": [
+    "CIVIO-CLR-20261013-0010",
+    "CIVIO-CLR-20261013-0012",
+    "CIVIO-CLR-20261013-0014"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "clerical",
+   "frame": "N registry uses ascending numerical filing by the full five-digit reference number# N reco",
+   "ids": [
+    "CIVIO-CLR-20261013-0009",
+    "CIVIO-CLR-20261013-0011",
+    "CIVIO-CLR-20261013-0013"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "clerical",
+   "frame": "N are filed from earliest date to latest# using YYYY-MM-DD# N dated record should be place",
+   "ids": [
+    "CIVIO-CLR-20261013-0016",
+    "CIVIO-CLR-20261013-0018",
+    "CIVIO-CLR-20261013-0020"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "clerical",
+   "frame": "N are filed from earliest date to latest# using YYYY-MM-DD# N dated record should be place",
+   "ids": [
+    "CIVIO-CLR-20261013-0015",
+    "CIVIO-CLR-20261013-0017",
+    "CIVIO-CLR-20261013-0019"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "clerical",
+   "frame": "A filing clerk arranges records alphabetically by surname# then given name# N folder shoul",
+   "ids": [
+    "CIVIO-CLR-20261013-0002",
+    "CIVIO-CLR-20261013-0004",
+    "CIVIO-CLR-20261013-0006"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "analytical",
+   "frame": "N use of folders (packs) by office (N: N # N # N #; N: N # N # N #; N: N # N # N #)# N man",
+   "ids": [
+    "CIVIO-ANA-DI-TABLE-000464",
+    "CIVIO-ANA-DI-TABLE-000548",
+    "CIVIO-ANA-DI-TABLE-000760"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "analytical",
+   "frame": "N use of ballpens (boxes) by office (N: N # N # N #; N: N # N # N #; N: N # N # N #)# N N#",
+   "ids": [
+    "CIVIO-ANA-DI-TABLE-000255",
+    "CIVIO-ANA-DI-TABLE-000355",
+    "CIVIO-ANA-DI-TABLE-000757"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "analytical",
+   "frame": "N use of ballpens (boxes) by office (N: N # N # N #; HR: N # N # N #; N: N # N # N #)# N N",
+   "ids": [
+    "CIVIO-ANA-DI-TABLE-000245",
+    "CIVIO-ANA-DI-TABLE-000456",
+    "CIVIO-ANA-DI-TABLE-000466"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "analytical",
+   "frame": "N staff members are compared# N lives nearer the office than N# N lives nearer the office ",
+   "ids": [
+    "CIVIO-ANA-CONCLUSION-000159",
+    "CIVIO-ANA-CONCLUSION-000759",
+    "CIVIO-ANA-CONCLUSION-000842"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "analytical",
+   "frame": "N staff members are compared# N has served longer than N# N has served longer than N# N ha",
+   "ids": [
+    "CIVIO-ANA-CONCLUSION-000648",
+    "CIVIO-ANA-CONCLUSION-000650",
+    "CIVIO-ANA-CONCLUSION-000960"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "analytical",
+   "frame": "N staff members are compared# N has served longer than N# N has served longer than N# N ha",
+   "ids": [
+    "CIVIO-ANA-CONCLUSION-000162",
+    "CIVIO-ANA-CONCLUSION-000461",
+    "CIVIO-ANA-CONCLUSION-000753"
+   ]
+  },
+  {
+   "size": 3,
+   "domain": "analytical",
+   "frame": "N staff members are compared# N arrived earlier than N# N arrived earlier than N# N arrive",
+   "ids": [
+    "CIVIO-ANA-CONCLUSION-000052",
+    "CIVIO-ANA-CONCLUSION-000262",
+    "CIVIO-ANA-CONCLUSION-000457"
+   ]
+  }
+ ]
+}

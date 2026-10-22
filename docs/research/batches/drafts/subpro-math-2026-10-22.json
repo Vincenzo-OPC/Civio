@@ -1,0 +1,4927 @@
+{
+ "batch": "subpro-math-2026-10-22",
+ "date": "2026-10-22",
+ "status": "draft",
+ "spec_version": "0.1.9",
+ "authority": "GT approval 2026-10-22 and MASTER directive 2026-10-22; drafts only, nothing approved, signed or imported",
+ "count": 60,
+ "items": [
+  {
+   "id": "CIVIO-D1022-SPMATH-0001",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "fraction of a remainder",
+   "micro_skill": "take a fraction of what is left, not of the original",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Rhea has 120 permit forms. In the morning she checks 1/4 of them, and in the afternoon she encodes 2/3 of the remaining permit forms. How many permit forms are still untouched at the end of the day?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "30"
+    },
+    {
+     "option_id": "o2",
+     "text": "90"
+    },
+    {
+     "option_id": "o3",
+     "text": "10"
+    },
+    {
+     "option_id": "o4",
+     "text": "60"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "\"Of the remaining\" means the second fraction is taken of what is left, not of the starting total.",
+    "shortcut": "Multiply the leftover fractions: 120 × 3/4 × 1/3.",
+    "why_correct": "Morning: 1/4 of 120 = 30, leaving 90. Afternoon: 2/3 of 90 = 60, leaving 90 − 60 = 30.",
+    "why_wrong": {
+     "o2": "90 is what remains after the morning only; the afternoon work still has to come off.",
+     "o3": "This takes 2/3 of all 120, but the afternoon fraction applies only to the 90 left after the morning.",
+     "o4": "60 is how many were handled in the afternoon, not how many are untouched."
+    },
+    "method_steps": {
+     "1_asked": "How many permit forms are still untouched at the end of the day?",
+     "2_givens": "120, 1/4, 2/3",
+     "3_method": "\"Of the remaining\" means the second fraction is taken of what is left, not of the starting total.",
+     "4_why": "The method matches what is asked: \"of the remaining\" means the second fraction is taken of what is left, not of the starting total.",
+     "5_solve_by_hand": "Morning: 1/4 of 120 = 30, leaving 90. Afternoon: 2/3 of 90 = 60, leaving 90 − 60 = 30.",
+     "6_check": "Put 30 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "90: 90 is what remains after the morning only; the afternoon work still has to come off. 10: This takes 2/3 of all 120, but the afternoon fraction applies only to the 90 left after the morning. 60: 60 is how many were handled in the afternoon, not how many are untouched.",
+     "8_shortcut": "Multiply the leftover fractions: 120 × 3/4 × 1/3."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-WRONG-BASE",
+    "o4": "NUM-OTHER-SHARE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Multiply the leftover fractions: 120 × 3/4 × 1/3.",
+   "recipe": {
+    "op": "frac_rest2",
+    "args": {
+     "total": 120,
+     "f1": "1/4",
+     "f2": "2/3"
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0002",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "fraction of a remainder",
+   "micro_skill": "take a fraction of what is left, not of the original",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "The records unit has 96 old folders. In the morning it scans 3/8 of them, and in the afternoon it labels 1/4 of the remaining old folders. How many old folders are still untouched at the end of the day?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "15"
+    },
+    {
+     "option_id": "o2",
+     "text": "60"
+    },
+    {
+     "option_id": "o3",
+     "text": "45"
+    },
+    {
+     "option_id": "o4",
+     "text": "36"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"Of the remaining\" means the second fraction is taken of what is left, not of the starting total.",
+    "shortcut": "Multiply the leftover fractions: 96 × 5/8 × 3/4.",
+    "why_correct": "Morning: 3/8 of 96 = 36, leaving 60. Afternoon: 1/4 of 60 = 15, leaving 60 − 15 = 45.",
+    "why_wrong": {
+     "o1": "15 is how many were handled in the afternoon, not how many are untouched.",
+     "o2": "60 is what remains after the morning only; the afternoon work still has to come off.",
+     "o4": "This takes 1/4 of all 96, but the afternoon fraction applies only to the 60 left after the morning."
+    },
+    "method_steps": {
+     "1_asked": "How many old folders are still untouched at the end of the day?",
+     "2_givens": "96, 3/8, 1/4",
+     "3_method": "\"Of the remaining\" means the second fraction is taken of what is left, not of the starting total.",
+     "4_why": "The method matches what is asked: \"of the remaining\" means the second fraction is taken of what is left, not of the starting total.",
+     "5_solve_by_hand": "Morning: 3/8 of 96 = 36, leaving 60. Afternoon: 1/4 of 60 = 15, leaving 60 − 15 = 45.",
+     "6_check": "Put 45 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "15: 15 is how many were handled in the afternoon, not how many are untouched. 60: 60 is what remains after the morning only; the afternoon work still has to come off. 36: This takes 1/4 of all 96, but the afternoon fraction applies only to the 60 left after the morning.",
+     "8_shortcut": "Multiply the leftover fractions: 96 × 5/8 × 3/4."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OTHER-SHARE",
+    "o2": "NUM-PARTIAL",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Multiply the leftover fractions: 96 × 5/8 × 3/4.",
+   "recipe": {
+    "op": "frac_rest2",
+    "args": {
+     "total": 96,
+     "f1": "3/8",
+     "f2": "1/4"
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0003",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "adding unlike fractions",
+   "micro_skill": "rename to a common denominator before adding",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "A carpenter cuts two boards for a counter, one 3/4 meter long and one 2/3 meter long. What is their total length in meters?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "1 5/12"
+    },
+    {
+     "option_id": "o2",
+     "text": "5/7"
+    },
+    {
+     "option_id": "o3",
+     "text": "1 1/3"
+    },
+    {
+     "option_id": "o4",
+     "text": "1/12"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Unlike fractions have different denominators; rename both over the least common denominator (LCD), then add the numerators.",
+    "shortcut": "Cross-multiply: (a×d + b×c) / (b×d), then simplify.",
+    "why_correct": "The LCD of 4 and 3 is 12: 3/4 = 9/12 and 2/3 = 8/12. Added: 17/12 = 1 5/12 meters.",
+    "why_wrong": {
+     "o2": "Adding tops and bottoms separately is not how fractions add; the pieces must first share a denominator.",
+     "o3": "This is 1/12 short; recount the renamed numerators.",
+     "o4": "This is the difference between the two amounts; the question asks for the total."
+    },
+    "method_steps": {
+     "1_asked": "What is their total length in meters?",
+     "2_givens": "3/4, 2/3",
+     "3_method": "Unlike fractions have different denominators; rename both over the least common denominator (LCD), then add the numerators.",
+     "4_why": "The method matches what is asked: unlike fractions have different denominators; rename both over the least common denominator (lcd), then add the numerators.",
+     "5_solve_by_hand": "The LCD of 4 and 3 is 12: 3/4 = 9/12 and 2/3 = 8/12. Added: 17/12 = 1 5/12 meters.",
+     "6_check": "Put 1 5/12 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "5/7: Adding tops and bottoms separately is not how fractions add; the pieces must first share a denominator. 1 1/3: This is 1/12 short; recount the renamed numerators. 1/12: This is the difference between the two amounts; the question asks for the total.",
+     "8_shortcut": "Cross-multiply: (a×d + b×c) / (b×d), then simplify."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-OP-SWAP",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Cross-multiply: (a×d + b×c) / (b×d), then simplify.",
+   "recipe": {
+    "op": "frac_add",
+    "args": {
+     "f1": "3/4",
+     "f2": "2/3"
+    },
+    "fmt": "frac"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0004",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "adding unlike fractions",
+   "micro_skill": "rename to a common denominator before adding",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "A canteen worker pours 5/6 liter of soup into one pot and 3/8 liter into another. How many liters were poured in all?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "11/24"
+    },
+    {
+     "option_id": "o2",
+     "text": "1 5/24"
+    },
+    {
+     "option_id": "o3",
+     "text": "1 1/6"
+    },
+    {
+     "option_id": "o4",
+     "text": "8/14"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Unlike fractions have different denominators; rename both over the least common denominator (LCD), then add the numerators.",
+    "shortcut": "Cross-multiply: (a×d + b×c) / (b×d), then simplify.",
+    "why_correct": "The LCD of 6 and 8 is 24: 5/6 = 20/24 and 3/8 = 9/24. Added: 29/24 = 1 5/24 liters.",
+    "why_wrong": {
+     "o1": "This is the difference between the two amounts; the question asks for the total.",
+     "o3": "This is 1/24 short; recount the renamed numerators.",
+     "o4": "Adding tops and bottoms separately is not how fractions add; the pieces must first share a denominator."
+    },
+    "method_steps": {
+     "1_asked": "How many liters were poured in all?",
+     "2_givens": "5/6, 3/8",
+     "3_method": "Unlike fractions have different denominators; rename both over the least common denominator (LCD), then add the numerators.",
+     "4_why": "The method matches what is asked: unlike fractions have different denominators; rename both over the least common denominator (lcd), then add the numerators.",
+     "5_solve_by_hand": "The LCD of 6 and 8 is 24: 5/6 = 20/24 and 3/8 = 9/24. Added: 29/24 = 1 5/24 liters.",
+     "6_check": "Put 1 5/24 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "11/24: This is the difference between the two amounts; the question asks for the total. 1 1/6: This is 1/24 short; recount the renamed numerators. 8/14: Adding tops and bottoms separately is not how fractions add; the pieces must first share a denominator.",
+     "8_shortcut": "Cross-multiply: (a×d + b×c) / (b×d), then simplify."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Cross-multiply: (a×d + b×c) / (b×d), then simplify.",
+   "recipe": {
+    "op": "frac_add",
+    "args": {
+     "f1": "5/6",
+     "f2": "3/8"
+    },
+    "fmt": "frac"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0005",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "subtracting mixed numbers",
+   "micro_skill": "borrow a whole when the fraction part is too small",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A household had 5 1/2 kilograms of rice and cooked 2 3/4 kilograms during the week. How many kilograms are left?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "3 1/4"
+    },
+    {
+     "option_id": "o2",
+     "text": "8 1/4"
+    },
+    {
+     "option_id": "o3",
+     "text": "1 3/4"
+    },
+    {
+     "option_id": "o4",
+     "text": "2 3/4"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Mixed number: a whole number and a fraction. To subtract, rename both as improper fractions, or borrow 1 whole from the first number.",
+    "shortcut": "Convert to improper fractions over one denominator, subtract, then convert back.",
+    "why_correct": "5 1/2 = 11/2, 2 3/4 = 11/4 (as improper fractions). 11/2 − 11/4 = 11/4 = 2 3/4 kilograms.",
+    "why_wrong": {
+     "o1": "This subtracts the smaller fraction from the larger one; 1/2 − 3/4 needs borrowing instead.",
+     "o2": "This adds the two amounts; the question asks what is left.",
+     "o3": "This takes off one whole too many: after borrowing, only the remaining wholes are subtracted."
+    },
+    "method_steps": {
+     "1_asked": "How many kilograms are left?",
+     "2_givens": "5 1/2, 2 3/4",
+     "3_method": "Mixed number: a whole number and a fraction. To subtract, rename both as improper fractions, or borrow 1 whole from the first number.",
+     "4_why": "The method matches what is asked: mixed number.",
+     "5_solve_by_hand": "5 1/2 = 11/2, 2 3/4 = 11/4 (as improper fractions). 11/2 − 11/4 = 11/4 = 2 3/4 kilograms.",
+     "6_check": "Put 2 3/4 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "3 1/4: This subtracts the smaller fraction from the larger one; 1/2 − 3/4 needs borrowing instead. 8 1/4: This adds the two amounts; the question asks what is left. 1 3/4: This takes off one whole too many: after borrowing, only the remaining wholes are subtracted.",
+     "8_shortcut": "Convert to improper fractions over one denominator, subtract, then convert back."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o2": "NUM-OP-SWAP",
+    "o3": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Convert to improper fractions over one denominator, subtract, then convert back.",
+   "recipe": {
+    "op": "frac_sub",
+    "args": {
+     "a": "11/2",
+     "b": "11/4"
+    },
+    "fmt": "frac"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0006",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "subtracting mixed numbers",
+   "micro_skill": "borrow a whole when the fraction part is too small",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A health center had 7 1/3 boxes of gloves and used 4 5/6 boxes during a vaccination drive. How many boxes are left?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "1 1/2"
+    },
+    {
+     "option_id": "o2",
+     "text": "3 1/2"
+    },
+    {
+     "option_id": "o3",
+     "text": "2 1/2"
+    },
+    {
+     "option_id": "o4",
+     "text": "12 1/6"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Mixed number: a whole number and a fraction. To subtract, rename both as improper fractions, or borrow 1 whole from the first number.",
+    "shortcut": "Convert to improper fractions over one denominator, subtract, then convert back.",
+    "why_correct": "7 1/3 = 22/3, 4 5/6 = 29/6 (as improper fractions). 22/3 − 29/6 = 5/2 = 2 1/2 boxes.",
+    "why_wrong": {
+     "o1": "This takes off one whole too many: after borrowing, only the remaining wholes are subtracted.",
+     "o2": "This subtracts the smaller fraction from the larger one; 1/3 − 5/6 needs borrowing instead.",
+     "o4": "This adds the two amounts; the question asks what is left."
+    },
+    "method_steps": {
+     "1_asked": "How many boxes are left?",
+     "2_givens": "7 1/3, 4 5/6",
+     "3_method": "Mixed number: a whole number and a fraction. To subtract, rename both as improper fractions, or borrow 1 whole from the first number.",
+     "4_why": "The method matches what is asked: mixed number.",
+     "5_solve_by_hand": "7 1/3 = 22/3, 4 5/6 = 29/6 (as improper fractions). 22/3 − 29/6 = 5/2 = 2 1/2 boxes.",
+     "6_check": "Put 2 1/2 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "1 1/2: This takes off one whole too many: after borrowing, only the remaining wholes are subtracted. 3 1/2: This subtracts the smaller fraction from the larger one; 1/3 − 5/6 needs borrowing instead. 12 1/6: This adds the two amounts; the question asks what is left.",
+     "8_shortcut": "Convert to improper fractions over one denominator, subtract, then convert back."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o2": "NUM-OP-SWAP",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Convert to improper fractions over one denominator, subtract, then convert back.",
+   "recipe": {
+    "op": "frac_sub",
+    "args": {
+     "a": "22/3",
+     "b": "29/6"
+    },
+    "fmt": "frac"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0007",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "fraction of a whole number",
+   "micro_skill": "divide by the denominator, multiply by the numerator",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "easy",
+   "est_seconds": 35,
+   "language": "en",
+   "stem": "In a municipal office of 35 employees, 2/5 ride the jeepney to work. How many employees ride the jeepney?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "7"
+    },
+    {
+     "option_id": "o2",
+     "text": "21"
+    },
+    {
+     "option_id": "o3",
+     "text": "14"
+    },
+    {
+     "option_id": "o4",
+     "text": "70"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"Fraction of\" a number means multiply: (numerator ÷ denominator) × the number.",
+    "shortcut": "Divide first to keep numbers small: 35 ÷ 5 = 7, then × 2.",
+    "why_correct": "35 ÷ 5 = 7, and 7 × 2 = 14.",
+    "why_wrong": {
+     "o1": "This is only one 5th of 35; it still has to be multiplied by 2.",
+     "o2": "This is the part that does not fit the description, the complement of the fraction.",
+     "o4": "This multiplies by the numerator but never divides by the denominator."
+    },
+    "method_steps": {
+     "1_asked": "How many employees ride the jeepney?",
+     "2_givens": "35, 2/5",
+     "3_method": "\"Fraction of\" a number means multiply: (numerator ÷ denominator) × the number.",
+     "4_why": "The method matches what is asked: \"fraction of\" a number means multiply.",
+     "5_solve_by_hand": "35 ÷ 5 = 7, and 7 × 2 = 14.",
+     "6_check": "Put 14 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "7: This is only one 5th of 35; it still has to be multiplied by 2. 21: This is the part that does not fit the description, the complement of the fraction. 70: This multiplies by the numerator but never divides by the denominator.",
+     "8_shortcut": "Divide first to keep numbers small: 35 ÷ 5 = 7, then × 2."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-OTHER-SHARE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Divide first to keep numbers small: 35 ÷ 5 = 7, then × 2.",
+   "recipe": {
+    "op": "frac_of",
+    "args": {
+     "total": 35,
+     "f": "2/5"
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0008",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "fraction of a whole number",
+   "micro_skill": "divide by the denominator, multiply by the numerator",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "easy",
+   "est_seconds": 35,
+   "language": "en",
+   "stem": "A school ordered 63 chairs, and 5/9 of them have arrived. How many chairs have arrived?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "7"
+    },
+    {
+     "option_id": "o2",
+     "text": "35"
+    },
+    {
+     "option_id": "o3",
+     "text": "315"
+    },
+    {
+     "option_id": "o4",
+     "text": "28"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "\"Fraction of\" a number means multiply: (numerator ÷ denominator) × the number.",
+    "shortcut": "Divide first to keep numbers small: 63 ÷ 9 = 7, then × 5.",
+    "why_correct": "63 ÷ 9 = 7, and 7 × 5 = 35.",
+    "why_wrong": {
+     "o1": "This is only one 9th of 63; it still has to be multiplied by 5.",
+     "o3": "This multiplies by the numerator but never divides by the denominator.",
+     "o4": "This is the part that does not fit the description, the complement of the fraction."
+    },
+    "method_steps": {
+     "1_asked": "How many chairs have arrived?",
+     "2_givens": "63, 5/9",
+     "3_method": "\"Fraction of\" a number means multiply: (numerator ÷ denominator) × the number.",
+     "4_why": "The method matches what is asked: \"fraction of\" a number means multiply.",
+     "5_solve_by_hand": "63 ÷ 9 = 7, and 7 × 5 = 35.",
+     "6_check": "Put 35 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "7: This is only one 9th of 63; it still has to be multiplied by 5. 315: This multiplies by the numerator but never divides by the denominator. 28: This is the part that does not fit the description, the complement of the fraction.",
+     "8_shortcut": "Divide first to keep numbers small: 63 ÷ 9 = 7, then × 5."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-OTHER-SHARE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Divide first to keep numbers small: 63 ÷ 9 = 7, then × 5.",
+   "recipe": {
+    "op": "frac_of",
+    "args": {
+     "total": 63,
+     "f": "5/9"
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0009",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "dividing by a fraction",
+   "micro_skill": "dividing by a fraction is multiplying by its reciprocal",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "medium",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "A 6-meter roll of packing tape is cut into strips, each 3/4 meter long. How many strips can be cut?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "24"
+    },
+    {
+     "option_id": "o2",
+     "text": "7"
+    },
+    {
+     "option_id": "o3",
+     "text": "8"
+    },
+    {
+     "option_id": "o4",
+     "text": "4.5"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "To divide by a fraction, multiply by its reciprocal (flip it): ÷ a/b = × b/a.",
+    "shortcut": "6 ÷ 3/4 = 6 × 4/3.",
+    "why_correct": "6 × 4 = 24, and 24 ÷ 3 = 8 strips.",
+    "why_wrong": {
+     "o1": "This multiplies by 4 but never divides by 3.",
+     "o2": "This is one short; the division comes out exact, so no piece is wasted.",
+     "o4": "This multiplies by the fraction; fitting pieces into a length is division."
+    },
+    "method_steps": {
+     "1_asked": "How many strips can be cut?",
+     "2_givens": "6, 3/4",
+     "3_method": "To divide by a fraction, multiply by its reciprocal (flip it): ÷ a/b = × b/a.",
+     "4_why": "The method matches what is asked: to divide by a fraction, multiply by its reciprocal (flip it).",
+     "5_solve_by_hand": "6 × 4 = 24, and 24 ÷ 3 = 8 strips.",
+     "6_check": "Put 8 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "24: This multiplies by 4 but never divides by 3. 7: This is one short; the division comes out exact, so no piece is wasted. 4.5: This multiplies by the fraction; fitting pieces into a length is division.",
+     "8_shortcut": "6 ÷ 3/4 = 6 × 4/3."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-OFF-BY-ONE",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "6 ÷ 3/4 = 6 × 4/3.",
+   "recipe": {
+    "op": "frac_div",
+    "args": {
+     "total": 6,
+     "f": "3/4"
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0010",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "dividing by a fraction",
+   "micro_skill": "dividing by a fraction is multiplying by its reciprocal",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "medium",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "A 10-liter container of disinfectant is poured into spray bottles that each hold 2/5 liter. How many bottles can be filled?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "24"
+    },
+    {
+     "option_id": "o2",
+     "text": "4"
+    },
+    {
+     "option_id": "o3",
+     "text": "25"
+    },
+    {
+     "option_id": "o4",
+     "text": "50"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "To divide by a fraction, multiply by its reciprocal (flip it): ÷ a/b = × b/a.",
+    "shortcut": "10 ÷ 2/5 = 10 × 5/2.",
+    "why_correct": "10 × 5 = 50, and 50 ÷ 2 = 25 bottles.",
+    "why_wrong": {
+     "o1": "This is one short; the division comes out exact, so no piece is wasted.",
+     "o2": "This multiplies by the fraction; fitting pieces into a length is division.",
+     "o4": "This multiplies by 5 but never divides by 2."
+    },
+    "method_steps": {
+     "1_asked": "How many bottles can be filled?",
+     "2_givens": "10, 2/5",
+     "3_method": "To divide by a fraction, multiply by its reciprocal (flip it): ÷ a/b = × b/a.",
+     "4_why": "The method matches what is asked: to divide by a fraction, multiply by its reciprocal (flip it).",
+     "5_solve_by_hand": "10 × 5 = 50, and 50 ÷ 2 = 25 bottles.",
+     "6_check": "Put 25 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "24: This is one short; the division comes out exact, so no piece is wasted. 4: This multiplies by the fraction; fitting pieces into a length is division. 50: This multiplies by 5 but never divides by 2.",
+     "8_shortcut": "10 ÷ 2/5 = 10 × 5/2."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o2": "NUM-OP-SWAP",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "10 ÷ 2/5 = 10 × 5/2.",
+   "recipe": {
+    "op": "frac_div",
+    "args": {
+     "total": 10,
+     "f": "2/5"
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0011",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "finding the whole from a part",
+   "micro_skill": "part ÷ fraction = whole",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A barangay spent ₱4,500 on medicines, which is 3/8 of its health budget for the quarter. What is the whole quarterly health budget?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱1,500"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱12,000"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱7,500"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱1,687.50"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "If 3/8 of a whole is known, one 8th is the part ÷ 3, and the whole is 8 of those.",
+    "shortcut": "Whole = part × denominator ÷ numerator.",
+    "why_correct": "₱4,500 ÷ 3 = ₱1,500 per 8th; × 8 = ₱12,000.",
+    "why_wrong": {
+     "o1": "This is one 8th of the whole; multiply by 8 to finish.",
+     "o3": "This is the rest of the whole, the part not yet counted.",
+     "o4": "This takes a fraction of the part; the part is already the fraction, so divide."
+    },
+    "method_steps": {
+     "1_asked": "What is the whole quarterly health budget?",
+     "2_givens": "₱4,500, 3/8",
+     "3_method": "If 3/8 of a whole is known, one 8th is the part ÷ 3, and the whole is 8 of those.",
+     "4_why": "The method matches what is asked: if 3/8 of a whole is known, one 8th is the part ÷ 3, and the whole is 8 of those.",
+     "5_solve_by_hand": "₱4,500 ÷ 3 = ₱1,500 per 8th; × 8 = ₱12,000.",
+     "6_check": "Put ₱12,000 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "₱1,500: This is one 8th of the whole; multiply by 8 to finish. ₱7,500: This is the rest of the whole, the part not yet counted. ₱1,687.50: This takes a fraction of the part; the part is already the fraction, so divide.",
+     "8_shortcut": "Whole = part × denominator ÷ numerator."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-OTHER-SHARE",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Whole = part × denominator ÷ numerator.",
+   "recipe": {
+    "op": "frac_whole",
+    "args": {
+     "part": 4500,
+     "f": "3/8"
+    },
+    "fmt": "peso"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0012",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "finding the whole from a part",
+   "micro_skill": "part ÷ fraction = whole",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "After a cleanup, volunteers had collected 52 sacks of plastic, which is 4/7 of their target. How many sacks is the full target?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "364"
+    },
+    {
+     "option_id": "o2",
+     "text": "91"
+    },
+    {
+     "option_id": "o3",
+     "text": "39"
+    },
+    {
+     "option_id": "o4",
+     "text": "13"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "If 4/7 of a whole is known, one 7th is the part ÷ 4, and the whole is 7 of those.",
+    "shortcut": "Whole = part × denominator ÷ numerator.",
+    "why_correct": "52 ÷ 4 = 13 per 7th; × 7 = 91.",
+    "why_wrong": {
+     "o1": "This multiplies by 7 but forgets to divide by 4.",
+     "o3": "This is the rest of the whole, the part not yet counted.",
+     "o4": "This is one 7th of the whole; multiply by 7 to finish."
+    },
+    "method_steps": {
+     "1_asked": "How many sacks is the full target?",
+     "2_givens": "52, 4/7",
+     "3_method": "If 4/7 of a whole is known, one 7th is the part ÷ 4, and the whole is 7 of those.",
+     "4_why": "The method matches what is asked: if 4/7 of a whole is known, one 7th is the part ÷ 4, and the whole is 7 of those.",
+     "5_solve_by_hand": "52 ÷ 4 = 13 per 7th; × 7 = 91.",
+     "6_check": "Put 91 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "364: This multiplies by 7 but forgets to divide by 4. 39: This is the rest of the whole, the part not yet counted. 13: This is one 7th of the whole; multiply by 7 to finish.",
+     "8_shortcut": "Whole = part × denominator ÷ numerator."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-OTHER-SHARE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Whole = part × denominator ÷ numerator.",
+   "recipe": {
+    "op": "frac_whole",
+    "args": {
+     "part": 52,
+     "f": "4/7"
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0013",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "fraction of a fraction",
+   "micro_skill": "\"of\" between fractions means multiply",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "easy",
+   "est_seconds": 35,
+   "language": "en",
+   "stem": "Half of a covered court is reserved for a job fair, and 2/3 of that reserved area is set aside for registration. What fraction of the whole court is the registration area?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "1/3"
+    },
+    {
+     "option_id": "o2",
+     "text": "1/6"
+    },
+    {
+     "option_id": "o3",
+     "text": "2/3"
+    },
+    {
+     "option_id": "o4",
+     "text": "3/5"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A fraction of a fraction: multiply numerators and multiply denominators, then simplify.",
+    "shortcut": "Cancel common factors across before multiplying.",
+    "why_correct": "1/2 × 2/3 = 2/6 = 1/3 of the whole.",
+    "why_wrong": {
+     "o2": "This subtracts; \"of\" calls for multiplication.",
+     "o3": "This is the share of the smaller area only, not of the whole.",
+     "o4": "This adds tops and bottoms; a fraction of a fraction is found by multiplying."
+    },
+    "method_steps": {
+     "1_asked": "What fraction of the whole court is the registration area?",
+     "2_givens": "2/3",
+     "3_method": "A fraction of a fraction: multiply numerators and multiply denominators, then simplify.",
+     "4_why": "The method matches what is asked: a fraction of a fraction.",
+     "5_solve_by_hand": "1/2 × 2/3 = 2/6 = 1/3 of the whole.",
+     "6_check": "Put 1/3 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "1/6: This subtracts; \"of\" calls for multiplication. 2/3: This is the share of the smaller area only, not of the whole. 3/5: This adds tops and bottoms; a fraction of a fraction is found by multiplying.",
+     "8_shortcut": "Cancel common factors across before multiplying."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-OP-SWAP",
+    "o3": "NUM-WRONG-BASE",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Cancel common factors across before multiplying.",
+   "recipe": {
+    "op": "frac_mul",
+    "args": {
+     "f1": "1/2",
+     "f2": "2/3"
+    },
+    "fmt": "frac"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0014",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "fraction of a fraction",
+   "micro_skill": "\"of\" between fractions means multiply",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "easy",
+   "est_seconds": 35,
+   "language": "en",
+   "stem": "3/4 of a provincial road project is in Town A, and 2/9 of the Town A portion is already paved. What fraction of the whole project is the paved part in Town A?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "19/36"
+    },
+    {
+     "option_id": "o2",
+     "text": "2/9"
+    },
+    {
+     "option_id": "o3",
+     "text": "35/36"
+    },
+    {
+     "option_id": "o4",
+     "text": "1/6"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A fraction of a fraction: multiply numerators and multiply denominators, then simplify.",
+    "shortcut": "Cancel common factors across before multiplying.",
+    "why_correct": "3/4 × 2/9 = 6/36 = 1/6 of the whole.",
+    "why_wrong": {
+     "o1": "This subtracts; \"of\" calls for multiplication.",
+     "o2": "This is the share of the smaller area only, not of the whole.",
+     "o3": "This adds the two fractions; a fraction of a fraction is found by multiplying."
+    },
+    "method_steps": {
+     "1_asked": "What fraction of the whole project is the paved part in Town A?",
+     "2_givens": "3/4, 2/9",
+     "3_method": "A fraction of a fraction: multiply numerators and multiply denominators, then simplify.",
+     "4_why": "The method matches what is asked: a fraction of a fraction.",
+     "5_solve_by_hand": "3/4 × 2/9 = 6/36 = 1/6 of the whole.",
+     "6_check": "Put 1/6 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "19/36: This subtracts; \"of\" calls for multiplication. 2/9: This is the share of the smaller area only, not of the whole. 35/36: This adds the two fractions; a fraction of a fraction is found by multiplying.",
+     "8_shortcut": "Cancel common factors across before multiplying."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o2": "NUM-WRONG-BASE",
+    "o3": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Cancel common factors across before multiplying.",
+   "recipe": {
+    "op": "frac_mul",
+    "args": {
+     "f1": "3/4",
+     "f2": "2/9"
+    },
+    "fmt": "frac"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0015",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "comparing fractions",
+   "micro_skill": "compare by cross-multiplying or by decimals",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Four teams report how much of their encoding is done: Team 1, 5/8; Team 2, 3/5; Team 3, 7/12; Team 4, 2/3. Which fraction shows the team that is farthest along?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "5/8"
+    },
+    {
+     "option_id": "o2",
+     "text": "2/3"
+    },
+    {
+     "option_id": "o3",
+     "text": "7/12"
+    },
+    {
+     "option_id": "o4",
+     "text": "3/5"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "To compare fractions, cross-multiply (a/b > c/d when a×d > b×c) or convert each to a decimal.",
+    "shortcut": "Compare each fraction with 1/2 first, then cross-multiply the close ones.",
+    "why_correct": "As decimals: 5/8 ≈ 0.625, 3/5 ≈ 0.600, 7/12 ≈ 0.583, 2/3 ≈ 0.667. The largest is 2/3.",
+    "why_wrong": {
+     "o1": "A larger numerator alone does not decide it; the denominator matters too.",
+     "o3": "The largest denominator does not make the largest fraction; compare the values.",
+     "o4": "As a decimal this is smaller than the key; check each to two places."
+    },
+    "method_steps": {
+     "1_asked": "Which fraction shows the team that is farthest along?",
+     "2_givens": "1, 5/8, 2, 3/5, 3, 7/12, 4, 2/3",
+     "3_method": "To compare fractions, cross-multiply (a/b > c/d when a×d > b×c) or convert each to a decimal.",
+     "4_why": "The method matches what is asked: to compare fractions, cross-multiply (a/b > c/d when a×d > b×c) or convert each to a decimal.",
+     "5_solve_by_hand": "As decimals: 5/8 ≈ 0.625, 3/5 ≈ 0.600, 7/12 ≈ 0.583, 2/3 ≈ 0.667. The largest is 2/3.",
+     "6_check": "Put 2/3 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "5/8: A larger numerator alone does not decide it; the denominator matters too. 7/12: The largest denominator does not make the largest fraction; compare the values. 3/5: As a decimal this is smaller than the key; check each to two places.",
+     "8_shortcut": "Compare each fraction with 1/2 first, then cross-multiply the close ones."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-WRONG-BASE",
+    "o4": "NUM-DECIMAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Compare each fraction with 1/2 first, then cross-multiply the close ones.",
+   "recipe": {
+    "op": "frac_max",
+    "args": {
+     "fs": [
+      "5/8",
+      "3/5",
+      "7/12",
+      "2/3"
+     ]
+    },
+    "fmt": "fracraw"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0016",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Fractions",
+   "concept": "comparing fractions",
+   "micro_skill": "compare by cross-multiplying or by decimals",
+   "archetype": "NUM-FRAC-DEC",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Four water jugs are filled to these levels: 4/9, 3/7, 5/11 and 2/5. Which jug holds the largest fraction of its capacity?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "5/11"
+    },
+    {
+     "option_id": "o2",
+     "text": "2/5"
+    },
+    {
+     "option_id": "o3",
+     "text": "3/7"
+    },
+    {
+     "option_id": "o4",
+     "text": "4/9"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "To compare fractions, cross-multiply (a/b > c/d when a×d > b×c) or convert each to a decimal.",
+    "shortcut": "Compare each fraction with 1/2 first, then cross-multiply the close ones.",
+    "why_correct": "As decimals: 4/9 ≈ 0.444, 3/7 ≈ 0.429, 5/11 ≈ 0.455, 2/5 ≈ 0.400. The largest is 5/11.",
+    "why_wrong": {
+     "o2": "As a decimal this is smaller than the key; check each to two places.",
+     "o3": "A larger numerator alone does not decide it; the denominator matters too.",
+     "o4": "The largest denominator does not make the largest fraction; compare the values."
+    },
+    "method_steps": {
+     "1_asked": "Which jug holds the largest fraction of its capacity?",
+     "2_givens": "4/9, 3/7, 5/11, 2/5",
+     "3_method": "To compare fractions, cross-multiply (a/b > c/d when a×d > b×c) or convert each to a decimal.",
+     "4_why": "The method matches what is asked: to compare fractions, cross-multiply (a/b > c/d when a×d > b×c) or convert each to a decimal.",
+     "5_solve_by_hand": "As decimals: 4/9 ≈ 0.444, 3/7 ≈ 0.429, 5/11 ≈ 0.455, 2/5 ≈ 0.400. The largest is 5/11.",
+     "6_check": "Put 5/11 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "2/5: As a decimal this is smaller than the key; check each to two places. 3/7: A larger numerator alone does not decide it; the denominator matters too. 4/9: The largest denominator does not make the largest fraction; compare the values.",
+     "8_shortcut": "Compare each fraction with 1/2 first, then cross-multiply the close ones."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-DECIMAL",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Compare each fraction with 1/2 first, then cross-multiply the close ones.",
+   "recipe": {
+    "op": "frac_max",
+    "args": {
+     "fs": [
+      "4/9",
+      "3/7",
+      "5/11",
+      "2/5"
+     ]
+    },
+    "fmt": "fracraw"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0017",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "sharing in a ratio",
+   "micro_skill": "total ÷ number of parts × parts wanted",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "easy",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Two cousins share a ₱7,200 prize from a barangay quiz bee in the ratio 5 : 3. How much does the cousin with the smaller share get?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱2,700"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱3,600"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱4,500"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱4,320"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A ratio a : b splits a total into a + b equal parts; each side gets its number of parts.",
+    "shortcut": "One part = ₱7,200 ÷ 8.",
+    "why_correct": "5 + 3 = 8 parts, so one part is ₱900. The share asked for is 3 parts = ₱2,700.",
+    "why_wrong": {
+     "o2": "This splits the total equally and ignores the ratio.",
+     "o3": "This is the other person's (or fund's) share, not the one asked for.",
+     "o4": "This divides by 5 parts instead of the 8 parts in the whole ratio."
+    },
+    "method_steps": {
+     "1_asked": "How much does the cousin with the smaller share get?",
+     "2_givens": "₱7,200, 5, 3",
+     "3_method": "A ratio a : b splits a total into a + b equal parts; each side gets its number of parts.",
+     "4_why": "The method matches what is asked: a ratio a .",
+     "5_solve_by_hand": "5 + 3 = 8 parts, so one part is ₱900. The share asked for is 3 parts = ₱2,700.",
+     "6_check": "Put ₱2,700 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "₱3,600: This splits the total equally and ignores the ratio. ₱4,500: This is the other person's (or fund's) share, not the one asked for. ₱4,320: This divides by 5 parts instead of the 8 parts in the whole ratio.",
+     "8_shortcut": "One part = ₱7,200 ÷ 8."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-OTHER-SHARE",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "One part = ₱7,200 ÷ 8.",
+   "recipe": {
+    "op": "ratio_share",
+    "args": {
+     "total": 7200,
+     "parts": [
+      5,
+      3
+     ],
+     "idx": 1
+    },
+    "fmt": "peso"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0018",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "sharing in a ratio",
+   "micro_skill": "total ÷ number of parts × parts wanted",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "easy",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "A cooperative divides ₱18,000 of earnings between its savings fund and its members' dividends in the ratio 4 : 5. How much goes to dividends?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱8,000"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱22,500"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱9,000"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱10,000"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A ratio a : b splits a total into a + b equal parts; each side gets its number of parts.",
+    "shortcut": "One part = ₱18,000 ÷ 9.",
+    "why_correct": "4 + 5 = 9 parts, so one part is ₱2,000. The share asked for is 5 parts = ₱10,000.",
+    "why_wrong": {
+     "o1": "This is the other person's (or fund's) share, not the one asked for.",
+     "o2": "This divides by 4 parts instead of the 9 parts in the whole ratio.",
+     "o3": "This splits the total equally and ignores the ratio."
+    },
+    "method_steps": {
+     "1_asked": "How much goes to dividends?",
+     "2_givens": "₱18,000, 4, 5",
+     "3_method": "A ratio a : b splits a total into a + b equal parts; each side gets its number of parts.",
+     "4_why": "The method matches what is asked: a ratio a .",
+     "5_solve_by_hand": "4 + 5 = 9 parts, so one part is ₱2,000. The share asked for is 5 parts = ₱10,000.",
+     "6_check": "Put ₱10,000 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "₱8,000: This is the other person's (or fund's) share, not the one asked for. ₱22,500: This divides by 4 parts instead of the 9 parts in the whole ratio. ₱9,000: This splits the total equally and ignores the ratio.",
+     "8_shortcut": "One part = ₱18,000 ÷ 9."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OTHER-SHARE",
+    "o2": "NUM-WRONG-BASE",
+    "o3": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "One part = ₱18,000 ÷ 9.",
+   "recipe": {
+    "op": "ratio_share",
+    "args": {
+     "total": 18000,
+     "parts": [
+      4,
+      5
+     ],
+     "idx": 1
+    },
+    "fmt": "peso"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0019",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "three-way ratio",
+   "micro_skill": "add all the parts first",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "medium",
+   "est_seconds": 75,
+   "language": "en",
+   "stem": "Three volunteers pack 600 relief bags in the ratio 2 : 3 : 5 according to the hours each can give. How many bags does the second volunteer pack?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "200"
+    },
+    {
+     "option_id": "o2",
+     "text": "180"
+    },
+    {
+     "option_id": "o3",
+     "text": "300"
+    },
+    {
+     "option_id": "o4",
+     "text": "225"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "In a three-way ratio a : b : c, the whole is a + b + c parts.",
+    "shortcut": "One part = 600 ÷ 10 = 60.",
+    "why_correct": "2 + 3 + 5 = 10 parts; one part = 60; the share asked for is 3 × 60 = 180.",
+    "why_wrong": {
+     "o1": "This splits the total into three equal shares and ignores the ratio.",
+     "o3": "This is a different person's (or barangay's) share.",
+     "o4": "This uses only two of the three parts as the base."
+    },
+    "method_steps": {
+     "1_asked": "How many bags does the second volunteer pack?",
+     "2_givens": "600, 2, 3, 5",
+     "3_method": "In a three-way ratio a : b : c, the whole is a + b + c parts.",
+     "4_why": "The method matches what is asked: in a three-way ratio a .",
+     "5_solve_by_hand": "2 + 3 + 5 = 10 parts; one part = 60; the share asked for is 3 × 60 = 180.",
+     "6_check": "Put 180 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "200: This splits the total into three equal shares and ignores the ratio. 300: This is a different person's (or barangay's) share. 225: This uses only two of the three parts as the base.",
+     "8_shortcut": "One part = 600 ÷ 10 = 60."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-OTHER-SHARE",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "One part = 600 ÷ 10 = 60.",
+   "recipe": {
+    "op": "ratio_share",
+    "args": {
+     "total": 600,
+     "parts": [
+      2,
+      3,
+      5
+     ],
+     "idx": 1
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0020",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "three-way ratio",
+   "micro_skill": "add all the parts first",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "medium",
+   "est_seconds": 75,
+   "language": "en",
+   "stem": "A town spreads 1,260 seedlings among three barangays in the ratio 3 : 5 : 6. How many seedlings go to the barangay with the largest share?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "420"
+    },
+    {
+     "option_id": "o2",
+     "text": "540"
+    },
+    {
+     "option_id": "o3",
+     "text": "840"
+    },
+    {
+     "option_id": "o4",
+     "text": "270"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "In a three-way ratio a : b : c, the whole is a + b + c parts.",
+    "shortcut": "One part = 1,260 ÷ 14 = 90.",
+    "why_correct": "3 + 5 + 6 = 14 parts; one part = 90; the share asked for is 6 × 90 = 540.",
+    "why_wrong": {
+     "o1": "This splits the total into three equal shares and ignores the ratio.",
+     "o3": "This uses only two of the three parts as the base.",
+     "o4": "This is a different person's (or barangay's) share."
+    },
+    "method_steps": {
+     "1_asked": "How many seedlings go to the barangay with the largest share?",
+     "2_givens": "1,260, 3, 5, 6",
+     "3_method": "In a three-way ratio a : b : c, the whole is a + b + c parts.",
+     "4_why": "The method matches what is asked: in a three-way ratio a .",
+     "5_solve_by_hand": "3 + 5 + 6 = 14 parts; one part = 90; the share asked for is 6 × 90 = 540.",
+     "6_check": "Put 540 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "420: This splits the total into three equal shares and ignores the ratio. 840: This uses only two of the three parts as the base. 270: This is a different person's (or barangay's) share.",
+     "8_shortcut": "One part = 1,260 ÷ 14 = 90."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-WRONG-BASE",
+    "o4": "NUM-OTHER-SHARE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "One part = 1,260 ÷ 14 = 90.",
+   "recipe": {
+    "op": "ratio_share",
+    "args": {
+     "total": 1260,
+     "parts": [
+      3,
+      5,
+      6
+     ],
+     "idx": 2
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0021",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "finding a quantity from a ratio",
+   "micro_skill": "scale the ratio up to the known amount",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "easy",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "In a training class, the ratio of men to women is 4 : 5. If there are 35 women, how many men are there?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "63"
+    },
+    {
+     "option_id": "o2",
+     "text": "43.75"
+    },
+    {
+     "option_id": "o3",
+     "text": "28"
+    },
+    {
+     "option_id": "o4",
+     "text": "34"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Equivalent ratios: multiply both terms by the same number. Find that multiplier from the known group.",
+    "shortcut": "Multiplier = 35 ÷ 5 = 7.",
+    "why_correct": "35 ÷ 5 = 7, and 4 × 7 = 28.",
+    "why_wrong": {
+     "o1": "This adds both groups; the question asks for one group only.",
+     "o2": "This flips the ratio; match each number to the group it describes.",
+     "o4": "Subtracting the difference of the ratio terms does not scale the ratio."
+    },
+    "method_steps": {
+     "1_asked": "If there are 35 women, how many men are there?",
+     "2_givens": "4, 5, 35",
+     "3_method": "Equivalent ratios: multiply both terms by the same number. Find that multiplier from the known group.",
+     "4_why": "The method matches what is asked: equivalent ratios.",
+     "5_solve_by_hand": "35 ÷ 5 = 7, and 4 × 7 = 28.",
+     "6_check": "Put 28 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "63: This adds both groups; the question asks for one group only. 43.75: This flips the ratio; match each number to the group it describes. 34: Subtracting the difference of the ratio terms does not scale the ratio.",
+     "8_shortcut": "Multiplier = 35 ÷ 5 = 7."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-EXTRA-STEP",
+    "o2": "NUM-OP-SWAP",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Multiplier = 35 ÷ 5 = 7.",
+   "recipe": {
+    "op": "ratio_part",
+    "args": {
+     "known": 35,
+     "parts": [
+      4,
+      5
+     ],
+     "ki": 1
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0022",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "finding a quantity from a ratio",
+   "micro_skill": "scale the ratio up to the known amount",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "easy",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "A clinic's ratio of nurses to midwives is 7 : 3. If there are 28 nurses, how many midwives work there?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "12"
+    },
+    {
+     "option_id": "o2",
+     "text": "40"
+    },
+    {
+     "option_id": "o3",
+     "text": "24"
+    },
+    {
+     "option_id": "o4",
+     "text": "65.33"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Equivalent ratios: multiply both terms by the same number. Find that multiplier from the known group.",
+    "shortcut": "Multiplier = 28 ÷ 7 = 4.",
+    "why_correct": "28 ÷ 7 = 4, and 3 × 4 = 12.",
+    "why_wrong": {
+     "o2": "This adds both groups; the question asks for one group only.",
+     "o3": "Subtracting the difference of the ratio terms does not scale the ratio.",
+     "o4": "This flips the ratio; match each number to the group it describes."
+    },
+    "method_steps": {
+     "1_asked": "If there are 28 nurses, how many midwives work there?",
+     "2_givens": "7, 3, 28",
+     "3_method": "Equivalent ratios: multiply both terms by the same number. Find that multiplier from the known group.",
+     "4_why": "The method matches what is asked: equivalent ratios.",
+     "5_solve_by_hand": "28 ÷ 7 = 4, and 3 × 4 = 12.",
+     "6_check": "Put 12 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "40: This adds both groups; the question asks for one group only. 24: Subtracting the difference of the ratio terms does not scale the ratio. 65.33: This flips the ratio; match each number to the group it describes.",
+     "8_shortcut": "Multiplier = 28 ÷ 7 = 4."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-EXTRA-STEP",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Multiplier = 28 ÷ 7 = 4.",
+   "recipe": {
+    "op": "ratio_part",
+    "args": {
+     "known": 28,
+     "parts": [
+      7,
+      3
+     ],
+     "ki": 0
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0023",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "ratio with a known difference",
+   "micro_skill": "the difference of the terms equals the known difference",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "medium",
+   "est_seconds": 75,
+   "language": "en",
+   "stem": "The ages of two siblings are in the ratio 7 : 4, and the older one is 27 years older. How old is the older sibling?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "9"
+    },
+    {
+     "option_id": "o2",
+     "text": "36"
+    },
+    {
+     "option_id": "o3",
+     "text": "63"
+    },
+    {
+     "option_id": "o4",
+     "text": "17.18"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "If a : b and the difference is known, then (a − b) parts equal that difference.",
+    "shortcut": "One part = 27 ÷ (7 − 4).",
+    "why_correct": "7 − 4 = 3 parts = 27, so one part is 9. The larger is 7 × 9 = 63.",
+    "why_wrong": {
+     "o1": "This is the size of one part only.",
+     "o2": "This is the smaller quantity, not the larger one asked for.",
+     "o4": "This treats the difference as if it were the total."
+    },
+    "method_steps": {
+     "1_asked": "How old is the older sibling?",
+     "2_givens": "7, 4,, 27",
+     "3_method": "If a : b and the difference is known, then (a − b) parts equal that difference.",
+     "4_why": "The method matches what is asked: if a .",
+     "5_solve_by_hand": "7 − 4 = 3 parts = 27, so one part is 9. The larger is 7 × 9 = 63.",
+     "6_check": "Put 63 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "9: This is the size of one part only. 36: This is the smaller quantity, not the larger one asked for. 17.18: This treats the difference as if it were the total.",
+     "8_shortcut": "One part = 27 ÷ (7 − 4)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-OTHER-SHARE",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "One part = 27 ÷ (7 − 4).",
+   "recipe": {
+    "op": "ratio_diff",
+    "args": {
+     "diff": 27,
+     "parts": [
+      7,
+      4
+     ]
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0024",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "ratio with a known difference",
+   "micro_skill": "the difference of the terms equals the known difference",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "medium",
+   "est_seconds": 75,
+   "language": "en",
+   "stem": "Two offices received complaint letters in the ratio 9 : 5. The first office received 32 more letters than the second. How many letters did the first office receive?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "8"
+    },
+    {
+     "option_id": "o2",
+     "text": "72"
+    },
+    {
+     "option_id": "o3",
+     "text": "40"
+    },
+    {
+     "option_id": "o4",
+     "text": "20.57"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "If a : b and the difference is known, then (a − b) parts equal that difference.",
+    "shortcut": "One part = 32 ÷ (9 − 5).",
+    "why_correct": "9 − 5 = 4 parts = 32, so one part is 8. The larger is 9 × 8 = 72.",
+    "why_wrong": {
+     "o1": "This is the size of one part only.",
+     "o3": "This is the smaller quantity, not the larger one asked for.",
+     "o4": "This treats the difference as if it were the total."
+    },
+    "method_steps": {
+     "1_asked": "How many letters did the first office receive?",
+     "2_givens": "9, 5, 32",
+     "3_method": "If a : b and the difference is known, then (a − b) parts equal that difference.",
+     "4_why": "The method matches what is asked: if a .",
+     "5_solve_by_hand": "9 − 5 = 4 parts = 32, so one part is 8. The larger is 9 × 8 = 72.",
+     "6_check": "Put 72 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "8: This is the size of one part only. 40: This is the smaller quantity, not the larger one asked for. 20.57: This treats the difference as if it were the total.",
+     "8_shortcut": "One part = 32 ÷ (9 − 5)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-OTHER-SHARE",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "One part = 32 ÷ (9 − 5).",
+   "recipe": {
+    "op": "ratio_diff",
+    "args": {
+     "diff": 32,
+     "parts": [
+      9,
+      5
+     ]
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0025",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "combining ratios",
+   "micro_skill": "make the shared term equal",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "medium",
+   "est_seconds": 75,
+   "language": "en",
+   "stem": "In a warehouse, the ratio of rice sacks to sugar sacks is 2 : 3, and the ratio of sugar sacks to flour sacks is 4 : 5. What is the ratio of rice sacks to flour sacks?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "6 : 8"
+    },
+    {
+     "option_id": "o2",
+     "text": "2 : 5"
+    },
+    {
+     "option_id": "o3",
+     "text": "8 : 15"
+    },
+    {
+     "option_id": "o4",
+     "text": "15 : 8"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "To chain a : b and b : c, rewrite both so the shared middle term is the same number.",
+    "shortcut": "Multiply across: (a × second b) : (first b × c).",
+    "why_correct": "Make the middle terms equal: 2 : 3 = 8 : 12 and 4 : 5 = 12 : 15. So the outer ratio is 8 : 15.",
+    "why_wrong": {
+     "o1": "Adding terms of two ratios does not combine them.",
+     "o2": "This joins the outer terms without making the middle terms match.",
+     "o4": "This reverses the order asked for."
+    },
+    "method_steps": {
+     "1_asked": "What is the ratio of rice sacks to flour sacks?",
+     "2_givens": "2, 3,, 4, 5",
+     "3_method": "To chain a : b and b : c, rewrite both so the shared middle term is the same number.",
+     "4_why": "The method matches what is asked: to chain a .",
+     "5_solve_by_hand": "Make the middle terms equal: 2 : 3 = 8 : 12 and 4 : 5 = 12 : 15. So the outer ratio is 8 : 15.",
+     "6_check": "Put 8 : 15 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "6 : 8: Adding terms of two ratios does not combine them. 2 : 5: This joins the outer terms without making the middle terms match. 15 : 8: This reverses the order asked for.",
+     "8_shortcut": "Multiply across: (a × second b) : (first b × c)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o2": "NUM-PARTIAL",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Multiply across: (a × second b) : (first b × c).",
+   "recipe": {
+    "op": "ratio_chain",
+    "args": {
+     "ab": [
+      2,
+      3
+     ],
+     "bc": [
+      4,
+      5
+     ]
+    },
+    "fmt": "raw"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0026",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "combining ratios",
+   "micro_skill": "make the shared term equal",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "medium",
+   "est_seconds": 75,
+   "language": "en",
+   "stem": "At a job fair, the ratio of applicants to interviewers is 15 : 2, and the ratio of interviewers to booths is 4 : 3. What is the ratio of applicants to booths?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "15 : 3"
+    },
+    {
+     "option_id": "o2",
+     "text": "19 : 5"
+    },
+    {
+     "option_id": "o3",
+     "text": "1 : 10"
+    },
+    {
+     "option_id": "o4",
+     "text": "10 : 1"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "To chain a : b and b : c, rewrite both so the shared middle term is the same number.",
+    "shortcut": "Multiply across: (a × second b) : (first b × c).",
+    "why_correct": "Make the middle terms equal: 15 : 2 = 60 : 8 and 4 : 3 = 8 : 6. So the outer ratio is 60 : 6, which simplifies to 10 : 1.",
+    "why_wrong": {
+     "o1": "This joins the outer terms without making the middle terms match.",
+     "o2": "Adding terms of two ratios does not combine them.",
+     "o3": "This reverses the order asked for."
+    },
+    "method_steps": {
+     "1_asked": "What is the ratio of applicants to booths?",
+     "2_givens": "15, 2,, 4, 3",
+     "3_method": "To chain a : b and b : c, rewrite both so the shared middle term is the same number.",
+     "4_why": "The method matches what is asked: to chain a .",
+     "5_solve_by_hand": "Make the middle terms equal: 15 : 2 = 60 : 8 and 4 : 3 = 8 : 6. So the outer ratio is 60 : 6, which simplifies to 10 : 1.",
+     "6_check": "Put 10 : 1 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "15 : 3: This joins the outer terms without making the middle terms match. 19 : 5: Adding terms of two ratios does not combine them. 1 : 10: This reverses the order asked for.",
+     "8_shortcut": "Multiply across: (a × second b) : (first b × c)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-OP-SWAP",
+    "o3": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Multiply across: (a × second b) : (first b × c).",
+   "recipe": {
+    "op": "ratio_chain",
+    "args": {
+     "ab": [
+      15,
+      2
+     ],
+     "bc": [
+      4,
+      3
+     ]
+    },
+    "fmt": "raw"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0027",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "map scale",
+   "micro_skill": "multiply the map length by the scale",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "On a provincial road map, 1 cm stands for 2.5 km. Two town halls are 6.4 cm apart on the map. What is the actual distance?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "160 km"
+    },
+    {
+     "option_id": "o2",
+     "text": "16 km"
+    },
+    {
+     "option_id": "o3",
+     "text": "2.56 km"
+    },
+    {
+     "option_id": "o4",
+     "text": "8.9 km"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A map scale 1 cm : k units means every centimeter on paper is k units on the ground.",
+    "shortcut": "Actual = map length × scale value.",
+    "why_correct": "6.4 × 2.5 = 16 km.",
+    "why_wrong": {
+     "o1": "This slips a factor of ten; the scale is already in the answer unit.",
+     "o3": "This divides by the scale; each centimeter stands for more distance, so multiply.",
+     "o4": "This adds the scale to the map length."
+    },
+    "method_steps": {
+     "1_asked": "What is the actual distance?",
+     "2_givens": "1, 2.5, 6.4",
+     "3_method": "A map scale 1 cm : k units means every centimeter on paper is k units on the ground.",
+     "4_why": "The method matches what is asked: a map scale 1 cm .",
+     "5_solve_by_hand": "6.4 × 2.5 = 16 km.",
+     "6_check": "Put 16 km back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "160 km: This slips a factor of ten; the scale is already in the answer unit. 2.56 km: This divides by the scale; each centimeter stands for more distance, so multiply. 8.9 km: This adds the scale to the map length.",
+     "8_shortcut": "Actual = map length × scale value."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-UNIT",
+    "o3": "NUM-OP-SWAP",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Actual = map length × scale value.",
+   "recipe": {
+    "op": "mul",
+    "args": {
+     "a": "5/2",
+     "b": "32/5"
+    },
+    "fmt": "unit",
+    "unit": "km"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0028",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "map scale",
+   "micro_skill": "multiply the map length by the scale",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A floor plan uses a scale of 1 cm to 1.5 m. A hallway measures 9 cm on the plan. How long is the actual hallway?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "6 m"
+    },
+    {
+     "option_id": "o2",
+     "text": "13.5 m"
+    },
+    {
+     "option_id": "o3",
+     "text": "135 m"
+    },
+    {
+     "option_id": "o4",
+     "text": "10.5 m"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A map scale 1 cm : k units means every centimeter on paper is k units on the ground.",
+    "shortcut": "Actual = map length × scale value.",
+    "why_correct": "9 × 1.5 = 13.5 m.",
+    "why_wrong": {
+     "o1": "This divides by the scale; each centimeter stands for more distance, so multiply.",
+     "o3": "This slips a factor of ten; the scale is already in the answer unit.",
+     "o4": "This adds the scale to the map length."
+    },
+    "method_steps": {
+     "1_asked": "How long is the actual hallway?",
+     "2_givens": "1, 1.5, 9",
+     "3_method": "A map scale 1 cm : k units means every centimeter on paper is k units on the ground.",
+     "4_why": "The method matches what is asked: a map scale 1 cm .",
+     "5_solve_by_hand": "9 × 1.5 = 13.5 m.",
+     "6_check": "Put 13.5 m back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "6 m: This divides by the scale; each centimeter stands for more distance, so multiply. 135 m: This slips a factor of ten; the scale is already in the answer unit. 10.5 m: This adds the scale to the map length.",
+     "8_shortcut": "Actual = map length × scale value."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o3": "NUM-UNIT",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Actual = map length × scale value.",
+   "recipe": {
+    "op": "mul",
+    "args": {
+     "a": "3/2",
+     "b": "9"
+    },
+    "fmt": "unit",
+    "unit": "m"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0029",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "direct proportion",
+   "micro_skill": "set up equal ratios and cross-multiply",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "easy",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "A feeding program uses 3 kilograms of rice for every 12 children. How many kilograms are needed for 30 children?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "2.5 kilograms"
+    },
+    {
+     "option_id": "o2",
+     "text": "15 kilograms"
+    },
+    {
+     "option_id": "o3",
+     "text": "21 kilograms"
+    },
+    {
+     "option_id": "o4",
+     "text": "7.5 kilograms"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "In a direct proportion, both quantities grow by the same factor: a/b = x/c.",
+    "shortcut": "Factor = 30 ÷ 12 = 2.5; multiply 3 by it.",
+    "why_correct": "30 ÷ 12 = 2.5, and 3 × 2.5 = 7.5 kilograms.",
+    "why_wrong": {
+     "o1": "This is only the scaling factor (30 ÷ 12); multiply it by 3.",
+     "o2": "This doubles the answer for no reason in the problem.",
+     "o3": "Adding the increase does not keep the rate the same."
+    },
+    "method_steps": {
+     "1_asked": "How many kilograms are needed for 30 children?",
+     "2_givens": "3, 12, 30",
+     "3_method": "In a direct proportion, both quantities grow by the same factor: a/b = x/c.",
+     "4_why": "The method matches what is asked: in a direct proportion, both quantities grow by the same factor.",
+     "5_solve_by_hand": "30 ÷ 12 = 2.5, and 3 × 2.5 = 7.5 kilograms.",
+     "6_check": "Put 7.5 kilograms back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "2.5 kilograms: This is only the scaling factor (30 ÷ 12); multiply it by 3. 15 kilograms: This doubles the answer for no reason in the problem. 21 kilograms: Adding the increase does not keep the rate the same.",
+     "8_shortcut": "Factor = 30 ÷ 12 = 2.5; multiply 3 by it."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-EXTRA-STEP",
+    "o3": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Factor = 30 ÷ 12 = 2.5; multiply 3 by it.",
+   "recipe": {
+    "op": "proportion",
+    "args": {
+     "a": 3,
+     "b": 12,
+     "c": 30
+    },
+    "fmt": "unit",
+    "unit": "kilograms"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0030",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Ratios",
+   "concept": "direct proportion",
+   "micro_skill": "set up equal ratios and cross-multiply",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "easy",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "A printer uses 2 toner cartridges for every 15 reams of paper printed. How many cartridges are needed for 75 reams?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "10 cartridges"
+    },
+    {
+     "option_id": "o2",
+     "text": "5 cartridges"
+    },
+    {
+     "option_id": "o3",
+     "text": "62 cartridges"
+    },
+    {
+     "option_id": "o4",
+     "text": "20 cartridges"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "In a direct proportion, both quantities grow by the same factor: a/b = x/c.",
+    "shortcut": "Factor = 75 ÷ 15 = 5; multiply 2 by it.",
+    "why_correct": "75 ÷ 15 = 5, and 2 × 5 = 10 cartridges.",
+    "why_wrong": {
+     "o2": "This is only the scaling factor (75 ÷ 15); multiply it by 2.",
+     "o3": "Adding the increase does not keep the rate the same.",
+     "o4": "This doubles the answer for no reason in the problem."
+    },
+    "method_steps": {
+     "1_asked": "How many cartridges are needed for 75 reams?",
+     "2_givens": "2, 15, 75",
+     "3_method": "In a direct proportion, both quantities grow by the same factor: a/b = x/c.",
+     "4_why": "The method matches what is asked: in a direct proportion, both quantities grow by the same factor.",
+     "5_solve_by_hand": "75 ÷ 15 = 5, and 2 × 5 = 10 cartridges.",
+     "6_check": "Put 10 cartridges back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "5 cartridges: This is only the scaling factor (75 ÷ 15); multiply it by 2. 62 cartridges: Adding the increase does not keep the rate the same. 20 cartridges: This doubles the answer for no reason in the problem.",
+     "8_shortcut": "Factor = 75 ÷ 15 = 5; multiply 2 by it."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-OP-SWAP",
+    "o4": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Factor = 75 ÷ 15 = 5; multiply 2 by it.",
+   "recipe": {
+    "op": "proportion",
+    "args": {
+     "a": 2,
+     "b": 15,
+     "c": 75
+    },
+    "fmt": "unit",
+    "unit": "cartridges"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0031",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "one-variable linear equation",
+   "micro_skill": "undo the addition, then the multiplication",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "Solve for x: 3x + 7 = 31.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "8"
+    },
+    {
+     "option_id": "o2",
+     "text": "3.33"
+    },
+    {
+     "option_id": "o3",
+     "text": "24"
+    },
+    {
+     "option_id": "o4",
+     "text": "12.67"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Solving a linear equation: do the same operation on both sides, undoing addition first, then multiplication.",
+    "shortcut": "x = (31 − 7) ÷ 3.",
+    "why_correct": "3x = 31 − 7 = 24, so x = 24 ÷ 3 = 8. Check: 3 × 8 + 7 = 31.",
+    "why_wrong": {
+     "o2": "This divides first and subtracts later, which undoes the steps in the wrong order.",
+     "o3": "This stops after subtracting 7; still divide by 3.",
+     "o4": "This adds 7 instead of subtracting it from both sides."
+    },
+    "method_steps": {
+     "1_asked": "Solve for x: 3x + 7 = 31.",
+     "2_givens": "3, 7, 31",
+     "3_method": "Solving a linear equation: do the same operation on both sides, undoing addition first, then multiplication.",
+     "4_why": "The method matches what is asked: solving a linear equation.",
+     "5_solve_by_hand": "3x = 31 − 7 = 24, so x = 24 ÷ 3 = 8. Check: 3 × 8 + 7 = 31.",
+     "6_check": "Put 8 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "3.33: This divides first and subtracts later, which undoes the steps in the wrong order. 24: This stops after subtracting 7; still divide by 3. 12.67: This adds 7 instead of subtracting it from both sides.",
+     "8_shortcut": "x = (31 − 7) ÷ 3."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-ORDER-OPS",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "x = (31 − 7) ÷ 3.",
+   "recipe": {
+    "op": "lin",
+    "args": {
+     "a": 3,
+     "b": 7,
+     "c": 31
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0032",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "one-variable linear equation",
+   "micro_skill": "undo the addition, then the multiplication",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "A tricycle driver's fare rule is 15 pesos plus 2 pesos for every kilometer. A passenger paid 37 pesos. Writing the fare as 2x + 15 = 37, how many kilometers (x) was the ride?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "26"
+    },
+    {
+     "option_id": "o2",
+     "text": "22"
+    },
+    {
+     "option_id": "o3",
+     "text": "3.5"
+    },
+    {
+     "option_id": "o4",
+     "text": "11"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Solving a linear equation: do the same operation on both sides, undoing addition first, then multiplication.",
+    "shortcut": "x = (37 − 15) ÷ 2.",
+    "why_correct": "2x = 37 − 15 = 22, so x = 22 ÷ 2 = 11. Check: 2 × 11 + 15 = 37.",
+    "why_wrong": {
+     "o1": "This adds 15 instead of subtracting it from both sides.",
+     "o2": "This stops after subtracting 15; still divide by 2.",
+     "o3": "This divides first and subtracts later, which undoes the steps in the wrong order."
+    },
+    "method_steps": {
+     "1_asked": "Writing the fare as 2x + 15 = 37, how many kilometers (x) was the ride?",
+     "2_givens": "15, 2, 37, 37,",
+     "3_method": "Solving a linear equation: do the same operation on both sides, undoing addition first, then multiplication.",
+     "4_why": "The method matches what is asked: solving a linear equation.",
+     "5_solve_by_hand": "2x = 37 − 15 = 22, so x = 22 ÷ 2 = 11. Check: 2 × 11 + 15 = 37.",
+     "6_check": "Put 11 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "26: This adds 15 instead of subtracting it from both sides. 22: This stops after subtracting 15; still divide by 2. 3.5: This divides first and subtracts later, which undoes the steps in the wrong order.",
+     "8_shortcut": "x = (37 − 15) ÷ 2."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-ORDER-OPS"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "x = (37 − 15) ÷ 2.",
+   "recipe": {
+    "op": "lin",
+    "args": {
+     "a": 2,
+     "b": 15,
+     "c": 37
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0033",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "translating words to an equation",
+   "micro_skill": "write the steps as an equation, then undo them in reverse",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "When a number is tripled and 8 is subtracted, the result is 49. What is the number?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "57"
+    },
+    {
+     "option_id": "o2",
+     "text": "19"
+    },
+    {
+     "option_id": "o3",
+     "text": "21"
+    },
+    {
+     "option_id": "o4",
+     "text": "13.67"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Working backward: undo the last step first. The opposite of subtracting is adding; the opposite of multiplying is dividing.",
+    "shortcut": "(49 + 8) ÷ 3.",
+    "why_correct": "Let the number be x: 3x − 8 = 49. Then 3x = 57, so x = 19. Check: 3 × 19 − 8 = 49.",
+    "why_wrong": {
+     "o1": "This adds 8 back but forgets to divide by 3.",
+     "o3": "This divides before adding back, which reverses the steps in the wrong order.",
+     "o4": "This subtracts 8 again instead of adding it back."
+    },
+    "method_steps": {
+     "1_asked": "What is the number?",
+     "2_givens": "8, 49",
+     "3_method": "Working backward: undo the last step first. The opposite of subtracting is adding; the opposite of multiplying is dividing.",
+     "4_why": "The method matches what is asked: working backward.",
+     "5_solve_by_hand": "Let the number be x: 3x − 8 = 49. Then 3x = 57, so x = 19. Check: 3 × 19 − 8 = 49.",
+     "6_check": "Put 19 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "57: This adds 8 back but forgets to divide by 3. 21: This divides before adding back, which reverses the steps in the wrong order. 13.67: This subtracts 8 again instead of adding it back.",
+     "8_shortcut": "(49 + 8) ÷ 3."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-ORDER-OPS",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "(49 + 8) ÷ 3.",
+   "recipe": {
+    "op": "lin",
+    "args": {
+     "a": 3,
+     "b": -8,
+     "c": 49
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0034",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "translating words to an equation",
+   "micro_skill": "write the steps as an equation, then undo them in reverse",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Ramon thinks of a number, multiplies it by 5, then subtracts 12. He gets 63. What number did he start with?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "10.2"
+    },
+    {
+     "option_id": "o2",
+     "text": "15"
+    },
+    {
+     "option_id": "o3",
+     "text": "75"
+    },
+    {
+     "option_id": "o4",
+     "text": "17"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Working backward: undo the last step first. The opposite of subtracting is adding; the opposite of multiplying is dividing.",
+    "shortcut": "(63 + 12) ÷ 5.",
+    "why_correct": "Let the number be x: 5x − 12 = 63. Then 5x = 75, so x = 15. Check: 5 × 15 − 12 = 63.",
+    "why_wrong": {
+     "o1": "This subtracts 12 again instead of adding it back.",
+     "o3": "This adds 12 back but forgets to divide by 5.",
+     "o4": "This divides before adding back, which reverses the steps in the wrong order."
+    },
+    "method_steps": {
+     "1_asked": "What number did he start with?",
+     "2_givens": "5,, 12, 63",
+     "3_method": "Working backward: undo the last step first. The opposite of subtracting is adding; the opposite of multiplying is dividing.",
+     "4_why": "The method matches what is asked: working backward.",
+     "5_solve_by_hand": "Let the number be x: 5x − 12 = 63. Then 5x = 75, so x = 15. Check: 5 × 15 − 12 = 63.",
+     "6_check": "Put 15 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "10.2: This subtracts 12 again instead of adding it back. 75: This adds 12 back but forgets to divide by 5. 17: This divides before adding back, which reverses the steps in the wrong order.",
+     "8_shortcut": "(63 + 12) ÷ 5."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-ORDER-OPS"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "(63 + 12) ÷ 5.",
+   "recipe": {
+    "op": "lin",
+    "args": {
+     "a": 5,
+     "b": -12,
+     "c": 63
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0035",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "consecutive numbers",
+   "micro_skill": "the middle value is the average",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "The sum of three consecutive odd numbers is 81. What is the largest of the three?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "25"
+    },
+    {
+     "option_id": "o2",
+     "text": "27"
+    },
+    {
+     "option_id": "o3",
+     "text": "31"
+    },
+    {
+     "option_id": "o4",
+     "text": "29"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Consecutive odd numbers go up by 2: x, x + 2, x + 4…",
+    "shortcut": "Average = 81 ÷ 3; count out from the middle.",
+    "why_correct": "Write them as x, x + 2, …; the sum is 3x + 6 = 81, so x = 25. The numbers run 25 to 29; the largest is 29.",
+    "why_wrong": {
+     "o1": "This is the smallest number, not the largest.",
+     "o2": "This is the middle (average) value, not the one asked for.",
+     "o3": "This is one step past the end of the list of numbers."
+    },
+    "method_steps": {
+     "1_asked": "What is the largest of the three?",
+     "2_givens": "81",
+     "3_method": "Consecutive odd numbers go up by 2: x, x + 2, x + 4…",
+     "4_why": "The method matches what is asked: consecutive odd numbers go up by 2.",
+     "5_solve_by_hand": "Write them as x, x + 2, …; the sum is 3x + 6 = 81, so x = 25. The numbers run 25 to 29; the largest is 29.",
+     "6_check": "Put 29 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "25: This is the smallest number, not the largest. 27: This is the middle (average) value, not the one asked for. 31: This is one step past the end of the list of numbers.",
+     "8_shortcut": "Average = 81 ÷ 3; count out from the middle."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OTHER-SHARE",
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Average = 81 ÷ 3; count out from the middle.",
+   "recipe": {
+    "op": "consec",
+    "args": {
+     "count": 3,
+     "step": 2,
+     "total": 81,
+     "want": "largest"
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0036",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "consecutive numbers",
+   "micro_skill": "the middle value is the average",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Four consecutive whole numbers add up to 106. What is the smallest of them?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "25"
+    },
+    {
+     "option_id": "o2",
+     "text": "26"
+    },
+    {
+     "option_id": "o3",
+     "text": "28"
+    },
+    {
+     "option_id": "o4",
+     "text": "24"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Consecutive whole numbers go up by 1: x, x + 1, x + 2…",
+    "shortcut": "Average = 106 ÷ 4; count out from the middle.",
+    "why_correct": "Write them as x, x + 1, …; the sum is 4x + 6 = 106, so x = 25. The numbers run 25 to 28; the smallest is 25.",
+    "why_wrong": {
+     "o2": "This is the middle (average) value, not the one asked for.",
+     "o3": "This is the largest number, not the smallest.",
+     "o4": "This is one step past the end of the list of numbers."
+    },
+    "method_steps": {
+     "1_asked": "What is the smallest of them?",
+     "2_givens": "106",
+     "3_method": "Consecutive whole numbers go up by 1: x, x + 1, x + 2…",
+     "4_why": "The method matches what is asked: consecutive whole numbers go up by 1.",
+     "5_solve_by_hand": "Write them as x, x + 1, …; the sum is 4x + 6 = 106, so x = 25. The numbers run 25 to 28; the smallest is 25.",
+     "6_check": "Put 25 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "26: This is the middle (average) value, not the one asked for. 28: This is the largest number, not the smallest. 24: This is one step past the end of the list of numbers.",
+     "8_shortcut": "Average = 106 ÷ 4; count out from the middle."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-OTHER-SHARE",
+    "o4": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Average = 106 ÷ 4; count out from the middle.",
+   "recipe": {
+    "op": "consec",
+    "args": {
+     "count": 4,
+     "step": 1,
+     "total": 106,
+     "want": "smallest"
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0037",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "one number as a multiple of another",
+   "micro_skill": "x + kx = total",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Two numbers add up to 72, and one is 5 times the other. What is the smaller number?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "12"
+    },
+    {
+     "option_id": "o2",
+     "text": "60"
+    },
+    {
+     "option_id": "o3",
+     "text": "36"
+    },
+    {
+     "option_id": "o4",
+     "text": "14.4"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "If one number is k times the other, together they make k + 1 equal parts.",
+    "shortcut": "72 ÷ (5 + 1).",
+    "why_correct": "x + 5x = 6x = 72, so x = 12 (and the larger is 60).",
+    "why_wrong": {
+     "o2": "This is the larger number.",
+     "o3": "This splits the total in half, ignoring the multiple.",
+     "o4": "This divides by 5, forgetting that the smaller number is one more part: 5 + 1 = 6."
+    },
+    "method_steps": {
+     "1_asked": "What is the smaller number?",
+     "2_givens": "72,, 5",
+     "3_method": "If one number is k times the other, together they make k + 1 equal parts.",
+     "4_why": "The method matches what is asked: if one number is k times the other, together they make k + 1 equal parts.",
+     "5_solve_by_hand": "x + 5x = 6x = 72, so x = 12 (and the larger is 60).",
+     "6_check": "Put 12 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "60: This is the larger number. 36: This splits the total in half, ignoring the multiple. 14.4: This divides by 5, forgetting that the smaller number is one more part: 5 + 1 = 6.",
+     "8_shortcut": "72 ÷ (5 + 1)."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-OTHER-SHARE",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "72 ÷ (5 + 1).",
+   "recipe": {
+    "op": "multiple",
+    "args": {
+     "k": 5,
+     "total": 72
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0038",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "one number as a multiple of another",
+   "micro_skill": "x + kx = total",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A school's two buildings have 96 classrooms in all. The new building has 3 times as many classrooms as the old one. How many classrooms are in the old building?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "48"
+    },
+    {
+     "option_id": "o2",
+     "text": "72"
+    },
+    {
+     "option_id": "o3",
+     "text": "24"
+    },
+    {
+     "option_id": "o4",
+     "text": "32"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "If one number is k times the other, together they make k + 1 equal parts.",
+    "shortcut": "96 ÷ (3 + 1).",
+    "why_correct": "x + 3x = 4x = 96, so x = 24 (and the larger is 72).",
+    "why_wrong": {
+     "o1": "This splits the total in half, ignoring the multiple.",
+     "o2": "This is the larger number.",
+     "o4": "This divides by 3, forgetting that the smaller number is one more part: 3 + 1 = 4."
+    },
+    "method_steps": {
+     "1_asked": "How many classrooms are in the old building?",
+     "2_givens": "96, 3",
+     "3_method": "If one number is k times the other, together they make k + 1 equal parts.",
+     "4_why": "The method matches what is asked: if one number is k times the other, together they make k + 1 equal parts.",
+     "5_solve_by_hand": "x + 3x = 4x = 96, so x = 24 (and the larger is 72).",
+     "6_check": "Put 24 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "48: This splits the total in half, ignoring the multiple. 72: This is the larger number. 32: This divides by 3, forgetting that the smaller number is one more part: 3 + 1 = 4.",
+     "8_shortcut": "96 ÷ (3 + 1)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-OTHER-SHARE",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "96 ÷ (3 + 1).",
+   "recipe": {
+    "op": "multiple",
+    "args": {
+     "k": 3,
+     "total": 96
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0039",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "coin problem",
+   "micro_skill": "assume all coins are the smaller kind, then trade up",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "medium",
+   "est_seconds": 75,
+   "language": "en",
+   "stem": "A cashier's drawer has 40 coins, all five-peso and ten-peso coins, worth ₱290 in all. How many ten-peso coins are there?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "29"
+    },
+    {
+     "option_id": "o2",
+     "text": "22"
+    },
+    {
+     "option_id": "o3",
+     "text": "20"
+    },
+    {
+     "option_id": "o4",
+     "text": "18"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Two-unknown problem: let x be one kind; the other kind is (total coins − x). Write one equation for the value.",
+    "shortcut": "If all 40 were ₱5 coins, the value would be ₱200; each swap to a ₱10 coin adds ₱5.",
+    "why_correct": "All ₱5: ₱200. Shortfall ₱290 − ₱200 = ₱90; ÷ ₱5 = 18 ten-peso coins, and 22 of the other kind.",
+    "why_wrong": {
+     "o1": "This divides the total value by one coin value and ignores the coin count.",
+     "o2": "This is the number of the other kind of coin.",
+     "o3": "This splits the coins evenly without checking the value."
+    },
+    "method_steps": {
+     "1_asked": "How many ten-peso coins are there?",
+     "2_givens": "40, ₱290",
+     "3_method": "Two-unknown problem: let x be one kind; the other kind is (total coins − x). Write one equation for the value.",
+     "4_why": "The method matches what is asked: two-unknown problem.",
+     "5_solve_by_hand": "All ₱5: ₱200. Shortfall ₱290 − ₱200 = ₱90; ÷ ₱5 = 18 ten-peso coins, and 22 of the other kind.",
+     "6_check": "Put 18 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "29: This divides the total value by one coin value and ignores the coin count. 22: This is the number of the other kind of coin. 20: This splits the coins evenly without checking the value.",
+     "8_shortcut": "If all 40 were ₱5 coins, the value would be ₱200; each swap to a ₱10 coin adds ₱5."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-OTHER-SHARE",
+    "o3": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "If all 40 were ₱5 coins, the value would be ₱200; each swap to a ₱10 coin adds ₱5.",
+   "recipe": {
+    "op": "coins",
+    "args": {
+     "d1": 5,
+     "d2": 10,
+     "count": 40,
+     "value": 290,
+     "want": 10
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0040",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "coin problem",
+   "micro_skill": "assume all coins are the smaller kind, then trade up",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "medium",
+   "est_seconds": 75,
+   "language": "en",
+   "stem": "Joy paid exactly ₱210 for snacks using 30 coins, all one-peso and ten-peso coins. How many one-peso coins did she use?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "10"
+    },
+    {
+     "option_id": "o2",
+     "text": "15"
+    },
+    {
+     "option_id": "o3",
+     "text": "20"
+    },
+    {
+     "option_id": "o4",
+     "text": "21"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Two-unknown problem: let x be one kind; the other kind is (total coins − x). Write one equation for the value.",
+    "shortcut": "If all 30 were ₱1 coins, the value would be ₱30; each swap to a ₱10 coin adds ₱9.",
+    "why_correct": "All ₱1: ₱30. Shortfall ₱210 − ₱30 = ₱180; ÷ ₱9 = 20 ten-peso coins, and 10 of the other kind.",
+    "why_wrong": {
+     "o2": "This splits the coins evenly without checking the value.",
+     "o3": "This is the number of the other kind of coin.",
+     "o4": "This divides the total value by one coin value and ignores the coin count."
+    },
+    "method_steps": {
+     "1_asked": "How many one-peso coins did she use?",
+     "2_givens": "₱210, 30",
+     "3_method": "Two-unknown problem: let x be one kind; the other kind is (total coins − x). Write one equation for the value.",
+     "4_why": "The method matches what is asked: two-unknown problem.",
+     "5_solve_by_hand": "All ₱1: ₱30. Shortfall ₱210 − ₱30 = ₱180; ÷ ₱9 = 20 ten-peso coins, and 10 of the other kind.",
+     "6_check": "Put 10 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "15: This splits the coins evenly without checking the value. 20: This is the number of the other kind of coin. 21: This divides the total value by one coin value and ignores the coin count.",
+     "8_shortcut": "If all 30 were ₱1 coins, the value would be ₱30; each swap to a ₱10 coin adds ₱9."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-OTHER-SHARE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "If all 30 were ₱1 coins, the value would be ₱30; each swap to a ₱10 coin adds ₱9.",
+   "recipe": {
+    "op": "coins",
+    "args": {
+     "d1": 1,
+     "d2": 10,
+     "count": 30,
+     "value": 210,
+     "want": 1
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0041",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "variables on both sides",
+   "micro_skill": "distribute, collect the variable on one side",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Solve for x: 5(x − 2) = 3x + 4.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "7"
+    },
+    {
+     "option_id": "o2",
+     "text": "−3"
+    },
+    {
+     "option_id": "o3",
+     "text": "1.75"
+    },
+    {
+     "option_id": "o4",
+     "text": "3"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Distributive property: a(x + b) = ax + ab. Then gather the variable terms on one side and the numbers on the other, changing signs as terms cross.",
+    "shortcut": "Distribute first; then move the smaller variable term so its coefficient stays positive.",
+    "why_correct": "Distribute: 5x − 10 = 3x + 4. Collect terms: 2x = 14, so x = 7. Check by substituting 7 into both sides.",
+    "why_wrong": {
+     "o2": "This moves −10 across without changing its sign (2x = 4 − 10).",
+     "o3": "This adds 5x and 3x instead of subtracting (8x = 14).",
+     "o4": "This writes 5(x − 2) as 5x − 2, forgetting to multiply the 2 by 5."
+    },
+    "method_steps": {
+     "1_asked": "Solve for x: 5(x − 2) = 3x + 4.",
+     "2_givens": "5, 2, 3, 4",
+     "3_method": "Distributive property: a(x + b) = ax + ab. Then gather the variable terms on one side and the numbers on the other, changing signs as terms cross.",
+     "4_why": "The method matches what is asked: distributive property.",
+     "5_solve_by_hand": "Distribute: 5x − 10 = 3x + 4. Collect terms: 2x = 14, so x = 7. Check by substituting 7 into both sides.",
+     "6_check": "Put 7 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "−3: This moves −10 across without changing its sign (2x = 4 − 10). 1.75: This adds 5x and 3x instead of subtracting (8x = 14). 3: This writes 5(x − 2) as 5x − 2, forgetting to multiply the 2 by 5.",
+     "8_shortcut": "Distribute first; then move the smaller variable term so its coefficient stays positive."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-OP-SWAP",
+    "o3": "NUM-OP-SWAP",
+    "o4": "NUM-ORDER-OPS"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Distribute first; then move the smaller variable term so its coefficient stays positive.",
+   "recipe": {
+    "op": "lin2",
+    "args": {
+     "stem": "Solve for x: 5(x − 2) = 3x + 4."
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0042",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "variables on both sides",
+   "micro_skill": "distribute, collect the variable on one side",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Solve for y: 4(y + 3) = 7y − 9.",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "−7"
+    },
+    {
+     "option_id": "o2",
+     "text": "1"
+    },
+    {
+     "option_id": "o3",
+     "text": "4"
+    },
+    {
+     "option_id": "o4",
+     "text": "7"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Distributive property: a(x + b) = ax + ab. Then gather the variable terms on one side and the numbers on the other, changing signs as terms cross.",
+    "shortcut": "Distribute first; then move the smaller variable term so its coefficient stays positive.",
+    "why_correct": "Distribute: 4y + 12 = 7y − 9. Collect terms: 21 = 3y, so y = 7. Check by substituting 7 into both sides.",
+    "why_wrong": {
+     "o1": "This keeps the sign wrong when moving the y terms; check by substituting back.",
+     "o2": "This moves −9 across without changing its sign (3 = 3y).",
+     "o3": "This writes 4(y + 3) as 4y + 3, forgetting to multiply the 3 by 4."
+    },
+    "method_steps": {
+     "1_asked": "Solve for y: 4(y + 3) = 7y − 9.",
+     "2_givens": "4, 3, 7, 9",
+     "3_method": "Distributive property: a(x + b) = ax + ab. Then gather the variable terms on one side and the numbers on the other, changing signs as terms cross.",
+     "4_why": "The method matches what is asked: distributive property.",
+     "5_solve_by_hand": "Distribute: 4y + 12 = 7y − 9. Collect terms: 21 = 3y, so y = 7. Check by substituting 7 into both sides.",
+     "6_check": "Put 7 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "−7: This keeps the sign wrong when moving the y terms; check by substituting back. 1: This moves −9 across without changing its sign (3 = 3y). 4: This writes 4(y + 3) as 4y + 3, forgetting to multiply the 3 by 4.",
+     "8_shortcut": "Distribute first; then move the smaller variable term so its coefficient stays positive."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o2": "NUM-OP-SWAP",
+    "o3": "NUM-ORDER-OPS"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Distribute first; then move the smaller variable term so its coefficient stays positive.",
+   "recipe": {
+    "op": "lin2",
+    "args": {
+     "stem": "Solve for y: 4(y + 3) = 7y − 9."
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0043",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "age problem",
+   "micro_skill": "add the years to both people",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "hard",
+   "est_seconds": 90,
+   "language": "en",
+   "stem": "A grandmother is 5 times as old as her grandson. In 18 years she will be twice as old as he will be then. How old is the grandson now?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "9"
+    },
+    {
+     "option_id": "o2",
+     "text": "24"
+    },
+    {
+     "option_id": "o3",
+     "text": "6"
+    },
+    {
+     "option_id": "o4",
+     "text": "30"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Age problems: both people get older by the same number of years.",
+    "shortcut": "5x + 18 = 2(x + 18) gives x = 18 ÷ (5 − 2).",
+    "why_correct": "Let the child be x now; the parent is 5x. In 18 years: 5x + 18 = 2(x + 18), so 3x = 18 and x = 6.",
+    "why_wrong": {
+     "o1": "This divides 18 by (5 − 3); the equation 5x + 18 = 2(x + 18) gives x = 18 ÷ (5 − 2).",
+     "o2": "This is the child's age in the future, not now.",
+     "o4": "This is the parent's present age."
+    },
+    "method_steps": {
+     "1_asked": "How old is the grandson now?",
+     "2_givens": "5, 18",
+     "3_method": "Age problems: both people get older by the same number of years.",
+     "4_why": "The method matches what is asked: age problems.",
+     "5_solve_by_hand": "Let the child be x now; the parent is 5x. In 18 years: 5x + 18 = 2(x + 18), so 3x = 18 and x = 6.",
+     "6_check": "Put 6 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "9: This divides 18 by (5 − 3); the equation 5x + 18 = 2(x + 18) gives x = 18 ÷ (5 − 2). 24: This is the child's age in the future, not now. 30: This is the parent's present age.",
+     "8_shortcut": "5x + 18 = 2(x + 18) gives x = 18 ÷ (5 − 2)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-WRONG-BASE",
+    "o2": "NUM-EXTRA-STEP",
+    "o4": "NUM-OTHER-SHARE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "5x + 18 = 2(x + 18) gives x = 18 ÷ (5 − 2).",
+   "recipe": {
+    "op": "age",
+    "args": {
+     "k": 5,
+     "years": 18
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0044",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "age problem",
+   "micro_skill": "add the years to both people",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "hard",
+   "est_seconds": 90,
+   "language": "en",
+   "stem": "A father is 4 times as old as his daughter. In 20 years he will be twice as old as she will be then. How old is the daughter now?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "40"
+    },
+    {
+     "option_id": "o2",
+     "text": "5"
+    },
+    {
+     "option_id": "o3",
+     "text": "10"
+    },
+    {
+     "option_id": "o4",
+     "text": "30"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Age problems: both people get older by the same number of years.",
+    "shortcut": "4x + 20 = 2(x + 20) gives x = 20 ÷ (4 − 2).",
+    "why_correct": "Let the child be x now; the parent is 4x. In 20 years: 4x + 20 = 2(x + 20), so 2x = 20 and x = 10.",
+    "why_wrong": {
+     "o1": "This is the parent's present age.",
+     "o2": "This divides 20 by 4; the equation 4x + 20 = 2(x + 20) gives x = 20 ÷ (4 − 2).",
+     "o4": "This is the child's age in the future, not now."
+    },
+    "method_steps": {
+     "1_asked": "How old is the daughter now?",
+     "2_givens": "4, 20",
+     "3_method": "Age problems: both people get older by the same number of years.",
+     "4_why": "The method matches what is asked: age problems.",
+     "5_solve_by_hand": "Let the child be x now; the parent is 4x. In 20 years: 4x + 20 = 2(x + 20), so 2x = 20 and x = 10.",
+     "6_check": "Put 10 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "40: This is the parent's present age. 5: This divides 20 by 4; the equation 4x + 20 = 2(x + 20) gives x = 20 ÷ (4 − 2). 30: This is the child's age in the future, not now.",
+     "8_shortcut": "4x + 20 = 2(x + 20) gives x = 20 ÷ (4 − 2)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OTHER-SHARE",
+    "o2": "NUM-WRONG-BASE",
+    "o4": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "4x + 20 = 2(x + 20) gives x = 20 ÷ (4 − 2).",
+   "recipe": {
+    "op": "age",
+    "args": {
+     "k": 4,
+     "years": 20
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0045",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Basic algebra",
+   "concept": "equation with a fraction",
+   "micro_skill": "clear the fraction by multiplying",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "If one fourth of a number, decreased by 3, equals 5, what is the number?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "8"
+    },
+    {
+     "option_id": "o2",
+     "text": "23"
+    },
+    {
+     "option_id": "o3",
+     "text": "32"
+    },
+    {
+     "option_id": "o4",
+     "text": "20"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"One fourth of a number, decreased by 3\" is x/4 − 3. Undo the subtraction first, then the division.",
+    "shortcut": "(5 + 3) × 4.",
+    "why_correct": "x/4 − 3 = 5, so x/4 = 8 and x = 32. Check: 32 ÷ 4 − 3 = 5.",
+    "why_wrong": {
+     "o1": "8 is one fourth of the number; multiply by 4 to get the number.",
+     "o2": "This multiplies 5 by 4 and then adds 3, undoing the steps in the wrong order.",
+     "o4": "This subtracts 3 instead of adding it back before multiplying."
+    },
+    "method_steps": {
+     "1_asked": "If one fourth of a number, decreased by 3, equals 5, what is the number?",
+     "2_givens": "3,, 5,",
+     "3_method": "\"One fourth of a number, decreased by 3\" is x/4 − 3. Undo the subtraction first, then the division.",
+     "4_why": "The method matches what is asked: \"one fourth of a number, decreased by 3\" is x/4 − 3.",
+     "5_solve_by_hand": "x/4 − 3 = 5, so x/4 = 8 and x = 32. Check: 32 ÷ 4 − 3 = 5.",
+     "6_check": "Put 32 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "8: 8 is one fourth of the number; multiply by 4 to get the number. 23: This multiplies 5 by 4 and then adds 3, undoing the steps in the wrong order. 20: This subtracts 3 instead of adding it back before multiplying.",
+     "8_shortcut": "(5 + 3) × 4."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-ORDER-OPS",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "(5 + 3) × 4.",
+   "recipe": {
+    "op": "lin",
+    "args": {
+     "a": "1/4",
+     "b": -3,
+     "c": 5
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0046",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "change from a purchase",
+   "micro_skill": "total the cost, then subtract from the bill",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "At a school supply store, Teresa buys 4 ballpens at ₱18 each and 3 folders at ₱25 each. She pays with a ₱200 bill. How much change should she get?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱147"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱43"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱157"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱53"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Change = amount paid − total cost. Total cost = sum of (quantity × unit price).",
+    "shortcut": "Group each item's subtotal before subtracting.",
+    "why_correct": "4 × ₱18 = ₱72 + 3 × ₱25 = ₱75; total ₱147. Change: ₱200 − ₱147 = ₱53.",
+    "why_wrong": {
+     "o1": "This is the total bill, not the change.",
+     "o2": "This takes off an extra ₱10 that is not in the problem.",
+     "o3": "This subtracts one of each item only and forgets the quantities."
+    },
+    "method_steps": {
+     "1_asked": "How much change should she get?",
+     "2_givens": "4, ₱18, 3, ₱25, ₱200",
+     "3_method": "Change = amount paid − total cost. Total cost = sum of (quantity × unit price).",
+     "4_why": "The method matches what is asked: change = amount paid − total cost.",
+     "5_solve_by_hand": "4 × ₱18 = ₱72 + 3 × ₱25 = ₱75; total ₱147. Change: ₱200 − ₱147 = ₱53.",
+     "6_check": "Put ₱53 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "₱147: This is the total bill, not the change. ₱43: This takes off an extra ₱10 that is not in the problem. ₱157: This subtracts one of each item only and forgets the quantities.",
+     "8_shortcut": "Group each item's subtotal before subtracting."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-EXTRA-STEP",
+    "o3": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Group each item's subtotal before subtracting.",
+   "recipe": {
+    "op": "change",
+    "args": {
+     "items": [
+      [
+       4,
+       18
+      ],
+      [
+       3,
+       25
+      ]
+     ],
+     "paid": 200
+    },
+    "fmt": "peso"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0047",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "change from a purchase",
+   "micro_skill": "total the cost, then subtract from the bill",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "For a seminar, Carlo buys 6 bottles of water at ₱15 each and 2 boxes of pandesal at ₱85 each, paying with a ₱500 bill. What is his change?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱240"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱400"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱260"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱230"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Change = amount paid − total cost. Total cost = sum of (quantity × unit price).",
+    "shortcut": "Group each item's subtotal before subtracting.",
+    "why_correct": "6 × ₱15 = ₱90 + 2 × ₱85 = ₱170; total ₱260. Change: ₱500 − ₱260 = ₱240.",
+    "why_wrong": {
+     "o2": "This subtracts one of each item only and forgets the quantities.",
+     "o3": "This is the total bill, not the change.",
+     "o4": "This takes off an extra ₱10 that is not in the problem."
+    },
+    "method_steps": {
+     "1_asked": "What is his change?",
+     "2_givens": "6, ₱15, 2, ₱85, ₱500",
+     "3_method": "Change = amount paid − total cost. Total cost = sum of (quantity × unit price).",
+     "4_why": "The method matches what is asked: change = amount paid − total cost.",
+     "5_solve_by_hand": "6 × ₱15 = ₱90 + 2 × ₱85 = ₱170; total ₱260. Change: ₱500 − ₱260 = ₱240.",
+     "6_check": "Put ₱240 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "₱400: This subtracts one of each item only and forgets the quantities. ₱260: This is the total bill, not the change. ₱230: This takes off an extra ₱10 that is not in the problem.",
+     "8_shortcut": "Group each item's subtotal before subtracting."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Group each item's subtotal before subtracting.",
+   "recipe": {
+    "op": "change",
+    "args": {
+     "items": [
+      [
+       6,
+       15
+      ],
+      [
+       2,
+       85
+      ]
+     ],
+     "paid": 500
+    },
+    "fmt": "peso"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0048",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "elapsed time",
+   "micro_skill": "count to the next hour, then whole hours, then the leftover",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "A data encoder starts work at 8:45 a.m. and stops at 1:20 p.m., taking a 30-minute lunch break in between. How long did she actually encode?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "3 hours 25 minutes"
+    },
+    {
+     "option_id": "o2",
+     "text": "4 hours 5 minutes"
+    },
+    {
+     "option_id": "o3",
+     "text": "4 hours 35 minutes"
+    },
+    {
+     "option_id": "o4",
+     "text": "3 hours 5 minutes"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Elapsed time: change both times to minutes after midnight (or count up hour by hour), subtract, then remove the breaks.",
+    "shortcut": "Count up: to the next whole hour, then full hours, then the remaining minutes.",
+    "why_correct": "From start to end is 4 hours 35 minutes. Minus 30 minutes of breaks leaves 4 hours 5 minutes.",
+    "why_wrong": {
+     "o1": "This treats the clock like decimals (100 minutes in an hour) when subtracting.",
+     "o3": "This is the time from start to finish; the breaks still come off.",
+     "o4": "This loses one hour when the times cross noon; convert p.m. times to 24-hour time first."
+    },
+    "method_steps": {
+     "1_asked": "How long did she actually encode?",
+     "2_givens": "8, 45, 1, 20, 30",
+     "3_method": "Elapsed time: change both times to minutes after midnight (or count up hour by hour), subtract, then remove the breaks.",
+     "4_why": "The method matches what is asked: elapsed time.",
+     "5_solve_by_hand": "From start to end is 4 hours 35 minutes. Minus 30 minutes of breaks leaves 4 hours 5 minutes.",
+     "6_check": "Put 4 hours 5 minutes back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "3 hours 25 minutes: This treats the clock like decimals (100 minutes in an hour) when subtracting. 4 hours 35 minutes: This is the time from start to finish; the breaks still come off. 3 hours 5 minutes: This loses one hour when the times cross noon; convert p.m. times to 24-hour time first.",
+     "8_shortcut": "Count up: to the next whole hour, then full hours, then the remaining minutes."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-UNIT",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Count up: to the next whole hour, then full hours, then the remaining minutes.",
+   "recipe": {
+    "op": "elapsed",
+    "args": {
+     "start": [
+      8,
+      45
+     ],
+     "end": [
+      13,
+      20
+     ],
+     "brk": 30
+    },
+    "fmt": "hm"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0049",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "elapsed time",
+   "micro_skill": "count to the next hour, then whole hours, then the leftover",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "A seminar ran from 9:50 a.m. to 3:05 p.m., with a 45-minute lunch and a 15-minute snack break. How much time was spent in actual sessions?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "5 hours 15 minutes"
+    },
+    {
+     "option_id": "o2",
+     "text": "3 hours 35 minutes"
+    },
+    {
+     "option_id": "o3",
+     "text": "3 hours 15 minutes"
+    },
+    {
+     "option_id": "o4",
+     "text": "4 hours 15 minutes"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Elapsed time: change both times to minutes after midnight (or count up hour by hour), subtract, then remove the breaks.",
+    "shortcut": "Count up: to the next whole hour, then full hours, then the remaining minutes.",
+    "why_correct": "From start to end is 5 hours 15 minutes. Minus 60 minutes of breaks leaves 4 hours 15 minutes.",
+    "why_wrong": {
+     "o1": "This is the time from start to finish; the breaks still come off.",
+     "o2": "This treats the clock like decimals (100 minutes in an hour) when subtracting.",
+     "o3": "This loses one hour when the times cross noon; convert p.m. times to 24-hour time first."
+    },
+    "method_steps": {
+     "1_asked": "How much time was spent in actual sessions?",
+     "2_givens": "9, 50, 3, 05, 45, 15",
+     "3_method": "Elapsed time: change both times to minutes after midnight (or count up hour by hour), subtract, then remove the breaks.",
+     "4_why": "The method matches what is asked: elapsed time.",
+     "5_solve_by_hand": "From start to end is 5 hours 15 minutes. Minus 60 minutes of breaks leaves 4 hours 15 minutes.",
+     "6_check": "Put 4 hours 15 minutes back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "5 hours 15 minutes: This is the time from start to finish; the breaks still come off. 3 hours 35 minutes: This treats the clock like decimals (100 minutes in an hour) when subtracting. 3 hours 15 minutes: This loses one hour when the times cross noon; convert p.m. times to 24-hour time first.",
+     "8_shortcut": "Count up: to the next whole hour, then full hours, then the remaining minutes."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-UNIT",
+    "o3": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Count up: to the next whole hour, then full hours, then the remaining minutes.",
+   "recipe": {
+    "op": "elapsed",
+    "args": {
+     "start": [
+      9,
+      50
+     ],
+     "end": [
+      15,
+      5
+     ],
+     "brk": 60
+    },
+    "fmt": "hm"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0050",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "distance, rate and time",
+   "micro_skill": "time = distance ÷ speed",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "easy",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "A bus from Roxas to Iloilo covers 150 km at an average of 60 km/h. How long is the trip?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "3 hours"
+    },
+    {
+     "option_id": "o2",
+     "text": "2 hours 50 minutes"
+    },
+    {
+     "option_id": "o3",
+     "text": "2 hours 30 minutes"
+    },
+    {
+     "option_id": "o4",
+     "text": "2 hours 8 minutes"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Distance = speed × time, so time = distance ÷ speed. A decimal hour must be converted: × 60 for minutes.",
+    "shortcut": "Fraction of an hour × 60 = minutes.",
+    "why_correct": "150 ÷ 60 = 2.5 hours = 2 hours 30 minutes.",
+    "why_wrong": {
+     "o1": "This adds an extra half hour not supported by the numbers.",
+     "o2": "This reads 2.5 hours as hours and hundredths; 0.5 hour is 30 minutes, not 50.",
+     "o4": "This uses a different speed from the one given."
+    },
+    "method_steps": {
+     "1_asked": "How long is the trip?",
+     "2_givens": "150, 60",
+     "3_method": "Distance = speed × time, so time = distance ÷ speed. A decimal hour must be converted: × 60 for minutes.",
+     "4_why": "The method matches what is asked: distance = speed × time, so time = distance ÷ speed.",
+     "5_solve_by_hand": "150 ÷ 60 = 2.5 hours = 2 hours 30 minutes.",
+     "6_check": "Put 2 hours 30 minutes back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "3 hours: This adds an extra half hour not supported by the numbers. 2 hours 50 minutes: This reads 2.5 hours as hours and hundredths; 0.5 hour is 30 minutes, not 50. 2 hours 8 minutes: This uses a different speed from the one given.",
+     "8_shortcut": "Fraction of an hour × 60 = minutes."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o2": "NUM-DECIMAL",
+    "o4": "NUM-GIVEN-REUSED"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Fraction of an hour × 60 = minutes.",
+   "recipe": {
+    "op": "travel_time",
+    "args": {
+     "d": 150,
+     "v": 60
+    },
+    "fmt": "hm"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0051",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "distance, rate and time",
+   "micro_skill": "time = distance ÷ speed",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "easy",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "A delivery van travels 210 km at an average speed of 84 km/h. How long does the trip take?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "2 hours 50 minutes"
+    },
+    {
+     "option_id": "o2",
+     "text": "2 hours 30 minutes"
+    },
+    {
+     "option_id": "o3",
+     "text": "2 hours 14 minutes"
+    },
+    {
+     "option_id": "o4",
+     "text": "3 hours"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Distance = speed × time, so time = distance ÷ speed. A decimal hour must be converted: × 60 for minutes.",
+    "shortcut": "Fraction of an hour × 60 = minutes.",
+    "why_correct": "210 ÷ 84 = 2.5 hours = 2 hours 30 minutes.",
+    "why_wrong": {
+     "o1": "This reads 2.5 hours as hours and hundredths; 0.5 hour is 30 minutes, not 50.",
+     "o3": "This uses a different speed from the one given.",
+     "o4": "This adds an extra half hour not supported by the numbers."
+    },
+    "method_steps": {
+     "1_asked": "How long does the trip take?",
+     "2_givens": "210, 84",
+     "3_method": "Distance = speed × time, so time = distance ÷ speed. A decimal hour must be converted: × 60 for minutes.",
+     "4_why": "The method matches what is asked: distance = speed × time, so time = distance ÷ speed.",
+     "5_solve_by_hand": "210 ÷ 84 = 2.5 hours = 2 hours 30 minutes.",
+     "6_check": "Put 2 hours 30 minutes back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "2 hours 50 minutes: This reads 2.5 hours as hours and hundredths; 0.5 hour is 30 minutes, not 50. 2 hours 14 minutes: This uses a different speed from the one given. 3 hours: This adds an extra half hour not supported by the numbers.",
+     "8_shortcut": "Fraction of an hour × 60 = minutes."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-DECIMAL",
+    "o3": "NUM-GIVEN-REUSED",
+    "o4": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Fraction of an hour × 60 = minutes.",
+   "recipe": {
+    "op": "travel_time",
+    "args": {
+     "d": 210,
+     "v": 84
+    },
+    "fmt": "hm"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0052",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "combined work rate",
+   "micro_skill": "add the rates, not the times",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "medium",
+   "est_seconds": 75,
+   "language": "en",
+   "stem": "Bea can type the minutes of a meeting in 6 hours; Nonoy can type the same minutes in 3 hours. If they split the work and type at the same time, how many hours will it take?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "9 hours"
+    },
+    {
+     "option_id": "o2",
+     "text": "2 hours"
+    },
+    {
+     "option_id": "o3",
+     "text": "3 hours"
+    },
+    {
+     "option_id": "o4",
+     "text": "4.5 hours"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Work rate: a job done in h hours means 1/h of the job per hour. Rates add when people (or pipes) work together.",
+    "shortcut": "Together time = (a × b) ÷ (a + b).",
+    "why_correct": "1/6 + 1/3 = 1/2 of the job per hour, so the job takes 2 hours.",
+    "why_wrong": {
+     "o1": "Adding the times gives longer, not shorter, work.",
+     "o3": "This is how long the faster one needs alone; with help the job finishes sooner.",
+     "o4": "Averaging the two times ignores that both work at once."
+    },
+    "method_steps": {
+     "1_asked": "If they split the work and type at the same time, how many hours will it take?",
+     "2_givens": "6, 3",
+     "3_method": "Work rate: a job done in h hours means 1/h of the job per hour. Rates add when people (or pipes) work together.",
+     "4_why": "The method matches what is asked: work rate.",
+     "5_solve_by_hand": "1/6 + 1/3 = 1/2 of the job per hour, so the job takes 2 hours.",
+     "6_check": "Put 2 hours back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "9 hours: Adding the times gives longer, not shorter, work. 3 hours: This is how long the faster one needs alone; with help the job finishes sooner. 4.5 hours: Averaging the two times ignores that both work at once.",
+     "8_shortcut": "Together time = (a × b) ÷ (a + b)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Together time = (a × b) ÷ (a + b).",
+   "recipe": {
+    "op": "together",
+    "args": {
+     "a": 6,
+     "b": 3
+    },
+    "fmt": "unit",
+    "unit": "hours"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0053",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "combined work rate",
+   "micro_skill": "add the rates, not the times",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "medium",
+   "est_seconds": 75,
+   "language": "en",
+   "stem": "One hose fills a water tank in 4 hours, and a second hose fills it in 12 hours. If both run at once, how long until the tank is full?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "8 hours"
+    },
+    {
+     "option_id": "o2",
+     "text": "3 hours"
+    },
+    {
+     "option_id": "o3",
+     "text": "4 hours"
+    },
+    {
+     "option_id": "o4",
+     "text": "16 hours"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Work rate: a job done in h hours means 1/h of the job per hour. Rates add when people (or pipes) work together.",
+    "shortcut": "Together time = (a × b) ÷ (a + b).",
+    "why_correct": "1/4 + 1/12 = 1/3 of the job per hour, so the job takes 3 hours.",
+    "why_wrong": {
+     "o1": "Averaging the two times ignores that both work at once.",
+     "o3": "This is how long the faster one needs alone; with help the job finishes sooner.",
+     "o4": "Adding the times gives longer, not shorter, work."
+    },
+    "method_steps": {
+     "1_asked": "If both run at once, how long until the tank is full?",
+     "2_givens": "4, 12",
+     "3_method": "Work rate: a job done in h hours means 1/h of the job per hour. Rates add when people (or pipes) work together.",
+     "4_why": "The method matches what is asked: work rate.",
+     "5_solve_by_hand": "1/4 + 1/12 = 1/3 of the job per hour, so the job takes 3 hours.",
+     "6_check": "Put 3 hours back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "8 hours: Averaging the two times ignores that both work at once. 4 hours: This is how long the faster one needs alone; with help the job finishes sooner. 16 hours: Adding the times gives longer, not shorter, work.",
+     "8_shortcut": "Together time = (a × b) ÷ (a + b)."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Together time = (a × b) ÷ (a + b).",
+   "recipe": {
+    "op": "together",
+    "args": {
+     "a": 4,
+     "b": 12
+    },
+    "fmt": "unit",
+    "unit": "hours"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0054",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "missing value for a target average",
+   "micro_skill": "target total − current total",
+   "archetype": "NUM-WP-AVERAGE",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Paolo scored 82, 75 and 90 on three quizzes. What score does he need on the fourth quiz to average 85?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "85"
+    },
+    {
+     "option_id": "o2",
+     "text": "93"
+    },
+    {
+     "option_id": "o3",
+     "text": "82"
+    },
+    {
+     "option_id": "o4",
+     "text": "88"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Average = total ÷ number of values. A target average fixes the needed total.",
+    "shortcut": "Needed total = 85 × 4; subtract what is already in.",
+    "why_correct": "Needed total: 85 × 4 = 340. Current total: 247. Needed value: 93.",
+    "why_wrong": {
+     "o1": "This assumes the next value only has to equal the target average.",
+     "o3": "This is close to the current average, which is not what is needed.",
+     "o4": "This adds the gap between the target and the current average only once; the new value must lift every earlier value too."
+    },
+    "method_steps": {
+     "1_asked": "What score does he need on the fourth quiz to average 85?",
+     "2_givens": "82,, 75, 90, 85",
+     "3_method": "Average = total ÷ number of values. A target average fixes the needed total.",
+     "4_why": "The method matches what is asked: average = total ÷ number of values.",
+     "5_solve_by_hand": "Needed total: 85 × 4 = 340. Current total: 247. Needed value: 93.",
+     "6_check": "Put 93 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "85: This assumes the next value only has to equal the target average. 82: This is close to the current average, which is not what is needed. 88: This adds the gap between the target and the current average only once; the new value must lift every earlier value too.",
+     "8_shortcut": "Needed total = 85 × 4; subtract what is already in."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-GIVEN-REUSED",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Needed total = 85 × 4; subtract what is already in.",
+   "recipe": {
+    "op": "avg_missing",
+    "args": {
+     "scores": [
+      82,
+      75,
+      90
+     ],
+     "target": 85
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0055",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "missing value for a target average",
+   "micro_skill": "target total − current total",
+   "archetype": "NUM-WP-AVERAGE",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "A clinic served 46, 52, 39 and 55 patients on four days. How many must it serve on the fifth day to average 50 patients a day?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "50"
+    },
+    {
+     "option_id": "o2",
+     "text": "48"
+    },
+    {
+     "option_id": "o3",
+     "text": "58"
+    },
+    {
+     "option_id": "o4",
+     "text": "52"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Average = total ÷ number of values. A target average fixes the needed total.",
+    "shortcut": "Needed total = 50 × 5; subtract what is already in.",
+    "why_correct": "Needed total: 50 × 5 = 250. Current total: 192. Needed value: 58.",
+    "why_wrong": {
+     "o1": "This assumes the next value only has to equal the target average.",
+     "o2": "This is close to the current average, which is not what is needed.",
+     "o4": "This adds the gap between the target and the current average only once; the new value must lift every earlier value too."
+    },
+    "method_steps": {
+     "1_asked": "How many must it serve on the fifth day to average 50 patients a day?",
+     "2_givens": "46,, 52,, 39, 55, 50",
+     "3_method": "Average = total ÷ number of values. A target average fixes the needed total.",
+     "4_why": "The method matches what is asked: average = total ÷ number of values.",
+     "5_solve_by_hand": "Needed total: 50 × 5 = 250. Current total: 192. Needed value: 58.",
+     "6_check": "Put 58 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "50: This assumes the next value only has to equal the target average. 48: This is close to the current average, which is not what is needed. 52: This adds the gap between the target and the current average only once; the new value must lift every earlier value too.",
+     "8_shortcut": "Needed total = 50 × 5; subtract what is already in."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-GIVEN-REUSED",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Needed total = 50 × 5; subtract what is already in.",
+   "recipe": {
+    "op": "avg_missing",
+    "args": {
+     "scores": [
+      46,
+      52,
+      39,
+      55
+     ],
+     "target": 50
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0056",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "rounding up in context",
+   "micro_skill": "a part pack still has to be bought",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A barangay office needs 250 envelopes for its notices. Envelopes are sold only in packs of 40. How many packs must it buy?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "7"
+    },
+    {
+     "option_id": "o2",
+     "text": "30"
+    },
+    {
+     "option_id": "o3",
+     "text": "8"
+    },
+    {
+     "option_id": "o4",
+     "text": "6"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "When items come only in whole packs, divide and round UP whenever there is a remainder.",
+    "shortcut": "If pack × quotient falls short, add one pack.",
+    "why_correct": "6 packs hold only 6 × 40 = 240, which is short of 250. One more makes 7 × 40 = 280, enough, so 7 packs are needed.",
+    "why_wrong": {
+     "o2": "This is how many spare items 7 packs leave over, not the number of packs.",
+     "o3": "This buys one pack more than needed.",
+     "o4": "This rounds down; the leftover need still requires one more full pack."
+    },
+    "method_steps": {
+     "1_asked": "How many packs must it buy?",
+     "2_givens": "250, 40",
+     "3_method": "When items come only in whole packs, divide and round UP whenever there is a remainder.",
+     "4_why": "The method matches what is asked: when items come only in whole packs, divide and round up whenever there is a remainder.",
+     "5_solve_by_hand": "6 packs hold only 6 × 40 = 240, which is short of 250. One more makes 7 × 40 = 280, enough, so 7 packs are needed.",
+     "6_check": "Put 7 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "30: This is how many spare items 7 packs leave over, not the number of packs. 8: This buys one pack more than needed. 6: This rounds down; the leftover need still requires one more full pack.",
+     "8_shortcut": "If pack × quotient falls short, add one pack."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-EXTRA-STEP",
+    "o4": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "If pack × quotient falls short, add one pack.",
+   "recipe": {
+    "op": "ceil_div",
+    "args": {
+     "need": 250,
+     "pack": 40
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0057",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "rounding up in context",
+   "micro_skill": "a part pack still has to be bought",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A school needs 130 meal boxes for a field trip. The caterer sells them only in trays of 12. How many trays are needed?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "12"
+    },
+    {
+     "option_id": "o2",
+     "text": "2"
+    },
+    {
+     "option_id": "o3",
+     "text": "10"
+    },
+    {
+     "option_id": "o4",
+     "text": "11"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "When items come only in whole packs, divide and round UP whenever there is a remainder.",
+    "shortcut": "If pack × quotient falls short, add one pack.",
+    "why_correct": "10 trays hold only 10 × 12 = 120, which is short of 130. One more makes 11 × 12 = 132, enough, so 11 trays are needed.",
+    "why_wrong": {
+     "o1": "This buys one pack more than needed.",
+     "o2": "This is how many spare items 11 trays leave over, not the number of trays.",
+     "o3": "This rounds down; the leftover need still requires one more full pack."
+    },
+    "method_steps": {
+     "1_asked": "How many trays are needed?",
+     "2_givens": "130, 12",
+     "3_method": "When items come only in whole packs, divide and round UP whenever there is a remainder.",
+     "4_why": "The method matches what is asked: when items come only in whole packs, divide and round up whenever there is a remainder.",
+     "5_solve_by_hand": "10 trays hold only 10 × 12 = 120, which is short of 130. One more makes 11 × 12 = 132, enough, so 11 trays are needed.",
+     "6_check": "Put 11 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "12: This buys one pack more than needed. 2: This is how many spare items 11 trays leave over, not the number of trays. 10: This rounds down; the leftover need still requires one more full pack.",
+     "8_shortcut": "If pack × quotient falls short, add one pack."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-EXTRA-STEP",
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "If pack × quotient falls short, add one pack.",
+   "recipe": {
+    "op": "ceil_div",
+    "args": {
+     "need": 130,
+     "pack": 12
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0058",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "posts and gaps",
+   "micro_skill": "posts = gaps + 1 on a straight line",
+   "archetype": "NUM-WP-GEOM",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A straight fence 48 m long gets a post every 4 m, with a post at both ends. How many posts are needed?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "13"
+    },
+    {
+     "option_id": "o2",
+     "text": "24"
+    },
+    {
+     "option_id": "o3",
+     "text": "12"
+    },
+    {
+     "option_id": "o4",
+     "text": "11"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Fence-post rule: on a straight line with something at both ends, the count is (length ÷ spacing) + 1.",
+    "shortcut": "Picture a tiny case: 8 m with posts every 4 m needs 3 posts.",
+    "why_correct": "48 ÷ 4 = 12 gaps, so 12 + 1 = 13.",
+    "why_wrong": {
+     "o2": "This doubles the count, as if both sides of the path were planted.",
+     "o3": "This counts gaps, not posts; a straight line with both ends needs one more.",
+     "o4": "This leaves out both end posts."
+    },
+    "method_steps": {
+     "1_asked": "How many posts are needed?",
+     "2_givens": "48, 4",
+     "3_method": "Fence-post rule: on a straight line with something at both ends, the count is (length ÷ spacing) + 1.",
+     "4_why": "The method matches what is asked: fence-post rule.",
+     "5_solve_by_hand": "48 ÷ 4 = 12 gaps, so 12 + 1 = 13.",
+     "6_check": "Put 13 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "24: This doubles the count, as if both sides of the path were planted. 12: This counts gaps, not posts; a straight line with both ends needs one more. 11: This leaves out both end posts.",
+     "8_shortcut": "Picture a tiny case: 8 m with posts every 4 m needs 3 posts."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-EXTRA-STEP",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Picture a tiny case: 8 m with posts every 4 m needs 3 posts.",
+   "recipe": {
+    "op": "posts",
+    "args": {
+     "length": 48,
+     "gap": 4
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0059",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "posts and gaps",
+   "micro_skill": "posts = gaps + 1 on a straight line",
+   "archetype": "NUM-WP-GEOM",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Along a 90-meter straight path, a barangay plants a tree every 6 meters, starting at one end and finishing at the other. How many trees are planted?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "16"
+    },
+    {
+     "option_id": "o2",
+     "text": "15"
+    },
+    {
+     "option_id": "o3",
+     "text": "14"
+    },
+    {
+     "option_id": "o4",
+     "text": "30"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Fence-post rule: on a straight line with something at both ends, the count is (length ÷ spacing) + 1.",
+    "shortcut": "Picture a tiny case: 8 m with posts every 4 m needs 3 posts.",
+    "why_correct": "90 ÷ 6 = 15 gaps, so 15 + 1 = 16.",
+    "why_wrong": {
+     "o2": "This counts gaps, not posts; a straight line with both ends needs one more.",
+     "o3": "This leaves out both end posts.",
+     "o4": "This doubles the count, as if both sides of the path were planted."
+    },
+    "method_steps": {
+     "1_asked": "How many trees are planted?",
+     "2_givens": "90, 6",
+     "3_method": "Fence-post rule: on a straight line with something at both ends, the count is (length ÷ spacing) + 1.",
+     "4_why": "The method matches what is asked: fence-post rule.",
+     "5_solve_by_hand": "90 ÷ 6 = 15 gaps, so 15 + 1 = 16.",
+     "6_check": "Put 16 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "15: This counts gaps, not posts; a straight line with both ends needs one more. 14: This leaves out both end posts. 30: This doubles the count, as if both sides of the path were planted.",
+     "8_shortcut": "Picture a tiny case: 8 m with posts every 4 m needs 3 posts."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-OFF-BY-ONE",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Picture a tiny case: 8 m with posts every 4 m needs 3 posts.",
+   "recipe": {
+    "op": "posts",
+    "args": {
+     "length": 90,
+     "gap": 6
+    },
+    "fmt": "num"
+   }
+  },
+  {
+   "id": "CIVIO-D1022-SPMATH-0060",
+   "track": "subprofessional",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "installment payment",
+   "micro_skill": "subtract the down payment, then divide",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "An electric fan costs ₱3,960. The buyer pays ₱1,200 down and the rest in 6 equal monthly payments. How much is each monthly payment?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱660"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱460"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱860"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱552"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Installment: balance = price − down payment; each payment = balance ÷ number of payments.",
+    "shortcut": "Take out the down payment first.",
+    "why_correct": "₱3,960 − ₱1,200 = ₱2,760 balance; ₱2,760 ÷ 6 = ₱460 a month.",
+    "why_wrong": {
+     "o1": "This divides the full price by 6 and forgets the down payment.",
+     "o3": "This adds the down payment back before dividing.",
+     "o4": "This divides the balance by 5 months instead of 6."
+    },
+    "method_steps": {
+     "1_asked": "How much is each monthly payment?",
+     "2_givens": "₱3,960, ₱1,200, 6",
+     "3_method": "Installment: balance = price − down payment; each payment = balance ÷ number of payments.",
+     "4_why": "The method matches what is asked: installment.",
+     "5_solve_by_hand": "₱3,960 − ₱1,200 = ₱2,760 balance; ₱2,760 ÷ 6 = ₱460 a month.",
+     "6_check": "Put ₱460 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
+     "7_distractors": "₱660: This divides the full price by 6 and forgets the down payment. ₱860: This adds the down payment back before dividing. ₱552: This divides the balance by 5 months instead of 6.",
+     "8_shortcut": "Take out the down payment first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-OP-SWAP",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "shortcut": "Take out the down payment first.",
+   "recipe": {
+    "op": "installment",
+    "args": {
+     "price": 3960,
+     "down": 1200,
+     "months": 6
+    },
+    "fmt": "peso"
+   }
+  }
+ ]
+}
