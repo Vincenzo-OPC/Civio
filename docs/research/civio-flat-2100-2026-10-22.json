@@ -1,7 +1,7 @@
 {
   "batch": "civio-flat-2100-2026-10-22",
   "status": "draft — repaired after CoS review of 86608c1, not approved",
-  "count": 122,
+  "count": 121,
   "domains": {
     "analytical": 48,
     "verbal_en": 11,
@@ -3782,39 +3782,6 @@
       "status": "draft"
     },
     {
-      "id": "CIVIO-2100-0115",
-      "track": "both",
-      "domain": "general_information",
-      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
-      "difficulty": "medium",
-      "est_seconds": 80,
-      "language": "en",
-      "stem": "Under R.A. 6713 §5: A records officer ignores a document request for 45 days. What is the proper action?",
-      "options": [
-        {
-          "option_id": "n1",
-          "text": "Deny it without a written reason"
-        },
-        {
-          "option_id": "n2",
-          "text": "Ask the requester to get a court order"
-        },
-        {
-          "option_id": "n3",
-          "text": "Act on the request or issue a formal denial with legal basis"
-        },
-        {
-          "option_id": "n4",
-          "text": "Wait until the requester follows up"
-        }
-      ],
-      "answer_option_id": "n3",
-      "reveal": "Under §5, the proper action is to act on the request or issue a formal denial with legal basis.",
-      "source": "original Civio flat-2100 2026-10-22",
-      "source_group": "civio",
-      "status": "draft"
-    },
-    {
       "id": "CIVIO-2100-0116",
       "track": "both",
       "domain": "general_information",
@@ -4045,5 +4012,6 @@
       "source_group": "civio",
       "status": "draft"
     }
-  ]
+  ],
+  "retired_note": "2026-10-22: 1 filler clone (CIVIO-2100-0115, clone of CIVIO-FINAL-0119) moved to docs/research/bank/retired/filler-clones-2026-10-22.json (GT approved)."
 }
