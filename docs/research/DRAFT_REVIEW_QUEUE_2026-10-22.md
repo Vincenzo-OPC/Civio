@@ -16,17 +16,17 @@ Script: `scripts/batches/qa/draft_review_queue_2026_10_22.py`, rendered by `draf
 | Subject | Unique drafts | Pass | Flag | new | revision | rev. of approved | baseline |
 |---|---|---|---|---|---|---|---|
 | GI | 286 | 273 | 13 | 83 | 24 | 45 | 134 |
-| Clerical | 297 | 200 | 97 | 164 | 15 | 38 | 80 |
-| Numerical | 279 | 208 | 71 | 141 | 46 | 1 | 91 |
-| Analytical | 395 | 278 | 117 | 205 | 10 | 66 | 114 |
-| Verbal EN | 347 | 207 | 140 | 137 | 5 | 77 | 128 |
-| Verbal Fil | 179 | 165 | 14 | 127 | 34 | 17 | 1 |
+| Clerical | 297 | 256 | 41 | 164 | 15 | 38 | 80 |
+| Numerical | 279 | 257 | 22 | 141 | 46 | 1 | 91 |
+| Analytical | 395 | 371 | 24 | 205 | 10 | 66 | 114 |
+| Verbal EN | 347 | 209 | 138 | 137 | 5 | 77 | 128 |
+| Verbal Fil | 179 | 166 | 13 | 127 | 34 | 17 | 1 |
 
 ## Open defects
 
-- `missing_est_seconds` (311): Baseline-550 rows outside GI still have no difficulty or est_seconds (metadata only).
 - `near_dup_approved` (261): Lint-fix revisions close to the approved item they fix. Expected, and not blocking for revisions.
 - `previously_rejected` (99): Already rejected in the ChatGPT batch 002/003 reviews.
+- `missing_est_seconds` (80): Baseline-550 rows outside GI still have no difficulty or est_seconds (metadata only).
 - `percent_change_topic` (31): Information only: the bank is already over the percent-change cap of 40.
 - `near_dup_draft` (22): Near-duplicate of another draft.
 - `passage_missing_or_unlinked` (19): Baseline reading item with no linked passage.
@@ -35,7 +35,7 @@ Script: `scripts/batches/qa/draft_review_queue_2026_10_22.py`, rendered by `draf
 - `key_not_in_reveal` (10): Numerical baseline items whose explanation never states the answer.
 - `difficulty_vs_time` (9): Information only: the label and the time disagree.
 - `superseded_by_lintfix` (4): A baseline row has a lint-fixed revision. Review that instead.
-- `hold_phrase_overlap` (2): Baseline GI 0006 (the R.A. 6713 title) and 0056 (the Art. II §1 quote) share 20–30% of their 5-grams with a HOLD file. That is public statutory text, but a human must confirm.
+- `hold_phrase_overlap` (3): Baseline GI 0006 (the R.A. 6713 title) and 0056 (the Art. II §1 quote) share 20–30% of their 5-grams with a HOLD file. That is public statutory text, but a human must confirm. Numerical 0263 (square root of 196, 0.29 shared) is flagged and stays out.
 
 Not found: mojibake, "(variant N)", keys outside the options, HOLD-source markers, or arithmetic key errors in the computable items.
 
@@ -43,7 +43,7 @@ Not found: mojibake, "(variant N)", keys outside the options, HOLD-source marker
 
 | File | Pass | Flag |
 |---|---|---|
-| baseline-550-spec-2026-10-18.json | 241 | 308 |
+| baseline-550-spec-2026-10-18.json | 442 | 107 |
 | gap-fill-2000-06-lintfix.json | 203 | 14 |
 | civio-flat-2100-2026-10-22.json | 122 | 0 |
 | civio-final-rewrite-2026-10-22.json | 120 | 0 |
@@ -70,18 +70,18 @@ Order: gap-fill-2000 files, then round-03 replacements, then baseline GI, then f
 
 | Subject | Approved | Passing adds available | Recommended | Projected if signed | Target | Shortfall |
 |---|---|---|---|---|---|---|
-| Verbal (EN+Fil) | 474 | 264 | 126 | 600 | 600 | 0 |
-| Numerical | 309 | 188 | 91 | 400 | 400 | 0 |
+| Verbal (EN+Fil) | 474 | 267 | 126 | 600 | 600 | 0 |
+| Numerical | 309 | 237 | 91 | 400 | 400 | 0 |
 | GI | 236 | 226 | 164 | 400 | 400 | 0 |
-| Analytical | 251 | 203 | 49 | 300 | 300 | 0 |
-| Clerical | 207 | 147 | 93 | 300 | 300 | 0 |
+| Analytical | 251 | 296 | 49 | 300 | 300 | 0 |
+| Clerical | 207 | 203 | 93 | 300 | 300 | 0 |
 | **Total** | **1477** | | **523** | **2000** | **2,000** | **0** |
 
-Verbal split: EN 126 + Fil 0. GI draws on baseline rows: about 195 of the 164 recommended GI items.
+Verbal split: EN 126 + Fil 0. GI draws on baseline rows: about 242 of the 164 recommended GI items.
 
 ## Next
 
 1. Fix the R.A. 6713 citations and circular explanations (`civio-final-rewrite`, `civio-flat-2100`).
-2. A human checks the 2 `hold_phrase_overlap` rows.
+2. A human checks the `hold_phrase_overlap` rows.
 3. CoS reviews the recommended set by subject, then GT signs per batch. Nothing is activated before that.
-4. Baseline rows outside GI still need metadata before they can count.
+4. Every non-GI baseline row is now screened (22 Oct): passes carry metadata; failures carry `qa_flags` and stay out.

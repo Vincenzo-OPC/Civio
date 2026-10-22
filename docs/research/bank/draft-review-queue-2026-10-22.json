@@ -19,11 +19,11 @@
  },
  "adds_unique_pass_by_domain": {
   "general_information": 226,
-  "clerical": 147,
-  "numerical": 188,
-  "analytical": 203,
-  "verbal_en": 137,
-  "verbal_fil": 127
+  "clerical": 203,
+  "numerical": 237,
+  "analytical": 296,
+  "verbal_en": 139,
+  "verbal_fil": 128
  },
  "projected_if_signed": {
   "verbal": 600,
@@ -48,7 +48,8 @@
  },
  "by_domain_kind": {
   "analytical|baseline": {
-   "flag": 114
+   "pass": 93,
+   "flag": 21
   },
   "analytical|new": {
    "pass": 203,
@@ -62,7 +63,8 @@
    "flag": 1
   },
   "clerical|baseline": {
-   "flag": 80
+   "pass": 56,
+   "flag": 24
   },
   "clerical|new": {
    "pass": 147,
@@ -89,8 +91,8 @@
    "pass": 45
   },
   "numerical|baseline": {
-   "flag": 70,
-   "pass": 21
+   "flag": 21,
+   "pass": 70
   },
   "numerical|new": {
    "pass": 140,
@@ -103,8 +105,8 @@
    "pass": 1
   },
   "verbal_en|baseline": {
-   "pass": 88,
-   "flag": 40
+   "pass": 90,
+   "flag": 38
   },
   "verbal_en|new": {
    "flag": 88,
@@ -119,7 +121,7 @@
    "pass": 69
   },
   "verbal_fil|baseline": {
-   "flag": 1
+   "pass": 1
   },
   "verbal_fil|new": {
    "pass": 127
@@ -133,27 +135,32 @@
   }
  },
  "flag_counts": {
-  "missing_est_seconds": 311,
-  "missing_difficulty": 310,
-  "bad_difficulty": 310,
   "near_dup_approved": 261,
   "previously_rejected": 99,
+  "missing_est_seconds": 80,
+  "missing_difficulty": 79,
+  "bad_difficulty": 79,
+  "near_dup": 38,
   "percent_change_topic": 31,
   "near_dup_draft": 22,
   "passage_missing_or_unlinked": 19,
+  "stem_artifact": 12,
   "duplicate_options": 11,
   "template_stem_place_name": 10,
   "key_not_in_reveal": 10,
   "difficulty_vs_time": 9,
-  "near_dup": 7,
+  "spelling_target_repeat": 9,
+  "option_artifact": 8,
+  "wrong_domain": 8,
   "superseded_by_lintfix": 4,
-  "wrong_domain": 4,
-  "hold_phrase_overlap": 2,
+  "hold_phrase_overlap": 3,
+  "unclear_relation": 3,
+  "options_shape": 2,
   "ambiguous_key": 2,
-  "option_artifact": 2,
-  "options_shape": 1,
   "non_integer_intermediate": 1,
   "reveal_math_wrong": 1,
+  "broken_code": 1,
+  "unclear_stem": 1,
   "track_noncanonical": 1
  }
 }

@@ -28,7 +28,7 @@ desc = {
     "key_not_in_reveal": "Numerical baseline items whose explanation never states the answer.",
     "gi_citation_doubt": "Wrong R.A. 6713 section: nepotism as §7(a) (it is EO 292 §59), share conflicts as §7(b) (§9 divestment), late SALN with a remedy §8 does not give.",
     "superseded_by_lintfix": "A baseline row has a lint-fixed revision. Review that instead.",
-    "hold_phrase_overlap": "Baseline GI 0006 (the R.A. 6713 title) and 0056 (the Art. II §1 quote) share 20–30% of their 5-grams with a HOLD file. That is public statutory text, but a human must confirm.",
+    "hold_phrase_overlap": "Baseline GI 0006 (the R.A. 6713 title) and 0056 (the Art. II §1 quote) share 20–30% of their 5-grams with a HOLD file. That is public statutory text, but a human must confirm. Numerical 0263 (square root of 196, 0.29 shared) is flagged and stays out.",
     "percent_change_topic": "Information only: the bank is already over the percent-change cap of 40.",
     "difficulty_vs_time": "Information only: the label and the time disagree.",
 }
@@ -59,6 +59,6 @@ for n, a, ad, rc, g in rows:
 tot = sum(P.values())
 L.append(f"| **Total** | **{s['approved_unique']}** | | **{sum(rec.values())}** | **{tot}** | **2,000** | **{max(0,2000-tot)}** |\n")
 L.append(f"Verbal split: EN {rec.get('verbal_en',0)} + Fil {rec.get('verbal_fil',0)}. GI draws on baseline rows: about {sum(1 for x in r if x['recommended']=='yes' and x['kind']=='baseline')} of the {rec.get('general_information',0)} recommended GI items.\n")
-L.append("## Next\n\n1. Fix the R.A. 6713 citations and circular explanations (`civio-final-rewrite`, `civio-flat-2100`).\n2. A human checks the 2 `hold_phrase_overlap` rows.\n3. CoS reviews the recommended set by subject, then GT signs per batch. Nothing is activated before that.\n4. Baseline rows outside GI still need metadata before they can count.\n")
+L.append("## Next\n\n1. Fix the R.A. 6713 citations and circular explanations (`civio-final-rewrite`, `civio-flat-2100`).\n2. A human checks the `hold_phrase_overlap` rows.\n3. CoS reviews the recommended set by subject, then GT signs per batch. Nothing is activated before that.\n4. Every non-GI baseline row is now screened (22 Oct): passes carry metadata; failures carry `qa_flags` and stay out.\n")
 open("docs/research/DRAFT_REVIEW_QUEUE_2026-10-22.md", "w").write("\n".join(L))
 print("\n".join(L[-14:]))
