@@ -1,5 +1,7 @@
 # Civio repository rules
 
+> **22 Oct 2026 OWNER-SPEND STOP RULE (GT directive):** Read [Dexter zero-owner-cost activation gate](docs/DEXTER_ZERO_COST_ACTIVATION_GATE_2026-10-22.md). A free Civio user may issue thousands of model calls; even fractions of a cent per call accumulate into **GT's bill**, which is unacceptable. **Maximum approved GT-funded AI inference spend: ₱0.** No owner-funded API calls, paid overages, shared production inference key, paid automatic failover, public free-tier proxy or activation of an in-app LLM. Continue improving disabled Dexter logic, safe deterministic MCQ teaching and optional external user-account handoff, without paid calls. A nominal per-request cost is NOT acceptable. Only GT may explicitly approve a legally compliant user-funded or truly zero-GT-exposure production path after evidence. Do not confuse a user logging in with granting model tokens.
+
 > **22 Oct 2026 GT scope correction: ADAPTIVE MCQs ONLY.** Read [StudyStash competitive analysis and MCQ-first brief](docs/research/STUDYSTASH_MCQ_ADAPTIVE_LEARNING_REVIEW_2026-10-22.md) with the current Dexter plan and Issue #17. Keep Civio's teaching, adaptive selection, explanations, fresh transfer and spaced review **inside multiple-choice questions**. Do not add flashcards, matching, podcasts, drag/drop exam formats or mini-games. This is a product-research handoff for Grok Bot (independent scout), Astra (architecture) and Codex (later code), not a background start signal. Preserve all existing bank, security, no-cost, no-deploy and Lite gates.
 
 
