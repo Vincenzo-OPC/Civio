@@ -3799,7 +3799,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §5: A records officer ignores a document request for 45 days. What is the proper action?",
+      "stem": "Under R.A. 6713 §5(a): A records officer ignores a document request for 45 days. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3819,10 +3819,22 @@
         }
       ],
       "answer_option_id": "n3",
-      "reveal": "Under §5, the proper action is to act on the request or issue a formal denial with legal basis.",
+      "reveal": "Under R.A. 6713 §5(a), the proper action is to act on the request or issue a formal denial with legal basis.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
-      "status": "draft"
+      "status": "draft",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Citation corrected from R.A. 6713 §5 to §5(a), which requires a response to letters and requests from the public within 15 working days. No other text changed.",
+          "prior": {
+            "stem": "Under R.A. 6713 §5: A records officer ignores a document request for 45 days. What is the proper action?",
+            "reveal": "Under §5, the proper action is to act on the request or issue a formal denial with legal basis."
+          },
+          "source": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html"
+        }
+      ]
     },
     {
       "id": "CIVIO-2100-0116",

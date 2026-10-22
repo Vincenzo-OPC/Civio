@@ -9,13 +9,13 @@ Script: `scripts/batches/qa/draft_review_queue_2026_10_22.py`, rendered by `draf
 
 ## Scope
 
-1829 non-approved rows reduce to **1754 unique stems**. The approved unique count is **1477** (GI 236, Clerical 207, Numerical 309, Analytical 251, Verbal EN 286, Verbal Fil 188).
+1829 non-approved rows reduce to **1753 unique stems**. The approved unique count is **1477** (GI 236, Clerical 207, Numerical 309, Analytical 251, Verbal EN 286, Verbal Fil 188).
 
 ## Pass/flag by subject
 
 | Subject | Unique drafts | Pass | Flag | new | revision | rev. of approved | baseline |
 |---|---|---|---|---|---|---|---|
-| GI | 287 | 273 | 14 | 84 | 24 | 45 | 134 |
+| GI | 286 | 273 | 13 | 83 | 24 | 45 | 134 |
 | Clerical | 297 | 200 | 97 | 164 | 15 | 38 | 80 |
 | Numerical | 259 | 167 | 92 | 141 | 27 | 0 | 91 |
 | Analytical | 390 | 273 | 117 | 205 | 5 | 66 | 114 |
@@ -27,7 +27,7 @@ Script: `scripts/batches/qa/draft_review_queue_2026_10_22.py`, rendered by `draf
 - `missing_est_seconds` (420): Baseline-550 rows outside GI still have no difficulty or est_seconds (metadata only).
 - `near_dup_approved` (246): Lint-fix revisions close to the approved item they fix. Expected, and not blocking for revisions.
 - `previously_rejected` (99): Already rejected in the ChatGPT batch 002/003 reviews.
-- `near_dup_draft` (23): Near-duplicate of another draft.
+- `near_dup_draft` (22): Near-duplicate of another draft.
 - `passage_missing_or_unlinked` (19): Baseline reading item with no linked passage.
 - `percent_change_topic` (18): Information only: the bank is already over the percent-change cap of 40.
 - `duplicate_options` (11): Two identical options, e.g. CIVIO-CLEAN-0060 with "liaison" twice.
@@ -45,8 +45,8 @@ Not found: mojibake, "(variant N)", keys outside the options, HOLD-source marker
 |---|---|---|
 | baseline-550-spec-2026-10-18.json | 132 | 417 |
 | gap-fill-2000-06-lintfix.json | 203 | 14 |
-| civio-flat-2100-2026-10-22.json | 121 | 1 |
-| civio-final-rewrite-2026-10-22.json | 121 | 0 |
+| civio-flat-2100-2026-10-22.json | 122 | 0 |
+| civio-final-rewrite-2026-10-22.json | 120 | 0 |
 | gap-fill-2000-02.json | 108 | 0 |
 | gap-fill-2000-03.json | 101 | 0 |
 | gap-fill-2000-01.json | 99 | 0 |
