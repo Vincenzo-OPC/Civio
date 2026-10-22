@@ -16,16 +16,16 @@ Grok Bot, 2026-10-17. Source: `source_group='baseline'` GI rows in the MSI local
 | ID | Sub | Key now | Finding | Verdict | Proposal |
 |---|---|---|---|---|---|
 | 1 | Constitution | Constitution | Placeholder explanation ('Local practice item for Docker study.'). | FIX | Real explanation (Art. XVIII, Sec. 27 ratification; the Constitution is the fundamental law). Keep. |
-| 2 | Constitution | People | Same fact as approved bank item 000804, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
-| 3 | Constitution | 6 years | Same fact as approved bank item 000808, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
+| 2 | Constitution | People | Same fact as approved bank Item 000804, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
+| 3 | Constitution | 6 years | Same fact as approved bank Item 000808, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
 | 4 | Constitution | Legislative | Placeholder explanation ('Local practice item for Docker study.'). Same task as #355. | DUPLICATE | Retire; keep #355. |
 | 5 | Constitution | Article III | Placeholder explanation ('Local practice item for Docker study.'). | FIX | Real explanation: Article III is the Bill of Rights; drop 'mainly'. |
 | 9 | Peace/HR | Inherent, inalienable, and universal | Placeholder explanation ('Local practice item for Docker study.'). Same idea as #399 and #74 (universality, non-discrimination). | DUPLICATE | Retire; keep #399. |
 | 10 | Peace/HR | Constitutional independent office | Placeholder explanation ('Local practice item for Docker study.'). | FIX | Real explanation: Art. XIII, Sec. 17 creates the CHR as an independent office. |
 | 56 | Constitution | Article II (Declaration of Principles and State Policies) | Art. II, Sec. 1. | OK |  |
 | 57 | Constitution | Determine whether a law or act is unconstitutional | Judicial review. | OK |  |
-| 58 | Constitution | The House of Representatives | Same fact as approved bank item 000007, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
-| 59 | Constitution | Three years | Same fact as approved bank item 000108, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
+| 58 | Constitution | The House of Representatives | Same fact as approved bank Item 000007, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
+| 59 | Constitution | Three years | Same fact as approved bank Item 000108, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
 | 60 | Constitution | Constitutional Commission under Article IX | COMELEC under Art. IX-C. | OK |  |
 | 61 | Constitution | Who are citizens from birth without having to perform any act to acquire or perfect citizenship | Art. IV, Sec. 2. Keep; #361 duplicates it. | OK |  |
 | 62 | Constitution | The right to life, liberty, and security against extralegal threats | Keep; #402 duplicates it. | OK | Note: amparo comes from a Supreme Court rule (2007), not the Constitution; recategorize under Peace and Human Rights. |
@@ -43,7 +43,7 @@ Grok Bot, 2026-10-17. Source: `source_group='baseline'` GI rows in the MSI local
 | 219 | Constitution | Impeachment | Art. VII, Sec. 19: except in cases of impeachment. | OK | Replace 'All criminal offenses without limit' with 'Final conviction of a public official'. |
 | 220 | Constitution | Limitations and a defined period set by law | Art. VI, Sec. 23(2). | OK |  |
 | 221 | Constitution | Law | Art. IV, Sec. 5. | OK |  |
-| 222 | Constitution | 24 | Same fact as approved bank item 000903, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
+| 222 | Constitution | 24 | Same fact as approved bank Item 000903, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
 | 226 | Peace/HR | A fundamental human right that must be respected | Joke distractors make the key obvious; 'derogable' is not explained. | FIX | Anchor to Art. III, Sec. 12(2) and R.A. 9745 (Anti-Torture Act). |
 | 227 | Peace/HR | Equal opportunities and non-discrimination | Not tied to any law; Joke distractors make the key obvious. | FIX | Anchor to Art. II, Sec. 14 or R.A. 9710 (Magna Carta of Women), or retire. |
 | 354 | Constitution | Public accountability | Explanation boilerplate lacks a period ('... Therefore, the correct option is ...'). Joke distractors make the key obvious ('Hereditary succession'). | FIX | Real distractors: separation of powers, local autonomy, civilian supremacy. |
@@ -52,16 +52,16 @@ Grok Bot, 2026-10-17. Source: `source_group='baseline'` GI rows in the MSI local
 | 357 | Constitution | The armed forces of the Philippines | Explanation boilerplate lacks a period ('... Therefore, the correct option is ...'). Joke distractors make the key obvious ('All private corporations', 'Every foreign military'). | FIX | Real distractors: the PNP, the Cabinet, the National Security Council. |
 | 358 | Constitution | Freedom of the press | Explanation boilerplate lacks a period ('... Therefore, the correct option is ...'). Joke distractors. | FIX | Real distractors: right to information, freedom of assembly, privacy of communication. |
 | 359 | Constitution | Right against unreasonable searches and seizures | Art. III, Sec. 2. | OK | Explanation boilerplate lacks a period ('... Therefore, the correct option is ...'). |
-| 360 | Constitution | Commission on Audit | Same fact as approved bank item 000304, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
+| 360 | Constitution | Commission on Audit | Same fact as approved bank Item 000304, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
 | 361 | Constitution | Natural-born citizenship | Same as #61. | DUPLICATE | Retire. |
 | 362 | Constitution | Civil Service Commission | CSC (Art. IX-B). | OK | Explanation boilerplate lacks a period ('... Therefore, the correct option is ...'). |
 | 363 | Constitution | Arbitrary government action | Explanation boilerplate lacks a period ('... Therefore, the correct option is ...'). Joke distractors ('Routine filing errors'). | FIX | Real distractors: equal protection, just compensation, ex post facto. |
 | 364 | Constitution | It settles actual controversies involving enforceable rights | Art. VIII, Sec. 1. | OK | Explanation boilerplate lacks a period ('... Therefore, the correct option is ...'). |
 | 365 | Constitution | Protection against unlawful detention | Same as #75. | DUPLICATE | Retire. |
-| 366 | Constitution | Civilian authority is supreme over the military | Same fact as approved bank item 000507, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
+| 366 | Constitution | Civilian authority is supreme over the military | Same fact as approved bank Item 000507, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
 | 367 | Constitution | All members of the same class | Grammar: 'related to the law purpose'. Joke distractors. | FIX | Stem: 'related to the purpose of the law'. |
 | 368 | Constitution | Eminent domain | Eminent domain. | OK | Replace 'Police patrol only' with 'Police power'; 'Taxation' as another real power. |
-| 369 | Constitution | Two-thirds of all the members of each House vote to pass it again | Same fact as approved bank item 000910, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
+| 369 | Constitution | Two-thirds of all the members of each House vote to pass it again | Same fact as approved bank Item 000910, which has full spec metadata. | DUPLICATE | Retire the baseline copy. |
 | 370 | Constitution | At least 35 years old on election day | Art. VI, Sec. 3: at least 35 on election day. | OK | Explanation boilerplate lacks a period ('... Therefore, the correct option is ...'). |
 | 371 | Constitution | Suffrage | Suffrage (Art. V). | OK | Explanation boilerplate lacks a period ('... Therefore, the correct option is ...'). |
 | 372 | Constitution | Punish an act that was not criminal when done | Ex post facto (Art. III, Sec. 22). | OK | Explanation boilerplate lacks a period ('... Therefore, the correct option is ...'). |

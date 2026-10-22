@@ -559,8 +559,7 @@ Civio:
 1. identifies error pattern
 2. gives micro-lesson
 3. gives guided example
-4. gives independent item
-5. schedules review
+4. gives independent Item 5. schedules review
 
 ### Final-week plan
 > Exam is in 7 days.

@@ -34,7 +34,7 @@ allows exactly one operator. Rows it cannot repair safely are listed by ID.
 
 ## Removing "(variant N)" clones
 
-Older copies of `seed_real_practice.php` saved each item 8 times with
+Older copies of `seed_real_practice.php` saved each Item 8 times with
 " (variant N)" on the stem. The script now saves one copy per item. To clean a
 bank that already has clones:
 

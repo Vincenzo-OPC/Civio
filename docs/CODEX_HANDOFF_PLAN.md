@@ -62,7 +62,7 @@ Start with [REVIEW_MISTAKES_BRIEF.md](REVIEW_MISTAKES_BRIEF.md) (17 Oct 2026). F
 ### 0.5 Other open items
 - **Deploy:** Hosting undecided pending GT. Cloud Run and Koyeb/Neon/Netlify are historical alternatives; no deployment or spending is authorized.
 - **Bank:** import the 1,000-item bank into production with `php artisan civio:import-batch` (batches 002–011, `--status=active` after QA) at deploy.
-- **Old desktop app:** item 1530 is untouched; GT skipped it.
+- **Old desktop app:** Item 1530 is untouched; GT skipped it.
 
 ## 1. Read in this order
 
@@ -209,7 +209,7 @@ inline script.
       timer is forced on (optional in Study). Labels read "Exam Simulation";
       route names are unchanged. Real mock sizes: 150 items in 3h10m (Professional,
       ~76 s/item), 145 items in 2h40m (Subprofessional, ~66 s/item).
-- [ ] Lite L0 item 6: nginx/deploy cache headers are not set up (needs deploy
+- [ ] Lite L0 Item 6: nginx/deploy cache headers are not set up (needs deploy
       config).
 - [ ] The MSI desktop app is still at the baseline. Ports and the clone cleanup SQL
       are listed in `docs/DESKTOP_PATCHES_TO_PORT.md`.
@@ -225,7 +225,7 @@ inline script.
 1. ~~Hide Reveal during strict mocks?~~ Decided: Study Mock / Strict Mock split (shipped).
 2. ~~Remove the Mock Exams links?~~ Decided: keep them, renamed "Exam Simulation".
 3. Keep the Lite switch in the exam header on phones, or move it to Settings only?
-4. L0 item 6: who owns nginx/deploy cache config, and when?
+4. L0 Item 6: who owns nginx/deploy cache config, and when?
 5. Copy override on exam pages: only copy, cut, right-click and text selection are
    intercepted (keyboard blocking was dropped because it broke dialogs and forms).
    Keep it that way?

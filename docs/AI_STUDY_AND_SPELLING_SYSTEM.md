@@ -269,8 +269,7 @@ For reasoning, grammar, math, filing, and similar skills:
 One tap should support:
 1. 20–60 second micro-lesson
 2. one worked example if needed
-3. one fresh test item
-4. result
+3. one fresh test Item 4. result
 5. schedule the concept for later review if weak
 
 ---

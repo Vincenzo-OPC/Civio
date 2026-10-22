@@ -29,9 +29,7 @@ Codex, Grok Build and Grok Bot read this file. Claude Code reads `CLAUDE.md`
 and often skips this one. Keep both aligned. Cursor is not used for Civio: there
 is no `.cursor/` folder (hooks or rules); do not add one.
 
-## Read first, every session
-
-0. `docs/CODEX_HANDOFF_PLAN.md` — start here: record, invariants, gaps, next phases.
+## Read first, every Session 0. `docs/CODEX_HANDOFF_PLAN.md` — start here: record, invariants, gaps, next phases.
 0a. `docs/HANDOFF_ANY_AI.md` — how ChatGPT or any AI takes over every Grok Bot job (audits, question pipeline, Sentinel).
 1. This file (`AGENTS.md`) — locked product and workflow rules.
 2. `docs/CIVIO_CODEX_BUILD_BRIEF.md` — phased build plan (Gate 0 → Phase 0 → 0.5 → 1 → Bank).
@@ -141,7 +139,7 @@ the equivalent Postgres SQL (`scripts/seeds/remove_variant_clones.sql`).
   use unique items only (no variant fill), `civio:remove-variant-clones` cleans
   existing rows. MSI DB cleanup still pending (desktop patches doc).
 - **Done:** Copy for AI MVP (`docs/EXTERNAL_AI_HANDOFF.md`).
-- **Done:** Lite L0 (items 1–5; item 6 nginx cache config pending) and Lite L1:
+- **Done:** Lite L0 (items 1–5; Item 6 nginx cache config pending) and Lite L1:
   server-picked mocks (`POST /exams/sessions`, `MockPoolSelector`,
   `exam_sessions`), Lite mode flag (`lib/lite-mode.ts`, `useLiteMode()`,
   `civio_lite` cookie), text-first exam/drill screens, server-side prop

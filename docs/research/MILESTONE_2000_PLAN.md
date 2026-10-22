@@ -83,7 +83,7 @@ Civio items are counted by `archetype` in the approved batch JSON (`docs/batches
 
 **Clerical (262).** Filing 124 (Civio 94: FILE-POSITION 58, FILE-ORDER 16, NAMES 8, NUMERIC 6, CHRONOLOGICAL 6; baseline 30). Spelling 138 (Civio 113: SPELL-WRONG 57, SPELL-RIGHT 36, SPELLING 20; baseline 25).
 
-**General Information (347).** Constitution 136 (baseline 38). R.A. 6713 85 (37). Peace and human rights 53 (9). Environment 73 (27). Civio GI by item type: GI-DEADLINE-NUMBER 60 (25%), GI-TERM-MATCH 46 (19%), GI-SOURCE-BASED-SCENARIO 30, GI-RIGHTS-APPLY 29, GI-SCENARIO-APPLY 27, GI-WHO-HOLDS-POWER 23, GI-ENV-PRINCIPLE 21. Recall types are 44% of Civio GI. Applied types are 36%.
+**General Information (347).** Constitution 136 (baseline 38). R.A. 6713 85 (37). Peace and human rights 53 (9). Environment 73 (27). Civio GI by item type: GI-DEADLINE-NUMBER 60 (25%), GI-TERM-MATCH 46 (19%), GI-SOURCE-BASED-Scenario 30, GI-RIGHTS-APPLY 29, GI-SCENARIO-APPLY 27, GI-WHO-HOLDS-POWER 23, GI-ENV-PRINCIPLE 21. Recall types are 44% of Civio GI. Applied types are 36%.
 
 ### 3.3 Lopsided areas
 

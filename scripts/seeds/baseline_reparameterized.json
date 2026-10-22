@@ -2179,7 +2179,7 @@
     "prior_stem": "Two numbers sum to 50 and differ by 8. The larger is:",
     "subcategory_id": 17,
     "language": "English",
-    "stem": "Two counts in set 5 add up to 40 and the larger is 6 more than the smaller. What is the larger count?",
+    "stem": "Two counts in Set 5 add up to 40 and the larger is 6 more than the smaller. What is the larger count?",
     "options": [
       "23",
       "17",
@@ -6574,7 +6574,7 @@
     "prior_stem": "A 15 percent discount is applied to a 2,400-peso fee. What is the discounted fee?",
     "subcategory_id": 17,
     "language": "English",
-    "stem": "Two counts in set 25 add up to 40 and the larger is 6 more than the smaller. What is the larger count?",
+    "stem": "Two counts in Set 25 add up to 40 and the larger is 6 more than the smaller. What is the larger count?",
     "options": [
       "23",
       "17",
@@ -6886,7 +6886,7 @@
   },
   {
     "replaces_id": 461,
-    "prior_stem": "Which spelling is correct, item 8?",
+    "prior_stem": "Which spelling is correct, Item 8?",
     "subcategory_id": 19,
     "language": "English",
     "stem": "Choose the correctly spelled word for this meaning: a place that serves meals.",
@@ -6901,7 +6901,7 @@
   },
   {
     "replaces_id": 462,
-    "prior_stem": "Which spelling is correct, item 9?",
+    "prior_stem": "Which spelling is correct, Item 9?",
     "subcategory_id": 19,
     "language": "English",
     "stem": "Choose the correctly spelled word for this meaning: a timetable.",
@@ -6916,7 +6916,7 @@
   },
   {
     "replaces_id": 463,
-    "prior_stem": "Which spelling is correct, item 10?",
+    "prior_stem": "Which spelling is correct, Item 10?",
     "subcategory_id": 19,
     "language": "English",
     "stem": "Choose the correctly spelled word for this meaning: the day after today.",

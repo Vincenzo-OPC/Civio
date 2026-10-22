@@ -7,7 +7,7 @@
 - **qa_file.py:** `python3 scripts/batches/qa_file.py docs/research/audit/data/baseline-550-spec-2026-10-18.json` → exit 1, 2,217 problems:
   - 550 × 3 schema gaps: `reveal.terms` empty, `reveal.shortcut` empty, missing distractor codes / why_wrong. These are expected; every baseline row needs them before it can be approved.
   - 534 "baseline exact/near match": items matching their own seed SQL. These are self-matches and carry no signal.
-  - **29 near-duplicates and 2 duplicate stems inside the baseline**: sequences, PRUDENT ×3, SCARCE ×2, compound/complex-sentence frames, analogies 317/467 and 469, and spelling "item 8" frames. Verbal and Analytical ones go into future batches.
+  - **29 near-duplicates and 2 duplicate stems inside the baseline**: sequences, PRUDENT ×3, SCARCE ×2, compound/complex-sentence frames, analogies 317/467 and 469, and spelling "Item 8" frames. Verbal and Analytical ones go into future batches.
   - **#462 (active, Filipino error recognition): options are not distinct.** It reads `pinagkakakitaan` ×2 and `pinagkakitaan` ×2. This is user-visible, needs CoS, and is a proposed retire/fix.
 - **explanation_lint.py:** 370 of 550 flagged.
   - By check: BOILERPLATE 163, LONG-KEY 141, KEY-NOT-STATED 95, PLACEHOLDER 76, GI-NO-SECTION 27.

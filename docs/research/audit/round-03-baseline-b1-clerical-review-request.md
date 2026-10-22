@@ -90,9 +90,9 @@ If CoS accepts every proposal, 44 baseline Clerical items stay active (3 with co
 | 513 | Spelling | Maintenance | 'maintenance' repeat. | DUPLICATE | Retire. |
 | 514 | Spelling | Questionnaire | 'questionnaire' repeat. | DUPLICATE | Retire. |
 | 515 | Spelling | Conscientious | 'conscientious' repeat. | DUPLICATE | Retire. |
-| 516 | Spelling | Embarrass | 'embarrass' repeat; stem says 'item 8'. | DUPLICATE | Retire. |
-| 517 | Spelling | Definitely | 'definitely' repeat; stem says 'item 9'. | DUPLICATE | Retire. |
-| 518 | Spelling | Miscellaneous | 'miscellaneous' repeat; stem says 'item 10'. | DUPLICATE | Retire. |
+| 516 | Spelling | Embarrass | 'embarrass' repeat; stem says 'Item 8'. | DUPLICATE | Retire. |
+| 517 | Spelling | Definitely | 'definitely' repeat; stem says 'Item 9'. | DUPLICATE | Retire. |
+| 518 | Spelling | Miscellaneous | 'miscellaneous' repeat; stem says 'Item 10'. | DUPLICATE | Retire. |
 | 543 | Filing | Garcia, Liza | Garcia, Liza first. | OK | Explanation punctuation. |
 | 544 | Filing | 03-119 | Same task as #280. | DUPLICATE | Retire. |
 | 545 | Filing | Personnel Leave Requests, Approved, January 2027 | Same task as #285; joke distractors. | DUPLICATE | Retire. |

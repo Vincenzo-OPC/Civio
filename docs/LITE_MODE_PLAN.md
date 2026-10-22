@@ -1,6 +1,6 @@
 # Lite mode plan: cheap phones and slow internet
 
-Status (7 Oct 2026): **L0 done except item 6** (nginx/deploy cache config,
+Status (7 Oct 2026): **L0 done except Item 6** (nginx/deploy cache config,
 pending). **L1 done** (server-picked mocks, Lite toggle, text-first exam and
 drill screens, server-side prop trimming). **L2 done** (offline drill packs).
 See "L0 results", "L1 results" and "L2 results" below.
@@ -279,7 +279,7 @@ reuses all of it and only swaps presentation and payload size.
   - There is no rich text editor in the user app today. If one is added, keep it out of Lite.
 - **Text-first exam and drill screens:**
   - stem, options as large tap targets, Next/Previous, a compact palette
-  - one clock line ("Exam left 2:41:10 · This item 0:42")
+  - one clock line ("Exam left 2:41:10 · This Item 0:42")
   - Reveal/Copy for AI as text buttons
   - same components, simpler markup under `lite`
 - **System fonts:** `font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`
@@ -430,7 +430,7 @@ Only where they clearly help:
 
 ## 9. Decisions for GT
 
-1. ~~Ship L0 now~~ Done (items 1–5); item 6 (nginx cache config) still needs a
+1. ~~Ship L0 now~~ Done (items 1–5); Item 6 (nginx cache config) still needs a
    decision because it touches deploy config.
 2. ~~Lite as a mode flag vs a `/lite` layout~~ Mode flag, done in L1.
 3. ~~Server-built mock pools~~ Done in L1.

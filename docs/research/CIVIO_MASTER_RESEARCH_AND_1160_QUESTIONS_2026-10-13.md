@@ -15776,7 +15776,7 @@ That is the bar: three short lines, no algebra words, one check.
 | `notes` | string | Optional |
 
 Status meanings:
-- `draft`: a new Civio item waiting for review (section 10, item 6). Never shown to users. (added v0.1.3, CoS)
+- `draft`: a new Civio item waiting for review (section 10, Item 6). Never shown to users. (added v0.1.3, CoS)
 - `curated`: hand-written by GT or a named human from official sources.
 - `generated`: drafted by a tool or AI. Never shown to users.
 - `reviewed`: passed the checklist in Section 7 by a reviewer other than the author.
@@ -15848,7 +15848,7 @@ Rules:
 - `why_wrong` and `distractor_reasoning` are keyed by `option_id`.
 - Reveal text never says "A", "B", "choice C", and so on. It names the choice by content.
 - The screen maps `option_id` to the shown letter at display time.
-- Test: shuffle each item 20 times; every time, the choice marked right in the Reveal must equal `answer_option_id`.
+- Test: shuffle each Item 20 times; every time, the choice marked right in the Reveal must equal `answer_option_id`.
 
 ---
 
