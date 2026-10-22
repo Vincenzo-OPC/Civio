@@ -82,3 +82,7 @@ Product continuation: [educational/product handoff](CODEX_EDUCATIONAL_HANDOFF.md
 ## Publication reconciliation, 22 October 2026
 
 Confirmed on remote main `99ebe099376ca18c5a9338876c928fbea7519536`: the research was published by the concurrent Codex session in `3c1fd91` and `b51c311`. All curriculum evidence and the read-only auditor match the prepared checkpoint. The question audit remains pinned to `dbdf2bc`; newer engineering work does not independently approve content or establish a live bank count. See the handoff snapshot note and current feature catalog before planning implementation.
+
+## Follow-up, 22 October 2026
+
+The latest content work added a 50-item Subprofessional Numerical draft packet, `docs/research/batch-subpro-num-001.json`. It has 49 Astra-reviewed items and one replacement draft still unreviewed. **None is approved, active, imported or eligible to increase the verified count.** The packet therefore changes neither the 1,478 approved-labeled repository records in the 21 October snapshot nor the 1,978 historical runtime count; the exact current release gap remains unknown. See the [audit tracker](../AUDIT_TRACKER.md#2026-10-22-subprofessional-numerical-batch-001) and its digest-bound [mechanical evidence](../bank/subpro-num-001-audit-2026-10-22.json). The existing generic numerical validator still crashes on the fraction archetype; the audit record preserves the failure and supplemental checks.
