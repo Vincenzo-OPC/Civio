@@ -412,7 +412,7 @@
       "difficulty": "medium",
       "est_seconds": 50,
       "language": "en",
-      "stem": "Using standard alphabetic indexing, which business name comes SECOND?\nLopez Pharmacy | Lim & Uy Accounting | The Lucky Juice Bar | Lim Bakeshop",
+      "stem": "Under ANSI/ARMA 12-2005, rank these business names alphabetically. Which one is SECOND?\nLopez Pharmacy | Lim & Uy Accounting | The Lucky Juice Bar | Lim Bakeshop",
       "options": [
         {
           "option_id": "o1",
