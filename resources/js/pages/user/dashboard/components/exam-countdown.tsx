@@ -1,205 +1,221 @@
-import { Clock } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
+import { CalendarDays, Flag } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import {
+    examCountdown,
+    formatPhDate,
+    milestoneText,
+    nextMilestone,
+    readTrack,
+    TRACK_LABEL,
+    TRACK_STORAGE_KEY,
+} from '@/lib/exam-countdown';
+import type {
+    ExamMilestone,
+    ExamSitting,
+    ExamTrack,
+} from '@/lib/exam-countdown';
 
 interface ExamCountdownProps {
-    examDate: string;
-    examDateRaw: string;
-    examDescription?: string | null;
-    motivationText?: string | null;
+    sittings: ExamSitting[];
+    milestones?: ExamMilestone[];
+    sourceUrl?: string | null;
+    source?: 'csc' | 'admin' | null;
+    /** Test hook: a fixed clock. The live dashboard leaves it unset. */
+    initialNow?: number;
 }
 
+const TRACKS: ExamTrack[] = ['professional', 'subprofessional'];
+
+function pad(n: number): string {
+    return String(n).padStart(2, '0');
+}
+
+/**
+ * Live countdown to 00:00 Philippine time on the next confirmed CSC exam day.
+ * Ticks every second; the target never depends on the browser's timezone.
+ */
 export function ExamCountdown({
-    examDate,
-    examDateRaw,
-    examDescription,
-    motivationText,
+    sittings,
+    milestones = [],
+    sourceUrl,
+    source = 'csc',
+    initialNow,
 }: ExamCountdownProps) {
-    const [timeLeft, setTimeLeft] = useState({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-        isExpired: false,
+    const [now, setNow] = useState(() => initialNow ?? Date.now());
+    const [track, setTrack] = useState<ExamTrack>(() => {
+        try {
+            return readTrack(
+                typeof window === 'undefined'
+                    ? null
+                    : localStorage.getItem(TRACK_STORAGE_KEY),
+            );
+        } catch {
+            return 'professional'; // Storage blocked.
+        }
     });
 
     useEffect(() => {
-        // Set target time to 00:00:00 of the exam date
-        const targetDate = new Date(`${examDateRaw}T00:00:00`);
+        const id = window.setInterval(() => setNow(Date.now()), 1000);
 
-        const calculateTimeLeft = () => {
-            const now = new Date();
-            const difference = targetDate.getTime() - now.getTime();
+        return () => window.clearInterval(id);
+    }, []);
 
-            if (difference <= 0) {
-                setTimeLeft({
-                    days: 0,
-                    hours: 0,
-                    minutes: 0,
-                    seconds: 0,
-                    isExpired: true,
-                });
+    const chooseTrack = (next: ExamTrack) => {
+        setTrack(next);
 
-                return;
-            }
+        try {
+            localStorage.setItem(TRACK_STORAGE_KEY, next);
+        } catch {
+            // Ignore: the choice still applies for this visit.
+        }
+    };
 
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor(
-                (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-            );
-            const minutes = Math.floor(
-                (difference % (1000 * 60 * 60)) / (1000 * 60),
-            );
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    const state = examCountdown(sittings, now);
+    const milestone = nextMilestone(milestones, now);
 
-            setTimeLeft({ days, hours, minutes, seconds, isExpired: false });
-        };
-
-        calculateTimeLeft();
-        const interval = setInterval(calculateTimeLeft, 1000);
-
-        return () => clearInterval(interval);
-    }, [examDateRaw]);
-
-    if (timeLeft.isExpired) {
-        return (
-            <div className="relative overflow-hidden rounded-2xl border border-rose-200 bg-rose-50 p-4 shadow-sm backdrop-blur-xl sm:p-6 dark:border-rose-900/40 dark:bg-rose-950/40">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="flex items-center gap-4">
-                        <div className="flex size-12 shrink-0 items-center justify-center rounded-full border border-rose-200 bg-rose-100/50 backdrop-blur-md dark:border-rose-500/30 dark:bg-rose-500/20">
-                            <Clock className="size-6 animate-bounce text-rose-600 dark:text-rose-400" />
-                        </div>
-                        <div>
-                            <span className="text-[10px] font-bold tracking-widest text-rose-600 uppercase dark:text-rose-400">
-                                Exam Day Is Here
-                            </span>
-                            <h3 className="mt-0.5 font-heading text-lg font-semibold tracking-tight text-slate-900 dark:text-white">
-                                Civil Service Exam date has arrived:{' '}
-                                <span className="underline decoration-slate-300 decoration-2 underline-offset-4 dark:decoration-white/40">
-                                    {examDate}
-                                </span>
-                            </h3>
-                        </div>
-                    </div>
-                    <div className="rounded-lg border border-rose-100 bg-white/60 px-4 py-2 text-sm font-bold text-rose-700 backdrop-blur-sm dark:border-rose-800/50 dark:bg-rose-900/40 dark:text-rose-300">
-                        Best of luck! 🎯
-                    </div>
-                </div>
-            </div>
-        );
-    }
-
-    const padZero = (num: number) => String(num).padStart(2, '0');
-    const isUrgent = timeLeft.days <= 30;
+    const units =
+        state.phase === 'counting'
+            ? [
+                  ['Days', state.parts.days],
+                  ['Hours', state.parts.hours],
+                  ['Mins', state.parts.minutes],
+                  ['Secs', state.parts.seconds],
+              ]
+            : [];
 
     return (
-        <div
-            className={`relative overflow-hidden rounded-2xl border p-4 shadow-sm backdrop-blur-xl transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 sm:p-6 ${
-                isUrgent
-                    ? 'border-amber-200 bg-amber-50 dark:border-amber-900/40 dark:bg-amber-950/40'
-                    : 'border-blue-100/60 bg-blue-50 dark:border-slate-800 dark:bg-slate-900/60'
-            }`}
+        <section
+            data-testid="exam-countdown"
+            aria-label="Exam countdown"
+            className="rounded-2xl border border-[#5B35F5]/20 bg-gradient-to-br from-[#5B35F5]/[0.06] via-white to-[#B3F52D]/[0.12] p-4 sm:p-6 dark:border-[#B3F52D]/20 dark:from-[#5B35F5]/20 dark:via-slate-950 dark:to-[#B3F52D]/[0.06]"
         >
-            {/* Decorative background lights */}
-            <div className="pointer-events-none absolute -top-20 -right-20 h-48 w-48 rounded-full bg-blue-400/10 blur-3xl dark:bg-[#B3F52D] dark:text-[#0A0A0A]/10" />
-            <div className="pointer-events-none absolute -bottom-20 -left-20 h-48 w-48 rounded-full bg-indigo-400/10 blur-3xl dark:bg-indigo-500/10" />
-
-            <div className="relative z-10 flex flex-col gap-3 sm:gap-6 lg:flex-row lg:items-center lg:justify-between">
-                <div className="flex items-center gap-4">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                <div className="min-w-0 space-y-3">
                     <div
-                        className={`flex size-14 shrink-0 items-center justify-center rounded-full border backdrop-blur-md ${isUrgent ? 'border-amber-200 bg-amber-100/50 dark:border-amber-500/30 dark:bg-amber-500/20' : 'border-blue-200 bg-blue-100/50 dark:border-blue-500/30 dark:bg-[#B3F52D] dark:text-[#0A0A0A]/20'}`}
+                        role="radiogroup"
+                        aria-label="Exam level"
+                        className="inline-flex rounded-full border border-[#E3E5EA] bg-white p-1 dark:border-slate-700 dark:bg-slate-900"
                     >
-                        <Clock
-                            className={`size-7 ${isUrgent ? 'animate-pulse text-amber-600 dark:text-amber-400' : 'text-[#5B35F5] dark:text-[#B3F52D]'}`}
-                        />
+                        {TRACKS.map((t) => (
+                            <button
+                                key={t}
+                                type="button"
+                                role="radio"
+                                aria-checked={track === t}
+                                onClick={() => chooseTrack(t)}
+                                className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#5B35F5] focus-visible:outline-none sm:text-sm ${
+                                    track === t
+                                        ? 'bg-[#5B35F5] text-white dark:bg-[#B3F52D] dark:text-[#0A0A0A]'
+                                        : 'text-slate-600 hover:text-[#101426] dark:text-slate-300 dark:hover:text-white'
+                                }`}
+                            >
+                                {TRACK_LABEL[t]}
+                            </button>
+                        ))}
                     </div>
-                    <div>
-                        <span
-                            className={`text-[10px] font-bold tracking-widest uppercase ${isUrgent ? 'text-amber-600 dark:text-amber-400' : 'text-[#5B35F5] dark:text-[#B3F52D]'}`}
-                        >
-                            {isUrgent
-                                ? '⚠️ EXAM Nearing COUNTDOWN'
-                                : 'Exam Countdown'}
-                        </span>
-                        <h3 className="mt-0.5 font-heading text-lg font-semibold tracking-tight text-slate-900 dark:text-white">
-                            Civil Service Exam:{' '}
-                            <span className="underline decoration-slate-300 decoration-2 underline-offset-4 dark:decoration-white/40">
-                                {examDate}
-                            </span>
-                        </h3>
-                        {examDescription && (
-                            <p className="mt-0.5 text-xs font-bold text-slate-500 dark:text-slate-400">
-                                {examDescription}
+
+                    {state.phase === 'none' ? (
+                        <div>
+                            <h2 className="text-lg font-semibold text-[#101426] dark:text-white">
+                                No confirmed CSC exam date yet
+                            </h2>
+                            <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                                The countdown returns once the Civil Service
+                                Commission publishes the next sitting.
                             </p>
-                        )}
-                    </div>
+                        </div>
+                    ) : (
+                        <div>
+                            <p className="text-xs font-semibold tracking-wider text-[#5B35F5] uppercase dark:text-[#B3F52D]">
+                                {state.phase === 'today'
+                                    ? 'Exam Day Today'
+                                    : 'Until exam day'}
+                            </p>
+                            <h2 className="mt-1 flex items-start gap-2 text-lg font-semibold text-[#101426] sm:text-xl dark:text-white">
+                                <CalendarDays className="mt-0.5 size-5 shrink-0 text-[#5B35F5] dark:text-[#B3F52D]" />
+                                <span>
+                                    CSE {TRACK_LABEL[track]} ·{' '}
+                                    {formatPhDate(state.sitting.date)}
+                                </span>
+                            </h2>
+                            <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                                {source === 'csc' ? (
+                                    <>
+                                        Confirmed by the{' '}
+                                        {sourceUrl ? (
+                                            <a
+                                                href={sourceUrl}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="underline underline-offset-2"
+                                            >
+                                                CSC exam calendar
+                                            </a>
+                                        ) : (
+                                            'CSC exam calendar'
+                                        )}
+                                        . Counting to 12:00 AM Philippine time.
+                                    </>
+                                ) : (
+                                    'Date set by your Civio admin. Counting to 12:00 AM Philippine time.'
+                                )}
+                            </p>
+                        </div>
+                    )}
                 </div>
 
-                {/* Countdown Numbers Grid */}
-                <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-                    <div className="flex items-start gap-1.5 sm:gap-2">
-                        {/* Days */}
-                        <div className="flex flex-col items-center">
-                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-semibold tracking-tight text-slate-800 backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-white">
-                                {padZero(timeLeft.days)}
+                {state.phase === 'counting' && (
+                    <div
+                        className="grid grid-cols-4 gap-2 sm:gap-3"
+                        aria-live="off"
+                    >
+                        {units.map(([label, value]) => (
+                            <div
+                                key={label}
+                                data-unit={label}
+                                className="flex min-w-0 flex-col items-center rounded-xl border border-[#E3E5EA] bg-white px-2 py-2.5 sm:min-w-[4.75rem] sm:px-3 sm:py-3 dark:border-slate-800 dark:bg-slate-900"
+                            >
+                                <span
+                                    className={`font-mono text-2xl font-semibold tabular-nums sm:text-3xl ${
+                                        label === 'Secs'
+                                            ? 'text-[#5B35F5] dark:text-[#B3F52D]'
+                                            : 'text-[#101426] dark:text-white'
+                                    }`}
+                                >
+                                    {label === 'Days'
+                                        ? value
+                                        : pad(value as number)}
+                                </span>
+                                <span className="mt-0.5 text-[11px] font-medium text-slate-500 uppercase sm:text-xs dark:text-slate-400">
+                                    {label}
+                                </span>
                             </div>
-                            <span className="mt-1.5 text-[9px] font-bold text-slate-500 uppercase sm:text-[10px] dark:text-slate-400">
-                                Days
-                            </span>
-                        </div>
-
-                        <span className="flex h-12 items-center font-mono text-xl font-semibold tracking-tight text-slate-300 sm:h-14 sm:text-xl dark:text-slate-600">
-                            :
-                        </span>
-
-                        {/* Hours */}
-                        <div className="flex flex-col items-center">
-                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-semibold tracking-tight text-slate-800 backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-white">
-                                {padZero(timeLeft.hours)}
-                            </div>
-                            <span className="mt-1.5 text-[9px] font-bold text-slate-500 uppercase sm:text-[10px] dark:text-slate-400">
-                                Hrs
-                            </span>
-                        </div>
-
-                        <span className="flex h-12 items-center font-mono text-xl font-semibold tracking-tight text-slate-300 sm:h-14 sm:text-xl dark:text-slate-600">
-                            :
-                        </span>
-
-                        {/* Minutes */}
-                        <div className="flex flex-col items-center">
-                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-semibold tracking-tight text-slate-800 backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-white">
-                                {padZero(timeLeft.minutes)}
-                            </div>
-                            <span className="mt-1.5 text-[9px] font-bold text-slate-500 uppercase sm:text-[10px] dark:text-slate-400">
-                                Mins
-                            </span>
-                        </div>
-
-                        <span className="flex h-12 items-center font-mono text-xl font-semibold tracking-tight text-slate-300 sm:h-14 sm:text-xl dark:text-slate-600">
-                            :
-                        </span>
-
-                        {/* Seconds */}
-                        <div className="flex flex-col items-center">
-                            <div className="flex size-12 items-center justify-center rounded-full border border-slate-200/60 bg-white/60 font-mono text-xl font-semibold tracking-tight text-[#5B35F5] backdrop-blur-md sm:size-14 sm:text-2xl dark:border-slate-700/50 dark:bg-slate-800/60 dark:text-[#B3F52D]">
-                                {padZero(timeLeft.seconds)}
-                            </div>
-                            <span className="mt-1.5 text-[9px] font-bold text-slate-500 uppercase sm:text-[10px] dark:text-slate-400">
-                                Secs
-                            </span>
-                        </div>
+                        ))}
                     </div>
+                )}
 
-                    <div className="hidden max-w-[200px] border-l border-slate-200 py-1 pl-4 md:block dark:border-slate-800">
-                        <p className="text-sm leading-relaxed leading-snug font-bold text-slate-600 dark:text-slate-400">
-                            {motivationText ||
-                                (isUrgent
-                                    ? 'The date you set is close. Drill the subjects you miss.'
-                                    : 'Drill the subjects you miss. A practice score is not a pass forecast.')}
-                        </p>
+                {state.phase === 'today' && (
+                    <div className="rounded-xl bg-[#B3F52D] px-4 py-3 text-center text-base font-semibold text-[#0A0A0A]">
+                        Good luck today
                     </div>
-                </div>
+                )}
             </div>
-        </div>
+
+            {milestone && (
+                <div
+                    data-testid="exam-milestone"
+                    className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-[#5B35F5]/10 pt-3 text-sm text-slate-600 dark:border-white/10 dark:text-slate-300"
+                >
+                    <Flag className="size-4 shrink-0 text-[#5B35F5] dark:text-[#B3F52D]" />
+                    <span className="font-medium text-[#101426] dark:text-white">
+                        Next milestone:
+                    </span>
+                    <span>
+                        {formatPhDate(milestone.date)} ·{' '}
+                        {milestoneText(milestone)}
+                    </span>
+                </div>
+            )}
+        </section>
     );
 }

@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Support;
 
+use Carbon\CarbonImmutable;
+use Carbon\CarbonInterface;
+
 /**
  * Public CSE 2027 dates, copied by hand from official CSC pages only.
  *
@@ -50,6 +53,57 @@ final class CseExamDates
             $row($august, 'Filing opens', '2027-05-10', 'confirmed'),
             $row($august, 'Exam day (Professional and Subprofessional)', '2027-08-08', 'confirmed'),
             $row($august, 'Results', '2027-10-05', 'target', 'This is the CSC target release date, not a promise.'),
+        ];
+    }
+
+    public const TIMEZONE = 'Asia/Manila';
+
+    /**
+     * Confirmed exam days and filing openings whose Philippine calendar day has
+     * not ended yet, soonest first. An exam day stays listed for the whole of
+     * that day in Manila, so "Exam Day Today" holds until PH midnight.
+     *
+     * @return array{sittings: list<array{date: string, sitting: string, label: string}>, milestones: list<array{date: string, sitting: string, label: string, kind: 'filing_opens'|'exam_day'}>, source_title: string, source_url: string, last_checked: string}
+     */
+    public static function upcoming(?CarbonInterface $now = null): array
+    {
+        $today = CarbonImmutable::instance($now ?? CarbonImmutable::now())
+            ->setTimezone(self::TIMEZONE)
+            ->toDateString();
+
+        $sittings = [];
+        $milestones = [];
+
+        foreach (self::all() as $row) {
+            if ($row['status'] !== 'confirmed' || $row['date'] === null || $row['date'] < $today) {
+                continue;
+            }
+
+            $isExam = str_starts_with($row['label'], 'Exam day');
+            $isFiling = $row['label'] === 'Filing opens';
+
+            if (! $isExam && ! $isFiling) {
+                continue;
+            }
+
+            $item = ['date' => $row['date'], 'sitting' => $row['sitting'], 'label' => $row['label']];
+
+            if ($isExam) {
+                $sittings[] = $item;
+            }
+
+            $milestones[] = $item + ['kind' => $isExam ? 'exam_day' : 'filing_opens'];
+        }
+
+        usort($sittings, fn (array $a, array $b): int => strcmp($a['date'], $b['date']));
+        usort($milestones, fn (array $a, array $b): int => strcmp($a['date'], $b['date']));
+
+        return [
+            'sittings' => $sittings,
+            'milestones' => $milestones,
+            'source_title' => self::ANNOUNCEMENT_TITLE,
+            'source_url' => self::ANNOUNCEMENT_URL,
+            'last_checked' => self::LAST_CHECKED,
         ];
     }
 }

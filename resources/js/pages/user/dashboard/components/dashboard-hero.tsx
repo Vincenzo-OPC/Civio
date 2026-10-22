@@ -1,5 +1,5 @@
 import { Link } from '@inertiajs/react';
-import { Calendar, ChevronDown, Play, GraduationCap } from 'lucide-react';
+import { ChevronDown, Play, GraduationCap } from 'lucide-react';
 import React from 'react';
 import LiteModeToggle from '@/components/shared/lite-mode-toggle';
 import { Button } from '@/components/ui/button';
@@ -14,6 +14,7 @@ import type { DashboardStats } from '../types';
 
 interface DashboardHeroProps {
     firstName: string;
+    /** Kept for callers; the exam date now lives in ExamCountdown. */
     stats?: DashboardStats | null;
     motivationText?: string | null;
     streak?: number;
@@ -21,14 +22,9 @@ interface DashboardHeroProps {
 
 export function DashboardHero({
     firstName,
-    stats,
     motivationText,
     streak = 0,
 }: DashboardHeroProps) {
-    const daysUntilExam = stats?.daysUntilExam;
-    const examDate = stats?.examDate;
-    const examDescription = stats?.examDescription;
-
     const defaultMotivation =
         'Practice scores on this page are not a Civil Service Commission rating.';
     const motivation = motivationText || defaultMotivation;
@@ -63,30 +59,6 @@ export function DashboardHero({
                 </div>
 
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:flex-col lg:items-end">
-                    {examDate && typeof daysUntilExam === 'number' && (
-                        <div className="flex items-center gap-3 rounded-xl border border-[#E3E5EA] bg-white p-3 dark:border-slate-800 dark:bg-slate-950">
-                            <Calendar className="size-5 text-[#5B35F5]" />
-                            <div>
-                                <div className="flex items-center gap-2">
-                                    <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                                        Exam date
-                                    </span>
-                                    <span className="text-xs text-slate-500">
-                                        {daysUntilExam > 0
-                                            ? `${daysUntilExam} days left`
-                                            : 'Today'}
-                                    </span>
-                                </div>
-                                <p className="text-sm text-[#101426] dark:text-slate-200">
-                                    {examDate}
-                                    {examDescription
-                                        ? ` · ${examDescription}`
-                                        : ''}
-                                </p>
-                            </div>
-                        </div>
-                    )}
-
                     <div className="flex w-full gap-2 sm:w-auto">
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>

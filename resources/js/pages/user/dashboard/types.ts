@@ -1,3 +1,4 @@
+import type { ExamMilestone, ExamSitting } from '@/lib/exam-countdown';
 export interface CategoryScore {
     name: string;
     correct: number;
@@ -27,6 +28,12 @@ export interface DashboardStats {
     examDate?: string | null;
     examDateRaw?: string | null;
     examDescription?: string | null;
+    examSource?: 'csc' | 'admin' | null;
+    examSittings?: ExamSitting[];
+    examMilestones?: ExamMilestone[];
+    examSourceTitle?: string | null;
+    examSourceUrl?: string | null;
+    examLastChecked?: string | null;
     avgScore?: number;
     totalExams?: number;
     strongestArea?: string;

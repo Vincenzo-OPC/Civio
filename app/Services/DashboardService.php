@@ -8,6 +8,7 @@ use App\Models\ExamAttempt;
 use App\Models\ExamDate;
 use App\Models\LearnModule;
 use App\Models\StudySchedule;
+use App\Support\CseExamDates;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Schema;
@@ -23,7 +24,7 @@ class DashboardService
      * Aggregate full command center data for user dashboard.
      *
      * @return array{
-     *     stats: array{daysUntilExam: int|null, examDate: string|null, examDateRaw: string|null, examDescription: string|null},
+     *     stats: array<string, mixed>,
      *     aiAnalysis: array{status: string, data: mixed},
      *     dailyGoal: array{streak: int, questionsToday: int, goalTarget: int},
      *     todayTasks: Collection<int, array<string, mixed>>,
@@ -66,34 +67,54 @@ class DashboardService
     }
 
     /**
-     * @return array{daysUntilExam: int|null, examDate: string|null, examDateRaw: string|null, examDescription: string|null}
+     * Exam countdown data. The hand-checked CSC calendar (CseExamDates) is the
+     * source of truth; an admin ExamDate row is only a fallback when no
+     * confirmed CSC sitting remains, and only if its PH day has not passed.
+     * A stale or expired row can never override the CSC calendar.
+     *
+     * @return array{daysUntilExam: int|null, examDate: string|null, examDateRaw: string|null, examDescription: string|null, examSource: 'csc'|'admin'|null, examSittings: list<array{date: string, sitting: string, label: string}>, examMilestones: list<array{date: string, sitting: string, label: string, kind: string}>, examSourceTitle: string, examSourceUrl: string, examLastChecked: string}
      */
-    protected function getExamDateStats(): array
+    public function getExamDateStats(): array
     {
-        $examDate = null;
-        $examDateRaw = null;
-        $examDescription = null;
-        $daysUntilExam = null;
+        $tz = CseExamDates::TIMEZONE;
+        $today = Carbon::now($tz)->startOfDay();
+        $calendar = CseExamDates::upcoming(Carbon::now());
 
-        if (Schema::hasTable('exam_dates')) {
-            $examDateObj = ExamDate::where('is_active', true)
-                ->where('date', '>', now())
+        $sittings = $calendar['sittings'];
+        $source = $sittings === [] ? null : 'csc';
+        $description = $sittings === [] ? null : $sittings[0]['sitting'];
+
+        if ($sittings === [] && Schema::hasTable('exam_dates')) {
+            $row = ExamDate::where('is_active', true)
+                ->whereDate('date', '>=', $today->toDateString())
                 ->orderBy('date')
                 ->first();
 
-            if ($examDateObj) {
-                $examDate = $examDateObj->date->format('F j, Y');
-                $examDateRaw = $examDateObj->date->toDateString();
-                $examDescription = $examDateObj->description;
-                $daysUntilExam = (int) ceil(now()->diffInDays($examDateObj->date, false));
+            if ($row) {
+                $sittings = [[
+                    'date' => $row->date->toDateString(),
+                    'sitting' => (string) ($row->description ?? 'Exam date set by admin'),
+                    'label' => 'Exam day',
+                ]];
+                $source = 'admin';
+                $description = $row->description;
             }
         }
 
+        $next = $sittings[0] ?? null;
+        $nextDay = $next ? Carbon::parse($next['date'], $tz)->startOfDay() : null;
+
         return [
-            'daysUntilExam' => $daysUntilExam,
-            'examDate' => $examDate,
-            'examDateRaw' => $examDateRaw,
-            'examDescription' => $examDescription,
+            'daysUntilExam' => $nextDay ? (int) $today->diffInDays($nextDay, false) : null,
+            'examDate' => $nextDay?->format('F j, Y'),
+            'examDateRaw' => $next['date'] ?? null,
+            'examDescription' => $description,
+            'examSource' => $source,
+            'examSittings' => $sittings,
+            'examMilestones' => $calendar['milestones'],
+            'examSourceTitle' => $calendar['source_title'],
+            'examSourceUrl' => $calendar['source_url'],
+            'examLastChecked' => $calendar['last_checked'],
         ];
     }
 

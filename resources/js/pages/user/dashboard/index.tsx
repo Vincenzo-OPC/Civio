@@ -6,6 +6,7 @@ import { AiReadinessBentoCard } from '@/pages/user/dashboard/components/ai-readi
 import { ContinueStudyingCard } from '@/pages/user/dashboard/components/continue-studying-card';
 import { DailyGoalStreakCard } from '@/pages/user/dashboard/components/daily-goal-streak-card';
 import { DashboardHero } from '@/pages/user/dashboard/components/dashboard-hero';
+import { ExamCountdown } from '@/pages/user/dashboard/components/exam-countdown';
 import { SmartStudyLaunchers } from '@/pages/user/dashboard/components/smart-study-launchers';
 import { StudyScheduleActivityCard } from '@/pages/user/dashboard/components/study-schedule-activity-card';
 import { StudyTotalsCard } from '@/pages/user/dashboard/components/study-totals-card';
@@ -50,6 +51,14 @@ export default function Dashboard({
                 streak={dailyGoal?.streak}
             />
 
+            {/* Live countdown to 00:00 PHT on the next CSC-confirmed exam day */}
+            <ExamCountdown
+                sittings={stats?.examSittings ?? []}
+                milestones={stats?.examMilestones ?? []}
+                sourceUrl={stats?.examSourceUrl}
+                source={stats?.examSource ?? null}
+            />
+
             {/* One dominant next action, from server data only. */}
             <ContinueStudyingCard
                 nextModule={nextModule}
@@ -90,14 +99,6 @@ export default function Dashboard({
 
                 {/* Counts from stored attempts; no readiness forecast */}
                 <StudyTotalsCard totals={studyTotals} />
-
-                <DailyGoalStreakCard dailyGoal={dailyGoal} />
-
-                {/* Next steps */}
-                <SmartStudyLaunchers
-                    nextModule={nextModule}
-                    primaryWeakness={primaryWeakness}
-                />
             </div>
         </PageContainer>
     );

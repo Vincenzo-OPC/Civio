@@ -25,12 +25,7 @@ class DashboardController extends Controller
         // Local study: guests get a soft-empty dashboard shell.
         if (! $request->user()) {
             return $this->render('user/dashboard/index', [
-                'stats' => [
-                    'daysUntilExam' => null,
-                    'examDate' => null,
-                    'examDateRaw' => null,
-                    'examDescription' => null,
-                ],
+                'stats' => $this->dashboardService->getExamDateStats(),
                 'aiAnalysis' => [
                     'status' => 'no_data',
                     'data' => null,

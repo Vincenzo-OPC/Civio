@@ -20,7 +20,7 @@ import { index as learnIndex } from '@/routes/learn';
 import type { Auth } from '@/types';
 import type { DashboardProps } from '../types';
 
-export function UserDashboardPage({ stats, aiAnalysis }: DashboardProps) {
+export function UserDashboardPage({ stats }: DashboardProps) {
     const { auth } = usePage<{ auth: Auth }>().props;
     const firstName = auth?.user?.name ? auth.user.name.split(' ')[0] : 'User';
 
@@ -75,13 +75,12 @@ export function UserDashboardPage({ stats, aiAnalysis }: DashboardProps) {
             </div>
 
             {/* Exam Countdown Card */}
-            {stats?.examDate && stats?.examDateRaw && (
-                <ExamCountdown
-                    examDate={stats.examDate}
-                    examDateRaw={stats.examDateRaw}
-                    motivationText={aiAnalysis?.data?.encouragement}
-                />
-            )}
+            <ExamCountdown
+                sittings={stats?.examSittings ?? []}
+                milestones={stats?.examMilestones ?? []}
+                sourceUrl={stats?.examSourceUrl}
+                source={stats?.examSource ?? null}
+            />
 
             {/* Simple Monitor cards pointing to core modules */}
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
