@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\LearnModule;
 use App\Models\Subcategory;
 use App\Services\Ai\AiGatewayService;
+use App\Services\Ai\OwnerAiSpendLock;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -46,6 +47,13 @@ class GenerateLearnModuleJob implements ShouldQueue
         try {
             set_time_limit(300);
             $validated = $this->validated;
+
+            if (OwnerAiSpendLock::disabled()) {
+                Log::warning('GenerateLearnModuleJob: owner-funded AI is disabled; job skipped with no external request.');
+                AiGenerationFailed::dispatch($this->userId, OwnerAiSpendLock::DISABLED_MESSAGE, 'module');
+
+                return;
+            }
 
             $aiGateway = app(AiGatewayService::class);
             $isWorkersAi = $aiGateway->isWorkersAiModel($this->primaryModel);

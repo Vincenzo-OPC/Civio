@@ -7,6 +7,12 @@ use Tests\TestCase;
 
 uses(TestCase::class);
 
+// These tests exercise the legacy AI code paths, so they open the Issue #18
+// owner-funded AI lock explicitly. HTTP stays faked; no real request is made.
+beforeEach(function () {
+    config(['ai.owner_funded_inference_enabled' => true]);
+});
+
 test('AiGatewayService resolves Cloudflare REST endpoint', function () {
     config([
         'services.cloudflare.account_id' => 'test-account-id',

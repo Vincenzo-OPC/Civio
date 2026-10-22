@@ -9,6 +9,7 @@ use App\Jobs\GenerateUserAnalysisJob;
 use App\Models\ExamAttempt;
 use App\Models\UserAiAnalysis;
 use App\Services\Ai\AiGatewayService;
+use App\Services\Ai\OwnerAiSpendLock;
 use Illuminate\Support\Facades\Cache;
 
 class UserPreferenceService
@@ -24,7 +25,7 @@ class UserPreferenceService
     public function getAnalysisMode(int $userId): string
     {
         $aiAvailable = $this->isAiAvailable();
-        $mode = Cache::get("user-analysis-mode-{$userId}", 'ai');
+        $mode = Cache::get("user-analysis-mode-{$userId}", OwnerAiSpendLock::enabled() ? 'ai' : 'instant');
 
         if (! $aiAvailable && $mode === 'ai') {
             $mode = 'instant';
@@ -35,7 +36,7 @@ class UserPreferenceService
 
     public function isAiAvailable(): bool
     {
-        return $this->aiGateway->isAiConfigured();
+        return OwnerAiSpendLock::enabled() && $this->aiGateway->isAiConfigured();
     }
 
     /**

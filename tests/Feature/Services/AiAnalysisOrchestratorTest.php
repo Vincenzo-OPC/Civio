@@ -37,6 +37,12 @@ function orchestratorWithDrillAfterMock(User $user): AiAnalysisOrchestrator
     return new AiAnalysisOrchestrator($deterministic, $gateway);
 }
 
+// These tests exercise the legacy AI code paths, so they open the Issue #18
+// owner-funded AI lock explicitly. HTTP stays faked; no real request is made.
+beforeEach(function () {
+    config(['ai.owner_funded_inference_enabled' => true]);
+});
+
 test('merging drill results into an analysis with missing keys falls back to safe defaults', function () {
     $user = User::factory()->create();
     $result = orchestratorWithDrillAfterMock($user)->resolveAnalysis($user->id);

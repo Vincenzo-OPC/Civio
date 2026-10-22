@@ -9,6 +9,12 @@ use App\Models\User;
 use App\Models\UserAiAnalysis;
 use Illuminate\Support\Facades\Http;
 
+// These tests exercise the legacy AI code paths, so they open the Issue #18
+// owner-funded AI lock explicitly. HTTP stays faked; no real request is made.
+beforeEach(function () {
+    config(['ai.owner_funded_inference_enabled' => true]);
+});
+
 test('GenerateUserAnalysisJob calculates subtopic stats and maps subcategory IDs correctly', function () {
     // 1. Setup User and Categories
     $user = User::factory()->create();

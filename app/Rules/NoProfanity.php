@@ -3,6 +3,7 @@
 namespace App\Rules;
 
 use App\Services\Ai\AiGatewayService;
+use App\Services\Ai\OwnerAiSpendLock;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Support\Facades\Cache;
@@ -106,7 +107,7 @@ class NoProfanity implements ValidationRule
 
         // 4. Fallback to Groq API (NLP) - Direct API
         $groqKey = config('services.groq.key') ?: env('GROQ_API_KEY');
-        if ($groqKey) {
+        if ($groqKey && OwnerAiSpendLock::enabled()) {
             $ip = request()->ip() ?: 'unknown';
             $limiterKey = 'nlp-profanity-check:'.$ip;
 

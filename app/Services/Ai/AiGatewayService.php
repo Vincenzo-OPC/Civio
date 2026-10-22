@@ -44,6 +44,10 @@ class AiGatewayService
      */
     public function isAiGatewayConfigured(): bool
     {
+        if (OwnerAiSpendLock::disabled()) {
+            return false;
+        }
+
         return ! empty(config('services.cloudflare.account_id'))
             && (! empty(config('services.cloudflare.ai_gateway_id')) || ! empty(config('services.cloudflare.ai_gateway.id')));
     }
@@ -69,6 +73,10 @@ class AiGatewayService
      */
     public function isWorkersAiConfigured(): bool
     {
+        if (OwnerAiSpendLock::disabled()) {
+            return false;
+        }
+
         return (bool) (config('services.cloudflare.account_id') && config('services.cloudflare.api_token'));
     }
 
@@ -77,6 +85,10 @@ class AiGatewayService
      */
     public function isGeminiConfigured(): bool
     {
+        if (OwnerAiSpendLock::disabled()) {
+            return false;
+        }
+
         return (bool) config('services.gemini.key');
     }
 
@@ -96,6 +108,10 @@ class AiGatewayService
      */
     public function runWorkersAi(string $model, array $payload, int $timeout = 180): array
     {
+        if (OwnerAiSpendLock::disabled()) {
+            return OwnerAiSpendLock::disabledResult();
+        }
+
         $token = (string) config('services.cloudflare.api_token');
         if ($token === '') {
             return ['success' => false, 'error' => 'CLOUDFLARE_API_TOKEN is missing.'];
@@ -152,6 +168,10 @@ class AiGatewayService
      */
     public function runGemini(string $model, array $payload, int $timeout = 300): array
     {
+        if (OwnerAiSpendLock::disabled()) {
+            return OwnerAiSpendLock::disabledResult();
+        }
+
         $geminiKey = (string) config('services.gemini.key');
         if ($geminiKey === '') {
             return ['success' => false, 'error' => 'GEMINI_API_KEY is missing.'];
@@ -206,6 +226,10 @@ class AiGatewayService
         ?array $responseSchema = null,
         int $timeout = 240
     ): array {
+        if (OwnerAiSpendLock::disabled()) {
+            return OwnerAiSpendLock::disabledResult();
+        }
+
         $cleanJson = static function (string $text): ?array {
             $cleaned = trim($text);
             if (str_starts_with($cleaned, '```')) {

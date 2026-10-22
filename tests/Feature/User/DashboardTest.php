@@ -56,6 +56,8 @@ test('dashboard status is no_data if user has no exam attempts with active exam 
 });
 
 test('dashboard dispatches GenerateUserAnalysisJob if user has exam attempts but no analysis', function () {
+    // Legacy AI path: open the Issue #18 lock explicitly; HTTP is never real.
+    config(['ai.owner_funded_inference_enabled' => true]);
     config(['services.gemini.key' => 'fake-gemini-key']);
     Bus::fake();
 
@@ -98,6 +100,8 @@ test('dashboard dispatches GenerateUserAnalysisJob if user has exam attempts but
 });
 
 test('dashboard serves cached analysis if generated today', function () {
+    // Legacy AI path: open the Issue #18 lock explicitly; HTTP is never real.
+    config(['ai.owner_funded_inference_enabled' => true]);
     config(['services.gemini.key' => 'fake-gemini-key']);
     $user = User::factory()->create();
     ExamDate::create(['date' => now()->addDays(30), 'is_active' => true]);

@@ -5,6 +5,7 @@ namespace App\Jobs;
 use App\Events\AiGenerationCompleted;
 use App\Models\UserAiAnalysis;
 use App\Services\Ai\AiGatewayService;
+use App\Services\Ai\OwnerAiSpendLock;
 use App\Services\DeterministicAnalysisService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -41,7 +42,7 @@ class GenerateUserAnalysisJob implements ShouldQueue
             $cfConfigured = $aiGateway->isWorkersAiConfigured();
             $geminiConfigured = $aiGateway->isGeminiConfigured();
 
-            if (! $cfConfigured && ! $geminiConfigured) {
+            if (OwnerAiSpendLock::disabled() || (! $cfConfigured && ! $geminiConfigured)) {
                 Log::info('GenerateUserAnalysisJob: No AI credentials configured. Saving deterministic analysis directly.');
                 UserAiAnalysis::updateOrCreate(
                     ['user_id' => $this->userId],

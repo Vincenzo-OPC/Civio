@@ -24,6 +24,7 @@ use App\Models\Question;
 use App\Models\Subcategory;
 use App\Models\User;
 use App\Services\Ai\AiGatewayService;
+use App\Services\Ai\OwnerAiSpendLock;
 use App\Services\QuestionService;
 use Database\Seeders\DatabaseSeeder;
 use Illuminate\Http\Request;
@@ -148,6 +149,15 @@ class QuestionController extends Controller
      */
     public function generate(GenerateQuestionsRequest $request)
     {
+        if (OwnerAiSpendLock::disabled()) {
+            return response()->json([
+                'success' => false,
+                'queued' => false,
+                'disabled' => true,
+                'message' => 'AI question generation is disabled. Nothing was queued and no external AI request was made. Manual drafts still work.',
+            ], 503);
+        }
+
         $validated = $request->validated();
         $subcategory = $validated['subcategory'] ?? 'default';
         $lockKey = 'generate-questions-lock:'.Str::slug((string) $subcategory);

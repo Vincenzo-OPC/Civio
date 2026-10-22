@@ -9,6 +9,7 @@ use App\Models\ExamAttempt;
 use App\Models\StudySchedule;
 use App\Models\UserAiAnalysis;
 use App\Services\Ai\AiGatewayService;
+use App\Services\Ai\OwnerAiSpendLock;
 use Illuminate\Support\Facades\Cache;
 
 class AiAnalysisOrchestrator
@@ -33,8 +34,8 @@ class AiAnalysisOrchestrator
             return ['status' => 'no_data', 'data' => null];
         }
 
-        $userMode = Cache::get("user-analysis-mode-{$userId}", 'ai');
-        $useAi = $userMode === 'ai' && $this->aiGateway->isAiConfigured() && $latestMockAttemptId;
+        $userMode = Cache::get("user-analysis-mode-{$userId}", OwnerAiSpendLock::enabled() ? 'ai' : 'instant');
+        $useAi = OwnerAiSpendLock::enabled() && $userMode === 'ai' && $this->aiGateway->isAiConfigured() && $latestMockAttemptId;
 
         // If user is in instant mode or only has drills, immediately generate reactive analysis for the latest attempt
         if (! $useAi) {
@@ -124,8 +125,8 @@ class AiAnalysisOrchestrator
             return ['status' => 'no_data', 'data' => null];
         }
 
-        $userMode = Cache::get("user-analysis-mode-{$userId}", 'ai');
-        $useAi = $userMode === 'ai' && $this->aiGateway->isAiConfigured() && $latestMockAttemptId;
+        $userMode = Cache::get("user-analysis-mode-{$userId}", OwnerAiSpendLock::enabled() ? 'ai' : 'instant');
+        $useAi = OwnerAiSpendLock::enabled() && $userMode === 'ai' && $this->aiGateway->isAiConfigured() && $latestMockAttemptId;
 
         $targetAttemptId = $useAi ? $latestMockAttemptId : $latestAttemptId;
         $cacheKey = "ai-analysis-generating-{$userId}";
@@ -233,6 +234,10 @@ class AiAnalysisOrchestrator
 
         Cache::forget($cacheKey);
         Cache::forget($failKey);
+
+        if (OwnerAiSpendLock::disabled()) {
+            return;
+        }
 
         $latestMockAttemptId = ExamAttempt::where('user_id', $userId)->whereNull('category_id')->latest()->value('id');
         $latestAttemptId = $latestMockAttemptId ?: ExamAttempt::where('user_id', $userId)->latest()->value('id');

@@ -15,6 +15,7 @@ use App\Http\Resources\AdminLearnModuleResource;
 use App\Jobs\GenerateLearnModuleJob;
 use App\Models\LearnModule;
 use App\Services\Ai\AiGatewayService;
+use App\Services\Ai\OwnerAiSpendLock;
 use App\Services\CategoryService;
 use App\Services\LearnModuleService;
 use Illuminate\Http\JsonResponse;
@@ -166,6 +167,15 @@ class LearnController extends Controller
 
     public function generate(GenerateLearnModuleRequest $request): JsonResponse
     {
+        if (OwnerAiSpendLock::disabled()) {
+            return response()->json([
+                'success' => false,
+                'queued' => false,
+                'disabled' => true,
+                'message' => 'AI learning module generation is disabled. Nothing was queued and no external AI request was made. Manual drafts still work.',
+            ], 503);
+        }
+
         $validated = $request->validated();
         $topic = $validated['topic'] ?? 'default';
         $lockKey = 'generate-learn-lock:'.Str::slug($topic);
