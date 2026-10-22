@@ -329,3 +329,13 @@ Applied to residual and batch JSON. Remaining lowercase hits: 0.
 3. Clone files (`civio-exact-flat-cleaned`, `civio-fixed-flat-final`) are superseded. Do not count them toward unique totals.
 
 **Do not activate.** Send the rewrite to CoS for re-review. Label normalization and difficulty pass wait until the rewrite passes.
+
+## 2026-10-22 (final): track normalization complete
+
+Normalized `pro` → `professional` and `sub` → `subprofessional` across bank JSON.
+- Files changed: 5
+- Items changed: 157
+- Remaining tracks: both, professional, subprofessional only
+
+Difficulty rebalance is held until CoS clears the 122 rewrite (`civio-final-rewrite-2026-10-22.json`).
+No activation.

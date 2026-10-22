@@ -7,7 +7,7 @@
   "items": [
     {
       "id": "CIVIO-NUM-FRAC-DEC-926001",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "subtract fractions",
@@ -70,7 +70,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926002",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "fraction of a set",
@@ -133,7 +133,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926003",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "compare close fractions",
@@ -196,7 +196,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926004",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "mixed number conversion",
@@ -259,7 +259,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926005",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "fraction division",
@@ -322,7 +322,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926006",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "recover the whole from a fraction",
@@ -385,7 +385,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926007",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "fractions of a litre",
@@ -448,7 +448,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926008",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "add mixed numbers",
@@ -511,7 +511,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926009",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "fraction of a completed project",
@@ -574,7 +574,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926010",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "decimal to fraction",
@@ -637,7 +637,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926011",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "fraction of a fraction",
@@ -700,7 +700,7 @@
     },
     {
       "id": "CIVIO-NUM-FRAC-DEC-926012",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "multiply a mixed number by a fraction",
@@ -763,7 +763,7 @@
     },
     {
       "id": "CIVIO-NUM-PCT-BASIC-926013",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "percentage of a quantity",
@@ -826,7 +826,7 @@
     },
     {
       "id": "CIVIO-NUM-PCT-BASIC-926014",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "part as a percent",
@@ -889,7 +889,7 @@
     },
     {
       "id": "CIVIO-NUM-PCT-BASIC-926015",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "whole from known percent",
@@ -952,7 +952,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-926016",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "single percent discount",
@@ -1015,7 +1015,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-926017",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "percent increase",
@@ -1078,7 +1078,7 @@
     },
     {
       "id": "CIVIO-NUM-PCT-BASIC-926018",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "weighted overall percentage",
@@ -1141,7 +1141,7 @@
     },
     {
       "id": "CIVIO-NUM-PCT-BASIC-926019",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "completion rate",
@@ -1204,7 +1204,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-926020",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "percent decrease of a forecast",
@@ -1267,7 +1267,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-926021",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "reverse a discount",
@@ -1330,7 +1330,7 @@
     },
     {
       "id": "CIVIO-NUM-PCT-BASIC-926022",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "compare percentages of different totals",
@@ -1393,7 +1393,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-926023",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "percent reduction",
@@ -1456,7 +1456,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-926024",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Basic operations",
       "concept": "compare a percentage discount with a fixed rebate",
@@ -1519,7 +1519,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-926025",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "two-part ratio from total",
@@ -1582,7 +1582,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-926026",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "proportion from one known share",
@@ -1645,7 +1645,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-926027",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "recipe scaling",
@@ -1708,7 +1708,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-926028",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "three-part ratio",
@@ -1771,7 +1771,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATE-926029",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "direct proportion and unit price",
@@ -1834,7 +1834,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATE-926030",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "inverse proportion",
@@ -1897,7 +1897,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATE-926031",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "map scale",
@@ -1960,7 +1960,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATIO-926032",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "equalize two quantities from ratio",
@@ -2023,7 +2023,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926033",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "one-step linear equation",
@@ -2086,7 +2086,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926034",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "distributive equation",
@@ -2149,7 +2149,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926035",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "sum and difference",
@@ -2212,7 +2212,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926036",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "consecutive even numbers",
@@ -2275,7 +2275,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926051",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "linear equation with parentheses",
@@ -2338,7 +2338,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926038",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "fixed fee with variable cost",
@@ -2401,7 +2401,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926039",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "linear inventory with a fraction",
@@ -2464,7 +2464,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926040",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "combine like terms",
@@ -2527,7 +2527,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926041",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "past ages with a fixed gap",
@@ -2590,7 +2590,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926042",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "ages from future sum and gap",
@@ -2653,7 +2653,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATE-926043",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "worker-hours production",
@@ -2716,7 +2716,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATE-926044",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "combined water-pump rates",
@@ -2779,7 +2779,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATE-926045",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "travel time at constant speed",
@@ -2842,7 +2842,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATE-926046",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "average speed with equal distances",
@@ -2905,7 +2905,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-RATE-926047",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "unit profit",
@@ -2968,7 +2968,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-ALGEBRA-926048",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "change from a purchase budget",
@@ -3031,7 +3031,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-AVERAGE-926049",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "weighted cost of a mixture",
@@ -3094,7 +3094,7 @@
     },
     {
       "id": "CIVIO-NUM-WP-PCT-CHANGE-926050",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "numerical",
       "competency": "Word problems",
       "concept": "dilute a liquid mixture",

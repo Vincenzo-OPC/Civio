@@ -504,7 +504,7 @@
     },
     {
       "id": "CIVIO-ANA-ANALOGY-PART-WHOLE-000009",
-      "track": "pro",
+      "track": "professional",
       "domain": "analytical",
       "competency": "Word association (analogy)",
       "concept": "part to whole",
@@ -566,7 +566,7 @@
     },
     {
       "id": "CIVIO-CLR-SPELL-WRONG-000010",
-      "track": "sub",
+      "track": "subprofessional",
       "domain": "clerical",
       "competency": "Spelling",
       "concept": "commonly misspelled words",

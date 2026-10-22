@@ -268,7 +268,7 @@
     },
     {
       "id": "CIVIO-ANA-SYLLOGISM-000015",
-      "track": "pro",
+      "track": "professional",
       "domain": "analytical",
       "competency": "Logic",
       "concept": "syllogism",
@@ -330,7 +330,7 @@
     },
     {
       "id": "CIVIO-ANA-ASSUME-I-II-000016",
-      "track": "pro",
+      "track": "professional",
       "domain": "analytical",
       "competency": "Assumptions and conclusions",
       "concept": "assumptions",
@@ -391,7 +391,7 @@
     },
     {
       "id": "CIVIO-ANA-SYMBOL-SERIES-000017",
-      "track": "pro",
+      "track": "professional",
       "domain": "analytical",
       "competency": "Logic",
       "concept": "letter series",
