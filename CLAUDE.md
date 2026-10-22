@@ -1,5 +1,7 @@
 # Claude instructions for Civio
 
+> **22 Oct 2026 GT VISUAL DIRECTIVE (dashboard):** Read [`docs/design/CIVIO_DASHBOARD_VISUAL_CONTRACT_2026-10-22.md`](docs/design/CIVIO_DASHBOARD_VISUAL_CONTRACT_2026-10-22.md) before any learner-dashboard UI work. Owner preferences: Title Case on headings/labels/actions, limited intentional ALL CAPS for short editorial tags, deliberate optical typography, flat surfaces **without decorative gradients/glass/glow**, equal-row card geometry, mobile-first legibility, actual screenshot measurements. Compare PRO2000, Grip-PH, Undercor; chief-of-staff delegation and independent QA. This specific owner instruction supersedes older generic typography advice. No deployment, MSI mutation, paid AI, bank changes or Rescue activation.
+
 > **Future AI research:** Also read [`docs/AI_SELF_IMPROVEMENT.md`](docs/AI_SELF_IMPROVEMENT.md) when proposing agent/tutor optimization. Civio is an opt-in held-out evaluation target of THE-MACHINE, not a separate self-editing agent. Do not begin autonomous mutation loops or change grading, question-bank or deployment approvals.
 
 > Substantive entry for Claude (Claude Code CLI, Claude.ai projects, Claude Cowork).
