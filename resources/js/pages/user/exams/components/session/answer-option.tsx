@@ -69,7 +69,7 @@ export function AnswerOption({
                 >
                     {letter}
                 </span>
-                <span className="min-w-0 flex-1 text-sm leading-relaxed md:text-base">
+                <span className="min-w-0 flex-1 text-[0.9375rem] leading-relaxed text-pretty [overflow-wrap:anywhere] md:text-base">
                     {children}
                     {status && (
                         <span className="mt-1 flex items-center gap-1 text-xs font-semibold tracking-wide uppercase">
