@@ -10,7 +10,6 @@ use App\Http\Resources\ExamScorecardResource;
 use App\Models\ExamAttempt;
 use App\Models\Question;
 use App\Models\ReviewItem;
-use App\Models\SavedDrillSet;
 use App\Repositories\QuestionRepositoryInterface;
 use App\Repositories\UserRepositoryInterface;
 use App\Services\Exam\MockPoolSelector;
@@ -18,7 +17,7 @@ use App\Services\Exam\StrictMockLock;
 use App\Services\Learning\ExposureHistory;
 use App\Services\Learning\LearningInsightsService;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Inertia\DeferProp;
 use Inertia\Inertia;
 
@@ -355,10 +354,17 @@ class ExamService
     /**
      * Filter client-supplied custom drill IDs (anti answer-key harvesting).
      *
-     * IDs the user legitimately holds (own attempts, own saved sets) always pass.
-     * Any other ID spends from a per-principal daily budget; once spent, unseen
-     * IDs are refused. Drafts never reach here (active pool only) and
-     * Strict-locked items are removed by the caller.
+     * IDs the principal has already encountered (own exam attempts, or an
+     * earlier budget grant) always pass. Saved-set membership is NOT an
+     * encounter: any user can attach any ID to a set, so it grants nothing.
+     * Every other ID spends one unit of a per-principal daily budget, charged
+     * once per distinct ID (a grant row, unique per principal+question) inside
+     * a transaction that locks the principal's daily counter row, so repeat or
+     * concurrent requests cannot overspend. Drafts never reach here (active
+     * pool only) and Strict-locked items are removed by the caller.
+     *
+     * Residual: the budget is per account (or guest IP). Someone with
+     * several accounts gets one budget per account; accepted for a public app.
      *
      * @param  array<int, int>  $ids
      * @return array<int, int>
@@ -366,17 +372,17 @@ class ExamService
     protected function permittedCustomIds(array $ids, ?int $userId): array
     {
         $ids = array_slice(array_values(array_unique(array_map('intval', $ids))), 0, ExamSessionQueryData::MAX_CUSTOM_IDS);
+
+        if ($ids === []) {
+            return [];
+        }
+
         $owned = [];
 
         if ($userId !== null) {
             foreach (ExamAttempt::query()->where('user_id', $userId)->latest('id')->limit(200)->pluck('question_ids') as $qids) {
                 foreach ((array) $qids as $qid) {
                     $owned[(int) $qid] = true;
-                }
-            }
-            foreach (SavedDrillSet::query()->where('user_id', $userId)->with('questions:id')->get() as $set) {
-                foreach ($set->questions as $q) {
-                    $owned[(int) $q->id] = true;
                 }
             }
         }
@@ -388,18 +394,57 @@ class ExamService
             return $known;
         }
 
-        $principal = $userId !== null
+        $principal = self::budgetPrincipal($userId);
+
+        $granted = DB::transaction(function () use ($principal, $unseen): array {
+            $day = now()->toDateString();
+            $stamp = now();
+
+            DB::table('custom_drill_budgets')->insertOrIgnore([
+                'principal' => $principal, 'day' => $day, 'used' => 0,
+                'created_at' => $stamp, 'updated_at' => $stamp,
+            ]);
+
+            $counter = DB::table('custom_drill_budgets')
+                ->where('principal', $principal)->where('day', $day)
+                ->lockForUpdate()->first();
+
+            $already = DB::table('custom_drill_grants')
+                ->where('principal', $principal)->whereIn('question_id', $unseen)
+                ->pluck('question_id')->map(fn ($id) => (int) $id)->all();
+
+            $fresh = array_values(array_diff($unseen, $already));
+            $room = max(0, self::CUSTOM_UNSEEN_DAILY_BUDGET - (int) ($counter->used ?? 0));
+            $spend = array_slice($fresh, 0, $room);
+            $charged = 0;
+
+            if ($spend !== []) {
+                $charged = DB::table('custom_drill_grants')->insertOrIgnore(array_map(fn (int $id) => [
+                    'principal' => $principal, 'question_id' => $id, 'granted_on' => $day,
+                    'created_at' => $stamp, 'updated_at' => $stamp,
+                ], $spend));
+
+                if ($charged > 0) {
+                    DB::table('custom_drill_budgets')->where('principal', $principal)->where('day', $day)
+                        ->update(['used' => DB::raw('used + '.(int) $charged), 'updated_at' => $stamp]);
+                }
+            }
+
+            return array_values(array_merge($already, $spend));
+        });
+
+        return array_values(array_intersect($ids, array_merge($known, $granted)));
+    }
+
+    /**
+     * Budget principal: the account, or the hashed client IP for guests. A
+     * guest session ID is not used: dropping the cookie would reset it.
+     */
+    public static function budgetPrincipal(?int $userId): string
+    {
+        return $userId !== null
             ? 'u:'.$userId
-            : 'g:'.hash('sha256', request()->hasSession() ? request()->session()->getId() : (string) request()->ip());
-        $key = 'custom-ids-budget:'.$principal.':'.now()->toDateString();
-        $used = (int) Cache::get($key, 0);
-        $grant = array_slice($unseen, 0, max(0, self::CUSTOM_UNSEEN_DAILY_BUDGET - $used));
-
-        if ($grant !== []) {
-            Cache::put($key, $used + count($grant), now()->endOfDay());
-        }
-
-        return array_values(array_merge($known, $grant));
+            : 'g:'.substr(hash('sha256', (string) request()->ip()), 0, 40);
     }
 
     /**
