@@ -55,7 +55,7 @@ export default function Dashboard({
                     data="aiAnalysis"
                     fallback={
                         <p className="rounded-xl border p-5 text-sm text-muted-foreground">
-                            Loading your readiness...
+                            Loading your practice scores...
                         </p>
                     }
                 >

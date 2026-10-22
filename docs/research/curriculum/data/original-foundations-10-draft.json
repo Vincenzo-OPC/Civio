@@ -1,0 +1,617 @@
+{
+  "batch_id": "curriculum-foundations-20261021",
+  "status": "draft",
+  "review_status": "unreviewed",
+  "items": [
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-210001",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "fraction subtraction",
+      "micro_skill": "subtract unlike fractions with a common whole",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A ribbon is 9/10 meter long. A 3/5-meter piece is cut from it. What length remains?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "3/10 meter"
+        },
+        {
+          "option_id": "o2",
+          "text": "6/10 meter"
+        },
+        {
+          "option_id": "o3",
+          "text": "6/5 meters"
+        },
+        {
+          "option_id": "o4",
+          "text": "12/15 meter"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A fraction names equal parts of one unit. The two lengths must use the same size parts.",
+        "shortcut": "Convert 3/5 meter to 6/10 meter. Subtract 9/10 - 6/10 = 3/10 meter.",
+        "why_correct": "Adding the removed 6/10 meter to the remaining 3/10 meter recovers 9/10 meter.",
+        "why_wrong": {
+          "o2": "Subtracts 3 from 9 without changing fifths to tenths.",
+          "o3": "Subtracts both numerators and denominators: (9-3)/(10-5). Denominators name part sizes and are not subtracted.",
+          "o4": "Adds numerators and denominators instead of subtracting lengths."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-OP-SWAP",
+        "o4": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT curriculum audit session, 2026-10-21",
+        "method": "ai_assisted",
+        "created_at": "2026-10-21T19:13:02+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "CURR-001. Original gap draft. Self-check is not independent review. Inactive; separate reviewer and GT signed approval required."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-210002",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "equivalent fractions",
+      "micro_skill": "scale numerator and denominator by the same factor",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Which fraction represents the same number as 5/8?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "5/40"
+        },
+        {
+          "option_id": "o2",
+          "text": "25/40"
+        },
+        {
+          "option_id": "o3",
+          "text": "8/40"
+        },
+        {
+          "option_id": "o4",
+          "text": "40/5"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Equivalent fractions name the same amount using different equal-sized parts.",
+        "shortcut": "To change eighths into fortieths, multiply the denominator by 5. Multiply the numerator by 5 as well: 5/8 = 25/40.",
+        "why_correct": "25/40 reduces to 5/8 when both numbers are divided by 5.",
+        "why_wrong": {
+          "o1": "Changes only the denominator, making the value five times smaller.",
+          "o3": "Reuses the original denominator as the new numerator.",
+          "o4": "Reverses and scales unrelated parts; 40/5 is 8, greater than 1, whereas 5/8 is less than 1."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o3": "NUM-GIVEN-REUSED",
+        "o4": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT curriculum audit session, 2026-10-21",
+        "method": "ai_assisted",
+        "created_at": "2026-10-21T19:13:02+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "CURR-002. Original gap draft. Self-check is not independent review. Inactive; separate reviewer and GT signed approval required."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-210003",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "fractional change and whole",
+      "micro_skill": "recover a whole from the difference between two fractions",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A club had spent 1/5 of its activity budget. After paying a further 92 pesos, it had spent 7/12 of that same budget. How many pesos was the full budget?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "5520"
+        },
+        {
+          "option_id": "o2",
+          "text": "460"
+        },
+        {
+          "option_id": "o3",
+          "text": "240"
+        },
+        {
+          "option_id": "o4",
+          "text": "92"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Both fractions refer to the original budget. The extra payment accounts for the change in the spent fraction.",
+        "shortcut": "The change is 7/12 - 1/5 = 35/60 - 12/60 = 23/60. If 23/60 of the budget is 92 pesos, one sixtieth is 92/23 = 4 pesos. The full budget is 60*4 = 240 pesos.",
+        "why_correct": "Initially 48 pesos was spent. Adding 92 gives 140 pesos, and 7/12 of 240 is 140.",
+        "why_wrong": {
+          "o1": "Multiplies 92 by 60 but omits division by 23.",
+          "o2": "Treats the extra 92 pesos as 1/5 of the budget, ignoring the change.",
+          "o4": "Returns the extra payment rather than the full budget."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-WRONG-BASE",
+        "o4": "NUM-GIVEN-REUSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT curriculum audit session, 2026-10-21",
+        "method": "ai_assisted",
+        "created_at": "2026-10-21T19:13:02+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "CURR-003. Original gap draft. Self-check is not independent review. Inactive; separate reviewer and GT signed approval required."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-210004",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "expression substitution",
+      "micro_skill": "evaluate a fixed charge plus a variable charge",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A document service charges 18 pesos per order plus 7 pesos per bound copy. Its bill is written as 18 + 7p, where p is the number of bound copies. What is the bill, in pesos, when p = 6?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "42"
+        },
+        {
+          "option_id": "o2",
+          "text": "150"
+        },
+        {
+          "option_id": "o3",
+          "text": "31"
+        },
+        {
+          "option_id": "o4",
+          "text": "60"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "A fixed charge is paid once. A per-copy charge is multiplied by the number of copies.",
+        "shortcut": "Replace p with 6: 18 + 7*6. Multiply first to get 18 + 42, then add to get 60 pesos.",
+        "why_correct": "Six copies cost 42 pesos. Adding the one-time 18-peso fee gives 60 pesos.",
+        "why_wrong": {
+          "o1": "Counts only the per-copy charges and drops the fixed fee.",
+          "o2": "Multiplies the fixed charge by six as well: (18+7)*6.",
+          "o3": "Adds 18, 7 and 6 instead of multiplying 7 by 6."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-EXTRA-STEP",
+        "o3": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT curriculum audit session, 2026-10-21",
+        "method": "ai_assisted",
+        "created_at": "2026-10-21T19:13:02+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "CURR-004. Original gap draft. Self-check is not independent review. Inactive; separate reviewer and GT signed approval required."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-210005",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "linear equation",
+      "micro_skill": "distribute and collect like terms",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A planning worksheet uses the equation 5(x + 2) - 3x = 34. What value of x satisfies it?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "12"
+        },
+        {
+          "option_id": "o2",
+          "text": "17"
+        },
+        {
+          "option_id": "o3",
+          "text": "16"
+        },
+        {
+          "option_id": "o4",
+          "text": "22"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "An equation states that two expressions have equal values. Distribution multiplies every term inside the brackets.",
+        "shortcut": "Expand: 5x + 10 - 3x = 34. Combine x terms: 2x + 10 = 34. Subtract 10 from both sides: 2x = 24. Divide both sides by 2: x = 12.",
+        "why_correct": "Substitute 12: 5*(12+2)-3*12 = 70-36 = 34.",
+        "why_wrong": {
+          "o2": "Ignores the constant 10 after expanding, then solves 2x=34.",
+          "o3": "Expands 5(x+2) incorrectly as 5x+2, then solves 2x+2=34.",
+          "o4": "Moves +10 to the other side without changing its sign, then solves 2x=44."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-PARTIAL",
+        "o3": "NUM-ORDER-OPS",
+        "o4": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT curriculum audit session, 2026-10-21",
+        "method": "ai_assisted",
+        "created_at": "2026-10-21T19:13:02+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "CURR-005. Original gap draft. Self-check is not independent review. Inactive; separate reviewer and GT signed approval required."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-210006",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "elapsed time",
+      "micro_skill": "cross noon and express duration in minutes",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A records counter closes for maintenance at 11:48 a.m. and reopens at 1:23 p.m. on the same day. For how many minutes was it closed?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "35"
+        },
+        {
+          "option_id": "o2",
+          "text": "95"
+        },
+        {
+          "option_id": "o3",
+          "text": "135"
+        },
+        {
+          "option_id": "o4",
+          "text": "155"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Clock minutes use groups of 60. Crossing noon does not add an extra hour.",
+        "shortcut": "From 11:48 to noon is 12 minutes. Noon to 1:00 p.m. is 60 minutes. Add the final 23 minutes: 12+60+23 = 95 minutes.",
+        "why_correct": "In 24-hour form, 13:23 is 803 minutes after midnight and 11:48 is 708. Their difference is 95.",
+        "why_wrong": {
+          "o1": "Counts the two partial hours, 12+23, but omits the full hour between them.",
+          "o3": "Treats the written difference 1 hour 35 minutes as the decimal-looking number 135.",
+          "o4": "Adds an extra 60 minutes when crossing noon."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o3": "NUM-UNIT",
+        "o4": "NUM-EXTRA-STEP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT curriculum audit session, 2026-10-21",
+        "method": "ai_assisted",
+        "created_at": "2026-10-21T19:13:02+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "CURR-006. Original gap draft. Self-check is not independent review. Inactive; separate reviewer and GT signed approval required."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-210007",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "reverse ratio",
+      "micro_skill": "recover a unit part and find another subtotal",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A reading room has atlases, manuals and storybooks in the ratio 3:4:6. There are 18 atlases. How many manuals and storybooks are there altogether?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "78"
+        },
+        {
+          "option_id": "o2",
+          "text": "180"
+        },
+        {
+          "option_id": "o3",
+          "text": "60"
+        },
+        {
+          "option_id": "o4",
+          "text": "108"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A ratio compares counts in equal parts. The known count must be matched to its own number of parts.",
+        "shortcut": "Three parts represent 18 atlases, so one part is 6 books. Manuals and storybooks together are 4+6 = 10 parts. Ten parts contain 10*6 = 60 books.",
+        "why_correct": "There are 24 manuals and 36 storybooks; 24+36=60. Their counts with 18 atlases simplify to 3:4:6.",
+        "why_wrong": {
+          "o1": "Includes the 18 atlases, answering the total for all three types.",
+          "o2": "Multiplies 18 by 10 without first dividing by the three atlas parts.",
+          "o4": "Uses the six storybook parts as a multiplier on 18 and ignores the unit-part value."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-EXTRA-STEP",
+        "o2": "NUM-WRONG-BASE",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT curriculum audit session, 2026-10-21",
+        "method": "ai_assisted",
+        "created_at": "2026-10-21T19:13:02+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "CURR-007. Original gap draft. Self-check is not independent review. Inactive; separate reviewer and GT signed approval required."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-210008",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "relative efficiency and total output",
+      "micro_skill": "convert a percent comparison to an additive hourly rate",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "One technician labels 12 equipment cases per hour. Another labels 50% more cases per hour. Working on separate cases at those constant rates for 2.5 hours, how many cases do they label in total?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "45"
+        },
+        {
+          "option_id": "o2",
+          "text": "60"
+        },
+        {
+          "option_id": "o3",
+          "text": "30"
+        },
+        {
+          "option_id": "o4",
+          "text": "75"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Fifty percent more means the original rate plus half of that rate. Separate cases let the outputs be added.",
+        "shortcut": "The second rate is 12 + 6 = 18 cases per hour. Their combined rate is 12+18 = 30. Over 2.5 hours, output is 30*2.5 = 75 cases.",
+        "why_correct": "The first labels 30 cases and the second 45 cases. Their outputs sum to 75.",
+        "why_wrong": {
+          "o1": "Counts only the second technician: 18*2.5.",
+          "o2": "Treats both technicians as having the first rate: 24*2.5.",
+          "o3": "Reports the combined hourly rate and omits the 2.5 hours."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o2": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT curriculum audit session, 2026-10-21",
+        "method": "ai_assisted",
+        "created_at": "2026-10-21T19:13:02+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "CURR-008. Original gap draft. Self-check is not independent review. Inactive; separate reviewer and GT signed approval required."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-210009",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "staff-hours and capacity",
+      "micro_skill": "infer time from a fixed workload and equal worker rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Five clerks can index a set of records in 6 hours. Each clerk indexes records at the same constant rate, and the work can be divided without delays. How many hours would eight clerks need for that set?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "15/4"
+        },
+        {
+          "option_id": "o2",
+          "text": "48/5"
+        },
+        {
+          "option_id": "o3",
+          "text": "30"
+        },
+        {
+          "option_id": "o4",
+          "text": "3"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A clerk-hour is one clerk working for one hour. With equal independent rates, the fixed task needs the same number of clerk-hours.",
+        "shortcut": "The task requires 5*6 = 30 clerk-hours. Eight clerks supply 8 clerk-hours each hour, so they need 30/8 = 15/4 hours, or 3 hours 45 minutes.",
+        "why_correct": "Eight clerks working 15/4 hours supply 8*15/4=30 clerk-hours, matching the original task.",
+        "why_wrong": {
+          "o2": "Uses direct rather than inverse proportion: 6*8/5.",
+          "o3": "Stops at the number of clerk-hours without dividing by eight clerks.",
+          "o4": "Subtracts the three extra clerks from six hours, mixing people and hours."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-UNIT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT curriculum audit session, 2026-10-21",
+        "method": "ai_assisted",
+        "created_at": "2026-10-21T19:13:02+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "CURR-009. Original gap draft. Self-check is not independent review. Inactive; separate reviewer and GT signed approval required."
+    },
+    {
+      "id": "CIVIO-NUM-WP-GEOM-210010",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "perimeter to area",
+      "micro_skill": "solve dimensions before multiplying for area",
+      "archetype": "NUM-WP-GEOM",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A rectangular floor mat uses 28 meters of edging around its entire boundary. Its length is 2 meters greater than its width. What is its area in square meters?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "96"
+        },
+        {
+          "option_id": "o2",
+          "text": "48"
+        },
+        {
+          "option_id": "o3",
+          "text": "56"
+        },
+        {
+          "option_id": "o4",
+          "text": "28"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Perimeter measures the boundary length. Area measures the surface covered in square units.",
+        "shortcut": "Let the width be w and the length w+2. The boundary is 2w+2(w+2)=28, so 4w+4=28 and w=6. The length is 8. Area=6*8=48 square meters.",
+        "why_correct": "The dimensions satisfy both conditions: 8-6=2 and 8+6+8+6=28.",
+        "why_wrong": {
+          "o1": "Doubles the area, treating the two pairs of sides as two surfaces.",
+          "o3": "Multiplies the perimeter by the given difference: 28*2.",
+          "o4": "Returns the given boundary length as though it were area."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-EXTRA-STEP",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-GIVEN-REUSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT curriculum audit session, 2026-10-21",
+        "method": "ai_assisted",
+        "created_at": "2026-10-21T19:13:02+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "CURR-010. Original gap draft. Self-check is not independent review. Inactive; separate reviewer and GT signed approval required."
+    }
+  ]
+}

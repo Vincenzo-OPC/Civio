@@ -12,6 +12,7 @@ use App\Models\Question;
 use App\Repositories\QuestionRepositoryInterface;
 use App\Services\ExamAttemptFormatter;
 use Illuminate\Contracts\Session\Session;
+use Illuminate\Support\Facades\Cache;
 
 /**
  * Lite L1: picks a full mock on the server and sends only those items.
@@ -39,6 +40,22 @@ class MockSessionService
      */
     public function start(?int $userId, string $track, array $clientBias, ?Session $session = null, ExamMode $mode = ExamMode::Study): array
     {
+        $identity = $userId !== null ? 'user:'.$userId : 'browser:'.($session?->getId() ?? '');
+        $lock = Cache::lock('mock-start:'.hash('sha256', $identity), 30);
+        abort_unless($lock->get(), 429, 'A mock is already being started.');
+        try {
+            abort_if($mode === ExamMode::Strict
+                && app(StrictMockLock::class)->lockedQuestionIds($userId, $session) !== [],
+                409, 'Submit your current Strict Mock before starting another.');
+
+            return $this->startUnlocked($userId, $track, $clientBias, $session, $mode);
+        } finally {
+            $lock->release();
+        }
+    }
+
+    private function startUnlocked(?int $userId, string $track, array $clientBias, ?Session $session, ExamMode $mode): array
+    {
         $level = MockPoolSelector::levelFor($track);
         $pool = $this->questionRepository->getActivePool();
 
@@ -63,17 +80,29 @@ class MockSessionService
 
         $ids = array_map(fn ($row) => (int) $row['id'], $result['items']);
 
+        $startedAt = now();
         $examSession = ExamSession::create([
             'user_id' => $userId,
             'track' => $level,
             'mode' => $mode,
             'question_ids' => $ids,
+            'owner_session_hash' => $userId === null && $session !== null ? hash('sha256', $session->getId()) : null,
+            'started_at' => $startedAt,
+            'deadline_at' => $mode === ExamMode::Strict
+                ? $startedAt->copy()->addSeconds(MockPoolSelector::timeLimitFor($level))
+                : null,
         ]);
 
         if ($userId === null && $session !== null) {
             $owned = (array) $session->get(ExamSession::GUEST_SESSION_KEY, []);
+            // Preserve protected guest IDs through login/session-ID regeneration.
+            $protected = ExamSession::whereIn('id', $owned)->where('mode', 'strict')
+                ->whereNull('exam_attempt_id')
+                ->where('created_at', '>=', now()->subSeconds(max(MockPoolSelector::TIME_LIMIT_SECS) + StrictMockLock::GRACE_SECS))
+                ->pluck('id')->all();
             $owned[] = $examSession->id;
-            $session->put(ExamSession::GUEST_SESSION_KEY, array_slice($owned, -self::MAX_GUEST_SESSIONS));
+            $owned = array_values(array_unique([...array_slice($owned, -self::MAX_GUEST_SESSIONS), ...$protected]));
+            $session->put(ExamSession::GUEST_SESSION_KEY, $owned);
         }
 
         $questions = ExamQuestionResource::collectionForExam(
@@ -83,6 +112,9 @@ class MockSessionService
 
         return [
             'session_id' => $examSession->id,
+            'started_at' => $examSession->started_at?->toISOString(),
+            'deadline_at' => $examSession->deadline()?->toISOString(),
+            'server_now' => now()->toISOString(),
             'track' => $level,
             'mode' => $mode->value,
             'time_limit_secs' => MockPoolSelector::timeLimitFor($level),
@@ -101,7 +133,11 @@ class MockSessionService
         }
 
         return $session !== null
-            && in_array($examSession->id, (array) $session->get(ExamSession::GUEST_SESSION_KEY, []), true);
+            && (
+                in_array($examSession->id, (array) $session->get(ExamSession::GUEST_SESSION_KEY, []), true)
+                || ($examSession->owner_session_hash !== null
+                    && hash_equals($examSession->owner_session_hash, hash('sha256', $session->getId())))
+            );
     }
 
     /**

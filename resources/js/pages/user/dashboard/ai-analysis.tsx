@@ -161,6 +161,9 @@ export default function AiAnalysisReport({
     lastUpdated,
 }: AiAnalysisProps) {
     const { auth, pusher } = usePage<{ auth: Auth; pusher?: any }>().props;
+    const noMock = (
+        data?.predictive_metrics?.estimated_exam_score ?? ''
+    ).startsWith('No mock');
     const isAiMode = auth?.user?.analysis_mode === 'ai';
     const [localStatus, setLocalStatus] = useState<
         'no_data' | 'generating' | 'ready' | 'failed'
@@ -736,7 +739,7 @@ export default function AiAnalysisReport({
                             <div className="space-y-6 lg:col-span-4">
                                 <Card className="flex h-full flex-col items-center justify-between bg-gradient-to-br from-white to-slate-50/50 p-4 text-center sm:p-6 dark:from-slate-900 dark:to-slate-900/60">
                                     <span className="text-xs font-semibold tracking-wider text-slate-400 uppercase dark:text-slate-500">
-                                        Not a forecast
+                                        Mock items correct
                                     </span>
 
                                     <div className="relative my-6 flex size-40 items-center justify-center">
@@ -764,10 +767,12 @@ export default function AiAnalysisReport({
                                                     2 * Math.PI * 68
                                                 }
                                                 strokeDashoffset={
-                                                    2 * Math.PI * 68 -
-                                                    (data.pass_probability /
-                                                        100) *
-                                                        (2 * Math.PI * 68)
+                                                    noMock
+                                                        ? 2 * Math.PI * 68
+                                                        : 2 * Math.PI * 68 -
+                                                          (data.pass_probability /
+                                                              100) *
+                                                              (2 * Math.PI * 68)
                                                 }
                                                 strokeLinecap="round"
                                                 className={`transition-all duration-500 ${
@@ -785,10 +790,12 @@ export default function AiAnalysisReport({
                                                         : 'text-rose-600 dark:text-rose-400'
                                                 }`}
                                             >
-                                                {data.pass_probability}%
+                                                {noMock
+                                                    ? '—'
+                                                    : `${data.pass_probability}%`}
                                             </span>
                                             <span className="mt-1 text-[10px] font-medium text-slate-500">
-                                                Practice index
+                                                Of submitted mocks
                                             </span>
                                         </div>
                                     </div>
@@ -796,25 +803,10 @@ export default function AiAnalysisReport({
                                     <div className="w-full border-t border-slate-100 pt-4 dark:border-slate-800/80">
                                         <div className="flex items-center justify-between text-xs">
                                             <span className="font-medium text-slate-400">
-                                                Confidence Level
+                                                What this number is
                                             </span>
-                                            <span
-                                                className={`font-bold capitalize ${
-                                                    data.predictive_metrics
-                                                        ?.mock_pass_confidence ===
-                                                    'high'
-                                                        ? 'text-emerald-600 dark:text-emerald-400'
-                                                        : data
-                                                                .predictive_metrics
-                                                                ?.mock_pass_confidence ===
-                                                            'moderate'
-                                                          ? 'text-amber-600 dark:text-amber-400'
-                                                          : 'text-rose-600 dark:text-rose-400'
-                                                }`}
-                                            >
-                                                {data.predictive_metrics
-                                                    ?.mock_pass_confidence ||
-                                                    'moderate'}
+                                            <span className="font-bold text-slate-500">
+                                                Not a forecast
                                             </span>
                                         </div>
                                     </div>

@@ -67,3 +67,27 @@ export function shouldRunExamClock(input: {
 }): boolean {
     return input.isExamActive && !input.isExamSubmitted && !input.isPaused;
 }
+
+/** Restore original-option server answers into the displayed shuffled positions. */
+export function restoreAnswerPositions(
+    questions: { id: number; originalOptionIndices?: number[] }[],
+    answers: Record<string, number | null>,
+): Record<number, number> {
+    const restored: Record<number, number> = {};
+    questions.forEach((question, index) => {
+        const chosen = answers[String(question.id)];
+
+        if (chosen === undefined || chosen === null) {
+            return;
+        }
+
+        const display =
+            question.originalOptionIndices?.indexOf(chosen) ?? chosen;
+
+        if (display >= 0) {
+            restored[index] = display;
+        }
+    });
+
+    return restored;
+}

@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/react';
 import { Brain, Zap, Clock, Lightbulb, FileText } from 'lucide-react';
 import React, { lazy, Suspense } from 'react';
 import { PageHeader } from '@/components/layout/page-header';
@@ -55,6 +56,12 @@ export function HubView({
                     />
                 </div>
             </div>
+            <Link
+                href="/reviews/mistakes"
+                className="inline-flex min-h-11 w-fit items-center text-sm font-semibold text-[#5B35F5] underline-offset-4 hover:underline dark:text-[#B3F52D]"
+            >
+                Review Mistakes
+            </Link>
 
             {activeCategories.length > 0 ? (
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">

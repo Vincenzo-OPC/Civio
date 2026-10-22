@@ -39,6 +39,7 @@ class ExamGradingService
         $ids = array_values(array_map('intval', $questionIds));
         $questions = Question::query()
             ->with(['subcategory.category'])
+            ->where('status', 'active')
             ->whereIn('id', $ids)
             ->get()
             ->keyBy('id');

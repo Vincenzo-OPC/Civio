@@ -34,10 +34,11 @@ class DrillService
      *     seenQuestionIds: array<int, int>
      * }
      */
-    public function getDrillsIndexData(?int $userId): array
+    public function getDrillsIndexData(?int $userId, int $page = 1): array
     {
         $activePool = $this->questionRepository->getActivePool();
-        $questions = DrillQuestionResource::collection($activePool)->resolve();
+        $page = max(1, min($page, max(1, (int) ceil($activePool->count() / 100))));
+        $questions = DrillQuestionResource::collection($activePool->slice(($page - 1) * 100, 100)->values())->resolve();
 
         $categories = Cache::rememberForever('categories.tree', function () {
             return Category::with(['subcategory' => function ($query) {
@@ -85,6 +86,7 @@ class DrillService
 
         return [
             'questions' => $questions,
+            'bankPage' => ['current' => $page, 'last' => max(1, (int) ceil($activePool->count() / 100))],
             'categories' => $categories,
             'savedDrillSets' => $savedDrillSets,
             'wrongQuestionIds' => $wrongQuestionIds,

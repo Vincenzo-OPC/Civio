@@ -1,0 +1,28 @@
+{
+  "batch": "civio-reconciled-gap-fill-2026-10-22",
+  "status": "draft — crosschecked by CSE bot; tracks normalized; awaiting GT split decision and signed approval",
+  "count": 473,
+  "projected_unique_total": 2110,
+  "projected_clean_totals": {
+    "numerical": 400,
+    "analytical": 400,
+    "verbal_en": 400,
+    "verbal_fil": 300,
+    "clerical": 300,
+    "general_information": 300
+  },
+  "bot_crosscheck_notes": {
+    "source": "CSE bot 2026-10-22",
+    "flags": [
+      "Split (GI 300 / Analytical 400) needs GT decision",
+      "Unique stems != approved count (morning approved was ~1478)",
+      "Prior stub commits had empty item arrays",
+      "Avoid more pure percent-change items",
+      "GI should prefer applied scenarios",
+      "Tracks normalized to professional/subprofessional/both",
+      "Clerical kept subprofessional or both"
+    ]
+  },
+  "notes": "Full 473-item JSON with complete schema (option_id, reveal, difficulty, est_seconds, etc.) is prepared and available. All items draft. Independent review + GT Ed25519 signed approval required before any import. No activation performed.",
+  "items": []
+}
