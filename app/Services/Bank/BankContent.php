@@ -29,9 +29,11 @@ final class BankContent
 
     public static function itemDigest(array $item): string
     {
-        // Editorial labels may change after review; content never changes in place.
+        // Editorial labels and spec tags (fact_id, theme) may change after review;
+        // content never changes in place. The question fingerprint excludes the tags too.
         return self::digest(array_diff_key($item, array_flip([
             'status', 'review_status', 'reviewer', 'reviewed_at', 'approved_by', 'approved_at',
+            'fact_id', 'theme',
         ])));
     }
 

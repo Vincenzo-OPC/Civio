@@ -115,14 +115,14 @@ test('fact_id and theme tags are saved, and an untagged re-import keeps them', f
     $tagged = tempnam(sys_get_temp_dir(), 'batch');
     file_put_contents($tagged, json_encode($data));
 
-    $this->artisan('civio:import-batch', ['path' => $tagged])->assertSuccessful();
+    $this->artisan('civio:import-batch', ['path' => $tagged, ...bankSign($tagged, 'import-batch-active')])->assertSuccessful();
 
     $q = Question::where('stem', $data['items'][0]['stem'])->firstOrFail();
     expect($q->fact_id)->toBe('FACT-TEST-0001')
         ->and($q->theme)->toBe('test-theme')
         ->and(Question::whereNull('fact_id')->count())->toBe(9);
 
-    $this->artisan('civio:import-batch', ['path' => $source])->assertSuccessful();
+    $this->artisan('civio:import-batch', ['path' => $source, ...bankSign($source, 'import-batch-active')])->assertSuccessful();
 
     expect($q->fresh()->fact_id)->toBe('FACT-TEST-0001')
         ->and($q->fresh()->theme)->toBe('test-theme');
