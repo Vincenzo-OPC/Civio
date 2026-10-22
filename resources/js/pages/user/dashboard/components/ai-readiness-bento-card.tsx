@@ -12,6 +12,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import { summarizeMockAccuracy } from '@/lib/mock-accuracy';
 import { connectRealtime } from '@/lib/realtime';
 import { index as examsIndex } from '@/routes/exams';
 import type { Auth } from '@/types';
@@ -87,44 +88,18 @@ export function AiReadinessBentoCard({
         });
     }, [localStatus, auth?.user?.id, pusher]);
 
-    const prob = Math.round(data?.pass_probability ?? 0);
+    const accuracy = summarizeMockAccuracy(data?.mock_accuracy);
+    const prob = accuracy.percent ?? 0;
     const primaryWeakness = data?.critical_weaknesses?.[0];
-    const estimate = data?.predictive_metrics?.estimated_exam_score ?? '';
-    const noMock = estimate.startsWith('No mock');
+    const noMock = !accuracy.hasMocks;
 
-    const getScoreColor = (score: number, isDrill: boolean) => {
-        if (isDrill) {
-            return {
-                text: 'text-indigo-600 dark:text-indigo-400',
-                stroke: 'stroke-indigo-500',
-                badge: 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-900/60',
-            };
-        }
-
-        if (score >= 80) {
-            return {
-                text: 'text-emerald-600 dark:text-emerald-400',
-                stroke: 'stroke-emerald-500',
-                badge: 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-900/60',
-            };
-        }
-
-        if (score >= 60) {
-            return {
-                text: 'text-amber-600 dark:text-amber-400',
-                stroke: 'stroke-amber-500',
-                badge: 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-900/60',
-            };
-        }
-
-        return {
-            text: 'text-rose-600 dark:text-rose-400',
-            stroke: 'stroke-rose-500',
-            badge: 'bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-950/40 dark:text-rose-300 dark:border-rose-900/60',
-        };
+    // One neutral palette: accuracy is a practice measurement, not a
+    // pass/fail signal, so it is never coloured by a passing threshold.
+    const colors = {
+        text: 'text-indigo-600 dark:text-indigo-400',
+        stroke: 'stroke-indigo-500',
+        badge: 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-900/60',
     };
-
-    const colors = getScoreColor(prob, noMock);
 
     // SVG Circular Gauge calculation with ample inner breathing space
     const radius = 46;
@@ -143,11 +118,11 @@ export function AiReadinessBentoCard({
                     </div>
                     <div>
                         <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                            Mock items correct
+                            Mock Accuracy
                         </h3>
                         <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                            Correct mock items divided by mock items. Not a pass
-                            forecast.
+                            Correct over scored mock questions. Not a pass
+                            prediction.
                         </p>
                     </div>
                 </div>
@@ -198,10 +173,10 @@ export function AiReadinessBentoCard({
                                             : 'text-2xl sm:text-3xl'
                                     }`}
                                 >
-                                    {noMock ? 'No mock' : `${prob}%`}
+                                    {noMock ? 'No mock' : accuracy.display}
                                 </span>
                                 <span className="mt-0.5 text-[9px] leading-none font-bold tracking-wider whitespace-nowrap text-slate-400 uppercase sm:text-[10px] dark:text-slate-500">
-                                    {noMock ? 'Not a score' : 'Not official'}
+                                    {noMock ? 'Not a score' : accuracy.counts}
                                 </span>
                             </div>
                         </div>
@@ -224,6 +199,24 @@ export function AiReadinessBentoCard({
                                     : data.priority_action ||
                                       'The next drill adds a practice score. It does not forecast a pass.'}
                             </p>
+
+                            {!noMock && (
+                                <dl
+                                    className="space-y-0.5 text-[11px] leading-snug text-slate-500 dark:text-slate-400"
+                                    data-testid="mock-accuracy-detail"
+                                >
+                                    <div>
+                                        <dt className="inline font-semibold">
+                                            Track:{' '}
+                                        </dt>
+                                        <dd className="inline">
+                                            {accuracy.track} · {accuracy.sample}
+                                        </dd>
+                                    </div>
+                                    <div>{accuracy.strictLine}</div>
+                                    <div>{accuracy.personalizedLine}</div>
+                                </dl>
+                            )}
 
                             {/* Top Weakness / Quick Fix Pill placed underneath */}
                             {primaryWeakness && !noMock && (

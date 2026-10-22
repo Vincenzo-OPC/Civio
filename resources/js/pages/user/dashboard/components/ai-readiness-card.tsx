@@ -16,6 +16,8 @@ import {
     TooltipTrigger,
     TooltipContent,
 } from '@/components/ui/tooltip';
+import { summarizeMockAccuracy } from '@/lib/mock-accuracy';
+import type { MockAccuracy } from '@/lib/mock-accuracy';
 import { connectRealtime } from '@/lib/realtime';
 import type { Auth } from '@/types';
 
@@ -23,7 +25,7 @@ interface AiReadinessCardProps {
     aiAnalysis?: {
         status: 'no_data' | 'generating' | 'ready' | 'failed' | 'no_exam_date';
         data: {
-            pass_probability: number;
+            mock_accuracy?: MockAccuracy;
             verdict: string;
             trend: 'improving' | 'declining' | 'stable' | 'insufficient_data';
             strengths: string[];
@@ -267,21 +269,16 @@ export default function AiReadinessCard({
     }
 
     if (localStatus === 'ready' && data) {
-        const prob = data.pass_probability;
+        const accuracy = summarizeMockAccuracy(data.mock_accuracy);
+        const prob = accuracy.percent ?? 0;
         const radius = 40;
         const strokeWidth = 8;
         const circumference = 2 * Math.PI * radius;
         const offset = circumference - (prob / 100) * circumference;
 
-        // Dynamic visual attributes based on pass probability thresholds
-        let strokeColor = 'stroke-emerald-600 dark:stroke-emerald-500';
-        let textColor =
-            'text-emerald-600 dark:text-emerald-400 dark:text-emerald-400';
-
-        if (prob < 80) {
-            strokeColor = 'stroke-rose-600 dark:stroke-rose-500';
-            textColor = 'text-rose-600 dark:text-rose-400 dark:text-rose-400';
-        }
+        // Neutral palette: accuracy is a practice measurement, not pass/fail.
+        const strokeColor = 'stroke-violet-600 dark:stroke-violet-400';
+        const textColor = 'text-violet-700 dark:text-violet-300';
 
         // Dynamic visual attributes based on user performance trends
         let TrendIcon = Minus;
@@ -433,12 +430,18 @@ export default function AiReadinessCard({
                                 <span
                                     className={`text-3xl font-semibold ${textColor}`}
                                 >
-                                    {prob}%
+                                    {accuracy.display}
                                 </span>
                             </div>
                         </div>
                         <span className="mt-2 text-[10px] font-semibold tracking-widest text-slate-500 uppercase dark:text-slate-400">
-                            Passing Probability
+                            Mock Accuracy
+                        </span>
+                        <span className="mt-1 text-[11px] text-slate-500 dark:text-slate-400">
+                            {accuracy.counts} · {accuracy.sample}
+                        </span>
+                        <span className="text-[11px] text-slate-500 dark:text-slate-400">
+                            Track: {accuracy.track}
                         </span>
                     </div>
 

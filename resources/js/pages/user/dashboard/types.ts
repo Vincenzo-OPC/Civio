@@ -1,4 +1,5 @@
 import type { ExamMilestone, ExamSitting } from '@/lib/exam-countdown';
+import type { MockAccuracy } from '@/lib/mock-accuracy';
 export interface CategoryScore {
     name: string;
     correct: number;
@@ -87,7 +88,7 @@ export interface NextModuleItem {
 }
 
 export interface AiAnalysisData {
-    pass_probability: number;
+    mock_accuracy?: MockAccuracy;
     verdict: string;
     trend: 'improving' | 'declining' | 'stable' | 'insufficient_data';
     strengths: string[];
@@ -96,7 +97,7 @@ export interface AiAnalysisData {
     recommended_modules: string[];
     encouragement: string;
     predictive_metrics?: {
-        estimated_exam_score?: string;
+        completion_pace?: string;
     };
     subject_mastery?: Array<{
         subject: string;

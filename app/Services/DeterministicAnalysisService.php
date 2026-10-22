@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Enums\SelectionPolicy;
 use App\Models\Category;
 use App\Models\ExamAttempt;
 use App\Models\ExamDate;
@@ -51,14 +52,7 @@ class DeterministicAnalysisService
         $trend = $this->calculateTrend($trendScores);
         $examDate = $this->resolveExamDate();
 
-        $prediction = $this->calculatePassPrediction(
-            $metrics['mockExamCount'],
-            $metrics['mockTotalCorrect'],
-            $metrics['mockTotalQuestions'],
-            $trend,
-            $examDate['daysUntilExam'],
-            $examDate['examDateStr']
-        );
+        $mockAccuracy = $this->buildMockAccuracy($metrics);
 
         $completionPace = $this->pickTemplate('completion_pace_'.$trend, compact('totalAttempts'));
         $remediation = $this->buildRemediationMatrix($subtopicStats, $mastery['criticalWeaknesses']);
@@ -72,11 +66,10 @@ class DeterministicAnalysisService
 
         $daysUntilExam = $examDate['daysUntilExam'];
         $examDateStr = $examDate['examDateStr'];
-        $passProbability = $prediction['passProbability'];
         $mockExamCount = $metrics['mockExamCount'];
 
         $templateVars = compact(
-            'totalAttempts', 'avgScore', 'passProbability', 'daysUntilExam',
+            'totalAttempts', 'avgScore', 'daysUntilExam',
             'examDateStr', 'strengthsList', 'weakList', 'topModule',
             'mockExamCount', 'passingRate', 'trend'
         );
@@ -96,7 +89,7 @@ class DeterministicAnalysisService
             : $this->pickTemplate('priority_action_none', $templateVars);
 
         return [
-            'pass_probability' => $passProbability,
+            'mock_accuracy' => $mockAccuracy,
             'verdict' => $verdict,
             'trend' => $trend,
             'strengths' => $mastery['strengths'],
@@ -105,10 +98,7 @@ class DeterministicAnalysisService
             'recommended_modules' => array_slice($remediation['recommendedModules'], 0, 3),
             'encouragement' => $encouragement,
             'predictive_metrics' => [
-                'estimated_exam_score' => $prediction['estimatedExamScore'],
-                'days_to_readiness' => $prediction['daysToReadiness'],
                 'completion_pace' => $completionPace,
-                'mock_pass_confidence' => $prediction['mockPassConfidence'],
             ],
             'subject_mastery' => $mastery['subjectMastery'],
             'timeline_prediction' => [
@@ -198,6 +188,8 @@ class DeterministicAnalysisService
      *     allTotalQuestions: int,
      *     mockTotalCorrect: int,
      *     mockTotalQuestions: int,
+     *     mockBuckets: array<string, array<string, int>>,
+     *     mockTracks: array<int, string>,
      *     categoryTotals: array<string, array{correct: int, total: int}>
      * }
      */
@@ -211,6 +203,11 @@ class DeterministicAnalysisService
         $allTotalQuestions = 0;
         $mockTotalCorrect = 0;
         $mockTotalQuestions = 0;
+        $mockBuckets = [
+            'representative' => ['correct' => 0, 'total' => 0, 'mocks' => 0],
+            'personalized' => ['correct' => 0, 'total' => 0, 'mocks' => 0, 'legacy' => 0],
+        ];
+        $mockTracks = [];
 
         $categoriesMap = Category::all()->keyBy('id');
 
@@ -238,6 +235,15 @@ class DeterministicAnalysisService
                 $mockTotalCorrect += $correct;
                 $mockTotalQuestions += $total;
                 $mockScores[] = (int) $percentage;
+                $mockTracks[(string) $track] = true;
+                $policy = $attempt->selection_policy instanceof SelectionPolicy ? $attempt->selection_policy : null;
+                $bucket = $policy === SelectionPolicy::Representative ? 'representative' : 'personalized';
+                $mockBuckets[$bucket]['correct'] += (int) $correct;
+                $mockBuckets[$bucket]['total'] += (int) $total;
+                $mockBuckets[$bucket]['mocks']++;
+                if ($policy === null && $bucket === 'personalized') {
+                    $mockBuckets['personalized']['legacy']++;
+                }
                 if ($percentage >= 80) {
                     $passCount++;
                 }
@@ -282,6 +288,8 @@ class DeterministicAnalysisService
             'allTotalQuestions' => $allTotalQuestions,
             'mockTotalCorrect' => $mockTotalCorrect,
             'mockTotalQuestions' => $mockTotalQuestions,
+            'mockBuckets' => $mockBuckets,
+            'mockTracks' => array_keys($mockTracks),
             'categoryTotals' => $categoryTotals,
         ];
     }
@@ -479,60 +487,40 @@ class DeterministicAnalysisService
     }
 
     /**
-     * Calculate pass probability and mock predictive metrics.
+     * Mock Accuracy: correct over scored questions on submitted full mocks.
+     * A practice measurement only, never a pass prediction. Representative
+     * (Strict, server policy stored per attempt) mocks are kept apart from
+     * personalized ones (Study/adaptive, plus legacy rows with no policy).
      *
-     * @return array{
-     *     passProbability: int,
-     *     estimatedExamScore: string,
-     *     daysToReadiness: string,
-     *     mockPassConfidence: string
-     * }
+     * @param  array<string, mixed>  $metrics
+     * @return array<string, mixed>
      */
-    protected function calculatePassPrediction(
-        int $mockExamCount,
-        int $mockTotalCorrect,
-        int $mockTotalQuestions,
-        string $trend,
-        int $daysUntilExam,
-        string $examDateStr
-    ): array {
-        if ($mockExamCount <= 0 || $mockTotalQuestions <= 0) {
+    protected function buildMockAccuracy(array $metrics): array
+    {
+        $part = function (array $b): array {
+            $total = (int) $b['total'];
+
             return [
-                'passProbability' => 0,
-                'estimatedExamScore' => 'No mock yet. A mock score is not a forecast.',
-                'daysToReadiness' => 'No mock yet. Days until your date are not a forecast.',
-                'mockPassConfidence' => 'low',
+                'correct' => (int) $b['correct'],
+                'total' => $total,
+                'mocks' => (int) $b['mocks'],
+                'percent' => $total > 0 ? round(((int) $b['correct'] / $total) * 100, 1) : null,
             ];
-        }
+        };
 
-        $mockAvg = (int) round(($mockTotalCorrect / $mockTotalQuestions) * 100);
-        $passProbability = $mockAvg;
-
-        $estimatedExamScore = "Practice average {$mockAvg}% on submitted mocks. Not an official score.";
-
-        if ($daysUntilExam <= 7) {
-            if ($daysUntilExam <= 1) {
-                $daysToReadiness = "The date you set is {$examDateStr}. That countdown is not a forecast.";
-            } else {
-                $daysToReadiness = "{$daysUntilExam} days until {$examDateStr}. That countdown is not a forecast.";
-            }
-        } else {
-            $daysToReadiness = $this->pickTemplate($mockAvg < 60 ? 'readiness_low' : ($mockAvg >= 80 ? 'readiness_high' : 'readiness_mid'), []);
-        }
-
-        $mockPassConfidence = 'moderate';
-        if ($mockAvg >= 80) {
-            $mockPassConfidence = 'high';
-        } elseif ($mockAvg < 60) {
-            $mockPassConfidence = 'low';
-        }
-
-        return [
-            'passProbability' => $passProbability,
-            'estimatedExamScore' => $estimatedExamScore,
-            'daysToReadiness' => $daysToReadiness,
-            'mockPassConfidence' => $mockPassConfidence,
+        $all = [
+            'correct' => (int) $metrics['mockTotalCorrect'],
+            'total' => (int) $metrics['mockTotalQuestions'],
+            'mocks' => (int) $metrics['mockExamCount'],
         ];
+        $buckets = $metrics['mockBuckets'];
+
+        return array_merge($part($all), [
+            'tracks' => array_values($metrics['mockTracks']),
+            'representative' => $part($buckets['representative']),
+            'personalized' => array_merge($part($buckets['personalized']), ['legacy' => (int) $buckets['personalized']['legacy']]),
+            'note' => 'Practice accuracy on submitted Civio mocks. Not an official rating or a pass prediction.',
+        ]);
     }
 
     /**
@@ -713,10 +701,67 @@ class DeterministicAnalysisService
         return $catName;
     }
 
+    /**
+     * Mock Accuracy for a user's latest track, computed from attempts.
+     *
+     * @return array<string, mixed>
+     */
+    public function mockAccuracyFor(int $userId): array
+    {
+        $latestId = (int) ExamAttempt::where('user_id', $userId)->latest('id')->value('id');
+        $attempts = $latestId > 0 ? $this->resolveAttempts($userId, $latestId, false) : null;
+
+        return $attempts ? $this->buildMockAccuracy($this->aggregateAttemptMetrics($attempts)) : $this->emptyMockAccuracy();
+    }
+
+    /**
+     * Strip retired prediction fields from a stored (possibly legacy) analysis
+     * and make sure it carries Mock Accuracy. Old rows may hold
+     * pass_probability, days_to_readiness, estimated_exam_score and
+     * mock_pass_confidence; none of them may reach a learner.
+     *
+     * @return array<string, mixed>|null
+     */
+    public function sanitizeStored(mixed $data, int $userId): ?array
+    {
+        if (! is_array($data)) {
+            return null;
+        }
+
+        unset($data['pass_probability']);
+
+        if (isset($data['predictive_metrics']) && is_array($data['predictive_metrics'])) {
+            unset(
+                $data['predictive_metrics']['days_to_readiness'],
+                $data['predictive_metrics']['estimated_exam_score'],
+                $data['predictive_metrics']['mock_pass_confidence'],
+            );
+        }
+
+        if (! isset($data['mock_accuracy']) || ! is_array($data['mock_accuracy'])) {
+            $data['mock_accuracy'] = $this->mockAccuracyFor($userId);
+        }
+
+        return $data;
+    }
+
+    /** @return array<string, mixed> */
+    public function emptyMockAccuracy(): array
+    {
+        $zero = ['correct' => 0, 'total' => 0, 'mocks' => 0, 'percent' => null];
+
+        return array_merge($zero, [
+            'tracks' => [],
+            'representative' => $zero,
+            'personalized' => array_merge($zero, ['legacy' => 0]),
+            'note' => 'Practice accuracy on submitted Civio mocks. Not an official rating or a pass prediction.',
+        ]);
+    }
+
     protected function getEmptyAnalysis(): array
     {
         return [
-            'pass_probability' => 0,
+            'mock_accuracy' => $this->emptyMockAccuracy(),
             'verdict' => $this->pickTemplate('verdict_empty', []),
             'trend' => 'insufficient_data',
             'strengths' => [],
@@ -725,10 +770,7 @@ class DeterministicAnalysisService
             'recommended_modules' => [],
             'encouragement' => $this->pickTemplate('encouragement_empty', []),
             'predictive_metrics' => [
-                'estimated_exam_score' => 'N/A',
-                'days_to_readiness' => 'N/A',
                 'completion_pace' => 'N/A',
-                'mock_pass_confidence' => 'low',
             ],
             'subject_mastery' => array_map(fn ($s) => [
                 'subject' => $s,
@@ -950,23 +992,6 @@ class DeterministicAnalysisService
                 'Five easier {subtopic} items, then a medium set.',
                 'Save missed {subtopic} items and drill them again.',
                 'A short {subtopic} note, then a timed drill. About 76 seconds an item on the Professional mock.',
-            ],
-
-            // ── Days to Readiness ────────────────────────────────
-            'readiness_low' => [
-                'Practice average is under 60%. That is not a forecast.',
-                'Under 60% on practice mocks. The published general passing rating is at least 80.00.',
-                'The practice average is under 60%. A mock score is not an official rating.',
-            ],
-            'readiness_mid' => [
-                'Practice average is between 60% and 80%. That is not a forecast.',
-                'The practice average is below the published general passing rating of at least 80.00.',
-                'Missed subjects are listed on this page. This is not a timeline.',
-            ],
-            'readiness_high' => [
-                'Practice average is at least 80%. That is not an official rating.',
-                'The practice average meets the published general passing figure. It is still a practice score.',
-                'A timed mock checks pace. This is not a forecast.',
             ],
 
             // ── Completion Pace (by trend) ──────────────────────

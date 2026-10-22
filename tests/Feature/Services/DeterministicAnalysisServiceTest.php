@@ -13,7 +13,9 @@ test('it returns empty analysis when user has no exam attempts', function () {
 
     $result = $service->generate($user->id, 99999);
 
-    expect($result['pass_probability'])->toBe(0)
+    expect($result)->not->toHaveKey('pass_probability')
+        ->and($result['mock_accuracy']['mocks'])->toBe(0)
+        ->and($result['mock_accuracy']['percent'])->toBeNull()
         ->and($result['trend'])->toBe('insufficient_data')
         ->and($result['strengths'])->toBeEmpty()
         ->and($result['critical_weaknesses'])->toBeEmpty()
@@ -60,7 +62,7 @@ test('it generates full deterministic analysis with mock exam attempts', functio
     $result = $service->generate($user->id, $attempt->id);
 
     expect($result)->toHaveKeys([
-        'pass_probability',
+        'mock_accuracy',
         'verdict',
         'trend',
         'strengths',
@@ -75,7 +77,11 @@ test('it generates full deterministic analysis with mock exam attempts', functio
         'personalized_study_plan',
     ])
         ->and($result['personalized_study_plan'])->toHaveCount(7)
-        ->and($result['pass_probability'])->toBe(100)
+        ->and($result)->not->toHaveKey('pass_probability')
+        ->and($result['mock_accuracy']['correct'])->toBe(1)
+        ->and($result['mock_accuracy']['total'])->toBe(1)
+        ->and($result['mock_accuracy']['percent'])->toEqual(100)
+        ->and($result['mock_accuracy']['tracks'])->toBe(['Professional'])
         ->and($result['timeline_prediction']['current_stage'])->toBe('Practice 85+')
         ->and(collect($result['subject_mastery'])->pluck('rating')->all())->not->toContain('Critical Concern')
         ->and(collect($result['subject_mastery'])->pluck('rating')->all())->not->toContain('Mastered')
@@ -136,7 +142,8 @@ test('it handles drill attempts and singleAttemptOnly option correctly', functio
     // Normal multi-attempt evaluation
     $resultMulti = $service->generate($user->id, $attempt2->id, singleAttemptOnly: false);
     expect($resultMulti['verdict'])->toBeString()
-        ->and($resultMulti['predictive_metrics']['estimated_exam_score'])->toBe('No mock yet. A mock score is not a forecast.');
+        ->and($resultMulti['mock_accuracy']['mocks'])->toBe(0)
+        ->and($resultMulti['mock_accuracy']['percent'])->toBeNull();
 
     // Single attempt evaluation
     $resultSingle = $service->generate($user->id, $attempt1->id, singleAttemptOnly: true);

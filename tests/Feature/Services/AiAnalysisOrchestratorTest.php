@@ -27,6 +27,7 @@ function orchestratorWithDrillAfterMock(User $user): AiAnalysisOrchestrator
     // Deterministic drill analysis that is missing every merged key.
     $deterministic = Mockery::mock(DeterministicAnalysisService::class);
     $deterministic->shouldReceive('generate')->andReturn([]);
+    $deterministic->shouldReceive('sanitizeStored')->andReturnUsing(fn ($d) => is_array($d) ? $d : null);
 
     UserAiAnalysis::create([
         'user_id' => $user->id,

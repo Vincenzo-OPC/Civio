@@ -23,6 +23,8 @@ import { useEffect, useState } from 'react';
 import { PageContainer } from '@/components/layout/page-container';
 import { ConfirmModal } from '@/components/shared/confirm-modal';
 import { Card } from '@/components/ui/card';
+import { summarizeMockAccuracy } from '@/lib/mock-accuracy';
+import type { MockAccuracy } from '@/lib/mock-accuracy';
 import { connectRealtime } from '@/lib/realtime';
 import { makeBackOnClick, resolveOriginFromUrl } from '@/lib/smart-back';
 import type { Auth } from '@/types';
@@ -120,7 +122,7 @@ interface AiAnalysisProps {
     isLocal?: boolean;
     existingSchedules?: ExistingSchedule[];
     data: {
-        pass_probability: number;
+        mock_accuracy?: MockAccuracy;
         verdict: string;
         trend: 'improving' | 'declining' | 'stable' | 'insufficient_data';
         strengths: string[];
@@ -129,10 +131,7 @@ interface AiAnalysisProps {
         recommended_modules: string[];
         encouragement: string;
         predictive_metrics?: {
-            estimated_exam_score: string;
-            days_to_readiness: string;
-            completion_pace: string;
-            mock_pass_confidence: 'high' | 'moderate' | 'low';
+            completion_pace?: string;
         };
         subject_mastery?: SubjectMasteryItem[];
         timeline_prediction?: {
@@ -161,9 +160,9 @@ export default function AiAnalysisReport({
     lastUpdated,
 }: AiAnalysisProps) {
     const { auth, pusher } = usePage<{ auth: Auth; pusher?: any }>().props;
-    const noMock = (
-        data?.predictive_metrics?.estimated_exam_score ?? ''
-    ).startsWith('No mock');
+    const accuracy = summarizeMockAccuracy(data?.mock_accuracy);
+    const noMock = !accuracy.hasMocks;
+    const accuracyPct = accuracy.percent ?? 0;
     const isAiMode = auth?.user?.analysis_mode === 'ai';
     const [localStatus, setLocalStatus] = useState<
         'no_data' | 'generating' | 'ready' | 'failed'
@@ -739,7 +738,7 @@ export default function AiAnalysisReport({
                             <div className="space-y-6 lg:col-span-4">
                                 <Card className="flex h-full flex-col items-center justify-between bg-gradient-to-br from-white to-slate-50/50 p-4 text-center sm:p-6 dark:from-slate-900 dark:to-slate-900/60">
                                     <span className="text-xs font-semibold tracking-wider text-slate-400 uppercase dark:text-slate-500">
-                                        Mock items correct
+                                        Mock Accuracy
                                     </span>
 
                                     <div className="relative my-6 flex size-40 items-center justify-center">
@@ -770,32 +769,19 @@ export default function AiAnalysisReport({
                                                     noMock
                                                         ? 2 * Math.PI * 68
                                                         : 2 * Math.PI * 68 -
-                                                          (data.pass_probability /
-                                                              100) *
+                                                          (accuracyPct / 100) *
                                                               (2 * Math.PI * 68)
                                                 }
                                                 strokeLinecap="round"
-                                                className={`transition-all duration-500 ${
-                                                    data.pass_probability >= 80
-                                                        ? 'text-emerald-500'
-                                                        : 'text-rose-500'
-                                                }`}
+                                                className="text-violet-500 transition-all duration-500"
                                             />
                                         </svg>
                                         <div className="flex flex-col items-center justify-center">
-                                            <span
-                                                className={`text-4xl font-semibold ${
-                                                    data.pass_probability >= 80
-                                                        ? 'text-emerald-600 dark:text-emerald-400'
-                                                        : 'text-rose-600 dark:text-rose-400'
-                                                }`}
-                                            >
-                                                {noMock
-                                                    ? '—'
-                                                    : `${data.pass_probability}%`}
+                                            <span className="text-4xl font-semibold text-violet-700 dark:text-violet-300">
+                                                {accuracy.display}
                                             </span>
                                             <span className="mt-1 text-[10px] font-medium text-slate-500">
-                                                Of submitted mocks
+                                                {accuracy.counts}
                                             </span>
                                         </div>
                                     </div>
@@ -803,10 +789,10 @@ export default function AiAnalysisReport({
                                     <div className="w-full border-t border-slate-100 pt-4 dark:border-slate-800/80">
                                         <div className="flex items-center justify-between text-xs">
                                             <span className="font-medium text-slate-400">
-                                                What this number is
+                                                {accuracy.sample}
                                             </span>
                                             <span className="font-bold text-slate-500">
-                                                Not a forecast
+                                                Not a pass prediction
                                             </span>
                                         </div>
                                     </div>
@@ -823,19 +809,18 @@ export default function AiAnalysisReport({
                                         </div>
                                         <div>
                                             <span className="text-xs font-medium text-slate-500">
-                                                Mock range
+                                                Strict vs Study mocks
                                             </span>
-                                            <h4 className="mt-0.5 text-base font-semibold tracking-tight text-slate-900 dark:text-white">
-                                                {data.predictive_metrics
-                                                    ?.estimated_exam_score ||
-                                                    'No mock yet'}
+                                            <h4 className="mt-0.5 text-sm font-semibold tracking-tight text-slate-900 dark:text-white">
+                                                {accuracy.strictLine}
                                             </h4>
                                         </div>
                                     </div>
                                     <p className="mt-4 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                                        A band around the mock average. Not an
-                                        official score. The published general
-                                        passing rating is at least 80.00.
+                                        {accuracy.personalizedLine}. Strict
+                                        mocks follow the Civio blueprint at
+                                        random; Study mocks lean on your weak
+                                        items, so the two are kept apart.
                                     </p>
                                 </Card>
 
@@ -846,19 +831,16 @@ export default function AiAnalysisReport({
                                         </div>
                                         <div>
                                             <span className="text-xs font-medium text-slate-500">
-                                                Until your date
+                                                Exam track and sample
                                             </span>
                                             <h4 className="mt-0.5 text-base font-semibold tracking-tight text-slate-900 dark:text-white">
-                                                {data.predictive_metrics
-                                                    ?.days_to_readiness ||
-                                                    'No date yet'}
+                                                {accuracy.track}
                                             </h4>
                                         </div>
                                     </div>
                                     <p className="mt-4 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                                        Days until the date you set, or a note
-                                        about the practice average. Not a
-                                        forecast.
+                                        {accuracy.sample}. Accuracy on a few
+                                        mocks moves a lot between forms.
                                     </p>
                                 </Card>
 

@@ -75,7 +75,7 @@ class AiAnalysisOrchestrator
 
                 return [
                     'status' => 'ready',
-                    'data' => $analysisData,
+                    'data' => $this->deterministicService->sanitizeStored($analysisData, $userId),
                 ];
             }
 
@@ -106,7 +106,7 @@ class AiAnalysisOrchestrator
 
         return [
             'status' => 'ready',
-            'data' => $analysisData,
+            'data' => $this->deterministicService->sanitizeStored($analysisData, $userId),
         ];
     }
 
@@ -159,7 +159,7 @@ class AiAnalysisOrchestrator
         if ($analysis->last_exam_attempt_id !== $targetAttemptId) {
             $isCooldownActive = $analysis->updated_at && $analysis->updated_at->gt(now()->subHours(24));
             if ($isCooldownActive) {
-                return ['status' => 'ready', 'data' => $analysis->analysis_json];
+                return ['status' => 'ready', 'data' => $this->deterministicService->sanitizeStored($analysis->analysis_json, $userId)];
             }
 
             if (! Cache::has($failKey)) {
@@ -174,7 +174,7 @@ class AiAnalysisOrchestrator
             return ['status' => 'failed', 'data' => null];
         }
 
-        return ['status' => 'ready', 'data' => $analysis->analysis_json];
+        return ['status' => 'ready', 'data' => $this->deterministicService->sanitizeStored($analysis->analysis_json, $userId)];
     }
 
     /**

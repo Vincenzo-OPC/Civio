@@ -159,7 +159,8 @@ test('GenerateUserAnalysisJob calculates subtopic stats and maps subcategory IDs
     $cached = UserAiAnalysis::where('user_id', $user->id)->first();
     $analysis = $cached->analysis_json;
 
-    expect($analysis['pass_probability'])->toBe(75);
+    expect($analysis)->not->toHaveKey('pass_probability');
+    expect($analysis['mock_accuracy'])->toBeArray();
     expect($analysis['verdict'])->toContain('fractions');
     expect($analysis['personalized_7_day_plan'][0]['subcategory_id'])->toBe($subcategory2->id);
 });
@@ -216,11 +217,12 @@ test('GenerateUserAnalysisJob falls back to deterministic generation when keys a
     $cached = UserAiAnalysis::where('user_id', $user->id)->first();
     $analysis = $cached->analysis_json;
 
-    expect($analysis['pass_probability'])->toBeGreaterThan(0);
+    expect($analysis)->not->toHaveKey('pass_probability');
+    expect($analysis['mock_accuracy']['percent'])->toBeGreaterThan(0);
     expect($analysis['verdict'])->not->toBeEmpty();
 });
 
-test('GenerateUserAnalysisJob sets pass_probability to 0 when user has only completed drills', function () {
+test('GenerateUserAnalysisJob reports no mock accuracy when user has only completed drills', function () {
     $user = User::factory()->create();
 
     $category = Category::create([
@@ -260,7 +262,8 @@ test('GenerateUserAnalysisJob sets pass_probability to 0 when user has only comp
     $cached = UserAiAnalysis::where('user_id', $user->id)->first();
     $analysis = $cached->analysis_json;
 
-    expect($analysis['pass_probability'])->toBe(0);
+    expect($analysis)->not->toHaveKey('pass_probability');
+    expect($analysis['mock_accuracy']['mocks'])->toBe(0);
     expect($analysis['verdict'])->not->toBeEmpty();
 });
 
@@ -333,6 +336,6 @@ test('GenerateUserAnalysisJob uses Cloudflare Workers AI first and falls back to
     $cached = UserAiAnalysis::where('user_id', $user->id)->first();
     $analysis = $cached->analysis_json;
 
-    expect($analysis['pass_probability'])->toBe(88);
+    expect($analysis)->not->toHaveKey('pass_probability');
     expect($analysis['verdict'])->toBe('Gemini fallback coaching verdict!');
 });

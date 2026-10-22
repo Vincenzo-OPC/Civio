@@ -56,15 +56,15 @@ class GenerateUserAnalysisJob implements ShouldQueue
                 return;
             }
 
-            $passProb = $deterministicData['pass_probability'] ?? 0;
-            $scoreTier = $passProb >= 80 ? 'High (80%+)' : ($passProb >= 60 ? 'Moderate (60-79%)' : 'Needs Improvement (<60%)');
+            $mockPct = (float) ($deterministicData['mock_accuracy']['percent'] ?? 0);
+            $scoreTier = $mockPct >= 80 ? 'High (80%+)' : ($mockPct >= 60 ? 'Moderate (60-79%)' : 'Needs Improvement (<60%)');
             $topStrengths = array_slice($deterministicData['strengths'] ?? [], 0, 2);
             $topWeaknesses = array_slice($deterministicData['critical_weaknesses'] ?? [], 0, 2);
             $topModule = ($deterministicData['recommended_modules'] ?? [])[0] ?? 'General Review';
 
             $normalizedProfile = [
                 'score_tier' => $scoreTier,
-                'pass_probability' => $passProb,
+                'mock_accuracy_percent' => $mockPct,
                 'strengths' => $topStrengths,
                 'critical_weaknesses' => $topWeaknesses,
                 'priority_focus' => $topModule,
@@ -111,7 +111,7 @@ CRITICAL RULES:
                 $cfRes = $aiGateway->generateStructuredJson($cfModel, $systemPrompt, $userPrompt, $responseSchema);
 
                 if ($cfRes['success'] && isset($cfRes['data']['verdict'])) {
-                    $finalData = array_merge($deterministicData, array_filter($cfRes['data'], fn ($v) => ! is_null($v)));
+                    $finalData = array_merge($deterministicData, self::coachingFields($cfRes['data']));
                 } else {
                     $errorMsg = $cfRes['error'] ?? 'Invalid response from Cloudflare Workers AI';
                     Log::warning("GenerateUserAnalysisJob: Cloudflare Workers AI failed or hit limit ({$errorMsg}), falling back to Gemini.");
@@ -128,7 +128,7 @@ CRITICAL RULES:
                 $geminiRes = $aiGateway->generateStructuredJson($geminiModel, $systemPrompt, $userPrompt, $responseSchema);
 
                 if ($geminiRes['success'] && isset($geminiRes['data']['verdict'])) {
-                    $finalData = array_merge($deterministicData, array_filter($geminiRes['data'], fn ($v) => ! is_null($v)));
+                    $finalData = array_merge($deterministicData, self::coachingFields($geminiRes['data']));
                 } else {
                     $errorMsg = $geminiRes['error'] ?? 'Invalid response from Gemini API';
                     Log::warning("GenerateUserAnalysisJob: Gemini API failed: {$errorMsg}");
@@ -173,5 +173,29 @@ CRITICAL RULES:
         } finally {
             Cache::forget("ai-analysis-generating-{$this->userId}");
         }
+    }
+
+    /**
+     * Model output merged over the deterministic analysis, minus any retired
+     * pass-prediction field (pass_probability, days_to_readiness, ...) and
+     * minus mock_accuracy, which only the server computes.
+     *
+     * @param  array<string, mixed>  $data
+     * @return array<string, mixed>
+     */
+    public static function coachingFields(array $data): array
+    {
+        $data = array_filter($data, fn ($v) => ! is_null($v));
+        unset($data['pass_probability'], $data['days_to_readiness'], $data['mock_accuracy']);
+
+        if (isset($data['predictive_metrics']) && is_array($data['predictive_metrics'])) {
+            unset(
+                $data['predictive_metrics']['days_to_readiness'],
+                $data['predictive_metrics']['estimated_exam_score'],
+                $data['predictive_metrics']['mock_pass_confidence'],
+            );
+        }
+
+        return $data;
     }
 }

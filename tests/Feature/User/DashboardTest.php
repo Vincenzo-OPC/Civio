@@ -130,6 +130,7 @@ test('dashboard serves cached analysis if generated today', function () {
     $analysisData = [
         'pass_probability' => 85,
         'verdict' => 'Looking strong!',
+        'predictive_metrics' => ['days_to_readiness' => '10 days', 'estimated_exam_score' => '85%', 'mock_pass_confidence' => 'high', 'completion_pace' => 'steady'],
         'trend' => 'improving',
         'strengths' => ['Verbal Ability'],
         'critical_weaknesses' => [],
@@ -151,7 +152,11 @@ test('dashboard serves cached analysis if generated today', function () {
         ->component('user/dashboard/index')
         ->has('aiAnalysis', fn (Assert $page) => $page
             ->where('status', fn ($status) => $status === 'ready')
-            ->where('data', $analysisData)
+            // Legacy cached row: retired prediction fields are stripped and
+            // Mock Accuracy is filled in, without crashing on old keys.
+            ->where('data', fn ($data) => ! isset($data['pass_probability'])
+                && $data['verdict'] === 'Looking strong!'
+                && is_array($data['mock_accuracy'] ?? null))
         )
         ->has('dailyGoal')
         ->has('todayTasks')
