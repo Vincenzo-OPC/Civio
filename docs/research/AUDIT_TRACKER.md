@@ -318,3 +318,14 @@ Source snapshot: PR #5 head `fcc2ed22b39d60e0469304e690749bc17263f8bf`; file `do
 **Disposition:** Numerical: 80 answer keys verified with the corrections/selection notes above. Filipino: 28 items reviewed for key defensibility and wording at the item level; paragraph-order explanation depth and distractor quality remain editorial work. The batch still has `status: draft` / `review_status: unreviewed`; no item was approved, activated, imported or counted toward the 2,000 verified release target. Its passing bank comparison (1,656 items) is the validator's comparison set, not the current approved inventory and not evidence that the 2,000 milestone is complete.
 
 **Next actions for the PR author / Codex:** (1) set the 60 operation targets to 35 seconds; (2) prepare a blueprint-based release subset rather than treating all 60 near-frames as distinct coverage; (3) rewrite the 16 sequencing Reveals to teach the actual ordering constraints and strengthen weak distractors; (4) rerun content QA on the revised digest and complete the PR's explicitly required check suite; (5) keep every item draft until independent review and the repository's signed approval/import workflow are satisfied. The current main inventory and exact release gap remain as recorded in [Current Bank Assessment](curriculum/CURRENT_BANK_ASSESSMENT.md); this PR draft does not change them.
+
+
+### PR #8 draft corrections and recheck (22 October 2026)
+
+Applied the specific editorial fixes to the existing PR #8 draft branch `grok/gap-fill-2000-02`, commit `8ef853ae22600cac8b0cb4f05309027e826ff626` (the branch head changed; PR remains open/draft):
+
+- Corrected all 60 `NUM-OPS-ORDER` target times from 40 to the spec's 35 seconds.
+- Rewrote the 16 `VFIL-PAGSUSUNOD` explanations to state the actual chronology, prerequisite/action/result, or reference cue that supports each order.
+- Preserved all statuses as `draft` / `unreviewed`; no approval, activation, import or merge.
+
+On the updated PR commit, `python scripts/batches/qa_file.py docs/research/gap-fill-2000-02.json` again reports **108 items, 1,656 comparison-bank items, 0 problems**. The independent numerical recomputation again returns **80/80 correct** (60 mixed-operation expressions and 20 sequences), with the 35-second targets verified and keys balanced 20 per option position. This still does not complete the full PR-required software test/build/bundle suite, source-by-source originality check, or content approval.
