@@ -1,0 +1,29 @@
+{
+  "warning": "Isolated component lower bounds, external React/Motion/UI packages excluded. Not installed in Civio and not an application bundle delta.",
+  "samples": [
+    {
+      "repository": "motion-primitives",
+      "commit": "120f64f6ca60348e251f929e9c81f11ccbe45eda",
+      "last_commit_date": "2026-09-28T15:32:06+02:00",
+      "sample": "components/core/accordion.tsx",
+      "minified_bytes_excluding_external_packages": 1927,
+      "brotli_bytes_excluding_external_packages": 738
+    },
+    {
+      "repository": "animate-ui",
+      "commit": "e6cea6b5ae5a4985d3bf3cc0ebea173555eafd72",
+      "last_commit_date": "2026-10-19T21:52:02+02:00",
+      "sample": "packages/react/src/primitives/base-ui/progress/progress.tsx",
+      "minified_bytes_excluding_external_packages": 7162,
+      "brotli_bytes_excluding_external_packages": 2525
+    },
+    {
+      "repository": "velora-ui",
+      "commit": "a07bcc129b45eeed3fc070357a6a74b876d96159",
+      "last_commit_date": "2026-09-30T14:28:18+03:00",
+      "sample": "src/components/velora/stateful-button.tsx",
+      "minified_bytes_excluding_external_packages": 3094,
+      "brotli_bytes_excluding_external_packages": 1149
+    }
+  ]
+}

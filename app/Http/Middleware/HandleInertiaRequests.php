@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Models\Announcement;
 use App\Models\Feedback;
 use App\Models\RolePermission;
+use App\Models\User;
 use App\Services\TurnstileService;
 use App\Services\UserPreferenceService;
 use App\Support\LiteMode;
@@ -72,6 +73,7 @@ class HandleInertiaRequests extends Middleware
                     [
                         'two_factor_enabled' => ! is_null($request->user()->two_factor_secret),
                         'analysis_mode' => app(UserPreferenceService::class)->getAnalysisMode($request->user()->id),
+                        'can_download_pdf' => $this->canDownloadPdf($request->user()),
                     ]
                 ) : null,
                 'permissions' => Cache::remember('role_permissions', 3600, function () {
@@ -113,5 +115,24 @@ class HandleInertiaRequests extends Middleware
                 ->mapWithKeys(fn ($item) => [$item->flaggable_type.':'.$item->flaggable_id => $item->status])
                 ->toArray() : (object) [],
         ];
+    }
+
+    /**
+     * A freshly created user can omit this column until it is reloaded.
+     * Reading it through only() then crashes strict models.
+     */
+    private function canDownloadPdf(mixed $user): bool
+    {
+        if (! $user instanceof User) {
+            return false;
+        }
+
+        $attributes = $user->getAttributes();
+
+        if (array_key_exists('can_download_pdf', $attributes)) {
+            return (bool) $attributes['can_download_pdf'];
+        }
+
+        return (bool) $user->newQuery()->whereKey($user->getKey())->value('can_download_pdf');
     }
 }

@@ -53,7 +53,7 @@ describe('answer option visuals', () => {
                 strict: false,
                 correctIndex: 0,
             }),
-            { visual: 'incorrect', status: 'Your answer' },
+            { visual: 'incorrect', status: 'Your answer · Incorrect' },
         );
         assert.deepEqual(
             answerOptionVisual({
@@ -63,7 +63,7 @@ describe('answer option visuals', () => {
                 strict: false,
                 correctIndex: 0,
             }),
-            { visual: 'correct', status: 'Correct' },
+            { visual: 'correct', status: 'Your answer · Correct' },
         );
     });
 

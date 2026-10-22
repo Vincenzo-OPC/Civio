@@ -16,6 +16,7 @@ use App\Observers\ExamDateObserver;
 use App\Observers\LearnModuleObserver;
 use App\Observers\QuestionObserver;
 use App\Observers\SubcategoryObserver;
+use App\Services\Exam\ReviewScheduleReport;
 use Carbon\CarbonImmutable;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Cache\RateLimiting\Limit;
@@ -41,6 +42,8 @@ class AppServiceProvider extends ServiceProvider
             // Future: resolve Gemini/OpenAI/xAI via Prism when CIVIO_TUTOR_PROVIDER != null
             return new NullTutorProvider;
         });
+
+        $this->app->singleton(ReviewScheduleReport::class);
 
         //
     }
@@ -123,6 +126,16 @@ class AppServiceProvider extends ServiceProvider
 
         // Lite L2 offline packs: always on (also outside production) so the
         // limits are tested; sizes in config/civio.php.
+        RateLimiter::for('exam-progress', function (Request $request) {
+            return Limit::perMinute((int) config('civio.progress_per_minute', 180))
+                ->by('exam-progress:'.($request->user() ? 'user:'.$request->user()->id : 'ip:'.$request->ip()));
+        });
+
+        RateLimiter::for('bank-access', function (Request $request) {
+            return Limit::perMinute((int) config('civio.bank_access_per_minute', 30))
+                ->by('bank-access:'.($request->user() ? 'user:'.$request->user()->id : 'ip:'.$request->ip()));
+        });
+
         RateLimiter::for('offline-packs', function (Request $request) {
             return Limit::perMinute((int) config('civio.offline.packs_per_minute', 60))
                 ->by('offline-packs:'.($request->user()?->id ?: $request->ip()));

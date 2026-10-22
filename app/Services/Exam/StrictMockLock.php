@@ -38,7 +38,9 @@ final class StrictMockLock
             ? array_values(array_filter((array) $session->get(ExamSession::GUEST_SESSION_KEY, []), 'is_string'))
             : [];
 
-        if ($userId === null && $guestIds === []) {
+        $guestHash = $session !== null ? hash('sha256', $session->getId()) : null;
+
+        if ($userId === null && $guestIds === [] && $guestHash === null) {
             return [];
         }
 
@@ -48,9 +50,13 @@ final class StrictMockLock
             ->where('mode', ExamMode::Strict->value)
             ->whereNull('exam_attempt_id')
             ->where('created_at', '>=', $oldest)
-            ->where(function (Builder $query) use ($userId, $guestIds): void {
+            ->where(function (Builder $query) use ($userId, $guestIds, $guestHash): void {
                 if ($userId !== null) {
                     $query->orWhere('user_id', $userId);
+                }
+
+                if ($guestHash !== null) {
+                    $query->orWhere(fn (Builder $guest) => $guest->whereNull('user_id')->where('owner_session_hash', $guestHash));
                 }
 
                 if ($guestIds !== []) {
@@ -58,7 +64,7 @@ final class StrictMockLock
                 }
             })
             ->when($exceptSessionId !== null, fn (Builder $query) => $query->where('id', '!=', $exceptSessionId))
-            ->get(['id', 'track', 'question_ids', 'created_at']);
+            ->get(['id', 'track', 'mode', 'question_ids', 'created_at', 'deadline_at']);
 
         $locked = [];
 
@@ -107,9 +113,6 @@ final class StrictMockLock
 
     private function stillRunning(ExamSession $examSession): bool
     {
-        $limit = MockPoolSelector::timeLimitFor(MockPoolSelector::levelFor($examSession->track));
-
-        return $examSession->created_at !== null
-            && $examSession->created_at->greaterThanOrEqualTo(now()->subSeconds($limit + self::GRACE_SECS));
+        return $examSession->deadline()?->copy()->addSeconds(self::GRACE_SECS)->greaterThanOrEqualTo(now()) ?? false;
     }
 }

@@ -1,0 +1,3159 @@
+{
+  "batch": "batch-subpro-num-001",
+  "spec_version": "0.1.9",
+  "status": "draft",
+  "source_group": "civio",
+  "notes": "50-item Subprofessional Numerical batch. All source items in the supplied upload were checked for keyed arithmetic, option uniqueness, explanation alignment, distractor mapping, metadata, and repository overlap. 49 uploaded items passed this Astra content review after corrections; replacement item 926051 remains draft/unreviewed because it was authored during the review. Uploaded geometry item 926037 was valid but held outside this batch so the requested allocation is 12 fractions, 12 percentage items, 8 ratio/proportion, 8 basic algebra, and 10 age/work/distance/money/mixture word problems. It is preserved separately as a held draft. Target times now follow CSE-Question-Design-Spec §3.1 by archetype. The resulting 50-item draft-batch mean is 69.3 seconds; do not administer this authoring batch as a single timed practice set until set-level pacing is redesigned. Difficulty mix is 11 easy, 25 medium, 14 hard versus the spec suggestion of 15/25/10; labels are editorial, not empirically calibrated. Repository similarity screening covered 3,333 unique stems from current main and 10 pinned content PR snapshots; no >=0.65 stem match, within-batch match, or stable-ID collision was found. This is not a comparison to the source reviewer PDFs. The existing qa_file.py still crashes on the fraction archetype because its solver assumes a narrow \"had <number>\" stem. No question was imported or activated. Only reviewed items remain not approved for users; a separate GT approval is still required before any release or activation. Item 926003 uses NUM-WRONG-BASE as the nearest available code for fraction-comparison heuristics; the spec has no dedicated numerator-only/denominator-only comparison code.",
+  "items": [
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926001",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "subtract fractions",
+      "micro_skill": "subtract a quarter from an eighth-based measure",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A small fish pond was 7/8 meter deep. Maintenance lowered the water by 1/4 meter. What was the new water depth?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "5/8 meter"
+        },
+        {
+          "option_id": "o2",
+          "text": "1 1/8 meter"
+        },
+        {
+          "option_id": "o3",
+          "text": "3/4 meter"
+        },
+        {
+          "option_id": "o4",
+          "text": "1 1/2 meter"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "To subtract fractions, first make their denominators match.",
+        "shortcut": "Change 1/4 to 2/8. Take away 2 eighths from 7 eighths: 7/8 − 2/8 = 5/8.",
+        "why_correct": "5/8 meter is right because raising the final level by 1/4 meter returns it to 7/8 meter.",
+        "why_wrong": {
+          "o2": "1 1/8 meters adds the 1/4-meter change instead of subtracting it from the pond depth.",
+          "o3": "3/4 meter subtracts only the top numbers and keeps eighths; 1/4 is actually 2/8.",
+          "o4": "1 1/2 meters wrongly subtracts denominators; the part sizes must first match."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926001",
+      "theme": "fish-pond-depth-maintenance",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926002",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "fraction of a set",
+      "micro_skill": "take a fractional part of a whole number",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "Of 72 seats in a municipal training room, 3/8 are reserved for visitors. How many visitor seats are reserved?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "45 seats"
+        },
+        {
+          "option_id": "o2",
+          "text": "27 seats"
+        },
+        {
+          "option_id": "o3",
+          "text": "24 seats"
+        },
+        {
+          "option_id": "o4",
+          "text": "9 seats"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Three eighths means three of eight equal shares.",
+        "shortcut": "Divide 72 by 8 to find one share: 9. Then multiply 9 by 3: 27 seats.",
+        "why_correct": "27 is correct. Eight groups of 9 make 72, and three groups make 27.",
+        "why_wrong": {
+          "o1": "45 seats is the unreserved portion, not the visitor seats.",
+          "o3": "24 seats divides by the numerator 3 instead of finding one eighth and taking three.",
+          "o4": "9 seats counts one eighth and stops before taking three eighths."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926002",
+      "theme": "training-room-seats",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926003",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "compare close fractions",
+      "micro_skill": "compare rational numbers with unequal denominators",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A health worker filled four identical containers to 4/7, 5/9, 7/12, and 3/5 of their capacity. What fraction is the fullest?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "7/12"
+        },
+        {
+          "option_id": "o2",
+          "text": "4/7"
+        },
+        {
+          "option_id": "o3",
+          "text": "3/5"
+        },
+        {
+          "option_id": "o4",
+          "text": "5/9"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "The fullest container has the greatest fraction, not the largest numerator.",
+        "shortcut": "Compare each with 3/5 using cross multiplication. For 7/12, compare 7 × 5 = 35 with 3 × 12 = 36; 3/5 wins. The others are smaller too.",
+        "why_correct": "3/5 is greatest: it equals 0.6, while 7/12, 4/7, and 5/9 are each below 0.6.",
+        "why_wrong": {
+          "o1": "7/12 chooses the largest numerator, but its value is only 35/60.",
+          "o2": "4/7 may look larger because 7 is a smaller denominator, but it is below 3/5.",
+          "o4": "5/9 is less than 3/5: cross-products are 25 and 27, so the second fraction is larger."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o2": "NUM-WRONG-BASE",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "fact_id": "num-original-926003",
+      "theme": "health-clinic-container-comparison",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926004",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "mixed number conversion",
+      "micro_skill": "convert a mixed number to an improper fraction",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A field notebook records a measured distance as 2 3/7 kilometers. Which improper fraction represents the same distance?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "5/7"
+        },
+        {
+          "option_id": "o2",
+          "text": "11/7"
+        },
+        {
+          "option_id": "o3",
+          "text": "14/7"
+        },
+        {
+          "option_id": "o4",
+          "text": "17/7"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "A mixed number has a whole part and a fractional part.",
+        "shortcut": "Two wholes equal 14/7. Add 3/7, giving 17/7.",
+        "why_correct": "17/7 = 14/7 + 3/7 = 2 3/7 kilometers.",
+        "why_wrong": {
+          "o1": "5/7 adds the whole number 2 to the numerator 3, then keeps the denominator 7. Each whole must first be changed to sevenths.",
+          "o2": "11/7 subtracts the extra 3 seventh-parts from the two wholes instead of adding them.",
+          "o3": "14/7 accounts for the two whole kilometers but drops the extra 3/7."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926004",
+      "theme": "field-distance-conversion",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926005",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "fraction division",
+      "micro_skill": "count equal portions of fractional size",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A bakery has 6 kilograms of flour for 3/4-kilogram sample bags. How many full sample bags can it fill?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "8 bags"
+        },
+        {
+          "option_id": "o2",
+          "text": "2 bags"
+        },
+        {
+          "option_id": "o3",
+          "text": "24 bags"
+        },
+        {
+          "option_id": "o4",
+          "text": "6 bags"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "To count bags, divide total flour by flour in one bag.",
+        "shortcut": "Divide 6 by 3/4. Turn division into multiplication by 4/3: 6 × 4/3 = 8.",
+        "why_correct": "Eight bags use 8 × 3/4 = 6 kilograms exactly.",
+        "why_wrong": {
+          "o2": "2 bags treats each bag as 3 kilograms and ignores the denominator 4.",
+          "o3": "24 bags counts quarter-kilogram portions but forgets that each bag holds three such portions.",
+          "o4": "6 bags repeats the flour amount without dividing by the size of one bag."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-WRONG-BASE",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-GIVEN-REUSED"
+      },
+      "fact_id": "num-original-926005",
+      "theme": "bakery-sample-bags",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926006",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "recover the whole from a fraction",
+      "micro_skill": "divide a known part by its share of the whole",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A relief team counted 45 blankets on one shelf. That shelf held 5/8 of all the blankets. How many blankets did the team have?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "45 blankets"
+        },
+        {
+          "option_id": "o2",
+          "text": "72 blankets"
+        },
+        {
+          "option_id": "o3",
+          "text": "9 blankets"
+        },
+        {
+          "option_id": "o4",
+          "text": "120 blankets"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "The whole equals a known part divided by the fraction it represents.",
+        "shortcut": "Five equal parts contain 45 blankets, so one part has 9. Eight parts have 9 × 8 = 72.",
+        "why_correct": "5/8 of 72 is 45, exactly the shelf count.",
+        "why_wrong": {
+          "o1": "45 is only the count on the shelf, not the full supply.",
+          "o3": "9 blankets is one part of the eight-part total, before multiplying by eight.",
+          "o4": "120 blankets divides by the missing 3/8 share rather than the stated 5/8 share."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-GIVEN-REUSED",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "fact_id": "num-original-926006",
+      "theme": "relief-blanket-inventory",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926007",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "fractions of a litre",
+      "micro_skill": "divide a mixed-number volume by a fractional cup size",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A nutrition volunteer has 1 1/2 liters of juice. Each serving is 3/8 liter. How many equal servings are possible?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "12 servings"
+        },
+        {
+          "option_id": "o2",
+          "text": "3 servings"
+        },
+        {
+          "option_id": "o3",
+          "text": "4 servings"
+        },
+        {
+          "option_id": "o4",
+          "text": "6 servings"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A serving count is total volume divided by volume per serving.",
+        "shortcut": "Convert 1 1/2 to 12/8 liters. Each serving takes 3/8, so 12 ÷ 3 = 4.",
+        "why_correct": "Four servings use 4 × 3/8 = 12/8 = 1 1/2 liters.",
+        "why_wrong": {
+          "o1": "12 servings counts eighth-liters but forgets that each serving needs three eighths.",
+          "o2": "3 servings assumes every serving takes half a liter instead of 3/8 liter.",
+          "o4": "6 servings incorrectly treats each serving as 1/4 liter."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-WRONG-BASE",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "fact_id": "num-original-926007",
+      "theme": "nutrition-juice-servings",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926008",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "add mixed numbers",
+      "micro_skill": "combine quantities with different fractional parts",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A farmers' cooperative collected 1 2/3 kilograms of bean seeds from one plot and 2 1/6 kilograms from another. What was the combined weight?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "4 5/6 kilograms"
+        },
+        {
+          "option_id": "o2",
+          "text": "3 1/2 kilograms"
+        },
+        {
+          "option_id": "o3",
+          "text": "3 1/3 kilograms"
+        },
+        {
+          "option_id": "o4",
+          "text": "3 5/6 kilograms"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Convert fractional parts to the same denominator before adding.",
+        "shortcut": "2/3 is 4/6. Add 4/6 and 1/6 = 5/6. Add the whole numbers 1 + 2 = 3.",
+        "why_correct": "3 5/6 kilograms is correct because 1 2/3 + 2 1/6 = 3 5/6.",
+        "why_wrong": {
+          "o1": "4 5/6 kilograms counts one extra whole kilogram.",
+          "o2": "3 1/2 kilograms subtracts fractional parts instead of combining them.",
+          "o3": "3 1/3 kilograms adds the fractional numerators and denominators separately, which changes the part size."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-EXTRA-STEP",
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-WRONG-BASE"
+      },
+      "fact_id": "num-original-926008",
+      "theme": "bean-seed-harvest-weights",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926009",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "fraction of a completed project",
+      "micro_skill": "find the unfinished share when parts use the same whole",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "easy",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A coastal cleanup crew finished 3/10 of a shoreline on Saturday and another 1/5 of the same shoreline on Sunday. What fraction remains?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "1/2"
+        },
+        {
+          "option_id": "o2",
+          "text": "1/10"
+        },
+        {
+          "option_id": "o3",
+          "text": "7/10"
+        },
+        {
+          "option_id": "o4",
+          "text": "4/5"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "The remaining part is one whole minus the portions already finished.",
+        "shortcut": "Change 1/5 to 2/10. Completed: 3/10 + 2/10 = 5/10. Remaining: 10/10 − 5/10 = 5/10.",
+        "why_correct": "1/2 remains. Half was cleaned, so the other half is left.",
+        "why_wrong": {
+          "o2": "1/10 subtracts Sunday’s completed part from Saturday’s instead of finding what is left from one whole.",
+          "o3": "7/10 stops after Saturday and ignores Sunday’s cleanup.",
+          "o4": "4/5 counts only Sunday’s work and forgets Saturday."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926009",
+      "theme": "coastal-cleanup-progress",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926010",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "decimal to fraction",
+      "micro_skill": "simplify a three-place decimal",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A rain gauge showed 0.625 of its maximum capacity. Which fraction in simplest form is equal to 0.625?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "8/5"
+        },
+        {
+          "option_id": "o2",
+          "text": "5/8"
+        },
+        {
+          "option_id": "o3",
+          "text": "25/4"
+        },
+        {
+          "option_id": "o4",
+          "text": "5/16"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Three digits after a decimal point mean thousandths.",
+        "shortcut": "Write 0.625 as 625/1000. Divide both by 125 to get 5/8.",
+        "why_correct": "5 ÷ 8 = 0.625. Both values describe the same part of the gauge.",
+        "why_wrong": {
+          "o1": "8/5 reverses 5/8, making a number bigger than 1 although 0.625 is below 1.",
+          "o3": "25/4 shifts the decimal place by using hundredths rather than thousandths.",
+          "o4": "5/16 divides the correct fraction by 2 a second time."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o3": "NUM-DECIMAL",
+        "o4": "NUM-EXTRA-STEP"
+      },
+      "fact_id": "num-original-926010",
+      "theme": "rain-gauge-decimal",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926011",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "fraction of a fraction",
+      "micro_skill": "take successive shares of a collection",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "hard",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A nursery has 45 seedlings. Two thirds are native trees, and 3/5 of those native trees are narra. How many narra seedlings are there?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "27 seedlings"
+        },
+        {
+          "option_id": "o2",
+          "text": "9 seedlings"
+        },
+        {
+          "option_id": "o3",
+          "text": "18 seedlings"
+        },
+        {
+          "option_id": "o4",
+          "text": "30 seedlings"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "“Of those” means the second fraction applies to the smaller group.",
+        "shortcut": "First take 2/3 of 45 = 30 native seedlings. Then take 3/5 of 30 = 18 narra seedlings.",
+        "why_correct": "18 is correct: 18 of 30 native seedlings is 3/5, and 30 of 45 seedlings is 2/3.",
+        "why_wrong": {
+          "o1": "27 seedlings takes 3/5 of the entire nursery instead of only the native trees.",
+          "o2": "9 seedlings first uses the nonnative one-third rather than the two-thirds of native trees.",
+          "o4": "30 seedlings counts all native trees before selecting only the narra."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o2": "NUM-OTHER-SHARE",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926011",
+      "theme": "native-narra-seedlings",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-926012",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "multiply a mixed number by a fraction",
+      "micro_skill": "find a fractional part of a mixed distance",
+      "archetype": "NUM-FRAC-DEC",
+      "difficulty": "medium",
+      "est_seconds": 40,
+      "language": "en",
+      "stem": "A rural footpath is 2 2/3 kilometers long. Surveyors have measured 3/4 of it. How many kilometers have they measured?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "2 2/3 kilometers"
+        },
+        {
+          "option_id": "o2",
+          "text": "0.75 kilometers"
+        },
+        {
+          "option_id": "o3",
+          "text": "3 5/12 kilometers"
+        },
+        {
+          "option_id": "o4",
+          "text": "2 kilometers"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "“Three-fourths of” means multiply by 3/4.",
+        "shortcut": "Change 2 2/3 to 8/3. Multiply 8/3 × 3/4; cancel the 3s to get 8/4 = 2.",
+        "why_correct": "2 kilometers is three-fourths of 2 2/3 kilometers because 2 ÷ (2 2/3) = 3/4.",
+        "why_wrong": {
+          "o1": "2 2/3 kilometers is the full footpath, not the measured three-fourths.",
+          "o2": "0.75 kilometer treats the entire footpath as only one kilometer.",
+          "o3": "3 5/12 kilometers adds a fraction to the path length instead of taking a fraction of it."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-WRONG-BASE",
+        "o3": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926012",
+      "theme": "rural-footpath-measurement",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-PCT-BASIC-926013",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "percentage of a quantity",
+      "micro_skill": "calculate fifteen percent by parts",
+      "archetype": "NUM-PCT-BASIC",
+      "difficulty": "easy",
+      "est_seconds": 35,
+      "language": "en",
+      "stem": "An Albay library received 360 donated notebooks. It set aside 15% for an outreach class. How many notebooks were set aside?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "54 notebooks"
+        },
+        {
+          "option_id": "o2",
+          "text": "72 notebooks"
+        },
+        {
+          "option_id": "o3",
+          "text": "36 notebooks"
+        },
+        {
+          "option_id": "o4",
+          "text": "24 notebooks"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Percent means per hundred. Fifteen percent is 15 out of every 100.",
+        "shortcut": "Find 10% of 360 = 36. Half of that is 5% = 18. Add 36 + 18 = 54.",
+        "why_correct": "54 is correct: 54 ÷ 360 = 0.15 = 15%.",
+        "why_wrong": {
+          "o2": "72 notebooks is 20% of 360. It treats the requested 15% as 20%, adding an unsupported five percentage points.",
+          "o3": "36 notebooks calculates only 10%, leaving out the additional 5%.",
+          "o4": "24 notebooks divides the total by 15 instead of taking 15 hundredths."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-EXTRA-STEP",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "fact_id": "num-original-926013",
+      "theme": "albay-notebook-outreach",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-PCT-BASIC-926014",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "part as a percent",
+      "micro_skill": "convert part over whole to percent",
+      "archetype": "NUM-PCT-BASIC",
+      "difficulty": "easy",
+      "est_seconds": 35,
+      "language": "en",
+      "stem": "At a Davao orientation, 18 out of 60 invitees came by bicycle. What percentage of invitees came by bicycle?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "3 1/3%"
+        },
+        {
+          "option_id": "o2",
+          "text": "30%"
+        },
+        {
+          "option_id": "o3",
+          "text": "18%"
+        },
+        {
+          "option_id": "o4",
+          "text": "70%"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Percentage of a group equals part ÷ whole × 100.",
+        "shortcut": "Divide 18 by 60 to get 3/10. Then 3/10 × 100 = 30%.",
+        "why_correct": "30% of 60 = 18, so the answer matches the reported bicycle riders.",
+        "why_wrong": {
+          "o1": "3 1/3% reverses part and whole and does not multiply the fraction by 100.",
+          "o3": "18% repeats the attendee count as a percent without dividing by the 60 invitees.",
+          "o4": "70% describes the people who did not cycle, not the 18 who did."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o3": "NUM-GIVEN-REUSED",
+        "o4": "NUM-OTHER-SHARE"
+      },
+      "fact_id": "num-original-926014",
+      "theme": "davao-orientation-bicycles",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-PCT-BASIC-926015",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "whole from known percent",
+      "micro_skill": "find the total when twenty-five percent is given",
+      "archetype": "NUM-PCT-BASIC",
+      "difficulty": "medium",
+      "est_seconds": 35,
+      "language": "en",
+      "stem": "A municipal registrar has encoded 72 documents, which is 25% of the assigned files. How many files were assigned in total?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "18 files"
+        },
+        {
+          "option_id": "o2",
+          "text": "72 files"
+        },
+        {
+          "option_id": "o3",
+          "text": "288 files"
+        },
+        {
+          "option_id": "o4",
+          "text": "96 files"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Twenty-five percent is one fourth of the whole.",
+        "shortcut": "If 72 is one fourth, multiply by 4: 72 × 4 = 288.",
+        "why_correct": "One fourth of 288 is 72 files, so 288 is the full assignment.",
+        "why_wrong": {
+          "o1": "18 files takes 25% of the completed portion, not the original total.",
+          "o2": "72 files is the already encoded quarter, not the complete assignment.",
+          "o4": "96 files divides by the remaining 75% even though 72 is stated as 25%."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o2": "NUM-GIVEN-REUSED",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "fact_id": "num-original-926015",
+      "theme": "registrar-document-progress",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-926016",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "single percent discount",
+      "micro_skill": "subtract a one-eighth discount from a listed price",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A bicycle repair cooperative lists a helmet at ₱800 and offers a 12.5% discount. What is the sale price?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱720"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱100"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱900"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱700"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "A discount lowers the original price. 12.5% equals one eighth.",
+        "shortcut": "One eighth of ₱800 is ₱100. Subtract: ₱800 − ₱100 = ₱700.",
+        "why_correct": "The ₱700 sale price plus ₱100 saved returns the ₱800 list price.",
+        "why_wrong": {
+          "o1": "₱720 assumes a 10% discount rather than the stated 12.5%.",
+          "o2": "₱100 is the amount saved, not the price the buyer pays.",
+          "o3": "₱900 adds the discount to the price instead of subtracting it."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o2": "NUM-PARTIAL",
+        "o3": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926016",
+      "theme": "bicycle-helmet-discount",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-926017",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "percent increase",
+      "micro_skill": "measure change using the original total as base",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A ferry carried 240 passengers on Monday and 300 on Tuesday. What was the percentage increase in passengers?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "25%"
+        },
+        {
+          "option_id": "o2",
+          "text": "60%"
+        },
+        {
+          "option_id": "o3",
+          "text": "125%"
+        },
+        {
+          "option_id": "o4",
+          "text": "20%"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Percent increase means extra amount divided by the old amount.",
+        "shortcut": "The ferry gained 300 − 240 = 60 passengers. Divide 60 by 240 = 1/4. Convert to 25%.",
+        "why_correct": "25% of 240 is 60; adding 60 to 240 gives 300.",
+        "why_wrong": {
+          "o2": "60% uses the number of extra passengers as if it were already a percentage.",
+          "o3": "125% measures Tuesday’s full total relative to Monday, not the increase alone.",
+          "o4": "20% divides by Tuesday’s new total. Percent increase uses Monday’s original 240."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-PARTIAL",
+        "o3": "NUM-EXTRA-STEP",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "fact_id": "num-original-926017",
+      "theme": "interisland-ferry-passenger-change",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-PCT-BASIC-926018",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "weighted overall percentage",
+      "micro_skill": "combine completed counts before computing a rate",
+      "archetype": "NUM-PCT-BASIC",
+      "difficulty": "hard",
+      "est_seconds": 35,
+      "language": "en",
+      "stem": "At a vocational fair, 80% of 20 morning attendees completed a survey. In the afternoon, 60% of 30 attendees completed it. What percentage of all attendees completed a survey?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "70%"
+        },
+        {
+          "option_id": "o2",
+          "text": "68%"
+        },
+        {
+          "option_id": "o3",
+          "text": "34%"
+        },
+        {
+          "option_id": "o4",
+          "text": "32%"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "To combine different-sized groups, first count successes in each group.",
+        "shortcut": "Morning: 80% of 20 = 16 surveys. Afternoon: 60% of 30 = 18. Together 34 of 50 completed a survey, so 34 ÷ 50 × 100 = 68%.",
+        "why_correct": "68% of 50 is 34, matching the 16 + 18 completed surveys.",
+        "why_wrong": {
+          "o1": "70% averages the two rates equally even though the sessions have different numbers of attendees.",
+          "o3": "34% confuses the 34 completed surveys with a percentage of 50 attendees.",
+          "o4": "32% is the percentage who did not complete the survey, not those who did."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-OTHER-SHARE"
+      },
+      "fact_id": "num-original-926018",
+      "theme": "vocational-fair-weighted-survey",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-PCT-BASIC-926019",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "completion rate",
+      "micro_skill": "find a percentage close to the whole",
+      "archetype": "NUM-PCT-BASIC",
+      "difficulty": "easy",
+      "est_seconds": 35,
+      "language": "en",
+      "stem": "A records office verified 72 of 80 marriage-certificate entries. What percentage has been verified?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "8%"
+        },
+        {
+          "option_id": "o2",
+          "text": "10%"
+        },
+        {
+          "option_id": "o3",
+          "text": "90%"
+        },
+        {
+          "option_id": "o4",
+          "text": "80%"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "The completed percent is completed ÷ total × 100.",
+        "shortcut": "80 − 72 = 8 not yet checked, which is 10% of 80. Thus 100% − 10% = 90% verified.",
+        "why_correct": "90% × 80 = 72 verified records, exactly as stated.",
+        "why_wrong": {
+          "o1": "8% confuses the 8 unverified records with a percentage.",
+          "o2": "10% is the unverified portion, since 8 entries still need checking.",
+          "o4": "80% simply repeats the total count as a percent; 72 is the part to compare with 80."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-OTHER-SHARE",
+        "o4": "NUM-GIVEN-REUSED"
+      },
+      "fact_id": "num-original-926019",
+      "theme": "registry-certificate-verification",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-926020",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "percent decrease of a forecast",
+      "micro_skill": "reduce a planned count by fifteen percent",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A barangay expected 600 households at a health fair. The final turnout was 15% below that estimate. How many households attended?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "690 households"
+        },
+        {
+          "option_id": "o2",
+          "text": "540 households"
+        },
+        {
+          "option_id": "o3",
+          "text": "90 households"
+        },
+        {
+          "option_id": "o4",
+          "text": "510 households"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "“15% below” means subtract 15% of the estimate.",
+        "shortcut": "10% of 600 is 60; 5% is 30. Subtract 60 + 30 = 90 from 600 to get 510.",
+        "why_correct": "510 attended; 600 − 510 = 90, and 90/600 = 15%.",
+        "why_wrong": {
+          "o1": "690 households adds 15% even though turnout was below the estimate.",
+          "o2": "540 households takes away only 10%, not 15%.",
+          "o3": "90 households is the shortfall, not the actual turnout."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o2": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926020",
+      "theme": "barangay-health-fair-turnout",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-926021",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "reverse a discount",
+      "micro_skill": "recover original price from a discounted amount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "After a 20% discount, a volunteer jacket costs ₱640. What was its price before the discount?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱800"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱512"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱768"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱128"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A 20% discount leaves 80% of the original price.",
+        "shortcut": "If ₱640 is 80%, divide it by 4 to find 20% = ₱160. Add five equal parts: 5 × ₱160 = ₱800.",
+        "why_correct": "20% of ₱800 is ₱160; ₱800 − ₱160 = ₱640, the stated sale price.",
+        "why_wrong": {
+          "o2": "₱512 applies another 20% discount instead of reversing the first one.",
+          "o3": "₱768 adds 20% to the reduced price. The discount was 20% of the original price.",
+          "o4": "₱128 is 20% of the sale price, not the jacket’s original price."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926021",
+      "theme": "volunteer-jacket-original-price",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-PCT-BASIC-926022",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "compare percentages of different totals",
+      "micro_skill": "find the difference between two part counts",
+      "archetype": "NUM-PCT-BASIC",
+      "difficulty": "hard",
+      "est_seconds": 35,
+      "language": "en",
+      "stem": "A municipal clinic gave vitamins to 40% of 250 enrolled children. A second clinic reached 30% of 400. How many more children did the second clinic reach?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "150 children"
+        },
+        {
+          "option_id": "o2",
+          "text": "20 children"
+        },
+        {
+          "option_id": "o3",
+          "text": "10 children"
+        },
+        {
+          "option_id": "o4",
+          "text": "220 children"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Percentages of different groups must be turned into counts before comparing.",
+        "shortcut": "First clinic: 40% of 250 = 100 children. Second clinic: 30% of 400 = 120. Difference: 120 − 100 = 20.",
+        "why_correct": "The second clinic reached 20 more because 120 − 100 = 20 children.",
+        "why_wrong": {
+          "o1": "150 children compares all enrolled children rather than those reached.",
+          "o3": "10 children subtracts percentage numbers without accounting for the different group sizes.",
+          "o4": "220 children adds the two clinic totals instead of finding the difference."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-GIVEN-REUSED",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926022",
+      "theme": "two-clinic-vitamin-comparison",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-926023",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "percent reduction",
+      "micro_skill": "divide the drop by the initial amount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A water district reduced daily pipe leaks from 500 reports to 425. By what percentage did the report count decrease?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "85%"
+        },
+        {
+          "option_id": "o2",
+          "text": "75%"
+        },
+        {
+          "option_id": "o3",
+          "text": "15%"
+        },
+        {
+          "option_id": "o4",
+          "text": "17.65%"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Percent decrease compares the drop with the original count.",
+        "shortcut": "The reduction is 500 − 425 = 75 reports. Divide by 500: 75/500 = 0.15, or 15%.",
+        "why_correct": "15% of 500 equals 75. Subtracting 75 gives the new total of 425.",
+        "why_wrong": {
+          "o1": "85% is the portion still reported after the reduction, not the reduction itself.",
+          "o2": "75% repeats the number of fewer reports as if it were a percentage.",
+          "o4": "About 17.65% uses the new count of 425 as the denominator instead of the original 500."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o2": "NUM-PARTIAL",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "fact_id": "num-original-926023",
+      "theme": "water-pipe-leak-decrease",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-926024",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Basic operations",
+      "concept": "compare a percentage discount with a fixed rebate",
+      "micro_skill": "subtract savings to see which is larger",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A shuttle ticket costs ₱600. Offer A cuts 20% off; Offer B gives a flat ₱90 rebate. How much more does Offer A save than Offer B?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱120"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱90"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱210"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱30"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "A rebate is a fixed peso amount; a percent discount depends on the original price.",
+        "shortcut": "20% of ₱600 is ₱120. Subtract Offer B’s ₱90 savings: ₱120 − ₱90 = ₱30.",
+        "why_correct": "Offer A saves ₱120, which is ₱30 more than ₱90.",
+        "why_wrong": {
+          "o1": "₱120 is all the savings under Offer A, before subtracting Offer B’s rebate.",
+          "o2": "₱90 repeats Offer B’s rebate instead of comparing the two savings.",
+          "o3": "₱210 adds both savings rather than finding how much extra Offer A saves."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-GIVEN-REUSED",
+        "o3": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926024",
+      "theme": "shuttle-ticket-offers",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-926025",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "two-part ratio from total",
+      "micro_skill": "find a named share after summing ratio parts",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A community workshop has red and blue stools in a ratio of 4 to 7. There are 55 stools in all. How many stools are blue?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "35 stools"
+        },
+        {
+          "option_id": "o2",
+          "text": "11 stools"
+        },
+        {
+          "option_id": "o3",
+          "text": "20 stools"
+        },
+        {
+          "option_id": "o4",
+          "text": "5 stools"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A 4-to-7 ratio means 4 equal parts red and 7 equal parts blue.",
+        "shortcut": "There are 4 + 7 = 11 parts. One part is 55 ÷ 11 = 5. Blue stools: 7 × 5 = 35.",
+        "why_correct": "35 blue and 20 red stools total 55; their counts have the ratio 7 to 4.",
+        "why_wrong": {
+          "o2": "11 stools counts the total number of ratio parts as if each part were one stool.",
+          "o3": "20 stools is the red share of four parts, not the blue share of seven.",
+          "o4": "5 stools is the value of one part before multiplying by seven."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-PARTIAL",
+        "o3": "NUM-OTHER-SHARE",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926025",
+      "theme": "workshop-stool-colors",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-926026",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "proportion from one known share",
+      "micro_skill": "scale both sides of a given ratio",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A rural collection center stores coffee beans and cacao beans in a 5-to-8 ratio by sack count. If there are 30 coffee sacks, how many cacao sacks are there?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "78 sacks"
+        },
+        {
+          "option_id": "o2",
+          "text": "48 sacks"
+        },
+        {
+          "option_id": "o3",
+          "text": "30 sacks"
+        },
+        {
+          "option_id": "o4",
+          "text": "6 sacks"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "When one ratio share is known, find how much one part is worth.",
+        "shortcut": "Five parts represent 30 coffee sacks, so one part is 6 sacks. Eight parts give 8 × 6 = 48 cacao sacks.",
+        "why_correct": "48/30 simplifies to 8/5, matching the cacao-to-coffee ratio.",
+        "why_wrong": {
+          "o1": "78 sacks adds the coffee count to the cacao count, giving the combined total.",
+          "o3": "30 sacks simply repeats the coffee count, assuming equal counts instead of the 5-to-8 ratio.",
+          "o4": "6 sacks is one ratio part; cacao requires eight such parts."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-EXTRA-STEP",
+        "o3": "NUM-GIVEN-REUSED",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926026",
+      "theme": "coffee-cacao-sack-storage",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-926027",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "recipe scaling",
+      "micro_skill": "keep ingredient proportion when scaling",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "easy",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A calamansi drink uses 2 cups of syrup for every 5 cups of water. A canteen plans to use 20 cups of water. How many cups of syrup are needed?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "4 cups"
+        },
+        {
+          "option_id": "o2",
+          "text": "50 cups"
+        },
+        {
+          "option_id": "o3",
+          "text": "8 cups"
+        },
+        {
+          "option_id": "o4",
+          "text": "28 cups"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A 2-to-5 recipe scales both ingredients by the same factor.",
+        "shortcut": "Water increased from 5 to 20 cups, which is four times as much. Syrup must also be four times as much: 2 × 4 = 8.",
+        "why_correct": "8 syrup cups to 20 water cups simplifies to 2 to 5.",
+        "why_wrong": {
+          "o1": "4 cups is one syrup-to-water scaling unit, before taking two syrup parts.",
+          "o2": "50 cups multiplies by the reversed water-to-syrup ratio.",
+          "o4": "28 cups counts all the finished drink, not syrup alone."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-OP-SWAP",
+        "o4": "NUM-EXTRA-STEP"
+      },
+      "fact_id": "num-original-926027",
+      "theme": "calamansi-canteen-recipe",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-926028",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "three-part ratio",
+      "micro_skill": "allocate one of three shares",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A literacy caravan sends reading kits to three areas in the ratio 2 : 3 : 5. It has 100 kits. How many kits go to the third area?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "10 kits"
+        },
+        {
+          "option_id": "o2",
+          "text": "20 kits"
+        },
+        {
+          "option_id": "o3",
+          "text": "30 kits"
+        },
+        {
+          "option_id": "o4",
+          "text": "50 kits"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "For a three-way ratio, count the parts in all three groups.",
+        "shortcut": "Total parts: 2 + 3 + 5 = 10. Each part is 100 ÷ 10 = 10 kits. Third area gets 5 × 10 = 50.",
+        "why_correct": "20 + 30 + 50 = 100 kits and follows the given 2 : 3 : 5 shares.",
+        "why_wrong": {
+          "o1": "10 kits is one ratio part, not the third area’s five parts.",
+          "o2": "20 kits is the first area’s two-part share.",
+          "o3": "30 kits is the second area’s three-part share."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-OTHER-SHARE",
+        "o3": "NUM-OTHER-SHARE"
+      },
+      "fact_id": "num-original-926028",
+      "theme": "literacy-caravan-three-areas",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926029",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "direct proportion and unit price",
+      "micro_skill": "scale a price linearly with length",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "easy",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A weaving group sells 6 meters of plain abaca cloth for ₱390. At the same price per meter, what will 10 meters cost?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱650"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱390"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱1,040"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱65"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "At a fixed unit price, cost grows in the same proportion as length.",
+        "shortcut": "One meter costs ₱390 ÷ 6 = ₱65. Ten meters cost 10 × ₱65 = ₱650.",
+        "why_correct": "₱650 for 10 meters gives ₱65 per meter, matching the original price.",
+        "why_wrong": {
+          "o2": "₱390 is the known price for six meters, not ten.",
+          "o3": "₱1,040 adds the six-meter purchase to the ten-meter price although only ten meters are requested.",
+          "o4": "₱65 is the price of one meter, not ten meters."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-GIVEN-REUSED",
+        "o3": "NUM-EXTRA-STEP",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926029",
+      "theme": "abaca-cloth-meter-cost",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926030",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "inverse proportion",
+      "micro_skill": "adjust hours when the number of workers changes",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Eight trained packers can finish an order in 15 hours. If 12 equally fast packers handle the same order, how many hours will it take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "22 1/2 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "10 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "15 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "11 hours"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "For the same job, more equally fast workers need fewer hours.",
+        "shortcut": "Total work is 8 × 15 = 120 packer-hours. Divide by 12 packers: 120 ÷ 12 = 10 hours.",
+        "why_correct": "12 packers × 10 hours = 120 packer-hours, the same work as 8 × 15.",
+        "why_wrong": {
+          "o1": "22 1/2 hours increases the time when more packers are added; for the same work, time should decrease.",
+          "o3": "15 hours assumes the larger team works no faster than the original eight.",
+          "o4": "11 hours subtracts the four additional packers from the hours, mixing different units."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o3": "NUM-GIVEN-REUSED",
+        "o4": "NUM-UNIT"
+      },
+      "fact_id": "num-original-926030",
+      "theme": "warehouse-packer-workload",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926031",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "map scale",
+      "micro_skill": "convert a drawing length to real distance",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "On an evacuation route map, every 1 centimeter represents 4 kilometers. A road is 7 1/2 centimeters long on the map. How long is that road in reality?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "300 kilometers"
+        },
+        {
+          "option_id": "o2",
+          "text": "11 1/2 kilometers"
+        },
+        {
+          "option_id": "o3",
+          "text": "30 kilometers"
+        },
+        {
+          "option_id": "o4",
+          "text": "1 7/8 kilometers"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A map scale tells how far one centimeter represents in real life.",
+        "shortcut": "Seven centimeters represent 28 kilometers. Another half centimeter represents 2. Add 28 + 2 = 30 kilometers.",
+        "why_correct": "30 ÷ 7 1/2 = 4 kilometers per centimeter, matching the map scale.",
+        "why_wrong": {
+          "o1": "300 kilometers treats the 4-kilometer scale as 40 kilometers per centimeter.",
+          "o2": "11 1/2 kilometers adds the scale number to the map length instead of multiplying.",
+          "o4": "1 7/8 kilometers divides by the scale rather than multiplying."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-DECIMAL",
+        "o2": "NUM-OP-SWAP",
+        "o4": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926031",
+      "theme": "evacuation-route-map-scale",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-926032",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "equalize two quantities from ratio",
+      "micro_skill": "identify the gap between two ratio shares",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Two barangay teams have recycling crates in the ratio 4 : 5. Together they have 36 crates. Without removing any crates from the larger team, how many must be added to the smaller team to match it?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "20 crates"
+        },
+        {
+          "option_id": "o2",
+          "text": "36 crates"
+        },
+        {
+          "option_id": "o3",
+          "text": "16 crates"
+        },
+        {
+          "option_id": "o4",
+          "text": "4 crates"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Equalizing two shares means adding the difference to the smaller share.",
+        "shortcut": "The ratio has 4 + 5 = 9 parts. One part = 36 ÷ 9 = 4 crates. The shares differ by one part, so add 4.",
+        "why_correct": "The smaller team starts with 16 crates. Adding 4 gives 20, matching the larger team.",
+        "why_wrong": {
+          "o1": "20 crates is the larger team’s existing count, not the difference.",
+          "o2": "36 crates repeats the combined amount rather than finding the one-part gap.",
+          "o3": "16 crates is what the smaller team already owns, not how many it needs."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o2": "NUM-GIVEN-REUSED",
+        "o3": "NUM-OTHER-SHARE"
+      },
+      "fact_id": "num-original-926032",
+      "theme": "barangay-crate-equalization",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926033",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "one-step linear equation",
+      "micro_skill": "undo an addition to isolate an unknown",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "easy",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A supply log shows that a delivery contained 17 folders more than the morning count. The delivery count was 49 folders. How many folders were counted in the morning?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "32 folders"
+        },
+        {
+          "option_id": "o2",
+          "text": "66 folders"
+        },
+        {
+          "option_id": "o3",
+          "text": "49 folders"
+        },
+        {
+          "option_id": "o4",
+          "text": "17 folders"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "To undo “17 more,” subtract 17 from the new amount.",
+        "shortcut": "Let the morning count be x. Then x + 17 = 49. Subtract 17: x = 32.",
+        "why_correct": "32 + 17 = 49, so 32 is the missing earlier count.",
+        "why_wrong": {
+          "o2": "66 folders adds the extra 17 rather than removing it from 49.",
+          "o3": "49 folders is the later delivery count, not the earlier count.",
+          "o4": "17 folders is just the increase, not the morning quantity."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-GIVEN-REUSED",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926033",
+      "theme": "supply-log-extra-folders",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926034",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "distributive equation",
+      "micro_skill": "undo multiplication after opening parentheses",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A craft set includes three identical bundles. Each bundle contains some beads and four spacers. Across the three bundles there are 45 pieces. How many beads are in each bundle?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "33 beads"
+        },
+        {
+          "option_id": "o2",
+          "text": "11 beads"
+        },
+        {
+          "option_id": "o3",
+          "text": "19 beads"
+        },
+        {
+          "option_id": "o4",
+          "text": "15 beads"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Each bundle has x beads plus four spacers, so three bundles mean 3(x + 4).",
+        "shortcut": "Write 3(x + 4) = 45. Divide by 3 to get x + 4 = 15. Subtract 4: x = 11.",
+        "why_correct": "Three bundles of 11 beads and 4 spacers contain 3 × 15 = 45 pieces.",
+        "why_wrong": {
+          "o1": "33 beads counts all beads across three bundles, not in one bundle.",
+          "o3": "19 beads adds the four spacers back after dividing, instead of subtracting them.",
+          "o4": "15 pieces is everything in one bundle before removing the four spacers."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o3": "NUM-OP-SWAP",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926034",
+      "theme": "craft-bundle-bead-equation",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926035",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "sum and difference",
+      "micro_skill": "solve for the larger of two unknown numbers",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Two delivery routes cover 68 kilometers in total. One route is 14 kilometers longer than the other. How long is the longer route?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "34 kilometers"
+        },
+        {
+          "option_id": "o2",
+          "text": "54 kilometers"
+        },
+        {
+          "option_id": "o3",
+          "text": "41 kilometers"
+        },
+        {
+          "option_id": "o4",
+          "text": "27 kilometers"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "When two numbers have a sum and a difference, add both to find twice the larger one.",
+        "shortcut": "Add 68 + 14 = 82. Divide by 2: 41 kilometers is the longer route.",
+        "why_correct": "The shorter route is 68 − 41 = 27; 41 − 27 = 14 kilometers.",
+        "why_wrong": {
+          "o1": "34 kilometers is the equal half before allowing for the 14-kilometer difference.",
+          "o2": "54 kilometers subtracts the difference from the total but does not split the remaining relationship.",
+          "o4": "27 kilometers is the shorter route, not the longer one."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-OP-SWAP",
+        "o4": "NUM-OTHER-SHARE"
+      },
+      "fact_id": "num-original-926035",
+      "theme": "delivery-route-sum-difference",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926036",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "consecutive even numbers",
+      "micro_skill": "find the greater of two consecutive even integers",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Two consecutive even apartment numbers add up to 78. What is the larger apartment number?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "38"
+        },
+        {
+          "option_id": "o2",
+          "text": "39"
+        },
+        {
+          "option_id": "o3",
+          "text": "42"
+        },
+        {
+          "option_id": "o4",
+          "text": "40"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Consecutive even numbers are two apart.",
+        "shortcut": "Their average is 78 ÷ 2 = 39. The numbers one below and one above 39 are 38 and 40.",
+        "why_correct": "38 + 40 = 78, and both are consecutive even numbers. The larger is 40.",
+        "why_wrong": {
+          "o1": "38 is the smaller even apartment number.",
+          "o2": "39 is the average of the two numbers, not either even apartment number.",
+          "o3": "42 is too high: the consecutive even pair ending at 42 is 40 and 42, which totals 82, not 78."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o2": "NUM-PARTIAL",
+        "o3": "NUM-EXTRA-STEP"
+      },
+      "fact_id": "num-original-926036",
+      "theme": "apartment-even-number-pair",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926051",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "linear equation with parentheses",
+      "micro_skill": "undo multiplication before isolating a value inside parentheses",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A training group prepares 3 identical sets of forms. Each set has x forms after 4 damaged forms are removed. If the three sets contain 24 usable forms in total, how many forms were in each set before the damaged forms were removed?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "8 forms"
+        },
+        {
+          "option_id": "o2",
+          "text": "12 forms"
+        },
+        {
+          "option_id": "o3",
+          "text": "4 forms"
+        },
+        {
+          "option_id": "o4",
+          "text": "28 forms"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Each set starts with the same number of forms. Four are removed from each set, leaving x usable forms per set.",
+        "shortcut": "The 24 usable forms are shared across 3 sets: 24 ÷ 3 = 8 usable forms in each set. Add back the 4 damaged forms: 8 + 4 = 12 forms originally in each set.",
+        "why_correct": "12 forms is correct. Removing 4 from each original set leaves 8, and 3 × 8 = 24 usable forms.",
+        "why_wrong": {
+          "o1": "8 forms is the number left in each set after the damaged forms are removed, not the starting number.",
+          "o3": "4 forms is the number removed from each set, not the number originally prepared.",
+          "o4": "28 forms adds the four damaged forms only once to the total of 24 usable forms, then stops before dividing the usable total among 3 sets."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o3": "NUM-GIVEN-REUSED",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926051",
+      "theme": "training-forms-damaged-sets",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT (GPT-6.1-sol; Astra content audit)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T12:00:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Original replacement for the requested basic-algebra allocation. Authored during review; remains draft/unreviewed because the author cannot independently review this item."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926038",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "fixed fee with variable cost",
+      "micro_skill": "subtract a fixed charge then divide by a unit charge",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A document binding shop charges ₱120 to set up an order and ₱35 per booklet. A group paid ₱400. How many booklets were bound?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "9 booklets"
+        },
+        {
+          "option_id": "o2",
+          "text": "8 booklets"
+        },
+        {
+          "option_id": "o3",
+          "text": "3 booklets"
+        },
+        {
+          "option_id": "o4",
+          "text": "11 booklets"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "A fixed fee is charged once; the price per booklet applies to each booklet.",
+        "shortcut": "Remove the ₱120 setup fee: ₱400 − ₱120 = ₱280. Divide ₱280 by ₱35 per booklet: 8.",
+        "why_correct": "8 booklets cost 8 × ₱35 = ₱280; with the ₱120 fee, the bill is ₱400.",
+        "why_wrong": {
+          "o1": "9 booklets adds an extra booklet after correctly dividing the variable charge by ₱35.",
+          "o3": "3 booklets divides the ₱120 setup charge by ₱35, using the wrong part of the bill.",
+          "o4": "11 booklets uses the whole ₱400 as if there were no ₱120 setup charge, then rounds down."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-EXTRA-STEP",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "fact_id": "num-original-926038",
+      "theme": "bookbinding-setup-fee",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926039",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "linear inventory with a fraction",
+      "micro_skill": "solve for an original amount from a fractional remainder",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A recycling shop sold 12 kilograms of plastic bottles. After the sale, the remaining stock was 3 kilograms more than half the starting stock. How many kilograms did it have at the start?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "24 kilograms"
+        },
+        {
+          "option_id": "o2",
+          "text": "15 kilograms"
+        },
+        {
+          "option_id": "o3",
+          "text": "30 kilograms"
+        },
+        {
+          "option_id": "o4",
+          "text": "18 kilograms"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Let x be the starting stock. After selling 12 kilograms, x − 12 remains.",
+        "shortcut": "Set x − 12 = x/2 + 3. Move half of x to the left: x/2 = 15. Double to get x = 30.",
+        "why_correct": "Starting with 30 kilograms and selling 12 leaves 18; half of 30 plus 3 is also 18.",
+        "why_wrong": {
+          "o1": "24 kilograms doubles the sold amount but leaves out the three extra kilograms in the remainder.",
+          "o2": "15 kilograms is half the original stock, not the full starting amount.",
+          "o4": "18 kilograms subtracts the three-kilogram remainder adjustment instead of adding it."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-PARTIAL",
+        "o4": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926039",
+      "theme": "recycling-bottle-stock-equation",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926040",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "combine like terms",
+      "micro_skill": "solve an equation with repeated unknowns and brackets",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A school exhibit uses two trays with x beads and 6 labels in each tray, plus a third bag with x beads only. Altogether there are 42 pieces. How many beads are in each tray?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "18 beads"
+        },
+        {
+          "option_id": "o2",
+          "text": "14 beads"
+        },
+        {
+          "option_id": "o3",
+          "text": "15 beads"
+        },
+        {
+          "option_id": "o4",
+          "text": "10 beads"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Two copies of x plus one more x make three copies of x.",
+        "shortcut": "Write 2(x + 6) + x = 42. Remove the 12 labels: 3x = 30. Divide by 3: x = 10.",
+        "why_correct": "Two trays each have 10 beads and 6 labels, plus a bag of 10 beads: 16 + 16 + 10 = 42.",
+        "why_wrong": {
+          "o1": "18 beads removes labels for just one tray and divides among only two groups.",
+          "o2": "14 beads divides all 42 pieces by three before removing the 12 labels.",
+          "o3": "15 beads divides the remaining beads between two trays but forgets the third bag."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-PARTIAL",
+        "o3": "NUM-WRONG-BASE"
+      },
+      "fact_id": "num-original-926040",
+      "theme": "school-exhibit-bead-trays",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926041",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "past ages with a fixed gap",
+      "micro_skill": "relate a past age ratio to ages today",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A speech therapist is 21 years older than a trainee. Five years ago, the therapist was four times as old as the trainee. How old is the trainee today?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "12 years"
+        },
+        {
+          "option_id": "o2",
+          "text": "33 years"
+        },
+        {
+          "option_id": "o3",
+          "text": "16 years"
+        },
+        {
+          "option_id": "o4",
+          "text": "7 years"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "An age difference stays constant when both people age by the same years.",
+        "shortcut": "Let t be the trainee’s age now. The therapist is t + 21. Five years ago: t + 16 = 4(t − 5). Solve t + 16 = 4t − 20, giving 3t = 36 and t = 12.",
+        "why_correct": "Today their ages are 12 and 33. Five years ago they were 7 and 28, and 28 is four times 7.",
+        "why_wrong": {
+          "o2": "33 years is the therapist’s age today, not the trainee’s.",
+          "o3": "16 years subtracts the five-year interval from the age gap instead of setting up the past age relationship.",
+          "o4": "7 years is the trainee’s age five years ago, not today."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OTHER-SHARE",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926041",
+      "theme": "speech-therapist-trainee-past-ages",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926042",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ages from future sum and gap",
+      "micro_skill": "undo a future total before splitting ages",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Two cousins are 6 years apart. Four years from now their ages will total 48. How old is the younger cousin today?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "23 years"
+        },
+        {
+          "option_id": "o2",
+          "text": "17 years"
+        },
+        {
+          "option_id": "o3",
+          "text": "20 years"
+        },
+        {
+          "option_id": "o4",
+          "text": "21 years"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "The age gap stays the same, but their combined age grows by two years each year.",
+        "shortcut": "Four years from now the total is 48. Today it is 48 − 8 = 40. The younger age is (40 − 6) ÷ 2 = 17.",
+        "why_correct": "Today the cousins are 17 and 23; in four years they will be 21 and 27, totaling 48.",
+        "why_wrong": {
+          "o1": "23 years is the older cousin’s present age, not the younger one.",
+          "o3": "20 years is their current average age; the younger cousin is three years below it.",
+          "o4": "21 years forgets that both cousins will each be four years older at the future date."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926042",
+      "theme": "cousins-future-age-sum",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926043",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "worker-hours production",
+      "micro_skill": "scale output using workers and hours",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Three equally fast volunteers pack 360 relief kits in 6 hours. At the same pace, how many kits can 5 volunteers pack in 4 hours?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "360 kits"
+        },
+        {
+          "option_id": "o2",
+          "text": "240 kits"
+        },
+        {
+          "option_id": "o3",
+          "text": "400 kits"
+        },
+        {
+          "option_id": "o4",
+          "text": "600 kits"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Work output at a constant pace depends on both worker count and time.",
+        "shortcut": "The first crew worked 3 × 6 = 18 volunteer-hours. Each volunteer-hour makes 360 ÷ 18 = 20 kits. New output: 5 × 4 × 20 = 400 kits.",
+        "why_correct": "Five volunteers working four hours provide 20 volunteer-hours, 2 more than before, so 400 is reasonable.",
+        "why_wrong": {
+          "o1": "360 kits simply repeats the production of the first crew instead of adjusting workers and time.",
+          "o2": "240 kits scales down to four hours but keeps only the original three volunteers.",
+          "o4": "600 kits accounts for five volunteers but keeps the original six-hour shift."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-GIVEN-REUSED",
+        "o2": "NUM-PARTIAL",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926043",
+      "theme": "relief-kit-volunteer-hours",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926044",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "combined water-pump rates",
+      "micro_skill": "add job fractions completed per hour",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "One pump empties a pond in 8 hours. Another pump can empty the same pond in 12 hours. If both operate together from the start, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "10 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "6 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "20 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "4 4/5 hours"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Two pumps working together add the parts of a pond they empty each hour.",
+        "shortcut": "In one hour they empty 1/8 + 1/12 = 5/24 of the pond. Total hours = 24/5 = 4 4/5 hours.",
+        "why_correct": "4 4/5 hours × 5/24 pond per hour = one whole pond. Both pumps finish faster than either pump alone.",
+        "why_wrong": {
+          "o1": "10 hours averages the completion times and is slower than the faster pump alone.",
+          "o2": "6 hours assumes two pumps each work at the slower pump’s rate; their actual rates differ.",
+          "o3": "20 hours adds the individual completion times instead of adding their hourly work rates."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o2": "NUM-WRONG-BASE",
+        "o3": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926044",
+      "theme": "two-pond-drain-pumps",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926045",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "travel time at constant speed",
+      "micro_skill": "convert mixed hours to speed and trip time",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A provincial bus covers 72 kilometers in 1 1/2 hours at a steady speed. How many hours will it need to travel 120 kilometers at the same speed?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "2 1/2 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "0.9 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "48 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "1 1/2 hours"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Speed equals distance divided by time; time equals distance divided by speed.",
+        "shortcut": "Speed: 72 ÷ 1 1/2 = 48 km/h. For 120 km, time is 120 ÷ 48 = 2 1/2 hours.",
+        "why_correct": "48 km/h × 2 1/2 hours = 120 km, matching the distance.",
+        "why_wrong": {
+          "o2": "0.9 hour reverses the distance ratio, making a longer trip take less time.",
+          "o3": "48 hours mistakes the bus speed, 48 kilometers per hour, for a travel time.",
+          "o4": "1 1/2 hours repeats the time for the shorter 72-kilometer trip without increasing the time for the longer 120-kilometer trip."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-UNIT",
+        "o4": "NUM-GIVEN-REUSED"
+      },
+      "fact_id": "num-original-926045",
+      "theme": "provincial-bus-longer-trip",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926046",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "average speed with equal distances",
+      "micro_skill": "use total distance divided by total time",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A delivery van travels 50 kilometers at 50 km/h, then another 50 kilometers at 25 km/h. What is the average speed for the entire 100-kilometer trip?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "100 km/h"
+        },
+        {
+          "option_id": "o2",
+          "text": "33 1/3 km/h"
+        },
+        {
+          "option_id": "o3",
+          "text": "37 1/2 km/h"
+        },
+        {
+          "option_id": "o4",
+          "text": "50 km/h"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Average speed is total distance divided by total travel time.",
+        "shortcut": "First 50 km takes 1 hour. Second 50 km takes 2 hours. Total: 100 km in 3 hours, so 100 ÷ 3 = 33 1/3 km/h.",
+        "why_correct": "At 33 1/3 km/h, three hours cover 100 km. The slower portion lowers the overall speed.",
+        "why_wrong": {
+          "o1": "100 km/h repeats the total distance as if it were a speed.",
+          "o3": "37 1/2 km/h takes the simple average of two speeds even though the slow segment takes longer.",
+          "o4": "50 km/h is only the speed on the first segment."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-GIVEN-REUSED",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926046",
+      "theme": "delivery-van-two-speed-segments",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926047",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "unit profit",
+      "micro_skill": "subtract unit cost before multiplying sales",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A campus kiosk sells 18 prepaid study cards for ₱35 each. Each card costs the kiosk ₱22. What is its total profit on these sales?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱396"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱13"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱234"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱630"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Profit is selling price minus cost. Total profit is profit per item times number sold.",
+        "shortcut": "Each card earns ₱35 − ₱22 = ₱13. On 18 cards, profit is 18 × ₱13 = ₱234.",
+        "why_correct": "Revenue ₱630 minus cost ₱396 equals ₱234 profit.",
+        "why_wrong": {
+          "o1": "₱396 is the kiosk’s cost, not the profit.",
+          "o2": "₱13 is the profit on one card, not all eighteen cards.",
+          "o4": "₱630 is the revenue before subtracting the cost of the cards."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o2": "NUM-PARTIAL",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926047",
+      "theme": "campus-prepaid-study-card-profit",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926048",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "change from a purchase budget",
+      "micro_skill": "subtract multiple purchase costs from a budget",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A school club has ₱1,200 for refreshments. It buys 18 sandwiches at ₱45 each and 6 water bottles at ₱25 each. How much money is left?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱390"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱150"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱960"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱240"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "When finding change, add all purchases first and subtract from the starting budget.",
+        "shortcut": "Sandwiches: 18 × ₱45 = ₱810. Water: 6 × ₱25 = ₱150. Spend ₱960 in all. Left: ₱1,200 − ₱960 = ₱240.",
+        "why_correct": "₱240 left plus ₱960 spent equals the original ₱1,200 budget.",
+        "why_wrong": {
+          "o1": "₱390 is the money left after sandwiches, before paying for bottled water.",
+          "o2": "₱150 is the water cost, not the money left.",
+          "o3": "₱960 is the total amount spent, not the unspent budget."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-OTHER-SHARE",
+        "o3": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926048",
+      "theme": "school-club-refreshment-budget",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-AVERAGE-926049",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "weighted cost of a mixture",
+      "micro_skill": "calculate cost per kilogram using total value and weight",
+      "archetype": "NUM-WP-AVERAGE",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A rice cooperative blends 3 kilograms of grain costing ₱45 per kilogram with 2 kilograms costing ₱60 per kilogram. What is the average cost per kilogram of the mixture?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱51 per kilogram"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱255 per kilogram"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱52.50 per kilogram"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱105 per kilogram"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A weighted average divides the total cost by the total quantity.",
+        "shortcut": "First grain costs 3 × ₱45 = ₱135. Second costs 2 × ₱60 = ₱120. Total ₱255 for 5 kg. Divide: ₱255 ÷ 5 = ₱51 per kg.",
+        "why_correct": "₱51 × 5 kg = ₱255, the total purchase cost.",
+        "why_wrong": {
+          "o2": "₱255 is the cost of all five kilograms, not the average cost of one kilogram.",
+          "o3": "₱52.50 averages the two prices without weighting them by the different kilograms.",
+          "o4": "₱105 adds the two price tags rather than computing a price per kilogram."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-PARTIAL",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926049",
+      "theme": "rice-grain-blend-unit-cost",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-926050",
+      "track": "sub",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "dilute a liquid mixture",
+      "micro_skill": "preserve dissolved amount while changing total volume",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A 20-liter salt solution is 10% salt by volume. Pure water is added until the solution is 8% salt. How many liters of water were added?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "2 liters"
+        },
+        {
+          "option_id": "o2",
+          "text": "5 liters"
+        },
+        {
+          "option_id": "o3",
+          "text": "4 liters"
+        },
+        {
+          "option_id": "o4",
+          "text": "25 liters"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Adding pure water changes the total volume but not the amount of salt already dissolved.",
+        "shortcut": "Salt initially: 10% of 20 = 2 liters. After dilution, 2 liters is 8% of the whole. New volume: 2 ÷ 0.08 = 25 liters. Add 25 − 20 = 5 liters.",
+        "why_correct": "The diluted 25 liters contains 2/25 = 8% salt, so adding 5 liters works.",
+        "why_wrong": {
+          "o1": "2 liters is the unchanged salt volume, not the added water.",
+          "o3": "4 liters takes 20% of the original volume instead of using the new 8% concentration.",
+          "o4": "25 liters is the final volume of the diluted solution, not just the water added."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926050",
+      "theme": "salt-solution-dilution",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "reviewed",
+      "review_status": "passed",
+      "reviewer": "ASTRA (GPT-6.1-sol, independent content review)",
+      "reviewed_at": "2026-10-22T12:00:00+08:00",
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Fresh draft. Author math checks are not independent CoS approval. Source reviewers used as competency-pattern references only."
+    }
+  ]
+}

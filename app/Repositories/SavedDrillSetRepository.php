@@ -26,8 +26,8 @@ class SavedDrillSetRepository extends BaseRepository implements SavedDrillSetRep
     {
         return $this->model->newQuery()
             ->where('user_id', $userId)
-            ->withCount('questions')
-            ->with(['questions.subcategory.category'])
+            ->withCount(['questions' => fn ($q) => $q->where('status', 'active')])
+            ->with(['questions' => fn ($q) => $q->where('status', 'active')->with('subcategory.category')->limit(100)])
             ->orderBy('id', 'desc')
             ->get();
     }
@@ -100,6 +100,7 @@ class SavedDrillSetRepository extends BaseRepository implements SavedDrillSetRep
         return $set->questions()
             ->where('status', 'active')
             ->with(['subcategory.category'])
+            ->limit(300)
             ->get();
     }
 

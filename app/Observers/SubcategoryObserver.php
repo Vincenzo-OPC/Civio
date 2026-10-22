@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Models\Subcategory;
+use App\Services\Bank\BankImportLedger;
 use Illuminate\Support\Facades\Cache;
 
 class SubcategoryObserver
@@ -36,6 +37,12 @@ class SubcategoryObserver
      */
     private function clearCache(): void
     {
+        if (BankImportLedger::importing()) {
+            BankImportLedger::invalidate();
+
+            return;
+        }
+
         Cache::forget('questions.all');
         Cache::forget('questions.active');
         Cache::forget('categories.tree');

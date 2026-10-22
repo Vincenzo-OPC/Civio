@@ -53,9 +53,8 @@ export default function About() {
 
                     <section className="flex flex-col gap-3 text-sm leading-relaxed">
                         <p>
-                            You can study without an account. Dexter is the
-                            tutor in the app. He checks an item against its
-                            stored key. He does not speak for the Commission.
+                            You can study without an account. A stored-answer
+                            check is not a conversation.
                         </p>
                         <p>
                             The questions are written for practice. They are not

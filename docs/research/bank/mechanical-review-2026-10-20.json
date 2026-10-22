@@ -1,0 +1,1462 @@
+{
+  "warning": "Heuristic results on file occurrences; not mathematical, factual or editorial approval. No legal-source verification was run.",
+  "tool": {
+    "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+    "path": "scripts/batches/audit/explanation_lint.py",
+    "sha256": "8a921f5e0f67c3dfdaaaf7190e73c2e4fd475618325f59ef83f67ff48c6af5a5"
+  },
+  "inventory_summary": {
+    "artifact_count": 143,
+    "item_occurrences": 4276,
+    "identity_groups": 3705,
+    "conflicting_identity_groups": 294,
+    "flag_occurrences": {
+      "placeholder-or-generic-explanation": 592,
+      "identity-mapping-required": 1673,
+      "duplicate-options": 2
+    },
+    "runtime_count": "NOT VERIFIED",
+    "independently_approved_release_count": "NOT ESTABLISHED"
+  },
+  "artifacts": [
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-001.json",
+      "sha256": "f6c73c2f0ffbfd08cc3b83d1e591870c9fe9e1f70c9b1eab557224c7f309296e",
+      "item_occurrences": 10,
+      "declared_statuses": {
+        "approved": 10
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-001.md",
+      "sha256": "2fd1d3e6b1e4b585330a4d51a813f2e9e5faed31540c041ccffb9f01364f12a0"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-002.json",
+      "sha256": "4330194a8e358bb94286b237b37a8375fa130db345a1cae36577205e9f021d16",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-002.md",
+      "sha256": "3994daf5f3104fb54061630b5c43862950476e7767a82ec7e71d6774ffcb31dd"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-003.json",
+      "sha256": "8389676d28b94bbc91a09acd912a46bce7746ddf1693c22188d8aa1b10c08a04",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-003.md",
+      "sha256": "67b6b6a34c9837c8820e9ee45956628a4f1fff6e8cdc3a0eec9c7e1eb7c2deef"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-004.json",
+      "sha256": "3c1da34b600530c67819f161ea29a966e9e6cff8888d6781a1d4674f662c51dd",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-004.md",
+      "sha256": "88252962be742ae050685900a6bfe897b2a1a892e243ef93ef6550995b5f3ec4"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-005.json",
+      "sha256": "35ab03d8be9c79ec19798be72f349a17a3f91ec60fc20fc5e6116e96c25c30fb",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-005.md",
+      "sha256": "74e7d5e6b23d9ada6261882505eacd80c23f358a3daee1e6e37cfdddce3bcf18"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-006.json",
+      "sha256": "e52612234f3ce0281682863c1c3a5a7b01dd892c2d58dd2cc0534803d2aae1f3",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-006.md",
+      "sha256": "f04610c5602e797d818578dd0b021d9e4e5d490ce2a90a877962e809095d5686"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-007.json",
+      "sha256": "a6efe60092ced27eda1a5b33d105a7508beb843a0ddd3dc9a531006a96ec11a9",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-007.md",
+      "sha256": "05e8800de05af062ee980c8a26dcc5e67c5641695ccde636287827f482109d37"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-008.json",
+      "sha256": "833c999aa57ef5ed79f379af65018d7dbd7169f5be9819110583d819cad81507",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-008.md",
+      "sha256": "f30a0fe8d3d2bc4341edf97a403af9fdc7b6f2f20d0123baeae393479462fd24"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-009.json",
+      "sha256": "842a4a9dfdb29750ac45c21d56fffe9260d328751b7e1b1e8eb1f892c2b3141d",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-009.md",
+      "sha256": "adfc61cef8d6a536fb417a00130ca28d8a0d9fb87c847d0868ac9fce7c18d4bb"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-010.json",
+      "sha256": "911659c41f957a0b829185f8a5b63e8b63b80acf2e72c7edc45c94baf19500a5",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-010.md",
+      "sha256": "a920c205eb4968fa102b1e73849d7b186223a4c045cf35fa9ade5eb739b21883"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-011.json",
+      "sha256": "a4c7a1224b9aa0f153971af235b9c898e2f3dc918915de8852d669ef42b6311f",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-011.md",
+      "sha256": "371c7bd4afd274407f121ea2c497a5e76ff9a3490bf237e8499d4603447f00d5"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/render.py",
+      "sha256": "636b5241b12906ca23bb4856048b6fe1ae2061ed5bae05690f308d7247e80aa3"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/AUDIT_TRACKER.md",
+      "sha256": "8de65d4bffce41ea068b8ab31851ca486963f5bfdfb1171ff9af45f482e9df81"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/BETTERGOV_QUIZ_CSE_REVIEW_2026-10-18.md",
+      "sha256": "791574df44026844aa9d83191a0016b2b84667eebfeadd77346ed6c0ce2b8bed"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/CHATGPT_GI_DEEP_RESEARCH_2026-10-16.md",
+      "sha256": "0414d473d7bb4b4cd022061d5becea6e91553ceb8270c59b81e431d4a410d4af"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/CHATGPT_NEXT_PROMPT.md",
+      "sha256": "3ec6159aeac69808e09d20bfe866078b80455b72b83d3e700122819a725c18a0"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/CIVIO_MASTER_RESEARCH_AND_1160_QUESTIONS_2026-10-13.md",
+      "sha256": "511ec29263cda633e2d6ba223157be4dd248e89764bc1e5475e716987181b67d"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/MILESTONE_2000_PLAN.md",
+      "sha256": "ca5846a2797f1b4e783b497bacf2fe163f61cc344017a272774c20cc41493dff"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/SUBPROFESSIONAL_BUILD_AUDIT_2026-10-13.md",
+      "sha256": "a79e9fc14e47d0ef3a8c1568739227bac8a9fb10f4225dfdabdd29df3de5182e"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/COVERAGE_GAP_MAP.md",
+      "sha256": "8e928368202397bd577e987ad3e43e9891cd2cf4b804b55f61dcc7938bdd3618"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+      "sha256": "1aa2206db280b88e4877513789237cfd8026690b40d2b28f549eb249d09856a7",
+      "item_occurrences": 550,
+      "declared_statuses": {
+        "unspecified": 550
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/fixes/round-03-baseline-b1-spelling-swaps.json",
+      "sha256": "0bfb003b314ffd2012342ecf9df8efff403699f4186a05520b6d88f44d5a3609"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/fixes/round-03-baseline-b1b2-cos.json",
+      "sha256": "6dc2c654f13af741d2a278a9dbb65ae99b41a744ab486a7745f7fb79f8f79c83"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-01-fixes.md",
+      "sha256": "d8a597615f2cc2d5c1dd2621b06e393415af53e897832b4b37ab77bfcd90dc16"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-01-review-request.md",
+      "sha256": "926e8855428a53c9a40b6fef75187bd1da2aedba9a20051f54dde30e770f7080"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-01.md",
+      "sha256": "dde4fe4ef86e4832f93d4afb61929c189af707fd60bdac902bd4c8c011cd19d8"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-02-fixes-review-request.md",
+      "sha256": "65c5fb0d16ad6e0636b8326f71a39c588652bf41654c0b75e99058241a38267c"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-02-fixes.md",
+      "sha256": "88eb87f1878d2b34eee81bd1eee4b743b7a4b3eab4acb001e36584530b3ae50c"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-02-review-request.md",
+      "sha256": "081269c39d4fa91393b3731b9615824302f9c8e687549d4e8d7adba0cb352c42"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-02.md",
+      "sha256": "8af5dc25c03cc9e5436fb4746cbe4fd27bda2eb40bfe554051b39c76002b0de7"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-03-baseline-b1-clerical-review-request.md",
+      "sha256": "f48547372a90b59314dca207c0631e6f14a659116b5dd5e71b6ae37cbe4c1ac1"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-03-baseline-b2-gi-review-request.md",
+      "sha256": "801852a6376049eb84274c4d03f871e8671a96d7547a91357654c7965ba632c7"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-03-chatgpt-001-review-request.md",
+      "sha256": "bd8ff2d4a440774d0e31fb452b8a1454ffc6ff3fbe9df416bd37585134b2b99b"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-03-chatgpt-002-review-request.md",
+      "sha256": "5e5a402ec900fffd5ca60c39d92bc48725b2effaa926d7f04396a29097f7f868"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-03-chatgpt-003-review-request.md",
+      "sha256": "e6392930a9b96b627e093b75a7cd549633988186800b80720e3d26cb929e8173"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-03-cos-verdict-2026-10-17.md",
+      "sha256": "bd5cb6003b7418df1f774f4a281d1c74210e6d11e75c4312ee3f027d370c3779"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-03-gap-fill-004-review-request.md",
+      "sha256": "4732692dc188368a91567dd54929e177e5ae25cf813e4ddf9df62bd5ff865640"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/round-03-gap-fill-005-review-request.md",
+      "sha256": "ff095a2e49933c4a1c985eeb5016fd212c13d0092bbe606f85ce33d693f012b7"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/chatgpt-batch-001.json",
+      "sha256": "7b71cf0eb2208ea43de7a6b7ab0017af1cc69d1e44c1b0d4e06c2c512aa2f30f",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 100
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/chatgpt-batch-002.json",
+      "sha256": "540566273c230d701f02eb5666d29191c7239c591591203e382b9b69f41d2de0",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "draft": 88,
+        "approved": 12
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/chatgpt-batch-003.json",
+      "sha256": "974095506d7b72e5a68d7d98988b3689026a4a136e0f571ccad9effd721dd095",
+      "item_occurrences": 100,
+      "declared_statuses": {
+        "approved": 89,
+        "draft": 11
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/filipino-supplement-001.json",
+      "sha256": "7d591be27c25e3e76679dabfb69d91f74d4eeed279eb5ad109ec50129df901f7",
+      "item_occurrences": 80,
+      "declared_statuses": {
+        "approved": 80
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/gap-fill-001.json",
+      "sha256": "74d51094384fc2a84a19ed85ab9fc8ed0a026108df0839113a815b1ed0cab341",
+      "item_occurrences": 23,
+      "declared_statuses": {
+        "approved": 23
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/gap-fill-002.json",
+      "sha256": "6c24855b9086dc478f2537cafa7c35764e1b62c96d00ee659ced40819a2202dd",
+      "item_occurrences": 14,
+      "declared_statuses": {
+        "approved": 14
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/gap-fill-003.json",
+      "sha256": "5437c428bb5c9d3ce7916333b7f92ba70ca7a486da62c4b03323e17c85719364",
+      "item_occurrences": 10,
+      "declared_statuses": {
+        "approved": 10
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/gap-fill-004.json",
+      "sha256": "2b2c5cb6f8cb9332133a5b5585f643e8fb8b2b636582ee6b7803f9b4d3ab06ba",
+      "item_occurrences": 10,
+      "declared_statuses": {
+        "approved": 10
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/gap-fill-005.json",
+      "sha256": "1915740f18d987c20eda6adf7723de7d50be0079b5599f1d838fc3456432180a",
+      "item_occurrences": 60,
+      "declared_statuses": {
+        "approved": 60
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/round-02-fixes.json",
+      "sha256": "3d3d75dd8200f2d7363aa9654aca98b70042c1a8ed3b26e210f65214cc9dd217",
+      "item_occurrences": 178,
+      "declared_statuses": {
+        "approved": 178
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/sentinel/DOSSIER_2026-10-17.md",
+      "sha256": "2c40999eb688a4a7f759307662a6f1e175e2e7727eeb0449b9588271f52d24a4"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/sentinel/README.md",
+      "sha256": "4dbdff7e52db81f47e135c61d2981eedf7e5206cc504de14314ebb5e13d25197"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/shortcuts-num-001.json",
+      "sha256": "6fb8fac77a3168484d20e4c8e327ad8416e70f17b1ec5c282a28eab1cb484c0c"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/subprofessional-clerical-supplement-001.json",
+      "sha256": "0dce9bbb0ae8924ebe0de4948d20e59434b2cf1e3e1c31dcbda247659b0d4369",
+      "item_occurrences": 40,
+      "declared_statuses": {
+        "approved": 40
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/subprofessional-general-info-supplement-001.json",
+      "sha256": "e0dd05576e4ce42815e504d57d2fab212aa201c17e9e7babe06b60524ef4a4a2",
+      "item_occurrences": 30,
+      "declared_statuses": {
+        "approved": 30
+      }
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/supplement-001-review.md",
+      "sha256": "c2aed9d996162c1dabda48a6a51e001ca20349ea4456491e73719005b8003962"
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "scripts/seeds/baseline_reparameterized.json",
+      "sha256": "e017ca5c37d78b13b3e9c6a8d8b5db905df93e8632a13d9160f5e5a138afaacd",
+      "item_occurrences": 496,
+      "declared_statuses": {
+        "unspecified": 496
+      }
+    },
+    {
+      "source": "open-pr-3",
+      "commit": "bee7f22dde80ed9b407aed5bc0afbcafd0c25d64",
+      "path": "scripts/batches/qa.py",
+      "sha256": "3fd99ad8eb2ca01e59a4edf13ad298b368b67b251bce91981802cfbebc4905ce"
+    },
+    {
+      "source": "open-pr-3",
+      "commit": "bee7f22dde80ed9b407aed5bc0afbcafd0c25d64",
+      "path": "scripts/batches/qa_file.py",
+      "sha256": "c04f6135bde2d41d169547fcff47a3282ed8c09137ac751e8da9503be9395f5a"
+    },
+    {
+      "source": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "path": "docs/research/AUDIT_TRACKER.md",
+      "sha256": "4e13a84ca67424db2ddefb9c5c4412fadd9e08522ba82676cfe8f1e89b60fb40"
+    },
+    {
+      "source": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "path": "docs/research/audit/data/baseline-b3-explanation-lint-2026-10-18.csv",
+      "sha256": "9d3cb06690845a766f27fe12da2820b32a48f354b5a5182c4af14d9a5c9848db"
+    },
+    {
+      "source": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "path": "docs/research/audit/data/baseline-b3-numerical-keys-2026-10-18.csv",
+      "sha256": "e3403db48443d06d728817c089a83e0ea2bcc7a0af5d716954646d8442a87617"
+    },
+    {
+      "source": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "path": "docs/research/audit/data/baseline-b3-verdicts-2026-10-18.csv",
+      "sha256": "146c2763bba770cc5c960aeed03ecfa80e099c342eba89dd34faa2d68fbba8e2"
+    },
+    {
+      "source": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "path": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
+      "sha256": "b998681bf9ed280022c8a71cf0d123b39b91e24aff67e13543e2f2b6806b92c3",
+      "item_occurrences": 44,
+      "declared_statuses": {
+        "draft": 44
+      }
+    },
+    {
+      "source": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "path": "docs/research/audit/round-03-baseline-b3-review-request.md",
+      "sha256": "c2396a3eb736cbc55645588863bcf9cf6c8c69e1bf329c5aee8b5ee7645ea6c9"
+    },
+    {
+      "source": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "path": "scripts/batches/audit/b3_numcheck.py",
+      "sha256": "329d1f172a49b2a7f9a559ef196158e8216855b62118ecfb1ca00c02b47fd06c"
+    },
+    {
+      "source": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "path": "scripts/batches/audit/baseline_b3.py",
+      "sha256": "9dbe8ad2b6ee947ba05803aa8ea43639513adfb4f615567d03abca24548f60c0"
+    },
+    {
+      "source": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "path": "scripts/batches/audit/explanation_lint.py",
+      "sha256": "8a921f5e0f67c3dfdaaaf7190e73c2e4fd475618325f59ef83f67ff48c6af5a5"
+    },
+    {
+      "source": "open-pr-5",
+      "commit": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+      "path": "docs/research/AUDIT_TRACKER.md",
+      "sha256": "6256b83d8039c99e0d95d2902e263f0e18c0125eaa47f92ce239a233e4ff12bc"
+    },
+    {
+      "source": "open-pr-5",
+      "commit": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+      "path": "docs/research/audit/data/baseline-b4-numerical-keys-2026-10-18.csv",
+      "sha256": "e7d9000a7ea8958f0dc4277c521cc9cdc98059948439899b6aa710ff1188a452"
+    },
+    {
+      "source": "open-pr-5",
+      "commit": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+      "path": "docs/research/audit/data/baseline-b4-verdicts-2026-10-18.csv",
+      "sha256": "56f5a75435e7a7c80a3af1113db94b9d1ab71a7230d4226fecd8d8e4695ee20a"
+    },
+    {
+      "source": "open-pr-5",
+      "commit": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+      "path": "docs/research/audit/fixes/round-03-baseline-b4-drafts.json",
+      "sha256": "09d238b1aebc1f6326a3254eab767631120455c7c444ec9e7102a235d3a29b9a",
+      "item_occurrences": 5,
+      "declared_statuses": {
+        "draft": 5
+      }
+    },
+    {
+      "source": "open-pr-5",
+      "commit": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+      "path": "docs/research/audit/gap-2000-2026-10-18.md",
+      "sha256": "7ef2fd26d08a494798e67aca8e11a56939bdef7aa5d500583ad735ca75936b81"
+    },
+    {
+      "source": "open-pr-5",
+      "commit": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+      "path": "docs/research/audit/round-03-baseline-b4-review-request.md",
+      "sha256": "a9afc7f09e024fafcab1e983cf506dda2ceb993b0455a3d1d42e2258e30e301d"
+    },
+    {
+      "source": "open-pr-5",
+      "commit": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+      "path": "scripts/batches/audit/baseline_b4.py",
+      "sha256": "77c5a9c17e02d26a24297c12605750d104e90c173fb3a0c32f3df03a71eb4506"
+    },
+    {
+      "source": "open-pr-5",
+      "commit": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+      "path": "scripts/batches/audit/explanation_lint.py",
+      "sha256": "8a921f5e0f67c3dfdaaaf7190e73c2e4fd475618325f59ef83f67ff48c6af5a5"
+    },
+    {
+      "source": "open-pr-6",
+      "commit": "8edb2cfcd95fd71a376360ee327f673cda484c9f",
+      "path": "docs/research/AUDIT_TRACKER.md",
+      "sha256": "09a2a2ba5f86e7dfee56d22288425caea20846e27987e904436c3864aac143a3"
+    },
+    {
+      "source": "open-pr-6",
+      "commit": "8edb2cfcd95fd71a376360ee327f673cda484c9f",
+      "path": "docs/research/audit/baseline-550-spec-qa-2026-10-18.md",
+      "sha256": "2a3a43cb4ce9cf73625412f6fd64eda21747863dcabb9a243ffbd157d7762d3d"
+    },
+    {
+      "source": "open-pr-6",
+      "commit": "8edb2cfcd95fd71a376360ee327f673cda484c9f",
+      "path": "docs/research/audit/data/baseline-550-explanation-lint-2026-10-18.csv",
+      "sha256": "5d218c54c94748fd71353e14eb1b813b0f0a6045deac01123e5d44eab742f7b3"
+    },
+    {
+      "source": "open-pr-6",
+      "commit": "8edb2cfcd95fd71a376360ee327f673cda484c9f",
+      "path": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+      "sha256": "55ee84280665386ea39278ab58f9e032f3d499ce9af9225990b3e78e8de228cb",
+      "item_occurrences": 550,
+      "declared_statuses": {
+        "draft": 550
+      }
+    },
+    {
+      "source": "open-pr-6",
+      "commit": "8edb2cfcd95fd71a376360ee327f673cda484c9f",
+      "path": "scripts/batches/audit/baseline_convert.py",
+      "sha256": "35502c9abdb9a82e3e174cf9b8c07dab93269114e2b52fdae324b36c44aec1b7"
+    },
+    {
+      "source": "open-pr-6",
+      "commit": "8edb2cfcd95fd71a376360ee327f673cda484c9f",
+      "path": "scripts/batches/audit/explanation_lint.py",
+      "sha256": "8a921f5e0f67c3dfdaaaf7190e73c2e4fd475618325f59ef83f67ff48c6af5a5"
+    },
+    {
+      "source": "open-pr-7",
+      "commit": "749fcf9a3dfa4b8c4e8b461f16140a6c316710c2",
+      "path": "docs/research/AUDIT_TRACKER.md",
+      "sha256": "97cd65c87aa274f2470dbdc59da6499b4362d891423bf34c0c20a203fbaa78fd"
+    },
+    {
+      "source": "open-pr-7",
+      "commit": "749fcf9a3dfa4b8c4e8b461f16140a6c316710c2",
+      "path": "docs/research/audit/gap-2000-2026-10-18.md",
+      "sha256": "7ef2fd26d08a494798e67aca8e11a56939bdef7aa5d500583ad735ca75936b81"
+    },
+    {
+      "source": "open-pr-7",
+      "commit": "749fcf9a3dfa4b8c4e8b461f16140a6c316710c2",
+      "path": "docs/research/audit/gap-fill-2000-01-review-request.md",
+      "sha256": "48775e396e6ddd22bba085236127b9dac562c7ae518a516d63c0eaa0180640f7"
+    },
+    {
+      "source": "open-pr-7",
+      "commit": "749fcf9a3dfa4b8c4e8b461f16140a6c316710c2",
+      "path": "docs/research/gap-fill-2000-01.json",
+      "sha256": "a1b7efb520f6a6954fa552fa2bf4884b7c0d04f4624ac68bb687b0fef3ee5733",
+      "item_occurrences": 99,
+      "declared_statuses": {
+        "draft": 99
+      }
+    },
+    {
+      "source": "open-pr-7",
+      "commit": "749fcf9a3dfa4b8c4e8b461f16140a6c316710c2",
+      "path": "docs/research/release/MERGE_ORDER_2000.md",
+      "sha256": "32825637050c83fed3d796be5278d3a0f578d025d6717e0d2bbe837fbeafd275"
+    },
+    {
+      "source": "open-pr-7",
+      "commit": "749fcf9a3dfa4b8c4e8b461f16140a6c316710c2",
+      "path": "scripts/batches/audit/explanation_lint.py",
+      "sha256": "8a921f5e0f67c3dfdaaaf7190e73c2e4fd475618325f59ef83f67ff48c6af5a5"
+    },
+    {
+      "source": "open-pr-7",
+      "commit": "749fcf9a3dfa4b8c4e8b461f16140a6c316710c2",
+      "path": "scripts/batches/gapfill/gap_fill_2000_01.py",
+      "sha256": "4a608445868f83b24569d48e8fb1cddfca951ef57c2c6cc24655db809fbed9dc"
+    },
+    {
+      "source": "open-pr-7",
+      "commit": "749fcf9a3dfa4b8c4e8b461f16140a6c316710c2",
+      "path": "scripts/batches/release/release_manifest.py",
+      "sha256": "578c2a8bd0e82f2543885e36c7c8569c23a1dd55b201ad2b11687708832bbf06"
+    },
+    {
+      "source": "open-pr-8",
+      "commit": "5fd89f9dd0a5a3592f682187c9b7db07b37b6757",
+      "path": "docs/research/AUDIT_TRACKER.md",
+      "sha256": "dc0de43ca088feae34ddb9eb9ea311fa4866fcd775412720944781a9b9e4ad52"
+    },
+    {
+      "source": "open-pr-8",
+      "commit": "5fd89f9dd0a5a3592f682187c9b7db07b37b6757",
+      "path": "docs/research/audit/gap-fill-2000-02-review-request.md",
+      "sha256": "9fbc8466ff0120cd43c33fd5c760b2b5aa5a85e65317165d4d7d5d93a215a009"
+    },
+    {
+      "source": "open-pr-8",
+      "commit": "5fd89f9dd0a5a3592f682187c9b7db07b37b6757",
+      "path": "docs/research/gap-fill-2000-02.json",
+      "sha256": "02a79a420a0c988291727d5377dea679cbe146168db7f4af390738ef3a7d0a3e",
+      "item_occurrences": 108,
+      "declared_statuses": {
+        "draft": 108
+      }
+    },
+    {
+      "source": "open-pr-8",
+      "commit": "5fd89f9dd0a5a3592f682187c9b7db07b37b6757",
+      "path": "scripts/batches/gapfill/gap_fill_2000_02.py",
+      "sha256": "9d34905f7ef516f53ea537f4108d0c852efef57e51b2f5550f1b4ae03db45e10"
+    },
+    {
+      "source": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "path": "docs/research/audit/gap-fill-2000-03-review-request.md",
+      "sha256": "75e76fe8e30f251819aa3ec969eb68db0ea0140186804eae77c0c7af30342698"
+    },
+    {
+      "source": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "path": "docs/research/gap-fill-2000-03.json",
+      "sha256": "b279fff82b0e2d2c56ce8ea9d77758c22541db4c496b2f2091c15f9e56978cf5",
+      "item_occurrences": 101,
+      "declared_statuses": {
+        "draft": 101
+      }
+    },
+    {
+      "source": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "path": "scripts/batches/audit/explanation_lint.py",
+      "sha256": "8a921f5e0f67c3dfdaaaf7190e73c2e4fd475618325f59ef83f67ff48c6af5a5"
+    },
+    {
+      "source": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "path": "scripts/batches/di_grid.py",
+      "sha256": "10d43316a4769a17f71852576aa33765354640e48bdc248845e76234d9c35f87"
+    },
+    {
+      "source": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "path": "scripts/batches/gapfill/gap_fill_2000_03.py",
+      "sha256": "ef00183d4417a3e090b686d29e39305c6c6bcf2c41d8ac44ac7eb9d1efa03ff7"
+    },
+    {
+      "source": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "path": "scripts/batches/gapfill/gf03_analogies.py",
+      "sha256": "10dd7d174f61d233433c59f35c073da180852945b82b536a6c568ed742fd3ef4"
+    },
+    {
+      "source": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "path": "scripts/batches/gapfill/gf03_di.py",
+      "sha256": "a14f7b2e635e4a479adf9f141f49395392cd862eaeb38f01c892d7b4864e5b93"
+    },
+    {
+      "source": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "path": "scripts/batches/qa.py",
+      "sha256": "ed0406a7b785279246d9e601389ba5de30a46dfd4cc24469a4a3554d670ea7b6"
+    },
+    {
+      "source": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "path": "scripts/batches/release/release_manifest.py",
+      "sha256": "578c2a8bd0e82f2543885e36c7c8569c23a1dd55b201ad2b11687708832bbf06"
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "docs/research/audit/gap-fill-2000-04-review-request.md",
+      "sha256": "fe0f66db11d1f8501a83dd7d7327e853479455e0885fd17df7eac17b9a017a17"
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "docs/research/gap-fill-2000-04.json",
+      "sha256": "3196e25047f64f520e433a8fc4bd395a388fed0d616105cf55caade89a604d48",
+      "item_occurrences": 83,
+      "declared_statuses": {
+        "draft": 83
+      }
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "scripts/batches/arma_solver.py",
+      "sha256": "3341c96e0b194b002996ae91986e1642133b7f73dc86fe1c343d2f757cf6ba44"
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "scripts/batches/audit/explanation_lint.py",
+      "sha256": "8a921f5e0f67c3dfdaaaf7190e73c2e4fd475618325f59ef83f67ff48c6af5a5"
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "scripts/batches/gapfill/gap_fill_2000_04.py",
+      "sha256": "a2ba0de3d791570a2bd6af0beecf3b059ed773bd934b6bf7e92e6bb8f73cd8ab"
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "scripts/batches/gapfill/gf04_filing.py",
+      "sha256": "1f8124fd125276e93d6613e954ce9913d9181771a363700e977ba8dc9e45a977"
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "scripts/batches/gapfill/gf04_filing_data.py",
+      "sha256": "899a9dc92c7cc39c5c53b12a7c968debefd1065e857e490b5a99a7ac45e35383"
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "scripts/batches/gapfill/gf04_ra6713.py",
+      "sha256": "636ee66e5c06faf7d5df2e5c89802748affc823da363f63fb0fa73cef5a0f20b"
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "scripts/batches/qa.py",
+      "sha256": "c27a454ba4ad8ce3e90b5f3f729f40ebe673a7b86347d576e40f3ea7c0787548"
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "scripts/batches/release/release_manifest.py",
+      "sha256": "578c2a8bd0e82f2543885e36c7c8569c23a1dd55b201ad2b11687708832bbf06"
+    },
+    {
+      "source": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "path": "docs/research/AUDIT_TRACKER.md",
+      "sha256": "63960fde3c1285fb7104a12ef8f0ad2117479407c2ac58a251780316d9797104"
+    },
+    {
+      "source": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "path": "docs/research/audit/fixes/gap-fill-2000-05-lintfix.json",
+      "sha256": "e8a1b3e8f5adfaefa7bc24f635dfcb2a0a7521a0b76f0edeee2e2b79cb08e085",
+      "item_occurrences": 117,
+      "declared_statuses": {
+        "draft": 117
+      }
+    },
+    {
+      "source": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "path": "docs/research/audit/gap-fill-2000-05-review-request.md",
+      "sha256": "9f7f589273d09ea3aafa9d496aa6b8e289e98532a6cd8633fd9981ce2216e6cd"
+    },
+    {
+      "source": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "path": "docs/research/gap-fill-2000-05.json",
+      "sha256": "d32e04e289dd5026de9ee92d44d8ccb752643de49bf303fe136223a0b053c04a",
+      "item_occurrences": 15,
+      "declared_statuses": {
+        "draft": 15
+      }
+    },
+    {
+      "source": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "path": "scripts/batches/audit/qa_fixfile.py",
+      "sha256": "510e144f5cd51c5063e4d931c625c585999b24d05fec6541ec024a9538514471"
+    },
+    {
+      "source": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "path": "scripts/batches/gapfill/gap_fill_2000_05.py",
+      "sha256": "e9c458e77107dacf59d04fc63fe863190fdd446067bc4784d70af19057771d26"
+    },
+    {
+      "source": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "path": "scripts/batches/gapfill/lintfix_2000_05.py",
+      "sha256": "c5a404f46459bb29b215873ab4dcdef7ff809cd594a9d9cbc3be4060a249d10b"
+    },
+    {
+      "source": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "path": "scripts/batches/gapfill/lintfix_2000_05_baseline.py",
+      "sha256": "29bb9216fe52267e16fc4428184c13588b53e8f26b14f0b8ba54eccd7c0f99b0"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "docs/research/AUDIT_TRACKER.md",
+      "sha256": "fccf35b71d9b82c80133173fac7e42bb36d3a7e0635ebfdffc740fdbd5736272"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "docs/research/audit/fixes/gap-fill-2000-06-lintfix.json",
+      "sha256": "849ed3506fa22484102c76c4cdf13ea4cc07d0ae4c1621984f79e78f88afc112",
+      "item_occurrences": 254,
+      "declared_statuses": {
+        "draft": 254
+      }
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "docs/research/audit/gap-2000-2026-10-18.md",
+      "sha256": "7ef2fd26d08a494798e67aca8e11a56939bdef7aa5d500583ad735ca75936b81"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "docs/research/audit/gap-fill-2000-01-review-request.md",
+      "sha256": "48775e396e6ddd22bba085236127b9dac562c7ae518a516d63c0eaa0180640f7"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "docs/research/audit/gap-fill-2000-06-lintfix-review-request.md",
+      "sha256": "09f9e690eaa356a081d09c088ea1e99c815cccbfbee4ad351343be8b89dac477"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "docs/research/gap-fill-2000-01.json",
+      "sha256": "a1b7efb520f6a6954fa552fa2bf4884b7c0d04f4624ac68bb687b0fef3ee5733",
+      "item_occurrences": 99,
+      "declared_statuses": {
+        "draft": 99
+      }
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "docs/research/release/MERGE_ORDER_2000.md",
+      "sha256": "32825637050c83fed3d796be5278d3a0f578d025d6717e0d2bbe837fbeafd275"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "scripts/batches/audit/explanation_lint.py",
+      "sha256": "8a921f5e0f67c3dfdaaaf7190e73c2e4fd475618325f59ef83f67ff48c6af5a5"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "scripts/batches/audit/qa_fixfile.py",
+      "sha256": "510e144f5cd51c5063e4d931c625c585999b24d05fec6541ec024a9538514471"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "scripts/batches/gapfill/gap_fill_2000_01.py",
+      "sha256": "4a608445868f83b24569d48e8fb1cddfca951ef57c2c6cc24655db809fbed9dc"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "scripts/batches/gapfill/lintfix_2000_06.py",
+      "sha256": "be1d184c547876998b121247f09eaeea429cd308d118b91cd71d7c983000935a"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "scripts/batches/gapfill/lintfix_2000_06_data.py",
+      "sha256": "7007bc18e5d50a4783f1438f61c88f5d009b425859e934676af1cef3303de4e4"
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "scripts/batches/release/release_manifest.py",
+      "sha256": "578c2a8bd0e82f2543885e36c7c8569c23a1dd55b201ad2b11687708832bbf06"
+    }
+  ],
+  "explanation_lint": [
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-001.json",
+      "eligible_occurrences": 10,
+      "flagged_occurrences": 2,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "LONG-KEY": 2
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-002.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 14,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "PLACEHOLDER": 9,
+        "LONG-KEY": 5
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-003.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 12,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "PLACEHOLDER": 11,
+        "LONG-KEY": 1
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-004.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 15,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "LONG-KEY": 7,
+        "PLACEHOLDER": 8
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-005.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 17,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "PLACEHOLDER": 15,
+        "LONG-KEY": 2
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-006.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 16,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "LONG-KEY": 8,
+        "PLACEHOLDER": 8
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-007.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 23,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "PLACEHOLDER": 14,
+        "LONG-KEY": 9
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-008.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 19,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "PLACEHOLDER": 14,
+        "LONG-KEY": 5
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-009.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 20,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "PLACEHOLDER": 12,
+        "LONG-KEY": 8
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-010.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 20,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "LONG-KEY": 8,
+        "PLACEHOLDER": 12
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/batches/batch-011.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 21,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "PLACEHOLDER": 14,
+        "LONG-KEY": 7
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/audit/data/baseline-550-2026-10-17.json",
+      "eligible_occurrences": 0,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 550,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/chatgpt-batch-001.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 10,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "LONG-KEY": 10
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/chatgpt-batch-002.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 15,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "LONG-KEY": 4,
+        "KEY-NOT-STATED": 11
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/chatgpt-batch-003.json",
+      "eligible_occurrences": 100,
+      "flagged_occurrences": 16,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "LONG-KEY": 16
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/filipino-supplement-001.json",
+      "eligible_occurrences": 80,
+      "flagged_occurrences": 36,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "PLACEHOLDER": 9,
+        "KEY-NOT-STATED": 23,
+        "LONG-KEY": 12
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/gap-fill-001.json",
+      "eligible_occurrences": 23,
+      "flagged_occurrences": 15,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "KEY-NOT-STATED": 12,
+        "LONG-KEY": 6
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/gap-fill-002.json",
+      "eligible_occurrences": 14,
+      "flagged_occurrences": 5,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "KEY-NOT-STATED": 5
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/gap-fill-003.json",
+      "eligible_occurrences": 10,
+      "flagged_occurrences": 3,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "LONG-KEY": 1,
+        "KEY-NOT-STATED": 2
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/gap-fill-004.json",
+      "eligible_occurrences": 10,
+      "flagged_occurrences": 2,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "KEY-NOT-STATED": 2,
+        "LONG-KEY": 1
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/gap-fill-005.json",
+      "eligible_occurrences": 60,
+      "flagged_occurrences": 52,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "KEY-NOT-STATED": 52,
+        "PLACEHOLDER": 1
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/round-02-fixes.json",
+      "eligible_occurrences": 178,
+      "flagged_occurrences": 43,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "PLACEHOLDER": 37,
+        "LONG-KEY": 6
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/subprofessional-clerical-supplement-001.json",
+      "eligible_occurrences": 40,
+      "flagged_occurrences": 12,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "KEY-NOT-STATED": 12
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "docs/research/subprofessional-general-info-supplement-001.json",
+      "eligible_occurrences": 30,
+      "flagged_occurrences": 27,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "GI-NO-SECTION": 25,
+        "KEY-NOT-STATED": 9,
+        "LONG-KEY": 5,
+        "PLACEHOLDER": 1
+      },
+      "errors": []
+    },
+    {
+      "source": "main-2026-10-20",
+      "commit": "06f3d239f918bd954a932748a75e7f93ec5968bc",
+      "path": "scripts/seeds/baseline_reparameterized.json",
+      "eligible_occurrences": 0,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 496,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "path": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
+      "eligible_occurrences": 44,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 0,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "open-pr-5",
+      "commit": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+      "path": "docs/research/audit/fixes/round-03-baseline-b4-drafts.json",
+      "eligible_occurrences": 5,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 0,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "open-pr-6",
+      "commit": "8edb2cfcd95fd71a376360ee327f673cda484c9f",
+      "path": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+      "eligible_occurrences": 550,
+      "flagged_occurrences": 370,
+      "uncovered_occurrences": 0,
+      "flags": {
+        "PLACEHOLDER": 76,
+        "GI-NO-SECTION": 27,
+        "LONG-KEY": 141,
+        "KEY-NOT-STATED": 95,
+        "BOILERPLATE": 163
+      },
+      "errors": []
+    },
+    {
+      "source": "open-pr-7",
+      "commit": "749fcf9a3dfa4b8c4e8b461f16140a6c316710c2",
+      "path": "docs/research/gap-fill-2000-01.json",
+      "eligible_occurrences": 99,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 0,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "open-pr-8",
+      "commit": "5fd89f9dd0a5a3592f682187c9b7db07b37b6757",
+      "path": "docs/research/gap-fill-2000-02.json",
+      "eligible_occurrences": 108,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 0,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "path": "docs/research/gap-fill-2000-03.json",
+      "eligible_occurrences": 101,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 0,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "path": "docs/research/gap-fill-2000-04.json",
+      "eligible_occurrences": 83,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 0,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "path": "docs/research/audit/fixes/gap-fill-2000-05-lintfix.json",
+      "eligible_occurrences": 117,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 0,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "path": "docs/research/gap-fill-2000-05.json",
+      "eligible_occurrences": 15,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 0,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "docs/research/audit/fixes/gap-fill-2000-06-lintfix.json",
+      "eligible_occurrences": 254,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 0,
+      "flags": {},
+      "errors": []
+    },
+    {
+      "source": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "path": "docs/research/gap-fill-2000-01.json",
+      "eligible_occurrences": 99,
+      "flagged_occurrences": 0,
+      "uncovered_occurrences": 0,
+      "flags": {},
+      "errors": []
+    }
+  ]
+}
