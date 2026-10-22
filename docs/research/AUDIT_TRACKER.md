@@ -369,3 +369,15 @@ CoS on `86608c1`: 13 accept, 72 revise, 37 reject. All 13 accepts were General I
 
 **Not signed. Not activated. Not imported.** Next step is CoS re-review of the packet above. GT Ed25519 approval waits until that review is clear.
 
+## 2026-10-22: five analogies sent back after 0622a31
+
+CoS on `0622a31`: 117 accept, 4 revise, 1 reject. Only these five changed. The other 117 were not rewritten.
+
+- 0002: oar moves a rowboat; paddle moves a canoe. "stroke" is no longer the key.
+- 0012: "bird" removed, because a bird also has quills. Key stays porcupine.
+- 0032: "wheel" removed. Key stays kiln.
+- 0042: "actor" removed. Key stays films.
+- 0045: "egg" removed. Key stays turtle.
+
+The five stems now use one format. Nothing activated. Recheck only 0002, 0012, 0032, 0042, and 0045.
+

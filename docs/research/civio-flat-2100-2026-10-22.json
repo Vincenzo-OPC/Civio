@@ -17,7 +17,7 @@
     "clerical": 300,
     "general_information": 300
   },
-  "notes": "Repaired after CoS review of 86608c1 (13 accept, 72 revise, 37 reject). The 13 accepted General Information items are unchanged. Analogy distractors are no longer filler, base words are not repeated, and the nine non-parallel pairs plus the three bank duplicates were replaced. Antonym distractors are no longer filler, and the bank duplicates were replaced. Clerical options are believable misspellings of one word. Stems do not print the key. cooly, committee/committed, and license/licensee are gone. R.A. 6713 labels: 0111 and 0112 are §4(A)(c); 0119 is §7(a); 0120 is §7(b)(1); 0122 is §7(c). Filipino reading passages stay in the bank. The trim list is unchanged. DRAFT ONLY. Not signed, not activated, not imported.",
+  "notes": "Repaired after CoS review of 86608c1, then five analogies fixed after the review of 0622a31. The other 117 items were accepted and were not rewritten. 0002, 0012, 0032, 0042, and 0045 now use one stem format. DRAFT ONLY. Not signed, not activated, not imported.",
   "items": [
     {
       "id": "CIVIO-2100-0001",
@@ -60,15 +60,15 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "oar is to row as paddle is to which of the following?",
+      "stem": "Oar is to rowboat as paddle is to which of the following?",
       "options": [
         {
           "option_id": "n1",
-          "text": "canoe"
+          "text": "stroke"
         },
         {
           "option_id": "n2",
-          "text": "stroke"
+          "text": "canoe"
         },
         {
           "option_id": "n3",
@@ -80,7 +80,7 @@
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "A utensil is named for the action it performs. Oar is to row; paddle is to stroke.",
+      "reveal": "The tool moves that craft. Oar is to rowboat; paddle is to canoe.",
       "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -390,7 +390,7 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "quill relates to which word in the same way that petal relates to flower?",
+      "stem": "Petal is to flower as quill is to which of the following?",
       "options": [
         {
           "option_id": "n1",
@@ -398,7 +398,7 @@
         },
         {
           "option_id": "n2",
-          "text": "bird"
+          "text": "inkwell"
         },
         {
           "option_id": "n3",
@@ -1050,7 +1050,7 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Which term completes it? blacksmith is to forge what potter is to",
+      "stem": "Blacksmith is to forge as potter is to which of the following?",
       "options": [
         {
           "option_id": "n1",
@@ -1062,7 +1062,7 @@
         },
         {
           "option_id": "n3",
-          "text": "wheel"
+          "text": "glaze"
         },
         {
           "option_id": "n4",
@@ -1380,11 +1380,11 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "The pair bibliography and book works like filmography and which word?",
+      "stem": "Bibliography is to book as filmography is to which of the following?",
       "options": [
         {
           "option_id": "n1",
-          "text": "actor"
+          "text": "poster"
         },
         {
           "option_id": "n2",
@@ -1479,7 +1479,7 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Identify the match. armor is to knight just as shell is to:",
+      "stem": "Armor is to knight as shell is to which of the following?",
       "options": [
         {
           "option_id": "n1",
@@ -1491,7 +1491,7 @@
         },
         {
           "option_id": "n3",
-          "text": "egg"
+          "text": "claw"
         },
         {
           "option_id": "n4",

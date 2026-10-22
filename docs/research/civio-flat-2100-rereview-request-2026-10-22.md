@@ -2,8 +2,19 @@
 
 **Date:** 2026-10-22
 **File:** `docs/research/civio-flat-2100-2026-10-22.json`
-**Replaces the content of:** commit `86608c1` (CoS reviewed, not approved)
 **Status:** Every item is `draft`. Nothing was signed, activated, or imported.
+
+## Recheck only these five (after 0622a31)
+
+CoS: 117 accept, 4 revise, 1 reject. The other 117 items were not rewritten. These five now share one stem format: "X is to Y as Z is to which of the following?"
+
+| ID | Ruling | Fix |
+| --- | --- | --- |
+| 0002 | revise | Oar is to rowboat as paddle is to canoe. Stroke, river, and water are not that craft |
+| 0012 | reject | "bird" removed. A quill is part of a porcupine. Ink, inkwell, and nest are not |
+| 0032 | revise | "wheel" removed. The potter's match for a forge is the kiln. Clay, mug, and glaze are not |
+| 0042 | revise | "actor" removed. A filmography lists films. Poster, camera, and ticket do not |
+| 0045 | revise | "egg" removed. A shell is worn by a turtle. Beach, claw, and slow are not |
 
 ## What CoS found on 86608c1
 
