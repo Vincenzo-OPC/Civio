@@ -562,20 +562,33 @@ final class MockPoolSelector
         )));
         $extraIdx = 0;
 
-        for ($i = count($result) - 1; $i >= 0 && $weakCount < $weakTarget && $extraIdx < count($extras); $i--) {
-            if (! $isWeak($result[$i])) {
-                // Extras obey the same pool rules as the blueprint picks
-                // (no key-trap pairs, no exact repeats); skip any that clash.
-                while ($extraIdx < count($extras) && ! $state->isFree($extras[$extraIdx])) {
-                    $extraIdx++;
-                }
-                if ($extraIdx >= count($extras)) {
-                    break;
-                }
-                $state->take($extras[$extraIdx]);
-                $result[$i] = $extras[$extraIdx++];
-                $weakCount++;
+        // Swap out of the largest non-weak subject each time so the cost is
+        // spread proportionally and a small subject (GI: 8 items) is not wiped.
+        $positions = [];
+        foreach ($result as $i => $q) {
+            if (! $isWeak($q)) {
+                $positions[(string) ($q['category'] ?? '')][] = $i;
             }
+        }
+
+        while ($weakCount < $weakTarget && $positions !== []) {
+            while ($extraIdx < count($extras) && ! $state->isFree($extras[$extraIdx])) {
+                $extraIdx++;
+            }
+            if ($extraIdx >= count($extras)) {
+                break;
+            }
+
+            uasort($positions, fn ($x, $y) => count($y) <=> count($x));
+            $category = (string) array_key_first($positions);
+            $i = array_pop($positions[$category]);
+            if ($positions[$category] === []) {
+                unset($positions[$category]);
+            }
+
+            $state->take($extras[$extraIdx]);
+            $result[$i] = $extras[$extraIdx++];
+            $weakCount++;
         }
 
         return $result;

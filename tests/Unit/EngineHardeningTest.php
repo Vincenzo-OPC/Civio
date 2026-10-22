@@ -23,3 +23,27 @@ test('weak-category top-up never adds a key-trap pair the blueprint picks would 
             ->and(count($ids))->toBe(count(array_unique($ids)));
     }
 });
+
+function engBank(): array
+{
+    $bank = [];
+    $id = 1000;
+    foreach (['Verbal Ability' => 120, 'Clerical Ability' => 120, 'Numerical Ability' => 120, 'General Information' => 60] as $cat => $n) {
+        for ($i = 0; $i < $n; $i++) {
+            $id++;
+            $bank[] = ['id' => $id, 'stem' => "{$id} {$cat} question stem", 'options' => ["w{$id}", "x{$id}", "y{$id}", "z{$id}"], 'correct' => 0, 'category' => $cat, 'subcategory' => $cat.' '.($i % 3), 'language' => 'English', 'isDemographic' => false];
+        }
+    }
+
+    return $bank;
+}
+
+test('weak-category top-up spreads its swaps instead of wiping out a small subject', function () {
+    for ($run = 0; $run < 10; $run++) {
+        $items = (new MockPoolSelector)->select(engBank(), MockPoolSelector::SUBPROFESSIONAL, ['weakCategories' => ['Verbal Ability']])['items'];
+        $counts = array_count_values(array_column($items, 'category'));
+        expect(count($items))->toBe(145)
+            ->and($counts['General Information'] ?? 0)->toBeGreaterThanOrEqual(4)
+            ->and($counts['Verbal Ability'])->toBeGreaterThanOrEqual(72);
+    }
+});
