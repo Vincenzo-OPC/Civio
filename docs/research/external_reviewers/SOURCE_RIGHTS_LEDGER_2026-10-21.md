@@ -29,3 +29,14 @@ Several authors state their items were taken partly from "previous CSE exams (sh
 ## Unresolved questions (need GT or legal judgment)
 - Would Leonalyn Mutia-Tayone or PinoyEinstein give written permission to *link* to their free reviewers or videos? Linking is lower-risk than reuse.
 - Can the provenance of `CSE Reviewer.pdf` and the 5-Part / "PDF" Masterclass drills be traced?
+
+## Online reviewer sites (added 2026-10-22, Asia/Manila)
+Learn-only review of each site's public landing page, done on 22 Oct 2026. I didn't download, scrape or copy any question, explanation or UI text, and nothing entered the bank.
+
+| Site | What it is (public landing page) | Rights evidence | Civio use |
+|---|---|---|---|
+| cseexamreviewer.com | Free multi-exam quiz portal (CSE, LET, NLE, BFP, NAPOLCOM, CLE). CSE quizzes by Verbal, Numerical, Logical Reasoning, General Information; tips pages. Cloudflare bot check in front. | No reuse licence seen; treat as all rights reserved. | Feature/coverage comparison only. No items, no paraphrase. |
+| cse-examination.vercel.app ("CSE Mock Exam") | Timed mocks (Professional 170 items / 3 h 10 min; Sub-Professional 165 items / 2 h 40 min, 4 sections), a no-timer Study Reviewer with explanations, and an Exam Day Guide. | No licence seen; treat as all rights reserved. | Structure comparison only. Its item counts include sections Civio treats differently; don't adopt them without checking against CSC. |
+| soda-cse-reviewer.vercel.app ("SODA Reviewer") | Free mobile-first SPA: daily streak, countdown, level + category picker, timed practice, instant feedback with explanations and "techniques", a "Mistakes Locker" re-drill, optional sign-in to save progress. Testimonials are self-published. Its countdown still showed the past 9 Aug 2026 exam. | No licence seen; treat as all rights reserved. | Feature comparison only. Don't treat its testimonials as evidence. |
+
+None of these is an official CSC source. Coverage claims must still be checked against the CSC exam announcements on csc.gov.ph.
