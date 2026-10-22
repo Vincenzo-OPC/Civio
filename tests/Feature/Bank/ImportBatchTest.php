@@ -2,7 +2,6 @@
 
 use App\Console\Commands\ImportBatchCommand;
 use App\Models\Question;
-use Illuminate\Support\Facades\DB;
 
 require_once __DIR__.'/../../Support/BankApprovalFixtures.php';
 
