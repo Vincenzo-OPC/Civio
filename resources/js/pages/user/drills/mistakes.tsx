@@ -80,6 +80,7 @@ export default function ReviewMistakes({
     page,
     lastPage,
     total,
+    freshSameSkillCount = 0,
 }: {
     title: string;
     note: string;
@@ -102,6 +103,7 @@ export default function ReviewMistakes({
     page: number;
     lastPage: number;
     total: number;
+    freshSameSkillCount?: number;
 }) {
     const dueIds = due.map((item) => item.question_id);
 
@@ -178,12 +180,19 @@ export default function ReviewMistakes({
                                 Review Due
                             </Link>
                         ) : null}
-                        <Link
-                            href="/exams?drill=true&fresh_same_skill=1&category_name=Fresh%20practice"
-                            className="inline-flex min-h-11 items-center justify-center rounded-lg border border-[var(--civio-line)] px-4 text-sm font-semibold"
-                        >
-                            Practice New Questions on These Skills
-                        </Link>
+                        {freshSameSkillCount > 0 ? (
+                            <Link
+                                href="/exams?drill=true&fresh_same_skill=1&category_name=Fresh%20practice"
+                                className="inline-flex min-h-11 items-center justify-center rounded-lg border border-[var(--civio-line)] px-4 text-sm font-semibold"
+                            >
+                                Practice New Questions on These Skills
+                            </Link>
+                        ) : (
+                            <p className="text-sm">
+                                No new questions are left on these skills yet.
+                                Review the items above instead.
+                            </p>
+                        )}
                         {dueLastPage > 1 ? (
                             <nav className="flex gap-3">
                                 {duePage > 1 ? (

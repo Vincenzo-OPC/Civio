@@ -13,7 +13,9 @@ use App\Models\ReviewItem;
 use App\Models\SavedDrillSet;
 use App\Repositories\QuestionRepositoryInterface;
 use App\Repositories\UserRepositoryInterface;
+use App\Services\Exam\MockPoolSelector;
 use App\Services\Exam\StrictMockLock;
+use App\Services\Learning\ExposureHistory;
 use App\Services\Learning\LearningInsightsService;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
@@ -144,12 +146,10 @@ class ExamService
             }
         }
 
-        if ($query->freshSameSkill && $userId !== null) {
-            $fresh = $this->freshSameSkillCandidates($scored, $userId);
-
-            if ($fresh->isNotEmpty()) {
-                return $fresh;
-            }
+        // Fresh same-skill never falls back to the ordinary pool: an empty set
+        // is the honest answer when nothing new is left on those skills.
+        if ($query->freshSameSkill) {
+            return $userId !== null ? $this->freshSameSkillCandidates($scored, $userId) : collect();
         }
 
         if ($query->customQuestionIds !== []) {
@@ -196,6 +196,9 @@ class ExamService
      */
     protected function todaysFocusCandidates(Collection $scored, ?int $userId): Collection
     {
+        $level = $this->focusLevel($userId);
+        $eligible = self::focusSubjectsFor($level);
+        $scored = $scored->filter(fn (Question $q) => in_array($q->subcategory?->category?->name, $eligible, true));
         $subjects = $scored->map(fn (Question $q) => $q->subcategory?->category?->name)->filter()->unique()->sort()->values();
 
         if ($subjects->isEmpty()) {
@@ -204,10 +207,57 @@ class ExamService
 
         $focus = $this->todaysFocusSubject($subjects->all(), $userId);
         $inFocus = fn (Question $q) => ($q->subcategory?->category?->name) === $focus;
+        $seen = $userId !== null ? app(ExposureHistory::class)->forUser($userId) : [];
+        $locked = array_flip(app(StrictMockLock::class)->lockedQuestionIds(
+            $userId, request()->hasSession() ? request()->session() : null
+        ));
+        $scored = $scored->reject(fn (Question $q) => isset($locked[(int) $q->id]));
+        // Unseen items first, then seen ones, so practice meets new questions.
+        $order = fn (Collection $c) => $c->shuffle()->sortBy(fn (Question $q) => isset($seen[(int) $q->id]) ? 1 : 0)->values();
 
-        return $scored->filter($inFocus)->shuffle()->take(self::FOCUS_ITEMS)
-            ->concat($scored->reject($inFocus)->shuffle()->take(self::FOCUS_MIXED_ITEMS))
+        return $order($scored->filter($inFocus))->take(self::FOCUS_ITEMS)
+            ->concat($order($scored->reject($inFocus))->take(self::FOCUS_MIXED_ITEMS))
+            ->unique('id')
             ->values();
+    }
+
+    /** Minimum independent items before a subject is ranked as "weakest". */
+    public const FOCUS_MIN_SAMPLE = 10;
+
+    /**
+     * Subjects eligible for a level: Analytical is Professional only, Clerical
+     * is Subprofessional only. Unknown level: only the shared subjects.
+     *
+     * @return array<int, string>
+     */
+    public static function focusSubjectsFor(?string $level): array
+    {
+        if ($level !== null && isset(MockPoolSelector::BLUEPRINT[$level])) {
+            return array_column(MockPoolSelector::BLUEPRINT[$level], 'category');
+        }
+
+        return ['General Information', 'Numerical Ability', 'Verbal Ability'];
+    }
+
+    protected function focusLevel(?int $userId): ?string
+    {
+        $requested = (string) request()->query('track', '');
+        if (isset(MockPoolSelector::BLUEPRINT[$requested])) {
+            return $requested;
+        }
+
+        if ($userId === null) {
+            return null;
+        }
+
+        foreach (ExamAttempt::query()->where('user_id', $userId)->latest('id')->limit(20)->get(['cat_scores']) as $a) {
+            $track = (string) ($a->cat_scores['metadata']['track'] ?? '');
+            if (isset(MockPoolSelector::BLUEPRINT[$track])) {
+                return $track;
+            }
+        }
+
+        return null;
     }
 
     /**
@@ -217,7 +267,7 @@ class ExamService
     {
         if ($userId !== null) {
             $weakest = collect(app(LearningInsightsService::class)->forUser($userId)['mastery'])
-                ->filter(fn ($m) => in_array($m['name'], $subjects, true))
+                ->filter(fn ($m) => in_array($m['name'], $subjects, true) && $m['total'] >= self::FOCUS_MIN_SAMPLE)
                 ->sortBy([['percentage', 'asc'], ['total', 'asc']])
                 ->first();
 
@@ -241,7 +291,16 @@ class ExamService
      * @param  Collection<int, Question>  $scored
      * @return Collection<int, Question>
      */
-    protected function freshSameSkillCandidates(Collection $scored, int $userId): Collection
+    /** How many fresh same-skill items a learner could get right now (for an honest empty state). */
+    public function freshSameSkillAvailable(int $userId): int
+    {
+        $scored = $this->questionRepository->getActivePool()
+            ->reject(fn (Question $q) => (bool) ($q->subcategory?->category?->is_demographic ?? false));
+
+        return $this->freshSameSkillCandidates($scored, $userId)->count();
+    }
+
+    public function freshSameSkillCandidates(Collection $scored, int $userId): Collection
     {
         $mistakeIds = ReviewItem::query()->where('user_id', $userId)->where('status', 'pending')->pluck('question_id')->map(fn ($id) => (int) $id)->all();
 
@@ -250,15 +309,13 @@ class ExamService
         }
 
         $skills = $scored->whereIn('id', $mistakeIds)->map(fn (Question $q) => (int) $q->subcategory_id)->unique()->all();
-        $served = [];
-        foreach (ExamAttempt::query()->where('user_id', $userId)->latest('id')->limit(200)->pluck('question_ids') as $qids) {
-            foreach ((array) $qids as $qid) {
-                $served[(int) $qid] = true;
-            }
-        }
+        $served = app(ExposureHistory::class)->forUser($userId);
+        $locked = array_flip(app(StrictMockLock::class)->lockedQuestionIds(
+            $userId, request()->hasSession() ? request()->session() : null
+        ));
 
         return $scored
-            ->filter(fn (Question $q) => in_array((int) $q->subcategory_id, $skills, true) && ! isset($served[(int) $q->id]) && ! in_array((int) $q->id, $mistakeIds, true))
+            ->filter(fn (Question $q) => in_array((int) $q->subcategory_id, $skills, true) && ! isset($served[(int) $q->id]) && ! isset($locked[(int) $q->id]))
             ->shuffle()
             ->take(self::FRESH_SAME_SKILL_LIMIT)
             ->values();

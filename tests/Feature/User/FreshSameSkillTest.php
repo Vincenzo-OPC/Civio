@@ -3,11 +3,13 @@
 use App\Enums\ExamMode;
 use App\Models\Category;
 use App\Models\ExamAttempt;
+use App\Models\ExamSession;
 use App\Models\Question;
 use App\Models\ReviewItem;
 use App\Models\Subcategory;
 use App\Models\User;
 use App\Services\ExamService;
+use Inertia\Testing\AssertableInertia as Assert;
 
 function freshSkill(): Subcategory
 {
@@ -19,20 +21,28 @@ function freshItems(Subcategory $sub, int $n, string $status = 'active'): array
     return Question::factory()->count($n)->create(['subcategory_id' => $sub->id, 'status' => $status, 'options' => ['A', 'B', 'C', 'D'], 'correct_option' => 1])->pluck('id')->all();
 }
 
+function freshMistake(User $user, array $attemptIds, int $missed): void
+{
+    $attempt = ExamAttempt::create(['user_id' => $user->id, 'mode' => ExamMode::Study->value, 'question_ids' => $attemptIds, 'answers' => [], 'cat_scores' => []]);
+    ReviewItem::create(['user_id' => $user->id, 'question_id' => $missed, 'source_attempt_id' => $attempt->id, 'last_attempt_id' => $attempt->id, 'first_wrong_at' => now(), 'last_result_at' => now(), 'status' => 'pending']);
+}
+
+function freshServed($response): array
+{
+    return collect($response->viewData('page')['props']['questions'])->pluck('id')->map(fn ($i) => (int) $i)->all();
+}
+
 test('a fresh same-skill revisit serves unseen questions from the mistake skill only', function () {
     $user = User::factory()->create();
     $skill = freshSkill();
-    $other = freshSkill();
     [$missed, $seen] = freshItems($skill, 2);
     $fresh = freshItems($skill, 3);
     $draft = freshItems($skill, 1, 'draft');
-    $unrelated = freshItems($other, 3);
-
-    $attempt = ExamAttempt::create(['user_id' => $user->id, 'mode' => ExamMode::Study->value, 'question_ids' => [$missed, $seen], 'answers' => [], 'cat_scores' => []]);
-    ReviewItem::create(['user_id' => $user->id, 'question_id' => $missed, 'source_attempt_id' => $attempt->id, 'last_attempt_id' => $attempt->id, 'first_wrong_at' => now(), 'last_result_at' => now(), 'status' => 'pending']);
+    $unrelated = freshItems(freshSkill(), 3);
+    freshMistake($user, [$missed, $seen], $missed);
 
     $page = $this->actingAs($user)->withoutVite()->get(route('exams.index', ['drill' => 'true', 'fresh_same_skill' => '1']))->assertOk();
-    $ids = collect($page->viewData('page')['props']['questions'])->pluck('id')->map(fn ($i) => (int) $i)->all();
+    $ids = freshServed($page);
 
     expect($ids)->toEqualCanonicalizing($fresh)
         ->and(array_intersect($ids, [$missed, $seen, ...$draft, ...$unrelated]))->toBe([])
@@ -40,8 +50,37 @@ test('a fresh same-skill revisit serves unseen questions from the mistake skill 
     expect($page->viewData('page')['props']['questions'][0])->not->toHaveKey('correct_option');
 });
 
-test('without pending mistakes a fresh same-skill request falls back to the normal drill', function () {
+test('exposure uses the full history, beyond 200 attempts, and served mock sessions', function () {
+    $user = User::factory()->create();
+    $skill = freshSkill();
+    [$missed, $old, $inSession, $fresh] = freshItems($skill, 4);
+    ExamAttempt::create(['user_id' => $user->id, 'mode' => ExamMode::Study->value, 'question_ids' => [$old], 'answers' => [], 'cat_scores' => []]);
+    $filler = freshItems(freshSkill(), 1)[0];
+    for ($i = 0; $i < 205; $i++) {
+        ExamAttempt::create(['user_id' => $user->id, 'mode' => ExamMode::Study->value, 'question_ids' => [$filler], 'answers' => [], 'cat_scores' => []]);
+    }
+    ExamSession::create(['user_id' => $user->id, 'track' => 'Professional', 'mode' => ExamMode::Study->value, 'question_ids' => [$inSession], 'started_at' => now(), 'deadline_at' => now()->addHour()]);
+    freshMistake($user, [$missed], $missed);
+
+    $ids = freshServed($this->actingAs($user)->withoutVite()->get(route('exams.index', ['drill' => 'true', 'fresh_same_skill' => '1'])));
+
+    expect($ids)->toBe([$fresh]);
+});
+
+test('nothing fresh left gives an empty set and an honest empty state, never the ordinary pool', function () {
+    $user = User::factory()->create();
+    $skill = freshSkill();
+    [$missed, $seen] = freshItems($skill, 2);
+    freshItems(freshSkill(), 5);
+    freshMistake($user, [$missed, $seen], $missed);
+
+    $ids = freshServed($this->actingAs($user)->withoutVite()->get(route('exams.index', ['drill' => 'true', 'fresh_same_skill' => '1']))->assertOk());
+    expect($ids)->toBe([]);
+
+    $this->get(route('reviews.mistakes.index'))->assertInertia(fn (Assert $page) => $page->where('freshSameSkillCount', 0));
+});
+
+test('guests get no fallback pool for fresh same-skill', function () {
     freshItems(freshSkill(), 3);
-    $this->actingAs(User::factory()->create())->withoutVite()
-        ->get(route('exams.index', ['drill' => 'true', 'fresh_same_skill' => '1']))->assertOk();
+    expect(freshServed($this->withoutVite()->get(route('exams.index', ['drill' => 'true', 'fresh_same_skill' => '1']))->assertOk()))->toBe([]);
 });

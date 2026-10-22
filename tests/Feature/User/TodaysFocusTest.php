@@ -7,6 +7,7 @@ use App\Models\Question;
 use App\Models\Subcategory;
 use App\Models\User;
 use App\Services\ExamService;
+use Inertia\Testing\AssertableInertia as Assert;
 
 function focusSubject(string $name, int $n): array
 {
@@ -20,29 +21,68 @@ function focusServed($response): array
     return collect($response->viewData('page')['props']['questions'])->pluck('id')->map(fn ($i) => (int) $i)->all();
 }
 
-test('today\'s focus serves 15 from the weakest subject then 10 mixed from the others', function () {
+/** A Strict attempt with the given correct/total per subject, tagged with a track. */
+function focusHistory(User $user, string $track, array $results): void
+{
+    $ids = [];
+    $answers = [];
+    foreach ($results as [$pool, $correct, $total]) {
+        foreach (array_slice($pool, 0, $total) as $i => $id) {
+            $ids[] = $id;
+            $answers[(string) $id] = $i < $correct ? 1 : 0;
+        }
+    }
+    ExamAttempt::create(['user_id' => $user->id, 'mode' => ExamMode::Strict->value, 'question_ids' => $ids, 'answers' => $answers,
+        'cat_scores' => ['categoryScoreMap' => [], 'metadata' => ['track' => $track]]]);
+}
+
+test('focus serves 15 from the weakest well-sampled subject then 10 mixed, unseen first, no keys, no duplicates', function () {
     $user = User::factory()->create();
-    $num = focusSubject('Numerical Ability', 30);
-    $ver = focusSubject('Verbal Ability', 20);
+    $num = focusSubject('Numerical Ability', 40);
+    $ver = focusSubject('Verbal Ability', 40);
     $cle = focusSubject('Clerical Ability', 20);
+    focusHistory($user, 'Subprofessional', [[$num, 2, 10], [$ver, 9, 10]]);
 
-    // Numerical: 0/2 independent; Verbal: 2/2.
-    ExamAttempt::create(['user_id' => $user->id, 'mode' => ExamMode::Strict->value, 'question_ids' => [$num[0], $num[1], $ver[0], $ver[1]],
-        'answers' => [(string) $num[0] => 0, (string) $num[1] => 0, (string) $ver[0] => 1, (string) $ver[1] => 1], 'cat_scores' => []]);
+    $page = $this->actingAs($user)->withoutVite()->get(route('exams.index', ['drill' => 'true', 'focus_today' => '1']))->assertOk();
+    $ids = focusServed($page);
+    $focus = array_slice($ids, 0, 15);
 
-    $ids = focusServed($this->actingAs($user)->withoutVite()->get(route('exams.index', ['drill' => 'true', 'focus_today' => '1']))->assertOk());
-
-    expect($ids)->toHaveCount(ExamService::FOCUS_ITEMS + ExamService::FOCUS_MIXED_ITEMS)
-        ->and(array_intersect(array_slice($ids, 0, 15), $num))->toHaveCount(15)
-        ->and(array_intersect(array_slice($ids, 15), $num))->toBe([])
+    expect($ids)->toHaveCount(25)
+        ->and(count(array_unique($ids)))->toBe(25)
+        ->and(array_intersect($focus, $num))->toHaveCount(15)
+        ->and(array_intersect($focus, array_slice($num, 0, 10)))->toBe([]) // 30 unseen exist, so no seen items
         ->and(array_intersect(array_slice($ids, 15), [...$ver, ...$cle]))->toHaveCount(10);
+    $page->assertInertia(fn (Assert $p) => $p->missing('questions.0.correct_option'));
 });
 
-test('a guest gets a weekday-rotation focus subject', function () {
-    focusSubject('Numerical Ability', 20);
-    focusSubject('Verbal Ability', 20);
-    $subject = app(ExamService::class)->todaysFocusSubject(['Numerical Ability', 'Verbal Ability'], null);
+test('a subject with too few independent items is not ranked weakest', function () {
+    $user = User::factory()->create();
+    $num = focusSubject('Numerical Ability', 20);
+    $ver = focusSubject('Verbal Ability', 20);
+    // Numerical 0/3 (too few to judge), Verbal 6/10 (judged).
+    focusHistory($user, 'Subprofessional', [[$num, 0, 3], [$ver, 6, 10]]);
 
-    expect($subject)->toBeIn(['Numerical Ability', 'Verbal Ability']);
-    $this->withoutVite()->get(route('exams.index', ['drill' => 'true', 'focus_today' => '1']))->assertOk();
+    expect(app(ExamService::class)->todaysFocusSubject(['Numerical Ability', 'Verbal Ability'], $user->id))->toBe('Verbal Ability');
+});
+
+test('subject eligibility follows the level: no Analytical for Subprofessional, no Clerical for Professional', function () {
+    expect(ExamService::focusSubjectsFor('Subprofessional'))->not->toContain('Analytical Ability')->toContain('Clerical Ability')
+        ->and(ExamService::focusSubjectsFor('Professional'))->not->toContain('Clerical Ability')->toContain('Analytical Ability')
+        ->and(ExamService::focusSubjectsFor(null))->not->toContain('Clerical Ability')->not->toContain('Analytical Ability');
+
+    $user = User::factory()->create();
+    $ana = focusSubject('Analytical Ability', 30);
+    $num = focusSubject('Numerical Ability', 30);
+    focusHistory($user, 'Subprofessional', [[$num, 9, 10]]);
+
+    $ids = focusServed($this->actingAs($user)->withoutVite()->get(route('exams.index', ['drill' => 'true', 'focus_today' => '1'])));
+    expect(array_intersect($ids, $ana))->toBe([]);
+});
+
+test('a guest gets a weekday rotation over shared subjects only', function () {
+    focusSubject('Numerical Ability', 20);
+    $cle = focusSubject('Clerical Ability', 20);
+    $ids = focusServed($this->withoutVite()->get(route('exams.index', ['drill' => 'true', 'focus_today' => '1']))->assertOk());
+
+    expect(array_intersect($ids, $cle))->toBe([]);
 });

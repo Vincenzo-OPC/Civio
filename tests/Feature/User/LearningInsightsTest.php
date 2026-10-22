@@ -65,3 +65,12 @@ test('pace is seconds per answered item by subject, skipping blanks', function (
     expect(app(LearningInsightsService::class)->forUser($user->id)['pace'])
         ->toBe([['name' => 'Clerical Ability', 'secondsPerItem' => 30.0, 'items' => 2]]);
 });
+
+test('an idle item cannot skew pace beyond the per-item cap', function () {
+    $user = User::factory()->create();
+    [$a, $b] = insightItems('Numerical Ability', 2);
+    insightAttempt($user, [$a, $b], ExamMode::Study, [(string) $a => 1, (string) $b => 1], [0 => 60, 1 => 5000]);
+
+    expect(app(LearningInsightsService::class)->forUser($user->id)['pace'][0]['secondsPerItem'])
+        ->toEqual((60 + LearningInsightsService::MAX_ITEM_SECONDS) / 2);
+});

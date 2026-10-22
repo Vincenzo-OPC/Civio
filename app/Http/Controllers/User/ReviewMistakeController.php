@@ -12,6 +12,7 @@ use App\Models\ReviewEvent;
 use App\Models\ReviewItem;
 use App\Services\Exam\ReviewScheduleApplier;
 use App\Services\Exam\StrictMockLock;
+use App\Services\ExamService;
 use App\Support\ReviewCopy;
 use App\Support\ReviewDueLabel;
 use Illuminate\Http\JsonResponse;
@@ -63,6 +64,7 @@ class ReviewMistakeController extends Controller
             'page' => $pending['page'],
             'lastPage' => $pending['last_page'],
             'total' => $pending['total'],
+            'freshSameSkillCount' => $state === 'open' ? app(ExamService::class)->freshSameSkillAvailable($user->id) : 0,
         ];
 
         if ($request->wantsJson()) {

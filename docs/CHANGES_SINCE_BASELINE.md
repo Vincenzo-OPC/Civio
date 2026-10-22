@@ -335,3 +335,17 @@ The Drills hub has a Today's Focus launcher. The server picks 15 items from the 
 ## Exam-day guide page, 22 October 2026
 
 New public page `/exam-day`, linked in the footer. It gives a short, general checklist and points to the CSC 2027 exam calendar and csc.gov.ph, and says the CSC advisory wins over this page. It contains no invented rules, fees or pass rates. Test in `ExamDayGuideTest`.
+
+## Full mocks keep the blueprint exactly, 22 October 2026
+
+The cross-subject weak-category boost was removed from full mocks. Every mock now has exactly the blueprint count per subject: Professional is Verbal 45, Analytical 52, Numerical 45, GI 8; Subprofessional is Verbal 45, Clerical 47, Numerical 45, GI 8. Weakness bias stays inside each subject (wrong items first, weak subcategories get more). Cross-subject focus now lives in Today's Focus. Tested for both levels.
+
+## Fresh same-skill and Today's Focus repairs, 22 October 2026
+
+- **Fresh same-skill:** uses the learner's full exposure history (all attempts, served mock sessions, review items, offline practice, with no 200-attempt cap). It skips Strict-locked items and never falls back to the ordinary pool. When nothing fresh is left, Review Mistakes says so instead of showing the button.
+- **Today's Focus:** subjects follow the level (Analytical Professional-only, Clerical Subprofessional-only; an unknown level gets only the shared subjects). A subject is ranked weakest only with at least 10 independent items. Unseen items come first, Strict-locked items are excluded, there are no duplicates and keys stay withheld.
+- **Pace:** caps one item at 300 seconds so an idle tab cannot skew it.
+
+## Resume no longer resurrects a submitted exam, 22 October 2026
+
+The autosave "page hidden" listener was never removed, so old copies kept firing and could write a finished exam back to local storage as resumable. All page-exit listeners are now removed on cleanup. Scratchpad edits also trigger an autosave.

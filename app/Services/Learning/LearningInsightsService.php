@@ -27,6 +27,9 @@ final class LearningInsightsService
 
     public const RECENT_ATTEMPTS = 50;
 
+    /** One idle item (tab left open) must not skew pace: cap per-item seconds. */
+    public const MAX_ITEM_SECONDS = 300;
+
     /**
      * @return array{
      *     mastery: array<int, array{name: string, correct: int, total: int, percentage: int}>,
@@ -70,7 +73,7 @@ final class LearningInsightsService
 
                 $secs = $times[$position] ?? $times[(string) $position] ?? null;
                 if (is_numeric($secs) && (float) $secs > 0 && $chosen !== null) {
-                    $pace[$cat]['secs'] = ($pace[$cat]['secs'] ?? 0) + (float) $secs;
+                    $pace[$cat]['secs'] = ($pace[$cat]['secs'] ?? 0) + min((float) $secs, self::MAX_ITEM_SECONDS);
                     $pace[$cat]['items'] = ($pace[$cat]['items'] ?? 0) + 1;
                 }
 
