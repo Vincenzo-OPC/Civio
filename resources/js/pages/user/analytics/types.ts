@@ -102,4 +102,15 @@ export interface LearningSignals {
     }[];
     timedSuggestions: string[];
     pace: { name: string; secondsPerItem: number; items: number }[];
+    skills?: {
+        subject: string;
+        skill: string;
+        subcategoryId: number;
+        correct: number;
+        total: number;
+        percentage: number;
+        stage: 'start' | 'building' | 'steady' | 'timed';
+        next: string;
+    }[];
+    retention?: { checked: number; kept: number; percentage: number } | null;
 }

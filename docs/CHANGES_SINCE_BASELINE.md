@@ -361,3 +361,7 @@ The dashboard streak already existed. Repairs: a day counts only if at least one
 ## Full exam-day guide from CSC sources, 22 October 2026
 
 `/exam-day` now covers the 2027 dates, who may apply, what to file (form, photos, accepted IDs, the PhP 500 fee from the 2026 announcement), the Subprofessional scope, the 80.00 passing grade, prohibited items and acts (R.A. 9416), and how results are published. Every section cites CSC Examination Announcement No. 03 or No. 05, s. 2026 on csc.gov.ph (checked 22 Oct 2026). Study tips are labeled as not CSC rules. A test checks that every section has a source and that no pass rate appears.
+
+## Weak-skill progression and retention, 22 October 2026
+
+The independent-accuracy card now lists the five skills (subcategories) to work on. Each has a descriptive stage and next step: start (fewer than 5 items), building (under 70%), steady (70% or more over at least 10 items), or timed (80% or more over at least 20 items). It never says mastered or proficient. Retention shows how many independently correct items were still correct on a later independent attempt at least 24 hours later. It only appears once at least 10 such re-checks exist. Tests include a hand-counted check of independent accuracy across Strict, unassisted and assisted answers.

@@ -30,6 +30,77 @@ final class LearningInsightsService
     /** One idle item (tab left open) must not skew pace: cap per-item seconds. */
     public const MAX_ITEM_SECONDS = 300;
 
+    public const SKILL_LIMIT = 5;
+
+    public const RETENTION_MIN_SAMPLE = 10;
+
+    /**
+     * Weakest skills first, each with a stage and the next step. Stages are
+     * descriptive (never "mastered" or "proficient"):
+     *   start    (< 5 independent items)  -> learn the method, untimed
+     *   building (< 70%)                  -> untimed practice on this skill
+     *   steady   (>= 70%, >= 10 items)    -> mixed practice
+     *   timed    (>= 80%, >= 20 items)    -> try it under time
+     *
+     * @param  array<string, array{total: int, correct: int, subcategoryId: int}>  $skills
+     * @return array<int, array{subject: string, skill: string, subcategoryId: int, correct: int, total: int, percentage: int, stage: string, next: string}>
+     */
+    private function skillProgression(array $skills): array
+    {
+        $out = [];
+        foreach ($skills as $key => $s) {
+            [$subject, $skill] = explode('|', $key, 2);
+            $pct = (int) round($s['correct'] / $s['total'] * 100);
+            [$stage, $next] = match (true) {
+                $s['total'] < 5 => ['start', 'Learn the method, then answer a few untimed items.'],
+                $pct < 70 => ['building', 'Untimed practice on this skill; read each explanation after answering.'],
+                $pct >= 80 && $s['total'] >= 20 => ['timed', 'Try this skill under time.'],
+                $s['total'] >= 10 => ['steady', 'Mix it with other skills to check it holds.'],
+                default => ['building', 'Untimed practice on this skill; read each explanation after answering.'],
+            };
+            $out[] = ['subject' => $subject, 'skill' => $skill, 'subcategoryId' => $s['subcategoryId'], 'correct' => $s['correct'], 'total' => $s['total'], 'percentage' => $pct, 'stage' => $stage, 'next' => $next];
+        }
+
+        $rank = ['building' => 0, 'start' => 1, 'steady' => 2, 'timed' => 3];
+        usort($out, fn ($a, $b) => [$rank[$a['stage']], $a['percentage'], -$a['total']] <=> [$rank[$b['stage']], $b['percentage'], -$b['total']]);
+
+        return array_slice($out, 0, self::SKILL_LIMIT);
+    }
+
+    /**
+     * Retention: of items answered correctly on their own, how many were
+     * still correct on a later independent attempt at least a day later.
+     * Null until there are enough re-checks to say anything.
+     *
+     * @param  array<int, array<int, array{correct: bool, at: mixed}>>  $history
+     * @return array{checked: int, kept: int, percentage: int}|null
+     */
+    private function retention(array $history): ?array
+    {
+        $checked = 0;
+        $kept = 0;
+
+        foreach ($history as $events) {
+            for ($i = 0; $i < count($events) - 1; $i++) {
+                if (! $events[$i]['correct']) {
+                    continue;
+                }
+                for ($j = $i + 1; $j < count($events); $j++) {
+                    if ($events[$i]['at']->diffInHours($events[$j]['at']) >= 24) {
+                        $checked++;
+                        $kept += $events[$j]['correct'] ? 1 : 0;
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+
+        return $checked >= self::RETENTION_MIN_SAMPLE
+            ? ['checked' => $checked, 'kept' => $kept, 'percentage' => (int) round($kept / $checked * 100)]
+            : null;
+    }
+
     /**
      * @return array{
      *     mastery: array<int, array{name: string, correct: int, total: int, percentage: int}>,
@@ -54,8 +125,10 @@ final class LearningInsightsService
 
         $mastery = [];
         $pace = [];
+        $skills = [];
+        $history = [];
 
-        foreach ($attempts as $attempt) {
+        foreach ($attempts->sortBy('id') as $attempt) {
             $strict = $attempt->mode === ExamMode::Strict;
             $answers = (array) $attempt->answers;
             $times = (array) ($attempt->cat_scores['metadata']['question_times'] ?? []);
@@ -84,6 +157,12 @@ final class LearningInsightsService
                 $mastery[$cat]['total'] = ($mastery[$cat]['total'] ?? 0) + 1;
                 $isCorrect = $chosen !== null && $chosen !== '' && (int) $chosen === (int) $q->correct_option;
                 $mastery[$cat]['correct'] = ($mastery[$cat]['correct'] ?? 0) + ($isCorrect ? 1 : 0);
+
+                $skill = $q->subcategory?->name ?? 'General';
+                $skills[$cat.'|'.$skill]['total'] = ($skills[$cat.'|'.$skill]['total'] ?? 0) + 1;
+                $skills[$cat.'|'.$skill]['correct'] = ($skills[$cat.'|'.$skill]['correct'] ?? 0) + ($isCorrect ? 1 : 0);
+                $skills[$cat.'|'.$skill]['subcategoryId'] = (int) $q->subcategory_id;
+                $history[$qid][] = ['correct' => $isCorrect, 'at' => $attempt->created_at];
             }
         }
 
@@ -104,6 +183,12 @@ final class LearningInsightsService
             $paceOut[] = ['name' => (string) $name, 'secondsPerItem' => round($p['secs'] / $p['items'], 1), 'items' => $p['items']];
         }
 
-        return ['mastery' => $masteryOut, 'timedSuggestions' => $suggest, 'pace' => $paceOut];
+        return [
+            'mastery' => $masteryOut,
+            'timedSuggestions' => $suggest,
+            'pace' => $paceOut,
+            'skills' => $this->skillProgression($skills),
+            'retention' => $this->retention($history),
+        ];
     }
 }

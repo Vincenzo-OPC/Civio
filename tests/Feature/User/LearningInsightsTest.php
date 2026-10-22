@@ -74,3 +74,63 @@ test('an idle item cannot skew pace beyond the per-item cap', function () {
     expect(app(LearningInsightsService::class)->forUser($user->id)['pace'][0]['secondsPerItem'])
         ->toEqual((60 + LearningInsightsService::MAX_ITEM_SECONDS) / 2);
 });
+
+test('independent accuracy matches a hand count across Strict, unassisted and assisted practice', function () {
+    $user = User::factory()->create();
+    $ids = insightItems('Numerical Ability', 6);
+    // Strict: 2/3 correct (always counts). Study: 1 correct unassisted, 1 wrong assisted, 1 correct assisted.
+    insightAttempt($user, array_slice($ids, 0, 3), ExamMode::Strict, [(string) $ids[0] => 1, (string) $ids[1] => 1, (string) $ids[2] => 0]);
+    $study = insightAttempt($user, array_slice($ids, 3, 3), ExamMode::Study, [(string) $ids[3] => 1, (string) $ids[4] => 0, (string) $ids[5] => 1]);
+    assistedEvent($user, $study, $ids[4]);
+    assistedEvent($user, $study, $ids[5]);
+
+    expect(app(LearningInsightsService::class)->forUser($user->id)['mastery'][0])
+        ->toMatchArray(['correct' => 3, 'total' => 4, 'percentage' => 75]);
+});
+
+test('weak-skill progression ranks building skills first and never says mastered', function () {
+    $user = User::factory()->create();
+    $weak = insightItems('Numerical Ability', 10);
+    $strong = insightItems('Verbal Ability', 20);
+    $answers = [];
+    foreach ($weak as $i => $id) {
+        $answers[(string) $id] = $i < 3 ? 1 : 0; // 30%
+    }
+    foreach ($strong as $id) {
+        $answers[(string) $id] = 1; // 100% over 20
+    }
+    insightAttempt($user, [...$weak, ...$strong], ExamMode::Strict, $answers);
+
+    $skills = app(LearningInsightsService::class)->forUser($user->id)['skills'];
+
+    expect($skills[0])->toMatchArray(['subject' => 'Numerical Ability', 'stage' => 'building', 'percentage' => 30])
+        ->and(collect($skills)->firstWhere('subject', 'Verbal Ability')['stage'])->toBe('timed')
+        ->and(json_encode($skills))->not->toMatch('/master|proficien/i');
+});
+
+test('retention needs enough day-apart re-checks and counts kept items', function () {
+    $user = User::factory()->create();
+    $ids = insightItems('Clerical Ability', 10);
+    $first = array_fill_keys(array_map('strval', $ids), 1);
+    $again = $first;
+    $again[(string) $ids[0]] = 0;
+    $again[(string) $ids[1]] = 0;
+
+    $a = insightAttempt($user, $ids, ExamMode::Strict, $first);
+    $a->forceFill(['created_at' => now()->subDays(3)])->save();
+    expect(app(LearningInsightsService::class)->forUser($user->id)['retention'])->toBeNull();
+
+    insightAttempt($user, $ids, ExamMode::Strict, $again);
+    expect(app(LearningInsightsService::class)->forUser($user->id)['retention'])
+        ->toBe(['checked' => 10, 'kept' => 8, 'percentage' => 80]);
+});
+
+test('a same-day repeat does not count as retention', function () {
+    $user = User::factory()->create();
+    $ids = insightItems('Clerical Ability', 10);
+    $answers = array_fill_keys(array_map('strval', $ids), 1);
+    insightAttempt($user, $ids, ExamMode::Strict, $answers);
+    insightAttempt($user, $ids, ExamMode::Strict, $answers);
+
+    expect(app(LearningInsightsService::class)->forUser($user->id)['retention'])->toBeNull();
+});

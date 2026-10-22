@@ -46,6 +46,25 @@ export function LearningSignalsCard({
                     ))}
                 </tbody>
             </table>
+            {learning.skills && learning.skills.length > 0 ? (
+                <div className="mt-4">
+                    <h3 className="text-sm font-semibold">Skills to work on</h3>
+                    <ul className="mt-2 flex flex-col gap-2 text-sm">
+                        {learning.skills.map((s) => (
+                            <li key={`${s.subject}-${s.skill}`}>
+                                <span className="font-medium">{s.skill}</span> (
+                                {s.subject}): {s.percentage}% of {s.total} on
+                                your own. Next: {s.next}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ) : null}
+            <p className="mt-3 text-sm">
+                {learning.retention
+                    ? `Still correct a day or more later: ${learning.retention.kept} of ${learning.retention.checked} (${learning.retention.percentage}%).`
+                    : 'Retention appears after at least 10 items are re-checked a day or more later.'}
+            </p>
             {learning.timedSuggestions.length > 0 ? (
                 <p className="mt-3 text-sm">
                     Ready to try timed practice in:{' '}
