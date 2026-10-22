@@ -54,7 +54,13 @@ export function LearningSignalsCard({
                             <li key={`${s.subject}-${s.skill}`}>
                                 <span className="font-medium">{s.skill}</span> (
                                 {s.subject}): {s.percentage}% of {s.total} on
-                                your own. Next: {s.next}
+                                your own. Next: {s.next}{' '}
+                                <a
+                                    href={`/exams?drill=true&subcategory_id=${s.subcategoryId}&category_name=${encodeURIComponent(s.skill)}`}
+                                    className="font-semibold underline"
+                                >
+                                    Practice this skill
+                                </a>
                             </li>
                         ))}
                     </ul>

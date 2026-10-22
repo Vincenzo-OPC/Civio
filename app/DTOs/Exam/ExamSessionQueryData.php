@@ -24,6 +24,7 @@ readonly class ExamSessionQueryData
         public array $customQuestionIds = [],
         public bool $freshSameSkill = false,
         public bool $focusToday = false,
+        public ?int $drillSubcategoryId = null,
     ) {}
 
     public static function fromRequest(Request $request): self
@@ -42,6 +43,7 @@ readonly class ExamSessionQueryData
             customQuestionIds: self::parseIds($request->input('custom_question_ids')),
             freshSameSkill: $request->boolean('fresh_same_skill'),
             focusToday: $request->boolean('focus_today'),
+            drillSubcategoryId: $request->filled('subcategory_id') && is_numeric($request->input('subcategory_id')) ? (int) $request->input('subcategory_id') : null,
         );
     }
 

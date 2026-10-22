@@ -138,6 +138,10 @@ class ExamService
     {
         $scored = $pool->reject(fn (Question $q) => (bool) ($q->subcategory?->category?->is_demographic ?? false));
 
+        if ($query->drillSubcategoryId !== null) {
+            return $this->skillDrillCandidates($scored, $query->drillSubcategoryId, $userId);
+        }
+
         if ($query->focusToday) {
             $focus = $this->todaysFocusCandidates($scored, $userId);
 
@@ -180,6 +184,30 @@ class ExamService
         }
 
         return $matches->isNotEmpty() ? $matches : $scored->take(30);
+    }
+
+    public const SKILL_DRILL_ITEMS = 20;
+
+    /**
+     * One-skill drill (subcategory): never-seen items first, then seen ones;
+     * Strict-locked items excluded; keys stay withheld by the payload.
+     *
+     * @param  Collection<int, Question>  $scored
+     * @return Collection<int, Question>
+     */
+    protected function skillDrillCandidates(Collection $scored, int $subcategoryId, ?int $userId): Collection
+    {
+        $seen = $userId !== null ? app(ExposureHistory::class)->forUser($userId) : [];
+        $locked = array_flip(app(StrictMockLock::class)->lockedQuestionIds(
+            $userId, request()->hasSession() ? request()->session() : null
+        ));
+
+        return $scored
+            ->filter(fn (Question $q) => (int) $q->subcategory_id === $subcategoryId && ! isset($locked[(int) $q->id]))
+            ->shuffle()
+            ->sortBy(fn (Question $q) => isset($seen[(int) $q->id]) ? 1 : 0)
+            ->take(self::SKILL_DRILL_ITEMS)
+            ->values();
     }
 
     public const FOCUS_ITEMS = 15;

@@ -365,3 +365,7 @@ The dashboard streak already existed. Repairs: a day counts only if at least one
 ## Weak-skill progression and retention, 22 October 2026
 
 The independent-accuracy card now lists the five skills (subcategories) to work on. Each has a descriptive stage and next step: start (fewer than 5 items), building (under 70%), steady (70% or more over at least 10 items), or timed (80% or more over at least 20 items). It never says mastered or proficient. Retention shows how many independently correct items were still correct on a later independent attempt at least 24 hours later. It only appears once at least 10 such re-checks exist. Tests include a hand-counted check of independent accuracy across Strict, unassisted and assisted answers.
+
+## One-skill drill, 22 October 2026
+
+`/exams?drill=true&subcategory_id=N` serves up to 20 items from that one subtopic, picked on the server. Never-seen items come first (full exposure history), Strict-locked items and drafts are excluded, and keys and explanations stay withheld. An unknown subtopic serves nothing rather than another pool. Each weak skill on the analytics card has a "Practice this skill" link. Tests in `SkillDrillTest`.
