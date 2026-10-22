@@ -345,3 +345,19 @@ On the updated PR commit, `python scripts/batches/qa_file.py docs/research/gap-f
 **Release planning evidence (PR #9 head only):** The existing release manifest reports **1,401 selected / 2,000** from approved content plus the baseline, a 599 shortfall. With `--include-drafts` on this one PR head, it reports **1,502 / 2,000**, still 498 short. These are manifest projections from PR #9's checkout, not current live-bank counts; they do not incorporate all other open PRs and do not confer approval. Significant subtopic gaps persist in English paragraph organization/reading, Filipino vocabulary/idioms, numerical operations/sequences, clerical filing/spelling and General Information. Do not call the 2,000 milestone complete.
 
 **Disposition:** Corrected the one detected numerical explanation defect in PR #9. The questions remain unapproved drafts pending full independent/source-rights review, author-independent content approval and the repository release/import requirements. Full software type/lint/format/test/build/bundle checks required by the PR were not run.
+
+
+## 2026-10-22: Independent audit of gap-fill-2000-04 (open PR #10)
+
+**Scope:** Reviewed 83 draft items at revised branch head `c8800eb50743bb34ab3686346143ad32a0d8d3e1`: 48 clerical alphabetical-filing items and 35 R.A. 6713 application items. No approval, activation, import, merge or deployment.
+
+**Corrections applied to the existing draft branch:**
+- Added an explicit ANSI/ARMA 12-2005 filing-rule reference to 30 filing stems that previously left the convention unstated; reworded two resulting near-duplicate frames for distinct task demands.
+- Replaced all 35 R.A. 6713 source links with the official COMELEC law page.
+- Clarified item `CIVIO-GF2K04-GI-SCENARIO-APPLY-0015`: R.A. 6713 §7(d) permits Congress-consented gifts in the nature of scholarships/fellowships/medical treatment; the distinct national-interest and head-of-office conditions apply to foreign travel grants. This clarification does not change its key.
+
+**Checks on revised head:** repository `qa_file.py`: 83 items, 1,656 comparisons, 0 problems. `explanation_lint.py`: 83 items, 0 flagged; answer positions A 21, B 20, C 21, D 21. Independent deterministic filing solver matches 48/48 keyed answers; all 48 stems now specify ANSI/ARMA. RA 6713 source references and keyed statutory scenarios were reviewed against the cited Act.
+
+**Limitation:** The full ANSI/ARMA 12-2005 standard text was not accessible; its publisher preview establishes the standard title and scope but not the complete operative rules. The internal filing solver establishes consistency with the encoded rule interpretation, not authoritative proof of every normative filing answer. Keep these 48 items pending independent competent review against an authorized copy of the standard. The 35 law items remain draft pending the normal source-rights/content approval gate.
+
+**Disposition:** All 83 stay `draft/unreviewed`. Full PR software type/lint/format/test/build/bundle checks and required source-by-source originality review were not run. No part of this PR counts toward the verified/approved 2,000-item release target.
