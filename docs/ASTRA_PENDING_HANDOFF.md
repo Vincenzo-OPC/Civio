@@ -117,7 +117,7 @@ The security invariants in [CODEX_HANDOFF_PLAN.md](CODEX_HANDOFF_PLAN.md) §5 st
 ## 6. Guardrails
 
 - **No deploy and no spend.** Nothing is deployed. Hosting is GT's call ([DEPLOY.md](DEPLOY.md)). Add `[skip netlify]` to docs-only and bank-only commits.
-- **Protected machines.** Never touch GT's MSI Docker study containers or Hermes (`:8642`) (AGENTS.md, CODEX_HANDOFF_PLAN §5.7). On 17 Oct 2026 the MSI shows `hiraya-review-app` / `hiraya-review-db` on `:8080` / `:5433`, `machine-ops-pg` on `:5432`, and GT's local Civio on `civio-local-app :8090` / `civio-local-db :5434`. Grok Bot imports approved items into the local Civio DB only after a backup.
+- **Protected machines.** Never touch GT's MSI Docker study containers or Hermes (`:8642`) (AGENTS.md, CODEX_HANDOFF_PLAN §5.7).Grok Bot imports approved items into the local Civio DB only after a backup.
 - **Git.** Normal pushes to `main` only. `git pull --rebase` first, because several agents push. Never force-push and never use `--no-verify`. Conventional Commits. No secrets.
 - **No invented stats.** No pass rates, mastery or readiness without stored data and a test (DESIGN_IMPLEMENTATION_BRIEF §15). The unverified "14.41% pass rate" post in dossier §3 must not appear in product copy.
 - **UI constraints** are in AGENTS.md and the execution plan:
@@ -141,7 +141,7 @@ The security invariants in [CODEX_HANDOFF_PLAN.md](CODEX_HANDOFF_PLAN.md) §5 st
 2. F3 wording: rename the readiness card to a factual "Latest full Strict Mock" line now, or hide it until F1 and F2 are fixed?
 3. F4: show the 22 Nov 2026 reset exam (fallback 24 Jan 2027) as a date option in Civio?
 4. Deploy target: [DEPLOY.md](DEPLOY.md) says Cloud Run + Neon + Cloudflare, but [CODEX_HANDOFF_PLAN.md](CODEX_HANDOFF_PLAN.md) §0.5 says Koyeb + Neon + a Netlify landing. Which one is current?
-5. The MSI port note in AGENTS.md (study app `:8080`, Postgres `:5433`) no longer matches the machine, where Hiraya now holds those ports and Civio runs on `:8090` / `:5434`. Which containers count as protected?
+5. The MSI port note in AGENTS.Which containers count as protected?
 6. Who owns `qa.py` changes (dossier F9: the audit agent, not Astra)?
 
 ## Security execution checkpoint - 20 October 2026

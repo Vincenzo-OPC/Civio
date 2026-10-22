@@ -8,7 +8,6 @@ No deployment, paid service or Netlify credit spending is authorized. Preserve a
 
 - Canonical source: C:\Users\GT\Desktop\Claude\Civio, branch main.
 - Civio live study: civio-local-app at localhost:8090; civio-local-db on localhost:5434.
-- Separate protected application: 8080/5433 (historical container names hiraya-review-app and hiraya-review-db).
 - Hermes: 8642.
 - Never stop, restart, rebuild, query or modify these services for development. Never use student data for tests.
 
