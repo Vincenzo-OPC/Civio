@@ -1,0 +1,20 @@
+{
+ "seed": 20261022,
+ "items": 60,
+ "distractor_rows": 180,
+ "per_skill": {
+  "NUM-WP-PCT-CHANGE": {
+   "families_available": 20,
+   "picked": 20
+  },
+  "NUM-WP-RATIO": {
+   "families_available": 29,
+   "picked": 20
+  },
+  "CLR-SPELL-WRONG": {
+   "families_available": 57,
+   "picked": 20
+  }
+ },
+ "sha256_csv": "508e5f9a7569b6e21bd9efd3e1ee55a68a6712ba9698cb7c24993e5c4f92956b"
+}
