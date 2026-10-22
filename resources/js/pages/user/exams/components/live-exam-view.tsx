@@ -94,6 +94,8 @@ interface LiveExamViewProps {
     onResume?: () => void;
     subscribeClock?: (listener: () => void) => () => void;
     getClockSnapshot?: () => ExamClockSnapshot;
+    practiceBatchId?: string | null;
+    examSessionId?: string | null;
 }
 
 export function LiveExamView({
@@ -131,6 +133,8 @@ export function LiveExamView({
     onResume,
     subscribeClock,
     getClockSnapshot,
+    practiceBatchId = null,
+    examSessionId = null,
 }: LiveExamViewProps) {
     const activeQuestion = activeQuestions[currentIdx];
     const studyTools = showsStudyTools(examMode, isDrillSession);
@@ -507,6 +511,8 @@ export function LiveExamView({
                     chosen_option: chosenOriginal,
                     weak_subcategories:
                         combinedStudyBias().weakSubcategories.slice(0, 20),
+                    practice_batch_id: practiceBatchId,
+                    exam_session_id: examSessionId,
                 }),
             });
             const data = await res.json();

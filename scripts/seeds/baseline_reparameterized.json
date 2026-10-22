@@ -3825,21 +3825,6 @@
     "explanation": "Rhythm starts with rh and has no extra vowel. The matching choice is “Rhythm.” “Rythm”, “Rhythem”, “Rythym” do not follow the same steps."
   },
   {
-    "replaces_id": 256,
-    "prior_stem": "Choose the standard adverb formed from the word “public.”",
-    "subcategory_id": 19,
-    "language": "English",
-    "stem": "Choose the correctly spelled word for this meaning: a noncommissioned officer.",
-    "options": [
-      "Sergeant",
-      "Sargent",
-      "Sergent",
-      "Sargeant"
-    ],
-    "correct_option": 0,
-    "explanation": "Sergeant is s-e-r-g-e-a-n-t. The matching choice is “Sergeant.” “Sargent”, “Sergent”, “Sargeant” do not follow the same steps."
-  },
-  {
     "replaces_id": 257,
     "prior_stem": "Which spelling is correct in the phrase “I am _____ sure”?",
     "subcategory_id": 19,

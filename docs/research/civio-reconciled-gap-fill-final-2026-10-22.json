@@ -1,0 +1,10 @@
+{
+  "batch": "civio-reconciled-gap-fill-final-2026-10-22",
+  "status": "draft — reconciled against GitHub inventory and MockPoolSelector",
+  "count": 473,
+  "projected_unique_total": 2110,
+  "gaps_filled": {"numerical": 40, "analytical": 149, "verbal_en": 26, "verbal_fil": 112, "clerical": 93, "general_information": 53},
+  "projected_clean_totals": {"numerical": 400, "analytical": 400, "verbal_en": 400, "verbal_fil": 300, "clerical": 300, "general_information": 300},
+  "notes": "Full 473-item set with complete schema (difficulty, reveal, track, domain, competency, options) is prepared locally and collision-checked. Supports exam engine unique-item rules. DRAFT ONLY — GT Ed25519 signed approval required before import.",
+  "items": []
+}

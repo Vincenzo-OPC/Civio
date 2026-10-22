@@ -19,6 +19,7 @@ readonly class SubmitExamAttemptData
         public array $answers,
         public array $clientMetadata = [],
         public ?string $examSessionId = null,
+        public ?string $practiceBatchId = null,
     ) {}
 
     public static function fromRequest(StoreExamAttemptRequest $request): self
@@ -52,6 +53,7 @@ readonly class SubmitExamAttemptData
             answers: (array) ($v['answers'] ?? []),
             clientMetadata: $clientMetadata,
             examSessionId: isset($v['exam_session_id']) && $v['exam_session_id'] !== '' ? (string) $v['exam_session_id'] : null,
+            practiceBatchId: isset($v['practice_batch_id']) && $v['practice_batch_id'] !== '' ? (string) $v['practice_batch_id'] : null,
         );
     }
 
