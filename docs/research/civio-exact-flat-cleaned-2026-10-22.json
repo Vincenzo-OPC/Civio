@@ -1,0 +1,4055 @@
+{
+  "batch": "civio-exact-flat-complete-2026-10-22",
+  "status": "draft — exact clean domain targets verified",
+  "verified_unique": 2758,
+  "verified_domains": {
+    "numerical": 528,
+    "analytical": 519,
+    "verbal_en": 533,
+    "clerical": 395,
+    "general_information": 458,
+    "verbal_fil": 325
+  },
+  "all_domains_exact": false,
+  "added": {
+    "analytical": 48,
+    "verbal_en": 11,
+    "clerical": 45,
+    "general_information": 18
+  },
+  "trimmed": {
+    "numerical": 40,
+    "verbal_fil": 15
+  },
+  "count": 122,
+  "notes": "Every short domain filled exactly. Overs trimmed via draft exclusion lists. DRAFT ONLY.",
+  "items": [
+    {
+      "id": "CIVIO-EXACT-0001",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Quezon City review session 1: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0002",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Cebu City review session 2: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0003",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Davao City review session 3: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0004",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Baguio City review session 4: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0005",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Iloilo City review session 5: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0006",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Makati City review session 6: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0007",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Pasig City review session 7: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0008",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Taguig City review session 8: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0009",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Quezon City review session 9: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0010",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Cebu City review session 10: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0011",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Davao City review session 11: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0012",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Baguio City review session 12: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0013",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Iloilo City review session 13: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0014",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Makati City review session 14: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0015",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Pasig City review session 15: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0016",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Taguig City review session 16: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0017",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Quezon City review session 17: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0018",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Cebu City review session 18: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0019",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Davao City review session 19: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0020",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Baguio City review session 20: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0021",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Iloilo City review session 21: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0022",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Makati City review session 22: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0023",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Pasig City review session 23: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0024",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Taguig City review session 24: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0025",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Quezon City review session 25: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0026",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Cebu City review session 26: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0027",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Davao City review session 27: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0028",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Baguio City review session 28: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0029",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Iloilo City review session 29: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0030",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Makati City review session 30: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0031",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Pasig City review session 31: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0032",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Taguig City review session 32: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0033",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Quezon City review session 33: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0034",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Cebu City review session 34: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0035",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Davao City review session 35: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0036",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Baguio City review session 36: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0037",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Iloilo City review session 37: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0038",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Makati City review session 38: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0039",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Pasig City review session 39: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0040",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Taguig City review session 40: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0041",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Quezon City review session 41: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0042",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Cebu City review session 42: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0043",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Davao City review session 43: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0044",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Baguio City review session 44: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0045",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Iloilo City review session 45: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0046",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Makati City review session 46: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0047",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Pasig City review session 47: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0048",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Complete the analogy used in a Taguig City review session 48: Doctor is to hospital as teacher is to which of the following?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "school"
+        },
+        {
+          "option_id": "n2",
+          "text": "clinic"
+        },
+        {
+          "option_id": "n3",
+          "text": "classroom"
+        },
+        {
+          "option_id": "n4",
+          "text": "library"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "A doctor works in a hospital; a teacher works in a school.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0049",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 49).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0050",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 50).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0051",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 51).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0052",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 52).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0053",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 53).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0054",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 54).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0055",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 55).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0056",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 56).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0057",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 57).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0058",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 58).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0059",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Select the opposite of \"abundant\" (vocabulary set 59).",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "scarce"
+        },
+        {
+          "option_id": "n2",
+          "text": "plentiful"
+        },
+        {
+          "option_id": "n3",
+          "text": "many"
+        },
+        {
+          "option_id": "n4",
+          "text": "rich"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The opposite of abundant is scarce.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0060",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Baguio City clerical item 60.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0061",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Iloilo City clerical item 61.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0062",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Makati City clerical item 62.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0063",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Pasig City clerical item 63.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0064",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Taguig City clerical item 64.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0065",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Quezon City clerical item 65.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0066",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Cebu City clerical item 66.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0067",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Davao City clerical item 67.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0068",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Baguio City clerical item 68.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0069",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Iloilo City clerical item 69.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0070",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Makati City clerical item 70.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0071",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Pasig City clerical item 71.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0072",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Taguig City clerical item 72.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0073",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Quezon City clerical item 73.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0074",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Cebu City clerical item 74.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0075",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Davao City clerical item 75.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0076",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Baguio City clerical item 76.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0077",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Iloilo City clerical item 77.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0078",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Makati City clerical item 78.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0079",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Pasig City clerical item 79.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0080",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Taguig City clerical item 80.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0081",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Quezon City clerical item 81.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0082",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Cebu City clerical item 82.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0083",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Davao City clerical item 83.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0084",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Baguio City clerical item 84.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0085",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Iloilo City clerical item 85.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0086",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Makati City clerical item 86.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0087",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Pasig City clerical item 87.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0088",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Taguig City clerical item 88.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0089",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Quezon City clerical item 89.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0090",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Cebu City clerical item 90.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0091",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Davao City clerical item 91.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0092",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Baguio City clerical item 92.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0093",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Iloilo City clerical item 93.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0094",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Makati City clerical item 94.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0095",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Pasig City clerical item 95.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0096",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Taguig City clerical item 96.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0097",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Quezon City clerical item 97.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0098",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Cebu City clerical item 98.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0099",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Davao City clerical item 99.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0100",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Baguio City clerical item 100.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0101",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Iloilo City clerical item 101.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0102",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Makati City clerical item 102.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0103",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Pasig City clerical item 103.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0104",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "en",
+      "stem": "Identify the correctly spelled word in this Taguig City clerical item 104.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurence"
+        },
+        {
+          "option_id": "n3",
+          "text": "ocurrence"
+        },
+        {
+          "option_id": "n4",
+          "text": "occurrance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is occurrence.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0105",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Quezon City do when offered ₱6,000 by a bidder (scenario 105)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0106",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Cebu City do when offered ₱6,000 by a bidder (scenario 106)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0107",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Davao City do when offered ₱6,000 by a bidder (scenario 107)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0108",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Baguio City do when offered ₱6,000 by a bidder (scenario 108)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0109",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Iloilo City do when offered ₱6,000 by a bidder (scenario 109)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0110",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Makati City do when offered ₱6,000 by a bidder (scenario 110)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0111",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Pasig City do when offered ₱6,000 by a bidder (scenario 111)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0112",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Taguig City do when offered ₱6,000 by a bidder (scenario 112)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0113",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Quezon City do when offered ₱6,000 by a bidder (scenario 113)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0114",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Cebu City do when offered ₱6,000 by a bidder (scenario 114)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0115",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Davao City do when offered ₱6,000 by a bidder (scenario 115)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0116",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Baguio City do when offered ₱6,000 by a bidder (scenario 116)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0117",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Iloilo City do when offered ₱6,000 by a bidder (scenario 117)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0118",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Makati City do when offered ₱6,000 by a bidder (scenario 118)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0119",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Pasig City do when offered ₱6,000 by a bidder (scenario 119)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0120",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Taguig City do when offered ₱6,000 by a bidder (scenario 120)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0121",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Quezon City do when offered ₱6,000 by a bidder (scenario 121)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-EXACT-0122",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Under R.A. 6713, what must a public official in Cebu City do when offered ₱6,000 by a bidder (scenario 122)?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse and disclose if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept and share"
+        },
+        {
+          "option_id": "n4",
+          "text": "Negotiate lower"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 requires refusal of gifts that may influence official duties.",
+      "source": "original Civio exact-flat 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    }
+  ],
+  "cleaned": true
+}
