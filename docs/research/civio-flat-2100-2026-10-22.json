@@ -1,6 +1,6 @@
 {
   "batch": "civio-flat-2100-2026-10-22",
-  "status": "draft \u2014 final set for flat 2100",
+  "status": "draft — repaired after CoS review of 86608c1, not approved",
   "count": 122,
   "domains": {
     "analytical": 48,
@@ -8,7 +8,7 @@
     "clerical": 45,
     "general_information": 18
   },
-  "math": "2033 base \u2212 40 numerical drafts \u2212 15 non-reading verbal_fil drafts + these items = 2100",
+  "math": "2033 base − 40 numerical drafts − 15 non-reading verbal_fil drafts + these items = 2100",
   "targets": {
     "numerical": 400,
     "analytical": 400,
@@ -17,7 +17,7 @@
     "clerical": 300,
     "general_information": 300
   },
-  "notes": "Answer positions shuffled. Clerical stems do not reveal the key. GI section labels corrected. DRAFT ONLY.",
+  "notes": "Repaired after CoS review of 86608c1 (13 accept, 72 revise, 37 reject). The 13 accepted General Information items are unchanged. Analogy distractors are no longer filler, base words are not repeated, and the nine non-parallel pairs plus the three bank duplicates were replaced. Antonym distractors are no longer filler, and the bank duplicates were replaced. Clerical options are believable misspellings of one word. Stems do not print the key. cooly, committee/committed, and license/licensee are gone. R.A. 6713 labels: 0111 and 0112 are §4(A)(c); 0119 is §7(a); 0120 is §7(b)(1); 0122 is §7(c). Filipino reading passages stay in the bank. The trim list is unchanged. DRAFT ONLY. Not signed, not activated, not imported.",
   "items": [
     {
       "id": "CIVIO-2100-0001",
@@ -27,28 +27,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Author is to book as composer is to which of the following?",
+      "stem": "spatula is to flip as whisk is to which of the following?",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "beat"
         },
         {
           "option_id": "n2",
-          "text": "symphony"
+          "text": "bowl"
         },
         {
           "option_id": "n3",
-          "text": "book"
+          "text": "cream"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "recipe"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Author relates to book; composer relates to symphony.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "A utensil is named for the action it performs. Spatula is to flip; whisk is to beat.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -60,28 +60,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Pilot is to aircraft as captain is to which of the following?",
+      "stem": "oar is to row as paddle is to which of the following?",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "canoe"
         },
         {
           "option_id": "n2",
-          "text": "aircraft"
+          "text": "stroke"
         },
         {
           "option_id": "n3",
-          "text": "ship"
+          "text": "river"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "water"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "Pilot relates to aircraft; captain relates to ship.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "A utensil is named for the action it performs. Oar is to row; paddle is to stroke.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -93,28 +93,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Chef is to kitchen as surgeon is to which of the following?",
+      "stem": "Which word completes the analogy? needle is to sew as awl is to ____.",
       "options": [
         {
           "option_id": "n1",
-          "text": "kitchen"
+          "text": "leather"
         },
         {
           "option_id": "n2",
-          "text": "operating room"
+          "text": "stitch"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "pierce"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "handle"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Chef relates to kitchen; surgeon relates to operating room.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "A hand tool is named for the action it performs. Needle is to sew; awl is to pierce.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -126,28 +126,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Teacher is to classroom as coach is to which of the following?",
+      "stem": "Which word completes the analogy? funnel is to pour as ladle is to ____.",
       "options": [
         {
           "option_id": "n1",
-          "text": "classroom"
+          "text": "soup"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "pot"
         },
         {
           "option_id": "n3",
-          "text": "workplace"
+          "text": "menu"
         },
         {
           "option_id": "n4",
-          "text": "court"
+          "text": "serve"
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "Teacher relates to classroom; coach relates to court.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "A utensil is named for the action it performs. Funnel is to pour; ladle is to serve.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -159,28 +159,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Farmer is to crops as miner is to which of the following?",
+      "stem": "chisel : carve :: plane : ____",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "smooth"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "wood"
         },
         {
           "option_id": "n3",
-          "text": "crops"
+          "text": "shavings"
         },
         {
           "option_id": "n4",
-          "text": "ore"
+          "text": "bench"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "Farmer relates to crops; miner relates to ore.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "A woodworking tool is named for the action it performs. Chisel is to carve; plane is to smooth.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -192,28 +192,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Judge is to verdict as referee is to which of the following?",
+      "stem": "corkscrew : uncork :: stapler : ____",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "paper"
         },
         {
           "option_id": "n2",
-          "text": "verdict"
+          "text": "fasten"
         },
         {
           "option_id": "n3",
-          "text": "decision"
+          "text": "desk"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "bottle"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "Judge relates to verdict; referee relates to decision.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "A device is named for the action it performs. Corkscrew is to uncork; stapler is to fasten.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -225,28 +225,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Nurse is to hospital as mechanic is to which of the following?",
+      "stem": "Find the word that matches the link of hoe to cultivate. rake is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "leaves"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "soil"
         },
         {
           "option_id": "n3",
-          "text": "hospital"
+          "text": "gather"
         },
         {
           "option_id": "n4",
-          "text": "garage"
+          "text": "yard"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "Nurse relates to hospital; mechanic relates to garage.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "A garden tool is named for the action it performs. Hoe is to cultivate; rake is to gather.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -258,28 +258,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Painter is to canvas as sculptor is to which of the following?",
+      "stem": "Find the word that matches the link of metronome to tempo. tuner is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "concert"
         },
         {
           "option_id": "n2",
-          "text": "marble"
+          "text": "string"
         },
         {
           "option_id": "n3",
-          "text": "canvas"
+          "text": "song"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "pitch"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Painter relates to canvas; sculptor relates to marble.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "A music device is named for the property it sets. Metronome is to tempo; tuner is to pitch.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -291,28 +291,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Poet is to poem as songwriter is to which of the following?",
+      "stem": "The link from milliner to hat matches the link from cobbler to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "lyric"
+          "text": "shoe"
         },
         {
           "option_id": "n2",
-          "text": "poem"
+          "text": "leather"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "lace"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "shop"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Poet relates to poem; songwriter relates to lyric.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "A maker is named for the product they produce. Milliner is to hat; cobbler is to shoe.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -324,28 +324,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Librarian is to books as curator is to which of the following?",
+      "stem": "The link from florist to bouquet matches the link from silversmith to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "artifacts"
+          "text": "metal"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "tray"
         },
         {
           "option_id": "n3",
-          "text": "books"
+          "text": "polish"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "counter"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "Librarian relates to books; curator relates to artifacts.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "A maker is named for the product they produce. Florist is to bouquet; silversmith is to tray.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -357,28 +357,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Baker is to bread as tailor is to which of the following?",
+      "stem": "tread relates to which word in the same way that rung relates to ladder?",
       "options": [
         {
           "option_id": "n1",
-          "text": "suit"
+          "text": "climb"
         },
         {
           "option_id": "n2",
-          "text": "bread"
+          "text": "rail"
         },
         {
           "option_id": "n3",
-          "text": "workplace"
+          "text": "staircase"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "height"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "Baker relates to bread; tailor relates to suit.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The word is one part of the whole. Rung is to ladder; tread is to staircase.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -390,28 +390,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Sailor is to sea as pilot is to which of the following?",
+      "stem": "quill relates to which word in the same way that petal relates to flower?",
       "options": [
         {
           "option_id": "n1",
-          "text": "sky"
+          "text": "ink"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "bird"
         },
         {
           "option_id": "n3",
-          "text": "sea"
+          "text": "nest"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "porcupine"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "Sailor relates to sea; pilot relates to sky.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The word is one part of the whole. Petal is to flower; quill is to porcupine.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -423,28 +423,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Dentist is to teeth as optician is to which of the following?",
+      "stem": "Choose the completion: tine is to fork as bristle is to what?",
       "options": [
         {
           "option_id": "n1",
-          "text": "eyes"
+          "text": "brush"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "paint"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "handle"
         },
         {
           "option_id": "n4",
-          "text": "teeth"
+          "text": "hair"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Dentist relates to teeth; optician relates to eyes.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The word is one projecting part of the whole. Tine is to fork; bristle is to brush.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -456,28 +456,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Architect is to building as cartographer is to which of the following?",
+      "stem": "Choose the completion: kernel is to corn as stone is to what?",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "juice"
         },
         {
           "option_id": "n2",
-          "text": "map"
+          "text": "peach"
         },
         {
           "option_id": "n3",
-          "text": "building"
+          "text": "orchard"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "blossom"
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "Architect relates to building; cartographer relates to map.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The word is the inner part of the whole. Kernel is to corn; stone is to peach.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -489,28 +489,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Editor is to article as director is to which of the following?",
+      "stem": "Same relationship: clasp goes with bracelet, so buckle goes with:",
       "options": [
         {
           "option_id": "n1",
-          "text": "article"
+          "text": "waist"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "leather"
         },
         {
           "option_id": "n3",
-          "text": "film"
+          "text": "belt"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "gold"
         }
       ],
       "answer_option_id": "n3",
-      "reveal": "Editor relates to article; director relates to film.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The word is the fastener on the whole. Clasp is to bracelet; buckle is to belt.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -522,28 +522,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Gardener is to garden as custodian is to which of the following?",
+      "stem": "Same relationship: string goes with violin, so reed goes with:",
       "options": [
         {
           "option_id": "n1",
-          "text": "building"
+          "text": "music"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "breath"
         },
         {
           "option_id": "n3",
-          "text": "garden"
+          "text": "concert"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "oboe"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "Gardener relates to garden; custodian relates to building.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The word is the sounding part of the instrument. String is to violin; reed is to oboe.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -555,28 +555,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Scientist is to experiment as detective is to which of the following?",
+      "stem": "Pair the missing word. murmur is to shout; trickle is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "investigation"
+          "text": "torrent"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "river"
         },
         {
           "option_id": "n3",
-          "text": "experiment"
+          "text": "whisper"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "silence"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Scientist relates to experiment; detective relates to investigation.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The second word is a much stronger degree of the first. Murmur is to shout; trickle is to torrent.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -588,28 +588,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Musician is to instrument as athlete is to which of the following?",
+      "stem": "Pair the missing word. ember is to blaze; ripple is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "equipment"
+          "text": "ocean"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "wave"
         },
         {
           "option_id": "n3",
-          "text": "workplace"
+          "text": "splash"
         },
         {
           "option_id": "n4",
-          "text": "instrument"
+          "text": "beach"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "Musician relates to instrument; athlete relates to equipment.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The second word is a much stronger degree of the first. Ember is to blaze; ripple is to wave.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -621,28 +621,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Writer is to draft as painter is to which of the following?",
+      "stem": "In the same sense that tired goes with exhausted, hungry goes with:",
       "options": [
         {
           "option_id": "n1",
-          "text": "draft"
+          "text": "food"
         },
         {
           "option_id": "n2",
-          "text": "sketch"
+          "text": "sleep"
         },
         {
           "option_id": "n3",
-          "text": "workplace"
+          "text": "famished"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "meal"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Writer relates to draft; painter relates to sketch.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The second word is a much stronger degree of the first. Tired is to exhausted; hungry is to famished.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -654,28 +654,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Carpenter is to wood as blacksmith is to which of the following?",
+      "stem": "In the same sense that irritate goes with enrage, drip goes with:",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "faucet"
         },
         {
           "option_id": "n2",
-          "text": "metal"
+          "text": "leak"
         },
         {
           "option_id": "n3",
-          "text": "workplace"
+          "text": "pipe"
         },
         {
           "option_id": "n4",
-          "text": "wood"
+          "text": "gush"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Carpenter relates to wood; blacksmith relates to metal.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The second word is a much stronger degree of the first. Irritate is to enrage; drip is to gush.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -687,28 +687,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Photographer is to camera as painter is to which of the following?",
+      "stem": "Complete the pair. fragile is to brittle as lucid is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "camera"
+          "text": "clear"
         },
         {
           "option_id": "n2",
-          "text": "brush"
+          "text": "glass"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "dark"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "muddy"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Photographer relates to camera; painter relates to brush.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The two words are synonyms. Fragile is to brittle; lucid is to clear.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -720,28 +720,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Conductor is to orchestra as director is to which of the following?",
+      "stem": "Complete the pair. weary is to fatigued as costly is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "orchestra"
+          "text": "money"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "expensive"
         },
         {
           "option_id": "n3",
-          "text": "workplace"
+          "text": "cheap"
         },
         {
           "option_id": "n4",
-          "text": "cast"
+          "text": "price"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "Conductor relates to orchestra; director relates to cast.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The two words are synonyms. Weary is to fatigued; costly is to expensive.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -753,28 +753,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Pharmacist is to medicine as librarian is to which of the following?",
+      "stem": "Which word keeps the relationship? silent : quiet = enormous :",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "sound"
         },
         {
           "option_id": "n2",
-          "text": "information"
+          "text": "tiny"
         },
         {
           "option_id": "n3",
-          "text": "workplace"
+          "text": "huge"
         },
         {
           "option_id": "n4",
-          "text": "medicine"
+          "text": "room"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Pharmacist relates to medicine; librarian relates to information.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The two words are synonyms. Silent is to quiet; enormous is to huge.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -786,28 +786,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Veterinarian is to animal as physician is to which of the following?",
+      "stem": "Which word keeps the relationship? calm : peaceful = wealthy :",
       "options": [
         {
           "option_id": "n1",
-          "text": "person"
+          "text": "money"
         },
         {
           "option_id": "n2",
-          "text": "animal"
+          "text": "poor"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "noisy"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "affluent"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "Veterinarian relates to animal; physician relates to person.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The two words are synonyms. Calm is to peaceful; wealthy is to affluent.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -819,28 +819,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Accountant is to ledger as historian is to which of the following?",
+      "stem": "Select the word that finishes this analogy: danger is to dangerous as fame is to",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "famous"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "popular"
         },
         {
           "option_id": "n3",
-          "text": "archive"
+          "text": "celebrity"
         },
         {
           "option_id": "n4",
-          "text": "ledger"
+          "text": "hero"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "Accountant relates to ledger; historian relates to archive.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The second word is the adjective formed from the first. Danger is to dangerous; fame is to famous.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -852,28 +852,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Translator is to language as interpreter is to which of the following?",
+      "stem": "Select the word that finishes this analogy: arrive is to arrival as depart is to",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "station"
         },
         {
           "option_id": "n2",
-          "text": "speech"
+          "text": "departure"
         },
         {
           "option_id": "n3",
-          "text": "language"
+          "text": "leave"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "ticket"
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "Translator relates to language; interpreter relates to speech.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The second word is the noun formed from the verb. Arrive is to arrival; depart is to departure.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -885,28 +885,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Navigator is to route as guide is to which of the following?",
+      "stem": "What stands in the same relation to triangle that circular has to circle?",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "square"
         },
         {
           "option_id": "n2",
-          "text": "path"
+          "text": "angle"
         },
         {
           "option_id": "n3",
-          "text": "route"
+          "text": "triangular"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "line"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Navigator relates to route; guide relates to path.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The second word is the adjective formed from the shape. Circle is to circular; triangle is to triangular.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -918,28 +918,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Forester is to trees as oceanographer is to which of the following?",
+      "stem": "What stands in the same relation to wide that depth has to deep?",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "narrow"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "broad"
         },
         {
           "option_id": "n3",
-          "text": "trees"
+          "text": "long"
         },
         {
           "option_id": "n4",
-          "text": "ocean"
+          "text": "width"
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "Forester relates to trees; oceanographer relates to ocean.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The second word is the noun formed from the adjective. Deep is to depth; wide is to width.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -951,28 +951,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Beekeeper is to hive as shepherd is to which of the following?",
+      "stem": "swift compares with swiftly as careful compares with:",
       "options": [
         {
           "option_id": "n1",
-          "text": "flock"
+          "text": "carefully"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "caution"
         },
         {
           "option_id": "n3",
-          "text": "workplace"
+          "text": "slow"
         },
         {
           "option_id": "n4",
-          "text": "hive"
+          "text": "care"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Beekeeper relates to hive; shepherd relates to flock.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The second word is the adverb formed from the adjective. Swift is to swiftly; careful is to carefully.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -984,28 +984,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Locksmith is to lock as guard is to which of the following?",
+      "stem": "free compares with freedom as equal compares with:",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "fair"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "equality"
         },
         {
           "option_id": "n3",
-          "text": "lock"
+          "text": "same"
         },
         {
           "option_id": "n4",
-          "text": "gate"
+          "text": "law"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "Locksmith relates to lock; guard relates to gate.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The second word is the noun formed from the adjective. Free is to freedom; equal is to equality.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1017,28 +1017,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Weaver is to cloth as potter is to which of the following?",
+      "stem": "Which term completes it? curator is to museum what warden is to",
       "options": [
         {
           "option_id": "n1",
-          "text": "cloth"
+          "text": "cell"
         },
         {
           "option_id": "n2",
-          "text": "vessel"
+          "text": "sentence"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "prison"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "uniform"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Weaver relates to cloth; potter relates to vessel.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The person works in that place. Curator is to museum; warden is to prison.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1050,28 +1050,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Mason is to wall as roofer is to which of the following?",
+      "stem": "Which term completes it? blacksmith is to forge what potter is to",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "clay"
         },
         {
           "option_id": "n2",
-          "text": "roof"
+          "text": "mug"
         },
         {
           "option_id": "n3",
-          "text": "wall"
+          "text": "wheel"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "kiln"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Mason relates to wall; roofer relates to roof.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The person works at that heated equipment. Blacksmith is to forge; potter is to kiln.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1083,28 +1083,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Printer is to page as publisher is to which of the following?",
+      "stem": "Match the relationship of quiver and arrow. scabbard matches:",
       "options": [
         {
           "option_id": "n1",
-          "text": "page"
+          "text": "sword"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "knight"
         },
         {
           "option_id": "n3",
-          "text": "book"
+          "text": "blade"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "steel"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "Printer relates to page; publisher relates to book.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The first object holds the second. Quiver is to arrow; scabbard is to sword.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1116,28 +1116,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Actor is to role as singer is to which of the following?",
+      "stem": "Match the relationship of umbrella and rain. sunscreen matches:",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "beach"
         },
         {
           "option_id": "n2",
-          "text": "role"
+          "text": "sunlight"
         },
         {
           "option_id": "n3",
-          "text": "song"
+          "text": "towel"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "sand"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "Actor relates to role; singer relates to song.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The first object protects against the second. Umbrella is to rain; sunscreen is to sunlight.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1149,28 +1149,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Coach is to team as conductor is to which of the following?",
+      "stem": "Apply the same link. levee is to flood. seawall is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "ocean"
         },
         {
           "option_id": "n2",
-          "text": "ensemble"
+          "text": "sand"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "surge"
         },
         {
           "option_id": "n4",
-          "text": "team"
+          "text": "pier"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Coach relates to team; conductor relates to ensemble.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The first structure holds back the second. Levee is to flood; seawall is to surge.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1182,28 +1182,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Chef is to menu as curator is to which of the following?",
+      "stem": "Apply the same link. beaver is to lodge. termite is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "wood"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "soil"
         },
         {
           "option_id": "n3",
-          "text": "exhibition"
+          "text": "queen"
         },
         {
           "option_id": "n4",
-          "text": "menu"
+          "text": "mound"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "Chef relates to menu; curator relates to exhibition.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The animal builds that home. Beaver is to lodge; termite is to mound.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1215,28 +1215,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Pilot is to flight plan as captain is to which of the following?",
+      "stem": "Which word belongs with silkworm, given that spider belongs with web in the same way?",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "cocoon"
         },
         {
           "option_id": "n2",
-          "text": "voyage plan"
+          "text": "moth"
         },
         {
           "option_id": "n3",
-          "text": "flight plan"
+          "text": "leaf"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "thread"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "Pilot relates to flight plan; captain relates to voyage plan.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The animal makes that structure. Spider is to web; silkworm is to cocoon.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1248,28 +1248,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Teacher is to syllabus as trainer is to which of the following?",
+      "stem": "Which word belongs with botanist, given that geologist belongs with rock in the same way?",
       "options": [
         {
           "option_id": "n1",
-          "text": "tool"
+          "text": "garden"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "plant"
         },
         {
           "option_id": "n3",
-          "text": "curriculum"
+          "text": "soil"
         },
         {
           "option_id": "n4",
-          "text": "syllabus"
+          "text": "leaf"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "Teacher relates to syllabus; trainer relates to curriculum.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The scientist studies that object. Geologist is to rock; botanist is to plant.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1281,28 +1281,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Judge is to sentence as arbiter is to which of the following?",
+      "stem": "Finish the analogy linguist : language :: entomologist :",
       "options": [
         {
           "option_id": "n1",
-          "text": "sentence"
+          "text": "hive"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "grammar"
         },
         {
           "option_id": "n3",
-          "text": "award"
+          "text": "insect"
         },
         {
           "option_id": "n4",
-          "text": "workplace"
+          "text": "wing"
         }
       ],
       "answer_option_id": "n3",
-      "reveal": "Judge relates to sentence; arbiter relates to award.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The scientist studies that subject. Linguist is to language; entomologist is to insect.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1314,28 +1314,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Nurse is to care plan as mechanic is to which of the following?",
+      "stem": "Finish the analogy epilogue : novel :: coda :",
       "options": [
         {
           "option_id": "n1",
-          "text": "repair plan"
+          "text": "author"
         },
         {
           "option_id": "n2",
-          "text": "care plan"
+          "text": "stage"
         },
         {
           "option_id": "n3",
-          "text": "workplace"
+          "text": "overture"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "symphony"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "Nurse relates to care plan; mechanic relates to repair plan.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The word is the closing section of the work. Epilogue is to novel; coda is to symphony.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1347,28 +1347,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Author is to chapter as composer is to which of the following?",
+      "stem": "The pair caption and photograph works like subtitle and which word?",
       "options": [
         {
           "option_id": "n1",
-          "text": "movement"
+          "text": "film"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "camera"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "actor"
         },
         {
           "option_id": "n4",
-          "text": "chapter"
+          "text": "screen"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Author relates to chapter; composer relates to movement.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The word is text written to accompany the work. Caption is to photograph; subtitle is to film.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1380,28 +1380,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Farmer is to field as miner is to which of the following?",
+      "stem": "The pair bibliography and book works like filmography and which word?",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "actor"
         },
         {
           "option_id": "n2",
-          "text": "mine"
+          "text": "films"
         },
         {
           "option_id": "n3",
-          "text": "field"
+          "text": "camera"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "ticket"
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "Farmer relates to field; miner relates to mine.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The first word is a list of works of that kind. Bibliography is to book; filmography is to films.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1413,28 +1413,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Librarian is to catalog as archivist is to which of the following?",
+      "stem": "Which option continues the pattern grape is to raisin, plum is to?",
       "options": [
         {
           "option_id": "n1",
-          "text": "inventory"
+          "text": "fruit"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "juice"
         },
         {
           "option_id": "n3",
-          "text": "catalog"
+          "text": "prune"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "tree"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "Librarian relates to catalog; archivist relates to inventory.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The second word is the first food after it is dried. Grape is to raisin; plum is to prune.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1446,28 +1446,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Baker is to oven as potter is to which of the following?",
+      "stem": "Which option continues the pattern log is to lumber, ore is to?",
       "options": [
         {
           "option_id": "n1",
-          "text": "oven"
+          "text": "mine"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "forest"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "furnace"
         },
         {
           "option_id": "n4",
-          "text": "kiln"
+          "text": "metal"
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "Baker relates to oven; potter relates to kiln.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The second word is the processed form of the first. Log is to lumber; ore is to metal.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1479,28 +1479,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Sailor is to harbor as pilot is to which of the following?",
+      "stem": "Identify the match. armor is to knight just as shell is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "airport"
+          "text": "turtle"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "beach"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "egg"
         },
         {
           "option_id": "n4",
-          "text": "harbor"
+          "text": "slow"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Sailor relates to harbor; pilot relates to airport.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The first word is the covering worn by the second. Armor is to knight; shell is to turtle.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1512,28 +1512,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Editor is to proof as auditor is to which of the following?",
+      "stem": "Identify the match. bark is to trunk just as skin is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "bone"
         },
         {
           "option_id": "n2",
-          "text": "proof"
+          "text": "body"
         },
         {
           "option_id": "n3",
-          "text": "tool"
+          "text": "blood"
         },
         {
           "option_id": "n4",
-          "text": "report"
+          "text": "organ"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "Editor relates to proof; auditor relates to report.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The first word is the outer covering of the second. Bark is to trunk; skin is to body.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1545,28 +1545,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Gardener is to soil as florist is to which of the following?",
+      "stem": "Which choice has the same link? hinge is to door, and axle is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "workplace"
+          "text": "road"
         },
         {
           "option_id": "n2",
-          "text": "tool"
+          "text": "tire"
         },
         {
           "option_id": "n3",
-          "text": "arrangement"
+          "text": "wheel"
         },
         {
           "option_id": "n4",
-          "text": "soil"
+          "text": "engine"
         }
       ],
       "answer_option_id": "n3",
-      "reveal": "Gardener relates to soil; florist relates to arrangement.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The first word is the part the second turns on. Hinge is to door; axle is to wheel.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1578,28 +1578,28 @@
       "difficulty": "medium",
       "est_seconds": 60,
       "language": "en",
-      "stem": "Scientist is to data as analyst is to which of the following?",
+      "stem": "Which choice has the same link? yeast is to dough, and rennet is to:",
       "options": [
         {
           "option_id": "n1",
-          "text": "data"
+          "text": "cheese"
         },
         {
           "option_id": "n2",
-          "text": "workplace"
+          "text": "cow"
         },
         {
           "option_id": "n3",
-          "text": "dataset"
+          "text": "recipe"
         },
         {
           "option_id": "n4",
-          "text": "tool"
+          "text": "milk"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "Scientist relates to data; analyst relates to dataset.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The first substance is added to the second to start the change. Yeast is to dough; rennet is to milk.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1611,28 +1611,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"sparse\"?",
+      "stem": "Which word is most nearly the opposite of \"barren\"?",
       "options": [
         {
           "option_id": "n1",
-          "text": "dense"
+          "text": "arid"
         },
         {
           "option_id": "n2",
-          "text": "unrelated"
+          "text": "fertile"
         },
         {
           "option_id": "n3",
-          "text": "similar"
+          "text": "deserted"
         },
         {
           "option_id": "n4",
-          "text": "sparse"
+          "text": "harvested"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The opposite of \"sparse\" is \"dense\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "Barren land produces little; fertile land produces a lot.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1644,28 +1644,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"hostile\"?",
+      "stem": "Which word is most nearly the opposite of \"blunt\"?",
       "options": [
         {
           "option_id": "n1",
-          "text": "hostile"
+          "text": "dull"
         },
         {
           "option_id": "n2",
-          "text": "unrelated"
+          "text": "heavy"
         },
         {
           "option_id": "n3",
-          "text": "friendly"
+          "text": "short"
         },
         {
           "option_id": "n4",
-          "text": "similar"
+          "text": "sharp"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The opposite of \"hostile\" is \"friendly\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "Blunt and dull name the same edge. Sharp is the opposite.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1677,28 +1677,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"conceal\"?",
+      "stem": "Choose the best antonym of \"compulsory\".",
       "options": [
         {
           "option_id": "n1",
-          "text": "unrelated"
+          "text": "optional"
         },
         {
           "option_id": "n2",
-          "text": "reveal"
+          "text": "mandatory"
         },
         {
           "option_id": "n3",
-          "text": "conceal"
+          "text": "required"
         },
         {
           "option_id": "n4",
-          "text": "similar"
+          "text": "scheduled"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "The opposite of \"conceal\" is \"reveal\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "Mandatory and required repeat compulsory. Optional is the opposite.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1710,28 +1710,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"ascend\"?",
+      "stem": "Choose the best antonym of \"dawn\".",
       "options": [
         {
           "option_id": "n1",
-          "text": "descend"
+          "text": "sunrise"
         },
         {
           "option_id": "n2",
-          "text": "similar"
+          "text": "morning"
         },
         {
           "option_id": "n3",
-          "text": "ascend"
+          "text": "dusk"
         },
         {
           "option_id": "n4",
-          "text": "unrelated"
+          "text": "daylight"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The opposite of \"ascend\" is \"descend\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "Sunrise and morning sit with dawn. Dusk is the opposite end of the day.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1743,28 +1743,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"rigid\"?",
+      "stem": "Which choice is opposite in meaning to \"import\"?",
       "options": [
         {
           "option_id": "n1",
-          "text": "similar"
+          "text": "inbound"
         },
         {
           "option_id": "n2",
-          "text": "rigid"
+          "text": "export"
         },
         {
           "option_id": "n3",
-          "text": "flexible"
+          "text": "purchase"
         },
         {
           "option_id": "n4",
-          "text": "unrelated"
+          "text": "tariff"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The opposite of \"rigid\" is \"flexible\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "Inbound repeats the idea of bringing goods in. Export sends them out.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1776,28 +1776,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"surplus\"?",
+      "stem": "Which choice is opposite in meaning to \"junior\"?",
       "options": [
         {
           "option_id": "n1",
-          "text": "similar"
+          "text": "younger"
         },
         {
           "option_id": "n2",
-          "text": "shortage"
+          "text": "newer"
         },
         {
           "option_id": "n3",
-          "text": "surplus"
+          "text": "apprentice"
         },
         {
           "option_id": "n4",
-          "text": "unrelated"
+          "text": "senior"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "The opposite of \"surplus\" is \"shortage\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "Younger and newer stay on the junior side. Senior is the opposite rank.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1809,28 +1809,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"praise\"?",
+      "stem": "\"maximum\" is the opposite of which word?",
       "options": [
         {
           "option_id": "n1",
-          "text": "similar"
+          "text": "highest"
         },
         {
           "option_id": "n2",
-          "text": "unrelated"
+          "text": "peak"
         },
         {
           "option_id": "n3",
-          "text": "praise"
+          "text": "minimum"
         },
         {
           "option_id": "n4",
-          "text": "blame"
+          "text": "average"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "The opposite of \"praise\" is \"blame\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "Highest and peak repeat the top. Minimum is the opposite extreme.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1842,28 +1842,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"innocent\"?",
+      "stem": "\"noisy\" is the opposite of which word?",
       "options": [
         {
           "option_id": "n1",
-          "text": "guilty"
+          "text": "quiet"
         },
         {
           "option_id": "n2",
-          "text": "unrelated"
+          "text": "loud"
         },
         {
           "option_id": "n3",
-          "text": "similar"
+          "text": "rowdy"
         },
         {
           "option_id": "n4",
-          "text": "innocent"
+          "text": "crowded"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "The opposite of \"innocent\" is \"guilty\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "Loud and rowdy repeat noisy. Quiet is the opposite.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1875,28 +1875,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"advance\"?",
+      "stem": "Select the antonym of \"permit\".",
       "options": [
         {
           "option_id": "n1",
-          "text": "similar"
+          "text": "allow"
         },
         {
           "option_id": "n2",
-          "text": "unrelated"
+          "text": "approve"
         },
         {
           "option_id": "n3",
-          "text": "advance"
+          "text": "review"
         },
         {
           "option_id": "n4",
-          "text": "retreat"
+          "text": "forbid"
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "The opposite of \"advance\" is \"retreat\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "Allow and approve repeat permit. Forbid is the opposite.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1908,28 +1908,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"public\"?",
+      "stem": "Select the antonym of \"rural\".",
       "options": [
         {
           "option_id": "n1",
-          "text": "public"
+          "text": "provincial"
         },
         {
           "option_id": "n2",
-          "text": "similar"
+          "text": "urban"
         },
         {
           "option_id": "n3",
-          "text": "secret"
+          "text": "agricultural"
         },
         {
           "option_id": "n4",
-          "text": "unrelated"
+          "text": "remote"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The opposite of \"public\" is \"secret\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "Provincial and agricultural stay with rural. Urban is the opposite setting.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1941,28 +1941,28 @@
       "difficulty": "easy",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Which word is most nearly the opposite of \"simple\"?",
+      "stem": "Which word means the opposite of \"victory\"?",
       "options": [
         {
           "option_id": "n1",
-          "text": "complex"
+          "text": "triumph"
         },
         {
           "option_id": "n2",
-          "text": "similar"
+          "text": "success"
         },
         {
           "option_id": "n3",
-          "text": "unrelated"
+          "text": "defeat"
         },
         {
           "option_id": "n4",
-          "text": "simple"
+          "text": "score"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The opposite of \"simple\" is \"complex\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "Triumph and success repeat victory. Defeat is the opposite outcome.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -1974,28 +1974,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the travel order, which word is spelled correctly?",
+      "stem": "Which of these four spellings is right?",
       "options": [
         {
           "option_id": "n1",
-          "text": "accidentally"
+          "text": "amature"
         },
         {
           "option_id": "n2",
-          "text": "accidentallye"
+          "text": "amateur"
         },
         {
           "option_id": "n3",
-          "text": "acidentally"
+          "text": "amatuer"
         },
         {
           "option_id": "n4",
-          "text": "accidentalle"
+          "text": "amater"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"accidentally\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The correct spelling is \"amateur\". \"amature\" and \"amatuer\" swap the vowel, and \"amater\" drops a letter.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2007,28 +2007,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the inspection report, which word is spelled correctly?",
+      "stem": "Choose the version a dictionary would print.",
       "options": [
         {
           "option_id": "n1",
-          "text": "amateur"
+          "text": "artic"
         },
         {
           "option_id": "n2",
-          "text": "amateue"
+          "text": "arctik"
         },
         {
           "option_id": "n3",
-          "text": "amateure"
+          "text": "arctic"
         },
         {
           "option_id": "n4",
-          "text": "amateeur"
+          "text": "artcic"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"amateur\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The correct spelling is \"arctic\". \"artic\" drops the first c, \"arctik\" spells the end by sound, and \"artcic\" swaps two letters.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2040,28 +2040,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the payroll summary, which word is spelled correctly?",
+      "stem": "A clerk must copy one form of the word. Which attempt has no error?",
       "options": [
         {
           "option_id": "n1",
-          "text": "arctice"
+          "text": "colectible"
         },
         {
           "option_id": "n2",
-          "text": "arctie"
+          "text": "collectabel"
         },
         {
           "option_id": "n3",
-          "text": "arctic"
+          "text": "collectuble"
         },
         {
           "option_id": "n4",
-          "text": "arcteic"
+          "text": "collectible"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The correct spelling is \"arctic\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The correct spelling is \"collectible\". The others drop a letter or use the wrong ending. \"collectable\" is not used, because it is also an accepted spelling.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2073,28 +2073,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the leave form, which word is spelled correctly?",
+      "stem": "Identify the spelling that needs no correction.",
       "options": [
         {
           "option_id": "n1",
-          "text": "cemeterye"
+          "text": "committed"
         },
         {
           "option_id": "n2",
-          "text": "cemetere"
+          "text": "commited"
         },
         {
           "option_id": "n3",
-          "text": "cemetery"
+          "text": "comitted"
         },
         {
           "option_id": "n4",
-          "text": "cemeetery"
+          "text": "comited"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The correct spelling is \"cemetery\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"committed\", with two m's and two t's. \"committee\" is a different real word and is not an option.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2106,28 +2106,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the purchase request, which word is spelled correctly?",
+      "stem": "Select the line that is written properly.",
       "options": [
         {
           "option_id": "n1",
-          "text": "changeablee"
+          "text": "consience"
         },
         {
           "option_id": "n2",
-          "text": "changeable"
+          "text": "conscience"
         },
         {
           "option_id": "n3",
-          "text": "chanegeable"
+          "text": "consciense"
         },
         {
           "option_id": "n4",
-          "text": "changeable2"
+          "text": "concience"
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "The correct spelling is \"changeable\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"conscience\". The others drop a c, swap c for s, or drop the s. \"conscious\" is a different word and is not an option.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2139,28 +2139,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the delivery receipt, which word is spelled correctly?",
+      "stem": "Which choice matches the accepted form?",
       "options": [
         {
           "option_id": "n1",
-          "text": "collectible"
+          "text": "daquiri"
         },
         {
           "option_id": "n2",
-          "text": "collectiblee"
+          "text": "daiquirii"
         },
         {
           "option_id": "n3",
-          "text": "collectible2"
+          "text": "daiquiri"
         },
         {
           "option_id": "n4",
-          "text": "colleectible"
+          "text": "diaquiri"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"collectible\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The correct spelling is \"daiquiri\". The others drop the i, add an i, or swap two letters.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2172,28 +2172,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the audit finding, which word is spelled correctly?",
+      "stem": "Find the option with every letter in its proper place.",
       "options": [
         {
           "option_id": "n1",
-          "text": "committee"
+          "text": "drunkeness"
         },
         {
           "option_id": "n2",
-          "text": "comitted"
+          "text": "drunkness"
         },
         {
           "option_id": "n3",
-          "text": "committede"
+          "text": "drunkennes"
         },
         {
           "option_id": "n4",
-          "text": "committed"
+          "text": "drunkenness"
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"committed\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"drunkenness\". The others drop one n, drop the e, or drop one s.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2205,28 +2205,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the appointment paper, which word is spelled correctly?",
+      "stem": "Which entry can go into the record unchanged?",
       "options": [
         {
           "option_id": "n1",
-          "text": "conscience2"
+          "text": "dumbbell"
         },
         {
           "option_id": "n2",
-          "text": "consecience"
+          "text": "dumbell"
         },
         {
           "option_id": "n3",
-          "text": "consciencee"
+          "text": "dumbel"
         },
         {
           "option_id": "n4",
-          "text": "conscience"
+          "text": "dummbell"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"conscience\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"dumbbell\", with one m and two b's. The others drop a b, drop more than one letter, or double the m.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2238,28 +2238,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the clearance slip, which word is spelled correctly?",
+      "stem": "A proofreader circles mistakes. Which spelling gets no circle?",
       "options": [
         {
           "option_id": "n1",
-          "text": "conscientioue"
+          "text": "firey"
         },
         {
           "option_id": "n2",
-          "text": "consecientious"
+          "text": "fiery"
         },
         {
           "option_id": "n3",
-          "text": "conscientiouse"
+          "text": "feiry"
         },
         {
           "option_id": "n4",
-          "text": "conscientious"
+          "text": "firy"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"conscientious\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The correct spelling is \"fiery\". \"firey\" keeps the e from fire, \"feiry\" swaps the vowels, and \"firy\" drops a letter.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2271,28 +2271,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the inventory sheet, which word is spelled correctly?",
+      "stem": "Which alternative is the standard form?",
       "options": [
         {
           "option_id": "n1",
-          "text": "consensus"
+          "text": "fouth"
         },
         {
           "option_id": "n2",
-          "text": "consensuse"
+          "text": "fourht"
         },
         {
           "option_id": "n3",
-          "text": "conseensus"
+          "text": "fourth"
         },
         {
           "option_id": "n4",
-          "text": "consensue"
+          "text": "fuorth"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"consensus\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The correct spelling is \"fourth\". The others drop a letter or swap letters. \"forth\" is a different real word and is not an option.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2304,28 +2304,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the routing slip, which word is spelled correctly?",
+      "stem": "Pick the writing that is not a misspelling.",
       "options": [
         {
           "option_id": "n1",
-          "text": "cooley"
+          "text": "humorus"
         },
         {
           "option_id": "n2",
-          "text": "coole"
+          "text": "huemorous"
         },
         {
           "option_id": "n3",
-          "text": "coolye"
+          "text": "humoros"
         },
         {
           "option_id": "n4",
-          "text": "cooly"
+          "text": "humorous"
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"cooly\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"humorous\". The others drop a letter or swap the vowel. \"humourous\" is not used, because it is a recognized British spelling.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2337,28 +2337,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the endorsement, which word is spelled correctly?",
+      "stem": "Which of the list is free of letter errors?",
       "options": [
         {
           "option_id": "n1",
-          "text": "daiquirie"
+          "text": "ignorance"
         },
         {
           "option_id": "n2",
-          "text": "daiqeuiri"
+          "text": "ignorence"
         },
         {
           "option_id": "n3",
-          "text": "daiquiri"
+          "text": "ignoranse"
         },
         {
           "option_id": "n4",
-          "text": "daiquire"
+          "text": "ignorrance"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The correct spelling is \"daiquiri\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"ignorance\". The others use the wrong ending or double the wrong letter.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2370,28 +2370,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the certification, which word is spelled correctly?",
+      "stem": "Which form would you keep after a spelling check?",
       "options": [
         {
           "option_id": "n1",
-          "text": "diarrhoee"
+          "text": "innoculate"
         },
         {
           "option_id": "n2",
-          "text": "diarrhoeae"
+          "text": "inoculate"
         },
         {
           "option_id": "n3",
-          "text": "diarrhoea"
+          "text": "inocculate"
         },
         {
           "option_id": "n4",
-          "text": "diarerhoea"
+          "text": "innosulate"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The correct spelling is \"diarrhoea\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The correct spelling is \"inoculate\", with one n and one c. The others double the n, double the c, or spell the middle by sound.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2403,28 +2403,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the acknowledgment, which word is spelled correctly?",
+      "stem": "The other three attempts fail. Which one succeeds?",
       "options": [
         {
           "option_id": "n1",
-          "text": "drunkenness"
+          "text": "jewelery"
         },
         {
           "option_id": "n2",
-          "text": "drunkennese"
+          "text": "jewlery"
         },
         {
           "option_id": "n3",
-          "text": "drunekenness"
+          "text": "jewelry"
         },
         {
           "option_id": "n4",
-          "text": "drunkennesse"
+          "text": "jewellry"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"drunkenness\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The correct spelling used here is \"jewelry\". The others add an e, drop the e, or double the l. \"jewellery\" is not used, because it is a recognized British spelling.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2436,28 +2436,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the incident note, which word is spelled correctly?",
+      "stem": "Which option uses the letters in the correct sequence?",
       "options": [
         {
           "option_id": "n1",
-          "text": "dumbebell"
+          "text": "miniture"
         },
         {
           "option_id": "n2",
-          "text": "dumbbele"
+          "text": "minature"
         },
         {
           "option_id": "n3",
-          "text": "dumbbelle"
+          "text": "miniatur"
         },
         {
           "option_id": "n4",
-          "text": "dumbbell"
+          "text": "miniature"
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"dumbbell\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"miniature\". The others drop the a, drop the i, or drop the final e.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2469,28 +2469,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the transmittal, which word is spelled correctly?",
+      "stem": "Which version belongs on the signed page?",
       "options": [
         {
           "option_id": "n1",
-          "text": "equipmente"
+          "text": "mischievous"
         },
         {
           "option_id": "n2",
-          "text": "equipmene"
+          "text": "mischievious"
         },
         {
           "option_id": "n3",
-          "text": "equipment"
+          "text": "mischevious"
         },
         {
           "option_id": "n4",
-          "text": "equiepment"
+          "text": "mischivous"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The correct spelling is \"equipment\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"mischievous\". \"mischievious\" adds the extra i people often say, and the others drop a letter.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2502,28 +2502,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the logbook entry, which word is spelled correctly?",
+      "stem": "Which spelling passes review?",
       "options": [
         {
           "option_id": "n1",
-          "text": "exceede"
+          "text": "mispell"
         },
         {
           "option_id": "n2",
-          "text": "exceee"
+          "text": "misspell"
         },
         {
           "option_id": "n3",
-          "text": "exceeed"
+          "text": "misspel"
         },
         {
           "option_id": "n4",
-          "text": "exceed"
+          "text": "mispel"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"exceed\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The correct spelling is \"misspell\", with two s's and two l's. The others drop an s, drop an l, or drop both.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2535,28 +2535,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the notice of meeting, which word is spelled correctly?",
+      "stem": "Which of these writings is accurate?",
       "options": [
         {
           "option_id": "n1",
-          "text": "fierye"
+          "text": "pasttime"
         },
         {
           "option_id": "n2",
-          "text": "fierey"
+          "text": "passtime"
         },
         {
           "option_id": "n3",
-          "text": "fiere"
+          "text": "pastime"
         },
         {
           "option_id": "n4",
-          "text": "fiery"
+          "text": "pasttim"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"fiery\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The correct spelling is \"pastime\", with one s and one t. The others double a consonant or drop the final e.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2568,28 +2568,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the budget realignment, which word is spelled correctly?",
+      "stem": "Choose the form that is not wrong.",
       "options": [
         {
           "option_id": "n1",
-          "text": "fourte"
+          "text": "playwrite"
         },
         {
           "option_id": "n2",
-          "text": "fourthe"
+          "text": "playright"
         },
         {
           "option_id": "n3",
-          "text": "fourth"
+          "text": "playwrit"
         },
         {
           "option_id": "n4",
-          "text": "foureth"
+          "text": "playwright"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The correct spelling is \"fourth\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The correct spelling is \"playwright\". A wright is a maker. \"playwrite\" and \"playright\" follow the sound, and \"playwrit\" drops a letter.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2601,28 +2601,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the disbursement voucher, which word is spelled correctly?",
+      "stem": "Which line shows the proper letter order?",
       "options": [
         {
           "option_id": "n1",
-          "text": "gauge2"
+          "text": "absence"
         },
         {
           "option_id": "n2",
-          "text": "gaugee"
+          "text": "absense"
         },
         {
           "option_id": "n3",
-          "text": "gauge"
+          "text": "abcense"
         },
         {
           "option_id": "n4",
-          "text": "gauge1"
+          "text": "absance"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The correct spelling is \"gauge\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"absence\". \"absense\" uses the wrong ending, \"abcense\" follows the sound, and \"absance\" changes the vowel.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2634,28 +2634,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the property acknowledgment, which word is spelled correctly?",
+      "stem": "Which choice should replace the mistaken ones?",
       "options": [
         {
           "option_id": "n1",
-          "text": "grammae"
+          "text": "acceptible"
         },
         {
           "option_id": "n2",
-          "text": "grammare"
+          "text": "acceptable"
         },
         {
           "option_id": "n3",
-          "text": "grammar"
+          "text": "aceptable"
         },
         {
           "option_id": "n4",
-          "text": "gramar"
+          "text": "acceptabel"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The correct spelling is \"grammar\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The correct spelling is \"acceptable\". The others use -ible, drop a c, or scramble the ending.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2667,28 +2667,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the service record, which word is spelled correctly?",
+      "stem": "Which spelling is fit for an official paper?",
       "options": [
         {
           "option_id": "n1",
-          "text": "haraess"
+          "text": "anonymus"
         },
         {
           "option_id": "n2",
-          "text": "harass"
+          "text": "anonimous"
         },
         {
           "option_id": "n3",
-          "text": "harasse"
+          "text": "anonymous"
         },
         {
           "option_id": "n4",
-          "text": "harase"
+          "text": "anonymos"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "The correct spelling is \"harass\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The correct spelling is \"anonymous\". The others swap the ending vowel, spell the middle by sound, or drop a letter.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2700,28 +2700,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the daily time record, which word is spelled correctly?",
+      "stem": "Which of the four attempts is accurate?",
       "options": [
         {
           "option_id": "n1",
-          "text": "heighte"
+          "text": "apologie"
         },
         {
           "option_id": "n2",
-          "text": "height"
+          "text": "apolegy"
         },
         {
           "option_id": "n3",
-          "text": "heighe"
+          "text": "apollogy"
         },
         {
           "option_id": "n4",
-          "text": "heigeht"
+          "text": "apology"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "The correct spelling is \"height\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The correct spelling is \"apology\". The others use an -ie ending, swap the vowel, or double the l.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2733,28 +2733,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the trip ticket, which word is spelled correctly?",
+      "stem": "Select the writing that a careful editor would accept.",
       "options": [
         {
           "option_id": "n1",
-          "text": "humorous"
+          "text": "appearance"
         },
         {
           "option_id": "n2",
-          "text": "humoerous"
+          "text": "appearence"
         },
         {
           "option_id": "n3",
-          "text": "humorouse"
+          "text": "apearance"
         },
         {
           "option_id": "n4",
-          "text": "humoroue"
+          "text": "appearanse"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"humorous\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"appearance\". The others use the wrong ending or drop a p.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2766,28 +2766,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the canvass sheet, which word is spelled correctly?",
+      "stem": "Which option has the right sequence of letters?",
       "options": [
         {
           "option_id": "n1",
-          "text": "ignorancee"
+          "text": "attendence"
         },
         {
           "option_id": "n2",
-          "text": "ignoerance"
+          "text": "attendance"
         },
         {
           "option_id": "n3",
-          "text": "ignorance2"
+          "text": "atendance"
         },
         {
           "option_id": "n4",
-          "text": "ignorance"
+          "text": "attendanse"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"ignorance\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The correct spelling is \"attendance\". The others use the wrong ending or drop a t.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2799,28 +2799,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the abstract of bids, which word is spelled correctly?",
+      "stem": "Which form is the one without a mistake?",
       "options": [
         {
           "option_id": "n1",
-          "text": "immeediate"
+          "text": "autum"
         },
         {
           "option_id": "n2",
-          "text": "imediate"
+          "text": "automn"
         },
         {
           "option_id": "n3",
-          "text": "immediatee"
+          "text": "autumn"
         },
         {
           "option_id": "n4",
-          "text": "immediate"
+          "text": "autumm"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"immediate\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The correct spelling is \"autumn\". The n is silent but kept. The others drop it, move it, or double the m.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2832,28 +2832,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the notice of award, which word is spelled correctly?",
+      "stem": "A typist tried four times. Which try is right?",
       "options": [
         {
           "option_id": "n1",
-          "text": "independente"
+          "text": "ackward"
         },
         {
           "option_id": "n2",
-          "text": "independent"
+          "text": "awkwrd"
         },
         {
           "option_id": "n3",
-          "text": "independene"
+          "text": "aukward"
         },
         {
           "option_id": "n4",
-          "text": "indeependent"
+          "text": "awkward"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "The correct spelling is \"independent\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The correct spelling is \"awkward\". The others swap the first letters or drop a vowel.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2865,28 +2865,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the inspection and acceptance, which word is spelled correctly?",
+      "stem": "Which alternative would you leave unmarked?",
       "options": [
         {
           "option_id": "n1",
-          "text": "indispensable"
+          "text": "beginning"
         },
         {
           "option_id": "n2",
-          "text": "indispensable2"
+          "text": "begining"
         },
         {
           "option_id": "n3",
-          "text": "indispensablee"
+          "text": "beggining"
         },
         {
           "option_id": "n4",
-          "text": "indiespensable"
+          "text": "beginnning"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"indispensable\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"beginning\", with one g in begin and a double n. The others drop an n, double the g, or triple the n.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2898,28 +2898,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the waste material report, which word is spelled correctly?",
+      "stem": "Which of these is the proper written form?",
       "options": [
         {
           "option_id": "n1",
-          "text": "inoceulate"
+          "text": "boundry"
         },
         {
           "option_id": "n2",
-          "text": "inoculate"
+          "text": "boundary"
         },
         {
           "option_id": "n3",
-          "text": "inoculate2"
+          "text": "boundery"
         },
         {
           "option_id": "n4",
-          "text": "inoculatee"
+          "text": "boundarie"
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "The correct spelling is \"inoculate\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"boundary\". The others drop the a or use the wrong ending.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2931,28 +2931,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the gate pass, which word is spelled correctly?",
+      "stem": "Which entry avoids a spelling mistake?",
       "options": [
         {
           "option_id": "n1",
-          "text": "intelligencee"
+          "text": "briliant"
         },
         {
           "option_id": "n2",
-          "text": "inteelligence"
+          "text": "brillant"
         },
         {
           "option_id": "n3",
-          "text": "intelligence"
+          "text": "brilliant"
         },
         {
           "option_id": "n4",
-          "text": "intelligence2"
+          "text": "brillient"
         }
       ],
       "answer_option_id": "n3",
-      "reveal": "The correct spelling is \"intelligence\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"brilliant\", with two l's and an ia. The others drop an l, drop the i, or change the vowel.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2964,28 +2964,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the locator slip, which word is spelled correctly?",
+      "stem": "Which version is ready to file?",
       "options": [
         {
           "option_id": "n1",
-          "text": "jewelrye"
+          "text": "buisness"
         },
         {
           "option_id": "n2",
-          "text": "jewelry"
+          "text": "busness"
         },
         {
           "option_id": "n3",
-          "text": "jeweelry"
+          "text": "bussiness"
         },
         {
           "option_id": "n4",
-          "text": "jewelre"
+          "text": "business"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "The correct spelling is \"jewelry\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The correct spelling is \"business\". The others swap the vowel, drop the i, or double the s.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -2997,28 +2997,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the obligation request, which word is spelled correctly?",
+      "stem": "Which choice is the correct written form?",
       "options": [
         {
           "option_id": "n1",
-          "text": "leisure"
+          "text": "category"
         },
         {
           "option_id": "n2",
-          "text": "leisure2"
+          "text": "catagory"
         },
         {
           "option_id": "n3",
-          "text": "leiseure"
+          "text": "categery"
         },
         {
           "option_id": "n4",
-          "text": "leisuree"
+          "text": "categorey"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"leisure\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"category\". The others change the e to a, drop the o, or use an -ey ending.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3030,28 +3030,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the journal entry, which word is spelled correctly?",
+      "stem": "Which spelling can be signed off?",
       "options": [
         {
           "option_id": "n1",
-          "text": "library"
+          "text": "cieling"
         },
         {
           "option_id": "n2",
-          "text": "librarye"
+          "text": "ceiling"
         },
         {
           "option_id": "n3",
-          "text": "libreary"
+          "text": "ceeling"
         },
         {
           "option_id": "n4",
-          "text": "librare"
+          "text": "ceilling"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"library\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n2",
+      "reveal": "The correct spelling is \"ceiling\". The i comes before the e after c. The others swap the vowels or double the l.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3063,28 +3063,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the bank reconciliation, which word is spelled correctly?",
+      "stem": "Which of the following writings has no error?",
       "options": [
         {
           "option_id": "n1",
-          "text": "license"
+          "text": "certian"
         },
         {
           "option_id": "n2",
-          "text": "liceense"
+          "text": "certin"
         },
         {
           "option_id": "n3",
-          "text": "licensee"
+          "text": "certain"
         },
         {
           "option_id": "n4",
-          "text": "license2"
+          "text": "sertain"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"license\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The correct spelling is \"certain\". The others swap the vowels, drop a vowel, or start with the sound s.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3096,28 +3096,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the petty cash voucher, which word is spelled correctly?",
+      "stem": "Identify the attempt that is written right.",
       "options": [
         {
           "option_id": "n1",
-          "text": "maneuvere"
+          "text": "cheif"
         },
         {
           "option_id": "n2",
-          "text": "maneuvee"
+          "text": "cheef"
         },
         {
           "option_id": "n3",
-          "text": "maneeuver"
+          "text": "chieff"
         },
         {
           "option_id": "n4",
-          "text": "maneuver"
+          "text": "chief"
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"maneuver\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"chief\". The i comes before the e. The others swap the vowels, spell it by sound, or double the f.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3129,28 +3129,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the attendance sheet, which word is spelled correctly?",
+      "stem": "Which line is the accepted written form?",
       "options": [
         {
           "option_id": "n1",
-          "text": "milleennium"
+          "text": "comparison"
         },
         {
           "option_id": "n2",
-          "text": "millenniue"
+          "text": "comparision"
         },
         {
           "option_id": "n3",
-          "text": "millenniume"
+          "text": "comparrison"
         },
         {
           "option_id": "n4",
-          "text": "millennium"
+          "text": "compairison"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"millennium\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"comparison\". The others add an i, double the r, or add an i in the middle.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3162,28 +3162,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the training nomination, which word is spelled correctly?",
+      "stem": "Which option would survive a dictionary check?",
       "options": [
         {
           "option_id": "n1",
-          "text": "minieature"
+          "text": "convenence"
         },
         {
           "option_id": "n2",
-          "text": "miniature"
+          "text": "convenience"
         },
         {
           "option_id": "n3",
-          "text": "miniature2"
+          "text": "conveniance"
         },
         {
           "option_id": "n4",
-          "text": "miniaturee"
+          "text": "convinince"
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "The correct spelling is \"miniature\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"convenience\". The others drop the i, use the wrong ending, or spell the vowels by sound.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3195,28 +3195,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the overtime authority, which word is spelled correctly?",
+      "stem": "Which form is spelled in the standard manner?",
       "options": [
         {
           "option_id": "n1",
-          "text": "mischievouse"
+          "text": "critisism"
         },
         {
           "option_id": "n2",
-          "text": "mischievoue"
+          "text": "critiscism"
         },
         {
           "option_id": "n3",
-          "text": "miscehievous"
+          "text": "criticism"
         },
         {
           "option_id": "n4",
-          "text": "mischievous"
+          "text": "critcism"
         }
       ],
-      "answer_option_id": "n4",
-      "reveal": "The correct spelling is \"mischievous\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The correct spelling is \"criticism\". The others use an s for the c, add an s, or drop a vowel.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3228,28 +3228,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the suspension order, which word is spelled correctly?",
+      "stem": "Which alternative contains no letter mistake?",
       "options": [
         {
           "option_id": "n1",
-          "text": "misspele"
+          "text": "curiousity"
         },
         {
           "option_id": "n2",
-          "text": "missepell"
+          "text": "curiocity"
         },
         {
           "option_id": "n3",
-          "text": "misspell"
+          "text": "curiosety"
         },
         {
           "option_id": "n4",
-          "text": "misspelle"
+          "text": "curiosity"
         }
       ],
-      "answer_option_id": "n3",
-      "reveal": "The correct spelling is \"misspell\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The correct spelling is \"curiosity\". The others keep the o from curious, swap a consonant, or change the ending.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3261,28 +3261,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the reinstatement order, which word is spelled correctly?",
+      "stem": "Which version is the right written form?",
       "options": [
         {
           "option_id": "n1",
-          "text": "noticeable"
+          "text": "decision"
         },
         {
           "option_id": "n2",
-          "text": "noticeable2"
+          "text": "descision"
         },
         {
           "option_id": "n3",
-          "text": "noticeablee"
+          "text": "decison"
         },
         {
           "option_id": "n4",
-          "text": "notieceable"
+          "text": "desicion"
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"noticeable\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"decision\". The others add an s, drop an i, or move the s.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3294,28 +3294,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the memorandum receipt, which word is spelled correctly?",
+      "stem": "Which of these attempts should be kept?",
       "options": [
         {
           "option_id": "n1",
-          "text": "occasionalle"
+          "text": "discription"
         },
         {
           "option_id": "n2",
-          "text": "occasionally"
+          "text": "description"
         },
         {
           "option_id": "n3",
-          "text": "ocasionally"
+          "text": "descripsion"
         },
         {
           "option_id": "n4",
-          "text": "occasionallye"
+          "text": "desciption"
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "The correct spelling is \"occasionally\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"description\". The others change the first vowel, spell the ending by sound, or drop the r.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3327,28 +3327,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the invoice, which word is spelled correctly?",
+      "stem": "Choose the spelling that an editor would pass.",
       "options": [
         {
           "option_id": "n1",
-          "text": "parallel"
+          "text": "desireable"
         },
         {
           "option_id": "n2",
-          "text": "parallele"
+          "text": "desirible"
         },
         {
           "option_id": "n3",
-          "text": "parallee"
+          "text": "desirable"
         },
         {
           "option_id": "n4",
-          "text": "paraellel"
+          "text": "desirabel"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"parallel\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "The correct spelling is \"desirable\". The others keep the e from desire, use -ible, or scramble the ending.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3360,28 +3360,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the billing statement, which word is spelled correctly?",
+      "stem": "Which entry is the accurate one?",
       "options": [
         {
           "option_id": "n1",
-          "text": "pastime"
+          "text": "dilema"
         },
         {
           "option_id": "n2",
-          "text": "pasteime"
+          "text": "dilemna"
         },
         {
           "option_id": "n3",
-          "text": "pastimee"
+          "text": "dilemme"
         },
         {
           "option_id": "n4",
-          "text": "pastime2"
+          "text": "dilemma"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "The correct spelling is \"pastime\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n4",
+      "reveal": "The correct spelling is \"dilemma\", with two m's and no n. The others drop an m, add an n, or use a French-looking ending.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3393,28 +3393,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the collection report, which word is spelled correctly?",
+      "stem": "Which choice has no spelling fault?",
       "options": [
         {
           "option_id": "n1",
-          "text": "perseverancee"
+          "text": "efficiency"
         },
         {
           "option_id": "n2",
-          "text": "perseverance"
+          "text": "effeciency"
         },
         {
           "option_id": "n3",
-          "text": "perseeverance"
+          "text": "eficency"
         },
         {
           "option_id": "n4",
-          "text": "perseverance2"
+          "text": "efficience"
         }
       ],
-      "answer_option_id": "n2",
-      "reveal": "The correct spelling is \"perseverance\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"efficiency\". The others swap the vowels, drop an f, or use the wrong ending.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3426,28 +3426,28 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "On the remittance advice, which word is spelled correctly?",
+      "stem": "Which writing is the correct form of the word?",
       "options": [
         {
           "option_id": "n1",
-          "text": "playewright"
+          "text": "eligable"
         },
         {
           "option_id": "n2",
-          "text": "playwright"
+          "text": "eligible"
         },
         {
           "option_id": "n3",
-          "text": "playwrighe"
+          "text": "elligible"
         },
         {
           "option_id": "n4",
-          "text": "playwrighte"
+          "text": "eligble"
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "The correct spelling is \"playwright\".",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "The correct spelling is \"eligible\". The others use -able, double the l, or drop a vowel.",
+      "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3459,7 +3459,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a77(d): An official accepts a \u20b18,000 gift from a supplier with a pending bid. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(d): An official accepts a ₱8,000 gift from a supplier with a pending bid. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3471,7 +3471,7 @@
         },
         {
           "option_id": "n3",
-          "text": "Ask the supplier to reduce it below \u20b11,000"
+          "text": "Ask the supplier to reduce it below ₱1,000"
         },
         {
           "option_id": "n4",
@@ -3479,7 +3479,7 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Under \u00a77(d), the proper action is to refuse or return the gift and disclose it.",
+      "reveal": "Under §7(d), the proper action is to refuse or return the gift and disclose it.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3492,7 +3492,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a77(d): A staff member takes free tournament tickets from a bidding contractor. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(d): A staff member takes free tournament tickets from a bidding contractor. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3512,7 +3512,7 @@
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "Under \u00a77(d), the proper action is to decline the tickets and record the offer.",
+      "reveal": "Under §7(d), the proper action is to decline the tickets and record the offer.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3525,7 +3525,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a77(b): A regulator discusses employment with a company they currently oversee. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(b): A regulator discusses employment with a company they currently oversee. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3545,7 +3545,7 @@
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "Under \u00a77(b), the proper action is to decline until separation and the cooling-off period ends.",
+      "reveal": "Under §7(b), the proper action is to decline until separation and the cooling-off period ends.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3558,7 +3558,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a77(c): An employee posts confidential bid prices on a personal account. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(c): An employee posts confidential bid prices on a personal account. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3578,7 +3578,7 @@
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "Under \u00a77(c), the proper action is to remove the post and report the disclosure.",
+      "reveal": "Under §7(c), the proper action is to remove the post and report the disclosure.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3591,7 +3591,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a74: A division chief uses a government vehicle every weekend for family trips. What is the proper action?",
+      "stem": "Under R.A. 6713 §4: A division chief uses a government vehicle every weekend for family trips. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3611,7 +3611,7 @@
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "Under \u00a74, the proper action is to stop the personal use and reimburse the agency.",
+      "reveal": "Under §4, the proper action is to stop the personal use and reimburse the agency.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3624,7 +3624,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a74: Personal mobile load is charged to the office telephone allowance. What is the proper action?",
+      "stem": "Under R.A. 6713 §4: Personal mobile load is charged to the office telephone allowance. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3644,7 +3644,7 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Under \u00a74, the proper action is to refund the personal charges and stop the practice.",
+      "reveal": "Under §4, the proper action is to refund the personal charges and stop the practice.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3657,7 +3657,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a77(a): A director sits on the panel promoting their spouse. What is the proper action?",
+      "stem": "Under R.A. 6713 §4(A)(c): A director sits on the panel promoting their spouse to a regular technical post. The post is not confidential and is not coterminous personal staff. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3677,8 +3677,8 @@
         }
       ],
       "answer_option_id": "n3",
-      "reveal": "Under \u00a77(a), the proper action is to inhibit from the panel and disclose the relationship.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "Section 4(A)(c) says officials must not extend undue favors on account of office to relatives by blood or marriage. The only stated exception is a strictly confidential post or coterminous personal staff. This regular technical post is neither, so the director must leave the panel and disclose the relationship. Staying on the panel, even without a vote, still extends the favor.",
+      "source": "R.A. 6713, Sec. 4(A)(c)",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3690,7 +3690,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a77(a): An officer recommends a cousin for a vacancy in the same unit. What is the proper action?",
+      "stem": "Under R.A. 6713 §4(A)(c): An officer recommends a cousin for a regular vacancy in the same unit. The post is not confidential and is not coterminous personal staff. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3710,8 +3710,8 @@
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "Under \u00a77(a), the proper action is to withdraw the recommendation and disclose the kinship.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "Section 4(A)(c) bars undue favors to relatives by consanguinity or affinity, except for strictly confidential or coterminous personal-staff posts. A cousin is a relative by blood, and a regular vacancy is outside the exception. The recommendation should be withdrawn and the kinship disclosed. A high exam score does not lift the bar.",
+      "source": "R.A. 6713, Sec. 4(A)(c)",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3723,7 +3723,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a78: An appointee files a SALN that omits a residential lot. What is the proper action?",
+      "stem": "Under R.A. 6713 §8: An appointee files a SALN that omits a residential lot. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3743,7 +3743,7 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Under \u00a78, the proper action is to amend and file a complete SALN.",
+      "reveal": "Under §8, the proper action is to amend and file a complete SALN.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3756,7 +3756,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a78: The annual SALN is submitted three months late with no justification. What is the proper action?",
+      "stem": "Under R.A. 6713 §8: The annual SALN is submitted three months late with no justification. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3776,7 +3776,7 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Under \u00a78, the proper action is to file immediately and explain the delay.",
+      "reveal": "Under §8, the proper action is to file immediately and explain the delay.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3789,7 +3789,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a75: A records officer ignores a document request for 45 days. What is the proper action?",
+      "stem": "Under R.A. 6713 §5: A records officer ignores a document request for 45 days. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3809,7 +3809,7 @@
         }
       ],
       "answer_option_id": "n3",
-      "reveal": "Under \u00a75, the proper action is to act on the request or issue a formal denial with legal basis.",
+      "reveal": "Under §5, the proper action is to act on the request or issue a formal denial with legal basis.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3822,7 +3822,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a75: Access to a public report is denied without citing any exception. What is the proper action?",
+      "stem": "Under R.A. 6713 §5: Access to a public report is denied without citing any exception. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3842,7 +3842,7 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Under \u00a75, the proper action is to grant access or state the statutory ground for denial.",
+      "reveal": "Under §5, the proper action is to grant access or state the statutory ground for denial.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3855,7 +3855,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a77(d): A supervisor solicits cash from subordinates for a personal wedding. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(d): A supervisor solicits cash from subordinates for a personal wedding. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3875,7 +3875,7 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Under \u00a77(d), the proper action is to stop the solicitation and report it.",
+      "reveal": "Under §7(d), the proper action is to stop the solicitation and report it.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3888,7 +3888,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a74: Office supplies are used for a private side business. What is the proper action?",
+      "stem": "Under R.A. 6713 §4: Office supplies are used for a private side business. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3908,7 +3908,7 @@
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "Under \u00a74, the proper action is to return the supplies and stop the use.",
+      "reveal": "Under §4, the proper action is to return the supplies and stop the use.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -3921,28 +3921,28 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a77(b): An official holds shares in a firm bidding on the agency contract. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(a): A bids-committee member will be paid a commission by one bidder if that bidder wins a contract the committee must approve. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
-          "text": "Divest or inhibit from the procurement"
+          "text": "Disclose the commission and still score the bids"
         },
         {
           "option_id": "n2",
-          "text": "Disclose but still evaluate the bid"
+          "text": "Accept the commission after the award is posted"
         },
         {
           "option_id": "n3",
-          "text": "Transfer the shares to a spouse and continue"
+          "text": "Refuse the commission and take no part in the approval"
         },
         {
           "option_id": "n4",
-          "text": "Abstain only from the final signature"
+          "text": "Let a sibling receive the commission and continue"
         }
       ],
-      "answer_option_id": "n1",
-      "reveal": "Under \u00a77(b), the proper action is to divest or inhibit from the procurement.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "answer_option_id": "n3",
+      "reveal": "Section 7(a) says officials shall not, directly or indirectly, have any financial or material interest in a transaction requiring the approval of their office. A success fee from a bidder is that interest. It must be refused, and the member must not take part. Paying a sibling is still an indirect interest. Section 9 is the divestment clock that runs from assumption of office; it is not the rule for this live commission.",
+      "source": "R.A. 6713, Sec. 7(a)",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3954,28 +3954,28 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a77(c): A technical evaluator\u2019s consultancy advises one of the bidders. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(b)(1): A licensing evaluator accepts a paid consultancy with a company that their office licenses. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
-          "text": "Continue if the consultancy is unpaid"
+          "text": "Keep the consultancy if the meetings are after office hours"
         },
         {
           "option_id": "n2",
-          "text": "Inhibit and disclose the interest"
+          "text": "End the consultancy while the office licenses that company"
         },
         {
           "option_id": "n3",
-          "text": "Let a junior sign the evaluation"
+          "text": "Disclose it and still sign the company's license"
         },
         {
           "option_id": "n4",
-          "text": "Advise the bidder after office hours only"
+          "text": "Stay as consultant but ask a junior to sign"
         }
       ],
       "answer_option_id": "n2",
-      "reveal": "Under \u00a77(c), the proper action is to inhibit and disclose the interest.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "Section 7(b)(1) says that during incumbency an official shall not accept employment as a consultant in any private enterprise regulated, supervised, or licensed by their office, unless a law expressly allows it. The consultancy has to end. After-hours meetings, disclosure, or a junior's signature do not remove the employment.",
+      "source": "R.A. 6713, Sec. 7(b)(1)",
       "source_group": "civio",
       "status": "draft"
     },
@@ -3987,7 +3987,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a77(d): An inspector is handed cash during a site visit. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(d): An inspector is handed cash during a site visit. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -4007,7 +4007,7 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Under \u00a77(d), the proper action is to refuse the cash and report the incident.",
+      "reveal": "Under §7(d), the proper action is to refuse the cash and report the incident.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
       "status": "draft"
@@ -4020,28 +4020,28 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 \u00a74: Confidential agency data is copied onto a personal drive. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(c): An employee copies confidential bid prices onto a personal drive to help a relative price a competing bid. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
-          "text": "Share it only with trusted staff"
+          "text": "Send only the totals, not the unit prices"
         },
         {
           "option_id": "n2",
-          "text": "Keep it for backup"
+          "text": "Keep the file if the relative has not opened it yet"
         },
         {
           "option_id": "n3",
-          "text": "Encrypt it and retain it"
+          "text": "Mail it from a personal account so the office network is not used"
         },
         {
           "option_id": "n4",
-          "text": "Delete the copy and report the removal"
+          "text": "Delete the copy, do not pass it on, and report the incident"
         }
       ],
       "answer_option_id": "n4",
-      "reveal": "Under \u00a74, the proper action is to delete the copy and report the removal.",
-      "source": "original Civio flat-2100 2026-10-22",
+      "reveal": "Section 7(c) says officials shall not use or divulge confidential information known by reason of office to further a private interest or to give anyone an undue advantage. Copying bid prices for a relative is that misuse. The copy must be deleted, it must not be passed on, and the incident must be reported. Sending less of the file, or sending it from a personal account, is still disclosure.",
+      "source": "R.A. 6713, Sec. 7(c)",
       "source_group": "civio",
       "status": "draft"
     }

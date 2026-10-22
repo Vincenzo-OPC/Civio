@@ -345,8 +345,27 @@ No activation.
 Base unique 2,033. To hit exactly 2,100 with clean domain hundreds:
 - Trim 40 numerical drafts
 - Trim 15 non-reading verbal_fil drafts (PAGBASA passages kept)
-- Add 122 genuine rewrite items (`civio-final-rewrite-2026-10-22.json`)
+- Add 122 genuine rewrite items. The set that counts is `civio-flat-2100-2026-10-22.json` (repaired below). `civio-final-rewrite-2026-10-22.json` and the earlier clone files are not a second 122.
 - 2033 − 55 + 122 = **2100**
 
 Domain result: Numerical 400, Analytical 400, Verbal EN 400, Verbal Fil 300, Clerical 300, GI 300.
 All new items draft. No activation.
+
+## 2026-10-22: CoS blockers repaired on the flat 2100 set (still draft)
+
+CoS on `86608c1`: 13 accept, 72 revise, 37 reject. All 13 accepts were General Information. Nothing was activated.
+
+**File:** `docs/research/civio-flat-2100-2026-10-22.json` (122 drafts, same IDs).
+**Packet:** `docs/research/civio-flat-2100-rereview-request-2026-10-22.md`.
+
+- 13 accepted GI items are unchanged: 0105–0110, 0113–0118, 0121.
+- 0111 and 0112 relabeled to R.A. 6713 §4(A)(c). The posts are not the confidential or personal-staff exception.
+- 0119 relabeled to §7(a). §9 is the assumption-of-office divestment clock and is not the rule for this commission.
+- 0120 relabeled to §7(b)(1). 0122 relabeled to §7(c).
+- All 48 analogies and all 11 antonyms were replaced. Filler distractors, repeated base words, non-parallel pairs, and the bank duplicates (`author:book`, `judge:verdict`, `librarian:catalog`, plus five antonym meanings) are gone.
+- 19 clerical targets kept, with real misspellings. 26 targets replaced, including the words already in the bank, `cooly`, and the pairs that had two real words (`committee`/`committed`, `license`/`licensee`).
+- Stems do not print the clerical key. Answer slots are mixed (n1 32, n2 30, n3 29, n4 31).
+- Trim list unchanged. PAGBASA passages stay. Math unchanged: 2033 − 55 + 122 = 2100.
+
+**Not signed. Not activated. Not imported.** Next step is CoS re-review of the packet above. GT Ed25519 approval waits until that review is clear.
+
