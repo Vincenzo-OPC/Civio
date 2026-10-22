@@ -2459,7 +2459,7 @@
    "difficulty": "medium",
    "est_seconds": 70,
    "language": "en",
-   "stem": "Where does the following sentence best fit in the paragraph?\n\"Those children often had to walk for an hour on the muddy road instead.\"\n\n(1) The municipal engineering office repaired the road to the public school. (2) Before the repair, the road turned into mud whenever it rained. (3) Some children missed classes because tricycles could not pass. (4) Attendance has improved since the road was paved.",
+   "stem": "Where does the following sentence best fit in the paragraph?\n\"Others had to walk for an hour on the muddy road instead.\"\n\n(1) The municipal engineering office repaired the road to the public school. (2) Before the repair, the road turned into mud whenever it rained. (3) Some children missed classes because tricycles could not pass. (4) Attendance has improved since the road was paved.",
    "options": [
     {
      "option_id": "o1",
@@ -2482,11 +2482,11 @@
    "reveal": {
     "terms": "Sentence insertion: an added sentence goes right after the sentence its pointer words (this, these, such, also, for example) refer to.",
     "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
-    "why_correct": "Answer: \"After sentence 3\". The added sentence fits there because \"Those children\" points to the children who missed classes in sentence 3; the sentence that follows still reads smoothly.",
+    "why_correct": "Answer: \"After sentence 3\". The added sentence fits there because \"Others\" contrasts with the children who missed classes in sentence 3, and \"instead\" means instead of riding the tricycles that could not pass; the sentence that follows still reads smoothly.",
     "why_wrong": {
-     "o1": "After sentence 2, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 3 because \"Those children\" points to the children who missed classes in sentence 3.",
-     "o3": "At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 3 because \"Those children\" points to the children who missed classes in sentence 3.",
-     "o4": "After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 3 because \"Those children\" points to the children who missed classes in sentence 3."
+     "o1": "After sentence 2, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 3 because \"Others\" contrasts with the children who missed classes in sentence 3, and \"instead\" means instead of riding the tricycles that could not pass.",
+     "o3": "At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 3 because \"Others\" contrasts with the children who missed classes in sentence 3, and \"instead\" means instead of riding the tricycles that could not pass.",
+     "o4": "After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 3 because \"Others\" contrasts with the children who missed classes in sentence 3, and \"instead\" means instead of riding the tricycles that could not pass."
     }
    },
    "distractor_reasoning": {
@@ -2723,7 +2723,7 @@
    "difficulty": "medium",
    "est_seconds": 70,
    "language": "en",
-   "stem": "Where does the following sentence best fit in the paragraph?\n\"Each vendor must also present a health certificate before opening.\"\n\n(1) The city opened a night market on the riverside promenade. (2) Vendors pay a small daily fee for a stall. (3) The fees are used to pay for lighting and cleaning. (4) The market has become a favorite place for families after work.",
+   "stem": "Where does the following sentence best fit in the paragraph?\n\"These fees pay for the lighting and cleaning of the promenade.\"\n\n(1) The city opened a night market on the riverside promenade. (2) Vendors pay a small daily fee for a stall. (3) Each vendor must also present a health certificate before opening. (4) The market has become a favorite place for families after work.",
    "options": [
     {
      "option_id": "o1",
@@ -2746,11 +2746,11 @@
    "reveal": {
     "terms": "Sentence insertion: an added sentence goes right after the sentence its pointer words (this, these, such, also, for example) refer to.",
     "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
-    "why_correct": "Answer: \"After sentence 2\". The added sentence fits there because \"also\" adds a second stall requirement after the daily fee in sentence 2; the sentence that follows still reads smoothly.",
+    "why_correct": "Answer: \"After sentence 2\". The added sentence fits there because \"These fees\" needs the daily fee of sentence 2; after sentence 3 it would point to the health certificate, which is not a fee; the sentence that follows still reads smoothly.",
     "why_wrong": {
-     "o1": "After sentence 3, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because \"also\" adds a second stall requirement after the daily fee in sentence 2.",
-     "o2": "After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because \"also\" adds a second stall requirement after the daily fee in sentence 2.",
-     "o4": "At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 2 because \"also\" adds a second stall requirement after the daily fee in sentence 2."
+     "o1": "After sentence 3, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because \"These fees\" needs the daily fee of sentence 2; after sentence 3 it would point to the health certificate, which is not a fee.",
+     "o2": "After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because \"These fees\" needs the daily fee of sentence 2; after sentence 3 it would point to the health certificate, which is not a fee.",
+     "o4": "At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 2 because \"These fees\" needs the daily fee of sentence 2; after sentence 3 it would point to the health certificate, which is not a fee."
     }
    },
    "distractor_reasoning": {
@@ -2921,7 +2921,7 @@
    "difficulty": "medium",
    "est_seconds": 70,
    "language": "en",
-   "stem": "Read the paragraph. After which sentence should the added sentence be placed?\n\"Classes are limited to fifteen learners so that each one gets help.\"\n\n(1) The provincial library offers free computer classes for adults. (2) Each class runs for four Saturdays. (3) Learners practice using email and filling out online forms. (4) Many graduates have used these skills to apply for jobs online.",
+   "stem": "Read the paragraph. After which sentence should the added sentence be placed?\n\"That is enough time, because each class has only fifteen learners.\"\n\n(1) The provincial library offers free computer classes for adults. (2) Each class runs for four Saturdays. (3) Learners practice using email and filling out online forms. (4) Many graduates have used these skills to apply for jobs online.",
    "options": [
     {
      "option_id": "o1",
@@ -2944,11 +2944,11 @@
    "reveal": {
     "terms": "Sentence insertion: an added sentence goes right after the sentence its pointer words (this, these, such, also, for example) refer to.",
     "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
-    "why_correct": "Answer: \"After sentence 2\". The added sentence fits there because this sentence adds a second detail about each class after sentence 2 and before what learners do in sentence 3; the sentence that follows still reads smoothly.",
+    "why_correct": "Answer: \"After sentence 2\". The added sentence fits there because \"That is enough time\" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 \"That\" would point to the practice, which is not a length of time; the sentence that follows still reads smoothly.",
     "why_wrong": {
-     "o1": "After sentence 3, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because this sentence adds a second detail about each class after sentence 2 and before what learners do in sentence 3.",
-     "o3": "After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because this sentence adds a second detail about each class after sentence 2 and before what learners do in sentence 3.",
-     "o4": "At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 2 because this sentence adds a second detail about each class after sentence 2 and before what learners do in sentence 3."
+     "o1": "After sentence 3, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because \"That is enough time\" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 \"That\" would point to the practice, which is not a length of time.",
+     "o3": "After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because \"That is enough time\" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 \"That\" would point to the practice, which is not a length of time.",
+     "o4": "At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 2 because \"That is enough time\" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 \"That\" would point to the practice, which is not a length of time."
     }
    },
    "distractor_reasoning": {

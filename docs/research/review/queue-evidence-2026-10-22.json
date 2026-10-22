@@ -1170,7 +1170,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-RSANA-0030",
@@ -1181,7 +1190,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-RSANA-0002",
@@ -1192,7 +1210,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-ANA-SYLLOGISM-000643-R1",
@@ -1225,7 +1252,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-ANA-SYLLOGISM-000853-R1",
@@ -1247,7 +1283,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-ANA-SYLLOGISM-000966-R1",
@@ -1269,7 +1314,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0033",
@@ -1280,7 +1334,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0028",
@@ -1291,7 +1354,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0035",
@@ -1302,7 +1374,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0026",
@@ -1313,7 +1394,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0051",
@@ -1370,7 +1460,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "defect found and repaired",
+   "finding": "weak point: 'cold : hot' could be argued as lower to higher temperature, close to tepid : scalding",
+   "action": "repaired in the draft: distractor changed to 'heat : thermometer' (a different relation)",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0045",
@@ -1381,7 +1480,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0030",
@@ -1392,7 +1500,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0038",
@@ -1403,7 +1520,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "defect found and repaired",
+   "finding": "second defensible answer: 'general : army' is also member : organized group, like soldier : battalion",
+   "action": "repaired in the draft: distractor changed to 'army : navy' (a different relation)",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0031",
@@ -1414,7 +1540,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0052",
@@ -1469,7 +1604,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-RSANA-0003",
@@ -1480,7 +1624,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0036",
@@ -1491,7 +1644,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0039",
@@ -1502,7 +1664,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0034",
@@ -1513,7 +1684,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0053",
@@ -1568,7 +1748,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-RSANA-0015",
@@ -1579,7 +1768,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0041",
@@ -1590,7 +1788,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0040",
@@ -1601,7 +1808,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0037",
@@ -1612,7 +1828,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0054",
@@ -1669,7 +1894,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-RSANA-0023",
@@ -1680,7 +1914,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0048",
@@ -1691,7 +1934,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0043",
@@ -1702,7 +1954,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0044",
@@ -1713,7 +1974,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0055",
@@ -1768,7 +2038,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-RSANA-0026",
@@ -1779,7 +2058,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-ANA-0049",
@@ -1790,7 +2078,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "relation stated and tested against all four pairs (reversed pair, same-topic pair, other-relation pair); one pair only keeps the relation and its order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-GF2K03-ANA-ANALOGY-DEGREE-0001",
@@ -2912,7 +3209,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0001",
@@ -2923,7 +3229,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-021",
@@ -2934,7 +3249,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-012",
@@ -2945,7 +3269,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-011",
@@ -2956,7 +3289,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-013",
@@ -2967,7 +3309,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0002",
@@ -2978,7 +3329,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0002",
@@ -2989,7 +3349,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect; watch note",
+   "finding": "P-S-R-Q is readable; P-R-S-Q is better because 'As a result' must follow the reminder system, not the forgetting",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-033",
@@ -3000,7 +3369,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-022",
@@ -3011,7 +3389,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-031",
@@ -3022,7 +3409,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-GF2K05-PO-0001",
@@ -3121,7 +3517,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC2-013",
@@ -3132,7 +3537,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC2-011",
@@ -3143,7 +3557,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC2-023",
@@ -3154,7 +3577,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC2-021",
@@ -3165,7 +3597,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC2-014",
@@ -3176,7 +3617,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC2-031",
@@ -3187,7 +3637,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-023",
@@ -3198,7 +3657,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0003",
@@ -3209,7 +3677,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0003",
@@ -3220,7 +3697,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-061",
@@ -3231,7 +3717,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-032",
@@ -3242,7 +3737,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-041",
@@ -3253,7 +3757,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-043",
@@ -3264,7 +3777,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0004",
@@ -3275,7 +3797,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0004",
@@ -3286,7 +3817,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-081",
@@ -3297,7 +3837,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-042",
@@ -3308,7 +3857,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-051",
@@ -3319,7 +3877,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-053",
@@ -3330,7 +3897,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0005",
@@ -3341,7 +3917,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0005",
@@ -3352,7 +3937,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-093",
@@ -3363,7 +3957,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-052",
@@ -3374,7 +3977,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-071",
@@ -3385,7 +3997,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-063",
@@ -3396,7 +4017,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0006",
@@ -3407,7 +4037,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0006",
@@ -3418,7 +4057,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-113",
@@ -3429,7 +4077,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-062",
@@ -3440,7 +4097,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-091",
@@ -3451,7 +4117,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-073",
@@ -3464,7 +4139,16 @@
   "flags": [
    "absolute word in key"
   ],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0007",
@@ -3475,7 +4159,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0007",
@@ -3486,7 +4179,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-133",
@@ -3497,7 +4199,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-072",
@@ -3508,7 +4219,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-101",
@@ -3519,7 +4239,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-083",
@@ -3530,7 +4259,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0008",
@@ -3541,7 +4279,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "defect found and repaired",
+   "finding": "logic error: 'Those children often had to walk' after 'Some children missed classes' says the children who missed class walked to class",
+   "action": "repaired in the draft: added sentence is now 'Others had to walk for an hour on the muddy road instead.'",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0008",
@@ -3552,7 +4299,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-141",
@@ -3563,7 +4319,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-082",
@@ -3574,7 +4339,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-111",
@@ -3585,7 +4359,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-103",
@@ -3596,7 +4379,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0009",
@@ -3607,7 +4399,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0009",
@@ -3618,7 +4419,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-153",
@@ -3629,7 +4439,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-092",
@@ -3640,7 +4459,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-121",
@@ -3653,7 +4481,16 @@
   "flags": [
    "absolute word in key"
   ],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-123",
@@ -3664,7 +4501,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0010",
@@ -3675,7 +4521,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0010",
@@ -3686,7 +4541,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-181",
@@ -3697,7 +4561,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-102",
@@ -3708,7 +4581,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-131",
@@ -3719,7 +4601,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-143",
@@ -3730,7 +4621,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0011",
@@ -3741,7 +4641,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0011",
@@ -3752,7 +4661,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-112",
@@ -3763,7 +4681,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-151",
@@ -3774,7 +4701,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-163",
@@ -3785,7 +4721,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0012",
@@ -3796,7 +4741,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "defect found and repaired",
+   "finding": "second defensible answer: the health-certificate sentence fit after sentence 2 or after sentence 3",
+   "action": "repaired in the draft: the certificate rule became sentence 3 and the added sentence is now 'These fees pay for the lighting and cleaning of the promenade.', which fits only after the fee sentence",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0012",
@@ -3807,7 +4761,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-122",
@@ -3818,7 +4781,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-161",
@@ -3829,7 +4801,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-173",
@@ -3840,7 +4821,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0013",
@@ -3851,7 +4841,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0013",
@@ -3862,7 +4861,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect; watch note",
+   "finding": "R-P-S-Q is readable; R-S-P-Q is better because S defines the agenda before P uses 'With it'",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-132",
@@ -3873,7 +4881,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-171",
@@ -3884,7 +4901,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-183",
@@ -3895,7 +4921,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0014",
@@ -3906,7 +4941,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0014",
@@ -3917,7 +4961,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-142",
@@ -3928,7 +4981,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-INS-0015",
@@ -3939,7 +5001,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
+   "result": "defect found and repaired",
+   "finding": "second defensible answer: the class-size sentence fit after sentence 1 or after sentence 2",
+   "action": "repaired in the draft: added sentence is now 'That is enough time, because each class has only fifteen learners.', which needs the four Saturdays of sentence 2",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0015",
@@ -3950,7 +5021,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-152",
@@ -3961,7 +5041,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0016",
@@ -3972,7 +5061,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-162",
@@ -3983,7 +5081,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0017",
@@ -3994,7 +5101,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-172",
@@ -4005,7 +5121,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0018",
@@ -4016,7 +5141,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect; watch note",
+   "finding": "Q-P-R-S is readable; Q-R-P-S is better because the fare check explains why complaints dropped",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-RC-182",
@@ -4027,7 +5161,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key located in the passage; each wrong option checked for partial support, overreach or an outside fact; main-idea keys tested against the whole passage",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0019",
@@ -4038,7 +5181,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0020",
@@ -4049,7 +5201,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0021",
@@ -4060,7 +5221,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0022",
@@ -4071,7 +5241,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0023",
@@ -4082,7 +5261,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0024",
@@ -4093,7 +5281,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0025",
@@ -4104,7 +5301,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect; watch note",
+   "finding": "S-P-R-Q is readable; S-R-P-Q is better because 'also welcome' in Q must follow the users named in P",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0026",
@@ -4115,7 +5321,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0027",
@@ -4126,7 +5341,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0028",
@@ -4137,7 +5361,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0029",
@@ -4148,7 +5381,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-VEN-PO-0030",
@@ -4159,7 +5401,16 @@
   "key_check": "none (judgment item)",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-VFIL-20261013-0001-R1",
@@ -6590,7 +7841,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0001",
@@ -6634,7 +7894,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0003",
@@ -6667,7 +7936,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0040",
@@ -6700,7 +7978,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0006",
@@ -6711,7 +7998,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0042",
@@ -6722,7 +8018,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0007",
@@ -6733,7 +8038,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0043",
@@ -6766,7 +8080,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0009",
@@ -6788,7 +8111,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0010",
@@ -6810,7 +8142,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0011",
@@ -6832,7 +8173,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0012",
@@ -6843,7 +8193,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0048",
@@ -6876,7 +8235,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0014",
@@ -6887,7 +8255,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0050",
@@ -6920,7 +8297,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0016",
@@ -6931,7 +8317,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0052",
@@ -6942,7 +8337,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0017",
@@ -6953,7 +8357,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0053",
@@ -6964,7 +8377,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0018",
@@ -6986,7 +8408,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0019",
@@ -6997,7 +8428,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0055",
@@ -7019,7 +8459,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-D1022-GI-0056",
@@ -7030,7 +8479,16 @@
   "key_check": "lawphil evidence",
   "qa_errors": [],
   "flags": [],
-  "review_notes": ""
+  "review_notes": "",
+  "adversarial_read": {
+   "date": "2026-10-22",
+   "by": "bank worker (author; not independent)",
+   "attacks": "key checked against the constitutional text; each lengthened wrong option checked so that the added words do not make it true or give the key away",
+   "result": "no defect found",
+   "finding": "",
+   "action": "",
+   "needs_human_read": "yes"
+  }
  },
  {
   "id": "CIVIO-GF2K04-GI-DEADLINE-NUMBER-0007",

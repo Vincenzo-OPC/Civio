@@ -960,7 +960,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "cold : hot"
+     "text": "heat : thermometer"
     },
     {
      "option_id": "o2",
@@ -981,7 +981,7 @@
     "shortcut": "Make a sentence for the first pair (\"tepid is … scalding\") and test each choice in the same sentence, keeping the order.",
     "why_correct": "\"mild : severe\" fits the same sentence: slightly warm is to burning hot: lesser to greater degree. The order also matches: the first word stands to the second exactly as tepid stands to scalding.",
     "why_wrong": {
-     "o1": "\"cold : hot\" shows a different relationship.",
+     "o1": "\"heat : thermometer\" shows a different relationship.",
      "o2": "\"kettle : water\" is about the same topic but has a different relationship.",
      "o4": "\"severe : mild\" has the right words but in reversed order."
     }
@@ -1549,7 +1549,7 @@
     },
     {
      "option_id": "o2",
-     "text": "general : army"
+     "text": "army : navy"
     },
     {
      "option_id": "o3",
@@ -1566,7 +1566,7 @@
     "shortcut": "Make a sentence for the first pair (\"soldier is … battalion\") and test each choice in the same sentence, keeping the order.",
     "why_correct": "\"sailor : crew\" fits the same sentence: one member is to the organized group. The order also matches: the first word stands to the second exactly as soldier stands to battalion.",
     "why_wrong": {
-     "o2": "\"general : army\" shows a different relationship.",
+     "o2": "\"army : navy\" shows a different relationship.",
      "o3": "\"gun : soldier\" is about the same topic but has a different relationship.",
      "o4": "\"crew : sailor\" has the right words but in reversed order."
     }

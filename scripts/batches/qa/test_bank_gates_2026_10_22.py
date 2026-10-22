@@ -159,6 +159,19 @@ def test_num_template_replacements_are_separate_verified_drafts():
         if it.get("recipe"):
             assert S.solve(it) == next(o["text"] for o in it["options"] if o["option_id"] == it["answer_option_id"])
 
+
+def test_adversarial_read_recorded_and_repairs_applied():
+    ev = json.load(open("docs/research/review/queue-evidence-2026-10-22.json"))
+    ar = [e for e in ev if "adversarial_read" in e]
+    judg = [e for e in ar if e["key_check"].startswith("none")]
+    assert len(judg) == 139 and len(ar) - len(judg) == 23, (len(judg), len(ar))
+    assert all(e["adversarial_read"]["needs_human_read"] == "yes" for e in ar)
+    d = {i["id"]: i for f in ("docs/research/batches/drafts/analytical-professional-2026-10-22.json",
+                              "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json") for i in json.load(open(f))["items"]}
+    assert "general : army" not in [o["text"] for o in d["CIVIO-D1022-ANA-0038"]["options"]]
+    assert "These fees" in d["CIVIO-D1022-VEN-INS-0012"]["stem"] and "That is enough time" in d["CIVIO-D1022-VEN-INS-0015"]["stem"]
+    assert "Those children" not in d["CIVIO-D1022-VEN-INS-0008"]["stem"]
+
 if __name__ == "__main__":
     fails = 0
     for k, f in sorted(globals().items()):

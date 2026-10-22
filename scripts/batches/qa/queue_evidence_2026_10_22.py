@@ -6,7 +6,10 @@ Writes docs/research/review/queue-evidence-2026-10-22.json. Read-only on bank da
 import collections, csv, json, re, sys
 from pathlib import Path
 sys.path[:0] = [str(Path(__file__).parent.parent), str(Path(__file__).parent.parent / "audit"), str(Path(__file__).parent.parent / "drafts")]
-import qa  # noqa: E402
+import qa
+sys.path.insert(0, str(Path(__file__).parent))
+import adversarial_read_2026_10_22 as AR  # noqa: E402
+import distractor_length_2026_10_22 as DL  # noqa: E402
 import verified_keys_2026_10_22 as VK  # noqa: E402
 
 MAN = "docs/research/bank/civio-flat-2100-manifest-2026-10-22.json"
@@ -58,8 +61,11 @@ def main():
             flags.append("absolute word in key")
         if frames[frame(it["stem"])] >= 4 and it["domain"] in ("numerical", "general_information"):
             flags.append(f"shares a stem frame with {frames[frame(it['stem'])] - 1} other manifest items")
-        out.append({"id": r["id"], "priority": p, "domain": r["domain"], "status": r["status"], "source_file": r["source_file"],
-                    "key_check": how, "qa_errors": errs, "flags": flags, "review_notes": pr[r["id"]].get("review_notes", "")})
+        row = {"id": r["id"], "priority": p, "domain": r["domain"], "status": r["status"], "source_file": r["source_file"],
+               "key_check": how, "qa_errors": errs, "flags": flags, "review_notes": pr[r["id"]].get("review_notes", "")}
+        if "D1022" in r["id"] and (how.startswith("none") or r["id"] in DL.LONGER):
+            row["adversarial_read"] = AR.record(it)
+        out.append(row)
     Path(OUT).write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     c = collections.Counter((e["domain"], e["key_check"]) for e in out)
     print(len(out)); [print(k, v) for k, v in sorted(c.items())]

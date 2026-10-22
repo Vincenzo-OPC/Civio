@@ -37,7 +37,7 @@ def p2_p4(m, cache):
         if e["key_check"] in HOW:
             notes.append(HOW[e["key_check"]])
         elif d1022:
-            notes.append("judgment item: checked by its author in the 22 Oct content QA pass (passage support, one defensible answer); not re-read in this pass")
+            notes.append("judgment item: adversarial read by its author on 22 Oct (second answer, passage support, relation, connectors, grammar, distractors); not an independent check")
         else:
             notes.append("judgment item: stem, key and all three wrong options read in this pass; one defensible answer")
         rec = "Accept"
@@ -59,6 +59,13 @@ def p2_p4(m, cache):
                              "question, options and key unchanged; the added sentences were written by the bank worker, so a human should read them against every option")
         if any("absolute word" in x for x in e["flags"]):
             notes.append("absolute word in the key checked against the text: supported")
+        ar = e.get("adversarial_read")
+        if ar and ar["result"] != "no defect found":
+            notes.append(f"adversarial read: {ar['finding']}" + (f"; {ar['action']}" if ar["action"] else ""))
+            if ar["action"]:
+                rec = "Accept revision"
+        if ar:
+            human = True
         if d1022:
             notes.append(SELF)
         out.append({"id": e["id"], "priority": e["priority"], "status": e["status"], "recommendation": rec, "reason": " | ".join(notes),

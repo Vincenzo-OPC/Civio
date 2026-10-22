@@ -39,7 +39,7 @@ Which pair shows the same relationship as "farmer : harvest"?
 
 TEPID : SCALDING :: ____
 
-- (A) cold : hot
+- (A) heat : thermometer
 - (B) kettle : water
 - (C) mild : severe
 - (D) severe : mild
@@ -121,7 +121,7 @@ Which pair shows the same relationship as "assist : aid"?
 SOLDIER : BATTALION :: ____
 
 - (A) sailor : crew
-- (B) general : army
+- (B) army : navy
 - (C) gun : soldier
 - (D) crew : sailor
 
@@ -436,7 +436,7 @@ Nibble is to devour as ____.
 ### 4. `CIVIO-D1022-ANA-0029`: key (C) mild : severe
 
 - Why correct: "mild : severe" fits the same sentence: slightly warm is to burning hot: lesser to greater degree. The order also matches: the first word stands to the second exactly as tepid stands to scalding.
-- (A) "cold : hot" shows a different relationship.
+- (A) "heat : thermometer" shows a different relationship.
 - (B) "kettle : water" is about the same topic but has a different relationship.
 - (D) "severe : mild" has the right words but in reversed order.
 - File: `docs/research/batches/drafts/analytical-professional-2026-10-22.json`
@@ -508,7 +508,7 @@ Nibble is to devour as ____.
 ### 13. `CIVIO-D1022-ANA-0038`: key (A) sailor : crew
 
 - Why correct: "sailor : crew" fits the same sentence: one member is to the organized group. The order also matches: the first word stands to the second exactly as soldier stands to battalion.
-- (B) "general : army" shows a different relationship.
+- (B) "army : navy" shows a different relationship.
 - (C) "gun : soldier" is about the same topic but has a different relationship.
 - (D) "crew : sailor" has the right words but in reversed order.
 - File: `docs/research/batches/drafts/analytical-professional-2026-10-22.json`

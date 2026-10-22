@@ -59,7 +59,7 @@
         "o3": "NUM-WRONG-BASE",
         "o4": "NUM-PARTIAL"
       },
-      "fact_id": "num-original-926041",
+      "fact_id": "FACT-NUM-ORIGINAL-926041",
       "theme": "mother-son-past-ages",
       "source": "Original, Civio",
       "source_url": null,
@@ -152,7 +152,7 @@
         "o2": "NUM-PARTIAL",
         "o4": "NUM-OP-SWAP"
       },
-      "fact_id": "num-original-926039",
+      "fact_id": "FACT-NUM-ORIGINAL-926039",
       "theme": "recycling-bottle-stock-equation",
       "source": "Original, Civio",
       "source_url": null,
@@ -243,7 +243,7 @@
         "o3": "NUM-PARTIAL",
         "o4": "NUM-PARTIAL"
       },
-      "fact_id": "num-original-926042",
+      "fact_id": "FACT-NUM-ORIGINAL-926042",
       "theme": "cousins-future-age-sum",
       "source": "Original, Civio",
       "source_url": null,
@@ -334,7 +334,7 @@
         "o2": "NUM-PARTIAL",
         "o4": "NUM-PARTIAL"
       },
-      "fact_id": "num-original-926043",
+      "fact_id": "FACT-NUM-ORIGINAL-926043",
       "theme": "relief-kit-volunteer-hours",
       "source": "Original, Civio",
       "source_url": null,

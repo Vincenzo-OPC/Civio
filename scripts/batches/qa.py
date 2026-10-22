@@ -62,7 +62,7 @@ def solve_num(it):
         for c in range(1, 100):
             if m * c + y == k * (c + y):
                 return str(m * c)
-    if "% off" in s:
+    if "% off" in s and not re.search(r"how much more|rebate", s, re.I):  # offer-comparison stems are not a plain discount
         p = money(re.search(r"₱[\d,.]+", s).group())
         d = int(re.search(r"(\d+)% off", s).group(1))
         return p * (100 - d) / 100
@@ -415,7 +415,8 @@ def check_item(it):
         errs.append("order item: key matches listed order")
     approved = (it["status"] == "approved" and it.get("review_status") == "passed"
                 and it.get("reviewer") and it.get("reviewed_at"))
-    if not (it["status"] == "draft" or approved) or it["source_group"] != "civio":
+    # "reviewed" is a valid intermediate status (reviewed, awaiting approval); the master audit already accepted it
+    if not (it["status"] in ("draft", "reviewed") or approved) or it["source_group"] != "civio":
         errs.append("status/source_group")
     for o in it["options"]:
         if re.search(r"\b(choice|option|letter) [A-D]\b", it["reveal"]["why_correct"] + " ".join(it["reveal"]["why_wrong"].values())):
@@ -487,6 +488,16 @@ def siblings(a, b):
     return pa == pb and len(pa) >= 400 and norm_stem(qa_) != norm_stem(qb)
 
 
+_EXPR_STEM = re.compile(r"^(?:what is the value of|find the value of|evaluate)\s*([\d\s×÷+\-−*/().]+)\??$", re.I)
+
+
+def different_expressions(a, b):
+    """Two bare arithmetic stems ("What is the value of 19 × 2 − 10 ÷ 2?") share every word, so word overlap calls them
+    near-duplicates; they are distinct items when the expressions differ."""
+    ma, mb = _EXPR_STEM.match(a.strip()), _EXPR_STEM.match(b.strip())
+    return bool(ma and mb and re.sub(r"\s", "", ma.group(1)) != re.sub(r"\s", "", mb.group(1)))
+
+
 def check_round(items, prior_stems, near=0.9):
     """Return list of (id, error). prior_stems: stems from earlier batches and the dev DB."""
     out = []
@@ -500,7 +511,7 @@ def check_round(items, prior_stems, near=0.9):
             out.append((it["id"], "duplicate stem"))
         else:
             for p in seen:
-                if siblings(p, it["stem"]):
+                if siblings(p, it["stem"]) or different_expressions(p, it["stem"]):
                     continue
                 if jaccard(p, it["stem"]) >= near:
                     out.append((it["id"], f"near-duplicate of: {p[:70]}"))

@@ -21,8 +21,16 @@ for f in sorted(glob.glob(os.path.join(root, "batches", "batch-*.json")) + glob.
     items = d.get("items") if isinstance(d, dict) else d
     if isinstance(items, list):
         others += [i for i in items if isinstance(i, dict) and "archetype" in i and "stem" in i and i.get("review_status") != "rejected"]
+# a revision (-R1) or replacement draft keeps its original's stem on purpose; don't count the original as a duplicate
+_orig = {i.get("replaces") or i.get("proposed_replacement_for") for i in mine} - {None}
+others = [o for o in others if o.get("id") not in _orig]
 view = [dict(i, _legacy=True) if i.get("domain") == "general_information" else i for i in mine]
 probs = qa.check_round(view, [o["stem"] for o in others], near=near)
+# keys the solver cannot recompute are accepted when the hand-checked key sheet verifies them (same rule as the master audit)
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "audit"))
+import verified_keys_2026_10_22 as VK  # noqa: E402
+_byid = {i["id"]: i for i in mine}
+probs = [p for p in probs if not (p[0] in _byid and p[1].startswith(("solver could not", "key mismatch")) and VK.verify(_byid[p[0]]))]
 probs += [(h[0], f"baseline {h[1]} match ({h[2]}): {h[3]}") for h in qa.baseline_hits(view)]
 fact_errs, fact_warns = qa.check_fact_ids(mine, others, near=near)
 probs += fact_errs

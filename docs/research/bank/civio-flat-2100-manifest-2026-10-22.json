@@ -12992,7 +12992,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/analytical-professional-2026-10-22.json",
-   "content_sha256": "2ef39db95c2a76ec1db0bfa54c40e9f22f027555a3d862fcb3a24767c228eda7",
+   "content_sha256": "669abf714906357e69198c1ab1bd92141eef5e1669d437c8d597693ee4146a28",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -13025,7 +13025,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/analytical-professional-2026-10-22.json",
-   "content_sha256": "e4f9acec4b6b3b7b9a846fbf3e78adbcffa608f415903309aeff81185e51325c",
+   "content_sha256": "67a0ee1db063e1a5d580248e1f62731097e5a729113c3a90991eda3eb525ed18",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -18305,7 +18305,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json",
-   "content_sha256": "f7c6cb2b3fbd4b45cf3ba4a2d1543126d551e23838e5723faed521d9f0def699",
+   "content_sha256": "89737d7baa074911543a067d5643544962a17afcf44932584b94e95a35acb8cc",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -18558,7 +18558,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json",
-   "content_sha256": "134b12c6fc87548d204af92bd81bb043d31787043f089283c16a2f9dee8e3ffa",
+   "content_sha256": "ebf9c0a52a7cd29c9cd78f7cf93f3734d0da65e5bf4daa43334c8ea4d9b47359",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -18701,7 +18701,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json",
-   "content_sha256": "c7621cc6e4be853fa11b5aa2c9e046cdf3f43790d3704421b2a433ba60321b40",
+   "content_sha256": "813deb36ee2cb8f53e33466c86c61127ca6a18d2d224cf723c1841292796ebcb",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -31393,6 +31393,11 @@
   "CIVIO-GF2K02-PAGBASA-0009",
   "CIVIO-GF2K02-PAGBASA-0010",
   "CIVIO-GF2K02-PAGBASA-0011",
-  "CIVIO-GF2K02-PAGBASA-0012"
+  "CIVIO-GF2K02-PAGBASA-0012",
+  "CIVIO-D1022-ANA-0029",
+  "CIVIO-D1022-ANA-0038",
+  "CIVIO-D1022-VEN-INS-0008",
+  "CIVIO-D1022-VEN-INS-0012",
+  "CIVIO-D1022-VEN-INS-0015"
  ]
 }

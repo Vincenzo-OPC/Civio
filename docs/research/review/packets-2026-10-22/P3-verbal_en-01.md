@@ -95,7 +95,7 @@ Read the paragraph. After which sentence should the added sentence be placed?
 ### 8. `CIVIO-D1022-VEN-INS-0008`  (both, medium, 70 s)
 
 Where does the following sentence best fit in the paragraph?
-"Those children often had to walk for an hour on the muddy road instead."
+"Others had to walk for an hour on the muddy road instead."
 
 (1) The municipal engineering office repaired the road to the public school. (2) Before the repair, the road turned into mud whenever it rained. (3) Some children missed classes because tricycles could not pass. (4) Attendance has improved since the road was paved.
 
@@ -143,9 +143,9 @@ Read the paragraph. After which sentence should the added sentence be placed?
 ### 12. `CIVIO-D1022-VEN-INS-0012`  (both, medium, 70 s)
 
 Where does the following sentence best fit in the paragraph?
-"Each vendor must also present a health certificate before opening."
+"These fees pay for the lighting and cleaning of the promenade."
 
-(1) The city opened a night market on the riverside promenade. (2) Vendors pay a small daily fee for a stall. (3) The fees are used to pay for lighting and cleaning. (4) The market has become a favorite place for families after work.
+(1) The city opened a night market on the riverside promenade. (2) Vendors pay a small daily fee for a stall. (3) Each vendor must also present a health certificate before opening. (4) The market has become a favorite place for families after work.
 
 - (A) After sentence 3
 - (B) After sentence 1
@@ -179,7 +179,7 @@ Where does the following sentence best fit in the paragraph?
 ### 15. `CIVIO-D1022-VEN-INS-0015`  (both, medium, 70 s)
 
 Read the paragraph. After which sentence should the added sentence be placed?
-"Classes are limited to fifteen learners so that each one gets help."
+"That is enough time, because each class has only fifteen learners."
 
 (1) The provincial library offers free computer classes for adults. (2) Each class runs for four Saturdays. (3) Learners practice using email and filling out online forms. (4) Many graduates have used these skills to apply for jobs online.
 
@@ -575,10 +575,10 @@ S. The provincial capitol now has a lactation room for nursing mothers.
 
 ### 8. `CIVIO-D1022-VEN-INS-0008`: key (B) After sentence 3
 
-- Why correct: Answer: "After sentence 3". The added sentence fits there because "Those children" points to the children who missed classes in sentence 3; the sentence that follows still reads smoothly.
-- (A) After sentence 2, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 3 because "Those children" points to the children who missed classes in sentence 3.
-- (C) At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 3 because "Those children" points to the children who missed classes in sentence 3.
-- (D) After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 3 because "Those children" points to the children who missed classes in sentence 3.
+- Why correct: Answer: "After sentence 3". The added sentence fits there because "Others" contrasts with the children who missed classes in sentence 3, and "instead" means instead of riding the tricycles that could not pass; the sentence that follows still reads smoothly.
+- (A) After sentence 2, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 3 because "Others" contrasts with the children who missed classes in sentence 3, and "instead" means instead of riding the tricycles that could not pass.
+- (C) At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 3 because "Others" contrasts with the children who missed classes in sentence 3, and "instead" means instead of riding the tricycles that could not pass.
+- (D) After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 3 because "Others" contrasts with the children who missed classes in sentence 3, and "instead" means instead of riding the tricycles that could not pass.
 - File: `docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json`
 
 ### 9. `CIVIO-D1022-VEN-INS-0009`: key (C) After sentence 4
@@ -607,10 +607,10 @@ S. The provincial capitol now has a lactation room for nursing mothers.
 
 ### 12. `CIVIO-D1022-VEN-INS-0012`: key (C) After sentence 2
 
-- Why correct: Answer: "After sentence 2". The added sentence fits there because "also" adds a second stall requirement after the daily fee in sentence 2; the sentence that follows still reads smoothly.
-- (A) After sentence 3, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because "also" adds a second stall requirement after the daily fee in sentence 2.
-- (B) After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because "also" adds a second stall requirement after the daily fee in sentence 2.
-- (D) At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 2 because "also" adds a second stall requirement after the daily fee in sentence 2.
+- Why correct: Answer: "After sentence 2". The added sentence fits there because "These fees" needs the daily fee of sentence 2; after sentence 3 it would point to the health certificate, which is not a fee; the sentence that follows still reads smoothly.
+- (A) After sentence 3, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because "These fees" needs the daily fee of sentence 2; after sentence 3 it would point to the health certificate, which is not a fee.
+- (B) After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because "These fees" needs the daily fee of sentence 2; after sentence 3 it would point to the health certificate, which is not a fee.
+- (D) At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 2 because "These fees" needs the daily fee of sentence 2; after sentence 3 it would point to the health certificate, which is not a fee.
 - File: `docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json`
 
 ### 13. `CIVIO-D1022-VEN-INS-0013`: key (C) After sentence 3
@@ -631,10 +631,10 @@ S. The provincial capitol now has a lactation room for nursing mothers.
 
 ### 15. `CIVIO-D1022-VEN-INS-0015`: key (B) After sentence 2
 
-- Why correct: Answer: "After sentence 2". The added sentence fits there because this sentence adds a second detail about each class after sentence 2 and before what learners do in sentence 3; the sentence that follows still reads smoothly.
-- (A) After sentence 3, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because this sentence adds a second detail about each class after sentence 2 and before what learners do in sentence 3.
-- (C) After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because this sentence adds a second detail about each class after sentence 2 and before what learners do in sentence 3.
-- (D) At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 2 because this sentence adds a second detail about each class after sentence 2 and before what learners do in sentence 3.
+- Why correct: Answer: "After sentence 2". The added sentence fits there because "That is enough time" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 "That" would point to the practice, which is not a length of time; the sentence that follows still reads smoothly.
+- (A) After sentence 3, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because "That is enough time" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 "That" would point to the practice, which is not a length of time.
+- (C) After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because "That is enough time" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 "That" would point to the practice, which is not a length of time.
+- (D) At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 2 because "That is enough time" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 "That" would point to the practice, which is not a length of time.
 - File: `docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json`
 
 ### 16. `CIVIO-D1022-VEN-PO-0001`: key (D) S-R-Q-P

@@ -479,3 +479,33 @@ Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
 - **Real defect found by the E2E:** the global fetch guard retried offline requests for about 7 s and then showed an "overloaded" dialog, so an offline answer was never held. Fixed. With the fix reverted, the offline scenario fails.
 - **Grader:** the schema is now declared, not inferred. `AnswerSchemaTest` uses real small ids (1–3) with no filler, and fails against the old grader.
 - **Withdrawn items:** labelled in review and never keyed. `ExamDeadlineTest` checks `retired_ids` and that a reopened scorecard leaves the item out.
+## Adversarial read of D1022 judgment items and distractor-lengthened rows; old qa_file problems (2026-10-22, 5:10 PM)
+
+- **Scope:** the 139 D1022 judgment items (106 Verbal EN, 33 Analytical) and the 23 distractor-lengthened GI rows. I am their author, so this is not an independent check and `needs_human_read` stays "yes".
+- **What each item was attacked for:** a second defensible answer, a key the passage doesn't support, a faulty analogy relation, an invalid inference, a grammar error and a weak or giveaway distractor.
+  - Every added sentence (INSERT items) was tried in every slot.
+  - Every option order (ORDER items) was read as a paragraph.
+  - Every lengthened GI wrong option was checked against the constitutional text.
+- **Where it is recorded:** each of the 162 rows has an `adversarial_read` record in `review/queue-evidence-2026-10-22.json` (attacks tried, result, finding, action), from `qa/adversarial_read_2026_10_22.py`.
+- **Defects found and repaired in the drafts (5):** fixed in the generators (`drafts/d22_analogy.py`, `drafts/en_text_2026_10_22.py`); count still 2,100.
+  - **ANA-0038 (soldier : battalion):** "general : army" was a second member-to-group answer. That option is now "army : navy".
+  - **ANA-0029 (tepid : scalding):** "cold : hot" could be argued as a lower-to-higher degree. That option is now "heat : thermometer".
+  - **VEN-INS-0008:** "Those children often had to walk" contradicted "missed classes". It now reads "Others had to walk ... instead."
+  - **VEN-INS-0012:** the health-certificate sentence fit after sentence 2 or sentence 3. The paragraph was rebuilt so the added sentence "These fees pay for ..." fits only after the fee sentence.
+  - **VEN-INS-0015:** the class-size sentence fit after sentence 1 or sentence 2. It is now "That is enough time, because each class has only fifteen learners.", which needs sentence 2.
+- **No defect found:** the other 134 judgment items and all 23 GI rows. 4 paragraph-order items (PO-0002, PO-0013, PO-0018, PO-0025) have a readable second order that is clearly weaker; they carry watch notes.
+- **Old qa_file problems fixed:**
+  - **fact_id format:** the 50 `num-original-9260NN` fact_ids in batch-subpro-num-001 (and the 4 P1 -R1s that copy them) are now `FACT-NUM-ORIGINAL-9260NN`.
+  - **gap-fill-2000-02 "near-duplicate" (NUMOPS-0050 vs ORDER-000240):** a false positive. Word overlap matched two bare expressions that differ (69 × (19 − 2) + 11 vs 19 × 2 − 10 ÷ 2). The near-duplicate check now treats bare arithmetic stems with different expressions as distinct. The item is outside the manifest and carries a GT-approved revision, so its content was not touched.
+  - **"reviewed" status:** qa.py now accepts it as valid, as the master audit already did.
+  - **Solver false positive:** the discount solver no longer misreads an offer-comparison stem (926024: correct key ₱30).
+  - **Revisions:** qa_file no longer flags an -R1 as a duplicate of the original it replaces.
+  - **Key sheet:** qa_file now accepts keys verified by the hand-checked key sheet. The 7 off-manifest percent-change rows were re-solved and added to it.
+  - **Result:** qa_file reports 0 problems for batch-subpro-num-001, gap-fill-2000-02, the P1 -R1 file and both D1022 files.
+- **Still reported by qa_file (not in this scope; master audit is clean):**
+  - gap-fill-2000-05: the 7 short English originals, which GT replaced and which are outside the manifest.
+  - round-03 b3/b4: 6 legacy rows without a key sheet or lawphil evidence.
+  - signoff-replacements: 29 percent-change R1s near-duplicate their originals by design.
+  - gap-fill-2000-06-lintfix: 398 legacy findings, many on rows outside the manifest.
+- **Queue:** 707 Accept, 16 Accept revision, 0 Escalate before this read. The 5 repaired items moved from Accept to Accept revision, so it is now 702 Accept and 21 Accept revision. 317 rows have needs_human_read = yes. `decision_by_human` is empty.
+- **Tests:** 16 bank-gate tests. New: adversarial-read records exist for exactly 139 + 23 rows, all with needs_human_read = yes, and the 4 repairs checked by the test are present in the drafts.

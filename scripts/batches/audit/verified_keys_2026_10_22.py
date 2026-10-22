@@ -14,6 +14,14 @@ NUM = {  # id: (expected key text, formula/working)
  "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0009": ("5/8", max([F("0.6"), F(5, 8), F("0.58"), F(3, 5)])),
  "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0010": ("175", 500 - 500 * F(2, 5) - 500 * F(1, 4)),
  "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0011": ("1", F(5, 3) * F(3, 5)),
+ # 7 percent-change rows of batch-subpro-num-001 kept outside the manifest (percent-change cap); keys re-solved 22 Oct
+ "CIVIO-NUM-WP-PCT-CHANGE-926016": ("₱700", 800 * (1 - F("12.5") / 100)),
+ "CIVIO-NUM-WP-PCT-CHANGE-926017": ("25%", F(300 - 240, 240) * 100),
+ "CIVIO-NUM-WP-PCT-CHANGE-926020": ("510 households", 600 * F(85, 100)),
+ "CIVIO-NUM-WP-PCT-CHANGE-926021": ("₱800", 640 / F(80, 100)),
+ "CIVIO-NUM-WP-PCT-CHANGE-926023": ("15%", F(500 - 425, 500) * 100),
+ "CIVIO-NUM-WP-PCT-CHANGE-926024": ("₱30", 600 * F(20, 100) - 90),
+ "CIVIO-NUM-WP-PCT-CHANGE-926050": ("5 liters", 20 * F(10, 8) - 20),     # salt 2 L stays; 2 / 0.08 = 25 L total
  "CIVIO-NUM-PCT-BASIC-926013": ("54 notebooks", 360 * F(15, 100)),
  "CIVIO-NUM-PCT-BASIC-926014": ("30%", F(18, 60) * 100),
  "CIVIO-NUM-PCT-BASIC-926015": ("288 files", 72 / F(25, 100)),

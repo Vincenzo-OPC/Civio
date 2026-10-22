@@ -474,103 +474,78 @@
    "verified by audit/verified_keys_2026_10_22.py: GI key mismatch"
   ],
   "CIVIO-NUM-FRAC-DEC-926001": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926002": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926003": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926004": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926005": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926006": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926007": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926008": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926009": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926010": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926011": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-FRAC-DEC-926012": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-PCT-BASIC-926013": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-PCT-BASIC-926014": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-PCT-BASIC-926015": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-PCT-BASIC-926018": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-PCT-BASIC-926019": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-PCT-BASIC-926022": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-ALGEBRA-926033": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-ALGEBRA-926034": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-ALGEBRA-926035": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-ALGEBRA-926036": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-ALGEBRA-926038": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-ALGEBRA-926040": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-ALGEBRA-926048": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-ALGEBRA-926051": [
@@ -580,58 +555,45 @@
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-AVERAGE-926049": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATE-000011": [
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATE-926029": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATE-926030": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATE-926031": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATE-926044": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATE-926045": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATE-926046": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATE-926047": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATIO-926025": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATIO-926026": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATIO-926027": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATIO-926028": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATIO-926032": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-VEN-ERROR-TENSE-000019": [
