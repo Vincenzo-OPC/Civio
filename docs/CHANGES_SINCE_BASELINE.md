@@ -327,3 +327,7 @@ The production image no longer deletes Node after the frontend build. It keeps t
 ## Independent accuracy, pace and timed suggestion, 22 October 2026
 
 Analytics adds an "Independent accuracy and pace" card, a plain table that also works in Lite. Accuracy counts every Strict Mock item plus practice items answered without seeing the explanation. An assisted item never counts, right or wrong. The subject ring uses the same independent numbers. Seconds per item by subject come from the stored per-item times, and blanks are skipped. Once a subject has at least 30 independent items at 80% or more, the card suggests timed practice. It is a suggestion, never a proficiency label. Source: `app/Services/Learning/LearningInsightsService.php`, tests in `LearningInsightsTest`.
+
+## Today's Focus drill, 22 October 2026
+
+The Drills hub has a Today's Focus launcher. The server picks 15 items from the subject with the lowest independent accuracy, then 10 mixed items from the other subjects. Guests, and learners with no history, get a weekday rotation in Philippine time. No client IDs are involved and keys stay withheld. Tests in `TodaysFocusTest`.

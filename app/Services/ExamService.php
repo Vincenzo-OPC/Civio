@@ -14,6 +14,7 @@ use App\Models\SavedDrillSet;
 use App\Repositories\QuestionRepositoryInterface;
 use App\Repositories\UserRepositoryInterface;
 use App\Services\Exam\StrictMockLock;
+use App\Services\Learning\LearningInsightsService;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Inertia\DeferProp;
@@ -135,6 +136,14 @@ class ExamService
     {
         $scored = $pool->reject(fn (Question $q) => (bool) ($q->subcategory?->category?->is_demographic ?? false));
 
+        if ($query->focusToday) {
+            $focus = $this->todaysFocusCandidates($scored, $userId);
+
+            if ($focus->isNotEmpty()) {
+                return $focus;
+            }
+        }
+
         if ($query->freshSameSkill && $userId !== null) {
             $fresh = $this->freshSameSkillCandidates($scored, $userId);
 
@@ -171,6 +180,53 @@ class ExamService
         }
 
         return $matches->isNotEmpty() ? $matches : $scored->take(30);
+    }
+
+    public const FOCUS_ITEMS = 15;
+
+    public const FOCUS_MIXED_ITEMS = 10;
+
+    /**
+     * Today's focus: the subject with the lowest independent accuracy (or, with
+     * no history, a weekday rotation), 15 items first, then 10 mixed items from
+     * the other subjects for transfer practice. Picked on the server.
+     *
+     * @param  Collection<int, Question>  $scored
+     * @return Collection<int, Question>
+     */
+    protected function todaysFocusCandidates(Collection $scored, ?int $userId): Collection
+    {
+        $subjects = $scored->map(fn (Question $q) => $q->subcategory?->category?->name)->filter()->unique()->sort()->values();
+
+        if ($subjects->isEmpty()) {
+            return collect();
+        }
+
+        $focus = $this->todaysFocusSubject($subjects->all(), $userId);
+        $inFocus = fn (Question $q) => ($q->subcategory?->category?->name) === $focus;
+
+        return $scored->filter($inFocus)->shuffle()->take(self::FOCUS_ITEMS)
+            ->concat($scored->reject($inFocus)->shuffle()->take(self::FOCUS_MIXED_ITEMS))
+            ->values();
+    }
+
+    /**
+     * @param  array<int, string>  $subjects
+     */
+    public function todaysFocusSubject(array $subjects, ?int $userId): string
+    {
+        if ($userId !== null) {
+            $weakest = collect(app(LearningInsightsService::class)->forUser($userId)['mastery'])
+                ->filter(fn ($m) => in_array($m['name'], $subjects, true))
+                ->sortBy([['percentage', 'asc'], ['total', 'asc']])
+                ->first();
+
+            if ($weakest !== null) {
+                return $weakest['name'];
+            }
+        }
+
+        return $subjects[now('Asia/Manila')->dayOfYear % count($subjects)];
     }
 
     /** Most items in one fresh same-skill revisit. */

@@ -271,6 +271,19 @@ export default function Drills(props: DrillsProps) {
                             </button>
                         </nav>
                     )}
+                {/* Today's focus: one weak subject (15), then 10 mixed */}
+                {viewState === 'hub' && activeTab === 'categories' && (
+                    <a
+                        href="/exams?drill=true&focus_today=1&category_name=Today%27s%20Focus"
+                        className="mb-4 flex min-h-11 items-center justify-between rounded-xl border border-border/80 px-4 py-3 text-sm font-semibold"
+                    >
+                        <span>
+                            Today&apos;s Focus: 15 items on your weakest
+                            subject, then 10 mixed
+                        </span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+                )}
                 {/* Tab Content */}
                 {viewState === 'hub' && activeTab === 'categories' && (
                     <HubView
