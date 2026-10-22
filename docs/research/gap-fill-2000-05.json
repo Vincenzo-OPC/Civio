@@ -564,7 +564,7 @@
     },
     {
      "option_id": "o2",
-     "text": "Choosing the right spot on the shore matters as much as planting."
+     "text": "The right planting zone is important for seedling survival."
     },
     {
      "option_id": "o3",
@@ -579,7 +579,7 @@
    "reveal": {
     "terms": "The correct answer is stated in the passage or follows directly from it.",
     "shortcut": "Check each choice against a specific sentence in the passage; reject any choice with no support or that overstates.",
-    "why_correct": "Answer: \"Choosing the right spot on the shore matters as much as planting.\" Seedlings die when placed too low or too high, and groups that copy where wild mangroves grow see more survive, so location is key.",
+    "why_correct": "Answer: \"Choosing the right spot on the shore matters as much as planting.\" Seedlings die when placed too low or too high, while survival improves when groups use the shore zones where wild mangroves grow. This supports the importance of choosing a suitable planting zone.",
     "why_wrong": {
      "o1": "\"Planting more seedlings guarantees success in any part of the shore.\" says the opposite of the passage.",
      "o3": "\"Mangrove seedlings grow best when they are watered by hand daily.\" is not mentioned in the passage.",
@@ -740,7 +740,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Reminders helped, but distance still keeps some mothers from visits."
+     "text": "Missed doses declined after reminders began, but distance still affects some visits."
     },
     {
      "option_id": "o2",
@@ -759,7 +759,7 @@
    "reveal": {
     "terms": "The correct answer is stated in the passage or follows directly from it.",
     "shortcut": "Check each choice against a specific sentence in the passage; reject any choice with no support or that overstates.",
-    "why_correct": "Answer: \"Reminders helped, but distance still keeps some mothers from visits.\" Missed doses fell from one in four to one in ten, but nurses say distance still causes some missed visits, so both parts are supported.",
+    "why_correct": "Answer: \"Reminders helped, but distance still keeps some mothers from visits.\" The passage reports that missed doses declined after the reminders began, and nurses identify distance as a continuing barrier. It supports the timing and remaining barrier without proving that reminders alone caused the decline.",
     "why_wrong": {
      "o2": "\"The text reminders had no effect on missed vaccination doses at all.\" says the opposite of the passage.",
      "o3": "\"The health unit has started a free jeepney service for mothers.\" is not mentioned in the passage.",
