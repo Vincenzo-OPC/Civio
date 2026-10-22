@@ -545,3 +545,10 @@ Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
 - **Tests:** `ExamDeadlineTest` (a progress read lists items withdrawn since the start, without keys); `progress-save.test.ts` (live marking, idempotent marking, resume marking); `answer-keys.test.ts`. The browser E2E (4 scenarios) passes again.
 - **Budget:** the exam chunk is exactly 11,000 B brotli, on the 11 kB limit with no headroom. Space was made by loading mock start and the post-submit key merge on demand.
 
+### Engine: Playwright browser E2E in CI, with an isolated database
+- **Added (GT approved):** `@playwright/test` 1.64.1 as a devDependency. The manual script is ported to `tests/E2E/playwright/strict-mock.spec.ts`: 4 scenarios plus a new withdrawn-mid-mock scenario, 5/5 passing locally in Chromium.
+- **CI:** `.github/workflows/e2e.yml` runs Chromium only, with browsers cached by version. The database is a throwaway SQLite file in `$RUNNER_TEMP`. The job uses no secrets, no external DB, no Netlify and no deploy.
+- **DB guard:** `tests/E2E/db-guard.mjs` aborts unless the connection is sqlite, `DB_DATABASE` is exactly the `E2E_DB` throwaway path (named `civio-e2e*.sqlite`, inside a temp dir) and `DB_URL` is empty. It also aborts if a port points at 5432/5433/5434/8080. It runs before setup, before every PHP helper call and at config load. Tested in `tests/Js/e2e-db-guard.test.ts`.
+- **Real defect found and fixed:** Pest inherited DB settings from the shell. phpunit.xml set them without `force` and only in `<env>`, but Laravel reads `$_SERVER` first. A shell exporting the E2E variables made Pest run `RefreshDatabase` on the E2E file and wipe it; this happened twice during this work. phpunit.xml now forces the values in both `<env>` and `<server>`. `TestDatabaseIsolationTest` failed before the fix and passes after it. A full Pest run with the E2E variables (and a pgsql/5434 env) exported now passes 526/526 and leaves the E2E file intact (24 questions before and after).
+- **Production bundle:** unchanged. No file under `resources/` changed, and the size-limit numbers are identical.
+

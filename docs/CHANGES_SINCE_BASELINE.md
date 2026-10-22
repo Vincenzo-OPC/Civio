@@ -17,6 +17,10 @@ keep this current" below).
 
 Tests: `tests/Feature/Ai/OwnerAiSpendLockTest.php` uses dummy keys with `Http::fake()` and `assertNothingSent`. Legacy AI tests now open the lock explicitly.
 
+## Browser E2E in CI, 22 October 2026
+
+The Strict mock browser tests now run with Playwright (Chromium) in a separate GitHub Actions workflow, `e2e`. It covers offline reload, two tabs, deadline while offline, double submit, and items withdrawn mid-mock. The tests only run against a throwaway SQLite file in a temp directory, and a guard aborts them otherwise; see `tests/E2E/README.md`. Pest now always uses in-memory SQLite, even if the shell exports database settings. The app itself and its production bundle are unchanged.
+
 ## Withdrawn items marked during the exam, 22 October 2026
 
 If Civio withdraws an item while a Strict mock is in progress, the exam screen now marks it "withdrawn, not scored" and the item can no longer be answered. The mark appears live after a save and also after a reload or resume. The progress endpoint returns those ids with no answer key. Mock start and the post-submit key merge now load on demand, which keeps the exam chunk within its 11 kB budget.
