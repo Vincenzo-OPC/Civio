@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 readonly class ExamSessionQueryData
 {
+    /** Hard cap on hand-picked IDs per drill launch (anti bulk-harvest). */
+    public const MAX_CUSTOM_IDS = 50;
+
     public function __construct(
         public ?int $attemptId = null,
         public ?int $retakeSame = null,
@@ -52,6 +55,6 @@ readonly class ExamSessionQueryData
             return [];
         }
 
-        return array_slice(array_values(array_unique(array_map('intval', array_filter($raw, 'is_numeric')))), 0, 2000);
+        return array_slice(array_values(array_unique(array_map('intval', array_filter($raw, 'is_numeric')))), 0, self::MAX_CUSTOM_IDS);
     }
 }

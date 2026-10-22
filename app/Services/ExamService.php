@@ -7,11 +7,14 @@ namespace App\Services;
 use App\DTOs\Exam\ExamSessionQueryData;
 use App\Http\Resources\ExamQuestionResource;
 use App\Http\Resources\ExamScorecardResource;
+use App\Models\ExamAttempt;
 use App\Models\Question;
+use App\Models\SavedDrillSet;
 use App\Repositories\QuestionRepositoryInterface;
 use App\Repositories\UserRepositoryInterface;
 use App\Services\Exam\StrictMockLock;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 use Inertia\DeferProp;
 use Inertia\Inertia;
 
@@ -70,7 +73,7 @@ class ExamService
             $wanted = array_map('intval', (array) $attempt->question_ids);
             $selected = $activeQuestions->whereIn('id', $wanted);
         } elseif ($query->isDrill) {
-            $selected = $this->drillCandidates($activeQuestions, $query);
+            $selected = $this->drillCandidates($activeQuestions, $query, $userId);
         } else {
             $selected = $activeQuestions->take(0);
         }
@@ -127,12 +130,16 @@ class ExamService
      * @param  Collection<int, Question>  $pool
      * @return Collection<int, Question>
      */
-    protected function drillCandidates(Collection $pool, ExamSessionQueryData $query): Collection
+    protected function drillCandidates(Collection $pool, ExamSessionQueryData $query, ?int $userId = null): Collection
     {
         $scored = $pool->reject(fn (Question $q) => (bool) ($q->subcategory?->category?->is_demographic ?? false));
 
         if ($query->customQuestionIds !== []) {
-            $custom = $scored->whereIn('id', $query->customQuestionIds);
+            $allowed = $this->permittedCustomIds($query->customQuestionIds, $userId);
+            $locked = app(StrictMockLock::class)->lockedQuestionIds(
+                $userId, request()->hasSession() ? request()->session() : null
+            );
+            $custom = $scored->whereIn('id', array_values(array_diff($allowed, $locked)));
 
             if ($custom->isNotEmpty()) {
                 return $custom;
@@ -155,6 +162,59 @@ class ExamService
         }
 
         return $matches->isNotEmpty() ? $matches : $scored->take(30);
+    }
+
+    /** Daily budget of hand-picked IDs a principal may request outside its own history. */
+    public const CUSTOM_UNSEEN_DAILY_BUDGET = 100;
+
+    /**
+     * Filter client-supplied custom drill IDs (anti answer-key harvesting).
+     *
+     * IDs the user legitimately holds (own attempts, own saved sets) always pass.
+     * Any other ID spends from a per-principal daily budget; once spent, unseen
+     * IDs are refused. Drafts never reach here (active pool only) and
+     * Strict-locked items are removed by the caller.
+     *
+     * @param  array<int, int>  $ids
+     * @return array<int, int>
+     */
+    protected function permittedCustomIds(array $ids, ?int $userId): array
+    {
+        $ids = array_slice(array_values(array_unique(array_map('intval', $ids))), 0, ExamSessionQueryData::MAX_CUSTOM_IDS);
+        $owned = [];
+
+        if ($userId !== null) {
+            foreach (ExamAttempt::query()->where('user_id', $userId)->latest('id')->limit(200)->pluck('question_ids') as $qids) {
+                foreach ((array) $qids as $qid) {
+                    $owned[(int) $qid] = true;
+                }
+            }
+            foreach (SavedDrillSet::query()->where('user_id', $userId)->with('questions:id')->get() as $set) {
+                foreach ($set->questions as $q) {
+                    $owned[(int) $q->id] = true;
+                }
+            }
+        }
+
+        $known = array_values(array_filter($ids, fn (int $id) => isset($owned[$id])));
+        $unseen = array_values(array_filter($ids, fn (int $id) => ! isset($owned[$id])));
+
+        if ($unseen === []) {
+            return $known;
+        }
+
+        $principal = $userId !== null
+            ? 'u:'.$userId
+            : 'g:'.hash('sha256', request()->hasSession() ? request()->session()->getId() : (string) request()->ip());
+        $key = 'custom-ids-budget:'.$principal.':'.now()->toDateString();
+        $used = (int) Cache::get($key, 0);
+        $grant = array_slice($unseen, 0, max(0, self::CUSTOM_UNSEEN_DAILY_BUDGET - $used));
+
+        if ($grant !== []) {
+            Cache::put($key, $used + count($grant), now()->endOfDay());
+        }
+
+        return array_values(array_merge($known, $grant));
     }
 
     /**
