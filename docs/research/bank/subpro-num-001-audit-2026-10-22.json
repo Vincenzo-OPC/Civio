@@ -81,11 +81,11 @@
   },
   "avg_est_seconds": 69.3,
   "repository_main_sha": "43529d8425b86b5a47b8032346eed26bbea48218",
-  "qa_file_cli": "BLOCKED: scripts/batches/qa_file.py aborts on NUM-FRAC-DEC item 926001 because qa.py calls .group(1) on unmatched re.search(r\"had (\\d+)\", stem).",
+  "qa_file_cli": "BLOCKED: scripts/batches/qa_file.py aborts on NUM-FRAC-DEC Item 926001 because qa.py calls .group(1) on unmatched re.search(r\"had (\\d+)\", stem).",
   "review_notes": {
     "authoring_reference_check": "Repository source-rights and reviewer shortlist were inspected, but the underlying reviewer PDFs were not available in this audit. Similarity results cover Civio repository items only and do not establish source-by-source originality.",
     "separate_approval": "49 supplied items passed Astra content review and remain status reviewed/review_status passed; replacement 926051 is draft/unreviewed because it was authored during review. No item is approved, active, imported or release-ready without GT approval.",
-    "held_item": "Uploaded item 926037 was mathematically valid geometry but held outside the requested 8-item basic-algebra block. It is preserved in the original upload and not included in the batch.",
+    "held_item": "Uploaded Item 926037 was mathematically valid geometry but held outside the requested 8-item basic-algebra block. It is preserved in the original upload and not included in the batch.",
     "timing": "Per-item est_seconds now matches the spec archetype targets. The selected batch has a 69.3-second mean and should not be administered as a single practice set under the spec 60-second set-mean rule.",
     "difficulty": "11 easy, 25 medium, 14 hard; the spec suggestion is 15/25/10 and these editorial labels are not empirically calibrated.",
     "corrections": [
