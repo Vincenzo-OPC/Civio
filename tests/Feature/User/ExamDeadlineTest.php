@@ -251,3 +251,25 @@ test('the submit response reports withdrawn items so the scorecard can explain t
             return true;
         }));
 });
+
+test('a progress read lists every served item withdrawn since the mock started, with no keys', function () {
+    $user = User::factory()->create();
+    $session = deadlineSession($user->id);
+    [$a, $b, $retired] = $session->question_ids;
+    $session->forceFill(['saved_answers' => [$a => 1, $retired => 2], 'save_version' => 1])->save();
+
+    $this->actingAs($user)->postJson(route('exams.sessions.progress'), ['exam_session_id' => $session->id])
+        ->assertOk()->assertJson(['withdrawn_ids' => []]);
+
+    Question::whereKey($retired)->update(['status' => 'retired']);
+    $this->postJson(route('exams.sessions.progress'), ['exam_session_id' => $session->id])
+        ->assertOk()
+        ->assertJson(['withdrawn_ids' => [$retired], 'save_version' => 1])
+        ->assertJsonMissingPath('correct_option')
+        ->assertJsonMissingPath('explanation');
+
+    // A save to another item still reports the earlier withdrawal.
+    $this->postJson(route('exams.sessions.progress'), [
+        'exam_session_id' => $session->id, 'answers' => [$b => 0], 'expected_version' => 1,
+    ])->assertOk()->assertJson(['withdrawn_ids' => [$retired], 'save_version' => 2]);
+});

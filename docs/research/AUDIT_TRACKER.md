@@ -537,3 +537,11 @@ Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
   - A decision needs a reason for each item; a whole-packet stamp is not accepted.
 - **Queue:** 698 Accept, 20 Accept revision, 5 Revise; 317 rows need a human read. `decision_by_human` is empty.
 - **Tests:** 19 bank-gate tests, all passing.
+
+
+### Engine: withdrawn items marked during the exam
+- **Defect:** an item withdrawn mid-mock only showed after submit. During the exam it still looked answerable, and on resume the answer just disappeared with no visible reason.
+- **Fix:** a progress read now lists every served item that is no longer active as `withdrawn_ids`, with no key. The exam screen shows an amber "withdrawn, not scored" banner on that item and blocks answering it. This happens live after a save, and also after a reload or resume.
+- **Tests:** `ExamDeadlineTest` (a progress read lists items withdrawn since the start, without keys); `progress-save.test.ts` (live marking, idempotent marking, resume marking); `answer-keys.test.ts`. The browser E2E (4 scenarios) passes again.
+- **Budget:** the exam chunk is exactly 11,000 B brotli, on the 11 kB limit with no headroom. Space was made by loading mock start and the post-submit key merge on demand.
+

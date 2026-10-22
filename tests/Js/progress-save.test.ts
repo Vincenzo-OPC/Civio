@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import {
     httpStatusOf,
+    markWithdrawn,
+    resumeFromServer,
     mergeResumed,
     pendingKey,
     persistPending,
@@ -420,4 +422,89 @@ test('an empty batch (all withdrawn) sends nothing', async () => {
     );
     assert.deepEqual(out, { kind: 'saved', version: 5, withdrawn: [] });
     assert.equal(calls, 0);
+});
+
+type Q = { id: number; withdrawn?: boolean };
+function questionsStore(list: Q[]) {
+    const store = { list: list as unknown as Question[], updates: 0 };
+    const set = (update: (prev: Question[]) => Question[]) => {
+        const next = update(store.list);
+        if (next !== store.list) store.updates++;
+        store.list = next;
+    };
+    return { store, set };
+}
+
+test('live: a save reporting a withdrawal marks that item on screen', () => {
+    const { store, set } = questionsStore([{ id: 7 }, { id: 8 }, { id: 9 }]);
+    const h = harness({ 0: 1, 2: 3 });
+    settleSave(
+        { kind: 'saved', version: 2, withdrawn: [9] },
+        { 7: 1 },
+        h.state,
+        {
+            ...h.ui,
+            closed: () => {},
+            setQuestions: set,
+            setQuestions: set,
+        },
+    );
+    assert.deepEqual(
+        (store.list as unknown as Q[]).map((q) => !!q.withdrawn),
+        [false, false, true],
+    );
+    assert.deepEqual(h.ui.answers, { 0: 1 }, 'its answer is cleared');
+});
+
+test('live: marking is idempotent and leaves the array alone when nothing changes', () => {
+    const { store, set } = questionsStore([
+        { id: 7 },
+        { id: 9, withdrawn: true },
+    ]);
+    markWithdrawn(set, [9]);
+    markWithdrawn(set, []);
+    markWithdrawn(undefined, [7]);
+    assert.equal(store.updates, 0);
+    markWithdrawn(set, [7, 9]);
+    assert.equal(store.updates, 1);
+    assert.deepEqual(
+        (store.list as unknown as Q[]).map((q) => !!q.withdrawn),
+        [true, true],
+    );
+});
+
+test('resume: withdrawn items are marked, show no answer, and are never resent', () => {
+    const { store, set } = questionsStore([{ id: 7 }, { id: 8 }, { id: 9 }]);
+    const h = harness();
+    const storage = memoryStorage();
+    Object.assign(h.state, { sessionId: 'S', storage });
+    storage.setItem(
+        pendingKey('S'),
+        JSON.stringify({ 8: [2, null], 9: [1, null] }),
+    );
+
+    const out = resumeFromServer(
+        res({ answers: { 7: 1, 9: 3 }, withdrawn_ids: [9] }),
+        h.state,
+        [7, 8, 9],
+        set,
+    );
+    assert.deepEqual(
+        out.answers,
+        { 7: 1, 8: 2 },
+        'withdrawn answer hidden; offline answer to 8 restored',
+    );
+    assert.deepEqual(
+        out.resend,
+        { 8: 2 },
+        'only the active offline answer is resent',
+    );
+    assert.ok(h.state.withdrawnIds.has(9));
+    assert.deepEqual(
+        (store.list as unknown as Q[]).map((q) => !!q.withdrawn),
+        [false, false, true],
+    );
+    assert.deepEqual(withoutWithdrawn({ 9: 0, 7: 2 }, h.state.withdrawnIds), {
+        7: 2,
+    });
 });

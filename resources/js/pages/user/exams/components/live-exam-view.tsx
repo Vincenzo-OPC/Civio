@@ -14,7 +14,7 @@ import {
     Edit3,
     Strikethrough,
 } from 'lucide-react';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import { toast } from 'sonner';
 import { ReportIssueModal } from '@/components/domain/report-issue-modal';
 import LiteModeToggle from '@/components/shared/lite-mode-toggle';
@@ -37,6 +37,7 @@ import type { Question, SimulationDetails } from '../types';
 import { answerOptionVisual } from '../utils/answer-state';
 import type { ExamMode } from '../utils/exam-mode';
 import { showsStudyTools, EXAM_MODE_LABELS } from '../utils/exam-mode';
+import { WITHDRAWN_LIVE_NOTICE } from '../utils/retired-notice';
 import { AskAssistantButton } from './ask-assistant-button';
 import { CopyForAiButton } from './copy-for-ai-button';
 import { ExamTimerDisplay } from './exam-timer-display';
@@ -113,7 +114,7 @@ export function LiveExamView({
     toggleFlag,
     flagged,
     answers,
-    handleSelectOption,
+    handleSelectOption: selectOption,
     handleQuestionNavigate,
     isFreeAttempt,
     setShowRegisterModal,
@@ -137,6 +138,16 @@ export function LiveExamView({
     examSessionId = null,
 }: LiveExamViewProps) {
     const activeQuestion = activeQuestions[currentIdx];
+    // Withdrawn by Civio mid-mock: labelled, takes no new answer, not scored.
+    const isWithdrawn = Boolean(activeQuestion?.withdrawn);
+    const handleSelectOption = useCallback(
+        (idx: number) => {
+            if (!isWithdrawn) {
+                selectOption(idx);
+            }
+        },
+        [isWithdrawn, selectOption],
+    );
     const studyTools = showsStudyTools(examMode, isDrillSession);
     const { lite } = useLiteMode();
     const [isReportModalOpen, setIsReportModalOpen] = useState(false);
@@ -894,6 +905,15 @@ export function LiveExamView({
                                                     true,
                                                 )}
                                             </div>
+                                            {isWithdrawn && (
+                                                <p
+                                                    role="status"
+                                                    data-testid="withdrawn-live"
+                                                    className="rounded-xl border border-amber-300/60 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900 dark:border-amber-500/40 dark:bg-amber-950/40 dark:text-amber-200"
+                                                >
+                                                    {WITHDRAWN_LIVE_NOTICE}
+                                                </p>
+                                            )}
                                             <div className="flex flex-wrap items-center gap-3">
                                                 <button
                                                     type="button"
@@ -1053,7 +1073,8 @@ export function LiveExamView({
                                                                     choice.status
                                                                 }
                                                                 eliminated={
-                                                                    isEliminated
+                                                                    isEliminated ||
+                                                                    isWithdrawn
                                                                 }
                                                                 onSelect={() =>
                                                                     !isEliminated &&

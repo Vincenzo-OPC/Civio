@@ -60,6 +60,15 @@ final class ExamProgressController extends Controller
                 }
             }
 
+            // Every served item withdrawn since the mock started, not only the
+            // ones in this patch, so a resumed screen can label them too.
+            $served = array_map('intval', $session->question_ids);
+            $withdrawn = array_values(array_unique([...$withdrawn, ...array_diff(
+                $served,
+                Question::whereIn('id', $served)->where('status', 'active')->pluck('id')->map(fn ($id) => (int) $id)->all(),
+            )]));
+            sort($withdrawn);
+
             return response()->json([
                 'success' => true,
                 'deadline_at' => $session->deadline()?->toISOString(),
@@ -67,7 +76,7 @@ final class ExamProgressController extends Controller
                 'answers' => (object) ($session->saved_answers ?? []),
                 'save_version' => (int) $session->save_version,
                 'submitted' => ! $session->isOpen(),
-                'withdrawn_ids' => $withdrawn ?? [],
+                'withdrawn_ids' => $withdrawn,
             ])->header('Cache-Control', 'private, no-store');
         });
     }

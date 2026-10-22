@@ -30,7 +30,6 @@ import {
     apiPost,
 } from '../utils/exam-utils';
 import { mockLevelForExam, shortMockNotice } from '../utils/mock-pool';
-import { startMockSession } from '../utils/mock-session';
 import { useExamHydration } from './use-exam-hydration';
 import { useExamPersistence } from './use-exam-persistence';
 import { useExamSubmission } from './use-exam-submission';
@@ -208,6 +207,7 @@ export function useExamState(props: ExamIndexProps) {
         // A refresh after submit (or a submit from another tab) must not
         // leave a completed Strict mock on screen as if it could resume.
         setIsExamActive,
+        setActiveQuestions,
     );
 
     // Sub-hook 2: Timer
@@ -353,6 +353,9 @@ export function useExamState(props: ExamIndexProps) {
             toast.loading('Picking your mock items...', { id: 'mock-start' });
 
             try {
+                // Loaded on demand: only a mock start needs it.
+                const { startMockSession } =
+                    await import('../utils/mock-session');
                 const mock = await startMockSession(examId, mode);
                 toast.dismiss('mock-start');
                 beginExamSession(

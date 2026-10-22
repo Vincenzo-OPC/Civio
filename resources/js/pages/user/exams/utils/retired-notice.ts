@@ -1,3 +1,7 @@
+/** Shown on a Strict-mock item withdrawn after the mock started. */
+export const WITHDRAWN_LIVE_NOTICE =
+    'Civio withdrew this item after your mock started. It will not be scored, so you can skip it. Your other answers are not affected.';
+
 /**
  * Scorecard note for items withdrawn after the mock was served. They are not
  * counted as wrong or skipped, and the score is out of the remaining items.

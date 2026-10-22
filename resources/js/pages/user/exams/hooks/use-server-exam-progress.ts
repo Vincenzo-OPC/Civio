@@ -22,6 +22,8 @@ export function useServerExamProgress(
     setAnswers: Dispatch<SetStateAction<Record<number, number>>>,
     /** Stable setter: a submitted mock must leave the exam screen. */
     setExamActive?: (active: boolean) => void,
+    /** Stable setter: marks items withdrawn mid-mock on screen. */
+    setQuestions?: Dispatch<SetStateAction<Question[]>>,
 ) {
     const [readyId, setReadyId] = useState<string | null>(null);
     const [deadline, setDeadline] = useState<number | null>(null);
@@ -43,11 +45,15 @@ export function useServerExamProgress(
         offline: { current: false },
     }));
 
+    // Hydrate once per session when its items arrive. Keyed on whether items
+    // exist, not on the array: marking an item withdrawn replaces the array
+    // and must not trigger a server re-read that drops a save in flight.
+    const hasQuestions = questions.length > 0;
     useEffect(() => {
         const current = ++generation.current;
         canSave.current = false;
 
-        if (!enabled || !sessionId) {
+        if (!enabled || !sessionId || !hasQuestions) {
             return;
         }
 
@@ -75,7 +81,8 @@ export function useServerExamProgress(
                 const merged = save.resumeFromServer(
                     data,
                     state,
-                    questions.map((q) => q.id),
+                    questionsRef.current.map((q) => q.id),
+                    setQuestions,
                 );
 
                 if (data.submitted) {
@@ -87,7 +94,12 @@ export function useServerExamProgress(
                 }
 
                 version.current = data.save_version;
-                setAnswers(restoreAnswerPositions(questions, merged.answers));
+                setAnswers(
+                    restoreAnswerPositions(
+                        questionsRef.current,
+                        merged.answers,
+                    ),
+                );
                 setDeadline(
                     data.deadline_at
                         ? localDeadline(
@@ -114,7 +126,15 @@ export function useServerExamProgress(
             generation.current = current + 1;
             canSave.current = false;
         };
-    }, [sessionId, enabled, questions, setAnswers, state, setExamActive]);
+    }, [
+        sessionId,
+        enabled,
+        hasQuestions,
+        setAnswers,
+        state,
+        setExamActive,
+        setQuestions,
+    ]);
 
     const send = useCallback(
         (batch: Record<number, number | null>) => {
@@ -152,6 +172,7 @@ export function useServerExamProgress(
                     const next = save.settleSave(outcome, answers, state, {
                         setAnswers,
                         questions: questionsRef,
+                        setQuestions,
                         hydrate: (server) =>
                             setAnswers(
                                 restoreAnswerPositions(
@@ -186,7 +207,7 @@ export function useServerExamProgress(
                     toast.error(save.progressNotices.saveFailed);
                 });
         },
-        [enabled, sessionId, setAnswers, state, setExamActive],
+        [enabled, sessionId, setAnswers, state, setExamActive, setQuestions],
     );
 
     const saveAnswer = useCallback(

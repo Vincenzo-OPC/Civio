@@ -1,5 +1,27 @@
 import type { Question } from '../types';
 
+type QuestionsSetter = (update: (prev: Question[]) => Question[]) => void;
+
+/** Flag withdrawn items on screen; keeps the same array if nothing changes. */
+export function markWithdrawn(
+    setQuestions: QuestionsSetter | undefined,
+    ids: number[],
+): void {
+    if (!setQuestions || ids.length === 0) {
+        return;
+    }
+
+    setQuestions((prev) =>
+        prev.some((q) => ids.includes(q.id) && !q.withdrawn)
+            ? prev.map((q) =>
+                  ids.includes(q.id) && !q.withdrawn
+                      ? { ...q, withdrawn: true }
+                      : q,
+              )
+            : prev,
+    );
+}
+
 /**
  * One Strict-mock progress save, with recovery rules:
  * - 409 version conflict (another tab saved): re-read, retry once on the
@@ -294,6 +316,8 @@ export interface SaveUi {
     setAnswers: (update: (prev: AnswerMap) => AnswerMap) => void;
     /** Served questions in position order (current at call time). */
     questions: { current: Question[] };
+    /** Marks items withdrawn mid-mock so the exam screen can label them. */
+    setQuestions?: QuestionsSetter;
     /** Replace answers from the server's original-option map. */
     hydrate: (answers: ProgressResponse['answers']) => void;
     /** sonner's toast (or any object with these methods). */
@@ -386,6 +410,8 @@ export function settleSave(
         state.pending.delete(id);
     }
 
+    markWithdrawn(ui.setQuestions, ids);
+
     if (ids.length > 0) {
         persistPending(state);
         const positions = ui.questions.current
@@ -427,6 +453,7 @@ export function resumeFromServer(
     data: ProgressResponse,
     state: SaveState,
     servedIds: number[],
+    setQuestions?: QuestionsSetter,
 ): {
     answers: Record<number, number | null>;
     resend: Record<number, number | null>;
@@ -435,7 +462,21 @@ export function resumeFromServer(
     const local = state.sessionId
         ? readPending(state.sessionId, state.storage ?? defaultStorage())
         : {};
+    const withdrawn = data.withdrawn_ids ?? [];
+
+    for (const id of withdrawn) {
+        state.withdrawnIds.add(id);
+        delete local[id];
+    }
+
     const merged = mergeResumed(data, local, servedIds);
+
+    // A withdrawn item shows no answer: it will not be scored.
+    for (const id of withdrawn) {
+        delete merged.answers[id];
+    }
+
+    markWithdrawn(setQuestions, withdrawn);
     const closed = isClosed(data);
     state.server = { ...data.answers };
     state.pending.clear();

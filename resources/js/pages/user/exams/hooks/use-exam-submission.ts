@@ -262,38 +262,11 @@ export function useExamSubmission({
                     }
 
                     if (Array.isArray(data?.answer_keys)) {
-                        // Merge withheld keys into in-memory questions for review UI.
-                        const keyById = new Map<
-                            number,
-                            { correct_option: number; explanation: string }
-                        >(
-                            data.answer_keys.map(
-                                (k: {
-                                    id: number;
-                                    correct_option: number;
-                                    explanation: string;
-                                }) => [
-                                    k.id,
-                                    {
-                                        correct_option: k.correct_option,
-                                        explanation: k.explanation ?? '',
-                                    },
-                                ],
-                            ),
+                        const keys = data.answer_keys;
+                        const answers = data.answers ?? answersByQuestionId;
+                        void import('../utils/answer-keys').then((m) =>
+                            m.publishAnswerKeys(keys, answers),
                         );
-
-                        // Notify via custom event — exam state listens and patches activeQuestions.
-                        if (typeof window !== 'undefined') {
-                            window.dispatchEvent(
-                                new CustomEvent('civio:exam-answer-keys', {
-                                    detail: {
-                                        keys: Object.fromEntries(keyById),
-                                        answers:
-                                            data.answers ?? answersByQuestionId,
-                                    },
-                                }),
-                            );
-                        }
                     }
                 })
                 .catch(() => {

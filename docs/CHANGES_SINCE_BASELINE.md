@@ -17,6 +17,10 @@ keep this current" below).
 
 Tests: `tests/Feature/Ai/OwnerAiSpendLockTest.php` uses dummy keys with `Http::fake()` and `assertNothingSent`. Legacy AI tests now open the lock explicitly.
 
+## Withdrawn items marked during the exam, 22 October 2026
+
+If Civio withdraws an item while a Strict mock is in progress, the exam screen now marks it "withdrawn, not scored" and the item can no longer be answered. The mark appears live after a save and also after a reload or resume. The progress endpoint returns those ids with no answer key. Mock start and the post-submit key merge now load on demand, which keeps the exam chunk within its 11 kB budget.
+
 ## Image smoke, 22 October 2026
 
 A manual GitHub Actions workflow, `image smoke`, builds the production Dockerfile and runs `scripts/fsrs-image-smoke.sh`. It does not push the image or deploy. The host key is a disposable `openssl` value because a clean runner has no Composer install. The build context excludes local SQLite files, logs, sessions, uploads, and secrets, and keeps the storage directory markers. [Run 39631539498](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631539498) passed (`php 8.4.26`, `node v22.23.2`, `sodium loaded`, `fsrs image smoke passed`). [Run 39631088212](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631088212) built the image and then stopped on a missing import while the job stayed green; it is not a pass. An image pass is not a deployment and is not operational production readiness.
