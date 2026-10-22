@@ -21,7 +21,10 @@ export default function Footer() {
                 <div className="flex items-end justify-between gap-4">
                     <div className="flex flex-col gap-2 text-sm">
                         <p>© {currentYear} Civio. All rights reserved.</p>
-                        <nav aria-label="Footer" className="flex gap-4">
+                        <nav
+                            aria-label="Footer"
+                            className="flex flex-wrap gap-x-4 gap-y-1"
+                        >
                             {FOOTER_LINKS.map(({ href, label }) => (
                                 <Link
                                     key={href}

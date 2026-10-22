@@ -1,7 +1,9 @@
 import { Deferred, Head, usePage } from '@inertiajs/react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { AnnouncementsBanner } from '@/components/domain/announcements-banner';
 import { PageContainer } from '@/components/layout/page-container';
+import { readTrack, TRACK_STORAGE_KEY } from '@/lib/exam-countdown';
+import type { ExamTrack } from '@/lib/exam-countdown';
 import { AiReadinessBentoCard } from '@/pages/user/dashboard/components/ai-readiness-bento-card';
 import { ContinueStudyingCard } from '@/pages/user/dashboard/components/continue-studying-card';
 import { DailyGoalStreakCard } from '@/pages/user/dashboard/components/daily-goal-streak-card';
@@ -24,7 +26,20 @@ export default function Dashboard({
     studyTotals,
 }: DashboardProps) {
     const { auth } = usePage<{ auth: Auth }>().props;
-    const firstName = auth?.user?.name ? auth.user.name.split(' ')[0] : 'User';
+    const firstName = auth?.user?.name ? auth.user.name.split(' ')[0] : null;
+    // Exam level from the countdown picker; it also sets which mock a new
+    // learner's primary action starts.
+    const [track, setTrack] = useState<ExamTrack>(() => {
+        try {
+            return readTrack(
+                typeof window === 'undefined'
+                    ? null
+                    : localStorage.getItem(TRACK_STORAGE_KEY),
+            );
+        } catch {
+            return 'professional';
+        }
+    });
 
     useEffect(() => {
         const pendingExam = localStorage.getItem('pending_free_exam');
@@ -37,18 +52,14 @@ export default function Dashboard({
     const primaryWeakness = aiAnalysis?.data?.critical_weaknesses?.[0];
 
     return (
-        <PageContainer className="gap-5 sm:gap-6">
+        <PageContainer className="civio-dashboard gap-5 sm:gap-6">
             <Head title="Dashboard" />
 
-            {/* Global Announcements Banner */}
             <AnnouncementsBanner />
 
-            {/* High-Impact Integrated Hero Banner */}
             <DashboardHero
                 firstName={firstName}
-                stats={stats}
                 motivationText={aiAnalysis?.data?.encouragement}
-                streak={dailyGoal?.streak}
             />
 
             {/* Live countdown to 00:00 PHT on the next CSC-confirmed exam day */}
@@ -57,23 +68,27 @@ export default function Dashboard({
                 milestones={stats?.examMilestones ?? []}
                 sourceUrl={stats?.examSourceUrl}
                 source={stats?.examSource ?? null}
+                track={track}
+                onTrackChange={setTrack}
             />
 
-            {/* One dominant next action, from server data only. */}
+            {/* The one primary action, from server data only. */}
             <ContinueStudyingCard
                 nextModule={nextModule}
                 latestAttempt={recentAttempts[0] ?? null}
+                track={track}
             />
 
-            <div className="grid grid-cols-1 items-start gap-5 sm:gap-6 md:grid-cols-2">
-                {/* Recent sessions and today's study-plan tasks */}
-
-                {/* Card 1: AI Readiness & Coaching */}
+            {/* Paired cards stretch to equal row height on lg+ (md columns were too narrow beside the sidebar); natural height on mobile. */}
+            <div
+                data-dashboard-grid
+                className="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-2"
+            >
                 {/* Lite defers the analysis prop; show a text line until it lands. */}
                 <Deferred
                     data="aiAnalysis"
                     fallback={
-                        <p className="rounded-xl border p-5 text-sm text-muted-foreground">
+                        <p className="dash-panel dash-muted text-sm">
                             Loading your practice scores...
                         </p>
                     }
@@ -81,23 +96,20 @@ export default function Dashboard({
                     <AiReadinessBentoCard aiAnalysis={aiAnalysis} />
                 </Deferred>
 
-                {/* Card 2: Daily Study Streak & Goal Progress */}
                 <DailyGoalStreakCard dailyGoal={dailyGoal} />
 
-                {/* Card 3: Smart Contextual Study Launchers */}
                 <SmartStudyLaunchers
                     nextModule={nextModule}
                     primaryWeakness={primaryWeakness}
                 />
 
-                {/* Card 4: Today's Tasks & Recent Exam Runs */}
                 <StudyScheduleActivityCard
                     todayTasks={todayTasks}
                     overdueTasksCount={overdueTasksCount}
                     recentAttempts={recentAttempts}
                 />
 
-                {/* Counts from stored attempts; no readiness forecast */}
+                {/* Counts from stored attempts; full width, no orphan column */}
                 <StudyTotalsCard totals={studyTotals} />
             </div>
         </PageContainer>

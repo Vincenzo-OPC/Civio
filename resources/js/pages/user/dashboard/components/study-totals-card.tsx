@@ -4,42 +4,45 @@ import type { StudyTotals } from '../types';
 export function StudyTotalsCard({ totals }: { totals?: StudyTotals | null }) {
     const items = totals
         ? [
-              { label: 'Sessions submitted', value: totals.sessions },
-              { label: 'Questions answered', value: totals.questionsAnswered },
-              { label: 'Sessions this week', value: totals.sessionsThisWeek },
+              { label: 'Sessions', value: totals.sessions },
+              { label: 'Questions', value: totals.questionsAnswered },
+              { label: 'This Week', value: totals.sessionsThisWeek },
           ]
         : [];
+    const hasData = !!totals && totals.sessions > 0;
 
     return (
         <section
             aria-labelledby="study-totals-title"
-            className="rounded-xl border border-[#E3E5EA] p-5 sm:p-6 dark:border-[#2a2a2a]"
+            className="dash-panel flex flex-col gap-4 lg:col-span-2 lg:flex-row lg:items-center lg:justify-between"
         >
-            <h2
-                id="study-totals-title"
-                className="text-sm font-semibold text-[#101426] dark:text-[#FAFAF7]"
-            >
-                Your Study So Far
-            </h2>
-            {totals && totals.sessions > 0 ? (
-                <dl className="mt-4 grid grid-cols-3 gap-3">
+            <div className="min-w-0">
+                <h2 id="study-totals-title" className="dash-title">
+                    Study Overview
+                </h2>
+                <p className="dash-muted mt-0.5 text-sm">
+                    {hasData
+                        ? 'Counts from your submitted drills and mocks.'
+                        : 'No submitted sessions yet. Counts appear after your first drill or mock.'}
+                </p>
+            </div>
+            {hasData ? (
+                <dl className="grid grid-cols-3 gap-3 sm:gap-4 lg:w-[34rem] lg:shrink-0">
                     {items.map((item) => (
-                        <div key={item.label} className="min-w-0">
-                            <dt className="text-xs leading-snug text-[#101426]/60 dark:text-[#FAFAF7]/60">
+                        <div
+                            key={item.label}
+                            className="dash-tile min-w-0 px-3 py-2.5 sm:px-4 sm:py-3"
+                        >
+                            <dt className="dash-muted text-xs leading-snug">
                                 {item.label}
                             </dt>
-                            <dd className="mt-1 text-2xl font-semibold text-[#101426] tabular-nums dark:text-[#FAFAF7]">
+                            <dd className="mt-1 font-heading text-2xl font-semibold tabular-nums">
                                 {item.value.toLocaleString()}
                             </dd>
                         </div>
                     ))}
                 </dl>
-            ) : (
-                <p className="mt-2 text-sm text-[#101426]/65 dark:text-[#FAFAF7]/65">
-                    No submitted sessions yet. Your counts appear after your
-                    first drill or mock.
-                </p>
-            )}
+            ) : null}
         </section>
     );
 }

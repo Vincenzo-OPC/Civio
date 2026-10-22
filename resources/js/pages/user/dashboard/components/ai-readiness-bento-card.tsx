@@ -1,22 +1,11 @@
 import { Link, router, usePage } from '@inertiajs/react';
-import {
-    Brain,
-    Sparkles,
-    Zap,
-    ChevronRight,
-    Loader2,
-    AlertCircle,
-    Target,
-} from 'lucide-react';
-import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
+import { ChevronRight, Loader2, AlertCircle } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { summarizeMockAccuracy } from '@/lib/mock-accuracy';
 import { connectRealtime } from '@/lib/realtime';
-import { index as examsIndex } from '@/routes/exams';
 import type { Auth } from '@/types';
 import type { AiAnalysisData } from '../types';
+import { DashPanel } from './dash-panel';
 
 interface AiReadinessBentoCardProps {
     aiAnalysis?: {
@@ -89,256 +78,131 @@ export function AiReadinessBentoCard({
     }, [localStatus, auth?.user?.id, pusher]);
 
     const accuracy = summarizeMockAccuracy(data?.mock_accuracy);
-    const prob = accuracy.percent ?? 0;
+    const pct = accuracy.percent ?? 0;
     const primaryWeakness = data?.critical_weaknesses?.[0];
     const noMock = !accuracy.hasMocks;
-
-    // One neutral palette: accuracy is a practice measurement, not a
-    // pass/fail signal, so it is never coloured by a passing threshold.
-    const colors = {
-        text: 'text-indigo-600 dark:text-indigo-400',
-        stroke: 'stroke-indigo-500',
-        badge: 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-900/60',
-    };
-
-    // SVG Circular Gauge calculation with ample inner breathing space
-    const radius = 46;
-    const circumference = 2 * Math.PI * radius;
-    const strokeDashoffset = noMock
-        ? circumference
-        : circumference - (prob / 100) * circumference;
+    const showEmpty =
+        localStatus === 'no_data' || (localStatus === 'ready' && noMock);
 
     return (
-        <Card className="relative flex flex-col justify-between overflow-hidden border border-slate-200/80 bg-linear-to-br from-white via-indigo-50/20 to-blue-50/30 p-5 shadow-2xs sm:p-6 dark:border-slate-800 dark:from-slate-900 dark:via-indigo-950/20 dark:to-slate-900/90">
-            {/* Header */}
-            <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                    <div className="flex size-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-600 dark:bg-indigo-400/10 dark:text-indigo-400">
-                        <Brain className="size-4" />
-                    </div>
-                    <div>
-                        <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                            Mock Accuracy
-                        </h3>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                            Correct over scored mock questions. Not a pass
-                            prediction.
-                        </p>
-                    </div>
-                </div>
-
-                {localStatus === 'ready' && data && (
-                    <span className="inline-flex items-center gap-1 rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-0.5 text-[11px] font-bold text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300">
-                        <Sparkles className="size-3 fill-current" />
-                        Saved
-                    </span>
-                )}
-            </div>
-
-            {/* Content Body */}
-            <div className="my-4">
-                {localStatus === 'ready' && data && (
-                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-                        {/* Circular Progress Gauge with Generous Inner Spacing */}
-                        <div className="relative flex size-28 shrink-0 items-center justify-center self-start p-1 sm:size-32">
-                            <svg
-                                className="size-full -rotate-90"
-                                viewBox="0 0 112 112"
-                            >
-                                <circle
-                                    cx="56"
-                                    cy="56"
-                                    r={radius}
-                                    className="stroke-slate-100 dark:stroke-slate-800"
-                                    strokeWidth="7"
-                                    fill="transparent"
-                                />
-                                <circle
-                                    cx="56"
-                                    cy="56"
-                                    r={radius}
-                                    className={`${colors.stroke} transition-all duration-1000 ease-out`}
-                                    strokeWidth="7"
-                                    strokeDasharray={circumference}
-                                    strokeDashoffset={strokeDashoffset}
-                                    strokeLinecap="round"
-                                    fill="transparent"
-                                />
-                            </svg>
-                            <div className="absolute inset-0 flex flex-col items-center justify-center p-3 text-center">
-                                <span
-                                    className={`font-semibold tracking-tight ${colors.text} ${
-                                        noMock
-                                            ? 'text-lg sm:text-xl'
-                                            : 'text-2xl sm:text-3xl'
-                                    }`}
-                                >
-                                    {noMock ? 'No mock' : accuracy.display}
-                                </span>
-                                <span className="mt-0.5 text-[9px] leading-none font-bold tracking-wider whitespace-nowrap text-slate-400 uppercase sm:text-[10px] dark:text-slate-500">
-                                    {noMock ? 'Not a score' : accuracy.counts}
-                                </span>
-                            </div>
-                        </div>
-
-                        {/* Verdict & Recommendation with Priority Focus underneath */}
-                        <div className="min-w-0 flex-1 space-y-2.5">
-                            <div>
-                                <span
-                                    className={`inline-block rounded-xl border px-3 py-2 text-xs leading-relaxed font-bold sm:text-sm ${colors.badge}`}
-                                >
-                                    {noMock
-                                        ? 'No mock yet'
-                                        : data.verdict || 'Practice summary'}
-                                </span>
-                            </div>
-
-                            <p className="text-xs leading-relaxed font-medium text-slate-600 sm:text-sm dark:text-slate-300">
-                                {noMock
-                                    ? 'A full mock is 150 or 145 scored items. Civio does not calculate an official pass chance.'
-                                    : data.priority_action ||
-                                      'The next drill adds a practice score. It does not forecast a pass.'}
-                            </p>
-
-                            {!noMock && (
-                                <dl
-                                    className="space-y-0.5 text-[11px] leading-snug text-slate-500 dark:text-slate-400"
-                                    data-testid="mock-accuracy-detail"
-                                >
-                                    <div>
-                                        <dt className="inline font-semibold">
-                                            Track:{' '}
-                                        </dt>
-                                        <dd className="inline">
-                                            {accuracy.track} · {accuracy.sample}
-                                        </dd>
-                                    </div>
-                                    <div>{accuracy.strictLine}</div>
-                                    <div>{accuracy.personalizedLine}</div>
-                                </dl>
-                            )}
-
-                            {/* Top Weakness / Quick Fix Pill placed underneath */}
-                            {primaryWeakness && !noMock && (
-                                <div className="mt-2 flex flex-col justify-between gap-2.5 rounded-xl border border-rose-200/80 bg-rose-50/60 p-2.5 sm:flex-row sm:items-center sm:px-3 sm:py-2 dark:border-rose-900/40 dark:bg-rose-950/30">
-                                    <div className="flex min-w-0 items-center gap-2">
-                                        <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-rose-500/10 text-rose-600 dark:text-rose-400">
-                                            <Target className="size-3.5" />
-                                        </div>
-                                        <div className="flex min-w-0 flex-wrap items-center gap-1.5">
-                                            <span className="shrink-0 text-[11px] font-semibold tracking-wide text-rose-700 uppercase dark:text-rose-300">
-                                                Priority Focus:
-                                            </span>
-                                            <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
-                                                {primaryWeakness}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <Link
-                                        href={`/drills?category=${encodeURIComponent(primaryWeakness)}&from=/dashboard`}
-                                        className="inline-flex shrink-0 items-center justify-center gap-1.5 self-start rounded-lg bg-rose-600 px-3 py-1.5 text-xs font-bold text-white shadow-2xs transition hover:bg-rose-700 active:scale-95 sm:self-auto"
-                                    >
-                                        <Zap className="size-3 fill-current" />
-                                        <span>Fix in Drill</span>
-                                        <ChevronRight className="size-3.5" />
-                                    </Link>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                )}
-
-                {localStatus === 'generating' && (
-                    <div className="space-y-3 rounded-xl border border-blue-200/60 bg-blue-50/40 p-4 text-center dark:border-blue-900/40 dark:bg-blue-950/20">
-                        <div className="flex items-center justify-center gap-2 text-xs font-bold text-blue-700 dark:text-[#B3F52D]">
-                            <Loader2 className="size-4 animate-spin" />
-                            <span>Reading your finished attempts.</span>
-                        </div>
-                        <Progress value={progress} className="h-2" />
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                            Analyzing past attempts across all CSE syllabus
-                            subtopics
-                        </p>
-                    </div>
-                )}
-
-                {localStatus === 'no_data' && (
-                    <div className="flex flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-slate-200 p-4 text-center dark:border-slate-800">
-                        <Sparkles className="size-6 text-indigo-500 dark:text-indigo-400" />
-                        <div>
-                            <p className="text-xs font-bold text-slate-800 dark:text-slate-200">
-                                No Mock Exam Data Yet
-                            </p>
-                            <p className="mt-0.5 text-[11px] text-slate-500 dark:text-slate-400">
-                                Finish a mock to see a practice score. That
-                                number is not a pass forecast.
-                            </p>
-                        </div>
-                        <Button
-                            asChild
-                            size="sm"
-                            variant="outline"
-                            className="gap-1.5 text-xs font-semibold"
-                            uppercase={false}
-                        >
-                            <Link
-                                href={
-                                    examsIndex({
-                                        query: {
-                                            start: 'professional',
-                                            from: '/dashboard',
-                                        },
-                                    }).url
-                                }
-                            >
-                                <Zap className="size-3.5 text-indigo-500" />
-                                Take First Mock Exam
-                            </Link>
-                        </Button>
-                    </div>
-                )}
-
-                {localStatus === 'no_exam_date' && (
-                    <div className="flex items-center gap-3 rounded-xl border border-amber-200/60 bg-amber-50/40 p-3.5 text-xs text-amber-800 dark:border-amber-900/40 dark:bg-amber-950/20 dark:text-amber-300">
-                        <AlertCircle className="size-4 shrink-0" />
-                        <span>
-                            Set an exam date if you want a countdown. The
-                            countdown is not a forecast.
-                        </span>
-                    </div>
-                )}
-
-                {localStatus === 'failed' && (
-                    <div className="flex items-center justify-between rounded-xl border border-rose-200/60 bg-rose-50/40 p-3.5 text-xs text-rose-800 dark:border-rose-900/40 dark:bg-rose-950/20 dark:text-rose-300">
-                        <div className="flex items-center gap-2">
-                            <AlertCircle className="size-4 shrink-0" />
-                            <span>AI Coach unavailable right now.</span>
-                        </div>
-                        <Button
-                            size="sm"
-                            variant="outline"
-                            className="h-7 text-xs font-bold"
-                            onClick={() => router.reload()}
-                        >
-                            Retry
-                        </Button>
-                    </div>
-                )}
-            </div>
-
-            {/* Footer */}
-            <div className="flex items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800/80">
+        <DashPanel
+            id="mock-accuracy-title"
+            title="Mock Accuracy"
+            subtitle="Correct answers over scored mock questions. Not a pass prediction."
+            footer={
                 <Link
                     href="/analytics/ai-analysis?from=/dashboard"
-                    className="inline-flex items-center gap-1 text-xs font-bold text-indigo-600 transition-colors hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
+                    className="dash-link"
                 >
-                    <span>View In-Depth AI Analysis</span>
-                    <ChevronRight className="size-3.5" />
+                    View Practice Analytics
+                    <ChevronRight className="size-4" aria-hidden />
                 </Link>
-                <span className="text-[10px] font-semibold text-slate-400 dark:text-slate-500">
-                    Updates per exam run
-                </span>
-            </div>
-        </Card>
+            }
+        >
+            {localStatus === 'ready' && data && !noMock && (
+                <div className="flex flex-1 flex-col">
+                    <div className="flex items-end justify-between gap-3">
+                        <p className="font-heading text-4xl leading-none font-semibold tracking-tight tabular-nums">
+                            {accuracy.display}
+                        </p>
+                        <p className="dash-muted text-sm tabular-nums">
+                            {accuracy.counts}
+                        </p>
+                    </div>
+                    <div className="mt-3 h-2 overflow-hidden rounded-full bg-(--dash-track)">
+                        <div
+                            className="h-full rounded-full bg-(--dash-accent)"
+                            style={{ width: `${pct}%` }}
+                        />
+                    </div>
+
+                    <p className="mt-3 text-sm leading-relaxed">
+                        {data.priority_action ||
+                            'The next drill adds a practice score. It does not forecast a pass.'}
+                    </p>
+
+                    <dl
+                        className="dash-muted mt-3 space-y-0.5 text-xs leading-5"
+                        data-testid="mock-accuracy-detail"
+                    >
+                        <div>
+                            <dt className="inline font-semibold">Track: </dt>
+                            <dd className="inline">
+                                {accuracy.track} · {accuracy.sample}
+                            </dd>
+                        </div>
+                        <div>{accuracy.strictLine}</div>
+                        <div>{accuracy.personalizedLine}</div>
+                    </dl>
+
+                    {primaryWeakness && (
+                        <div className="dash-tile mt-auto flex items-center justify-between gap-3 px-3 py-2.5">
+                            <p className="min-w-0 truncate text-sm">
+                                <span className="dash-muted">Focus: </span>
+                                <span className="font-semibold">
+                                    {primaryWeakness}
+                                </span>
+                            </p>
+                            <Link
+                                href={`/drills?category=${encodeURIComponent(primaryWeakness)}&from=/dashboard`}
+                                className="dash-link shrink-0"
+                            >
+                                Drill It
+                                <ChevronRight className="size-4" aria-hidden />
+                            </Link>
+                        </div>
+                    )}
+                </div>
+            )}
+
+            {showEmpty && (
+                <div className="flex flex-1 flex-col justify-center">
+                    <p className="text-base font-semibold">No Mocks Yet</p>
+                    <p className="dash-muted mt-0.5 text-sm">
+                        Finish a full mock to see your accuracy. A full mock is
+                        150 or 145 scored items.
+                    </p>
+                </div>
+            )}
+
+            {localStatus === 'generating' && (
+                <div className="flex flex-1 flex-col justify-center gap-3">
+                    <p className="flex items-center gap-2 text-sm font-medium">
+                        <Loader2 className="size-4 animate-spin" aria-hidden />
+                        Reading your finished attempts.
+                    </p>
+                    <div className="h-2 overflow-hidden rounded-full bg-(--dash-track)">
+                        <div
+                            className="h-full rounded-full bg-(--dash-accent)"
+                            style={{ width: `${progress}%` }}
+                        />
+                    </div>
+                </div>
+            )}
+
+            {localStatus === 'no_exam_date' && (
+                <p className="dash-tile flex items-center gap-2 p-3 text-sm">
+                    <AlertCircle className="size-4 shrink-0" aria-hidden />
+                    Set an exam date if you want a countdown. The countdown is
+                    not a forecast.
+                </p>
+            )}
+
+            {localStatus === 'failed' && (
+                <div className="dash-tile flex items-center justify-between gap-3 p-3 text-sm">
+                    <span className="flex items-center gap-2">
+                        <AlertCircle className="size-4 shrink-0" aria-hidden />
+                        Analysis unavailable right now.
+                    </span>
+                    <button
+                        type="button"
+                        className="dash-link"
+                        onClick={() => router.reload()}
+                    >
+                        Retry
+                    </button>
+                </div>
+            )}
+        </DashPanel>
     );
 }

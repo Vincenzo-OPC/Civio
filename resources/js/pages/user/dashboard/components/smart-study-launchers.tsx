@@ -1,186 +1,119 @@
 import { Link } from '@inertiajs/react';
+import type { LucideIcon } from 'lucide-react';
 import {
-    Target,
     BookOpen,
-    ClipboardList,
     ChevronRight,
-    Sparkles,
-    Zap,
-    Clock,
+    ClipboardList,
+    ListChecks,
+    Target,
 } from 'lucide-react';
-import React from 'react';
-import { Card } from '@/components/ui/card';
 import { index as drillsIndex } from '@/routes/drills';
 import { index as examsIndex } from '@/routes/exams';
 import { index as learnIndex } from '@/routes/learn';
 import type { NextModuleItem } from '../types';
+import { DashPanel } from './dash-panel';
 
 interface SmartStudyLaunchersProps {
     nextModule?: NextModuleItem | null;
     primaryWeakness?: string | null;
 }
 
+interface Tile {
+    key: string;
+    href: string;
+    icon: LucideIcon;
+    title: string;
+    detail: string;
+    cta: string;
+}
+
+/** Four equal tiles: the same icon, title, line and action rhythm in each. */
 export function SmartStudyLaunchers({
     nextModule,
     primaryWeakness,
 }: SmartStudyLaunchersProps) {
+    const tiles: Tile[] = [
+        {
+            key: 'drills',
+            href: primaryWeakness
+                ? '/drills/smart-weakness?from=/dashboard'
+                : drillsIndex({ query: { from: '/dashboard' } }).url,
+            icon: Target,
+            title: 'Practice Drills',
+            detail: primaryWeakness
+                ? `Focus: ${primaryWeakness}`
+                : 'Short sets by subtopic',
+            cta: 'Start Drill',
+        },
+        {
+            key: 'custom',
+            href: '/drills?tab=custom&from=/dashboard',
+            icon: ListChecks,
+            title: 'Custom Drills',
+            detail: 'Mix topics or saved sets',
+            cta: 'Build Drill',
+        },
+        {
+            key: 'learn',
+            href: nextModule ? `/learn/${nextModule.slug}` : learnIndex().url,
+            icon: BookOpen,
+            title: 'Lessons',
+            detail: nextModule?.title
+                ? `Next: ${nextModule.title}`
+                : 'Lessons for every subject',
+            cta: 'Open Lessons',
+        },
+        {
+            key: 'exams',
+            href: examsIndex({ query: { from: '/dashboard' } }).url,
+            icon: ClipboardList,
+            title: 'Exam Simulation',
+            detail: 'Study Mode or Exam Mode',
+            cta: 'View Mocks',
+        },
+    ];
+
     return (
-        <Card className="relative flex h-full min-h-115 flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md sm:p-6 dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700">
-            {/* Header */}
-            <div className="flex shrink-0 items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                    <div className="flex size-9 items-center justify-center rounded-xl bg-blue-500/10 text-[#5B35F5] dark:bg-blue-400/10 dark:text-[#B3F52D]">
-                        <Sparkles className="size-5 text-[#5B35F5] dark:text-[#B3F52D]" />
-                    </div>
-                    <div>
-                        <h2 className="text-sm font-bold text-slate-900 dark:text-white">
-                            Smart Study Launchers
-                        </h2>
-                        <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                            Open a mock, a drill, or the notes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            {/* 4 Contextual Tiles Grid */}
-            <div className="my-auto grid grid-cols-1 gap-3 py-3 sm:grid-cols-2">
-                {/* Tile 1: Practice Drills */}
-                <Link
-                    href={
-                        primaryWeakness
-                            ? '/drills/smart-weakness?from=/dashboard'
-                            : drillsIndex({ query: { from: '/dashboard' } })
-                    }
-                    className="group relative flex flex-col justify-between rounded-xl border border-indigo-100 bg-linear-to-br from-indigo-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-md dark:border-indigo-950/60 dark:from-indigo-950/30 dark:to-slate-900/60 dark:hover:border-indigo-800"
-                >
-                    <div>
-                        <div className="flex items-center justify-between">
-                            <div className="flex size-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-600 dark:bg-indigo-400/10 dark:text-indigo-400">
-                                <Target className="size-4" />
-                            </div>
-                            <span className="inline-flex items-center gap-1 rounded-full bg-indigo-100 px-2 py-0.5 text-[10px] font-bold text-indigo-700 dark:bg-indigo-900/60 dark:text-indigo-300">
-                                <Zap className="size-2.5 fill-current" />
-                                {primaryWeakness ? 'Smart Drill' : '10 Qs'}
+        <DashPanel
+            id="study-tools-title"
+            title="Study Tools"
+            subtitle="Drills, lessons and full mocks."
+            footer={
+                <Link href="/guide" className="dash-link">
+                    Reviewer Guide
+                    <ChevronRight className="size-4" aria-hidden />
+                </Link>
+            }
+        >
+            <div className="grid flex-1 auto-rows-fr grid-cols-1 gap-3 @xs:grid-cols-2">
+                {tiles.map((tile) => (
+                    <Link
+                        key={tile.key}
+                        href={tile.href}
+                        data-launcher-tile
+                        className="dash-tile group flex min-w-0 items-center gap-3 p-3.5 transition-colors @xs:flex-col @xs:items-start @xs:gap-0 @xs:p-4"
+                    >
+                        <tile.icon
+                            className="size-5 shrink-0 text-(--dash-mark)"
+                            aria-hidden
+                        />
+                        <div className="min-w-0 flex-1 @xs:mt-3">
+                            <h3 className="text-[15px] leading-5 font-semibold">
+                                {tile.title}
+                            </h3>
+                            <p className="dash-muted mt-0.5 truncate text-[13px] leading-5">
+                                {tile.detail}
+                            </p>
+                        </div>
+                        <span className="dash-link shrink-0 text-[13px] @xs:mt-auto @xs:pt-3">
+                            <span className="hidden @xs:inline">
+                                {tile.cta}
                             </span>
-                        </div>
-                        <h3 className="mt-2.5 text-xs font-bold text-slate-900 dark:text-white">
-                            Practice Drills
-                        </h3>
-                        <p className="mt-0.5 line-clamp-1 text-[11px] text-slate-500 dark:text-slate-400">
-                            {primaryWeakness
-                                ? `Fix: ${primaryWeakness}`
-                                : 'Sharpen specific subtopics'}
-                        </p>
-                    </div>
-                    <div className="mt-3 flex items-center gap-1 text-[11px] font-bold text-indigo-600 transition-transform group-hover:translate-x-0.5 dark:text-indigo-400">
-                        <span>Launch Drill</span>
-                        <ChevronRight className="size-3" />
-                    </div>
-                </Link>
-
-                {/* Tile 2: Custom Drill Builder */}
-                <Link
-                    href="/drills?tab=custom&from=/dashboard"
-                    className="group relative flex flex-col justify-between rounded-xl border border-violet-100 bg-linear-to-br from-violet-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-300 hover:shadow-md dark:border-violet-950/60 dark:from-violet-950/30 dark:to-slate-900/60 dark:hover:border-violet-800"
-                >
-                    <div>
-                        <div className="flex items-center justify-between">
-                            <div className="flex size-8 items-center justify-center rounded-lg bg-violet-500/10 text-violet-600 dark:bg-violet-400/10 dark:text-violet-400">
-                                <Sparkles className="size-4" />
-                            </div>
-                            <span className="inline-flex items-center rounded-full bg-violet-100 px-2 py-0.5 text-[10px] font-bold text-violet-700 dark:bg-violet-900/60 dark:text-violet-300">
-                                Custom Mix
-                            </span>
-                        </div>
-                        <h3 className="mt-2.5 text-xs font-bold text-slate-900 dark:text-white">
-                            Custom Drills
-                        </h3>
-                        <p className="mt-0.5 line-clamp-1 text-[11px] text-slate-500 dark:text-slate-400">
-                            Build multi-topic &amp; mistake sets
-                        </p>
-                    </div>
-                    <div className="mt-3 flex items-center gap-1 text-[11px] font-bold text-violet-600 transition-transform group-hover:translate-x-0.5 dark:text-violet-400">
-                        <span>Build Drill</span>
-                        <ChevronRight className="size-3" />
-                    </div>
-                </Link>
-
-                {/* Tile 3: Learn Modules */}
-                <Link
-                    href={
-                        nextModule ? `/learn/${nextModule.slug}` : learnIndex()
-                    }
-                    className="group relative flex flex-col justify-between rounded-xl border border-sky-100 bg-linear-to-br from-sky-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md dark:border-sky-950/60 dark:from-sky-950/30 dark:to-slate-900/60 dark:hover:border-sky-800"
-                >
-                    <div>
-                        <div className="flex items-center justify-between">
-                            <div className="flex size-8 items-center justify-center rounded-lg bg-sky-500/10 text-sky-600 dark:bg-sky-400/10 dark:text-sky-400">
-                                <BookOpen className="size-4" />
-                            </div>
-                            {nextModule?.estimated_minutes && (
-                                <span className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-2 py-0.5 text-[10px] font-bold text-sky-700 dark:bg-sky-900/60 dark:text-sky-300">
-                                    <Clock className="size-2.5" />
-                                    {nextModule.estimated_minutes}m
-                                </span>
-                            )}
-                        </div>
-                        <h3 className="mt-2.5 text-xs font-bold text-slate-900 dark:text-white">
-                            Learn Scope
-                        </h3>
-                        <p className="mt-0.5 line-clamp-1 text-[11px] text-slate-500 dark:text-slate-400">
-                            {nextModule?.title
-                                ? `Next: ${nextModule.title}`
-                                : 'Core syllabus modules'}
-                        </p>
-                    </div>
-                    <div className="mt-3 flex items-center gap-1 text-[11px] font-bold text-sky-600 transition-transform group-hover:translate-x-0.5 dark:text-sky-400">
-                        <span>Continue Reading</span>
-                        <ChevronRight className="size-3" />
-                    </div>
-                </Link>
-
-                {/* Tile 4: Exam Simulation */}
-                <Link
-                    href={examsIndex({ query: { from: '/dashboard' } })}
-                    className="group relative flex flex-col justify-between rounded-xl border border-emerald-100 bg-linear-to-br from-emerald-50/60 to-white p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md dark:border-emerald-950/60 dark:from-emerald-950/30 dark:to-slate-900/60 dark:hover:border-emerald-800"
-                >
-                    <div>
-                        <div className="flex items-center justify-between">
-                            <div className="flex size-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:bg-emerald-400/10 dark:text-emerald-400">
-                                <ClipboardList className="size-4" />
-                            </div>
-                            <span className="inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700 dark:bg-emerald-900/60 dark:text-emerald-300">
-                                Full Mock
-                            </span>
-                        </div>
-                        <h3 className="mt-2.5 text-xs font-bold text-slate-900 dark:text-white">
-                            Exam Simulation
-                        </h3>
-                        <p className="mt-0.5 line-clamp-1 text-[11px] text-slate-500 dark:text-slate-400">
-                            Study Mode or Exam Mode
-                        </p>
-                    </div>
-                    <div className="mt-3 flex items-center gap-1 text-[11px] font-bold text-emerald-600 transition-transform group-hover:translate-x-0.5 dark:text-emerald-400">
-                        <span>View Exams</span>
-                        <ChevronRight className="size-3" />
-                    </div>
-                </Link>
+                            <ChevronRight className="size-4" aria-hidden />
+                        </span>
+                    </Link>
+                ))}
             </div>
-
-            {/* Footer */}
-            <div className="flex shrink-0 items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800/80">
-                <Link
-                    href="/guide"
-                    className="inline-flex items-center gap-1 text-xs font-bold text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
-                >
-                    <span>View CSE Reviewer Guide</span>
-                    <ChevronRight className="size-3" />
-                </Link>
-                <span className="text-[10px] font-semibold text-slate-400 dark:text-slate-500">
-                    4 Core Modes
-                </span>
-            </div>
-        </Card>
+        </DashPanel>
     );
 }

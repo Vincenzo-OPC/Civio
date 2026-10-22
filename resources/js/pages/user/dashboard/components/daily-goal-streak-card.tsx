@@ -1,33 +1,19 @@
-import { Link } from '@inertiajs/react';
-import {
-    Flame,
-    CheckCircle2,
-    Target,
-    ChevronRight,
-    ArrowRight,
-    Bookmark,
-    SlidersHorizontal,
-    Sparkles,
-} from 'lucide-react';
-import React from 'react';
-import { Badge } from '@/components/ui/badge';
-import { Card } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import { index as drillsIndex } from '@/routes/drills';
+import { CheckCircle2 } from 'lucide-react';
 import type { DailyGoalStats } from '../types';
+import { DashPanel } from './dash-panel';
 
 interface DailyGoalStreakCardProps {
     dailyGoal?: DailyGoalStats;
 }
 
 const DAYS_OF_WEEK = [
-    { label: 'M', name: 'Mon' },
-    { label: 'T', name: 'Tue' },
-    { label: 'W', name: 'Wed' },
-    { label: 'T', name: 'Thu' },
-    { label: 'F', name: 'Fri' },
-    { label: 'S', name: 'Sat' },
-    { label: 'S', name: 'Sun' },
+    { label: 'M', name: 'Monday' },
+    { label: 'T', name: 'Tuesday' },
+    { label: 'W', name: 'Wednesday' },
+    { label: 'T', name: 'Thursday' },
+    { label: 'F', name: 'Friday' },
+    { label: 'S', name: 'Saturday' },
+    { label: 'S', name: 'Sunday' },
 ];
 
 export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
@@ -41,183 +27,103 @@ export function DailyGoalStreakCard({ dailyGoal }: DailyGoalStreakCardProps) {
     );
     const isGoalMet = questionsToday >= goalTarget;
 
-    // Determine current day of week index (0 = Monday, 6 = Sunday)
+    // 0 = Monday, 6 = Sunday
     const todayDayIndex = (new Date().getDay() + 6) % 7;
 
     return (
-        <Card className="relative flex flex-col justify-between overflow-hidden border border-slate-200/80 bg-white/90 p-5 shadow-2xs backdrop-blur-xl transition-all duration-300 hover:border-slate-300 hover:shadow-md sm:p-6 dark:border-slate-800/80 dark:bg-slate-900/70 dark:hover:border-slate-700">
-            {/* Header */}
-            <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                    <div className="flex size-8 items-center justify-center rounded-lg bg-amber-500/10 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-                        <Flame className="size-4 fill-current text-amber-500 dark:text-amber-400" />
-                    </div>
-                    <div>
-                        <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                            Daily Habit & Goal
-                        </h3>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                            Build momentum toward exam day
-                        </p>
-                    </div>
-                </div>
-
-                <Badge
-                    variant="outline"
-                    className={`gap-1.5 px-2.5 py-0.5 text-[11px] font-bold ${
-                        streak > 0
-                            ? 'border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900/60 dark:bg-amber-950/40 dark:text-amber-300'
-                            : 'border-slate-200 bg-slate-50 text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400'
-                    }`}
-                >
-                    <Flame
-                        className={`size-3.5 ${streak > 0 ? 'fill-amber-500 text-amber-500' : 'text-slate-400'}`}
-                    />
-                    <span>
-                        {streak > 0 ? `${streak} Day Streak` : 'Start Streak'}
+        <DashPanel
+            id="daily-goal-title"
+            title="Daily Goal"
+            subtitle={`Answer ${goalTarget} questions a day.`}
+            footer={
+                <>
+                    <span className="text-sm font-semibold">
+                        {streak > 0 ? `${streak}-Day Streak` : 'No Streak Yet'}
                     </span>
-                </Badge>
+                    <span className="dash-muted text-xs">
+                        Resets at 12:00 AM
+                    </span>
+                </>
+            }
+        >
+            <div className="flex items-end justify-between gap-3">
+                <p className="font-heading text-4xl leading-none font-semibold tracking-tight tabular-nums">
+                    {questionsToday}
+                    <span className="dash-muted text-xl font-medium">
+                        {' '}
+                        / {goalTarget}
+                    </span>
+                </p>
+                <p className="dash-muted text-sm tabular-nums">
+                    {progressPct}%
+                </p>
             </div>
 
-            {/* Content Body - naturally fills vertical space without gaps */}
-            <div className="my-4 flex flex-1 flex-col justify-between gap-3">
-                {/* Weekly Habit Consistency Tracker */}
-                <div className="flex items-center justify-between gap-2 rounded-xl border border-slate-100 bg-slate-50/60 px-3.5 py-2.5 dark:border-slate-800/60 dark:bg-slate-950/30">
-                    <div className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
-                        <Sparkles className="size-3.5 shrink-0 text-amber-500" />
-                        <span className="truncate">Weekly Habit:</span>
-                    </div>
-
-                    <div className="flex items-center gap-1.5 sm:gap-2">
-                        {DAYS_OF_WEEK.map((day, idx) => {
-                            const isToday = idx === todayDayIndex;
-                            const isCompleted =
-                                streak > 0 &&
-                                idx <= todayDayIndex &&
-                                todayDayIndex - idx < streak;
-
-                            return (
-                                <div
-                                    key={idx}
-                                    className={`flex size-7 items-center justify-center rounded-lg text-xs font-semibold transition-all ${
-                                        isCompleted
-                                            ? 'bg-amber-500 text-white shadow-2xs'
-                                            : isToday
-                                              ? 'border border-amber-300 bg-amber-50 text-amber-700 ring-1 ring-amber-400/40 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-300'
-                                              : 'bg-muted/70 text-muted-foreground'
-                                    }`}
-                                    title={`${day.name}: ${
-                                        isCompleted
-                                            ? 'Goal Completed'
-                                            : isToday
-                                              ? 'Today'
-                                              : 'Upcoming'
-                                    }`}
-                                >
-                                    {day.label}
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-
-                {/* Questions Solved Progress Card */}
-                <div className="space-y-2.5 rounded-xl border border-slate-100 bg-slate-50/70 p-3.5 sm:p-4 dark:border-slate-800/60 dark:bg-slate-950/40">
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                            <Target className="size-4 text-[#5B35F5] dark:text-[#B3F52D]" />
-                            <span className="text-xs font-bold text-slate-700 sm:text-sm dark:text-slate-200">
-                                Questions Solved Today
-                            </span>
-                        </div>
-                        <div className="flex items-center gap-1 text-xs font-semibold text-slate-900 sm:text-sm dark:text-white">
-                            <span>{questionsToday}</span>
-                            <span className="text-slate-400 dark:text-slate-500">
-                                / {goalTarget}
-                            </span>
-                        </div>
-                    </div>
-
-                    <Progress
-                        value={progressPct}
-                        className={`h-2.5 ${isGoalMet ? '[&>div]:bg-emerald-500' : '[&>div]:bg-[#5B35F5]'}`}
-                    />
-
-                    <div className="flex items-center justify-between text-xs font-semibold text-slate-500 dark:text-slate-400">
-                        {isGoalMet ? (
-                            <span className="flex items-center gap-1 font-bold text-emerald-600 dark:text-emerald-400">
-                                <CheckCircle2 className="size-3.5" /> Daily
-                                target met! Great work.
-                            </span>
-                        ) : (
-                            <span>
-                                {goalTarget - questionsToday} more questions to
-                                reach goal
-                            </span>
-                        )}
-                        <span className="font-bold text-slate-700 dark:text-slate-300">
-                            {progressPct}%
-                        </span>
-                    </div>
-                </div>
-
-                {/* Quick Practice Study Jumpers (Custom Builder & Saved Sets) */}
-                <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-                    <Link
-                        href="/drills?tab=custom"
-                        className="group flex items-center justify-between rounded-xl border border-violet-200/70 bg-violet-50/40 p-3 transition-all hover:border-violet-300 hover:bg-violet-50/70 dark:border-violet-900/40 dark:bg-violet-950/20 dark:hover:border-violet-800"
-                    >
-                        <div className="flex min-w-0 items-center gap-2.5">
-                            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-violet-500/10 text-violet-600 dark:bg-violet-400/10 dark:text-violet-400">
-                                <SlidersHorizontal className="size-4" />
-                            </div>
-                            <div className="min-w-0">
-                                <p className="truncate text-xs font-bold text-slate-900 dark:text-white">
-                                    Custom Builder
-                                </p>
-                                <p className="truncate text-[10px] text-slate-500 dark:text-slate-400">
-                                    Curate & test topics
-                                </p>
-                            </div>
-                        </div>
-                        <ChevronRight className="size-4 shrink-0 text-violet-500 transition-transform group-hover:translate-x-0.5" />
-                    </Link>
-
-                    <Link
-                        href="/drills?tab=saved"
-                        className="group flex items-center justify-between rounded-xl border border-blue-200/70 bg-blue-50/40 p-3 transition-all hover:border-blue-300 hover:bg-blue-50/70 dark:border-blue-900/40 dark:bg-blue-950/20 dark:hover:border-blue-800"
-                    >
-                        <div className="flex min-w-0 items-center gap-2.5">
-                            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-[#5B35F5] dark:bg-blue-400/10 dark:text-[#B3F52D]">
-                                <Bookmark className="size-4" />
-                            </div>
-                            <div className="min-w-0">
-                                <p className="truncate text-xs font-bold text-slate-900 dark:text-white">
-                                    Saved Sets
-                                </p>
-                                <p className="truncate text-[10px] text-slate-500 dark:text-slate-400">
-                                    Bookmarked playlists
-                                </p>
-                            </div>
-                        </div>
-                        <ChevronRight className="size-4 shrink-0 text-blue-500 transition-transform group-hover:translate-x-0.5" />
-                    </Link>
-                </div>
+            <div
+                className="mt-3 h-2 overflow-hidden rounded-full bg-(--dash-track)"
+                role="progressbar"
+                aria-label="Questions answered today"
+                aria-valuemin={0}
+                aria-valuemax={goalTarget}
+                aria-valuenow={Math.min(questionsToday, goalTarget)}
+            >
+                <div
+                    className="h-full rounded-full bg-(--dash-accent)"
+                    style={{ width: `${progressPct}%` }}
+                />
             </div>
 
-            {/* Footer */}
-            <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800/80">
-                <Link
-                    href={drillsIndex({ query: { from: '/dashboard' } })}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-[#5B35F5] transition-colors hover:text-blue-700 dark:text-[#B3F52D] dark:hover:text-blue-300"
-                >
-                    <span>Practice Quick Drill</span>
-                    <ArrowRight className="size-3.5" />
-                </Link>
-                <span className="text-[10px] font-semibold text-slate-400 dark:text-slate-500">
-                    Resets daily at 12:00 AM
-                </span>
+            <p className="mt-2 flex items-center gap-1.5 text-sm">
+                {isGoalMet ? (
+                    <>
+                        <CheckCircle2
+                            className="size-4 text-(--dash-mark)"
+                            aria-hidden
+                        />
+                        <span className="font-medium">Goal met for today.</span>
+                    </>
+                ) : (
+                    <span className="dash-muted">
+                        {goalTarget - questionsToday} more to reach today's
+                        goal.
+                    </span>
+                )}
+            </p>
+
+            <div className="mt-auto pt-5">
+                <p className="dash-muted mb-2 text-xs font-medium">This Week</p>
+                <ol className="grid grid-cols-7 gap-1.5">
+                    {DAYS_OF_WEEK.map((day, idx) => {
+                        const isToday = idx === todayDayIndex;
+                        const isCompleted =
+                            streak > 0 &&
+                            idx <= todayDayIndex &&
+                            todayDayIndex - idx < streak;
+
+                        return (
+                            <li
+                                key={idx}
+                                aria-label={`${day.name}: ${
+                                    isCompleted
+                                        ? 'goal met'
+                                        : isToday
+                                          ? 'today'
+                                          : 'not yet'
+                                }`}
+                                className={`flex h-8 items-center justify-center rounded-md text-xs font-semibold ${
+                                    isCompleted
+                                        ? 'bg-(--dash-accent) text-(--dash-on-accent)'
+                                        : isToday
+                                          ? 'border border-(--dash-accent) text-(--dash-mark)'
+                                          : 'dash-tile dash-muted'
+                                }`}
+                            >
+                                {day.label}
+                            </li>
+                        );
+                    })}
+                </ol>
             </div>
-        </Card>
+        </DashPanel>
     );
 }
