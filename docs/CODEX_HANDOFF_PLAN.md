@@ -1,5 +1,7 @@
 # Codex handoff plan
 
+> **Issue #18 status (22 Oct 2026): DONE on main (dfa8fd7, a44bc0e + follow-up).** All owner-key AI goes through `App\Services\Ai\OwnerAiSpendLock`. It is closed by default and opens only when `CIVIO_OWNER_FUNDED_AI` is exactly `true`, and never in production; credentials alone do nothing. The only path to an AI host is `AiGatewayService`, which checks the lock first in every network method. The architecture test `tests/Unit/Architecture/AiEgressTest.php` fails if app code names an AI host or uses an HTTP client elsewhere (Turnstile is the only allowed non-AI exception) or reads AI keys with `env()`. **New AI code must go through the gateway and keep these tests green. Do not open the lock without GT's explicit approval.**
+
 > **Superseding GT addition, 21 Oct 2026:** Read [Dexter timing and AI evaluations](DEXTER_TIMING_AND_EVALS_2026-10-21.md) alongside the master Dexter plan. Research and design optional question pacing/interactive bar, separate accuracy from speed and item familiarity, and use human-calibrated hybrid AI tutoring evals. **Astra reviews the architecture and can veto/improve proposals**; Codex must prepare ADR and perform only first eligible tested change after security gates. Existing earlier copy-paste prompts are superseded. No deployment, billing, unauthorized question access or live-service mutation.
 
 

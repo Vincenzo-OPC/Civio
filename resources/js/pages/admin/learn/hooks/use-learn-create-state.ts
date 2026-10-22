@@ -172,7 +172,9 @@ export function useLearnCreateState({
                 const errData = await response.json().catch(() => ({}));
 
                 throw new Error(
-                    errData.error || `HTTP error! status: ${response.status}`,
+                    errData.error ||
+                        errData.message ||
+                        `HTTP error! status: ${response.status}`,
                 );
             }
 

@@ -66,7 +66,7 @@ const modes = [
             },
             {
                 icon: Shield,
-                text: 'Requires active AI service — falls back to Instant if unavailable',
+                text: 'Off unless Civio turns AI on. Instant is used when it is off',
             },
         ],
         badge: 'Recommended',
@@ -181,6 +181,17 @@ export default function Preferences({ analysisMode, aiAvailable }: PageProps) {
                     title="Analysis mode"
                     description="Choose how your performance reports are generated after each exam"
                 />
+
+                {!aiAvailable && (
+                    <p
+                        role="status"
+                        className="rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300"
+                    >
+                        AI-Powered analysis is unavailable. Civio has turned it
+                        off, so your reports use Instant analysis. Nothing is
+                        sent to an AI service.
+                    </p>
+                )}
 
                 <div className="grid gap-4 sm:grid-cols-2">
                     {modes.map((mode) => {
@@ -302,8 +313,7 @@ export default function Preferences({ analysisMode, aiAvailable }: PageProps) {
                                 {/* Disabled overlay */}
                                 {isDisabled && (
                                     <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-700 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-400">
-                                        AI analysis is not available on this
-                                        server. Contact admin to enable it.
+                                        Unavailable. AI analysis is turned off.
                                     </div>
                                 )}
                             </button>
@@ -325,14 +335,17 @@ export default function Preferences({ analysisMode, aiAvailable }: PageProps) {
                             immediately generates a fresh report based on all
                             your exam history.
                         </li>
-                        <li>
-                            • Switching to{' '}
-                            <strong className="text-indigo-700 dark:text-indigo-400">
-                                AI-Powered
-                            </strong>{' '}
-                            queues an AI analysis — you&apos;ll see a loading
-                            indicator until it completes (a few seconds).
-                        </li>
+                        {aiAvailable && (
+                            <li>
+                                • Switching to{' '}
+                                <strong className="text-indigo-700 dark:text-indigo-400">
+                                    AI-Powered
+                                </strong>{' '}
+                                queues an AI analysis — you&apos;ll see a
+                                loading indicator until it completes (a few
+                                seconds).
+                            </li>
+                        )}
                         <li>
                             • Your existing report remains visible until the new
                             one is ready.

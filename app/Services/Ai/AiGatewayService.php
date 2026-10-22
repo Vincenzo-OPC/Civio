@@ -101,6 +101,53 @@ class AiGatewayService
     }
 
     /**
+     * Groq (owner key) is usable only when the owner-funded AI lock is open.
+     */
+    public function isGroqConfigured(): bool
+    {
+        if (OwnerAiSpendLock::disabled()) {
+            return false;
+        }
+
+        return (bool) config('services.groq.key');
+    }
+
+    /**
+     * Execute an OpenAI-compatible chat completion against Groq.
+     *
+     * @param  array<string, mixed>  $payload
+     * @return array{success: bool, text?: string, error?: string, status?: int, disabled?: bool}
+     */
+    public function runGroqChat(array $payload, int $timeout = 10): array
+    {
+        if (OwnerAiSpendLock::disabled()) {
+            return OwnerAiSpendLock::disabledResult();
+        }
+
+        $key = (string) config('services.groq.key');
+        if ($key === '') {
+            return ['success' => false, 'error' => 'GROQ_API_KEY is missing.'];
+        }
+
+        try {
+            /** @var Response $response */
+            $response = Http::withToken($key)->timeout($timeout)->post($this->resolveGroqUrl(), $payload);
+
+            if ($response->successful()) {
+                return [
+                    'success' => true,
+                    'text' => (string) ($response->json('choices.0.message.content') ?? ''),
+                    'status' => $response->status(),
+                ];
+            }
+
+            return ['success' => false, 'error' => "Groq request failed with status {$response->status()}", 'status' => $response->status()];
+        } catch (\Throwable $e) {
+            return ['success' => false, 'error' => 'Groq Exception: '.$e->getMessage()];
+        }
+    }
+
+    /**
      * Execute a text generation run against Cloudflare Workers AI.
      *
      * @param  array<string, mixed>  $payload

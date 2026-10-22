@@ -221,6 +221,7 @@ export function useQuestionCreateState({
             if (!response.ok) {
                 throw new Error(
                     resData.error ||
+                        resData.message ||
                         'Failed to generate questions. Please try again.',
                 );
             }

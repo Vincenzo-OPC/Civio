@@ -121,12 +121,14 @@ test('the gateway reports nothing configured and returns a disabled result befor
     expect($gateway->isGeminiConfigured())->toBeFalse()
         ->and($gateway->isWorkersAiConfigured())->toBeFalse()
         ->and($gateway->isAiGatewayConfigured())->toBeFalse()
-        ->and($gateway->isAiConfigured())->toBeFalse();
+        ->and($gateway->isAiConfigured())->toBeFalse()
+        ->and($gateway->isGroqConfigured())->toBeFalse();
 
     $results = [
         $gateway->runGemini(AiGatewayService::DEFAULT_GEMINI_MODEL, ['contents' => []]),
         $gateway->runGemini(AiGatewayService::FALLBACK_GEMINI_MODEL, ['contents' => []]),
         $gateway->runWorkersAi(AiGatewayService::DEFAULT_WORKERS_AI_MODEL, ['messages' => []]),
+        $gateway->runGroqChat(['messages' => []]),
         $gateway->generateStructuredJson(AiGatewayService::DEFAULT_GEMINI_MODEL, 'sys', 'user'),
         $gateway->generateStructuredJson(AiGatewayService::DEFAULT_WORKERS_AI_MODEL, 'sys', 'user'),
     ];

@@ -3,11 +3,9 @@
 namespace App\Rules;
 
 use App\Services\Ai\AiGatewayService;
-use App\Services\Ai\OwnerAiSpendLock;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Translation\PotentiallyTranslatedString;
@@ -106,8 +104,7 @@ class NoProfanity implements ValidationRule
         }
 
         // 4. Fallback to Groq API (NLP) - Direct API
-        $groqKey = config('services.groq.key') ?: env('GROQ_API_KEY');
-        if ($groqKey && OwnerAiSpendLock::enabled()) {
+        if ($aiGateway->isGroqConfigured()) {
             $ip = request()->ip() ?: 'unknown';
             $limiterKey = 'nlp-profanity-check:'.$ip;
 
@@ -123,27 +120,24 @@ class NoProfanity implements ValidationRule
 
             try {
                 $model = 'llama-3.3-70b-versatile';
-                $response = Http::withToken($groqKey)
-                    ->timeout(3)
-                    ->post('https://api.groq.com/openai/v1/chat/completions', [
-                        'model' => $model,
-                        'messages' => [
-                            [
-                                'role' => 'system',
-                                'content' => 'You are a strict content moderator for a Philippine civil service exam platform. Analyze the input text for any profanity, vulgarity, offensive language, hate speech, inappropriate slurs, sexual/anatomical slang, and crude colloquial terms in English or Tagalog/Filipino. Respond strictly in JSON format matching this schema: {"inappropriate": boolean}',
-                            ],
-                            [
-                                'role' => 'user',
-                                'content' => $trimmedValue,
-                            ],
+                $response = $aiGateway->runGroqChat([
+                    'model' => $model,
+                    'messages' => [
+                        [
+                            'role' => 'system',
+                            'content' => 'You are a strict content moderator for a Philippine civil service exam platform. Analyze the input text for any profanity, vulgarity, offensive language, hate speech, inappropriate slurs, sexual/anatomical slang, and crude colloquial terms in English or Tagalog/Filipino. Respond strictly in JSON format matching this schema: {"inappropriate": boolean}',
                         ],
-                        'temperature' => 0.0,
-                        'response_format' => ['type' => 'json_object'],
-                    ]);
+                        [
+                            'role' => 'user',
+                            'content' => $trimmedValue,
+                        ],
+                    ],
+                    'temperature' => 0.0,
+                    'response_format' => ['type' => 'json_object'],
+                ], 3);
 
-                if ($response->successful()) {
-                    $json = $response->json();
-                    $text = $json['choices'][0]['message']['content'] ?? '';
+                if ($response['success']) {
+                    $text = $response['text'] ?? '';
                     $parsed = json_decode($text, true);
 
                     if (isset($parsed['inappropriate']) && $parsed['inappropriate'] === true) {

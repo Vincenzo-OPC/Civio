@@ -1,5 +1,7 @@
 # Next-agent execution plan
 
+> **Issue #18 status (22 Oct 2026): DONE on main (dfa8fd7, a44bc0e + follow-up).** All owner-key AI goes through `App\Services\Ai\OwnerAiSpendLock`. It is closed by default and opens only when `CIVIO_OWNER_FUNDED_AI` is exactly `true`, and never in production; credentials alone do nothing. The only path to an AI host is `AiGatewayService`, which checks the lock first in every network method. The architecture test `tests/Unit/Architecture/AiEgressTest.php` fails if app code names an AI host or uses an HTTP client elsewhere (Turnstile is the only allowed non-AI exception) or reads AI keys with `env()`. **New AI code must go through the gateway and keep these tests green. Do not open the lock without GT's explicit approval.**
+
 > **Latest Astra decision gate (21 Oct 2026):** Read [timing, telemetry and educational AI evaluation brief](DEXTER_TIMING_AND_EVALS_2026-10-21.md). GT's optional elapsed/pacing bar, eventual concept-level pace and multi-turn tutor evals are proposals for research, not blanket feature approval. Require Astra-reviewed ADR, rigorous correctness-first / speed-second evaluation, user privacy, realistic exam timing and Lite budget; proceed in small tested slices **only after existing F1/F2/F6, importer, readiness integrity and Review Mistakes gates**. Existing explicit no-spend/no-deploy/no-bank-activation rules remain in effect.
 
 
