@@ -357,3 +357,7 @@ The Drills page gets the learner's level from recent attempts and shows one Toda
 ## Study streak counts real study days, 22 October 2026
 
 The dashboard streak already existed. Repairs: a day counts only if at least one item was answered, so a blank submission no longer keeps a streak. "Questions today" counts answered items, not served items. The 60-day lookback that silently capped long streaks is now 400 days. Days use the app timezone (Asia/Manila). Tests in `StudyStreakTest`.
+
+## Full exam-day guide from CSC sources, 22 October 2026
+
+`/exam-day` now covers the 2027 dates, who may apply, what to file (form, photos, accepted IDs, the PhP 500 fee from the 2026 announcement), the Subprofessional scope, the 80.00 passing grade, prohibited items and acts (R.A. 9416), and how results are published. Every section cites CSC Examination Announcement No. 03 or No. 05, s. 2026 on csc.gov.ph (checked 22 Oct 2026). Study tips are labeled as not CSC rules. A test checks that every section has a source and that no pass rate appears.
