@@ -17,8 +17,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The supreme law of the Philippines is the:",
    "options": [
@@ -62,7 +62,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0002",
@@ -72,8 +78,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The Philippines is a democratic and republican State. Sovereignty resides in the:",
    "options": [
@@ -117,7 +123,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.15
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0003",
@@ -127,8 +139,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The term of the President of the Philippines is:",
    "options": [
@@ -172,7 +184,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0004",
@@ -182,8 +200,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which branch has the power to make laws?",
    "options": [
@@ -227,7 +245,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0005",
@@ -237,8 +261,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The Bill of Rights is found in:",
    "options": [
@@ -282,7 +306,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0006",
@@ -292,8 +322,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "R.A. 6713 is also known as the:",
    "options": [
@@ -337,7 +367,16 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.3
+   },
+   "qa_flags": [
+    "hold_phrase_overlap"
+   ],
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0007",
@@ -347,8 +386,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Public officials must prioritize:",
    "options": [
@@ -392,7 +431,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0008",
@@ -402,8 +447,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Disclosure of conflict of interest is an example of:",
    "options": [
@@ -447,7 +492,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0009",
@@ -457,8 +508,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Human rights are generally described as:",
    "options": [
@@ -502,7 +553,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0010",
@@ -512,8 +569,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The Commission on Human Rights is a:",
    "options": [
@@ -557,7 +614,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0011",
@@ -567,8 +630,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Sustainable development aims to meet present needs without:",
    "options": [
@@ -612,7 +675,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0012",
@@ -622,8 +691,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "An EIA is typically required for projects that may:",
    "options": [
@@ -667,7 +736,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0013",
@@ -3042,8 +3117,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Under the 1987 Constitution, sovereignty resides in the people and all government authority emanates from them. This principle is primarily found in:",
    "options": [
@@ -3087,7 +3162,16 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.21
+   },
+   "qa_flags": [
+    "hold_phrase_overlap"
+   ],
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0057",
@@ -3097,8 +3181,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The power of judicial review allows the Supreme Court to:",
    "options": [
@@ -3142,7 +3226,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0058",
@@ -3152,8 +3242,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which body has the exclusive power to initiate impeachment cases against impeachable officers?",
    "options": [
@@ -3197,7 +3287,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.1
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0059",
@@ -3207,8 +3303,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Members of the House of Representatives are elected for a term of:",
    "options": [
@@ -3252,7 +3348,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0060",
@@ -3262,8 +3364,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The Commission on Elections (COMELEC) is a:",
    "options": [
@@ -3307,7 +3409,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0061",
@@ -3317,8 +3425,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Natural-born citizens of the Philippines are those:",
    "options": [
@@ -3362,7 +3470,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0062",
@@ -3372,8 +3486,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The Writ of Amparo is primarily intended to protect:",
    "options": [
@@ -3417,7 +3531,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0063",
@@ -3427,8 +3547,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Local government units enjoy local autonomy subject to:",
    "options": [
@@ -3472,7 +3592,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0064",
@@ -3482,8 +3608,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The party-list system is designed primarily to:",
    "options": [
@@ -3527,7 +3653,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0065",
@@ -3537,8 +3669,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Which of the following is NOT a Constitutional Commission?",
    "options": [
@@ -3582,7 +3714,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.17
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0066",
@@ -3592,8 +3730,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Under R.A. 6713, public officials must always put which interest above personal interest?",
    "options": [
@@ -3637,7 +3775,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0067",
@@ -3647,8 +3791,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A Statement of Assets, Liabilities and Net Worth (SALN) must generally be filed:",
    "options": [
@@ -3692,7 +3836,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0068",
@@ -3702,8 +3852,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which act is generally prohibited for public officials under the Code of Conduct?",
    "options": [
@@ -3747,7 +3897,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0069",
@@ -3757,8 +3913,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Transparency of public transactions under ethical standards typically requires:",
    "options": [
@@ -3802,7 +3958,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0070",
@@ -3812,8 +3974,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Divestment under conflict-of-interest rules generally means:",
    "options": [
@@ -3857,7 +4019,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0071",
@@ -3867,8 +4035,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Simple living as a norm for public officials under R.A. 6713 means officials should:",
    "options": [
@@ -3912,7 +4080,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0072",
@@ -3922,8 +4096,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which is an example of a conflict of interest?",
    "options": [
@@ -3967,7 +4141,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0073",
@@ -3977,8 +4157,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Whistleblowing about graft, when done through proper channels, is generally:",
    "options": [
@@ -4022,7 +4202,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0074",
@@ -4032,8 +4218,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The principle of non-discrimination in human rights means rights apply:",
    "options": [
@@ -4077,7 +4263,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0075",
@@ -4087,8 +4279,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Habeas corpus primarily protects against:",
    "options": [
@@ -4132,7 +4324,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0076",
@@ -4142,8 +4340,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The Commission on Human Rights (CHR) is empowered to:",
    "options": [
@@ -4187,7 +4385,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0077",
@@ -4197,8 +4401,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Children's rights under Philippine policy emphasize:",
    "options": [
@@ -4242,7 +4446,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0078",
@@ -4252,8 +4462,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Freedom of expression may be limited when:",
    "options": [
@@ -4297,7 +4507,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0079",
@@ -4307,8 +4523,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Peace education in communities often focuses on:",
    "options": [
@@ -4352,7 +4568,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0080",
@@ -4362,8 +4584,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Indigenous peoples' rights in the Philippines are principally framed by:",
    "options": [
@@ -4407,7 +4629,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0081",
@@ -4417,8 +4645,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Extrajudicial killing, if proven, violates primarily the right to:",
    "options": [
@@ -4462,7 +4690,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0082",
@@ -4472,8 +4706,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "R.A. 9003 primarily deals with:",
    "options": [
@@ -4517,7 +4751,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0083",
@@ -4527,8 +4767,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "An Environmental Impact Statement (EIS) system is important because it:",
    "options": [
@@ -4572,7 +4812,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0084",
@@ -4582,8 +4828,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The precautionary principle in environmental policy suggests that:",
    "options": [
@@ -4627,7 +4873,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0085",
@@ -4637,8 +4889,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Climate change adaptation in local governance commonly includes:",
    "options": [
@@ -4682,7 +4934,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0086",
@@ -4692,8 +4950,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Illegal logging primarily threatens:",
    "options": [
@@ -4737,7 +4995,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0087",
@@ -4747,8 +5011,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Segregation at source in solid waste management means:",
    "options": [
@@ -4792,7 +5056,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0088",
@@ -4802,8 +5072,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Protected areas under the NIPAS framework are intended to:",
    "options": [
@@ -4847,7 +5117,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0089",
@@ -4857,8 +5133,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Which agency is primarily associated with environmental management and natural resources at the national level?",
    "options": [
@@ -4902,7 +5178,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0090",
@@ -12007,8 +12289,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Art. VII, Sec. 19 names which case as the one where the President may not grant reprieves, commutations and pardons?",
    "options": [
@@ -12052,7 +12334,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0220",
@@ -12062,8 +12350,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Emergency powers may be delegated to the President by Congress subject to:",
    "options": [
@@ -12107,7 +12395,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0221",
@@ -12117,8 +12411,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Dual allegiance of citizens is inimical to national interest and shall be dealt with by:",
    "options": [
@@ -12162,7 +12456,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0222",
@@ -12172,8 +12472,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The Senate is composed of how many members elected at large?",
    "options": [
@@ -12217,7 +12517,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0223",
@@ -12227,8 +12533,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Public officials shall not dispose of government property without:",
    "options": [
@@ -12272,7 +12578,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0224",
@@ -12282,8 +12594,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Nepotism restrictions generally aim to prevent:",
    "options": [
@@ -12327,7 +12639,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0225",
@@ -12337,8 +12655,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Ethical standards require officials to act with professionalism, which includes:",
    "options": [
@@ -12382,7 +12700,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0226",
@@ -12392,8 +12716,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Freedom from torture is:",
    "options": [
@@ -12437,7 +12761,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0227",
@@ -12447,8 +12777,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Gender equality policies in public service promote:",
    "options": [
@@ -12492,7 +12822,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0228",
@@ -12502,8 +12838,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Watershed protection is important because watersheds:",
    "options": [
@@ -12547,7 +12883,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0229",
@@ -12557,8 +12899,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Open dumping of waste is discouraged because it:",
    "options": [
@@ -12602,7 +12944,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0230",
@@ -19432,8 +19780,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which constitutional principle requires government authority to remain answerable to the people?",
    "options": [
@@ -19477,7 +19825,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0355",
@@ -19487,8 +19841,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A law must respect the separation of powers. Which branch primarily makes statutes?",
    "options": [
@@ -19532,7 +19886,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0356",
@@ -19542,8 +19902,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which institution tries impeachment cases under the 1987 Constitution?",
    "options": [
@@ -19587,7 +19947,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0357",
@@ -19597,8 +19963,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The President is the commander-in-chief of which constitutional institution?",
    "options": [
@@ -19642,7 +20008,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0358",
@@ -19652,8 +20024,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which right is most directly involved when government prevents a peaceful newspaper from criticizing a policy?",
    "options": [
@@ -19697,7 +20069,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0359",
@@ -19707,8 +20085,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A search of a home generally requires a judicial warrant based on probable cause. This rule protects the:",
    "options": [
@@ -19752,7 +20130,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0360",
@@ -19762,8 +20146,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which body audits government funds and property?",
    "options": [
@@ -19807,7 +20191,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0361",
@@ -19817,8 +20207,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "What is the constitutional term for citizenship acquired from birth without needing an act to acquire or perfect it?",
    "options": [
@@ -19862,7 +20252,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0362",
@@ -19872,8 +20268,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which constitutional commission administers the civil service?",
    "options": [
@@ -19917,7 +20313,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.06
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0363",
@@ -19927,8 +20329,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "The constitutional guarantee that no person may be deprived of life, liberty, or property without due process is a protection against:",
    "options": [
@@ -19972,7 +20374,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0364",
@@ -19982,8 +20390,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which statement best describes the constitutional role of the judiciary?",
    "options": [
@@ -20027,7 +20435,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0365",
@@ -20037,8 +20451,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Under the Constitution, the privilege of the writ of habeas corpus relates most closely to:",
    "options": [
@@ -20082,7 +20496,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.03
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0366",
@@ -20092,8 +20512,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which statement reflects the constitutional policy on civilian authority?",
    "options": [
@@ -20137,7 +20557,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0367",
@@ -20147,8 +20573,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A valid classification for equal-protection purposes should be related to the purpose of the law and apply to:",
    "options": [
@@ -20192,7 +20618,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0368",
@@ -20202,8 +20634,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which governmental power is exercised when the state takes private property for public use with payment?",
    "options": [
@@ -20247,7 +20679,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.05
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0369",
@@ -20257,8 +20695,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A bill becomes a law over the President's veto when:",
    "options": [
@@ -20302,7 +20740,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0370",
@@ -20312,8 +20756,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which is a constitutional qualification for a Philippine senator?",
    "options": [
@@ -20357,7 +20801,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0371",
@@ -20367,8 +20817,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which right allows qualified citizens to participate directly in choosing public officials?",
    "options": [
@@ -20412,7 +20862,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0372",
@@ -20422,8 +20878,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The constitutional ban on ex post facto laws means government may not:",
    "options": [
@@ -20467,7 +20923,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0373",
@@ -20477,8 +20939,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Which constitutional office investigates illegal acts of public officials and, as provided by law, prosecutes them?",
    "options": [
@@ -20522,7 +20984,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0374",
@@ -20532,8 +21000,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Local autonomy means local government units may:",
    "options": [
@@ -20577,7 +21045,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0375",
@@ -20587,8 +21061,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which constitutional commission conducts elections and enforces election laws?",
    "options": [
@@ -20632,7 +21106,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.06
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0376",
@@ -20642,8 +21122,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The constitutional right to information generally concerns:",
    "options": [
@@ -20687,7 +21167,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0377",
@@ -20697,8 +21183,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which statement about a person accused of a crime is constitutionally sound?",
    "options": [
@@ -20742,7 +21228,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0378",
@@ -20752,8 +21244,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A constitutional limitation on public funds is that money may be paid out only:",
    "options": [
@@ -20797,7 +21289,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0379",
@@ -20807,8 +21305,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Under RA 6713, which interest must public officials place above personal interest?",
    "options": [
@@ -20852,7 +21350,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0380",
@@ -20862,8 +21366,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "A public employee receives a valuable gift from a bidder whose transaction the employee handles. The safer statutory conclusion is that the gift is:",
    "options": [
@@ -20907,7 +21411,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0381",
@@ -20917,8 +21427,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "RA 6713 generally requires a public official to respond to a public letter within:",
    "options": [
@@ -20962,7 +21472,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0382",
@@ -20972,8 +21488,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The annual deadline stated in RA 6713 for filing the SALN is:",
    "options": [
@@ -21017,7 +21533,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0383",
@@ -21027,8 +21549,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A SALN is generally filed after assumption of office within:",
    "options": [
@@ -21072,7 +21594,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0384",
@@ -21082,8 +21610,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "When a public officer separates from service, the SALN is generally due within:",
    "options": [
@@ -21127,7 +21655,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0385",
@@ -21137,8 +21671,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Political neutrality under RA 6713 means a public employee should:",
    "options": [
@@ -21182,7 +21716,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0386",
@@ -21192,8 +21732,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The norm of simple living asks officials and their families to:",
    "options": [
@@ -21237,7 +21777,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0387",
@@ -21247,8 +21793,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which act best illustrates professionalism under RA 6713?",
    "options": [
@@ -21292,7 +21838,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0388",
@@ -21302,8 +21854,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "A conflict of interest exists when an official's private business interest may be:",
    "options": [
@@ -21347,7 +21899,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0389",
@@ -21357,8 +21915,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Divestment under RA 6713 means:",
    "options": [
@@ -21402,7 +21960,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0390",
@@ -21412,8 +21976,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "A public employee using confidential procurement data to help a friend violates the rule against:",
    "options": [
@@ -21457,7 +22021,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0391",
@@ -21467,8 +22037,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which duty supports openness in government service?",
    "options": [
@@ -21512,7 +22082,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0392",
@@ -21522,8 +22098,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "For official papers, RA 6713 says they should contain, as far as practicable, no more than:",
    "options": [
@@ -21567,7 +22143,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0393",
@@ -21577,8 +22159,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which agency has primary responsibility for administration and enforcement of RA 6713?",
    "options": [
@@ -21622,7 +22204,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0394",
@@ -21632,8 +22220,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "A public officer recommending a person to a private enterprise with a regular pending transaction with the officer's office is:",
    "options": [
@@ -21677,7 +22265,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0395",
@@ -21687,8 +22281,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which statement about public service and relatives is consistent with RA 6713?",
    "options": [
@@ -21732,7 +22326,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0396",
@@ -21742,8 +22342,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The public's right to know under the SALN provisions relates to declared:",
    "options": [
@@ -21787,7 +22387,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0397",
@@ -21797,8 +22403,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "A public official may accept a nominal foreign-government souvenir when it is:",
    "options": [
@@ -21842,7 +22448,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0398",
@@ -21852,8 +22464,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "The political-neutrality norm is most directly tested when an employee:",
    "options": [
@@ -21897,7 +22509,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0399",
@@ -21907,8 +22525,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The principle of universality of human rights means rights belong to:",
    "options": [
@@ -21952,7 +22570,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0400",
@@ -21962,8 +22586,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A community peace process is strongest when parties:",
    "options": [
@@ -22007,7 +22631,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0401",
@@ -22017,8 +22647,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Habeas data is most closely associated with protection of:",
    "options": [
@@ -22062,7 +22692,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0402",
@@ -22072,8 +22708,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The writ of amparo is principally a protective remedy for threats to:",
    "options": [
@@ -22117,7 +22753,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0403",
@@ -22127,8 +22769,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A human-rights-based public program should begin by asking whether a policy:",
    "options": [
@@ -22172,7 +22814,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0404",
@@ -22182,8 +22830,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which action supports inclusive peace education?",
    "options": [
@@ -22227,7 +22875,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0405",
@@ -22237,8 +22891,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "RA 9003 is principally known as the:",
    "options": [
@@ -22282,7 +22936,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0406",
@@ -22292,8 +22952,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Segregation at source means waste is separated:",
    "options": [
@@ -22337,7 +22997,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0407",
@@ -22347,8 +23013,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Composting is most suitable for processing:",
    "options": [
@@ -22392,7 +23058,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0408",
@@ -22402,8 +23074,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "RA 8749 is commonly called the:",
    "options": [
@@ -22447,7 +23119,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0409",
@@ -22457,8 +23135,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "An environmental impact assessment is useful because it:",
    "options": [
@@ -22502,7 +23180,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0410",
@@ -22512,8 +23196,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The precautionary principle supports preventive action when:",
    "options": [
@@ -22557,7 +23241,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0411",
@@ -22567,8 +23257,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A watershed is important because it:",
    "options": [
@@ -22612,7 +23302,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0412",
@@ -22622,8 +23318,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which practice best reduces plastic leakage into waterways?",
    "options": [
@@ -22667,7 +23363,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0413",
@@ -22677,8 +23379,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A protected area is primarily managed to conserve:",
    "options": [
@@ -22722,7 +23424,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0414",
@@ -22732,8 +23440,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "The national agency most associated with environment and natural resources management is:",
    "options": [
@@ -22777,7 +23485,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0415",
@@ -22787,8 +23501,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A peace agreement should include a monitoring mechanism mainly to:",
    "options": [
@@ -22832,7 +23546,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0416",
@@ -22842,8 +23562,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "The human-rights principle of non-refoulement is generally concerned with not sending a person to:",
    "options": [
@@ -22887,7 +23607,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0417",
@@ -22897,8 +23623,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A circular-economy approach aims to:",
    "options": [
@@ -22942,7 +23668,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0418",
@@ -22952,8 +23684,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Open burning of mixed household waste is unsafe mainly because it can:",
    "options": [
@@ -22997,7 +23729,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0419",
@@ -28507,8 +29245,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which constitutional protection most directly limits a bill of attainder?",
    "options": [
@@ -28552,7 +29290,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0520",
@@ -28562,8 +29306,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "A public office denies a permit solely because an applicant criticized the mayor. Which principle is most implicated?",
    "options": [
@@ -28607,7 +29351,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0521",
@@ -28617,8 +29367,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which branch has the power to appropriate public funds?",
    "options": [
@@ -28662,7 +29412,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0522",
@@ -28672,8 +29428,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "The constitutional requirement of just compensation applies when government:",
    "options": [
@@ -28717,7 +29473,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.04
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0523",
@@ -28727,8 +29489,8 @@
    "concept": "philippine constitution",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which statement best reflects freedom of religion?",
    "options": [
@@ -28772,7 +29534,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0524",
@@ -28782,8 +29550,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "A public employee uses an official vehicle for a private vacation. Which RA 6713 norm is most directly violated?",
    "options": [
@@ -28827,7 +29595,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0525",
@@ -28837,8 +29611,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which conduct best demonstrates responsiveness to the public?",
    "options": [
@@ -28882,7 +29656,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0526",
@@ -28892,8 +29672,8 @@
    "concept": "code of conduct and ethical standards (r.a. 6713)",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "A public employee discovers a mistake in a submitted SALN. The ethical course is to:",
    "options": [
@@ -28937,7 +29717,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0527",
@@ -28947,8 +29733,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which waste-management choice follows the waste hierarchy most closely?",
    "options": [
@@ -28992,7 +29778,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0528",
@@ -29002,8 +29794,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Mangroves help coastal communities mainly by:",
    "options": [
@@ -29047,7 +29839,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0529",
@@ -29057,8 +29855,8 @@
    "concept": "environment management and protection",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Which office practice reduces paper consumption without sacrificing records control?",
    "options": [
@@ -29102,7 +29900,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0530",
@@ -30157,8 +30961,8 @@
    "concept": "peace and human rights issues and concepts",
    "micro_skill": "",
    "archetype": "BASELINE-GENERAL_INFORMATION",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A mediator should keep a peace dialogue credible by:",
    "options": [
@@ -30202,7 +31006,13 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall, medium = application/negative, hard = multi-condition scenario); the reviewer confirms."
   },
   {
    "id": "CIVIO-BASELINE-0550",
