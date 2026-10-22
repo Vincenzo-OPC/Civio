@@ -293,3 +293,28 @@ Source snapshot: PR #5 head `fcc2ed22b39d60e0469304e690749bc17263f8bf`; file `do
   - `CIVIO-B4-NUM-PCT-BASIC-0495`: ₱2,040 is correct, but this is a discount/application item and should be `NUM-WP-PCT-CHANGE`, target 90 seconds, medium difficulty. Replace ₱2,085 (the claimed 315-peso error has no credible derivation) with ₱2,400 for “used the listed fee without applying the discount” (`NUM-GIVEN-REUSED)). The ₱2,160 distractor can be explained as taking off only the 10% part and omitting 5% (`NUM-PARTIAL)); ₱2,760 remains the add-instead-of-subtracting error.
 - The milestone plan's percent-change cap is a **Release Collection** selection rule, not by itself a content-quality failure for the whole verified bank. Exclude this replacement from that collection if the cap remains, but do not reject or hold otherwise-valid bank content solely because of the collection cap.
 - No source PR file was edited, merged, signed or activated in this review. The records remain drafts until the corrected packet is resubmitted with a digest-bound report; GT's signed approval remains necessary for active import.
+
+
+## 2026-10-22: Independent audit of gap-fill-2000-02 (open PR #8)
+
+**Scope and source:** Reviewed PR #8 head `5fd89f9dd0a5a3592f682187c9b7db07b37b6757`, batch `docs/research/gap-fill-2000-02.json` (108 draft items). It proposes 60 Numerical basic-operations items, 20 Numerical sequences, 12 Filipino reading-comprehension items and 16 Filipino paragraph-order items. The PR is open and marked draft. This audit did not edit the PR, merge it, approve its content for activation, or import it.
+
+**Reproducible repository check:** On the pinned PR head, `python scripts/batches/qa_file.py docs/research/gap-fill-2000-02.json` reported **108 items, compared with 1,656 bank items; 0 problems**. This is a content-file QA result, not the full PR check suite listed in its description (tests, type/lint/format/build/bundle checks were not run).
+
+**Independent Numerical answer audit: 80/80 keys recomputed.**
+- All 60 `NUM-OPS-ORDER` expressions were parsed and evaluated with arithmetic precedence, then compared with the keyed option and worked answer.
+- All 20 sequence keys were checked against their stated rules (11 growing-difference patterns; 9 multiply-then-add/subtract patterns). The reveal states the same next term.
+- The 80 items have four distinct choices each, no repeated exact stems, and numerical answer positions are balanced (20 each at o1–o4).
+- No wrong-key or arithmetic defect was found in these 80 items.
+
+**Required metadata and learning-quality changes before selection for a release collection:**
+- IDs `CIVIO-GF2K02-NUMOPS-0001` through `CIVIO-GF2K02-NUMOPS-0060` all set `est_seconds: 40`; spec §3.1 sets `NUM-OPS-ORDER` to **35 seconds**. Correct all 60 values. The 20 sequence items are correctly set at 45 seconds.
+- The 60 operation items repeat one micro-skill and only eight normalized expression structures, each with fresh numbers. This is substantial within-batch frame repetition. Keep only the number needed to fill the approved collection's numerical blueprint; retain representative expressions across the eight structures and do not count the whole 60 as demonstrated coverage breadth.
+- Difficulty labels are editorial, not empirically calibrated: batch Numerical has 16 easy and 64 medium, with no hard items. Do not present this distribution as measured difficulty.
+- Sequence rules are conventional and explicitly explained, but next-term questions remain pattern-inference tasks; do not treat them as uniquely determined by a finite sequence absent the stated rule.
+- Check all 12 reading items and 16 ordering items for one defensible key. The paragraph-order Reveals repeatedly say only “Panimula…sinundan…kinalabasan”; before release, explain the actual ordering cues (time, prerequisite/action/result, reference words) for each item. Some reading distractors are conspicuously implausible; improve distractor quality where doing so preserves a single text-supported answer.
+- These are third-party independent drafts (Grok Bot) with original-source labels; repository QA and this review do not establish source-by-source originality against every reviewer PDF. Keep draft/provenance status pending the existing approval procedure.
+
+**Disposition:** Numerical: 80 answer keys verified with the corrections/selection notes above. Filipino: 28 items reviewed for key defensibility and wording at the item level; paragraph-order explanation depth and distractor quality remain editorial work. The batch still has `status: draft` / `review_status: unreviewed`; no item was approved, activated, imported or counted toward the 2,000 verified release target. Its passing bank comparison (1,656 items) is the validator's comparison set, not the current approved inventory and not evidence that the 2,000 milestone is complete.
+
+**Next actions for the PR author / Codex:** (1) set the 60 operation targets to 35 seconds; (2) prepare a blueprint-based release subset rather than treating all 60 near-frames as distinct coverage; (3) rewrite the 16 sequencing Reveals to teach the actual ordering constraints and strengthen weak distractors; (4) rerun content QA on the revised digest and complete the PR's explicitly required check suite; (5) keep every item draft until independent review and the repository's signed approval/import workflow are satisfied. The current main inventory and exact release gap remain as recorded in [Current Bank Assessment](curriculum/CURRENT_BANK_ASSESSMENT.md); this PR draft does not change them.
