@@ -171,3 +171,16 @@ See [current bank assessment](research/curriculum/CURRENT_BANK_ASSESSMENT.md) an
 - Trim lists exclude drafts from the flat count; they do not delete approved items.
 - Activation still requires independent review + GT Ed25519 signed approval (`docs/BANK_IMPORT_APPROVAL.md`).
 - Commit `c5ea772` on `main`. No Netlify builds triggered.
+
+## Open for Codex (22 Oct 2026, GT approved)
+
+1. **Flat 2,100 bank: awaiting GT sign-off.**
+   - **Manifest:** `docs/research/bank/civio-flat-2100-manifest-2026-10-22.json` at `c45526a`: 1,414 approved, 42 reviewed, 644 draft.
+   - **Replacements:** 25 approved originals are marked `retire_on_signoff`. Corrected `-R1` draft replacements take their slots.
+   - **Validation:** `scripts/batches/qa/validate_flat_2100_manifest.py`. CoS has cleared the set.
+   - **Approval path:** GT finds the Ed25519/SSHSIG signing ceremony (`docs/BANK_IMPORT_APPROVAL.md`) heavy. Codex should **propose** a simpler approval path for GT to decide on. It must stay GT-only and GT-gated, with no bot self-approval. Do not implement it before GT chooses.
+   - **Retire mechanism:** the importer has no way to retire approved items, so the `retire_on_signoff` originals can't be retired yet. Propose one with the approval path.
+2. **Answer-key leak (fix before launch):** `custom_question_ids` in `app/DTOs/Exam/ExamSessionQueryData.php:37` must not let a client pull answer keys.
+3. **Pass-rate claims:** remove or qualify `pass_probability`, "% Pass Rate" and "80% passing rate" claims until they are backed by data.
+4. **Baseline metadata:** about 420 non-GI baseline rows still lack difficulty and est_seconds. The 109 Verbal EN and Numerical rows in the manifest are done (`c45526a`).
+5. **Hosting:** parked. Any option must be free.
