@@ -182,6 +182,9 @@ def solve_cler(it):
     if a == "CLR-SPELL-WRONG":
         bad = [o["text"] for o in it["options"] if o["text"] not in CORRECT]
         return bad[0] if len(bad) == 1 else None
+    if a.startswith("CLR-FILE") and "?\n" in s:
+        import arma_solver
+        return arma_solver.solve(s)
     if a == "CLR-FILE-POSITION":
         names = s.split("?  ")[1].split(" | ")
         def k(n):
