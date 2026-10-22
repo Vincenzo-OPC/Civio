@@ -3,6 +3,7 @@ import type { MutableRefObject } from 'react';
 import type { Question } from '../types';
 import type { ExamMode } from '../utils/exam-mode';
 import { isDemographicQuestion } from '../utils/exam-utils';
+import { bindFlushListeners } from '../utils/flush-listeners';
 
 const PERSISTENCE_KEY = 'active_exam_session_v1';
 
@@ -265,6 +266,7 @@ export function useExamPersistence({
         answers,
         currentIdx,
         flagged,
+        scratchpads,
         isExamActive,
         isExamSubmitted,
         saveSession,
@@ -289,22 +291,7 @@ export function useExamPersistence({
             return;
         }
 
-        const flush = () => {
-            saveSession();
-        };
-
-        window.addEventListener('pagehide', flush);
-        window.addEventListener('beforeunload', flush);
-        document.addEventListener('visibilitychange', () => {
-            if (document.visibilityState === 'hidden') {
-                flush();
-            }
-        });
-
-        return () => {
-            window.removeEventListener('pagehide', flush);
-            window.removeEventListener('beforeunload', flush);
-        };
+        return bindFlushListeners(window, document, () => saveSession());
     }, [isExamActive, isExamSubmitted, saveSession]);
 
     return {
