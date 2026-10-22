@@ -1,0 +1,96 @@
+name: e2e
+
+# Strict mock browser tests (Playwright, Chromium only) against a local app
+# server on a throwaway SQLite file created inside this job. No secrets, no
+# real databases, no Netlify, no deploy.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  strict-mock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      CI: 'true'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      # The only database this job uses: a fresh file in the runner's temp dir.
+      # tests/E2E/db-guard.mjs aborts the run if anything points elsewhere.
+      - name: Throwaway SQLite path
+        run: echo "E2E_DB=$RUNNER_TEMP/civio-e2e.sqlite" >> "$GITHUB_ENV"
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2
+          coverage: none
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install Node Dependencies
+        run: npm ci
+
+      - name: Install PHP Dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: App environment (no real database)
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+          # Blank every non-SQLite database setting from the example file.
+          sed -i -E 's/^(DB_HOST|DB_PORT|DB_USERNAME|DB_PASSWORD|DB_URL)=.*/\1=/' .env
+
+      - name: Build Assets
+        run: npm run build
+
+      - name: Playwright version
+        id: pw
+        run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Playwright Chromium
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ runner.os }}-${{ steps.pw.outputs.version }}
+
+      - name: Install Chromium
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+
+      - name: Install Chromium system dependencies
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+
+      - name: Browser E2E
+        run: npm run test:e2e
+
+      - name: Upload traces on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces
+          path: test-results/
+          retention-days: 7
