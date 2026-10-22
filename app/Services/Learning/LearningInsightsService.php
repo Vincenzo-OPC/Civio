@@ -8,6 +8,9 @@ use App\Enums\ExamMode;
 use App\Models\ExamAttempt;
 use App\Models\Question;
 use App\Models\ReviewEvent;
+use App\Services\Dexter\NextSkillRecommender;
+use App\Services\Dexter\SkillGraph;
+use App\Services\Dexter\SkillMasteryEstimator;
 
 /**
  * Honest per-subject learning signals.
@@ -127,6 +130,8 @@ final class LearningInsightsService
         $pace = [];
         $skills = [];
         $history = [];
+        $graph = new SkillGraph;
+        $skillEvents = [];
 
         foreach ($attempts->sortBy('id') as $attempt) {
             $strict = $attempt->mode === ExamMode::Strict;
@@ -163,6 +168,11 @@ final class LearningInsightsService
                 $skills[$cat.'|'.$skill]['correct'] = ($skills[$cat.'|'.$skill]['correct'] ?? 0) + ($isCorrect ? 1 : 0);
                 $skills[$cat.'|'.$skill]['subcategoryId'] = (int) $q->subcategory_id;
                 $history[$qid][] = ['correct' => $isCorrect, 'at' => $attempt->created_at];
+
+                $graphSkill = $graph->skillFor($q);
+                if ($graphSkill !== null) {
+                    $skillEvents[] = ['skill' => $graphSkill, 'correct' => $isCorrect];
+                }
             }
         }
 
@@ -189,6 +199,8 @@ final class LearningInsightsService
             'pace' => $paceOut,
             'skills' => $this->skillProgression($skills),
             'retention' => $this->retention($history),
+            // Independent answers only; null until items carry a graph archetype.
+            'nextFocus' => (new NextSkillRecommender($graph))->recommend((new SkillMasteryEstimator)->estimate($skillEvents)),
         ];
     }
 }

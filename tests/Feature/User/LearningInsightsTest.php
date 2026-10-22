@@ -134,3 +134,36 @@ test('a same-day repeat does not count as retention', function () {
 
     expect(app(LearningInsightsService::class)->forUser($user->id)['retention'])->toBeNull();
 });
+
+test('nextFocus uses only independent answers on archetype-tagged items', function () {
+    $user = User::factory()->create();
+    $ids = insightItems('Numerical Ability', 8);
+    Question::whereIn('id', $ids)->update(['archetype' => 'NUM-WP-PCT-CHANGE']);
+    $wrong = [];
+    foreach ($ids as $id) {
+        $wrong[(string) $id] = 0;
+    }
+
+    // Six wrong Strict answers on the tagged skill: weak, enough evidence.
+    insightAttempt($user, array_slice($ids, 0, 6), ExamMode::Strict, array_slice($wrong, 0, 6, true));
+    $focus = app(LearningInsightsService::class)->forUser($user->id)['nextFocus'];
+
+    expect($focus['skill'])->toBe('NUM-OPS-ORDER')
+        ->and($focus['basedOn'])->toBe('0 of 6 independent answers correct in Percent change, discounts and markups');
+
+    // Assisted answers add nothing to the evidence.
+    $attempt = insightAttempt($user, array_slice($ids, 6, 2), ExamMode::Study, [(string) $ids[6] => 1, (string) $ids[7] => 1]);
+    assistedEvent($user, $attempt, $ids[6]);
+    assistedEvent($user, $attempt, $ids[7]);
+
+    expect(app(LearningInsightsService::class)->forUser($user->id)['nextFocus']['basedOn'])
+        ->toBe('0 of 6 independent answers correct in Percent change, discounts and markups');
+});
+
+test('nextFocus is null when no item carries a graph archetype', function () {
+    $user = User::factory()->create();
+    $ids = insightItems('Numerical Ability', 6);
+    insightAttempt($user, $ids, ExamMode::Strict, array_fill_keys(array_map('strval', $ids), 0));
+
+    expect(app(LearningInsightsService::class)->forUser($user->id)['nextFocus'])->toBeNull();
+});
