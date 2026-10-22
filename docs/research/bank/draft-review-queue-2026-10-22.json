@@ -1,6 +1,6 @@
 {
  "raw_non_approved_rows": 1828,
- "unique_drafts": 1747,
+ "unique_drafts": 1753,
  "approved_unique": 1477,
  "approved_by_domain": {
   "numerical": 309,
@@ -19,10 +19,10 @@
   "verbal_fil": 77
  },
  "adds_unique_pass_by_domain": {
-  "general_information": 205,
+  "general_information": 208,
   "clerical": 147,
   "numerical": 167,
-  "analytical": 197,
+  "analytical": 203,
   "verbal_en": 49,
   "verbal_fil": 127
  },
@@ -52,7 +52,7 @@
    "flag": 114
   },
   "analytical|new": {
-   "pass": 197,
+   "pass": 203,
    "flag": 2
   },
   "analytical|revision": {
@@ -80,8 +80,8 @@
    "flag": 2
   },
   "general_information|new": {
-   "flag": 32,
-   "pass": 51
+   "flag": 29,
+   "pass": 54
   },
   "general_information|revision": {
    "pass": 24
@@ -142,7 +142,7 @@
   "template_stem_place_name": 10,
   "key_not_in_reveal": 10,
   "difficulty_vs_time": 9,
-  "gi_citation_doubt": 8,
+  "gi_citation_doubt": 5,
   "superseded_by_lintfix": 4,
   "hold_phrase_overlap": 2,
   "gi_fact_doubt": 1,

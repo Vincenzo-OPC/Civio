@@ -9,16 +9,16 @@ Script: `scripts/batches/qa/draft_review_queue_2026_10_22.py`, rendered by `draf
 
 ## Scope
 
-1828 non-approved rows reduce to **1747 unique stems**. The approved unique count is **1477** (GI 236, Clerical 207, Numerical 309, Analytical 251, Verbal EN 286, Verbal Fil 188).
+1828 non-approved rows reduce to **1753 unique stems**. The approved unique count is **1477** (GI 236, Clerical 207, Numerical 309, Analytical 251, Verbal EN 286, Verbal Fil 188).
 
 ## Pass/flag by subject
 
 | Subject | Unique drafts | Pass | Flag | new | revision | rev. of approved | baseline |
 |---|---|---|---|---|---|---|---|
-| GI | 286 | 252 | 34 | 83 | 24 | 45 | 134 |
+| GI | 286 | 255 | 31 | 83 | 24 | 45 | 134 |
 | Clerical | 297 | 200 | 97 | 164 | 15 | 38 | 80 |
 | Numerical | 259 | 167 | 92 | 141 | 27 | 0 | 91 |
-| Analytical | 384 | 267 | 117 | 199 | 5 | 66 | 114 |
+| Analytical | 390 | 273 | 117 | 205 | 5 | 66 | 114 |
 | Verbal EN | 347 | 119 | 228 | 137 | 5 | 77 | 128 |
 | Verbal Fil | 174 | 160 | 14 | 127 | 24 | 22 | 1 |
 
@@ -35,7 +35,7 @@ Script: `scripts/batches/qa/draft_review_queue_2026_10_22.py`, rendered by `draf
 - `template_stem_place_name` (10): "…for use in an official <City> document": the place name adds nothing.
 - `key_not_in_reveal` (10): Numerical baseline items whose explanation never states the answer.
 - `difficulty_vs_time` (9): Information only: the label and the time disagree.
-- `gi_citation_doubt` (8): Wrong R.A. 6713 section: nepotism as §7(a) (it is EO 292 §59), share conflicts as §7(b) (§9 divestment), late SALN with a remedy §8 does not give.
+- `gi_citation_doubt` (5): Wrong R.A. 6713 section: nepotism as §7(a) (it is EO 292 §59), share conflicts as §7(b) (§9 divestment), late SALN with a remedy §8 does not give.
 - `superseded_by_lintfix` (4): A baseline row has a lint-fixed revision. Review that instead.
 - `hold_phrase_overlap` (2): Baseline GI 0006 (the R.A. 6713 title) and 0056 (the Art. II §1 quote) share 20–30% of their 5-grams with a HOLD file. That is public statutory text, but a human must confirm.
 
@@ -47,8 +47,8 @@ Not found: mojibake, "(variant N)", keys outside the options, HOLD-source marker
 |---|---|---|
 | baseline-550-spec-2026-10-18.json | 132 | 417 |
 | gap-fill-2000-06-lintfix.json | 203 | 14 |
-| civio-flat-2100-2026-10-22.json | 117 | 4 |
-| civio-final-rewrite-2026-10-22.json | 98 | 17 |
+| civio-flat-2100-2026-10-22.json | 120 | 1 |
+| civio-final-rewrite-2026-10-22.json | 104 | 17 |
 | gap-fill-2000-02.json | 108 | 0 |
 | gap-fill-2000-03.json | 101 | 0 |
 | gap-fill-2000-01.json | 99 | 0 |
@@ -73,8 +73,8 @@ Order: gap-fill-2000 files, then round-03 replacements, then baseline GI, then f
 |---|---|---|---|---|---|---|
 | Verbal (EN+Fil) | 474 | 176 | 126 | 600 | 600 | 0 |
 | Numerical | 309 | 167 | 91 | 400 | 400 | 0 |
-| GI | 236 | 205 | 164 | 400 | 400 | 0 |
-| Analytical | 251 | 197 | 49 | 300 | 300 | 0 |
+| GI | 236 | 208 | 164 | 400 | 400 | 0 |
+| Analytical | 251 | 203 | 49 | 300 | 300 | 0 |
 | Clerical | 207 | 147 | 93 | 300 | 300 | 0 |
 | **Total** | **1477** | | **523** | **2000** | **2,000** | **0** |
 
