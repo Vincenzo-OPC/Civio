@@ -73,6 +73,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | --- | --- | --- |
 | Scores are recomputed on the server from the bank (`ExamGradingService`); client `cat_scores` are ignored. | The baseline trusted the browser's score, so results could be forged. | `d19afda` |
 | Live exam JSON no longer carries `correct_option` or `explanation` (`ExamQuestionResource` `$includeAnswerKey`). Keys come back only from `/exams/reveal` or after submit. | Answer keys were readable in page props during a mock. | `d19afda` |
+| New nullable, indexed `questions.fact_id` and `questions.theme` (string 100). `civio:import-batch` saves them from batch JSON and keeps existing tags on untagged re-imports. `qa_file.py` checks tag format and fails same-format twins. The mock rules (one per fact, two per theme) are not built yet; see `docs/FACT_ID_MOCK_RULE_BRIEF.md`. | CoS round 03: items sharing a fact must not give each other away in one mock. | this PR |
 | Answers are stored by question ID and original option index (`originalOptionIndices`); legacy position-keyed attempts still read. | Option shuffle made position keys and Reveal ("sirit") mark the wrong choice. | `d19afda` |
 | Open `/clear-cache-temp-route` removed; browser migrate/rollback only with `CIVIO_ALLOW_BROWSER_MIGRATIONS` outside production. | Anyone could clear cache or run migrations from a URL. | `761a3bd` |
 | User custom drill questions are saved as `draft`, not straight into the shared active pool. | Users could inject items into everyone's mocks. | `761a3bd` |
@@ -247,6 +248,10 @@ the Docker autostart task, the desktop start shortcut, and any files
 4. Regenerate the changelog with `npm run changelog` (add `-- --tag vX.Y.Z` when
    cutting a release), then tag with an annotated tag and `git push origin <tag>`.
 5. Never push to `upstream-baseline`; it is a local, read-only remote.
+
+## Drill key withholding review — 19 October 2026 (PR #2)
+
+Drill hub, saved-set and smart-weakness bank payloads omit keys and explanations. The author exception is limited to an owner's unpublished draft; authoring an active item no longer exposes its key, including during Strict Mock. Guest stems/choices and custom draft creation remain usable. Tests cover all three entry points with/without protected attempts and owner/other/guest draft visibility. Before the fix seven regressions failed; after it 14 targeted cases pass. Full suite: 342 PHP tests (7,628 assertions), 94 JS tests; types, lint, formatting, Pint, build and size pass. JS remains 1,037,085 / 1,040,000 B. Welcome formatting is isolated in `a077dd7`. [Real browser screenshots and evidence](review/2026-10-19/README.md) are local guest builder verification only. PR #2 remains draft pending GT's bank-preview decision; no merge, main push, deployment or study-data change.
 
 ## Review evidence — 18 October 2026
 
