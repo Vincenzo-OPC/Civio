@@ -55,7 +55,7 @@ See `AUDIT_TRACKER.md` ("GT directive 3, BANK"). The 150-word passage gate is en
 - **Filipino passage gate (qa.py):** two levels. SHORT is 80-149 words, LONG is 150-250. A passage under 80 or over 250 fails. When an item sets `passage_level`, the word count must match that level.
   - Detection covers VFIL-PAGBASA and VFIL-READ, plus the instruction lines "Basahin ang talata", "Basahin at unawain", "Suriin ang talata" and "Talata:". The instruction line is not counted.
   - English stays at a 150-word minimum.
-  - 5 new tests in `test_bank_gates_2026_10_22.py` (16 tests in total).
+  - 5 new Filipino-gate tests plus 1 Numerical-replacement test in `test_bank_gates_2026_10_22.py` (15 tests in total).
 - **Short Filipino passages: 47 items, not 38.** The earlier detector only knew the "Basahin ang talata" instruction, so it found 35 approved items and 3 drafts (38). With every instruction variant it finds 47, all under 80 words (36-55): 35 approved and 12 drafts.
   - **12 drafts (CIVIO-GF2K02-PAGBASA-0001 to 0012):** passages lengthened in place to 80-98 words and marked `passage_level: short`, with a revision_history entry each. Manifest hashes refreshed.
   - **35 approved (VFIL-PAGBASA-040076 to 040090, VFIL-20261013-0055 to 0074):** left unchanged. Each has a -R1 proposal in `audit/fixes/vfil-passage-r1-2026-10-22.json`. The 20 VFIL-READ rows share 5 passages. Proposals are status draft with reviewer null and are not in the manifest.
