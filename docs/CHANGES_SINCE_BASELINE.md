@@ -249,6 +249,10 @@ the Docker autostart task, the desktop start shortcut, and any files
    cutting a release), then tag with an annotated tag and `git push origin <tag>`.
 5. Never push to `upstream-baseline`; it is a local, read-only remote.
 
+## Drill key withholding review — 19 October 2026 (PR #2)
+
+Drill hub, saved-set and smart-weakness bank payloads omit keys and explanations. The author exception is limited to an owner's unpublished draft; authoring an active item no longer exposes its key, including during Strict Mock. Guest stems/choices and custom draft creation remain usable. Tests cover all three entry points with/without protected attempts and owner/other/guest draft visibility. Before the fix seven regressions failed; after it 14 targeted cases pass. Full suite: 342 PHP tests (7,628 assertions), 94 JS tests; types, lint, formatting, Pint, build and size pass. JS remains 1,037,085 / 1,040,000 B. Welcome formatting is isolated in `a077dd7`. [Real browser screenshots and evidence](review/2026-10-19/README.md) are local guest builder verification only. PR #2 remains draft pending GT's bank-preview decision; no merge, main push, deployment or study-data change.
+
 ## Review evidence — 18 October 2026
 
 The welcome paragraph's existing Prettier-only change (`cf00b8a`, PR #1) has a full passing local check run and real desktop/phone light/dark screenshots in [docs/review/2026-10-18](review/2026-10-18/README.md). No wording, scoring, question-bank, or application behavior changes were made by this evidence commit. The ordered 16-PR queue is draft pending individual verification and owner review; nothing was merged or deployed.
