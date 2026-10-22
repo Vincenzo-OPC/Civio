@@ -2,11 +2,19 @@
 # npm and the frontend node_modules are removed after the asset build.
 FROM node:22.23.2-bookworm-slim AS nodebin
 
-FROM serversideup/php:8.4-fpm-nginx
+# Pinned to a patched PHP (CVE-2026-109618 / CVE-2026-109619, fixed in 8.4.27).
+# The digest was checked against the registry: its PHP_VERSION is 8.4.27.
+# Override only for tests; the guard below rejects a vulnerable base.
+ARG PHP_BASE_IMAGE=serversideup/php:8.4.27-fpm-nginx-v4.5.3@sha256:f6768762e0511e2b710294eac0949361c17ccbca25016a5a908f3df3e933a512
+FROM ${PHP_BASE_IMAGE}
 
 WORKDIR /var/www/html
 
 USER root
+
+# Build fails here when the base image runs a vulnerable PHP.
+COPY scripts/security/assert-patched-php.php scripts/security/patched-php-minimums.php /tmp/php-guard/
+RUN php /tmp/php-guard/assert-patched-php.php && rm -rf /tmp/php-guard
 
 COPY --from=nodebin /usr/local/bin/node /usr/local/bin/node
 COPY --from=nodebin /usr/local/lib/node_modules /usr/local/lib/node_modules
