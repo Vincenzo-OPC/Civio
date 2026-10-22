@@ -44,6 +44,7 @@ class DashboardController extends Controller
                 'overdueTasksCount' => 0,
                 'recentAttempts' => [],
                 'nextModule' => null,
+                'studyTotals' => null,
             ]);
         }
 
