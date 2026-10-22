@@ -6,9 +6,9 @@
     "analytical": 48,
     "verbal_en": 11,
     "clerical": 45,
-    "general_information": 18
+    "general_information": 17
   },
-  "math": "2033 base − 40 numerical drafts − 15 non-reading verbal_fil drafts + these items = 2100",
+  "math": "2033 base − 40 numerical drafts − 15 non-reading verbal_fil drafts + 121 items now in this file = 2099. CIVIO-2100-0115 was retired in fe38b06 as a filler clone of CIVIO-FINAL-0119.",
   "targets": {
     "numerical": 400,
     "analytical": 400,

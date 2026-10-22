@@ -381,3 +381,5 @@ CoS on `0622a31`: 117 accept, 4 revise, 1 reject. Only these five changed. The o
 
 The five stems now use one format. Nothing activated. Recheck only 0002, 0012, 0032, 0042, and 0045.
 
+`fe38b06` had already retired 0115 from this file as a filler clone of `CIVIO-FINAL-0119`. That retirement is left in place. This file is 121 drafts (General Information 17). 2033 − 55 + 121 = 2099.
+
