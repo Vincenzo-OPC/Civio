@@ -10,6 +10,7 @@ use App\Http\Resources\ExamScorecardResource;
 use App\Models\Question;
 use App\Repositories\QuestionRepositoryInterface;
 use App\Repositories\UserRepositoryInterface;
+use App\Services\Exam\StrictMockLock;
 use Illuminate\Support\Collection;
 use Inertia\DeferProp;
 use Inertia\Inertia;
@@ -74,7 +75,12 @@ class ExamService
             $selected = $activeQuestions->take(0);
         }
 
-        $questions = collect(ExamQuestionResource::collectionForExam($selected, $includeAnswerKey));
+        $selected = $selected->take(300);
+        $payload = ExamQuestionResource::collectionForExam($selected, $includeAnswerKey);
+        $locked = app(StrictMockLock::class)->lockedQuestionIds(
+            $userId, request()->hasSession() ? request()->session() : null
+        );
+        $questions = collect(StrictMockLock::withholdKeys($payload, $locked));
 
         if (($savedAttempt || $retakeSource) && $attempt) {
             $questions = $questions->sortBy(function ($q) use ($attempt) {

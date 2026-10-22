@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "warning": "Pinned repository evidence only. No runtime counts or editorial approvals.",
+  "sources": [
+    {
+      "name": "main-2026-10-21",
+      "commit": "dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1",
+      "scope": "all-bank-artifacts"
+    },
+    {
+      "name": "open-pr-3",
+      "commit": "bee7f22dde80ed9b407aed5bc0afbcafd0c25d64",
+      "scope": "changed-bank-artifacts",
+      "base": "f2766db13827e3f6076cda66ceb7e2846c487dcb",
+      "state": "OPEN",
+      "url": "https://github.com/Vincenzo-OPC/Civio/pull/3"
+    },
+    {
+      "name": "open-pr-4",
+      "commit": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+      "scope": "changed-bank-artifacts",
+      "base": "f2766db13827e3f6076cda66ceb7e2846c487dcb",
+      "state": "OPEN",
+      "url": "https://github.com/Vincenzo-OPC/Civio/pull/4"
+    },
+    {
+      "name": "open-pr-5",
+      "commit": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+      "scope": "changed-bank-artifacts",
+      "base": "f2766db13827e3f6076cda66ceb7e2846c487dcb",
+      "state": "OPEN",
+      "url": "https://github.com/Vincenzo-OPC/Civio/pull/5"
+    },
+    {
+      "name": "open-pr-6",
+      "commit": "8edb2cfcd95fd71a376360ee327f673cda484c9f",
+      "scope": "changed-bank-artifacts",
+      "base": "f2766db13827e3f6076cda66ceb7e2846c487dcb",
+      "state": "OPEN",
+      "url": "https://github.com/Vincenzo-OPC/Civio/pull/6"
+    },
+    {
+      "name": "open-pr-7",
+      "commit": "749fcf9a3dfa4b8c4e8b461f16140a6c316710c2",
+      "scope": "changed-bank-artifacts",
+      "base": "f2766db13827e3f6076cda66ceb7e2846c487dcb",
+      "state": "OPEN",
+      "url": "https://github.com/Vincenzo-OPC/Civio/pull/7"
+    },
+    {
+      "name": "open-pr-8",
+      "commit": "5fd89f9dd0a5a3592f682187c9b7db07b37b6757",
+      "scope": "changed-bank-artifacts",
+      "base": "f2766db13827e3f6076cda66ceb7e2846c487dcb",
+      "state": "OPEN",
+      "url": "https://github.com/Vincenzo-OPC/Civio/pull/8"
+    },
+    {
+      "name": "open-pr-9",
+      "commit": "026519163498df7e47b49f5069a59f23cd4728d5",
+      "scope": "changed-bank-artifacts",
+      "base": "f2766db13827e3f6076cda66ceb7e2846c487dcb",
+      "state": "OPEN",
+      "url": "https://github.com/Vincenzo-OPC/Civio/pull/9"
+    },
+    {
+      "name": "open-pr-10",
+      "commit": "1a0191acac7641f4f296ccfafd9b67db245f49df",
+      "scope": "changed-bank-artifacts",
+      "base": "f2766db13827e3f6076cda66ceb7e2846c487dcb",
+      "state": "OPEN",
+      "url": "https://github.com/Vincenzo-OPC/Civio/pull/10"
+    },
+    {
+      "name": "open-pr-11",
+      "commit": "f3e154612a2f85f16681902bdd467b72aa92d411",
+      "scope": "changed-bank-artifacts",
+      "base": "f2766db13827e3f6076cda66ceb7e2846c487dcb",
+      "state": "OPEN",
+      "url": "https://github.com/Vincenzo-OPC/Civio/pull/11"
+    },
+    {
+      "name": "open-pr-12",
+      "commit": "7220b8ade08deee3b348233702b97e4710fd807d",
+      "scope": "changed-bank-artifacts",
+      "base": "f2766db13827e3f6076cda66ceb7e2846c487dcb",
+      "state": "OPEN",
+      "url": "https://github.com/Vincenzo-OPC/Civio/pull/12"
+    }
+  ]
+}

@@ -8,54 +8,34 @@ use App\Models\Question;
 class ExamAttemptFormatter
 {
     /**
-     * Calculate the weighted percentage based on category scores.
+     * Practice percentage from the stored item counts.
+     * Category weights are not applied. A missing metadata block falls back
+     * to the sum of the stored category counts, still unweighted.
      */
     public function calculateWeightedPercentage(array $catScores): float|int
     {
-        $scoreMap = $catScores['categoryScoreMap'] ?? $catScores ?? [];
+        $meta = is_array($catScores['metadata'] ?? null) ? $catScores['metadata'] : [];
+        $metaCorrect = $meta['correct_count'] ?? null;
+        $metaTotal = $meta['total_questions'] ?? null;
 
-        $hasWeights = false;
-        foreach (['Verbal Ability', 'Analytical Ability', 'Numerical Ability', 'Clerical Ability', 'General Information'] as $cat) {
-            if (isset($scoreMap[$cat])) {
-                $hasWeights = true;
-                break;
-            }
+        if (is_numeric($metaCorrect) && is_numeric($metaTotal) && (int) $metaTotal > 0) {
+            return ((int) $metaCorrect / (int) $metaTotal) * 100;
         }
 
-        if ($hasWeights) {
-            $totalWeight = 0;
-            $weightedScore = 0;
+        $scoreMap = $catScores['categoryScoreMap'] ?? $catScores;
+        $correct = 0;
+        $total = 0;
 
+        if (is_array($scoreMap)) {
             foreach ($scoreMap as $catName => $val) {
                 if ($catName === 'metadata' || ! is_array($val)) {
                     continue;
                 }
 
-                $weight = match ($catName) {
-                    'Verbal Ability', 'Numerical Ability' => 0.30,
-                    'Analytical Ability', 'Clerical Ability' => 0.35,
-                    'General Information' => 0.05,
-                    default => 0,
-                };
-
-                if ($weight > 0) {
-                    $correct = (int) ($val['correct'] ?? 0);
-                    $total = (int) ($val['total'] ?? 0);
-                    $catScore = $total > 0 ? ($correct / $total) * 100 : 0;
-
-                    $weightedScore += $catScore * $weight;
-                    $totalWeight += $weight;
-                }
-            }
-
-            if ($totalWeight > 0) {
-                return $weightedScore / $totalWeight;
+                $correct += (int) ($val['correct'] ?? 0);
+                $total += (int) ($val['total'] ?? 0);
             }
         }
-
-        $meta = $catScores['metadata'] ?? [];
-        $correct = $meta['correct_count'] ?? 0;
-        $total = $meta['total_questions'] ?? 0;
 
         return $total > 0 ? ($correct / $total) * 100 : 0;
     }

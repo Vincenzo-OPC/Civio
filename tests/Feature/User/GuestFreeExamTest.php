@@ -1,8 +1,17 @@
 <?php
 
+use App\Models\Category;
+use App\Models\Question;
 use App\Models\User;
 use Illuminate\Auth\Events\Login;
 
+beforeEach(function () {
+    Question::factory()->count(3)->create(['status' => 'active']);
+    Category::query()->update(['is_demographic' => false]);
+    $this->withoutVite()->get(route('exams.index', [
+        'drill' => 'true', 'custom_question_ids' => '[1,2,3]',
+    ]))->assertOk();
+});
 test('guest can access the exams page', function () {
     $response = $this->get(route('exams.index', ['free_attempt' => '1']));
 
@@ -35,6 +44,9 @@ test('guest can POST to exams/attempts', function () {
 test('authenticated user can POST to exams/attempts', function () {
     $user = User::factory()->create();
     $this->actingAs($user);
+    $this->withoutVite()->get(route('exams.index', [
+        'drill' => 'true', 'custom_question_ids' => '[1,2,3]',
+    ]))->assertOk();
 
     $response = $this->postJson(route('exams.attempts.store'), [
         'category_id' => null,

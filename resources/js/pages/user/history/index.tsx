@@ -1,4 +1,4 @@
-import { Head, usePage } from '@inertiajs/react';
+import { Head } from '@inertiajs/react';
 import { Search, Calendar, Trash2 } from 'lucide-react';
 import React from 'react';
 import { PageContainer } from '@/components/layout/page-container';
@@ -6,7 +6,6 @@ import { PageHeader } from '@/components/layout/page-header';
 import { ConfirmModal } from '@/components/shared/confirm-modal';
 import { HowItWorksModal } from '@/components/shared/how-it-works-modal';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import type { Auth } from '@/types';
 import { AttemptsTable } from './components/attempts-table';
 import { FiltersCard } from './components/filters-card';
 import { HistoryKpiCards } from './components/history-kpi-cards';
@@ -14,8 +13,6 @@ import { useHistoryState } from './hooks/use-history-state';
 import type { HistoryPageProps } from './types';
 
 export default function HistoryPage(props: HistoryPageProps) {
-    const { auth } = usePage<{ auth: Auth }>().props;
-    const isAiMode = auth?.user?.analysis_mode === 'ai';
     const { attempts = [], stats, pagination } = props;
 
     const {
@@ -68,7 +65,7 @@ export default function HistoryPage(props: HistoryPageProps) {
                                 {
                                     icon: <Trash2 className="size-4" />,
                                     title: 'Manage Records',
-                                    text: `Delete obsolete attempt records anytime to keep your ${isAiMode ? 'AI Readiness Score' : 'Readiness Score'} accurate and up-to-date.`,
+                                    text: 'Delete obsolete attempt records anytime to keep your practice score up to date.',
                                 },
                             ]}
                         />
