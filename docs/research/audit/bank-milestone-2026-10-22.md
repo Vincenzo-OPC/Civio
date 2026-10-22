@@ -43,3 +43,9 @@ Pending human review: 723 non-approved rows (681 draft + 42 reviewed). Nothing s
 - **Numerical method-first:** `reveal.method_steps` (asked, givens, method, why, solve by hand, check, distractors, shortcut) added in place to all 76 non-D1022 numerical draft rows (the 25 D1022 drafts already had them). Hashes refreshed by the swap script, now for every draft row. 59 approved rows got -R1 proposals only (`audit/fixes/method-first-r1-proposals-2026-10-22.json`, content and key unchanged, not in the manifest). Not yet covered: 42 reviewed rows (batch-subpro-num-001) and about 240 other approved rows (no template yet).
 - **Flags for review:** signoff-replacements-2026-10-22 has template padding (5 near-identical rectangle-edging items, 3 near-identical chair-discount items), and gap-fill-2000-02 has 20 templated order-of-operations items. These are drafts only.
 - **Manifest:** 2,100 (Num 400, Ana 400, VEN 400, VFIL 300, CLR 300, GI 300); percent-change rows 40/40; validator 0 problems; master audit Counter().
+
+## GT directive 3 update (22 Oct 2026, 3:30 PM)
+
+See `AUDIT_TRACKER.md` ("GT directive 3, BANK"). The 150-word passage gate is enforced in `qa.check_item`. 4 P1 editorial -R1 drafts took their originals' slots. 24 templated Numerical drafts were swapped for distinct spares. Method-first -R1 proposals now cover all 295 approved and reviewed Numerical rows. The 42 P1 recommendations are written. Manifest: 2,100 (approved 1,377, draft 685, reviewed 38); percent-change rows 38/40.
+
+**Spec proposals for GT:** CLR-CHRONOLOGICAL, CLR-COPY-CHECK, CLR-COPY-MISMATCH (proposals), and whether VFIL-PAGBASA passages need a word floor (38 Filipino passage items are 32–54 words).

@@ -242,7 +242,16 @@ What number comes next: 2, 3, 5, 8, 13, 21, ___?
 - (C) 34
 - (D) 42
 
-### 27. `CIVIO-GF2K02-SEQD-0001`  (both, medium, 45 s)
+### 27. `CIVIO-D1022-NUMSEQ-0012`  (both, hard, 50 s)
+
+What number comes next: 3, 4, 8, 17, 33, ___?
+
+- (A) 66
+- (B) 58
+- (C) 57
+- (D) 49
+
+### 28. `CIVIO-GF2K02-SEQD-0001`  (both, medium, 45 s)
 
 What number comes next in the series?  19, 23, 31, 43, 59, ___
 
@@ -251,7 +260,7 @@ What number comes next in the series?  19, 23, 31, 43, 59, ___
 - (C) 83
 - (D) 63
 
-### 28. `CIVIO-GF2K02-SEQD-0002`  (both, medium, 45 s)
+### 29. `CIVIO-GF2K02-SEQD-0002`  (both, medium, 45 s)
 
 Which number continues the pattern?  15, 23, 33, 45, 59, ___
 
@@ -260,7 +269,7 @@ Which number continues the pattern?  15, 23, 33, 45, 59, ___
 - (C) 77
 - (D) 67
 
-### 29. `CIVIO-GF2K02-SEQD-0003`  (both, medium, 45 s)
+### 30. `CIVIO-GF2K02-SEQD-0003`  (both, medium, 45 s)
 
 What is the next number in the sequence?  8, 16, 27, 41, 58, ___
 
@@ -269,7 +278,7 @@ What is the next number in the sequence?  8, 16, 27, 41, 58, ___
 - (C) 78
 - (D) 66
 
-### 30. `CIVIO-GF2K02-SEQD-0004`  (both, medium, 45 s)
+### 31. `CIVIO-GF2K02-SEQD-0004`  (both, medium, 45 s)
 
 Which number should replace the blank?  5, 7, 12, 20, 31, ___
 
@@ -278,7 +287,7 @@ Which number should replace the blank?  5, 7, 12, 20, 31, ___
 - (C) 33
 - (D) 45
 
-### 31. `CIVIO-GF2K02-SEQD-0005`  (both, medium, 45 s)
+### 32. `CIVIO-GF2K02-SEQD-0005`  (both, medium, 45 s)
 
 What number comes next in the series?  21, 25, 32, 42, 55, ___
 
@@ -287,7 +296,7 @@ What number comes next in the series?  21, 25, 32, 42, 55, ___
 - (C) 74
 - (D) 59
 
-### 32. `CIVIO-GF2K02-SEQD-0006`  (both, medium, 45 s)
+### 33. `CIVIO-GF2K02-SEQD-0006`  (both, medium, 45 s)
 
 Which number continues the pattern?  5, 12, 23, 38, 57, ___
 
@@ -296,7 +305,7 @@ Which number continues the pattern?  5, 12, 23, 38, 57, ___
 - (C) 84
 - (D) 64
 
-### 33. `CIVIO-GF2K02-SEQD-0007`  (both, medium, 45 s)
+### 34. `CIVIO-GF2K02-SEQD-0007`  (both, medium, 45 s)
 
 What is the next number in the sequence?  19, 25, 33, 43, 55, ___
 
@@ -305,7 +314,7 @@ What is the next number in the sequence?  19, 25, 33, 43, 55, ___
 - (C) 69
 - (D) 61
 
-### 34. `CIVIO-GF2K02-SEQD-0008`  (both, medium, 45 s)
+### 35. `CIVIO-GF2K02-SEQD-0008`  (both, medium, 45 s)
 
 Which number should replace the blank?  13, 17, 23, 31, 41, ___
 
@@ -314,7 +323,7 @@ Which number should replace the blank?  13, 17, 23, 31, 41, ___
 - (C) 45
 - (D) 53
 
-### 35. `CIVIO-GF2K02-SEQD-0009`  (both, medium, 45 s)
+### 36. `CIVIO-GF2K02-SEQD-0009`  (both, medium, 45 s)
 
 What number comes next in the series?  25, 30, 39, 52, 69, ___
 
@@ -323,7 +332,7 @@ What number comes next in the series?  25, 30, 39, 52, 69, ___
 - (C) 94
 - (D) 74
 
-### 36. `CIVIO-GF2K02-SEQD-0010`  (both, medium, 45 s)
+### 37. `CIVIO-GF2K02-SEQD-0010`  (both, medium, 45 s)
 
 Which number continues the pattern?  11, 15, 20, 26, 33, ___
 
@@ -332,7 +341,7 @@ Which number continues the pattern?  11, 15, 20, 26, 33, ___
 - (C) 42
 - (D) 37
 
-### 37. `CIVIO-GF2K02-SEQD-0011`  (both, medium, 45 s)
+### 38. `CIVIO-GF2K02-SEQD-0011`  (both, medium, 45 s)
 
 What is the next number in the sequence?  25, 34, 46, 61, 79, ___
 
@@ -341,7 +350,7 @@ What is the next number in the sequence?  25, 34, 46, 61, 79, ___
 - (C) 100
 - (D) 88
 
-### 38. `CIVIO-GF2K02-SEQM-0012`  (both, medium, 45 s)
+### 39. `CIVIO-GF2K02-SEQM-0012`  (both, medium, 45 s)
 
 Which number should replace the blank?  3, 12, 39, 120, 363, ___
 
@@ -350,7 +359,7 @@ Which number should replace the blank?  3, 12, 39, 120, 363, ___
 - (C) 1095
 - (D) 1092
 
-### 39. `CIVIO-GF2K02-SEQM-0013`  (both, medium, 45 s)
+### 40. `CIVIO-GF2K02-SEQM-0013`  (both, medium, 45 s)
 
 What number comes next in the series?  4, 14, 44, 134, 404, ___
 
@@ -358,15 +367,6 @@ What number comes next in the series?  4, 14, 44, 134, 404, ___
 - (B) 1212
 - (C) 674
 - (D) 1216
-
-### 40. `CIVIO-GF2K02-SEQM-0014`  (both, medium, 45 s)
-
-Which number continues the pattern?  2, 5, 14, 41, 122, ___
-
-- (A) 366
-- (B) 365
-- (C) 203
-- (D) 364
 
 ---
 
@@ -505,7 +505,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - (B) Added 6.
 - (D) Doubled the last term.
 - File: `docs/research/audit/fixes/round-03-baseline-b3-drafts.json`
-- Review note: stem frame shared by 24 bank rows: check it is not a numeric/name variant
+- Review note: stem frame shared by 25 bank rows: check it is not a numeric/name variant
 
 ### 16. `CIVIO-B3-NUM-SEQ-DIFF-0187`: key (D) 13
 
@@ -523,7 +523,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - (C) Added 9, the previous odd difference.
 - (D) Skipped to 7².
 - File: `docs/research/audit/fixes/round-03-baseline-b3-drafts.json`
-- Review note: stem frame shared by 24 bank rows: check it is not a numeric/name variant
+- Review note: stem frame shared by 25 bank rows: check it is not a numeric/name variant
 
 ### 18. `CIVIO-B3-NUM-SEQ-DIFF-0196`: key (C) 29
 
@@ -595,7 +595,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - (C) 31 repeats the last difference of 8.
 - (D) 46 doubles the last term.
 - File: `docs/research/batches/drafts/numerical-series-2026-10-22.json`
-- Review note: stem frame shared by 24 bank rows: check it is not a numeric/name variant
+- Review note: stem frame shared by 25 bank rows: check it is not a numeric/name variant
 
 ### 26. `CIVIO-D1022-NUMSEQ-0007`: key (C) 34
 
@@ -604,9 +604,18 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - (B) 33 adds 12, one short of 13.
 - (D) 42 doubles the last term.
 - File: `docs/research/batches/drafts/numerical-series-2026-10-22.json`
-- Review note: stem frame shared by 24 bank rows: check it is not a numeric/name variant
+- Review note: stem frame shared by 25 bank rows: check it is not a numeric/name variant
 
-### 27. `CIVIO-GF2K02-SEQD-0001`: key (A) 79
+### 27. `CIVIO-D1022-NUMSEQ-0012`: key (B) 58
+
+- Why correct: The rule is: add 1, 4, 9, 16 (square numbers), so next add 25. Applied to 33, the next term is 58. Each wrong choice comes from a rule that fits only part of the series.
+- (A) 66 doubles the last term.
+- (C) 57 adds 24, one short of 25.
+- (D) 49 adds 16 again.
+- File: `docs/research/batches/drafts/numerical-series-2026-10-22.json`
+- Review note: stem frame shared by 25 bank rows: check it is not a numeric/name variant
+
+### 28. `CIVIO-GF2K02-SEQD-0001`: key (A) 79
 
 - Why correct: Answer: 79. Rule: the jumps are 4, 8, 12, 16, growing by 4; next jump +20: 59 + 20 = 79.
 - (B) 75 repeats the last jump (+16). The jumps grow by 4 each time, so the next jump is +20.
@@ -615,7 +624,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 19 bank rows: check it is not a numeric/name variant
 
-### 28. `CIVIO-GF2K02-SEQD-0002`: key (B) 75
+### 29. `CIVIO-GF2K02-SEQD-0002`: key (B) 75
 
 - Why correct: Answer: 75. Rule: the jumps are 8, 10, 12, 14, growing by 2; next jump +16: 59 + 16 = 75.
 - (A) 73 repeats the last jump (+14). The jumps grow by 2 each time, so the next jump is +16.
@@ -624,7 +633,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 29. `CIVIO-GF2K02-SEQD-0003`: key (C) 78
+### 30. `CIVIO-GF2K02-SEQD-0003`: key (C) 78
 
 - Why correct: Answer: 78. Rule: the jumps are 8, 11, 14, 17, growing by 3; next jump +20: 58 + 20 = 78.
 - (A) 75 repeats the last jump (+17). The jumps grow by 3 each time, so the next jump is +20.
@@ -633,7 +642,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 30. `CIVIO-GF2K02-SEQD-0004`: key (D) 45
+### 31. `CIVIO-GF2K02-SEQD-0004`: key (D) 45
 
 - Why correct: Answer: 45. Rule: the jumps are 2, 5, 8, 11, growing by 3; next jump +14: 31 + 14 = 45.
 - (A) 42 repeats the last jump (+11). The jumps grow by 3 each time, so the next jump is +14.
@@ -642,7 +651,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 31. `CIVIO-GF2K02-SEQD-0005`: key (A) 71
+### 32. `CIVIO-GF2K02-SEQD-0005`: key (A) 71
 
 - Why correct: Answer: 71. Rule: the jumps are 4, 7, 10, 13, growing by 3; next jump +16: 55 + 16 = 71.
 - (B) 68 repeats the last jump (+13). The jumps grow by 3 each time, so the next jump is +16.
@@ -651,7 +660,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 19 bank rows: check it is not a numeric/name variant
 
-### 32. `CIVIO-GF2K02-SEQD-0006`: key (B) 80
+### 33. `CIVIO-GF2K02-SEQD-0006`: key (B) 80
 
 - Why correct: Answer: 80. Rule: the jumps are 7, 11, 15, 19, growing by 4; next jump +23: 57 + 23 = 80.
 - (A) 76 repeats the last jump (+19). The jumps grow by 4 each time, so the next jump is +23.
@@ -660,7 +669,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 33. `CIVIO-GF2K02-SEQD-0007`: key (C) 69
+### 34. `CIVIO-GF2K02-SEQD-0007`: key (C) 69
 
 - Why correct: Answer: 69. Rule: the jumps are 6, 8, 10, 12, growing by 2; next jump +14: 55 + 14 = 69.
 - (A) 67 repeats the last jump (+12). The jumps grow by 2 each time, so the next jump is +14.
@@ -669,7 +678,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 34. `CIVIO-GF2K02-SEQD-0008`: key (D) 53
+### 35. `CIVIO-GF2K02-SEQD-0008`: key (D) 53
 
 - Why correct: Answer: 53. Rule: the jumps are 4, 6, 8, 10, growing by 2; next jump +12: 41 + 12 = 53.
 - (A) 51 repeats the last jump (+10). The jumps grow by 2 each time, so the next jump is +12.
@@ -678,7 +687,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 35. `CIVIO-GF2K02-SEQD-0009`: key (A) 90
+### 36. `CIVIO-GF2K02-SEQD-0009`: key (A) 90
 
 - Why correct: Answer: 90. Rule: the jumps are 5, 9, 13, 17, growing by 4; next jump +21: 69 + 21 = 90.
 - (B) 86 repeats the last jump (+17). The jumps grow by 4 each time, so the next jump is +21.
@@ -687,7 +696,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 19 bank rows: check it is not a numeric/name variant
 
-### 36. `CIVIO-GF2K02-SEQD-0010`: key (B) 41
+### 37. `CIVIO-GF2K02-SEQD-0010`: key (B) 41
 
 - Why correct: Answer: 41. Rule: the jumps are 4, 5, 6, 7, growing by 1; next jump +8: 33 + 8 = 41.
 - (A) 40 repeats the last jump (+7). The jumps grow by 1 each time, so the next jump is +8.
@@ -696,7 +705,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 37. `CIVIO-GF2K02-SEQD-0011`: key (C) 100
+### 38. `CIVIO-GF2K02-SEQD-0011`: key (C) 100
 
 - Why correct: Answer: 100. Rule: the jumps are 9, 12, 15, 18, growing by 3; next jump +21: 79 + 21 = 100.
 - (A) 97 repeats the last jump (+18). The jumps grow by 3 each time, so the next jump is +21.
@@ -705,7 +714,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 38. `CIVIO-GF2K02-SEQM-0012`: key (D) 1092
+### 39. `CIVIO-GF2K02-SEQM-0012`: key (D) 1092
 
 - Why correct: Answer: 1092. Rule: each term is the one before × 3 + 3: 363 × 3 = 1089; 1089 + 3 = 1092.
 - (A) 1089 multiplies by 3 but forgets to add 3.
@@ -714,7 +723,7 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 39. `CIVIO-GF2K02-SEQM-0013`: key (A) 1214
+### 40. `CIVIO-GF2K02-SEQM-0013`: key (A) 1214
 
 - Why correct: Answer: 1214. Rule: each term is the one before × 3 + 2: 404 × 3 = 1212; 1212 + 2 = 1214.
 - (B) 1212 multiplies by 3 but forgets to add 2.
@@ -722,13 +731,4 @@ Which number continues the pattern?  2, 5, 14, 41, 122, ___
 - (D) 1216 applies the + 2 step twice.
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 19 bank rows: check it is not a numeric/name variant
-
-### 40. `CIVIO-GF2K02-SEQM-0014`: key (B) 365
-
-- Why correct: Answer: 365. Rule: each term is the one before × 3 − 1: 122 × 3 = 366; 366 − 1 = 365.
-- (A) 366 multiplies by 3 but forgets to subtract 1.
-- (C) 203 repeats the last difference (81). The rule is × 3 then − 1, not a fixed jump.
-- (D) 364 applies the − 1 step twice.
-- File: `docs/research/gap-fill-2000-02.json`
-- Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 

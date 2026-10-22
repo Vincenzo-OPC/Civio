@@ -9,6 +9,7 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 | 02 | 2026-10-13 | Batches 001-011, Subprofessional domains: 759 (CLR 151, VEN 203, GI 102, NUM 303) | 759 key-correct | ~27 proposed (CoS) + 58 metadata applied | 0 | audit/round-02.md |
 | 02 gap | 2026-10-13 | gap-fill-002: 14 new drafts (VEN error 5, NUM frac/dec 6, CLR business filing 3) | 14 CoS PASS (4 fixed) → approved, active locally | 4 | 0 | audit/round-02-fixes.md |
 | 02 fixes | 2026-10-13 | CoS round 02 rulings: 178 rewrites of approved items (spelling 93, Verbal lead-in 60, ops shapes 25) + gap-fill-003 10 filing drafts + 267 Numerical shortcuts | CoS PASS after fixes → merged + approved | 178 changed | 0 | audit/round-02-fixes.md, audit/round-02-fixes-review-request.md |
+| D3 bank | 2026-10-22 | GT directive 3 BANK: passage gate, 4 P1 editorial -R1, 24 templated Num drafts swapped, method-first steps (76 drafts in place; 295 -R1 proposals), P1 queue recommendations 42 | 2,100 QA-valid; validator 0; audit 0; gate tests 7/7 | 4 revised, 24 replaced | 0 | audit/bank-milestone-2026-10-22.md |
 
 ## Open flags (not edited)
 
@@ -410,3 +411,18 @@ Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
 - **Fix, browser:** withdrawn answers are cleared with one notice ("One item was withdrawn by Civio and will not be scored…") and never resent, so there is no 422 loop. A 422 is a hard failure and is never retried. Answers made during a dropped connection are held and sent as one patch on reconnect. A version conflict re-reads the server state and retries once. A submitted mock leaves the exam screen and clears the local resume copy.
 - **Tests:** `ExamDeadlineTest` (mixed patch, resend, on-time submit with a retired answer, second submit returns 409) and `tests/Js/progress-save.test.ts` (13 cases).
 - **Scenario status:** 1-4, 7, 8, 10 and 11 are covered by tests. 5 and 6 (reload and resume) are traced in the code, not tested in a browser. 9 (deadline passes while offline): the server refuses late saves and grades only what was saved before the deadline, by design.
+## GT directive 3, BANK (2026-10-22 afternoon)
+
+- **(a) Passage gate:** `qa.check_item` now rejects any English passage item (passage_id, passage field, or "Read the passage" stem) whose passage has fewer than 150 words, excluding the instruction line (`qa.PASSAGE_MIN_WORDS`). Sentence-level vocabulary items are not passage items. All 73 English passage items in the manifest pass (shortest exactly 150 words). GT verified the 7 short-passage replacements himself, so they were not re-audited. Tests: `scripts/batches/qa/test_bank_gates_2026_10_22.py` (7 tests).
+- **Open question for GT:** spec §3 sets 150–250 words for English passages only; VFIL-PAGBASA is specified as a "short Filipino passage" with no floor. 38 Filipino passage items (35 approved, 3 draft) are 32–54 words. The gate does not cover Filipino until GT decides.
+- **(b) P1 editorial fixes:** draft revisions in `audit/fixes/p1-editorial-r1-2026-10-22.json` with `replaces` and `revision_history`; the reviewed originals are unchanged in `batch-subpro-num-001.json`. Each -R1 takes its original's manifest slot (status draft, `retire_on_signoff` = original). No approval recorded.
+  - 926041-R1: speech therapist and trainee (trainee 7 years old five years ago) → mother and son; numbers, key, distractors unchanged.
+  - 926039-R1: 18 kg is the stock left after the sale (30 − 12), not a sign error; 24 kg explanation made exact.
+  - 926042-R1: 21 years is the younger cousin's age in four years (17 + 4).
+  - 926043-R1: four explicit steps: 18 volunteer-hours, 20 kits per volunteer-hour, 20 new volunteer-hours, 400 kits.
+  - Each has a solver recipe, so `qa.check_item` recomputes the key from the stem.
+- **Padded drafts:** 24 templated Numerical drafts swapped for distinct spares (5 rectangle-edging, 2 chair-discount, 17 order-of-operations; one of each frame kept). 8 spares that are near-twins of other spares are barred from swap-in.
+- **(c) Queue:** P1 (42) worked: `review/queue-recommendations-2026-10-22.csv`, 4 Accept revision, 38 Accept (key re-solved by hand, distractor explanations read). Recommendations only; status unchanged. P2–P4 (681) not yet worked.
+- **(d) Method-first explanations:** 76 numerical drafts in place; -R1 proposals (content and key unchanged) for 257 approved and 38 reviewed rows in `audit/fixes/method-first-r1-proposals-2026-10-22.json`. The 38 reviewed (Subpro fundamentals) are hand-written; the approved use per-family builders that recompute from the stem numbers and are checked against the key. The 59 pattern-built proposals from the morning were hand-checked: all correct.
+- **Approved-bank flag:** approved Numerical rows are heavily templated (about 30 order-of-operations, 27 percent-change, 35 work-rate, 34 ratio-share rows on fixed frames). Approved items are immutable; replacing them needs GT/CoS.
+- **Spec proposals for GT (pending):** archetypes CLR-CHRONOLOGICAL and CLR-COPY-CHECK; distractor code CLR-COPY-MISMATCH; the VFIL passage-length question above.

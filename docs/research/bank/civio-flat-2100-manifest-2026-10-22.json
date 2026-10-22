@@ -20,24 +20,24 @@
  },
  "by_status": {
   "approved": 1377,
-  "draft": 681,
-  "reviewed": 42
+  "draft": 685,
+  "reviewed": 38
  },
  "by_tier": {
-  "1": 1402,
+  "1": 1395,
   "2": 42,
-  "3": 379,
-  "4": 277
+  "3": 362,
+  "4": 301
  },
  "by_track": {
-  "both": 1341,
-  "subprofessional": 359,
+  "both": 1321,
+  "subprofessional": 379,
   "professional": 400
  },
  "track_by_domain": {
   "numerical": {
-   "both": 341,
-   "subprofessional": 59
+   "both": 321,
+   "subprofessional": 79
   },
   "analytical": {
    "professional": 400
@@ -56,8 +56,8 @@
   }
  },
  "subprofessional_eligible": 1700,
- "subprofessional_only": 359,
- "percent_change_numerical": 40,
+ "subprofessional_only": 379,
+ "percent_change_numerical": 38,
  "percent_change_cap": 40,
  "retire_on_signoff": [
   "CIVIO-ANA-SYLLOGISM-000053",
@@ -6925,15 +6925,15 @@
    "note": ""
   },
   {
-   "id": "CIVIO-NUM-WP-PCT-CHANGE-000323-R1",
+   "id": "CIVIO-D1022-NUMSEQ-0010",
    "domain": "numerical",
    "track": "both",
    "status": "draft",
-   "tier": 1,
-   "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "17826125819c3385905c5bbb6baecd60caa4c76e9b64dbe6ac81fd9a1e64c0dc",
-   "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000323",
-   "note": "replacement"
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/numerical-series-2026-10-22.json",
+   "content_sha256": "7cf90c559ceaf702797dece3ed37be3ffb3cd9d5a7448a71e73630eeee59f739",
+   "retire_on_signoff": "",
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-NUM-WP-PCT-CHANGE-000324",
@@ -7310,15 +7310,15 @@
    "note": ""
   },
   {
-   "id": "CIVIO-NUM-WP-PCT-CHANGE-000423-R1",
+   "id": "CIVIO-D1022-NUMSEQ-0013",
    "domain": "numerical",
    "track": "both",
    "status": "draft",
-   "tier": 1,
-   "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "6c428466899d7a7b44d3ca20f9922e1864708a38dcee49abdd1232478b769f26",
-   "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000423",
-   "note": "replacement"
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/numerical-series-2026-10-22.json",
+   "content_sha256": "26f133af61cdd1e0f1ae0feae987ecc2b35c834fa5a998b11bc477eb21fbcabc",
+   "retire_on_signoff": "",
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-NUM-WP-PCT-CHANGE-000428",
@@ -7563,15 +7563,15 @@
    "note": ""
   },
   {
-   "id": "CIVIO-NUM-WP-GEOM-000534-R1",
+   "id": "CIVIO-D1022-SPMATH-0004",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 1,
-   "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "320a52dded24e70cdf22e12fb0a323f9e6ef25d9b147c6bc56e0096d31247789",
-   "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000534",
-   "note": "replacement"
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "3ad4343ae3fc0982d3004f5a815771b60b64f30b3c6be9d6dc56d2f979540fa7",
+   "retire_on_signoff": "",
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-NUM-WP-PCT-CHANGE-000514",
@@ -8080,15 +8080,15 @@
    "note": ""
   },
   {
-   "id": "CIVIO-NUM-WP-GEOM-000736-R1",
+   "id": "CIVIO-D1022-SPMATH-0034",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 1,
-   "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "84df88ccc51b4d00d7a5343364e458b8a04620cfa7bf1ad99e19b4d892e20c77",
-   "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000736",
-   "note": "replacement"
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "c83c4be7e13303d9cb7e429226be16409c2ec3795b34f1335a053f75d3e755e9",
+   "retire_on_signoff": "",
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-NUM-WP-RATE-000718",
@@ -8322,15 +8322,15 @@
    "note": ""
   },
   {
-   "id": "CIVIO-NUM-WP-GEOM-000838-R1",
+   "id": "CIVIO-D1022-SPMATH-0049",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 1,
-   "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "606aff79dd43582313a80e65a03a3da0b4b32a01e282f02b4a237201b69d67e0",
-   "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000838",
-   "note": "replacement"
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "e1c13d192b61fee83479b3804959fdcac218b9871a88a92f1708d24e7652a9f6",
+   "retire_on_signoff": "",
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-NUM-WP-RATE-000812",
@@ -8553,26 +8553,26 @@
    "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-NUM-WP-GEOM-000920-R1",
+   "id": "CIVIO-D1022-SPMATH-0020",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 1,
-   "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "5da70fec43e2bbf1764f628a7042b652e43f055cacd9e6cb3f3fc88b62d54204",
-   "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000920",
-   "note": "replacement"
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "3b5da675306077a27086b17f6681437654b2a16427dc869c73cf085aca9a9288",
+   "retire_on_signoff": "",
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-NUM-WP-GEOM-000934-R1",
+   "id": "CIVIO-D1022-NUMSEQ-0011",
    "domain": "numerical",
    "track": "both",
    "status": "draft",
-   "tier": 1,
-   "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "d9b695316090651081782d3803e21acc9e936f6e705be6de61b0f3a60303e64a",
-   "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000934",
-   "note": "replacement"
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/numerical-series-2026-10-22.json",
+   "content_sha256": "683b692fa499cb93f594c7e141461a63ffd570e66d4fcd1776a25f04a4f06d53",
+   "retire_on_signoff": "",
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-NUM-WP-RATE-000922",
@@ -8960,15 +8960,15 @@
    "note": ""
   },
   {
-   "id": "CIVIO-NUM-WP-ALGEBRA-926039",
+   "id": "CIVIO-NUM-WP-ALGEBRA-926039-R1",
    "domain": "numerical",
    "track": "subprofessional",
-   "status": "reviewed",
+   "status": "draft",
    "tier": 2,
-   "source_file": "docs/research/batch-subpro-num-001.json",
-   "content_sha256": "3d675ea7f5022107e9eae2df7a08945dc42ab2d5b48c7b752623bd8a9a27eff5",
-   "retire_on_signoff": "",
-   "note": ""
+   "source_file": "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json",
+   "content_sha256": "57c2341b465dc9a6f6d6257390ee3ef7c0acca836503a9a990b0dbf15a5e368a",
+   "retire_on_signoff": "CIVIO-NUM-WP-ALGEBRA-926039",
+   "note": "p1_editorial_revision"
   },
   {
    "id": "CIVIO-NUM-WP-ALGEBRA-926040",
@@ -8982,26 +8982,26 @@
    "note": ""
   },
   {
-   "id": "CIVIO-NUM-WP-ALGEBRA-926041",
+   "id": "CIVIO-NUM-WP-ALGEBRA-926041-R1",
    "domain": "numerical",
    "track": "subprofessional",
-   "status": "reviewed",
+   "status": "draft",
    "tier": 2,
-   "source_file": "docs/research/batch-subpro-num-001.json",
-   "content_sha256": "d816fbeb5979ae08eb6199f1c0cdac4ccf87a5c3f9101df184a0f354ad2845a9",
-   "retire_on_signoff": "",
-   "note": ""
+   "source_file": "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json",
+   "content_sha256": "5201a3855f38e2021b8b721440388e2cb7854508124a91f7f822713510336b3a",
+   "retire_on_signoff": "CIVIO-NUM-WP-ALGEBRA-926041",
+   "note": "p1_editorial_revision"
   },
   {
-   "id": "CIVIO-NUM-WP-ALGEBRA-926042",
+   "id": "CIVIO-NUM-WP-ALGEBRA-926042-R1",
    "domain": "numerical",
    "track": "subprofessional",
-   "status": "reviewed",
+   "status": "draft",
    "tier": 2,
-   "source_file": "docs/research/batch-subpro-num-001.json",
-   "content_sha256": "5acbb2ef27d58399f2d98ee3b85aeacbd52d8e2e4832e00131a8e807cc1554ec",
-   "retire_on_signoff": "",
-   "note": ""
+   "source_file": "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json",
+   "content_sha256": "b0380b2aa6c2b8bc7ce9d93d5c8777a8718215b11bb14a30a8a0f3f3459a258f",
+   "retire_on_signoff": "CIVIO-NUM-WP-ALGEBRA-926042",
+   "note": "p1_editorial_revision"
   },
   {
    "id": "CIVIO-NUM-WP-ALGEBRA-926048",
@@ -9059,15 +9059,15 @@
    "note": ""
   },
   {
-   "id": "CIVIO-NUM-WP-RATE-926043",
+   "id": "CIVIO-NUM-WP-RATE-926043-R1",
    "domain": "numerical",
    "track": "subprofessional",
-   "status": "reviewed",
+   "status": "draft",
    "tier": 2,
-   "source_file": "docs/research/batch-subpro-num-001.json",
-   "content_sha256": "76d4f3f1970d9d2380c44d2ea92af78fc9313a9c21bb685f024a5e148c0a1413",
-   "retire_on_signoff": "",
-   "note": ""
+   "source_file": "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json",
+   "content_sha256": "9049dbc5a7b3f3282bea2862e82bf35b0a786f36197b9a8f463f87014d356063",
+   "retire_on_signoff": "CIVIO-NUM-WP-RATE-926043",
+   "note": "p1_editorial_revision"
   },
   {
    "id": "CIVIO-NUM-WP-RATE-926044",
@@ -9180,59 +9180,59 @@
    "note": ""
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0042",
+   "id": "CIVIO-D1022-SPMATH-0005",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "f09df6f6d63c3094c9a3c54e4867c1bf0e8c3a7168be0f367bb1dbd2e66cb26c",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "b15689a293aa2d5dfbe78907d43bb328f8bcc9233601f649ca3ec364910f952c",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0043",
+   "id": "CIVIO-D1022-SPMATH-0035",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "7f4864ce839f480557c98a7518aab6e2e2bf47b9ad552bea51479b4992b30139",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "91f15eefdedd99547b66c9fe65daa86ad0ad7e076478123d8a268194c40fbf28",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0044",
+   "id": "CIVIO-D1022-SPMATH-0050",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "2f2288ba7f01613fd2dc5064a2ec2114b96f0ad4cc47a5a61c015c578da91a7e",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "07750f455e183c29cb656541ba548a802e9f66e078058055bf81ec742d312000",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0045",
+   "id": "CIVIO-D1022-SPMATH-0021",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "8e5d84391f21e09cc72bd65564f4025176d9cb136164d788be6ee5bd5ab50e5e",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "031db49d3414b84b5fc7822fc1c8658823f36fc4033f4c3a344afa1eabd72735",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0046",
+   "id": "CIVIO-D1022-NUMSEQ-0012",
    "domain": "numerical",
    "track": "both",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "1d6103cdb54d9528698eb20af2a1f7a37e5919a52c39e97666dbca6104bc846d",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/numerical-series-2026-10-22.json",
+   "content_sha256": "bd10fcfd616c8c203fb3500db560deb2c6cd5f99762a0297ebe13bdfacf52085",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-GF2K02-NUMOPS-0047",
@@ -9246,70 +9246,70 @@
    "note": ""
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0048",
+   "id": "CIVIO-D1022-SPMATH-0007",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "c7367c2ab1a03add28e824696ea3578e667d851e5a9c4b78a30a5e41e65b00af",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "ea1ad4a84484a1e73b3ba92a8881d35b1d5a660cd502c2c45614a3841fa12a6b",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0049",
+   "id": "CIVIO-D1022-SPMATH-0036",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "e7eb722b6022791d20897d79e864283abe2f82328cf1b3862e88c3f813affb1e",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "d22901026f80edad482805ef11e1b830cb78272be663877e1b81ca180ea37402",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0050",
+   "id": "CIVIO-D1022-SPMATH-0052",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "653e4e391d7678a623a79caae26c3f15b5a3f65e97c70e27681330767301140b",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "45b805f1df57710d416e5665286bdf0d9985331c3806e9fea11aea424e5a39d5",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0051",
+   "id": "CIVIO-D1022-SPMATH-0022",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "67bf6ef466ae9f6116e25491cb31724f4b5176163eeaedef39498aa3429db41c",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "700044039a73914c0b9289d6de5c92f0cb8ba9fadd262eaf562e45f3fc861179",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0052",
+   "id": "CIVIO-D1022-SPMATH-0009",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "1ae1de12a2b9bab1634347e6c53aef880e25ce22ebf2844eeacbc53547f25b0f",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "7ecf369068130b1b562ff70cf2d1b3bc05690889eb7ae1d46688b660d4688b2a",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0053",
+   "id": "CIVIO-D1022-SPMATH-0037",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "4c458df379daa41b6898b1f68df50201b6cf621bfac426de024a99ad97741aa1",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "894f04f291d352eb2257577ce104bcff92fe9ee0c1315485b21355e8f2f11cf2",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-GF2K02-NUMOPS-0054",
@@ -9323,70 +9323,70 @@
    "note": ""
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0055",
+   "id": "CIVIO-D1022-SPMATH-0053",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "e2ee9cbcf0c20bf4b43fa1ef903290ee27319b8f73eea18d8fd73e3bcb4eb0e3",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "692123e1973df23d8b68077f890a1dbcf45738f7c56c38a48047b26bc03a16bc",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0056",
+   "id": "CIVIO-D1022-SPMATH-0023",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "e91150f7f86e18dc23e607a56f8d1e178d4894278868ef130e9c59b19b1e5409",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "2f42129fdb7640015bb70e100dbf9250c9f9a2905106cc0576554ac17251469a",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0057",
+   "id": "CIVIO-D1022-SPMATH-0011",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "97b839d2543b05bd380647e37abe0de61ab65263138e132e446f6756285de071",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "e843701ca9ee827909b09083cefb51dca1fa0bfc84d81edf24d5c37344d8cd76",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0058",
+   "id": "CIVIO-D1022-SPMATH-0038",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "4c557ff5ac8a7eaeddd3643955a652a879d8a412b8d04dce2a422525fc343761",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "bca3e095c1fa0595c388692f8a976ff7916546d1812d0fc648deaf3b11625869",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0059",
+   "id": "CIVIO-D1022-SPMATH-0056",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "1e6a62e5bce8e6d8a491c129e1c0289de7621a16b4a7a870be0e60874c998476",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "343d73187448785069e16af48a57bddeaf5848b0e8bc2445ab3425d011741125",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K02-NUMOPS-0060",
+   "id": "CIVIO-D1022-SPMATH-0024",
    "domain": "numerical",
-   "track": "both",
+   "track": "subprofessional",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "1f5553723426526576bca7dc90403ca31cc4387f2094f25b7e5cdd6b597b8854",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+   "content_sha256": "246d98132ee74ec6f2a6c84d5dbbab0b2480355f3353601dd153284a5a9c1ce6",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-GF2K02-SEQD-0001",
@@ -31042,6 +31042,230 @@
    "reason": "short_passage: reading passage under the 150-word spec minimum (replaced by a set-2 passage item)",
    "in": "CIVIO-D1022-VEN-RC2-031",
    "in_source": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-NUM-WP-PCT-CHANGE-000323-R1",
+   "out_source": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-NUM-WP-PCT-CHANGE-000221-R1 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-NUMSEQ-0010",
+   "in_source": "docs/research/batches/drafts/numerical-series-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-NUM-WP-PCT-CHANGE-000423-R1",
+   "out_source": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-NUM-WP-PCT-CHANGE-000221-R1 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-NUMSEQ-0013",
+   "in_source": "docs/research/batches/drafts/numerical-series-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-NUM-WP-GEOM-000534-R1",
+   "out_source": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-NUM-WP-GEOM-000226-R1 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0004",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-NUM-WP-GEOM-000736-R1",
+   "out_source": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-NUM-WP-GEOM-000226-R1 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0034",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-NUM-WP-GEOM-000838-R1",
+   "out_source": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-NUM-WP-GEOM-000226-R1 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0049",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-NUM-WP-GEOM-000920-R1",
+   "out_source": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-NUM-WP-GEOM-000226-R1 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0020",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-NUM-WP-GEOM-000934-R1",
+   "out_source": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-NUM-WP-GEOM-000226-R1 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-NUMSEQ-0011",
+   "in_source": "docs/research/batches/drafts/numerical-series-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0042",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0041 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0005",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0043",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0041 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0035",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0044",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0041 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0050",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0045",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0041 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0021",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0046",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0041 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-NUMSEQ-0012",
+   "in_source": "docs/research/batches/drafts/numerical-series-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0048",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0047 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0007",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0049",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0047 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0036",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0050",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0047 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0052",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0051",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0047 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0022",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0052",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0047 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0009",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0053",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0047 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0037",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0055",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0054 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0053",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0056",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0054 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0023",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0057",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0054 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0011",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0058",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0054 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0038",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0059",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0054 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0056",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K02-NUMOPS-0060",
+   "out_source": "docs/research/gap-fill-2000-02.json",
+   "out_status": "draft",
+   "reason": "padding: same item as CIVIO-GF2K02-NUMOPS-0054 with only names, objects or one noun changed (kept the earlier twin)",
+   "in": "CIVIO-D1022-SPMATH-0024",
+   "in_source": "docs/research/batches/drafts/subpro-math-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-NUM-WP-ALGEBRA-926039",
+   "out_source": "docs/research/batch-subpro-num-001.json",
+   "out_status": "reviewed",
+   "in": "CIVIO-NUM-WP-ALGEBRA-926039-R1",
+   "in_source": "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json",
+   "reason": "editorial_revision: P1 fix as a draft -R1 of the same item (Explanation fix: the 18-kg distractor is the stock left after the sale (30 − 12), not a sign error; 24-kg explanation made exact.)"
+  },
+  {
+   "out": "CIVIO-NUM-WP-ALGEBRA-926041",
+   "out_source": "docs/research/batch-subpro-num-001.json",
+   "out_status": "reviewed",
+   "in": "CIVIO-NUM-WP-ALGEBRA-926041-R1",
+   "in_source": "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json",
+   "reason": "editorial_revision: P1 fix as a draft -R1 of the same item (Scenario made realistic: a 12-year-old 'trainee' (7 years old five years ago) is implausible; now a mother and son. Numbers, key and distractors unchanged.)"
+  },
+  {
+   "out": "CIVIO-NUM-WP-ALGEBRA-926042",
+   "out_source": "docs/research/batch-subpro-num-001.json",
+   "out_status": "reviewed",
+   "in": "CIVIO-NUM-WP-ALGEBRA-926042-R1",
+   "in_source": "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json",
+   "reason": "editorial_revision: P1 fix as a draft -R1 of the same item (Explanation fix: the 21-year distractor is the younger cousin's age four years from now (17 + 4), not a missed step.)"
+  },
+  {
+   "out": "CIVIO-NUM-WP-RATE-926043",
+   "out_source": "docs/research/batch-subpro-num-001.json",
+   "out_status": "reviewed",
+   "in": "CIVIO-NUM-WP-RATE-926043-R1",
+   "in_source": "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json",
+   "reason": "editorial_revision: P1 fix as a draft -R1 of the same item (Explanation fix: teach the work-rate calculation for 400 kits step by step (kits per volunteer-hour, then new volunteer-hours).)"
   }
  ],
  "hash_refresh_2026_10_22": [

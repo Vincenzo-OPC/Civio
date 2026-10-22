@@ -1,0 +1,373 @@
+{
+  "batch": "p1-editorial-r1-2026-10-22",
+  "spec_version": "0.1.9",
+  "status": "draft (pending independent review; not approved)",
+  "items": [
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926041-R1",
+      "track": "subprofessional",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "past ages with a fixed gap",
+      "micro_skill": "relate a past age ratio to ages today",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A mother is 21 years older than her son. Five years ago, the mother was four times as old as her son. How old is the son today?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "12 years"
+        },
+        {
+          "option_id": "o2",
+          "text": "33 years"
+        },
+        {
+          "option_id": "o3",
+          "text": "16 years"
+        },
+        {
+          "option_id": "o4",
+          "text": "7 years"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "An age difference stays the same as both people grow older.",
+        "shortcut": "Five years ago the mother was 4 times the son's age, so the 21-year gap is 3 of the son's ages then: 21 ÷ 3 = 7. Add the 5 years back: 7 + 5 = 12.",
+        "why_correct": "12 years is right. Today the son is 12 and the mother 33. Five years ago they were 7 and 28, and 28 = 4 × 7.",
+        "why_wrong": {
+          "o2": "33 years is the mother's age today, not the son's.",
+          "o3": "16 years is 21 − 5: it subtracts the five years from the age gap instead of using the 'four times' relation.",
+          "o4": "7 years is the son's age five years ago; add the 5 years back to get his age today."
+        },
+        "method_steps": {
+          "1_asked": "The son's age today.",
+          "2_givens": "gap 21 years; five years ago, mother = 4 × son",
+          "3_method": "Use the fixed gap. When one age is 4 times the other, the gap is 3 times the smaller age.",
+          "4_why": "The gap never changes, so it is the same 21 years five years ago.",
+          "5_solve_by_hand": "Five years ago: 4s − s = 3s = 21, so s = 7. Today: 7 + 5 = 12 years.",
+          "6_check": "Today 12 and 33 (gap 21). Five years ago 7 and 28; 4 × 7 = 28.",
+          "7_distractors": "33 years: 33 years is the mother's age today, not the son's. 16 years: 16 years is 21 − 5: it subtracts the five years from the age gap instead of using the 'four times' relation. 7 years: 7 years is the son's age five years ago; add the 5 years back to get his age today.",
+          "8_shortcut": "Smaller past age = gap ÷ (multiplier − 1)."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OTHER-SHARE",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926041",
+      "theme": "mother-son-past-ages",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Draft revision of CIVIO-NUM-WP-ALGEBRA-926041 (reviewed). Scenario made realistic: a 12-year-old 'trainee' (7 years old five years ago) is implausible; now a mother and son. Numbers, key and distractors unchanged. Pending independent review; not approved.",
+      "replaces": "CIVIO-NUM-WP-ALGEBRA-926041",
+      "revision_history": [
+        {
+          "from": "CIVIO-NUM-WP-ALGEBRA-926041",
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "change": "Scenario made realistic: a 12-year-old 'trainee' (7 years old five years ago) is implausible; now a mother and son. Numbers, key and distractors unchanged.",
+          "reason": "P1 editorial fix, GT directive 3 (b)"
+        }
+      ],
+      "recipe": {
+        "op": "past_age_gap",
+        "args": {
+          "gap": 21,
+          "k": 4,
+          "years_ago": 5
+        },
+        "fmt": "unit",
+        "unit": "years"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926039-R1",
+      "track": "subprofessional",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "linear inventory with a fraction",
+      "micro_skill": "solve for an original amount from a fractional remainder",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "A recycling shop sold 12 kilograms of plastic bottles. After the sale, the remaining stock was 3 kilograms more than half the starting stock. How many kilograms did it have at the start?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "24 kilograms"
+        },
+        {
+          "option_id": "o2",
+          "text": "15 kilograms"
+        },
+        {
+          "option_id": "o3",
+          "text": "30 kilograms"
+        },
+        {
+          "option_id": "o4",
+          "text": "18 kilograms"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Let x be the starting stock. After selling 12 kilograms, x − 12 remains.",
+        "shortcut": "Set x − 12 = x/2 + 3. Move half of x to the left: x/2 = 15. Double to get x = 30.",
+        "why_correct": "Starting with 30 kilograms and selling 12 leaves 18; half of 30 plus 3 is also 18.",
+        "why_wrong": {
+          "o1": "24 kilograms assumes the 12 kilograms sold was exactly half the stock (12 × 2) and ignores the extra 3 kilograms in the remainder.",
+          "o2": "15 kilograms is half the starting stock (x/2 = 15), the middle step, not the full starting amount.",
+          "o4": "18 kilograms is the stock left after the sale (30 − 12 = 18), not the stock at the start."
+        },
+        "method_steps": {
+          "1_asked": "The starting stock.",
+          "2_givens": "sold 12 kg; left = half the start + 3 kg",
+          "3_method": "Set the two expressions for the remaining stock equal.",
+          "4_why": "The remaining stock can be written two ways: start − 12 and half the start + 3.",
+          "5_solve_by_hand": "x − 12 = x/2 + 3 → x/2 = 15 → x = 30 kg.",
+          "6_check": "30 − 12 = 18 and 30/2 + 3 = 18.",
+          "7_distractors": "24 kilograms: 24 kilograms assumes the 12 kilograms sold was exactly half the stock (12 × 2) and ignores the extra 3 kilograms in the remainder. 15 kilograms: 15 kilograms is half the starting stock (x/2 = 15), the middle step, not the full starting amount. 18 kilograms: 18 kilograms is the stock left after the sale (30 − 12 = 18), not the stock at the start.",
+          "8_shortcut": "The half that was not counted equals 12 + 3 = 15, so the start is 30."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-PARTIAL",
+        "o4": "NUM-OP-SWAP"
+      },
+      "fact_id": "num-original-926039",
+      "theme": "recycling-bottle-stock-equation",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Draft revision of CIVIO-NUM-WP-ALGEBRA-926039 (reviewed). Explanation fix: the 18-kg distractor is the stock left after the sale (30 − 12), not a sign error; 24-kg explanation made exact. Pending independent review; not approved.",
+      "replaces": "CIVIO-NUM-WP-ALGEBRA-926039",
+      "revision_history": [
+        {
+          "from": "CIVIO-NUM-WP-ALGEBRA-926039",
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "change": "Explanation fix: the 18-kg distractor is the stock left after the sale (30 − 12), not a sign error; 24-kg explanation made exact.",
+          "reason": "P1 editorial fix, GT directive 3 (b)"
+        }
+      ],
+      "recipe": {
+        "op": "expr",
+        "args": {
+          "expr": "(12 + 3) * 2"
+        },
+        "fmt": "unit",
+        "unit": "kilograms"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926042-R1",
+      "track": "subprofessional",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ages from future sum and gap",
+      "micro_skill": "undo a future total before splitting ages",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Two cousins are 6 years apart. Four years from now their ages will total 48. How old is the younger cousin today?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "23 years"
+        },
+        {
+          "option_id": "o2",
+          "text": "17 years"
+        },
+        {
+          "option_id": "o3",
+          "text": "20 years"
+        },
+        {
+          "option_id": "o4",
+          "text": "21 years"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "The age gap stays the same, but their combined age grows by two years each year.",
+        "shortcut": "Four years from now the total is 48. Today it is 48 − 8 = 40. The younger age is (40 − 6) ÷ 2 = 17.",
+        "why_correct": "Today the cousins are 17 and 23; in four years they will be 21 and 27, totaling 48.",
+        "why_wrong": {
+          "o1": "23 years is the older cousin’s present age, not the younger one.",
+          "o3": "20 years is their current average age; the younger cousin is three years below it.",
+          "o4": "21 years is the younger cousin's age four years from now (17 + 4); the question asks for the age today."
+        },
+        "method_steps": {
+          "1_asked": "The younger cousin's age today.",
+          "2_givens": "gap 6; total in 4 years = 48",
+          "3_method": "Undo the future: each cousin loses 4 years.",
+          "4_why": "Both cousins age, so the total falls by 8.",
+          "5_solve_by_hand": "48 − 8 = 40 today; younger = (40 − 6) ÷ 2 = 17.",
+          "6_check": "17 and 23 now; 21 and 27 in four years; 21 + 27 = 48.",
+          "7_distractors": "23 years: 23 years is the older cousin’s present age, not the younger one. 20 years: 20 years is their current average age; the younger cousin is three years below it. 21 years: 21 years is the younger cousin's age four years from now (17 + 4); the question asks for the age today.",
+          "8_shortcut": "Total now, then (sum − gap) ÷ 2."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926042",
+      "theme": "cousins-future-age-sum",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Draft revision of CIVIO-NUM-WP-ALGEBRA-926042 (reviewed). Explanation fix: the 21-year distractor is the younger cousin's age four years from now (17 + 4), not a missed step. Pending independent review; not approved.",
+      "replaces": "CIVIO-NUM-WP-ALGEBRA-926042",
+      "revision_history": [
+        {
+          "from": "CIVIO-NUM-WP-ALGEBRA-926042",
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "change": "Explanation fix: the 21-year distractor is the younger cousin's age four years from now (17 + 4), not a missed step.",
+          "reason": "P1 editorial fix, GT directive 3 (b)"
+        }
+      ],
+      "recipe": {
+        "op": "expr",
+        "args": {
+          "expr": "(48 - 4 - 4 - 6) / 2"
+        },
+        "fmt": "unit",
+        "unit": "years"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926043-R1",
+      "track": "subprofessional",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "worker-hours production",
+      "micro_skill": "scale output using workers and hours",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Three equally fast volunteers pack 360 relief kits in 6 hours. At the same pace, how many kits can 5 volunteers pack in 4 hours?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "360 kits"
+        },
+        {
+          "option_id": "o2",
+          "text": "240 kits"
+        },
+        {
+          "option_id": "o3",
+          "text": "400 kits"
+        },
+        {
+          "option_id": "o4",
+          "text": "600 kits"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A \"volunteer-hour\" is one volunteer working for one hour. At a steady pace, every volunteer-hour packs the same number of kits.",
+        "shortcut": "Step 1: first crew = 3 volunteers × 6 hours = 18 volunteer-hours. Step 2: 360 kits ÷ 18 = 20 kits per volunteer-hour. Step 3: new crew = 5 × 4 = 20 volunteer-hours. Step 4: 20 × 20 = 400 kits.",
+        "why_correct": "400 kits is right: 5 volunteers × 4 hours = 20 volunteer-hours, and each volunteer-hour packs 20 kits, so 20 × 20 = 400. Check: 400 ÷ 20 = 20 volunteer-hours = 5 × 4.",
+        "why_wrong": {
+          "o1": "360 kits simply repeats the production of the first crew instead of adjusting workers and time.",
+          "o2": "240 kits scales down to four hours but keeps only the original three volunteers.",
+          "o4": "600 kits accounts for five volunteers but keeps the original six-hour shift."
+        },
+        "method_steps": {
+          "1_asked": "Kits packed by 5 volunteers in 4 hours.",
+          "2_givens": "3 volunteers, 6 hours, 360 kits",
+          "3_method": "Find kits per volunteer per hour, then multiply by the new volunteers and hours.",
+          "4_why": "Output grows with both people and time.",
+          "5_solve_by_hand": "3 × 6 = 18 volunteer-hours make 360 kits, so 1 volunteer-hour makes 20. New: 5 × 4 = 20 volunteer-hours → 20 × 20 = 400 kits.",
+          "6_check": "400 ÷ 20 = 20 volunteer-hours = 5 × 4.",
+          "7_distractors": "360 kits: 360 kits simply repeats the production of the first crew instead of adjusting workers and time. 240 kits: 240 kits scales down to four hours but keeps only the original three volunteers. 600 kits: 600 kits accounts for five volunteers but keeps the original six-hour shift.",
+          "8_shortcut": "New ÷ old work = 20/18; 360 × 20/18 = 400."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-GIVEN-REUSED",
+        "o2": "NUM-PARTIAL",
+        "o4": "NUM-PARTIAL"
+      },
+      "fact_id": "num-original-926043",
+      "theme": "relief-kit-volunteer-hours",
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "ChatGPT (GPT-6)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T00:20:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Draft revision of CIVIO-NUM-WP-RATE-926043 (reviewed). Explanation fix: teach the work-rate calculation for 400 kits step by step (kits per volunteer-hour, then new volunteer-hours). Pending independent review; not approved.",
+      "replaces": "CIVIO-NUM-WP-RATE-926043",
+      "revision_history": [
+        {
+          "from": "CIVIO-NUM-WP-RATE-926043",
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "change": "Explanation fix: teach the work-rate calculation for 400 kits step by step (kits per volunteer-hour, then new volunteer-hours).",
+          "reason": "P1 editorial fix, GT directive 3 (b)"
+        }
+      ],
+      "recipe": {
+        "op": "expr",
+        "args": {
+          "expr": "360 / (3 * 6) * 5 * 4"
+        },
+        "fmt": "unit",
+        "unit": "kits"
+      }
+    }
+  ]
+}

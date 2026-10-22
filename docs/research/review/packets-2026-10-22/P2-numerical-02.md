@@ -1,6 +1,6 @@
 # Review packet P2-numerical-02
 
-Priority P2, domain numerical, 6 items. Status of every item: not approved.
+Priority P2, domain numerical, 7 items. Status of every item: not approved.
 
 **How to review independently:** answer every item below before opening the answer sheet. Then compare, and mark each item ACCEPT / FIX (say what) / REJECT in `decisions.csv` (one row per id). Do not edit the item files; the bank worker applies fixes as draft replacements.
 
@@ -8,7 +8,16 @@ Priority P2, domain numerical, 6 items. Status of every item: not approved.
 
 ## Items
 
-### 1. `CIVIO-GF2K02-SEQM-0015`  (both, medium, 45 s)
+### 1. `CIVIO-GF2K02-SEQM-0014`  (both, medium, 45 s)
+
+Which number continues the pattern?  2, 5, 14, 41, 122, ___
+
+- (A) 366
+- (B) 365
+- (C) 203
+- (D) 364
+
+### 2. `CIVIO-GF2K02-SEQM-0015`  (both, medium, 45 s)
 
 What is the next number in the sequence?  3, 7, 15, 31, 63, ___
 
@@ -17,7 +26,7 @@ What is the next number in the sequence?  3, 7, 15, 31, 63, ___
 - (C) 127
 - (D) 128
 
-### 2. `CIVIO-GF2K02-SEQM-0016`  (both, medium, 45 s)
+### 3. `CIVIO-GF2K02-SEQM-0016`  (both, medium, 45 s)
 
 Which number should replace the blank?  5, 17, 53, 161, 485, ___
 
@@ -26,7 +35,7 @@ Which number should replace the blank?  5, 17, 53, 161, 485, ___
 - (C) 1459
 - (D) 1457
 
-### 3. `CIVIO-GF2K02-SEQM-0017`  (both, medium, 45 s)
+### 4. `CIVIO-GF2K02-SEQM-0017`  (both, medium, 45 s)
 
 What number comes next in the series?  4, 15, 48, 147, 444, ___
 
@@ -35,7 +44,7 @@ What number comes next in the series?  4, 15, 48, 147, 444, ___
 - (C) 741
 - (D) 1338
 
-### 4. `CIVIO-GF2K02-SEQM-0018`  (both, medium, 45 s)
+### 5. `CIVIO-GF2K02-SEQM-0018`  (both, medium, 45 s)
 
 Which number continues the pattern?  6, 21, 66, 201, 606, ___
 
@@ -44,7 +53,7 @@ Which number continues the pattern?  6, 21, 66, 201, 606, ___
 - (C) 1011
 - (D) 1824
 
-### 5. `CIVIO-GF2K02-SEQM-0019`  (both, medium, 45 s)
+### 6. `CIVIO-GF2K02-SEQM-0019`  (both, medium, 45 s)
 
 What is the next number in the sequence?  5, 18, 57, 174, 525, ___
 
@@ -53,7 +62,7 @@ What is the next number in the sequence?  5, 18, 57, 174, 525, ___
 - (C) 1578
 - (D) 1581
 
-### 6. `CIVIO-GF2K02-SEQM-0020`  (both, medium, 45 s)
+### 7. `CIVIO-GF2K02-SEQM-0020`  (both, medium, 45 s)
 
 Which number should replace the blank?  4, 10, 22, 46, 94, ___
 
@@ -66,7 +75,16 @@ Which number should replace the blank?  4, 10, 22, 46, 94, ___
 
 ## Answer sheet (open only after answering)
 
-### 1. `CIVIO-GF2K02-SEQM-0015`: key (C) 127
+### 1. `CIVIO-GF2K02-SEQM-0014`: key (B) 365
+
+- Why correct: Answer: 365. Rule: each term is the one before × 3 − 1: 122 × 3 = 366; 366 − 1 = 365.
+- (A) 366 multiplies by 3 but forgets to subtract 1.
+- (C) 203 repeats the last difference (81). The rule is × 3 then − 1, not a fixed jump.
+- (D) 364 applies the − 1 step twice.
+- File: `docs/research/gap-fill-2000-02.json`
+- Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
+
+### 2. `CIVIO-GF2K02-SEQM-0015`: key (C) 127
 
 - Why correct: Answer: 127. Rule: each term is the one before × 2 + 1: 63 × 2 = 126; 126 + 1 = 127.
 - (A) 126 multiplies by 2 but forgets to add 1.
@@ -75,7 +93,7 @@ Which number should replace the blank?  4, 10, 22, 46, 94, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 2. `CIVIO-GF2K02-SEQM-0016`: key (D) 1457
+### 3. `CIVIO-GF2K02-SEQM-0016`: key (D) 1457
 
 - Why correct: Answer: 1457. Rule: each term is the one before × 3 + 2: 485 × 3 = 1455; 1455 + 2 = 1457.
 - (A) 1455 multiplies by 3 but forgets to add 2.
@@ -84,7 +102,7 @@ Which number should replace the blank?  4, 10, 22, 46, 94, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 3. `CIVIO-GF2K02-SEQM-0017`: key (A) 1335
+### 4. `CIVIO-GF2K02-SEQM-0017`: key (A) 1335
 
 - Why correct: Answer: 1335. Rule: each term is the one before × 3 + 3: 444 × 3 = 1332; 1332 + 3 = 1335.
 - (B) 1332 multiplies by 3 but forgets to add 3.
@@ -93,7 +111,7 @@ Which number should replace the blank?  4, 10, 22, 46, 94, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 19 bank rows: check it is not a numeric/name variant
 
-### 4. `CIVIO-GF2K02-SEQM-0018`: key (B) 1821
+### 5. `CIVIO-GF2K02-SEQM-0018`: key (B) 1821
 
 - Why correct: Answer: 1821. Rule: each term is the one before × 3 + 3: 606 × 3 = 1818; 1818 + 3 = 1821.
 - (A) 1818 multiplies by 3 but forgets to add 3.
@@ -102,7 +120,7 @@ Which number should replace the blank?  4, 10, 22, 46, 94, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 5. `CIVIO-GF2K02-SEQM-0019`: key (C) 1578
+### 6. `CIVIO-GF2K02-SEQM-0019`: key (C) 1578
 
 - Why correct: Answer: 1578. Rule: each term is the one before × 3 + 3: 525 × 3 = 1575; 1575 + 3 = 1578.
 - (A) 1575 multiplies by 3 but forgets to add 3.
@@ -111,7 +129,7 @@ Which number should replace the blank?  4, 10, 22, 46, 94, ___
 - File: `docs/research/gap-fill-2000-02.json`
 - Review note: stem frame shared by 5 bank rows: check it is not a numeric/name variant
 
-### 6. `CIVIO-GF2K02-SEQM-0020`: key (D) 190
+### 7. `CIVIO-GF2K02-SEQM-0020`: key (D) 190
 
 - Why correct: Answer: 190. Rule: each term is the one before × 2 + 2: 94 × 2 = 188; 188 + 2 = 190.
 - (A) 188 multiplies by 2 but forgets to add 2.

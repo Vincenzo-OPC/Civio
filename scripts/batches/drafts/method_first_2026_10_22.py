@@ -75,7 +75,7 @@ def series(it):
         if all(b == k * a + c for a, b in zip(xs, xs[1:])):
             return dict(asked="The next number in the series.", givens=", ".join(map(str, xs)),
                         method=f"Test a multiply-then-add rule: term × {k} {'+' if c >= 0 else '−'} {abs(c)}.",
-                        why="The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+                        why="The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added or taken away.",
                         solve=f"{xs[-1]} × {k} = {xs[-1] * k}; {xs[-1] * k} {'+' if c >= 0 else '−'} {abs(c)} = {xs[-1] * k + c}.",
                         check=f"Test the rule on an early pair: {xs[0]} × {k} {'+' if c >= 0 else '−'} {abs(c)} = {xs[1]}, and {xs[1]} × {k} {'+' if c >= 0 else '−'} {abs(c)} = {xs[2]}.",
                         shortcut=f"Divide a term by the one before (about {k}); the multiplier is {k}, then find what is added.")
@@ -183,6 +183,233 @@ HAND = {
 def steps(it):
     h = HAND.get(it["id"])
     f = h or ops(it) or series(it) or edging(it) or discount(it)
+    if not f:
+        return None
+    return {"1_asked": f["asked"], "2_givens": f["givens"], "3_method": f["method"], "4_why": f["why"], "5_solve_by_hand": f["solve"],
+            "6_check": f["check"], "7_distractors": _dist(it), "8_shortcut": f["shortcut"]}
+
+
+# ---- Families added 22 Oct pm (GT directive 3, item d): approved and reviewed rows, used only in -R1 proposals ----
+from fractions import Fraction as _F
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.dirname(__file__))
+from method_first_reviewed_2026_10_22 import H as _REV  # noqa: E402
+
+_TIMES = {"twice": 2, "three times": 3, "four times": 4}
+
+
+def fence(it):
+    m = re.search(r"(\d+) m long and (\d+) m wide\. (?:A|An) ([\w -]+?) costs ₱([\d,]+) per meter", it["stem"])
+    if not m:
+        return None
+    L, W, what, c = int(m.group(1)), int(m.group(2)), m.group(3), _n(m.group(4))
+    P = 2 * (L + W)
+    return dict(asked=f"The cost of putting the {what} around the whole rectangle.", givens=f"length {L} m, width {W} m, ₱{c:,} per meter",
+                method="Find the perimeter, then multiply by the cost per meter.",
+                why=f"The {what} goes around the outside, so you pay for the perimeter, not the area.",
+                solve=f"Perimeter = 2 × ({L} + {W}) = 2 × {L + W} = {P} m. Cost = {P} × ₱{c:,} = {_p(P * c)}.",
+                check=f"{L} + {W} + {L} + {W} = {P} m, and {_p(P * c)} ÷ ₱{c:,} = {P}.",
+                shortcut=f"Add one length and one width ({L + W}), double it, then multiply by the price.")
+
+
+def successive(it):
+    m = re.search(r"for ₱([\d,]+)\. It raised the price by (\d+)%\. (?:A week later|Later), it (?:cut|lowered) the new price by (\d+)%", it["stem"])
+    if not m:
+        return None
+    p, a, b = _n(m.group(1)), int(m.group(2)), int(m.group(3))
+    up = p * (100 + a) // 100
+    fin = up * (100 - b) // 100
+    return dict(asked="The final price after a raise and then a cut.", givens=f"₱{p:,}; up {a}%; then down {b}% of the new price",
+                method="Do the two changes one after the other; the second percent is taken of the new price.",
+                why="The two percents have different bases, so they do not cancel or simply add.",
+                solve=f"Up {a}%: {a}% of ₱{p:,} = {_p(p * a // 100)}, new price {_p(up)}. Down {b}%: {b}% of {_p(up)} = {_p(up - fin)}; final {_p(fin)}.",
+                check=f"Multipliers: ₱{p:,} × {(100 + a) / 100:g} × {(100 - b) / 100:g} = {_p(fin)}.",
+                shortcut=f"Multiply by {(100 + a) / 100:g}, then by {(100 - b) / 100:g}.")
+
+
+def interest(it):
+    m = re.search(r"borrows ₱([\d,]+) at (\d+)% simple interest per year\. How much interest (?:will she owe|is due) after (\d+) years?( and 6 months)?", it["stem"])
+    if not m:
+        return None
+    p, r, y, half = _n(m.group(1)), int(m.group(2)), int(m.group(3)), bool(m.group(4))
+    t = _F(2 * y + half, 2)
+    i = p * r * t / 100
+    ts = f"{y}.5" if half else f"{y}"
+    return dict(asked="The simple interest owed.", givens=f"principal ₱{p:,}; rate {r}% per year; time {y} years{' and 6 months' if half else ''}",
+                method="Simple interest = principal × rate × time (time in years).", why=f"6 months is half a year, so the time is {ts} years." if half else "Simple interest is the same every year.",
+                solve=f"One year: {r}% of ₱{p:,} = {_p(p * r // 100) if p * r % 100 == 0 else p * r / 100}. Times {ts} years = {_p(int(i))}.",
+                check=f"{_p(int(i))} ÷ {ts} = ₱{p * r / 100:,.0f} per year, which is {r}% of ₱{p:,}.",
+                shortcut="Find one year's interest first, then multiply by the years.")
+
+
+def avg_join(it):
+    m = re.search(r"average ([\w ]+?) of the (\d+) .*? is (\d+)(?: years)?\. (?:A new [\w ]+? who is (\d+) years old joins|One more person, with (\d+) years, joins)", it["stem"])
+    if not m:
+        return None
+    n, a, v = int(m.group(2)), int(m.group(3)), int(m.group(4) or m.group(5))
+    tot = n * a + v
+    new = _F(tot, n + 1)
+    return dict(asked=f"The new average {m.group(1)} of all {n + 1} people.", givens=f"{n} people averaging {a}; one more with {v}",
+                method="Average = total ÷ number of people. Find the old total, add the newcomer, divide by the new count.",
+                why="You cannot average the old average with the newcomer: the old average stands for many people.",
+                solve=f"Old total = {n} × {a} = {n * a}. New total = {n * a} + {v} = {tot}. New average = {tot} ÷ {n + 1} = {new}.",
+                check=f"{new} × {n + 1} = {tot}.", shortcut=f"The newcomer is {v - a} above the average; spread that over {n + 1} people: {a} + {v - a} ÷ {n + 1} = {new}.")
+
+
+def share(it):
+    s = it["stem"]
+    m = re.search(r"₱([\d,]+)\b.*?ratio (\d+) : (\d+)\. (?:How much (?:is|will) ([\w' -]+?)(?:'s share| receive)|What is ([\w' -]+?)'s share)", s)
+    if not m:
+        return None
+    T, a, b = _n(m.group(1)), int(m.group(2)), int(m.group(3))
+    who = m.group(4) or m.group(5)
+    second = re.search(r"(?:between|and) ([\w' -]+?)(?: will| in the ratio)", s)
+    names = re.findall(r"([A-Z][\w-]*(?: [A-Z][\w-]*)?) and ([A-Z][\w-]*(?: [A-Z][\w-]*)?)", s)
+    k = b
+    if names and who.strip() == names[0][0].strip():
+        k = a
+    part = T // (a + b)
+    return dict(asked=f"{who}'s share.", givens=f"₱{T:,} in the ratio {a} : {b}",
+                method="Add the ratio terms to get the number of equal parts, find one part, then multiply.",
+                why=f"The ₱{T:,} is cut into {a} + {b} = {a + b} equal parts.",
+                solve=f"{a} + {b} = {a + b} parts. One part = ₱{T:,} ÷ {a + b} = {_p(part)}. {who}'s share = {k} × {_p(part)} = {_p(k * part)}.",
+                check=f"{_p(a * part)} + {_p(b * part)} = ₱{T:,}.", shortcut=f"Share = {k}/{a + b} of the total.")
+
+
+def ages(it):
+    m = re.search(r"is (\d+|three|four|five) times as old as (?:his|her) (\w+)\. In (\d+) years, .*? will be (twice|three times|four times) as old", it["stem"])
+    if not m:
+        return None
+    k, n, j = int(m.group(1)), int(m.group(3)), _TIMES[m.group(4)]
+    # k*c + n = j*(c + n) -> c = n(j-1)/(k-j)
+    c = n * (j - 1) // (k - j)
+    rel = m.group(2)
+    return dict(asked="The older person's age now.", givens=f"now {k} times as old as the {rel}; in {n} years, {j} times as old",
+                method=f"Let the {rel}'s age be c. Now: {k}c. In {n} years: {k}c + {n} = {j}(c + {n}).",
+                why="Both people get older by the same number of years, so add the years to both ages.",
+                solve=f"{k}c + {n} = {j}c + {j * n} → {(str(k - j) if k - j > 1 else "")}c = {j * n - n}" + (f" → c = {c}" if k - j > 1 else "") + f". Older person = {k} × {c} = {k * c}.",
+                check=f"In {n} years: {k * c + n} and {c + n}; {c + n} × {j} = {j * (c + n)}.",
+                shortcut="Try the answer choices: divide by the multiplier, add the years to both, test the second ratio.")
+
+
+def together(it):
+    m = re.search(r"in (\d+) hours\. \w[\w ]*? can (?:do the same job|encode the same box) in (\d+) hours", it["stem"])
+    if not m:
+        return None
+    a, b = int(m.group(1)), int(m.group(2))
+    t = _F(a * b, a + b)
+    from math import lcm
+    L = lcm(a, b)
+    return dict(asked="How long the two take working together.", givens=f"one alone {a} hours, the other alone {b} hours",
+                method="Add the parts of the job each does in one hour, then flip.", why="Working together adds work rates; the times themselves do not add.",
+                solve=f"Per hour: 1/{a} + 1/{b} = {L // a}/{L} + {L // b}/{L} = {_F(L // a + L // b, L)}. Time = {t} hours.",
+                check=f"In {t} hours: {_F(t, a)} + {_F(t, b)} = 1 whole job.", shortcut=f"(a × b) ÷ (a + b) = {a * b} ÷ {a + b} = {t}.")
+
+
+def remaining(it):
+    m = re.search(r"had (\d+) ([\w ]+?)\. It gave out (\d+)/(\d+) of them on Monday and (\d+)/(\d+) of the remaining", it["stem"])
+    if not m:
+        return None
+    N, what = int(m.group(1)), m.group(2)
+    a, b, c, d = map(int, m.groups()[2:])
+    g1 = N * a // b
+    r1 = N - g1
+    g2 = r1 * c // d
+    return dict(asked=f"How many {what} are left after both days.", givens=f"{N} {what}; {a}/{b} given Monday; {c}/{d} of the rest given Tuesday",
+                method="Work one day at a time; Tuesday's fraction is of what was left, not of the original.",
+                why="\"Of the remaining\" changes the base for the second fraction.",
+                solve=f"Monday: {a}/{b} of {N} = {g1}; left {r1}. Tuesday: {c}/{d} of {r1} = {g2}; left {r1 - g2}.",
+                check=f"Fractions kept: {N} × {b - a}/{b} × {d - c}/{d} = {r1 - g2}.", shortcut="Multiply by the fractions kept, not the fractions given.")
+
+
+def _tok(e):
+    return re.findall(r"\d+|[-+×÷()]|−", e)
+
+
+def _signcheck(cur, val):
+    t = [int(x) for x in re.findall(r"[+-]?\s*\d+", cur.replace(" ", ""))]
+    pos, neg = [x for x in t if x >= 0], [-x for x in t if x < 0]
+    if not neg or len(t) < 2:
+        return f"Undo the last step: work backward from {val:g} and you return to the numbers in the expression.".replace("-", "−")
+    return (f"Group the signs: added terms {' + '.join(map(str, pos))} = {sum(pos)}; taken-away terms {' + '.join(map(str, neg))} = {sum(neg)}; "
+            f"{sum(pos)} − {sum(neg)} = {val:g}.").replace("= -", "= −")
+
+
+def _reduce(cur, steps):
+    """Reduce a flat or parenthesized expression one operation at a time, logging each step."""
+    while True:
+        p = next((x for x in re.finditer(r"\(([^()]+)\)", cur) if not re.fullmatch(r"-\d+", x.group(1))), None)
+        if p:
+            inner = _reduce(p.group(1), steps)
+            cur = cur[:p.start()] + (f"({inner})" if inner.startswith("-") else inner) + cur[p.end():]
+            continue
+        q = re.search(r"(\(-\d+\)|\d+)\s*([*/])\s*(\(-\d+\)|\d+)", cur)
+        if q:
+            v = eval(q.group(0), {"__builtins__": {}}); v = int(v) if v == int(v) else v
+            steps.append((q.group(0), v)); cur = cur[:q.start()] + (f"({v})" if v < 0 else f"{v}") + cur[q.end():]; continue
+        if re.fullmatch(r"-?\d+", cur.strip()):
+            return cur.strip()
+        flat = cur.replace("+(-", "-").replace("(-", "-").replace(")", "")
+        v = eval(flat, {"__builtins__": {}}); v = int(v)
+        steps.append((flat, v))
+        return f"{v}"
+
+
+def _pp(x):
+    return (str(x).replace("*", " × ").replace("/", " ÷ ").replace("+", " + ").replace("-", " − ").replace("(", "(").replace("  ", " ")
+            .replace("( − ", "(−").replace("× − ", "× (−").strip()).replace("− ", "−", 1) if str(x).startswith("-") else (str(x).replace("*", " × ").replace("/", " ÷ ").replace("+", " + ").replace("-", " − ").replace("( − ", "(−").strip())
+
+
+def expr(it):
+    m = re.fullmatch(r"What is the value of ([\d\s+×÷()−-]+)\?", it["stem"].strip())
+    if not m:
+        return None
+    e = m.group(1).strip()
+    py = e.replace("×", "*").replace("÷", "/").replace("−", "-").replace(" ", "")
+    steps = []
+    val = int(_reduce(py, steps))
+    txt = ". ".join(f"{_pp(a)} = {_pp(b)}" for a, b in steps) + "."
+    a, v = steps[-1]
+    q = re.fullmatch(r"(\d+)/(\d+)", a)
+    if q:
+        chk = f"Multiply back: {val} × {q.group(2)} = {q.group(1)}."
+    else:
+        t = [int(x) for x in re.findall(r"[+-]?\d+", a)]
+        pos, neg = [x for x in t if x >= 0], [-x for x in t if x < 0]
+        j = lambda xs: " + ".join(map(str, xs)) + (f" = {sum(xs)}" if len(xs) > 1 else "")
+        chk = (f"Group the signs: added {j(pos)}; taken away {j(neg)}; "
+               f"{sum(pos)} − {sum(neg)} = {_pp(val)}.")
+    return dict(asked="The value of the expression, following the order of operations.", givens=e,
+                method="Parentheses first, then × and ÷ (left to right), then + and − (left to right).",
+                why="Working strictly left to right gives a different, wrong value whenever × or ÷ comes after + or −.",
+                solve=txt, check=chk, shortcut="Box every product and quotient first; only then add and subtract.")
+
+
+HAND.update({
+ "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0006": dict(asked="3/4 + 5/6.", givens="3/4, 5/6", method="Common denominator 12.", why="Only like fractions can be added directly.",
+    solve="3/4 = 9/12; 5/6 = 10/12; 19/12 = 1 7/12.", check="0.75 + 0.83 ≈ 1.58 ≈ 1 7/12.", shortcut="LCD of 4 and 6 is 12."),
+ "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0007": dict(asked="2.5 × 0.04.", givens="2.5, 0.04", method="Multiply as whole numbers, then place the decimal point.", why="Decimal places add up: 1 + 2 = 3.",
+    solve="25 × 4 = 100; three decimal places: 0.100 = 0.1.", check="0.04 is 4 hundredths; 2.5 × 4 = 10 hundredths = 0.1.", shortcut="× 0.04 = × 4 ÷ 100."),
+ "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0008": dict(asked="7.2 ÷ 0.08.", givens="7.2, 0.08", method="Move both decimal points two places right.", why="Multiplying both by 100 keeps the quotient the same.",
+    solve="7.2 ÷ 0.08 = 720 ÷ 8 = 90.", check="90 × 0.08 = 7.2.", shortcut="Make the divisor a whole number first."),
+ "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0009": dict(asked="The greatest of 0.6, 5/8, 0.58, 3/5.", givens="0.6, 5/8, 0.58, 3/5", method="Change all to decimals.", why="Decimals line up place by place.",
+    solve="5/8 = 0.625; 3/5 = 0.6. Order: 0.58 < 0.6 = 3/5 < 0.625. Greatest: 5/8.", check="5/8 − 3/5 = 25/40 − 24/40 = 1/40 > 0.", shortcut="Write every number to three decimal places."),
+ "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0010": dict(asked="Sheets left from 500.", givens="2/5 Monday, 1/4 Tuesday, both of the same ream", method="Add the fractions used, subtract from 1, multiply.", why="Both fractions are of the whole ream.",
+    solve="2/5 + 1/4 = 8/20 + 5/20 = 13/20 used; 7/20 left; 7/20 of 500 = 175.", check="Used 200 + 125 = 325; 500 − 325 = 175.", shortcut="Find each day's sheets: 200 and 125."),
+ "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0011": dict(asked="1 2/3 × 3/5.", givens="1 2/3, 3/5", method="Change to an improper fraction, then multiply.", why="Mixed numbers cannot be multiplied part by part.",
+    solve="1 2/3 = 5/3; 5/3 × 3/5 = 15/15 = 1.", check="5/3 and 3/5 are reciprocals, so the product is 1.", shortcut="Spot reciprocals."),
+ "CIVIO-NUM-WP-RATIO-000003": None,
+})
+HAND.pop("CIVIO-NUM-WP-RATIO-000003")
+for _k, _v in _REV.items():
+    HAND.setdefault("_rev_" + _k, dict(zip(("asked", "givens", "method", "why", "solve", "check", "shortcut"), _v)))
+
+_base_steps = steps
+
+
+def steps(it):  # noqa: F811
+    h = HAND.get(it["id"]) or (HAND.get("_rev_" + it["id"][-6:]) if it["id"].startswith(("CIVIO-NUM-", )) and it["id"][-6:] in _REV and it["id"][-7:-6] == "-" else None)
+    f = h or ops(it) or series(it) or edging(it) or discount(it) or fence(it) or successive(it) or interest(it) or avg_join(it) or share(it) or ages(it) or together(it) or remaining(it) or expr(it)
     if not f:
         return None
     return {"1_asked": f["asked"], "2_givens": f["givens"], "3_method": f["method"], "4_why": f["why"], "5_solve_by_hand": f["solve"],

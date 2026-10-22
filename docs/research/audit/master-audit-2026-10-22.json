@@ -12,12 +12,12 @@
  },
  "by_status": {
   "approved": 1377,
-  "draft": 681,
-  "reviewed": 42
+  "draft": 685,
+  "reviewed": 38
  },
- "percent_change_numerical": 40,
+ "percent_change_numerical": 38,
  "items_with_issues": 0,
- "resolved_by_sheet": 162,
+ "resolved_by_sheet": 158,
  "issues": {},
  "resolved": {
   "CIVIO-ANA-ANALOGY-PART-WHOLE-000009": [
@@ -445,18 +445,7 @@
    "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
-  "CIVIO-NUM-WP-ALGEBRA-926039": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
-   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
-  ],
   "CIVIO-NUM-WP-ALGEBRA-926040": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
-   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
-  ],
-  "CIVIO-NUM-WP-ALGEBRA-926041": [
-   "verified by audit/verified_keys_2026_10_22.py: check_item crashed: AttributeError"
-  ],
-  "CIVIO-NUM-WP-ALGEBRA-926042": [
    "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
@@ -486,10 +475,6 @@
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
   "CIVIO-NUM-WP-RATE-926031": [
-   "qa status rule predates 'reviewed' (valid intermediate status)",
-   "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
-  ],
-  "CIVIO-NUM-WP-RATE-926043": [
    "qa status rule predates 'reviewed' (valid intermediate status)",
    "verified by audit/verified_keys_2026_10_22.py: solver could not recompute the key"
   ],
@@ -624,32 +609,6 @@
   {
    "size": 6,
    "domain": "numerical",
-   "frame": "N the value of # × (# − #) + #?",
-   "ids": [
-    "CIVIO-GF2K02-NUMOPS-0047",
-    "CIVIO-GF2K02-NUMOPS-0048",
-    "CIVIO-GF2K02-NUMOPS-0049",
-    "CIVIO-GF2K02-NUMOPS-0051",
-    "CIVIO-GF2K02-NUMOPS-0052",
-    "CIVIO-GF2K02-NUMOPS-0053"
-   ]
-  },
-  {
-   "size": 6,
-   "domain": "numerical",
-   "frame": "N the value of # × # ÷ (# − #)?",
-   "ids": [
-    "CIVIO-GF2K02-NUMOPS-0054",
-    "CIVIO-GF2K02-NUMOPS-0055",
-    "CIVIO-GF2K02-NUMOPS-0056",
-    "CIVIO-GF2K02-NUMOPS-0058",
-    "CIVIO-GF2K02-NUMOPS-0059",
-    "CIVIO-GF2K02-NUMOPS-0060"
-   ]
-  },
-  {
-   "size": 6,
-   "domain": "numerical",
    "frame": "N and N will share ₱# of cleanup fund in the ratio # : # N much is N's share?",
    "ids": [
     "CIVIO-NUM-WP-RATIO-000126",
@@ -671,18 +630,6 @@
     "CIVIO-NUM-WP-PCT-CHANGE-000230",
     "CIVIO-NUM-WP-PCT-CHANGE-000340",
     "CIVIO-NUM-WP-PCT-CHANGE-000341"
-   ]
-  },
-  {
-   "size": 5,
-   "domain": "numerical",
-   "frame": "N the value of # − # ÷ # + #?",
-   "ids": [
-    "CIVIO-GF2K02-NUMOPS-0041",
-    "CIVIO-GF2K02-NUMOPS-0043",
-    "CIVIO-GF2K02-NUMOPS-0044",
-    "CIVIO-GF2K02-NUMOPS-0045",
-    "CIVIO-GF2K02-NUMOPS-0046"
    ]
   },
   {

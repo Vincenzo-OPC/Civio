@@ -7,6 +7,7 @@ Packets are grouped by priority, then domain, at most 40 items each. Nothing her
 
 Priority
   P1  status "reviewed": one human pass done, waiting for the second (final) decision.
+  P1  also holds the P1 editorial -R1 revisions (draft) that replace a reviewed row; review them against the original.
   P2  carries a review note: qa_flags, a legacy row checked only by a hand sheet, a reading passage under the
       150-word spec minimum, or an item whose stem frame repeats inside the bank (possible template variant).
   P3  new 22 Oct drafts: machine QA + hand check by the bank worker, never human-reviewed.
@@ -66,12 +67,12 @@ def main():
     for r in rows:
         it = load(r["source_file"])[r["id"]]
         n = notes(it, frames)
-        p = "P1" if r["status"] == "reviewed" else "P2" if n else "P3" if "D1022" in r["id"] else "P4"
+        p = "P1" if r["status"] == "reviewed" or r.get("note") == "p1_editorial_revision" else "P2" if n else "P3" if "D1022" in r["id"] else "P4"
         recs.append((p, r, it, n))
     recs.sort(key=lambda x: (x[0], x[1]["domain"], x[1]["id"]))
     OUT.mkdir(parents=True, exist_ok=True)
-    for old in OUT.glob("*.md"):
-        old.unlink()
+    for old in [p for p in OUT.glob("*.md") if re.fullmatch(r"P[1-4]-[a-z_]+-\d\d\.md|README\.md", p.name)]:  # only files this script writes; keep reviewer files
+        old.unlink(missing_ok=True)
     index, groups = [], collections.defaultdict(list)
     for rec in recs:
         groups[(rec[0], rec[1]["domain"])].append(rec)

@@ -55,7 +55,7 @@ def solve_num(it):
         m = re.search(r"and (\d+) months", s)
         t = y + (int(m.group(1)) / 12 if m else 0)
         return P * r / 100 * t
-    if "times as old" in s:
+    if "times as old" in s and re.search(r"is (\d+) times", s) and re.search(r"In (\d+) years", s):  # past-age variants fall through
         m = int(re.search(r"is (\d+) times", s).group(1))
         y = int(re.search(r"In (\d+) years", s).group(1))
         k = 2 if "twice" in s else 3
@@ -318,8 +318,32 @@ def legacy_errors(it):
     return [] if key_text(it) == LK.KEYS[it["id"]] else ["legacy key differs from hand-checked sheet"]
 
 
+PASSAGE_MIN_WORDS = 150  # spec: reading passages are at least 150 words (GT directive 3, gate a)
+_INSTR = re.compile(r"^(read the passage|basahin ang talata)[^\n]*\n+", re.I)
+
+
+def passage_words(it):
+    """Words in the passage of a reading-comprehension item: the stem minus its instruction line and final question.
+    None when the item is not a passage item."""
+    # passage items: a passage_id, a passage field, or a stem that opens with a read-the-passage instruction.
+    # Sentence-level vocabulary-in-context items (VEN-RC-VOCAB with no passage) are not passage items.
+    if not (it.get("passage_id") or it.get("passage") or _INSTR.match(it.get("stem", ""))):
+        return None
+    body = it.get("passage") or it["stem"].rpartition("\n\n")[0]
+    return len(_INSTR.sub("", body.strip()).split())
+
+
+def passage_errors(it):
+    # Spec section 3 sets 150-250 words for English reading passages. VFIL-PAGBASA is specified as a "short Filipino passage"
+    # with no word floor, so the gate covers verbal_en only (open question for GT, see AUDIT_TRACKER).
+    if it.get("domain") != "verbal_en":
+        return []
+    n = passage_words(it)
+    return [f"passage has {n} words; minimum is {PASSAGE_MIN_WORDS}"] if n is not None and n < PASSAGE_MIN_WORDS else []
+
+
 def check_item(it):
-    errs = pronoun_errors(it)
+    errs = pronoun_errors(it) + passage_errors(it)
     for k in REQ:
         if k not in it:
             errs.append(f"missing {k}")

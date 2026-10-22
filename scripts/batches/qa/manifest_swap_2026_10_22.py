@@ -24,6 +24,13 @@ PADDING = {"CIVIO-NUM-FRAC-DEC-000713": "CIVIO-NUM-FRAC-DEC-000440", "CIVIO-NUM-
            "CIVIO-ANA-CONCLUSION-000749": "CIVIO-ANA-CONCLUSION-000461", "CIVIO-ANA-CONCLUSION-000964": "CIVIO-ANA-CONCLUSION-000457",
            # same syllogism with one predicate noun swapped
            "CIVIO-ANA-SYLLOGISM-000342": "CIVIO-ANA-SYLLOGISM-000147"}
+# templated numerical drafts (22 Oct pm): same frame, numbers changed. Keep one per frame, swap the rest for distinct spares.
+PADDING.update({"CIVIO-NUM-WP-GEOM-%s-R1" % n: "CIVIO-NUM-WP-GEOM-000226-R1" for n in ("000534", "000736", "000838", "000920", "000934")})
+PADDING.update({"CIVIO-NUM-WP-PCT-CHANGE-%s-R1" % n: "CIVIO-NUM-WP-PCT-CHANGE-000221-R1" for n in ("000323", "000423")})
+PADDING.update({"CIVIO-GF2K02-NUMOPS-%04d" % n: "CIVIO-GF2K02-NUMOPS-%04d" % k for k, r in ((41, range(42, 47)), (47, range(48, 54)), (54, range(55, 61))) for n in r})
+# spare drafts that are themselves near-twins of another spare: never swapped in
+TWIN_SPARE = {"CIVIO-D1022-SPMATH-%04d" % n for n in (6, 8, 10, 40, 42, 44, 51, 57)}
+P1REV = "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json"
 DISPUTED = ["CIVIO-GAP3-CLR-FILE-ORDER-00%d" % n for n in (17, 20, 21, 22, 23)]
 # legacy GI drafts with no verifiable lawphil quote (qa.legacy_errors): one cites no statute, one still says "TO BE QUOTED"
 SHORT_RC = ["CIVIO-GF2K05-RC%s" % x for x in ("D-0001", "D-0002", "I-0001", "I-0002", "M-0001", "M-0002", "V-0001")]
@@ -70,11 +77,23 @@ def main():
             if it.get("source_url") in seen:
                 out_ids[r["id"]] = "template_padding: repeated \"which law is R.A. X\" recall item for the same statute"
             seen.add(it.get("source_url"))
+    # P1 editorial revisions (GT directive 3 b): the reviewed original leaves the manifest, its own -R1 draft takes the slot.
+    # The original row stays untouched in its source file (history); the -R1 is a draft and records no approval.
+    log0 = m.setdefault("swaps_2026_10_22", [])
+    rev_items = {i["replaces"]: i for i in json.load(open(P1REV, encoding="utf-8"))["items"]}
+    for r in rows:
+        if r["id"] in rev_items and r["id"] not in done:
+            it = rev_items[r["id"]]
+            log0.append({"out": r["id"], "out_source": r["source_file"], "out_status": r["status"], "in": it["id"], "in_source": P1REV,
+                         "reason": "editorial_revision: P1 fix as a draft -R1 of the same item (" + it["revision_history"][0]["change"] + ")"})
+            r.update({"id": it["id"], "track": it["track"], "status": "draft", "source_file": P1REV, "content_sha256": content_hash(it),
+                      "retire_on_signoff": r["id"], "note": "p1_editorial_revision"})
+            out_ids.pop(r["id"], None)
     need = collections.Counter(r["domain"] for r in rows if r["id"] in out_ids)
     inman = {r["id"] for r in rows}
     pool = {}
     for dom, files in NEW.items():
-        its = [(f, i) for f in files for i in json.load(open(f))["items"] if i["id"] not in inman]
+        its = [(f, i) for f in files for i in json.load(open(f))["items"] if i["id"] not in inman and i["id"] not in TWIN_SPARE]
         pool[dom] = rr(its, key=lambda fi: (fi[0], fi[1]["archetype"]))
     log = m.setdefault("swaps_2026_10_22", [])
     for r in rows:

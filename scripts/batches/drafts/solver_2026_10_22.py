@@ -306,3 +306,14 @@ def compute(op, a, stem):  # noqa: F811
         hit = [c for c, t in cps if (t == orig) == (a["mode"] == "same")]
         return hit[0] if len(hit) == 1 else None
     return _compute1(op, a, stem)
+
+
+_compute_pa = compute
+
+
+def compute(op, a, stem):  # noqa: F811  (past-age with a fixed gap, P1 revision 926041-R1)
+    if op == "past_age_gap":
+        # younger age today = gap / (k - 1) + years_ago; gap, k and years_ago must appear in the stem
+        _need(stem, a["gap"], a["k"], a["years_ago"])
+        return F(a["gap"], a["k"] - 1) + a["years_ago"]
+    return _compute_pa(op, a, stem)

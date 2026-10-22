@@ -215,7 +215,7 @@ A document binding shop charges ₱120 to set up an order and ₱35 per booklet.
 - (C) 3 booklets
 - (D) 11 booklets
 
-### 24. `CIVIO-NUM-WP-ALGEBRA-926039`  (subprofessional, hard, 90 s)
+### 24. `CIVIO-NUM-WP-ALGEBRA-926039-R1`  (subprofessional, hard, 90 s)
 
 A recycling shop sold 12 kilograms of plastic bottles. After the sale, the remaining stock was 3 kilograms more than half the starting stock. How many kilograms did it have at the start?
 
@@ -233,16 +233,16 @@ A school exhibit uses two trays with x beads and 6 labels in each tray, plus a t
 - (C) 15 beads
 - (D) 10 beads
 
-### 26. `CIVIO-NUM-WP-ALGEBRA-926041`  (subprofessional, hard, 90 s)
+### 26. `CIVIO-NUM-WP-ALGEBRA-926041-R1`  (subprofessional, hard, 90 s)
 
-A speech therapist is 21 years older than a trainee. Five years ago, the therapist was four times as old as the trainee. How old is the trainee today?
+A mother is 21 years older than her son. Five years ago, the mother was four times as old as her son. How old is the son today?
 
 - (A) 12 years
 - (B) 33 years
 - (C) 16 years
 - (D) 7 years
 
-### 27. `CIVIO-NUM-WP-ALGEBRA-926042`  (subprofessional, hard, 90 s)
+### 27. `CIVIO-NUM-WP-ALGEBRA-926042-R1`  (subprofessional, hard, 90 s)
 
 Two cousins are 6 years apart. Four years from now their ages will total 48. How old is the younger cousin today?
 
@@ -296,7 +296,7 @@ On an evacuation route map, every 1 centimeter represents 4 kilometers. A road i
 - (C) 30 kilometers
 - (D) 1 7/8 kilometers
 
-### 33. `CIVIO-NUM-WP-RATE-926043`  (subprofessional, hard, 90 s)
+### 33. `CIVIO-NUM-WP-RATE-926043-R1`  (subprofessional, hard, 90 s)
 
 Three equally fast volunteers pack 360 relief kits in 6 hours. At the same pace, how many kits can 5 volunteers pack in 4 hours?
 
@@ -556,13 +556,13 @@ A calamansi drink uses 2 cups of syrup for every 5 cups of water. A canteen plan
 - (D) 11 booklets uses the whole ₱400 as if there were no ₱120 setup charge, then rounds down.
 - File: `docs/research/batch-subpro-num-001.json`
 
-### 24. `CIVIO-NUM-WP-ALGEBRA-926039`: key (C) 30 kilograms
+### 24. `CIVIO-NUM-WP-ALGEBRA-926039-R1`: key (C) 30 kilograms
 
 - Why correct: Starting with 30 kilograms and selling 12 leaves 18; half of 30 plus 3 is also 18.
-- (A) 24 kilograms doubles the sold amount but leaves out the three extra kilograms in the remainder.
-- (B) 15 kilograms is half the original stock, not the full starting amount.
-- (D) 18 kilograms subtracts the three-kilogram remainder adjustment instead of adding it.
-- File: `docs/research/batch-subpro-num-001.json`
+- (A) 24 kilograms assumes the 12 kilograms sold was exactly half the stock (12 × 2) and ignores the extra 3 kilograms in the remainder.
+- (B) 15 kilograms is half the starting stock (x/2 = 15), the middle step, not the full starting amount.
+- (D) 18 kilograms is the stock left after the sale (30 − 12 = 18), not the stock at the start.
+- File: `docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json`
 
 ### 25. `CIVIO-NUM-WP-ALGEBRA-926040`: key (D) 10 beads
 
@@ -572,21 +572,21 @@ A calamansi drink uses 2 cups of syrup for every 5 cups of water. A canteen plan
 - (C) 15 beads divides the remaining beads between two trays but forgets the third bag.
 - File: `docs/research/batch-subpro-num-001.json`
 
-### 26. `CIVIO-NUM-WP-ALGEBRA-926041`: key (A) 12 years
+### 26. `CIVIO-NUM-WP-ALGEBRA-926041-R1`: key (A) 12 years
 
-- Why correct: Today their ages are 12 and 33. Five years ago they were 7 and 28, and 28 is four times 7.
-- (B) 33 years is the therapist’s age today, not the trainee’s.
-- (C) 16 years subtracts the five-year interval from the age gap instead of setting up the past age relationship.
-- (D) 7 years is the trainee’s age five years ago, not today.
-- File: `docs/research/batch-subpro-num-001.json`
+- Why correct: 12 years is right. Today the son is 12 and the mother 33. Five years ago they were 7 and 28, and 28 = 4 × 7.
+- (B) 33 years is the mother's age today, not the son's.
+- (C) 16 years is 21 − 5: it subtracts the five years from the age gap instead of using the 'four times' relation.
+- (D) 7 years is the son's age five years ago; add the 5 years back to get his age today.
+- File: `docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json`
 
-### 27. `CIVIO-NUM-WP-ALGEBRA-926042`: key (B) 17 years
+### 27. `CIVIO-NUM-WP-ALGEBRA-926042-R1`: key (B) 17 years
 
 - Why correct: Today the cousins are 17 and 23; in four years they will be 21 and 27, totaling 48.
 - (A) 23 years is the older cousin’s present age, not the younger one.
 - (C) 20 years is their current average age; the younger cousin is three years below it.
-- (D) 21 years forgets that both cousins will each be four years older at the future date.
-- File: `docs/research/batch-subpro-num-001.json`
+- (D) 21 years is the younger cousin's age four years from now (17 + 4); the question asks for the age today.
+- File: `docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json`
 
 ### 28. `CIVIO-NUM-WP-ALGEBRA-926048`: key (D) ₱240
 
@@ -628,13 +628,13 @@ A calamansi drink uses 2 cups of syrup for every 5 cups of water. A canteen plan
 - (D) 1 7/8 kilometers divides by the scale rather than multiplying.
 - File: `docs/research/batch-subpro-num-001.json`
 
-### 33. `CIVIO-NUM-WP-RATE-926043`: key (C) 400 kits
+### 33. `CIVIO-NUM-WP-RATE-926043-R1`: key (C) 400 kits
 
-- Why correct: Five volunteers working four hours provide 20 volunteer-hours, 2 more than before, so 400 is reasonable.
+- Why correct: 400 kits is right: 5 volunteers × 4 hours = 20 volunteer-hours, and each volunteer-hour packs 20 kits, so 20 × 20 = 400. Check: 400 ÷ 20 = 20 volunteer-hours = 5 × 4.
 - (A) 360 kits simply repeats the production of the first crew instead of adjusting workers and time.
 - (B) 240 kits scales down to four hours but keeps only the original three volunteers.
 - (D) 600 kits accounts for five volunteers but keeps the original six-hour shift.
-- File: `docs/research/batch-subpro-num-001.json`
+- File: `docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json`
 
 ### 34. `CIVIO-NUM-WP-RATE-926044`: key (D) 4 4/5 hours
 
