@@ -50,6 +50,7 @@ class ExamGradingService
         $correctCount = 0;
         $wrongCount = 0;
         $skippedCount = 0;
+        $retiredCount = 0;
         $wrongQuestionIds = [];
         $catMap = [];
         $answerKeys = [];
@@ -59,7 +60,9 @@ class ExamGradingService
             $question = $questions->get($qId);
 
             if ($question === null) {
-                $skippedCount++;
+                // Retired/missing since it was served: not the examinee's fault,
+                // so it stays out of the denominator instead of counting as a miss.
+                $retiredCount++;
                 $normalizedAnswers[(string) $qId] = $normalizedAnswers[(string) $qId] ?? null;
 
                 continue;
@@ -116,6 +119,7 @@ class ExamGradingService
             'correct_count' => $correctCount,
             'wrong_count' => $wrongCount,
             'skipped_count' => $skippedCount,
+            'retired_count' => $retiredCount,
             'total_questions' => $totalScored,
             'score' => $score,
             'wrong_question_ids' => array_values(array_unique($wrongQuestionIds)),
