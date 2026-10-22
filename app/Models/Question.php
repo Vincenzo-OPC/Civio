@@ -7,11 +7,14 @@ namespace App\Models;
 use App\Enums\QuestionSourceGroup;
 use App\Enums\QuestionStatus;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-#[Fillable(['subcategory_id', 'language', 'stem', 'options', 'correct_option', 'explanation', 'created_by', 'status', 'source_group', 'replaces_question_id', 'offline_eligible', 'fact_id', 'theme'])]
+#[Fillable(['subcategory_id', 'language', 'stem', 'options', 'correct_option', 'explanation', 'created_by', 'status', 'source_group', 'replaces_question_id', 'offline_eligible', 'fact_id', 'theme', 'archetype', 'distractor_codes'])]
+// distractor_codes imply the key, so they never serialize to a client.
+#[Hidden(['distractor_codes'])]
 class Question extends Model
 {
     use HasFactory;
@@ -35,6 +38,7 @@ class Question extends Model
             'source_group' => QuestionSourceGroup::class,
             'offline_eligible' => 'boolean',
             'replaces_question_id' => 'integer',
+            'distractor_codes' => 'array',
         ];
     }
 
