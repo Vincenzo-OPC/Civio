@@ -1,5 +1,7 @@
 <?php
 
+use App\Enums\ExamMode;
+use App\Enums\SelectionPolicy;
 use App\Services\Exam\MockPoolSelector;
 use Random\Engine\Xoshiro256StarStar;
 use Random\Randomizer;
@@ -124,7 +126,7 @@ test('a short bank gives a shorter mock with a clear notice, never padded', func
         ->and(MockPoolSelector::shortNotice(MockPoolSelector::PROFESSIONAL, 150))->toBeNull();
 });
 
-test('previously wrong items are favoured', function () {
+test('previously wrong items are favoured under the adaptive (Study) policy', function () {
     $bank = fullProBank();
     $numerical = array_values(array_filter($bank, fn ($q) => $q['category'] === 'Numerical Ability'));
     $wrongIds = array_map(fn ($q) => $q['id'], array_slice($numerical, 0, 10));
@@ -169,4 +171,121 @@ test('a mock never serves an offline-eligible item', function () {
     $items = seededSelector(11)->select($bank, MockPoolSelector::PROFESSIONAL)['items'];
 
     expect(array_filter(array_column($items, 'id'), fn (int $i) => isset($offline[$i])))->toBe([]);
+});
+
+/*
+ * ADR-0002 Option A: selection policies.
+ */
+
+function heavyHistory(array $bank): array
+{
+    $ids = array_column($bank, 'id');
+
+    return [
+        'seenIds' => array_slice($ids, 0, 300),
+        'wrongIds' => array_slice($ids, 0, 150),
+        'weakSubcategories' => ['Arithmetic', 'Logic', 'Grammar'],
+        'weakCategories' => ['Numerical Ability'],
+    ];
+}
+
+test('the policy comes from the mode', function () {
+    expect(SelectionPolicy::forMode(ExamMode::Strict))->toBe(SelectionPolicy::Representative)
+        ->and(SelectionPolicy::forMode(ExamMode::Study))->toBe(SelectionPolicy::Adaptive);
+});
+
+test('representative selection is identical with or without learner history', function (string $level) {
+    $bank = fullProBank();
+
+    foreach ([1, 9, 42] as $seed) {
+        $fresh = seededSelector($seed)->select($bank, $level, [], SelectionPolicy::Representative);
+        $veteran = seededSelector($seed)->select($bank, $level, heavyHistory($bank), SelectionPolicy::Representative);
+
+        expect(array_column($veteran['items'], 'id'))->toBe(array_column($fresh['items'], 'id'));
+    }
+})->with([MockPoolSelector::PROFESSIONAL, MockPoolSelector::SUBPROFESSIONAL]);
+
+test('adaptive selection still changes with history and favours weak areas', function () {
+    $bank = fullProBank();
+    $history = heavyHistory($bank);
+    $fresh = seededSelector(5)->select($bank, MockPoolSelector::PROFESSIONAL, [], SelectionPolicy::Adaptive);
+    $biased = seededSelector(5)->select($bank, MockPoolSelector::PROFESSIONAL, $history, SelectionPolicy::Adaptive);
+
+    expect(array_column($biased['items'], 'id'))->not->toBe(array_column($fresh['items'], 'id'));
+
+    $count = fn (array $items, string $sub) => count(array_filter($items, fn ($q) => $q['subcategory'] === $sub));
+    expect($count($biased['items'], 'Arithmetic'))->toBeGreaterThan($count($fresh['items'], 'Arithmetic'));
+});
+
+test('representative mocks keep the Civio blueprint, FIL/EN split and uniqueness on both tracks', function (string $level, array $expected) {
+    $bank = fullProBank();
+
+    for ($seed = 1; $seed <= 5; $seed++) {
+        $result = seededSelector($seed)->select($bank, $level, heavyHistory($bank), SelectionPolicy::Representative);
+        $items = $result['items'];
+        $per = array_count_values(array_column($items, 'category'));
+        ksort($per);
+
+        $verbal = array_filter($items, fn ($q) => $q['category'] === 'Verbal Ability');
+        $fil = array_filter($verbal, fn ($q) => $q['language'] === 'Filipino');
+
+        expect($per)->toBe($expected)
+            ->and(array_unique(array_column($items, 'id')))->toHaveCount(array_sum($expected))
+            ->and($result['short'])->toBeFalse()
+            // Two Verbal subcategories, each split half Filipino (rounded down).
+            ->and(count($verbal) - 2 * count($fil))->toBeGreaterThanOrEqual(0)
+            ->and(count($verbal) - 2 * count($fil))->toBeLessThanOrEqual(2);
+    }
+})->with([
+    'Professional' => [MockPoolSelector::PROFESSIONAL, ['Analytical Ability' => 52, 'General Information' => 8, 'Numerical Ability' => 45, 'Verbal Ability' => 45]],
+    'Subprofessional' => [MockPoolSelector::SUBPROFESSIONAL, ['Clerical Ability' => 47, 'General Information' => 8, 'Numerical Ability' => 45, 'Verbal Ability' => 45]],
+]);
+
+/**
+ * Pearson chi-square of per-item pick counts across seeded mocks, for one
+ * 100-item Numerical subcategory (quota 45) whose items differ sharply in
+ * heuristic difficulty.
+ */
+function numericalPickChiSquare(SelectionPolicy $policy, int $draws, array $bias = []): float
+{
+    $rows = [];
+    for ($i = 1; $i <= 100; $i++) {
+        $rows[] = [
+            'id' => $i,
+            'stem' => $i % 2 === 0
+                ? "Item {$i}: a store raised a price by {$i}% and then gave a discount of 12 percent; what is the percent change in the final price compared with the original price of the item?"
+                : "Item {$i}: pick the plain answer.",
+            'options' => ["A{$i}", "B{$i}", "C{$i}", "D{$i}"],
+            'category' => 'Numerical Ability', 'subcategory' => 'Arithmetic', 'language' => 'English',
+            'isDemographic' => false, 'explanation' => '',
+        ];
+    }
+
+    $counts = array_fill(1, 100, 0);
+    $total = 0;
+    for ($seed = 1; $seed <= $draws; $seed++) {
+        foreach (seededSelector($seed)->select($rows, MockPoolSelector::PROFESSIONAL, $bias, $policy)['items'] as $q) {
+            $counts[$q['id']]++;
+            $total++;
+        }
+    }
+
+    $expected = $total / 100;
+
+    return array_sum(array_map(fn ($o) => ($o - $expected) ** 2 / $expected, $counts));
+}
+
+test('representative picks are uniform within a subcategory (chi-square, df 99, alpha 0.001)', function () {
+    // Critical value of chi-square with 99 degrees of freedom at alpha 0.001 is about 148.2.
+    // Sampling without replacement is less variable than the multinomial model, so this is conservative.
+    expect(numericalPickChiSquare(SelectionPolicy::Representative, 400))->toBeLessThan(148.2);
+});
+
+test('the same chi-square check detects a biased pick (the test has power)', function () {
+    $wrong = range(2, 40, 2);
+    $history = ['seenIds' => $wrong, 'wrongIds' => $wrong];
+
+    expect(numericalPickChiSquare(SelectionPolicy::Adaptive, 400, $history))->toBeGreaterThan(148.2)
+        // Strict ignores that same history.
+        ->and(numericalPickChiSquare(SelectionPolicy::Representative, 400, $history))->toBeLessThan(148.2);
 });

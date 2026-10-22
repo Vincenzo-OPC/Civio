@@ -197,6 +197,12 @@ final class LearningInsightsService
             'mastery' => $masteryOut,
             'timedSuggestions' => $suggest,
             'pace' => $paceOut,
+            // ADR-0002: Strict scores from before the representative policy are
+            // not comparable with later ones, so they are counted apart.
+            'strictMockPolicies' => [
+                'representative' => $attempts->filter(fn (ExamAttempt $a) => $a->mode === ExamMode::Strict && $a->selection_policy_version !== null)->count(),
+                'legacy' => $attempts->filter(fn (ExamAttempt $a) => $a->mode === ExamMode::Strict && $a->selection_policy_version === null)->count(),
+            ],
             'skills' => $this->skillProgression($skills),
             'retention' => $this->retention($history),
             // Independent answers only; null until items carry a graph archetype.

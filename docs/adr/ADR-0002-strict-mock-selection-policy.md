@@ -1,6 +1,6 @@
 # ADR-0002 (DRAFT): Separate adaptive and representative selection without a third mode
 
-- Status: **Proposed, awaiting Astra.** Not accepted.
+- Status: **Accepted by GT (owner) 2026-10-22; Astra review not performed.** Option A implemented.
 - Date: 2026-10-22 (Asia/Manila)
 - Issue: #21
 - Evidence: `app/Services/Exam/MockPoolSelector.php`, `app/Services/Exam/MockSessionService.php`, `tests/Unit/Exam/MockPoolSelectorTest.php`, `tests/Unit/EngineHardeningTest.php`.
@@ -40,6 +40,20 @@ C. **A + fixed forms.** Pre-assemble N parallel Strict forms per track from appr
 - `exam_attempts.selection_policy` (or equivalent) records the policy used.
 - No answer key, reveal, or `distractor_codes` appears in any Strict payload before submit (existing lock test extended).
 
-## Decision
+## Decision (GT, 2026-10-22)
 
-None yet. Option A is the smallest change that makes Strict scores comparable. B and C are follow-ups.
+Option A, implemented:
+
+- `App\Enums\SelectionPolicy::forMode()`: Study → `adaptive`, Strict → `representative`. Server-derived; the client cannot choose it.
+- Representative ignores wrong history, weak subjects/subcategories, client `bias`, **and exposure (seen/unseen) history**. GT asked for an explicit choice: Strict does **not** prefer unseen items, so the form depends only on bank + seed. The difficulty heuristic is off; picks are uniform random within the Civio blueprint quotas.
+- Kept: subject totals (150 Pro / 145 Subpro), FIL/EN split, uniqueness, clone/copy/offline-key exclusions, no padding, server scoring, server deadlines (11,400 s / 9,600 s), key protection.
+- `selection_policy` and `selection_policy_version` (`MockPoolSelector::POLICY_VERSION`) are stored on `exam_sessions` and `exam_attempts`. Older rows stay null (= legacy shared pick). `LearningInsightsService` reports `strictMockPolicies` {representative, legacy} so analytics keep them apart.
+- Wording: "Civio blueprint" for our weights.
+
+### Claims (kept separate)
+
+1. **Not weakness-targeted**: claimed and tested (same bank + seed with or without wrong/weak/client data gives the same form; chi-square uniformity within a subcategory, df 99, α 0.001, with a power check).
+2. **Follows the Civio blueprint**: claimed and tested on both tracks.
+3. **Scores comparable across forms / equal difficulty**: **not claimed.** That needs measured item difficulty and calibration.
+
+Options B (exposure control) and C (fixed forms) remain open follow-ups.

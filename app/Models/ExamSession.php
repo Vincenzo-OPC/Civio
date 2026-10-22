@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Enums\ExamMode;
+use App\Enums\SelectionPolicy;
 use App\Services\Exam\MockPoolSelector;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
@@ -26,7 +27,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property array<int, int> $question_ids
  * @property int|null $exam_attempt_id
  */
-#[Fillable(['user_id', 'track', 'mode', 'question_ids', 'exam_attempt_id', 'started_at', 'deadline_at', 'saved_answers', 'save_version', 'owner_session_hash'])]
+#[Fillable(['user_id', 'track', 'mode', 'selection_policy', 'selection_policy_version', 'question_ids', 'exam_attempt_id', 'started_at', 'deadline_at', 'saved_answers', 'save_version', 'owner_session_hash'])]
 class ExamSession extends Model
 {
     use HasUlids;
@@ -43,6 +44,7 @@ class ExamSession extends Model
             'save_version' => 'integer',
             'user_id' => 'integer',
             'mode' => ExamMode::class,
+            'selection_policy' => SelectionPolicy::class,
             'question_ids' => 'array',
             'exam_attempt_id' => 'integer',
         ];

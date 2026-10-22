@@ -4,7 +4,8 @@ import { EXAM_CONSTANTS, fisherYatesShuffle } from './exam-utils';
 /**
  * Client helpers for mocks. Lite L1 moved item selection to the server
  * (`App\Services\Exam\MockPoolSelector`, POST /exams/sessions): unique items
- * only, blueprint quotas, weak-topic bias, no clones and no padding. The
+ * only, Civio blueprint quotas, weak-topic bias in Study only (Strict is
+ * representative), no clones and no padding. The
  * client only shuffles options (keeping `originalOptionIndices`) and words the
  * short-mock notice.
  */

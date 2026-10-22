@@ -131,6 +131,8 @@ class SubmitExamAttemptAction
                     'user_id' => $userId,
                     'category_id' => $data->categoryId,
                     'mode' => $session?->mode ?? ExamMode::Study,
+                    'selection_policy' => $session?->selection_policy,
+                    'selection_policy_version' => $session?->selection_policy_version,
                     'question_ids' => $ids,
                     'answers' => $graded['answers'],
                     'cat_scores' => $graded['cat_scores'],

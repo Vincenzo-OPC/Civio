@@ -16,7 +16,8 @@ class ExamSessionController extends Controller
 
     /**
      * Start a full mock: the server picks the items (unique only, blueprint
-     * quotas, weak-topic bias) and returns only those, keys withheld.
+     * Civio blueprint quotas; weak-topic bias in Study only) and returns only those,
+     * keys withheld. Strict ignores the client bias (ADR-0002).
      * `mode` is `study` (default) or `strict`.
      */
     public function store(StartExamSessionRequest $request): JsonResponse

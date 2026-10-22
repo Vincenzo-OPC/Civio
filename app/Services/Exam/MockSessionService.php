@@ -6,6 +6,7 @@ namespace App\Services\Exam;
 
 use App\Enums\ExamMode;
 use App\Enums\QuestionLanguage;
+use App\Enums\SelectionPolicy;
 use App\Http\Resources\ExamQuestionResource;
 use App\Models\ExamSession;
 use App\Models\Question;
@@ -21,8 +22,9 @@ use Illuminate\Support\Facades\Cache;
  * question IDs are stored in `exam_sessions` so submit can be checked against
  * exactly what the server served.
  *
- * Both Exam Simulation modes use the same pick. Study keeps Reveal per item;
- * Strict is timed and its keys stay locked until submit (StrictMockLock).
+ * The selection policy comes from the mode (ADR-0002): Study is adaptive and
+ * keeps Reveal per item; Strict is representative (uniform within the Civio
+ * blueprint), timed, and its keys stay locked until submit (StrictMockLock).
  */
 class MockSessionService
 {
@@ -68,15 +70,16 @@ class MockSessionService
             $rows[] = self::selectorRow($question);
         }
 
-        $serverSeen = $this->formatter->seenQuestionIdsByTrack($userId)[$level] ?? [];
-        $serverWrong = $this->formatter->wrongQuestionIdsByTrack($userId)[$level] ?? [];
-
-        $result = $this->selector->select($rows, $level, [
-            'seenIds' => $serverSeen,
-            'wrongIds' => array_values(array_unique([...$serverWrong, ...($clientBias['wrong_ids'] ?? [])])),
+        $policy = SelectionPolicy::forMode($mode);
+        // Representative (Strict) never reads history or client personalisation.
+        $bias = $policy === SelectionPolicy::Representative ? [] : [
+            'seenIds' => $this->formatter->seenQuestionIdsByTrack($userId)[$level] ?? [],
+            'wrongIds' => array_values(array_unique([...($this->formatter->wrongQuestionIdsByTrack($userId)[$level] ?? []), ...($clientBias['wrong_ids'] ?? [])])),
             'weakSubcategories' => $clientBias['weak_subcategories'] ?? [],
             'weakCategories' => $clientBias['weak_categories'] ?? [],
-        ]);
+        ];
+
+        $result = $this->selector->select($rows, $level, $bias, $policy);
 
         $ids = array_map(fn ($row) => (int) $row['id'], $result['items']);
 
@@ -85,6 +88,8 @@ class MockSessionService
             'user_id' => $userId,
             'track' => $level,
             'mode' => $mode,
+            'selection_policy' => $policy,
+            'selection_policy_version' => MockPoolSelector::POLICY_VERSION,
             'question_ids' => $ids,
             'owner_session_hash' => $userId === null && $session !== null ? hash('sha256', $session->getId()) : null,
             'started_at' => $startedAt,
@@ -117,6 +122,8 @@ class MockSessionService
             'server_now' => now()->toISOString(),
             'track' => $level,
             'mode' => $mode->value,
+            'selection_policy' => $policy->value,
+            'selection_policy_version' => MockPoolSelector::POLICY_VERSION,
             'time_limit_secs' => MockPoolSelector::timeLimitFor($level),
             'target' => $result['target'],
             'short' => $result['short'],

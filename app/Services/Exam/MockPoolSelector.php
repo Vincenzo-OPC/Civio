@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services\Exam;
 
+use App\Enums\SelectionPolicy;
 use Random\Randomizer;
 
 /**
@@ -14,12 +15,14 @@ use Random\Randomizer;
  *
  * - unique items only: demographics, "(variant N)" clones and exact copies (same
  *   stem and options under another ID) are dropped, and no item is used twice;
- * - official blueprint per level with per-subcategory quotas (Verbal split
+ * - Civio blueprint per level (our weights, not official CSC quotas) with per-subcategory quotas (Verbal split
  *   between English and Filipino);
- * - weak-topic bias: previously wrong items first (up to half of each block),
+ * - adaptive policy (Study) only: weak-topic bias: previously wrong items first (up to half of each block),
  *   then unseen, then seen-correct; weak subcategories get a larger share
  *   inside their own subject. Subject counts always match the blueprint;
- * - harder-biased shuffle (heuristic difficulty, no DB column);
+ * - adaptive only: harder-biased shuffle (heuristic difficulty, no DB column);
+ * - representative policy (Strict): no history, weak lists or difficulty bias;
+ *   uniform random inside the same quotas;
  * - no padding: a short bank gives a shorter mock and a clear notice;
  * - offline-eligible items (Lite L2 drill packs) never enter a mock.
  *
@@ -76,7 +79,18 @@ final class MockPoolSelector
 
     public const STEM_PREFIX_LEN = 48;
 
+    /**
+     * Stored on each session and attempt (ADR-0002). Attempts with a null
+     * version predate the split and used the shared, weakness-biased pick.
+     * Strict ("representative") does not prefer unseen items: exposure and
+     * weakness history are both ignored, so the form depends only on bank + seed.
+     */
+    public const POLICY_VERSION = 'mock-select-2026-10-22';
+
     private Randomizer $random;
+
+    /** False under the representative policy: plain uniform shuffle. */
+    private bool $hardBiasOn = true;
 
     public function __construct(?Randomizer $random = null)
     {
@@ -261,6 +275,10 @@ final class MockPoolSelector
      */
     public function shuffleHardBiased(array $pool, float $hardBias = self::HARD_BIAS): array
     {
+        if (! $this->hardBiasOn) {
+            return $this->shuffle($pool);
+        }
+
         if (count($pool) <= 1) {
             return array_values($pool);
         }
@@ -300,8 +318,14 @@ final class MockPoolSelector
      * @param  array<string, mixed>  $bias
      * @return array{items: array<int, array<string, mixed>>, target: int, short: bool}
      */
-    public function select(array $questions, string $level, array $bias = []): array
+    public function select(array $questions, string $level, array $bias = [], SelectionPolicy $policy = SelectionPolicy::Adaptive): array
     {
+        if ($policy === SelectionPolicy::Representative) {
+            $bias = [];
+        }
+
+        $this->hardBiasOn = $policy === SelectionPolicy::Adaptive;
+
         $level = isset(self::BLUEPRINT[$level]) ? $level : self::PROFESSIONAL;
         $blueprint = self::BLUEPRINT[$level];
         $target = self::targetFor($level);
@@ -320,7 +344,7 @@ final class MockPoolSelector
             array_push($scored, ...$this->pickBalanced($state, $categoryPool, $block['count'], (bool) ($block['splitLanguage'] ?? false), $seen, $wrong, $weakSub));
         }
 
-        // Full mocks keep the CSC blueprint exactly (GI 8 means 8). Weakness
+        // Full mocks keep the Civio blueprint exactly (GI 8 means 8). Weakness
         // bias stays inside each subject (wrong items, weak subcategories);
         // cross-subject boosting belongs to dedicated practice (Today's Focus).
         $items = $this->shuffle($scored);
@@ -524,7 +548,7 @@ final class MockPoolSelector
         return $quotas;
     }
 
-    /** User-facing note for a mock that could not reach the official count. */
+    /** User-facing note for a mock that could not reach the Civio blueprint count. */
     public static function shortNotice(string $level, int $itemCount): ?string
     {
         $target = self::targetFor($level);

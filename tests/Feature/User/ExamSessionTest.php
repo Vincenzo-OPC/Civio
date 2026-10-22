@@ -1,11 +1,19 @@
 <?php
 
+use App\Enums\ExamMode;
 use App\Models\Category;
 use App\Models\ExamAttempt;
 use App\Models\ExamSession;
 use App\Models\Question;
 use App\Models\Subcategory;
 use App\Models\User;
+use App\Repositories\QuestionRepositoryInterface;
+use App\Services\Exam\MockPoolSelector;
+use App\Services\Exam\MockSessionService;
+use App\Services\ExamAttemptFormatter;
+use App\Services\Learning\LearningInsightsService;
+use Random\Engine\Xoshiro256StarStar;
+use Random\Randomizer;
 
 /**
  * Seed a small Professional bank: every blueprint category with a few items,
@@ -211,4 +219,89 @@ test('an abandoned strict mock stops locking after its time limit plus grace', f
     $this->travel(11400 + 601)->seconds();
 
     $this->postJson(route('exams.reveal'), ['question_id' => $start->json('questions.0.id')])->assertOk();
+});
+
+/*
+ * ADR-0002: Strict is representative, Study is adaptive. The policy is
+ * derived on the server and stored with a version on the session and attempt.
+ * Route controllers are cached per test, so the service is called directly
+ * with a fresh seeded selector for each start.
+ */
+function startSeeded(int $seed, ?int $userId, string $mode, array $clientBias = []): array
+{
+    $service = new MockSessionService(
+        app(QuestionRepositoryInterface::class),
+        app(ExamAttemptFormatter::class),
+        new MockPoolSelector(new Randomizer(new Xoshiro256StarStar($seed))),
+    );
+
+    return $service->start($userId, 'Professional', $clientBias, null, ExamMode::from($mode));
+}
+
+test('strict: wrong history and client weak lists change nothing for the same bank and seed', function () {
+    seedMockBank(60);
+    $user = User::factory()->create();
+
+    $before = startSeeded(17, $user->id, 'strict');
+    ExamSession::query()->delete();
+
+    $wrong = array_slice(Question::pluck('id')->all(), 0, 80);
+    ExamAttempt::create(['user_id' => $user->id, 'mode' => 'study', 'question_ids' => $wrong,
+        'answers' => array_fill_keys(array_map('strval', $wrong), 0), 'cat_scores' => []]);
+
+    $after = startSeeded(17, $user->id, 'strict', [
+        'wrong_ids' => $wrong, 'weak_subcategories' => ['Numerical Ability basics'], 'weak_categories' => ['Numerical Ability'],
+    ]);
+
+    expect(array_column($after['questions'], 'id'))->toBe(array_column($before['questions'], 'id'))
+        ->and($after['selection_policy'])->toBe('representative')
+        ->and($after['selection_policy_version'])->toBe(MockPoolSelector::POLICY_VERSION)
+        ->and(ExamSession::firstOrFail()->selection_policy->value)->toBe('representative');
+});
+
+test('study stays adaptive: wrong items are favoured compared with strict on the same seed', function () {
+    seedMockBank(60);
+    $wrong = array_slice(Question::pluck('id')->all(), 60, 40);
+
+    $study = array_column(startSeeded(17, null, 'study', ['wrong_ids' => $wrong])['questions'], 'id');
+    $strict = array_column(startSeeded(17, null, 'strict', ['wrong_ids' => $wrong])['questions'], 'id');
+
+    expect(count(array_intersect($wrong, $study)))->toBeGreaterThan(count(array_intersect($wrong, $strict)));
+});
+
+test('the attempt records the policy and version, and insights count legacy strict mocks apart', function () {
+    seedMockBank(3);
+    $user = User::factory()->create();
+    $start = $this->actingAs($user)->postJson(route('exams.sessions.store'), ['track' => 'Professional', 'mode' => 'strict'])
+        ->assertOk()->assertJson(['selection_policy' => 'representative']);
+    $ids = $start->json('questions.*.id');
+
+    $this->postJson(route('exams.attempts.store'), [
+        'exam_session_id' => $start->json('session_id'),
+        'question_ids' => $ids,
+        'answers' => collect($ids)->mapWithKeys(fn ($id) => [(string) $id => 2])->all(),
+        'metadata' => ['track' => 'Professional', 'duration_secs' => 60, 'is_timed' => true],
+    ])->assertOk();
+
+    $attempt = ExamAttempt::where('user_id', $user->id)->firstOrFail();
+    expect($attempt->selection_policy->value)->toBe('representative')
+        ->and($attempt->selection_policy_version)->toBe(MockPoolSelector::POLICY_VERSION);
+
+    ExamAttempt::create(['user_id' => $user->id, 'mode' => 'strict', 'question_ids' => $ids, 'answers' => [], 'cat_scores' => []]);
+
+    expect(app(LearningInsightsService::class)->forUser($user->id)['strictMockPolicies'])
+        ->toBe(['representative' => 1, 'legacy' => 1]);
+});
+
+test('a strict mock payload carries no keys, explanations or misconception codes before submit', function () {
+    seedMockBank(3);
+    Question::query()->update(['archetype' => 'NUM-WP-PCT-CHANGE', 'distractor_codes' => json_encode(['0' => 'NUM-WRONG-BASE'])]);
+    $this->actingAs(User::factory()->create());
+
+    $body = $this->postJson(route('exams.sessions.store'), ['track' => 'Professional', 'mode' => 'strict'])->assertOk()->getContent();
+
+    expect($body)->not->toContain('correct_option')
+        ->and($body)->not->toContain('distractor_codes')
+        ->and($body)->not->toContain('NUM-WRONG-BASE')
+        ->and($body)->not->toContain('Because C.');
 });
