@@ -69,8 +69,9 @@ Briefs are how work moves between AIs. Write the task into `docs/` as a brief, c
 - Fix the 12 baseline spelling rows by swapping in new target words.
 - Write gap-fill-004: 2 items each on R.A. 7610, 9710, 9745, 10353 and 9851.
 - Audit `chatgpt-batch-002.json` (100 English drafts).
-- Audit baseline batch B3 (GI: R.A. 6713 and Environment), then the other baseline domains.
-- Audit Codex's 495-item `scripts/seeds/baseline_reparameterized.json` as its own round.
+- Baseline B3 (GI R.A. 6713 + Environment, Numerical Basic operations + Number sequence, 123 items) was audited independently on 2026-10-18 and awaits the CoS verdict: packet `research/audit/round-03-baseline-b3-review-request.md`, drafts `research/audit/fixes/round-03-baseline-b3-drafts.json` (KEEP 21, FIX 42, REJECT 55, HOLD 5). When ChatGPT's 2026-10-18 audit files arrive, fill the `chatgpt_verdict`/`agree` columns in `research/audit/data/baseline-b3-verdicts-2026-10-18.csv`.
+- Next baseline batch: B4 = Numerical Word problems (32), then Analytical 114 and Verbal 130.
+- Audit Codex's 496-item `scripts/seeds/baseline_reparameterized.json` as its own round.
 
 ## 4. Local Civio on GT's MSI
 
