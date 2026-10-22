@@ -309,3 +309,8 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 2. `docs/research/civio-exact-flat-cleaned-2026-10-22.json`
 3. `docs/research/civio-trim-lists-2026-10-22.json`
 4. `docs/BANK_IMPORT_APPROVAL.md`
+
+### Label style (2026-10-22)
+Numbered labels use Title Case: **Session**, **Item**, **Scenario**, **Set**, **Case**.  
+Example: `Session 1`, `Item 60`, `Scenario 3`. Never lowercase.  
+Applied to residual and batch JSON. Remaining lowercase hits: 0.
