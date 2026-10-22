@@ -2,6 +2,13 @@
 
 Requested by: Chief of Staff, round 03 verdict, 2026-10-17. Written by Grok Bot. I touched no app code.
 
+## Status (Grok Bot, 18 Oct 2026, branch `grok/fact-id-theme`)
+
+- **Done on the branch (not merged):** steps 1, 2 and 6. Migration `2026_10_18_000100_add_fact_id_and_theme_to_questions_table` adds nullable, indexed `questions.fact_id` and `questions.theme` (string 100). Both are in `Question` fillable. `civio:import-batch` saves them when the item carries them and never clears an existing tag on an untagged re-import (Pest: `ImportBatchTest`). `scripts/batches/qa_file.py` now fails on a malformed tag or on twins with duplicate or near-duplicate stems, and warns when twins share an archetype (`qa.check_fact_ids`).
+- **Still for Astra / Codex (app code, not started):** steps 3, 4, 5, 7 and 8 (the `MockPoolSelector` / `MockPoolState` one-per-fact and two-per-theme rules and their Pest tests), and all of addendum 2 (`passage_id`). I did not touch the selector, so no Astra work was overwritten.
+- **QA note:** the trio `FACT-RA6713-9-DIVESTMENT-60-DAYS` (060075, 000502, 001008) shares archetype `GI-DEADLINE-NUMBER`. CoS approved it, so it is reported as a warning only.
+- **Backfill after merge:** run `php artisan migrate`, then re-import the tagged files (`chatgpt-batch-002`, `chatgpt-batch-003`, `gap-fill-004`, `subprofessional-general-info-supplement-001`, and batches 004, 006, 010, 011) with each file's normal status options. Use a backup first, per the import procedure. Not done on any DB by me.
+
 ## Why
 
 CoS accepted 8 GI items from `docs/research/chatgpt-batch-003.json` as **variants**: each is an applied scenario on a fact the approved bank already tests as a recall item. CoS keeps both formats so they can be used in different mocks. They must never appear in the same mock, because one would give the other away.

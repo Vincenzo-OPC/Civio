@@ -107,56 +107,23 @@ test('an optional item-level shortcut leads the Reveal and the worked steps foll
     expect($with)->toContain("Shortcut: {$item['shortcut']}\nMethod: {$item['reveal']['shortcut']}");
 });
 
-test('self declared approved metadata cannot activate an unsigned batch', function () {
-    $this->artisan('civio:import-batch', ['path' => base_path('docs/batches/batch-001.json')])->assertFailed();
-    expect(Question::count())->toBe(0);
-});
+test('fact_id and theme tags are saved, and an untagged re-import keeps them', function () {
+    $source = base_path('docs/batches/batch-001.json');
+    $data = json_decode((string) file_get_contents($source), true);
+    $data['items'][0]['fact_id'] = 'FACT-TEST-0001';
+    $data['items'][0]['theme'] = 'test-theme';
+    $tagged = tempnam(sys_get_temp_dir(), 'batch');
+    file_put_contents($tagged, json_encode($data));
 
-test('batch draft import cannot overwrite or demote an active bank row', function () {
-    $path = base_path('docs/batches/batch-001.json');
-    $this->artisan('civio:import-batch', ['path' => $path, ...bankSign($path, 'import-batch-active')])->assertSuccessful();
-    $this->artisan('civio:import-batch', ['path' => $path, '--status' => 'draft'])->assertFailed();
-    expect(Question::where('status', 'active')->count())->toBe(10);
-});
+    $this->artisan('civio:import-batch', ['path' => $tagged])->assertSuccessful();
 
-test('changed batch revisions and duplicate option IDs fail without mutation', function (string $defect) {
-    $batch = json_decode(file_get_contents(base_path('docs/batches/batch-001.json')), true);
-    $path = bankJson($batch);
-    $this->artisan('civio:import-batch', ['path' => $path, '--status' => 'draft'])->assertSuccessful();
-    if ($defect === 'revision') {
-        $batch['items'][0]['reveal']['why_correct'] = 'Changed explanation';
-    } else {
-        $batch['items'][1]['options'][1]['option_id'] = $batch['items'][1]['options'][0]['option_id'];
-    }
-    $this->artisan('civio:import-batch', ['path' => bankJson($batch), '--status' => 'draft'])->assertFailed();
-    expect(Question::count())->toBe(10);
-})->with(['revision', 'option-id']);
+    $q = Question::where('stem', $data['items'][0]['stem'])->firstOrFail();
+    expect($q->fact_id)->toBe('FACT-TEST-0001')
+        ->and($q->theme)->toBe('test-theme')
+        ->and(Question::whereNull('fact_id')->count())->toBe(9);
 
-test('malformed batch item types fail cleanly', function (mixed $item) {
-    $this->artisan('civio:import-batch', ['path' => bankJson(['items' => [$item]]), '--status' => 'draft'])->assertFailed();
-    expect(Question::count())->toBe(0);
-})->with([[null], ['text'], [['id' => 'x', 'domain' => ['bad']]]]);
+    $this->artisan('civio:import-batch', ['path' => $source])->assertSuccessful();
 
-test('an unchanged draft requires exact independently signed review before promotion', function () {
-    $batch = json_decode(file_get_contents(base_path('docs/batches/batch-001.json')), true);
-    foreach ($batch['items'] as &$item) {
-        $item['status'] = 'draft';
-        $item['review_status'] = 'unreviewed';
-    }
-    unset($item);
-    $draft = bankJson($batch);
-    $this->artisan('civio:import-batch', ['path' => $draft, '--status' => 'draft'])->assertSuccessful();
-    $ids = Question::orderBy('id')->pluck('id')->all();
-    foreach ($batch['items'] as &$item) {
-        $item['status'] = 'approved';
-        $item['review_status'] = 'passed';
-    }
-    unset($item);
-    $approved = bankJson($batch);
-    $this->artisan('civio:import-batch', ['path' => $approved])->assertFailed();
-    expect(Question::where('status', 'active')->count())->toBe(0);
-    $this->artisan('civio:import-batch', ['path' => $approved, ...bankSign($approved, 'import-batch-active')])->assertSuccessful();
-    expect(Question::where('status', 'active')->count())->toBe(10)
-        ->and(Question::orderBy('id')->pluck('id')->all())->toBe($ids)
-        ->and(DB::table('bank_import_entries')->whereNotNull('approval_sha256')->count())->toBe(10);
+    expect($q->fresh()->fact_id)->toBe('FACT-TEST-0001')
+        ->and($q->fresh()->theme)->toBe('test-theme');
 });

@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-#[Fillable(['subcategory_id', 'language', 'stem', 'options', 'correct_option', 'explanation', 'created_by', 'status', 'source_group', 'replaces_question_id', 'offline_eligible'])]
+#[Fillable(['subcategory_id', 'language', 'stem', 'options', 'correct_option', 'explanation', 'created_by', 'status', 'source_group', 'replaces_question_id', 'offline_eligible', 'fact_id', 'theme'])]
 class Question extends Model
 {
     use HasFactory;
