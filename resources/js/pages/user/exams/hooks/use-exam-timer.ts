@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import type { SetStateAction } from 'react';
 import { toast } from 'sonner';
 import { shouldRunExamClock } from '../utils/answer-state';
-import { secondsUntil } from '../utils/server-clock';
+import { dueTimerWarning, secondsUntil } from '../utils/server-clock';
 
 export interface ExamClockSnapshot {
     timeLeft: number;
@@ -172,12 +172,19 @@ export function useExamTimer({
                 const next = deadlineMs !== null ? prev : prev - 1;
                 publishClock(next, nextElapsed);
 
-                if (next === 600 && !warned10MinRef.current) {
+                const due = dueTimerWarning(
+                    next,
+                    warned10MinRef.current,
+                    warned1MinRef.current,
+                );
+
+                if (due === '10m') {
                     warned10MinRef.current = true;
                     toast.warning('10 minutes remaining in this session.', {
                         id: 'timer-warning-10m',
                     });
-                } else if (next === 60 && !warned1MinRef.current) {
+                } else if (due === '1m') {
+                    warned10MinRef.current = true;
                     warned1MinRef.current = true;
                     toast.error(
                         '1 minute remaining! Your exam will auto-submit soon.',
