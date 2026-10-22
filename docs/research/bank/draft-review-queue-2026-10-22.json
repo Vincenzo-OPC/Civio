@@ -1,6 +1,6 @@
 {
- "raw_non_approved_rows": 2024,
- "unique_drafts": 1943,
+ "raw_non_approved_rows": 1828,
+ "unique_drafts": 1747,
  "approved_unique": 1477,
  "approved_by_domain": {
   "numerical": 309,
@@ -11,7 +11,7 @@
   "verbal_fil": 188
  },
  "recommended_by_domain": {
-  "general_information": 73,
+  "general_information": 164,
   "clerical": 93,
   "numerical": 91,
   "analytical": 49,
@@ -19,17 +19,17 @@
   "verbal_fil": 77
  },
  "adds_unique_pass_by_domain": {
-  "general_information": 73,
+  "general_information": 205,
   "clerical": 147,
   "numerical": 167,
-  "analytical": 196,
+  "analytical": 197,
   "verbal_en": 49,
   "verbal_fil": 127
  },
  "projected_if_signed": {
   "verbal": 600,
   "numerical": 400,
-  "general_information": 309,
+  "general_information": 400,
   "analytical": 300,
   "clerical": 300
  },
@@ -43,7 +43,7 @@
  "shortfall": {
   "verbal": 0,
   "numerical": 0,
-  "general_information": 91,
+  "general_information": 0,
   "analytical": 0,
   "clerical": 0
  },
@@ -52,8 +52,8 @@
    "flag": 114
   },
   "analytical|new": {
-   "pass": 196,
-   "flag": 91
+   "pass": 197,
+   "flag": 2
   },
   "analytical|revision": {
    "pass": 5
@@ -67,7 +67,7 @@
   },
   "clerical|new": {
    "pass": 147,
-   "flag": 81
+   "flag": 17
   },
   "clerical|revision": {
    "pass": 15
@@ -76,10 +76,11 @@
    "pass": 38
   },
   "general_information|baseline": {
-   "flag": 134
+   "pass": 132,
+   "flag": 2
   },
   "general_information|new": {
-   "flag": 66,
+   "flag": 32,
    "pass": 51
   },
   "general_information|revision": {
@@ -102,7 +103,7 @@
    "flag": 128
   },
   "verbal_en|new": {
-   "flag": 98,
+   "flag": 88,
    "pass": 49
   },
   "verbal_en|revision": {
@@ -128,25 +129,26 @@
   }
  },
  "flag_counts": {
-  "missing_est_seconds": 554,
-  "missing_difficulty": 553,
-  "bad_difficulty": 553,
+  "missing_est_seconds": 420,
+  "missing_difficulty": 419,
+  "bad_difficulty": 419,
   "near_dup_approved": 246,
-  "place_or_amount_swap_clone": 143,
-  "near_dup_draft": 107,
   "previously_rejected": 99,
-  "place_swap_clone": 53,
-  "duplicate_options": 20,
+  "near_dup_draft": 22,
   "passage_missing_or_unlinked": 19,
   "percent_change_topic": 18,
   "circular_reveal": 17,
-  "template_stem_place_name": 15,
+  "duplicate_options": 11,
+  "template_stem_place_name": 10,
   "key_not_in_reveal": 10,
   "difficulty_vs_time": 9,
   "gi_citation_doubt": 8,
   "superseded_by_lintfix": 4,
+  "hold_phrase_overlap": 2,
   "gi_fact_doubt": 1,
   "options_shape": 1,
+  "non_integer_intermediate": 1,
+  "reveal_math_wrong": 1,
   "track_noncanonical": 1
  }
 }

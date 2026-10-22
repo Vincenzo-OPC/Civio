@@ -108,7 +108,7 @@ def main():
         if not rows:
             continue
         for i in rows:
-            if i.get("status") == "approved":
+            if i.get("status") in ("approved", "retired"):
                 continue
             raw += 1
             k = norm(i["stem"])
@@ -157,8 +157,10 @@ def main():
             flags.append("mojibake")
         if re.search(r"\(variant \d+\)", blob, re.I):
             flags.append("variant_clone")
-        if HOLD.search(blob):
+        if HOLD.search(json.dumps({k: v for k, v in i.items() if k not in ("hold_screen", "metadata_note")}, ensure_ascii=False)):
             flags.append("hold_source_red_flag")
+        for qf in i.get("qa_flags") or []:
+            flags.append(str(qf))
         if i.get("review_status") == "rejected":
             flags.append("previously_rejected")
         t = toks(i["stem"])
@@ -251,11 +253,14 @@ def main():
     have = collections.Counter()
     for d, n in approved_dom.items():
         have[group(d)] += n
-    prio = ["gap-fill-2000-", "round-03-baseline", "batch-subpro", "original-foundations", "civio-final-rewrite",
+    prio = ["gap-fill-2000-", "round-03-baseline", "baseline-550-spec", "batch-subpro", "original-foundations", "civio-final-rewrite",
             "civio-exact-flat", "civio-flat-2100", "civio-fixed-flat", "chatgpt-batch"]
     def rank(r):
         return (next((n for n, x in enumerate(prio) if x in r["file"]), 99), r["id"] or "")
-    adds = [r for r in rows_out if r["result"] == "pass" and (r["kind"] == "new" or (r["kind"] == "revision" and not pool_fix.get(r["id"])))]
+    # Baseline GI rows (metadata added, HOLD-screened 22 Oct) count as adds once they pass; they are
+    # served legacy rows never approved under the spec. Other baseline subjects still lack metadata.
+    adds = [r for r in rows_out if r["result"] == "pass" and (r["kind"] == "new" or (r["kind"] == "revision" and not pool_fix.get(r["id"]))
+                                                             or (r["kind"] == "baseline" and r["domain"] == "general_information"))]
     # Verbal: balance English first (smaller pool), then Filipino.
     adds.sort(key=lambda r: (r["domain"] != "verbal_en", rank(r)))
     for r in rows_out:
