@@ -22,6 +22,7 @@ readonly class ExamSessionQueryData
         public ?string $drillCategoryName = null,
         /** @var array<int, int> */
         public array $customQuestionIds = [],
+        public bool $freshSameSkill = false,
     ) {}
 
     public static function fromRequest(Request $request): self
@@ -38,6 +39,7 @@ readonly class ExamSessionQueryData
             drillCategoryId: $request->filled('category_id') && is_numeric($request->input('category_id')) ? (int) $request->input('category_id') : null,
             drillCategoryName: $request->filled('category_name') ? (string) $request->input('category_name') : null,
             customQuestionIds: self::parseIds($request->input('custom_question_ids')),
+            freshSameSkill: $request->boolean('fresh_same_skill'),
         );
     }
 

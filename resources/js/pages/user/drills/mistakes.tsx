@@ -178,6 +178,12 @@ export default function ReviewMistakes({
                                 Review Due
                             </Link>
                         ) : null}
+                        <Link
+                            href="/exams?drill=true&fresh_same_skill=1&category_name=Fresh%20practice"
+                            className="inline-flex min-h-11 items-center justify-center rounded-lg border border-[var(--civio-line)] px-4 text-sm font-semibold"
+                        >
+                            Practice New Questions on These Skills
+                        </Link>
                         {dueLastPage > 1 ? (
                             <nav className="flex gap-3">
                                 {duePage > 1 ? (

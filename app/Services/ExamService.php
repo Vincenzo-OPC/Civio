@@ -9,6 +9,7 @@ use App\Http\Resources\ExamQuestionResource;
 use App\Http\Resources\ExamScorecardResource;
 use App\Models\ExamAttempt;
 use App\Models\Question;
+use App\Models\ReviewItem;
 use App\Models\SavedDrillSet;
 use App\Repositories\QuestionRepositoryInterface;
 use App\Repositories\UserRepositoryInterface;
@@ -134,6 +135,14 @@ class ExamService
     {
         $scored = $pool->reject(fn (Question $q) => (bool) ($q->subcategory?->category?->is_demographic ?? false));
 
+        if ($query->freshSameSkill && $userId !== null) {
+            $fresh = $this->freshSameSkillCandidates($scored, $userId);
+
+            if ($fresh->isNotEmpty()) {
+                return $fresh;
+            }
+        }
+
         if ($query->customQuestionIds !== []) {
             $allowed = $this->permittedCustomIds($query->customQuestionIds, $userId);
             $locked = app(StrictMockLock::class)->lockedQuestionIds(
@@ -162,6 +171,41 @@ class ExamService
         }
 
         return $matches->isNotEmpty() ? $matches : $scored->take(30);
+    }
+
+    /** Most items in one fresh same-skill revisit. */
+    public const FRESH_SAME_SKILL_LIMIT = 20;
+
+    /**
+     * Revisit open mistakes with DIFFERENT questions on the same skill:
+     * active items from the subcategories of the learner's pending mistakes
+     * that the learner has never been served. Chosen on the server, so no
+     * client-supplied IDs are involved.
+     *
+     * @param  Collection<int, Question>  $scored
+     * @return Collection<int, Question>
+     */
+    protected function freshSameSkillCandidates(Collection $scored, int $userId): Collection
+    {
+        $mistakeIds = ReviewItem::query()->where('user_id', $userId)->where('status', 'pending')->pluck('question_id')->map(fn ($id) => (int) $id)->all();
+
+        if ($mistakeIds === []) {
+            return collect();
+        }
+
+        $skills = $scored->whereIn('id', $mistakeIds)->map(fn (Question $q) => (int) $q->subcategory_id)->unique()->all();
+        $served = [];
+        foreach (ExamAttempt::query()->where('user_id', $userId)->latest('id')->limit(200)->pluck('question_ids') as $qids) {
+            foreach ((array) $qids as $qid) {
+                $served[(int) $qid] = true;
+            }
+        }
+
+        return $scored
+            ->filter(fn (Question $q) => in_array((int) $q->subcategory_id, $skills, true) && ! isset($served[(int) $q->id]) && ! in_array((int) $q->id, $mistakeIds, true))
+            ->shuffle()
+            ->take(self::FRESH_SAME_SKILL_LIMIT)
+            ->values();
     }
 
     /** Daily budget of hand-picked IDs a principal may request outside its own history. */
