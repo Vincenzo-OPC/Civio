@@ -24,11 +24,11 @@ test('weak-category top-up never adds a key-trap pair the blueprint picks would 
     }
 });
 
-function engBank(): array
+function engBank(array $sizes): array
 {
     $bank = [];
     $id = 1000;
-    foreach (['Verbal Ability' => 120, 'Clerical Ability' => 120, 'Numerical Ability' => 120, 'General Information' => 60] as $cat => $n) {
+    foreach ($sizes as $cat => $n) {
         for ($i = 0; $i < $n; $i++) {
             $id++;
             $bank[] = ['id' => $id, 'stem' => "{$id} {$cat} question stem", 'options' => ["w{$id}", "x{$id}", "y{$id}", "z{$id}"], 'correct' => 0, 'category' => $cat, 'subcategory' => $cat.' '.($i % 3), 'language' => 'English', 'isDemographic' => false];
@@ -38,12 +38,26 @@ function engBank(): array
     return $bank;
 }
 
-test('weak-category top-up spreads its swaps instead of wiping out a small subject', function () {
+dataset('levels', [
+    'Subprofessional' => [MockPoolSelector::SUBPROFESSIONAL, ['Verbal Ability' => 120, 'Clerical Ability' => 120, 'Numerical Ability' => 120, 'General Information' => 60, 'Analytical Ability' => 60]],
+    'Professional' => [MockPoolSelector::PROFESSIONAL, ['Verbal Ability' => 120, 'Analytical Ability' => 120, 'Numerical Ability' => 120, 'General Information' => 60, 'Clerical Ability' => 60]],
+]);
+
+test('full mocks keep the blueprint exactly, even with strong weakness bias', function (string $level, array $sizes) {
+    $bank = engBank($sizes);
+    $wrong = array_column(array_filter($bank, fn ($q) => $q['category'] === 'Verbal Ability'), 'id');
+    $expected = array_column(MockPoolSelector::BLUEPRINT[$level], 'count', 'category');
+
     for ($run = 0; $run < 10; $run++) {
-        $items = (new MockPoolSelector)->select(engBank(), MockPoolSelector::SUBPROFESSIONAL, ['weakCategories' => ['Verbal Ability']])['items'];
+        $items = (new MockPoolSelector)->select($bank, $level, [
+            'weakCategories' => ['Verbal Ability'], 'wrongIds' => $wrong, 'weakSubcategories' => ['Verbal Ability 0'],
+        ])['items'];
         $counts = array_count_values(array_column($items, 'category'));
-        expect(count($items))->toBe(145)
-            ->and($counts['General Information'] ?? 0)->toBeGreaterThanOrEqual(4)
-            ->and($counts['Verbal Ability'])->toBeGreaterThanOrEqual(72);
+        ksort($counts);
+        ksort($expected);
+
+        expect($counts)->toBe($expected)
+            ->and(count($items))->toBe(MockPoolSelector::targetFor($level))
+            ->and(count(array_unique(array_column($items, 'id'))))->toBe(count($items));
     }
-});
+})->with('levels');

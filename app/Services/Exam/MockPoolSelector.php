@@ -17,8 +17,8 @@ use Random\Randomizer;
  * - official blueprint per level with per-subcategory quotas (Verbal split
  *   between English and Filipino);
  * - weak-topic bias: previously wrong items first (up to half of each block),
- *   then unseen, then seen-correct; about half of the mock leans to weak
- *   subcategories / categories when unused items exist;
+ *   then unseen, then seen-correct; weak subcategories get a larger share
+ *   inside their own subject. Subject counts always match the blueprint;
  * - harder-biased shuffle (heuristic difficulty, no DB column);
  * - no padding: a short bank gives a shorter mock and a clear notice;
  * - offline-eligible items (Lite L2 drill packs) never enter a mock.
@@ -320,9 +320,10 @@ final class MockPoolSelector
             array_push($scored, ...$this->pickBalanced($state, $categoryPool, $block['count'], (bool) ($block['splitLanguage'] ?? false), $seen, $wrong, $weakSub));
         }
 
-        $levelCategories = array_fill_keys(array_column($blueprint, 'category'), true);
-        $biased = $this->raiseWeakCategoryShare($state, $scored, $source, array_map('strval', $bias['weakCategories'] ?? []), $target, $levelCategories);
-        $items = $this->shuffle($biased);
+        // Full mocks keep the CSC blueprint exactly (GI 8 means 8). Weakness
+        // bias stays inside each subject (wrong items, weak subcategories);
+        // cross-subject boosting belongs to dedicated practice (Today's Focus).
+        $items = $this->shuffle($scored);
 
         return ['items' => $items, 'target' => $target, 'short' => count($items) < $target];
     }
@@ -521,77 +522,6 @@ final class MockPoolSelector
         }
 
         return $quotas;
-    }
-
-    /**
-     * About half the scored items come from previously weak categories when
-     * unused items in those categories remain. Never brings in a duplicate.
-     *
-     * @param  array<int, array<string, mixed>>  $scored
-     * @param  array<int, array<string, mixed>>  $source
-     * @param  array<int, string>  $weakCategories
-     * @param  array<string, true>  $levelCategories
-     * @return array<int, array<string, mixed>>
-     */
-    private function raiseWeakCategoryShare(MockPoolState $state, array $scored, array $source, array $weakCategories, int $target, array $levelCategories): array
-    {
-        if ($weakCategories === [] || $scored === []) {
-            return $scored;
-        }
-
-        $weak = array_fill_keys(array_filter($weakCategories, fn ($c) => isset($levelCategories[$c])), true);
-
-        if ($weak === []) {
-            return $scored;
-        }
-
-        $isWeak = fn ($q) => isset($weak[(string) ($q['category'] ?? '')]);
-        $weakTarget = min($target, (int) round($target * self::WRONG_PRIORITY));
-        $result = array_values($scored);
-        $weakCount = count(array_filter($result, $isWeak));
-
-        if ($weakCount >= $weakTarget) {
-            return $result;
-        }
-
-        $usedIds = array_fill_keys(array_map(fn ($q) => (int) $q['id'], $result), true);
-        $usedKeys = array_fill_keys(array_map(fn ($q) => self::exactItemKey($q), $result), true);
-        $extras = $this->shuffle(array_values(array_filter(
-            $source,
-            fn ($q) => ! isset($usedIds[(int) $q['id']]) && ! isset($usedKeys[self::exactItemKey($q)]) && $isWeak($q)
-        )));
-        $extraIdx = 0;
-
-        // Swap out of the largest non-weak subject each time so the cost is
-        // spread proportionally and a small subject (GI: 8 items) is not wiped.
-        $positions = [];
-        foreach ($result as $i => $q) {
-            if (! $isWeak($q)) {
-                $positions[(string) ($q['category'] ?? '')][] = $i;
-            }
-        }
-
-        while ($weakCount < $weakTarget && $positions !== []) {
-            while ($extraIdx < count($extras) && ! $state->isFree($extras[$extraIdx])) {
-                $extraIdx++;
-            }
-            if ($extraIdx >= count($extras)) {
-                break;
-            }
-
-            uasort($positions, fn ($x, $y) => count($y) <=> count($x));
-            $category = (string) array_key_first($positions);
-            $i = array_pop($positions[$category]);
-            if ($positions[$category] === []) {
-                unset($positions[$category]);
-            }
-
-            $state->take($extras[$extraIdx]);
-            $result[$i] = $extras[$extraIdx++];
-            $weakCount++;
-        }
-
-        return $result;
     }
 
     /** User-facing note for a mock that could not reach the official count. */
