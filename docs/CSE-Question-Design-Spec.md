@@ -339,6 +339,8 @@ Informed by: URLs 15, 16.
 | CLR-SPELL-WRONG | Which of 4 words is misspelled | 1 | Unusual but correct words beside the wrong one | 15 |
 | CLR-SPELL-RIGHT | Which of 4 spellings is correct | 1 | Spelling by sound | 15 |
 | CLR-SPELL-CONTEXT | Which word fits the sentence (look-alike word pairs) | 1 | Look-alike word | 20 |
+| CLR-CHRONOLOGICAL | 4 dates (mixed formats); which is filed first or last | 2–3 | Reads the day or month name before the year | 40 |
+| CLR-COPY-CHECK | An original record and 4 copies; find the exact copy or the one with an error (v0.1.9 proposal, 22 Oct 2026, pending CoS) | 2–3 | Swapped digits; one-letter name change | 40 |
 
 Rule set: Civio must publish **Civio Filing Rules v1** (surname first; letter by letter; prefixes are part of the surname; titles and suffixes do not change order except as tie-breakers; leading "The" ignored). Every filing item cites the rule number it tests. Until v1 is approved, do not write items on disputed edge cases (numerals inside names, Jr./Sr. ties).
 
@@ -350,6 +352,7 @@ Distractor codes:
 - `CLR-FIRSTNAME-FIRST` sorted by given name
 - `CLR-SPELL-CORRECT-FOIL` a correctly spelled word that looks unusual, offered beside the one misspelled word (v0.1.4)
 - `CLR-LETTER-ORDER` misread the letter-by-letter order of the indexed units (v0.1.4, approved by CoS; filing sub-reason only)
+- `CLR-COPY-MISMATCH` a copy with a changed character, or (for "which has the error") a copy that is actually exact (v0.1.9 proposal, 22 Oct 2026, pending CoS; used only by draft items)
 - `SPL-DOUBLE` doubled or undoubled consonant
 - `SPL-IE-EI` vowel order swapped
 - `SPL-DROP` missing letter

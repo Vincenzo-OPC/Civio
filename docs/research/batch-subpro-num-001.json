@@ -2312,6 +2312,16 @@
           "o1": "8 forms is the number left in each set after the damaged forms are removed, not the starting number.",
           "o3": "4 forms is the number removed from each set, not the number originally prepared.",
           "o4": "28 forms adds the four damaged forms only once to the total of 24 usable forms, then stops before dividing the usable total among 3 sets."
+        },
+        "method_steps": {
+          "1_asked": "Forms in each set before 4 damaged ones were removed.",
+          "2_givens": "3 sets, 4 removed from each, 24 usable in all",
+          "3_method": "Undo the steps backward: share the usable forms, then add back the removed ones.",
+          "4_why": "The 24 usable forms are split evenly across 3 sets.",
+          "5_solve_by_hand": "24 ÷ 3 = 8 usable per set; 8 + 4 = 12 forms per set before removal.",
+          "6_check": "3 × (12 − 4) = 3 × 8 = 24.",
+          "7_distractors": "8 forms: 8 forms is the number left in each set after the damaged forms are removed, not the starting number. 4 forms: 4 forms is the number removed from each set, not the number originally prepared. 28 forms: 28 forms adds the four damaged forms only once to the total of 24 usable forms, then stops before dividing the usable total among 3 sets.",
+          "8_shortcut": "Equation: 3(x − 4) = 24, so x − 4 = 8 and x = 12."
         }
       },
       "distractor_reasoning": {

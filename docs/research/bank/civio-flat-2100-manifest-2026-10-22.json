@@ -26,8 +26,8 @@
  "by_tier": {
   "1": 1402,
   "2": 42,
-  "3": 386,
-  "4": 270
+  "3": 379,
+  "4": 277
  },
  "by_track": {
   "both": 1341,
@@ -6370,7 +6370,7 @@
    "status": "draft",
    "tier": 1,
    "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "5a184204a0fd6cfc18b2767ea8994a89cf043d843efceee88470b0c709a0e124",
+   "content_sha256": "6ead7efda894a4f5dcc5bf217e803dacbf16bbe2969d9f4a11b498a620a71754",
    "retire_on_signoff": "CIVIO-NUM-WP-RATE-000116",
    "note": "replacement"
   },
@@ -6612,7 +6612,7 @@
    "status": "draft",
    "tier": 1,
    "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "229149f18fc89bc367d3dcaf892bf1b8d81a571857cc41a2cd535cb243b73008",
+   "content_sha256": "e234ddb5abb875ab57d010230939ecc17aac949fc21eab5743cda8105e6970db",
    "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000226",
    "note": "replacement"
   },
@@ -6656,7 +6656,7 @@
    "status": "draft",
    "tier": 1,
    "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "0f83656ba39e1b4b7b5928affdd6a85a0bd9da16d31f5e65f96c160679b65694",
+   "content_sha256": "1828d0d5d91da5f6337102f184e321ae9d33306dfef8ae7acd71e9dedc68834f",
    "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000221",
    "note": "replacement"
   },
@@ -6931,7 +6931,7 @@
    "status": "draft",
    "tier": 1,
    "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "dd1f8415d06cd3d3061c44c69acd7657727a7435a693b5590a3e58aa29dff282",
+   "content_sha256": "17826125819c3385905c5bbb6baecd60caa4c76e9b64dbe6ac81fd9a1e64c0dc",
    "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000323",
    "note": "replacement"
   },
@@ -7316,7 +7316,7 @@
    "status": "draft",
    "tier": 1,
    "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "7a087f6a4bb97d42a0862a003f7b05b82170a903b2ac4ad69127523b2e0c5bed",
+   "content_sha256": "6c428466899d7a7b44d3ca20f9922e1864708a38dcee49abdd1232478b769f26",
    "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000423",
    "note": "replacement"
   },
@@ -7569,7 +7569,7 @@
    "status": "draft",
    "tier": 1,
    "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "f7709951f8baf88546d718b77378378abee34c8a3ad139ec1bee5b1d84e029dd",
+   "content_sha256": "320a52dded24e70cdf22e12fb0a323f9e6ef25d9b147c6bc56e0096d31247789",
    "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000534",
    "note": "replacement"
   },
@@ -8086,7 +8086,7 @@
    "status": "draft",
    "tier": 1,
    "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "e1018382b7230f937a8312adcaf964cc802da7e2af3c670efb1afef7d1494cc2",
+   "content_sha256": "84df88ccc51b4d00d7a5343364e458b8a04620cfa7bf1ad99e19b4d892e20c77",
    "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000736",
    "note": "replacement"
   },
@@ -8328,7 +8328,7 @@
    "status": "draft",
    "tier": 1,
    "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "89510ac59838955e566a00f75715ac3af2d39ee2cafdbdde1a517df1825e87c1",
+   "content_sha256": "606aff79dd43582313a80e65a03a3da0b4b32a01e282f02b4a237201b69d67e0",
    "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000838",
    "note": "replacement"
   },
@@ -8559,7 +8559,7 @@
    "status": "draft",
    "tier": 1,
    "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "39d629e41b7fdf71ddffb80150a9c486406b0511fca20e73b17eafee5ad6109d",
+   "content_sha256": "5da70fec43e2bbf1764f628a7042b652e43f055cacd9e6cb3f3fc88b62d54204",
    "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000920",
    "note": "replacement"
   },
@@ -8570,7 +8570,7 @@
    "status": "draft",
    "tier": 1,
    "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
-   "content_sha256": "7b85e1992f8ebbeb829ceb23a511c7462a2afb216a69489e29af49b079d2c85d",
+   "content_sha256": "d9b695316090651081782d3803e21acc9e936f6e705be6de61b0f3a60303e64a",
    "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000934",
    "note": "replacement"
   },
@@ -9175,7 +9175,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "a12afb071400c5ea79196af9e317486f62e32ea8be272505c930e83882532b4b",
+   "content_sha256": "515a6005acb230d4e3d7a24ce74aecf1ee25b4c2fa44f18737c623c48558c014",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9186,7 +9186,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "a27db766e60146c8a86e5c57267edbba9c9a054cde41dbb252b81640b62827fb",
+   "content_sha256": "f09df6f6d63c3094c9a3c54e4867c1bf0e8c3a7168be0f367bb1dbd2e66cb26c",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9197,7 +9197,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "64c46021e5e1a68898d3722e6744e1841fe5cd88855177a155eb1d97e1d82761",
+   "content_sha256": "7f4864ce839f480557c98a7518aab6e2e2bf47b9ad552bea51479b4992b30139",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9208,7 +9208,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "2767729329ea271021128c4b33bbe7c4d34c29ca472b243c92ec905f34d688ad",
+   "content_sha256": "2f2288ba7f01613fd2dc5064a2ec2114b96f0ad4cc47a5a61c015c578da91a7e",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9219,7 +9219,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "d411961608d4eca0eaf6c9b43d91711407a1f704748dbe8d952d6e88978a93b2",
+   "content_sha256": "8e5d84391f21e09cc72bd65564f4025176d9cb136164d788be6ee5bd5ab50e5e",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9230,7 +9230,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "e080c28e636ac1d08917237c42d182598e1a037c09b48ae026c1afe4108df60f",
+   "content_sha256": "1d6103cdb54d9528698eb20af2a1f7a37e5919a52c39e97666dbca6104bc846d",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9241,7 +9241,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "19a086b5109277ea04dcc2a6aab8d266f78d83d065957abf2058338fe449b42b",
+   "content_sha256": "57257146246cad0319827d774ba1b22a47aee99f3543f8c5e2ae6666315933aa",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9252,7 +9252,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "90fba311610a189163a6fc80f7445d5e921e1a27fcd67ec174bba7dfb89f6087",
+   "content_sha256": "c7367c2ab1a03add28e824696ea3578e667d851e5a9c4b78a30a5e41e65b00af",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9263,7 +9263,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "8f061b2f84050dda7e826fca081e15e5a65e2784ebe03d39eaa3f16dd2144214",
+   "content_sha256": "e7eb722b6022791d20897d79e864283abe2f82328cf1b3862e88c3f813affb1e",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9274,7 +9274,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "5fa9552bf5ce99510d5472de26829a37f73ced95ea6ea326275b1f9b00d263ab",
+   "content_sha256": "653e4e391d7678a623a79caae26c3f15b5a3f65e97c70e27681330767301140b",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9285,7 +9285,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "211605e9e5fb7f10521b5f1ec9db6415ef15a065b241eb404b8282da45fd5e91",
+   "content_sha256": "67bf6ef466ae9f6116e25491cb31724f4b5176163eeaedef39498aa3429db41c",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9296,7 +9296,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "6f7996aa48573cd30684b6ce8e0fb201d074a5ffb937b531d7eae54abd033a1f",
+   "content_sha256": "1ae1de12a2b9bab1634347e6c53aef880e25ce22ebf2844eeacbc53547f25b0f",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9307,7 +9307,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "a8d4783ae73aca1f87096ec7fb91d205555c88f4a5a2e67fdf1d796303c8d525",
+   "content_sha256": "4c458df379daa41b6898b1f68df50201b6cf621bfac426de024a99ad97741aa1",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9318,7 +9318,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "a46cea01e1ff4d75137cf72737f1618fef0b3a1115cdfe68c0ba3ba015d50e8a",
+   "content_sha256": "322f2e240430e4ed9a3ec9c624f0be843003af130a3cb3776d450b180cc8d602",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9329,7 +9329,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "1ac2bda0cc03eade25a310ae1550dde3d7750fd0107fc6928d2ed364f13e72fd",
+   "content_sha256": "e2ee9cbcf0c20bf4b43fa1ef903290ee27319b8f73eea18d8fd73e3bcb4eb0e3",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9340,7 +9340,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "3209120063d7cb47be5abc4e5bc442b59b923c69a0d7b817a04d5d9923c9a05c",
+   "content_sha256": "e91150f7f86e18dc23e607a56f8d1e178d4894278868ef130e9c59b19b1e5409",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9351,7 +9351,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "9ed194ce4c3a8f91a9f67ef033213d9f822667f3b7adf6bfe5cf49c519593c3f",
+   "content_sha256": "97b839d2543b05bd380647e37abe0de61ab65263138e132e446f6756285de071",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9362,7 +9362,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "bc1c17d5e1cc6deb6cdcb5b70b61b4420c391f8ac6ce964cca89455408bf7b71",
+   "content_sha256": "4c557ff5ac8a7eaeddd3643955a652a879d8a412b8d04dce2a422525fc343761",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9373,7 +9373,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "e9d62e15c6850ec047a95b98ed86f3bc586453742afc3abbf9bbd8a08646966c",
+   "content_sha256": "1e6a62e5bce8e6d8a491c129e1c0289de7621a16b4a7a870be0e60874c998476",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9384,7 +9384,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "1b396dbade7ee866eac7cd996911ffcb1aed14f2fc538248803db5aa2ea192e4",
+   "content_sha256": "1f5553723426526576bca7dc90403ca31cc4387f2094f25b7e5cdd6b597b8854",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9395,7 +9395,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "3aa31bf4d044eaff9e96750ca63657deb44236d14209bed3c6e58d37bb13c4c2",
+   "content_sha256": "60d93363136d3c5d7c2617e88d53bfd00565e0167d8ecd8833f2b1fb29bf3ff3",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9406,7 +9406,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "a622b3200b70c1db8f85d0a0d9118cba5c0a2859c828ca6abc0d4b62a78ee023",
+   "content_sha256": "1e10f35978d6c3bd99a8a3ca41f7e450374bd1ee620f79cdb3e72be814a13ee5",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9417,7 +9417,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "c5aa50d2faca6bc9fcf6d47a7b9d06c3fe13bf69501bb493df8867758a0e1fd7",
+   "content_sha256": "fac616757568da3fd34f06bb71e1d2d5e91b499b7c281fd70895fe952d370fae",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9428,7 +9428,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "015b30d862151f3a1fe6f5a1390efb0d35eaa4c6f40410be51f926837f480a64",
+   "content_sha256": "89a95a88235e22142544dfcbb5a6c8e9ed2d5a24cf362f9e1234104a642d3061",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9439,7 +9439,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "f2baa5d891adb642c3231cb5c4ce045dcb502a7abdade24ca25457c8d2938ba7",
+   "content_sha256": "0406dd6bbf78c4e32c56469c358801c209758c99811e84018663e5f984ea5d42",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9450,7 +9450,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "26e158fce7974639be3849dd2039a6950e2ca5262139dd18318cba8ae768eb89",
+   "content_sha256": "e1532dcfdad442f1a8d300244e087ed2c53c96668e9643a3327e8f162b520907",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9461,7 +9461,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "2e3759b132c9ef73de9b19881d5bc4d176100b0eb4e407eed677e648c1aa85e9",
+   "content_sha256": "af8f2e1afc76ed53fe5c65888b1f73c8036f67f00fe5b9a324f2193dbe30962f",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9472,7 +9472,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "424133088a21e1d4e21503fb147cf80c17ab16486677917b0939de63107b307f",
+   "content_sha256": "4f9334e9e8dd55f9ac75814a8c555a04556b6d39f266e840603626b3f357bc46",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9483,7 +9483,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "c06ce0a1ba2df1566cd32be4177857258dd082c6d9b70a1a194fef78f1564fad",
+   "content_sha256": "06613905d15ee5373b3e09aed848ad4054bec8dd169c1920156dc5ebee04fa77",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9494,7 +9494,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "4f8a19ced66ba0156468b176453de5a283a0e8c7a93fef1af6f45b67cd0c5a4d",
+   "content_sha256": "0974c0cfa3eab4779f333f9c8f9d73b1c000278b11e546c7e3d618bd58c70d00",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9505,7 +9505,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "7a34c7ab03cb1128e50717b861eec9a9ea7f64bc42f636a0657f8a38fbf66d66",
+   "content_sha256": "01f82bf8996d56ccb867f75490949307c45b2de888419e0db18bf67a39596450",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9516,7 +9516,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "0c40fc4d360640418baf21849f135336eb3e2971b10b1e8294fa70db14ce47ec",
+   "content_sha256": "f9b90aae2bb43cc284423248413f720b6249b7d8cc246e0229850f020f5620ed",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9527,7 +9527,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "a8f2ae2f408d6c04b209882c73da89f722a082256473f6a65ef36163b93ff7a7",
+   "content_sha256": "863f0e48dace2d47ca23514dbbe1be7ecf256a4fe81f2e898e8024b0efbf5abc",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9538,7 +9538,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "6ba72aedb39ae41ba49293a1a1c8785319e184cf7c7264c081650a121e489a96",
+   "content_sha256": "16883882cf29ea10af6394b8925978571e6599f21f72026222c2ec5491081714",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9549,7 +9549,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "99b3f26cea5bae4fdb08aeee44002e3b6b0fe7171f7286fc70785fbe82c68fba",
+   "content_sha256": "a5a488cf0ad8648d1c978968ec00a8eb65d308a3c52f2c3a1e772804e1b0c74a",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9560,7 +9560,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "c8579a78080c5c9dfa445f0631251bb52ac72f855d8af094bbc9326b5f1eb4b7",
+   "content_sha256": "879466b0c1ed53fb72124169f781bd04bbb851b5a7d2724133a738410df601f7",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9571,7 +9571,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "df6b81801810ac780addadef155aa992902e2d818d68b3db4a066f9c26f08863",
+   "content_sha256": "896f345281ed885c7af4399a9be2100f7b7b54379f22a6bd94697603ff09d181",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9582,7 +9582,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "bcf2f733fa520bce115ddf619bbddfbf36f451ba1a3f7b67c571aefc94a9d131",
+   "content_sha256": "afb75c4074a4dfd0078e194cdd3d9a87b436e7b30353a72b928334230d6cbb6e",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9593,7 +9593,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "accaaef5f67a5a926617dc1ef24a117f245640d10ae736b0894f2b759f3fe2d0",
+   "content_sha256": "a4ad6b88734f39b2d7d2460a5805549eba5db0c598f9ec6e37d9d9e41be58c69",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9604,7 +9604,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/gap-fill-2000-02.json",
-   "content_sha256": "392a8d44375a8979555b9ae384c6519d3b9c53cb4342b06f817aeabe9f54923d",
+   "content_sha256": "1f2e3d93435c0e024f15a7d7e49668b5785ef6e96c108b648452f068e40aa5e6",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9615,7 +9615,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "4348e44af76e1bd069bca1aac73deeff9c9c08e0750ea51496bba12471b27c43",
+   "content_sha256": "a0cb54b6d9476e0f243123ad72da8c587a5d24ecfbd6db0f6beefc5160e9e1fc",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9626,7 +9626,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "1c323f326057d225487d0f6675d9ea6a98b043598990242eb574e9db176772ef",
+   "content_sha256": "c956997553c33d01657cb40ed5a07b4f88719a3da132cad9e330c2eba45ab299",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9637,7 +9637,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "975d48e1796ac099d6befa52578cc5bb329c97edefe783c4b0d208ae4ed60c20",
+   "content_sha256": "921b43fea146f80a6206bf0c26db02aa3c42b51fc4a569edd1cdfa27aa32d4f4",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9648,7 +9648,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "fb1d2bed64929501797b5937c270384e4e036dff4629aedd881bd371721b5e0e",
+   "content_sha256": "832e5fb9018c79ab1076d37f979f0718a3764b810efc17fcf4b988a67c0d7cfb",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9659,7 +9659,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "a8be5f31e484b1d9ec3542fadfea1017a16f29a83949d0414b0fe0640126e783",
+   "content_sha256": "b79be82c48ee9c3421a4dfe16425ac3a776dfcb2863ac3c178749741e103afd7",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9670,7 +9670,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "fd7656ae72ab81d0bc2a87e3ad8fb22a7cde2182ddf594cc2c17aa185fe819c4",
+   "content_sha256": "8c3b589062f3e46730f2e70abed1270c5da715ed820cefb4d2c996acd120d386",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9681,7 +9681,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "1f94841b42e29eebc75f1fe819af50144e35c018bff2a66624622e931a6c480e",
+   "content_sha256": "c44b0fb5260392bf980fd603fd32d91331475568a1580759872a559b7312c3c6",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9692,7 +9692,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "198be051e946ef1a3cc4b252dfcaab13a24422f32463b1e76609c1bc29456169",
+   "content_sha256": "7e0c33cb62c78302ef2da4d4982c96eba34c84e5233f3fb6e5713c8c5c41ff02",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9703,7 +9703,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "dfc2d8da6b1d70182d48cf83bae0359cab32b7fac1bbb5ceacbf529e41b0cbce",
+   "content_sha256": "c90536d79426950217adeaacda70f0c2f25361ea42a32cdfdd57c7762ddfe244",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9714,7 +9714,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "f0c033228d45f23c8e7535f487f7087471c4d7019569177f1cd4683abe06f3b4",
+   "content_sha256": "c9314b924bba8a09958e724c348ad85773456d6ca9d83890b4a3eb55a430e49a",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9725,7 +9725,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "dd5cdd62001d337a0af7ceb575c0fe527cbc316b0882e1993ad7f69bca64595b",
+   "content_sha256": "cc71a2b046ad5cd89a87215dc2a65d46f8402b292fb70ab6c35f27ef2b7d7a3e",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9736,7 +9736,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "a4d5dd5e2f6812f3a75bb6c458013cec217a389d48fd6c29be7680c330104898",
+   "content_sha256": "a0c98995b39bfdd0326bb7dea50d0c213d3448cf681d0cb34bddb03c005f82e5",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9747,7 +9747,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "275afa6480b021ced5905b696a00ae4ddc2221638998ad4d4829bcf855b2ffa5",
+   "content_sha256": "f970d0e909b353632a432278d64aab35fdf2f5a6a06cbcdca7ad4a6989efe848",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9758,7 +9758,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "35eb0b2ee4e705296d3054a166bafe7439ca9d8cc3a0883eeb4dabec0296be00",
+   "content_sha256": "3b6f074f08922d7dc227a40bf67607ca89f08c1633f7fe8700cf6820e90f484b",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9769,7 +9769,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "9d69ae83efdd02c3622a3e051d63dcda6dc14f78c078433fd9b25a2ac440f9c4",
+   "content_sha256": "7f21fdb7c562d9c47a629516dcc5fc73d47f49e5ca3bb9b8ffe927816aab3f22",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9780,7 +9780,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "2b09dad7cc897cc50c1dadac523e79f9d39ddc845b80ead52a29e78380aa723a",
+   "content_sha256": "79f22bff5533379831bb8c319b0be7b70658314007975a892706a3fd977c954d",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9791,7 +9791,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "b5e69a26937cb8d8f8456ec07356d21ee06c0739950a960fbc9172fbec0f2335",
+   "content_sha256": "733be082d6a6310f8af22cff4fd513bcec5279799a1c43ccd647d08d54a8e8a5",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9802,7 +9802,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "369d2aa0e73d32d28ff840fa9f9089abfadfe994da79c20b62f3788e212e6535",
+   "content_sha256": "cb61aeec5159cdc4362ec42277480894347c4bb8b0f4fd0d5fb079f1692ec055",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9813,7 +9813,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "fb7e5e57444d594d701bd08a3502eb430f6cd7aafa6a25679308da682e0031c1",
+   "content_sha256": "54d0ea94a8cb3018b00c207f8cf977a8e06fab95181f941eecb696bc161478b5",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9824,7 +9824,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "ae5f414018a81be67dee65afa335dab0308fbecd10f25c05c339b77602478511",
+   "content_sha256": "635e5f26c87e3034614e198a0d23b90e6591436135ef40f0de98c1e6105f18be",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9835,7 +9835,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "f14474d91ff0fca9c001b273ab06f5fdb9c32a23887fbb208ad1be14c4097542",
+   "content_sha256": "245fa7c0c86338a11661f8ca73c262ad0c58183ed7a90993b7f21f99e21fdd14",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9846,7 +9846,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b4-drafts.json",
-   "content_sha256": "331f49d3bdb14e0339681615049a645be774b800bf3e98fee43df1fe5b1e13da",
+   "content_sha256": "dcb933f2c22d89d0cd7bc632ae62f7529a54368135ab40c447a22e37932c53d9",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9857,7 +9857,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b4-drafts.json",
-   "content_sha256": "26982fe82b99095636d737b53c735a2e88c3d95c889fd467f88f79a1fc75fd01",
+   "content_sha256": "2c3b981f255d529393a7e6547168c3c3d7be43ff7c32a24316dc7d441ba0cf42",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9868,7 +9868,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b4-drafts.json",
-   "content_sha256": "970372bf96e2cf8be91d0d9198befe81ade61c107e7bab7b533a514d7099e055",
+   "content_sha256": "52790a445375e4fed708cb63742f199f360cea4b0be0b29efa946efc157b8e98",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -9879,7 +9879,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/audit/fixes/round-03-baseline-b4-drafts.json",
-   "content_sha256": "63c7642204eaa697167890fb9cb0b8c9518f90bc1105c0d8215217218f266ef9",
+   "content_sha256": "69173595e5ebab909d824c41a0a9124759cdc78b98478dc85b5ea5c841bfd9e5",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -10121,7 +10121,7 @@
    "status": "draft",
    "tier": 3,
    "source_file": "docs/research/batch-subpro-num-001.json",
-   "content_sha256": "8af4e132930d3090cba82bf64e487a22b5f5146b5feb083e35ef02628c6a973a",
+   "content_sha256": "6b30f7a8304c0700686be0cd4a7e10a4809a6b9c91be4fa699bee461f36926be",
    "retire_on_signoff": "",
    "note": ""
   },
@@ -17881,81 +17881,81 @@
    "note": ""
   },
   {
-   "id": "CIVIO-GF2K05-RCD-0001",
+   "id": "CIVIO-D1022-VEN-RC2-012",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-05.json",
-   "content_sha256": "946fdff799e4b2724b4a244462373052deced78d3bff3c9fe871834f784aac51",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json",
+   "content_sha256": "ffbd11841586d597d89174c75dcfda06f0092794bb805ac5d0d070c81e697935",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K05-RCD-0002",
+   "id": "CIVIO-D1022-VEN-RC2-013",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-05.json",
-   "content_sha256": "862e843e488d71b0ed78e7d5ea5513ab815cf53b69c1ebc4e1da840ff8486e14",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json",
+   "content_sha256": "d502c1b0f2d6dba3e1dbb7f72f8f753d1579bfe6c3a15ec6835953273dc396c5",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K05-RCI-0001",
+   "id": "CIVIO-D1022-VEN-RC2-011",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-05.json",
-   "content_sha256": "95a89de9d26689fa370a3f233220dd8a0dfeec611a350611be38af9ec3832996",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json",
+   "content_sha256": "a54f1b1f27f77aa3e1db24233d0768819c1e4743fbd408d77bba2853a367e3a8",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K05-RCI-0002",
+   "id": "CIVIO-D1022-VEN-RC2-023",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-05.json",
-   "content_sha256": "beadd0567041f1e27bcae4e32f37be20cfd39102619bbb90b89fe31c753fcafe",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json",
+   "content_sha256": "8b04de57d062504ce843616c72f9d88c25de33134d658397bcdbc5cd63f33805",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K05-RCM-0001",
+   "id": "CIVIO-D1022-VEN-RC2-021",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-05.json",
-   "content_sha256": "1363517cff5cc413acfb2b30646bd86ae25fc6aa11ab1ae520ee9f8771f5cdbd",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json",
+   "content_sha256": "df1c1f5ecbdbf6fffc6c7f72c87dc8faa957b11c5ced0ab5cfce4ce5e0b510e7",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K05-RCM-0002",
+   "id": "CIVIO-D1022-VEN-RC2-014",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-05.json",
-   "content_sha256": "bb928ca4d004599d99212978b4ae846114047a2f6e7fe38d54432fdadd8c9771",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json",
+   "content_sha256": "396bdaf3768972533142824ed87a3d23ae8e6641d5b60019b260e2ac3039efdd",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
-   "id": "CIVIO-GF2K05-RCV-0001",
+   "id": "CIVIO-D1022-VEN-RC2-031",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/gap-fill-2000-05.json",
-   "content_sha256": "9c818a3c1600361006dd2098d6e9eaf8bac4938710913535a8cc0a3332f1f306",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json",
+   "content_sha256": "de05281777db9d0526422b580747dfc2e84c2575b88de93bc79a6edafce39ae9",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-D1022-VEN-RC-023",
@@ -30986,10 +30986,142 @@
    "reason": "unverifiable_gi: no statute cited (general ecology fact), cannot be checked against lawphil",
    "in": "CIVIO-D1022-GI-0021",
    "in_source": "docs/research/batches/drafts/gi-applied-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K05-RCD-0001",
+   "out_source": "docs/research/gap-fill-2000-05.json",
+   "out_status": "draft",
+   "reason": "short_passage: reading passage under the 150-word spec minimum (replaced by a set-2 passage item)",
+   "in": "CIVIO-D1022-VEN-RC2-012",
+   "in_source": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K05-RCD-0002",
+   "out_source": "docs/research/gap-fill-2000-05.json",
+   "out_status": "draft",
+   "reason": "short_passage: reading passage under the 150-word spec minimum (replaced by a set-2 passage item)",
+   "in": "CIVIO-D1022-VEN-RC2-013",
+   "in_source": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K05-RCI-0001",
+   "out_source": "docs/research/gap-fill-2000-05.json",
+   "out_status": "draft",
+   "reason": "short_passage: reading passage under the 150-word spec minimum (replaced by a set-2 passage item)",
+   "in": "CIVIO-D1022-VEN-RC2-011",
+   "in_source": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K05-RCI-0002",
+   "out_source": "docs/research/gap-fill-2000-05.json",
+   "out_status": "draft",
+   "reason": "short_passage: reading passage under the 150-word spec minimum (replaced by a set-2 passage item)",
+   "in": "CIVIO-D1022-VEN-RC2-023",
+   "in_source": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K05-RCM-0001",
+   "out_source": "docs/research/gap-fill-2000-05.json",
+   "out_status": "draft",
+   "reason": "short_passage: reading passage under the 150-word spec minimum (replaced by a set-2 passage item)",
+   "in": "CIVIO-D1022-VEN-RC2-021",
+   "in_source": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K05-RCM-0002",
+   "out_source": "docs/research/gap-fill-2000-05.json",
+   "out_status": "draft",
+   "reason": "short_passage: reading passage under the 150-word spec minimum (replaced by a set-2 passage item)",
+   "in": "CIVIO-D1022-VEN-RC2-014",
+   "in_source": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-GF2K05-RCV-0001",
+   "out_source": "docs/research/gap-fill-2000-05.json",
+   "out_status": "draft",
+   "reason": "short_passage: reading passage under the 150-word spec minimum (replaced by a set-2 passage item)",
+   "in": "CIVIO-D1022-VEN-RC2-031",
+   "in_source": "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json"
   }
  ],
  "hash_refresh_2026_10_22": [
   "CIVIO-D1022-ANA-0042",
-  "CIVIO-D1022-GI-0016"
+  "CIVIO-D1022-GI-0016",
+  "CIVIO-NUM-WP-RATE-000116-R1",
+  "CIVIO-NUM-WP-GEOM-000226-R1",
+  "CIVIO-NUM-WP-PCT-CHANGE-000221-R1",
+  "CIVIO-NUM-WP-PCT-CHANGE-000323-R1",
+  "CIVIO-NUM-WP-PCT-CHANGE-000423-R1",
+  "CIVIO-NUM-WP-GEOM-000534-R1",
+  "CIVIO-NUM-WP-GEOM-000736-R1",
+  "CIVIO-NUM-WP-GEOM-000838-R1",
+  "CIVIO-NUM-WP-GEOM-000920-R1",
+  "CIVIO-NUM-WP-GEOM-000934-R1",
+  "CIVIO-GF2K02-NUMOPS-0041",
+  "CIVIO-GF2K02-NUMOPS-0042",
+  "CIVIO-GF2K02-NUMOPS-0043",
+  "CIVIO-GF2K02-NUMOPS-0044",
+  "CIVIO-GF2K02-NUMOPS-0045",
+  "CIVIO-GF2K02-NUMOPS-0046",
+  "CIVIO-GF2K02-NUMOPS-0047",
+  "CIVIO-GF2K02-NUMOPS-0048",
+  "CIVIO-GF2K02-NUMOPS-0049",
+  "CIVIO-GF2K02-NUMOPS-0050",
+  "CIVIO-GF2K02-NUMOPS-0051",
+  "CIVIO-GF2K02-NUMOPS-0052",
+  "CIVIO-GF2K02-NUMOPS-0053",
+  "CIVIO-GF2K02-NUMOPS-0054",
+  "CIVIO-GF2K02-NUMOPS-0055",
+  "CIVIO-GF2K02-NUMOPS-0056",
+  "CIVIO-GF2K02-NUMOPS-0057",
+  "CIVIO-GF2K02-NUMOPS-0058",
+  "CIVIO-GF2K02-NUMOPS-0059",
+  "CIVIO-GF2K02-NUMOPS-0060",
+  "CIVIO-GF2K02-SEQD-0001",
+  "CIVIO-GF2K02-SEQD-0002",
+  "CIVIO-GF2K02-SEQD-0003",
+  "CIVIO-GF2K02-SEQD-0004",
+  "CIVIO-GF2K02-SEQD-0005",
+  "CIVIO-GF2K02-SEQD-0006",
+  "CIVIO-GF2K02-SEQD-0007",
+  "CIVIO-GF2K02-SEQD-0008",
+  "CIVIO-GF2K02-SEQD-0009",
+  "CIVIO-GF2K02-SEQD-0010",
+  "CIVIO-GF2K02-SEQD-0011",
+  "CIVIO-GF2K02-SEQM-0012",
+  "CIVIO-GF2K02-SEQM-0013",
+  "CIVIO-GF2K02-SEQM-0014",
+  "CIVIO-GF2K02-SEQM-0015",
+  "CIVIO-GF2K02-SEQM-0016",
+  "CIVIO-GF2K02-SEQM-0017",
+  "CIVIO-GF2K02-SEQM-0018",
+  "CIVIO-GF2K02-SEQM-0019",
+  "CIVIO-GF2K02-SEQM-0020",
+  "CIVIO-B3-NUM-DECIMAL-0175",
+  "CIVIO-B3-NUM-FRAC-DEC-0180",
+  "CIVIO-B3-NUM-FRAC-DEC-0183",
+  "CIVIO-B3-NUM-PCT-BASIC-0173",
+  "CIVIO-B3-NUM-PCT-BASIC-0184",
+  "CIVIO-B3-NUM-PCT-BASIC-0265",
+  "CIVIO-B3-NUM-PROPERTY-0041",
+  "CIVIO-B3-NUM-PROPERTY-0042",
+  "CIVIO-B3-NUM-PROPERTY-0043",
+  "CIVIO-B3-NUM-PROPERTY-0044",
+  "CIVIO-B3-NUM-PROPERTY-0176",
+  "CIVIO-B3-NUM-PROPERTY-0178",
+  "CIVIO-B3-NUM-PROPERTY-0179",
+  "CIVIO-B3-NUM-PROPERTY-0263",
+  "CIVIO-B3-NUM-SEQ-DIFF-0045",
+  "CIVIO-B3-NUM-SEQ-DIFF-0187",
+  "CIVIO-B3-NUM-SEQ-DIFF-0193",
+  "CIVIO-B3-NUM-SEQ-DIFF-0196",
+  "CIVIO-B3-NUM-SEQ-MULT-0190",
+  "CIVIO-B3-NUM-SEQ-MULT-0267",
+  "CIVIO-B3-NUM-UNIT-0264",
+  "CIVIO-B4-NUM-WP-ALGEBRA-0201",
+  "CIVIO-B4-NUM-WP-GEOM-0206",
+  "CIVIO-B4-NUM-WP-RATE-0349",
+  "CIVIO-B4-NUM-WP-RATIO-0209",
+  "CIVIO-NUM-WP-ALGEBRA-926051"
  ]
 }

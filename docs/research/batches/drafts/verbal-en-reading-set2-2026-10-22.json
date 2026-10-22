@@ -1,0 +1,3226 @@
+{
+ "batch": "verbal-en-reading-set2-2026-10-22",
+ "date": "2026-10-22",
+ "status": "draft",
+ "spec_version": "0.1.9",
+ "authority": "GT approval 2026-10-22 and MASTER directive 2026-10-22; drafts only, nothing approved, signed or imported",
+ "count": 48,
+ "items": [
+  {
+   "id": "CIVIO-D1022-VEN-RC2-011",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "main idea",
+   "micro_skill": "choose the statement that covers the whole passage",
+   "archetype": "VEN-RC-MAIN",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn a farming town in Nueva Ecija, an old storeroom behind the municipal hall now holds hundreds of glass jars of seeds. Each jar is labeled with the name of a rice, corn or vegetable variety, the farm it came from and the year it was harvested. The collection began after a typhoon flooded the lowland fields and ruined the seed that many families had saved for the next planting. Farmers who wanted to replant had to buy commercial seed, which was costly and did not always suit the local soil. A retired agriculturist suggested that the town keep a shared reserve. Farmers now deposit a small part of each harvest and may borrow seed when they need it, returning twice the amount after their next harvest. The arrangement is not free of problems. Seeds lose their ability to sprout if they are stored too long or kept in damp jars, so volunteers test a sample from each jar every year. Even so, the storeroom has already supplied seed to forty households after a second flood.\n\nWhat is the passage mainly about?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "A shared seed reserve that helps farmers replant after disasters"
+    },
+    {
+     "option_id": "o2",
+     "text": "Why commercial seed is better than saved seed"
+    },
+    {
+     "option_id": "o3",
+     "text": "How typhoons damage lowland rice fields"
+    },
+    {
+     "option_id": "o4",
+     "text": "The history of farming in the Philippines"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Main idea: the statement that covers the whole passage, neither one detail (too narrow) nor a topic bigger than the text (too broad).",
+    "shortcut": "Ask which choice the first and last sentences would both agree with.",
+    "why_correct": "Answer: \"A shared seed reserve that helps farmers replant after disasters\". The passage explains why the town began the reserve, how it works, its main problem and its results.",
+    "why_wrong": {
+     "o2": "The passage says commercial seed was costly and did not always suit the soil.",
+     "o3": "The flood explains why the reserve began; it is not the subject.",
+     "o4": "The passage covers one town's reserve, not national history."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-OPPOSITE",
+    "o3": "RC-TOO-NARROW",
+    "o4": "RC-TOO-BROAD"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P01 (\"Seed bank\"), question 1 of 4.",
+   "shortcut": "Ask which choice the first and last sentences would both agree with.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P01"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-012",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn a farming town in Nueva Ecija, an old storeroom behind the municipal hall now holds hundreds of glass jars of seeds. Each jar is labeled with the name of a rice, corn or vegetable variety, the farm it came from and the year it was harvested. The collection began after a typhoon flooded the lowland fields and ruined the seed that many families had saved for the next planting. Farmers who wanted to replant had to buy commercial seed, which was costly and did not always suit the local soil. A retired agriculturist suggested that the town keep a shared reserve. Farmers now deposit a small part of each harvest and may borrow seed when they need it, returning twice the amount after their next harvest. The arrangement is not free of problems. Seeds lose their ability to sprout if they are stored too long or kept in damp jars, so volunteers test a sample from each jar every year. Even so, the storeroom has already supplied seed to forty households after a second flood.\n\nAccording to the passage, how much seed must a borrower return?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The same amount, within a month"
+    },
+    {
+     "option_id": "o2",
+     "text": "Twice the amount borrowed, after the next harvest"
+    },
+    {
+     "option_id": "o3",
+     "text": "A small part of each harvest"
+    },
+    {
+     "option_id": "o4",
+     "text": "Nothing, since the seed is free"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"Twice the amount borrowed, after the next harvest\". The passage says farmers may borrow seed, \"returning twice the amount after their next harvest.\"",
+    "why_wrong": {
+     "o1": "No one-month rule is given, and the amount is twice, not the same.",
+     "o3": "That is what every farmer deposits, not what a borrower repays.",
+     "o4": "Borrowers must return seed; the reserve is not a gift."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o3": "VRB-SYNONYM-TRAP",
+    "o4": "RC-OPPOSITE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P01 (\"Seed bank\"), question 2 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P01"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-013",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn a farming town in Nueva Ecija, an old storeroom behind the municipal hall now holds hundreds of glass jars of seeds. Each jar is labeled with the name of a rice, corn or vegetable variety, the farm it came from and the year it was harvested. The collection began after a typhoon flooded the lowland fields and ruined the seed that many families had saved for the next planting. Farmers who wanted to replant had to buy commercial seed, which was costly and did not always suit the local soil. A retired agriculturist suggested that the town keep a shared reserve. Farmers now deposit a small part of each harvest and may borrow seed when they need it, returning twice the amount after their next harvest. The arrangement is not free of problems. Seeds lose their ability to sprout if they are stored too long or kept in damp jars, so volunteers test a sample from each jar every year. Even so, the storeroom has already supplied seed to forty households after a second flood.\n\nWhy do volunteers test a sample from each jar every year?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "To prove that commercial seed is weaker"
+    },
+    {
+     "option_id": "o2",
+     "text": "To decide which farmer may borrow first"
+    },
+    {
+     "option_id": "o3",
+     "text": "To find seed that may no longer sprout"
+    },
+    {
+     "option_id": "o4",
+     "text": "To count how many jars were borrowed"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"To find seed that may no longer sprout\". The sentence before the tests says seeds lose their ability to sprout if stored too long or kept damp; the tests catch that.",
+    "why_wrong": {
+     "o1": "The tests compare nothing with commercial seed.",
+     "o2": "Testing is about the seed, not about the order of borrowers.",
+     "o4": "Counting jars is never mentioned."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P01 (\"Seed bank\"), question 3 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P01"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-014",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "relation between parts",
+   "micro_skill": "tell how one part of the passage connects to another",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn a farming town in Nueva Ecija, an old storeroom behind the municipal hall now holds hundreds of glass jars of seeds. Each jar is labeled with the name of a rice, corn or vegetable variety, the farm it came from and the year it was harvested. The collection began after a typhoon flooded the lowland fields and ruined the seed that many families had saved for the next planting. Farmers who wanted to replant had to buy commercial seed, which was costly and did not always suit the local soil. A retired agriculturist suggested that the town keep a shared reserve. Farmers now deposit a small part of each harvest and may borrow seed when they need it, returning twice the amount after their next harvest. The arrangement is not free of problems. Seeds lose their ability to sprout if they are stored too long or kept in damp jars, so volunteers test a sample from each jar every year. Even so, the storeroom has already supplied seed to forty households after a second flood.\n\nWhat is the purpose of the sentence \"The arrangement is not free of problems\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "It repeats the cause of the first flood"
+    },
+    {
+     "option_id": "o2",
+     "text": "It shows that the reserve has failed"
+    },
+    {
+     "option_id": "o3",
+     "text": "It introduces a difficulty before the passage describes how it is handled"
+    },
+    {
+     "option_id": "o4",
+     "text": "It explains why farmers distrust the agriculturist"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Relation between parts: how a sentence or group of sentences connects to what comes before or after (contrast, cause and effect, problem and solution, sequence).",
+    "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+    "why_correct": "Answer: \"It introduces a difficulty before the passage describes how it is handled\". The sentence is a turn: it signals the storage problem, which the next sentences describe and answer with yearly testing.",
+    "why_wrong": {
+     "o1": "The flood was described earlier; this sentence turns to a new point.",
+     "o2": "The passage goes on to say the reserve still supplied forty households.",
+     "o4": "No distrust is described."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-EXTREME",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P01 (\"Seed bank\"), question 4 of 4.",
+   "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P01"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-021",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nEvery Friday, a street in a Cagayan de Oro barangay closes to traffic and fills with food stalls. The night market began as a way to help small vendors, but within a year residents were complaining about the noise, the smoke from grills and the trash left behind until morning. Instead of closing the market, the barangay council met with vendors and residents together. They agreed on a short list of rules. Grills must sit at the downwind end of the street, music must stop at ten, and every vendor must clean the space in front of the stall before leaving. A vendor who breaks a rule twice loses the stall for a month. The rules were posted on a board at both entrances so that customers, too, would know what to expect. Complaints fell sharply in the following months. The council credits the change less to the penalties than to the meeting itself, where residents and vendors heard each other's concerns for the first time and wrote rules that both groups considered fair.\n\nAccording to the passage, what happens to a vendor who breaks a rule twice?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The vendor pays a fine to the barangay"
+    },
+    {
+     "option_id": "o2",
+     "text": "The vendor is banned from the market for good"
+    },
+    {
+     "option_id": "o3",
+     "text": "The vendor loses the stall for a month"
+    },
+    {
+     "option_id": "o4",
+     "text": "The vendor must move to the downwind end"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"The vendor loses the stall for a month\". The passage states: \"A vendor who breaks a rule twice loses the stall for a month.\"",
+    "why_wrong": {
+     "o1": "No fine is mentioned.",
+     "o2": "The penalty lasts one month, not forever.",
+     "o4": "That is where grills must be placed, not a penalty."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-EXTREME",
+    "o4": "VRB-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P02 (\"Night market rules\"), question 1 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P02"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-022",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nEvery Friday, a street in a Cagayan de Oro barangay closes to traffic and fills with food stalls. The night market began as a way to help small vendors, but within a year residents were complaining about the noise, the smoke from grills and the trash left behind until morning. Instead of closing the market, the barangay council met with vendors and residents together. They agreed on a short list of rules. Grills must sit at the downwind end of the street, music must stop at ten, and every vendor must clean the space in front of the stall before leaving. A vendor who breaks a rule twice loses the stall for a month. The rules were posted on a board at both entrances so that customers, too, would know what to expect. Complaints fell sharply in the following months. The council credits the change less to the penalties than to the meeting itself, where residents and vendors heard each other's concerns for the first time and wrote rules that both groups considered fair.\n\nWhat can be inferred about why the council met with both groups instead of closing the market?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Residents had asked for the market to grow"
+    },
+    {
+     "option_id": "o2",
+     "text": "It had no power to close the market"
+    },
+    {
+     "option_id": "o3",
+     "text": "Vendors had threatened to leave the barangay"
+    },
+    {
+     "option_id": "o4",
+     "text": "It wanted to keep the market's benefit to vendors while fixing the residents' complaints"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"It wanted to keep the market's benefit to vendors while fixing the residents' complaints\". The market began to help small vendors; the council kept it and addressed the complaints, so it sought both aims.",
+    "why_wrong": {
+     "o1": "Residents were complaining about it.",
+     "o2": "Nothing says the council lacked that power.",
+     "o3": "No threat is mentioned."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o2": "RC-NOT-IN-TEXT",
+    "o3": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P02 (\"Night market rules\"), question 2 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P02"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-023",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "vocabulary in context",
+   "micro_skill": "use context to fix a word's meaning",
+   "archetype": "VEN-RC-VOCAB",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nEvery Friday, a street in a Cagayan de Oro barangay closes to traffic and fills with food stalls. The night market began as a way to help small vendors, but within a year residents were complaining about the noise, the smoke from grills and the trash left behind until morning. Instead of closing the market, the barangay council met with vendors and residents together. They agreed on a short list of rules. Grills must sit at the downwind end of the street, music must stop at ten, and every vendor must clean the space in front of the stall before leaving. A vendor who breaks a rule twice loses the stall for a month. The rules were posted on a board at both entrances so that customers, too, would know what to expect. Complaints fell sharply in the following months. The council credits the change less to the penalties than to the meeting itself, where residents and vendors heard each other's concerns for the first time and wrote rules that both groups considered fair.\n\nAs used in the passage, the word \"credits\" most nearly means",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "pays back"
+    },
+    {
+     "option_id": "o2",
+     "text": "lends money to"
+    },
+    {
+     "option_id": "o3",
+     "text": "gives the reason for a result to"
+    },
+    {
+     "option_id": "o4",
+     "text": "blames for a problem"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Vocabulary in context: the meaning the word has in this sentence, which may differ from its most common meaning.",
+    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+    "why_correct": "Answer: \"gives the reason for a result to\". The council \"credits the change less to the penalties than to the meeting\": it says the meeting, more than the penalties, caused the drop.",
+    "why_wrong": {
+     "o1": "No payment is involved.",
+     "o2": "\"Credit\" can mean a loan, but here the council is explaining what caused the change.",
+     "o4": "The change was good; the council is praising the meeting, not blaming it."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "VRB-SYNONYM-TRAP",
+    "o4": "RC-OPPOSITE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P02 (\"Night market rules\"), question 3 of 4.",
+   "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P02"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-024",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "author's purpose",
+   "micro_skill": "tell why the writer included a sentence or detail",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nEvery Friday, a street in a Cagayan de Oro barangay closes to traffic and fills with food stalls. The night market began as a way to help small vendors, but within a year residents were complaining about the noise, the smoke from grills and the trash left behind until morning. Instead of closing the market, the barangay council met with vendors and residents together. They agreed on a short list of rules. Grills must sit at the downwind end of the street, music must stop at ten, and every vendor must clean the space in front of the stall before leaving. A vendor who breaks a rule twice loses the stall for a month. The rules were posted on a board at both entrances so that customers, too, would know what to expect. Complaints fell sharply in the following months. The council credits the change less to the penalties than to the meeting itself, where residents and vendors heard each other's concerns for the first time and wrote rules that both groups considered fair.\n\nWhat is the author's main purpose in the last sentence?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "To list the penalties a second time"
+    },
+    {
+     "option_id": "o2",
+     "text": "To argue that penalties never work"
+    },
+    {
+     "option_id": "o3",
+     "text": "To explain what the council believes made the rules work"
+    },
+    {
+     "option_id": "o4",
+     "text": "To describe the food sold at the stalls"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Author's purpose: why a sentence or detail is there (to give an example, explain a cause, introduce a problem, give advice), not what it says.",
+    "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+    "why_correct": "Answer: \"To explain what the council believes made the rules work\". The final sentence gives the council's explanation for the fall in complaints: the joint meeting and the fair rules it produced.",
+    "why_wrong": {
+     "o1": "The sentence mentions penalties only to set them aside.",
+     "o2": "The council says less, not never.",
+     "o4": "Food is not discussed there."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-TOO-NARROW",
+    "o2": "RC-EXTREME",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P02 (\"Night market rules\"), question 4 of 4.",
+   "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P02"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-031",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "main idea",
+   "micro_skill": "choose the statement that covers the whole passage",
+   "archetype": "VEN-RC-MAIN",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWhen food prices rose sharply one year, a public elementary school in Leyte turned a muddy corner of its grounds into a vegetable garden. Pupils in the upper grades were assigned small plots, and each class kept a notebook recording what was planted, how often it was watered and how much was harvested. Teachers used the notebooks in their lessons. In mathematics, pupils compared the yields of different plots; in science, they tested whether plots with compost grew faster than plots without it. The harvest went to the school's feeding program for pupils who were underweight. At first some parents objected, saying their children were sent to school to study, not to farm. Their view changed when they saw the notebooks at a parents' meeting and realized that the garden was part of the lessons rather than a distraction from them. Several parents later donated seedlings and tools. The principal admits that the garden does not feed every child who needs help, but she says it has taught pupils that what they learn in class can be used outside it.\n\nWhich statement best expresses the main idea of the passage?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "A school garden became both a food source and a way to teach regular lessons"
+    },
+    {
+     "option_id": "o2",
+     "text": "Food prices in Leyte rose sharply one year"
+    },
+    {
+     "option_id": "o3",
+     "text": "Pupils with compost plots always harvest more"
+    },
+    {
+     "option_id": "o4",
+     "text": "Parents should decide what schools teach"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Main idea: the statement that covers the whole passage, neither one detail (too narrow) nor a topic bigger than the text (too broad).",
+    "shortcut": "Ask which choice the first and last sentences would both agree with.",
+    "why_correct": "Answer: \"A school garden became both a food source and a way to teach regular lessons\". The passage shows the garden feeding underweight pupils and serving math and science lessons, which is why parents came to accept it.",
+    "why_wrong": {
+     "o2": "This is the background, not the main point.",
+     "o3": "The class tested compost; no result, let alone \"always,\" is given.",
+     "o4": "The passage does not argue this."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-TOO-NARROW",
+    "o3": "RC-EXTREME",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P03 (\"School gardens\"), question 1 of 4.",
+   "shortcut": "Ask which choice the first and last sentences would both agree with.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P03"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-032",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWhen food prices rose sharply one year, a public elementary school in Leyte turned a muddy corner of its grounds into a vegetable garden. Pupils in the upper grades were assigned small plots, and each class kept a notebook recording what was planted, how often it was watered and how much was harvested. Teachers used the notebooks in their lessons. In mathematics, pupils compared the yields of different plots; in science, they tested whether plots with compost grew faster than plots without it. The harvest went to the school's feeding program for pupils who were underweight. At first some parents objected, saying their children were sent to school to study, not to farm. Their view changed when they saw the notebooks at a parents' meeting and realized that the garden was part of the lessons rather than a distraction from them. Several parents later donated seedlings and tools. The principal admits that the garden does not feed every child who needs help, but she says it has taught pupils that what they learn in class can be used outside it.\n\nAccording to the passage, what did pupils test in science?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "How much water each plot needed to survive"
+    },
+    {
+     "option_id": "o2",
+     "text": "Which vegetables underweight pupils liked best"
+    },
+    {
+     "option_id": "o3",
+     "text": "Whether plots with compost grew faster than plots without it"
+    },
+    {
+     "option_id": "o4",
+     "text": "How the yields of different plots compared"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"Whether plots with compost grew faster than plots without it\". The passage says that in science, pupils tested whether plots with compost grew faster than plots without it.",
+    "why_wrong": {
+     "o1": "Watering was recorded in notebooks, but the test was about compost.",
+     "o2": "Pupils' food preferences are not mentioned.",
+     "o4": "Comparing yields was the mathematics activity."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "VRB-SYNONYM-TRAP",
+    "o2": "RC-NOT-IN-TEXT",
+    "o4": "VRB-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P03 (\"School gardens\"), question 2 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P03"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-033",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWhen food prices rose sharply one year, a public elementary school in Leyte turned a muddy corner of its grounds into a vegetable garden. Pupils in the upper grades were assigned small plots, and each class kept a notebook recording what was planted, how often it was watered and how much was harvested. Teachers used the notebooks in their lessons. In mathematics, pupils compared the yields of different plots; in science, they tested whether plots with compost grew faster than plots without it. The harvest went to the school's feeding program for pupils who were underweight. At first some parents objected, saying their children were sent to school to study, not to farm. Their view changed when they saw the notebooks at a parents' meeting and realized that the garden was part of the lessons rather than a distraction from them. Several parents later donated seedlings and tools. The principal admits that the garden does not feed every child who needs help, but she says it has taught pupils that what they learn in class can be used outside it.\n\nWhy did some parents change their view of the garden?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The school stopped assigning plots to pupils"
+    },
+    {
+     "option_id": "o2",
+     "text": "The principal ordered them to accept it"
+    },
+    {
+     "option_id": "o3",
+     "text": "They were given vegetables from the harvest"
+    },
+    {
+     "option_id": "o4",
+     "text": "They saw that the garden was used in their children's lessons"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"They saw that the garden was used in their children's lessons\". Parents changed their view at the meeting when the notebooks showed the garden was part of the lessons.",
+    "why_wrong": {
+     "o1": "Pupils kept their plots.",
+     "o2": "No order is mentioned.",
+     "o3": "The harvest went to the feeding program; nothing says parents received it."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o2": "RC-NOT-IN-TEXT",
+    "o3": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P03 (\"School gardens\"), question 3 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P03"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-034",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "relation between parts",
+   "micro_skill": "tell how one part of the passage connects to another",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWhen food prices rose sharply one year, a public elementary school in Leyte turned a muddy corner of its grounds into a vegetable garden. Pupils in the upper grades were assigned small plots, and each class kept a notebook recording what was planted, how often it was watered and how much was harvested. Teachers used the notebooks in their lessons. In mathematics, pupils compared the yields of different plots; in science, they tested whether plots with compost grew faster than plots without it. The harvest went to the school's feeding program for pupils who were underweight. At first some parents objected, saying their children were sent to school to study, not to farm. Their view changed when they saw the notebooks at a parents' meeting and realized that the garden was part of the lessons rather than a distraction from them. Several parents later donated seedlings and tools. The principal admits that the garden does not feed every child who needs help, but she says it has taught pupils that what they learn in class can be used outside it.\n\nHow does the last sentence relate to the rest of the passage?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "It contradicts the claim that the garden helped anyone"
+    },
+    {
+     "option_id": "o2",
+     "text": "It introduces a new problem the school must solve"
+    },
+    {
+     "option_id": "o3",
+     "text": "It admits a limit of the garden and then names its broader value"
+    },
+    {
+     "option_id": "o4",
+     "text": "It repeats the parents' original objection"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Relation between parts: how a sentence or group of sentences connects to what comes before or after (contrast, cause and effect, problem and solution, sequence).",
+    "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+    "why_correct": "Answer: \"It admits a limit of the garden and then names its broader value\". The principal concedes the garden cannot feed every child, then states its larger lesson: classroom learning can be used outside class.",
+    "why_wrong": {
+     "o1": "It confirms the garden helps, though not every child.",
+     "o2": "No new problem is introduced.",
+     "o4": "The parents' objection was about farming, not about feeding every child."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o2": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P03 (\"School gardens\"), question 4 of 4.",
+   "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P03"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-041",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nA city treasurer's office in Laguna once kept every tax receipt on paper, filed in steel cabinets that filled two rooms. Finding an old receipt could take a clerk half a day, and a leaking roof had already ruined one cabinet's contents. The office decided to scan its records and store the files on a secure online system. The project took longer than planned. Many receipts were faded or torn, and clerks had to type in details that the scanner could not read. Staff also debated whether to throw away the paper once it had been scanned. In the end, the office kept the paper copies of receipts from the last ten years, as the auditors advised, and sent older papers to the national archives. Today, a clerk can find most receipts in less than a minute, and taxpayers can request copies by email. The treasurer warns other offices, however, that scanning is only half the work: a digital file is useful only if it is named, dated and filed in a way that others can search.\n\nAccording to the passage, why did clerks have to type in some details by hand?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The scanner was damaged by the leaking roof"
+    },
+    {
+     "option_id": "o2",
+     "text": "Auditors asked for typed copies of every receipt"
+    },
+    {
+     "option_id": "o3",
+     "text": "The online system did not accept scanned files"
+    },
+    {
+     "option_id": "o4",
+     "text": "Many receipts were too faded or torn for the scanner to read"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"Many receipts were too faded or torn for the scanner to read\". The passage says many receipts were faded or torn, so clerks typed details the scanner could not read.",
+    "why_wrong": {
+     "o1": "The roof ruined a cabinet, not the scanner.",
+     "o2": "Auditors advised keeping ten years of paper, not typing.",
+     "o3": "The office stored scanned files on the system."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-NOT-IN-TEXT",
+    "o3": "RC-OPPOSITE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P04 (\"Records in the cloud\"), question 1 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P04"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-042",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "vocabulary in context",
+   "micro_skill": "use context to fix a word's meaning",
+   "archetype": "VEN-RC-VOCAB",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nA city treasurer's office in Laguna once kept every tax receipt on paper, filed in steel cabinets that filled two rooms. Finding an old receipt could take a clerk half a day, and a leaking roof had already ruined one cabinet's contents. The office decided to scan its records and store the files on a secure online system. The project took longer than planned. Many receipts were faded or torn, and clerks had to type in details that the scanner could not read. Staff also debated whether to throw away the paper once it had been scanned. In the end, the office kept the paper copies of receipts from the last ten years, as the auditors advised, and sent older papers to the national archives. Today, a clerk can find most receipts in less than a minute, and taxpayers can request copies by email. The treasurer warns other offices, however, that scanning is only half the work: a digital file is useful only if it is named, dated and filed in a way that others can search.\n\nAs used in the passage, the word \"secure\" most nearly means",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "open to anyone"
+    },
+    {
+     "option_id": "o2",
+     "text": "protected from loss or misuse"
+    },
+    {
+     "option_id": "o3",
+     "text": "tied down tightly"
+    },
+    {
+     "option_id": "o4",
+     "text": "certain to be approved"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Vocabulary in context: the meaning the word has in this sentence, which may differ from its most common meaning.",
+    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+    "why_correct": "Answer: \"protected from loss or misuse\". A \"secure online system\" keeps records safe, which is the point after a roof leak destroyed paper files.",
+    "why_wrong": {
+     "o1": "A secure system limits access; it is not open to all.",
+     "o3": "That sense fits ropes and cargo, not an online system.",
+     "o4": "\"Secure\" can mean to obtain or make certain, but here it describes a storage system."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o3": "VRB-SYNONYM-TRAP",
+    "o4": "VRB-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P04 (\"Records in the cloud\"), question 2 of 4.",
+   "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P04"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-043",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nA city treasurer's office in Laguna once kept every tax receipt on paper, filed in steel cabinets that filled two rooms. Finding an old receipt could take a clerk half a day, and a leaking roof had already ruined one cabinet's contents. The office decided to scan its records and store the files on a secure online system. The project took longer than planned. Many receipts were faded or torn, and clerks had to type in details that the scanner could not read. Staff also debated whether to throw away the paper once it had been scanned. In the end, the office kept the paper copies of receipts from the last ten years, as the auditors advised, and sent older papers to the national archives. Today, a clerk can find most receipts in less than a minute, and taxpayers can request copies by email. The treasurer warns other offices, however, that scanning is only half the work: a digital file is useful only if it is named, dated and filed in a way that others can search.\n\nWhat does the treasurer's warning suggest about offices that only scan their papers?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "They will never need auditors again"
+    },
+    {
+     "option_id": "o2",
+     "text": "They may still be unable to find their records quickly"
+    },
+    {
+     "option_id": "o3",
+     "text": "They must throw away their paper copies"
+    },
+    {
+     "option_id": "o4",
+     "text": "They should stop accepting tax payments"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"They may still be unable to find their records quickly\". The treasurer says a file is useful only if named, dated and filed so others can search; without that, records stay hard to find.",
+    "why_wrong": {
+     "o1": "Nothing supports this.",
+     "o3": "The warning is about naming and filing, not disposal.",
+     "o4": "Nothing in the passage suggests this."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-EXTREME",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P04 (\"Records in the cloud\"), question 3 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P04"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-044",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "author's purpose",
+   "micro_skill": "tell why the writer included a sentence or detail",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nA city treasurer's office in Laguna once kept every tax receipt on paper, filed in steel cabinets that filled two rooms. Finding an old receipt could take a clerk half a day, and a leaking roof had already ruined one cabinet's contents. The office decided to scan its records and store the files on a secure online system. The project took longer than planned. Many receipts were faded or torn, and clerks had to type in details that the scanner could not read. Staff also debated whether to throw away the paper once it had been scanned. In the end, the office kept the paper copies of receipts from the last ten years, as the auditors advised, and sent older papers to the national archives. Today, a clerk can find most receipts in less than a minute, and taxpayers can request copies by email. The treasurer warns other offices, however, that scanning is only half the work: a digital file is useful only if it is named, dated and filed in a way that others can search.\n\nWhy does the author mention the leaking roof?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "To explain why the project took longer than planned"
+    },
+    {
+     "option_id": "o2",
+     "text": "To prove that scanning damages old paper"
+    },
+    {
+     "option_id": "o3",
+     "text": "To show that the office needed a new building"
+    },
+    {
+     "option_id": "o4",
+     "text": "To show one reason why paper records were risky to keep"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Author's purpose: why a sentence or detail is there (to give an example, explain a cause, introduce a problem, give advice), not what it says.",
+    "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+    "why_correct": "Answer: \"To show one reason why paper records were risky to keep\". The roof is part of the opening problem: paper was slow to search and could be destroyed, which led to scanning.",
+    "why_wrong": {
+     "o1": "The delay came from faded and torn receipts.",
+     "o2": "The roof, not scanning, damaged the paper.",
+     "o3": "No new building is discussed."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "VRB-SYNONYM-TRAP",
+    "o2": "RC-OPPOSITE",
+    "o3": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P04 (\"Records in the cloud\"), question 4 of 4.",
+   "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P04"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-051",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "main idea",
+   "micro_skill": "choose the statement that covers the whole passage",
+   "archetype": "VEN-RC-MAIN",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn a fishing barangay in Quezon, the nearest hospital is an hour away by road, longer when the bridge floods. For years, residents with injuries simply waited for a ride. Two years ago, the barangay asked the Red Cross chapter to train volunteers in first aid. Thirty residents, among them tanods, teachers and a few fishermen, completed the course. They learned how to stop bleeding, how to keep an injured person still until help arrives and how to recognize signs of a stroke. The barangay also bought a stretcher and a supply box, kept at the hall and checked every month. The volunteers do not replace doctors, and they are taught to call for transport at once in any serious case. What they provide is the first half hour of care, which nurses at the hospital say often makes the difference. Last rainy season, volunteers kept a boy with a deep leg cut stable during a long wait for a boat. The barangay now hopes to train a volunteer in every purok, so that help is never more than a short walk away.\n\nWhich title best fits the passage?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Why Volunteers Should Replace Doctors"
+    },
+    {
+     "option_id": "o2",
+     "text": "The Hospitals of Quezon Province"
+    },
+    {
+     "option_id": "o3",
+     "text": "How to Treat a Deep Leg Cut"
+    },
+    {
+     "option_id": "o4",
+     "text": "Trained Neighbors Who Bridge the Wait for a Hospital"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Main idea: the statement that covers the whole passage, neither one detail (too narrow) nor a topic bigger than the text (too broad).",
+    "shortcut": "Ask which choice the first and last sentences would both agree with.",
+    "why_correct": "Answer: \"Trained Neighbors Who Bridge the Wait for a Hospital\". The passage is about volunteers trained to give care during the long wait before hospital treatment.",
+    "why_wrong": {
+     "o1": "The passage says volunteers do not replace doctors.",
+     "o2": "Hospitals are only the far destination.",
+     "o3": "The leg cut is one example."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o2": "RC-TOO-BROAD",
+    "o3": "RC-TOO-NARROW"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P05 (\"Barangay first aid\"), question 1 of 4.",
+   "shortcut": "Ask which choice the first and last sentences would both agree with.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P05"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-052",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn a fishing barangay in Quezon, the nearest hospital is an hour away by road, longer when the bridge floods. For years, residents with injuries simply waited for a ride. Two years ago, the barangay asked the Red Cross chapter to train volunteers in first aid. Thirty residents, among them tanods, teachers and a few fishermen, completed the course. They learned how to stop bleeding, how to keep an injured person still until help arrives and how to recognize signs of a stroke. The barangay also bought a stretcher and a supply box, kept at the hall and checked every month. The volunteers do not replace doctors, and they are taught to call for transport at once in any serious case. What they provide is the first half hour of care, which nurses at the hospital say often makes the difference. Last rainy season, volunteers kept a boy with a deep leg cut stable during a long wait for a boat. The barangay now hopes to train a volunteer in every purok, so that help is never more than a short walk away.\n\nAccording to the passage, where is the stretcher kept?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "At the barangay hall"
+    },
+    {
+     "option_id": "o2",
+     "text": "With the Red Cross chapter"
+    },
+    {
+     "option_id": "o3",
+     "text": "At the nearest hospital"
+    },
+    {
+     "option_id": "o4",
+     "text": "In every purok"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"At the barangay hall\". The passage says the stretcher and supply box are kept at the hall and checked every month.",
+    "why_wrong": {
+     "o2": "The Red Cross gave the training, not the storage.",
+     "o3": "The hospital is an hour away; the stretcher stays in the barangay.",
+     "o4": "Training a volunteer in every purok is a hope, not where the stretcher is."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "VRB-SYNONYM-TRAP",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "VRB-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P05 (\"Barangay first aid\"), question 2 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P05"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-053",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "vocabulary in context",
+   "micro_skill": "use context to fix a word's meaning",
+   "archetype": "VEN-RC-VOCAB",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn a fishing barangay in Quezon, the nearest hospital is an hour away by road, longer when the bridge floods. For years, residents with injuries simply waited for a ride. Two years ago, the barangay asked the Red Cross chapter to train volunteers in first aid. Thirty residents, among them tanods, teachers and a few fishermen, completed the course. They learned how to stop bleeding, how to keep an injured person still until help arrives and how to recognize signs of a stroke. The barangay also bought a stretcher and a supply box, kept at the hall and checked every month. The volunteers do not replace doctors, and they are taught to call for transport at once in any serious case. What they provide is the first half hour of care, which nurses at the hospital say often makes the difference. Last rainy season, volunteers kept a boy with a deep leg cut stable during a long wait for a boat. The barangay now hopes to train a volunteer in every purok, so that help is never more than a short walk away.\n\nAs used in the passage, the word \"stable\" most nearly means",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "not getting worse"
+    },
+    {
+     "option_id": "o2",
+     "text": "fully healed"
+    },
+    {
+     "option_id": "o3",
+     "text": "calm and cheerful"
+    },
+    {
+     "option_id": "o4",
+     "text": "kept inside a shed for animals"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Vocabulary in context: the meaning the word has in this sentence, which may differ from its most common meaning.",
+    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+    "why_correct": "Answer: \"not getting worse\". Volunteers \"kept a boy ... stable during a long wait\": they stopped his condition from worsening until transport came.",
+    "why_wrong": {
+     "o2": "He was kept stable during a wait, not cured.",
+     "o3": "The point is his medical condition, not his mood.",
+     "o4": "That is the noun \"stable,\" which does not fit an injured boy."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-EXTREME",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "VRB-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P05 (\"Barangay first aid\"), question 3 of 4.",
+   "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P05"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-054",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "author's purpose",
+   "micro_skill": "tell why the writer included a sentence or detail",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn a fishing barangay in Quezon, the nearest hospital is an hour away by road, longer when the bridge floods. For years, residents with injuries simply waited for a ride. Two years ago, the barangay asked the Red Cross chapter to train volunteers in first aid. Thirty residents, among them tanods, teachers and a few fishermen, completed the course. They learned how to stop bleeding, how to keep an injured person still until help arrives and how to recognize signs of a stroke. The barangay also bought a stretcher and a supply box, kept at the hall and checked every month. The volunteers do not replace doctors, and they are taught to call for transport at once in any serious case. What they provide is the first half hour of care, which nurses at the hospital say often makes the difference. Last rainy season, volunteers kept a boy with a deep leg cut stable during a long wait for a boat. The barangay now hopes to train a volunteer in every purok, so that help is never more than a short walk away.\n\nWhat is the purpose of the example of the boy with the leg cut?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "To show the volunteers' first half hour of care in a real case"
+    },
+    {
+     "option_id": "o2",
+     "text": "To show that volunteers can perform surgery"
+    },
+    {
+     "option_id": "o3",
+     "text": "To explain why fishermen joined the course"
+    },
+    {
+     "option_id": "o4",
+     "text": "To prove that the bridge should be rebuilt"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Author's purpose: why a sentence or detail is there (to give an example, explain a cause, introduce a problem, give advice), not what it says.",
+    "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+    "why_correct": "Answer: \"To show the volunteers' first half hour of care in a real case\". The example follows the claim that the first half hour matters, and it illustrates exactly that kind of care.",
+    "why_wrong": {
+     "o2": "They kept him stable; no surgery is described.",
+     "o3": "The example is not about who joined.",
+     "o4": "The bridge is mentioned only as a cause of delay."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-EXTREME",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P05 (\"Barangay first aid\"), question 4 of 4.",
+   "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P05"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-061",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "main idea",
+   "micro_skill": "choose the statement that covers the whole passage",
+   "archetype": "VEN-RC-MAIN",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWhen a city in Iloilo painted bike lanes along its main avenue, few people used them at first. Cyclists said the lanes ended suddenly at busy corners, leaving them to merge with jeepneys, and parked cars often blocked the painted strip. The city responded in stages. It first placed low concrete barriers along the most crowded section, so cars could no longer park in the lane. Next, it linked the avenue's lanes to the roads leading to two universities and the public market. Finally, it added bicycle racks near offices and the city hall. Counts by the city's traffic unit showed that cyclists on the avenue nearly tripled within a year of the last change. Some motorists still grumble that the barriers narrowed the road for cars. Planners answer that a lane is not useful merely because it exists; people ride when the route is safe, connects the places they need to go and lets them leave the bike somewhere at the end.\n\nWhat is the main idea of the passage?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Most cities in the country have bike lanes"
+    },
+    {
+     "option_id": "o2",
+     "text": "Bike lanes were used more once they were protected, connected and supported by parking"
+    },
+    {
+     "option_id": "o3",
+     "text": "Motorists dislike any change to the road"
+    },
+    {
+     "option_id": "o4",
+     "text": "Bicycle racks are the most important part of a lane"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Main idea: the statement that covers the whole passage, neither one detail (too narrow) nor a topic bigger than the text (too broad).",
+    "shortcut": "Ask which choice the first and last sentences would both agree with.",
+    "why_correct": "Answer: \"Bike lanes were used more once they were protected, connected and supported by parking\". The passage traces three changes and the rise in cyclists, and the planners' closing point names all three conditions.",
+    "why_wrong": {
+     "o1": "The passage is about one city.",
+     "o3": "Only some motorists grumble, about one change.",
+     "o4": "Racks were one of three changes."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-TOO-BROAD",
+    "o3": "RC-EXTREME",
+    "o4": "RC-TOO-NARROW"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P06 (\"Bike lanes\"), question 1 of 4.",
+   "shortcut": "Ask which choice the first and last sentences would both agree with.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P06"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-062",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWhen a city in Iloilo painted bike lanes along its main avenue, few people used them at first. Cyclists said the lanes ended suddenly at busy corners, leaving them to merge with jeepneys, and parked cars often blocked the painted strip. The city responded in stages. It first placed low concrete barriers along the most crowded section, so cars could no longer park in the lane. Next, it linked the avenue's lanes to the roads leading to two universities and the public market. Finally, it added bicycle racks near offices and the city hall. Counts by the city's traffic unit showed that cyclists on the avenue nearly tripled within a year of the last change. Some motorists still grumble that the barriers narrowed the road for cars. Planners answer that a lane is not useful merely because it exists; people ride when the route is safe, connects the places they need to go and lets them leave the bike somewhere at the end.\n\nAccording to the passage, what was the city's first change?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Painting new lanes on side streets"
+    },
+    {
+     "option_id": "o2",
+     "text": "Adding bicycle racks near offices"
+    },
+    {
+     "option_id": "o3",
+     "text": "Linking the lanes to the universities and market"
+    },
+    {
+     "option_id": "o4",
+     "text": "Placing low concrete barriers along the most crowded section"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"Placing low concrete barriers along the most crowded section\". The passage says the city \"first placed low concrete barriers\" along the most crowded section.",
+    "why_wrong": {
+     "o1": "No new side-street lanes are mentioned.",
+     "o2": "Racks came last.",
+     "o3": "Linking came second."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "VRB-SYNONYM-TRAP",
+    "o3": "VRB-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P06 (\"Bike lanes\"), question 2 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P06"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-063",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWhen a city in Iloilo painted bike lanes along its main avenue, few people used them at first. Cyclists said the lanes ended suddenly at busy corners, leaving them to merge with jeepneys, and parked cars often blocked the painted strip. The city responded in stages. It first placed low concrete barriers along the most crowded section, so cars could no longer park in the lane. Next, it linked the avenue's lanes to the roads leading to two universities and the public market. Finally, it added bicycle racks near offices and the city hall. Counts by the city's traffic unit showed that cyclists on the avenue nearly tripled within a year of the last change. Some motorists still grumble that the barriers narrowed the road for cars. Planners answer that a lane is not useful merely because it exists; people ride when the route is safe, connects the places they need to go and lets them leave the bike somewhere at the end.\n\nWhat can be inferred about why few people used the lanes at first?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The lanes did not feel safe or lead anywhere useful"
+    },
+    {
+     "option_id": "o2",
+     "text": "Most residents did not own bicycles"
+    },
+    {
+     "option_id": "o3",
+     "text": "Cyclists preferred to ride with jeepneys"
+    },
+    {
+     "option_id": "o4",
+     "text": "The lanes were painted in the wrong color"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"The lanes did not feel safe or lead anywhere useful\". Cyclists said the lanes ended at busy corners and were blocked by cars, so the lanes were unsafe and incomplete.",
+    "why_wrong": {
+     "o2": "Bicycle ownership is never discussed.",
+     "o3": "Cyclists complained about having to merge with jeepneys.",
+     "o4": "Color is not mentioned."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-NOT-IN-TEXT",
+    "o3": "RC-OPPOSITE",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P06 (\"Bike lanes\"), question 3 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P06"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-064",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "relation between parts",
+   "micro_skill": "tell how one part of the passage connects to another",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWhen a city in Iloilo painted bike lanes along its main avenue, few people used them at first. Cyclists said the lanes ended suddenly at busy corners, leaving them to merge with jeepneys, and parked cars often blocked the painted strip. The city responded in stages. It first placed low concrete barriers along the most crowded section, so cars could no longer park in the lane. Next, it linked the avenue's lanes to the roads leading to two universities and the public market. Finally, it added bicycle racks near offices and the city hall. Counts by the city's traffic unit showed that cyclists on the avenue nearly tripled within a year of the last change. Some motorists still grumble that the barriers narrowed the road for cars. Planners answer that a lane is not useful merely because it exists; people ride when the route is safe, connects the places they need to go and lets them leave the bike somewhere at the end.\n\nHow do the sentences beginning \"It first,\" \"Next\" and \"Finally\" relate to one another?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "They list three complaints from motorists"
+    },
+    {
+     "option_id": "o2",
+     "text": "They describe the city's changes in the order they were made"
+    },
+    {
+     "option_id": "o3",
+     "text": "They compare three different cities"
+    },
+    {
+     "option_id": "o4",
+     "text": "They give three reasons the lanes failed"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Relation between parts: how a sentence or group of sentences connects to what comes before or after (contrast, cause and effect, problem and solution, sequence).",
+    "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+    "why_correct": "Answer: \"They describe the city's changes in the order they were made\". \"First,\" \"next\" and \"finally\" mark a sequence of actions taken in stages.",
+    "why_wrong": {
+     "o1": "They list the city's actions, not complaints.",
+     "o3": "All three describe the same city.",
+     "o4": "They describe the fixes that made the lanes succeed."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-OPPOSITE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P06 (\"Bike lanes\"), question 4 of 4.",
+   "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P06"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-071",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWater refilling stations have spread across Philippine towns because many households do not trust their tap water for drinking. A station filters and disinfects water and sells it in returnable containers, usually for much less than bottled water. Their spread, however, has worried health officers. A station is only as safe as its equipment and its habits: filters must be changed on time, containers must be washed and sanitized, and water samples must be tested regularly by an accredited laboratory. In one province, the health office found that a few stations had skipped tests for months. It did not close all the stations, which many families now depend on. Instead, it began posting the date of each station's latest passing test on a public list and visiting stations without warning. Owners who kept good records soon used the list in their advertising. Health officers say customers can protect themselves too, by asking to see the station's most recent laboratory result and by noticing whether containers are cleaned before they are refilled.\n\nAccording to the passage, who must test a station's water samples?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The town's water district"
+    },
+    {
+     "option_id": "o2",
+     "text": "An accredited laboratory"
+    },
+    {
+     "option_id": "o3",
+     "text": "The station owner"
+    },
+    {
+     "option_id": "o4",
+     "text": "The customers who buy the water"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"An accredited laboratory\". The passage says water samples must be tested regularly by an accredited laboratory.",
+    "why_wrong": {
+     "o1": "The water district is not mentioned.",
+     "o3": "Owners keep records, but testing is done by an accredited laboratory.",
+     "o4": "Customers may ask for results; they do not run tests."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o3": "VRB-SYNONYM-TRAP",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P07 (\"Water refilling stations\"), question 1 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P07"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-072",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "vocabulary in context",
+   "micro_skill": "use context to fix a word's meaning",
+   "archetype": "VEN-RC-VOCAB",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWater refilling stations have spread across Philippine towns because many households do not trust their tap water for drinking. A station filters and disinfects water and sells it in returnable containers, usually for much less than bottled water. Their spread, however, has worried health officers. A station is only as safe as its equipment and its habits: filters must be changed on time, containers must be washed and sanitized, and water samples must be tested regularly by an accredited laboratory. In one province, the health office found that a few stations had skipped tests for months. It did not close all the stations, which many families now depend on. Instead, it began posting the date of each station's latest passing test on a public list and visiting stations without warning. Owners who kept good records soon used the list in their advertising. Health officers say customers can protect themselves too, by asking to see the station's most recent laboratory result and by noticing whether containers are cleaned before they are refilled.\n\nAs used in the passage, the word \"accredited\" most nearly means",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "located nearby"
+    },
+    {
+     "option_id": "o2",
+     "text": "paid in advance"
+    },
+    {
+     "option_id": "o3",
+     "text": "officially approved to do the work"
+    },
+    {
+     "option_id": "o4",
+     "text": "newly opened"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Vocabulary in context: the meaning the word has in this sentence, which may differ from its most common meaning.",
+    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+    "why_correct": "Answer: \"officially approved to do the work\". An \"accredited laboratory\" is one officially recognized as able to test water, which is why its results can be trusted.",
+    "why_wrong": {
+     "o1": "Nothing suggests nearness.",
+     "o2": "\"Credit\" suggests payment, but accredited means officially recognized.",
+     "o4": "Age of the laboratory is not the point."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "VRB-SYNONYM-TRAP",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P07 (\"Water refilling stations\"), question 2 of 4.",
+   "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P07"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-073",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWater refilling stations have spread across Philippine towns because many households do not trust their tap water for drinking. A station filters and disinfects water and sells it in returnable containers, usually for much less than bottled water. Their spread, however, has worried health officers. A station is only as safe as its equipment and its habits: filters must be changed on time, containers must be washed and sanitized, and water samples must be tested regularly by an accredited laboratory. In one province, the health office found that a few stations had skipped tests for months. It did not close all the stations, which many families now depend on. Instead, it began posting the date of each station's latest passing test on a public list and visiting stations without warning. Owners who kept good records soon used the list in their advertising. Health officers say customers can protect themselves too, by asking to see the station's most recent laboratory result and by noticing whether containers are cleaned before they are refilled.\n\nWhy did the health office post the dates of the latest passing tests instead of closing all stations?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Customers had asked it to stop inspections"
+    },
+    {
+     "option_id": "o2",
+     "text": "Every station had passed its tests"
+    },
+    {
+     "option_id": "o3",
+     "text": "The law did not allow it to close any station"
+    },
+    {
+     "option_id": "o4",
+     "text": "Families depend on the stations, and the list pushes owners to keep up their tests"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"Families depend on the stations, and the list pushes owners to keep up their tests\". The passage says many families depend on the stations, and the list let customers and owners see who kept up with testing.",
+    "why_wrong": {
+     "o1": "No such request is mentioned.",
+     "o2": "A few had skipped tests for months.",
+     "o3": "Its powers are not discussed."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-OPPOSITE",
+    "o3": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P07 (\"Water refilling stations\"), question 3 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P07"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-074",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "author's purpose",
+   "micro_skill": "tell why the writer included a sentence or detail",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nWater refilling stations have spread across Philippine towns because many households do not trust their tap water for drinking. A station filters and disinfects water and sells it in returnable containers, usually for much less than bottled water. Their spread, however, has worried health officers. A station is only as safe as its equipment and its habits: filters must be changed on time, containers must be washed and sanitized, and water samples must be tested regularly by an accredited laboratory. In one province, the health office found that a few stations had skipped tests for months. It did not close all the stations, which many families now depend on. Instead, it began posting the date of each station's latest passing test on a public list and visiting stations without warning. Owners who kept good records soon used the list in their advertising. Health officers say customers can protect themselves too, by asking to see the station's most recent laboratory result and by noticing whether containers are cleaned before they are refilled.\n\nWhat is the main purpose of the last sentence?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "To criticize customers for buying cheap water"
+    },
+    {
+     "option_id": "o2",
+     "text": "To describe how filters are changed"
+    },
+    {
+     "option_id": "o3",
+     "text": "To tell readers what they themselves can do to stay safe"
+    },
+    {
+     "option_id": "o4",
+     "text": "To argue that bottled water is safer"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Author's purpose: why a sentence or detail is there (to give an example, explain a cause, introduce a problem, give advice), not what it says.",
+    "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+    "why_correct": "Answer: \"To tell readers what they themselves can do to stay safe\". After describing the health office's steps, the passage ends with steps customers can take: ask for the result and watch the cleaning.",
+    "why_wrong": {
+     "o1": "No criticism of customers is made.",
+     "o2": "Filters are mentioned earlier, not in the last sentence.",
+     "o4": "The passage does not compare safety with bottled water."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P07 (\"Water refilling stations\"), question 4 of 4.",
+   "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P07"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-081",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "main idea",
+   "micro_skill": "choose the statement that covers the whole passage",
+   "archetype": "VEN-RC-MAIN",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nEvery June, parents in a Bulacan town line up to buy new school uniforms, though many children have outgrown uniforms that are still in good condition. A group of mothers decided to set up a uniform exchange at the public elementary school. Families bring clean uniforms their children no longer fit into and take home ones in the right size. Uniforms with small tears are mended by volunteers who know how to sew. In its first year, the exchange handed out more than three hundred sets. The mothers expected that only poor families would come. To their surprise, families of every income level took part, some because they saw no reason to buy new clothes that would be outgrown within a year, others because they liked that less cloth would be thrown away. The school now lends the mothers a classroom every May. The group keeps the exchange simple on purpose: there are no fees, no forms, and no questions about why a family needs a uniform, so that no one feels embarrassed to come.\n\nWhat is the passage mainly about?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The rising cost of education in the Philippines"
+    },
+    {
+     "option_id": "o2",
+     "text": "A uniform exchange that many kinds of families found useful"
+    },
+    {
+     "option_id": "o3",
+     "text": "Why school uniforms should be banned"
+    },
+    {
+     "option_id": "o4",
+     "text": "How to mend torn school uniforms"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Main idea: the statement that covers the whole passage, neither one detail (too narrow) nor a topic bigger than the text (too broad).",
+    "shortcut": "Ask which choice the first and last sentences would both agree with.",
+    "why_correct": "Answer: \"A uniform exchange that many kinds of families found useful\". The passage explains how the exchange works, who used it and why it is kept simple.",
+    "why_wrong": {
+     "o1": "The passage covers one exchange in one town.",
+     "o3": "The passage does not argue against uniforms.",
+     "o4": "Mending is one detail."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-TOO-BROAD",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-TOO-NARROW"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P08 (\"Recycled uniforms\"), question 1 of 4.",
+   "shortcut": "Ask which choice the first and last sentences would both agree with.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P08"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-082",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nEvery June, parents in a Bulacan town line up to buy new school uniforms, though many children have outgrown uniforms that are still in good condition. A group of mothers decided to set up a uniform exchange at the public elementary school. Families bring clean uniforms their children no longer fit into and take home ones in the right size. Uniforms with small tears are mended by volunteers who know how to sew. In its first year, the exchange handed out more than three hundred sets. The mothers expected that only poor families would come. To their surprise, families of every income level took part, some because they saw no reason to buy new clothes that would be outgrown within a year, others because they liked that less cloth would be thrown away. The school now lends the mothers a classroom every May. The group keeps the exchange simple on purpose: there are no fees, no forms, and no questions about why a family needs a uniform, so that no one feels embarrassed to come.\n\nAccording to the passage, how many sets did the exchange hand out in its first year?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "More than three hundred"
+    },
+    {
+     "option_id": "o2",
+     "text": "Exactly one hundred"
+    },
+    {
+     "option_id": "o3",
+     "text": "Fewer than fifty"
+    },
+    {
+     "option_id": "o4",
+     "text": "One for every pupil in the town"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"More than three hundred\". The passage says that in its first year, the exchange handed out more than three hundred sets.",
+    "why_wrong": {
+     "o2": "The passage gives more than three hundred.",
+     "o3": "The number was large, not small.",
+     "o4": "No such claim is made."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-NOT-IN-TEXT",
+    "o3": "RC-OPPOSITE",
+    "o4": "RC-EXTREME"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P08 (\"Recycled uniforms\"), question 2 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P08"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-083",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nEvery June, parents in a Bulacan town line up to buy new school uniforms, though many children have outgrown uniforms that are still in good condition. A group of mothers decided to set up a uniform exchange at the public elementary school. Families bring clean uniforms their children no longer fit into and take home ones in the right size. Uniforms with small tears are mended by volunteers who know how to sew. In its first year, the exchange handed out more than three hundred sets. The mothers expected that only poor families would come. To their surprise, families of every income level took part, some because they saw no reason to buy new clothes that would be outgrown within a year, others because they liked that less cloth would be thrown away. The school now lends the mothers a classroom every May. The group keeps the exchange simple on purpose: there are no fees, no forms, and no questions about why a family needs a uniform, so that no one feels embarrassed to come.\n\nWhat surprised the mothers who started the exchange?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Volunteers could not mend the uniforms"
+    },
+    {
+     "option_id": "o2",
+     "text": "Families of every income level took part"
+    },
+    {
+     "option_id": "o3",
+     "text": "The school refused to lend a classroom"
+    },
+    {
+     "option_id": "o4",
+     "text": "No families came in the first year"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"Families of every income level took part\". They expected only poor families, but \"to their surprise, families of every income level took part.\"",
+    "why_wrong": {
+     "o1": "Volunteers did mend them.",
+     "o3": "The school now lends them a classroom every May.",
+     "o4": "More than three hundred sets were handed out."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o3": "RC-OPPOSITE",
+    "o4": "RC-OPPOSITE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P08 (\"Recycled uniforms\"), question 3 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P08"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-084",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "author's purpose",
+   "micro_skill": "tell why the writer included a sentence or detail",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nEvery June, parents in a Bulacan town line up to buy new school uniforms, though many children have outgrown uniforms that are still in good condition. A group of mothers decided to set up a uniform exchange at the public elementary school. Families bring clean uniforms their children no longer fit into and take home ones in the right size. Uniforms with small tears are mended by volunteers who know how to sew. In its first year, the exchange handed out more than three hundred sets. The mothers expected that only poor families would come. To their surprise, families of every income level took part, some because they saw no reason to buy new clothes that would be outgrown within a year, others because they liked that less cloth would be thrown away. The school now lends the mothers a classroom every May. The group keeps the exchange simple on purpose: there are no fees, no forms, and no questions about why a family needs a uniform, so that no one feels embarrassed to come.\n\nWhy does the group keep the exchange free of fees, forms and questions?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Because the volunteers cannot read the forms"
+    },
+    {
+     "option_id": "o2",
+     "text": "So that no family feels embarrassed to take part"
+    },
+    {
+     "option_id": "o3",
+     "text": "So that only poor families will come"
+    },
+    {
+     "option_id": "o4",
+     "text": "Because the school does not allow written forms"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Author's purpose: why a sentence or detail is there (to give an example, explain a cause, introduce a problem, give advice), not what it says.",
+    "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+    "why_correct": "Answer: \"So that no family feels embarrassed to take part\". The last sentence gives the reason directly: \"so that no one feels embarrassed to come.\"",
+    "why_wrong": {
+     "o1": "Nothing supports this.",
+     "o3": "The aim is to let anyone come without embarrassment.",
+     "o4": "No school rule is mentioned."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o3": "RC-OPPOSITE",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P08 (\"Recycled uniforms\"), question 4 of 4.",
+   "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P08"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-091",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nA coastal town in Aklan built a wooden boardwalk through its mangrove forest to attract visitors. The project divided the town at first. Fishermen worried that crowds would disturb the young fish that shelter among the mangrove roots, and environmental groups feared that visitors would leave trash or break branches. The town tried to answer both concerns. The boardwalk was raised above the water so that it did not touch the roots, visitors were limited to set hours, and every group was led by a guide from the local fishermen's association. Guides were trained to explain how mangroves protect the shore from storm waves and serve as nurseries for fish. Part of each entrance fee now pays the guides and part funds the planting of new seedlings. Visitor numbers have grown steadily, and the association reports that catches near the forest have not declined. The town's tourism officer says the boardwalk taught her that a natural site can earn money for a community only if the community protects the very thing visitors come to see.\n\nAccording to the passage, who leads every group of visitors?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The town's tourism officer"
+    },
+    {
+     "option_id": "o2",
+     "text": "A guide from the local fishermen's association"
+    },
+    {
+     "option_id": "o3",
+     "text": "A member of an environmental group"
+    },
+    {
+     "option_id": "o4",
+     "text": "A teacher from the nearby school"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"A guide from the local fishermen's association\". The passage says every group was led by a guide from the local fishermen's association.",
+    "why_wrong": {
+     "o1": "The officer is quoted, but she does not lead groups.",
+     "o3": "Environmental groups raised concerns; guides come from the fishermen's association.",
+     "o4": "No teacher is mentioned."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o3": "VRB-SYNONYM-TRAP",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P09 (\"Mangrove boardwalk\"), question 1 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P09"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-092",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "vocabulary in context",
+   "micro_skill": "use context to fix a word's meaning",
+   "archetype": "VEN-RC-VOCAB",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nA coastal town in Aklan built a wooden boardwalk through its mangrove forest to attract visitors. The project divided the town at first. Fishermen worried that crowds would disturb the young fish that shelter among the mangrove roots, and environmental groups feared that visitors would leave trash or break branches. The town tried to answer both concerns. The boardwalk was raised above the water so that it did not touch the roots, visitors were limited to set hours, and every group was led by a guide from the local fishermen's association. Guides were trained to explain how mangroves protect the shore from storm waves and serve as nurseries for fish. Part of each entrance fee now pays the guides and part funds the planting of new seedlings. Visitor numbers have grown steadily, and the association reports that catches near the forest have not declined. The town's tourism officer says the boardwalk taught her that a natural site can earn money for a community only if the community protects the very thing visitors come to see.\n\nAs used in the passage, the word \"nurseries\" most nearly means",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "schools for small children"
+    },
+    {
+     "option_id": "o2",
+     "text": "places where young creatures grow safely"
+    },
+    {
+     "option_id": "o3",
+     "text": "shops that sell plants"
+    },
+    {
+     "option_id": "o4",
+     "text": "rooms for babies in a hospital"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Vocabulary in context: the meaning the word has in this sentence, which may differ from its most common meaning.",
+    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+    "why_correct": "Answer: \"places where young creatures grow safely\". Mangroves \"serve as nurseries for fish\": young fish shelter and grow among the roots, as the passage said earlier.",
+    "why_wrong": {
+     "o1": "No school is involved.",
+     "o3": "A plant nursery sells seedlings, but here mangroves shelter young fish.",
+     "o4": "That is a common meaning, but here the word describes mangroves and fish."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o3": "VRB-SYNONYM-TRAP",
+    "o4": "VRB-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P09 (\"Mangrove boardwalk\"), question 2 of 4.",
+   "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P09"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-093",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nA coastal town in Aklan built a wooden boardwalk through its mangrove forest to attract visitors. The project divided the town at first. Fishermen worried that crowds would disturb the young fish that shelter among the mangrove roots, and environmental groups feared that visitors would leave trash or break branches. The town tried to answer both concerns. The boardwalk was raised above the water so that it did not touch the roots, visitors were limited to set hours, and every group was led by a guide from the local fishermen's association. Guides were trained to explain how mangroves protect the shore from storm waves and serve as nurseries for fish. Part of each entrance fee now pays the guides and part funds the planting of new seedlings. Visitor numbers have grown steadily, and the association reports that catches near the forest have not declined. The town's tourism officer says the boardwalk taught her that a natural site can earn money for a community only if the community protects the very thing visitors come to see.\n\nWhat does the report about the catches suggest?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The fishermen have stopped fishing near the forest"
+    },
+    {
+     "option_id": "o2",
+     "text": "The mangrove forest is shrinking"
+    },
+    {
+     "option_id": "o3",
+     "text": "Visitors now catch most of the fish"
+    },
+    {
+     "option_id": "o4",
+     "text": "The boardwalk has not harmed the fish the fishermen worried about"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"The boardwalk has not harmed the fish the fishermen worried about\". Fishermen feared crowds would disturb young fish; catches near the forest have not declined, so that fear has not come true.",
+    "why_wrong": {
+     "o1": "Nothing says fishing stopped.",
+     "o2": "New seedlings are being planted, and catches have held.",
+     "o3": "Visitors are not described fishing."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-OPPOSITE",
+    "o3": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P09 (\"Mangrove boardwalk\"), question 3 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P09"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-094",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "relation between parts",
+   "micro_skill": "tell how one part of the passage connects to another",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nA coastal town in Aklan built a wooden boardwalk through its mangrove forest to attract visitors. The project divided the town at first. Fishermen worried that crowds would disturb the young fish that shelter among the mangrove roots, and environmental groups feared that visitors would leave trash or break branches. The town tried to answer both concerns. The boardwalk was raised above the water so that it did not touch the roots, visitors were limited to set hours, and every group was led by a guide from the local fishermen's association. Guides were trained to explain how mangroves protect the shore from storm waves and serve as nurseries for fish. Part of each entrance fee now pays the guides and part funds the planting of new seedlings. Visitor numbers have grown steadily, and the association reports that catches near the forest have not declined. The town's tourism officer says the boardwalk taught her that a natural site can earn money for a community only if the community protects the very thing visitors come to see.\n\nHow does the second paragraph of ideas, beginning \"The town tried to answer both concerns,\" relate to the sentences before it?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "It describes the steps taken in response to the worries just described"
+    },
+    {
+     "option_id": "o2",
+     "text": "It repeats the worries in different words"
+    },
+    {
+     "option_id": "o3",
+     "text": "It argues that the worries were unreasonable"
+    },
+    {
+     "option_id": "o4",
+     "text": "It adds a third worry raised by visitors"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Relation between parts: how a sentence or group of sentences connects to what comes before or after (contrast, cause and effect, problem and solution, sequence).",
+    "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+    "why_correct": "Answer: \"It describes the steps taken in response to the worries just described\". The earlier sentences give the fishermen's and environmentalists' concerns; the next ones list the measures that answer each concern.",
+    "why_wrong": {
+     "o2": "It moves from worries to solutions.",
+     "o3": "The town took the worries seriously and acted on them.",
+     "o4": "No visitor worry is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-NOT-IN-TEXT",
+    "o3": "RC-OPPOSITE",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P09 (\"Mangrove boardwalk\"), question 4 of 4.",
+   "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P09"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-101",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "main idea",
+   "micro_skill": "choose the statement that covers the whole passage",
+   "archetype": "VEN-RC-MAIN",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn many provinces, people now receive emergency text alerts before a strong typhoon arrives. The messages are short: the storm's expected landfall, the wind signal for the area and an instruction such as \"Prepare to evacuate.\" Disaster officials in one Samar town noticed, however, that many residents read the alerts but did not act on them. When they asked why, residents gave two main reasons. Some did not understand what a wind signal number meant for their own homes. Others did not know which evacuation center they were assigned to, so they waited for a barangay official to tell them. The town did not change the national alerts, which it does not control. Instead, it held short meetings in every purok before the typhoon season, explaining in the local language what each signal meant and marking every family's assigned center on a printed map left with the household. During the next typhoon, the town reported that more families moved to the centers early. Officials concluded that a warning works only when people already know what it asks them to do.\n\nWhich statement best expresses the main idea of the passage?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Text alerts led to action once residents understood what the alerts meant for them"
+    },
+    {
+     "option_id": "o2",
+     "text": "Text alerts give the storm's expected landfall"
+    },
+    {
+     "option_id": "o3",
+     "text": "National text alerts should be written in local languages"
+    },
+    {
+     "option_id": "o4",
+     "text": "Typhoons in Samar have become more frequent"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "Main idea: the statement that covers the whole passage, neither one detail (too narrow) nor a topic bigger than the text (too broad).",
+    "shortcut": "Ask which choice the first and last sentences would both agree with.",
+    "why_correct": "Answer: \"Text alerts led to action once residents understood what the alerts meant for them\". The passage moves from residents ignoring alerts, to their reasons, to the meetings and the earlier evacuations that followed.",
+    "why_wrong": {
+     "o2": "That is one detail of the alerts.",
+     "o3": "The town did not change the national alerts.",
+     "o4": "Frequency is never discussed."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "RC-TOO-NARROW",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P10 (\"Typhoon warnings by text\"), question 1 of 4.",
+   "shortcut": "Ask which choice the first and last sentences would both agree with.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P10"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-102",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn many provinces, people now receive emergency text alerts before a strong typhoon arrives. The messages are short: the storm's expected landfall, the wind signal for the area and an instruction such as \"Prepare to evacuate.\" Disaster officials in one Samar town noticed, however, that many residents read the alerts but did not act on them. When they asked why, residents gave two main reasons. Some did not understand what a wind signal number meant for their own homes. Others did not know which evacuation center they were assigned to, so they waited for a barangay official to tell them. The town did not change the national alerts, which it does not control. Instead, it held short meetings in every purok before the typhoon season, explaining in the local language what each signal meant and marking every family's assigned center on a printed map left with the household. During the next typhoon, the town reported that more families moved to the centers early. Officials concluded that a warning works only when people already know what it asks them to do.\n\nAccording to the passage, what was left with each household after the purok meetings?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "A copy of the national alert rules"
+    },
+    {
+     "option_id": "o2",
+     "text": "A list of national emergency hotlines"
+    },
+    {
+     "option_id": "o3",
+     "text": "A phone that receives text alerts"
+    },
+    {
+     "option_id": "o4",
+     "text": "A printed map marking the family's assigned center"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"A printed map marking the family's assigned center\". The passage says the town marked every family's assigned center on a printed map left with the household.",
+    "why_wrong": {
+     "o1": "The national alerts were not changed or distributed.",
+     "o2": "No hotline list is mentioned.",
+     "o3": "No phones were given out."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-NOT-IN-TEXT",
+    "o3": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P10 (\"Typhoon warnings by text\"), question 2 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P10"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-103",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn many provinces, people now receive emergency text alerts before a strong typhoon arrives. The messages are short: the storm's expected landfall, the wind signal for the area and an instruction such as \"Prepare to evacuate.\" Disaster officials in one Samar town noticed, however, that many residents read the alerts but did not act on them. When they asked why, residents gave two main reasons. Some did not understand what a wind signal number meant for their own homes. Others did not know which evacuation center they were assigned to, so they waited for a barangay official to tell them. The town did not change the national alerts, which it does not control. Instead, it held short meetings in every purok before the typhoon season, explaining in the local language what each signal meant and marking every family's assigned center on a printed map left with the household. During the next typhoon, the town reported that more families moved to the centers early. Officials concluded that a warning works only when people already know what it asks them to do.\n\nWhy did the town hold meetings instead of changing the alerts?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The alerts were usually wrong"
+    },
+    {
+     "option_id": "o2",
+     "text": "It had no control over the national alerts"
+    },
+    {
+     "option_id": "o3",
+     "text": "Meetings cost less than text messages"
+    },
+    {
+     "option_id": "o4",
+     "text": "Residents had asked for longer alerts"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"It had no control over the national alerts\". The passage says the town did not change the national alerts, \"which it does not control.\"",
+    "why_wrong": {
+     "o1": "Accuracy of the alerts is not questioned.",
+     "o3": "Costs are not compared.",
+     "o4": "No such request is reported."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P10 (\"Typhoon warnings by text\"), question 3 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P10"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-104",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "relation between parts",
+   "micro_skill": "tell how one part of the passage connects to another",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nIn many provinces, people now receive emergency text alerts before a strong typhoon arrives. The messages are short: the storm's expected landfall, the wind signal for the area and an instruction such as \"Prepare to evacuate.\" Disaster officials in one Samar town noticed, however, that many residents read the alerts but did not act on them. When they asked why, residents gave two main reasons. Some did not understand what a wind signal number meant for their own homes. Others did not know which evacuation center they were assigned to, so they waited for a barangay official to tell them. The town did not change the national alerts, which it does not control. Instead, it held short meetings in every purok before the typhoon season, explaining in the local language what each signal meant and marking every family's assigned center on a printed map left with the household. During the next typhoon, the town reported that more families moved to the centers early. Officials concluded that a warning works only when people already know what it asks them to do.\n\nWhat is the purpose of the sentence \"When they asked why, residents gave two main reasons\"?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "It compares Samar with other provinces"
+    },
+    {
+     "option_id": "o2",
+     "text": "It introduces the causes that the town's solution later addresses"
+    },
+    {
+     "option_id": "o3",
+     "text": "It ends the passage with a conclusion"
+    },
+    {
+     "option_id": "o4",
+     "text": "It shows that residents refused to evacuate on purpose"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Relation between parts: how a sentence or group of sentences connects to what comes before or after (contrast, cause and effect, problem and solution, sequence).",
+    "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+    "why_correct": "Answer: \"It introduces the causes that the town's solution later addresses\". The sentence sets up the two reasons, and each reason is answered by part of the solution: signal meanings and assigned centers.",
+    "why_wrong": {
+     "o1": "No comparison follows.",
+     "o3": "It comes in the middle and leads into the reasons.",
+     "o4": "The reasons are confusion and missing information, not refusal."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-OPPOSITE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P10 (\"Typhoon warnings by text\"), question 4 of 4.",
+   "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P10"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-111",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nOn a group of small islands in Palawan, many children had never held a storybook that was not a school textbook. A teacher who grew up on one of the islands began loading boxes of donated books onto a small motorboat every Saturday. She stops at a different island each week, spreads mats on the shore and lets children read for two hours. Children may borrow one book each and return it on her next visit. At first, parents doubted that the books would come back, since some families move between islands during the fishing season. The teacher solved part of the problem by asking older children to collect books from families who had moved. Nearly all the books have returned, though a few have been lost to rain and sea spray. The boxes are now lined with plastic. Teachers on the islands report that children who join the reading days talk more in class and are quicker to ask questions. The teacher says her goal is modest: she wants every child to know that books can be read for pleasure, not only for tests.\n\nAccording to the passage, how many books may each child borrow?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "Two books"
+    },
+    {
+     "option_id": "o2",
+     "text": "None; books must stay on the boat"
+    },
+    {
+     "option_id": "o3",
+     "text": "As many as the child can carry"
+    },
+    {
+     "option_id": "o4",
+     "text": "One book"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"One book\". The passage says children may borrow one book each and return it on her next visit.",
+    "why_wrong": {
+     "o1": "The two refers to hours of reading, not books.",
+     "o2": "Children may borrow and return books.",
+     "o3": "The limit is one book."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-OPPOSITE",
+    "o3": "RC-EXTREME"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P11 (\"Public library by boat\"), question 1 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P11"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-112",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "vocabulary in context",
+   "micro_skill": "use context to fix a word's meaning",
+   "archetype": "VEN-RC-VOCAB",
+   "difficulty": "easy",
+   "est_seconds": 40,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nOn a group of small islands in Palawan, many children had never held a storybook that was not a school textbook. A teacher who grew up on one of the islands began loading boxes of donated books onto a small motorboat every Saturday. She stops at a different island each week, spreads mats on the shore and lets children read for two hours. Children may borrow one book each and return it on her next visit. At first, parents doubted that the books would come back, since some families move between islands during the fishing season. The teacher solved part of the problem by asking older children to collect books from families who had moved. Nearly all the books have returned, though a few have been lost to rain and sea spray. The boxes are now lined with plastic. Teachers on the islands report that children who join the reading days talk more in class and are quicker to ask questions. The teacher says her goal is modest: she wants every child to know that books can be read for pleasure, not only for tests.\n\nAs used in the passage, the word \"modest\" most nearly means",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "shy about one's own success"
+    },
+    {
+     "option_id": "o2",
+     "text": "cheaply priced"
+    },
+    {
+     "option_id": "o3",
+     "text": "simple and not overly ambitious"
+    },
+    {
+     "option_id": "o4",
+     "text": "dressed plainly"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Vocabulary in context: the meaning the word has in this sentence, which may differ from its most common meaning.",
+    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+    "why_correct": "Answer: \"simple and not overly ambitious\". Her goal is \"modest\": simply that children know books can be read for pleasure, not a large program.",
+    "why_wrong": {
+     "o1": "\"Modest\" can describe a humble person, but here it describes a goal.",
+     "o2": "A modest price is low, but the passage describes a goal.",
+     "o4": "That sense applies to clothing, not to a goal."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "VRB-SYNONYM-TRAP",
+    "o2": "VRB-SYNONYM-TRAP",
+    "o4": "VRB-SYNONYM-TRAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P11 (\"Public library by boat\"), question 2 of 4.",
+   "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P11"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-113",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nOn a group of small islands in Palawan, many children had never held a storybook that was not a school textbook. A teacher who grew up on one of the islands began loading boxes of donated books onto a small motorboat every Saturday. She stops at a different island each week, spreads mats on the shore and lets children read for two hours. Children may borrow one book each and return it on her next visit. At first, parents doubted that the books would come back, since some families move between islands during the fishing season. The teacher solved part of the problem by asking older children to collect books from families who had moved. Nearly all the books have returned, though a few have been lost to rain and sea spray. The boxes are now lined with plastic. Teachers on the islands report that children who join the reading days talk more in class and are quicker to ask questions. The teacher says her goal is modest: she wants every child to know that books can be read for pleasure, not only for tests.\n\nWhy are the boxes now lined with plastic?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "To make the boxes lighter to carry"
+    },
+    {
+     "option_id": "o2",
+     "text": "To protect the books from rain and sea spray"
+    },
+    {
+     "option_id": "o3",
+     "text": "To keep children from opening the boxes"
+    },
+    {
+     "option_id": "o4",
+     "text": "To mark which island a box belongs to"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"To protect the books from rain and sea spray\". The sentence before says a few books were lost to rain and sea spray; the plastic lining answers that.",
+    "why_wrong": {
+     "o1": "Weight is not mentioned.",
+     "o3": "Children are meant to use the books.",
+     "o4": "Labeling is not mentioned."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P11 (\"Public library by boat\"), question 3 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P11"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-114",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "author's purpose",
+   "micro_skill": "tell why the writer included a sentence or detail",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nOn a group of small islands in Palawan, many children had never held a storybook that was not a school textbook. A teacher who grew up on one of the islands began loading boxes of donated books onto a small motorboat every Saturday. She stops at a different island each week, spreads mats on the shore and lets children read for two hours. Children may borrow one book each and return it on her next visit. At first, parents doubted that the books would come back, since some families move between islands during the fishing season. The teacher solved part of the problem by asking older children to collect books from families who had moved. Nearly all the books have returned, though a few have been lost to rain and sea spray. The boxes are now lined with plastic. Teachers on the islands report that children who join the reading days talk more in class and are quicker to ask questions. The teacher says her goal is modest: she wants every child to know that books can be read for pleasure, not only for tests.\n\nWhat is the author's purpose in mentioning what island teachers report?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "To prove that every child now reads daily"
+    },
+    {
+     "option_id": "o2",
+     "text": "To show that the books were lost"
+    },
+    {
+     "option_id": "o3",
+     "text": "To show an effect of the reading days on children's schoolwork"
+    },
+    {
+     "option_id": "o4",
+     "text": "To argue that teachers should run the boat library"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "Author's purpose: why a sentence or detail is there (to give an example, explain a cause, introduce a problem, give advice), not what it says.",
+    "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+    "why_correct": "Answer: \"To show an effect of the reading days on children's schoolwork\". The teachers' report gives evidence of a benefit: children who join talk more in class and ask questions sooner.",
+    "why_wrong": {
+     "o1": "The report says children talk and ask more; it says nothing about reading daily.",
+     "o2": "Lost books are discussed earlier.",
+     "o4": "The passage does not argue this."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-EXTREME",
+    "o2": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P11 (\"Public library by boat\"), question 4 of 4.",
+   "shortcut": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P11"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-121",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "main idea",
+   "micro_skill": "choose the statement that covers the whole passage",
+   "archetype": "VEN-RC-MAIN",
+   "difficulty": "medium",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nShoppers at a public market in Davao often suspected that some vendors' scales showed more weight than the goods really had. Complaints reached the city's market office, but they were hard to prove, since a buyer rarely carried a scale of her own. The office set up a free public scale, checked by city inspectors, near the market's main entrance. A large sign invited shoppers to reweigh their purchases. Any buyer who found a difference could report the stall number on the spot. The office then inspected the vendor's scale and, if it was faulty, sealed it until it was repaired. Within a few months, reports dropped. Vendors who were honest welcomed the public scale, since it gave them a way to show customers that their scales were accurate. The office believes that the scale works less by catching cheaters than by making cheating risky: a vendor cannot know which buyer will walk to the entrance and check.\n\nWhat is the passage mainly about?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "The prices of goods in Davao markets"
+    },
+    {
+     "option_id": "o2",
+     "text": "How city inspectors repair faulty scales"
+    },
+    {
+     "option_id": "o3",
+     "text": "Why shoppers should carry their own scales"
+    },
+    {
+     "option_id": "o4",
+     "text": "How a public scale helped reduce cheating on weights at a market"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "Main idea: the statement that covers the whole passage, neither one detail (too narrow) nor a topic bigger than the text (too broad).",
+    "shortcut": "Ask which choice the first and last sentences would both agree with.",
+    "why_correct": "Answer: \"How a public scale helped reduce cheating on weights at a market\". The passage explains the problem of short weights, the public scale, the response to reports and the results.",
+    "why_wrong": {
+     "o1": "Prices are not discussed.",
+     "o2": "Repairs are one step in the process.",
+     "o3": "The public scale made that unnecessary."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-NOT-IN-TEXT",
+    "o2": "RC-TOO-NARROW",
+    "o3": "RC-OPPOSITE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P12 (\"Market weighing scale\"), question 1 of 4.",
+   "shortcut": "Ask which choice the first and last sentences would both agree with.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P12"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-122",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "stated detail",
+   "micro_skill": "find the stated fact",
+   "archetype": "VEN-RC-DETAIL",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nShoppers at a public market in Davao often suspected that some vendors' scales showed more weight than the goods really had. Complaints reached the city's market office, but they were hard to prove, since a buyer rarely carried a scale of her own. The office set up a free public scale, checked by city inspectors, near the market's main entrance. A large sign invited shoppers to reweigh their purchases. Any buyer who found a difference could report the stall number on the spot. The office then inspected the vendor's scale and, if it was faulty, sealed it until it was repaired. Within a few months, reports dropped. Vendors who were honest welcomed the public scale, since it gave them a way to show customers that their scales were accurate. The office believes that the scale works less by catching cheaters than by making cheating risky: a vendor cannot know which buyer will walk to the entrance and check.\n\nAccording to the passage, what happens to a vendor's scale that inspectors find faulty?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "It is moved to the main entrance"
+    },
+    {
+     "option_id": "o2",
+     "text": "It is sealed until it is repaired"
+    },
+    {
+     "option_id": "o3",
+     "text": "It is returned after the vendor pays a fine"
+    },
+    {
+     "option_id": "o4",
+     "text": "It is replaced by the city for free"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+    "why_correct": "Answer: \"It is sealed until it is repaired\". The passage says that if the scale was faulty, the office sealed it until it was repaired.",
+    "why_wrong": {
+     "o1": "The public scale is at the entrance; faulty scales are sealed.",
+     "o3": "No fine is mentioned.",
+     "o4": "No free replacement is mentioned."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "VRB-SYNONYM-TRAP",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P12 (\"Market weighing scale\"), question 2 of 4.",
+   "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P12"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-123",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "inference",
+   "micro_skill": "draw the conclusion the passage supports",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nShoppers at a public market in Davao often suspected that some vendors' scales showed more weight than the goods really had. Complaints reached the city's market office, but they were hard to prove, since a buyer rarely carried a scale of her own. The office set up a free public scale, checked by city inspectors, near the market's main entrance. A large sign invited shoppers to reweigh their purchases. Any buyer who found a difference could report the stall number on the spot. The office then inspected the vendor's scale and, if it was faulty, sealed it until it was repaired. Within a few months, reports dropped. Vendors who were honest welcomed the public scale, since it gave them a way to show customers that their scales were accurate. The office believes that the scale works less by catching cheaters than by making cheating risky: a vendor cannot know which buyer will walk to the entrance and check.\n\nWhy did honest vendors welcome the public scale?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "It meant their own scales were never inspected"
+    },
+    {
+     "option_id": "o2",
+     "text": "It let them show customers that their scales were accurate"
+    },
+    {
+     "option_id": "o3",
+     "text": "It allowed them to raise their prices"
+    },
+    {
+     "option_id": "o4",
+     "text": "It reported other vendors automatically"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+    "why_correct": "Answer: \"It let them show customers that their scales were accurate\". The passage states that honest vendors welcomed it because it gave them a way to show their scales were accurate.",
+    "why_wrong": {
+     "o1": "Any scale can be inspected after a report.",
+     "o3": "Prices are not discussed.",
+     "o4": "Reports come from buyers, not from the scale."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P12 (\"Market weighing scale\"), question 3 of 4.",
+   "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P12"
+  },
+  {
+   "id": "CIVIO-D1022-VEN-RC2-124",
+   "track": "both",
+   "domain": "verbal_en",
+   "competency": "Reading comprehension",
+   "concept": "relation between parts",
+   "micro_skill": "tell how one part of the passage connects to another",
+   "archetype": "VEN-RC-INFER",
+   "difficulty": "medium",
+   "est_seconds": 70,
+   "language": "en",
+   "stem": "Read the passage, then answer the question.\n\nShoppers at a public market in Davao often suspected that some vendors' scales showed more weight than the goods really had. Complaints reached the city's market office, but they were hard to prove, since a buyer rarely carried a scale of her own. The office set up a free public scale, checked by city inspectors, near the market's main entrance. A large sign invited shoppers to reweigh their purchases. Any buyer who found a difference could report the stall number on the spot. The office then inspected the vendor's scale and, if it was faulty, sealed it until it was repaired. Within a few months, reports dropped. Vendors who were honest welcomed the public scale, since it gave them a way to show customers that their scales were accurate. The office believes that the scale works less by catching cheaters than by making cheating risky: a vendor cannot know which buyer will walk to the entrance and check.\n\nHow does the last sentence relate to the rest of the passage?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "It shows that the scale caught many cheaters"
+    },
+    {
+     "option_id": "o2",
+     "text": "It explains why reports dropped after the scale was set up"
+    },
+    {
+     "option_id": "o3",
+     "text": "It repeats the shoppers' first complaint"
+    },
+    {
+     "option_id": "o4",
+     "text": "It describes a new rule for vendors"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "Relation between parts: how a sentence or group of sentences connects to what comes before or after (contrast, cause and effect, problem and solution, sequence).",
+    "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+    "why_correct": "Answer: \"It explains why reports dropped after the scale was set up\". After reporting that complaints dropped, the passage ends with the office's explanation: cheating became too risky to try.",
+    "why_wrong": {
+     "o1": "It says the scale works less by catching cheaters.",
+     "o3": "It explains the result, not the complaint.",
+     "o4": "No new rule is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "RC-OPPOSITE",
+    "o3": "RC-NOT-IN-TEXT",
+    "o4": "RC-NOT-IN-TEXT"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-22T12:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "notes": "New original draft, 22 Oct 2026 set 2. Passage CIVIO-D1022-VEN-RC2-P12 (\"Market weighing scale\"), question 4 of 4.",
+   "shortcut": "Look for signal words (however, instead, first, next, so) and name the link they mark.",
+   "recipe": {
+    "op": "judgment",
+    "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+   },
+   "passage_id": "CIVIO-D1022-VEN-RC2-P12"
+  }
+ ]
+}

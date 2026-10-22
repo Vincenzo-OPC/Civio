@@ -83,3 +83,37 @@ for p, (title, text, qs) in enumerate(RC, 1):
                         why_correct=f"Answer: \"{key}\". {why}",
                         passage_id=pid, recipe=J,
                         notes=f"New original draft, 22 Oct 2026 (GT approved). Passage {pid} (\"{title}\"), question {q} of {len(qs)}."))
+
+# ---------- Set 2 (22 Oct 2026, afternoon): 12 passages x 4 questions, adds author's purpose and relation between parts ----------
+from en_rc2_2026_10_22 import RC2  # noqa: E402
+
+ITEMS2 = []
+_CON = {"VEN-RC-MAIN": "main idea", "VEN-RC-DETAIL": "stated detail", "VEN-RC-INFER": "inference", "VEN-RC-VOCAB": "vocabulary in context"}
+_SKL = {"VEN-RC-MAIN": "choose the statement that covers the whole passage", "VEN-RC-DETAIL": "find the stated fact",
+        "VEN-RC-INFER": "draw the conclusion the passage supports", "VEN-RC-VOCAB": "use context to fix a word's meaning",
+        "author's purpose": "tell why the writer included a sentence or detail", "relation between parts": "tell how one part of the passage connects to another"}
+_TRM = {"author's purpose": "Author's purpose: why a sentence or detail is there (to give an example, explain a cause, introduce a problem, give advice), not what it says.",
+        "relation between parts": "Relation between parts: how a sentence or group of sentences connects to what comes before or after (contrast, cause and effect, problem and solution, sequence)."}
+_SHC = {"author's purpose": "Read the sentences just before and after it; ask what job the sentence does for the passage.",
+        "relation between parts": "Look for signal words (however, instead, first, next, so) and name the link they mark."}
+for p, entry in enumerate(RC2, 1):
+    title, text, qs = entry
+    pid = f"CIVIO-D1022-VEN-RC2-P{p:02d}"
+    for q, qd in enumerate(qs, 1):
+        arch, question, key, wrong, why = qd[:5]
+        skill = qd[5] if len(qd) > 5 else None
+        ITEMS2.append(mk(id=f"CIVIO-D1022-VEN-RC2-{p:02d}{q}", track=T, domain=D, competency="Reading comprehension",
+                         concept=skill or _CON[arch], micro_skill=_SKL[skill or arch], archetype=arch,
+                         difficulty="easy" if arch in ("VEN-RC-DETAIL", "VEN-RC-VOCAB") else "medium",
+                         est={"VEN-RC-MAIN": 60, "VEN-RC-DETAIL": 45, "VEN-RC-INFER": 70, "VEN-RC-VOCAB": 40}[arch],
+                         stem="Read the passage, then answer the question.\n\n" + text + "\n\n" + question, correct=key, wrong=list(wrong),
+                         terms=_TRM.get(skill) or {"VEN-RC-MAIN": "Main idea: the statement that covers the whole passage, neither one detail (too narrow) nor a topic bigger than the text (too broad).",
+                                                   "VEN-RC-DETAIL": "Stated detail: the answer is written in the passage; find the sentence and match it.",
+                                                   "VEN-RC-INFER": "Inference: a conclusion the passage supports without saying it word for word; reject choices that go beyond the text or use extreme words.",
+                                                   "VEN-RC-VOCAB": "Vocabulary in context: the meaning the word has in this sentence, which may differ from its most common meaning."}[arch],
+                         shortcut=_SHC.get(skill) or {"VEN-RC-MAIN": "Ask which choice the first and last sentences would both agree with.",
+                                                      "VEN-RC-DETAIL": "Scan for the key noun in the question, then read that sentence closely.",
+                                                      "VEN-RC-INFER": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
+                                                      "VEN-RC-VOCAB": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged."}[arch],
+                         why_correct=f"Answer: \"{key}\". {why}", passage_id=pid, recipe=J,
+                         notes=f"New original draft, 22 Oct 2026 set 2. Passage {pid} (\"{title}\"), question {q} of {len(qs)}."))

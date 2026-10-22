@@ -1,6 +1,6 @@
 # Review packet P3-verbal_en-03
 
-Priority P3, domain verbal_en, 19 items. Status of every item: not approved.
+Priority P3, domain verbal_en, 26 items. Status of every item: not approved.
 
 **How to review independently:** answer every item below before opening the answer sheet. Then compare, and mark each item ACCEPT / FIX (say what) / REJECT in `decisions.csv` (one row per id). Do not edit the item files; the bank worker applies fixes as draft replacements.
 
@@ -255,6 +255,97 @@ As used in the passage, the phrase "crept in" most nearly means
 - (C) were removed
 - (D) were counted
 
+### 20. `CIVIO-D1022-VEN-RC2-011`  (both, medium, 60 s)
+
+Read the passage, then answer the question.
+
+In a farming town in Nueva Ecija, an old storeroom behind the municipal hall now holds hundreds of glass jars of seeds. Each jar is labeled with the name of a rice, corn or vegetable variety, the farm it came from and the year it was harvested. The collection began after a typhoon flooded the lowland fields and ruined the seed that many families had saved for the next planting. Farmers who wanted to replant had to buy commercial seed, which was costly and did not always suit the local soil. A retired agriculturist suggested that the town keep a shared reserve. Farmers now deposit a small part of each harvest and may borrow seed when they need it, returning twice the amount after their next harvest. The arrangement is not free of problems. Seeds lose their ability to sprout if they are stored too long or kept in damp jars, so volunteers test a sample from each jar every year. Even so, the storeroom has already supplied seed to forty households after a second flood.
+
+What is the passage mainly about?
+
+- (A) A shared seed reserve that helps farmers replant after disasters
+- (B) Why commercial seed is better than saved seed
+- (C) How typhoons damage lowland rice fields
+- (D) The history of farming in the Philippines
+
+### 21. `CIVIO-D1022-VEN-RC2-012`  (both, easy, 45 s)
+
+Read the passage, then answer the question.
+
+In a farming town in Nueva Ecija, an old storeroom behind the municipal hall now holds hundreds of glass jars of seeds. Each jar is labeled with the name of a rice, corn or vegetable variety, the farm it came from and the year it was harvested. The collection began after a typhoon flooded the lowland fields and ruined the seed that many families had saved for the next planting. Farmers who wanted to replant had to buy commercial seed, which was costly and did not always suit the local soil. A retired agriculturist suggested that the town keep a shared reserve. Farmers now deposit a small part of each harvest and may borrow seed when they need it, returning twice the amount after their next harvest. The arrangement is not free of problems. Seeds lose their ability to sprout if they are stored too long or kept in damp jars, so volunteers test a sample from each jar every year. Even so, the storeroom has already supplied seed to forty households after a second flood.
+
+According to the passage, how much seed must a borrower return?
+
+- (A) The same amount, within a month
+- (B) Twice the amount borrowed, after the next harvest
+- (C) A small part of each harvest
+- (D) Nothing, since the seed is free
+
+### 22. `CIVIO-D1022-VEN-RC2-013`  (both, medium, 70 s)
+
+Read the passage, then answer the question.
+
+In a farming town in Nueva Ecija, an old storeroom behind the municipal hall now holds hundreds of glass jars of seeds. Each jar is labeled with the name of a rice, corn or vegetable variety, the farm it came from and the year it was harvested. The collection began after a typhoon flooded the lowland fields and ruined the seed that many families had saved for the next planting. Farmers who wanted to replant had to buy commercial seed, which was costly and did not always suit the local soil. A retired agriculturist suggested that the town keep a shared reserve. Farmers now deposit a small part of each harvest and may borrow seed when they need it, returning twice the amount after their next harvest. The arrangement is not free of problems. Seeds lose their ability to sprout if they are stored too long or kept in damp jars, so volunteers test a sample from each jar every year. Even so, the storeroom has already supplied seed to forty households after a second flood.
+
+Why do volunteers test a sample from each jar every year?
+
+- (A) To prove that commercial seed is weaker
+- (B) To decide which farmer may borrow first
+- (C) To find seed that may no longer sprout
+- (D) To count how many jars were borrowed
+
+### 23. `CIVIO-D1022-VEN-RC2-014`  (both, medium, 70 s)
+
+Read the passage, then answer the question.
+
+In a farming town in Nueva Ecija, an old storeroom behind the municipal hall now holds hundreds of glass jars of seeds. Each jar is labeled with the name of a rice, corn or vegetable variety, the farm it came from and the year it was harvested. The collection began after a typhoon flooded the lowland fields and ruined the seed that many families had saved for the next planting. Farmers who wanted to replant had to buy commercial seed, which was costly and did not always suit the local soil. A retired agriculturist suggested that the town keep a shared reserve. Farmers now deposit a small part of each harvest and may borrow seed when they need it, returning twice the amount after their next harvest. The arrangement is not free of problems. Seeds lose their ability to sprout if they are stored too long or kept in damp jars, so volunteers test a sample from each jar every year. Even so, the storeroom has already supplied seed to forty households after a second flood.
+
+What is the purpose of the sentence "The arrangement is not free of problems"?
+
+- (A) It repeats the cause of the first flood
+- (B) It shows that the reserve has failed
+- (C) It introduces a difficulty before the passage describes how it is handled
+- (D) It explains why farmers distrust the agriculturist
+
+### 24. `CIVIO-D1022-VEN-RC2-021`  (both, easy, 45 s)
+
+Read the passage, then answer the question.
+
+Every Friday, a street in a Cagayan de Oro barangay closes to traffic and fills with food stalls. The night market began as a way to help small vendors, but within a year residents were complaining about the noise, the smoke from grills and the trash left behind until morning. Instead of closing the market, the barangay council met with vendors and residents together. They agreed on a short list of rules. Grills must sit at the downwind end of the street, music must stop at ten, and every vendor must clean the space in front of the stall before leaving. A vendor who breaks a rule twice loses the stall for a month. The rules were posted on a board at both entrances so that customers, too, would know what to expect. Complaints fell sharply in the following months. The council credits the change less to the penalties than to the meeting itself, where residents and vendors heard each other's concerns for the first time and wrote rules that both groups considered fair.
+
+According to the passage, what happens to a vendor who breaks a rule twice?
+
+- (A) The vendor pays a fine to the barangay
+- (B) The vendor is banned from the market for good
+- (C) The vendor loses the stall for a month
+- (D) The vendor must move to the downwind end
+
+### 25. `CIVIO-D1022-VEN-RC2-023`  (both, easy, 40 s)
+
+Read the passage, then answer the question.
+
+Every Friday, a street in a Cagayan de Oro barangay closes to traffic and fills with food stalls. The night market began as a way to help small vendors, but within a year residents were complaining about the noise, the smoke from grills and the trash left behind until morning. Instead of closing the market, the barangay council met with vendors and residents together. They agreed on a short list of rules. Grills must sit at the downwind end of the street, music must stop at ten, and every vendor must clean the space in front of the stall before leaving. A vendor who breaks a rule twice loses the stall for a month. The rules were posted on a board at both entrances so that customers, too, would know what to expect. Complaints fell sharply in the following months. The council credits the change less to the penalties than to the meeting itself, where residents and vendors heard each other's concerns for the first time and wrote rules that both groups considered fair.
+
+As used in the passage, the word "credits" most nearly means
+
+- (A) pays back
+- (B) lends money to
+- (C) gives the reason for a result to
+- (D) blames for a problem
+
+### 26. `CIVIO-D1022-VEN-RC2-031`  (both, medium, 60 s)
+
+Read the passage, then answer the question.
+
+When food prices rose sharply one year, a public elementary school in Leyte turned a muddy corner of its grounds into a vegetable garden. Pupils in the upper grades were assigned small plots, and each class kept a notebook recording what was planted, how often it was watered and how much was harvested. Teachers used the notebooks in their lessons. In mathematics, pupils compared the yields of different plots; in science, they tested whether plots with compost grew faster than plots without it. The harvest went to the school's feeding program for pupils who were underweight. At first some parents objected, saying their children were sent to school to study, not to farm. Their view changed when they saw the notebooks at a parents' meeting and realized that the garden was part of the lessons rather than a distraction from them. Several parents later donated seedlings and tools. The principal admits that the garden does not feed every child who needs help, but she says it has taught pupils that what they learn in class can be used outside it.
+
+Which statement best expresses the main idea of the passage?
+
+- (A) A school garden became both a food source and a way to teach regular lessons
+- (B) Food prices in Leyte rose sharply one year
+- (C) Pupils with compost plots always harvest more
+- (D) Parents should decide what schools teach
+
 ---
 
 ## Answer sheet (open only after answering)
@@ -410,4 +501,60 @@ As used in the passage, the phrase "crept in" most nearly means
 - (C) This is the opposite.
 - (D) Counting is not the meaning.
 - File: `docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json`
+
+### 20. `CIVIO-D1022-VEN-RC2-011`: key (A) A shared seed reserve that helps farmers replant after disasters
+
+- Why correct: Answer: "A shared seed reserve that helps farmers replant after disasters". The passage explains why the town began the reserve, how it works, its main problem and its results.
+- (B) The passage says commercial seed was costly and did not always suit the soil.
+- (C) The flood explains why the reserve began; it is not the subject.
+- (D) The passage covers one town's reserve, not national history.
+- File: `docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json`
+
+### 21. `CIVIO-D1022-VEN-RC2-012`: key (B) Twice the amount borrowed, after the next harvest
+
+- Why correct: Answer: "Twice the amount borrowed, after the next harvest". The passage says farmers may borrow seed, "returning twice the amount after their next harvest."
+- (A) No one-month rule is given, and the amount is twice, not the same.
+- (C) That is what every farmer deposits, not what a borrower repays.
+- (D) Borrowers must return seed; the reserve is not a gift.
+- File: `docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json`
+
+### 22. `CIVIO-D1022-VEN-RC2-013`: key (C) To find seed that may no longer sprout
+
+- Why correct: Answer: "To find seed that may no longer sprout". The sentence before the tests says seeds lose their ability to sprout if stored too long or kept damp; the tests catch that.
+- (A) The tests compare nothing with commercial seed.
+- (B) Testing is about the seed, not about the order of borrowers.
+- (D) Counting jars is never mentioned.
+- File: `docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json`
+
+### 23. `CIVIO-D1022-VEN-RC2-014`: key (C) It introduces a difficulty before the passage describes how it is handled
+
+- Why correct: Answer: "It introduces a difficulty before the passage describes how it is handled". The sentence is a turn: it signals the storage problem, which the next sentences describe and answer with yearly testing.
+- (A) The flood was described earlier; this sentence turns to a new point.
+- (B) The passage goes on to say the reserve still supplied forty households.
+- (D) No distrust is described.
+- File: `docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json`
+
+### 24. `CIVIO-D1022-VEN-RC2-021`: key (C) The vendor loses the stall for a month
+
+- Why correct: Answer: "The vendor loses the stall for a month". The passage states: "A vendor who breaks a rule twice loses the stall for a month."
+- (A) No fine is mentioned.
+- (B) The penalty lasts one month, not forever.
+- (D) That is where grills must be placed, not a penalty.
+- File: `docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json`
+
+### 25. `CIVIO-D1022-VEN-RC2-023`: key (C) gives the reason for a result to
+
+- Why correct: Answer: "gives the reason for a result to". The council "credits the change less to the penalties than to the meeting": it says the meeting, more than the penalties, caused the drop.
+- (A) No payment is involved.
+- (B) "Credit" can mean a loan, but here the council is explaining what caused the change.
+- (D) The change was good; the council is praising the meeting, not blaming it.
+- File: `docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json`
+
+### 26. `CIVIO-D1022-VEN-RC2-031`: key (A) A school garden became both a food source and a way to teach regular lessons
+
+- Why correct: Answer: "A school garden became both a food source and a way to teach regular lessons". The passage shows the garden feeding underweight pupils and serving math and science lessons, which is why parents came to accept it.
+- (B) This is the background, not the main point.
+- (C) The class tested compost; no result, let alone "always," is given.
+- (D) The passage does not argue this.
+- File: `docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json`
 

@@ -43,6 +43,16 @@
      "n2": "21 is the smaller number.",
      "n3": "25 splits 50 evenly and ignores the difference.",
      "n4": "42 is 50 − 8, the sum minus the difference."
+    },
+    "method_steps": {
+     "1_asked": "The larger of two numbers.",
+     "2_givens": "sum 50, difference 8",
+     "3_method": "Larger = (sum + difference) ÷ 2.",
+     "4_why": "Adding the difference to the sum gives two copies of the larger number.",
+     "5_solve_by_hand": "(50 + 8) ÷ 2 = 29.",
+     "6_check": "Smaller = 29 − 8 = 21; 29 + 21 = 50.",
+     "7_distractors": "21: 21 is the smaller number. 25: 25 splits 50 evenly and ignores the difference. 42: 42 is 50 − 8, the sum minus the difference.",
+     "8_shortcut": "Split the sum in half (25), then add half the difference (4): 29."
     }
    },
    "distractor_reasoning": {
@@ -109,6 +119,16 @@
      "n1": "17 m adds one length and one width only.",
      "n3": "60 is the area in square meters, not the distance around.",
      "n4": "29 m counts one length twice and one width once."
+    },
+    "method_steps": {
+     "1_asked": "The length of fence around the lot.",
+     "2_givens": "12 m by 5 m",
+     "3_method": "Perimeter of a rectangle = 2 × (length + width).",
+     "4_why": "A fence goes around the outside edge.",
+     "5_solve_by_hand": "2 × (12 + 5) = 2 × 17 = 34 m.",
+     "6_check": "12 + 5 + 12 + 5 = 34.",
+     "7_distractors": "17 m: 17 m adds one length and one width only. 60 m: 60 is the area in square meters, not the distance around. 29 m: 29 m counts one length twice and one width once.",
+     "8_shortcut": "Add one length and one width, then double."
     }
    },
    "distractor_reasoning": {
@@ -175,6 +195,16 @@
      "n1": "₱200 is the smallest share (2 parts).",
      "n2": "₱400 is the largest share (4 parts).",
      "n4": "₱450 halves the total instead of using parts."
+    },
+    "method_steps": {
+     "1_asked": "The middle share.",
+     "2_givens": "₱900, ratio 2 : 3 : 4",
+     "3_method": "Find one part, then the shares.",
+     "4_why": "The ratio terms add up to the number of equal parts.",
+     "5_solve_by_hand": "2 + 3 + 4 = 9 parts; ₱900 ÷ 9 = ₱100; middle share 3 × ₱100 = ₱300.",
+     "6_check": "₱200 + ₱300 + ₱400 = ₱900.",
+     "7_distractors": "₱200: ₱200 is the smallest share (2 parts). ₱400: ₱400 is the largest share (4 parts). ₱450: ₱450 halves the total instead of using parts.",
+     "8_shortcut": "Middle term over sum: 3/9 = 1/3 of ₱900."
     }
    },
    "distractor_reasoning": {
@@ -241,6 +271,16 @@
      "n1": "54 is only 3 hours (18 × 3).",
      "n2": "64 multiplies 16, not 18, by 4.",
      "n3": "82 adds an extra 10."
+    },
+    "method_steps": {
+     "1_asked": "Folders put away in 4 hours.",
+     "2_givens": "18 folders per hour, 4 hours",
+     "3_method": "Rate × time.",
+     "4_why": "The same amount is done each hour.",
+     "5_solve_by_hand": "18 × 4 = 72.",
+     "6_check": "72 ÷ 4 = 18.",
+     "7_distractors": "54: 54 is only 3 hours (18 × 3). 64: 64 multiplies 16, not 18, by 4. 82: 82 adds an extra 10.",
+     "8_shortcut": "Double twice: 36, 72."
     }
    },
    "distractor_reasoning": {

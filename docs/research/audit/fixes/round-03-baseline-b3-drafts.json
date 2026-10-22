@@ -1560,6 +1560,16 @@
      "n1": "Forgot the carried 1.",
      "n2": "Carried 1 twice.",
      "n4": "Off by one."
+    },
+    "method_steps": {
+     "1_asked": "15 + 27.",
+     "2_givens": "15, 27",
+     "3_method": "Add tens, then ones.",
+     "4_why": "Place value lets you add in parts.",
+     "5_solve_by_hand": "10 + 20 = 30; 5 + 7 = 12; 30 + 12 = 42.",
+     "6_check": "42 − 27 = 15.",
+     "7_distractors": "32: Forgot the carried 1. 52: Carried 1 twice. 41: Off by one.",
+     "8_shortcut": "Round 27 to 30: 15 + 30 = 45, minus 3 = 42."
     }
    },
    "distractor_reasoning": {
@@ -1626,6 +1636,16 @@
      "n1": "Repeats the divisor.",
      "n2": "96 ÷ 6, wrong divisor.",
      "n3": "Off by one."
+    },
+    "method_steps": {
+     "1_asked": "96 ÷ 8.",
+     "2_givens": "96, 8",
+     "3_method": "Split 96 into parts that 8 divides.",
+     "4_why": "80 and 16 are both multiples of 8.",
+     "5_solve_by_hand": "80 ÷ 8 = 10; 16 ÷ 8 = 2; 10 + 2 = 12.",
+     "6_check": "8 × 12 = 96.",
+     "7_distractors": "8: Repeats the divisor. 16: 96 ÷ 6, wrong divisor. 11: Off by one.",
+     "8_shortcut": "Halve three times: 96 → 48 → 24 → 12."
     }
    },
    "distractor_reasoning": {
@@ -1692,6 +1712,16 @@
      "n2": "7 × 8.",
      "n3": "8 × 9.",
      "n4": "8 × 8, a nearby square."
+    },
+    "method_steps": {
+     "1_asked": "7 × 9.",
+     "2_givens": "7, 9",
+     "3_method": "Use 7 × 10 and take away one 7.",
+     "4_why": "9 is one less than 10.",
+     "5_solve_by_hand": "7 × 10 = 70; 70 − 7 = 63.",
+     "6_check": "63 ÷ 9 = 7.",
+     "7_distractors": "56: 7 × 8. 72: 8 × 9. 64: 8 × 8, a nearby square.",
+     "8_shortcut": "For × 9, the digits of the answer add to 9: 6 + 3 = 9."
     }
    },
    "distractor_reasoning": {
@@ -1758,6 +1788,16 @@
      "n1": "Borrowing error in the tens.",
      "n3": "Subtracted 33 instead of 37 (digits swapped in the ones step).",
      "n4": "Borrowed twice."
+    },
+    "method_steps": {
+     "1_asked": "100 − 37.",
+     "2_givens": "100, 37",
+     "3_method": "Count up from 37 to 100.",
+     "4_why": "Counting up avoids borrowing across zeros.",
+     "5_solve_by_hand": "37 + 3 = 40; 40 + 60 = 100; 3 + 60 = 63.",
+     "6_check": "63 + 37 = 100.",
+     "7_distractors": "73: Borrowing error in the tens. 67: Subtracted 33 instead of 37 (digits swapped in the ones step). 53: Borrowed twice.",
+     "8_shortcut": "Subtract each digit of 37 from 9 except the last from 10: 6 and 3."
     }
    },
    "distractor_reasoning": {
@@ -1824,6 +1864,16 @@
      "n1": "16% of 450.",
      "n2": "20% of 450.",
      "n4": "22% of 450."
+    },
+    "method_steps": {
+     "1_asked": "18% of 450 thousand pesos, in thousands.",
+     "2_givens": "450 (thousand pesos), 18%",
+     "3_method": "Split 18% into 10% and 8%.",
+     "4_why": "10% and 1% are easy to find by moving the decimal point.",
+     "5_solve_by_hand": "10% of 450 = 45. 1% = 4.5, so 8% = 36. 45 + 36 = 81.",
+     "6_check": "20% would be 90; 18% must be a little less: 81 fits.",
+     "7_distractors": "72: 16% of 450. 90: 20% of 450. 99: 22% of 450.",
+     "8_shortcut": "18% = 20% − 2%: 90 − 9 = 81."
     }
    },
    "distractor_reasoning": {
@@ -1890,6 +1940,16 @@
      "n1": "Subtracted 35 by estimate.",
      "n2": "Subtracted only 15.",
      "n3": "Forgot to move the decimal point."
+    },
+    "method_steps": {
+     "1_asked": "The product 125 × 0.8.",
+     "2_givens": "125 and 0.8",
+     "3_method": "Change 0.8 to the fraction 4/5.",
+     "4_why": "Dividing by 5 and multiplying by 4 is easier by hand than multiplying by a decimal.",
+     "5_solve_by_hand": "125 ÷ 5 = 25; 25 × 4 = 100.",
+     "6_check": "0.8 is a little less than 1, so the answer must be a little less than 125: 100 fits.",
+     "7_distractors": "90: Subtracted 35 by estimate. 110: Subtracted only 15. 1,000: Forgot to move the decimal point.",
+     "8_shortcut": "× 0.8 = × 8 ÷ 10: 1,000 ÷ 10 = 100."
     }
    },
    "distractor_reasoning": {
@@ -1956,6 +2016,16 @@
      "n2": "Multiplied 2 × 5.",
      "n3": "Only four factors of 2.",
      "n4": "5 squared, base and exponent swapped."
+    },
+    "method_steps": {
+     "1_asked": "The value of 2⁵.",
+     "2_givens": "base 2, exponent 5",
+     "3_method": "Multiply 2 by itself five times.",
+     "4_why": "The exponent counts the factors, not a multiplier.",
+     "5_solve_by_hand": "2 × 2 = 4; × 2 = 8; × 2 = 16; × 2 = 32.",
+     "6_check": "2⁵ is not 2 × 5 = 10; doubling 1 five times gives 32.",
+     "7_distractors": "10: Multiplied 2 × 5. 16: Only four factors of 2. 25: 5 squared, base and exponent swapped.",
+     "8_shortcut": "Learn the powers of 2: 2, 4, 8, 16, 32, 64."
     }
    },
    "distractor_reasoning": {
@@ -2022,6 +2092,16 @@
      "n1": "A multiple of 6 but not of 8.",
      "n3": "The product 6 × 8, a common multiple but not the least.",
      "n4": "The GCF, not the LCM."
+    },
+    "method_steps": {
+     "1_asked": "The least common multiple of 6 and 8.",
+     "2_givens": "6, 8",
+     "3_method": "List multiples of the larger number until one is divisible by the smaller.",
+     "4_why": "The LCM is the smallest number both divide evenly.",
+     "5_solve_by_hand": "Multiples of 8: 8, 16, 24. 24 ÷ 6 = 4, so the LCM is 24.",
+     "6_check": "24 ÷ 8 = 3 and 24 ÷ 6 = 4, both whole; 16 ÷ 6 is not.",
+     "7_distractors": "12: A multiple of 6 but not of 8. 48: The product 6 × 8, a common multiple but not the least. 2: The GCF, not the LCM.",
+     "8_shortcut": "LCM = a × b ÷ GCF = 48 ÷ 2 = 24."
     }
    },
    "distractor_reasoning": {
@@ -2088,6 +2168,16 @@
      "n1": "A common factor, but not the greatest.",
      "n2": "A common factor, but not the greatest.",
      "n4": "The LCM."
+    },
+    "method_steps": {
+     "1_asked": "The greatest common factor of 36 and 54.",
+     "2_givens": "36, 54",
+     "3_method": "Factor both and take the shared part.",
+     "4_why": "The GCF is the largest number dividing both.",
+     "5_solve_by_hand": "36 = 2 × 18; 54 = 3 × 18. 2 and 3 share no factor, so the GCF is 18.",
+     "6_check": "36 ÷ 18 = 2, 54 ÷ 18 = 3, and no larger number divides both.",
+     "7_distractors": "6: A common factor, but not the greatest. 9: A common factor, but not the greatest. 108: The LCM.",
+     "8_shortcut": "GCF(36, 54) = GCF(36, 54 − 36) = GCF(36, 18) = 18."
     }
    },
    "distractor_reasoning": {
@@ -2154,6 +2244,16 @@
      "n1": "0.2.",
      "n2": "0.25.",
      "n3": "Wrong place value (that is 1.25)."
+    },
+    "method_steps": {
+     "1_asked": "0.125 written as a fraction in lowest terms.",
+     "2_givens": "0.125",
+     "3_method": "Write the decimal over 1,000, then reduce.",
+     "4_why": "Three decimal places mean thousandths.",
+     "5_solve_by_hand": "0.125 = 125/1,000. Divide top and bottom by 125: 1/8.",
+     "6_check": "1 ÷ 8 = 0.125.",
+     "7_distractors": "1/5: 0.2. 1/4: 0.25. 125/100: Wrong place value (that is 1.25).",
+     "8_shortcut": "Know the eighths: 1/8 = 0.125, 3/8 = 0.375, 5/8 = 0.625."
     }
    },
    "distractor_reasoning": {
@@ -2286,6 +2386,16 @@
      "n1": "Pens over pencils, not over the total.",
      "n3": "Pencils' share.",
      "n4": "Pencils over pens."
+    },
+    "method_steps": {
+     "1_asked": "The fraction of all items that are pens.",
+     "2_givens": "pens : pencils = 3 : 5",
+     "3_method": "Add the ratio terms to get the whole.",
+     "4_why": "A part-to-part ratio becomes a part-to-whole fraction over the sum of the parts.",
+     "5_solve_by_hand": "3 + 5 = 8 parts in all; pens are 3 of them: 3/8.",
+     "6_check": "Pencils would be 5/8, and 3/8 + 5/8 = 1.",
+     "7_distractors": "3/5: Pens over pencils, not over the total. 5/8: Pencils' share. 5/3: Pencils over pens.",
+     "8_shortcut": "Part ÷ (sum of the ratio terms)."
     }
    },
    "distractor_reasoning": {
@@ -2352,6 +2462,16 @@
      "n1": "Decimal moved one place too far.",
      "n2": "Took 2.5% of 1,000.",
      "n4": "Decimal moved one place the wrong way (25%)."
+    },
+    "method_steps": {
+     "1_asked": "2.5% of ₱800.",
+     "2_givens": "₱800, 2.5%",
+     "3_method": "Find 1%, then multiply by 2.5.",
+     "4_why": "1% of a number is that number ÷ 100.",
+     "5_solve_by_hand": "1% of 800 = 8; 2.5 × 8 = 20.",
+     "6_check": "5% of 800 is 40; half of that is 20.",
+     "7_distractors": "2: Decimal moved one place too far. 25: Took 2.5% of 1,000. 200: Decimal moved one place the wrong way (25%).",
+     "8_shortcut": "2.5% = 1/40: 800 ÷ 40 = 20."
     }
    },
    "distractor_reasoning": {
@@ -2418,6 +2538,16 @@
      "n1": "13 × 13 = 169.",
      "n2": "16 × 16 = 256.",
      "n3": "Halved instead of taking the root."
+    },
+    "method_steps": {
+     "1_asked": "The whole number whose square is 196.",
+     "2_givens": "196",
+     "3_method": "Bracket between known squares.",
+     "4_why": "13² = 169 and 15² = 225, so the root is between 13 and 15.",
+     "5_solve_by_hand": "196 ends in 6, so the root ends in 4 or 6; 14 is the only choice between 13 and 15. 14 × 14 = 196.",
+     "6_check": "14 × 14 = 140 + 56 = 196.",
+     "7_distractors": "13: 13 × 13 = 169. 16: 16 × 16 = 256. 98: Halved instead of taking the root.",
+     "8_shortcut": "Squares ending in 6 come from numbers ending in 4 or 6."
     }
    },
    "distractor_reasoning": {
@@ -2484,6 +2614,16 @@
      "n2": "Dropped the half hour.",
      "n3": "Treated .5 h as 20 min.",
      "n4": "Used 100 minutes per hour."
+    },
+    "method_steps": {
+     "1_asked": "Minutes in 3.5 hours.",
+     "2_givens": "3.5 hours, 60 minutes per hour",
+     "3_method": "Multiply hours by 60.",
+     "4_why": "Each hour is 60 minutes.",
+     "5_solve_by_hand": "3 × 60 = 180; 0.5 × 60 = 30; 180 + 30 = 210.",
+     "6_check": "210 ÷ 60 = 3.5.",
+     "7_distractors": "180: Dropped the half hour. 200: Treated .5 h as 20 min. 350: Used 100 minutes per hour.",
+     "8_shortcut": "Half an hour is 30 minutes."
     }
    },
    "distractor_reasoning": {
@@ -2550,6 +2690,16 @@
      "n1": "Took 20% off 180 (wrong base).",
      "n3": "Subtracted 20 instead of 20%.",
      "n4": "Added 20% to 180."
+    },
+    "method_steps": {
+     "1_asked": "The allowance before a 20% raise.",
+     "2_givens": "after the raise: ₱180; raise 20%",
+     "3_method": "The new amount is 120% of the old one; divide by 1.2.",
+     "4_why": "The 20% is 20% of the old amount, not of ₱180.",
+     "5_solve_by_hand": "120% = ₱180, so 10% = ₱15 and 100% = ₱150.",
+     "6_check": "20% of 150 = 30; 150 + 30 = 180.",
+     "7_distractors": "144: Took 20% off 180 (wrong base). 160: Subtracted 20 instead of 20%. 216: Added 20% to 180.",
+     "8_shortcut": "Old = new ÷ 1.2 (or new × 5/6)."
     }
    },
    "distractor_reasoning": {
@@ -2616,6 +2766,16 @@
      "n1": "Added 2.",
      "n2": "Added 6.",
      "n4": "Doubled the last term."
+    },
+    "method_steps": {
+     "1_asked": "The next number.",
+     "2_givens": "3, 6, 9, 12",
+     "3_method": "Find the constant difference.",
+     "4_why": "The terms rise by the same amount each time.",
+     "5_solve_by_hand": "Difference 3; 12 + 3 = 15.",
+     "6_check": "These are the multiples of 3: 3 × 5 = 15.",
+     "7_distractors": "14: Added 2. 18: Added 6. 24: Doubled the last term.",
+     "8_shortcut": "Same jump every time: add it once more."
     }
    },
    "distractor_reasoning": {
@@ -2681,6 +2841,16 @@
      "n1": "Added the last difference 3.",
      "n2": "Added 4.",
      "n3": "Doubled 8."
+    },
+    "method_steps": {
+     "1_asked": "The next term.",
+     "2_givens": "1, 1, 2, 3, 5, 8",
+     "3_method": "Add the two terms before.",
+     "4_why": "Jumps 0, 1, 1, 2, 3 repeat the series itself, the sign of a Fibonacci series.",
+     "5_solve_by_hand": "5 + 8 = 13.",
+     "6_check": "3 + 5 = 8 and 2 + 3 = 5, so the rule holds throughout.",
+     "7_distractors": "11: Added the last difference 3. 12: Added 4. 16: Doubled 8.",
+     "8_shortcut": "Each term = the two before it added."
     }
    },
    "distractor_reasoning": {
@@ -2747,6 +2917,16 @@
      "n2": "Added 28 (the previous term).",
      "n3": "Added 42.",
      "n4": "Added 14 (the first difference)."
+    },
+    "method_steps": {
+     "1_asked": "The next term.",
+     "2_givens": "7, 14, 28, 56",
+     "3_method": "Find the ratio.",
+     "4_why": "Each term is twice the one before.",
+     "5_solve_by_hand": "56 × 2 = 112.",
+     "6_check": "14 ÷ 7 = 28 ÷ 14 = 56 ÷ 28 = 2.",
+     "7_distractors": "84: Added 28 (the previous term). 98: Added 42. 70: Added 14 (the first difference).",
+     "8_shortcut": "Doubling: add the number to itself."
     }
    },
    "distractor_reasoning": {
@@ -2812,6 +2992,16 @@
      "n1": "Added 5 again.",
      "n3": "Added 9, the previous odd difference.",
      "n4": "Skipped to 7²."
+    },
+    "method_steps": {
+     "1_asked": "The next number.",
+     "2_givens": "1, 4, 9, 16, 25",
+     "3_method": "Recognize perfect squares (or jumps 3, 5, 7, 9).",
+     "4_why": "Both views give the same rule.",
+     "5_solve_by_hand": "6² = 36 (or 25 + 11 = 36).",
+     "6_check": "Jumps 3, 5, 7, 9, 11 rise by 2.",
+     "7_distractors": "30: Added 5 again. 34: Added 9, the previous odd difference. 49: Skipped to 7².",
+     "8_shortcut": "Learn squares 1 to 15."
     }
    },
    "distractor_reasoning": {
@@ -2877,6 +3067,16 @@
      "n1": "Added 2 (25 = 5 × 5 is not prime).",
      "n2": "Added 4 (27 = 3 × 9).",
      "n4": "Skipped the prime 29."
+    },
+    "method_steps": {
+     "1_asked": "The next number.",
+     "2_givens": "11, 13, 17, 19, 23",
+     "3_method": "Check for primes.",
+     "4_why": "Jumps 2, 4, 2, 4 do not settle, but every term is prime.",
+     "5_solve_by_hand": "After 23: 24, 25, 26, 27 and 28 are not prime; 29 is.",
+     "6_check": "29 has no divisor other than 1 and itself.",
+     "7_distractors": "25: Added 2 (25 = 5 × 5 is not prime). 27: Added 4 (27 = 3 × 9). 31: Skipped the prime 29.",
+     "8_shortcut": "Primes after 20: 23, 29, 31, 37."
     }
    },
    "distractor_reasoning": {
@@ -2943,6 +3143,16 @@
      "n1": "Multiplied by 2.",
      "n2": "Multiplied by 4 again.",
      "n3": "Multiplied by 6."
+    },
+    "method_steps": {
+     "1_asked": "The fifth term.",
+     "2_givens": "1, 2, 6, 24",
+     "3_method": "Find the multipliers.",
+     "4_why": "The multipliers are 2, 3, 4, so the next is 5.",
+     "5_solve_by_hand": "24 × 5 = 120.",
+     "6_check": "1 × 2 × 3 × 4 × 5 = 120.",
+     "7_distractors": "48: Multiplied by 2. 96: Multiplied by 4 again. 144: Multiplied by 6.",
+     "8_shortcut": "These are factorials: 5! = 120."
     }
    },
    "distractor_reasoning": {

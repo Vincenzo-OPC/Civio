@@ -43,6 +43,16 @@
           "o1": "₱72 is the discount itself. The buyer pays the price minus this amount.",
           "o3": "₱465 subtracts 15 pesos, not 15% of the price.",
           "o4": "₱552 adds 15% instead of taking it off."
+        },
+        "method_steps": {
+          "1_asked": "The price the buyer pays after the discount.",
+          "2_givens": "price ₱480, discount 15%",
+          "3_method": "Find 15% of the price and subtract it, or pay 85% of the price directly.",
+          "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+          "5_solve_by_hand": "10% of ₱480 = ₱48. 15% = ₱72. ₱480 − ₱72 = ₱408.",
+          "6_check": "85% of ₱480 = ₱408, the same answer.",
+          "7_distractors": "₱72: ₱72 is the discount itself. The buyer pays the price minus this amount. ₱465: ₱465 subtracts 15 pesos, not 15% of the price. ₱552: ₱552 adds 15% instead of taking it off.",
+          "8_shortcut": "Pay 85%: ₱480 × 85 ÷ 100."
         }
       },
       "distractor_reasoning": {
@@ -145,6 +155,16 @@
           "o1": "₱765 subtracts 35 pesos, not 35% of the price.",
           "o3": "₱280 is the discount itself. The buyer pays the price minus this amount.",
           "o4": "₱1,080 adds 35% instead of taking it off."
+        },
+        "method_steps": {
+          "1_asked": "The price the buyer pays after the discount.",
+          "2_givens": "price ₱800, discount 35%",
+          "3_method": "Find 35% of the price and subtract it, or pay 65% of the price directly.",
+          "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+          "5_solve_by_hand": "10% of ₱800 = ₱80. 35% = ₱280. ₱800 − ₱280 = ₱520.",
+          "6_check": "65% of ₱800 = ₱520, the same answer.",
+          "7_distractors": "₱765: ₱765 subtracts 35 pesos, not 35% of the price. ₱280: ₱280 is the discount itself. The buyer pays the price minus this amount. ₱1,080: ₱1,080 adds 35% instead of taking it off.",
+          "8_shortcut": "Pay 65%: ₱800 × 65 ÷ 100."
         }
       },
       "distractor_reasoning": {
@@ -247,6 +267,16 @@
           "o1": "₱1,725 adds 15% instead of taking it off.",
           "o2": "₱1,485 subtracts 15 pesos, not 15% of the price.",
           "o3": "₱225 is the discount itself. The buyer pays the price minus this amount."
+        },
+        "method_steps": {
+          "1_asked": "The price the buyer pays after the discount.",
+          "2_givens": "price ₱1,500, discount 15%",
+          "3_method": "Find 15% of the price and subtract it, or pay 85% of the price directly.",
+          "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+          "5_solve_by_hand": "10% of ₱1,500 = ₱150. 15% = ₱225. ₱1,500 − ₱225 = ₱1,275.",
+          "6_check": "85% of ₱1,500 = ₱1,275, the same answer.",
+          "7_distractors": "₱1,725: ₱1,725 adds 15% instead of taking it off. ₱1,485: ₱1,485 subtracts 15 pesos, not 15% of the price. ₱225: ₱225 is the discount itself. The buyer pays the price minus this amount.",
+          "8_shortcut": "Pay 85%: ₱1,500 × 85 ÷ 100."
         }
       },
       "distractor_reasoning": {
@@ -1369,6 +1399,16 @@
           "o1": "This uses the area (154 square meters). Going around uses the perimeter.",
           "o2": "₱58 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.",
           "o4": "This uses only one length and one width (29 m). A rectangle has two of each."
+        },
+        "method_steps": {
+          "1_asked": "The cost of edging all the way around the rectangle.",
+          "2_givens": "length 22 m, width 7 m, ₱40 per meter",
+          "3_method": "Find the perimeter, then multiply by the cost per meter.",
+          "4_why": "Edging goes around the outside, so the distance to pay for is the perimeter, not the area.",
+          "5_solve_by_hand": "Perimeter = 2 × (22 + 7) = 2 × 29 = 58 m. Cost = 58 × ₱40 = ₱2,320.",
+          "6_check": "Walk the sides: 22 + 7 + 22 + 7 = 58 m. Then ₱2,320 ÷ ₱40 = 58 m.",
+          "7_distractors": "₱6,160: This uses the area (154 square meters). Going around uses the perimeter. ₱58: ₱58 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40. ₱1,160: This uses only one length and one width (29 m). A rectangle has two of each.",
+          "8_shortcut": "Add one length and one width (29), double it, then multiply: 29 × 2 × 40."
         }
       },
       "distractor_reasoning": {
@@ -1471,6 +1511,16 @@
           "o1": "₱96 is just the perimeter in meters written as pesos. It stops before multiplying by ₱25.",
           "o2": "This uses the area (551 square meters). Going around uses the perimeter.",
           "o4": "This uses only one length and one width (48 m). A rectangle has two of each."
+        },
+        "method_steps": {
+          "1_asked": "The cost of edging all the way around the rectangle.",
+          "2_givens": "length 29 m, width 19 m, ₱25 per meter",
+          "3_method": "Find the perimeter, then multiply by the cost per meter.",
+          "4_why": "Edging goes around the outside, so the distance to pay for is the perimeter, not the area.",
+          "5_solve_by_hand": "Perimeter = 2 × (29 + 19) = 2 × 48 = 96 m. Cost = 96 × ₱25 = ₱2,400.",
+          "6_check": "Walk the sides: 29 + 19 + 29 + 19 = 96 m. Then ₱2,400 ÷ ₱25 = 96 m.",
+          "7_distractors": "₱96: ₱96 is just the perimeter in meters written as pesos. It stops before multiplying by ₱25. ₱13,775: This uses the area (551 square meters). Going around uses the perimeter. ₱1,200: This uses only one length and one width (48 m). A rectangle has two of each.",
+          "8_shortcut": "Add one length and one width (48), double it, then multiply: 48 × 2 × 25."
         }
       },
       "distractor_reasoning": {
@@ -1573,6 +1623,16 @@
           "o1": "₱86 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.",
           "o3": "This uses only one length and one width (43 m). A rectangle has two of each.",
           "o4": "This uses the area (420 square meters). Going around uses the perimeter."
+        },
+        "method_steps": {
+          "1_asked": "The cost of edging all the way around the rectangle.",
+          "2_givens": "length 28 m, width 15 m, ₱40 per meter",
+          "3_method": "Find the perimeter, then multiply by the cost per meter.",
+          "4_why": "Edging goes around the outside, so the distance to pay for is the perimeter, not the area.",
+          "5_solve_by_hand": "Perimeter = 2 × (28 + 15) = 2 × 43 = 86 m. Cost = 86 × ₱40 = ₱3,440.",
+          "6_check": "Walk the sides: 28 + 15 + 28 + 15 = 86 m. Then ₱3,440 ÷ ₱40 = 86 m.",
+          "7_distractors": "₱86: ₱86 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40. ₱1,720: This uses only one length and one width (43 m). A rectangle has two of each. ₱16,800: This uses the area (420 square meters). Going around uses the perimeter.",
+          "8_shortcut": "Add one length and one width (43), double it, then multiply: 43 × 2 × 40."
         }
       },
       "distractor_reasoning": {
@@ -1675,6 +1735,16 @@
           "o1": "₱86 is just the perimeter in meters written as pesos. It stops before multiplying by ₱120.",
           "o2": "This uses the area (450 square meters). Going around uses the perimeter.",
           "o3": "This uses only one length and one width (43 m). A rectangle has two of each."
+        },
+        "method_steps": {
+          "1_asked": "The cost of edging all the way around the rectangle.",
+          "2_givens": "length 25 m, width 18 m, ₱120 per meter",
+          "3_method": "Find the perimeter, then multiply by the cost per meter.",
+          "4_why": "Edging goes around the outside, so the distance to pay for is the perimeter, not the area.",
+          "5_solve_by_hand": "Perimeter = 2 × (25 + 18) = 2 × 43 = 86 m. Cost = 86 × ₱120 = ₱10,320.",
+          "6_check": "Walk the sides: 25 + 18 + 25 + 18 = 86 m. Then ₱10,320 ÷ ₱120 = 86 m.",
+          "7_distractors": "₱86: ₱86 is just the perimeter in meters written as pesos. It stops before multiplying by ₱120. ₱54,000: This uses the area (450 square meters). Going around uses the perimeter. ₱5,160: This uses only one length and one width (43 m). A rectangle has two of each.",
+          "8_shortcut": "Add one length and one width (43), double it, then multiply: 43 × 2 × 120."
         }
       },
       "distractor_reasoning": {
@@ -1777,6 +1847,16 @@
           "o1": "₱108 is just the perimeter in meters written as pesos. It stops before multiplying by ₱25.",
           "o3": "This uses only one length and one width (54 m). A rectangle has two of each.",
           "o4": "This uses the area (680 square meters). Going around uses the perimeter."
+        },
+        "method_steps": {
+          "1_asked": "The cost of edging all the way around the rectangle.",
+          "2_givens": "length 34 m, width 20 m, ₱25 per meter",
+          "3_method": "Find the perimeter, then multiply by the cost per meter.",
+          "4_why": "Edging goes around the outside, so the distance to pay for is the perimeter, not the area.",
+          "5_solve_by_hand": "Perimeter = 2 × (34 + 20) = 2 × 54 = 108 m. Cost = 108 × ₱25 = ₱2,700.",
+          "6_check": "Walk the sides: 34 + 20 + 34 + 20 = 108 m. Then ₱2,700 ÷ ₱25 = 108 m.",
+          "7_distractors": "₱108: ₱108 is just the perimeter in meters written as pesos. It stops before multiplying by ₱25. ₱1,350: This uses only one length and one width (54 m). A rectangle has two of each. ₱17,000: This uses the area (680 square meters). Going around uses the perimeter.",
+          "8_shortcut": "Add one length and one width (54), double it, then multiply: 54 × 2 × 25."
         }
       },
       "distractor_reasoning": {
@@ -1879,6 +1959,16 @@
           "o2": "₱78 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.",
           "o3": "This uses the area (290 square meters). Going around uses the perimeter.",
           "o4": "This uses only one length and one width (39 m). A rectangle has two of each."
+        },
+        "method_steps": {
+          "1_asked": "The cost of edging all the way around the rectangle.",
+          "2_givens": "length 29 m, width 10 m, ₱40 per meter",
+          "3_method": "Find the perimeter, then multiply by the cost per meter.",
+          "4_why": "Edging goes around the outside, so the distance to pay for is the perimeter, not the area.",
+          "5_solve_by_hand": "Perimeter = 2 × (29 + 10) = 2 × 39 = 78 m. Cost = 78 × ₱40 = ₱3,120.",
+          "6_check": "Walk the sides: 29 + 10 + 29 + 10 = 78 m. Then ₱3,120 ÷ ₱40 = 78 m.",
+          "7_distractors": "₱78: ₱78 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40. ₱11,600: This uses the area (290 square meters). Going around uses the perimeter. ₱1,560: This uses only one length and one width (39 m). A rectangle has two of each.",
+          "8_shortcut": "Add one length and one width (39), double it, then multiply: 39 × 2 × 40."
         }
       },
       "distractor_reasoning": {
@@ -2491,6 +2581,16 @@
           "o2": "24.5 hours is the average of the two times. Together they must be faster than the faster person alone.",
           "o3": "49 hours adds the two times. Add the work done per hour, not the hours.",
           "o4": "7 hours subtracts the two times (28 − 21). Add the work done per hour; do not subtract the hours."
+        },
+        "method_steps": {
+          "1_asked": "How long the two painters take working together.",
+          "2_givens": "Nestor alone 21 hours, Aling Rosa alone 28 hours",
+          "3_method": "Add the work rates (jobs per hour), then invert.",
+          "4_why": "Working together means their hourly work adds up; times do not add.",
+          "5_solve_by_hand": "Nestor: 1/21 of the job per hour; Aling Rosa: 1/28. With denominator 84: 4/84 + 3/84 = 7/84 = 1/12. So the job takes 12 hours.",
+          "6_check": "In 12 hours, Nestor does 12/21 = 4/7 and Aling Rosa 12/28 = 3/7; 4/7 + 3/7 = 1 whole job.",
+          "7_distractors": "24.5 hours: 24.5 hours is the average of the two times. Together they must be faster than the faster person alone. 49 hours: 49 hours adds the two times. Add the work done per hour, not the hours. 7 hours: 7 hours subtracts the two times (28 − 21). Add the work done per hour; do not subtract the hours.",
+          "8_shortcut": "Together time = (a × b) ÷ (a + b) = (21 × 28) ÷ 49 = 12."
         }
       },
       "distractor_reasoning": {

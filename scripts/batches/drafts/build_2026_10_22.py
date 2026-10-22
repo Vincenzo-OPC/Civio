@@ -7,7 +7,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE)); sys.path.insert(0, str(HERE.parent))
 import qa  # noqa: E402
 from d22_common import mk, words  # noqa: E402
-import d22_math, d22_fil, d22_cler, d22_ana, d22_en, gi_2026_10_22 as G  # noqa: E402
+import d22_math, d22_fil, d22_cler, d22_cler2, d22_ana, d22_en, gi_2026_10_22 as G  # noqa: E402
 
 OUT = Path("docs/research/batches/drafts")
 GI_CACHE = "/workspace/gi"
@@ -84,6 +84,8 @@ FILES = {
     "subpro-clerical-2026-10-22.json": ("clerical", lambda: d22_cler.ITEMS),
     "analytical-professional-2026-10-22.json": ("analytical", analytical),
     "verbal-en-organization-reading-2026-10-22.json": ("verbal_en", lambda: d22_en.ITEMS),
+    "verbal-en-reading-set2-2026-10-22.json": ("verbal_en", lambda: d22_en.ITEMS2),
+    "subpro-clerical-set2-2026-10-22.json": ("clerical", lambda: d22_cler2.ITEMS),
     "gi-applied-2026-10-22.json": ("general_information", gi_items),
 }
 

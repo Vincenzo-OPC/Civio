@@ -35,3 +35,11 @@ Pending human review: 723 non-approved rows (681 draft + 42 reviewed). Nothing s
   decimal distractors on 6 whole-count word problems replaced with integer misconceptions.
 - **Review packets:** 723 non-approved rows in 28 independent packets (`docs/research/review/packets-2026-10-22/`):
   P1 42, P2 84, P3 258, P4 339. Key and explanation sit in a separate answer sheet; decisions go in `decisions.csv`.
+
+## Late-afternoon update (22 Oct 2026, after 2:55 PM directive)
+
+- **Verbal EN:** 12 new original passages (158–185 words), 4 questions each = 48 drafts (`verbal-en-reading-set2-2026-10-22.json`) covering main idea, detail, inference, vocabulary in context, author's purpose and relation between parts. The 7 short-passage drafts (CIVIO-GF2K05-RCD-0001/0002, RCI-0001/0002, RCM-0001/0002, RCV-0001) were swapped out for RC2 items; 41 RC2 items stay as spares.
+- **Clerical:** 40 Subpro-only spare drafts (`subpro-clerical-set2-2026-10-22.json`): 12 spelling, 12 alphabetic filing (ARMA Rules 1, 2, 8), 6 chronological, 4 numeric filing (Rule 7), 6 copy-check. Spec proposals pending CoS: archetypes CLR-CHRONOLOGICAL and CLR-COPY-CHECK, distractor code CLR-COPY-MISMATCH.
+- **Numerical method-first:** `reveal.method_steps` (asked, givens, method, why, solve by hand, check, distractors, shortcut) added in place to all 76 non-D1022 numerical draft rows (the 25 D1022 drafts already had them). Hashes refreshed by the swap script, now for every draft row. 59 approved rows got -R1 proposals only (`audit/fixes/method-first-r1-proposals-2026-10-22.json`, content and key unchanged, not in the manifest). Not yet covered: 42 reviewed rows (batch-subpro-num-001) and about 240 other approved rows (no template yet).
+- **Flags for review:** signoff-replacements-2026-10-22 has template padding (5 near-identical rectangle-edging items, 3 near-identical chair-discount items), and gap-fill-2000-02 has 20 templated order-of-operations items. These are drafts only.
+- **Manifest:** 2,100 (Num 400, Ana 400, VEN 400, VFIL 300, CLR 300, GI 300); percent-change rows 40/40; validator 0 problems; master audit Counter().

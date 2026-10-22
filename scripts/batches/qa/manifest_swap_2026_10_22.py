@@ -8,8 +8,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 from flat_2100_manifest_2026_10_22 import content_hash, OUT_JSON, OUT_CSV, TARGETS, PCT_CAP, is_pct  # noqa: E402
 
 D = "docs/research/batches/drafts/"
-NEW = {"analytical": [D + "analytical-professional-2026-10-22.json"], "clerical": [D + "subpro-clerical-2026-10-22.json"],
-       "general_information": [D + "gi-applied-2026-10-22.json"], "verbal_en": [D + "verbal-en-organization-reading-2026-10-22.json"],
+NEW = {"analytical": [D + "analytical-professional-2026-10-22.json"], "clerical": [D + "subpro-clerical-2026-10-22.json", D + "subpro-clerical-set2-2026-10-22.json"],
+       "general_information": [D + "gi-applied-2026-10-22.json"], "verbal_en": [D + "verbal-en-organization-reading-2026-10-22.json", D + "verbal-en-reading-set2-2026-10-22.json"],
        "numerical": [D + "numerical-series-2026-10-22.json", D + "subpro-math-2026-10-22.json"]}
 FLAT, BASE = "docs/research/civio-flat-2100-2026-10-22.json", "docs/research/audit/data/baseline-550-spec-2026-10-18.json"
 GISUP = "docs/research/subprofessional-general-info-supplement-001.json"
@@ -26,6 +26,7 @@ PADDING = {"CIVIO-NUM-FRAC-DEC-000713": "CIVIO-NUM-FRAC-DEC-000440", "CIVIO-NUM-
            "CIVIO-ANA-SYLLOGISM-000342": "CIVIO-ANA-SYLLOGISM-000147"}
 DISPUTED = ["CIVIO-GAP3-CLR-FILE-ORDER-00%d" % n for n in (17, 20, 21, 22, 23)]
 # legacy GI drafts with no verifiable lawphil quote (qa.legacy_errors): one cites no statute, one still says "TO BE QUOTED"
+SHORT_RC = ["CIVIO-GF2K05-RC%s" % x for x in ("D-0001", "D-0002", "I-0001", "I-0002", "M-0001", "M-0002", "V-0001")]
 UNVERIFIED = {"CIVIO-B3-GI-ENV-PRINCIPLE-0528": "unverifiable_gi: no statute cited (general ecology fact), cannot be checked against lawphil",
               "CIVIO-B3-GI-ENV-PRINCIPLE-0083": "unverifiable_gi: source_quote is a placeholder (\"TO BE QUOTED\"), never checked against lawphil"}
 
@@ -55,6 +56,8 @@ def main():
             out_ids[r["id"]] = REASON[r["source_file"]]
         elif r["id"] in PADDING:
             out_ids[r["id"]] = f"padding: same item as {PADDING[r['id']]} with only names, objects or one noun changed (kept the earlier twin)"
+        elif r["id"] in SHORT_RC:
+            out_ids[r["id"]] = "short_passage: reading passage under the 150-word spec minimum (replaced by a set-2 passage item)"
         elif r["id"] in UNVERIFIED:
             out_ids[r["id"]] = UNVERIFIED[r["id"]]
         elif r["id"] in DISPUTED:
@@ -85,7 +88,7 @@ def main():
     # 22 Oct drafts edited after swap-in (content QA fixes): refresh their hash. Only draft rows; approved content never changes.
     refreshed = []
     for r in rows:
-        if r.get("note") == "d1022_replacement" and r["status"] == "draft":
+        if r["status"] == "draft":  # any draft row (d1022 replacements and method-first edits)
             it = next(i for i in json.load(open(r["source_file"]))["items"] if i["id"] == r["id"])
             if content_hash(it) != r["content_sha256"]:
                 r["content_sha256"] = content_hash(it); refreshed.append(r["id"])

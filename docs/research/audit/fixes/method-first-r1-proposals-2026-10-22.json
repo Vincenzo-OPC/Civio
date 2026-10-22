@@ -1,0 +1,4352 @@
+{
+ "date": "2026-10-22",
+ "note": "Proposals only: never approved, signed or imported by the bank worker.",
+ "items": [
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000002-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "number series with growing differences",
+   "micro_skill": "find the rule in the differences and extend it",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  4, 7, 12, 19, 28, ___",
+   "options": [
+    {
+     "option_id": "s1",
+     "text": "31"
+    },
+    {
+     "option_id": "s2",
+     "text": "37"
+    },
+    {
+     "option_id": "s3",
+     "text": "39"
+    },
+    {
+     "option_id": "s4",
+     "text": "41"
+    }
+   ],
+   "answer_option_id": "s3",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"difference\" is how much you add to get from one number to the next.",
+    "shortcut": "Write the jumps under the list. 4 to 7 is +3. 7 to 12 is +5. 12 to 19 is +7. 19 to 28 is +9. The jumps go up by 2 each time. So the next jump is +11.",
+    "why_correct": "39 is right: 28 + 11 = 39. Check the jumps: 3, 5, 7, 9, 11 each grow by 2.",
+    "why_wrong": {
+     "s1": "31 adds only the first jump, +3, to 28. The jump does not stay at 3.",
+     "s2": "37 repeats the last jump, +9. The jump keeps growing, so it should be +11.",
+     "s4": "41 adds 13. That skips one step in the jumps (it goes 9 then 13 instead of 9 then 11)."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "4, 7, 12, 19, 28",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 3, 5, 7, 9; each jump is 2 more than the last. Next jump: 9 + 2 = 11. Next term: 28 + 11 = 39.",
+     "6_check": "Rebuild the series from 4 with jumps 3, 5, 7, 9, 11: you get 4, 7, 12, 19, 28, 39.",
+     "7_distractors": "31: 31 adds only the first jump, +3, to 28. The jump does not stay at 3. 37: 37 repeats the last jump, +9. The jump keeps growing, so it should be +11. 41: 41 adds 13. That skips one step in the jumps (it goes 9 then 13 instead of 9 then 11).",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "s1": "NUM-SEQ-OTHER-RULE",
+    "s2": "NUM-PARTIAL",
+    "s4": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:15:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000002 (approved); content and key unchanged. 22 Oct 2026.",
+   "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+   "shortcut": "Write the gaps (+3, +5, +7, +9); they change by the same amount each time, so the next gap is +11: 28 +11 = 39.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000002"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000023-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Find the next number in the series.  6, 12, 19, 27, 36, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "45"
+    },
+    {
+     "option_id": "o2",
+     "text": "42"
+    },
+    {
+     "option_id": "o3",
+     "text": "46"
+    },
+    {
+     "option_id": "o4",
+     "text": "47"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +6, +7, +8, +9. Each jump is 1 more than the one before. So the next jump is +10.",
+    "why_correct": "46 is right: 36 + 10 = 46.",
+    "why_wrong": {
+     "o1": "45 repeats the last jump, +9. The jumps keep growing by 1.",
+     "o2": "42 adds only the first jump, +6, as if the jump never changed.",
+     "o4": "47 uses a jump of +11, one step too far in the growing jumps."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "6, 12, 19, 27, 36",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 6, 7, 8, 9; each jump is 1 more than the last. Next jump: 9 + 1 = 10. Next term: 36 + 10 = 46.",
+     "6_check": "Rebuild the series from 6 with jumps 6, 7, 8, 9, 10: you get 6, 12, 19, 27, 36, 46.",
+     "7_distractors": "45: 45 repeats the last jump, +9. The jumps keep growing by 1. 42: 42 adds only the first jump, +6, as if the jump never changed. 47: 47 uses a jump of +11, one step too far in the growing jumps.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000023 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Find the next number in the series.  6, 12, 19, 27, 36, ___",
+   "shortcut": "Write the gaps (+6, +7, +8, +9); they change by the same amount each time, so the next gap is +10: 36 +10 = 46.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000023"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000044-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Which number should come next?  4, 8, 15, 25, 38, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "42"
+    },
+    {
+     "option_id": "o2",
+     "text": "54"
+    },
+    {
+     "option_id": "o3",
+     "text": "57"
+    },
+    {
+     "option_id": "o4",
+     "text": "51"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +4, +7, +10, +13. Each jump is 3 more than the one before. So the next jump is +16.",
+    "why_correct": "54 is right: 38 + 16 = 54.",
+    "why_wrong": {
+     "o1": "42 adds only the first jump, +4, as if the jump never changed.",
+     "o3": "57 uses a jump of +19, one step too far in the growing jumps.",
+     "o4": "51 repeats the last jump, +13. The jumps keep growing by 3."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "4, 8, 15, 25, 38",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 4, 7, 10, 13; each jump is 3 more than the last. Next jump: 13 + 3 = 16. Next term: 38 + 16 = 54.",
+     "6_check": "Rebuild the series from 4 with jumps 4, 7, 10, 13, 16: you get 4, 8, 15, 25, 38, 54.",
+     "7_distractors": "42: 42 adds only the first jump, +4, as if the jump never changed. 57: 57 uses a jump of +19, one step too far in the growing jumps. 51: 51 repeats the last jump, +13. The jumps keep growing by 3.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000044 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Which number should come next?  4, 8, 15, 25, 38, ___",
+   "shortcut": "Write the gaps (+4, +7, +10, +13); they change by the same amount each time, so the next gap is +16: 38 +16 = 54.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000044"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000035-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  2, 6, 14, 30, 62, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "124"
+    },
+    {
+     "option_id": "o2",
+     "text": "94"
+    },
+    {
+     "option_id": "o3",
+     "text": "128"
+    },
+    {
+     "option_id": "o4",
+     "text": "126"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 2, then + 2\" on the first numbers: 2 × 2 + 2 = 6; 6 × 2 + 2 = 14. It works, so use it on 62.",
+    "why_correct": "126 is right: 62 × 2 = 124, then + 2 gives 126.",
+    "why_wrong": {
+     "o1": "124 multiplies by 2 but forgets the + 2 step.",
+     "o2": "94 repeats the last difference (32). The jumps are not the same each time.",
+     "o3": "128 does the + 2 step twice."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "2, 6, 14, 30, 62",
+     "3_method": "Test a multiply-then-add rule: term × 2 + 2.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "62 × 2 = 124; 124 + 2 = 126.",
+     "6_check": "Test the rule on an early pair: 2 × 2 + 2 = 6, and 6 × 2 + 2 = 14.",
+     "7_distractors": "124: 124 multiplies by 2 but forgets the + 2 step. 94: 94 repeats the last difference (32). The jumps are not the same each time. 128: 128 does the + 2 step twice.",
+     "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000035 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  2, 6, 14, 30, 62, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000035"
+  },
+  {
+   "id": "CIVIO-NUM-WP-PCT-CHANGE-000030-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "discount",
+   "micro_skill": "price after a percent discount",
+   "archetype": "NUM-WP-PCT-CHANGE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A pair of school shoes is priced at ₱480. It is sold at 15% off. How much does a buyer pay?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱408"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱465"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱72"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱552"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+    "shortcut": "Pay 85% of the price: ₱480 × 0.85 = ₱408.",
+    "why_correct": "₱408 is right. Check: discount ₱72; ₱480 − ₱72 = ₱408.",
+    "why_wrong": {
+     "o2": "₱465 subtracts 15 pesos, not 15% of the price.",
+     "o3": "₱72 is the discount itself. The buyer pays the price minus this amount.",
+     "o4": "₱552 adds 15% instead of taking it off."
+    },
+    "method_steps": {
+     "1_asked": "The price the buyer pays after the discount.",
+     "2_givens": "price ₱480, discount 15%",
+     "3_method": "Find 15% of the price and subtract it, or pay 85% of the price directly.",
+     "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+     "5_solve_by_hand": "10% of ₱480 = ₱48. 15% = ₱72. ₱480 − ₱72 = ₱408.",
+     "6_check": "85% of ₱480 = ₱408, the same answer.",
+     "7_distractors": "₱465: ₱465 subtracts 15 pesos, not 15% of the price. ₱72: ₱72 is the discount itself. The buyer pays the price minus this amount. ₱552: ₱552 adds 15% instead of taking it off.",
+     "8_shortcut": "Pay 85%: ₱480 × 85 ÷ 100."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-WRONG-BASE",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000030 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "A pair of school shoes is priced at ₱480. It is sold at 15% off. How much does a buyer pay?",
+   "shortcut": "Split 15% into 10% + 5%: 10% of ₱480 is ₱48, and 5% is half of 10% (₱24). Take off ₱72 to get ₱408.",
+   "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000030"
+  },
+  {
+   "id": "CIVIO-NUM-WP-PCT-CHANGE-000036-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "discount",
+   "micro_skill": "price after a percent discount",
+   "archetype": "NUM-WP-PCT-CHANGE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A backpack is priced at ₱400. It is sold at 15% off. How much does a buyer pay?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱340"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱60"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱385"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱460"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+    "shortcut": "Pay 85% of the price: ₱400 × 0.85 = ₱340.",
+    "why_correct": "₱340 is right. Check: discount ₱60; ₱400 − ₱60 = ₱340.",
+    "why_wrong": {
+     "o2": "₱60 is the discount itself. The buyer pays the price minus this amount.",
+     "o3": "₱385 subtracts 15 pesos, not 15% of the price.",
+     "o4": "₱460 adds 15% instead of taking it off."
+    },
+    "method_steps": {
+     "1_asked": "The price the buyer pays after the discount.",
+     "2_givens": "price ₱400, discount 15%",
+     "3_method": "Find 15% of the price and subtract it, or pay 85% of the price directly.",
+     "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+     "5_solve_by_hand": "10% of ₱400 = ₱40. 15% = ₱60. ₱400 − ₱60 = ₱340.",
+     "6_check": "85% of ₱400 = ₱340, the same answer.",
+     "7_distractors": "₱60: ₱60 is the discount itself. The buyer pays the price minus this amount. ₱385: ₱385 subtracts 15 pesos, not 15% of the price. ₱460: ₱460 adds 15% instead of taking it off.",
+     "8_shortcut": "Pay 85%: ₱400 × 85 ÷ 100."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-WRONG-BASE",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000036 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "A backpack is priced at ₱400. It is sold at 15% off. How much does a buyer pay?",
+   "shortcut": "Move the decimal one place for 10% (₱40), halve it for 5% (₱20), and build 15% from those: ₱60 off, so ₱340.",
+   "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000036"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000117-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  5, 7, 10, 14, 19, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "25"
+    },
+    {
+     "option_id": "o2",
+     "text": "24"
+    },
+    {
+     "option_id": "o3",
+     "text": "26"
+    },
+    {
+     "option_id": "o4",
+     "text": "21"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +2, +3, +4, +5. Each jump is 1 more than the one before. So the next jump is +6.",
+    "why_correct": "25 is right: 19 + 6 = 25.",
+    "why_wrong": {
+     "o2": "24 repeats the last jump, +5. The jumps keep growing by 1.",
+     "o3": "26 uses a jump of +7, one step too far in the growing jumps.",
+     "o4": "21 adds only the first jump, +2, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "5, 7, 10, 14, 19",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 2, 3, 4, 5; each jump is 1 more than the last. Next jump: 5 + 1 = 6. Next term: 19 + 6 = 25.",
+     "6_check": "Rebuild the series from 5 with jumps 2, 3, 4, 5, 6: you get 5, 7, 10, 14, 19, 25.",
+     "7_distractors": "24: 24 repeats the last jump, +5. The jumps keep growing by 1. 26: 26 uses a jump of +7, one step too far in the growing jumps. 21: 21 adds only the first jump, +2, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000117 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  5, 7, 10, 14, 19, ___",
+   "shortcut": "Write the gaps (+2, +3, +4, +5); they change by the same amount each time, so the next gap is +6: 19 +6 = 25.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000117"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000122-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Which number should come next?  7, 11, 16, 22, 29, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "37"
+    },
+    {
+     "option_id": "o2",
+     "text": "36"
+    },
+    {
+     "option_id": "o3",
+     "text": "38"
+    },
+    {
+     "option_id": "o4",
+     "text": "33"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +4, +5, +6, +7. Each jump is 1 more than the one before. So the next jump is +8.",
+    "why_correct": "37 is right: 29 + 8 = 37.",
+    "why_wrong": {
+     "o2": "36 repeats the last jump, +7. The jumps keep growing by 1.",
+     "o3": "38 uses a jump of +9, one step too far in the growing jumps.",
+     "o4": "33 adds only the first jump, +4, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "7, 11, 16, 22, 29",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 4, 5, 6, 7; each jump is 1 more than the last. Next jump: 7 + 1 = 8. Next term: 29 + 8 = 37.",
+     "6_check": "Rebuild the series from 7 with jumps 4, 5, 6, 7, 8: you get 7, 11, 16, 22, 29, 37.",
+     "7_distractors": "36: 36 repeats the last jump, +7. The jumps keep growing by 1. 38: 38 uses a jump of +9, one step too far in the growing jumps. 33: 33 adds only the first jump, +4, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000122 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Which number should come next?  7, 11, 16, 22, 29, ___",
+   "shortcut": "Write the gaps (+4, +5, +6, +7); they change by the same amount each time, so the next gap is +8: 29 +8 = 37.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000122"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000123-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Find the next number in the series.  8, 14, 22, 32, 44, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "56"
+    },
+    {
+     "option_id": "o2",
+     "text": "58"
+    },
+    {
+     "option_id": "o3",
+     "text": "60"
+    },
+    {
+     "option_id": "o4",
+     "text": "50"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +6, +8, +10, +12. Each jump is 2 more than the one before. So the next jump is +14.",
+    "why_correct": "58 is right: 44 + 14 = 58.",
+    "why_wrong": {
+     "o1": "56 repeats the last jump, +12. The jumps keep growing by 2.",
+     "o3": "60 uses a jump of +16, one step too far in the growing jumps.",
+     "o4": "50 adds only the first jump, +6, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "8, 14, 22, 32, 44",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 6, 8, 10, 12; each jump is 2 more than the last. Next jump: 12 + 2 = 14. Next term: 44 + 14 = 58.",
+     "6_check": "Rebuild the series from 8 with jumps 6, 8, 10, 12, 14: you get 8, 14, 22, 32, 44, 58.",
+     "7_distractors": "56: 56 repeats the last jump, +12. The jumps keep growing by 2. 60: 60 uses a jump of +16, one step too far in the growing jumps. 50: 50 adds only the first jump, +6, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000123 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Find the next number in the series.  8, 14, 22, 32, 44, ___",
+   "shortcut": "Write the gaps (+6, +8, +10, +12); they change by the same amount each time, so the next gap is +14: 44 +14 = 58.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000123"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000129-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  2, 8, 26, 80, 242, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "728"
+    },
+    {
+     "option_id": "o2",
+     "text": "726"
+    },
+    {
+     "option_id": "o3",
+     "text": "730"
+    },
+    {
+     "option_id": "o4",
+     "text": "404"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 3, then + 2\" on the first numbers: 2 × 3 + 2 = 8; 8 × 3 + 2 = 26. It works, so use it on 242.",
+    "why_correct": "728 is right: 242 × 3 = 726, then + 2 gives 728.",
+    "why_wrong": {
+     "o2": "726 multiplies by 3 but forgets the + 2 step.",
+     "o3": "730 does the + 2 step twice.",
+     "o4": "404 repeats the last difference (162). The jumps are not the same each time."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "2, 8, 26, 80, 242",
+     "3_method": "Test a multiply-then-add rule: term × 3 + 2.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "242 × 3 = 726; 726 + 2 = 728.",
+     "6_check": "Test the rule on an early pair: 2 × 3 + 2 = 8, and 8 × 3 + 2 = 26.",
+     "7_distractors": "726: 726 multiplies by 3 but forgets the + 2 step. 730: 730 does the + 2 step twice. 404: 404 repeats the last difference (162). The jumps are not the same each time.",
+     "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-EXTRA-STEP",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000129 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  2, 8, 26, 80, 242, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000129"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000137-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  3, 8, 23, 68, 203, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "607"
+    },
+    {
+     "option_id": "o2",
+     "text": "609"
+    },
+    {
+     "option_id": "o3",
+     "text": "608"
+    },
+    {
+     "option_id": "o4",
+     "text": "338"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 3, then − 1\" on the first numbers: 3 × 3 − 1 = 8; 8 × 3 − 1 = 23. It works, so use it on 203.",
+    "why_correct": "608 is right: 203 × 3 = 609, then − 1 gives 608.",
+    "why_wrong": {
+     "o1": "607 does the − 1 step twice.",
+     "o2": "609 multiplies by 3 but forgets the − 1 step.",
+     "o4": "338 repeats the last difference (135). The jumps are not the same each time."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "3, 8, 23, 68, 203",
+     "3_method": "Test a multiply-then-add rule: term × 3 − 1.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "203 × 3 = 609; 609 − 1 = 608.",
+     "6_check": "Test the rule on an early pair: 3 × 3 − 1 = 8, and 8 × 3 − 1 = 23.",
+     "7_distractors": "607: 607 does the − 1 step twice. 609: 609 multiplies by 3 but forgets the − 1 step. 338: 338 repeats the last difference (135). The jumps are not the same each time.",
+     "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-EXTRA-STEP",
+    "o2": "NUM-PARTIAL",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000137 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  3, 8, 23, 68, 203, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000137"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000138-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  6, 15, 33, 69, 141, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "282"
+    },
+    {
+     "option_id": "o2",
+     "text": "285"
+    },
+    {
+     "option_id": "o3",
+     "text": "288"
+    },
+    {
+     "option_id": "o4",
+     "text": "213"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 2, then + 3\" on the first numbers: 6 × 2 + 3 = 15; 15 × 2 + 3 = 33. It works, so use it on 141.",
+    "why_correct": "285 is right: 141 × 2 = 282, then + 3 gives 285.",
+    "why_wrong": {
+     "o1": "282 multiplies by 2 but forgets the + 3 step.",
+     "o3": "288 does the + 3 step twice.",
+     "o4": "213 repeats the last difference (72). The jumps are not the same each time."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "6, 15, 33, 69, 141",
+     "3_method": "Test a multiply-then-add rule: term × 2 + 3.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "141 × 2 = 282; 282 + 3 = 285.",
+     "6_check": "Test the rule on an early pair: 6 × 2 + 3 = 15, and 15 × 2 + 3 = 33.",
+     "7_distractors": "282: 282 multiplies by 2 but forgets the + 3 step. 288: 288 does the + 3 step twice. 213: 213 repeats the last difference (72). The jumps are not the same each time.",
+     "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-EXTRA-STEP",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000138 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  6, 15, 33, 69, 141, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000138"
+  },
+  {
+   "id": "CIVIO-NUM-WP-PCT-CHANGE-000121-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "discount",
+   "micro_skill": "price after a percent discount",
+   "archetype": "NUM-WP-PCT-CHANGE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A backpack is priced at ₱2,400. It is sold at 25% off. How much does a buyer pay?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱3,000"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱600"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱1,800"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱2,375"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"25% off\" means 25 pesos less for every 100 pesos of the price.",
+    "shortcut": "Pay 75% of the price: ₱2,400 × 0.75 = ₱1,800.",
+    "why_correct": "₱1,800 is right. Check: discount ₱600; ₱2,400 − ₱600 = ₱1,800.",
+    "why_wrong": {
+     "o1": "₱3,000 adds 25% instead of taking it off.",
+     "o2": "₱600 is the discount itself. The buyer pays the price minus this amount.",
+     "o4": "₱2,375 subtracts 25 pesos, not 25% of the price."
+    },
+    "method_steps": {
+     "1_asked": "The price the buyer pays after the discount.",
+     "2_givens": "price ₱2,400, discount 25%",
+     "3_method": "Find 25% of the price and subtract it, or pay 75% of the price directly.",
+     "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+     "5_solve_by_hand": "10% of ₱2,400 = ₱240. 25% = ₱600. ₱2,400 − ₱600 = ₱1,800.",
+     "6_check": "75% of ₱2,400 = ₱1,800, the same answer.",
+     "7_distractors": "₱3,000: ₱3,000 adds 25% instead of taking it off. ₱600: ₱600 is the discount itself. The buyer pays the price minus this amount. ₱2,375: ₱2,375 subtracts 25 pesos, not 25% of the price.",
+     "8_shortcut": "Pay 75%: ₱2,400 × 75 ÷ 100."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o2": "NUM-PARTIAL",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000121 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "A backpack is priced at ₱2,400. It is sold at 25% off. How much does a buyer pay?",
+   "shortcut": "25% = 20% + 5%. 10% of ₱2,400 = ₱240; so the discount is ₱600 and the price is ₱1,800.",
+   "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000121"
+  },
+  {
+   "id": "CIVIO-NUM-WP-PCT-CHANGE-000139-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "discount",
+   "micro_skill": "price after a percent discount",
+   "archetype": "NUM-WP-PCT-CHANGE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A backpack is priced at ₱2,400. It is sold at 35% off. How much does a buyer pay?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱2,365"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱1,560"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱3,240"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱840"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "\"35% off\" means 35 pesos less for every 100 pesos of the price.",
+    "shortcut": "Pay 65% of the price: ₱2,400 × 0.65 = ₱1,560.",
+    "why_correct": "₱1,560 is right. Check: discount ₱840; ₱2,400 − ₱840 = ₱1,560.",
+    "why_wrong": {
+     "o1": "₱2,365 subtracts 35 pesos, not 35% of the price.",
+     "o3": "₱3,240 adds 35% instead of taking it off.",
+     "o4": "₱840 is the discount itself. The buyer pays the price minus this amount."
+    },
+    "method_steps": {
+     "1_asked": "The price the buyer pays after the discount.",
+     "2_givens": "price ₱2,400, discount 35%",
+     "3_method": "Find 35% of the price and subtract it, or pay 65% of the price directly.",
+     "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+     "5_solve_by_hand": "10% of ₱2,400 = ₱240. 35% = ₱840. ₱2,400 − ₱840 = ₱1,560.",
+     "6_check": "65% of ₱2,400 = ₱1,560, the same answer.",
+     "7_distractors": "₱2,365: ₱2,365 subtracts 35 pesos, not 35% of the price. ₱3,240: ₱3,240 adds 35% instead of taking it off. ₱840: ₱840 is the discount itself. The buyer pays the price minus this amount.",
+     "8_shortcut": "Pay 65%: ₱2,400 × 65 ÷ 100."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-WRONG-BASE",
+    "o3": "NUM-OP-SWAP",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000139 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "A backpack is priced at ₱2,400. It is sold at 35% off. How much does a buyer pay?",
+   "shortcut": "Split 35% into 30% + 5%: 30% of ₱2,400 is ₱720, and 5% is half of 10% (₱120). Take off ₱840 to get ₱1,560.",
+   "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000139"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000220-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  11, 15, 20, 26, 33, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "41"
+    },
+    {
+     "option_id": "o2",
+     "text": "42"
+    },
+    {
+     "option_id": "o3",
+     "text": "37"
+    },
+    {
+     "option_id": "o4",
+     "text": "40"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +4, +5, +6, +7. Each jump is 1 more than the one before. So the next jump is +8.",
+    "why_correct": "41 is right: 33 + 8 = 41.",
+    "why_wrong": {
+     "o2": "42 uses a jump of +9, one step too far in the growing jumps.",
+     "o3": "37 adds only the first jump, +4, as if the jump never changed.",
+     "o4": "40 repeats the last jump, +7. The jumps keep growing by 1."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "11, 15, 20, 26, 33",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 4, 5, 6, 7; each jump is 1 more than the last. Next jump: 7 + 1 = 8. Next term: 33 + 8 = 41.",
+     "6_check": "Rebuild the series from 11 with jumps 4, 5, 6, 7, 8: you get 11, 15, 20, 26, 33, 41.",
+     "7_distractors": "42: 42 uses a jump of +9, one step too far in the growing jumps. 37: 37 adds only the first jump, +4, as if the jump never changed. 40: 40 repeats the last jump, +7. The jumps keep growing by 1.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-OFF-BY-ONE",
+    "o3": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000220 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  11, 15, 20, 26, 33, ___",
+   "shortcut": "Write the gaps (+4, +5, +6, +7); they change by the same amount each time, so the next gap is +8: 33 +8 = 41.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000220"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000222-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Which number should come next?  4, 9, 16, 25, 36, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "47"
+    },
+    {
+     "option_id": "o2",
+     "text": "41"
+    },
+    {
+     "option_id": "o3",
+     "text": "51"
+    },
+    {
+     "option_id": "o4",
+     "text": "49"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +5, +7, +9, +11. Each jump is 2 more than the one before. So the next jump is +13.",
+    "why_correct": "49 is right: 36 + 13 = 49.",
+    "why_wrong": {
+     "o1": "47 repeats the last jump, +11. The jumps keep growing by 2.",
+     "o2": "41 adds only the first jump, +5, as if the jump never changed.",
+     "o3": "51 uses a jump of +15, one step too far in the growing jumps."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "4, 9, 16, 25, 36",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 5, 7, 9, 11; each jump is 2 more than the last. Next jump: 11 + 2 = 13. Next term: 36 + 13 = 49.",
+     "6_check": "Rebuild the series from 4 with jumps 5, 7, 9, 11, 13: you get 4, 9, 16, 25, 36, 49.",
+     "7_distractors": "47: 47 repeats the last jump, +11. The jumps keep growing by 2. 41: 41 adds only the first jump, +5, as if the jump never changed. 51: 51 uses a jump of +15, one step too far in the growing jumps.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000222 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Which number should come next?  4, 9, 16, 25, 36, ___",
+   "shortcut": "Write the gaps (+5, +7, +9, +11); they change by the same amount each time, so the next gap is +13: 36 +13 = 49.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000222"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000238-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  7, 12, 18, 25, 33, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "42"
+    },
+    {
+     "option_id": "o2",
+     "text": "38"
+    },
+    {
+     "option_id": "o3",
+     "text": "43"
+    },
+    {
+     "option_id": "o4",
+     "text": "41"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +5, +6, +7, +8. Each jump is 1 more than the one before. So the next jump is +9.",
+    "why_correct": "42 is right: 33 + 9 = 42.",
+    "why_wrong": {
+     "o2": "38 adds only the first jump, +5, as if the jump never changed.",
+     "o3": "43 uses a jump of +10, one step too far in the growing jumps.",
+     "o4": "41 repeats the last jump, +8. The jumps keep growing by 1."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "7, 12, 18, 25, 33",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 5, 6, 7, 8; each jump is 1 more than the last. Next jump: 8 + 1 = 9. Next term: 33 + 9 = 42.",
+     "6_check": "Rebuild the series from 7 with jumps 5, 6, 7, 8, 9: you get 7, 12, 18, 25, 33, 42.",
+     "7_distractors": "38: 38 adds only the first jump, +5, as if the jump never changed. 43: 43 uses a jump of +10, one step too far in the growing jumps. 41: 41 repeats the last jump, +8. The jumps keep growing by 1.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000238 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  7, 12, 18, 25, 33, ___",
+   "shortcut": "Write the gaps (+5, +6, +7, +8); they change by the same amount each time, so the next gap is +9: 33 +9 = 42.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000238"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000214-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  3, 11, 35, 107, 323, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "973"
+    },
+    {
+     "option_id": "o2",
+     "text": "971"
+    },
+    {
+     "option_id": "o3",
+     "text": "539"
+    },
+    {
+     "option_id": "o4",
+     "text": "969"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 3, then + 2\" on the first numbers: 3 × 3 + 2 = 11; 11 × 3 + 2 = 35. It works, so use it on 323.",
+    "why_correct": "971 is right: 323 × 3 = 969, then + 2 gives 971.",
+    "why_wrong": {
+     "o1": "973 does the + 2 step twice.",
+     "o3": "539 repeats the last difference (216). The jumps are not the same each time.",
+     "o4": "969 multiplies by 3 but forgets the + 2 step."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "3, 11, 35, 107, 323",
+     "3_method": "Test a multiply-then-add rule: term × 3 + 2.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "323 × 3 = 969; 969 + 2 = 971.",
+     "6_check": "Test the rule on an early pair: 3 × 3 + 2 = 11, and 11 × 3 + 2 = 35.",
+     "7_distractors": "973: 973 does the + 2 step twice. 539: 539 repeats the last difference (216). The jumps are not the same each time. 969: 969 multiplies by 3 but forgets the + 2 step.",
+     "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-EXTRA-STEP",
+    "o3": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000214 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  3, 11, 35, 107, 323, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000214"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000241-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  4, 13, 40, 121, 364, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "1092"
+    },
+    {
+     "option_id": "o2",
+     "text": "1093"
+    },
+    {
+     "option_id": "o3",
+     "text": "1094"
+    },
+    {
+     "option_id": "o4",
+     "text": "607"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 3, then + 1\" on the first numbers: 4 × 3 + 1 = 13; 13 × 3 + 1 = 40. It works, so use it on 364.",
+    "why_correct": "1093 is right: 364 × 3 = 1092, then + 1 gives 1093.",
+    "why_wrong": {
+     "o1": "1092 multiplies by 3 but forgets the + 1 step.",
+     "o3": "1094 does the + 1 step twice.",
+     "o4": "607 repeats the last difference (243). The jumps are not the same each time."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "4, 13, 40, 121, 364",
+     "3_method": "Test a multiply-then-add rule: term × 3 + 1.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "364 × 3 = 1092; 1092 + 1 = 1093.",
+     "6_check": "Test the rule on an early pair: 4 × 3 + 1 = 13, and 13 × 3 + 1 = 40.",
+     "7_distractors": "1092: 1092 multiplies by 3 but forgets the + 1 step. 1094: 1094 does the + 1 step twice. 607: 607 repeats the last difference (243). The jumps are not the same each time.",
+     "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-EXTRA-STEP",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000241 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  4, 13, 40, 121, 364, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000241"
+  },
+  {
+   "id": "CIVIO-NUM-WP-PCT-CHANGE-000224-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "discount",
+   "micro_skill": "price after a percent discount",
+   "archetype": "NUM-WP-PCT-CHANGE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A rice cooker is priced at ₱960. It is sold at 25% off. How much does a buyer pay?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱935"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱240"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱720"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱1,200"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"25% off\" means 25 pesos less for every 100 pesos of the price.",
+    "shortcut": "Pay 75% of the price: ₱960 × 0.75 = ₱720.",
+    "why_correct": "₱720 is right. Check: discount ₱240; ₱960 − ₱240 = ₱720.",
+    "why_wrong": {
+     "o1": "₱935 subtracts 25 pesos, not 25% of the price.",
+     "o2": "₱240 is the discount itself. The buyer pays the price minus this amount.",
+     "o4": "₱1,200 adds 25% instead of taking it off."
+    },
+    "method_steps": {
+     "1_asked": "The price the buyer pays after the discount.",
+     "2_givens": "price ₱960, discount 25%",
+     "3_method": "Find 25% of the price and subtract it, or pay 75% of the price directly.",
+     "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+     "5_solve_by_hand": "10% of ₱960 = ₱96. 25% = ₱240. ₱960 − ₱240 = ₱720.",
+     "6_check": "75% of ₱960 = ₱720, the same answer.",
+     "7_distractors": "₱935: ₱935 subtracts 25 pesos, not 25% of the price. ₱240: ₱240 is the discount itself. The buyer pays the price minus this amount. ₱1,200: ₱1,200 adds 25% instead of taking it off.",
+     "8_shortcut": "Pay 75%: ₱960 × 75 ÷ 100."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-WRONG-BASE",
+    "o2": "NUM-PARTIAL",
+    "o4": "NUM-OP-SWAP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000224 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "A rice cooker is priced at ₱960. It is sold at 25% off. How much does a buyer pay?",
+   "shortcut": "25% = 20% + 5%. 10% of ₱960 = ₱96; so the discount is ₱240 and the price is ₱720.",
+   "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000224"
+  },
+  {
+   "id": "CIVIO-NUM-WP-PCT-CHANGE-000230-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "discount",
+   "micro_skill": "price after a percent discount",
+   "archetype": "NUM-WP-PCT-CHANGE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A backpack is priced at ₱1,800. It is sold at 25% off. How much does a buyer pay?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱2,250"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱1,775"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱450"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱1,350"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "\"25% off\" means 25 pesos less for every 100 pesos of the price.",
+    "shortcut": "Pay 75% of the price: ₱1,800 × 0.75 = ₱1,350.",
+    "why_correct": "₱1,350 is right. Check: discount ₱450; ₱1,800 − ₱450 = ₱1,350.",
+    "why_wrong": {
+     "o1": "₱2,250 adds 25% instead of taking it off.",
+     "o2": "₱1,775 subtracts 25 pesos, not 25% of the price.",
+     "o3": "₱450 is the discount itself. The buyer pays the price minus this amount."
+    },
+    "method_steps": {
+     "1_asked": "The price the buyer pays after the discount.",
+     "2_givens": "price ₱1,800, discount 25%",
+     "3_method": "Find 25% of the price and subtract it, or pay 75% of the price directly.",
+     "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+     "5_solve_by_hand": "10% of ₱1,800 = ₱180. 25% = ₱450. ₱1,800 − ₱450 = ₱1,350.",
+     "6_check": "75% of ₱1,800 = ₱1,350, the same answer.",
+     "7_distractors": "₱2,250: ₱2,250 adds 25% instead of taking it off. ₱1,775: ₱1,775 subtracts 25 pesos, not 25% of the price. ₱450: ₱450 is the discount itself. The buyer pays the price minus this amount.",
+     "8_shortcut": "Pay 75%: ₱1,800 × 75 ÷ 100."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o2": "NUM-WRONG-BASE",
+    "o3": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000230 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "A backpack is priced at ₱1,800. It is sold at 25% off. How much does a buyer pay?",
+   "shortcut": "Split 25% into 20% + 5%: 20% of ₱1,800 is ₱360, and 5% is half of 10% (₱90). Take off ₱450 to get ₱1,350.",
+   "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000230"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000316-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Which number should come next?  11, 16, 22, 29, 37, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "42"
+    },
+    {
+     "option_id": "o2",
+     "text": "47"
+    },
+    {
+     "option_id": "o3",
+     "text": "45"
+    },
+    {
+     "option_id": "o4",
+     "text": "46"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +5, +6, +7, +8. Each jump is 1 more than the one before. So the next jump is +9.",
+    "why_correct": "46 is right: 37 + 9 = 46.",
+    "why_wrong": {
+     "o1": "42 adds only the first jump, +5, as if the jump never changed.",
+     "o2": "47 uses a jump of +10, one step too far in the growing jumps.",
+     "o3": "45 repeats the last jump, +8. The jumps keep growing by 1."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "11, 16, 22, 29, 37",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 5, 6, 7, 8; each jump is 1 more than the last. Next jump: 8 + 1 = 9. Next term: 37 + 9 = 46.",
+     "6_check": "Rebuild the series from 11 with jumps 5, 6, 7, 8, 9: you get 11, 16, 22, 29, 37, 46.",
+     "7_distractors": "42: 42 adds only the first jump, +5, as if the jump never changed. 47: 47 uses a jump of +10, one step too far in the growing jumps. 45: 45 repeats the last jump, +8. The jumps keep growing by 1.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-OFF-BY-ONE",
+    "o3": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000316 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Which number should come next?  11, 16, 22, 29, 37, ___",
+   "shortcut": "Write the gaps (+5, +6, +7, +8); they change by the same amount each time, so the next gap is +9: 37 +9 = 46.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000316"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000332-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  11, 15, 21, 29, 39, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "49"
+    },
+    {
+     "option_id": "o2",
+     "text": "51"
+    },
+    {
+     "option_id": "o3",
+     "text": "43"
+    },
+    {
+     "option_id": "o4",
+     "text": "53"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +4, +6, +8, +10. Each jump is 2 more than the one before. So the next jump is +12.",
+    "why_correct": "51 is right: 39 + 12 = 51.",
+    "why_wrong": {
+     "o1": "49 repeats the last jump, +10. The jumps keep growing by 2.",
+     "o3": "43 adds only the first jump, +4, as if the jump never changed.",
+     "o4": "53 uses a jump of +14, one step too far in the growing jumps."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "11, 15, 21, 29, 39",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 4, 6, 8, 10; each jump is 2 more than the last. Next jump: 10 + 2 = 12. Next term: 39 + 12 = 51.",
+     "6_check": "Rebuild the series from 11 with jumps 4, 6, 8, 10, 12: you get 11, 15, 21, 29, 39, 51.",
+     "7_distractors": "49: 49 repeats the last jump, +10. The jumps keep growing by 2. 43: 43 adds only the first jump, +4, as if the jump never changed. 53: 53 uses a jump of +14, one step too far in the growing jumps.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000332 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  11, 15, 21, 29, 39, ___",
+   "shortcut": "Write the gaps (+4, +6, +8, +10); they change by the same amount each time, so the next gap is +12: 39 +12 = 51.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000332"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000336-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  1, 6, 13, 22, 33, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "44"
+    },
+    {
+     "option_id": "o2",
+     "text": "48"
+    },
+    {
+     "option_id": "o3",
+     "text": "38"
+    },
+    {
+     "option_id": "o4",
+     "text": "46"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +5, +7, +9, +11. Each jump is 2 more than the one before. So the next jump is +13.",
+    "why_correct": "46 is right: 33 + 13 = 46.",
+    "why_wrong": {
+     "o1": "44 repeats the last jump, +11. The jumps keep growing by 2.",
+     "o2": "48 uses a jump of +15, one step too far in the growing jumps.",
+     "o3": "38 adds only the first jump, +5, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "1, 6, 13, 22, 33",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 5, 7, 9, 11; each jump is 2 more than the last. Next jump: 11 + 2 = 13. Next term: 33 + 13 = 46.",
+     "6_check": "Rebuild the series from 1 with jumps 5, 7, 9, 11, 13: you get 1, 6, 13, 22, 33, 46.",
+     "7_distractors": "44: 44 repeats the last jump, +11. The jumps keep growing by 2. 48: 48 uses a jump of +15, one step too far in the growing jumps. 38: 38 adds only the first jump, +5, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-OFF-BY-ONE",
+    "o3": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000336 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  1, 6, 13, 22, 33, ___",
+   "shortcut": "Write the gaps (+5, +7, +9, +11); they change by the same amount each time, so the next gap is +13: 33 +13 = 46.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000336"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000334-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  1, 4, 10, 22, 46, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "70"
+    },
+    {
+     "option_id": "o2",
+     "text": "92"
+    },
+    {
+     "option_id": "o3",
+     "text": "96"
+    },
+    {
+     "option_id": "o4",
+     "text": "94"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 2, then + 2\" on the first numbers: 1 × 2 + 2 = 4; 4 × 2 + 2 = 10. It works, so use it on 46.",
+    "why_correct": "94 is right: 46 × 2 = 92, then + 2 gives 94.",
+    "why_wrong": {
+     "o1": "70 repeats the last difference (24). The jumps are not the same each time.",
+     "o2": "92 multiplies by 2 but forgets the + 2 step.",
+     "o3": "96 does the + 2 step twice."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "1, 4, 10, 22, 46",
+     "3_method": "Test a multiply-then-add rule: term × 2 + 2.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "46 × 2 = 92; 92 + 2 = 94.",
+     "6_check": "Test the rule on an early pair: 1 × 2 + 2 = 4, and 4 × 2 + 2 = 10.",
+     "7_distractors": "70: 70 repeats the last difference (24). The jumps are not the same each time. 92: 92 multiplies by 2 but forgets the + 2 step. 96: 96 does the + 2 step twice.",
+     "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000334 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  1, 4, 10, 22, 46, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000334"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000335-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  5, 13, 37, 109, 325, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "541"
+    },
+    {
+     "option_id": "o2",
+     "text": "971"
+    },
+    {
+     "option_id": "o3",
+     "text": "973"
+    },
+    {
+     "option_id": "o4",
+     "text": "975"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 3, then − 2\" on the first numbers: 5 × 3 − 2 = 13; 13 × 3 − 2 = 37. It works, so use it on 325.",
+    "why_correct": "973 is right: 325 × 3 = 975, then − 2 gives 973.",
+    "why_wrong": {
+     "o1": "541 repeats the last difference (216). The jumps are not the same each time.",
+     "o2": "971 does the − 2 step twice.",
+     "o4": "975 multiplies by 3 but forgets the − 2 step."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "5, 13, 37, 109, 325",
+     "3_method": "Test a multiply-then-add rule: term × 3 − 2.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "325 × 3 = 975; 975 − 2 = 973.",
+     "6_check": "Test the rule on an early pair: 5 × 3 − 2 = 13, and 13 × 3 − 2 = 37.",
+     "7_distractors": "541: 541 repeats the last difference (216). The jumps are not the same each time. 971: 971 does the − 2 step twice. 975: 975 multiplies by 3 but forgets the − 2 step.",
+     "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-EXTRA-STEP",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000335 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  5, 13, 37, 109, 325, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000335"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000337-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  4, 7, 13, 25, 49, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "96"
+    },
+    {
+     "option_id": "o2",
+     "text": "98"
+    },
+    {
+     "option_id": "o3",
+     "text": "97"
+    },
+    {
+     "option_id": "o4",
+     "text": "73"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 2, then − 1\" on the first numbers: 4 × 2 − 1 = 7; 7 × 2 − 1 = 13. It works, so use it on 49.",
+    "why_correct": "97 is right: 49 × 2 = 98, then − 1 gives 97.",
+    "why_wrong": {
+     "o1": "96 does the − 1 step twice.",
+     "o2": "98 multiplies by 2 but forgets the − 1 step.",
+     "o4": "73 repeats the last difference (24). The jumps are not the same each time."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "4, 7, 13, 25, 49",
+     "3_method": "Test a multiply-then-add rule: term × 2 − 1.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "49 × 2 = 98; 98 − 1 = 97.",
+     "6_check": "Test the rule on an early pair: 4 × 2 − 1 = 7, and 7 × 2 − 1 = 13.",
+     "7_distractors": "96: 96 does the − 1 step twice. 98: 98 multiplies by 2 but forgets the − 1 step. 73: 73 repeats the last difference (24). The jumps are not the same each time.",
+     "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-EXTRA-STEP",
+    "o2": "NUM-PARTIAL",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000337 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  4, 7, 13, 25, 49, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000337"
+  },
+  {
+   "id": "CIVIO-NUM-WP-PCT-CHANGE-000340-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "discount",
+   "micro_skill": "price after a percent discount",
+   "archetype": "NUM-WP-PCT-CHANGE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A backpack is priced at ₱800. It is sold at 15% off. How much does a buyer pay?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱920"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱680"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱785"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱120"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+    "shortcut": "Pay 85% of the price: ₱800 × 0.85 = ₱680.",
+    "why_correct": "₱680 is right. Check: discount ₱120; ₱800 − ₱120 = ₱680.",
+    "why_wrong": {
+     "o1": "₱920 adds 15% instead of taking it off.",
+     "o3": "₱785 subtracts 15 pesos, not 15% of the price.",
+     "o4": "₱120 is the discount itself. The buyer pays the price minus this amount."
+    },
+    "method_steps": {
+     "1_asked": "The price the buyer pays after the discount.",
+     "2_givens": "price ₱800, discount 15%",
+     "3_method": "Find 15% of the price and subtract it, or pay 85% of the price directly.",
+     "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+     "5_solve_by_hand": "10% of ₱800 = ₱80. 15% = ₱120. ₱800 − ₱120 = ₱680.",
+     "6_check": "85% of ₱800 = ₱680, the same answer.",
+     "7_distractors": "₱920: ₱920 adds 15% instead of taking it off. ₱785: ₱785 subtracts 15 pesos, not 15% of the price. ₱120: ₱120 is the discount itself. The buyer pays the price minus this amount.",
+     "8_shortcut": "Pay 85%: ₱800 × 85 ÷ 100."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o3": "NUM-WRONG-BASE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000340 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "A backpack is priced at ₱800. It is sold at 15% off. How much does a buyer pay?",
+   "shortcut": "15% = 10% + 5%. 10% of ₱800 = ₱80; so the discount is ₱120 and the price is ₱680.",
+   "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000340"
+  },
+  {
+   "id": "CIVIO-NUM-WP-PCT-CHANGE-000341-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "discount",
+   "micro_skill": "price after a percent discount",
+   "archetype": "NUM-WP-PCT-CHANGE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A backpack is priced at ₱480. It is sold at 35% off. How much does a buyer pay?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱648"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱168"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱312"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱445"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "\"35% off\" means 35 pesos less for every 100 pesos of the price.",
+    "shortcut": "Pay 65% of the price: ₱480 × 0.65 = ₱312.",
+    "why_correct": "₱312 is right. Check: discount ₱168; ₱480 − ₱168 = ₱312.",
+    "why_wrong": {
+     "o1": "₱648 adds 35% instead of taking it off.",
+     "o2": "₱168 is the discount itself. The buyer pays the price minus this amount.",
+     "o4": "₱445 subtracts 35 pesos, not 35% of the price."
+    },
+    "method_steps": {
+     "1_asked": "The price the buyer pays after the discount.",
+     "2_givens": "price ₱480, discount 35%",
+     "3_method": "Find 35% of the price and subtract it, or pay 65% of the price directly.",
+     "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+     "5_solve_by_hand": "10% of ₱480 = ₱48. 35% = ₱168. ₱480 − ₱168 = ₱312.",
+     "6_check": "65% of ₱480 = ₱312, the same answer.",
+     "7_distractors": "₱648: ₱648 adds 35% instead of taking it off. ₱168: ₱168 is the discount itself. The buyer pays the price minus this amount. ₱445: ₱445 subtracts 35 pesos, not 35% of the price.",
+     "8_shortcut": "Pay 65%: ₱480 × 65 ÷ 100."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OP-SWAP",
+    "o2": "NUM-PARTIAL",
+    "o4": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000341 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "A backpack is priced at ₱480. It is sold at 35% off. How much does a buyer pay?",
+   "shortcut": "Split 35% into 30% + 5%: 30% of ₱480 is ₱144, and 5% is half of 10% (₱24). Take off ₱168 to get ₱312.",
+   "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000341"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000420-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Find the next number in the series.  6, 7, 11, 18, 28, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "41"
+    },
+    {
+     "option_id": "o2",
+     "text": "44"
+    },
+    {
+     "option_id": "o3",
+     "text": "29"
+    },
+    {
+     "option_id": "o4",
+     "text": "38"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +1, +4, +7, +10. Each jump is 3 more than the one before. So the next jump is +13.",
+    "why_correct": "41 is right: 28 + 13 = 41.",
+    "why_wrong": {
+     "o2": "44 uses a jump of +16, one step too far in the growing jumps.",
+     "o3": "29 adds only the first jump, +1, as if the jump never changed.",
+     "o4": "38 repeats the last jump, +10. The jumps keep growing by 3."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "6, 7, 11, 18, 28",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 1, 4, 7, 10; each jump is 3 more than the last. Next jump: 10 + 3 = 13. Next term: 28 + 13 = 41.",
+     "6_check": "Rebuild the series from 6 with jumps 1, 4, 7, 10, 13: you get 6, 7, 11, 18, 28, 41.",
+     "7_distractors": "44: 44 uses a jump of +16, one step too far in the growing jumps. 29: 29 adds only the first jump, +1, as if the jump never changed. 38: 38 repeats the last jump, +10. The jumps keep growing by 3.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-OFF-BY-ONE",
+    "o3": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000420 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Find the next number in the series.  6, 7, 11, 18, 28, ___",
+   "shortcut": "Write the gaps (+1, +4, +7, +10); they change by the same amount each time, so the next gap is +13: 28 +13 = 41.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000420"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000425-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  1, 4, 8, 13, 19, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "26"
+    },
+    {
+     "option_id": "o2",
+     "text": "27"
+    },
+    {
+     "option_id": "o3",
+     "text": "25"
+    },
+    {
+     "option_id": "o4",
+     "text": "22"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +3, +4, +5, +6. Each jump is 1 more than the one before. So the next jump is +7.",
+    "why_correct": "26 is right: 19 + 7 = 26.",
+    "why_wrong": {
+     "o2": "27 uses a jump of +8, one step too far in the growing jumps.",
+     "o3": "25 repeats the last jump, +6. The jumps keep growing by 1.",
+     "o4": "22 adds only the first jump, +3, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "1, 4, 8, 13, 19",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 3, 4, 5, 6; each jump is 1 more than the last. Next jump: 6 + 1 = 7. Next term: 19 + 7 = 26.",
+     "6_check": "Rebuild the series from 1 with jumps 3, 4, 5, 6, 7: you get 1, 4, 8, 13, 19, 26.",
+     "7_distractors": "27: 27 uses a jump of +8, one step too far in the growing jumps. 25: 25 repeats the last jump, +6. The jumps keep growing by 1. 22: 22 adds only the first jump, +3, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-OFF-BY-ONE",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000425 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  1, 4, 8, 13, 19, ___",
+   "shortcut": "Write the gaps (+3, +4, +5, +6); they change by the same amount each time, so the next gap is +7: 19 +7 = 26.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000425"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000427-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Which number should come next?  11, 13, 18, 26, 37, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "54"
+    },
+    {
+     "option_id": "o2",
+     "text": "51"
+    },
+    {
+     "option_id": "o3",
+     "text": "48"
+    },
+    {
+     "option_id": "o4",
+     "text": "39"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +2, +5, +8, +11. Each jump is 3 more than the one before. So the next jump is +14.",
+    "why_correct": "51 is right: 37 + 14 = 51.",
+    "why_wrong": {
+     "o1": "54 uses a jump of +17, one step too far in the growing jumps.",
+     "o3": "48 repeats the last jump, +11. The jumps keep growing by 3.",
+     "o4": "39 adds only the first jump, +2, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "11, 13, 18, 26, 37",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 2, 5, 8, 11; each jump is 3 more than the last. Next jump: 11 + 3 = 14. Next term: 37 + 14 = 51.",
+     "6_check": "Rebuild the series from 11 with jumps 2, 5, 8, 11, 14: you get 11, 13, 18, 26, 37, 51.",
+     "7_distractors": "54: 54 uses a jump of +17, one step too far in the growing jumps. 48: 48 repeats the last jump, +11. The jumps keep growing by 3. 39: 39 adds only the first jump, +2, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000427 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Which number should come next?  11, 13, 18, 26, 37, ___",
+   "shortcut": "Write the gaps (+2, +5, +8, +11); they change by the same amount each time, so the next gap is +14: 37 +14 = 51.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000427"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000438-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  5, 11, 23, 47, 95, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "191"
+    },
+    {
+     "option_id": "o2",
+     "text": "190"
+    },
+    {
+     "option_id": "o3",
+     "text": "143"
+    },
+    {
+     "option_id": "o4",
+     "text": "192"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 2, then + 1\" on the first numbers: 5 × 2 + 1 = 11; 11 × 2 + 1 = 23. It works, so use it on 95.",
+    "why_correct": "191 is right: 95 × 2 = 190, then + 1 gives 191.",
+    "why_wrong": {
+     "o2": "190 multiplies by 2 but forgets the + 1 step.",
+     "o3": "143 repeats the last difference (48). The jumps are not the same each time.",
+     "o4": "192 does the + 1 step twice."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "5, 11, 23, 47, 95",
+     "3_method": "Test a multiply-then-add rule: term × 2 + 1.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "95 × 2 = 190; 190 + 1 = 191.",
+     "6_check": "Test the rule on an early pair: 5 × 2 + 1 = 11, and 11 × 2 + 1 = 23.",
+     "7_distractors": "190: 190 multiplies by 2 but forgets the + 1 step. 143: 143 repeats the last difference (48). The jumps are not the same each time. 192: 192 does the + 1 step twice.",
+     "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000438 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  5, 11, 23, 47, 95, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000438"
+  },
+  {
+   "id": "CIVIO-NUM-WP-PCT-CHANGE-000417-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "discount",
+   "micro_skill": "price after a percent discount",
+   "archetype": "NUM-WP-PCT-CHANGE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A rice cooker is priced at ₱800. It is sold at 20% off. How much does a buyer pay?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱160"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱960"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱780"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱640"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "\"20% off\" means 20 pesos less for every 100 pesos of the price.",
+    "shortcut": "Pay 80% of the price: ₱800 × 0.8 = ₱640.",
+    "why_correct": "₱640 is right. Check: discount ₱160; ₱800 − ₱160 = ₱640.",
+    "why_wrong": {
+     "o1": "₱160 is the discount itself. The buyer pays the price minus this amount.",
+     "o2": "₱960 adds 20% instead of taking it off.",
+     "o3": "₱780 subtracts 20 pesos, not 20% of the price."
+    },
+    "method_steps": {
+     "1_asked": "The price the buyer pays after the discount.",
+     "2_givens": "price ₱800, discount 20%",
+     "3_method": "Find 20% of the price and subtract it, or pay 80% of the price directly.",
+     "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+     "5_solve_by_hand": "10% of ₱800 = ₱80. 20% = ₱160. ₱800 − ₱160 = ₱640.",
+     "6_check": "80% of ₱800 = ₱640, the same answer.",
+     "7_distractors": "₱160: ₱160 is the discount itself. The buyer pays the price minus this amount. ₱960: ₱960 adds 20% instead of taking it off. ₱780: ₱780 subtracts 20 pesos, not 20% of the price.",
+     "8_shortcut": "Pay 80%: ₱800 × 80 ÷ 100."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-OP-SWAP",
+    "o3": "NUM-WRONG-BASE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000417 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "A rice cooker is priced at ₱800. It is sold at 20% off. How much does a buyer pay?",
+   "shortcut": "Skip the subtraction step: multiply by what you keep, 80%. ₱800 × 0.8 = ₱640.",
+   "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000417"
+  },
+  {
+   "id": "CIVIO-NUM-WP-PCT-CHANGE-000421-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "discount",
+   "micro_skill": "price after a percent discount",
+   "archetype": "NUM-WP-PCT-CHANGE",
+   "difficulty": "easy",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "A rice cooker is priced at ₱480. It is sold at 30% off. How much does a buyer pay?",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "₱336"
+    },
+    {
+     "option_id": "o2",
+     "text": "₱450"
+    },
+    {
+     "option_id": "o3",
+     "text": "₱624"
+    },
+    {
+     "option_id": "o4",
+     "text": "₱144"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "\"30% off\" means 30 pesos less for every 100 pesos of the price.",
+    "shortcut": "Pay 70% of the price: ₱480 × 0.7 = ₱336.",
+    "why_correct": "₱336 is right. Check: discount ₱144; ₱480 − ₱144 = ₱336.",
+    "why_wrong": {
+     "o2": "₱450 subtracts 30 pesos, not 30% of the price.",
+     "o3": "₱624 adds 30% instead of taking it off.",
+     "o4": "₱144 is the discount itself. The buyer pays the price minus this amount."
+    },
+    "method_steps": {
+     "1_asked": "The price the buyer pays after the discount.",
+     "2_givens": "price ₱480, discount 30%",
+     "3_method": "Find 30% of the price and subtract it, or pay 70% of the price directly.",
+     "4_why": "\"Off\" means taken away from the price, so the buyer pays the part that is left.",
+     "5_solve_by_hand": "10% of ₱480 = ₱48. 30% = ₱144. ₱480 − ₱144 = ₱336.",
+     "6_check": "70% of ₱480 = ₱336, the same answer.",
+     "7_distractors": "₱450: ₱450 subtracts 30 pesos, not 30% of the price. ₱624: ₱624 adds 30% instead of taking it off. ₱144: ₱144 is the discount itself. The buyer pays the price minus this amount.",
+     "8_shortcut": "Pay 70%: ₱480 × 70 ÷ 100."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-WRONG-BASE",
+    "o3": "NUM-OP-SWAP",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000421 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "A rice cooker is priced at ₱480. It is sold at 30% off. How much does a buyer pay?",
+   "shortcut": "Find 10% by moving the decimal (₱48), then the discount is 3 × that = ₱144. ₱480 − ₱144 = ₱336.",
+   "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000421"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000513-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Which number should come next?  3, 4, 7, 12, 19, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "30"
+    },
+    {
+     "option_id": "o2",
+     "text": "20"
+    },
+    {
+     "option_id": "o3",
+     "text": "28"
+    },
+    {
+     "option_id": "o4",
+     "text": "26"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +1, +3, +5, +7. Each jump is 2 more than the one before. So the next jump is +9.",
+    "why_correct": "28 is right: 19 + 9 = 28.",
+    "why_wrong": {
+     "o1": "30 uses a jump of +11, one step too far in the growing jumps.",
+     "o2": "20 adds only the first jump, +1, as if the jump never changed.",
+     "o4": "26 repeats the last jump, +7. The jumps keep growing by 2."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "3, 4, 7, 12, 19",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 1, 3, 5, 7; each jump is 2 more than the last. Next jump: 7 + 2 = 9. Next term: 19 + 9 = 28.",
+     "6_check": "Rebuild the series from 3 with jumps 1, 3, 5, 7, 9: you get 3, 4, 7, 12, 19, 28.",
+     "7_distractors": "30: 30 uses a jump of +11, one step too far in the growing jumps. 20: 20 adds only the first jump, +1, as if the jump never changed. 26: 26 repeats the last jump, +7. The jumps keep growing by 2.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000513 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Which number should come next?  3, 4, 7, 12, 19, ___",
+   "shortcut": "Write the gaps (+1, +3, +5, +7); they change by the same amount each time, so the next gap is +9: 19 +9 = 28.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000513"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000532-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  2, 7, 15, 26, 40, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "54"
+    },
+    {
+     "option_id": "o2",
+     "text": "45"
+    },
+    {
+     "option_id": "o3",
+     "text": "60"
+    },
+    {
+     "option_id": "o4",
+     "text": "57"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +5, +8, +11, +14. Each jump is 3 more than the one before. So the next jump is +17.",
+    "why_correct": "57 is right: 40 + 17 = 57.",
+    "why_wrong": {
+     "o1": "54 repeats the last jump, +14. The jumps keep growing by 3.",
+     "o2": "45 adds only the first jump, +5, as if the jump never changed.",
+     "o3": "60 uses a jump of +20, one step too far in the growing jumps."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "2, 7, 15, 26, 40",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 5, 8, 11, 14; each jump is 3 more than the last. Next jump: 14 + 3 = 17. Next term: 40 + 17 = 57.",
+     "6_check": "Rebuild the series from 2 with jumps 5, 8, 11, 14, 17: you get 2, 7, 15, 26, 40, 57.",
+     "7_distractors": "54: 54 repeats the last jump, +14. The jumps keep growing by 3. 45: 45 adds only the first jump, +5, as if the jump never changed. 60: 60 uses a jump of +20, one step too far in the growing jumps.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000532 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  2, 7, 15, 26, 40, ___",
+   "shortcut": "Write the gaps (+5, +8, +11, +14); they change by the same amount each time, so the next gap is +17: 40 +17 = 57.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000532"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000533-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Find the next number in the series.  12, 13, 17, 24, 34, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "35"
+    },
+    {
+     "option_id": "o2",
+     "text": "50"
+    },
+    {
+     "option_id": "o3",
+     "text": "44"
+    },
+    {
+     "option_id": "o4",
+     "text": "47"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +1, +4, +7, +10. Each jump is 3 more than the one before. So the next jump is +13.",
+    "why_correct": "47 is right: 34 + 13 = 47.",
+    "why_wrong": {
+     "o1": "35 adds only the first jump, +1, as if the jump never changed.",
+     "o2": "50 uses a jump of +16, one step too far in the growing jumps.",
+     "o3": "44 repeats the last jump, +10. The jumps keep growing by 3."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "12, 13, 17, 24, 34",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 1, 4, 7, 10; each jump is 3 more than the last. Next jump: 10 + 3 = 13. Next term: 34 + 13 = 47.",
+     "6_check": "Rebuild the series from 12 with jumps 1, 4, 7, 10, 13: you get 12, 13, 17, 24, 34, 47.",
+     "7_distractors": "35: 35 adds only the first jump, +1, as if the jump never changed. 50: 50 uses a jump of +16, one step too far in the growing jumps. 44: 44 repeats the last jump, +10. The jumps keep growing by 3.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-OFF-BY-ONE",
+    "o3": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000533 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Find the next number in the series.  12, 13, 17, 24, 34, ___",
+   "shortcut": "Write the gaps (+1, +4, +7, +10); they change by the same amount each time, so the next gap is +13: 34 +13 = 47.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000533"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000529-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  3, 10, 31, 94, 283, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "472"
+    },
+    {
+     "option_id": "o2",
+     "text": "849"
+    },
+    {
+     "option_id": "o3",
+     "text": "851"
+    },
+    {
+     "option_id": "o4",
+     "text": "850"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 3, then + 1\" on the first numbers: 3 × 3 + 1 = 10; 10 × 3 + 1 = 31. It works, so use it on 283.",
+    "why_correct": "850 is right: 283 × 3 = 849, then + 1 gives 850.",
+    "why_wrong": {
+     "o1": "472 repeats the last difference (189). The jumps are not the same each time.",
+     "o2": "849 multiplies by 3 but forgets the + 1 step.",
+     "o3": "851 does the + 1 step twice."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "3, 10, 31, 94, 283",
+     "3_method": "Test a multiply-then-add rule: term × 3 + 1.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "283 × 3 = 849; 849 + 1 = 850.",
+     "6_check": "Test the rule on an early pair: 3 × 3 + 1 = 10, and 10 × 3 + 1 = 31.",
+     "7_distractors": "472: 472 repeats the last difference (189). The jumps are not the same each time. 849: 849 multiplies by 3 but forgets the + 1 step. 851: 851 does the + 1 step twice.",
+     "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000529 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  3, 10, 31, 94, 283, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000529"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000538-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  5, 14, 41, 122, 365, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "1093"
+    },
+    {
+     "option_id": "o2",
+     "text": "1095"
+    },
+    {
+     "option_id": "o3",
+     "text": "1094"
+    },
+    {
+     "option_id": "o4",
+     "text": "608"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 3, then − 1\" on the first numbers: 5 × 3 − 1 = 14; 14 × 3 − 1 = 41. It works, so use it on 365.",
+    "why_correct": "1094 is right: 365 × 3 = 1095, then − 1 gives 1094.",
+    "why_wrong": {
+     "o1": "1093 does the − 1 step twice.",
+     "o2": "1095 multiplies by 3 but forgets the − 1 step.",
+     "o4": "608 repeats the last difference (243). The jumps are not the same each time."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "5, 14, 41, 122, 365",
+     "3_method": "Test a multiply-then-add rule: term × 3 − 1.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "365 × 3 = 1095; 1095 − 1 = 1094.",
+     "6_check": "Test the rule on an early pair: 5 × 3 − 1 = 14, and 14 × 3 − 1 = 41.",
+     "7_distractors": "1093: 1093 does the − 1 step twice. 1095: 1095 multiplies by 3 but forgets the − 1 step. 608: 608 repeats the last difference (243). The jumps are not the same each time.",
+     "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-EXTRA-STEP",
+    "o2": "NUM-PARTIAL",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000538 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  5, 14, 41, 122, 365, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000538"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000539-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  6, 13, 27, 55, 111, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "224"
+    },
+    {
+     "option_id": "o2",
+     "text": "167"
+    },
+    {
+     "option_id": "o3",
+     "text": "222"
+    },
+    {
+     "option_id": "o4",
+     "text": "223"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 2, then + 1\" on the first numbers: 6 × 2 + 1 = 13; 13 × 2 + 1 = 27. It works, so use it on 111.",
+    "why_correct": "223 is right: 111 × 2 = 222, then + 1 gives 223.",
+    "why_wrong": {
+     "o1": "224 does the + 1 step twice.",
+     "o2": "167 repeats the last difference (56). The jumps are not the same each time.",
+     "o3": "222 multiplies by 2 but forgets the + 1 step."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "6, 13, 27, 55, 111",
+     "3_method": "Test a multiply-then-add rule: term × 2 + 1.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "111 × 2 = 222; 222 + 1 = 223.",
+     "6_check": "Test the rule on an early pair: 6 × 2 + 1 = 13, and 13 × 2 + 1 = 27.",
+     "7_distractors": "224: 224 does the + 1 step twice. 167: 167 repeats the last difference (56). The jumps are not the same each time. 222: 222 multiplies by 2 but forgets the + 1 step.",
+     "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-EXTRA-STEP",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000539 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  6, 13, 27, 55, 111, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000539"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000614-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Find the next number in the series.  2, 5, 11, 20, 32, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "50"
+    },
+    {
+     "option_id": "o2",
+     "text": "35"
+    },
+    {
+     "option_id": "o3",
+     "text": "47"
+    },
+    {
+     "option_id": "o4",
+     "text": "44"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +3, +6, +9, +12. Each jump is 3 more than the one before. So the next jump is +15.",
+    "why_correct": "47 is right: 32 + 15 = 47.",
+    "why_wrong": {
+     "o1": "50 uses a jump of +18, one step too far in the growing jumps.",
+     "o2": "35 adds only the first jump, +3, as if the jump never changed.",
+     "o4": "44 repeats the last jump, +12. The jumps keep growing by 3."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "2, 5, 11, 20, 32",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 3, 6, 9, 12; each jump is 3 more than the last. Next jump: 12 + 3 = 15. Next term: 32 + 15 = 47.",
+     "6_check": "Rebuild the series from 2 with jumps 3, 6, 9, 12, 15: you get 2, 5, 11, 20, 32, 47.",
+     "7_distractors": "50: 50 uses a jump of +18, one step too far in the growing jumps. 35: 35 adds only the first jump, +3, as if the jump never changed. 44: 44 repeats the last jump, +12. The jumps keep growing by 3.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000614 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Find the next number in the series.  2, 5, 11, 20, 32, ___",
+   "shortcut": "Write the gaps (+3, +6, +9, +12); they change by the same amount each time, so the next gap is +15: 32 +15 = 47.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000614"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000615-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  15, 21, 28, 36, 45, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "56"
+    },
+    {
+     "option_id": "o2",
+     "text": "54"
+    },
+    {
+     "option_id": "o3",
+     "text": "51"
+    },
+    {
+     "option_id": "o4",
+     "text": "55"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +6, +7, +8, +9. Each jump is 1 more than the one before. So the next jump is +10.",
+    "why_correct": "55 is right: 45 + 10 = 55.",
+    "why_wrong": {
+     "o1": "56 uses a jump of +11, one step too far in the growing jumps.",
+     "o2": "54 repeats the last jump, +9. The jumps keep growing by 1.",
+     "o3": "51 adds only the first jump, +6, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "15, 21, 28, 36, 45",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 6, 7, 8, 9; each jump is 1 more than the last. Next jump: 9 + 1 = 10. Next term: 45 + 10 = 55.",
+     "6_check": "Rebuild the series from 15 with jumps 6, 7, 8, 9, 10: you get 15, 21, 28, 36, 45, 55.",
+     "7_distractors": "56: 56 uses a jump of +11, one step too far in the growing jumps. 54: 54 repeats the last jump, +9. The jumps keep growing by 1. 51: 51 adds only the first jump, +6, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000615 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  15, 21, 28, 36, 45, ___",
+   "shortcut": "Write the gaps (+6, +7, +8, +9); they change by the same amount each time, so the next gap is +10: 45 +10 = 55.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000615"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000627-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  5, 6, 10, 17, 27, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "43"
+    },
+    {
+     "option_id": "o2",
+     "text": "40"
+    },
+    {
+     "option_id": "o3",
+     "text": "28"
+    },
+    {
+     "option_id": "o4",
+     "text": "37"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +1, +4, +7, +10. Each jump is 3 more than the one before. So the next jump is +13.",
+    "why_correct": "40 is right: 27 + 13 = 40.",
+    "why_wrong": {
+     "o1": "43 uses a jump of +16, one step too far in the growing jumps.",
+     "o3": "28 adds only the first jump, +1, as if the jump never changed.",
+     "o4": "37 repeats the last jump, +10. The jumps keep growing by 3."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "5, 6, 10, 17, 27",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 1, 4, 7, 10; each jump is 3 more than the last. Next jump: 10 + 3 = 13. Next term: 27 + 13 = 40.",
+     "6_check": "Rebuild the series from 5 with jumps 1, 4, 7, 10, 13: you get 5, 6, 10, 17, 27, 40.",
+     "7_distractors": "43: 43 uses a jump of +16, one step too far in the growing jumps. 28: 28 adds only the first jump, +1, as if the jump never changed. 37: 37 repeats the last jump, +10. The jumps keep growing by 3.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o3": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000627 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  5, 6, 10, 17, 27, ___",
+   "shortcut": "Write the gaps (+1, +4, +7, +10); they change by the same amount each time, so the next gap is +13: 27 +13 = 40.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000627"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000616-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  3, 9, 21, 45, 93, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "192"
+    },
+    {
+     "option_id": "o2",
+     "text": "189"
+    },
+    {
+     "option_id": "o3",
+     "text": "186"
+    },
+    {
+     "option_id": "o4",
+     "text": "141"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 2, then + 3\" on the first numbers: 3 × 2 + 3 = 9; 9 × 2 + 3 = 21. It works, so use it on 93.",
+    "why_correct": "189 is right: 93 × 2 = 186, then + 3 gives 189.",
+    "why_wrong": {
+     "o1": "192 does the + 3 step twice.",
+     "o3": "186 multiplies by 2 but forgets the + 3 step.",
+     "o4": "141 repeats the last difference (48). The jumps are not the same each time."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "3, 9, 21, 45, 93",
+     "3_method": "Test a multiply-then-add rule: term × 2 + 3.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "93 × 2 = 186; 186 + 3 = 189.",
+     "6_check": "Test the rule on an early pair: 3 × 2 + 3 = 9, and 9 × 2 + 3 = 21.",
+     "7_distractors": "192: 192 does the + 3 step twice. 186: 186 multiplies by 2 but forgets the + 3 step. 141: 141 repeats the last difference (48). The jumps are not the same each time.",
+     "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-EXTRA-STEP",
+    "o3": "NUM-PARTIAL",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000616 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  3, 9, 21, 45, 93, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000616"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000617-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  1, 5, 17, 53, 161, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "483"
+    },
+    {
+     "option_id": "o2",
+     "text": "269"
+    },
+    {
+     "option_id": "o3",
+     "text": "487"
+    },
+    {
+     "option_id": "o4",
+     "text": "485"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 3, then + 2\" on the first numbers: 1 × 3 + 2 = 5; 5 × 3 + 2 = 17. It works, so use it on 161.",
+    "why_correct": "485 is right: 161 × 3 = 483, then + 2 gives 485.",
+    "why_wrong": {
+     "o1": "483 multiplies by 3 but forgets the + 2 step.",
+     "o2": "269 repeats the last difference (108). The jumps are not the same each time.",
+     "o3": "487 does the + 2 step twice."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "1, 5, 17, 53, 161",
+     "3_method": "Test a multiply-then-add rule: term × 3 + 2.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "161 × 3 = 483; 483 + 2 = 485.",
+     "6_check": "Test the rule on an early pair: 1 × 3 + 2 = 5, and 5 × 3 + 2 = 17.",
+     "7_distractors": "483: 483 multiplies by 3 but forgets the + 2 step. 269: 269 repeats the last difference (108). The jumps are not the same each time. 487: 487 does the + 2 step twice.",
+     "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000617 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  1, 5, 17, 53, 161, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000617"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000619-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  3, 12, 39, 120, 363, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "606"
+    },
+    {
+     "option_id": "o2",
+     "text": "1089"
+    },
+    {
+     "option_id": "o3",
+     "text": "1095"
+    },
+    {
+     "option_id": "o4",
+     "text": "1092"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 3, then + 3\" on the first numbers: 3 × 3 + 3 = 12; 12 × 3 + 3 = 39. It works, so use it on 363.",
+    "why_correct": "1092 is right: 363 × 3 = 1089, then + 3 gives 1092.",
+    "why_wrong": {
+     "o1": "606 repeats the last difference (243). The jumps are not the same each time.",
+     "o2": "1089 multiplies by 3 but forgets the + 3 step.",
+     "o3": "1095 does the + 3 step twice."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "3, 12, 39, 120, 363",
+     "3_method": "Test a multiply-then-add rule: term × 3 + 3.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "363 × 3 = 1089; 1089 + 3 = 1092.",
+     "6_check": "Test the rule on an early pair: 3 × 3 + 3 = 12, and 12 × 3 + 3 = 39.",
+     "7_distractors": "606: 606 repeats the last difference (243). The jumps are not the same each time. 1089: 1089 multiplies by 3 but forgets the + 3 step. 1095: 1095 does the + 3 step twice.",
+     "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000619 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  3, 12, 39, 120, 363, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000619"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000715-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  15, 16, 20, 27, 37, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "47"
+    },
+    {
+     "option_id": "o2",
+     "text": "53"
+    },
+    {
+     "option_id": "o3",
+     "text": "50"
+    },
+    {
+     "option_id": "o4",
+     "text": "38"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +1, +4, +7, +10. Each jump is 3 more than the one before. So the next jump is +13.",
+    "why_correct": "50 is right: 37 + 13 = 50.",
+    "why_wrong": {
+     "o1": "47 repeats the last jump, +10. The jumps keep growing by 3.",
+     "o2": "53 uses a jump of +16, one step too far in the growing jumps.",
+     "o4": "38 adds only the first jump, +1, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "15, 16, 20, 27, 37",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 1, 4, 7, 10; each jump is 3 more than the last. Next jump: 10 + 3 = 13. Next term: 37 + 13 = 50.",
+     "6_check": "Rebuild the series from 15 with jumps 1, 4, 7, 10, 13: you get 15, 16, 20, 27, 37, 50.",
+     "7_distractors": "47: 47 repeats the last jump, +10. The jumps keep growing by 3. 53: 53 uses a jump of +16, one step too far in the growing jumps. 38: 38 adds only the first jump, +1, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000715 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  15, 16, 20, 27, 37, ___",
+   "shortcut": "Write the gaps (+1, +4, +7, +10); they change by the same amount each time, so the next gap is +13: 37 +13 = 50.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000715"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000731-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  10, 15, 21, 28, 36, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "41"
+    },
+    {
+     "option_id": "o2",
+     "text": "45"
+    },
+    {
+     "option_id": "o3",
+     "text": "46"
+    },
+    {
+     "option_id": "o4",
+     "text": "44"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +5, +6, +7, +8. Each jump is 1 more than the one before. So the next jump is +9.",
+    "why_correct": "45 is right: 36 + 9 = 45.",
+    "why_wrong": {
+     "o1": "41 adds only the first jump, +5, as if the jump never changed.",
+     "o3": "46 uses a jump of +10, one step too far in the growing jumps.",
+     "o4": "44 repeats the last jump, +8. The jumps keep growing by 1."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "10, 15, 21, 28, 36",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 5, 6, 7, 8; each jump is 1 more than the last. Next jump: 8 + 1 = 9. Next term: 36 + 9 = 45.",
+     "6_check": "Rebuild the series from 10 with jumps 5, 6, 7, 8, 9: you get 10, 15, 21, 28, 36, 45.",
+     "7_distractors": "41: 41 adds only the first jump, +5, as if the jump never changed. 46: 46 uses a jump of +10, one step too far in the growing jumps. 44: 44 repeats the last jump, +8. The jumps keep growing by 1.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000731 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  10, 15, 21, 28, 36, ___",
+   "shortcut": "Write the gaps (+5, +6, +7, +8); they change by the same amount each time, so the next gap is +9: 36 +9 = 45.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000731"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000737-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Find the next number in the series.  15, 18, 24, 33, 45, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "63"
+    },
+    {
+     "option_id": "o2",
+     "text": "48"
+    },
+    {
+     "option_id": "o3",
+     "text": "57"
+    },
+    {
+     "option_id": "o4",
+     "text": "60"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +3, +6, +9, +12. Each jump is 3 more than the one before. So the next jump is +15.",
+    "why_correct": "60 is right: 45 + 15 = 60.",
+    "why_wrong": {
+     "o1": "63 uses a jump of +18, one step too far in the growing jumps.",
+     "o2": "48 adds only the first jump, +3, as if the jump never changed.",
+     "o3": "57 repeats the last jump, +12. The jumps keep growing by 3."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "15, 18, 24, 33, 45",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 3, 6, 9, 12; each jump is 3 more than the last. Next jump: 12 + 3 = 15. Next term: 45 + 15 = 60.",
+     "6_check": "Rebuild the series from 15 with jumps 3, 6, 9, 12, 15: you get 15, 18, 24, 33, 45, 60.",
+     "7_distractors": "63: 63 uses a jump of +18, one step too far in the growing jumps. 48: 48 adds only the first jump, +3, as if the jump never changed. 57: 57 repeats the last jump, +12. The jumps keep growing by 3.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000737 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Find the next number in the series.  15, 18, 24, 33, 45, ___",
+   "shortcut": "Write the gaps (+3, +6, +9, +12); they change by the same amount each time, so the next gap is +15: 45 +15 = 60.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000737"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000717-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  4, 6, 10, 18, 34, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "50"
+    },
+    {
+     "option_id": "o2",
+     "text": "64"
+    },
+    {
+     "option_id": "o3",
+     "text": "68"
+    },
+    {
+     "option_id": "o4",
+     "text": "66"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 2, then − 2\" on the first numbers: 4 × 2 − 2 = 6; 6 × 2 − 2 = 10. It works, so use it on 34.",
+    "why_correct": "66 is right: 34 × 2 = 68, then − 2 gives 66.",
+    "why_wrong": {
+     "o1": "50 repeats the last difference (16). The jumps are not the same each time.",
+     "o2": "64 does the − 2 step twice.",
+     "o3": "68 multiplies by 2 but forgets the − 2 step."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "4, 6, 10, 18, 34",
+     "3_method": "Test a multiply-then-add rule: term × 2 − 2.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "34 × 2 = 68; 68 − 2 = 66.",
+     "6_check": "Test the rule on an early pair: 4 × 2 − 2 = 6, and 6 × 2 − 2 = 10.",
+     "7_distractors": "50: 50 repeats the last difference (16). The jumps are not the same each time. 64: 64 does the − 2 step twice. 68: 68 multiplies by 2 but forgets the − 2 step.",
+     "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-EXTRA-STEP",
+    "o3": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000717 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  4, 6, 10, 18, 34, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000717"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000817-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Find the next number in the series.  11, 13, 17, 23, 31, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "43"
+    },
+    {
+     "option_id": "o2",
+     "text": "39"
+    },
+    {
+     "option_id": "o3",
+     "text": "41"
+    },
+    {
+     "option_id": "o4",
+     "text": "33"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +2, +4, +6, +8. Each jump is 2 more than the one before. So the next jump is +10.",
+    "why_correct": "41 is right: 31 + 10 = 41.",
+    "why_wrong": {
+     "o1": "43 uses a jump of +12, one step too far in the growing jumps.",
+     "o2": "39 repeats the last jump, +8. The jumps keep growing by 2.",
+     "o4": "33 adds only the first jump, +2, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "11, 13, 17, 23, 31",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 2, 4, 6, 8; each jump is 2 more than the last. Next jump: 8 + 2 = 10. Next term: 31 + 10 = 41.",
+     "6_check": "Rebuild the series from 11 with jumps 2, 4, 6, 8, 10: you get 11, 13, 17, 23, 31, 41.",
+     "7_distractors": "43: 43 uses a jump of +12, one step too far in the growing jumps. 39: 39 repeats the last jump, +8. The jumps keep growing by 2. 33: 33 adds only the first jump, +2, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o2": "NUM-PARTIAL",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000817 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Find the next number in the series.  11, 13, 17, 23, 31, ___",
+   "shortcut": "Write the gaps (+2, +4, +6, +8); they change by the same amount each time, so the next gap is +10: 31 +10 = 41.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000817"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000824-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  5, 8, 12, 17, 23, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "29"
+    },
+    {
+     "option_id": "o2",
+     "text": "30"
+    },
+    {
+     "option_id": "o3",
+     "text": "31"
+    },
+    {
+     "option_id": "o4",
+     "text": "26"
+    }
+   ],
+   "answer_option_id": "o2",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +3, +4, +5, +6. Each jump is 1 more than the one before. So the next jump is +7.",
+    "why_correct": "30 is right: 23 + 7 = 30.",
+    "why_wrong": {
+     "o1": "29 repeats the last jump, +6. The jumps keep growing by 1.",
+     "o3": "31 uses a jump of +8, one step too far in the growing jumps.",
+     "o4": "26 adds only the first jump, +3, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "5, 8, 12, 17, 23",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 3, 4, 5, 6; each jump is 1 more than the last. Next jump: 6 + 1 = 7. Next term: 23 + 7 = 30.",
+     "6_check": "Rebuild the series from 5 with jumps 3, 4, 5, 6, 7: you get 5, 8, 12, 17, 23, 30.",
+     "7_distractors": "29: 29 repeats the last jump, +6. The jumps keep growing by 1. 31: 31 uses a jump of +8, one step too far in the growing jumps. 26: 26 adds only the first jump, +3, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000824 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  5, 8, 12, 17, 23, ___",
+   "shortcut": "Write the gaps (+3, +4, +5, +6); they change by the same amount each time, so the next gap is +7: 23 +7 = 30.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000824"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000836-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Which number should come next?  8, 13, 21, 32, 46, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "63"
+    },
+    {
+     "option_id": "o2",
+     "text": "51"
+    },
+    {
+     "option_id": "o3",
+     "text": "66"
+    },
+    {
+     "option_id": "o4",
+     "text": "60"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +5, +8, +11, +14. Each jump is 3 more than the one before. So the next jump is +17.",
+    "why_correct": "63 is right: 46 + 17 = 63.",
+    "why_wrong": {
+     "o2": "51 adds only the first jump, +5, as if the jump never changed.",
+     "o3": "66 uses a jump of +20, one step too far in the growing jumps.",
+     "o4": "60 repeats the last jump, +14. The jumps keep growing by 3."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "8, 13, 21, 32, 46",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 5, 8, 11, 14; each jump is 3 more than the last. Next jump: 14 + 3 = 17. Next term: 46 + 17 = 63.",
+     "6_check": "Rebuild the series from 8 with jumps 5, 8, 11, 14, 17: you get 8, 13, 21, 32, 46, 63.",
+     "7_distractors": "51: 51 adds only the first jump, +5, as if the jump never changed. 66: 66 uses a jump of +20, one step too far in the growing jumps. 60: 60 repeats the last jump, +14. The jumps keep growing by 3.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o3": "NUM-OFF-BY-ONE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000836 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Which number should come next?  8, 13, 21, 32, 46, ___",
+   "shortcut": "Write the gaps (+5, +8, +11, +14); they change by the same amount each time, so the next gap is +17: 46 +17 = 63.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000836"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000840-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  5, 8, 14, 26, 50, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "96"
+    },
+    {
+     "option_id": "o2",
+     "text": "74"
+    },
+    {
+     "option_id": "o3",
+     "text": "98"
+    },
+    {
+     "option_id": "o4",
+     "text": "100"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 2, then − 2\" on the first numbers: 5 × 2 − 2 = 8; 8 × 2 − 2 = 14. It works, so use it on 50.",
+    "why_correct": "98 is right: 50 × 2 = 100, then − 2 gives 98.",
+    "why_wrong": {
+     "o1": "96 does the − 2 step twice.",
+     "o2": "74 repeats the last difference (24). The jumps are not the same each time.",
+     "o4": "100 multiplies by 2 but forgets the − 2 step."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "5, 8, 14, 26, 50",
+     "3_method": "Test a multiply-then-add rule: term × 2 − 2.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "50 × 2 = 100; 100 − 2 = 98.",
+     "6_check": "Test the rule on an early pair: 5 × 2 − 2 = 8, and 8 × 2 − 2 = 14.",
+     "7_distractors": "96: 96 does the − 2 step twice. 74: 74 repeats the last difference (24). The jumps are not the same each time. 100: 100 multiplies by 2 but forgets the − 2 step.",
+     "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-EXTRA-STEP",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000840 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  5, 8, 14, 26, 50, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000840"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000915-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "Which number should come next?  6, 8, 13, 21, 32, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "49"
+    },
+    {
+     "option_id": "o2",
+     "text": "43"
+    },
+    {
+     "option_id": "o3",
+     "text": "34"
+    },
+    {
+     "option_id": "o4",
+     "text": "46"
+    }
+   ],
+   "answer_option_id": "o4",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +2, +5, +8, +11. Each jump is 3 more than the one before. So the next jump is +14.",
+    "why_correct": "46 is right: 32 + 14 = 46.",
+    "why_wrong": {
+     "o1": "49 uses a jump of +17, one step too far in the growing jumps.",
+     "o2": "43 repeats the last jump, +11. The jumps keep growing by 3.",
+     "o3": "34 adds only the first jump, +2, as if the jump never changed."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "6, 8, 13, 21, 32",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 2, 5, 8, 11; each jump is 3 more than the last. Next jump: 11 + 3 = 14. Next term: 32 + 14 = 46.",
+     "6_check": "Rebuild the series from 6 with jumps 2, 5, 8, 11, 14: you get 6, 8, 13, 21, 32, 46.",
+     "7_distractors": "49: 49 uses a jump of +17, one step too far in the growing jumps. 43: 43 repeats the last jump, +11. The jumps keep growing by 3. 34: 34 adds only the first jump, +2, as if the jump never changed.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-OFF-BY-ONE",
+    "o2": "NUM-PARTIAL",
+    "o3": "NUM-SEQ-OTHER-RULE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000915 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "Which number should come next?  6, 8, 13, 21, 32, ___",
+   "shortcut": "Write the gaps (+2, +5, +8, +11); they change by the same amount each time, so the next gap is +14: 32 +14 = 46.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000915"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-DIFF-000939-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "growing differences",
+   "micro_skill": "extend a series whose jumps grow by a fixed amount",
+   "archetype": "NUM-SEQ-DIFF",
+   "difficulty": "medium",
+   "est_seconds": 45,
+   "language": "en",
+   "stem": "What number comes next in the series?  2, 3, 7, 14, 24, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "25"
+    },
+    {
+     "option_id": "o2",
+     "text": "34"
+    },
+    {
+     "option_id": "o3",
+     "text": "37"
+    },
+    {
+     "option_id": "o4",
+     "text": "40"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"series\" is a list of numbers that follows one rule. The \"jump\" is how much you add to get the next number.",
+    "shortcut": "Write the jumps under the list: +1, +4, +7, +10. Each jump is 3 more than the one before. So the next jump is +13.",
+    "why_correct": "37 is right: 24 + 13 = 37.",
+    "why_wrong": {
+     "o1": "25 adds only the first jump, +1, as if the jump never changed.",
+     "o2": "34 repeats the last jump, +10. The jumps keep growing by 3.",
+     "o4": "40 uses a jump of +16, one step too far in the growing jumps."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "2, 3, 7, 14, 24",
+     "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+     "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+     "5_solve_by_hand": "Jumps: 1, 4, 7, 10; each jump is 3 more than the last. Next jump: 10 + 3 = 13. Next term: 24 + 13 = 37.",
+     "6_check": "Rebuild the series from 2 with jumps 1, 4, 7, 10, 13: you get 2, 3, 7, 14, 24, 37.",
+     "7_distractors": "25: 25 adds only the first jump, +1, as if the jump never changed. 34: 34 repeats the last jump, +10. The jumps keep growing by 3. 40: 40 uses a jump of +16, one step too far in the growing jumps.",
+     "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-SEQ-OTHER-RULE",
+    "o2": "NUM-PARTIAL",
+    "o4": "NUM-OFF-BY-ONE"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000939 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next in the series?  2, 3, 7, 14, 24, ___",
+   "shortcut": "Write the gaps (+1, +4, +7, +10); they change by the same amount each time, so the next gap is +13: 24 +13 = 37.",
+   "replaces": "CIVIO-NUM-SEQ-DIFF-000939"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000919-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  1, 6, 21, 66, 201, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "606"
+    },
+    {
+     "option_id": "o2",
+     "text": "609"
+    },
+    {
+     "option_id": "o3",
+     "text": "336"
+    },
+    {
+     "option_id": "o4",
+     "text": "603"
+    }
+   ],
+   "answer_option_id": "o1",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 3, then + 3\" on the first numbers: 1 × 3 + 3 = 6; 6 × 3 + 3 = 21. It works, so use it on 201.",
+    "why_correct": "606 is right: 201 × 3 = 603, then + 3 gives 606.",
+    "why_wrong": {
+     "o2": "609 does the + 3 step twice.",
+     "o3": "336 repeats the last difference (135). The jumps are not the same each time.",
+     "o4": "603 multiplies by 3 but forgets the + 3 step."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "1, 6, 21, 66, 201",
+     "3_method": "Test a multiply-then-add rule: term × 3 + 3.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "201 × 3 = 603; 603 + 3 = 606.",
+     "6_check": "Test the rule on an early pair: 1 × 3 + 3 = 6, and 6 × 3 + 3 = 21.",
+     "7_distractors": "609: 609 does the + 3 step twice. 336: 336 repeats the last difference (135). The jumps are not the same each time. 603: 603 multiplies by 3 but forgets the + 3 step.",
+     "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o2": "NUM-EXTRA-STEP",
+    "o3": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-PARTIAL"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000919 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  1, 6, 21, 66, 201, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000919"
+  },
+  {
+   "id": "CIVIO-NUM-SEQ-MULT-000938-R1",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Number sequence",
+   "concept": "multiply then add",
+   "micro_skill": "find a ×k then ±c rule",
+   "archetype": "NUM-SEQ-MULT",
+   "difficulty": "hard",
+   "est_seconds": 50,
+   "language": "en",
+   "stem": "What number comes next?  3, 8, 18, 38, 78, ___",
+   "options": [
+    {
+     "option_id": "o1",
+     "text": "156"
+    },
+    {
+     "option_id": "o2",
+     "text": "118"
+    },
+    {
+     "option_id": "o3",
+     "text": "158"
+    },
+    {
+     "option_id": "o4",
+     "text": "160"
+    }
+   ],
+   "answer_option_id": "o3",
+   "reveal": {
+    "terms": "A \"rule\" is the same steps done to each number to get the next one.",
+    "shortcut": "Test \"times 2, then + 2\" on the first numbers: 3 × 2 + 2 = 8; 8 × 2 + 2 = 18. It works, so use it on 78.",
+    "why_correct": "158 is right: 78 × 2 = 156, then + 2 gives 158.",
+    "why_wrong": {
+     "o1": "156 multiplies by 2 but forgets the + 2 step.",
+     "o2": "118 repeats the last difference (40). The jumps are not the same each time.",
+     "o4": "160 does the + 2 step twice."
+    },
+    "method_steps": {
+     "1_asked": "The next number in the series.",
+     "2_givens": "3, 8, 18, 38, 78",
+     "3_method": "Test a multiply-then-add rule: term × 2 + 2.",
+     "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+     "5_solve_by_hand": "78 × 2 = 156; 156 + 2 = 158.",
+     "6_check": "Test the rule on an early pair: 3 × 2 + 2 = 8, and 8 × 2 + 2 = 18.",
+     "7_distractors": "156: 156 multiplies by 2 but forgets the + 2 step. 118: 118 repeats the last difference (40). The jumps are not the same each time. 160: 160 does the + 2 step twice.",
+     "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
+    }
+   },
+   "distractor_reasoning": {
+    "o1": "NUM-PARTIAL",
+    "o2": "NUM-SEQ-OTHER-RULE",
+    "o4": "NUM-EXTRA-STEP"
+   },
+   "source": "Original, Civio",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "reviewer": null,
+   "reviewed_at": null,
+   "provenance": {
+    "author": "CSE (Grok Bot)",
+    "method": "ai_assisted",
+    "created_at": "2026-10-13T19:30:00+08:00",
+    "spec_version": "0.1.3"
+   },
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000938 (approved); content and key unchanged. 22 Oct 2026.",
+   "gen_sig": "What number comes next?  3, 8, 18, 38, 78, ___",
+   "replaces": "CIVIO-NUM-SEQ-MULT-000938"
+  }
+ ]
+}

@@ -2404,6 +2404,16 @@
           "o2": "11 subtracts first: (52 − 20) ÷ 4 + 3. Division comes before subtraction.",
           "o3": "47 stops at 52 − 5 and forgets to add 3.",
           "o4": "44 subtracts 3 instead of adding it."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "52 − 20 ÷ 4 + 3",
+          "3_method": "Order of operations: × and ÷ before + and −; then + and − from left to right.",
+          "4_why": "The ÷ sign binds 20 and 4 together, so 20 ÷ 4 must be done before anything is subtracted from 52.",
+          "5_solve_by_hand": "20 ÷ 4 = 5. Then 52 − 5 = 47. Then 47 + 3 = 50.",
+          "6_check": "Rewrite as 52 + 3 − 5 = 55 − 5 = 50: the same answer, so the order was right.",
+          "7_distractors": "11: 11 subtracts first: (52 − 20) ÷ 4 + 3. Division comes before subtraction. 47: 47 stops at 52 − 5 and forgets to add 3. 44: 44 subtracts 3 instead of adding it.",
+          "8_shortcut": "Circle every × and ÷ first and replace it with its value; what is left is only + and −."
         }
       },
       "distractor_reasoning": {
@@ -2463,6 +2473,16 @@
           "o1": "13 subtracts first: (60 − 32) ÷ 4 + 6. Division comes before subtraction.",
           "o3": "52 stops at 60 − 8 and forgets to add 6.",
           "o4": "46 subtracts 6 instead of adding it."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "60 − 32 ÷ 4 + 6",
+          "3_method": "Order of operations: × and ÷ before + and −; then + and − from left to right.",
+          "4_why": "The ÷ sign binds 32 and 4 together, so 32 ÷ 4 must be done before anything is subtracted from 60.",
+          "5_solve_by_hand": "32 ÷ 4 = 8. Then 60 − 8 = 52. Then 52 + 6 = 58.",
+          "6_check": "Rewrite as 60 + 6 − 8 = 66 − 8 = 58: the same answer, so the order was right.",
+          "7_distractors": "13: 13 subtracts first: (60 − 32) ÷ 4 + 6. Division comes before subtraction. 52: 52 stops at 60 − 8 and forgets to add 6. 46: 46 subtracts 6 instead of adding it.",
+          "8_shortcut": "Circle every × and ÷ first and replace it with its value; what is left is only + and −."
         }
       },
       "distractor_reasoning": {
@@ -2522,6 +2542,16 @@
           "o1": "24 subtracts first: (70 − 25) ÷ 5 + 15. Division comes before subtraction.",
           "o2": "65 stops at 70 − 5 and forgets to add 15.",
           "o4": "50 subtracts 15 instead of adding it."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "70 − 25 ÷ 5 + 15",
+          "3_method": "Order of operations: × and ÷ before + and −; then + and − from left to right.",
+          "4_why": "The ÷ sign binds 25 and 5 together, so 25 ÷ 5 must be done before anything is subtracted from 70.",
+          "5_solve_by_hand": "25 ÷ 5 = 5. Then 70 − 5 = 65. Then 65 + 15 = 80.",
+          "6_check": "Rewrite as 70 + 15 − 5 = 85 − 5 = 80: the same answer, so the order was right.",
+          "7_distractors": "24: 24 subtracts first: (70 − 25) ÷ 5 + 15. Division comes before subtraction. 65: 65 stops at 70 − 5 and forgets to add 15. 50: 50 subtracts 15 instead of adding it.",
+          "8_shortcut": "Circle every × and ÷ first and replace it with its value; what is left is only + and −."
         }
       },
       "distractor_reasoning": {
@@ -2581,6 +2611,16 @@
           "o1": "16 subtracts first: (40 − 35) ÷ 5 + 15. Division comes before subtraction.",
           "o2": "33 stops at 40 − 7 and forgets to add 15.",
           "o3": "18 subtracts 15 instead of adding it."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "40 − 35 ÷ 5 + 15",
+          "3_method": "Order of operations: × and ÷ before + and −; then + and − from left to right.",
+          "4_why": "The ÷ sign binds 35 and 5 together, so 35 ÷ 5 must be done before anything is subtracted from 40.",
+          "5_solve_by_hand": "35 ÷ 5 = 7. Then 40 − 7 = 33. Then 33 + 15 = 48.",
+          "6_check": "Rewrite as 40 + 15 − 7 = 55 − 7 = 48: the same answer, so the order was right.",
+          "7_distractors": "16: 16 subtracts first: (40 − 35) ÷ 5 + 15. Division comes before subtraction. 33: 33 stops at 40 − 7 and forgets to add 15. 18: 18 subtracts 15 instead of adding it.",
+          "8_shortcut": "Circle every × and ÷ first and replace it with its value; what is left is only + and −."
         }
       },
       "distractor_reasoning": {
@@ -2640,6 +2680,16 @@
           "o2": "15 subtracts first: (18 − 15) ÷ 3 + 14. Division comes before subtraction.",
           "o3": "13 stops at 18 − 5 and forgets to add 14.",
           "o4": "-1 subtracts 14 instead of adding it."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "18 − 15 ÷ 3 + 14",
+          "3_method": "Order of operations: × and ÷ before + and −; then + and − from left to right.",
+          "4_why": "The ÷ sign binds 15 and 3 together, so 15 ÷ 3 must be done before anything is subtracted from 18.",
+          "5_solve_by_hand": "15 ÷ 3 = 5. Then 18 − 5 = 13. Then 13 + 14 = 27.",
+          "6_check": "Rewrite as 18 + 14 − 5 = 32 − 5 = 27: the same answer, so the order was right.",
+          "7_distractors": "15: 15 subtracts first: (18 − 15) ÷ 3 + 14. Division comes before subtraction. 13: 13 stops at 18 − 5 and forgets to add 14. -1: -1 subtracts 14 instead of adding it.",
+          "8_shortcut": "Circle every × and ÷ first and replace it with its value; what is left is only + and −."
         }
       },
       "distractor_reasoning": {
@@ -2699,6 +2749,16 @@
           "o1": "25 subtracts first: (56 − 20) ÷ 4 + 16. Division comes before subtraction.",
           "o3": "51 stops at 56 − 5 and forgets to add 16.",
           "o4": "35 subtracts 16 instead of adding it."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "56 − 20 ÷ 4 + 16",
+          "3_method": "Order of operations: × and ÷ before + and −; then + and − from left to right.",
+          "4_why": "The ÷ sign binds 20 and 4 together, so 20 ÷ 4 must be done before anything is subtracted from 56.",
+          "5_solve_by_hand": "20 ÷ 4 = 5. Then 56 − 5 = 51. Then 51 + 16 = 67.",
+          "6_check": "Rewrite as 56 + 16 − 5 = 72 − 5 = 67: the same answer, so the order was right.",
+          "7_distractors": "25: 25 subtracts first: (56 − 20) ÷ 4 + 16. Division comes before subtraction. 51: 51 stops at 56 − 5 and forgets to add 16. 35: 35 subtracts 16 instead of adding it.",
+          "8_shortcut": "Circle every × and ÷ first and replace it with its value; what is left is only + and −."
         }
       },
       "distractor_reasoning": {
@@ -2758,6 +2818,16 @@
           "o1": "469 drops the parentheses and computes 91 × 5 − 2 + 16.",
           "o2": "273 stops at 91 × 3 and forgets to add 16.",
           "o4": "110 adds 91 instead of multiplying by 91."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "91 × (5 − 2) + 16",
+          "3_method": "Parentheses first, then ×, then +.",
+          "4_why": "Parentheses group a part that must be finished before it is used in a product.",
+          "5_solve_by_hand": "5 − 2 = 3. Then 91 × 3 = 273. Then 273 + 16 = 289.",
+          "6_check": "Estimate: 91 × 3 is about 90 × 3 = 270; adding 16 gives a value near 286, close to 289.",
+          "7_distractors": "469: 469 drops the parentheses and computes 91 × 5 − 2 + 16. 273: 273 stops at 91 × 3 and forgets to add 16. 110: 110 adds 91 instead of multiplying by 91.",
+          "8_shortcut": "Multiply 91 × 3 by splitting 91: (90 × 3) + (1 × 3)."
         }
       },
       "distractor_reasoning": {
@@ -2817,6 +2887,16 @@
           "o1": "737 drops the parentheses and computes 73 × 10 − 9 + 16.",
           "o2": "73 stops at 73 × 1 and forgets to add 16.",
           "o3": "90 adds 73 instead of multiplying by 73."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "73 × (10 − 9) + 16",
+          "3_method": "Parentheses first, then ×, then +.",
+          "4_why": "Parentheses group a part that must be finished before it is used in a product.",
+          "5_solve_by_hand": "10 − 9 = 1. Then 73 × 1 = 73. Then 73 + 16 = 89.",
+          "6_check": "Estimate: 73 × 1 is about 70 × 1 = 70; adding 16 gives a value near 86, close to 89.",
+          "7_distractors": "737: 737 drops the parentheses and computes 73 × 10 − 9 + 16. 73: 73 stops at 73 × 1 and forgets to add 16. 90: 90 adds 73 instead of multiplying by 73.",
+          "8_shortcut": "Multiply 73 × 1 by splitting 73: (70 × 1) + (3 × 1)."
         }
       },
       "distractor_reasoning": {
@@ -2876,6 +2956,16 @@
           "o2": "354 drops the parentheses and computes 21 × 17 − 11 + 8.",
           "o3": "126 stops at 21 × 6 and forgets to add 8.",
           "o4": "35 adds 21 instead of multiplying by 21."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "21 × (17 − 11) + 8",
+          "3_method": "Parentheses first, then ×, then +.",
+          "4_why": "Parentheses group a part that must be finished before it is used in a product.",
+          "5_solve_by_hand": "17 − 11 = 6. Then 21 × 6 = 126. Then 126 + 8 = 134.",
+          "6_check": "Estimate: 21 × 6 is about 20 × 6 = 120; adding 8 gives a value near 128, close to 134.",
+          "7_distractors": "354: 354 drops the parentheses and computes 21 × 17 − 11 + 8. 126: 126 stops at 21 × 6 and forgets to add 8. 35: 35 adds 21 instead of multiplying by 21.",
+          "8_shortcut": "Multiply 21 × 6 by splitting 21: (20 × 6) + (1 × 6)."
         }
       },
       "distractor_reasoning": {
@@ -2935,6 +3025,16 @@
           "o1": "1320 drops the parentheses and computes 69 × 19 − 2 + 11.",
           "o3": "1173 stops at 69 × 17 and forgets to add 11.",
           "o4": "97 adds 69 instead of multiplying by 69."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "69 × (19 − 2) + 11",
+          "3_method": "Parentheses first, then ×, then +.",
+          "4_why": "Parentheses group a part that must be finished before it is used in a product.",
+          "5_solve_by_hand": "19 − 2 = 17. Then 69 × 17 = 1173. Then 1173 + 11 = 1184.",
+          "6_check": "Estimate: 69 × 17 is about 70 × 17 = 1190; adding 11 gives a value near 1201, close to 1184.",
+          "7_distractors": "1320: 1320 drops the parentheses and computes 69 × 19 − 2 + 11. 1173: 1173 stops at 69 × 17 and forgets to add 11. 97: 97 adds 69 instead of multiplying by 69.",
+          "8_shortcut": "Multiply 69 × 17 by splitting 69: (60 × 17) + (9 × 17)."
         }
       },
       "distractor_reasoning": {
@@ -3004,6 +3104,16 @@
           "o1": "1056 drops the parentheses and computes 96 × 11 − 9 + 9.",
           "o2": "192 stops at 96 × 2 and forgets to add 9.",
           "o4": "107 adds 96 instead of multiplying by 96."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "96 × (11 − 9) + 9",
+          "3_method": "Parentheses first, then ×, then +.",
+          "4_why": "Parentheses group a part that must be finished before it is used in a product.",
+          "5_solve_by_hand": "11 − 9 = 2. Then 96 × 2 = 192. Then 192 + 9 = 201.",
+          "6_check": "Estimate: 96 × 2 is about 100 × 2 = 200; adding 9 gives a value near 209, close to 201.",
+          "7_distractors": "1056: 1056 drops the parentheses and computes 96 × 11 − 9 + 9. 192: 192 stops at 96 × 2 and forgets to add 9. 107: 107 adds 96 instead of multiplying by 96.",
+          "8_shortcut": "Multiply 96 × 2 by splitting 96: (90 × 2) + (6 × 2)."
         }
       },
       "distractor_reasoning": {
@@ -3063,6 +3173,16 @@
           "o1": "814 drops the parentheses and computes 67 × 12 − 6 + 16.",
           "o2": "402 stops at 67 × 6 and forgets to add 16.",
           "o3": "89 adds 67 instead of multiplying by 67."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "67 × (12 − 6) + 16",
+          "3_method": "Parentheses first, then ×, then +.",
+          "4_why": "Parentheses group a part that must be finished before it is used in a product.",
+          "5_solve_by_hand": "12 − 6 = 6. Then 67 × 6 = 402. Then 402 + 16 = 418.",
+          "6_check": "Estimate: 67 × 6 is about 70 × 6 = 420; adding 16 gives a value near 436, close to 418.",
+          "7_distractors": "814: 814 drops the parentheses and computes 67 × 12 − 6 + 16. 402: 402 stops at 67 × 6 and forgets to add 16. 89: 89 adds 67 instead of multiplying by 67.",
+          "8_shortcut": "Multiply 67 × 6 by splitting 67: (60 × 6) + (7 × 6)."
         }
       },
       "distractor_reasoning": {
@@ -3122,6 +3242,16 @@
           "o2": "633 drops the parentheses and computes 90 × 7 − 4 + 7.",
           "o3": "270 stops at 90 × 3 and forgets to add 7.",
           "o4": "100 adds 90 instead of multiplying by 90."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "90 × (7 − 4) + 7",
+          "3_method": "Parentheses first, then ×, then +.",
+          "4_why": "Parentheses group a part that must be finished before it is used in a product.",
+          "5_solve_by_hand": "7 − 4 = 3. Then 90 × 3 = 270. Then 270 + 7 = 277.",
+          "6_check": "Estimate: 90 × 3 is about 90 × 3 = 270; adding 7 gives a value near 277, close to 277.",
+          "7_distractors": "633: 633 drops the parentheses and computes 90 × 7 − 4 + 7. 270: 270 stops at 90 × 3 and forgets to add 7. 100: 100 adds 90 instead of multiplying by 90.",
+          "8_shortcut": "Multiply 90 × 3 by splitting 90: (90 × 3) + (0 × 3)."
         }
       },
       "distractor_reasoning": {
@@ -3181,6 +3311,16 @@
           "o1": "-6 drops the parentheses and computes 2 × 12 ÷ 12 − 8.",
           "o3": "24 stops at 2 × 12 and forgets to divide by 4.",
           "o4": "96 multiplies by 4 instead of dividing."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "2 × 12 ÷ (12 − 8)",
+          "3_method": "Parentheses first; then × and ÷ from left to right.",
+          "4_why": "The divisor is the whole parenthesis, so it must be found before dividing.",
+          "5_solve_by_hand": "12 − 8 = 4. Then 2 × 12 = 24. Then 24 ÷ 4 = 6.",
+          "6_check": "Multiply back: 6 × 4 = 24, which equals 2 × 12.",
+          "7_distractors": "-6: -6 drops the parentheses and computes 2 × 12 ÷ 12 − 8. 24: 24 stops at 2 × 12 and forgets to divide by 4. 96: 96 multiplies by 4 instead of dividing.",
+          "8_shortcut": "Cancel before multiplying when you can: divide 2 or 12 by 4 first if it divides evenly."
         }
       },
       "distractor_reasoning": {
@@ -3240,6 +3380,16 @@
           "o1": "13 drops the parentheses and computes 15 × 7 ÷ 7 − 2.",
           "o2": "105 stops at 15 × 7 and forgets to divide by 5.",
           "o4": "525 multiplies by 5 instead of dividing."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "15 × 7 ÷ (7 − 2)",
+          "3_method": "Parentheses first; then × and ÷ from left to right.",
+          "4_why": "The divisor is the whole parenthesis, so it must be found before dividing.",
+          "5_solve_by_hand": "7 − 2 = 5. Then 15 × 7 = 105. Then 105 ÷ 5 = 21.",
+          "6_check": "Multiply back: 21 × 5 = 105, which equals 15 × 7.",
+          "7_distractors": "13: 13 drops the parentheses and computes 15 × 7 ÷ 7 − 2. 105: 105 stops at 15 × 7 and forgets to divide by 5. 525: 525 multiplies by 5 instead of dividing.",
+          "8_shortcut": "Cancel before multiplying when you can: divide 15 or 7 by 5 first if it divides evenly."
         }
       },
       "distractor_reasoning": {
@@ -3299,6 +3449,16 @@
           "o1": "11 drops the parentheses and computes 20 × 12 ÷ 12 − 9.",
           "o2": "240 stops at 20 × 12 and forgets to divide by 3.",
           "o3": "720 multiplies by 3 instead of dividing."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "20 × 12 ÷ (12 − 9)",
+          "3_method": "Parentheses first; then × and ÷ from left to right.",
+          "4_why": "The divisor is the whole parenthesis, so it must be found before dividing.",
+          "5_solve_by_hand": "12 − 9 = 3. Then 20 × 12 = 240. Then 240 ÷ 3 = 80.",
+          "6_check": "Multiply back: 80 × 3 = 240, which equals 20 × 12.",
+          "7_distractors": "11: 11 drops the parentheses and computes 20 × 12 ÷ 12 − 9. 240: 240 stops at 20 × 12 and forgets to divide by 3. 720: 720 multiplies by 3 instead of dividing.",
+          "8_shortcut": "Cancel before multiplying when you can: divide 20 or 12 by 3 first if it divides evenly."
         }
       },
       "distractor_reasoning": {
@@ -3358,6 +3518,16 @@
           "o2": "8 drops the parentheses and computes 10 × 7 ÷ 7 − 2.",
           "o3": "70 stops at 10 × 7 and forgets to divide by 5.",
           "o4": "350 multiplies by 5 instead of dividing."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "10 × 7 ÷ (7 − 2)",
+          "3_method": "Parentheses first; then × and ÷ from left to right.",
+          "4_why": "The divisor is the whole parenthesis, so it must be found before dividing.",
+          "5_solve_by_hand": "7 − 2 = 5. Then 10 × 7 = 70. Then 70 ÷ 5 = 14.",
+          "6_check": "Multiply back: 14 × 5 = 70, which equals 10 × 7.",
+          "7_distractors": "8: 8 drops the parentheses and computes 10 × 7 ÷ 7 − 2. 70: 70 stops at 10 × 7 and forgets to divide by 5. 350: 350 multiplies by 5 instead of dividing.",
+          "8_shortcut": "Cancel before multiplying when you can: divide 10 or 7 by 5 first if it divides evenly."
         }
       },
       "distractor_reasoning": {
@@ -3417,6 +3587,16 @@
           "o1": "12 drops the parentheses and computes 16 × 12 ÷ 12 − 4.",
           "o3": "192 stops at 16 × 12 and forgets to divide by 8.",
           "o4": "1536 multiplies by 8 instead of dividing."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "16 × 12 ÷ (12 − 4)",
+          "3_method": "Parentheses first; then × and ÷ from left to right.",
+          "4_why": "The divisor is the whole parenthesis, so it must be found before dividing.",
+          "5_solve_by_hand": "12 − 4 = 8. Then 16 × 12 = 192. Then 192 ÷ 8 = 24.",
+          "6_check": "Multiply back: 24 × 8 = 192, which equals 16 × 12.",
+          "7_distractors": "12: 12 drops the parentheses and computes 16 × 12 ÷ 12 − 4. 192: 192 stops at 16 × 12 and forgets to divide by 8. 1536: 1536 multiplies by 8 instead of dividing.",
+          "8_shortcut": "Cancel before multiplying when you can: divide 16 or 12 by 8 first if it divides evenly."
         }
       },
       "distractor_reasoning": {
@@ -3476,6 +3656,16 @@
           "o1": "18 drops the parentheses and computes 18 × 18 ÷ 12 − 9.",
           "o2": "324 stops at 18 × 18 and forgets to divide by 3.",
           "o4": "972 multiplies by 3 instead of dividing."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "18 × 18 ÷ (12 − 9)",
+          "3_method": "Parentheses first; then × and ÷ from left to right.",
+          "4_why": "The divisor is the whole parenthesis, so it must be found before dividing.",
+          "5_solve_by_hand": "12 − 9 = 3. Then 18 × 18 = 324. Then 324 ÷ 3 = 108.",
+          "6_check": "Multiply back: 108 × 3 = 324, which equals 18 × 18.",
+          "7_distractors": "18: 18 drops the parentheses and computes 18 × 18 ÷ 12 − 9. 324: 324 stops at 18 × 18 and forgets to divide by 3. 972: 972 multiplies by 3 instead of dividing.",
+          "8_shortcut": "Cancel before multiplying when you can: divide 18 or 18 by 3 first if it divides evenly."
         }
       },
       "distractor_reasoning": {
@@ -3535,6 +3725,16 @@
           "o1": "1 drops the parentheses and computes 2 × 18 ÷ 9 − 3.",
           "o2": "36 stops at 2 × 18 and forgets to divide by 6.",
           "o3": "216 multiplies by 6 instead of dividing."
+        },
+        "method_steps": {
+          "1_asked": "The value of the expression, following the order of operations.",
+          "2_givens": "2 × 18 ÷ (9 − 3)",
+          "3_method": "Parentheses first; then × and ÷ from left to right.",
+          "4_why": "The divisor is the whole parenthesis, so it must be found before dividing.",
+          "5_solve_by_hand": "9 − 3 = 6. Then 2 × 18 = 36. Then 36 ÷ 6 = 6.",
+          "6_check": "Multiply back: 6 × 6 = 36, which equals 2 × 18.",
+          "7_distractors": "1: 1 drops the parentheses and computes 2 × 18 ÷ 9 − 3. 36: 36 stops at 2 × 18 and forgets to divide by 6. 216: 216 multiplies by 6 instead of dividing.",
+          "8_shortcut": "Cancel before multiplying when you can: divide 2 or 18 by 6 first if it divides evenly."
         }
       },
       "distractor_reasoning": {
@@ -3594,6 +3794,16 @@
           "o2": "75 repeats the last jump (+16). The jumps grow by 4 each time, so the next jump is +20.",
           "o3": "83 adds 24, skipping one step in the jumps (the next jump is +20).",
           "o4": "63 adds the first jump (+4) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "19, 23, 31, 43, 59",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 4, 8, 12, 16; each jump is 4 more than the last. Next jump: 16 + 4 = 20. Next term: 59 + 20 = 79.",
+          "6_check": "Rebuild the series from 19 with jumps 4, 8, 12, 16, 20: you get 19, 23, 31, 43, 59, 79.",
+          "7_distractors": "75: 75 repeats the last jump (+16). The jumps grow by 4 each time, so the next jump is +20. 83: 83 adds 24, skipping one step in the jumps (the next jump is +20). 63: 63 adds the first jump (+4) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -3653,6 +3863,16 @@
           "o1": "73 repeats the last jump (+14). The jumps grow by 2 each time, so the next jump is +16.",
           "o3": "77 adds 18, skipping one step in the jumps (the next jump is +16).",
           "o4": "67 adds the first jump (+8) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "15, 23, 33, 45, 59",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 8, 10, 12, 14; each jump is 2 more than the last. Next jump: 14 + 2 = 16. Next term: 59 + 16 = 75.",
+          "6_check": "Rebuild the series from 15 with jumps 8, 10, 12, 14, 16: you get 15, 23, 33, 45, 59, 75.",
+          "7_distractors": "73: 73 repeats the last jump (+14). The jumps grow by 2 each time, so the next jump is +16. 77: 77 adds 18, skipping one step in the jumps (the next jump is +16). 67: 67 adds the first jump (+8) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -3712,6 +3932,16 @@
           "o1": "75 repeats the last jump (+17). The jumps grow by 3 each time, so the next jump is +20.",
           "o2": "81 adds 23, skipping one step in the jumps (the next jump is +20).",
           "o4": "66 adds the first jump (+8) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "8, 16, 27, 41, 58",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 8, 11, 14, 17; each jump is 3 more than the last. Next jump: 17 + 3 = 20. Next term: 58 + 20 = 78.",
+          "6_check": "Rebuild the series from 8 with jumps 8, 11, 14, 17, 20: you get 8, 16, 27, 41, 58, 78.",
+          "7_distractors": "75: 75 repeats the last jump (+17). The jumps grow by 3 each time, so the next jump is +20. 81: 81 adds 23, skipping one step in the jumps (the next jump is +20). 66: 66 adds the first jump (+8) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -3771,6 +4001,16 @@
           "o1": "42 repeats the last jump (+11). The jumps grow by 3 each time, so the next jump is +14.",
           "o2": "48 adds 17, skipping one step in the jumps (the next jump is +14).",
           "o3": "33 adds the first jump (+2) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "5, 7, 12, 20, 31",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 2, 5, 8, 11; each jump is 3 more than the last. Next jump: 11 + 3 = 14. Next term: 31 + 14 = 45.",
+          "6_check": "Rebuild the series from 5 with jumps 2, 5, 8, 11, 14: you get 5, 7, 12, 20, 31, 45.",
+          "7_distractors": "42: 42 repeats the last jump (+11). The jumps grow by 3 each time, so the next jump is +14. 48: 48 adds 17, skipping one step in the jumps (the next jump is +14). 33: 33 adds the first jump (+2) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -3830,6 +4070,16 @@
           "o2": "68 repeats the last jump (+13). The jumps grow by 3 each time, so the next jump is +16.",
           "o3": "74 adds 19, skipping one step in the jumps (the next jump is +16).",
           "o4": "59 adds the first jump (+4) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "21, 25, 32, 42, 55",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 4, 7, 10, 13; each jump is 3 more than the last. Next jump: 13 + 3 = 16. Next term: 55 + 16 = 71.",
+          "6_check": "Rebuild the series from 21 with jumps 4, 7, 10, 13, 16: you get 21, 25, 32, 42, 55, 71.",
+          "7_distractors": "68: 68 repeats the last jump (+13). The jumps grow by 3 each time, so the next jump is +16. 74: 74 adds 19, skipping one step in the jumps (the next jump is +16). 59: 59 adds the first jump (+4) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -3889,6 +4139,16 @@
           "o1": "76 repeats the last jump (+19). The jumps grow by 4 each time, so the next jump is +23.",
           "o3": "84 adds 27, skipping one step in the jumps (the next jump is +23).",
           "o4": "64 adds the first jump (+7) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "5, 12, 23, 38, 57",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 7, 11, 15, 19; each jump is 4 more than the last. Next jump: 19 + 4 = 23. Next term: 57 + 23 = 80.",
+          "6_check": "Rebuild the series from 5 with jumps 7, 11, 15, 19, 23: you get 5, 12, 23, 38, 57, 80.",
+          "7_distractors": "76: 76 repeats the last jump (+19). The jumps grow by 4 each time, so the next jump is +23. 84: 84 adds 27, skipping one step in the jumps (the next jump is +23). 64: 64 adds the first jump (+7) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -3948,6 +4208,16 @@
           "o1": "67 repeats the last jump (+12). The jumps grow by 2 each time, so the next jump is +14.",
           "o2": "71 adds 16, skipping one step in the jumps (the next jump is +14).",
           "o4": "61 adds the first jump (+6) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "19, 25, 33, 43, 55",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 6, 8, 10, 12; each jump is 2 more than the last. Next jump: 12 + 2 = 14. Next term: 55 + 14 = 69.",
+          "6_check": "Rebuild the series from 19 with jumps 6, 8, 10, 12, 14: you get 19, 25, 33, 43, 55, 69.",
+          "7_distractors": "67: 67 repeats the last jump (+12). The jumps grow by 2 each time, so the next jump is +14. 71: 71 adds 16, skipping one step in the jumps (the next jump is +14). 61: 61 adds the first jump (+6) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -4007,6 +4277,16 @@
           "o1": "51 repeats the last jump (+10). The jumps grow by 2 each time, so the next jump is +12.",
           "o2": "55 adds 14, skipping one step in the jumps (the next jump is +12).",
           "o3": "45 adds the first jump (+4) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "13, 17, 23, 31, 41",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 4, 6, 8, 10; each jump is 2 more than the last. Next jump: 10 + 2 = 12. Next term: 41 + 12 = 53.",
+          "6_check": "Rebuild the series from 13 with jumps 4, 6, 8, 10, 12: you get 13, 17, 23, 31, 41, 53.",
+          "7_distractors": "51: 51 repeats the last jump (+10). The jumps grow by 2 each time, so the next jump is +12. 55: 55 adds 14, skipping one step in the jumps (the next jump is +12). 45: 45 adds the first jump (+4) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -4066,6 +4346,16 @@
           "o2": "86 repeats the last jump (+17). The jumps grow by 4 each time, so the next jump is +21.",
           "o3": "94 adds 25, skipping one step in the jumps (the next jump is +21).",
           "o4": "74 adds the first jump (+5) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "25, 30, 39, 52, 69",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 5, 9, 13, 17; each jump is 4 more than the last. Next jump: 17 + 4 = 21. Next term: 69 + 21 = 90.",
+          "6_check": "Rebuild the series from 25 with jumps 5, 9, 13, 17, 21: you get 25, 30, 39, 52, 69, 90.",
+          "7_distractors": "86: 86 repeats the last jump (+17). The jumps grow by 4 each time, so the next jump is +21. 94: 94 adds 25, skipping one step in the jumps (the next jump is +21). 74: 74 adds the first jump (+5) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -4125,6 +4415,16 @@
           "o1": "40 repeats the last jump (+7). The jumps grow by 1 each time, so the next jump is +8.",
           "o3": "42 adds 9, skipping one step in the jumps (the next jump is +8).",
           "o4": "37 adds the first jump (+4) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "11, 15, 20, 26, 33",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 4, 5, 6, 7; each jump is 1 more than the last. Next jump: 7 + 1 = 8. Next term: 33 + 8 = 41.",
+          "6_check": "Rebuild the series from 11 with jumps 4, 5, 6, 7, 8: you get 11, 15, 20, 26, 33, 41.",
+          "7_distractors": "40: 40 repeats the last jump (+7). The jumps grow by 1 each time, so the next jump is +8. 42: 42 adds 9, skipping one step in the jumps (the next jump is +8). 37: 37 adds the first jump (+4) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -4184,6 +4484,16 @@
           "o1": "97 repeats the last jump (+18). The jumps grow by 3 each time, so the next jump is +21.",
           "o2": "103 adds 24, skipping one step in the jumps (the next jump is +21).",
           "o4": "88 adds the first jump (+9) again, as if the jumps stayed the same."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "25, 34, 46, 61, 79",
+          "3_method": "Write the jumps between terms; if the jumps themselves change by a fixed amount, continue that pattern.",
+          "4_why": "When the terms grow faster and faster but not by multiplying, the jumps usually form their own simple series.",
+          "5_solve_by_hand": "Jumps: 9, 12, 15, 18; each jump is 3 more than the last. Next jump: 18 + 3 = 21. Next term: 79 + 21 = 100.",
+          "6_check": "Rebuild the series from 25 with jumps 9, 12, 15, 18, 21: you get 25, 34, 46, 61, 79, 100.",
+          "7_distractors": "97: 97 repeats the last jump (+18). The jumps grow by 3 each time, so the next jump is +21. 103: 103 adds 24, skipping one step in the jumps (the next jump is +21). 88: 88 adds the first jump (+9) again, as if the jumps stayed the same.",
+          "8_shortcut": "Two rows: terms on top, jumps below. Extend the bottom row first."
         }
       },
       "distractor_reasoning": {
@@ -4243,6 +4553,16 @@
           "o1": "1089 multiplies by 3 but forgets to add 3.",
           "o2": "606 repeats the last difference (243). The rule is × 3 then + 3, not a fixed jump.",
           "o3": "1095 applies the + 3 step twice."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "3, 12, 39, 120, 363",
+          "3_method": "Test a multiply-then-add rule: term × 3 + 3.",
+          "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+          "5_solve_by_hand": "363 × 3 = 1089; 1089 + 3 = 1092.",
+          "6_check": "Test the rule on an early pair: 3 × 3 + 3 = 12, and 12 × 3 + 3 = 39.",
+          "7_distractors": "1089: 1089 multiplies by 3 but forgets to add 3. 606: 606 repeats the last difference (243). The rule is × 3 then + 3, not a fixed jump. 1095: 1095 applies the + 3 step twice.",
+          "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
         }
       },
       "distractor_reasoning": {
@@ -4302,6 +4622,16 @@
           "o2": "1212 multiplies by 3 but forgets to add 2.",
           "o3": "674 repeats the last difference (270). The rule is × 3 then + 2, not a fixed jump.",
           "o4": "1216 applies the + 2 step twice."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "4, 14, 44, 134, 404",
+          "3_method": "Test a multiply-then-add rule: term × 3 + 2.",
+          "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+          "5_solve_by_hand": "404 × 3 = 1212; 1212 + 2 = 1214.",
+          "6_check": "Test the rule on an early pair: 4 × 3 + 2 = 14, and 14 × 3 + 2 = 44.",
+          "7_distractors": "1212: 1212 multiplies by 3 but forgets to add 2. 674: 674 repeats the last difference (270). The rule is × 3 then + 2, not a fixed jump. 1216: 1216 applies the + 2 step twice.",
+          "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
         }
       },
       "distractor_reasoning": {
@@ -4361,6 +4691,16 @@
           "o1": "366 multiplies by 3 but forgets to subtract 1.",
           "o3": "203 repeats the last difference (81). The rule is × 3 then − 1, not a fixed jump.",
           "o4": "364 applies the − 1 step twice."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "2, 5, 14, 41, 122",
+          "3_method": "Test a multiply-then-add rule: term × 3 − 1.",
+          "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+          "5_solve_by_hand": "122 × 3 = 366; 366 − 1 = 365.",
+          "6_check": "Test the rule on an early pair: 2 × 3 − 1 = 5, and 5 × 3 − 1 = 14.",
+          "7_distractors": "366: 366 multiplies by 3 but forgets to subtract 1. 203: 203 repeats the last difference (81). The rule is × 3 then − 1, not a fixed jump. 364: 364 applies the − 1 step twice.",
+          "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
         }
       },
       "distractor_reasoning": {
@@ -4420,6 +4760,16 @@
           "o1": "126 multiplies by 2 but forgets to add 1.",
           "o2": "95 repeats the last difference (32). The rule is × 2 then + 1, not a fixed jump.",
           "o4": "128 applies the + 1 step twice."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "3, 7, 15, 31, 63",
+          "3_method": "Test a multiply-then-add rule: term × 2 + 1.",
+          "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+          "5_solve_by_hand": "63 × 2 = 126; 126 + 1 = 127.",
+          "6_check": "Test the rule on an early pair: 3 × 2 + 1 = 7, and 7 × 2 + 1 = 15.",
+          "7_distractors": "126: 126 multiplies by 2 but forgets to add 1. 95: 95 repeats the last difference (32). The rule is × 2 then + 1, not a fixed jump. 128: 128 applies the + 1 step twice.",
+          "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
         }
       },
       "distractor_reasoning": {
@@ -4479,6 +4829,16 @@
           "o1": "1455 multiplies by 3 but forgets to add 2.",
           "o2": "809 repeats the last difference (324). The rule is × 3 then + 2, not a fixed jump.",
           "o3": "1459 applies the + 2 step twice."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "5, 17, 53, 161, 485",
+          "3_method": "Test a multiply-then-add rule: term × 3 + 2.",
+          "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+          "5_solve_by_hand": "485 × 3 = 1455; 1455 + 2 = 1457.",
+          "6_check": "Test the rule on an early pair: 5 × 3 + 2 = 17, and 17 × 3 + 2 = 53.",
+          "7_distractors": "1455: 1455 multiplies by 3 but forgets to add 2. 809: 809 repeats the last difference (324). The rule is × 3 then + 2, not a fixed jump. 1459: 1459 applies the + 2 step twice.",
+          "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
         }
       },
       "distractor_reasoning": {
@@ -4538,6 +4898,16 @@
           "o2": "1332 multiplies by 3 but forgets to add 3.",
           "o3": "741 repeats the last difference (297). The rule is × 3 then + 3, not a fixed jump.",
           "o4": "1338 applies the + 3 step twice."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "4, 15, 48, 147, 444",
+          "3_method": "Test a multiply-then-add rule: term × 3 + 3.",
+          "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+          "5_solve_by_hand": "444 × 3 = 1332; 1332 + 3 = 1335.",
+          "6_check": "Test the rule on an early pair: 4 × 3 + 3 = 15, and 15 × 3 + 3 = 48.",
+          "7_distractors": "1332: 1332 multiplies by 3 but forgets to add 3. 741: 741 repeats the last difference (297). The rule is × 3 then + 3, not a fixed jump. 1338: 1338 applies the + 3 step twice.",
+          "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
         }
       },
       "distractor_reasoning": {
@@ -4597,6 +4967,16 @@
           "o1": "1818 multiplies by 3 but forgets to add 3.",
           "o3": "1011 repeats the last difference (405). The rule is × 3 then + 3, not a fixed jump.",
           "o4": "1824 applies the + 3 step twice."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "6, 21, 66, 201, 606",
+          "3_method": "Test a multiply-then-add rule: term × 3 + 3.",
+          "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+          "5_solve_by_hand": "606 × 3 = 1818; 1818 + 3 = 1821.",
+          "6_check": "Test the rule on an early pair: 6 × 3 + 3 = 21, and 21 × 3 + 3 = 66.",
+          "7_distractors": "1818: 1818 multiplies by 3 but forgets to add 3. 1011: 1011 repeats the last difference (405). The rule is × 3 then + 3, not a fixed jump. 1824: 1824 applies the + 3 step twice.",
+          "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
         }
       },
       "distractor_reasoning": {
@@ -4656,6 +5036,16 @@
           "o1": "1575 multiplies by 3 but forgets to add 3.",
           "o2": "876 repeats the last difference (351). The rule is × 3 then + 3, not a fixed jump.",
           "o4": "1581 applies the + 3 step twice."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "5, 18, 57, 174, 525",
+          "3_method": "Test a multiply-then-add rule: term × 3 + 3.",
+          "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+          "5_solve_by_hand": "525 × 3 = 1575; 1575 + 3 = 1578.",
+          "6_check": "Test the rule on an early pair: 5 × 3 + 3 = 18, and 18 × 3 + 3 = 57.",
+          "7_distractors": "1575: 1575 multiplies by 3 but forgets to add 3. 876: 876 repeats the last difference (351). The rule is × 3 then + 3, not a fixed jump. 1581: 1581 applies the + 3 step twice.",
+          "8_shortcut": "Divide a term by the one before (about 3); the multiplier is 3, then find what is added."
         }
       },
       "distractor_reasoning": {
@@ -4715,6 +5105,16 @@
           "o1": "188 multiplies by 2 but forgets to add 2.",
           "o2": "142 repeats the last difference (48). The rule is × 2 then + 2, not a fixed jump.",
           "o3": "192 applies the + 2 step twice."
+        },
+        "method_steps": {
+          "1_asked": "The next number in the series.",
+          "2_givens": "4, 10, 22, 46, 94",
+          "3_method": "Test a multiply-then-add rule: term × 2 + 2.",
+          "4_why": "The terms roughly triple or double each time, which points to multiplication; the small leftover is a constant added.",
+          "5_solve_by_hand": "94 × 2 = 188; 188 + 2 = 190.",
+          "6_check": "Test the rule on an early pair: 4 × 2 + 2 = 10, and 10 × 2 + 2 = 22.",
+          "7_distractors": "188: 188 multiplies by 2 but forgets to add 2. 142: 142 repeats the last difference (48). The rule is × 2 then + 2, not a fixed jump. 192: 192 applies the + 2 step twice.",
+          "8_shortcut": "Divide a term by the one before (about 2); the multiplier is 2, then find what is added."
         }
       },
       "distractor_reasoning": {

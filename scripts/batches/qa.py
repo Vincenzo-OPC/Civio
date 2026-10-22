@@ -172,7 +172,8 @@ def solve_ana(it):
 from fixes import spell_words
 CORRECT = set(clerical.WORDS) | {w for w, _ in spell_words.T} | set(spell_words.FOILS)
 MISSPELT = {m: (w, c) for w, ms in spell_words.T for m, c in ms}
-from drafts.spell_2026_10_22 import SPELL as _SPELL22  # 22 Oct 2026 draft targets
+from drafts.spell_2026_10_22 import SPELL as _SPELL22, SPELL2 as _SPELL22b  # 22 Oct 2026 draft targets
+_SPELL22 = list(_SPELL22) + list(_SPELL22b)
 CORRECT |= {w for w, *_ in _SPELL22}
 MISSPELT.update({m: (w, c) for w, ms, *_ in _SPELL22 for m, c in ms})
 

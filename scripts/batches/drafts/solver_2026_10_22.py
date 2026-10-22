@@ -272,3 +272,37 @@ def compute(op, a, stem):  # noqa: F811  (extends the arithmetic ops above)
     if op == "tbl":
         return _tbl(a, stem)
     return _compute0(op, a, stem)
+
+
+# ---------- Clerical set 2 ops: computed from the stem alone ----------
+_compute1 = compute
+
+
+def compute(op, a, stem):  # noqa: F811
+    from datetime import datetime as _dt
+    if op == "clr_date":
+        ds = stem.split("?\n", 1)[1].split(" | ")
+        def p(s):
+            for f in ("%B %d, %Y", "%d %B %Y", "%Y-%m-%d"):
+                try:
+                    return _dt.strptime(s.strip(), f)
+                except ValueError:
+                    pass
+            raise ValueError(s)
+        s_ = sorted(ds, key=p)
+        if len({p(x) for x in ds}) != len(ds):
+            return None
+        return s_[0] if a["want"] == "first" else s_[-1]
+    if op == "clr_num":
+        cs = stem.split("?\n", 1)[1].split(" | ")
+        v = lambda s: int(re.sub(r"\D", "", s))
+        if len({v(c) for c in cs}) != len(cs):
+            return None
+        return sorted(cs, key=v)[{"first": 0, "second": 1, "third": 2, "last": -1}[a["want"]]]
+    if op == "clr_copy":
+        lines = stem.split("\n")
+        orig = next(x for x in lines if x.startswith("Original: "))[len("Original: "):]
+        cps = [(x.split(":", 1)[0], x.split(": ", 1)[1]) for x in lines if x.startswith("Copy ")]
+        hit = [c for c, t in cps if (t == orig) == (a["mode"] == "same")]
+        return hit[0] if len(hit) == 1 else None
+    return _compute1(op, a, stem)
