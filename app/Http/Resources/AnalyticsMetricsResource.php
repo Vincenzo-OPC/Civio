@@ -58,7 +58,9 @@ class AnalyticsMetricsResource extends JsonResource
             'cseReadinessIndex' => (int) ($metrics['cseReadinessIndex'] ?? 0),
             'subtestThresholds' => $metrics['subtestThresholds'] ?? [],
             'hasSubtestRisk' => (bool) ($metrics['hasSubtestRisk'] ?? false),
-            'percentileRank' => (int) ($metrics['percentileRank'] ?? 50),
+            'percentileRank' => isset($metrics['percentileRank']) && $metrics['percentileRank'] !== null
+                ? (int) $metrics['percentileRank']
+                : null,
             'isIncompleteSyllabus' => $isIncompleteSyllabus,
             'coveredCategoriesCount' => $coveredCategoriesCount,
             'mockExamCount' => $mockExamCount,

@@ -224,6 +224,53 @@ export default function Drills(props: DrillsProps) {
                     </div>
                 )}
 
+                {props.bankPage &&
+                    props.bankPage.last > 1 &&
+                    viewState === 'hub' && (
+                        <nav
+                            aria-label="Practice bank pages"
+                            className="mb-4 flex items-center gap-3 text-sm"
+                        >
+                            <button
+                                disabled={props.bankPage.current <= 1}
+                                onClick={() =>
+                                    router.get(
+                                        '/drills',
+                                        {
+                                            page: props.bankPage!.current - 1,
+                                            tab: activeTab,
+                                        },
+                                        { preserveState: false },
+                                    )
+                                }
+                            >
+                                Previous
+                            </button>
+                            <span>
+                                Bank page {props.bankPage.current} of{' '}
+                                {props.bankPage.last}. Counts and selections
+                                show this page.
+                            </span>
+                            <button
+                                disabled={
+                                    props.bankPage.current >=
+                                    props.bankPage.last
+                                }
+                                onClick={() =>
+                                    router.get(
+                                        '/drills',
+                                        {
+                                            page: props.bankPage!.current + 1,
+                                            tab: activeTab,
+                                        },
+                                        { preserveState: false },
+                                    )
+                                }
+                            >
+                                Next
+                            </button>
+                        </nav>
+                    )}
                 {/* Tab Content */}
                 {viewState === 'hub' && activeTab === 'categories' && (
                     <HubView

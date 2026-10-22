@@ -1,0 +1,24 @@
+# Manual only. Builds the production image and runs the Smart Review
+# smoke test inside it. Does not push the image, publish a port, or deploy.
+name: image smoke
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: image-smoke
+  cancel-in-progress: false
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Build the production image and run the smoke test
+        run: sh scripts/fsrs-image-smoke.sh

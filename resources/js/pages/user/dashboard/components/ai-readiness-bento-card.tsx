@@ -89,7 +89,8 @@ export function AiReadinessBentoCard({
 
     const prob = Math.round(data?.pass_probability ?? 0);
     const primaryWeakness = data?.critical_weaknesses?.[0];
-    const isDrillOnly = prob === 0;
+    const estimate = data?.predictive_metrics?.estimated_exam_score ?? '';
+    const noMock = estimate.startsWith('No mock');
 
     const getScoreColor = (score: number, isDrill: boolean) => {
         if (isDrill) {
@@ -123,13 +124,13 @@ export function AiReadinessBentoCard({
         };
     };
 
-    const colors = getScoreColor(prob, isDrillOnly);
+    const colors = getScoreColor(prob, noMock);
 
     // SVG Circular Gauge calculation with ample inner breathing space
     const radius = 46;
     const circumference = 2 * Math.PI * radius;
-    const strokeDashoffset = isDrillOnly
-        ? circumference * (1 - 0.35)
+    const strokeDashoffset = noMock
+        ? circumference
         : circumference - (prob / 100) * circumference;
 
     return (
@@ -142,10 +143,11 @@ export function AiReadinessBentoCard({
                     </div>
                     <div>
                         <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                            AI Readiness Predictor
+                            Mock items correct
                         </h3>
                         <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                            Based on your latest practice attempts
+                            Correct mock items divided by mock items. Not a pass
+                            forecast.
                         </p>
                     </div>
                 </div>
@@ -153,7 +155,7 @@ export function AiReadinessBentoCard({
                 {localStatus === 'ready' && data && (
                     <span className="inline-flex items-center gap-1 rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-0.5 text-[11px] font-bold text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300">
                         <Sparkles className="size-3 fill-current" />
-                        AI Synced
+                        Saved
                     </span>
                 )}
             </div>
@@ -191,17 +193,15 @@ export function AiReadinessBentoCard({
                             <div className="absolute inset-0 flex flex-col items-center justify-center p-3 text-center">
                                 <span
                                     className={`font-semibold tracking-tight ${colors.text} ${
-                                        isDrillOnly
+                                        noMock
                                             ? 'text-lg sm:text-xl'
                                             : 'text-2xl sm:text-3xl'
                                     }`}
                                 >
-                                    {isDrillOnly ? 'Drill' : `${prob}%`}
+                                    {noMock ? 'No mock' : `${prob}%`}
                                 </span>
                                 <span className="mt-0.5 text-[9px] leading-none font-bold tracking-wider whitespace-nowrap text-slate-400 uppercase sm:text-[10px] dark:text-slate-500">
-                                    {isDrillOnly
-                                        ? 'Mock Needed'
-                                        : 'Not official'}
+                                    {noMock ? 'Not a score' : 'Not official'}
                                 </span>
                             </div>
                         </div>
@@ -212,21 +212,21 @@ export function AiReadinessBentoCard({
                                 <span
                                     className={`inline-block rounded-xl border px-3 py-2 text-xs leading-relaxed font-bold sm:text-sm ${colors.badge}`}
                                 >
-                                    {isDrillOnly
-                                        ? 'Drill Diagnostics Active'
-                                        : data.verdict || 'Ready for Testing'}
+                                    {noMock
+                                        ? 'No mock yet'
+                                        : data.verdict || 'Practice summary'}
                                 </span>
                             </div>
 
                             <p className="text-xs leading-relaxed font-medium text-slate-600 sm:text-sm dark:text-slate-300">
-                                {isDrillOnly
+                                {noMock
                                     ? 'A full mock is 150 or 145 scored items. Civio does not calculate an official pass chance.'
                                     : data.priority_action ||
-                                      'Focus on targeted practice drills to raise your score.'}
+                                      'The next drill adds a practice score. It does not forecast a pass.'}
                             </p>
 
                             {/* Top Weakness / Quick Fix Pill placed underneath */}
-                            {primaryWeakness && !isDrillOnly && (
+                            {primaryWeakness && !noMock && (
                                 <div className="mt-2 flex flex-col justify-between gap-2.5 rounded-xl border border-rose-200/80 bg-rose-50/60 p-2.5 sm:flex-row sm:items-center sm:px-3 sm:py-2 dark:border-rose-900/40 dark:bg-rose-950/30">
                                     <div className="flex min-w-0 items-center gap-2">
                                         <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-rose-500/10 text-rose-600 dark:text-rose-400">

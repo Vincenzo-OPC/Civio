@@ -5,6 +5,21 @@ use App\Models\User;
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\post;
 
+test('the exam screen receives the pdf permission for the signed-in account', function () {
+    $allowed = User::factory()->create(['can_download_pdf' => true]);
+    $blocked = User::factory()->create(['can_download_pdf' => false]);
+
+    actingAs($allowed)
+        ->get(route('exams.index'))
+        ->assertOk()
+        ->assertInertia(fn ($page) => $page->where('auth.user.can_download_pdf', true));
+
+    actingAs($blocked)
+        ->get(route('exams.index'))
+        ->assertOk()
+        ->assertInertia(fn ($page) => $page->where('auth.user.can_download_pdf', false));
+});
+
 test('guest cannot check pdf export limit', function () {
     post(route('exams.exportPdfCheck'))
         ->assertStatus(404);

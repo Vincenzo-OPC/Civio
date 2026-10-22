@@ -157,67 +157,30 @@ export const formatDuration = (totalSecs: number, showLabel = true): string => {
 };
 
 export const calculateWeightedPercentage = (results: any): number => {
-    const catMap = results.categoryScoreMap || {};
-
-    // Check if we have multiple categories typical of a full mock exam
-    const hasWeights = Object.keys(catMap).some((cat) =>
-        [
-            'Verbal Ability',
-            'Analytical Ability',
-            'Numerical Ability',
-            'Clerical Ability',
-            'General Information',
-        ].includes(cat),
+    const meta = results?.metadata ?? results?.cat_scores?.metadata ?? {};
+    const correct = Number(
+        results?.correctCount ?? meta.correct_count ?? Number.NaN,
     );
+    const total = Number(results?.total ?? meta.total_questions ?? Number.NaN);
 
-    if (hasWeights) {
-        const getWeight = (catName: string) => {
-            if (catName === 'Verbal Ability') {
-                return 0.3;
-            }
-
-            if (catName === 'Numerical Ability') {
-                return 0.3;
-            }
-
-            if (catName === 'General Information') {
-                return 0.05;
-            }
-
-            // Professional uses Analytical, Subprofessional uses Clerical
-            if (catName === 'Analytical Ability') {
-                return 0.35;
-            }
-
-            if (catName === 'Clerical Ability') {
-                return 0.35;
-            }
-
-            return 0;
-        };
-
-        let totalWeight = 0;
-        let weightedScore = 0;
-
-        Object.entries(catMap).forEach(([cat, val]: [string, any]) => {
-            const weight = getWeight(cat);
-
-            if (weight > 0) {
-                const catScore =
-                    val.total > 0 ? (val.correct / val.total) * 100 : 0;
-                weightedScore += catScore * weight;
-                totalWeight += weight;
-            }
-        });
-
-        // Normalize the score based on available weights. If it's a full mock exam, totalWeight should be ~1.0
-        if (totalWeight > 0) {
-            return weightedScore / totalWeight;
-        }
+    if (Number.isFinite(correct) && Number.isFinite(total) && total > 0) {
+        return (correct / total) * 100;
     }
 
-    // Fallback to standard unweighted average if not a full mock exam track or weights are missing
-    return results.total > 0 ? (results.correctCount / results.total) * 100 : 0;
+    const catMap = results?.categoryScoreMap || {};
+    let summedCorrect = 0;
+    let summedTotal = 0;
+
+    Object.values(catMap).forEach((val: any) => {
+        if (!val || typeof val !== 'object') {
+            return;
+        }
+
+        summedCorrect += Number(val.correct) || 0;
+        summedTotal += Number(val.total) || 0;
+    });
+
+    return summedTotal > 0 ? (summedCorrect / summedTotal) * 100 : 0;
 };
 
 export const extractPropositions = (stem: string) => {

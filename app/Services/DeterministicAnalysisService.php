@@ -376,7 +376,7 @@ class DeterministicAnalysisService
                 $insight = $this->pickTemplate('insight_no_data', compact('subject'));
                 $action = $this->pickTemplate('action_no_data', compact('subject'));
             } elseif ($pct >= 80) {
-                $rating = 'Mastered';
+                $rating = 'Practice 80+';
                 $color = 'emerald';
                 $insight = $this->pickTemplate('insight_mastered', compact('subject', 'pct'));
                 $action = $this->pickTemplate('action_mastered', compact('subject'));
@@ -388,7 +388,7 @@ class DeterministicAnalysisService
                 $action = $this->pickTemplate('action_moderate', compact('subject'));
                 $weaknesses[$subject] = $pct;
             } else {
-                $rating = 'Critical Concern';
+                $rating = 'Below 60%';
                 $color = 'rose';
                 $insight = $this->pickTemplate('insight_critical', compact('subject', 'pct'));
                 $action = $this->pickTemplate('action_critical', compact('subject'));
@@ -506,17 +506,9 @@ class DeterministicAnalysisService
         }
 
         $mockAvg = (int) round(($mockTotalCorrect / $mockTotalQuestions) * 100);
-        $passProbability = (int) round($mockAvg * 0.9);
-        if ($trend === 'improving') {
-            $passProbability = min(98, $passProbability + 5);
-        } elseif ($trend === 'declining') {
-            $passProbability = max(5, $passProbability - 8);
-        }
-        $passProbability = max(0, min(100, $passProbability));
+        $passProbability = $mockAvg;
 
-        $estimatedMin = max(0, $mockAvg - 4);
-        $estimatedMax = min(100, $mockAvg + 4);
-        $estimatedExamScore = "Practice range {$estimatedMin}%–{$estimatedMax}% around a {$mockAvg}% mock average. Not an official score.";
+        $estimatedExamScore = "Practice average {$mockAvg}% on submitted mocks. Not an official score.";
 
         if ($daysUntilExam <= 7) {
             if ($daysUntilExam <= 1) {
@@ -685,19 +677,19 @@ class DeterministicAnalysisService
     protected function resolveCurrentStage(int $avgScore): string
     {
         if ($avgScore >= 85) {
-            return 'Exam-Day Simulation';
+            return 'Practice 85+';
         }
         if ($avgScore >= 80) {
-            return 'Final Polish & Speed Drills';
+            return 'Practice 80–84';
         }
         if ($avgScore >= 70) {
-            return 'Core Strengthening';
+            return 'Practice 70–79';
         }
         if ($avgScore >= 60) {
-            return 'Concept Reinforcement';
+            return 'Practice 60–69';
         }
 
-        return 'Foundation Building';
+        return 'Practice under 60';
     }
 
     protected function normalizeCategory(string $catName): string
@@ -746,7 +738,7 @@ class DeterministicAnalysisService
                 'recommended_action' => $this->pickTemplate('action_no_data', ['subject' => $s]),
             ], $this->categories),
             'timeline_prediction' => [
-                'current_stage' => 'Evaluation Phase',
+                'current_stage' => 'No practice yet',
                 'milestone_prediction' => $this->pickTemplate('milestone_empty', []),
                 'potential_score_improvement' => $this->pickTemplate('improvement_empty', []),
             ],
@@ -979,23 +971,20 @@ class DeterministicAnalysisService
 
             // ── Completion Pace (by trend) ──────────────────────
             'completion_pace_improving' => [
-                'Your practice frequency is increasing — great momentum across {totalAttempts} attempts.',
-                'Upward trend detected. You\'re accelerating your preparation pace.',
-                'Strong engagement pattern — your recent sessions show increasing focus.',
+                'The last three practice scores are higher than the earlier ones. {totalAttempts} attempts are in this summary.',
+                'Recent practice scores went up. That describes these attempts only.',
             ],
             'completion_pace_declining' => [
-                'Your practice frequency has dipped recently. Try to re-establish a daily habit.',
-                'Activity has slowed down — schedule dedicated study blocks to get back on track.',
-                'Recent sessions are less frequent. Consistency is key to retaining progress.',
+                'The last three practice scores are lower than the earlier ones. {totalAttempts} attempts are in this summary.',
+                'Recent practice scores went down. That describes these attempts only.',
             ],
             'completion_pace_stable' => [
-                'Steady pacing observed across {totalAttempts} attempts — keep it up!',
-                'Consistent practice rhythm detected. This is exactly how progress is made.',
-                'Your study cadence is stable. Maintain this pattern through exam day.',
+                '{totalAttempts} attempts are in this summary. The recent scores did not move by more than 5 points.',
+                'Recent practice scores stayed within 5 points. That is not a forecast.',
             ],
             'completion_pace_insufficient_data' => [
-                'Not enough data to assess your study pace yet.',
-                'Complete a few more sessions to establish your study pattern.',
+                'Fewer than three scores, so no practice trend yet.',
+                'Not enough finished attempts to compare scores.',
             ],
 
             // ── Milestone Predictions ────────────────────────────

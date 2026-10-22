@@ -1,0 +1,98 @@
+{
+  "file_sha256": "ce86fa40ed5f1f8b44857851b30558c2b054f60068a8d38bfecc6bdbfc7fb95c",
+  "item_count": 50,
+  "key_matches": 50,
+  "structural_errors": [],
+  "repository_unique_stems": 3333,
+  "repository_artifacts": 40,
+  "pinned_pr_count": 10,
+  "near_matches_0_65": [],
+  "within_batch_near_matches_0_65": [],
+  "id_collisions": [],
+  "nearest_existing": [
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-926036",
+      "similarity": 0.4762,
+      "match": {
+        "ref": "fcc2ed22b39d60e0469304e690749bc17263f8bf",
+        "path": "docs/research/audit/fixes/round-03-baseline-b4-drafts.json"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926044",
+      "similarity": 0.3939,
+      "match": {
+        "ref": "43529d8425b86b5a47b8032346eed26bbea48218",
+        "path": "docs/batches/batch-005.json"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-926017",
+      "similarity": 0.375,
+      "match": {
+        "ref": "43529d8425b86b5a47b8032346eed26bbea48218",
+        "path": "docs/research/audit/data/baseline-550-2026-10-17.json"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-926045",
+      "similarity": 0.3448,
+      "match": {
+        "ref": "43529d8425b86b5a47b8032346eed26bbea48218",
+        "path": "docs/research/audit/data/baseline-550-2026-10-17.json"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-926021",
+      "similarity": 0.3333,
+      "match": {
+        "ref": "28881e4aa41e2fd19cb407c3550576c03f33e9dd",
+        "path": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json"
+      }
+    }
+  ],
+  "status_counts": {
+    "reviewed": 49,
+    "draft": 1
+  },
+  "review_counts": {
+    "passed": 49,
+    "unreviewed": 1
+  },
+  "archetypes": {
+    "NUM-FRAC-DEC": 12,
+    "NUM-PCT-BASIC": 6,
+    "NUM-WP-PCT-CHANGE": 7,
+    "NUM-WP-RATIO": 5,
+    "NUM-WP-RATE": 8,
+    "NUM-WP-ALGEBRA": 11,
+    "NUM-WP-AVERAGE": 1
+  },
+  "key_positions": {
+    "o1": 12,
+    "o2": 14,
+    "o3": 12,
+    "o4": 12
+  },
+  "difficulty": {
+    "easy": 11,
+    "medium": 25,
+    "hard": 14
+  },
+  "avg_est_seconds": 69.3,
+  "repository_main_sha": "43529d8425b86b5a47b8032346eed26bbea48218",
+  "qa_file_cli": "BLOCKED: scripts/batches/qa_file.py aborts on NUM-FRAC-DEC item 926001 because qa.py calls .group(1) on unmatched re.search(r\"had (\\d+)\", stem).",
+  "review_notes": {
+    "authoring_reference_check": "Repository source-rights and reviewer shortlist were inspected, but the underlying reviewer PDFs were not available in this audit. Similarity results cover Civio repository items only and do not establish source-by-source originality.",
+    "separate_approval": "49 supplied items passed Astra content review and remain status reviewed/review_status passed; replacement 926051 is draft/unreviewed because it was authored during review. No item is approved, active, imported or release-ready without GT approval.",
+    "held_item": "Uploaded item 926037 was mathematically valid geometry but held outside the requested 8-item basic-algebra block. It is preserved in the original upload and not included in the batch.",
+    "timing": "Per-item est_seconds now matches the spec archetype targets. The selected batch has a 69.3-second mean and should not be administered as a single practice set under the spec 60-second set-mean rule.",
+    "difficulty": "11 easy, 25 medium, 14 hard; the spec suggestion is 15/25/10 and these editorial labels are not empirically calibrated.",
+    "corrections": [
+      "926036: corrected the 42 distractor explanation and recoded it NUM-EXTRA-STEP.",
+      "926037: held the geometry item outside the batch to preserve the requested topical allocation.",
+      "926051: wrote an original algebra replacement and left it unreviewed.",
+      "All est_seconds values: replaced difficulty-tier estimates with the target for each archetype in spec §3.1."
+    ]
+  }
+}
