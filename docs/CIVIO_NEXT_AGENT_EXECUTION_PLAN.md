@@ -102,11 +102,18 @@ See [LEARNING_DELIVERY_RECOMMENDATION.md](LEARNING_DELIVERY_RECOMMENDATION.md) f
 
 Build [REVIEW_MISTAKES_BRIEF.md](REVIEW_MISTAKES_BRIEF.md). All JS is 1,037,038 of 1,040,000 B after the dates page.
 
-<<<<<<< HEAD
+## PR queue review — 19 October 2026
+
+Latest GT instructions override the older main-only workflow: use feature PRs, do not push main, merge or deploy, and include `[skip netlify]` in each new commit. Main remains last fetched at `f2766db`; the old conflicted checkout and its stash are preserved.
+
+PR #2 review closed an active-author key leak: drill resources return keys only for an owner's unpublished draft. Active bank items stay keyless on hub, saved-set and weakness routes, including during Strict Mock. Formatting prerequisite `a077dd7` is separate. Full validation: 342 PHP tests / 7,628 assertions, 94 JS tests, types, ESLint, Prettier, Pint, build and size all pass. All JS is 1,037,085 / 1,040,000 B. See [the review evidence](review/2026-10-19/README.md) for regression results and actual desktop/phone light/dark screenshots.
+
+PR #2 stays draft until GT decides whether hiding bank answers in the custom-builder preview is acceptable. Do not add an ad hoc key endpoint. PR #1 is ready for review; nothing has been merged. Next bounded technical review is PR #3 fact metadata/import QA, preserving its open mock-selection policy and all editorial gates.
+
 ## Review queue continuation — 18 October 2026
 
 GT's current handoff requires feature-branch PRs and owner review: no pushes to main, merges, force-pushes, or deployments. Sixteen draft PRs were opened in the supplied order. The first branch, `grok/fix-welcome-format` at `cf00b8a`, passed every required check plus Pint: 328 PHP tests and 94 JS tests. Total JS measured 1,037,085 of 1,040,000 B on Node 22. Real desktop/phone light/dark welcome screenshots and check details are in [the review evidence](review/2026-10-18/README.md). Other PRs remain draft with validation and screenshots pending; the drills-preview decision and editorial approvals remain with GT/Chief of Staff. This is not exam-workspace or Lite-mode browser verification.
-=======
+
 ## Security execution checkpoint - 20 October 2026
 
 Verified MSI main was clean at efc0d81 and fast-forwarded it to fetched origin/main f2766db. GitHub PRs 1-16 were all OPEN and unmerged. No live service, study database, protected stack, question approval, or deployment was changed.
@@ -140,4 +147,3 @@ See [BANK_IMPORT_APPROVAL.md](BANK_IMPORT_APPROVAL.md) for the exact approval co
 Importer boundary shipped in 93633ef. Added a read-only Git-object inventory, five Python regressions, pinned source lock for main 06f3d23 and open PRs #3-12, and a mechanical review/report using the existing PR #12 explanation linter. Inventory covers 143 artifacts / 4,276 file occurrences (not live items), with 294 identity groups needing version reconciliation. Existing qa_all.py --no-fixes passed on 1,000 main batch occurrences, but GI official-text verification was skipped because no source cache was present. No editorial approval or status changed; AUDIT_TRACKER was intentionally left unchanged.
 
 See [bank review queue](research/bank/REVIEW_QUEUE_2026-10-20.md) for source hashes, exact reproduction commands, #462/B3 HOLD/source gaps, PR #12 passage-companion decisions, and the distinction between projection and release approval. Reconciliation/independent content review, sanitized runtime evidence, GT's final exact-content approvals and the provisional 2,000 split remain pending. No collection activation or authored bank content was produced. Next bounded bank slice: independently reconcile the #462 evidence and B3 HOLD/source gaps into a digest-bound decision packet for GT; do not apply fixes or retirements from stale snapshot IDs.
->>>>>>> origin/main
