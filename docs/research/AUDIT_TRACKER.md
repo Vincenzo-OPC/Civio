@@ -339,3 +339,14 @@ Normalized `pro` → `professional` and `sub` → `subprofessional` across bank 
 
 Difficulty rebalance is held until CoS clears the 122 rewrite (`civio-final-rewrite-2026-10-22.json`).
 No activation.
+
+## 2026-10-22: locked at 2,100
+
+Base unique 2,033. To hit exactly 2,100 with clean domain hundreds:
+- Trim 40 numerical drafts
+- Trim 15 non-reading verbal_fil drafts (PAGBASA passages kept)
+- Add 122 genuine rewrite items (`civio-final-rewrite-2026-10-22.json`)
+- 2033 − 55 + 122 = **2100**
+
+Domain result: Numerical 400, Analytical 400, Verbal EN 400, Verbal Fil 300, Clerical 300, GI 300.
+All new items draft. No activation.

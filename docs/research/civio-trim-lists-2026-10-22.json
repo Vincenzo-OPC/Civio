@@ -41,7 +41,23 @@
     "CIVIO-GF2K02-NUMOPS-0039",
     "CIVIO-GF2K02-NUMOPS-0040"
   ],
-  "trimmed_verbal_fil_ids": [],
-  "notes": "2026-10-22 update: verbal_fil exclusions cleared per CoS. The 15 PAGBASA reading items are restored to the count. Numerical draft exclusions remain.",
-  "restored": "15 verbal_fil reading passages (CIVIO-GF2K02-PAGBASA-*) restored"
+  "trimmed_verbal_fil_ids": [
+    "CIVIO-GF2K02-PAGSUSUNOD-0001",
+    "CIVIO-GF2K02-PAGSUSUNOD-0002",
+    "CIVIO-GF2K02-PAGSUSUNOD-0003",
+    "CIVIO-GF2K02-PAGSUSUNOD-0004",
+    "CIVIO-GF2K02-PAGSUSUNOD-0005",
+    "CIVIO-GF2K02-PAGSUSUNOD-0006",
+    "CIVIO-GF2K02-PAGSUSUNOD-0007",
+    "CIVIO-GF2K02-PAGSUSUNOD-0008",
+    "CIVIO-GF2K02-PAGSUSUNOD-0009",
+    "CIVIO-GF2K02-PAGSUSUNOD-0010",
+    "CIVIO-GF2K02-PAGSUSUNOD-0011",
+    "CIVIO-GF2K02-PAGSUSUNOD-0012",
+    "CIVIO-GF2K02-PAGSUSUNOD-0013",
+    "CIVIO-GF2K02-PAGSUSUNOD-0014",
+    "CIVIO-GF2K02-PAGSUSUNOD-0015"
+  ],
+  "notes": "Drafts only. Excluded from the flat 2100 count. Reading passages kept if alternatives existed. Not deleted.",
+  "math": "2033 base - 40 numerical - 15 verbal_fil + 122 rewrite = 2100"
 }
