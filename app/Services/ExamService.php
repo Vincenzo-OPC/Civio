@@ -239,7 +239,7 @@ class ExamService
         return ['General Information', 'Numerical Ability', 'Verbal Ability'];
     }
 
-    protected function focusLevel(?int $userId): ?string
+    public function focusLevel(?int $userId): ?string
     {
         $requested = (string) request()->query('track', '');
         if (isset(MockPoolSelector::BLUEPRINT[$requested])) {

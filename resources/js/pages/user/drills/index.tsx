@@ -171,6 +171,11 @@ export default function Drills(props: DrillsProps) {
         }
     };
 
+    const focusLevels =
+        props.focusLevel === 'Professional'
+            ? ['Professional', 'Subprofessional']
+            : ['Subprofessional', 'Professional'];
+
     return (
         <>
             <Head title="Practice Drills" />
@@ -271,18 +276,28 @@ export default function Drills(props: DrillsProps) {
                             </button>
                         </nav>
                     )}
-                {/* Today's focus: one weak subject (15), then 10 mixed */}
+                {/* Today's focus: one weak subject (15), then 10 mixed, per level */}
                 {viewState === 'hub' && activeTab === 'categories' && (
-                    <a
-                        href="/exams?drill=true&focus_today=1&category_name=Today%27s%20Focus"
-                        className="mb-4 flex min-h-11 items-center justify-between rounded-xl border border-border/80 px-4 py-3 text-sm font-semibold"
-                    >
-                        <span>
+                    <div className="mb-4 flex flex-col gap-2 rounded-xl border border-border/80 px-4 py-3 text-sm">
+                        <p className="font-semibold">
                             Today&apos;s Focus: 15 items on your weakest
                             subject, then 10 mixed
-                        </span>
-                        <span aria-hidden="true">→</span>
-                    </a>
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                            {focusLevels.map((level) => (
+                                <a
+                                    key={level}
+                                    href={`/exams?drill=true&focus_today=1&track=${level}&category_name=${encodeURIComponent("Today's Focus")}`}
+                                    className="inline-flex min-h-11 items-center rounded-lg border border-border/80 px-4 font-semibold"
+                                >
+                                    {level}
+                                    {level === props.focusLevel
+                                        ? ' (your level)'
+                                        : ''}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
                 )}
                 {/* Tab Content */}
                 {viewState === 'hub' && activeTab === 'categories' && (

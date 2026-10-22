@@ -86,3 +86,17 @@ test('a guest gets a weekday rotation over shared subjects only', function () {
 
     expect(array_intersect($ids, $cle))->toBe([]);
 });
+
+test('the drills page passes the learner level to the focus launcher, and an explicit track wins', function () {
+    $user = User::factory()->create();
+    $ana = focusSubject('Analytical Ability', 30);
+    $cle = focusSubject('Clerical Ability', 30);
+    focusHistory($user, 'Professional', [[$ana, 9, 10]]);
+
+    $this->actingAs($user)->withoutVite()->get(route('drills.index'))
+        ->assertInertia(fn (Assert $p) => $p->where('focusLevel', 'Professional'));
+
+    $ids = focusServed($this->get(route('exams.index', ['drill' => 'true', 'focus_today' => '1', 'track' => 'Subprofessional'])));
+    expect(array_intersect($ids, $ana))->toBe([]);
+    expect(array_intersect($ids, $cle))->not->toBe([]);
+});

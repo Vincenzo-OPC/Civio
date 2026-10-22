@@ -81,6 +81,7 @@ export default function ReviewMistakes({
     lastPage,
     total,
     freshSameSkillCount = 0,
+    freshNotice = null,
 }: {
     title: string;
     note: string;
@@ -104,6 +105,7 @@ export default function ReviewMistakes({
     lastPage: number;
     total: number;
     freshSameSkillCount?: number;
+    freshNotice?: string | null;
 }) {
     const dueIds = due.map((item) => item.question_id);
 
@@ -118,6 +120,14 @@ export default function ReviewMistakes({
                     <p className="max-w-2xl text-sm leading-relaxed text-[var(--civio-ink)]/70">
                         {note}
                     </p>
+                    {freshNotice ? (
+                        <p
+                            role="status"
+                            className="rounded-xl border border-[var(--civio-line)] px-4 py-3 text-sm"
+                        >
+                            {freshNotice}
+                        </p>
+                    ) : null}
                     {scheduleNotice ? (
                         <div className="flex flex-col gap-3 rounded-xl border border-[var(--civio-line)] px-4 py-4">
                             <p className="text-sm leading-relaxed">

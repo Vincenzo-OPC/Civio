@@ -349,3 +349,7 @@ The cross-subject weak-category boost was removed from full mocks. Every mock no
 ## Resume no longer resurrects a submitted exam, 22 October 2026
 
 The autosave "page hidden" listener was never removed, so old copies kept firing and could write a finished exam back to local storage as resumable. All page-exit listeners are now removed on cleanup. Scratchpad edits also trigger an autosave.
+
+## Focus level and honest fresh empty state, 22 October 2026
+
+The Drills page gets the learner's level from recent attempts and shows one Today's Focus launcher per level, with the learner's own level first and marked. Each launcher passes `track` so the server picks only eligible subjects. A direct fresh same-skill link with nothing new left now redirects to Review Mistakes with the message "No new questions are left on these skills yet" instead of opening an empty drill. Guests are sent to login.

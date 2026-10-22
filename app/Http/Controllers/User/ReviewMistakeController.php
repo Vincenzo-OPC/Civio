@@ -64,6 +64,7 @@ class ReviewMistakeController extends Controller
             'page' => $pending['page'],
             'lastPage' => $pending['last_page'],
             'total' => $pending['total'],
+            'freshNotice' => $request->query('fresh') === 'none' ? 'No new questions are left on these skills yet. Review the items below instead.' : null,
             'freshSameSkillCount' => $state === 'open' ? app(ExamService::class)->freshSameSkillAvailable($user->id) : 0,
         ];
 

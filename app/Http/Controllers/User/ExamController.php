@@ -24,6 +24,7 @@ use App\Services\Exam\StrictMockLock;
 use App\Services\ExamService;
 use App\Support\LiteMode;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Inertia\Response;
@@ -40,10 +41,17 @@ class ExamController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request): Response
+    public function index(Request $request): Response|RedirectResponse
     {
         $query = ExamSessionQueryData::fromRequest($request);
         $data = $this->examService->getExamSessionData($query, auth()->id(), LiteMode::enabled($request));
+
+        // Nothing fresh left on these skills: say so honestly, never an empty drill.
+        if ($query->isDrill && $query->freshSameSkill && $data['questions'] === []) {
+            return auth()->check()
+                ? redirect()->route('reviews.mistakes.index', ['fresh' => 'none'])
+                : redirect()->route('login');
+        }
 
         if (($query->isDrill || $data['retakeSource'] !== null) && $data['savedAttempt'] === null) {
             $data['practiceBatchId'] = app(ServedPracticeQuestions::class)->remember(

@@ -74,13 +74,15 @@ test('nothing fresh left gives an empty set and an honest empty state, never the
     freshItems(freshSkill(), 5);
     freshMistake($user, [$missed, $seen], $missed);
 
-    $ids = freshServed($this->actingAs($user)->withoutVite()->get(route('exams.index', ['drill' => 'true', 'fresh_same_skill' => '1']))->assertOk());
-    expect($ids)->toBe([]);
+    $this->actingAs($user)->withoutVite()->get(route('exams.index', ['drill' => 'true', 'fresh_same_skill' => '1']))
+        ->assertRedirect(route('reviews.mistakes.index', ['fresh' => 'none']));
 
-    $this->get(route('reviews.mistakes.index'))->assertInertia(fn (Assert $page) => $page->where('freshSameSkillCount', 0));
+    $this->get(route('reviews.mistakes.index', ['fresh' => 'none']))->assertInertia(fn (Assert $page) => $page
+        ->where('freshSameSkillCount', 0)
+        ->where('freshNotice', fn ($n) => str_contains((string) $n, 'No new questions are left')));
 });
 
 test('guests get no fallback pool for fresh same-skill', function () {
     freshItems(freshSkill(), 3);
-    expect(freshServed($this->withoutVite()->get(route('exams.index', ['drill' => 'true', 'fresh_same_skill' => '1']))->assertOk()))->toBe([]);
+    $this->withoutVite()->get(route('exams.index', ['drill' => 'true', 'fresh_same_skill' => '1']))->assertRedirect(route('login'));
 });

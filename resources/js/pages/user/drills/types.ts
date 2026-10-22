@@ -35,6 +35,7 @@ export interface SavedDrillSet {
 }
 
 export interface DrillsProps {
+    focusLevel?: string | null;
     bankPage?: { current: number; last: number };
     questions: Question[];
     categories: Category[];
