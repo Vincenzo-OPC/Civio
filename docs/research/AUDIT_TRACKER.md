@@ -425,7 +425,7 @@ Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
 - **(c) Queue:** P1 (42) worked: `review/queue-recommendations-2026-10-22.csv`, 4 Accept revision, 38 Accept (key re-solved by hand, distractor explanations read). Recommendations only; status unchanged. P2–P4 (681) not yet worked.
 - **(d) Method-first explanations:** 76 numerical drafts in place; -R1 proposals (content and key unchanged) for 257 approved and 38 reviewed rows in `audit/fixes/method-first-r1-proposals-2026-10-22.json`. The 38 reviewed (Subpro fundamentals) are hand-written; the approved use per-family builders that recompute from the stem numbers and are checked against the key. The 59 pattern-built proposals from the morning were hand-checked: all correct.
 - **Approved-bank flag:** approved Numerical rows are heavily templated (about 30 order-of-operations, 27 percent-change, 35 work-rate, 34 ratio-share rows on fixed frames). Approved items are immutable; replacing them needs GT/CoS.
-- **Spec proposals for GT (pending):** archetypes CLR-CHRONOLOGICAL and CLR-COPY-CHECK; distractor code CLR-COPY-MISMATCH; the VFIL passage-length question above.
+- **Spec proposals for GT (pending):** archetypes CLR-CHRONOLOGICAL and CLR-COPY-CHECK; distractor code CLR-COPY-MISMATCH; the VFIL passage-length question above (decided by GT 15:48: two levels).
 
 ### Engine: reload/resume merge and retired-item scorecard (current directive)
 - **Defect:** after a reload, answers made offline and not yet saved were overwritten by the server copy and lost.
@@ -454,3 +454,22 @@ Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
   - VFIL-KASALUNGAT uses a recurring "medyo/bahagyang" partial-change distractor pattern.
   - 20 Numerical series rows share wording frames; the rules differ, so they are distinct items.
 - **Tests:** `test_bank_gates_2026_10_22.py` now has 9 tests. New: no D1022 key is conspicuously longest; the recommendations cover exactly the pending rows and never record a decision.
+
+## GT decisions 15:48: Filipino passage levels, Numerical template audit, queue (2026-10-22, 4:40 PM)
+
+- **Filipino passage gate (qa.py):** two levels. SHORT is 80-149 words, LONG is 150-250. A passage under 80 or over 250 fails. When an item sets `passage_level`, the word count must match that level.
+  - Detection covers VFIL-PAGBASA and VFIL-READ, plus the instruction lines "Basahin ang talata", "Basahin at unawain", "Suriin ang talata" and "Talata:". The instruction line is not counted.
+  - English stays at a 150-word minimum.
+  - 5 new tests in `test_bank_gates_2026_10_22.py` (16 tests in total).
+- **Short Filipino passages: 47 items, not 38.** The earlier detector only knew the "Basahin ang talata" instruction, so it found 35 approved items and 3 drafts (38). With every instruction variant it finds 47, all under 80 words (36-55): 35 approved and 12 drafts.
+  - **12 drafts (CIVIO-GF2K02-PAGBASA-0001 to 0012):** passages lengthened in place to 80-98 words and marked `passage_level: short`, with a revision_history entry each. Manifest hashes refreshed.
+  - **35 approved (VFIL-PAGBASA-040076 to 040090, VFIL-20261013-0055 to 0074):** left unchanged. Each has a -R1 proposal in `audit/fixes/vfil-passage-r1-2026-10-22.json`. The 20 VFIL-READ rows share 5 passages. Proposals are status draft with reviewer null and are not in the manifest.
+  - The master audit lists these 35 under `flagged_pending_authorized_review` (not as unhandled defects).
+  - **How the passages were lengthened:** each one got neutral background sentences (`drafts/fil_passages_2026_10_22.py`). The question, options, key and explanations are unchanged. Each addition was read against every option, so a wrong option did not become supported and a "hindi binanggit" answer did not become mentioned. A human should still read the new sentences.
+- **Approved Numerical template audit:** `audit/num-template-audit-2026-10-22.md` and `.json`, built by `qa/num_template_audit_2026_10_22.py`.
+  - **Test used:** same archetype, identical stem numbers and the same key, with wording that differs only in names or the task noun.
+  - **Result:** 14 groups (ratio-share, work-together and age items) and 21 repeats. The first item of each group is kept. Each repeat has one replacement draft (`<id>-TR1`) with new numbers, a verified recipe (solver) and method_steps, in `audit/fixes/num-template-replacements-2026-10-22.json`.
+  - None of the drafts are swapped in, and no approved item was edited, retired or removed.
+  - 47 same-frame groups with different numbers are listed for information only, with no replacement (GT rule: sharing a method is not repetition).
+- **Queue (723 rows):** the CSV has a new `needs_human_read` column. It is "yes" for all 139 self-authored D1022 judgment items and for every other row a human still has to read (317 in total). The 12 former Escalate rows are now "Accept revision" (passage lengthened). Totals: 707 Accept, 16 Accept revision (4 P1 plus 12 Filipino), 0 Escalate. Recommendations only; `decision_by_human` is empty.
+- **QA fix:** a solver crash in `qa.py` on stems outside the solver's frames (batch-subpro-num-001) now records "solver could not recompute the key" instead of crashing.

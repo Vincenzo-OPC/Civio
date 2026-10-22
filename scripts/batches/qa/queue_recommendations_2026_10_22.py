@@ -47,16 +47,23 @@ def p2_p4(m, cache):
             notes.append("shares a wording frame with other rows, but the numbers and the rule differ, so it is a distinct item; keep an eye on bank variety")
         if arch == "VFIL-KASALUNGAT":
             notes.append("antonym in context checked; the 'medyo/bahagyang' partial-change option recurs across this set and is a known pattern a test-wise reader may learn")
-        fw = len(it["stem"].rpartition("\n\n")[0].split("\n", 1)[-1].split()) if arch == "VFIL-PAGBASA" else None
-        if fw is not None and fw < 150:
-            rec = "Escalate"
-            notes.append(f"content and key correct, but the passage is about {fw} words; whether Filipino passages need the 150-word floor is an open GT decision")
+        human = d1022
+        if it.get("domain") == "verbal_fil" and qa.passage_words(it) is not None:
+            n = qa.passage_words(it)
+            if qa.passage_errors(it):
+                rec = "Escalate"
+                notes.append(f"Filipino passage is {n} words and fails the two-level gate (SHORT >= 80, LONG 150-250)")
+            elif any("GT decision 15:48" in h.get("reason", "") for h in it.get("revision_history", [])):
+                rec = "Accept revision"; human = True
+                notes.append(f"passage lengthened 22 Oct to {n} words (SHORT level, GT decision 15:48) with neutral background sentences; "
+                             "question, options and key unchanged; the added sentences were written by the bank worker, so a human should read them against every option")
         if any("absolute word" in x for x in e["flags"]):
             notes.append("absolute word in the key checked against the text: supported")
         if d1022:
             notes.append(SELF)
         out.append({"id": e["id"], "priority": e["priority"], "status": e["status"], "recommendation": rec, "reason": " | ".join(notes),
-                    "checked": "evidence pass (queue_evidence_2026_10_22.py) + reading", "decision_by_human": ""})
+                    "checked": "evidence pass (queue_evidence_2026_10_22.py) + reading", "needs_human_read": "yes" if human else "no",
+                    "decision_by_human": ""})
     return out
 
 
@@ -79,13 +86,15 @@ def main():
         else:
             rec, why = NOTE.get(it["id"][-6:], ("Accept", f"Key '{key}' re-solved by hand without a calculator (see method-first -R1 proposal); stem clear, one defensible answer."))
         rows.append({"id": r["id"], "priority": "P1", "status": r["status"], "recommendation": rec, "reason": why,
-                     "checked": "key re-solved by hand; stem read for ambiguity; distractor explanations read", "decision_by_human": ""})
+                     "checked": "key re-solved by hand; stem read for ambiguity; distractor explanations read",
+                     "needs_human_read": "yes" if r.get("note") == "p1_editorial_revision" else "no", "decision_by_human": ""})
     rows += p2_p4(m, cache)
     Path(OUT).parent.mkdir(parents=True, exist_ok=True)
     with open(OUT, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
     import collections
-    print(len(rows), "recommendations", dict(collections.Counter((r["priority"], r["recommendation"]) for r in rows)))
+    print(len(rows), "recommendations", dict(collections.Counter((r["priority"], r["recommendation"]) for r in rows)),
+          "needs_human_read", collections.Counter(r["needs_human_read"] for r in rows)["yes"])
 
 
 if __name__ == "__main__":

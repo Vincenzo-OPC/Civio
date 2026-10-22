@@ -71,8 +71,11 @@ def solve_num(it):
         v = F(eval(re.sub(r"(\d+)", r"F(\1)", ex), {"__builtins__": {}, "F": F}))
         return str(v.numerator) if v.denominator == 1 else None
     if a == "NUM-FRAC-DEC":
-        tot = int(re.search(r"had (\d+)", s).group(1))
-        f1, f2 = [F(x) for x in re.findall(r"(\d+/\d+)", s)]
+        mt, fs = re.search(r"had (\d+)", s), re.findall(r"(\d+/\d+)", s)
+        if not mt or len(fs) != 2:  # only the "had N ... f1 ... f2 of the remaining" frame is solved here
+            return None
+        tot = int(mt.group(1))
+        f1, f2 = [F(x) for x in fs]
         rest = tot - tot * f1
         return str(int(rest - rest * f2))
     if a == "NUM-WP-GEOM":
@@ -319,7 +322,10 @@ def legacy_errors(it):
 
 
 PASSAGE_MIN_WORDS = 150  # spec: reading passages are at least 150 words (GT directive 3, gate a)
-_INSTR = re.compile(r"^(read the passage|basahin ang talata)[^\n]*\n+", re.I)
+_INSTR = re.compile(r"^(read the passage|basahin ang talata|basahin at unawain|suriin ang talata|talata:)[^\n]*\n+", re.I)
+# GT decision 15:48 (22 Oct 2026): Filipino reading passages have two levels.
+FIL_SHORT_MIN, FIL_LONG_MIN, FIL_LONG_MAX = 80, 150, 250
+FIL_PASSAGE_ARCHETYPES = {"VFIL-PAGBASA", "VFIL-READ"}
 
 
 def passage_words(it):
@@ -327,19 +333,39 @@ def passage_words(it):
     None when the item is not a passage item."""
     # passage items: a passage_id, a passage field, or a stem that opens with a read-the-passage instruction.
     # Sentence-level vocabulary-in-context items (VEN-RC-VOCAB with no passage) are not passage items.
-    if not (it.get("passage_id") or it.get("passage") or _INSTR.match(it.get("stem", ""))):
+    if not (it.get("passage_id") or it.get("passage") or _INSTR.match(it.get("stem", ""))
+            or it.get("archetype") in FIL_PASSAGE_ARCHETYPES):
         return None
     body = it.get("passage") or it["stem"].rpartition("\n\n")[0]
     return len(_INSTR.sub("", body.strip()).split())
 
 
+def fil_passage_level(n):
+    """SHORT (80-149 words), LONG (150-250) or None when the count fits neither level."""
+    if n is None or n < FIL_SHORT_MIN or n > FIL_LONG_MAX:
+        return None
+    return "short" if n < FIL_LONG_MIN else "long"
+
+
 def passage_errors(it):
-    # Spec section 3 sets 150-250 words for English reading passages. VFIL-PAGBASA is specified as a "short Filipino passage"
-    # with no word floor, so the gate covers verbal_en only (open question for GT, see AUDIT_TRACKER).
-    if it.get("domain") != "verbal_en":
-        return []
+    # English passages: spec section 3, at least 150 words. Filipino passages: GT decision 15:48, two levels,
+    # SHORT at least 80 words and LONG 150-250; an item may declare passage_level and the count must match it.
     n = passage_words(it)
-    return [f"passage has {n} words; minimum is {PASSAGE_MIN_WORDS}"] if n is not None and n < PASSAGE_MIN_WORDS else []
+    if n is None:
+        return []
+    if it.get("domain") == "verbal_en":
+        return [f"passage has {n} words; minimum is {PASSAGE_MIN_WORDS}"] if n < PASSAGE_MIN_WORDS else []
+    if it.get("domain") != "verbal_fil":
+        return []
+    lvl = fil_passage_level(n)
+    if n < FIL_SHORT_MIN:
+        return [f"Filipino passage has {n} words; SHORT level needs at least {FIL_SHORT_MIN}"]
+    if n > FIL_LONG_MAX:
+        return [f"Filipino passage has {n} words; LONG level allows at most {FIL_LONG_MAX}"]
+    want = it.get("passage_level")
+    if want and want != lvl:
+        return [f"Filipino passage declared {want} but has {n} words ({lvl})"]
+    return []
 
 
 def check_item(it):
@@ -431,7 +457,10 @@ def check_item(it):
         from drafts import solver_2026_10_22 as _s22
         solver = None if it["recipe"].get("op") == "judgment" else _s22.solve
     if solver:
-        exp = solver(it)
+        try:
+            exp = solver(it)
+        except (AttributeError, ValueError, TypeError, ZeroDivisionError, SyntaxError):  # stem outside the solver's frames
+            exp = None
         if exp is None:
             errs.append("solver could not recompute the key")
         else:

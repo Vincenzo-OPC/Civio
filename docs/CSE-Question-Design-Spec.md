@@ -259,7 +259,7 @@ Informed by: URLs 7, 8, 9.
 | VFIL-KASALUNGAT | Antonym of the marked word | 2 | A synonym of the word is among the choices | 25 |
 | VFIL-WIKAIN | Meaning of an idiom (sawikain) in a sentence | 1 | Literal reading of the idiom | 25 |
 | VFIL-BALARILA | Correct usage (ng/nang, may/mayroon, pang-ukol, panghalip) | 1–2 | Everyday spoken form that is not standard | 30 |
-| VFIL-PAGBASA | Short Filipino passage, main idea / detail / inference | 2 | Same as RC codes | 60 |
+| VFIL-PAGBASA | Filipino passage, main idea / detail / inference. Two levels (GT, 22 Oct 2026): SHORT at least 80 words, LONG 150–250 words | 2 | Same as RC codes | 60 |
 | VFIL-PAGSUSUNOD | Order sentences in Filipino | 3 | Same as paragraph codes | 75 |
 
 Wording level: standard formal Filipino. Target words: "malalim" but real and current, not archaic. Check every word in a standard Filipino dictionary (UP Diksiyonaryong Filipino or KWF). Do not mark the target word by underline only (see 4.6).

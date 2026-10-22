@@ -1,0 +1,2667 @@
+{
+  "batch": "vfil-passage-r1-2026-10-22",
+  "status": "draft proposals (pending authorized review; not approved, not in manifest)",
+  "note": "Approved originals stay in the bank unchanged until an authorized reviewer accepts or rejects each proposal.",
+  "items": [
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040076-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagsimula ang paaralan ng tahimik na sampung minutong pagbabasa bago ang unang klase. Pagkaraan ng isang buwan, mas marami nang mag-aaral ang nakatatapos ng aklat, ngunit wala pang sapat na tala kung mas nauunawaan nila ang binabasa. Naghanda ang mga guro ng maikling tanong pagkatapos magbasa. Bawat klase ay may sariling istante ng aklat na pinipili ng mga mag-aaral, at itinatala ng guro ang pamagat at bilang ng pahinang natapos ng bawat bata. Ayon sa punong-guro, kailangan pa ng isa o dalawang buwan ng tala bago masabi kung umunlad ang pag-unawa. Ihahambing nila ang mga sagot sa unang linggo at sa huling linggo ng markahan.\n\nAling bagay ang hindi pa napatutunayan sa unang buwan?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Na may mas maraming natatapos na aklat."
+        },
+        {
+          "option_id": "o2",
+          "text": "Na may oras para sa pagbabasa."
+        },
+        {
+          "option_id": "o3",
+          "text": "Na mas mahusay na silang umunawa sa binabasa."
+        },
+        {
+          "option_id": "o4",
+          "text": "Na naghanda ang guro ng tanong."
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Iba ang natapos na pahina sa totoong pag-unawa; iyon pa ang susukatin.",
+        "why_correct": "\"Na mas mahusay na silang umunawa sa binabasa.\" ang tamang sagot. Iba ang natapos na pahina sa totoong pag-unawa; iyon pa ang susukatin.",
+        "why_wrong": {
+          "o1": "\"Na may mas maraming natatapos na aklat.\" — Ito ang naobserbahang pagtaas, hindi ang kulang na ebidensiya.",
+          "o2": "\"Na may oras para sa pagbabasa.\" — Ito ang bagong iskedyul na mismong ipinatupad.",
+          "o4": "\"Na naghanda ang guro ng tanong.\" — Nakasaad na naghanda sila ng paraan ng pagsukat."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-SUPPORTED-NOT-ASKED",
+        "o2": "RC-SUPPORTED-NOT-ASKED",
+        "o4": "RC-SUPPORTED-NOT-ASKED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040076",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040076",
+          "original_status": "approved",
+          "words_before": 46,
+          "words_after": 105
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040077-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nDalawang linggong sinubukan ng kooperatiba ang mas maagang paghatid ng gatas sa mga tindahan. Nabawasan ang mga produktong nasisira bago mabenta, ngunit tumaas ang gastos sa sasakyan. Maghahambing muna ang lupon ng pagtitipid sa nasirang produkto at dagdag na gastos bago magpasya. Sa panahon ng pagsubok, umaalis ang trak bago pa sumikat ang araw, kaya mas maraming tindahan ang nakatanggap ng sariwang gatas bago magbukas at kakaunti ang ibinalik na maasim na. Gayunman, kinailangang magbayad ng dagdag na oras sa drayber at ng mas maraming krudo dahil dalawang beses nang bumibiyahe ang sasakyan.\n\nAno ang kailangang timbangin ng lupon?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Ang dami lamang ng tindahang nabuksan."
+        },
+        {
+          "option_id": "o2",
+          "text": "Ang pagtaas ng gastos sa sasakyan lamang."
+        },
+        {
+          "option_id": "o3",
+          "text": "Ang lahat ng kita sa nakaraang sampung taon."
+        },
+        {
+          "option_id": "o4",
+          "text": "Ang nabawasang pagkasira laban sa nadagdag na gastos sa paghahatid."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Kailangang ikumpara ang benepisyo at kapalit na gastos.",
+        "why_correct": "\"Ang nabawasang pagkasira laban sa nadagdag na gastos sa paghahatid.\" ang tamang sagot. Kailangang ikumpara ang benepisyo at kapalit na gastos.",
+        "why_wrong": {
+          "o1": "\"Ang dami lamang ng tindahang nabuksan.\" — Hindi iyon ang dalawang sukat na inihahambing.",
+          "o2": "\"Ang pagtaas ng gastos sa sasakyan lamang.\" — Isinasaalang-alang din ang pagliit ng pagkasira.",
+          "o3": "\"Ang lahat ng kita sa nakaraang sampung taon.\" — Hindi ganoon kalawak ang planong paghahambing."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-NOT-IN-TEXT",
+        "o2": "RC-TOO-NARROW",
+        "o3": "RC-TOO-BROAD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040077",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040077",
+          "original_status": "approved",
+          "words_before": 42,
+          "words_after": 93
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040078-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa bukas na pulong, ipinakita ng barangay ang kabuuang bilang ng tulong na naipamahagi. Hindi nila inilagay sa publikong listahan ang numero ng telepono ng mga benepisyaryo. Ipinaliwanag nila na maaari ang malinaw na pag-uulat nang hindi inilalantad ang pribadong detalye. Kasama sa ulat ang bilang ng pamilyang nakatanggap ng bigas, de-lata at gamot, at ang kabuuang halagang ginastos. Nang may magtanong kung bakit kulang ang detalye sa listahan, sinabi ng kalihim na maaaring suriin ng awditor ang buong talaan, ngunit hindi ilalagay sa pisara ang personal na detalye ng bawat pamilya.\n\nAlin ang pangunahing prinsipyo sa talata?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Maaaring pagsabayin ang pananagutan at pagprotekta sa pribadong impormasyon."
+        },
+        {
+          "option_id": "o2",
+          "text": "Telepono lamang ang mahalaga sa pag-uulat."
+        },
+        {
+          "option_id": "o3",
+          "text": "Dapat itago pati kabuuang bilang ng tulong."
+        },
+        {
+          "option_id": "o4",
+          "text": "Lahat ng personal na datos ay kailangang ilathala."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Naipakita ang datos ng programa nang hindi isinapubliko ang pagkakakilanlan.",
+        "why_correct": "\"Maaaring pagsabayin ang pananagutan at pagprotekta sa pribadong impormasyon.\" ang tamang sagot. Naipakita ang datos ng programa nang hindi isinapubliko ang pagkakakilanlan.",
+        "why_wrong": {
+          "o2": "\"Telepono lamang ang mahalaga sa pag-uulat.\" — Hindi ito ang impormasyong pinili nilang ilathala.",
+          "o3": "\"Dapat itago pati kabuuang bilang ng tulong.\" — Ipinakita nga nila ang kabuuang bilang.",
+          "o4": "\"Lahat ng personal na datos ay kailangang ilathala.\" — Salungat ito sa hindi paglalantad ng telepono."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-TOO-NARROW",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040078",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040078",
+          "original_status": "approved",
+          "words_before": 41,
+          "words_after": 92
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040079-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa pook na madalas bahain, nagmarka ang mga residente ng taas ng tubig sa pader tuwing may malakas na ulan. Nang tumaas ang marka sa dalawang magkasunod na bagyo, inilipat nila sa itaas ang mahahalagang dokumento. Gumamit sila ng pintura at isinulat ang petsa sa tabi ng bawat marka upang makita ang pagbabago sa paglipas ng panahon. Itinala rin nila kung ilang oras bago humupa ang tubig. Bukod sa mga dokumento, inilipat din nila sa mas mataas na istante ang mga gamot at kagamitang de-kuryente. Hindi nila ipinagpalagay na magkakapareho ang susunod na mga bagyo.\n\nBakit nila inilipat ang mga dokumento?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Upang palitan ang mga markang nasa pader."
+        },
+        {
+          "option_id": "o2",
+          "text": "Upang mabawasan ang posibleng pinsala batay sa naobserbahang panganib."
+        },
+        {
+          "option_id": "o3",
+          "text": "Dahil tiyak na pareho ang taas ng lahat ng susunod na baha."
+        },
+        {
+          "option_id": "o4",
+          "text": "Dahil ipinagbawal ang pagtago ng mga dokumento sa bahay."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Ang nakaraang tala ay ginamit para sa pag-iingat, hindi tiyak na paghula.",
+        "why_correct": "\"Upang mabawasan ang posibleng pinsala batay sa naobserbahang panganib.\" ang tamang sagot. Ang nakaraang tala ay ginamit para sa pag-iingat, hindi tiyak na paghula.",
+        "why_wrong": {
+          "o1": "\"Upang palitan ang mga markang nasa pader.\" — Ang dokumento ang inilipat, hindi ang marka.",
+          "o3": "\"Dahil tiyak na pareho ang taas ng lahat ng susunod na baha.\" — Tahasang hindi nila ito ipinagpalagay.",
+          "o4": "\"Dahil ipinagbawal ang pagtago ng mga dokumento sa bahay.\" — Walang gayong pagbabawal sa talata."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-TOO-NARROW",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040079",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040079",
+          "original_status": "approved",
+          "words_before": 46,
+          "words_after": 95
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040080-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSinimulan ng munisipyo ang paglalagay ng malinaw na palatandaan sa mga pasilyo ng ospital. Mas kaunti ang nagtatanong ng direksiyon, ngunit hindi nagbago ang oras ng paghihintay para sa doktor. Napagkasunduan na hiwalay na suliranin ang paglalakad sa gusali at pila sa konsultasyon. Kulay ang ginamit sa mga palatandaan: berde para sa laboratoryo, asul para sa parmasya at dilaw para sa konsultasyon, at may mapa ng gusali sa may pasukan. Ayon sa mga bantay, mas bihira na silang lapitan para itanong kung nasaan ang isang silid. Ang haba ng pila para sa doktor ay nakadepende pa rin sa dami ng pasyente sa araw na iyon.\n\nAling pagbabago ang may ebidensiya sa talata?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Bumaba ang pangangailangang magtanong ng direksiyon."
+        },
+        {
+          "option_id": "o2",
+          "text": "Dumami ang mga doktor sa ospital."
+        },
+        {
+          "option_id": "o3",
+          "text": "Bumilis ang oras ng konsultasyon sa doktor."
+        },
+        {
+          "option_id": "o4",
+          "text": "Nawala ang lahat ng pasilyo sa gusali."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Palatandaan ang tumulong sa paghanap ng lugar ngunit hindi sa bilis ng konsultasyon.",
+        "why_correct": "\"Bumaba ang pangangailangang magtanong ng direksiyon.\" ang tamang sagot. Palatandaan ang tumulong sa paghanap ng lugar ngunit hindi sa bilis ng konsultasyon.",
+        "why_wrong": {
+          "o2": "\"Dumami ang mga doktor sa ospital.\" — Walang sinabing nagdagdag ng doktor.",
+          "o3": "\"Bumilis ang oras ng konsultasyon sa doktor.\" — Walang pagbabago sa paghihintay ang naitala.",
+          "o4": "\"Nawala ang lahat ng pasilyo sa gusali.\" — Naglagay ng mga palatandaan sa pasilyo, hindi inalis ito."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-NOT-IN-TEXT",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040080",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040080",
+          "original_status": "approved",
+          "words_before": 43,
+          "words_after": 105
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040081-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa hardin ng isang paaralan, nagtanim ng dalawang uri ng gulay ang mga bata. Pareho silang dinilig, ngunit ang unang uri ay nasa mas maaraw na bahagi. Nang mas mabilis itong tumubo, hindi agad sinabi ng guro na dahil iyon sa uri ng buto. Nabanggit niyang kailangang isaalang-alang ang dami ng araw na natanggap. Halos magkasindami ang tubig na ibinigay sa dalawang taniman tuwing umaga. Sinukat ng mga bata ang taas ng mga halaman tuwing Biyernes at isinulat ito sa kuwaderno. Iminungkahi ng guro na sa susunod na pagtatanim, ilagay ang dalawang uri sa iisang bahagi ng hardin upang mas patas ang paghahambing.\n\nBakit hindi pa tiyak ang sanhi ng mas mabilis na pagtubo?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Dahil hindi sila dinilig kailanman."
+        },
+        {
+          "option_id": "o2",
+          "text": "Dahil iisa lamang ang uri ng gulay."
+        },
+        {
+          "option_id": "o3",
+          "text": "Dahil walang sinumang nagtala ng panahon."
+        },
+        {
+          "option_id": "o4",
+          "text": "Magkaiba rin ang sikat ng araw na natanggap ng mga halaman."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "May isa pang salik na nagkakaiba: ang natanggap na liwanag.",
+        "why_correct": "\"Magkaiba rin ang sikat ng araw na natanggap ng mga halaman.\" ang tamang sagot. May isa pang salik na nagkakaiba: ang natanggap na liwanag.",
+        "why_wrong": {
+          "o1": "\"Dahil hindi sila dinilig kailanman.\" — Pareho silang dinilig ayon sa talata.",
+          "o2": "\"Dahil iisa lamang ang uri ng gulay.\" — Dalawang uri ang itinanim.",
+          "o3": "\"Dahil walang sinumang nagtala ng panahon.\" — Walang nakasaad tungkol sa gayong tala."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o2": "RC-OPPOSITE",
+        "o3": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040081",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040081",
+          "original_status": "approved",
+          "words_before": 54,
+          "words_after": 103
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040082-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nMuling binuksan ang maliit na aklatan matapos ayusin ang bubong. Pinahiram muna ang isang bahagi ng koleksiyon dahil kailangang linisin pa ang nalalabing estante. Pinili ng tagapangasiwa na unti-unting magbukas kaysa ipagpaliban ang lahat ng serbisyo. Tumulo ang tubig-ulan sa ilang estante noong nakaraang bagyo, kaya maraming aklat ang kailangang patuyuin at linisin isa-isa. Habang inaayos ang mga ito, bukas muna ang aklatan tuwing umaga para sa mga aklat pambata at mga sanggunian. Nakasulat sa pisara kung aling bahagi ng koleksiyon ang maaari nang hiramin at kung kailan inaasahang mabubuksan ang iba.\n\nAno ang ibig sabihin ng unti-unting pagbubukas dito?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "May serbisyong sinimulan kahit hindi pa handa ang buong koleksiyon."
+        },
+        {
+          "option_id": "o2",
+          "text": "Lumipat sa ibang bayan ang aklatan."
+        },
+        {
+          "option_id": "o3",
+          "text": "Hindi na kailanman magbubukas ang iba pang estante."
+        },
+        {
+          "option_id": "o4",
+          "text": "Agad na ipinahiram ang lahat ng aklat."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Nagsimula ang bahagi ng serbisyo habang nagpapatuloy ang paglilinis.",
+        "why_correct": "\"May serbisyong sinimulan kahit hindi pa handa ang buong koleksiyon.\" ang tamang sagot. Nagsimula ang bahagi ng serbisyo habang nagpapatuloy ang paglilinis.",
+        "why_wrong": {
+          "o2": "\"Lumipat sa ibang bayan ang aklatan.\" — Walang nabanggit na paglipat.",
+          "o3": "\"Hindi na kailanman magbubukas ang iba pang estante.\" — Nililinis pa lamang ang natitira.",
+          "o4": "\"Agad na ipinahiram ang lahat ng aklat.\" — Bahagi lamang ng koleksiyon ang maaaring hiramin."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-NOT-IN-TEXT",
+        "o3": "RC-EXTREME",
+        "o4": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040082",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040082",
+          "original_status": "approved",
+          "words_before": 36,
+          "words_after": 92
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040083-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nUpang masuri ang haba ng pila sa palengke, binilang ang dumaraan tuwing umaga at hapon. Napansing higit na mahaba ang pila kapag uwian, kaya nagtalaga ng karagdagang tagabantay sa panahong iyon. Susuriin muli ang resulta sa susunod na buwan. Dalawang linggong nagbilang ang mga kawani ng munisipyo gamit ang simpleng talaan. Sa umaga, karaniwang mabilis ang daloy dahil kakaunti pa ang mamimili. Sa hapon, sabay-sabay dumarating ang mga manggagawang pauwi, kaya humahaba ang pila sa mga puwesto ng isda at gulay.\n\nAling datos ang nagsilbing batayan sa bagong pagtatalaga?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Taas ng presyo ng bawat paninda."
+        },
+        {
+          "option_id": "o2",
+          "text": "Pagkakaiba ng haba ng pila ayon sa oras."
+        },
+        {
+          "option_id": "o3",
+          "text": "Dami ng tagabantay noong nakaraang taon."
+        },
+        {
+          "option_id": "o4",
+          "text": "Bilang ng sasakyan sa ibang lungsod."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Oras ng mahabang pila ang nagtakda kung kailan kailangang magdagdag ng tao.",
+        "why_correct": "\"Pagkakaiba ng haba ng pila ayon sa oras.\" ang tamang sagot. Oras ng mahabang pila ang nagtakda kung kailan kailangang magdagdag ng tao.",
+        "why_wrong": {
+          "o1": "\"Taas ng presyo ng bawat paninda.\" — Walang datos sa presyo sa talata.",
+          "o3": "\"Dami ng tagabantay noong nakaraang taon.\" — Hindi ang bilang na iyon ang ginamit sa pasya.",
+          "o4": "\"Bilang ng sasakyan sa ibang lungsod.\" — Hindi iyon ang sinukat."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-NOT-IN-TEXT",
+        "o3": "RC-TOO-NARROW",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040083",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040083",
+          "original_status": "approved",
+          "words_before": 39,
+          "words_after": 81
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040084-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNaglabas ang radio station ng babala tuwing may pagbabago sa lagay ng dagat. Sa bawat pagbasa, binanggit ang ahensiyang pinagmulan at oras ng paglabas ng ulat. Ayon sa tagapagbalita, maaari kasing tama ang lumang ulat noong umaga ngunit hindi na angkop sa gabi. Kadalasang nagmumula ang ulat sa PAGASA o sa tanggapan ng Coast Guard sa lalawigan. Mahalaga ito sa mga mangingisdang nagpapasya kung papalaot o hindi. Kapag nagbago ang lagay ng dagat sa hapon, agad na naglalabas ng bagong babala ang istasyon at inuulit ito bawat oras.\n\nBakit kailangang banggitin ang oras ng ulat?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Upang malaman ng tagapakinig kung napapanahon ang impormasyon."
+        },
+        {
+          "option_id": "o2",
+          "text": "Upang hindi na kailanganin ang pinagmulan ng ulat."
+        },
+        {
+          "option_id": "o3",
+          "text": "Upang mahulaan nang tiyak ang panahon sa susunod na taon."
+        },
+        {
+          "option_id": "o4",
+          "text": "Upang bawasan ang bilang ng tagapakinig."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Maaaring magbago ang kondisyon kaya mahalaga kung kailan inilabas ang babala.",
+        "why_correct": "\"Upang malaman ng tagapakinig kung napapanahon ang impormasyon.\" ang tamang sagot. Maaaring magbago ang kondisyon kaya mahalaga kung kailan inilabas ang babala.",
+        "why_wrong": {
+          "o2": "\"Upang hindi na kailanganin ang pinagmulan ng ulat.\" — Parehong pinagmulan at oras ang binabanggit.",
+          "o3": "\"Upang mahulaan nang tiyak ang panahon sa susunod na taon.\" — Hindi ganoon kalawak ang layunin.",
+          "o4": "\"Upang bawasan ang bilang ng tagapakinig.\" — Walang ganoong layunin sa talata."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-OPPOSITE",
+        "o3": "RC-TOO-BROAD",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040084",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040084",
+          "original_status": "approved",
+          "words_before": 43,
+          "words_after": 88
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040085-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nMay mga tindera sa pamilihan na nagtipon ng tala kung ilang kilo ng isda ang natitira bago magsara. Iminungkahi ng isa na agad babaan ang presyo ng lahat ng isda. Sumang-ayon ang grupo na maaaring makatulong iyon, ngunit nais muna nilang malaman kung aling uri lamang ang madalas hindi nabibili. Sa loob ng isang linggo, itinala nila ang natirang galunggong, tilapia, bangus at pusit. Ang ilan ay nag-iimbak ng natirang isda sa yelo para ibenta kinabukasan, ngunit bumababa ang kalidad nito. Nais ng grupo na mabawasan ang nasasayang na isda nang hindi nalulugi sa pagbaba ng presyo.\n\nBakit nais muna nilang paghiwa-hiwalayin ang tala ayon sa uri?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Dahil ipinagbawal na ang pagbabago ng presyo."
+        },
+        {
+          "option_id": "o2",
+          "text": "Dahil wala nang naiiwang isda bago magsara."
+        },
+        {
+          "option_id": "o3",
+          "text": "Dahil pare-pareho ang dami ng lahat ng isda."
+        },
+        {
+          "option_id": "o4",
+          "text": "Maaaring hindi pare-pareho ang suliranin sa bawat uri ng isda."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Mas mabuting alamin ang tiyak na produktong hindi nabibili bago baguhin lahat.",
+        "why_correct": "\"Maaaring hindi pare-pareho ang suliranin sa bawat uri ng isda.\" ang tamang sagot. Mas mabuting alamin ang tiyak na produktong hindi nabibili bago baguhin lahat.",
+        "why_wrong": {
+          "o1": "\"Dahil ipinagbawal na ang pagbabago ng presyo.\" — Walang gayong pagbabawal.",
+          "o2": "\"Dahil wala nang naiiwang isda bago magsara.\" — Nagtatala nga sila ng natitirang isda.",
+          "o3": "\"Dahil pare-pareho ang dami ng lahat ng isda.\" — Walang datos na nagpapakita nito."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-NOT-IN-TEXT",
+        "o2": "RC-OPPOSITE",
+        "o3": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040085",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040085",
+          "original_status": "approved",
+          "words_before": 50,
+          "words_after": 97
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040086-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa isang kooperatiba ng mga magulang, dalawang paraan ng pagpapabatid ang sinubukan: nakapaskil na anunsiyo at text message. Mas marami ang nakabasa ng mensahe sa telepono, subalit sinabi ng grupo na hindi nito ibig sabihing maaari nang alisin ang lahat ng nakapaskil na paalala. Ipinadala ang text message tuwing Lunes ng gabi, habang ang anunsiyo ay nakapaskil sa pintuan ng silid-pulungan. Pagkalipas ng isang buwan, tinanong ng kalihim ang mga kasapi kung saan nila nalaman ang mga pulong at bayarin. Karamihan ay sumagot na sa telepono, ngunit ang ilang lolo at lola na nag-aalaga ng apo ay umaasa pa rin sa nakapaskil na papel. May mga kasaping walang sariling telepono.\n\nAno ang nagpapaliwanag sa pagpapanatili ng nakapaskil na anunsiyo?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Walang kasaping nakababasa ng text message."
+        },
+        {
+          "option_id": "o2",
+          "text": "Lahat ng kasapi ay may dalawang telepono."
+        },
+        {
+          "option_id": "o3",
+          "text": "May mga kasaping hindi maaabot ng text message lamang."
+        },
+        {
+          "option_id": "o4",
+          "text": "Mas mababa ang kuryenteng nagagamit sa telepono."
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Hindi pareho ang kakayahang makatanggap ng dalawang paraan ng balita.",
+        "why_correct": "\"May mga kasaping hindi maaabot ng text message lamang.\" ang tamang sagot. Hindi pareho ang kakayahang makatanggap ng dalawang paraan ng balita.",
+        "why_wrong": {
+          "o1": "\"Walang kasaping nakababasa ng text message.\" — Marami nga ang nababasa nito.",
+          "o2": "\"Lahat ng kasapi ay may dalawang telepono.\" — Kabaligtaran ito ng nakasaad na limitasyon.",
+          "o4": "\"Mas mababa ang kuryenteng nagagamit sa telepono.\" — Hindi ito isinama sa kanilang dahilan."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o2": "RC-OPPOSITE",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040086",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040086",
+          "original_status": "approved",
+          "words_before": 50,
+          "words_after": 110
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040087-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nBago isagawa ang paglilinis ng lumang larawan, kumuha ang museo ng tala ng mga lamat at dumi nito. Matapos ang pagsubok sa isang maliit na bahagi, itinigil nila ang napiling kemikal dahil namutla ang kulay. Ang larawan ay isang lumang litrato ng plasa na ibinigay ng isang pamilya sa bayan. Ginamit ng museo ang mga kuhang litrato bago ang paglilinis bilang batayan sa paghahambing. Sinubukan nila ang kemikal sa isang sulok na halos hindi nakikita upang hindi madamay ang mukha ng mga tao sa larawan. Naghanap sila ng mas banayad na paraan.\n\nAnong naging papel ng maliit na pagsubok?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Pinatunayan nitong ligtas ang napiling kemikal sa buong larawan."
+        },
+        {
+          "option_id": "o2",
+          "text": "Nangahulugang hindi na kailangang kumuha ng tala."
+        },
+        {
+          "option_id": "o3",
+          "text": "Nakatulong itong maiwasan ang mas malawak na posibleng pinsala."
+        },
+        {
+          "option_id": "o4",
+          "text": "Nagpakita ito ng halaga ng bawat larawan."
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Nakita sa maliit na bahagi ang hindi magandang epekto bago gamitin sa kabuuan.",
+        "why_correct": "\"Nakatulong itong maiwasan ang mas malawak na posibleng pinsala.\" ang tamang sagot. Nakita sa maliit na bahagi ang hindi magandang epekto bago gamitin sa kabuuan.",
+        "why_wrong": {
+          "o1": "\"Pinatunayan nitong ligtas ang napiling kemikal sa buong larawan.\" — Nagbago ang kulay kaya itinigil ito.",
+          "o2": "\"Nangahulugang hindi na kailangang kumuha ng tala.\" — Kumuha na sila ng tala bago sumubok.",
+          "o4": "\"Nagpakita ito ng halaga ng bawat larawan.\" — Hindi halaga ang sinubok."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o2": "RC-OPPOSITE",
+        "o4": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040087",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040087",
+          "original_status": "approved",
+          "words_before": 42,
+          "words_after": 92
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040088-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa bagong terminal, magkaiba ang oras ng huling pagtanggap ng kargamento at ang nakatakdang alis ng sasakyan. Ilang pasahero ang dumating para magpasa ng mabibigat na kahon sa mismong oras ng alis. Nagdagdag ang tagapamahala ng paliwanag sa karatula upang malinaw ang dalawang takdang oras. Binuksan ang terminal noong nakaraang buwan para sa mga bus at van papuntang lalawigan. Tumatanggap ng kargamento hanggang tatlumpung minuto bago ang alis upang may panahon ang mga kargador na isakay ito sa ilalim ng sasakyan. Dahil sa kalituhan, may mga kahong naiwan at ipinadala na lamang sa susunod na biyahe.\n\nAno ang sentrong kalituhan ng ilang pasahero?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Inakala nilang iisa ang oras ng alis at huling pagtanggap ng kargamento."
+        },
+        {
+          "option_id": "o2",
+          "text": "Hindi nila alam ang halaga ng pamasahe."
+        },
+        {
+          "option_id": "o3",
+          "text": "Akala nila sarado na ang buong terminal sa umaga."
+        },
+        {
+          "option_id": "o4",
+          "text": "Inakala nilang walang karatulang nakapaskil."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Hindi magkapareho ang oras para sa kargamento at oras ng pag-alis.",
+        "why_correct": "\"Inakala nilang iisa ang oras ng alis at huling pagtanggap ng kargamento.\" ang tamang sagot. Hindi magkapareho ang oras para sa kargamento at oras ng pag-alis.",
+        "why_wrong": {
+          "o2": "\"Hindi nila alam ang halaga ng pamasahe.\" — Hindi ito ang usaping binanggit.",
+          "o3": "\"Akala nila sarado na ang buong terminal sa umaga.\" — Hindi ito sinabi.",
+          "o4": "\"Inakala nilang walang karatulang nakapaskil.\" — May karatula na ngunit nilinaw pa."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-NOT-IN-TEXT",
+        "o3": "RC-NOT-IN-TEXT",
+        "o4": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040088",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040088",
+          "original_status": "approved",
+          "words_before": 45,
+          "words_after": 96
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040089-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nBawat linggo, tinitingnan ng mga tagapangasiwa ng parke ang lagay ng mga puno. Ang ilang sanga ay pinuputol dahil may panganib sa daanan, samantalang ang mga malulusog na puno ay hindi ginagalaw. Hindi nila ginagawang batayan ang taas lamang ng puno sa kanilang pasya. Gumagamit sila ng checklist: may bulok bang bahagi ang puno, may sanga bang nakabitin sa daanan, at may ugat bang umaangat sa bangketa. Kapag ligtas at malusog ang puno, iniiwan ito kahit gaano pa ito kataas. Itinatala rin nila ang bawat pinutol na sanga at ang dahilan nito.\n\nAno ang pinakamainam na paglalarawan sa kanilang paraan?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Tinatanggal nila ang lahat ng matataas na puno."
+        },
+        {
+          "option_id": "o2",
+          "text": "Ginagamot nila ang lahat ng puno sa parehong paraan."
+        },
+        {
+          "option_id": "o3",
+          "text": "Hindi sila nagsasagawa ng anumang inspeksiyon."
+        },
+        {
+          "option_id": "o4",
+          "text": "Ibinabatay ang aksiyon sa kalagayan at panganib ng bawat puno."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "Kalagayan at panganib, hindi laki, ang tinitingnan.",
+        "why_correct": "\"Ibinabatay ang aksiyon sa kalagayan at panganib ng bawat puno.\" ang tamang sagot. Kalagayan at panganib, hindi laki, ang tinitingnan.",
+        "why_wrong": {
+          "o1": "\"Tinatanggal nila ang lahat ng matataas na puno.\" — Hindi taas lamang ang batayan.",
+          "o2": "\"Ginagamot nila ang lahat ng puno sa parehong paraan.\" — Magkakaiba ang ginagawang hakbang.",
+          "o3": "\"Hindi sila nagsasagawa ng anumang inspeksiyon.\" — Lingguhan ang pagsusuri."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "RC-OPPOSITE",
+        "o2": "RC-OPPOSITE",
+        "o3": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040089",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040089",
+          "original_status": "approved",
+          "words_before": 44,
+          "words_after": 92
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-PAGBASA-040090-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "comprehension",
+      "micro_skill": "find an inference supported by the passage",
+      "archetype": "VFIL-PAGBASA",
+      "difficulty": "medium",
+      "est_seconds": 65,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa pagbuo ng bagong panuntunan sa barangay, nangalap muna ng mungkahi sa mga residente. Hindi lahat ng mungkahi ay naisama, ngunit may tala kung alin ang tinanggap, binago, o hindi ginamit at bakit. Ipinaskil ang buod bago ang pinal na pagpupulong. Inilagay ang kahon ng mungkahi sa barangay hall at tumanggap din ng mungkahi sa text sa loob ng dalawang linggo. Mahigit animnapung mungkahi ang natanggap tungkol sa oras ng katahimikan, paradahan at pagtatapon ng basura. Pinagsama ng kalihim ang magkakatulad na mungkahi bago ito pag-usapan ng konseho.\n\nAling katangian ng proseso ang pinakadiin?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Maipaliwanag ang naging pasya sa bawat mungkahi."
+        },
+        {
+          "option_id": "o2",
+          "text": "Ililihim sa mga residente ang naging resulta."
+        },
+        {
+          "option_id": "o3",
+          "text": "Walang kailangang dahilan sa pagbabago ng mungkahi."
+        },
+        {
+          "option_id": "o4",
+          "text": "Awtomatikong tanggapin ang lahat ng mungkahi."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang tamang sagot ay dapat direktang nakasaad o lohikal na suportado ng talata.",
+        "shortcut": "May dokumentadong dahilan kung bakit tinanggap o hindi ginamit ang bawat mungkahi.",
+        "why_correct": "\"Maipaliwanag ang naging pasya sa bawat mungkahi.\" ang tamang sagot. May dokumentadong dahilan kung bakit tinanggap o hindi ginamit ang bawat mungkahi.",
+        "why_wrong": {
+          "o2": "\"Ililihim sa mga residente ang naging resulta.\" — Ipinaskil ang buod.",
+          "o3": "\"Walang kailangang dahilan sa pagbabago ng mungkahi.\" — Nakatala ang dahilan sa pagtanggap o pagbabago.",
+          "o4": "\"Awtomatikong tanggapin ang lahat ng mungkahi.\" — May mungkahing hindi ginamit."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "RC-OPPOSITE",
+        "o3": "RC-OPPOSITE",
+        "o4": "RC-OPPOSITE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T21:53:00+08:00",
+        "spec_version": "0.1.5"
+      },
+      "notes": "Independent editorial QA required prior to approval.",
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-PAGBASA-040090",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-PAGBASA-040090",
+          "original_status": "approved",
+          "words_before": 41,
+          "words_after": 88
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0055-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa isang barangay, naglagay ng kahon para sa mga lumang baterya sa tabi ng tanggapan. Tuwing Biyernes, kinukuha ito ng awtorisadong tagapangalap. Ipinaliwanag ng mga opisyal na hindi dapat ihalo ang mga baterya sa karaniwang basura dahil may mga sangkap itong maaaring makapinsala. Kabilang dito ang mga baterya ng remote, relo at laruan. Hindi tinatanggap sa kahon ang baterya ng sasakyan dahil may ibang paraan ng pagtatapon para rito. Hinihikayat din ng mga opisyal ang mga residente na balutin ng tape ang dulo ng baterya bago ito ihulog, dahil mas ligtas ito para sa mga tagapangalap.\n\nTanong: Ano ang pangunahing layunin ng kahon?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mag-imbak ng pagkain"
+        },
+        {
+          "option_id": "b",
+          "text": "Mangalap ng donasyong pera"
+        },
+        {
+          "option_id": "c",
+          "text": "Magsilbing dekorasyon"
+        },
+        {
+          "option_id": "d",
+          "text": "Maghiwalay ng lumang baterya mula sa karaniwang basura"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Itinatabi ang lumang baterya upang hindi mahalo sa karaniwang basura.",
+        "why_correct": "Itinatabi ang lumang baterya upang hindi mahalo sa karaniwang basura.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Mag-imbak ng pagkain\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Mangalap ng donasyong pera\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Magsilbing dekorasyon\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0055",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0055",
+          "original_status": "approved",
+          "words_before": 43,
+          "words_after": 96
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0056-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa isang barangay, naglagay ng kahon para sa mga lumang baterya sa tabi ng tanggapan. Tuwing Biyernes, kinukuha ito ng awtorisadong tagapangalap. Ipinaliwanag ng mga opisyal na hindi dapat ihalo ang mga baterya sa karaniwang basura dahil may mga sangkap itong maaaring makapinsala. Kabilang dito ang mga baterya ng remote, relo at laruan. Hindi tinatanggap sa kahon ang baterya ng sasakyan dahil may ibang paraan ng pagtatapon para rito. Hinihikayat din ng mga opisyal ang mga residente na balutin ng tape ang dulo ng baterya bago ito ihulog, dahil mas ligtas ito para sa mga tagapangalap.\n\nTanong: Kailan kinukuha ang mga baterya?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Tuwing Biyernes"
+        },
+        {
+          "option_id": "b",
+          "text": "Isang beses sa isang taon"
+        },
+        {
+          "option_id": "c",
+          "text": "Araw-araw"
+        },
+        {
+          "option_id": "d",
+          "text": "Tuwing Lunes"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Tuwirang nakasaad ang Biyernes.",
+        "why_correct": "Tuwirang nakasaad ang Biyernes.",
+        "why_wrong": {
+          "b": "Walang bahagi ng talata na nagsasabing \"Isang beses sa isang taon\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Araw-araw\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Tuwing Lunes\"."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0056",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0056",
+          "original_status": "approved",
+          "words_before": 43,
+          "words_after": 96
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0057-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa isang barangay, naglagay ng kahon para sa mga lumang baterya sa tabi ng tanggapan. Tuwing Biyernes, kinukuha ito ng awtorisadong tagapangalap. Ipinaliwanag ng mga opisyal na hindi dapat ihalo ang mga baterya sa karaniwang basura dahil may mga sangkap itong maaaring makapinsala. Kabilang dito ang mga baterya ng remote, relo at laruan. Hindi tinatanggap sa kahon ang baterya ng sasakyan dahil may ibang paraan ng pagtatapon para rito. Hinihikayat din ng mga opisyal ang mga residente na balutin ng tape ang dulo ng baterya bago ito ihulog, dahil mas ligtas ito para sa mga tagapangalap.\n\nTanong: Bakit hindi dapat ihalo ang baterya sa ordinaryong basura?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Maaaring makapinsala ang ilang sangkap nito"
+        },
+        {
+          "option_id": "b",
+          "text": "Mas mahal itong itapon kapag magkahiwalay"
+        },
+        {
+          "option_id": "c",
+          "text": "Mas magaan ang karaniwang basura"
+        },
+        {
+          "option_id": "d",
+          "text": "Lahat ng baterya ay nabubulok"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "May binanggit na mga sangkap na maaaring makapinsala.",
+        "why_correct": "May binanggit na mga sangkap na maaaring makapinsala.",
+        "why_wrong": {
+          "b": "Walang bahagi ng talata na nagsasabing \"Mas mahal itong itapon kapag magkahiwalay\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Mas magaan ang karaniwang basura\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Lahat ng baterya ay nabubulok\"."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0057",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0057",
+          "original_status": "approved",
+          "words_before": 43,
+          "words_after": 96
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0058-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nSa isang barangay, naglagay ng kahon para sa mga lumang baterya sa tabi ng tanggapan. Tuwing Biyernes, kinukuha ito ng awtorisadong tagapangalap. Ipinaliwanag ng mga opisyal na hindi dapat ihalo ang mga baterya sa karaniwang basura dahil may mga sangkap itong maaaring makapinsala. Kabilang dito ang mga baterya ng remote, relo at laruan. Hindi tinatanggap sa kahon ang baterya ng sasakyan dahil may ibang paraan ng pagtatapon para rito. Hinihikayat din ng mga opisyal ang mga residente na balutin ng tape ang dulo ng baterya bago ito ihulog, dahil mas ligtas ito para sa mga tagapangalap.\n\nTanong: Alin ang hindi binanggit sa talata?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Ang uri ng basurang ihihiwalay"
+        },
+        {
+          "option_id": "b",
+          "text": "Ang lokasyon ng kahon"
+        },
+        {
+          "option_id": "c",
+          "text": "Ang araw ng koleksiyon"
+        },
+        {
+          "option_id": "d",
+          "text": "Ang kabuuang timbang ng nakolektang baterya"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Walang numerong nagsasabi ng timbang sa talata.",
+        "why_correct": "Walang numerong nagsasabi ng timbang sa talata.",
+        "why_wrong": {
+          "a": "Ang \"Ang uri ng basurang ihihiwalay\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "b": "Ang \"Ang lokasyon ng kahon\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "c": "Ang \"Ang araw ng koleksiyon\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-SUPPORTED-NOT-ASKED",
+        "b": "RC-SUPPORTED-NOT-ASKED",
+        "c": "RC-SUPPORTED-NOT-ASKED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0058",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0058",
+          "original_status": "approved",
+          "words_before": 43,
+          "words_after": 96
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0059-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagbukas ang munisipyo ng dagdag na pila para sa matatanda at mga taong may kapansanan. Sa unang linggo, mas umikli ang paghihintay ng mga kabilang sa grupong ito. Gayunman, sinusukat pa ng opisina kung nakatulong din ang pagbabago sa kabuuang daloy ng mga aplikante. Ang dagdag na pila ay nasa unang palapag, malapit sa pasukan, at may sariling upuan para sa naghihintay. Isang kawani ang itinalaga upang tingnan ang ID ng mga pumipila rito. Itinatala ng opisina ang oras ng pagdating at pag-alis ng bawat aplikante sa lahat ng pila, at ihahambing ito sa datos noong nakaraang buwan.\n\nTanong: Ano ang ginawa ng munisipyo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Nagbukas ng dagdag na pila para sa ilang aplikante"
+        },
+        {
+          "option_id": "b",
+          "text": "Kinansela ang lahat ng aplikasyon"
+        },
+        {
+          "option_id": "c",
+          "text": "Nagtaas agad ng bayarin"
+        },
+        {
+          "option_id": "d",
+          "text": "Isinara ang lahat ng tanggapan"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Dagdag na pila ang pangunahing pagbabago.",
+        "why_correct": "Dagdag na pila ang pangunahing pagbabago.",
+        "why_wrong": {
+          "b": "Walang bahagi ng talata na nagsasabing \"Kinansela ang lahat ng aplikasyon\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Nagtaas agad ng bayarin\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Isinara ang lahat ng tanggapan\"."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0059",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0059",
+          "original_status": "approved",
+          "words_before": 44,
+          "words_after": 98
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0060-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagbukas ang munisipyo ng dagdag na pila para sa matatanda at mga taong may kapansanan. Sa unang linggo, mas umikli ang paghihintay ng mga kabilang sa grupong ito. Gayunman, sinusukat pa ng opisina kung nakatulong din ang pagbabago sa kabuuang daloy ng mga aplikante. Ang dagdag na pila ay nasa unang palapag, malapit sa pasukan, at may sariling upuan para sa naghihintay. Isang kawani ang itinalaga upang tingnan ang ID ng mga pumipila rito. Itinatala ng opisina ang oras ng pagdating at pag-alis ng bawat aplikante sa lahat ng pila, at ihahambing ito sa datos noong nakaraang buwan.\n\nTanong: Ano ang naobserbahan sa unang linggo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Bumaba ang lahat ng bayarin"
+        },
+        {
+          "option_id": "b",
+          "text": "Nawala ang lahat ng pila"
+        },
+        {
+          "option_id": "c",
+          "text": "Mas umikli ang paghihintay ng partikular na grupo"
+        },
+        {
+          "option_id": "d",
+          "text": "Dumoble ang bilang ng kawani"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Mas maikli ang paghihintay para sa inilaanang grupo.",
+        "why_correct": "Mas maikli ang paghihintay para sa inilaanang grupo.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Bumaba ang lahat ng bayarin\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Nawala ang lahat ng pila\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Dumoble ang bilang ng kawani\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0060",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0060",
+          "original_status": "approved",
+          "words_before": 44,
+          "words_after": 98
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0061-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagbukas ang munisipyo ng dagdag na pila para sa matatanda at mga taong may kapansanan. Sa unang linggo, mas umikli ang paghihintay ng mga kabilang sa grupong ito. Gayunman, sinusukat pa ng opisina kung nakatulong din ang pagbabago sa kabuuang daloy ng mga aplikante. Ang dagdag na pila ay nasa unang palapag, malapit sa pasukan, at may sariling upuan para sa naghihintay. Isang kawani ang itinalaga upang tingnan ang ID ng mga pumipila rito. Itinatala ng opisina ang oras ng pagdating at pag-alis ng bawat aplikante sa lahat ng pila, at ihahambing ito sa datos noong nakaraang buwan.\n\nTanong: Bakit patuloy pa rin ang pagsukat ng opisina?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Hindi nagbukas ang dagdag na pila"
+        },
+        {
+          "option_id": "b",
+          "text": "Walang dumating na aplikante"
+        },
+        {
+          "option_id": "c",
+          "text": "Hindi pa tiyak ang epekto sa kabuuang daloy"
+        },
+        {
+          "option_id": "d",
+          "text": "Ipinagbawal ang pagtatala"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Inaalam pa nila ang pangkalahatang epekto.",
+        "why_correct": "Inaalam pa nila ang pangkalahatang epekto.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Hindi nagbukas ang dagdag na pila\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Walang dumating na aplikante\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Ipinagbawal ang pagtatala\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0061",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0061",
+          "original_status": "approved",
+          "words_before": 44,
+          "words_after": 98
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0062-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagbukas ang munisipyo ng dagdag na pila para sa matatanda at mga taong may kapansanan. Sa unang linggo, mas umikli ang paghihintay ng mga kabilang sa grupong ito. Gayunman, sinusukat pa ng opisina kung nakatulong din ang pagbabago sa kabuuang daloy ng mga aplikante. Ang dagdag na pila ay nasa unang palapag, malapit sa pasukan, at may sariling upuan para sa naghihintay. Isang kawani ang itinalaga upang tingnan ang ID ng mga pumipila rito. Itinatala ng opisina ang oras ng pagdating at pag-alis ng bawat aplikante sa lahat ng pila, at ihahambing ito sa datos noong nakaraang buwan.\n\nTanong: Aling konklusyon ang HINDI pa suportado ng talata?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Patuloy ang pagsusuri ng opisina"
+        },
+        {
+          "option_id": "b",
+          "text": "Bumilis na ang serbisyo para sa lahat ng aplikante"
+        },
+        {
+          "option_id": "c",
+          "text": "May nasukat na pagbabago sa unang linggo"
+        },
+        {
+          "option_id": "d",
+          "text": "May bagong pila para sa ilang aplikante"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Walang patunay na ang lahat ng aplikante ay mas mabilis nang napagsilbihan.",
+        "why_correct": "Walang patunay na ang lahat ng aplikante ay mas mabilis nang napagsilbihan.",
+        "why_wrong": {
+          "a": "Ang \"Patuloy ang pagsusuri ng opisina\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "c": "Ang \"May nasukat na pagbabago sa unang linggo\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "d": "Ang \"May bagong pila para sa ilang aplikante\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-SUPPORTED-NOT-ASKED",
+        "c": "RC-SUPPORTED-NOT-ASKED",
+        "d": "RC-SUPPORTED-NOT-ASKED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0062",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0062",
+          "original_status": "approved",
+          "words_before": 44,
+          "words_after": 98
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0063-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagplano ang paaralan ng reading corner sa lumang silid. Nag-ambag ng mga aklat ang mga magulang at inayos ng mga guro ang mga estante. Bago ito buksan, sinuri ng tagapangasiwa kung ligtas ang mga upuan at maayos ang bentilasyon. Itinakda ang pagbubukas sa susunod na buwan. Ang silid ay dating bodega ng mga lumang mesa at upuan. Pinintahan ito ng mapusyaw na kulay at nilagyan ng banig at maliliit na unan para sa mga batang magbabasa. Hahatiin ang mga aklat ayon sa baitang upang madaling makahanap ang mga bata ng angkop na babasahin.\n\nTanong: Ano ang pangunahing proyekto?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Pagtatayo ng bagong palaruan"
+        },
+        {
+          "option_id": "b",
+          "text": "Paggawa ng reading corner"
+        },
+        {
+          "option_id": "c",
+          "text": "Pagbili ng mga sasakyan"
+        },
+        {
+          "option_id": "d",
+          "text": "Pagpapalit ng lahat ng silid-aralan"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Reading corner ang paksa ng buong talata.",
+        "why_correct": "Reading corner ang paksa ng buong talata.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Pagtatayo ng bagong palaruan\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Pagbili ng mga sasakyan\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Pagpapalit ng lahat ng silid-aralan\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0063",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0063",
+          "original_status": "approved",
+          "words_before": 46,
+          "words_after": 93
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0064-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagplano ang paaralan ng reading corner sa lumang silid. Nag-ambag ng mga aklat ang mga magulang at inayos ng mga guro ang mga estante. Bago ito buksan, sinuri ng tagapangasiwa kung ligtas ang mga upuan at maayos ang bentilasyon. Itinakda ang pagbubukas sa susunod na buwan. Ang silid ay dating bodega ng mga lumang mesa at upuan. Pinintahan ito ng mapusyaw na kulay at nilagyan ng banig at maliliit na unan para sa mga batang magbabasa. Hahatiin ang mga aklat ayon sa baitang upang madaling makahanap ang mga bata ng angkop na babasahin.\n\nTanong: Sino ang nag-ayos ng mga estante?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mga guro"
+        },
+        {
+          "option_id": "b",
+          "text": "Mga magulang"
+        },
+        {
+          "option_id": "c",
+          "text": "Mga mag-aaral"
+        },
+        {
+          "option_id": "d",
+          "text": "Mga bisita"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Nabanggit na inayos ng mga guro ang estante.",
+        "why_correct": "Nabanggit na inayos ng mga guro ang estante.",
+        "why_wrong": {
+          "b": "Walang bahagi ng talata na nagsasabing \"Mga magulang\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Mga mag-aaral\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Mga bisita\"."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0064",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0064",
+          "original_status": "approved",
+          "words_before": 46,
+          "words_after": 93
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0065-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagplano ang paaralan ng reading corner sa lumang silid. Nag-ambag ng mga aklat ang mga magulang at inayos ng mga guro ang mga estante. Bago ito buksan, sinuri ng tagapangasiwa kung ligtas ang mga upuan at maayos ang bentilasyon. Itinakda ang pagbubukas sa susunod na buwan. Ang silid ay dating bodega ng mga lumang mesa at upuan. Pinintahan ito ng mapusyaw na kulay at nilagyan ng banig at maliliit na unan para sa mga batang magbabasa. Hahatiin ang mga aklat ayon sa baitang upang madaling makahanap ang mga bata ng angkop na babasahin.\n\nTanong: Ano ang ginawa bago ang pagbubukas?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Inilipat ang paaralan"
+        },
+        {
+          "option_id": "b",
+          "text": "Giniba ang silid"
+        },
+        {
+          "option_id": "c",
+          "text": "Ipinagbili ang mga aklat"
+        },
+        {
+          "option_id": "d",
+          "text": "Sinuri ang kaligtasan at bentilasyon"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Kaligtasan ng upuan at bentilasyon ang sinuri.",
+        "why_correct": "Kaligtasan ng upuan at bentilasyon ang sinuri.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Inilipat ang paaralan\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Giniba ang silid\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Ipinagbili ang mga aklat\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0065",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0065",
+          "original_status": "approved",
+          "words_before": 46,
+          "words_after": 93
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0066-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nNagplano ang paaralan ng reading corner sa lumang silid. Nag-ambag ng mga aklat ang mga magulang at inayos ng mga guro ang mga estante. Bago ito buksan, sinuri ng tagapangasiwa kung ligtas ang mga upuan at maayos ang bentilasyon. Itinakda ang pagbubukas sa susunod na buwan. Ang silid ay dating bodega ng mga lumang mesa at upuan. Pinintahan ito ng mapusyaw na kulay at nilagyan ng banig at maliliit na unan para sa mga batang magbabasa. Hahatiin ang mga aklat ayon sa baitang upang madaling makahanap ang mga bata ng angkop na babasahin.\n\nTanong: Kailan inaasahang buksan ang reading corner?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Walang itinakdang panahon"
+        },
+        {
+          "option_id": "b",
+          "text": "Ngayong araw"
+        },
+        {
+          "option_id": "c",
+          "text": "Sa susunod na buwan"
+        },
+        {
+          "option_id": "d",
+          "text": "Noong nakaraang taon"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Itinakda ang pagbubukas sa susunod na buwan.",
+        "why_correct": "Itinakda ang pagbubukas sa susunod na buwan.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Walang itinakdang panahon\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Ngayong araw\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Noong nakaraang taon\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0066",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0066",
+          "original_status": "approved",
+          "words_before": 46,
+          "words_after": 93
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0067-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nUpang mabawasan ang mga maling impormasyon sa isang tanggapan, gumawa ang pangkat ng iisang talaan para sa mga anunsiyo. Isang itinalagang kawani lamang ang maaaring magpalit ng opisyal na bersiyon. Maaari pa ring magmungkahi ang lahat, ngunit sinusuri muna ang mungkahi bago ito ilathala. Dati, may kani-kaniyang kopya ang bawat yunit, kaya may mga anunsiyong magkakaiba ang petsa at oras. Ngayon, nasa iisang shared folder ang talaan at may petsa ang bawat pagbabago. Kapag may tanong ang publiko, ito lamang ang tinitingnan ng mga kawani sa harapang mesa.\n\nTanong: Ano ang layunin ng iisang talaan?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mabawasan ang maling impormasyon"
+        },
+        {
+          "option_id": "b",
+          "text": "Maitago ang lahat ng anunsiyo"
+        },
+        {
+          "option_id": "c",
+          "text": "Madagdagan ang magkakaibang bersiyon"
+        },
+        {
+          "option_id": "d",
+          "text": "Matanggal ang bawat mungkahi"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Ang iisang talaan ay ginawa upang mabawasan ang maling impormasyon.",
+        "why_correct": "Ang iisang talaan ay ginawa upang mabawasan ang maling impormasyon.",
+        "why_wrong": {
+          "b": "Walang bahagi ng talata na nagsasabing \"Maitago ang lahat ng anunsiyo\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Madagdagan ang magkakaibang bersiyon\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Matanggal ang bawat mungkahi\"."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0067",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0067",
+          "original_status": "approved",
+          "words_before": 44,
+          "words_after": 88
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0068-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nUpang mabawasan ang mga maling impormasyon sa isang tanggapan, gumawa ang pangkat ng iisang talaan para sa mga anunsiyo. Isang itinalagang kawani lamang ang maaaring magpalit ng opisyal na bersiyon. Maaari pa ring magmungkahi ang lahat, ngunit sinusuri muna ang mungkahi bago ito ilathala. Dati, may kani-kaniyang kopya ang bawat yunit, kaya may mga anunsiyong magkakaiba ang petsa at oras. Ngayon, nasa iisang shared folder ang talaan at may petsa ang bawat pagbabago. Kapag may tanong ang publiko, ito lamang ang tinitingnan ng mga kawani sa harapang mesa.\n\nTanong: Sino ang maaaring magpalit ng opisyal na bersiyon?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Tanging dating empleyado"
+        },
+        {
+          "option_id": "b",
+          "text": "Sinumang bisita"
+        },
+        {
+          "option_id": "c",
+          "text": "Lahat nang walang pagsusuri"
+        },
+        {
+          "option_id": "d",
+          "text": "Isang itinalagang kawani"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Iisa lamang na itinalagang kawani ang may kapangyarihan.",
+        "why_correct": "Iisa lamang na itinalagang kawani ang may kapangyarihan.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Tanging dating empleyado\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Sinumang bisita\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Lahat nang walang pagsusuri\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0068",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0068",
+          "original_status": "approved",
+          "words_before": 44,
+          "words_after": 88
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0069-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nUpang mabawasan ang mga maling impormasyon sa isang tanggapan, gumawa ang pangkat ng iisang talaan para sa mga anunsiyo. Isang itinalagang kawani lamang ang maaaring magpalit ng opisyal na bersiyon. Maaari pa ring magmungkahi ang lahat, ngunit sinusuri muna ang mungkahi bago ito ilathala. Dati, may kani-kaniyang kopya ang bawat yunit, kaya may mga anunsiyong magkakaiba ang petsa at oras. Ngayon, nasa iisang shared folder ang talaan at may petsa ang bawat pagbabago. Kapag may tanong ang publiko, ito lamang ang tinitingnan ng mga kawani sa harapang mesa.\n\nTanong: Ano ang nangyayari sa mga mungkahi?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Hindi kailanman tinatanggap"
+        },
+        {
+          "option_id": "b",
+          "text": "Agad itinatapon"
+        },
+        {
+          "option_id": "c",
+          "text": "Sinusuri muna bago ilathala"
+        },
+        {
+          "option_id": "d",
+          "text": "Awtomatikong nilalathala"
+        }
+      ],
+      "answer_option_id": "c",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Pinapayagan ang mungkahi ngunit sinusuri muna.",
+        "why_correct": "Pinapayagan ang mungkahi ngunit sinusuri muna.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Hindi kailanman tinatanggap\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Agad itinatapon\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Awtomatikong nilalathala\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0069",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0069",
+          "original_status": "approved",
+          "words_before": 44,
+          "words_after": 88
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0070-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nUpang mabawasan ang mga maling impormasyon sa isang tanggapan, gumawa ang pangkat ng iisang talaan para sa mga anunsiyo. Isang itinalagang kawani lamang ang maaaring magpalit ng opisyal na bersiyon. Maaari pa ring magmungkahi ang lahat, ngunit sinusuri muna ang mungkahi bago ito ilathala. Dati, may kani-kaniyang kopya ang bawat yunit, kaya may mga anunsiyong magkakaiba ang petsa at oras. Ngayon, nasa iisang shared folder ang talaan at may petsa ang bawat pagbabago. Kapag may tanong ang publiko, ito lamang ang tinitingnan ng mga kawani sa harapang mesa.\n\nTanong: Aling gawain ang salungat sa proseso?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Pagbabago ng opisyal na bersiyon ng sinumang kawani"
+        },
+        {
+          "option_id": "b",
+          "text": "Pagsusuri sa mungkahi"
+        },
+        {
+          "option_id": "c",
+          "text": "Pagtatalaga ng responsable sa bersiyon"
+        },
+        {
+          "option_id": "d",
+          "text": "Paggamit ng iisang talaan"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Hindi lahat ng kawani ang maaaring magpalit ng opisyal na bersiyon.",
+        "why_correct": "Hindi lahat ng kawani ang maaaring magpalit ng opisyal na bersiyon.",
+        "why_wrong": {
+          "b": "Ang \"Pagsusuri sa mungkahi\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "c": "Ang \"Pagtatalaga ng responsable sa bersiyon\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap.",
+          "d": "Ang \"Paggamit ng iisang talaan\" ay nakasaad o suportado ng talata, kaya hindi ito ang hinahanap."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "RC-SUPPORTED-NOT-ASKED",
+        "c": "RC-SUPPORTED-NOT-ASKED",
+        "d": "RC-SUPPORTED-NOT-ASKED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0070",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0070",
+          "original_status": "approved",
+          "words_before": 44,
+          "words_after": 88
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0071-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nTuwing umaga, binibilang ng kooperatiba ang natitirang ani bago magtakda ng dami ng ibebenta. Kapag may sobra, inuuna nilang ibigay ito sa mga kasaping may naunang order. Hindi nila agad binabaan ang presyo sapagkat maaari pang may dumating na karagdagang kahilingan sa hapon. Gulay at prutas mula sa mga kasaping magsasaka ang karaniwang ani ng kooperatiba. Isinusulat sa pisara ang dami ng bawat uri pagkatapos magbilang. Tuwing alas-tres ng hapon, sinusuri nilang muli ang mga order bago magpasya kung ano ang gagawin sa natira.\n\nTanong: Ano ang unang ginagawa tuwing umaga?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Kinakansela ang mga order"
+        },
+        {
+          "option_id": "b",
+          "text": "Isinasara ang pamilihan"
+        },
+        {
+          "option_id": "c",
+          "text": "Binabaan agad ang presyo"
+        },
+        {
+          "option_id": "d",
+          "text": "Binibilang ang natitirang ani"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Pagbibilang ng ani ang unang hakbang.",
+        "why_correct": "Pagbibilang ng ani ang unang hakbang.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Kinakansela ang mga order\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Isinasara ang pamilihan\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Binabaan agad ang presyo\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0071",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0071",
+          "original_status": "approved",
+          "words_before": 43,
+          "words_after": 84
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0072-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nTuwing umaga, binibilang ng kooperatiba ang natitirang ani bago magtakda ng dami ng ibebenta. Kapag may sobra, inuuna nilang ibigay ito sa mga kasaping may naunang order. Hindi nila agad binabaan ang presyo sapagkat maaari pang may dumating na karagdagang kahilingan sa hapon. Gulay at prutas mula sa mga kasaping magsasaka ang karaniwang ani ng kooperatiba. Isinusulat sa pisara ang dami ng bawat uri pagkatapos magbilang. Tuwing alas-tres ng hapon, sinusuri nilang muli ang mga order bago magpasya kung ano ang gagawin sa natira.\n\nTanong: Sino ang inuuna kapag may sobrang ani?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mga mamimiling walang tala"
+        },
+        {
+          "option_id": "b",
+          "text": "Mga kasaping may naunang order"
+        },
+        {
+          "option_id": "c",
+          "text": "Mga hindi pa nag-oorder"
+        },
+        {
+          "option_id": "d",
+          "text": "Mga kasaping nahuling umorder"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Mga kasaping may naunang order ang inuuna.",
+        "why_correct": "Mga kasaping may naunang order ang inuuna.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Mga mamimiling walang tala\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Mga hindi pa nag-oorder\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Mga kasaping nahuling umorder\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0072",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0072",
+          "original_status": "approved",
+          "words_before": 43,
+          "words_after": 84
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0073-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nTuwing umaga, binibilang ng kooperatiba ang natitirang ani bago magtakda ng dami ng ibebenta. Kapag may sobra, inuuna nilang ibigay ito sa mga kasaping may naunang order. Hindi nila agad binabaan ang presyo sapagkat maaari pang may dumating na karagdagang kahilingan sa hapon. Gulay at prutas mula sa mga kasaping magsasaka ang karaniwang ani ng kooperatiba. Isinusulat sa pisara ang dami ng bawat uri pagkatapos magbilang. Tuwing alas-tres ng hapon, sinusuri nilang muli ang mga order bago magpasya kung ano ang gagawin sa natira.\n\nTanong: Bakit hindi agad ibinababa ang presyo?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Hindi nila binibilang ang ani"
+        },
+        {
+          "option_id": "b",
+          "text": "Maaaring may bagong kahilingan sa hapon"
+        },
+        {
+          "option_id": "c",
+          "text": "Walang ani sa umaga"
+        },
+        {
+          "option_id": "d",
+          "text": "Ipinagbawal ang pagtitinda"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Posibleng madagdagan ang demand sa hapon.",
+        "why_correct": "Posibleng madagdagan ang demand sa hapon.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Hindi nila binibilang ang ani\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Walang ani sa umaga\".",
+          "d": "Walang bahagi ng talata na nagsasabing \"Ipinagbawal ang pagtitinda\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT",
+        "d": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0073",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0073",
+          "original_status": "approved",
+          "words_before": 43,
+          "words_after": 84
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0074-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Reading comprehension",
+      "concept": "reading",
+      "micro_skill": "reading comprehension",
+      "archetype": "VFIL-READ",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "fil",
+      "stem": "Basahin ang talata:\nTuwing umaga, binibilang ng kooperatiba ang natitirang ani bago magtakda ng dami ng ibebenta. Kapag may sobra, inuuna nilang ibigay ito sa mga kasaping may naunang order. Hindi nila agad binabaan ang presyo sapagkat maaari pang may dumating na karagdagang kahilingan sa hapon. Gulay at prutas mula sa mga kasaping magsasaka ang karaniwang ani ng kooperatiba. Isinusulat sa pisara ang dami ng bawat uri pagkatapos magbilang. Tuwing alas-tres ng hapon, sinusuri nilang muli ang mga order bago magpasya kung ano ang gagawin sa natira.\n\nTanong: Ano ang pinakamainam na paglalarawan sa proseso?",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Awtomatikong inuubos lahat ng ani"
+        },
+        {
+          "option_id": "b",
+          "text": "Laging pareho ang dami ng ibinebenta"
+        },
+        {
+          "option_id": "c",
+          "text": "Walang sinusunod na prayoridad"
+        },
+        {
+          "option_id": "d",
+          "text": "Nakasalalay sa tala ng ani at order ang pasiya"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "Pag-unawa sa binasa: sagutin batay lamang sa nakasaad o malinaw na ipinahihiwatig ng talata.",
+        "shortcut": "Binibilang ang ani at inuuna ang dating order bago magpasya.",
+        "why_correct": "Binibilang ang ani at inuuna ang dating order bago magpasya.",
+        "why_wrong": {
+          "a": "Walang bahagi ng talata na nagsasabing \"Awtomatikong inuubos lahat ng ani\".",
+          "b": "Walang bahagi ng talata na nagsasabing \"Laging pareho ang dami ng ibinebenta\".",
+          "c": "Walang bahagi ng talata na nagsasabing \"Walang sinusunod na prayoridad\"."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "RC-NOT-IN-TEXT",
+        "b": "RC-NOT-IN-TEXT",
+        "c": "RC-NOT-IN-TEXT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
+      "passage_level": "short",
+      "replaces": "CIVIO-VFIL-20261013-0074",
+      "revision_history": [
+        {
+          "date": "2026-10-22",
+          "by": "bank worker",
+          "reason": "GT decision 15:48: Filipino SHORT passages need at least 80 words",
+          "change": "Passage lengthened with neutral background sentences; question, options, key and explanations unchanged.",
+          "from": "CIVIO-VFIL-20261013-0074",
+          "original_status": "approved",
+          "words_before": 43,
+          "words_after": 84
+        }
+      ]
+    }
+  ]
+}

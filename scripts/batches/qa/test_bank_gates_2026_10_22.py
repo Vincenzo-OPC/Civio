@@ -77,12 +77,87 @@ def test_recommendations_cover_queue_and_never_approve():
     pending = {r["id"] for r in m["items"] if r["status"] != "approved"}
     assert {r["id"] for r in rows} == pending
     assert all(r["decision_by_human"] == "" and r["recommendation"] in ("Accept", "Accept revision", "Revise", "Reject", "Escalate") for r in rows)
+    assert all(r["needs_human_read"] == "yes" for r in rows if "D1022" in r["id"]), "every self-authored D1022 row needs a human read"
 
 
 def test_count_is_2100():
     m = json.load(open(MAN))
     assert len(m["items"]) == 2100 and len({r["id"] for r in m["items"]}) == 2100
 
+
+
+FILR1 = "docs/research/audit/fixes/vfil-passage-r1-2026-10-22.json"
+
+
+def _fil(n, level=None, ins="Basahin ang talata:\n"):
+    it = {"domain": "verbal_fil", "archetype": "VFIL-PAGBASA", "stem": ins + " ".join(["salita"] * n) + "\n\nAno ang ipinahihiwatig?"}
+    if level:
+        it["passage_level"] = level
+    return it
+
+
+def test_fil_two_levels():
+    assert qa.passage_errors(_fil(79)) and "at least 80" in qa.passage_errors(_fil(79))[0]
+    assert qa.passage_errors(_fil(80)) == [] and qa.fil_passage_level(80) == "short"
+    assert qa.passage_errors(_fil(149)) == [] and qa.fil_passage_level(149) == "short"
+    assert qa.passage_errors(_fil(150)) == [] and qa.fil_passage_level(150) == "long"
+    assert qa.passage_errors(_fil(250)) == [] and "at most 250" in qa.passage_errors(_fil(251))[0]
+
+
+def test_fil_declared_level_must_match_count():
+    assert qa.passage_errors(_fil(100, "short")) == []
+    assert "declared long" in qa.passage_errors(_fil(100, "long"))[0]
+    assert "declared short" in qa.passage_errors(_fil(160, "short"))[0]
+
+
+def test_fil_instruction_variants_detected_and_not_counted():
+    for ins in ("Basahin ang talata:\n", "Basahin at unawain:\n", "Suriin ang talata sa ibaba:\n", "Talata:\n"):
+        it = _fil(70, ins=ins); it.pop("archetype")
+        assert qa.passage_words(it) == 70, ins
+        assert qa.passage_errors(it), ins
+
+
+def test_manifest_fil_passages_pass_or_have_r1():
+    m = json.load(open(MAN)); props = {p["replaces"]: p for p in json.load(open(FILR1))["items"]}
+    cache, bad = {}, []
+    for r in m["items"]:
+        if r["domain"] != "verbal_fil":
+            continue
+        f = r["source_file"]
+        if f not in cache:
+            d = json.load(open(f)); cache[f] = {i["id"]: i for i in (d["items"] if isinstance(d, dict) else d) if isinstance(i, dict)}
+        it = cache[f][r["id"]]
+        if qa.passage_errors(it) and not (it["status"] == "approved" and r["id"] in props):
+            bad.append(r["id"])
+        if r["id"] in props:
+            assert it["status"] == "approved" and props[r["id"]]["id"] not in {x["id"] for x in m["items"]}
+    assert not bad, bad
+
+
+def test_fil_r1_proposals_are_unapproved_and_keep_keys():
+    m = json.load(open(MAN)); cache = {}
+    for p in json.load(open(FILR1))["items"]:
+        assert p["status"] == "draft" and p["reviewer"] is None and p["id"] == p["replaces"] + "-R1"
+        assert qa.check_item(p) == [] and qa.fil_passage_level(qa.passage_words(p)) == "short"
+        r = next(x for x in m["items"] if x["id"] == p["replaces"]); f = r["source_file"]
+        if f not in cache:
+            d = json.load(open(f)); cache[f] = {i["id"]: i for i in (d["items"] if isinstance(d, dict) else d) if isinstance(i, dict)}
+        o = cache[f][p["replaces"]]
+        assert o["options"] == p["options"] and o["answer_option_id"] == p["answer_option_id"]
+        assert o["stem"].rpartition("\n\n")[2] == p["stem"].rpartition("\n\n")[2]
+
+
+def test_num_template_replacements_are_separate_verified_drafts():
+    import solver_2026_10_22 as S
+    m = json.load(open(MAN)); man = {r["id"]: r for r in m["items"]}
+    d = json.load(open("docs/research/audit/fixes/num-template-replacements-2026-10-22.json"))["items"]
+    assert d and len({x["proposed_replacement_for"] for x in d}) == len(d)
+    for it in d:
+        assert it["status"] == "draft" and it["reviewer"] is None and it["id"] not in man
+        assert man[it["proposed_replacement_for"]]["status"] == "approved" and man[it["kept_original"]]["status"] == "approved"
+        assert qa.check_item(it) == [], (it["id"], qa.check_item(it))
+        if it.get("recipe"):
+            assert S.solve(it) == next(o["text"] for o in it["options"] if o["option_id"] == it["answer_option_id"])
 
 if __name__ == "__main__":
     fails = 0

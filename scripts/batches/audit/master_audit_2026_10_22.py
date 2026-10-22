@@ -34,6 +34,9 @@ def main():
     m, items = load()
     issues = collections.defaultdict(list)
     resolved = collections.defaultdict(list)
+    # GT decision 15:48: approved short Filipino passages stay unchanged; each has a -R1 proposal awaiting authorized review.
+    fil_r1 = {p["replaces"] for p in json.load(open("docs/research/audit/fixes/vfil-passage-r1-2026-10-22.json"))["items"]}
+    flagged = collections.defaultdict(list)
     for r, i in items:
         try:
             e = qa.check_item(i)
@@ -44,6 +47,8 @@ def main():
             covered = re.search(r"solver could not|check_item crashed|GI key mismatch|GI url not verified|key mismatch|more than one option", x)
             if x == "status/source_group" and i.get("status") == "reviewed" and i.get("source_group") == "civio":
                 resolved[i["id"]].append("qa status rule predates 'reviewed' (valid intermediate status)"); continue
+            if x.startswith("Filipino passage has") and i["id"] in fil_r1 and i.get("status") == "approved":
+                flagged[i["id"]].append("short Filipino passage flagged; -R1 proposal in vfil-passage-r1-2026-10-22.json awaits authorized review"); continue
             if covered and sheet:
                 resolved[i["id"]].append("verified by audit/verified_keys_2026_10_22.py: " + x); continue
             issues[i["id"]].append("qa: " + x)
@@ -111,11 +116,11 @@ def main():
            "by_domain": dict(collections.Counter(i["domain"] for _, i in items)),
            "by_status": dict(collections.Counter(i["status"] for _, i in items)),
            "percent_change_numerical": pct,
-           "items_with_issues": len(issues), "resolved_by_sheet": len(resolved), "issues": dict(sorted(issues.items())),
+           "items_with_issues": len(issues), "resolved_by_sheet": len(resolved), "flagged_pending_authorized_review": len(flagged), "flagged": dict(sorted(flagged.items())), "issues": dict(sorted(issues.items())),
            "resolved": dict(sorted(resolved.items())),
            "numeric_variant_clusters": [{"size": n, "domain": d, "frame": f, "ids": v} for n, d, f, v in clusters]}
     OUT.write_text(json.dumps(rep, indent=1, ensure_ascii=False) + "\n")
-    print(json.dumps({k: v for k, v in rep.items() if k != "issues"}, indent=1))
+    print(json.dumps({k: v for k, v in rep.items() if k not in ("issues", "flagged")}, indent=1))
     c = collections.Counter(x.split(":")[0].split(" ")[0] for v in issues.values() for x in v); print(c)
     print(collections.Counter(next(i for r, i in items if i["id"] == k)["domain"] for k in issues))
 

@@ -1,0 +1,1770 @@
+{
+  "batch": "num-template-replacements-2026-10-22",
+  "status": "draft proposals (not approved, not in manifest)",
+  "note": "One-for-one replacement drafts for substantively repetitive approved Numerical items. Approved originals are unchanged.",
+  "items": [
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-000418-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "age problem",
+      "micro_skill": "set up now-and-later ages",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Bong is 3 times as old as his daughter. In 9 years, Bong will be twice as old as the daughter. How old is Bong now?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "36"
+        },
+        {
+          "option_id": "o2",
+          "text": "9"
+        },
+        {
+          "option_id": "o3",
+          "text": "27"
+        },
+        {
+          "option_id": "o4",
+          "text": "18"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "\"3 times as old\" means the age is the younger person's age multiplied by 3.",
+        "shortcut": "Try the choices. If Bong is 27, the daughter is 9. In 9 years: 36 and 18, and 36 = 2 × 18.",
+        "why_correct": "27 is right. Algebra: daughter = s, Bong = 3s; 3s + 9 = 2(s + 9) gives s = 9, so Bong = 27.",
+        "method_steps": {
+          "1_asked": "Bong's age now.",
+          "2_givens": "now Bong = 3 × daughter; in 9 years Bong = 2 × daughter",
+          "3_method": "Let the younger age be s and write the 'in the future' sentence as an equation.",
+          "4_why": "Both people get 9 years older, so add 9 to each age.",
+          "5_solve_by_hand": "3s + 9 = 2s + 18, so 1s = 9 and s = 9; Bong = 3 × 9 = 27.",
+          "6_check": "In 9 years: 36 = 2 × 18.",
+          "8_shortcut": "Younger age = years ÷ (3 − 2); multiply by 3.",
+          "7_distractors": "36 is Bong's age 9 years from now, not today. 9 is the daughter's age now, not Bong's. 18 is the daughter's age 9 years from now."
+        },
+        "why_wrong": {
+          "o2": "9 is the daughter's age now, not Bong's.",
+          "o1": "36 is Bong's age 9 years from now, not today.",
+          "o4": "18 is the daughter's age 9 years from now."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OTHER-SHARE",
+        "o1": "NUM-EXTRA-STEP",
+        "o4": "NUM-OTHER-SHARE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-ALGEBRA-000418 (same numbers, key and wording as CIVIO-NUM-WP-ALGEBRA-000014). Not in the manifest; the approved original stays until authorized review.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-ALGEBRA-000418",
+      "kept_original": "CIVIO-NUM-WP-ALGEBRA-000014",
+      "shortcut": "Younger age = years ÷ (3 − 2); multiply by 3.",
+      "recipe": {
+        "op": "expr",
+        "args": {
+          "expr": "3*9"
+        },
+        "fmt": "num"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-000823-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "age problem",
+      "micro_skill": "set up now-and-later ages",
+      "archetype": "NUM-WP-ALGEBRA",
+      "difficulty": "hard",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Nonoy is 3 times as old as his niece. In 13 years, Nonoy will be twice as old as the niece. How old is Nonoy now?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "26"
+        },
+        {
+          "option_id": "o2",
+          "text": "52"
+        },
+        {
+          "option_id": "o3",
+          "text": "13"
+        },
+        {
+          "option_id": "o4",
+          "text": "39"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "\"3 times as old\" means the age is the younger person's age multiplied by 3.",
+        "shortcut": "Try the choices. If Nonoy is 39, the niece is 13. In 13 years: 52 and 26, and 52 = 2 × 26.",
+        "why_correct": "39 is right. Algebra: niece = s, Nonoy = 3s; 3s + 13 = 2(s + 13) gives s = 13, so Nonoy = 39.",
+        "method_steps": {
+          "1_asked": "Nonoy's age now.",
+          "2_givens": "now Nonoy = 3 × niece; in 13 years Nonoy = 2 × niece",
+          "3_method": "Let the younger age be s and write the 'in the future' sentence as an equation.",
+          "4_why": "Both people get 13 years older, so add 13 to each age.",
+          "5_solve_by_hand": "3s + 13 = 2s + 26, so 1s = 13 and s = 13; Nonoy = 3 × 13 = 39.",
+          "6_check": "In 13 years: 52 = 2 × 26.",
+          "8_shortcut": "Younger age = years ÷ (3 − 2); multiply by 3.",
+          "7_distractors": "26 is the niece's age 13 years from now. 52 is Nonoy's age 13 years from now, not today. 13 is the niece's age now, not Nonoy's."
+        },
+        "why_wrong": {
+          "o3": "13 is the niece's age now, not Nonoy's.",
+          "o2": "52 is Nonoy's age 13 years from now, not today.",
+          "o1": "26 is the niece's age 13 years from now."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "NUM-OTHER-SHARE",
+        "o2": "NUM-EXTRA-STEP",
+        "o1": "NUM-OTHER-SHARE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-ALGEBRA-000823 (same numbers, key and wording as CIVIO-NUM-WP-ALGEBRA-000025). Not in the manifest; the approved original stays until authorized review.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-ALGEBRA-000823",
+      "kept_original": "CIVIO-NUM-WP-ALGEBRA-000025",
+      "shortcut": "Younger age = years ÷ (3 − 2); multiply by 3.",
+      "recipe": {
+        "op": "expr",
+        "args": {
+          "expr": "3*13"
+        },
+        "fmt": "num"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000042-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Ramon can encode a box of survey forms in 9 hours. Arnel can do the same job in 72 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "40.5 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "81 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "8 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "9 hours"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Ramon does 1/9 and Arnel does 1/72 of the job. Together: 1/9 + 1/72 = 1/8, so the job takes 8 hours.",
+        "why_correct": "8 hours is right. Check: in 8 hours, Ramon does 8/9 and Arnel does 1/9 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Ramon alone 9 hours; Arnel alone 72 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/9 + 1/72 = 1/8 of the job per hour; 1 ÷ 1/8 = 8 hours.",
+          "6_check": "8/9 + 1/9 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (9 × 72) ÷ (9 + 72) = 648 ÷ 81 = 8 hours.",
+          "7_distractors": "40.5 hours is the average of the two times. Together they must be faster than the faster person alone. 81 hours adds the two times. Add the work done per hour, not the hours. 9 hours is how long the faster worker needs alone; with help the job takes less time."
+        },
+        "why_wrong": {
+          "o2": "81 hours adds the two times. Add the work done per hour, not the hours.",
+          "o1": "40.5 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o4": "9 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o1": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000042 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000011). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (9 × 72) ÷ (9 + 72) = 648 ÷ 81 = 8 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000042",
+      "kept_original": "CIVIO-NUM-WP-RATE-000011",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 9,
+          "b": 72
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000212-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Grace can paint a classroom in 24 hours. Mang Jun can do the same job in 12 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "8 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "12 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "18 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "36 hours"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Grace does 1/24 and Mang Jun does 1/12 of the job. Together: 1/24 + 1/12 = 1/8, so the job takes 8 hours.",
+        "why_correct": "8 hours is right. Check: in 8 hours, Grace does 1/3 and Mang Jun does 2/3 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Grace alone 24 hours; Mang Jun alone 12 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/24 + 1/12 = 1/8 of the job per hour; 1 ÷ 1/8 = 8 hours.",
+          "6_check": "1/3 + 2/3 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (24 × 12) ÷ (24 + 12) = 288 ÷ 36 = 8 hours.",
+          "7_distractors": "12 hours is how long the faster worker needs alone; with help the job takes less time. 18 hours is the average of the two times. Together they must be faster than the faster person alone. 36 hours adds the two times. Add the work done per hour, not the hours."
+        },
+        "why_wrong": {
+          "o4": "36 hours adds the two times. Add the work done per hour, not the hours.",
+          "o3": "18 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o2": "12 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "NUM-OP-SWAP",
+        "o3": "NUM-WRONG-BASE",
+        "o2": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000212 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000011). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (24 × 12) ÷ (24 + 12) = 288 ÷ 36 = 8 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000212",
+      "kept_original": "CIVIO-NUM-WP-RATE-000011",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 24,
+          "b": 12
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000524-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Cora can repack the relief goods in 30 hours. Lourdes can do the same job in 15 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "10 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "15 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "22.5 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "45 hours"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Cora does 1/30 and Lourdes does 1/15 of the job. Together: 1/30 + 1/15 = 1/10, so the job takes 10 hours.",
+        "why_correct": "10 hours is right. Check: in 10 hours, Cora does 1/3 and Lourdes does 2/3 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Cora alone 30 hours; Lourdes alone 15 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/30 + 1/15 = 1/10 of the job per hour; 1 ÷ 1/10 = 10 hours.",
+          "6_check": "1/3 + 2/3 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (30 × 15) ÷ (30 + 15) = 450 ÷ 45 = 10 hours.",
+          "7_distractors": "15 hours is how long the faster worker needs alone; with help the job takes less time. 22.5 hours is the average of the two times. Together they must be faster than the faster person alone. 45 hours adds the two times. Add the work done per hour, not the hours."
+        },
+        "why_wrong": {
+          "o4": "45 hours adds the two times. Add the work done per hour, not the hours.",
+          "o3": "22.5 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o2": "15 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "NUM-OP-SWAP",
+        "o3": "NUM-WRONG-BASE",
+        "o2": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000524 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000011). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (30 × 15) ÷ (30 + 15) = 450 ÷ 45 = 10 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000524",
+      "kept_original": "CIVIO-NUM-WP-RATE-000011",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 30,
+          "b": 15
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000424-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Bea can clean the plaza in 20 hours. Aileen can do the same job in 5 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "4 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "5 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "12.5 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "25 hours"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Bea does 1/20 and Aileen does 1/5 of the job. Together: 1/20 + 1/5 = 1/4, so the job takes 4 hours.",
+        "why_correct": "4 hours is right. Check: in 4 hours, Bea does 1/5 and Aileen does 4/5 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Bea alone 20 hours; Aileen alone 5 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/20 + 1/5 = 1/4 of the job per hour; 1 ÷ 1/4 = 4 hours.",
+          "6_check": "1/5 + 4/5 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (20 × 5) ÷ (20 + 5) = 100 ÷ 25 = 4 hours.",
+          "7_distractors": "5 hours is how long the faster worker needs alone; with help the job takes less time. 12.5 hours is the average of the two times. Together they must be faster than the faster person alone. 25 hours adds the two times. Add the work done per hour, not the hours."
+        },
+        "why_wrong": {
+          "o4": "25 hours adds the two times. Add the work done per hour, not the hours.",
+          "o3": "12.5 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o2": "5 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "NUM-OP-SWAP",
+        "o3": "NUM-WRONG-BASE",
+        "o2": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000424 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000112). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (20 × 5) ÷ (20 + 5) = 100 ÷ 25 = 4 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000424",
+      "kept_original": "CIVIO-NUM-WP-RATE-000112",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 20,
+          "b": 5
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000722-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Liza can paint a classroom in 28 hours. Rogelio can do the same job in 84 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "56 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "112 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "21 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "28 hours"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Liza does 1/28 and Rogelio does 1/84 of the job. Together: 1/28 + 1/84 = 1/21, so the job takes 21 hours.",
+        "why_correct": "21 hours is right. Check: in 21 hours, Liza does 3/4 and Rogelio does 1/4 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Liza alone 28 hours; Rogelio alone 84 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/28 + 1/84 = 1/21 of the job per hour; 1 ÷ 1/21 = 21 hours.",
+          "6_check": "3/4 + 1/4 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (28 × 84) ÷ (28 + 84) = 2352 ÷ 112 = 21 hours.",
+          "7_distractors": "56 hours is the average of the two times. Together they must be faster than the faster person alone. 112 hours adds the two times. Add the work done per hour, not the hours. 28 hours is how long the faster worker needs alone; with help the job takes less time."
+        },
+        "why_wrong": {
+          "o2": "112 hours adds the two times. Add the work done per hour, not the hours.",
+          "o1": "56 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o4": "28 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o1": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000722 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000112). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (28 × 84) ÷ (28 + 84) = 2352 ÷ 112 = 21 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000722",
+      "kept_original": "CIVIO-NUM-WP-RATE-000112",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 28,
+          "b": 84
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000521-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Paolo can scan the old land titles in 10 hours. Grace can do the same job in 90 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "100 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "9 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "10 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "50 hours"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Paolo does 1/10 and Grace does 1/90 of the job. Together: 1/10 + 1/90 = 1/9, so the job takes 9 hours.",
+        "why_correct": "9 hours is right. Check: in 9 hours, Paolo does 9/10 and Grace does 1/10 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Paolo alone 10 hours; Grace alone 90 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/10 + 1/90 = 1/9 of the job per hour; 1 ÷ 1/9 = 9 hours.",
+          "6_check": "9/10 + 1/10 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (10 × 90) ÷ (10 + 90) = 900 ÷ 100 = 9 hours.",
+          "7_distractors": "100 hours adds the two times. Add the work done per hour, not the hours. 10 hours is how long the faster worker needs alone; with help the job takes less time. 50 hours is the average of the two times. Together they must be faster than the faster person alone."
+        },
+        "why_wrong": {
+          "o1": "100 hours adds the two times. Add the work done per hour, not the hours.",
+          "o4": "50 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o3": "10 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o4": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000521 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000239). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (10 × 90) ÷ (10 + 90) = 900 ÷ 100 = 9 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000521",
+      "kept_original": "CIVIO-NUM-WP-RATE-000239",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 10,
+          "b": 90
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000419-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Kimberly can encode a box of survey forms in 60 hours. Carlo can do the same job in 20 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "20 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "40 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "80 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "15 hours"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Kimberly does 1/60 and Carlo does 1/20 of the job. Together: 1/60 + 1/20 = 1/15, so the job takes 15 hours.",
+        "why_correct": "15 hours is right. Check: in 15 hours, Kimberly does 1/4 and Carlo does 3/4 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Kimberly alone 60 hours; Carlo alone 20 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/60 + 1/20 = 1/15 of the job per hour; 1 ÷ 1/15 = 15 hours.",
+          "6_check": "1/4 + 3/4 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (60 × 20) ÷ (60 + 20) = 1200 ÷ 80 = 15 hours.",
+          "7_distractors": "20 hours is how long the faster worker needs alone; with help the job takes less time. 40 hours is the average of the two times. Together they must be faster than the faster person alone. 80 hours adds the two times. Add the work done per hour, not the hours."
+        },
+        "why_wrong": {
+          "o3": "80 hours adds the two times. Add the work done per hour, not the hours.",
+          "o2": "40 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o1": "20 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "NUM-OP-SWAP",
+        "o2": "NUM-WRONG-BASE",
+        "o1": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000419 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000313). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (60 × 20) ÷ (60 + 20) = 1200 ÷ 80 = 15 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000419",
+      "kept_original": "CIVIO-NUM-WP-RATE-000313",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 60,
+          "b": 20
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000518-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Dindo can paint a classroom in 16 hours. Aling Rosa can do the same job in 48 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "32 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "64 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "12 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "16 hours"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Dindo does 1/16 and Aling Rosa does 1/48 of the job. Together: 1/16 + 1/48 = 1/12, so the job takes 12 hours.",
+        "why_correct": "12 hours is right. Check: in 12 hours, Dindo does 3/4 and Aling Rosa does 1/4 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Dindo alone 16 hours; Aling Rosa alone 48 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/16 + 1/48 = 1/12 of the job per hour; 1 ÷ 1/12 = 12 hours.",
+          "6_check": "3/4 + 1/4 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (16 × 48) ÷ (16 + 48) = 768 ÷ 64 = 12 hours.",
+          "7_distractors": "32 hours is the average of the two times. Together they must be faster than the faster person alone. 64 hours adds the two times. Add the work done per hour, not the hours. 16 hours is how long the faster worker needs alone; with help the job takes less time."
+        },
+        "why_wrong": {
+          "o2": "64 hours adds the two times. Add the work done per hour, not the hours.",
+          "o1": "32 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o4": "16 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o1": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000518 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000313). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (16 × 48) ÷ (16 + 48) = 768 ÷ 64 = 12 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000518",
+      "kept_original": "CIVIO-NUM-WP-RATE-000313",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 16,
+          "b": 48
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000635-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Mang Jun can repack the relief goods in 20 hours. Efren can do the same job in 80 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "20 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "50 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "100 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "16 hours"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Mang Jun does 1/20 and Efren does 1/80 of the job. Together: 1/20 + 1/80 = 1/16, so the job takes 16 hours.",
+        "why_correct": "16 hours is right. Check: in 16 hours, Mang Jun does 4/5 and Efren does 1/5 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Mang Jun alone 20 hours; Efren alone 80 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/20 + 1/80 = 1/16 of the job per hour; 1 ÷ 1/16 = 16 hours.",
+          "6_check": "4/5 + 1/5 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (20 × 80) ÷ (20 + 80) = 1600 ÷ 100 = 16 hours.",
+          "7_distractors": "20 hours is how long the faster worker needs alone; with help the job takes less time. 50 hours is the average of the two times. Together they must be faster than the faster person alone. 100 hours adds the two times. Add the work done per hour, not the hours."
+        },
+        "why_wrong": {
+          "o3": "100 hours adds the two times. Add the work done per hour, not the hours.",
+          "o2": "50 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o1": "20 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o3": "NUM-OP-SWAP",
+        "o2": "NUM-WRONG-BASE",
+        "o1": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000635 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000317). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (20 × 80) ÷ (20 + 80) = 1600 ÷ 100 = 16 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000635",
+      "kept_original": "CIVIO-NUM-WP-RATE-000317",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 20,
+          "b": 80
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000721-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Jomar can label the census boxes in 24 hours. Bong can do the same job in 40 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "64 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "15 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "24 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "32 hours"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Jomar does 1/24 and Bong does 1/40 of the job. Together: 1/24 + 1/40 = 1/15, so the job takes 15 hours.",
+        "why_correct": "15 hours is right. Check: in 15 hours, Jomar does 5/8 and Bong does 3/8 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Jomar alone 24 hours; Bong alone 40 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/24 + 1/40 = 1/15 of the job per hour; 1 ÷ 1/15 = 15 hours.",
+          "6_check": "5/8 + 3/8 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (24 × 40) ÷ (24 + 40) = 960 ÷ 64 = 15 hours.",
+          "7_distractors": "64 hours adds the two times. Add the work done per hour, not the hours. 24 hours is how long the faster worker needs alone; with help the job takes less time. 32 hours is the average of the two times. Together they must be faster than the faster person alone."
+        },
+        "why_wrong": {
+          "o1": "64 hours adds the two times. Add the work done per hour, not the hours.",
+          "o4": "32 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o3": "24 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o4": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000721 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000718). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (24 × 40) ÷ (24 + 40) = 960 ÷ 64 = 15 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000721",
+      "kept_original": "CIVIO-NUM-WP-RATE-000718",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 24,
+          "b": 40
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000814-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Rogelio can sort a sack of mail in 33 hours. Tess can do the same job in 66 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "49.5 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "99 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "22 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "33 hours"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Rogelio does 1/33 and Tess does 1/66 of the job. Together: 1/33 + 1/66 = 1/22, so the job takes 22 hours.",
+        "why_correct": "22 hours is right. Check: in 22 hours, Rogelio does 2/3 and Tess does 1/3 of the job; together that is 1 whole job.",
+        "method_steps": {
+          "1_asked": "The time to finish one job working together.",
+          "2_givens": "Rogelio alone 33 hours; Tess alone 66 hours",
+          "3_method": "Add the hourly rates, then turn the combined rate back into a time.",
+          "4_why": "Each person finishes a fraction of the job per hour, and those fractions add.",
+          "5_solve_by_hand": "1/33 + 1/66 = 1/22 of the job per hour; 1 ÷ 1/22 = 22 hours.",
+          "6_check": "2/3 + 1/3 = 1 job.",
+          "8_shortcut": "Time together = product ÷ sum: (33 × 66) ÷ (33 + 66) = 2178 ÷ 99 = 22 hours.",
+          "7_distractors": "49.5 hours is the average of the two times. Together they must be faster than the faster person alone. 99 hours adds the two times. Add the work done per hour, not the hours. 33 hours is how long the faster worker needs alone; with help the job takes less time."
+        },
+        "why_wrong": {
+          "o2": "99 hours adds the two times. Add the work done per hour, not the hours.",
+          "o1": "49.5 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o4": "33 hours is how long the faster worker needs alone; with help the job takes less time."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o1": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATE-000814 (same numbers, key and wording as CIVIO-NUM-WP-RATE-000812). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Time together = product ÷ sum: (33 × 66) ÷ (33 + 66) = 2178 ÷ 99 = 22 hours.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATE-000814",
+      "kept_original": "CIVIO-NUM-WP-RATE-000812",
+      "recipe": {
+        "op": "together",
+        "args": {
+          "a": 33,
+          "b": 66
+        },
+        "fmt": "unit",
+        "unit": "hours"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-000516-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ratio",
+      "micro_skill": "split a total in a ratio",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Bong and Teresa will share ₱16,000 of harvest income in the ratio 3 : 5. How much is Teresa's share?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱10,000"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱2,000"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱3,200"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱6,000"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A ratio of 3 : 5 means for every 3 pesos Bong gets, Teresa gets 5 pesos.",
+        "shortcut": "Add the ratio numbers: 3 + 5 = 8 equal parts. One part = ₱16,000 ÷ 8 = ₱2,000. Teresa gets 5 parts.",
+        "why_correct": "₱10,000 is right: 5 × ₱2,000 = ₱10,000. Check: ₱6,000 + ₱10,000 = ₱16,000.",
+        "method_steps": {
+          "1_asked": "Teresa's share.",
+          "2_givens": "total ₱16,000; ratio 3 : 5",
+          "3_method": "Split the total into equal parts, then take the parts for the person asked.",
+          "4_why": "A ratio says how many equal parts each person gets.",
+          "5_solve_by_hand": "3 + 5 = 8; ₱16,000 ÷ 8 = ₱2,000; ₱2,000 × 5 = ₱10,000.",
+          "6_check": "₱6,000 + ₱10,000 = ₱16,000, and ₱6,000 : ₱10,000 = 3 : 5.",
+          "8_shortcut": "Share = total × 5/8.",
+          "7_distractors": "₱2,000 is one part. It stops before multiplying by 5. ₱3,200 divides the total by 5 alone, not by all 8 parts. ₱6,000 is Bong's share (3 parts). The question asks for Teresa."
+        },
+        "why_wrong": {
+          "o4": "₱6,000 is Bong's share (3 parts). The question asks for Teresa.",
+          "o3": "₱3,200 divides the total by 5 alone, not by all 8 parts.",
+          "o2": "₱2,000 is one part. It stops before multiplying by 5."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "NUM-OTHER-SHARE",
+        "o3": "NUM-WRONG-BASE",
+        "o2": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATIO-000516 (same numbers, key and wording as CIVIO-NUM-WP-RATIO-000022). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Share = total × 5/8.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATIO-000516",
+      "kept_original": "CIVIO-NUM-WP-RATIO-000022",
+      "recipe": {
+        "op": "ratio_share",
+        "args": {
+          "total": 16000,
+          "parts": [
+            3,
+            5
+          ],
+          "idx": 1
+        },
+        "fmt": "peso"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-000629-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ratio",
+      "micro_skill": "split a total in a ratio",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Inday and Dindo will share ₱21,000 of cleanup fund in the ratio 2 : 5. How much is Dindo's share?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱6,000"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱15,000"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱3,000"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱4,200"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "A ratio of 2 : 5 means for every 2 pesos Inday gets, Dindo gets 5 pesos.",
+        "shortcut": "Add the ratio numbers: 2 + 5 = 7 equal parts. One part = ₱21,000 ÷ 7 = ₱3,000. Dindo gets 5 parts.",
+        "why_correct": "₱15,000 is right: 5 × ₱3,000 = ₱15,000. Check: ₱6,000 + ₱15,000 = ₱21,000.",
+        "method_steps": {
+          "1_asked": "Dindo's share.",
+          "2_givens": "total ₱21,000; ratio 2 : 5",
+          "3_method": "Split the total into equal parts, then take the parts for the person asked.",
+          "4_why": "A ratio says how many equal parts each person gets.",
+          "5_solve_by_hand": "2 + 5 = 7; ₱21,000 ÷ 7 = ₱3,000; ₱3,000 × 5 = ₱15,000.",
+          "6_check": "₱6,000 + ₱15,000 = ₱21,000, and ₱6,000 : ₱15,000 = 2 : 5.",
+          "8_shortcut": "Share = total × 5/7.",
+          "7_distractors": "₱6,000 is Inday's share (2 parts). The question asks for Dindo. ₱3,000 is one part. It stops before multiplying by 5. ₱4,200 divides the total by 5 alone, not by all 7 parts."
+        },
+        "why_wrong": {
+          "o1": "₱6,000 is Inday's share (2 parts). The question asks for Dindo.",
+          "o4": "₱4,200 divides the total by 5 alone, not by all 7 parts.",
+          "o3": "₱3,000 is one part. It stops before multiplying by 5."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o4": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATIO-000629 (same numbers, key and wording as CIVIO-NUM-WP-RATIO-000022). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Share = total × 5/7.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATIO-000629",
+      "kept_original": "CIVIO-NUM-WP-RATIO-000022",
+      "recipe": {
+        "op": "ratio_share",
+        "args": {
+          "total": 21000,
+          "parts": [
+            2,
+            5
+          ],
+          "idx": 1
+        },
+        "fmt": "peso"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-000714-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ratio",
+      "micro_skill": "split a total in a ratio",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Aileen and Datu will share ₱8,400 of harvest income in the ratio 5 : 9. How much is Datu's share?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱933.33"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱3,000"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱5,400"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱600"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "A ratio of 5 : 9 means for every 5 pesos Aileen gets, Datu gets 9 pesos.",
+        "shortcut": "Add the ratio numbers: 5 + 9 = 14 equal parts. One part = ₱8,400 ÷ 14 = ₱600. Datu gets 9 parts.",
+        "why_correct": "₱5,400 is right: 9 × ₱600 = ₱5,400. Check: ₱3,000 + ₱5,400 = ₱8,400.",
+        "method_steps": {
+          "1_asked": "Datu's share.",
+          "2_givens": "total ₱8,400; ratio 5 : 9",
+          "3_method": "Split the total into equal parts, then take the parts for the person asked.",
+          "4_why": "A ratio says how many equal parts each person gets.",
+          "5_solve_by_hand": "5 + 9 = 14; ₱8,400 ÷ 14 = ₱600; ₱600 × 9 = ₱5,400.",
+          "6_check": "₱3,000 + ₱5,400 = ₱8,400, and ₱3,000 : ₱5,400 = 5 : 9.",
+          "8_shortcut": "Share = total × 9/14.",
+          "7_distractors": "₱933.33 divides the total by 9 alone, not by all 14 parts. ₱3,000 is Aileen's share (5 parts). The question asks for Datu. ₱600 is one part. It stops before multiplying by 9."
+        },
+        "why_wrong": {
+          "o2": "₱3,000 is Aileen's share (5 parts). The question asks for Datu.",
+          "o1": "₱933.33 divides the total by 9 alone, not by all 14 parts.",
+          "o4": "₱600 is one part. It stops before multiplying by 9."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OTHER-SHARE",
+        "o1": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATIO-000714 (same numbers, key and wording as CIVIO-NUM-WP-RATIO-000126). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Share = total × 9/14.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATIO-000714",
+      "kept_original": "CIVIO-NUM-WP-RATIO-000126",
+      "recipe": {
+        "op": "ratio_share",
+        "args": {
+          "total": 8400,
+          "parts": [
+            5,
+            9
+          ],
+          "idx": 1
+        },
+        "fmt": "peso"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-000740-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ratio",
+      "micro_skill": "split a total in a ratio",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Tess and Ramon will share ₱6,300 of allowance fund in the ratio 4 : 5. How much is Ramon's share?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱3,500"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱700"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱1,260"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱2,800"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A ratio of 4 : 5 means for every 4 pesos Tess gets, Ramon gets 5 pesos.",
+        "shortcut": "Add the ratio numbers: 4 + 5 = 9 equal parts. One part = ₱6,300 ÷ 9 = ₱700. Ramon gets 5 parts.",
+        "why_correct": "₱3,500 is right: 5 × ₱700 = ₱3,500. Check: ₱2,800 + ₱3,500 = ₱6,300.",
+        "method_steps": {
+          "1_asked": "Ramon's share.",
+          "2_givens": "total ₱6,300; ratio 4 : 5",
+          "3_method": "Split the total into equal parts, then take the parts for the person asked.",
+          "4_why": "A ratio says how many equal parts each person gets.",
+          "5_solve_by_hand": "4 + 5 = 9; ₱6,300 ÷ 9 = ₱700; ₱700 × 5 = ₱3,500.",
+          "6_check": "₱2,800 + ₱3,500 = ₱6,300, and ₱2,800 : ₱3,500 = 4 : 5.",
+          "8_shortcut": "Share = total × 5/9.",
+          "7_distractors": "₱700 is one part. It stops before multiplying by 5. ₱1,260 divides the total by 5 alone, not by all 9 parts. ₱2,800 is Tess's share (4 parts). The question asks for Ramon."
+        },
+        "why_wrong": {
+          "o4": "₱2,800 is Tess's share (4 parts). The question asks for Ramon.",
+          "o3": "₱1,260 divides the total by 5 alone, not by all 9 parts.",
+          "o2": "₱700 is one part. It stops before multiplying by 5."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "NUM-OTHER-SHARE",
+        "o3": "NUM-WRONG-BASE",
+        "o2": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATIO-000740 (same numbers, key and wording as CIVIO-NUM-WP-RATIO-000223). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Share = total × 5/9.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATIO-000740",
+      "kept_original": "CIVIO-NUM-WP-RATIO-000223",
+      "recipe": {
+        "op": "ratio_share",
+        "args": {
+          "total": 6300,
+          "parts": [
+            4,
+            5
+          ],
+          "idx": 1
+        },
+        "fmt": "peso"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-000816-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ratio",
+      "micro_skill": "split a total in a ratio",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Cora and Kimberly will share ₱4,800 of harvest income in the ratio 5 : 7. How much is Kimberly's share?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱2,800"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱400"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱685.71"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱2,000"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A ratio of 5 : 7 means for every 5 pesos Cora gets, Kimberly gets 7 pesos.",
+        "shortcut": "Add the ratio numbers: 5 + 7 = 12 equal parts. One part = ₱4,800 ÷ 12 = ₱400. Kimberly gets 7 parts.",
+        "why_correct": "₱2,800 is right: 7 × ₱400 = ₱2,800. Check: ₱2,000 + ₱2,800 = ₱4,800.",
+        "method_steps": {
+          "1_asked": "Kimberly's share.",
+          "2_givens": "total ₱4,800; ratio 5 : 7",
+          "3_method": "Split the total into equal parts, then take the parts for the person asked.",
+          "4_why": "A ratio says how many equal parts each person gets.",
+          "5_solve_by_hand": "5 + 7 = 12; ₱4,800 ÷ 12 = ₱400; ₱400 × 7 = ₱2,800.",
+          "6_check": "₱2,000 + ₱2,800 = ₱4,800, and ₱2,000 : ₱2,800 = 5 : 7.",
+          "8_shortcut": "Share = total × 7/12.",
+          "7_distractors": "₱400 is one part. It stops before multiplying by 7. ₱685.71 divides the total by 7 alone, not by all 12 parts. ₱2,000 is Cora's share (5 parts). The question asks for Kimberly."
+        },
+        "why_wrong": {
+          "o4": "₱2,000 is Cora's share (5 parts). The question asks for Kimberly.",
+          "o3": "₱685.71 divides the total by 7 alone, not by all 12 parts.",
+          "o2": "₱400 is one part. It stops before multiplying by 7."
+        }
+      },
+      "distractor_reasoning": {
+        "o4": "NUM-OTHER-SHARE",
+        "o3": "NUM-WRONG-BASE",
+        "o2": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATIO-000816 (same numbers, key and wording as CIVIO-NUM-WP-RATIO-000223). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Share = total × 7/12.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATIO-000816",
+      "kept_original": "CIVIO-NUM-WP-RATIO-000223",
+      "recipe": {
+        "op": "ratio_share",
+        "args": {
+          "total": 4800,
+          "parts": [
+            5,
+            7
+          ],
+          "idx": 1
+        },
+        "fmt": "peso"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-000929-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ratio",
+      "micro_skill": "split a total in a ratio",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Mang Jun and Datu will share ₱7,200 of prize money in the ratio 2 : 7. How much is Datu's share?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱1,600"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱5,600"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱800"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱1,028.57"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "A ratio of 2 : 7 means for every 2 pesos Mang Jun gets, Datu gets 7 pesos.",
+        "shortcut": "Add the ratio numbers: 2 + 7 = 9 equal parts. One part = ₱7,200 ÷ 9 = ₱800. Datu gets 7 parts.",
+        "why_correct": "₱5,600 is right: 7 × ₱800 = ₱5,600. Check: ₱1,600 + ₱5,600 = ₱7,200.",
+        "method_steps": {
+          "1_asked": "Datu's share.",
+          "2_givens": "total ₱7,200; ratio 2 : 7",
+          "3_method": "Split the total into equal parts, then take the parts for the person asked.",
+          "4_why": "A ratio says how many equal parts each person gets.",
+          "5_solve_by_hand": "2 + 7 = 9; ₱7,200 ÷ 9 = ₱800; ₱800 × 7 = ₱5,600.",
+          "6_check": "₱1,600 + ₱5,600 = ₱7,200, and ₱1,600 : ₱5,600 = 2 : 7.",
+          "8_shortcut": "Share = total × 7/9.",
+          "7_distractors": "₱1,600 is Mang Jun's share (2 parts). The question asks for Datu. ₱800 is one part. It stops before multiplying by 7. ₱1,028.57 divides the total by 7 alone, not by all 9 parts."
+        },
+        "why_wrong": {
+          "o1": "₱1,600 is Mang Jun's share (2 parts). The question asks for Datu.",
+          "o4": "₱1,028.57 divides the total by 7 alone, not by all 9 parts.",
+          "o3": "₱800 is one part. It stops before multiplying by 7."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o4": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATIO-000929 (same numbers, key and wording as CIVIO-NUM-WP-RATIO-000223). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Share = total × 7/9.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATIO-000929",
+      "kept_original": "CIVIO-NUM-WP-RATIO-000223",
+      "recipe": {
+        "op": "ratio_share",
+        "args": {
+          "total": 7200,
+          "parts": [
+            2,
+            7
+          ],
+          "idx": 1
+        },
+        "fmt": "peso"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-000637-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ratio",
+      "micro_skill": "split a total in a ratio",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A ₱13,500 commission is divided between Mylene and Aling Rosa in the ratio 4 : 5. What is Aling Rosa's share?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱6,000"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱7,500"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱1,500"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱2,700"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "A ratio of 4 : 5 means for every 4 pesos Mylene gets, Aling Rosa gets 5 pesos.",
+        "shortcut": "Add the ratio numbers: 4 + 5 = 9 equal parts. One part = ₱13,500 ÷ 9 = ₱1,500. Aling Rosa gets 5 parts.",
+        "why_correct": "₱7,500 is right: 5 × ₱1,500 = ₱7,500. Check: ₱6,000 + ₱7,500 = ₱13,500.",
+        "method_steps": {
+          "1_asked": "Aling Rosa's share.",
+          "2_givens": "total ₱13,500; ratio 4 : 5",
+          "3_method": "Split the total into equal parts, then take the parts for the person asked.",
+          "4_why": "A ratio says how many equal parts each person gets.",
+          "5_solve_by_hand": "4 + 5 = 9; ₱13,500 ÷ 9 = ₱1,500; ₱1,500 × 5 = ₱7,500.",
+          "6_check": "₱6,000 + ₱7,500 = ₱13,500, and ₱6,000 : ₱7,500 = 4 : 5.",
+          "8_shortcut": "Share = total × 5/9.",
+          "7_distractors": "₱6,000 is Mylene's share (4 parts). The question asks for Aling Rosa. ₱1,500 is one part. It stops before multiplying by 5. ₱2,700 divides the total by 5 alone, not by all 9 parts."
+        },
+        "why_wrong": {
+          "o1": "₱6,000 is Mylene's share (4 parts). The question asks for Aling Rosa.",
+          "o4": "₱2,700 divides the total by 5 alone, not by all 9 parts.",
+          "o3": "₱1,500 is one part. It stops before multiplying by 5."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o4": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATIO-000637 (same numbers, key and wording as CIVIO-NUM-WP-RATIO-000432). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Share = total × 5/9.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATIO-000637",
+      "kept_original": "CIVIO-NUM-WP-RATIO-000432",
+      "recipe": {
+        "op": "ratio_share",
+        "args": {
+          "total": 13500,
+          "parts": [
+            4,
+            5
+          ],
+          "idx": 1
+        },
+        "fmt": "peso"
+      }
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-000813-TR1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "ratio",
+      "micro_skill": "split a total in a ratio",
+      "archetype": "NUM-WP-RATIO",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A ₱11,200 harvest income is divided between Inday and Aileen in the ratio 3 : 4. What is Aileen's share?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱4,800"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱6,400"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱1,600"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱2,800"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "A ratio of 3 : 4 means for every 3 pesos Inday gets, Aileen gets 4 pesos.",
+        "shortcut": "Add the ratio numbers: 3 + 4 = 7 equal parts. One part = ₱11,200 ÷ 7 = ₱1,600. Aileen gets 4 parts.",
+        "why_correct": "₱6,400 is right: 4 × ₱1,600 = ₱6,400. Check: ₱4,800 + ₱6,400 = ₱11,200.",
+        "method_steps": {
+          "1_asked": "Aileen's share.",
+          "2_givens": "total ₱11,200; ratio 3 : 4",
+          "3_method": "Split the total into equal parts, then take the parts for the person asked.",
+          "4_why": "A ratio says how many equal parts each person gets.",
+          "5_solve_by_hand": "3 + 4 = 7; ₱11,200 ÷ 7 = ₱1,600; ₱1,600 × 4 = ₱6,400.",
+          "6_check": "₱4,800 + ₱6,400 = ₱11,200, and ₱4,800 : ₱6,400 = 3 : 4.",
+          "8_shortcut": "Share = total × 4/7.",
+          "7_distractors": "₱4,800 is Inday's share (3 parts). The question asks for Aileen. ₱1,600 is one part. It stops before multiplying by 4. ₱2,800 divides the total by 4 alone, not by all 7 parts."
+        },
+        "why_wrong": {
+          "o1": "₱4,800 is Inday's share (3 parts). The question asks for Aileen.",
+          "o4": "₱2,800 divides the total by 4 alone, not by all 7 parts.",
+          "o3": "₱1,600 is one part. It stops before multiplying by 4."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OTHER-SHARE",
+        "o4": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Grok Bot (bank worker)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-22T16:30:00+08:00",
+        "spec_version": "0.1.9"
+      },
+      "notes": "Template-repetition replacement draft for CIVIO-NUM-WP-RATIO-000813 (same numbers, key and wording as CIVIO-NUM-WP-RATIO-000625). Not in the manifest; the approved original stays until authorized review.",
+      "shortcut": "Share = total × 4/7.",
+      "reviewer": null,
+      "reviewed_at": null,
+      "proposed_replacement_for": "CIVIO-NUM-WP-RATIO-000813",
+      "kept_original": "CIVIO-NUM-WP-RATIO-000625",
+      "recipe": {
+        "op": "ratio_share",
+        "args": {
+          "total": 11200,
+          "parts": [
+            3,
+            4
+          ],
+          "idx": 1
+        },
+        "fmt": "peso"
+      }
+    }
+  ]
+}

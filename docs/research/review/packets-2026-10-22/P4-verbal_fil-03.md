@@ -182,7 +182,7 @@ Basahin: "Araw-araw NAGBABANAT NG BUTO si Mang Ben sa konstruksiyon para sa pami
 ### 20. `CIVIO-GF2K02-PAGBASA-0001`  (both, medium, 65 s)
 
 Basahin at unawain:
-Inilunsad ng munisipyo ang online na pagkuha ng permit sa negosyo. Sa unang tatlong buwan, bumaba nang halos kalahati ang pila sa tanggapan, ngunit dumami ang tawag ng mga negosyanteng hindi marunong gumamit ng internet. Kaya nagbukas ang munisipyo ng maliit na mesang tutulong sa kanila.
+Inilunsad ng munisipyo ang online na pagkuha ng permit sa negosyo. Sa unang tatlong buwan, bumaba nang halos kalahati ang pila sa tanggapan, ngunit dumami ang tawag ng mga negosyanteng hindi marunong gumamit ng internet. Kaya nagbukas ang munisipyo ng maliit na mesang tutulong sa kanila. Dati, kailangang pumila nang ilang oras at bumalik nang dalawa o tatlong beses ang mga negosyante para sa isang permit. Sa bagong sistema, maaari nang punan ang form at magbayad gamit ang telepono. May kawani sa mesa ng tulong na gagabay sa mga hindi sanay sa internet hanggang matapos nila ang aplikasyon.
 
 Ano ang pangunahing ipinahihiwatig ng talata?
 
@@ -194,7 +194,7 @@ Ano ang pangunahing ipinahihiwatig ng talata?
 ### 21. `CIVIO-GF2K02-PAGBASA-0002`  (both, medium, 65 s)
 
 Suriin ang talata sa ibaba:
-Ayon sa ulat ng barangay, mas kaunti ang kaso ng dengue ngayong taon kaysa noong nakaraang taon. Iniuugnay ito ng health worker sa lingguhang paglilinis ng kanal, ngunit sinabi rin niyang mas kaunti ang ulan ngayong taon kaya hindi pa tiyak kung alin ang mas malaking dahilan.
+Ayon sa ulat ng barangay, mas kaunti ang kaso ng dengue ngayong taon kaysa noong nakaraang taon. Iniuugnay ito ng health worker sa lingguhang paglilinis ng kanal, ngunit sinabi rin niyang mas kaunti ang ulan ngayong taon kaya hindi pa tiyak kung alin ang mas malaking dahilan. Noong nakaraang taon, mahigit apatnapung kaso ang naitala sa barangay; ngayong taon, labinlima pa lamang. Tuwing Sabado, sama-samang naglilinis ng kanal ang mga residente at tinatanggal ang mga lalagyang naiipunan ng tubig. Plano ng health worker na ipagpatuloy ang paglilinis at ihambing ang datos sa susunod na taon.
 
 Alin ang pinakaangkop na konklusyon batay sa talata?
 
@@ -206,7 +206,7 @@ Alin ang pinakaangkop na konklusyon batay sa talata?
 ### 22. `CIVIO-GF2K02-PAGBASA-0003`  (both, medium, 65 s)
 
 Talata:
-Bago magtanim, sinusuri ng mga magsasaka sa Nueva Ecija ang lupa upang malaman kung anong pataba ang kailangan. Sa ganitong paraan, hindi sila gumagastos sa patabang hindi naman kailangan, at naiiwasan ang labis na kemikal na umaagos sa ilog.
+Bago magtanim, sinusuri ng mga magsasaka sa Nueva Ecija ang lupa upang malaman kung anong pataba ang kailangan. Sa ganitong paraan, hindi sila gumagastos sa patabang hindi naman kailangan, at naiiwasan ang labis na kemikal na umaagos sa ilog. Kumukuha sila ng kaunting lupa mula sa iba't ibang bahagi ng bukid at dinadala ito sa tanggapan ng agrikultura. Sa loob ng isang linggo, nalalaman nila kung kulang ang lupa sa nitroheno, posporo o potasa. Batay sa resulta, binibili lamang nila ang patabang tugma sa pangangailangan ng kanilang lupa.
 
 Ayon sa talata, ano ang dalawang pakinabang ng pagsusuri sa lupa?
 
@@ -218,7 +218,7 @@ Ayon sa talata, ano ang dalawang pakinabang ng pagsusuri sa lupa?
 ### 23. `CIVIO-GF2K02-PAGBASA-0004`  (both, medium, 65 s)
 
 Basahin ang talata:
-Maraming kabataan ang gumagamit ng cellphone bago matulog. Ayon sa isang pag-aaral, ang liwanag ng screen ay nakapagpapaantala ng antok. Iminumungkahi ng mga doktor na itabi ang cellphone isang oras bago matulog.
+Maraming kabataan ang gumagamit ng cellphone bago matulog. Ayon sa isang pag-aaral, ang liwanag ng screen ay nakapagpapaantala ng antok. Iminumungkahi ng mga doktor na itabi ang cellphone isang oras bago matulog. Kapag naantala ang antok, mas maikli ang tulog at mas mahirap gumising nang maaga para pumasok sa paaralan. Napapansin din ng mga guro na inaantok sa klase ang ilang mag-aaral na puyat. Sa halip na cellphone, maaaring magbasa ng aklat o makinig ng mahinang musika bago humiga. Mas mainam din kung madilim at tahimik ang silid-tulugan.
 
 Ano ang layunin ng talata?
 
@@ -230,7 +230,7 @@ Ano ang layunin ng talata?
 ### 24. `CIVIO-GF2K02-PAGBASA-0005`  (both, medium, 65 s)
 
 Basahin at unawain:
-Tuwing tag-ulan, binabaha ang mababang bahagi ng bayan. Nagtayo ang pamahalaang lokal ng mas malaking daluyan ng tubig, at mula noon ay mas mabilis nang humuhupa ang baha. Gayunman, nagbabala ang inhinyero na mababara pa rin ito kung patuloy na itatapon ang basura sa kanal.
+Tuwing tag-ulan, binabaha ang mababang bahagi ng bayan. Nagtayo ang pamahalaang lokal ng mas malaking daluyan ng tubig, at mula noon ay mas mabilis nang humuhupa ang baha. Gayunman, nagbabala ang inhinyero na mababara pa rin ito kung patuloy na itatapon ang basura sa kanal. Bago itayo ang daluyan, inaabot ng dalawa o tatlong araw bago humupa ang tubig, at maraming pamilya ang lumilikas sa paaralan. Ngayon, kadalasang nawawala ang baha sa loob ng ilang oras. Sa huling paglilinis, nakita ng mga manggagawa na plastik at bote ang karaniwang nakabara sa mga rehas ng daluyan.
 
 Batay sa talata, ano ang kailangan upang manatiling epektibo ang daluyan?
 
@@ -242,7 +242,7 @@ Batay sa talata, ano ang kailangan upang manatiling epektibo ang daluyan?
 ### 25. `CIVIO-GF2K02-PAGBASA-0006`  (both, medium, 65 s)
 
 Suriin ang talata sa ibaba:
-Sa isang tanggapan, ipinatupad ang patakarang walang pulong na lalampas sa tatlumpung minuto. Napansin ng hepe na mas maayos nang naihahanda ng mga kawani ang kanilang ulat bago ang pulong, dahil alam nilang maikli lamang ang oras.
+Sa isang tanggapan, ipinatupad ang patakarang walang pulong na lalampas sa tatlumpung minuto. Napansin ng hepe na mas maayos nang naihahanda ng mga kawani ang kanilang ulat bago ang pulong, dahil alam nilang maikli lamang ang oras. Dati, umaabot ng dalawang oras ang lingguhang pulong at madalas walang malinaw na napagkasunduan. Sa bagong patakaran, ipinapadala ang agenda isang araw bago ang pulong. Kapag hindi natapos ang isang paksa, itinatala ito at pinag-uusapan sa susunod na pulong. Ang hepe mismo ang nagbabantay sa oras ng bawat pulong.
 
 Ano ang naging epekto ng patakaran ayon sa talata?
 
@@ -254,7 +254,7 @@ Ano ang naging epekto ng patakaran ayon sa talata?
 ### 26. `CIVIO-GF2K02-PAGBASA-0007`  (both, medium, 65 s)
 
 Talata:
-Ang bakawan ay nagsisilbing tahanan ng maraming isda at alimango. Pinoprotektahan din nito ang baybayin laban sa malalaking alon tuwing may bagyo. Dahil dito, ipinagbabawal sa maraming bayan ang pagputol ng bakawan.
+Ang bakawan ay nagsisilbing tahanan ng maraming isda at alimango. Pinoprotektahan din nito ang baybayin laban sa malalaking alon tuwing may bagyo. Dahil dito, ipinagbabawal sa maraming bayan ang pagputol ng bakawan. Matatagpuan ang bakawan sa maputik na baybayin kung saan nagsasalubong ang tubig-alat at tubig-tabang. Sa mga ugat nito nangingitlog at lumalaki ang maraming maliliit na isda bago lumabas sa dagat. Sa ilang bayan, nagtatanim pa ang mga residente at mag-aaral ng bagong punla ng bakawan tuwing tag-ulan. Binabantayan ng mga bantay-dagat ang mga lugar na ito laban sa ilegal na pagputol.
 
 Bakit ipinagbabawal ang pagputol ng bakawan ayon sa talata?
 
@@ -266,7 +266,7 @@ Bakit ipinagbabawal ang pagputol ng bakawan ayon sa talata?
 ### 27. `CIVIO-GF2K02-PAGBASA-0008`  (both, medium, 65 s)
 
 Basahin ang talata:
-Nagsimula si Aling Rosa ng maliit na tindahan ng kakanin sa harap ng bahay. Nang dumami ang suki, kumuha siya ng dalawang katulong at nagpatala sa munisipyo upang magkaroon ng permit. Ngayon, nagdadala na rin siya ng kakanin sa mga kalapit na paaralan.
+Nagsimula si Aling Rosa ng maliit na tindahan ng kakanin sa harap ng bahay. Nang dumami ang suki, kumuha siya ng dalawang katulong at nagpatala sa munisipyo upang magkaroon ng permit. Ngayon, nagdadala na rin siya ng kakanin sa mga kalapit na paaralan. Sa simula, siya lamang ang nagluluto ng biko, puto at kutsinta tuwing madaling-araw. Nang lumaki ang benta, naglagay siya ng mesa at payong sa harap ng bahay para sa mga mamimili. Nag-iipon din siya ng bahagi ng kita upang makabili ng mas malaking kalan.
 
 Ano ang pangunahing ideya ng talata?
 
@@ -278,7 +278,7 @@ Ano ang pangunahing ideya ng talata?
 ### 28. `CIVIO-GF2K02-PAGBASA-0009`  (both, medium, 65 s)
 
 Basahin at unawain:
-Sa silid-aklatan ng bayan, pinahihintulutan na ang paghiram ng aklat nang hanggang dalawang linggo. Dati, isang linggo lamang ito. Ayon sa tagapamahala, marami ang humiling nito dahil hindi nila natatapos ang makakapal na aklat sa loob ng pitong araw.
+Sa silid-aklatan ng bayan, pinahihintulutan na ang paghiram ng aklat nang hanggang dalawang linggo. Dati, isang linggo lamang ito. Ayon sa tagapamahala, marami ang humiling nito dahil hindi nila natatapos ang makakapal na aklat sa loob ng pitong araw. Karamihan sa humiling ay mga mag-aaral sa kolehiyo at mga gurong nagbabasa ng makakapal na sanggunian. Upang hindi magkulang ang aklat sa istante, gumawa ang silid-aklatan ng listahan ng naghihintay para sa mga aklat na nakahiram na. Maaari ring i-renew ang hiram nang isang beses kung walang naghihintay.
 
 Bakit pinahaba ang panahon ng paghiram?
 
@@ -290,7 +290,7 @@ Bakit pinahaba ang panahon ng paghiram?
 ### 29. `CIVIO-GF2K02-PAGBASA-0010`  (both, medium, 65 s)
 
 Suriin ang talata sa ibaba:
-Hinihikayat ng paaralan ang mga magulang na dumalo sa pulong tuwing katapusan ng markahan. Dito ipinaliliwanag ng guro ang marka ng anak at ang mga paraan upang matulungan siya sa bahay. Ayon sa punong-guro, mas mabilis umunlad ang mga mag-aaral na ang magulang ay regular na dumadalo.
+Hinihikayat ng paaralan ang mga magulang na dumalo sa pulong tuwing katapusan ng markahan. Dito ipinaliliwanag ng guro ang marka ng anak at ang mga paraan upang matulungan siya sa bahay. Ayon sa punong-guro, mas mabilis umunlad ang mga mag-aaral na ang magulang ay regular na dumadalo. Karaniwang ginagawa ang pulong sa Sabado ng umaga upang makadalo ang mga magulang na nagtatrabaho. Binibigyan ang bawat magulang ng maikling ulat tungkol sa lakas at kahinaan ng anak. Ang mga hindi makadalo ay tinatawagan ng guro o pinadadalhan ng sulat.
 
 Ano ang ipinahihiwatig ng punong-guro?
 
@@ -302,7 +302,7 @@ Ano ang ipinahihiwatig ng punong-guro?
 ### 30. `CIVIO-GF2K02-PAGBASA-0011`  (both, medium, 65 s)
 
 Talata:
-Nagpatupad ang lungsod ng bike lane sa pangunahing kalsada. Sa simula, maraming tsuper ang tumutol dahil kumitid ang daan. Pagkalipas ng isang taon, dumami ang nagbibisikleta papasok sa trabaho, at bahagyang bumaba ang trapiko sa umaga.
+Nagpatupad ang lungsod ng bike lane sa pangunahing kalsada. Sa simula, maraming tsuper ang tumutol dahil kumitid ang daan. Pagkalipas ng isang taon, dumami ang nagbibisikleta papasok sa trabaho, at bahagyang bumaba ang trapiko sa umaga. Pininturahan ng berde ang bike lane at nilagyan ng plastik na harang upang hindi pumasok ang mga sasakyan. Nagbigay rin ang lungsod ng libreng pagsasanay sa ligtas na pagbibisikleta tuwing Linggo. Ayon sa tanggapan ng trapiko, mga kawani at mag-aaral ang karaniwang gumagamit ng bike lane.
 
 Alin ang sinusuportahan ng talata?
 
@@ -314,7 +314,7 @@ Alin ang sinusuportahan ng talata?
 ### 31. `CIVIO-GF2K02-PAGBASA-0012`  (both, medium, 65 s)
 
 Basahin ang talata:
-Ang kawani ng pamahalaan ay inaasahang sumagot sa mga liham ng publiko sa takdang panahon. Sa isang ahensiya, gumawa ang mga kawani ng talaan ng lahat ng liham na natatanggap upang walang makaligtaan at masubaybayan kung alin ang hindi pa nasasagot.
+Ang kawani ng pamahalaan ay inaasahang sumagot sa mga liham ng publiko sa takdang panahon. Sa isang ahensiya, gumawa ang mga kawani ng talaan ng lahat ng liham na natatanggap upang walang makaligtaan at masubaybayan kung alin ang hindi pa nasasagot. Nakalagay sa talaan ang petsa ng pagtanggap, pangalan ng sumulat, paksa at kawaning nakatalaga. Tuwing Biyernes, tinitingnan ng hepe kung aling liham ang malapit nang lumampas sa takdang panahon. Kapag nasagot na ang liham, isinusulat ang petsa ng sagot sa tabi nito.
 
 Ano ang layunin ng talaang ginawa ng mga kawani?
 
