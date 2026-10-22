@@ -1,0 +1,33 @@
+baseline_id,key_now,grok_verdict,issue_evidence,proposal,draft,chatgpt_verdict,agree
+48,₱52,REJECT,Placeholder explanation ('Local practice item for Docker study.'). Same fare-times-passengers task as #203.,Retire; keep #203.,,pending file,pending file
+49,"₱4,000",REJECT,Placeholder explanation ('Local practice item for Docker study.'). Same daily-wage task as #202.,Retire; keep #202.,,pending file,pending file
+50,₱450,REJECT,Placeholder explanation ('Local practice item for Docker study.'). Discount frame duplicated by #199/#495 and the bank's 78 percent-change items.,Retire.,,pending file,pending file
+197,60 km/h,REJECT,Average speed 180 km / 3 h is the first step of #351 (same numbers).,Retire; keep #351.,,pending file,pending file
+198,10,REJECT,Same clerks-forms-per-hour frame as #494 (5 clerks/100 forms/2 h vs 4/160/2).,Retire; keep #494.,,pending file,pending file
+199,1020 pesos,REJECT,"Percent-change/discount item; MILESTONE_2000_PLAN caps percent change at 40 and the bank already has 78 (NUM-WP-PCT-CHANGE). qa_file also finds the same frame already approved ('office chair ... 15% off', different price).",Retire under the cap.,,pending file,pending file
+200,240 L,KEEP,Key 240 recomputed (1/4 of capacity = 60). Distinct from #497 (complement fraction vs. given fraction).,,,pending file,pending file
+201,29,FIX,Key 29 recomputed ((50+8)/2). Explanation 'Larger is 29.' gives no method.,Draft with the sum-difference method.,yes,pending file,pending file
+202,9000 pesos,KEEP,"Key 9,000 recomputed.",Note: options lack thousands separators (8000) — fix on migration.,,pending file,pending file
+203,120 pesos,KEEP,Key 120 recomputed.,,,pending file,pending file
+204,14,KEEP,Key 14 recomputed (one part = 7).,,,pending file,pending file
+205,600 pesos,KEEP,"Key 600 recomputed. Same frame as approved CIVIO-NUM-WP-PCT-CHANGE-000330 (6%, 2 years) with a different principal — acceptable variant, flag for the frame cap.",,,pending file,pending file
+206,34 m,FIX,Key 34 recomputed. Explanation 'Perimeter 34 m.' gives no method; '60 m' (area) is a good trap but uncoded.,Draft with method and coded traps.,yes,pending file,pending file
+207,4.5 kg,KEEP,Key 4.5 recomputed.,,,pending file,pending file
+208,30%,KEEP,"Key 30% recomputed (60% left, half done → 30%). Percent-of-remaining, not percent change.",,,pending file,pending file
+209,300 pesos,FIX,Key 300 recomputed. Explanation 'Middle share 300.' gives no method.,Draft with the parts method.,yes,pending file,pending file
+210,15,KEEP,Key 15 recomputed.,,,pending file,pending file
+269,20,KEEP,Key 20 recomputed (2 pages/min per printer).,,,pending file,pending file
+270,"₱3,214",KEEP,"Key ₱3,214 recomputed (30,000 − 30,000/1.12 = 3,214.29). '₱3,600' is the classic 12%-of-gross trap.",,,pending file,pending file
+271,2.5 hours,KEEP,Key 2.5 hours recomputed.,,,pending file,pending file
+272,16%,KEEP,Key 16% recomputed (0.8 L solute in 5 L).,,,pending file,pending file
+349,72,FIX,"Key 72 correct, but option B is malformed: ' sixty-four' (spelled out, leading space) among numerals — user-visible.",Draft with '64' (18 × 4 misread as 16 × 4).,yes,pending file,pending file
+350,648,HOLD,Percent-change/discount item; MILESTONE_2000_PLAN caps percent change at 40 and the bank already has 78 (NUM-WP-PCT-CHANGE). Same frame as approved 000921 (₱600 base).,CoS decision as #199.,,pending file,pending file
+351,300 km,KEEP,Key 300 km recomputed.,,,pending file,pending file
+352,15,KEEP,Key 15 recomputed.,,,pending file,pending file
+353,25,KEEP,Key 25 recomputed.,,,pending file,pending file
+494,20,KEEP,Key 20 recomputed. Cosmetic: boilerplate missing period.,,,pending file,pending file
+495,"2,040",HOLD,Percent-change/discount item; MILESTONE_2000_PLAN caps percent change at 40 and the bank already has 78 (NUM-WP-PCT-CHANGE).,CoS decision as #199. Draft supplied.,yes,pending file,pending file
+496,120 km,KEEP,Key 120 km recomputed. Same skill as #351 with different numbers (3.5 h) — acceptable.,,,pending file,pending file
+497,120 liters,KEEP,Key 120 L recomputed.,,,pending file,pending file
+498,2,KEEP,Key 2 recomputed.,,,pending file,pending file
+542,360,KEEP,Key 360 recomputed. Cosmetic: boilerplate missing period.,,,pending file,pending file

@@ -1,0 +1,338 @@
+{
+ "batch": "round-03-baseline-b4-drafts",
+ "spec_version": "0.1.9",
+ "status": "draft (pending CoS)",
+ "source_group": "civio",
+ "items": [
+  {
+   "id": "CIVIO-B4-NUM-WP-ALGEBRA-0201",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "algebra",
+   "micro_skill": "num-wp-algebra",
+   "archetype": "NUM-WP-ALGEBRA",
+   "difficulty": "easy",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Two numbers add up to 50, and one is 8 more than the other. What is the larger number?",
+   "options": [
+    {
+     "option_id": "n1",
+     "text": "29"
+    },
+    {
+     "option_id": "n2",
+     "text": "21"
+    },
+    {
+     "option_id": "n3",
+     "text": "25"
+    },
+    {
+     "option_id": "n4",
+     "text": "42"
+    }
+   ],
+   "answer_option_id": "n1",
+   "reveal": {
+    "terms": "Word problem: translate the situation into one or two operations.",
+    "shortcut": "Larger = (sum + difference) ÷ 2.",
+    "why_correct": "Answer: 29. Larger = (sum + difference) ÷ 2 = (50 + 8) ÷ 2 = 29; the smaller is 21, and 29 − 21 = 8.",
+    "why_wrong": {
+     "n2": "21 is the smaller number.",
+     "n3": "25 splits 50 evenly and ignores the difference.",
+     "n4": "42 is 50 − 8, the sum minus the difference."
+    }
+   },
+   "distractor_reasoning": {
+    "n2": "NUM-OTHER-SHARE",
+    "n3": "NUM-PARTIAL",
+    "n4": "NUM-OP-SWAP"
+   },
+   "source": "Civio baseline, rewritten (Grok Bot B4)",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "_legacy": true,
+   "shortcut": "Larger = (sum + difference) ÷ 2.",
+   "replaces": {
+    "baseline_id": 201,
+    "stem": "Two numbers sum to 50 and differ by 8. The larger is:",
+    "key": "29"
+   },
+   "notes": "Round 03 B4 draft (Grok Bot). Key independently recomputed. Pending CoS."
+  },
+  {
+   "id": "CIVIO-B4-NUM-WP-GEOM-0206",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "geom",
+   "micro_skill": "num-wp-geom",
+   "archetype": "NUM-WP-GEOM",
+   "difficulty": "easy",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "A rectangular office lot is 12 m long and 5 m wide. How many meters of fence go around it?",
+   "options": [
+    {
+     "option_id": "n1",
+     "text": "17 m"
+    },
+    {
+     "option_id": "n2",
+     "text": "34 m"
+    },
+    {
+     "option_id": "n3",
+     "text": "60 m"
+    },
+    {
+     "option_id": "n4",
+     "text": "29 m"
+    }
+   ],
+   "answer_option_id": "n2",
+   "reveal": {
+    "terms": "Word problem: translate the situation into one or two operations.",
+    "shortcut": "Perimeter = 2 × (length + width).",
+    "why_correct": "Answer: 34 m. Perimeter = 2 × (12 + 5) = 2 × 17 = 34 m.",
+    "why_wrong": {
+     "n1": "17 m adds one length and one width only.",
+     "n3": "60 is the area in square meters, not the distance around.",
+     "n4": "29 m counts one length twice and one width once."
+    }
+   },
+   "distractor_reasoning": {
+    "n1": "NUM-PARTIAL",
+    "n3": "NUM-OP-SWAP",
+    "n4": "NUM-PARTIAL"
+   },
+   "source": "Civio baseline, rewritten (Grok Bot B4)",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "_legacy": true,
+   "shortcut": "Perimeter = 2 × (length + width).",
+   "replaces": {
+    "baseline_id": 206,
+    "stem": "A rectangle is 12 m by 5 m. Its perimeter is:",
+    "key": "34 m"
+   },
+   "notes": "Round 03 B4 draft (Grok Bot). Key independently recomputed. Pending CoS."
+  },
+  {
+   "id": "CIVIO-B4-NUM-WP-RATIO-0209",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "ratio",
+   "micro_skill": "num-wp-ratio",
+   "archetype": "NUM-WP-RATIO",
+   "difficulty": "easy",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "₱900 is shared among three volunteers in the ratio 2 : 3 : 4. How much is the middle share?",
+   "options": [
+    {
+     "option_id": "n1",
+     "text": "₱200"
+    },
+    {
+     "option_id": "n2",
+     "text": "₱400"
+    },
+    {
+     "option_id": "n3",
+     "text": "₱300"
+    },
+    {
+     "option_id": "n4",
+     "text": "₱450"
+    }
+   ],
+   "answer_option_id": "n3",
+   "reveal": {
+    "terms": "Word problem: translate the situation into one or two operations.",
+    "shortcut": "One part = total ÷ sum of ratio terms.",
+    "why_correct": "Answer: ₱300. 2 + 3 + 4 = 9 parts; one part = 900 ÷ 9 = ₱100; the middle share is 3 parts = ₱300.",
+    "why_wrong": {
+     "n1": "₱200 is the smallest share (2 parts).",
+     "n2": "₱400 is the largest share (4 parts).",
+     "n4": "₱450 halves the total instead of using parts."
+    }
+   },
+   "distractor_reasoning": {
+    "n1": "NUM-OTHER-SHARE",
+    "n2": "NUM-OTHER-SHARE",
+    "n4": "NUM-WRONG-BASE"
+   },
+   "source": "Civio baseline, rewritten (Grok Bot B4)",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "_legacy": true,
+   "shortcut": "One part = total ÷ sum of ratio terms.",
+   "replaces": {
+    "baseline_id": 209,
+    "stem": "Sharing 900 pesos in ratio 2:3:4, the middle share is:",
+    "key": "300 pesos"
+   },
+   "notes": "Round 03 B4 draft (Grok Bot). Key independently recomputed. Pending CoS."
+  },
+  {
+   "id": "CIVIO-B4-NUM-WP-RATE-0349",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "rate",
+   "micro_skill": "num-wp-rate",
+   "archetype": "NUM-WP-RATE",
+   "difficulty": "easy",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "Working steadily, a records clerk puts away 18 folders each hour. How many folders are put away in a 4-hour shift?",
+   "options": [
+    {
+     "option_id": "n1",
+     "text": "54"
+    },
+    {
+     "option_id": "n2",
+     "text": "64"
+    },
+    {
+     "option_id": "n3",
+     "text": "82"
+    },
+    {
+     "option_id": "n4",
+     "text": "72"
+    }
+   ],
+   "answer_option_id": "n4",
+   "reveal": {
+    "terms": "Word problem: translate the situation into one or two operations.",
+    "shortcut": "Rate × time.",
+    "why_correct": "Answer: 72. 18 folders × 4 hours = 72 folders.",
+    "why_wrong": {
+     "n1": "54 is only 3 hours (18 × 3).",
+     "n2": "64 multiplies 16, not 18, by 4.",
+     "n3": "82 adds an extra 10."
+    }
+   },
+   "distractor_reasoning": {
+    "n1": "NUM-OFF-BY-ONE",
+    "n2": "NUM-GIVEN-REUSED",
+    "n3": "NUM-EXTRA-STEP"
+   },
+   "source": "Civio baseline, rewritten (Grok Bot B4)",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "_legacy": true,
+   "shortcut": "Rate × time.",
+   "replaces": {
+    "baseline_id": 349,
+    "stem": "A team files 18 folders per hour. At the same rate, how many folders can it file in 4 hours?",
+    "key": "72"
+   },
+   "notes": "Round 03 B4 draft (Grok Bot). Key independently recomputed. Pending CoS."
+  },
+  {
+   "id": "CIVIO-B4-NUM-PCT-BASIC-0495",
+   "track": "both",
+   "domain": "numerical",
+   "competency": "Word problems",
+   "concept": "-basic",
+   "micro_skill": "num-pct-basic",
+   "archetype": "NUM-PCT-BASIC",
+   "difficulty": "easy",
+   "est_seconds": 60,
+   "language": "en",
+   "stem": "A seminar fee of ₱2,400 gets a 15% early-bird discount. What is the discounted fee?",
+   "options": [
+    {
+     "option_id": "n1",
+     "text": "₱2,040"
+    },
+    {
+     "option_id": "n2",
+     "text": "₱2,160"
+    },
+    {
+     "option_id": "n3",
+     "text": "₱2,085"
+    },
+    {
+     "option_id": "n4",
+     "text": "₱2,760"
+    }
+   ],
+   "answer_option_id": "n1",
+   "reveal": {
+    "terms": "Word problem: translate the situation into one or two operations.",
+    "shortcut": "10% = 240, 5% = 120; take off 360.",
+    "why_correct": "Answer: ₱2,040. 15% of 2,400 = 360; 2,400 − 360 = ₱2,040.",
+    "why_wrong": {
+     "n2": "₱2,160 takes off only 10%.",
+     "n3": "₱2,085 subtracts 315, a miscomputed 15%.",
+     "n4": "₱2,760 adds the 15%."
+    }
+   },
+   "distractor_reasoning": {
+    "n2": "NUM-WRONG-BASE",
+    "n3": "NUM-PARTIAL",
+    "n4": "NUM-OP-SWAP"
+   },
+   "source": "Civio baseline, rewritten (Grok Bot B4)",
+   "source_url": null,
+   "source_group": "civio",
+   "status": "draft",
+   "review_status": "unreviewed",
+   "provenance": {
+    "author": "Grok Bot",
+    "method": "ai_assisted",
+    "created_at": "2026-10-18T03:00:00+08:00",
+    "spec_version": "0.1.9"
+   },
+   "_legacy": true,
+   "shortcut": "10% = 240, 5% = 120; take off 360.",
+   "replaces": {
+    "baseline_id": 495,
+    "stem": "A 15 percent discount is applied to a 2,400-peso fee. What is the discounted fee?",
+    "key": "2,040"
+   },
+   "notes": "Round 03 B4 draft (Grok Bot). Key independently recomputed. Pending CoS."
+  }
+ ]
+}

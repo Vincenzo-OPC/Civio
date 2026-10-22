@@ -257,20 +257,12 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
   - Backup first: `civio_local_pre_r03c_20261017.dump`.
   - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 604, **total 1,978**.
 
-## 2026-10-18: Round 03 baseline B3, independent audit (Grok Bot), pending CoS
+## 2026-10-18: Round 03 baseline B4, Numerical word problems (32), pending CoS
 
-- **Scope:** 123 baseline items from the Oct 17 export (MSI not queried): GI R.A. 6713 37, GI Environment 27, Numerical Basic operations 31, Number sequence 28. This covers ChatGPT's 100-item scope (which takes only 5 of the 28 sequence items) plus the rest of Number sequence. ChatGPT's files (`audit-2026-10-18.json`, `fixes-2026-10-18.json`, `milestone-2000-compile.md`) were **not received**; the CSV's ChatGPT columns read `pending file` for reconciliation later.
-- **Verdicts:** KEEP 21, FIX 42, REJECT 55, HOLD 5.
-  - GI-6713: FIX 9, REJECT 27 (23 duplicate approved bank facts), HOLD 1 (#224 nepotism is E.O. 292, not R.A. 6713).
-  - GI-ENV: FIX 13, REJECT 13, HOLD 1 (#86 needs P.D. 705).
-  - NUM-OPS: KEEP 12, FIX 14, REJECT 2 (#262 dup of #487; #343 malformed ' von 760' and dup of bank 000528), HOLD 3 (percent-change cap: #181, #265, #489).
-  - NUM-SEQ: KEEP 9, FIX 6, REJECT 13 (same sequence or same rule).
-- **Keys:** 0 errors. LawPhil text checked for R.A. 6713, 9003 (amended by R.A. 11898), 8749, 9275, 9729, 7586/11038. All 59 Numerical keys recomputed (`scripts/batches/audit/b3_numcheck.py`; 59/59 match one option).
-- **Drafts:** 44 full-schema drafts, status draft/unreviewed, each with `replaces`: `audit/fixes/round-03-baseline-b3-drafts.json`. #83 and #414 still need `source_quote` (P.D. 1586, E.O. 192).
-- **QA:** `python3 scripts/batches/qa_file.py docs/research/audit/fixes/round-03-baseline-b3-drafts.json` → 44 items vs 1,656 bank items, 0 problems (after rewording stems that matched their own baseline seeds and finding the #343/000528 duplicate). `python3 scripts/batches/qa_all.py --no-fixes` → GREEN.
-- ~~App finding for Codex Astra: online drills do not shuffle choices.~~ **Correction (2026-10-18 02:40 PHT):** the app agent confirmed online drills DO shuffle choices at display, so stored key position is not a user-facing giveaway in drills. The real issue was answer keys included in drills-hub payloads; that leak is fixed on branch `grok/drill-choice-shuffle` (9086e0f, d10692a). Position balance remains an editorial quality goal only.
-- **Flag (approved item, not edited):** CIVIO-NUM-WP-PCT-CHANGE-000528 reads "A electric fan".
-- **Explanation lint** (`scripts/batches/audit/explanation_lint.py`, new): drafts 0 flagged, positions balanced 11/11/11/11.
-- **Packet:** `audit/round-03-baseline-b3-review-request.md`; per-item CSV `audit/data/baseline-b3-verdicts-2026-10-18.csv`. Regenerate with `python3 scripts/batches/audit/baseline_b3.py`.
-- **Next:** B4 = the remaining baseline Numerical, Word problems 32 (Basic ops and sequences are done here), then Analytical 114, Verbal 130. Codex's 496-item reworded set still needs its own round.
-- **Milestone effect if CoS approves:** baseline Numerical active drops by 15 rejects (sequence 13, ops 2), widening the sequence gap (MILESTONE §5: 80 target); GI drops by 40 rejects, mostly duplicates of approved items, so the verified GI fact coverage is unchanged.
+- KEEP 20, FIX 4, REJECT 6, HOLD 2. 0 key errors: 32/32 recomputed (`scripts/batches/audit/baseline_b4.py`).
+- REJECT: #48, #49, #197 and #198 duplicate other baseline rows. #50 duplicates the discount frame. #199 duplicates an approved "office chair, 15% off" item and falls under the percent cap.
+- FIX: #201, #206 and #209 have explanations with no method. #349 has a malformed option, ' sixty-four'.
+- HOLD under the percent-change cap: #350, #495.
+- Drafts: `audit/fixes/round-03-baseline-b4-drafts.json` (5). `qa_file.py` → 0 problems. `explanation_lint.py` → 0 flagged.
+- Packet: `audit/round-03-baseline-b4-review-request.md`.
+- This finishes the baseline Numerical audit (B3 + B4 = 91). Next: Analytical 114 (B5), then Verbal 130 (B6).
