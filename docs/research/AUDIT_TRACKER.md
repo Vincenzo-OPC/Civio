@@ -361,3 +361,16 @@ On the updated PR commit, `python scripts/batches/qa_file.py docs/research/gap-f
 **Limitation:** The full ANSI/ARMA 12-2005 standard text was not accessible; its publisher preview establishes the standard title and scope but not the complete operative rules. The internal filing solver establishes consistency with the encoded rule interpretation, not authoritative proof of every normative filing answer. Keep these 48 items pending independent competent review against an authorized copy of the standard. The 35 law items remain draft pending the normal source-rights/content approval gate.
 
 **Disposition:** All 83 stay `draft/unreviewed`. Full PR software type/lint/format/test/build/bundle checks and required source-by-source originality review were not run. No part of this PR counts toward the verified/approved 2,000-item release target.
+
+
+## 2026-10-22: Independent review of gap-fill-2000-05 English items (open PR #11)
+
+**Scope:** Independently reviewed the 15 new paragraph-order and reading-comprehension items at PR #11's initial head `f3e154612a2f85f16681902bdd467b72aa92d411`. All eight ordering keys were checked against the four sentence events; all seven passage keys were checked against the provided text and the question's requested inference/detail/main idea. No third-party reviewer text was copied.
+
+**Defects corrected in the existing draft branch:**
+- `CIVIO-GF2K05-RCI-0001`: removed the unsupported comparison “as much as planting”; the answer now states only that selecting a suitable planting zone is important for survival.
+- `CIVIO-GF2K05-RCI-0002`: removed causal wording (“reminders helped”) unsupported by the before/after passage; the answer now reports that missed doses declined after reminders began while distance remains a stated barrier.
+
+Revised branch head: `882f571690e2fef11eedfc70f8b7b76ed1f5b9e9`. Repository `qa_file.py` passes: **15 items, 1,656 comparison records, 0 problems**. The 117-item lint-fix file separately passes `qa_fixfile.py`: **117 fixes, 1,592 comparison records (originals excluded), 0 problems**. This structural check does not constitute independent semantic review of those 117 fixes. The branch does not contain the referenced `explanation_lint.py` module, so that PR's reported lint result could not be reproduced from this checkout.
+
+**Disposition:** The 15 new items remain `draft/unreviewed`; no approval, activation, import, merge or release count. The separate 117 full-item correction proposals remain unreviewed here, and the two known exceptions/holds identified in the PR's own tracker entry remain unresolved. Continue by auditing those fixes and obtaining the existing independent approval before any release selection.
