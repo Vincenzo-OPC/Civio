@@ -369,3 +369,7 @@ The independent-accuracy card now lists the five skills (subcategories) to work 
 ## One-skill drill, 22 October 2026
 
 `/exams?drill=true&subcategory_id=N` serves up to 20 items from that one subtopic, picked on the server. Never-seen items come first (full exposure history), Strict-locked items and drafts are excluded, and keys and explanations stay withheld. An unknown subtopic serves nothing rather than another pool. Each weak skill on the analytics card has a "Practice this skill" link. Tests in `SkillDrillTest`.
+
+## Strict mock with an item retired mid-exam, 22 October 2026
+
+Before this fix, retiring one served item during an open Strict mock made every later progress save fail with 422 and made the final submit fail, so the whole attempt was lost. Now only a save that touches the retired item is rejected. Submitting a server-held mock grades the remaining items, and the retired one is recorded as `retired_count`, outside the score. Practice drills that have no session keep the earlier strict check. Tests in `ExamDeadlineTest`.

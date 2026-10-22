@@ -69,7 +69,9 @@ class SubmitExamAttemptAction
                     ->lockForUpdate()
                     ->get()
                     ->keyBy('id');
-                if ($active->count() !== count($ids)) {
+                // A server-held mock still grades when an item was retired after
+                // serving; the grader records it as retired_count, outside the score.
+                if ($session === null && $active->count() !== count($ids)) {
                     return new SubmitExamAttemptResult(false, 422, message: 'A practice item is no longer available. Start a new session.');
                 }
 
@@ -77,6 +79,11 @@ class SubmitExamAttemptAction
                     ? (array) ($session->saved_answers ?? [])
                     : $this->gradingService->normalizeAnswers($data->questionIds, $data->answers);
                 foreach ($answers as $id => $chosen) {
+                    if ($chosen !== null && ! $active->has($id)) {
+                        $answers[$id] = null;
+
+                        continue;
+                    }
                     if ($chosen !== null && ! array_key_exists($chosen, (array) $active[$id]->options)) {
                         return new SubmitExamAttemptResult(false, 422, message: 'An answer does not match the available options.');
                     }

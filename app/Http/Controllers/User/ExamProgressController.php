@@ -40,8 +40,10 @@ final class ExamProgressController extends Controller
                 foreach (array_keys($patch) as $id) {
                     abort_unless((string) (int) $id === (string) $id, 422);
                 }
-                $items = Question::whereIn('id', $ids)->where('status', 'active')->get()->keyBy('id');
-                abort_unless($items->count() === count($ids), 422, 'An item is no longer available.');
+                // Only the patched items must be active: an item retired mid-mock
+                // must not block saving answers to every other item.
+                $items = Question::whereIn('id', array_keys($patch))->where('status', 'active')->get()->keyBy('id');
+                abort_unless($items->count() === count($patch), 422, 'An item is no longer available.');
                 foreach ($patch as $id => $answer) {
                     abort_if($answer !== null && ! array_key_exists($answer, (array) $items[$id]->options), 422);
                 }

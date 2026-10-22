@@ -175,3 +175,34 @@ test('even an empty progress patch requires a revision and integer inputs are ca
     ])->assertOk();
     expect($session->fresh()->saved_answers)->toBe([$session->question_ids[0] => 1]);
 });
+
+test('an item retired mid-mock does not block saving the other answers', function () {
+    $user = User::factory()->create();
+    $session = deadlineSession($user->id);
+    [$a, $b, $retired] = $session->question_ids;
+    Question::whereKey($retired)->update(['status' => 'retired']);
+
+    $this->actingAs($user)->postJson(route('exams.sessions.progress'), [
+        'exam_session_id' => $session->id, 'answers' => [$retired => 2], 'expected_version' => 0,
+    ])->assertUnprocessable();
+    $this->postJson(route('exams.sessions.progress'), [
+        'exam_session_id' => $session->id, 'answers' => [$a => 1], 'expected_version' => 0,
+    ])->assertOk()->assertJson(['save_version' => 1])->assertJsonMissingPath('correct_option');
+
+    expect($session->fresh()->saved_answers)->toBe([$a => 1]);
+});
+
+test('an expired strict mock with a retired item still grades the saved answers', function () {
+    $user = User::factory()->create();
+    $session = deadlineSession($user->id);
+    [$a, $b, $retired] = $session->question_ids;
+    $session->forceFill(['saved_answers' => [$a => 1, $b => 1, $retired => 1], 'save_version' => 1])->save();
+    Question::whereKey($retired)->update(['status' => 'retired']);
+    $this->travel(2)->minutes();
+
+    $this->actingAs($user)->postJson(route('exams.attempts.store'), deadlineFinal($session))->assertOk();
+
+    $attempt = ExamAttempt::where('user_id', $user->id)->latest('id')->firstOrFail();
+    expect($session->fresh()->exam_attempt_id)->toBe($attempt->id)
+        ->and($attempt->cat_scores['metadata']['retired_count'])->toBe(1);
+});
