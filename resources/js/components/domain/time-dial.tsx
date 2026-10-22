@@ -27,6 +27,8 @@ export interface TimeDialProps {
     remainingSeconds?: number;
     /** Header countdown: the ring only. The numerals sit beside it. */
     compact?: boolean;
+    /** With compact: a hairline ring for the desktop exam header. */
+    fine?: boolean;
     /** Unselected sitting: full ring, quieter arc. */
     quiet?: boolean;
     tone?: 'calm' | 'amber' | 'red';
@@ -40,6 +42,7 @@ export function TimeDial({
     totalSeconds,
     remainingSeconds,
     compact = false,
+    fine = false,
     quiet = false,
     tone = 'calm',
     decorative = false,
@@ -88,7 +91,7 @@ export function TimeDial({
                 fill="none"
                 stroke="currentColor"
                 strokeOpacity={0.16}
-                strokeWidth={compact ? 18 : 8}
+                strokeWidth={compact && !fine ? 18 : 8}
             />
             <circle
                 className={`civio-arc ${drawIn ? 'civio-arc-draw' : ''} ${
@@ -100,7 +103,7 @@ export function TimeDial({
                 fill="none"
                 stroke="currentColor"
                 strokeOpacity={quiet ? 0.45 : 1}
-                strokeWidth={compact ? 18 : 8}
+                strokeWidth={compact && !fine ? 18 : 8}
                 strokeLinecap={complete ? 'butt' : 'round'}
                 strokeDasharray={
                     complete ? undefined : `${dash} ${circumference}`

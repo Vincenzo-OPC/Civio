@@ -27,6 +27,11 @@ function toneClass(tone: ClockTone): string {
     return 'text-[var(--civio-ink)]/70';
 }
 
+/**
+ * Untimed sessions show no clock. Timed: a compact pill on phones, a hairline
+ * ring beside larger tabular digits from `sm` up. The ring and digits both read
+ * the same authoritative snapshot; this component adds no interval.
+ */
 function ClockReadout({
     isTimed,
     timeLeft,
@@ -36,39 +41,46 @@ function ClockReadout({
     timeLeft: number;
     totalSeconds?: number;
 }) {
+    if (!isTimed) {
+        return null;
+    }
+
     const tone = examClockTone(timeLeft);
+    const hasTotal = !!totalSeconds && totalSeconds > 0;
 
     return (
-        <div className="inline-flex shrink-0 items-center gap-1.5 text-xs font-semibold tabular-nums">
-            {isTimed && totalSeconds && totalSeconds > 0 ? (
+        <div
+            role="timer"
+            data-clock-tone={tone}
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-[var(--civio-line)] px-2.5 py-1 text-xs font-semibold tabular-nums sm:gap-2 sm:border-transparent sm:px-1 sm:text-sm"
+        >
+            {hasTotal ? (
                 <TimeDial
                     compact
+                    fine
                     decorative
                     totalSeconds={totalSeconds}
                     remainingSeconds={timeLeft}
                     tone={tone}
+                    className="sm:size-8"
                 />
             ) : null}
-            {isTimed ? (
-                <span
-                    className={toneClass(tone)}
-                    title={
-                        totalSeconds && totalSeconds > 0
-                            ? `Time left of ${formatSitting(totalSeconds)}`
-                            : 'Time left for the whole mock'
-                    }
-                >
-                    {formatExamLeft(timeLeft)}
-                    {totalSeconds && totalSeconds > 0 ? (
-                        <span className="sr-only">
-                            {' '}
-                            left of {formatSitting(totalSeconds)}
-                        </span>
-                    ) : null}
-                </span>
-            ) : (
-                <span className="text-[var(--civio-ink)]/60">Untimed</span>
-            )}
+            <span
+                className={toneClass(tone)}
+                title={
+                    hasTotal
+                        ? `Time left of ${formatSitting(totalSeconds)}`
+                        : 'Time left for the whole mock'
+                }
+            >
+                {formatExamLeft(timeLeft)}
+                {hasTotal ? (
+                    <span className="sr-only">
+                        {' '}
+                        left of {formatSitting(totalSeconds)}
+                    </span>
+                ) : null}
+            </span>
         </div>
     );
 }

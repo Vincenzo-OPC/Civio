@@ -2,7 +2,10 @@ export interface Question {
     id: number;
     stem: string;
     options: string[];
+<<<<<<< HEAD
     /** Only present on the learner's own custom questions. */
+=======
+>>>>>>> origin/main
     correct_option?: number;
     explanation?: string;
     category: string;
@@ -35,6 +38,7 @@ export interface SavedDrillSet {
 }
 
 export interface DrillsProps {
+    bankPage?: { current: number; last: number };
     questions: Question[];
     categories: Category[];
     savedDrillSets?: SavedDrillSet[];

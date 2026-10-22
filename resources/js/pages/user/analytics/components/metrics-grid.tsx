@@ -23,7 +23,7 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
             <div className={cardClass}>
                 <div className="flex items-center justify-between">
                     <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
-                        Avg Score
+                        Attempt avg
                     </span>
                     <Award className="size-4 text-blue-500" />
                 </div>
@@ -33,7 +33,7 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
                     </span>
                     <span className="inline-flex items-center gap-0.5 rounded-full border border-emerald-200 bg-emerald-50 px-1.5 py-0.5 text-[9px] font-semibold text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-400">
                         <TrendingUp className="size-2.5" />
-                        Live
+                        Each run
                     </span>
                 </div>
             </div>
@@ -42,7 +42,7 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
             <div className={cardClass}>
                 <div className="flex items-center justify-between">
                     <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
-                        Passing Rate
+                        Mocks at 80%
                     </span>
                     <Target className="size-4 text-emerald-500" />
                 </div>
@@ -51,7 +51,7 @@ export function MetricsGrid({ activeStats }: MetricsGridProps) {
                         {activeStats.passingRate}%
                     </span>
                     <span className="text-[9px] font-bold text-slate-400">
-                        Target 80%
+                        Of finished mocks
                     </span>
                 </div>
             </div>
