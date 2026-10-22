@@ -1,1 +1,16 @@
-PLACEHOLDER
+{
+  "batch": "civio-syllabus-aligned-final-drafts-2026-10-22",
+  "status": "draft — fully scrutinized, syllabus-aligned (Numerical + Clerical focus), exact+structural+fuzzy collision-checked against all official ChatGPT/Codex history",
+  "target_contribution": "toward exactly 2000 high-quality questions",
+  "generated_at": "2026-10-22T01:21:25.016012Z",
+  "count": 164,
+  "domain_breakdown": {
+    "numerical": 164
+  },
+  "competency_breakdown": {
+    "Word problems": 163,
+    "Number sequence": 1
+  },
+  "notes": "All items original. Collision-checked against full official bank (exact normalized, structural number-stripped, and high fuzzy). Answers recomputed for template items. Aligned to CSE Numerical (basic operations, sequences, word problems) and Clerical. DRAFT ONLY — requires independent review and GT Ed25519 signed approval before any import or activation. No live DB or deployment changes.",
+  "items": []
+}
