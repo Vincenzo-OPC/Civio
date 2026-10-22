@@ -217,4 +217,4 @@ for pid, passage, qs in P:
                         terms="Detalye: tahasang sinabi sa talata. Hinuha: makatwirang konklusyon mula sa sinabi, hindi hula.",
                         shortcut="Hanapin sa talata ang pangungusap na sumusuporta sa sagot bago pumili.",
                         why_correct=f"Ang tamang sagot ay \"{key}\" dahil ito ang tuwirang sinusuportahan ng talata, hindi lamang bahagi nito o labis na pahayag.",
-                        passage_id=f"CIVIO-D1022-{pid}", notes=f"Passage CIVIO-D1022-{pid}, question {k} of {len(qs)}. New original draft, 22 Oct 2026 (GT approved)."))
+                        passage_id=f"CIVIO-D1022-{pid}", notes=f"Passage CIVIO-D1022-{pid}, question {k} of {len(qs)}. New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed."))

@@ -99,3 +99,31 @@ See `AUDIT_TRACKER.md` ("GT directive 3, BANK"). The 150-word passage gate is en
   - gap-fill-2000-06-lintfix: 398 legacy findings, many on rows outside the manifest.
 - **Queue:** 707 Accept, 16 Accept revision, 0 Escalate before this read. The 5 repaired items moved from Accept to Accept revision, so it is now 702 Accept and 21 Accept revision. 317 rows have needs_human_read = yes. `decision_by_human` is empty.
 - **Tests:** 16 bank-gate tests. New: adversarial-read records exist for exactly 139 + 23 rows, all with needs_human_read = yes, and the 4 repairs checked by the test are present in the drafts.
+
+## GT independent review follow-up: ambiguous items, approval-claim notes, approval packets (2026-10-22, 4:45 PM)
+
+- **Items revised again; all 5 are recommended "Revise" until a reviewer confirms each one now has a single answer:**
+  - **VEN-INS-0015:** sentence 3 is now "On the first Saturday, learners set up their own email accounts." The added sentence is "On the last Saturday, they fill out a sample online job application." It must follow sentence 3 and come before "these skills" in sentence 4.
+  - **VEN-PO-0002:** S now needs "those cards" from R.
+  - **VEN-PO-0013:** P now needs "these topics" from S.
+  - **VEN-PO-0018:** P now needs the fare check in R ("easy to spot").
+  - **VEN-PO-0025:** P now needs "the refrigerator" named in R.
+  - In each ordering item, the wrong option that was also coherent is now broken. The changes are in `drafts/en_text_2026_10_22.py` and recorded in `qa/adversarial_read_2026_10_22.py` (GT_REVISE). The count stays 2,100.
+- **"GT approved" notes:** the 22 Oct draft builders wrote "New original draft, 22 Oct 2026 (GT approved)". It now reads "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed".
+  - **Scope:** 529 draft records in 8 files. 226 are in the two files GT counted (analytical-professional 127, verbal-en-organization-reading 99). The rest: GI 90, subpro-math 60, subpro-clerical 50, subpro-filipino 50, subpro-clerical-set2 40, numerical-series 13.
+  - The 295 method-first proposal notes "(approved)" now read "(original status: approved)".
+  - No status was changed.
+- **New QA gate:** `qa.approval_claim_errors` runs in `check_item` and fails any non-approved row that does one of these:
+  - carries approved_by, approved_at, signed_by, signed_at or signoff;
+  - is a draft with review_status passed or approved;
+  - says "GT/CoS approved" or "approved by GT/CoS" in its notes, provenance or review notes.
+  - **Allowed:** "Design approach approved by GT", `revisions[].approved_by` (GT approved that specific edit, not the item), and status "reviewed" with review_status "passed".
+  - **Tests:** a unit test of the gate, and a check that no manifest row claims approval it doesn't have. A scan of every research JSON file finds no remaining claims.
+- **Approval packets:** `review/approval-packets-2026-10-22/`, built by `qa/approval_packets_2026_10_22.py`. They replace the P1-P4 packets; `packets-2026-10-22/` keeps `decisions.csv` and the independent AI review.
+  - 23 packets cover all 723 pending rows. Each packet holds one domain and one evidence type: solver-verified, law-text-verified or human-judgment-needed. Sizes are 29-36, except one packet of the 8 Verbal EN grammar items that a solver checked.
+  - Packets are ordered by item risk, highest first: Revise, then revision, then not machine-checkable, then self-authored, then flags, then legal content.
+  - Each packet opens with a one-page summary: what the evidence proves, what it does NOT show, the risk counts, numbered checks for that domain and evidence type, and the items to look at hardest.
+  - Items are listed without keys. The answer sheet with keys, evidence and risk notes comes at the end, so the reviewer solves first.
+  - A decision needs a reason for each item; a whole-packet stamp is not accepted.
+- **Queue:** 698 Accept, 20 Accept revision, 5 Revise; 317 rows need a human read. `decision_by_human` is empty.
+- **Tests:** 19 bank-gate tests, all passing.

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Independent review packets for every non-approved row of the flat-2100 manifest (CONTINUE directive 2026-10-22).
+"""Priority assignment (decisions.csv) for every non-approved row; the packet files themselves are superseded by
+approval_packets_2026_10_22.py. Originally: independent review packets for every non-approved row of the flat-2100 manifest (CONTINUE directive 2026-10-22).
 
 Independent means the reviewer solves each item before seeing the key: every packet lists the items with their
 options only, and the key, explanation, source and machine-QA notes sit in a separate answer sheet at the end.
@@ -107,7 +108,7 @@ def main():
                 for x in nt:
                     L.append(f"- Review note: {x}")
                 L.append("")
-            (OUT / name).write_text("\n".join(L) + "\n", encoding="utf-8")
+            pass  # packet files superseded by approval_packets_2026_10_22.py (GT review 22 Oct, 4:18 PM); only decisions.csv is kept
             for _, r, it, nt in chunk:
                 index.append({"priority": p, "packet": name, "id": r["id"], "domain": dom, "track": it.get("track"), "status": r["status"],
                               "source_file": r["source_file"], "review_notes": " | ".join(nt), "decision": "", "reviewer": "", "comment": ""})
@@ -124,7 +125,9 @@ def main():
     notes_c = collections.Counter(re.sub(r"\d+", "N", n.split(":")[0] if n.startswith("qa_flag") else n) for x in index for n in x["review_notes"].split(" | ") if n)
     R += ["", "Review notes in P2:", ""] + [f"- {v} × {k}" for k, v in notes_c.most_common()]
     R += ["", "Record decisions in `decisions.csv`. ACCEPT from a human reviewer is the only path to approval; the bank worker never approves."]
-    (OUT / "README.md").write_text("\n".join(R) + "\n", encoding="utf-8")
+    (OUT / "README.md").write_text("# Superseded\n\nThe P1-P4 packets were replaced by evidence-typed approval packets in "
+                                   "`../approval-packets-2026-10-22/`. This folder keeps `decisions.csv` (priority per row, read by the evidence pass) "
+                                   "and the independent AI review of P1.\n", encoding="utf-8")
     print(json.dumps({"items": len(index), "packets": len({x['packet'] for x in index}), "by_priority": dict(pk)}, indent=1))
 
 

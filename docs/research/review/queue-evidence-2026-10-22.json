@@ -3354,9 +3354,9 @@
    "date": "2026-10-22",
    "by": "bank worker (author; not independent)",
    "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
-   "result": "no defect; watch note",
-   "finding": "P-S-R-Q is readable; P-R-S-Q is better because 'As a result' must follow the reminder system, not the forgetting",
-   "action": "",
+   "result": "revised after GT review; awaiting re-check",
+   "finding": "found by GT's independent review, not by the author's read: GT: P-S-R-Q was also coherent",
+   "action": "revised again in the draft: Sentence S now reads 'Now a text arrives two days before each appointment, so parents no longer depend on those cards.', which needs the cards of R; recommendation Revise until a reviewer confirms",
    "needs_human_read": "yes"
   }
  },
@@ -4866,9 +4866,9 @@
    "date": "2026-10-22",
    "by": "bank worker (author; not independent)",
    "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
-   "result": "no defect; watch note",
-   "finding": "R-P-S-Q is readable; R-S-P-Q is better because S defines the agenda before P uses 'With it'",
-   "action": "",
+   "result": "revised after GT review; awaiting re-check",
+   "finding": "found by GT's independent review, not by the author's read: GT: R-P-S-Q was also coherent",
+   "action": "revised again in the draft: Sentence P now reads 'Because they know these topics in advance, members can prepare their reports ahead of time.', which needs the topics listed in S; recommendation Revise until a reviewer confirms",
    "needs_human_read": "yes"
   }
  },
@@ -5006,9 +5006,9 @@
    "date": "2026-10-22",
    "by": "bank worker (author; not independent)",
    "attacks": "the added sentence tried after every sentence; pronoun/connector reference must resolve in one slot only",
-   "result": "defect found and repaired",
-   "finding": "second defensible answer: the class-size sentence fit after sentence 1 or after sentence 2",
-   "action": "repaired in the draft: added sentence is now 'That is enough time, because each class has only fifteen learners.', which needs the four Saturdays of sentence 2",
+   "result": "revised after GT review; awaiting re-check",
+   "finding": "found by GT's independent review, not by the author's read: GT: the class-size sentence still fit after sentence 2 or 3",
+   "action": "revised again in the draft: Rebuilt: sentence 3 is now 'On the first Saturday, learners set up their own email accounts.' and the added sentence is 'On the last Saturday, they fill out a sample online job application.', which must follow sentence 3 and precede 'these skills' in sentence 4; recommendation Revise until a reviewer confirms",
    "needs_human_read": "yes"
   }
  },
@@ -5146,9 +5146,9 @@
    "date": "2026-10-22",
    "by": "bank worker (author; not independent)",
    "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
-   "result": "no defect; watch note",
-   "finding": "Q-P-R-S is readable; Q-R-P-S is better because the fare check explains why complaints dropped",
-   "action": "",
+   "result": "revised after GT review; awaiting re-check",
+   "finding": "found by GT's independent review, not by the author's read: GT: Q-P-R-S was also coherent",
+   "action": "revised again in the draft: Sentence P now reads 'Because overcharging is now easy to spot, complaints about it dropped soon after the rule took effect.', which needs the fare check in R; recommendation Revise until a reviewer confirms",
    "needs_human_read": "yes"
   }
  },
@@ -5306,9 +5306,9 @@
    "date": "2026-10-22",
    "by": "bank worker (author; not independent)",
    "attacks": "every option order read as a paragraph; connectors (this, also, therefore, another, since then) must fix one order",
-   "result": "no defect; watch note",
-   "finding": "S-P-R-Q is readable; S-R-P-Q is better because 'also welcome' in Q must follow the users named in P",
-   "action": "",
+   "result": "revised after GT review; awaiting re-check",
+   "finding": "found by GT's independent review, not by the author's read: GT: S-P-R-Q was also coherent",
+   "action": "revised again in the draft: Sentence P now reads 'Thanks to the refrigerator, mothers who work at the capitol can store milk there during their breaks.', which needs the refrigerator named in R; recommendation Revise until a reviewer confirms",
    "needs_human_read": "yes"
   }
  },

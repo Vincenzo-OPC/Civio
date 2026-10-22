@@ -75,7 +75,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Multiply the leftover fractions: 120 × 3/4 × 1/3.",
    "recipe": {
     "op": "frac_rest2",
@@ -156,7 +156,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Multiply the leftover fractions: 96 × 5/8 × 3/4.",
    "recipe": {
     "op": "frac_rest2",
@@ -237,7 +237,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Cross-multiply: (a×d + b×c) / (b×d), then simplify.",
    "recipe": {
     "op": "frac_add",
@@ -317,7 +317,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Cross-multiply: (a×d + b×c) / (b×d), then simplify.",
    "recipe": {
     "op": "frac_add",
@@ -397,7 +397,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Convert to improper fractions over one denominator, subtract, then convert back.",
    "recipe": {
     "op": "frac_sub",
@@ -477,7 +477,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Convert to improper fractions over one denominator, subtract, then convert back.",
    "recipe": {
     "op": "frac_sub",
@@ -557,7 +557,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Divide first to keep numbers small: 35 ÷ 5 = 7, then × 2.",
    "recipe": {
     "op": "frac_of",
@@ -637,7 +637,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Divide first to keep numbers small: 63 ÷ 9 = 7, then × 5.",
    "recipe": {
     "op": "frac_of",
@@ -717,7 +717,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "6 ÷ 3/4 = 6 × 4/3.",
    "recipe": {
     "op": "frac_div",
@@ -797,7 +797,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "10 ÷ 2/5 = 10 × 5/2.",
    "recipe": {
     "op": "frac_div",
@@ -877,7 +877,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Whole = part × denominator ÷ numerator.",
    "recipe": {
     "op": "frac_whole",
@@ -957,7 +957,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Whole = part × denominator ÷ numerator.",
    "recipe": {
     "op": "frac_whole",
@@ -1037,7 +1037,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Cancel common factors across before multiplying.",
    "recipe": {
     "op": "frac_mul",
@@ -1117,7 +1117,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Cancel common factors across before multiplying.",
    "recipe": {
     "op": "frac_mul",
@@ -1197,7 +1197,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Compare each fraction with 1/2 first, then cross-multiply the close ones.",
    "recipe": {
     "op": "frac_max",
@@ -1281,7 +1281,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Compare each fraction with 1/2 first, then cross-multiply the close ones.",
    "recipe": {
     "op": "frac_max",
@@ -1365,7 +1365,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "One part = ₱7,200 ÷ 8.",
    "recipe": {
     "op": "ratio_share",
@@ -1449,7 +1449,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "One part = ₱18,000 ÷ 9.",
    "recipe": {
     "op": "ratio_share",
@@ -1533,7 +1533,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "One part = 600 ÷ 10 = 60.",
    "recipe": {
     "op": "ratio_share",
@@ -1618,7 +1618,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "One part = 1,260 ÷ 14 = 90.",
    "recipe": {
     "op": "ratio_share",
@@ -1703,7 +1703,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Multiplier = 35 ÷ 5 = 7.",
    "recipe": {
     "op": "ratio_part",
@@ -1787,7 +1787,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Multiplier = 28 ÷ 7 = 4.",
    "recipe": {
     "op": "ratio_part",
@@ -1871,7 +1871,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "One part = 27 ÷ (7 − 4).",
    "recipe": {
     "op": "ratio_diff",
@@ -1954,7 +1954,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "One part = 32 ÷ (9 − 5).",
    "recipe": {
     "op": "ratio_diff",
@@ -2037,7 +2037,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Multiply across: (a × second b) : (first b × c).",
    "recipe": {
     "op": "ratio_chain",
@@ -2123,7 +2123,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Multiply across: (a × second b) : (first b × c).",
    "recipe": {
     "op": "ratio_chain",
@@ -2209,7 +2209,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Actual = map length × scale value.",
    "recipe": {
     "op": "mul",
@@ -2290,7 +2290,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Actual = map length × scale value.",
    "recipe": {
     "op": "mul",
@@ -2371,7 +2371,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Factor = 30 ÷ 12 = 2.5; multiply 3 by it.",
    "recipe": {
     "op": "proportion",
@@ -2453,7 +2453,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Factor = 75 ÷ 15 = 5; multiply 2 by it.",
    "recipe": {
     "op": "proportion",
@@ -2535,7 +2535,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "x = (31 − 7) ÷ 3.",
    "recipe": {
     "op": "lin",
@@ -2616,7 +2616,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "x = (37 − 15) ÷ 2.",
    "recipe": {
     "op": "lin",
@@ -2697,7 +2697,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "(49 + 8) ÷ 3.",
    "recipe": {
     "op": "lin",
@@ -2778,7 +2778,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "(63 + 12) ÷ 5.",
    "recipe": {
     "op": "lin",
@@ -2859,7 +2859,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Average = 81 ÷ 3; count out from the middle.",
    "recipe": {
     "op": "consec",
@@ -2941,7 +2941,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Average = 106 ÷ 4; count out from the middle.",
    "recipe": {
     "op": "consec",
@@ -3023,7 +3023,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "72 ÷ (5 + 1).",
    "recipe": {
     "op": "multiple",
@@ -3103,7 +3103,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "96 ÷ (3 + 1).",
    "recipe": {
     "op": "multiple",
@@ -3183,7 +3183,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "If all 40 were ₱5 coins, the value would be ₱200; each swap to a ₱10 coin adds ₱5.",
    "recipe": {
     "op": "coins",
@@ -3266,7 +3266,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "If all 30 were ₱1 coins, the value would be ₱30; each swap to a ₱10 coin adds ₱9.",
    "recipe": {
     "op": "coins",
@@ -3349,7 +3349,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Distribute first; then move the smaller variable term so its coefficient stays positive.",
    "recipe": {
     "op": "lin2",
@@ -3428,7 +3428,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Distribute first; then move the smaller variable term so its coefficient stays positive.",
    "recipe": {
     "op": "lin2",
@@ -3507,7 +3507,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "5x + 18 = 2(x + 18) gives x = 18 ÷ (5 − 2).",
    "recipe": {
     "op": "age",
@@ -3587,7 +3587,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "4x + 20 = 2(x + 20) gives x = 20 ÷ (4 − 2).",
    "recipe": {
     "op": "age",
@@ -3667,7 +3667,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "(5 + 3) × 4.",
    "recipe": {
     "op": "lin",
@@ -3748,7 +3748,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Group each item's subtotal before subtracting.",
    "recipe": {
     "op": "change",
@@ -3837,7 +3837,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Group each item's subtotal before subtracting.",
    "recipe": {
     "op": "change",
@@ -3926,7 +3926,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Count up: to the next whole hour, then full hours, then the remaining minutes.",
    "recipe": {
     "op": "elapsed",
@@ -4013,7 +4013,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Count up: to the next whole hour, then full hours, then the remaining minutes.",
    "recipe": {
     "op": "elapsed",
@@ -4100,7 +4100,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Fraction of an hour × 60 = minutes.",
    "recipe": {
     "op": "travel_time",
@@ -4180,7 +4180,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Fraction of an hour × 60 = minutes.",
    "recipe": {
     "op": "travel_time",
@@ -4260,7 +4260,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Together time = (a × b) ÷ (a + b).",
    "recipe": {
     "op": "together",
@@ -4341,7 +4341,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Together time = (a × b) ÷ (a + b).",
    "recipe": {
     "op": "together",
@@ -4422,7 +4422,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Needed total = 85 × 4; subtract what is already in.",
    "recipe": {
     "op": "avg_missing",
@@ -4506,7 +4506,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Needed total = 50 × 5; subtract what is already in.",
    "recipe": {
     "op": "avg_missing",
@@ -4591,7 +4591,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "If pack × quotient falls short, add one pack.",
    "recipe": {
     "op": "ceil_div",
@@ -4671,7 +4671,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "If pack × quotient falls short, add one pack.",
    "recipe": {
     "op": "ceil_div",
@@ -4751,7 +4751,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Picture a tiny case: 8 m with posts every 4 m needs 3 posts.",
    "recipe": {
     "op": "posts",
@@ -4831,7 +4831,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Picture a tiny case: 8 m with posts every 4 m needs 3 posts.",
    "recipe": {
     "op": "posts",
@@ -4911,7 +4911,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Take out the down payment first.",
    "recipe": {
     "op": "installment",

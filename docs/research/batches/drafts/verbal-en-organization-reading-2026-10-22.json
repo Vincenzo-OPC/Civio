@@ -65,7 +65,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -83,7 +83,7 @@
    "difficulty": "medium",
    "est_seconds": 75,
    "language": "en",
-   "stem": "Put the sentences below in the best order. Which arrangement is correct?\nP. A barangay health center in Iloilo started sending text reminders for vaccination schedules.\nQ. As a result, fewer infants now miss their scheduled shots.\nR. Before this, many parents simply forgot the dates written on paper cards.\nS. The reminders are sent two days before each appointment.",
+   "stem": "Put the sentences below in the best order. Which arrangement is correct?\nP. A barangay health center in Iloilo started sending text reminders for vaccination schedules.\nQ. As a result, fewer infants now miss their scheduled shots.\nR. Before this, many parents simply forgot the dates written on paper cards.\nS. Now a text arrives two days before each appointment, so parents no longer depend on those cards.",
    "options": [
     {
      "option_id": "o1",
@@ -106,7 +106,7 @@
    "reveal": {
     "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
     "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
-    "why_correct": "Answer: \"P-R-S-Q\". The opener introduces the reminders, the second gives the earlier problem, the third adds a detail about the reminders, and \"As a result\" signals the outcome last. Read in this order, every pointer word has something before it to refer to.",
+    "why_correct": "Answer: \"P-R-S-Q\". The opener introduces the reminders, \"Before this\" gives the earlier problem with paper cards, \"those cards\" in the third needs the cards already mentioned, and \"As a result\" signals the outcome last. Read in this order, every pointer word has something before it to refer to.",
     "why_wrong": {
      "o2": "This runs the paragraph backward, so it ends with the topic sentence and opens with the conclusion.",
      "o3": "This opens with a supporting sentence; the topic sentence must come first.",
@@ -131,7 +131,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -197,7 +197,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -263,7 +263,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -329,7 +329,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -395,7 +395,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -461,7 +461,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -527,7 +527,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -593,7 +593,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -659,7 +659,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -725,7 +725,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -791,7 +791,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -809,7 +809,7 @@
    "difficulty": "medium",
    "est_seconds": 75,
    "language": "en",
-   "stem": "Which sequence of sentences P, Q, R and S makes the most logical paragraph?\nP. With it, members can prepare their reports ahead of time.\nQ. Meetings with an agenda therefore tend to finish sooner.\nR. A good meeting starts with a clear agenda.\nS. The agenda tells members what will be discussed and in what order.",
+   "stem": "Which sequence of sentences P, Q, R and S makes the most logical paragraph?\nP. Because they know these topics in advance, members can prepare their reports ahead of time.\nQ. Meetings with an agenda therefore tend to finish sooner.\nR. A good meeting starts with a clear agenda.\nS. The agenda tells members what will be discussed and in what order.",
    "options": [
     {
      "option_id": "o1",
@@ -832,7 +832,7 @@
    "reveal": {
     "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
     "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
-    "why_correct": "Answer: \"R-S-P-Q\". The main idea opens, \"The agenda\" is then explained, \"With it\" depends on the agenda, and \"therefore\" gives the conclusion. Read in this order, every pointer word has something before it to refer to.",
+    "why_correct": "Answer: \"R-S-P-Q\". The main idea opens, the agenda's contents are then explained, \"these topics\" needs the topics listed in the second sentence, and \"therefore\" gives the conclusion. Read in this order, every pointer word has something before it to refer to.",
     "why_wrong": {
      "o1": "This runs the paragraph backward, so it ends with the topic sentence and opens with the conclusion.",
      "o2": "This opens with a supporting sentence; the topic sentence must come first.",
@@ -857,7 +857,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -923,7 +923,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -989,7 +989,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1055,7 +1055,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1121,7 +1121,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1139,7 +1139,7 @@
    "difficulty": "medium",
    "est_seconds": 75,
    "language": "en",
-   "stem": "Arrange the sentences to form a logical paragraph. Which order is correct?\nP. Complaints about overcharging dropped soon after the rule took effect.\nQ. A new ordinance requires tricycle drivers to post their fare matrix inside the cab.\nR. Passengers can now check the correct fare before they pay.\nS. The town plans to apply the same rule to jeepneys next year.",
+   "stem": "Arrange the sentences to form a logical paragraph. Which order is correct?\nP. Because overcharging is now easy to spot, complaints about it dropped soon after the rule took effect.\nQ. A new ordinance requires tricycle drivers to post their fare matrix inside the cab.\nR. Passengers can now check the correct fare before they pay.\nS. The town plans to apply the same rule to jeepneys next year.",
    "options": [
     {
      "option_id": "o1",
@@ -1162,7 +1162,7 @@
    "reveal": {
     "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
     "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
-    "why_correct": "Answer: \"Q-R-P-S\". The rule opens, the passenger benefit follows, the measured result comes next, and the future plan closes. Read in this order, every pointer word has something before it to refer to.",
+    "why_correct": "Answer: \"Q-R-P-S\". The rule opens, the passenger fare check follows, \"easy to spot\" in the third needs that fare check, and the future plan closes. Read in this order, every pointer word has something before it to refer to.",
     "why_wrong": {
      "o1": "This swaps the middle two sentences, so a sentence comes before the idea it builds on.",
      "o2": "This runs the paragraph backward, so it ends with the topic sentence and opens with the conclusion.",
@@ -1187,7 +1187,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1253,7 +1253,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1319,7 +1319,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1385,7 +1385,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1451,7 +1451,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1517,7 +1517,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1583,7 +1583,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1601,7 +1601,7 @@
    "difficulty": "medium",
    "est_seconds": 75,
    "language": "en",
-   "stem": "Which sequence of sentences P, Q, R and S makes the most logical paragraph?\nP. Mothers who work at the capitol can use it during their breaks.\nQ. Visiting clients with infants are also welcome to use the room.\nR. The room is clean, private and equipped with a small refrigerator.\nS. The provincial capitol now has a lactation room for nursing mothers.",
+   "stem": "Which sequence of sentences P, Q, R and S makes the most logical paragraph?\nP. Thanks to the refrigerator, mothers who work at the capitol can store milk there during their breaks.\nQ. Visiting clients with infants are also welcome to use the room.\nR. The room is clean, private and equipped with a small refrigerator.\nS. The provincial capitol now has a lactation room for nursing mothers.",
    "options": [
     {
      "option_id": "o1",
@@ -1624,7 +1624,7 @@
    "reveal": {
     "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
     "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
-    "why_correct": "Answer: \"S-R-P-Q\". The room is introduced, its features follow, its main users come next, and \"also\" adds a second group. Read in this order, every pointer word has something before it to refer to.",
+    "why_correct": "Answer: \"S-R-P-Q\". The room is introduced, its features follow, \"the refrigerator\" in the third needs the refrigerator named in the second, and \"also\" adds a second group. Read in this order, every pointer word has something before it to refer to.",
     "why_wrong": {
      "o1": "This opens with a supporting sentence; the topic sentence must come first.",
      "o2": "This runs the paragraph backward, so it ends with the topic sentence and opens with the conclusion.",
@@ -1649,7 +1649,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1715,7 +1715,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1781,7 +1781,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1847,7 +1847,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1913,7 +1913,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -1979,7 +1979,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
    "recipe": {
     "op": "judgment",
@@ -2045,7 +2045,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2111,7 +2111,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2177,7 +2177,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2243,7 +2243,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2309,7 +2309,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2375,7 +2375,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2441,7 +2441,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2507,7 +2507,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2573,7 +2573,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2639,7 +2639,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2705,7 +2705,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2771,7 +2771,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2837,7 +2837,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2903,7 +2903,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -2921,15 +2921,15 @@
    "difficulty": "medium",
    "est_seconds": 70,
    "language": "en",
-   "stem": "Read the paragraph. After which sentence should the added sentence be placed?\n\"That is enough time, because each class has only fifteen learners.\"\n\n(1) The provincial library offers free computer classes for adults. (2) Each class runs for four Saturdays. (3) Learners practice using email and filling out online forms. (4) Many graduates have used these skills to apply for jobs online.",
+   "stem": "Read the paragraph. After which sentence should the added sentence be placed?\n\"On the last Saturday, they fill out a sample online job application.\"\n\n(1) The provincial library offers free computer classes for adults. (2) Each class runs for four Saturdays. (3) On the first Saturday, learners set up their own email accounts. (4) Many graduates have used these skills to apply for jobs online.",
    "options": [
     {
      "option_id": "o1",
-     "text": "After sentence 3"
+     "text": "After sentence 2"
     },
     {
      "option_id": "o2",
-     "text": "After sentence 2"
+     "text": "After sentence 3"
     },
     {
      "option_id": "o3",
@@ -2944,17 +2944,17 @@
    "reveal": {
     "terms": "Sentence insertion: an added sentence goes right after the sentence its pointer words (this, these, such, also, for example) refer to.",
     "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
-    "why_correct": "Answer: \"After sentence 2\". The added sentence fits there because \"That is enough time\" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 \"That\" would point to the practice, which is not a length of time; the sentence that follows still reads smoothly.",
+    "why_correct": "Answer: \"After sentence 3\". The added sentence fits there because \"On the last Saturday\" must follow \"On the first Saturday\" in sentence 3, and it must come before sentence 4, where \"these skills\" sums up what was learned; the sentence that follows still reads smoothly.",
     "why_wrong": {
-     "o1": "After sentence 3, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because \"That is enough time\" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 \"That\" would point to the practice, which is not a length of time.",
-     "o3": "After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because \"That is enough time\" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 \"That\" would point to the practice, which is not a length of time.",
-     "o4": "At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 2 because \"That is enough time\" needs the length of the class (four Saturdays) given in sentence 2; after sentence 3 \"That\" would point to the practice, which is not a length of time."
+     "o1": "After sentence 2, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 3 because \"On the last Saturday\" must follow \"On the first Saturday\" in sentence 3, and it must come before sentence 4, where \"these skills\" sums up what was learned.",
+     "o3": "After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 3 because \"On the last Saturday\" must follow \"On the first Saturday\" in sentence 3, and it must come before sentence 4, where \"these skills\" sums up what was learned.",
+     "o4": "At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 3 because \"On the last Saturday\" must follow \"On the first Saturday\" in sentence 3, and it must come before sentence 4, where \"these skills\" sums up what was learned."
     }
    },
    "distractor_reasoning": {
     "o1": "PO-TRANSITION-IGNORED",
-    "o3": "PO-TRANSITION-IGNORED",
-    "o4": "LOG-IGNORED-CLUE"
+    "o3": "LOG-IGNORED-CLUE",
+    "o4": "PO-TRANSITION-IGNORED"
    },
    "source": "Original, Civio",
    "source_url": null,
@@ -2969,7 +2969,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
    "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
    "recipe": {
     "op": "judgment",
@@ -3035,7 +3035,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P01 (\"Jeepney stops\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P01 (\"Jeepney stops\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -3102,7 +3102,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P01 (\"Jeepney stops\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P01 (\"Jeepney stops\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -3169,7 +3169,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P01 (\"Jeepney stops\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P01 (\"Jeepney stops\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -3236,7 +3236,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P02 (\"Library hours\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P02 (\"Library hours\"), question 1 of 3.",
    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
    "recipe": {
     "op": "judgment",
@@ -3303,7 +3303,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P02 (\"Library hours\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P02 (\"Library hours\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -3370,7 +3370,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P02 (\"Library hours\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P02 (\"Library hours\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -3437,7 +3437,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P03 (\"Fish sanctuary\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P03 (\"Fish sanctuary\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -3504,7 +3504,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P03 (\"Fish sanctuary\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P03 (\"Fish sanctuary\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -3571,7 +3571,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P03 (\"Fish sanctuary\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P03 (\"Fish sanctuary\"), question 3 of 3.",
    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
    "recipe": {
     "op": "judgment",
@@ -3638,7 +3638,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P04 (\"Clinic queues\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P04 (\"Clinic queues\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -3705,7 +3705,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P04 (\"Clinic queues\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P04 (\"Clinic queues\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -3772,7 +3772,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P04 (\"Clinic queues\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P04 (\"Clinic queues\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -3839,7 +3839,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P05 (\"Office plants\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P05 (\"Office plants\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -3906,7 +3906,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P05 (\"Office plants\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P05 (\"Office plants\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -3973,7 +3973,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P05 (\"Office plants\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P05 (\"Office plants\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -4040,7 +4040,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P06 (\"Senior IDs\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P06 (\"Senior IDs\"), question 1 of 3.",
    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
    "recipe": {
     "op": "judgment",
@@ -4107,7 +4107,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P06 (\"Senior IDs\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P06 (\"Senior IDs\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -4174,7 +4174,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P06 (\"Senior IDs\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P06 (\"Senior IDs\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -4241,7 +4241,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P07 (\"Typhoon drills\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P07 (\"Typhoon drills\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -4308,7 +4308,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P07 (\"Typhoon drills\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P07 (\"Typhoon drills\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -4375,7 +4375,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P07 (\"Typhoon drills\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P07 (\"Typhoon drills\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -4442,7 +4442,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P08 (\"Market scales\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P08 (\"Market scales\"), question 1 of 3.",
    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
    "recipe": {
     "op": "judgment",
@@ -4509,7 +4509,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P08 (\"Market scales\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P08 (\"Market scales\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -4576,7 +4576,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P08 (\"Market scales\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P08 (\"Market scales\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -4643,7 +4643,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P09 (\"Night classes\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P09 (\"Night classes\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -4710,7 +4710,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P09 (\"Night classes\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P09 (\"Night classes\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -4777,7 +4777,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P09 (\"Night classes\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P09 (\"Night classes\"), question 3 of 3.",
    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
    "recipe": {
     "op": "judgment",
@@ -4844,7 +4844,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P10 (\"Water refilling\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P10 (\"Water refilling\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -4911,7 +4911,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P10 (\"Water refilling\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P10 (\"Water refilling\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -4978,7 +4978,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P10 (\"Water refilling\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P10 (\"Water refilling\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -5045,7 +5045,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P11 (\"Waste-to-art\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P11 (\"Waste-to-art\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -5112,7 +5112,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P11 (\"Waste-to-art\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P11 (\"Waste-to-art\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -5179,7 +5179,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P11 (\"Waste-to-art\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P11 (\"Waste-to-art\"), question 3 of 3.",
    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
    "recipe": {
     "op": "judgment",
@@ -5246,7 +5246,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P12 (\"Tree planting\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P12 (\"Tree planting\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -5313,7 +5313,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P12 (\"Tree planting\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P12 (\"Tree planting\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -5380,7 +5380,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P12 (\"Tree planting\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P12 (\"Tree planting\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -5447,7 +5447,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P13 (\"Barangay radio\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P13 (\"Barangay radio\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -5514,7 +5514,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P13 (\"Barangay radio\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P13 (\"Barangay radio\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -5581,7 +5581,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P13 (\"Barangay radio\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P13 (\"Barangay radio\"), question 3 of 3.",
    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
    "recipe": {
     "op": "judgment",
@@ -5648,7 +5648,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P14 (\"Price tags\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P14 (\"Price tags\"), question 1 of 3.",
    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
    "recipe": {
     "op": "judgment",
@@ -5715,7 +5715,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P14 (\"Price tags\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P14 (\"Price tags\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -5782,7 +5782,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P14 (\"Price tags\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P14 (\"Price tags\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -5849,7 +5849,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P15 (\"Footbridge\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P15 (\"Footbridge\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -5916,7 +5916,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P15 (\"Footbridge\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P15 (\"Footbridge\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -5983,7 +5983,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P15 (\"Footbridge\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P15 (\"Footbridge\"), question 3 of 3.",
    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
    "recipe": {
     "op": "judgment",
@@ -6050,7 +6050,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P16 (\"Medicine labels\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P16 (\"Medicine labels\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -6117,7 +6117,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P16 (\"Medicine labels\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P16 (\"Medicine labels\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -6184,7 +6184,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P16 (\"Medicine labels\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P16 (\"Medicine labels\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -6251,7 +6251,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P17 (\"Bike lanes\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P17 (\"Bike lanes\"), question 1 of 3.",
    "shortcut": "Ask which choice the first and last sentences would both agree with.",
    "recipe": {
     "op": "judgment",
@@ -6318,7 +6318,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P17 (\"Bike lanes\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P17 (\"Bike lanes\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -6385,7 +6385,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P17 (\"Bike lanes\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P17 (\"Bike lanes\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",
@@ -6452,7 +6452,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P18 (\"Office forms\"), question 1 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P18 (\"Office forms\"), question 1 of 3.",
    "shortcut": "Scan for the key noun in the question, then read that sentence closely.",
    "recipe": {
     "op": "judgment",
@@ -6519,7 +6519,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P18 (\"Office forms\"), question 2 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P18 (\"Office forms\"), question 2 of 3.",
    "shortcut": "Find the sentence the question points to, then pick the choice that follows from it with no extra assumptions.",
    "recipe": {
     "op": "judgment",
@@ -6586,7 +6586,7 @@
     "created_at": "2026-10-22T12:00:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "New original draft, 22 Oct 2026 (GT approved). Passage CIVIO-D1022-VEN-RC-P18 (\"Office forms\"), question 3 of 3.",
+   "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage CIVIO-D1022-VEN-RC-P18 (\"Office forms\"), question 3 of 3.",
    "shortcut": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged.",
    "recipe": {
     "op": "judgment",

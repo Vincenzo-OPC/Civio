@@ -6,7 +6,7 @@ import re
 from fractions import Fraction as F
 
 PROV = {"author": "Grok Bot", "method": "ai_assisted", "created_at": "2026-10-22T12:00:00+08:00", "spec_version": "0.1.9"}
-NOTE = "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own."
+NOTE = "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Not copied from any reviewer; numbers, scenario and wording are Civio's own."
 
 
 class Skip(Exception):

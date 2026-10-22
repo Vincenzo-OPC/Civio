@@ -368,8 +368,33 @@ def passage_errors(it):
     return []
 
 
+_DESIGN_OK = re.compile(r"design approach approved by GT", re.I)
+_CLAIM = re.compile(r"\b(?:GT|CoS)[- ]approved\b|\bapproved by (?:GT|CoS|the Chief of Staff)\b|\(approved\)", re.I)
+
+
+def approval_claim_errors(it):
+    """A row that is not approved must not claim approval in its notes or metadata (GT review 22 Oct 2026).
+    Allowed: 'Design approach approved by GT; item not yet reviewed', and revisions[].approved_by, which records that GT
+    approved a specific edit, not the item."""
+    if it.get("status") == "approved":
+        return []
+    errs = []
+    for k in ("approved_by", "approved_at", "signed_by", "signed_at", "signoff"):
+        if it.get(k):
+            errs.append(f"not approved but carries {k}")
+    # a "reviewed" row may carry review_status "passed" (it passed review and awaits approval); a draft may not
+    if it.get("status") == "draft" and it.get("review_status") in ("passed", "approved"):
+        errs.append(f"not approved but review_status is {it['review_status']}")
+    for k in ("notes", "note", "provenance", "review_notes"):
+        v = it.get(k)
+        txt = _DESIGN_OK.sub("", v if isinstance(v, str) else json.dumps(v, ensure_ascii=False) if v else "")
+        if _CLAIM.search(txt):
+            errs.append(f"not approved but {k} claims approval")
+    return errs
+
+
 def check_item(it):
-    errs = pronoun_errors(it) + passage_errors(it)
+    errs = pronoun_errors(it) + passage_errors(it) + approval_claim_errors(it)
     for k in REQ:
         if k not in it:
             errs.append(f"missing {k}")

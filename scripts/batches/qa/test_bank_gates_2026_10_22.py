@@ -169,8 +169,49 @@ def test_adversarial_read_recorded_and_repairs_applied():
     d = {i["id"]: i for f in ("docs/research/batches/drafts/analytical-professional-2026-10-22.json",
                               "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json") for i in json.load(open(f))["items"]}
     assert "general : army" not in [o["text"] for o in d["CIVIO-D1022-ANA-0038"]["options"]]
-    assert "These fees" in d["CIVIO-D1022-VEN-INS-0012"]["stem"] and "That is enough time" in d["CIVIO-D1022-VEN-INS-0015"]["stem"]
+    assert "These fees" in d["CIVIO-D1022-VEN-INS-0012"]["stem"] and "On the last Saturday" in d["CIVIO-D1022-VEN-INS-0015"]["stem"]
     assert "Those children" not in d["CIVIO-D1022-VEN-INS-0008"]["stem"]
+
+
+def test_non_approved_rows_may_not_claim_approval():
+    base = {"status": "draft", "notes": "New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed."}
+    assert qa.approval_claim_errors(base) == []
+    assert qa.approval_claim_errors(dict(base, notes="New original draft, 22 Oct 2026 (GT approved)."))
+    assert qa.approval_claim_errors(dict(base, notes="Approved by CoS."))
+    assert qa.approval_claim_errors(dict(base, approved_by="GT"))
+    assert qa.approval_claim_errors(dict(base, review_status="passed"))
+    assert qa.approval_claim_errors(dict(base, revisions=[{"approved_by": "GT", "change": "edit"}])) == []
+    assert qa.approval_claim_errors({"status": "approved", "notes": "GT approved", "approved_by": "GT"}) == []
+    assert qa.approval_claim_errors({"status": "reviewed", "review_status": "passed"}) == []
+
+
+def test_no_manifest_row_claims_unearned_approval():
+    m = json.load(open(MAN)); cache, bad = {}, []
+    for r in m["items"]:
+        f = r["source_file"]
+        if f not in cache:
+            d = json.load(open(f)); cache[f] = {i["id"]: i for i in (d["items"] if isinstance(d, dict) else d) if isinstance(i, dict)}
+        if qa.approval_claim_errors(cache[f][r["id"]]):
+            bad.append(r["id"])
+    assert not bad, (len(bad), bad[:5])
+
+
+def test_approval_packets_cover_queue_by_evidence_type_risk_first():
+    import csv, glob, re
+    rows = {r["id"] for r in csv.DictReader(open("docs/research/review/queue-recommendations-2026-10-22.csv"))}
+    seen, maxes = [], []
+    files = sorted(glob.glob("docs/research/review/approval-packets-2026-10-22/A*.md"))
+    for f in files:
+        t = open(f).read()
+        head, items, answers = t.split("## Items (no keys)")[0], t.split("## Items (no keys)")[1].split("## Answer sheet")[0], t.split("## Answer sheet")[1]
+        assert "## One-page summary" in head and "You must check" in head and "does NOT show" in head
+        assert re.search(r"(solver-verified|law-text-verified|human-judgment-needed)", f)
+        ids = re.findall(r"^### \d+\. (\S+)", items, re.M)
+        assert len(ids) <= 40 and all(i in answers for i in ids)
+        assert "Answer:" not in items
+        seen += ids
+        maxes.append(int(re.search(r"Highest item risk score (\d+)", head).group(1)))
+    assert sorted(seen) == sorted(rows) and maxes == sorted(maxes, reverse=True)
 
 if __name__ == "__main__":
     fails = 0

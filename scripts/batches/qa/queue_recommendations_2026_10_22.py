@@ -5,6 +5,8 @@ import csv, json, sys
 from pathlib import Path
 sys.path[:0] = [str(Path(__file__).parent.parent), str(Path(__file__).parent.parent / "drafts")]
 import qa  # noqa: E402
+sys.path.insert(0, str(Path(__file__).parent))
+import adversarial_read_2026_10_22 as AR  # noqa: E402
 import method_first_2026_10_22 as MF  # noqa: E402
 
 MAN, OUT = "docs/research/bank/civio-flat-2100-manifest-2026-10-22.json", "docs/research/review/queue-recommendations-2026-10-22.csv"
@@ -63,7 +65,7 @@ def p2_p4(m, cache):
         if ar and ar["result"] != "no defect found":
             notes.append(f"adversarial read: {ar['finding']}" + (f"; {ar['action']}" if ar["action"] else ""))
             if ar["action"]:
-                rec = "Accept revision"
+                rec = "Revise" if e["id"] in AR.GT_REVISE else "Accept revision"
         if ar:
             human = True
         if d1022:

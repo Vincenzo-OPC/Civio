@@ -17755,7 +17755,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json",
-   "content_sha256": "28450e5c0d2c130003461583a5b2457127c81ddc4ffdb98a5037fe807e604f85",
+   "content_sha256": "4b9e1dda4f356735012b4bef80d74e4286dd24b7af9cdfe399e2b3c8c5031211",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -18624,7 +18624,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json",
-   "content_sha256": "564f792812cb8e45be88afc79d0cba061b1d2247674a5967675ef52f9db69934",
+   "content_sha256": "203b5c312dcfe9787a1053eb587fba04c4abcd15b528ca995e3bb2cd96f7d0bb",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -18701,7 +18701,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json",
-   "content_sha256": "813deb36ee2cb8f53e33466c86c61127ca6a18d2d224cf723c1841292796ebcb",
+   "content_sha256": "33f05f385f5209245ae7dd8ff32e90176e540faeef7cf1b1514dcc1c05c9e701",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -18778,7 +18778,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json",
-   "content_sha256": "964386e886126affbc7100af0f8c00d798a9740c22bc8d13c9f6f3501efb7ea9",
+   "content_sha256": "c592982b04150ca76798d3601794744e1667c1f58afad7289abd1b35af5f3085",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -18866,7 +18866,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json",
-   "content_sha256": "6521dc1fce2e737eac360f21183c9eee9bcd4cacbdb3b4fb6bf6f6b74e3ba157",
+   "content_sha256": "9cd31d6a63011447353c19275471c7a92e422c905f30ca45f3d729ad002df96b",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -31398,6 +31398,10 @@
   "CIVIO-D1022-ANA-0038",
   "CIVIO-D1022-VEN-INS-0008",
   "CIVIO-D1022-VEN-INS-0012",
-  "CIVIO-D1022-VEN-INS-0015"
+  "CIVIO-D1022-VEN-INS-0015",
+  "CIVIO-D1022-VEN-PO-0002",
+  "CIVIO-D1022-VEN-PO-0013",
+  "CIVIO-D1022-VEN-PO-0018",
+  "CIVIO-D1022-VEN-PO-0025"
  ]
 }

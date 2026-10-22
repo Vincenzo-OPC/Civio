@@ -42,7 +42,7 @@ def gi_items():
                 terms=f"Primary law: {src}.", shortcut=f"Key phrase in the text: \"{quote[:140]}{'…' if len(quote) > 140 else ''}\"",
                 why_correct=f"\"{key}\" is correct. {teach[0].upper() + teach[1:]}. Source checked word for word against the {law} text on lawphil.net.",
                 source=src, url=url, source_quote=quote, _fact22=n - 1,
-                notes="New original draft, 22 Oct 2026 (GT approved). Legal text verified against the cached lawphil.net page; needs a legal reviewer before approval.")
+                notes="New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Legal text verified against the cached lawphil.net page; needs a legal reviewer before approval.")
         out.append(it)
     # competency by block
     for it in out[35:60]:

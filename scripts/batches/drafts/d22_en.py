@@ -82,7 +82,7 @@ for p, (title, text, qs) in enumerate(RC, 1):
                                   "VEN-RC-VOCAB": "Replace the word with each choice and keep the one that leaves the sentence's meaning unchanged."}[arch],
                         why_correct=f"Answer: \"{key}\". {why}",
                         passage_id=pid, recipe=J,
-                        notes=f"New original draft, 22 Oct 2026 (GT approved). Passage {pid} (\"{title}\"), question {q} of {len(qs)}."))
+                        notes=f"New original draft, 22 Oct 2026. Design approach approved by GT; item not yet reviewed. Passage {pid} (\"{title}\"), question {q} of {len(qs)}."))
 
 # ---------- Set 2 (22 Oct 2026, afternoon): 12 passages x 4 questions, adds author's purpose and relation between parts ----------
 from en_rc2_2026_10_22 import RC2  # noqa: E402

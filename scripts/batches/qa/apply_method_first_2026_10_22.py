@@ -42,7 +42,7 @@ def main(limit_r1=None):
                 p = copy.deepcopy(it)
                 p.update({"id": it["id"] + "-R1" if not it["id"].endswith("-R1") else it["id"] + "b", "replaces": it["id"], "status": "draft",
                           "review_status": "unreviewed", "reviewer": None, "reviewed_at": None,
-                          "notes": f"Method-first explanation proposal for {it['id']} ({r['status']}); content and key unchanged. 22 Oct 2026."})
+                          "notes": f"Method-first explanation proposal for {it['id']} (original status: {r['status']}); content and key unchanged. 22 Oct 2026."})
                 p["reveal"]["method_steps"] = st
                 props.append(p); done[f"r1_{r['status']}"] += 1
         if changed:

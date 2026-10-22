@@ -25,11 +25,16 @@ FINDINGS = {
                                  "repaired in the draft: added sentence is now 'That is enough time, because each class has only fifteen learners.', which needs the four Saturdays of sentence 2"),
 }
 
-WATCH = {  # no defect, but a reviewer may want to look
-    "CIVIO-D1022-VEN-PO-0002": "P-S-R-Q is readable; P-R-S-Q is better because 'As a result' must follow the reminder system, not the forgetting",
-    "CIVIO-D1022-VEN-PO-0018": "Q-P-R-S is readable; Q-R-P-S is better because the fare check explains why complaints dropped",
-    "CIVIO-D1022-VEN-PO-0025": "S-P-R-Q is readable; S-R-P-Q is better because 'also welcome' in Q must follow the users named in P",
-    "CIVIO-D1022-VEN-PO-0013": "R-P-S-Q is readable; R-S-P-Q is better because S defines the agenda before P uses 'With it'",
+WATCH = {}  # the 4 watch-noted ordering items were revised after GT's independent review (see GT_REVISE)
+
+# GT's independent review (22 Oct, 4:18 PM): still ambiguous after the first repair, or a second coherent order.
+# Revised again by the bank worker; recommendation stays "Revise" until a reviewer confirms one slot/order only.
+GT_REVISE = {
+    "CIVIO-D1022-VEN-INS-0015": "GT: the class-size sentence still fit after sentence 2 or 3. Rebuilt: sentence 3 is now 'On the first Saturday, learners set up their own email accounts.' and the added sentence is 'On the last Saturday, they fill out a sample online job application.', which must follow sentence 3 and precede 'these skills' in sentence 4",
+    "CIVIO-D1022-VEN-PO-0002": "GT: P-S-R-Q was also coherent. Sentence S now reads 'Now a text arrives two days before each appointment, so parents no longer depend on those cards.', which needs the cards of R",
+    "CIVIO-D1022-VEN-PO-0013": "GT: R-P-S-Q was also coherent. Sentence P now reads 'Because they know these topics in advance, members can prepare their reports ahead of time.', which needs the topics listed in S",
+    "CIVIO-D1022-VEN-PO-0018": "GT: Q-P-R-S was also coherent. Sentence P now reads 'Because overcharging is now easy to spot, complaints about it dropped soon after the rule took effect.', which needs the fare check in R",
+    "CIVIO-D1022-VEN-PO-0025": "GT: S-P-R-Q was also coherent. Sentence P now reads 'Thanks to the refrigerator, mothers who work at the capitol can store milk there during their breaks.', which needs the refrigerator named in R",
 }
 
 
@@ -43,6 +48,9 @@ def kind(it):
 
 def record(it):
     f, w = FINDINGS.get(it["id"]), WATCH.get(it["id"])
+    if it["id"] in GT_REVISE:
+        f = ("found by GT's independent review, not by the author's read: " + GT_REVISE[it["id"]].split(". ")[0],
+             "revised again in the draft: " + GT_REVISE[it["id"]].split(". ", 1)[1] + "; recommendation Revise until a reviewer confirms")
     return {"date": "2026-10-22", "by": "bank worker (author; not independent)", "attacks": ATTACKS.get(kind(it), "content read"),
-            "result": "defect found and repaired" if f else ("no defect; watch note" if w else "no defect found"),
+            "result": ("revised after GT review; awaiting re-check" if it["id"] in GT_REVISE else "defect found and repaired") if f else ("no defect; watch note" if w else "no defect found"),
             "finding": f[0] if f else (w or ""), "action": f[1] if f else "", "needs_human_read": "yes"}

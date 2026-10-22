@@ -71,7 +71,7 @@
     "created_at": "2026-10-13T19:15:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000002 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000002 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
    "shortcut": "Write the gaps (+3, +5, +7, +9); they change by the same amount each time, so the next gap is +11: 28 +11 = 39.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000002"
@@ -145,7 +145,7 @@
     "created_at": "2026-10-13T19:15:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000001 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000001 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
    "shortcut": "Chain the changes as multipliers: up 20% is × 1.2, down 20% is × 0.8. ₱250 × 1.2 × 0.8 = ₱240.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000001"
@@ -219,7 +219,7 @@
     "created_at": "2026-10-13T19:15:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000003 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000003 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
    "shortcut": "The second share is 5 of 9 equal parts: ₱18,000 ÷ 9 × 5 = ₱10,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000003"
@@ -293,7 +293,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000034 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000034 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 600 liters of fuel. It gave out 1/5 of them on Monday and 3/4 of the remaining liters of fuel on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 600 × 4/5 × 1/4 = 120.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000034"
@@ -367,7 +367,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000046 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000046 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 900 face masks. It gave out 2/5 of them on Monday and 1/3 of the remaining face masks on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 900 × 3/5 × 2/3 = 360.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000046"
@@ -441,7 +441,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000031 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000031 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 4 + 2 × 4 − 10?",
    "replaces": "CIVIO-NUM-OPS-ORDER-000031"
   },
@@ -514,7 +514,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000039 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000039 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of (4 + 8) × 2 − 5?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -592,7 +592,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000041 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000041 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 9 × 4 − 9 ÷ 3?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -670,7 +670,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000023 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000023 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Find the next number in the series.  6, 12, 19, 27, 36, ___",
    "shortcut": "Write the gaps (+6, +7, +8, +9); they change by the same amount each time, so the next gap is +10: 36 +10 = 46.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000023"
@@ -744,7 +744,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000044 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000044 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Which number should come next?  4, 8, 15, 25, 38, ___",
    "shortcut": "Write the gaps (+4, +7, +10, +13); they change by the same amount each time, so the next gap is +16: 38 +16 = 54.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000044"
@@ -818,7 +818,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000035 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000035 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  2, 6, 14, 30, 62, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000035"
   },
@@ -891,7 +891,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000014 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000014 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000014"
   },
   {
@@ -963,7 +963,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000025 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000025 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Rogelio is 3 times as old as his daughter. In 5 years, Rogelio will be twice as old as the daughter. How old is Rogelio now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000025"
   },
@@ -1036,7 +1036,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000026 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000026 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Aileen is 4 times as old as her nephew. In 10 years, Aileen will be twice as old as the nephew. How old is Aileen now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000026"
   },
@@ -1109,7 +1109,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000012 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000012 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 32 + (44 − 32) ÷ 6 = 34 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000012"
   },
@@ -1182,7 +1182,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000032 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000032 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 4 clerks in the engineering office is 22 years. One more person, with 32 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 22 + (32 − 22) ÷ 5 = 24 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000032"
@@ -1256,7 +1256,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000037 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000037 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 4 barangay health workers in the district hospital is 9 years. One more person, with 19 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 9 + (19 − 9) ÷ 5 = 11 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000037"
@@ -1330,7 +1330,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000027 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000027 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular vegetable garden is 16 m long and 6 m wide. A fence costs ₱50 per meter. How much will it cost to put the fence around the whole vegetable garden?",
    "shortcut": "Add length and width once, then double: 16 + 6 = 22, × 2 = 44 m. × ₱50 = ₱2,200.",
    "replaces": "CIVIO-NUM-WP-GEOM-000027"
@@ -1404,7 +1404,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000043 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000043 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular school lot is 30 m long and 6 m wide. A chain-link fence costs ₱40 per meter. How much will it cost to put the chain-link fence around the whole school lot?",
    "shortcut": "Add length and width once, then double: 30 + 6 = 36, × 2 = 72 m. × ₱40 = ₱2,880.",
    "replaces": "CIVIO-NUM-WP-GEOM-000043"
@@ -1478,7 +1478,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000013 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000013 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "shortcut": "Find 1% first: 1% of ₱20,000 is ₱200, so 6% is ₱1,200 a year. Times 2.5 years = ₱3,000.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000013"
   },
@@ -1551,7 +1551,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000024 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000024 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A supplier sold a bag of cement for ₱1,200. It raised the price by 10%. Later, it lowered the new price by 40%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 10% is × 1.1, down 40% is × 0.6. ₱1,200 × 1.1 × 0.6 = ₱792.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000024"
@@ -1625,7 +1625,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000029 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000029 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A vendor borrows ₱10,000 at 10% simple interest per year. How much interest is due after 4 years and 6 months?",
    "shortcut": "Find 1% first: 1% of ₱10,000 is ₱100, so 10% is ₱1,000 a year. Times 4.5 years = ₱4,500.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000029"
@@ -1699,7 +1699,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000030 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000030 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A pair of school shoes is priced at ₱480. It is sold at 15% off. How much does a buyer pay?",
    "shortcut": "Split 15% into 10% + 5%: 10% of ₱480 is ₱48, and 5% is half of 10% (₱24). Take off ₱72 to get ₱408.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000030"
@@ -1773,7 +1773,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000033 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000033 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A government employee borrows ₱50,000 at 12% simple interest per year. How much interest is due after 3 years and 6 months?",
    "shortcut": "Find 1% first: 1% of ₱50,000 is ₱500, so 12% is ₱6,000 a year. Times 3.5 years = ₱21,000.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000033"
@@ -1847,7 +1847,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000036 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000036 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A backpack is priced at ₱400. It is sold at 15% off. How much does a buyer pay?",
    "shortcut": "Move the decimal one place for 10% (₱40), halve it for 5% (₱20), and build 15% from those: ₱60 off, so ₱340.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000036"
@@ -1921,7 +1921,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000038 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000038 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A hardware store sold a gallon of paint for ₱800. It raised the price by 30%. Later, it lowered the new price by 50%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 30% is × 1.3, down 50% is × 0.5. ₱800 × 1.3 × 0.5 = ₱520.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000038"
@@ -1995,7 +1995,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000045 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000045 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A cooperative store sold a tank of LPG for ₱150. It raised the price by 50%. Later, it lowered the new price by 20%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 50% is × 1.5, down 20% is × 0.8. ₱150 × 1.5 × 0.8 = ₱180.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000045"
@@ -2069,7 +2069,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000011 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000011 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "shortcut": "For two workers, time together = product ÷ sum: (6 × 3) ÷ (6 + 3) = 18 ÷ 9 = 2 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000011"
   },
@@ -2142,7 +2142,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000028 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000028 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Ramon can wash the ambulance fleet in 8 hours. Bong can do the same job in 24 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (8 × 24) ÷ (8 + 24) = 192 ÷ 32 = 6 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000028"
@@ -2216,7 +2216,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000042 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000042 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Ramon can encode a box of survey forms in 6 hours. Arnel can do the same job in 3 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (6 × 3) ÷ (6 + 3) = 18 ÷ 9 = 2 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000042"
@@ -2290,7 +2290,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000021 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000021 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Rhea and Liza will share ₱10,500 of prize money in the ratio 2 : 5. How much is Liza's share?",
    "shortcut": "The second share is 5 of 7 equal parts: ₱10,500 ÷ 7 × 5 = ₱7,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000021"
@@ -2364,7 +2364,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000022 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000022 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Rogelio and Kimberly will share ₱25,000 of prize money in the ratio 3 : 7. How much is Kimberly's share?",
    "shortcut": "The second share is 7 of 10 equal parts: ₱25,000 ÷ 10 × 7 = ₱17,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000022"
@@ -2438,7 +2438,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000040 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000040 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Aileen and Efren will share ₱21,000 of commission in the ratio 3 : 4. How much is Efren's share?",
    "shortcut": "The second share is 4 of 7 equal parts: ₱21,000 ÷ 7 × 4 = ₱12,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000040"
@@ -2512,7 +2512,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000140 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000140 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 480 liters of fuel. It gave out 1/8 of them on Monday and 1/3 of the remaining liters of fuel on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 480 × 7/8 × 2/3 = 280.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000140"
@@ -2586,7 +2586,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000141 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000141 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 840 liters of fuel. It gave out 1/3 of them on Monday and 1/4 of the remaining liters of fuel on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 840 × 2/3 × 3/4 = 420.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000141"
@@ -2660,7 +2660,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000118 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000118 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 3 − 3 × 7 + 2?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -2738,7 +2738,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000131 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000131 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 2 + 8 × (7 − 8)?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -2816,7 +2816,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000135 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000135 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of (14 × 2 + 7) ÷ 7?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -2894,7 +2894,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000117 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000117 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  5, 7, 10, 14, 19, ___",
    "shortcut": "Write the gaps (+2, +3, +4, +5); they change by the same amount each time, so the next gap is +6: 19 +6 = 25.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000117"
@@ -2968,7 +2968,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000122 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000122 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Which number should come next?  7, 11, 16, 22, 29, ___",
    "shortcut": "Write the gaps (+4, +5, +6, +7); they change by the same amount each time, so the next gap is +8: 29 +8 = 37.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000122"
@@ -3042,7 +3042,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000123 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000123 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Find the next number in the series.  8, 14, 22, 32, 44, ___",
    "shortcut": "Write the gaps (+6, +8, +10, +12); they change by the same amount each time, so the next gap is +14: 44 +14 = 58.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000123"
@@ -3116,7 +3116,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000129 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000129 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  2, 8, 26, 80, 242, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000129"
   },
@@ -3189,7 +3189,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000137 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000137 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  3, 8, 23, 68, 203, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000137"
   },
@@ -3262,7 +3262,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000138 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000138 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  6, 15, 33, 69, 141, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000138"
   },
@@ -3335,7 +3335,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000130 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000130 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Nestor is 5 times as old as his daughter. In 15 years, Nestor will be three times as old as the daughter. How old is Nestor now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000130"
   },
@@ -3408,7 +3408,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000114 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000114 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 8 drivers in the records section is 13 years. One more person, with 40 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 13 + (40 − 13) ÷ 9 = 16 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000114"
@@ -3482,7 +3482,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000115 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000115 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 4 staff members in the public library is 14 years. One more person, with 24 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 14 + (24 − 14) ÷ 5 = 16 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000115"
@@ -3556,7 +3556,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000132 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000132 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 8 staff members in the records section is 13 years. One more person, with 49 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 13 + (49 − 13) ÷ 9 = 17 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000132"
@@ -3630,7 +3630,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000127 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000127 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular vegetable garden is 19 m long and 20 m wide. A chain-link fence costs ₱120 per meter. How much will it cost to put the chain-link fence around the whole vegetable garden?",
    "shortcut": "Add length and width once, then double: 19 + 20 = 39, × 2 = 78 m. × ₱120 = ₱9,360.",
    "replaces": "CIVIO-NUM-WP-GEOM-000127"
@@ -3704,7 +3704,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000128 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000128 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular parking area is 31 m long and 9 m wide. A fence costs ₱120 per meter. How much will it cost to put the fence around the whole parking area?",
    "shortcut": "Add length and width once, then double: 31 + 9 = 40, × 2 = 80 m. × ₱120 = ₱9,600.",
    "replaces": "CIVIO-NUM-WP-GEOM-000128"
@@ -3778,7 +3778,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000113 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000113 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A hardware store sold a tank of LPG for ₱240. It raised the price by 50%. Later, it lowered the new price by 50%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 50% is × 1.5, down 50% is × 0.5. ₱240 × 1.5 × 0.5 = ₱180.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000113"
@@ -3852,7 +3852,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000119 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000119 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A vendor borrows ₱12,000 at 12% simple interest per year. How much interest is due after 2 years and 6 months?",
    "shortcut": "Find 1% first: 1% of ₱12,000 is ₱120, so 12% is ₱1,440 a year. Times 2.5 years = ₱3,600.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000119"
@@ -3926,7 +3926,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000121 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000121 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A backpack is priced at ₱2,400. It is sold at 25% off. How much does a buyer pay?",
    "shortcut": "25% = 20% + 5%. 10% of ₱2,400 = ₱240; so the discount is ₱600 and the price is ₱1,800.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000121"
@@ -4000,7 +4000,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000124 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000124 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A hardware store sold a gallon of paint for ₱250. It raised the price by 20%. Later, it lowered the new price by 25%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 20% is × 1.2, down 25% is × 0.75. ₱250 × 1.2 × 0.75 = ₱225.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000124"
@@ -4074,7 +4074,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000133 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000133 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A cooperative member borrows ₱12,000 at 3% simple interest per year. How much interest is due after 3 years?",
    "shortcut": "Find 1% first: 1% of ₱12,000 is ₱120, so 3% is ₱360 a year. Times 3 years = ₱1,080.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000133"
@@ -4148,7 +4148,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000134 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000134 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A farmer borrows ₱25,000 at 3% simple interest per year. How much interest is due after 3 years and 6 months?",
    "shortcut": "Find 1% first: 1% of ₱25,000 is ₱250, so 3% is ₱750 a year. Times 3.5 years = ₱2,625.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000134"
@@ -4222,7 +4222,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000139 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000139 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A backpack is priced at ₱2,400. It is sold at 35% off. How much does a buyer pay?",
    "shortcut": "Split 35% into 30% + 5%: 30% of ₱2,400 is ₱720, and 5% is half of 10% (₱120). Take off ₱840 to get ₱1,560.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000139"
@@ -4296,7 +4296,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000112 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000112 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Mang Jun can wash the ambulance fleet in 18 hours. Datu can do the same job in 9 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (18 × 9) ÷ (18 + 9) = 162 ÷ 27 = 6 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000112"
@@ -4370,7 +4370,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000120 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000120 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Carlo can repack the relief goods in 45 hours. Joy can do the same job in 30 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (45 × 30) ÷ (45 + 30) = 1350 ÷ 75 = 18 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000120"
@@ -4444,7 +4444,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000125 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000125 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Ramon and Dindo will share ₱14,000 of commission in the ratio 2 : 5. How much is Dindo's share?",
    "shortcut": "The second share is 5 of 7 equal parts: ₱14,000 ÷ 7 × 5 = ₱10,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000125"
@@ -4518,7 +4518,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000126 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000126 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Marites and Lourdes will share ₱5,000 of cleanup fund in the ratio 3 : 7. How much is Lourdes's share?",
    "shortcut": "The second share is 7 of 10 equal parts: ₱5,000 ÷ 10 × 7 = ₱3,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000126"
@@ -4592,7 +4592,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000136 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000136 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A ₱7,500 allowance fund is divided between Liza and Kimberly in the ratio 2 : 3. What is Kimberly's share?",
    "shortcut": "The second share is 3 of 5 equal parts: ₱7,500 ÷ 5 × 3 = ₱4,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000136"
@@ -4666,7 +4666,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000231 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000231 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 180 bags of cement. It gave out 1/3 of them on Monday and 3/5 of the remaining bags of cement on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 180 × 2/3 × 2/5 = 48.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000231"
@@ -4740,7 +4740,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000237 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000237 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 1440 bags of cement. It gave out 1/3 of them on Monday and 1/3 of the remaining bags of cement on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 1440 × 2/3 × 2/3 = 640.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000237"
@@ -4814,7 +4814,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000213 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000213 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 7 + 9 × 8 − 9?",
    "replaces": "CIVIO-NUM-OPS-ORDER-000213"
   },
@@ -4887,7 +4887,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000235 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000235 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of (17 + 6) × 8 − 3?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -4965,7 +4965,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000240 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000240 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 19 × 2 − 10 ÷ 2?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -5043,7 +5043,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000220 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000220 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  11, 15, 20, 26, 33, ___",
    "shortcut": "Write the gaps (+4, +5, +6, +7); they change by the same amount each time, so the next gap is +8: 33 +8 = 41.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000220"
@@ -5117,7 +5117,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000222 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000222 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Which number should come next?  4, 9, 16, 25, 36, ___",
    "shortcut": "Write the gaps (+5, +7, +9, +11); they change by the same amount each time, so the next gap is +13: 36 +13 = 49.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000222"
@@ -5191,7 +5191,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000238 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000238 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  7, 12, 18, 25, 33, ___",
    "shortcut": "Write the gaps (+5, +6, +7, +8); they change by the same amount each time, so the next gap is +9: 33 +9 = 42.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000238"
@@ -5265,7 +5265,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000214 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000214 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  3, 11, 35, 107, 323, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000214"
   },
@@ -5338,7 +5338,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000241 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000241 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  4, 13, 40, 121, 364, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000241"
   },
@@ -5411,7 +5411,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000216 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000216 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Inday is 3 times as old as her nephew. In 11 years, Inday will be twice as old as the nephew. How old is Inday now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000216"
   },
@@ -5484,7 +5484,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000219 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000219 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Analyn is 3 times as old as her son. In 10 years, Analyn will be twice as old as the son. How old is Analyn now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000219"
   },
@@ -5557,7 +5557,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000229 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000229 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Rhea is 5 times as old as her son. In 24 years, Rhea will be twice as old as the son. How old is Rhea now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000229"
   },
@@ -5630,7 +5630,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000215 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000215 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 5 drivers in the district hospital is 45 years. One more person, with 51 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 45 + (51 − 45) ÷ 6 = 46 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000215"
@@ -5704,7 +5704,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000232 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000232 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 9 drivers in the engineering office is 12 years. One more person, with 52 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 12 + (52 − 12) ÷ 10 = 16 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000232"
@@ -5778,7 +5778,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000233 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000233 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 4 clerks in the barangay hall is 24 years. One more person, with 34 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 24 + (34 − 24) ÷ 5 = 26 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000233"
@@ -5852,7 +5852,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000225 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000225 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular vegetable garden is 38 m long and 14 m wide. A lace border costs ₱75 per meter. How much will it cost to put the lace border around the whole vegetable garden?",
    "shortcut": "Add length and width once, then double: 38 + 14 = 52, × 2 = 104 m. × ₱75 = ₱7,800.",
    "replaces": "CIVIO-NUM-WP-GEOM-000225"
@@ -5926,7 +5926,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000236 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000236 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular parking area is 23 m long and 16 m wide. A lace border costs ₱50 per meter. How much will it cost to put the lace border around the whole parking area?",
    "shortcut": "Add length and width once, then double: 23 + 16 = 39, × 2 = 78 m. × ₱50 = ₱3,900.",
    "replaces": "CIVIO-NUM-WP-GEOM-000236"
@@ -6000,7 +6000,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000217 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000217 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A teacher borrows ₱20,000 at 5% simple interest per year. How much interest is due after 1 year and 6 months?",
    "shortcut": "Find 1% first: 1% of ₱20,000 is ₱200, so 5% is ₱1,000 a year. Times 1.5 years = ₱1,500.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000217"
@@ -6074,7 +6074,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000218 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000218 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A vendor borrows ₱30,000 at 3% simple interest per year. How much interest is due after 2 years and 6 months?",
    "shortcut": "Find 1% first: 1% of ₱30,000 is ₱300, so 3% is ₱900 a year. Times 2.5 years = ₱2,250.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000218"
@@ -6148,7 +6148,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000224 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000224 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rice cooker is priced at ₱960. It is sold at 25% off. How much does a buyer pay?",
    "shortcut": "25% = 20% + 5%. 10% of ₱960 = ₱96; so the discount is ₱240 and the price is ₱720.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000224"
@@ -6222,7 +6222,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000227 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000227 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A supplier sold a tank of LPG for ₱1,200. It raised the price by 40%. Later, it lowered the new price by 40%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 40% is × 1.4, down 40% is × 0.6. ₱1,200 × 1.4 × 0.6 = ₱1,008.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000227"
@@ -6296,7 +6296,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000228 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000228 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A cooperative member borrows ₱10,000 at 12% simple interest per year. How much interest is due after 2 years and 6 months?",
    "shortcut": "Find 1% first: 1% of ₱10,000 is ₱100, so 12% is ₱1,200 a year. Times 2.5 years = ₱3,000.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000228"
@@ -6370,7 +6370,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000230 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000230 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A backpack is priced at ₱1,800. It is sold at 25% off. How much does a buyer pay?",
    "shortcut": "Split 25% into 20% + 5%: 20% of ₱1,800 is ₱360, and 5% is half of 10% (₱90). Take off ₱450 to get ₱1,350.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000230"
@@ -6444,7 +6444,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000212 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000212 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Grace can paint a classroom in 6 hours. Mang Jun can do the same job in 3 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (6 × 3) ÷ (6 + 3) = 18 ÷ 9 = 2 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000212"
@@ -6518,7 +6518,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000239 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000239 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Bea can label the census boxes in 30 hours. Rhea can do the same job in 60 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (30 × 60) ÷ (30 + 60) = 1800 ÷ 90 = 20 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000239"
@@ -6592,7 +6592,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000223 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000223 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A ₱3,500 prize money is divided between Aileen and Tess in the ratio 3 : 4. What is Tess's share?",
    "shortcut": "The second share is 4 of 7 equal parts: ₱3,500 ÷ 7 × 4 = ₱2,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000223"
@@ -6666,7 +6666,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000234 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000234 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A ₱12,000 commission is divided between Teresa and Grace in the ratio 3 : 7. What is Grace's share?",
    "shortcut": "The second share is 7 of 10 equal parts: ₱12,000 ÷ 10 × 7 = ₱8,400.",
    "replaces": "CIVIO-NUM-WP-RATIO-000234"
@@ -6740,7 +6740,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000314 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000314 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 180 notebooks. It gave out 1/4 of them on Monday and 3/5 of the remaining notebooks on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 180 × 3/4 × 2/5 = 54.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000314"
@@ -6814,7 +6814,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000333 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000333 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 1440 face masks. It gave out 2/5 of them on Monday and 1/4 of the remaining face masks on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 1440 × 3/5 × 3/4 = 648.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000333"
@@ -6888,7 +6888,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000319 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000319 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 8 − 5 × 2 + 3?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -6966,7 +6966,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000321 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000321 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 9 + 4 × (5 − 9)?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -7044,7 +7044,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000322 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000322 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of (8 × 8 + 16) ÷ 2?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -7122,7 +7122,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000316 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000316 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Which number should come next?  11, 16, 22, 29, 37, ___",
    "shortcut": "Write the gaps (+5, +6, +7, +8); they change by the same amount each time, so the next gap is +9: 37 +9 = 46.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000316"
@@ -7196,7 +7196,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000332 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000332 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  11, 15, 21, 29, 39, ___",
    "shortcut": "Write the gaps (+4, +6, +8, +10); they change by the same amount each time, so the next gap is +12: 39 +12 = 51.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000332"
@@ -7270,7 +7270,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000336 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000336 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  1, 6, 13, 22, 33, ___",
    "shortcut": "Write the gaps (+5, +7, +9, +11); they change by the same amount each time, so the next gap is +13: 33 +13 = 46.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000336"
@@ -7344,7 +7344,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000334 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000334 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  1, 4, 10, 22, 46, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000334"
   },
@@ -7417,7 +7417,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000335 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000335 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  5, 13, 37, 109, 325, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000335"
   },
@@ -7490,7 +7490,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000337 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000337 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  4, 7, 13, 25, 49, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000337"
   },
@@ -7563,7 +7563,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000331 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000331 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 8 clerks in the agriculture office is 10 years. One more person, with 19 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 10 + (19 − 10) ÷ 9 = 11 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000331"
@@ -7637,7 +7637,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000338 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000338 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 5 drivers in the public market office is 26 years. One more person, with 50 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 26 + (50 − 26) ÷ 6 = 30 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000338"
@@ -7711,7 +7711,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000339 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000339 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 6 staff members in the public market office is 11 years. One more person, with 18 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 11 + (18 − 11) ÷ 7 = 12 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000339"
@@ -7785,7 +7785,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000315 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000315 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular drying yard is 14 m long and 18 m wide. A fence costs ₱25 per meter. How much will it cost to put the fence around the whole drying yard?",
    "shortcut": "Add length and width once, then double: 14 + 18 = 32, × 2 = 64 m. × ₱25 = ₱1,600.",
    "replaces": "CIVIO-NUM-WP-GEOM-000315"
@@ -7859,7 +7859,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000318 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000318 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular drying yard is 38 m long and 18 m wide. A chain-link fence costs ₱120 per meter. How much will it cost to put the chain-link fence around the whole drying yard?",
    "shortcut": "Add length and width once, then double: 38 + 18 = 56, × 2 = 112 m. × ₱120 = ₱13,440.",
    "replaces": "CIVIO-NUM-WP-GEOM-000318"
@@ -7933,7 +7933,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000324 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000324 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A market stall sold a set of school uniforms for ₱250. It raised the price by 20%. Later, it lowered the new price by 10%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 20% is × 1.2, down 10% is × 0.9. ₱250 × 1.2 × 0.9 = ₱270.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000324"
@@ -8007,7 +8007,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000326 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000326 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A farmer borrows ₱40,000 at 12% simple interest per year. How much interest is due after 2 years and 6 months?",
    "shortcut": "Find 1% first: 1% of ₱40,000 is ₱400, so 12% is ₱4,800 a year. Times 2.5 years = ₱12,000.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000326"
@@ -8081,7 +8081,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000328 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000328 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A market stall sold a tank of LPG for ₱750. It raised the price by 20%. Later, it lowered the new price by 40%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 20% is × 1.2, down 40% is × 0.6. ₱750 × 1.2 × 0.6 = ₱540.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000328"
@@ -8155,7 +8155,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000329 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000329 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A hardware store sold a tank of LPG for ₱800. It raised the price by 40%. Later, it lowered the new price by 25%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 40% is × 1.4, down 25% is × 0.75. ₱800 × 1.4 × 0.75 = ₱840.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000329"
@@ -8229,7 +8229,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000330 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000330 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A government employee borrows ₱50,000 at 6% simple interest per year. How much interest is due after 2 years?",
    "shortcut": "Find 1% first: 1% of ₱50,000 is ₱500, so 6% is ₱3,000 a year. Times 2 years = ₱6,000.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000330"
@@ -8303,7 +8303,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000340 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000340 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A backpack is priced at ₱800. It is sold at 15% off. How much does a buyer pay?",
    "shortcut": "15% = 10% + 5%. 10% of ₱800 = ₱80; so the discount is ₱120 and the price is ₱680.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000340"
@@ -8377,7 +8377,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000341 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000341 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A backpack is priced at ₱480. It is sold at 35% off. How much does a buyer pay?",
    "shortcut": "Split 35% into 30% + 5%: 30% of ₱480 is ₱144, and 5% is half of 10% (₱24). Take off ₱168 to get ₱312.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000341"
@@ -8451,7 +8451,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000313 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000313 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Rogelio can sort a sack of mail in 36 hours. Kimberly can do the same job in 12 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (36 × 12) ÷ (36 + 12) = 432 ÷ 48 = 9 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000313"
@@ -8525,7 +8525,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000317 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000317 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Aileen can paint a classroom in 6 hours. Ramon can do the same job in 12 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (6 × 12) ÷ (6 + 12) = 72 ÷ 18 = 4 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000317"
@@ -8599,7 +8599,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000325 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000325 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Ramon can label the census boxes in 10 hours. Rhea can do the same job in 40 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (10 × 40) ÷ (10 + 40) = 400 ÷ 50 = 8 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000325"
@@ -8673,7 +8673,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000312 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000312 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Teresa and Rogelio will share ₱36,000 of allowance fund in the ratio 5 : 7. How much is Rogelio's share?",
    "shortcut": "The second share is 7 of 12 equal parts: ₱36,000 ÷ 12 × 7 = ₱21,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000312"
@@ -8747,7 +8747,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000320 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000320 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Paolo and Lourdes will share ₱2,500 of allowance fund in the ratio 2 : 3. How much is Lourdes's share?",
    "shortcut": "The second share is 3 of 5 equal parts: ₱2,500 ÷ 5 × 3 = ₱1,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000320"
@@ -8821,7 +8821,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000327 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000327 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Datu and Arnel will share ₱9,000 of cleanup fund in the ratio 4 : 5. How much is Arnel's share?",
    "shortcut": "The second share is 5 of 9 equal parts: ₱9,000 ÷ 9 × 5 = ₱5,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000327"
@@ -8895,7 +8895,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000440 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000440 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 1200 sacks of relief rice. It gave out 1/4 of them on Monday and 1/6 of the remaining sacks of relief rice on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 1200 × 3/4 × 5/6 = 750.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000440"
@@ -8969,7 +8969,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000441 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000441 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 1080 school chairs. It gave out 1/6 of them on Monday and 2/3 of the remaining school chairs on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 1080 × 5/6 × 1/3 = 300.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000441"
@@ -9043,7 +9043,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000412 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000412 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 12 + 3 × 5 − 8?",
    "replaces": "CIVIO-NUM-OPS-ORDER-000412"
   },
@@ -9116,7 +9116,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000416 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000416 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of (14 + 2) × 7 − 6?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -9194,7 +9194,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000433 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000433 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 5 × 3 − 18 ÷ 3?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -9272,7 +9272,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000420 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000420 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Find the next number in the series.  6, 7, 11, 18, 28, ___",
    "shortcut": "Write the gaps (+1, +4, +7, +10); they change by the same amount each time, so the next gap is +13: 28 +13 = 41.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000420"
@@ -9346,7 +9346,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000425 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000425 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  1, 4, 8, 13, 19, ___",
    "shortcut": "Write the gaps (+3, +4, +5, +6); they change by the same amount each time, so the next gap is +7: 19 +7 = 26.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000425"
@@ -9420,7 +9420,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000427 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000427 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Which number should come next?  11, 13, 18, 26, 37, ___",
    "shortcut": "Write the gaps (+2, +5, +8, +11); they change by the same amount each time, so the next gap is +14: 37 +14 = 51.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000427"
@@ -9494,7 +9494,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000438 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000438 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  5, 11, 23, 47, 95, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000438"
   },
@@ -9567,7 +9567,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000418 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000418 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Bong is 3 times as old as his daughter. In 12 years, Bong will be twice as old as the daughter. How old is Bong now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000418"
   },
@@ -9640,7 +9640,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000435 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000435 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Nestor is 5 times as old as his daughter. In 10 years, Nestor will be three times as old as the daughter. How old is Nestor now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000435"
   },
@@ -9713,7 +9713,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000413 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000413 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 5 teachers in the civil registry is 8 years. One more person, with 26 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 8 + (26 − 8) ÷ 6 = 11 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000413"
@@ -9787,7 +9787,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000431 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000431 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 8 drivers in the barangay hall is 42 years. One more person, with 69 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 42 + (69 − 42) ÷ 9 = 45 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000431"
@@ -9861,7 +9861,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000436 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000436 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 6 staff members in the district hospital is 20 years. One more person, with 34 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 20 + (34 − 20) ÷ 7 = 22 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000436"
@@ -9935,7 +9935,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000422 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000422 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular basketball court is 32 m long and 11 m wide. A fence costs ₱150 per meter. How much will it cost to put the fence around the whole basketball court?",
    "shortcut": "Add length and width once, then double: 32 + 11 = 43, × 2 = 86 m. × ₱150 = ₱12,900.",
    "replaces": "CIVIO-NUM-WP-GEOM-000422"
@@ -10009,7 +10009,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000437 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000437 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular basketball court is 36 m long and 3 m wide. A chain-link fence costs ₱150 per meter. How much will it cost to put the chain-link fence around the whole basketball court?",
    "shortcut": "Add length and width once, then double: 36 + 3 = 39, × 2 = 78 m. × ₱150 = ₱11,700.",
    "replaces": "CIVIO-NUM-WP-GEOM-000437"
@@ -10083,7 +10083,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000439 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000439 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular school lot is 30 m long and 16 m wide. A fence costs ₱25 per meter. How much will it cost to put the fence around the whole school lot?",
    "shortcut": "Add length and width once, then double: 30 + 16 = 46, × 2 = 92 m. × ₱25 = ₱2,300.",
    "replaces": "CIVIO-NUM-WP-GEOM-000439"
@@ -10157,7 +10157,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000414 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000414 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A cooperative member borrows ₱20,000 at 4% simple interest per year. How much interest is due after 2 years?",
    "shortcut": "Find 1% first: 1% of ₱20,000 is ₱200, so 4% is ₱800 a year. Times 2 years = ₱1,600.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000414"
@@ -10231,7 +10231,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000415 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000415 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A cooperative store sold a gallon of paint for ₱600. It raised the price by 50%. Later, it lowered the new price by 25%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 50% is × 1.5, down 25% is × 0.75. ₱600 × 1.5 × 0.75 = ₱675.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000415"
@@ -10305,7 +10305,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000417 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000417 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rice cooker is priced at ₱800. It is sold at 20% off. How much does a buyer pay?",
    "shortcut": "Skip the subtraction step: multiply by what you keep, 80%. ₱800 × 0.8 = ₱640.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000417"
@@ -10379,7 +10379,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000421 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000421 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rice cooker is priced at ₱480. It is sold at 30% off. How much does a buyer pay?",
    "shortcut": "Find 10% by moving the decimal (₱48), then the discount is 3 × that = ₱144. ₱480 − ₱144 = ₱336.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000421"
@@ -10453,7 +10453,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000428 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000428 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A hardware store sold a sack of rice for ₱400. It raised the price by 10%. Later, it lowered the new price by 40%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 10% is × 1.1, down 40% is × 0.6. ₱400 × 1.1 × 0.6 = ₱264.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000428"
@@ -10527,7 +10527,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000429 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000429 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A market stall sold a bag of cement for ₱600. It raised the price by 30%. Later, it lowered the new price by 40%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 30% is × 1.3, down 40% is × 0.6. ₱600 × 1.3 × 0.6 = ₱468.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000429"
@@ -10601,7 +10601,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000419 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000419 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Kimberly can encode a box of survey forms in 36 hours. Carlo can do the same job in 12 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (36 × 12) ÷ (36 + 12) = 432 ÷ 48 = 9 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000419"
@@ -10675,7 +10675,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000424 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000424 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Bea can clean the plaza in 18 hours. Aileen can do the same job in 9 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (18 × 9) ÷ (18 + 9) = 162 ÷ 27 = 6 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000424"
@@ -10749,7 +10749,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000430 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000430 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Grace can repack the relief goods in 20 hours. Bea can do the same job in 30 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (20 × 30) ÷ (20 + 30) = 600 ÷ 50 = 12 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000430"
@@ -10823,7 +10823,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000426 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000426 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A ₱27,000 commission is divided between Bea and Cora in the ratio 4 : 5. What is Cora's share?",
    "shortcut": "The second share is 5 of 9 equal parts: ₱27,000 ÷ 9 × 5 = ₱15,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000426"
@@ -10897,7 +10897,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000432 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000432 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Carlo and Aling Rosa will share ₱14,400 of cleanup fund in the ratio 5 : 7. How much is Aling Rosa's share?",
    "shortcut": "The second share is 7 of 12 equal parts: ₱14,400 ÷ 12 × 7 = ₱8,400.",
    "replaces": "CIVIO-NUM-WP-RATIO-000432"
@@ -10971,7 +10971,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000434 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000434 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Aileen and Joy will share ₱12,500 of cleanup fund in the ratio 2 : 3. How much is Joy's share?",
    "shortcut": "The second share is 3 of 5 equal parts: ₱12,500 ÷ 5 × 3 = ₱7,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000434"
@@ -11045,7 +11045,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000540 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000540 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 720 bags of cement. It gave out 1/8 of them on Monday and 1/3 of the remaining bags of cement on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 720 × 7/8 × 2/3 = 420.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000540"
@@ -11119,7 +11119,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000541 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000541 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 240 bags of cement. It gave out 1/4 of them on Monday and 1/4 of the remaining bags of cement on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 240 × 3/4 × 3/4 = 135.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000541"
@@ -11193,7 +11193,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000520 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000520 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 6 − 4 × 8 + 7?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -11271,7 +11271,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000525 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000525 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 14 + 2 × (5 − 8)?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -11349,7 +11349,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000536 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000536 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of (14 × 7 + 12) ÷ 2?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -11427,7 +11427,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000513 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000513 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Which number should come next?  3, 4, 7, 12, 19, ___",
    "shortcut": "Write the gaps (+1, +3, +5, +7); they change by the same amount each time, so the next gap is +9: 19 +9 = 28.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000513"
@@ -11501,7 +11501,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000532 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000532 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  2, 7, 15, 26, 40, ___",
    "shortcut": "Write the gaps (+5, +8, +11, +14); they change by the same amount each time, so the next gap is +17: 40 +17 = 57.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000532"
@@ -11575,7 +11575,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000533 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000533 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Find the next number in the series.  12, 13, 17, 24, 34, ___",
    "shortcut": "Write the gaps (+1, +4, +7, +10); they change by the same amount each time, so the next gap is +13: 34 +13 = 47.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000533"
@@ -11649,7 +11649,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000529 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000529 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  3, 10, 31, 94, 283, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000529"
   },
@@ -11722,7 +11722,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000538 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000538 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  5, 14, 41, 122, 365, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000538"
   },
@@ -11795,7 +11795,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000539 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000539 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  6, 13, 27, 55, 111, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000539"
   },
@@ -11868,7 +11868,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000512 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000512 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Bea is 5 times as old as her niece. In 16 years, Bea will be three times as old as the niece. How old is Bea now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000512"
   },
@@ -11941,7 +11941,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000526 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000526 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 4 teachers in the engineering office is 16 years. One more person, with 31 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 16 + (31 − 16) ÷ 5 = 19 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000526"
@@ -12015,7 +12015,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000527 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000527 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 6 staff members in the agriculture office is 16 years. One more person, with 30 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 16 + (30 − 16) ÷ 7 = 18 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000527"
@@ -12089,7 +12089,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000514 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000514 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A government employee borrows ₱12,000 at 8% simple interest per year. How much interest is due after 2 years and 6 months?",
    "shortcut": "Find 1% first: 1% of ₱12,000 is ₱120, so 8% is ₱960 a year. Times 2.5 years = ₱2,400.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000514"
@@ -12163,7 +12163,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000515 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-PCT-CHANGE-000515 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A sari-sari store sold a tank of LPG for ₱240. It raised the price by 10%. Later, it lowered the new price by 50%. What is the final price?",
    "shortcut": "Chain the changes as multipliers: up 10% is × 1.1, down 50% is × 0.5. ₱240 × 1.1 × 0.5 = ₱132.",
    "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000515"
@@ -12237,7 +12237,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000518 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000518 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Dindo can paint a classroom in 36 hours. Aling Rosa can do the same job in 12 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (36 × 12) ÷ (36 + 12) = 432 ÷ 48 = 9 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000518"
@@ -12311,7 +12311,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000521 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000521 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Paolo can scan the old land titles in 30 hours. Grace can do the same job in 60 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (30 × 60) ÷ (30 + 60) = 1800 ÷ 90 = 20 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000521"
@@ -12385,7 +12385,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000524 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000524 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Cora can repack the relief goods in 6 hours. Lourdes can do the same job in 3 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (6 × 3) ÷ (6 + 3) = 18 ÷ 9 = 2 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000524"
@@ -12459,7 +12459,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000516 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000516 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Bong and Teresa will share ₱25,000 of harvest income in the ratio 3 : 7. How much is Teresa's share?",
    "shortcut": "The second share is 7 of 10 equal parts: ₱25,000 ÷ 10 × 7 = ₱17,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000516"
@@ -12533,7 +12533,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000519 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000519 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Lourdes and Rogelio will share ₱10,500 of cleanup fund in the ratio 3 : 4. How much is Rogelio's share?",
    "shortcut": "The second share is 4 of 7 equal parts: ₱10,500 ÷ 7 × 4 = ₱6,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000519"
@@ -12607,7 +12607,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000522 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000522 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Liza and Jomar will share ₱15,000 of cleanup fund in the ratio 2 : 3. How much is Jomar's share?",
    "shortcut": "The second share is 3 of 5 equal parts: ₱15,000 ÷ 5 × 3 = ₱9,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000522"
@@ -12681,7 +12681,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000626 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000626 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 1200 sacks of relief rice. It gave out 3/8 of them on Monday and 3/5 of the remaining sacks of relief rice on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 1200 × 5/8 × 2/5 = 300.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000626"
@@ -12755,7 +12755,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000632 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000632 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 1440 rolls of tarpaulin. It gave out 1/8 of them on Monday and 3/5 of the remaining rolls of tarpaulin on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 1440 × 7/8 × 2/5 = 504.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000632"
@@ -12829,7 +12829,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000618 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000618 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 14 + 3 × 8 − 7?",
    "replaces": "CIVIO-NUM-OPS-ORDER-000618"
   },
@@ -12902,7 +12902,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000638 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000638 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of (8 + 4) × 7 − 2?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -12980,7 +12980,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000640 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000640 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 18 × 3 − 12 ÷ 6?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -13058,7 +13058,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000614 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000614 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Find the next number in the series.  2, 5, 11, 20, 32, ___",
    "shortcut": "Write the gaps (+3, +6, +9, +12); they change by the same amount each time, so the next gap is +15: 32 +15 = 47.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000614"
@@ -13132,7 +13132,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000615 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000615 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  15, 21, 28, 36, 45, ___",
    "shortcut": "Write the gaps (+6, +7, +8, +9); they change by the same amount each time, so the next gap is +10: 45 +10 = 55.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000615"
@@ -13206,7 +13206,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000627 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000627 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  5, 6, 10, 17, 27, ___",
    "shortcut": "Write the gaps (+1, +4, +7, +10); they change by the same amount each time, so the next gap is +13: 27 +13 = 40.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000627"
@@ -13280,7 +13280,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000616 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000616 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  3, 9, 21, 45, 93, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000616"
   },
@@ -13353,7 +13353,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000617 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000617 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  1, 5, 17, 53, 161, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000617"
   },
@@ -13426,7 +13426,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000619 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000619 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  3, 12, 39, 120, 363, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000619"
   },
@@ -13499,7 +13499,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000624 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000624 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Lourdes is 5 times as old as her niece. In 14 years, Lourdes will be three times as old as the niece. How old is Lourdes now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000624"
   },
@@ -13572,7 +13572,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000628 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000628 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 8 clerks in the municipal health office is 28 years. One more person, with 55 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 28 + (55 − 28) ÷ 9 = 31 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000628"
@@ -13646,7 +13646,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000630 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000630 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 7 barangay health workers in the public market office is 15 years. One more person, with 23 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 15 + (23 − 15) ÷ 8 = 16 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000630"
@@ -13720,7 +13720,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000641 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000641 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 8 drivers in the city treasurer's office is 40 years. One more person, with 58 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 40 + (58 − 40) ÷ 9 = 42 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000641"
@@ -13794,7 +13794,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000621 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000621 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular basketball court is 19 m long and 4 m wide. A lace border costs ₱120 per meter. How much will it cost to put the lace border around the whole basketball court?",
    "shortcut": "Add length and width once, then double: 19 + 4 = 23, × 2 = 46 m. × ₱120 = ₱5,520.",
    "replaces": "CIVIO-NUM-WP-GEOM-000621"
@@ -13868,7 +13868,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000622 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000622 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular school lot is 12 m long and 20 m wide. A lace border costs ₱40 per meter. How much will it cost to put the lace border around the whole school lot?",
    "shortcut": "Add length and width once, then double: 12 + 20 = 32, × 2 = 64 m. × ₱40 = ₱2,560.",
    "replaces": "CIVIO-NUM-WP-GEOM-000622"
@@ -13942,7 +13942,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000633 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000633 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular school lot is 25 m long and 13 m wide. A fence costs ₱120 per meter. How much will it cost to put the fence around the whole school lot?",
    "shortcut": "Add length and width once, then double: 25 + 13 = 38, × 2 = 76 m. × ₱120 = ₱9,120.",
    "replaces": "CIVIO-NUM-WP-GEOM-000633"
@@ -14016,7 +14016,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000631 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000631 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Cora can paint a classroom in 40 hours. Aileen can do the same job in 10 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (40 × 10) ÷ (40 + 10) = 400 ÷ 50 = 8 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000631"
@@ -14090,7 +14090,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000634 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000634 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Nestor can inventory a supply room in 10 hours. Rhea can do the same job in 15 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (10 × 15) ÷ (10 + 15) = 150 ÷ 25 = 6 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000634"
@@ -14164,7 +14164,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000635 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000635 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Mang Jun can repack the relief goods in 6 hours. Efren can do the same job in 12 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (6 × 12) ÷ (6 + 12) = 72 ÷ 18 = 4 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000635"
@@ -14238,7 +14238,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000625 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000625 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Aling Rosa and Paolo will share ₱9,600 of allowance fund in the ratio 3 : 5. How much is Paolo's share?",
    "shortcut": "The second share is 5 of 8 equal parts: ₱9,600 ÷ 8 × 5 = ₱6,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000625"
@@ -14312,7 +14312,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000629 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000629 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Inday and Dindo will share ₱25,000 of cleanup fund in the ratio 3 : 7. How much is Dindo's share?",
    "shortcut": "The second share is 7 of 10 equal parts: ₱25,000 ÷ 10 × 7 = ₱17,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000629"
@@ -14386,7 +14386,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000637 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000637 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A ₱14,400 commission is divided between Mylene and Aling Rosa in the ratio 5 : 7. What is Aling Rosa's share?",
    "shortcut": "The second share is 7 of 12 equal parts: ₱14,400 ÷ 12 × 7 = ₱8,400.",
    "replaces": "CIVIO-NUM-WP-RATIO-000637"
@@ -14460,7 +14460,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000741 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000741 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 480 notebooks. It gave out 1/8 of them on Monday and 1/6 of the remaining notebooks on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 480 × 7/8 × 5/6 = 350.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000741"
@@ -14534,7 +14534,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000719 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000719 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 17 − 9 × 3 + 12?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -14612,7 +14612,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000720 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000720 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 14 + 2 × (9 − 1)?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -14690,7 +14690,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000729 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000729 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of (15 × 7 + 6) ÷ 3?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -14768,7 +14768,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000715 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000715 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  15, 16, 20, 27, 37, ___",
    "shortcut": "Write the gaps (+1, +4, +7, +10); they change by the same amount each time, so the next gap is +13: 37 +13 = 50.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000715"
@@ -14842,7 +14842,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000731 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000731 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  10, 15, 21, 28, 36, ___",
    "shortcut": "Write the gaps (+5, +6, +7, +8); they change by the same amount each time, so the next gap is +9: 36 +9 = 45.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000731"
@@ -14916,7 +14916,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000737 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000737 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Find the next number in the series.  15, 18, 24, 33, 45, ___",
    "shortcut": "Write the gaps (+3, +6, +9, +12); they change by the same amount each time, so the next gap is +15: 45 +15 = 60.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000737"
@@ -14990,7 +14990,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000717 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000717 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  4, 6, 10, 18, 34, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000717"
   },
@@ -15063,7 +15063,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000730 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000730 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 4 staff members in the agriculture office is 15 years. One more person, with 25 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 15 + (25 − 15) ÷ 5 = 17 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000730"
@@ -15137,7 +15137,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000732 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000732 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 8 staff members in the social welfare office is 29 years. One more person, with 38 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 29 + (38 − 29) ÷ 9 = 30 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000732"
@@ -15211,7 +15211,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000735 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000735 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 6 barangay health workers in the public market office is 41 years. One more person, with 48 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 41 + (48 − 41) ÷ 7 = 42 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000735"
@@ -15285,7 +15285,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000724 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000724 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular basketball court is 28 m long and 20 m wide. A chain-link fence costs ₱150 per meter. How much will it cost to put the chain-link fence around the whole basketball court?",
    "shortcut": "Add length and width once, then double: 28 + 20 = 48, × 2 = 96 m. × ₱150 = ₱14,400.",
    "replaces": "CIVIO-NUM-WP-GEOM-000724"
@@ -15359,7 +15359,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000734 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000734 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular school lot is 22 m long and 20 m wide. A lace border costs ₱150 per meter. How much will it cost to put the lace border around the whole school lot?",
    "shortcut": "Add length and width once, then double: 22 + 20 = 42, × 2 = 84 m. × ₱150 = ₱12,600.",
    "replaces": "CIVIO-NUM-WP-GEOM-000734"
@@ -15433,7 +15433,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000718 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000718 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Bea can paint a classroom in 21 hours. Liza can do the same job in 28 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (21 × 28) ÷ (21 + 28) = 588 ÷ 49 = 12 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000718"
@@ -15507,7 +15507,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000721 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000721 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Jomar can label the census boxes in 21 hours. Bong can do the same job in 28 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (21 × 28) ÷ (21 + 28) = 588 ÷ 49 = 12 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000721"
@@ -15581,7 +15581,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000722 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000722 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Liza can paint a classroom in 18 hours. Rogelio can do the same job in 9 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (18 × 9) ÷ (18 + 9) = 162 ÷ 27 = 6 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000722"
@@ -15655,7 +15655,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000714 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000714 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Aileen and Datu will share ₱5,000 of harvest income in the ratio 3 : 7. How much is Datu's share?",
    "shortcut": "The second share is 7 of 10 equal parts: ₱5,000 ÷ 10 × 7 = ₱3,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000714"
@@ -15729,7 +15729,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000740 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000740 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Tess and Ramon will share ₱3,500 of allowance fund in the ratio 3 : 4. How much is Ramon's share?",
    "shortcut": "The second share is 4 of 7 equal parts: ₱3,500 ÷ 7 × 4 = ₱2,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000740"
@@ -15803,7 +15803,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000819 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000819 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 600 vitamin packs. It gave out 2/5 of them on Monday and 1/3 of the remaining vitamin packs on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 600 × 3/5 × 2/3 = 240.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000819"
@@ -15877,7 +15877,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000841 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000841 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 900 notebooks. It gave out 2/5 of them on Monday and 1/6 of the remaining notebooks on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 900 × 3/5 × 5/6 = 450.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000841"
@@ -15951,7 +15951,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000830 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000830 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 5 + 7 × 6 − 6?",
    "replaces": "CIVIO-NUM-OPS-ORDER-000830"
   },
@@ -16024,7 +16024,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000833 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000833 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of (3 + 8) × 7 − 8?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -16102,7 +16102,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000839 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000839 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 6 × 6 − 10 ÷ 2?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -16180,7 +16180,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000817 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000817 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Find the next number in the series.  11, 13, 17, 23, 31, ___",
    "shortcut": "Write the gaps (+2, +4, +6, +8); they change by the same amount each time, so the next gap is +10: 31 +10 = 41.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000817"
@@ -16254,7 +16254,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000824 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000824 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  5, 8, 12, 17, 23, ___",
    "shortcut": "Write the gaps (+3, +4, +5, +6); they change by the same amount each time, so the next gap is +7: 23 +7 = 30.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000824"
@@ -16328,7 +16328,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000836 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000836 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Which number should come next?  8, 13, 21, 32, 46, ___",
    "shortcut": "Write the gaps (+5, +8, +11, +14); they change by the same amount each time, so the next gap is +17: 46 +17 = 63.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000836"
@@ -16402,7 +16402,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000840 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000840 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  5, 8, 14, 26, 50, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000840"
   },
@@ -16475,7 +16475,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000823 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000823 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Nonoy is 3 times as old as his niece. In 5 years, Nonoy will be twice as old as the niece. How old is Nonoy now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000823"
   },
@@ -16548,7 +16548,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000828 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000828 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Analyn is 4 times as old as her daughter. In 24 years, Analyn will be twice as old as the daughter. How old is Analyn now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000828"
   },
@@ -16621,7 +16621,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000835 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000835 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Aling Rosa is 3 times as old as her niece. In 7 years, Aling Rosa will be twice as old as the niece. How old is Aling Rosa now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000835"
   },
@@ -16694,7 +16694,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000826 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000826 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 8 clerks in the civil registry is 11 years. One more person, with 20 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 11 + (20 − 11) ÷ 9 = 12 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000826"
@@ -16768,7 +16768,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000827 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000827 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular school lot is 11 m long and 3 m wide. A chain-link fence costs ₱50 per meter. How much will it cost to put the chain-link fence around the whole school lot?",
    "shortcut": "Add length and width once, then double: 11 + 3 = 14, × 2 = 28 m. × ₱50 = ₱1,400.",
    "replaces": "CIVIO-NUM-WP-GEOM-000827"
@@ -16842,7 +16842,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000834 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-GEOM-000834 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A rectangular vegetable garden is 30 m long and 13 m wide. A fence costs ₱150 per meter. How much will it cost to put the fence around the whole vegetable garden?",
    "shortcut": "Add length and width once, then double: 30 + 13 = 43, × 2 = 86 m. × ₱150 = ₱12,900.",
    "replaces": "CIVIO-NUM-WP-GEOM-000834"
@@ -16916,7 +16916,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000812 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000812 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Analyn can label the census boxes in 15 hours. Bea can do the same job in 10 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (15 × 10) ÷ (15 + 10) = 150 ÷ 25 = 6 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000812"
@@ -16990,7 +16990,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000814 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000814 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Rogelio can sort a sack of mail in 15 hours. Tess can do the same job in 10 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (15 × 10) ÷ (15 + 10) = 150 ÷ 25 = 6 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000814"
@@ -17064,7 +17064,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000815 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000815 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Paolo can clean the plaza in 35 hours. Liza can do the same job in 14 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (35 × 14) ÷ (35 + 14) = 490 ÷ 49 = 10 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000815"
@@ -17138,7 +17138,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000813 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000813 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A ₱9,600 harvest income is divided between Inday and Aileen in the ratio 3 : 5. What is Aileen's share?",
    "shortcut": "The second share is 5 of 8 equal parts: ₱9,600 ÷ 8 × 5 = ₱6,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000813"
@@ -17212,7 +17212,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000816 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000816 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Cora and Kimberly will share ₱3,500 of harvest income in the ratio 3 : 4. How much is Kimberly's share?",
    "shortcut": "The second share is 4 of 7 equal parts: ₱3,500 ÷ 7 × 4 = ₱2,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000816"
@@ -17286,7 +17286,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000821 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000821 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Jun-jun and Joy will share ₱22,500 of allowance fund in the ratio 4 : 5. How much is Joy's share?",
    "shortcut": "The second share is 5 of 9 equal parts: ₱22,500 ÷ 9 × 5 = ₱12,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000821"
@@ -17360,7 +17360,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000930 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000930 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 480 hygiene kits. It gave out 1/6 of them on Monday and 3/4 of the remaining hygiene kits on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 480 × 5/6 × 1/4 = 100.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000930"
@@ -17434,7 +17434,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000941 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-000941 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A barangay had 960 seedlings. It gave out 2/5 of them on Monday and 1/6 of the remaining seedlings on Tuesday. How many are left?",
    "shortcut": "Multiply by what is left each time: 960 × 3/5 × 5/6 = 480.",
    "replaces": "CIVIO-NUM-FRAC-DEC-000941"
@@ -17508,7 +17508,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000912 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000912 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 7 − 3 × 6 + 11?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -17586,7 +17586,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000914 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000914 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of 10 + 6 × (7 − 6)?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -17664,7 +17664,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000932 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-OPS-ORDER-000932 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What is the value of (20 × 5 + 6) ÷ 2?",
    "previous_review": {
     "reviewer": "Chief of Staff",
@@ -17742,7 +17742,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000915 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000915 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Which number should come next?  6, 8, 13, 21, 32, ___",
    "shortcut": "Write the gaps (+2, +5, +8, +11); they change by the same amount each time, so the next gap is +14: 32 +14 = 46.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000915"
@@ -17816,7 +17816,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000939 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-DIFF-000939 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next in the series?  2, 3, 7, 14, 24, ___",
    "shortcut": "Write the gaps (+1, +4, +7, +10); they change by the same amount each time, so the next gap is +13: 24 +13 = 37.",
    "replaces": "CIVIO-NUM-SEQ-DIFF-000939"
@@ -17890,7 +17890,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000919 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000919 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  1, 6, 21, 66, 201, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000919"
   },
@@ -17963,7 +17963,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000938 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-SEQ-MULT-000938 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "What number comes next?  3, 8, 18, 38, 78, ___",
    "replaces": "CIVIO-NUM-SEQ-MULT-000938"
   },
@@ -18036,7 +18036,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000936 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000936 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Inday is 3 times as old as her niece. In 14 years, Inday will be twice as old as the niece. How old is Inday now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000936"
   },
@@ -18109,7 +18109,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000937 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-000937 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Ramon is 4 times as old as his niece. In 8 years, Ramon will be three times as old as the niece. How old is Ramon now?",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-000937"
   },
@@ -18182,7 +18182,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000916 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000916 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average age of the 7 teachers in the barangay hall is 21 years. One more person, with 29 years, joins them. What is the new average age?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 21 + (29 − 21) ÷ 8 = 22 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000916"
@@ -18256,7 +18256,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000926 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-000926 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "The average years of service of the 6 barangay health workers in the barangay hall is 8 years. One more person, with 15 years, joins them. What is the new average years of service?",
    "shortcut": "New average = old average + (newcomer − old average) ÷ new head count: 8 + (15 − 8) ÷ 7 = 9 years.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-000926"
@@ -18330,7 +18330,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000922 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000922 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Tess can sort a sack of mail in 12 hours. Bea can do the same job in 4 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (12 × 4) ÷ (12 + 4) = 48 ÷ 16 = 3 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000922"
@@ -18404,7 +18404,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000935 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-000935 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Marites can paint a classroom in 4 hours. Carlo can do the same job in 12 hours. Working together, how long will they take?",
    "shortcut": "For two workers, time together = product ÷ sum: (4 × 12) ÷ (4 + 12) = 48 ÷ 16 = 3 hours.",
    "replaces": "CIVIO-NUM-WP-RATE-000935"
@@ -18478,7 +18478,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000925 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000925 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "A ₱15,000 prize money is divided between Jun-jun and Liza in the ratio 3 : 7. What is Liza's share?",
    "shortcut": "The second share is 7 of 10 equal parts: ₱15,000 ÷ 10 × 7 = ₱10,500.",
    "replaces": "CIVIO-NUM-WP-RATIO-000925"
@@ -18552,7 +18552,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000929 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000929 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Mang Jun and Datu will share ₱3,500 of prize money in the ratio 3 : 4. How much is Datu's share?",
    "shortcut": "The second share is 4 of 7 equal parts: ₱3,500 ÷ 7 × 4 = ₱2,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000929"
@@ -18626,7 +18626,7 @@
     "created_at": "2026-10-13T19:30:00+08:00",
     "spec_version": "0.1.3"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000933 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-000933 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "gen_sig": "Rhea and Arnel will share ₱30,000 of prize money in the ratio 3 : 7. How much is Arnel's share?",
    "shortcut": "The second share is 7 of 10 equal parts: ₱30,000 ÷ 10 × 7 = ₱21,000.",
    "replaces": "CIVIO-NUM-WP-RATIO-000933"
@@ -18700,7 +18700,7 @@
     "created_at": "2026-10-13",
     "spec_version": "0.1.4"
    },
-   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0006 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0006 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
    "replaces": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0006"
   },
@@ -18773,7 +18773,7 @@
     "created_at": "2026-10-13",
     "spec_version": "0.1.4"
    },
-   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0007 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0007 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
    "replaces": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0007"
   },
@@ -18846,7 +18846,7 @@
     "created_at": "2026-10-13",
     "spec_version": "0.1.4"
    },
-   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0008 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0008 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
    "replaces": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0008"
   },
@@ -18919,7 +18919,7 @@
     "created_at": "2026-10-13",
     "spec_version": "0.1.4"
    },
-   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0009 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0009 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
    "replaces": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0009"
   },
@@ -18992,7 +18992,7 @@
     "created_at": "2026-10-13",
     "spec_version": "0.1.4"
    },
-   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0010 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0010 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
    "replaces": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0010"
   },
@@ -19065,7 +19065,7 @@
     "created_at": "2026-10-13",
     "spec_version": "0.1.4"
    },
-   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0011 (approved); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-GAP2-NUM-OPS-FRAC-DEC-0011 (original status: approved); content and key unchanged. 22 Oct 2026.",
    "review_line": "[x] CoS PASS (final, per GT delegation, 2026-10-13)",
    "replaces": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0011"
   },
@@ -19140,7 +19140,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926001 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926001 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926001"
   },
   {
@@ -19214,7 +19214,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926002 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926002 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926002"
   },
   {
@@ -19288,7 +19288,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926003 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926003 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926003"
   },
   {
@@ -19362,7 +19362,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926004 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926004 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926004"
   },
   {
@@ -19436,7 +19436,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926005 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926005 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926005"
   },
   {
@@ -19510,7 +19510,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926006 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926006 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926006"
   },
   {
@@ -19584,7 +19584,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926007 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926007 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926007"
   },
   {
@@ -19658,7 +19658,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926008 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926008 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926008"
   },
   {
@@ -19732,7 +19732,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926009 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926009 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926009"
   },
   {
@@ -19806,7 +19806,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926010 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926010 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926010"
   },
   {
@@ -19880,7 +19880,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926011 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926011 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926011"
   },
   {
@@ -19954,7 +19954,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926012 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-FRAC-DEC-926012 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-FRAC-DEC-926012"
   },
   {
@@ -20028,7 +20028,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926013 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926013 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-PCT-BASIC-926013"
   },
   {
@@ -20102,7 +20102,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926014 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926014 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-PCT-BASIC-926014"
   },
   {
@@ -20176,7 +20176,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926015 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926015 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-PCT-BASIC-926015"
   },
   {
@@ -20250,7 +20250,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926018 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926018 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-PCT-BASIC-926018"
   },
   {
@@ -20324,7 +20324,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926019 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926019 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-PCT-BASIC-926019"
   },
   {
@@ -20398,7 +20398,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926022 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-PCT-BASIC-926022 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-PCT-BASIC-926022"
   },
   {
@@ -20472,7 +20472,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926033 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926033 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-926033"
   },
   {
@@ -20546,7 +20546,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926034 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926034 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-926034"
   },
   {
@@ -20620,7 +20620,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926035 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926035 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-926035"
   },
   {
@@ -20694,7 +20694,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926036 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926036 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-926036"
   },
   {
@@ -20768,7 +20768,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926038 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926038 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-926038"
   },
   {
@@ -20842,7 +20842,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926040 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926040 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-926040"
   },
   {
@@ -20916,7 +20916,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926048 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-ALGEBRA-926048 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-ALGEBRA-926048"
   },
   {
@@ -20990,7 +20990,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-926049 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-AVERAGE-926049 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-AVERAGE-926049"
   },
   {
@@ -21064,7 +21064,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926029 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926029 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATE-926029"
   },
   {
@@ -21138,7 +21138,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926030 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926030 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATE-926030"
   },
   {
@@ -21212,7 +21212,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926031 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926031 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATE-926031"
   },
   {
@@ -21286,7 +21286,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926044 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926044 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATE-926044"
   },
   {
@@ -21360,7 +21360,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926045 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926045 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATE-926045"
   },
   {
@@ -21434,7 +21434,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926046 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926046 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATE-926046"
   },
   {
@@ -21508,7 +21508,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926047 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATE-926047 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATE-926047"
   },
   {
@@ -21582,7 +21582,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-926025 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-926025 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATIO-926025"
   },
   {
@@ -21656,7 +21656,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-926026 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-926026 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATIO-926026"
   },
   {
@@ -21730,7 +21730,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-926027 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-926027 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATIO-926027"
   },
   {
@@ -21804,7 +21804,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-926028 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-926028 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATIO-926028"
   },
   {
@@ -21878,7 +21878,7 @@
     "created_at": "2026-10-22T00:20:00+08:00",
     "spec_version": "0.1.9"
    },
-   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-926032 (reviewed); content and key unchanged. 22 Oct 2026.",
+   "notes": "Method-first explanation proposal for CIVIO-NUM-WP-RATIO-926032 (original status: reviewed); content and key unchanged. 22 Oct 2026.",
    "replaces": "CIVIO-NUM-WP-RATIO-926032"
   }
  ]
