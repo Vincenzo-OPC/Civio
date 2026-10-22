@@ -1,6 +1,6 @@
 # ADR-0003 (DRAFT): Dexter Rescue loop (deterministic, ₱0)
 
-- Status: **Proposed, awaiting Astra.** Not accepted.
+- Status: **Accepted by GT (owner) 2026-10-22; Astra review not performed.** v0 implemented behind a disabled gate.
 - Date: 2026-10-22 (Asia/Manila)
 - Issue: #23 (depends on #20 evidence fixes and #22 metadata pilot)
 
@@ -54,3 +54,14 @@ One Study-mode panel for the 344 rescue-ready approved items (see the audit §5)
 - A fresh answer given after Expound is not counted as independent.
 - The failed item appears in Review Mistakes with an FSRS due date.
 - Lite Mode: the panel renders without motion and under the page bundle budget.
+
+## Decision (GT, 2026-10-22): v0 as built
+
+- Gate `DEXTER_RESCUE_ENABLED`, off unless exactly `"true"` (`config/dexter_rescue.php`). Off: `POST /dexter/rescue` returns 404 `{enabled:false}`.
+- The order of checks is: gate, then the Strict lock (any active Strict Mock gives 423 `{locked, message}` only), then validation and lookup.
+- Scope: Study, signed-in learners, and the skills NUM-WP-PCT-CHANGE, NUM-WP-RATIO and CLR-SPELL-WRONG. Anything else returns `idle`.
+- A diagnosis appears only for ids in `validated_question_ids`, which a human fills after the editorial pilot (`docs/research/dexter2/pilot/`). It is empty today. Otherwise the response carries `diagnosis: null` with `explanation.source: checked_explanation` (RevealTutor's checked concept and steps).
+- Fresh item: same archetype, different id and stem, not seen (ExposureHistory), not Strict-locked, not offline-eligible. It is served without key, explanation or codes. If there is none, the response is `next.kind: none` with honest copy.
+- FSRS: the failed item reaches it through the existing Review Mistakes path on submit. Rescue adds no scheduling of its own.
+- Client: `resources/js/lib/dexter/rescue.ts` `canRequestRescue()` refuses in Strict mode, during an active Strict Mock, before grading, and for blanks or right answers. `rescueHeading()` never labels a fallback as a diagnosis. The guard is not yet imported by the exam page. The panel waits for validated metadata, and a later UI change must keep the exam chunk budget.
+- Not built in v0: the prerequisite step, and the UI panel.

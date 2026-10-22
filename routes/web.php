@@ -20,6 +20,7 @@ use App\Http\Controllers\ServiceWorkerController;
 use App\Http\Controllers\Settings\AcceptTermsController;
 use App\Http\Controllers\User\AnalyticsController;
 use App\Http\Controllers\User\DashboardController as UserDashboardController;
+use App\Http\Controllers\User\Dexter\RescueController;
 use App\Http\Controllers\User\DrillController;
 use App\Http\Controllers\User\ExamController;
 use App\Http\Controllers\User\ExamHistoryController;
@@ -136,6 +137,7 @@ Route::middleware(['auth.or.fail', 'verified'])->group(function () {
         Route::get('drills/smart-weakness', [DrillController::class, 'smartWeakness'])->middleware('throttle:bank-access')->name('drills.smartWeakness');
         Route::get('reviews/mistakes', [ReviewMistakeController::class, 'index'])->name('reviews.mistakes.index');
         Route::post('reviews/mistakes/start', [ReviewMistakeController::class, 'start'])->name('reviews.mistakes.start');
+        Route::post('dexter/rescue', [RescueController::class, 'store'])->middleware('throttle:bank-access')->name('dexter.rescue');
         Route::post('reviews/schedules/retry', [ReviewMistakeController::class, 'retry'])->middleware('throttle:global-mutations')->name('reviews.schedules.retry');
         Route::post('drills/custom-questions', [DrillController::class, 'storeCustomQuestion'])->name('drills.custom-questions.store')->middleware('throttle:global-mutations');
 
