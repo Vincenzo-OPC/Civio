@@ -2,10 +2,7 @@ export interface Question {
     id: number;
     stem: string;
     options: string[];
-<<<<<<< HEAD
     /** Only present on the learner's own custom questions. */
-=======
->>>>>>> origin/main
     correct_option?: number;
     explanation?: string;
     category: string;
