@@ -383,3 +383,12 @@ The five stems now use one format. Nothing activated. Recheck only 0002, 0012, 0
 
 `fe38b06` had already retired 0115 from this file as a filler clone of `CIVIO-FINAL-0119`. GT later approved restoring 0115 unchanged as a draft. This file is 122 drafts (General Information 18). 2033 − 55 + 122 = 2100: Numerical 400, Analytical 400, Verbal EN 400, Verbal Fil 300, Clerical 300, GI 300. The 2,000/523 plan is dropped.
 
+
+## 2026-10-22: flat-2100 manifest (GT approved)
+
+`docs/research/bank/civio-flat-2100-manifest-2026-10-22.json` (and `.csv`) lists exactly 2,100 IDs: Numerical 400, Analytical 400, Verbal EN 400, Verbal Fil 300, Clerical 300, GI 300. Each row records domain, track, status, tier, source file and sha256. The selection rule and every exclusion are in the JSON. Build: `scripts/batches/qa/flat_2100_manifest_2026_10_22.py`. Validate: `scripts/batches/qa/validate_flat_2100_manifest.py`.
+- Tiers: approved 1,439 (25 of them through corrected R1/LINTFIX replacements, with the originals marked retire_on_signoff), reviewed 42, passing drafts 510, and 109 legacy baseline drafts that only lack metadata (needs_metadata: Verbal EN 88, Numerical 21). No domain reaches its target with clean items alone.
+- Percent change is capped at 40 in Numerical. The 53 items over the cap, approved ones included, are left out of this release, not retired.
+- All 122 flat-2100 drafts are in.
+- Coverage: 343 items are subprofessional-only (Clerical 300, Numerical 43), and 1,700 are open to the subprofessional track (subprofessional plus both). Analytical is professional-only.
+Nothing approved, signed or imported.
