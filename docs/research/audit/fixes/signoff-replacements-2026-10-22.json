@@ -1,0 +1,3063 @@
+{
+  "batch": "signoff-replacements-2026-10-22",
+  "status": "draft (pending CoS; not approved, not signed, not imported)",
+  "note": "Corrected draft replacements for approved items found in the 22 Oct sign-off sample and the pattern scan. Originals are unchanged; the flat-2100 manifest lists them as retire_on_signoff.",
+  "count": 30,
+  "items": [
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000221-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An office chair is priced at ₱480. It is sold at 15% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱72"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱408"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱465"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱552"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 85% of the price: ₱480 × 0.85 = ₱408.",
+        "why_correct": "₱408 is right. Check: discount ₱72; ₱480 − ₱72 = ₱408.",
+        "why_wrong": {
+          "o1": "₱72 is the discount itself. The buyer pays the price minus this amount.",
+          "o3": "₱465 subtracts 15 pesos, not 15% of the price.",
+          "o4": "₱552 adds 15% instead of taking it off."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Move the decimal one place for 10% (₱48), halve it for 5% (₱24), and build 15% from those: ₱72 off, so ₱408.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000221",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000221",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000221",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000221",
+            "stem": "A office chair is priced at ₱480. It is sold at 15% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱72"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱408"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱465"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱552"
+              }
+            ],
+            "reveal": {
+              "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 85% of the price: ₱480 × 0.85 = ₱408.",
+              "why_correct": "₱408 is right. Check: discount ₱72; ₱480 − ₱72 = ₱408.",
+              "why_wrong": {
+                "o1": "₱72 is the discount itself. The buyer pays the price minus this amount.",
+                "o3": "₱465 subtracts 15 pesos, not 15% of the price.",
+                "o4": "₱552 adds 15% instead of taking it off."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000323-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An office chair is priced at ₱800. It is sold at 35% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱765"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱520"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱280"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱1,080"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "\"35% off\" means 35 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 65% of the price: ₱800 × 0.65 = ₱520.",
+        "why_correct": "₱520 is right. Check: discount ₱280; ₱800 − ₱280 = ₱520.",
+        "why_wrong": {
+          "o1": "₱765 subtracts 35 pesos, not 35% of the price.",
+          "o3": "₱280 is the discount itself. The buyer pays the price minus this amount.",
+          "o4": "₱1,080 adds 35% instead of taking it off."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Move the decimal one place for 10% (₱80), halve it for 5% (₱40), and build 35% from those: ₱280 off, so ₱520.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000323",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000323",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000323",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000323",
+            "stem": "A office chair is priced at ₱800. It is sold at 35% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱765"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱520"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱280"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱1,080"
+              }
+            ],
+            "reveal": {
+              "terms": "\"35% off\" means 35 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 65% of the price: ₱800 × 0.65 = ₱520.",
+              "why_correct": "₱520 is right. Check: discount ₱280; ₱800 − ₱280 = ₱520.",
+              "why_wrong": {
+                "o1": "₱765 subtracts 35 pesos, not 35% of the price.",
+                "o3": "₱280 is the discount itself. The buyer pays the price minus this amount.",
+                "o4": "₱1,080 adds 35% instead of taking it off."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000423-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An umbrella set is priced at ₱1,500. It is sold at 15% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱1,725"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱1,485"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱225"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱1,275"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 85% of the price: ₱1,500 × 0.85 = ₱1,275.",
+        "why_correct": "₱1,275 is right. Check: discount ₱225; ₱1,500 − ₱225 = ₱1,275.",
+        "why_wrong": {
+          "o1": "₱1,725 adds 15% instead of taking it off.",
+          "o2": "₱1,485 subtracts 15 pesos, not 15% of the price.",
+          "o3": "₱225 is the discount itself. The buyer pays the price minus this amount."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o2": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Split 15% into 10% + 5%: 10% of ₱1,500 is ₱150, and 5% is half of 10% (₱75). Take off ₱225 to get ₱1,275.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000423",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000423",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000423",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000423",
+            "stem": "A umbrella set is priced at ₱1,500. It is sold at 15% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱1,725"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱1,485"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱225"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱1,275"
+              }
+            ],
+            "reveal": {
+              "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 85% of the price: ₱1,500 × 0.85 = ₱1,275.",
+              "why_correct": "₱1,275 is right. Check: discount ₱225; ₱1,500 − ₱225 = ₱1,275.",
+              "why_wrong": {
+                "o1": "₱1,725 adds 15% instead of taking it off.",
+                "o2": "₱1,485 subtracts 15 pesos, not 15% of the price.",
+                "o3": "₱225 is the discount itself. The buyer pays the price minus this amount."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000517-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An electric fan is priced at ₱640. It is sold at 25% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱615"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱480"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱160"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱800"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "\"25% off\" means 25 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 75% of the price: ₱640 × 0.75 = ₱480.",
+        "why_correct": "₱480 is right. Check: discount ₱160; ₱640 − ₱160 = ₱480.",
+        "why_wrong": {
+          "o1": "₱615 subtracts 25 pesos, not 25% of the price.",
+          "o3": "₱160 is the discount itself. The buyer pays the price minus this amount.",
+          "o4": "₱800 adds 25% instead of taking it off."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Move the decimal one place for 10% (₱64), halve it for 5% (₱32), and build 25% from those: ₱160 off, so ₱480.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000517",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000517",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000517",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000517",
+            "stem": "A electric fan is priced at ₱640. It is sold at 25% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱615"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱480"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱160"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱800"
+              }
+            ],
+            "reveal": {
+              "terms": "\"25% off\" means 25 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 75% of the price: ₱640 × 0.75 = ₱480.",
+              "why_correct": "₱480 is right. Check: discount ₱160; ₱640 − ₱160 = ₱480.",
+              "why_wrong": {
+                "o1": "₱615 subtracts 25 pesos, not 25% of the price.",
+                "o3": "₱160 is the discount itself. The buyer pays the price minus this amount.",
+                "o4": "₱800 adds 25% instead of taking it off."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000528-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An electric fan is priced at ₱800. It is sold at 10% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱720"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱80"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱880"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱790"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "\"10% off\" means 10 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 90% of the price: ₱800 × 0.9 = ₱720.",
+        "why_correct": "₱720 is right. Check: discount ₱80; ₱800 − ₱80 = ₱720.",
+        "why_wrong": {
+          "o2": "₱80 is the discount itself. The buyer pays the price minus this amount.",
+          "o3": "₱880 adds 10% instead of taking it off.",
+          "o4": "₱790 subtracts 10 pesos, not 10% of the price."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-PARTIAL",
+        "o3": "NUM-OP-SWAP",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "10% off: move the decimal one place (₱80) and subtract: ₱800 − ₱80 = ₱720.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000528",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000528",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000528",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000528",
+            "stem": "A electric fan is priced at ₱800. It is sold at 10% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱720"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱80"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱880"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱790"
+              }
+            ],
+            "reveal": {
+              "terms": "\"10% off\" means 10 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 90% of the price: ₱800 × 0.9 = ₱720.",
+              "why_correct": "₱720 is right. Check: discount ₱80; ₱800 − ₱80 = ₱720.",
+              "why_wrong": {
+                "o2": "₱80 is the discount itself. The buyer pays the price minus this amount.",
+                "o3": "₱880 adds 10% instead of taking it off.",
+                "o4": "₱790 subtracts 10 pesos, not 10% of the price."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000537-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An electric fan is priced at ₱800. It is sold at 25% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱600"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱1,000"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱200"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱775"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "\"25% off\" means 25 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 75% of the price: ₱800 × 0.75 = ₱600.",
+        "why_correct": "₱600 is right. Check: discount ₱200; ₱800 − ₱200 = ₱600.",
+        "why_wrong": {
+          "o2": "₱1,000 adds 25% instead of taking it off.",
+          "o3": "₱200 is the discount itself. The buyer pays the price minus this amount.",
+          "o4": "₱775 subtracts 25 pesos, not 25% of the price."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Split 25% into 20% + 5%: 20% of ₱800 is ₱160, and 5% is half of 10% (₱40). Take off ₱200 to get ₱600.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000537",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000537",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000537",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000537",
+            "stem": "A electric fan is priced at ₱800. It is sold at 25% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱600"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱1,000"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱200"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱775"
+              }
+            ],
+            "reveal": {
+              "terms": "\"25% off\" means 25 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 75% of the price: ₱800 × 0.75 = ₱600.",
+              "why_correct": "₱600 is right. Check: discount ₱200; ₱800 − ₱200 = ₱600.",
+              "why_wrong": {
+                "o2": "₱1,000 adds 25% instead of taking it off.",
+                "o3": "₱200 is the discount itself. The buyer pays the price minus this amount.",
+                "o4": "₱775 subtracts 25 pesos, not 25% of the price."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000623-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An electric fan is priced at ₱1,500. It is sold at 15% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱1,485"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱1,725"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱1,275"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱225"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 85% of the price: ₱1,500 × 0.85 = ₱1,275.",
+        "why_correct": "₱1,275 is right. Check: discount ₱225; ₱1,500 − ₱225 = ₱1,275.",
+        "why_wrong": {
+          "o1": "₱1,485 subtracts 15 pesos, not 15% of the price.",
+          "o2": "₱1,725 adds 15% instead of taking it off.",
+          "o4": "₱225 is the discount itself. The buyer pays the price minus this amount."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o2": "NUM-OP-SWAP",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Split 15% into 10% + 5%: 10% of ₱1,500 is ₱150, and 5% is half of 10% (₱75). Take off ₱225 to get ₱1,275.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000623",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000623",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000623",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000623",
+            "stem": "A electric fan is priced at ₱1,500. It is sold at 15% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱1,485"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱1,725"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱1,275"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱225"
+              }
+            ],
+            "reveal": {
+              "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 85% of the price: ₱1,500 × 0.85 = ₱1,275.",
+              "why_correct": "₱1,275 is right. Check: discount ₱225; ₱1,500 − ₱225 = ₱1,275.",
+              "why_wrong": {
+                "o1": "₱1,485 subtracts 15 pesos, not 15% of the price.",
+                "o2": "₱1,725 adds 15% instead of taking it off.",
+                "o4": "₱225 is the discount itself. The buyer pays the price minus this amount."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000725-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An umbrella set is priced at ₱2,400. It is sold at 20% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱480"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱2,880"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱1,920"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱2,380"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "\"20% off\" means 20 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 80% of the price: ₱2,400 × 0.8 = ₱1,920.",
+        "why_correct": "₱1,920 is right. Check: discount ₱480; ₱2,400 − ₱480 = ₱1,920.",
+        "why_wrong": {
+          "o1": "₱480 is the discount itself. The buyer pays the price minus this amount.",
+          "o2": "₱2,880 adds 20% instead of taking it off.",
+          "o4": "₱2,380 subtracts 20 pesos, not 20% of the price."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-OP-SWAP",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Skip the subtraction step: multiply by what you keep, 80%. ₱2,400 × 0.8 = ₱1,920.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000725",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000725",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000725",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000725",
+            "stem": "A umbrella set is priced at ₱2,400. It is sold at 20% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱480"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱2,880"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱1,920"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱2,380"
+              }
+            ],
+            "reveal": {
+              "terms": "\"20% off\" means 20 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 80% of the price: ₱2,400 × 0.8 = ₱1,920.",
+              "why_correct": "₱1,920 is right. Check: discount ₱480; ₱2,400 − ₱480 = ₱1,920.",
+              "why_wrong": {
+                "o1": "₱480 is the discount itself. The buyer pays the price minus this amount.",
+                "o2": "₱2,880 adds 20% instead of taking it off.",
+                "o4": "₱2,380 subtracts 20 pesos, not 20% of the price."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000727-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An umbrella set is priced at ₱1,800. It is sold at 15% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱2,070"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱270"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱1,785"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱1,530"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 85% of the price: ₱1,800 × 0.85 = ₱1,530.",
+        "why_correct": "₱1,530 is right. Check: discount ₱270; ₱1,800 − ₱270 = ₱1,530.",
+        "why_wrong": {
+          "o1": "₱2,070 adds 15% instead of taking it off.",
+          "o2": "₱270 is the discount itself. The buyer pays the price minus this amount.",
+          "o3": "₱1,785 subtracts 15 pesos, not 15% of the price."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o2": "NUM-PARTIAL",
+        "o3": "NUM-WRONG-BASE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Split 15% into 10% + 5%: 10% of ₱1,800 is ₱180, and 5% is half of 10% (₱90). Take off ₱270 to get ₱1,530.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000727",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000727",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000727",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000727",
+            "stem": "A umbrella set is priced at ₱1,800. It is sold at 15% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱2,070"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱270"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱1,785"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱1,530"
+              }
+            ],
+            "reveal": {
+              "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 85% of the price: ₱1,800 × 0.85 = ₱1,530.",
+              "why_correct": "₱1,530 is right. Check: discount ₱270; ₱1,800 − ₱270 = ₱1,530.",
+              "why_wrong": {
+                "o1": "₱2,070 adds 15% instead of taking it off.",
+                "o2": "₱270 is the discount itself. The buyer pays the price minus this amount.",
+                "o3": "₱1,785 subtracts 15 pesos, not 15% of the price."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000822-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An electric fan is priced at ₱640. It is sold at 20% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱768"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱512"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱128"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱620"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "\"20% off\" means 20 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 80% of the price: ₱640 × 0.8 = ₱512.",
+        "why_correct": "₱512 is right. Check: discount ₱128; ₱640 − ₱128 = ₱512.",
+        "why_wrong": {
+          "o1": "₱768 adds 20% instead of taking it off.",
+          "o3": "₱128 is the discount itself. The buyer pays the price minus this amount.",
+          "o4": "₱620 subtracts 20 pesos, not 20% of the price."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Skip the subtraction step: multiply by what you keep, 80%. ₱640 × 0.8 = ₱512.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000822",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000822",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000822",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000822",
+            "stem": "A electric fan is priced at ₱640. It is sold at 20% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱768"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱512"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱128"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱620"
+              }
+            ],
+            "reveal": {
+              "terms": "\"20% off\" means 20 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 80% of the price: ₱640 × 0.8 = ₱512.",
+              "why_correct": "₱512 is right. Check: discount ₱128; ₱640 − ₱128 = ₱512.",
+              "why_wrong": {
+                "o1": "₱768 adds 20% instead of taking it off.",
+                "o3": "₱128 is the discount itself. The buyer pays the price minus this amount.",
+                "o4": "₱620 subtracts 20 pesos, not 20% of the price."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000825-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An umbrella set is priced at ₱640. It is sold at 35% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱864"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱416"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱605"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱224"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "\"35% off\" means 35 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 65% of the price: ₱640 × 0.65 = ₱416.",
+        "why_correct": "₱416 is right. Check: discount ₱224; ₱640 − ₱224 = ₱416.",
+        "why_wrong": {
+          "o1": "₱864 adds 35% instead of taking it off.",
+          "o3": "₱605 subtracts 35 pesos, not 35% of the price.",
+          "o4": "₱224 is the discount itself. The buyer pays the price minus this amount."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-OP-SWAP",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "35% = 30% + 5%. 10% of ₱640 = ₱64; so the discount is ₱224 and the price is ₱416.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000825",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000825",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000825",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000825",
+            "stem": "A umbrella set is priced at ₱640. It is sold at 35% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱864"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱416"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱605"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱224"
+              }
+            ],
+            "reveal": {
+              "terms": "\"35% off\" means 35 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 65% of the price: ₱640 × 0.65 = ₱416.",
+              "why_correct": "₱416 is right. Check: discount ₱224; ₱640 − ₱224 = ₱416.",
+              "why_wrong": {
+                "o1": "₱864 adds 35% instead of taking it off.",
+                "o3": "₱605 subtracts 35 pesos, not 35% of the price.",
+                "o4": "₱224 is the discount itself. The buyer pays the price minus this amount."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000917-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An office chair is priced at ₱400. It is sold at 35% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱365"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱260"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱540"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱140"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "\"35% off\" means 35 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 65% of the price: ₱400 × 0.65 = ₱260.",
+        "why_correct": "₱260 is right. Check: discount ₱140; ₱400 − ₱140 = ₱260.",
+        "why_wrong": {
+          "o1": "₱365 subtracts 35 pesos, not 35% of the price.",
+          "o3": "₱540 adds 35% instead of taking it off.",
+          "o4": "₱140 is the discount itself. The buyer pays the price minus this amount."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o3": "NUM-OP-SWAP",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "35% = 30% + 5%. 10% of ₱400 = ₱40; so the discount is ₱140 and the price is ₱260.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000917",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000917",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000917",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000917",
+            "stem": "A office chair is priced at ₱400. It is sold at 35% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱365"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱260"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱540"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱140"
+              }
+            ],
+            "reveal": {
+              "terms": "\"35% off\" means 35 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 65% of the price: ₱400 × 0.65 = ₱260.",
+              "why_correct": "₱260 is right. Check: discount ₱140; ₱400 − ₱140 = ₱260.",
+              "why_wrong": {
+                "o1": "₱365 subtracts 35 pesos, not 35% of the price.",
+                "o3": "₱540 adds 35% instead of taking it off.",
+                "o4": "₱140 is the discount itself. The buyer pays the price minus this amount."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-PCT-CHANGE-000924-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "discount",
+      "micro_skill": "price after a percent discount",
+      "archetype": "NUM-WP-PCT-CHANGE",
+      "difficulty": "easy",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "An umbrella set is priced at ₱1,800. It is sold at 35% off. How much does a buyer pay?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱630"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱2,430"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱1,765"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱1,170"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "\"35% off\" means 35 pesos less for every 100 pesos of the price.",
+        "shortcut": "Pay 65% of the price: ₱1,800 × 0.65 = ₱1,170.",
+        "why_correct": "₱1,170 is right. Check: discount ₱630; ₱1,800 − ₱630 = ₱1,170.",
+        "why_wrong": {
+          "o1": "₱630 is the discount itself. The buyer pays the price minus this amount.",
+          "o2": "₱2,430 adds 35% instead of taking it off.",
+          "o3": "₱1,765 subtracts 35 pesos, not 35% of the price."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-OP-SWAP",
+        "o3": "NUM-WRONG-BASE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Split 35% into 30% + 5%: 30% of ₱1,800 is ₱540, and 5% is half of 10% (₱90). Take off ₱630 to get ₱1,170.",
+      "fix_of": "CIVIO-NUM-WP-PCT-CHANGE-000924",
+      "replaces": "CIVIO-NUM-WP-PCT-CHANGE-000924",
+      "retire_on_signoff": "CIVIO-NUM-WP-PCT-CHANGE-000924",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-PCT-CHANGE-000924",
+            "stem": "A umbrella set is priced at ₱1,800. It is sold at 35% off. How much does a buyer pay?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱630"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱2,430"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱1,765"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱1,170"
+              }
+            ],
+            "reveal": {
+              "terms": "\"35% off\" means 35 pesos less for every 100 pesos of the price.",
+              "shortcut": "Pay 65% of the price: ₱1,800 × 0.65 = ₱1,170.",
+              "why_correct": "₱1,170 is right. Check: discount ₱630; ₱1,800 − ₱630 = ₱1,170.",
+              "why_wrong": {
+                "o1": "₱630 is the discount itself. The buyer pays the price minus this amount.",
+                "o2": "₱2,430 adds 35% instead of taking it off.",
+                "o3": "₱1,765 subtracts 35 pesos, not 35% of the price."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-GEOM-000226-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "perimeter and cost",
+      "micro_skill": "find perimeter, then multiply by cost per meter",
+      "archetype": "NUM-WP-GEOM",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A rectangular parking area is 22 m long and 7 m wide. Edging costs ₱40 per meter. How much will it cost to put the edging around the whole parking area?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱6,160"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱58"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱2,320"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱1,160"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+        "shortcut": "Around = 2 × (22 + 7) = 58 m. Cost = 58 × ₱40.",
+        "why_correct": "₱2,320 is right: 58 m × ₱40 = ₱2,320.",
+        "why_wrong": {
+          "o1": "This uses the area (154 square meters). Going around uses the perimeter.",
+          "o2": "₱58 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.",
+          "o4": "This uses only one length and one width (29 m). A rectangle has two of each."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-WRONG-BASE",
+        "o2": "NUM-PARTIAL",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Add length and width once, then double: 22 + 7 = 29, × 2 = 58 m. × ₱40 = ₱2,320.",
+      "fix_of": "CIVIO-NUM-WP-GEOM-000226",
+      "replaces": "CIVIO-NUM-WP-GEOM-000226",
+      "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000226",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-GEOM-000226",
+            "stem": "A rectangular parking area is 22 m long and 7 m wide. A edging costs ₱40 per meter. How much will it cost to put the edging around the whole parking area?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱6,160"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱58"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱2,320"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱1,160"
+              }
+            ],
+            "reveal": {
+              "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+              "shortcut": "Around = 2 × (22 + 7) = 58 m. Cost = 58 × ₱40.",
+              "why_correct": "₱2,320 is right: 58 m × ₱40 = ₱2,320.",
+              "why_wrong": {
+                "o1": "This uses the area (154 square meters). Going around uses the perimeter.",
+                "o2": "₱58 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.",
+                "o4": "This uses only one length and one width (29 m). A rectangle has two of each."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-GEOM-000534-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "perimeter and cost",
+      "micro_skill": "find perimeter, then multiply by cost per meter",
+      "archetype": "NUM-WP-GEOM",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A rectangular school lot is 29 m long and 19 m wide. Edging costs ₱25 per meter. How much will it cost to put the edging around the whole school lot?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱96"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱13,775"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱2,400"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱1,200"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+        "shortcut": "Around = 2 × (29 + 19) = 96 m. Cost = 96 × ₱25.",
+        "why_correct": "₱2,400 is right: 96 m × ₱25 = ₱2,400.",
+        "why_wrong": {
+          "o1": "₱96 is just the perimeter in meters written as pesos. It stops before multiplying by ₱25.",
+          "o2": "This uses the area (551 square meters). Going around uses the perimeter.",
+          "o4": "This uses only one length and one width (48 m). A rectangle has two of each."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Add length and width once, then double: 29 + 19 = 48, × 2 = 96 m. × ₱25 = ₱2,400.",
+      "fix_of": "CIVIO-NUM-WP-GEOM-000534",
+      "replaces": "CIVIO-NUM-WP-GEOM-000534",
+      "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000534",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-GEOM-000534",
+            "stem": "A rectangular school lot is 29 m long and 19 m wide. A edging costs ₱25 per meter. How much will it cost to put the edging around the whole school lot?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱96"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱13,775"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱2,400"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱1,200"
+              }
+            ],
+            "reveal": {
+              "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+              "shortcut": "Around = 2 × (29 + 19) = 96 m. Cost = 96 × ₱25.",
+              "why_correct": "₱2,400 is right: 96 m × ₱25 = ₱2,400.",
+              "why_wrong": {
+                "o1": "₱96 is just the perimeter in meters written as pesos. It stops before multiplying by ₱25.",
+                "o2": "This uses the area (551 square meters). Going around uses the perimeter.",
+                "o4": "This uses only one length and one width (48 m). A rectangle has two of each."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-GEOM-000736-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "perimeter and cost",
+      "micro_skill": "find perimeter, then multiply by cost per meter",
+      "archetype": "NUM-WP-GEOM",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A rectangular vegetable garden is 28 m long and 15 m wide. Edging costs ₱40 per meter. How much will it cost to put the edging around the whole vegetable garden?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱86"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱3,440"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱1,720"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱16,800"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+        "shortcut": "Around = 2 × (28 + 15) = 86 m. Cost = 86 × ₱40.",
+        "why_correct": "₱3,440 is right: 86 m × ₱40 = ₱3,440.",
+        "why_wrong": {
+          "o1": "₱86 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.",
+          "o3": "This uses only one length and one width (43 m). A rectangle has two of each.",
+          "o4": "This uses the area (420 square meters). Going around uses the perimeter."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Add length and width once, then double: 28 + 15 = 43, × 2 = 86 m. × ₱40 = ₱3,440.",
+      "fix_of": "CIVIO-NUM-WP-GEOM-000736",
+      "replaces": "CIVIO-NUM-WP-GEOM-000736",
+      "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000736",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-GEOM-000736",
+            "stem": "A rectangular vegetable garden is 28 m long and 15 m wide. A edging costs ₱40 per meter. How much will it cost to put the edging around the whole vegetable garden?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱86"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱3,440"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱1,720"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱16,800"
+              }
+            ],
+            "reveal": {
+              "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+              "shortcut": "Around = 2 × (28 + 15) = 86 m. Cost = 86 × ₱40.",
+              "why_correct": "₱3,440 is right: 86 m × ₱40 = ₱3,440.",
+              "why_wrong": {
+                "o1": "₱86 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.",
+                "o3": "This uses only one length and one width (43 m). A rectangle has two of each.",
+                "o4": "This uses the area (420 square meters). Going around uses the perimeter."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-GEOM-000838-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "perimeter and cost",
+      "micro_skill": "find perimeter, then multiply by cost per meter",
+      "archetype": "NUM-WP-GEOM",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A rectangular vegetable garden is 25 m long and 18 m wide. Edging costs ₱120 per meter. How much will it cost to put the edging around the whole vegetable garden?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱86"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱54,000"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱5,160"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱10,320"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+        "shortcut": "Around = 2 × (25 + 18) = 86 m. Cost = 86 × ₱120.",
+        "why_correct": "₱10,320 is right: 86 m × ₱120 = ₱10,320.",
+        "why_wrong": {
+          "o1": "₱86 is just the perimeter in meters written as pesos. It stops before multiplying by ₱120.",
+          "o2": "This uses the area (450 square meters). Going around uses the perimeter.",
+          "o3": "This uses only one length and one width (43 m). A rectangle has two of each."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o2": "NUM-WRONG-BASE",
+        "o3": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Add length and width once, then double: 25 + 18 = 43, × 2 = 86 m. × ₱120 = ₱10,320.",
+      "fix_of": "CIVIO-NUM-WP-GEOM-000838",
+      "replaces": "CIVIO-NUM-WP-GEOM-000838",
+      "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000838",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-GEOM-000838",
+            "stem": "A rectangular vegetable garden is 25 m long and 18 m wide. A edging costs ₱120 per meter. How much will it cost to put the edging around the whole vegetable garden?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱86"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱54,000"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱5,160"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱10,320"
+              }
+            ],
+            "reveal": {
+              "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+              "shortcut": "Around = 2 × (25 + 18) = 86 m. Cost = 86 × ₱120.",
+              "why_correct": "₱10,320 is right: 86 m × ₱120 = ₱10,320.",
+              "why_wrong": {
+                "o1": "₱86 is just the perimeter in meters written as pesos. It stops before multiplying by ₱120.",
+                "o2": "This uses the area (450 square meters). Going around uses the perimeter.",
+                "o3": "This uses only one length and one width (43 m). A rectangle has two of each."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-GEOM-000920-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "perimeter and cost",
+      "micro_skill": "find perimeter, then multiply by cost per meter",
+      "archetype": "NUM-WP-GEOM",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A rectangular basketball court is 34 m long and 20 m wide. Edging costs ₱25 per meter. How much will it cost to put the edging around the whole basketball court?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱108"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱2,700"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱1,350"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱17,000"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+        "shortcut": "Around = 2 × (34 + 20) = 108 m. Cost = 108 × ₱25.",
+        "why_correct": "₱2,700 is right: 108 m × ₱25 = ₱2,700.",
+        "why_wrong": {
+          "o1": "₱108 is just the perimeter in meters written as pesos. It stops before multiplying by ₱25.",
+          "o3": "This uses only one length and one width (54 m). A rectangle has two of each.",
+          "o4": "This uses the area (680 square meters). Going around uses the perimeter."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "NUM-PARTIAL",
+        "o3": "NUM-PARTIAL",
+        "o4": "NUM-WRONG-BASE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Add length and width once, then double: 34 + 20 = 54, × 2 = 108 m. × ₱25 = ₱2,700.",
+      "fix_of": "CIVIO-NUM-WP-GEOM-000920",
+      "replaces": "CIVIO-NUM-WP-GEOM-000920",
+      "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000920",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-GEOM-000920",
+            "stem": "A rectangular basketball court is 34 m long and 20 m wide. A edging costs ₱25 per meter. How much will it cost to put the edging around the whole basketball court?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱108"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱2,700"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱1,350"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱17,000"
+              }
+            ],
+            "reveal": {
+              "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+              "shortcut": "Around = 2 × (34 + 20) = 108 m. Cost = 108 × ₱25.",
+              "why_correct": "₱2,700 is right: 108 m × ₱25 = ₱2,700.",
+              "why_wrong": {
+                "o1": "₱108 is just the perimeter in meters written as pesos. It stops before multiplying by ₱25.",
+                "o3": "This uses only one length and one width (54 m). A rectangle has two of each.",
+                "o4": "This uses the area (680 square meters). Going around uses the perimeter."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-GEOM-000934-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "perimeter and cost",
+      "micro_skill": "find perimeter, then multiply by cost per meter",
+      "archetype": "NUM-WP-GEOM",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "A rectangular drying yard is 29 m long and 10 m wide. Edging costs ₱40 per meter. How much will it cost to put the edging around the whole drying yard?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "₱3,120"
+        },
+        {
+          "option_id": "o2",
+          "text": "₱78"
+        },
+        {
+          "option_id": "o3",
+          "text": "₱11,600"
+        },
+        {
+          "option_id": "o4",
+          "text": "₱1,560"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+        "shortcut": "Around = 2 × (29 + 10) = 78 m. Cost = 78 × ₱40.",
+        "why_correct": "₱3,120 is right: 78 m × ₱40 = ₱3,120.",
+        "why_wrong": {
+          "o2": "₱78 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.",
+          "o3": "This uses the area (290 square meters). Going around uses the perimeter.",
+          "o4": "This uses only one length and one width (39 m). A rectangle has two of each."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-PARTIAL",
+        "o3": "NUM-WRONG-BASE",
+        "o4": "NUM-PARTIAL"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "Add length and width once, then double: 29 + 10 = 39, × 2 = 78 m. × ₱40 = ₱3,120.",
+      "fix_of": "CIVIO-NUM-WP-GEOM-000934",
+      "replaces": "CIVIO-NUM-WP-GEOM-000934",
+      "retire_on_signoff": "CIVIO-NUM-WP-GEOM-000934",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Article: 'A' became 'An' before a vowel sound ('A edging' became 'Edging').",
+          "prior": {
+            "id": "CIVIO-NUM-WP-GEOM-000934",
+            "stem": "A rectangular drying yard is 29 m long and 10 m wide. A edging costs ₱40 per meter. How much will it cost to put the edging around the whole drying yard?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "₱3,120"
+              },
+              {
+                "option_id": "o2",
+                "text": "₱78"
+              },
+              {
+                "option_id": "o3",
+                "text": "₱11,600"
+              },
+              {
+                "option_id": "o4",
+                "text": "₱1,560"
+              }
+            ],
+            "reveal": {
+              "terms": "\"Perimeter\" is the distance around a shape. For a rectangle it is 2 × (length + width).",
+              "shortcut": "Around = 2 × (29 + 10) = 78 m. Cost = 78 × ₱40.",
+              "why_correct": "₱3,120 is right: 78 m × ₱40 = ₱3,120.",
+              "why_wrong": {
+                "o2": "₱78 is just the perimeter in meters written as pesos. It stops before multiplying by ₱40.",
+                "o3": "This uses the area (290 square meters). Going around uses the perimeter.",
+                "o4": "This uses only one length and one width (39 m). A rectangle has two of each."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-ANA-SYLLOGISM-000053-R1",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Logic",
+      "concept": "syllogism",
+      "micro_skill": "some form",
+      "archetype": "ANA-SYLLOGISM",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Statement 1: Some mangoes are exports. Statement 2: All mangoes are fruits. Which conclusion follows from both statements?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "No fruits are exports."
+        },
+        {
+          "option_id": "o2",
+          "text": "Some fruits are exports."
+        },
+        {
+          "option_id": "o3",
+          "text": "All fruits are exports."
+        },
+        {
+          "option_id": "o4",
+          "text": "All exports are mangoes."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+        "shortcut": "The mangoes that are exports are also fruits. So at least some fruits are exports.",
+        "why_correct": "\"Some fruits are exports.\" is right. It follows from the two statements with no extra facts.",
+        "why_wrong": {
+          "o1": "This contradicts the statements: the mangoes that are exports are also fruits.",
+          "o3": "Only some of the mangoes are exports, so we cannot say all fruits are.",
+          "o4": "This flips the statement about exports. Some exports may be outside the group."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-OVERSTRONG",
+        "o3": "LOG-OVERSTRONG",
+        "o4": "LOG-CONVERSE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_frame": "SYL-S2",
+      "fix_of": "CIVIO-ANA-SYLLOGISM-000053",
+      "replaces": "CIVIO-ANA-SYLLOGISM-000053",
+      "retire_on_signoff": "CIVIO-ANA-SYLLOGISM-000053",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Swapped the template filler 'rentals' for a sensible category, 'exports'. Changed 'who' to 'that' for things. The logic and key are unchanged.",
+          "prior": {
+            "id": "CIVIO-ANA-SYLLOGISM-000053",
+            "stem": "Statement 1: Some mangoes are rentals. Statement 2: All mangoes are fruits. Which conclusion follows from both statements?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "No fruits are rentals."
+              },
+              {
+                "option_id": "o2",
+                "text": "Some fruits are rentals."
+              },
+              {
+                "option_id": "o3",
+                "text": "All fruits are rentals."
+              },
+              {
+                "option_id": "o4",
+                "text": "All rentals are mangoes."
+              }
+            ],
+            "reveal": {
+              "terms": "A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+              "shortcut": "The mangoes who are rentals are also fruits. So at least some fruits are rentals.",
+              "why_correct": "\"Some fruits are rentals.\" is right. It follows from the two statements with no extra facts.",
+              "why_wrong": {
+                "o1": "This contradicts the statements: the mangoes who are rentals are also fruits.",
+                "o3": "Only some of the mangoes are rentals, so we cannot say all fruits are.",
+                "o4": "This flips the statement about rentals. Some rentals may be outside the group."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-ANA-SYLLOGISM-000643-R1",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Logic",
+      "concept": "syllogism",
+      "micro_skill": "some form",
+      "archetype": "ANA-SYLLOGISM",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Assume these are true: a few of the bridges are landmarks, and all of the bridges are structures. What can be concluded for certain?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Some structures are landmarks."
+        },
+        {
+          "option_id": "o2",
+          "text": "All landmarks are bridges."
+        },
+        {
+          "option_id": "o3",
+          "text": "No structures are landmarks."
+        },
+        {
+          "option_id": "o4",
+          "text": "All structures are landmarks."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+        "shortcut": "The bridges that are landmarks are also structures. So at least some structures are landmarks.",
+        "why_correct": "\"Some structures are landmarks.\" is right. It follows from the two statements with no extra facts.",
+        "why_wrong": {
+          "o2": "This flips the statement about landmarks. Some landmarks may be outside the group.",
+          "o3": "This contradicts the statements: the bridges that are landmarks are also structures.",
+          "o4": "Only some of the bridges are landmarks, so we cannot say all structures are."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "LOG-CONVERSE",
+        "o3": "LOG-OVERSTRONG",
+        "o4": "LOG-OVERSTRONG"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_frame": "SYL-S3",
+      "fix_of": "CIVIO-ANA-SYLLOGISM-000643",
+      "replaces": "CIVIO-ANA-SYLLOGISM-000643",
+      "retire_on_signoff": "CIVIO-ANA-SYLLOGISM-000643",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Swapped the template filler 'imported goods' for a sensible category, 'landmarks'. Changed 'who' to 'that' for things. The logic and key are unchanged.",
+          "prior": {
+            "id": "CIVIO-ANA-SYLLOGISM-000643",
+            "stem": "Assume these are true: a few of the bridges are imported goods, and all of the bridges are structures. What can be concluded for certain?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "Some structures are imported goods."
+              },
+              {
+                "option_id": "o2",
+                "text": "All imported goods are bridges."
+              },
+              {
+                "option_id": "o3",
+                "text": "No structures are imported goods."
+              },
+              {
+                "option_id": "o4",
+                "text": "All structures are imported goods."
+              }
+            ],
+            "reveal": {
+              "terms": "A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+              "shortcut": "The bridges who are imported goods are also structures. So at least some structures are imported goods.",
+              "why_correct": "\"Some structures are imported goods.\" is right. It follows from the two statements with no extra facts.",
+              "why_wrong": {
+                "o2": "This flips the statement about imported goods. Some imported goods may be outside the group.",
+                "o3": "This contradicts the statements: the bridges who are imported goods are also structures.",
+                "o4": "Only some of the bridges are imported goods, so we cannot say all structures are."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-ANA-SYLLOGISM-000655-R1",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Logic",
+      "concept": "syllogism",
+      "micro_skill": "some form",
+      "archetype": "ANA-SYLLOGISM",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Statement 1: Some tilapia are export products. Statement 2: All tilapia are fish. Which conclusion follows from both statements?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Some fish are export products."
+        },
+        {
+          "option_id": "o2",
+          "text": "No fish are export products."
+        },
+        {
+          "option_id": "o3",
+          "text": "All export products are tilapia."
+        },
+        {
+          "option_id": "o4",
+          "text": "All fish are export products."
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+        "shortcut": "The tilapia that are export products are also fish. So at least some fish are export products.",
+        "why_correct": "\"Some fish are export products.\" is right. It follows from the two statements with no extra facts.",
+        "why_wrong": {
+          "o2": "This contradicts the statements: the tilapia that are export products are also fish.",
+          "o3": "This flips the statement about export products. Some export products may be outside the group.",
+          "o4": "Only some of the tilapia are export products, so we cannot say all fish are."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "LOG-OVERSTRONG",
+        "o3": "LOG-CONVERSE",
+        "o4": "LOG-OVERSTRONG"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_frame": "SYL-S2",
+      "fix_of": "CIVIO-ANA-SYLLOGISM-000655",
+      "replaces": "CIVIO-ANA-SYLLOGISM-000655",
+      "retire_on_signoff": "CIVIO-ANA-SYLLOGISM-000655",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Swapped the template filler 'items marked for repair' for a sensible category, 'export products'. Changed 'who' to 'that' for things. The logic and key are unchanged.",
+          "prior": {
+            "id": "CIVIO-ANA-SYLLOGISM-000655",
+            "stem": "Statement 1: Some tilapia are items marked for repair. Statement 2: All tilapia are fish. Which conclusion follows from both statements?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "Some fish are items marked for repair."
+              },
+              {
+                "option_id": "o2",
+                "text": "No fish are items marked for repair."
+              },
+              {
+                "option_id": "o3",
+                "text": "All items marked for repair are tilapia."
+              },
+              {
+                "option_id": "o4",
+                "text": "All fish are items marked for repair."
+              }
+            ],
+            "reveal": {
+              "terms": "A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+              "shortcut": "The tilapia who are items marked for repair are also fish. So at least some fish are items marked for repair.",
+              "why_correct": "\"Some fish are items marked for repair.\" is right. It follows from the two statements with no extra facts.",
+              "why_wrong": {
+                "o2": "This contradicts the statements: the tilapia who are items marked for repair are also fish.",
+                "o3": "This flips the statement about items marked for repair. Some items marked for repair may be outside the group.",
+                "o4": "Only some of the tilapia are items marked for repair, so we cannot say all fish are."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-ANA-SYLLOGISM-000853-R1",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Logic",
+      "concept": "syllogism",
+      "micro_skill": "some form",
+      "archetype": "ANA-SYLLOGISM",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "Assume these are true: a few of the tilapia are pond-raised stock, and all of the tilapia are fish. What can be concluded for certain?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "All pond-raised stock are tilapia."
+        },
+        {
+          "option_id": "o2",
+          "text": "Some fish are pond-raised stock."
+        },
+        {
+          "option_id": "o3",
+          "text": "All fish are pond-raised stock."
+        },
+        {
+          "option_id": "o4",
+          "text": "No fish are pond-raised stock."
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+        "shortcut": "The tilapia that are pond-raised stock are also fish. So at least some fish are pond-raised stock.",
+        "why_correct": "\"Some fish are pond-raised stock.\" is right. It follows from the two statements with no extra facts.",
+        "why_wrong": {
+          "o1": "This flips the statement about pond-raised stock. Some pond-raised stock may be outside the group.",
+          "o3": "Only some of the tilapia are pond-raised stock, so we cannot say all fish are.",
+          "o4": "This contradicts the statements: the tilapia that are pond-raised stock are also fish."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-CONVERSE",
+        "o3": "LOG-OVERSTRONG",
+        "o4": "LOG-OVERSTRONG"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_frame": "SYL-S3",
+      "fix_of": "CIVIO-ANA-SYLLOGISM-000853",
+      "replaces": "CIVIO-ANA-SYLLOGISM-000853",
+      "retire_on_signoff": "CIVIO-ANA-SYLLOGISM-000853",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Swapped the template filler 'gifts from the province' for a sensible category, 'pond-raised stock'. Changed 'who' to 'that' for things. The logic and key are unchanged.",
+          "prior": {
+            "id": "CIVIO-ANA-SYLLOGISM-000853",
+            "stem": "Assume these are true: a few of the tilapia are gifts from the province, and all of the tilapia are fish. What can be concluded for certain?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "All gifts from the province are tilapia."
+              },
+              {
+                "option_id": "o2",
+                "text": "Some fish are gifts from the province."
+              },
+              {
+                "option_id": "o3",
+                "text": "All fish are gifts from the province."
+              },
+              {
+                "option_id": "o4",
+                "text": "No fish are gifts from the province."
+              }
+            ],
+            "reveal": {
+              "terms": "A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+              "shortcut": "The tilapia who are gifts from the province are also fish. So at least some fish are gifts from the province.",
+              "why_correct": "\"Some fish are gifts from the province.\" is right. It follows from the two statements with no extra facts.",
+              "why_wrong": {
+                "o1": "This flips the statement about gifts from the province. Some gifts from the province may be outside the group.",
+                "o3": "Only some of the tilapia are gifts from the province, so we cannot say all fish are.",
+                "o4": "This contradicts the statements: the tilapia who are gifts from the province are also fish."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-ANA-SYLLOGISM-000966-R1",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Logic",
+      "concept": "syllogism",
+      "micro_skill": "some form",
+      "archetype": "ANA-SYLLOGISM",
+      "difficulty": "medium",
+      "est_seconds": 45,
+      "language": "en",
+      "stem": "All tilapia are fish. Some tilapia are market items. Which conclusion must be true?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "All fish are market items."
+        },
+        {
+          "option_id": "o2",
+          "text": "No fish are market items."
+        },
+        {
+          "option_id": "o3",
+          "text": "All market items are tilapia."
+        },
+        {
+          "option_id": "o4",
+          "text": "Some fish are market items."
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+        "shortcut": "The tilapia that are market items are also fish. So at least some fish are market items.",
+        "why_correct": "\"Some fish are market items.\" is right. It follows from the two statements with no extra facts.",
+        "why_wrong": {
+          "o1": "Only some of the tilapia are market items, so we cannot say all fish are.",
+          "o2": "This contradicts the statements: the tilapia that are market items are also fish.",
+          "o3": "This flips the statement about market items. Some market items may be outside the group."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-OVERSTRONG",
+        "o2": "LOG-OVERSTRONG",
+        "o3": "LOG-CONVERSE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "gen_frame": "SYL-S1",
+      "fix_of": "CIVIO-ANA-SYLLOGISM-000966",
+      "replaces": "CIVIO-ANA-SYLLOGISM-000966",
+      "retire_on_signoff": "CIVIO-ANA-SYLLOGISM-000966",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Swapped the template filler 'second-hand goods' for a sensible category, 'market items'. Changed 'who' to 'that' for things. The logic and key are unchanged.",
+          "prior": {
+            "id": "CIVIO-ANA-SYLLOGISM-000966",
+            "stem": "All tilapia are fish. Some tilapia are second-hand goods. Which conclusion must be true?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "All fish are second-hand goods."
+              },
+              {
+                "option_id": "o2",
+                "text": "No fish are second-hand goods."
+              },
+              {
+                "option_id": "o3",
+                "text": "All second-hand goods are tilapia."
+              },
+              {
+                "option_id": "o4",
+                "text": "Some fish are second-hand goods."
+              }
+            ],
+            "reveal": {
+              "terms": "A conclusion \"must be true\" only if the statements force it. Ignore what you know from real life.",
+              "shortcut": "The tilapia who are second-hand goods are also fish. So at least some fish are second-hand goods.",
+              "why_correct": "\"Some fish are second-hand goods.\" is right. It follows from the two statements with no extra facts.",
+              "why_wrong": {
+                "o1": "Only some of the tilapia are second-hand goods, so we cannot say all fish are.",
+                "o2": "This contradicts the statements: the tilapia who are second-hand goods are also fish.",
+                "o3": "This flips the statement about second-hand goods. Some second-hand goods may be outside the group."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-000116-R1",
+      "track": "both",
+      "domain": "numerical",
+      "competency": "Word problems",
+      "concept": "work rate",
+      "micro_skill": "add work rates",
+      "archetype": "NUM-WP-RATE",
+      "difficulty": "medium",
+      "est_seconds": 90,
+      "language": "en",
+      "stem": "Nestor can paint a classroom in 21 hours. Aling Rosa can do the same job in 28 hours. Working together, how long will they take?",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "12 hours"
+        },
+        {
+          "option_id": "o2",
+          "text": "24.5 hours"
+        },
+        {
+          "option_id": "o3",
+          "text": "49 hours"
+        },
+        {
+          "option_id": "o4",
+          "text": "7 hours"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "A \"rate\" is how much of the job gets done in one hour.",
+        "shortcut": "Per hour, Nestor does 1/21 and Aling Rosa does 1/28. Together: 1/21 + 1/28 = 1/12. So the whole job takes 12 hours.",
+        "why_correct": "12 hours is right. Check: in 12 hours, Nestor does 12/21 and Aling Rosa does 12/28; together that is 1 whole job.",
+        "why_wrong": {
+          "o2": "24.5 hours is the average of the two times. Together they must be faster than the faster person alone.",
+          "o3": "49 hours adds the two times. Add the work done per hour, not the hours.",
+          "o4": "7 hours subtracts the two times (28 − 21). Add the work done per hour; do not subtract the hours."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "NUM-WRONG-BASE",
+        "o3": "NUM-OP-SWAP",
+        "o4": "NUM-OP-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "CSE (Grok Bot)",
+        "method": "ai_assisted",
+        "created_at": "2026-10-13T19:30:00+08:00",
+        "spec_version": "0.1.3"
+      },
+      "notes": "",
+      "shortcut": "For two workers, time together = product ÷ sum: (21 × 28) ÷ (21 + 28) = 588 ÷ 49 = 12 hours.",
+      "fix_of": "CIVIO-NUM-WP-RATE-000116",
+      "replaces": "CIVIO-NUM-WP-RATE-000116",
+      "retire_on_signoff": "CIVIO-NUM-WP-RATE-000116",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Swapped the implausible '5 minutes' distractor for '7 hours', the difference of the two times.",
+          "prior": {
+            "id": "CIVIO-NUM-WP-RATE-000116",
+            "stem": "Nestor can paint a classroom in 21 hours. Aling Rosa can do the same job in 28 hours. Working together, how long will they take?",
+            "options": [
+              {
+                "option_id": "o1",
+                "text": "12 hours"
+              },
+              {
+                "option_id": "o2",
+                "text": "24.5 hours"
+              },
+              {
+                "option_id": "o3",
+                "text": "49 hours"
+              },
+              {
+                "option_id": "o4",
+                "text": "5 minutes"
+              }
+            ],
+            "reveal": {
+              "terms": "A \"rate\" is how much of the job gets done in one hour.",
+              "shortcut": "Per hour, Nestor does 1/21 and Aling Rosa does 1/28. Together: 1/21 + 1/28 = 1/12. So the whole job takes 12 hours.",
+              "why_correct": "12 hours is right. Check: in 12 hours, Nestor does 12/21 and Aling Rosa does 12/28; together that is 1 whole job.",
+              "why_wrong": {
+                "o2": "24.5 hours is the average of the two times. Together they must be faster than the faster person alone.",
+                "o3": "49 hours adds the two times. Add the work done per hour, not the hours.",
+                "o4": "This reads the combined rate (1/12 of the job per hour) as a time. It stops before turning the rate into hours."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0001-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Ano ang kasingkahulugan ng salitang nasa malalaking titik? Sa ulat, inilalarawan ang kawani bilang MASIGASIG sa pag-asikaso ng mga kahilingan.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "masipag"
+        },
+        {
+          "option_id": "b",
+          "text": "marahas"
+        },
+        {
+          "option_id": "c",
+          "text": "malungkutin"
+        },
+        {
+          "option_id": "d",
+          "text": "pabaya"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
+        "shortcut": "Kasingkahulugan ng masigasig ang masipag.",
+        "why_correct": "Kasingkahulugan ng masigasig ang masipag.",
+        "why_wrong": {
+          "b": "Ang \"marahas\" ay hindi kasingkahulugan ng masigasig sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "c": "Ang \"malungkutin\" ay hindi kasingkahulugan ng masigasig sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "d": "Ang \"pabaya\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-ANTONYM-TRAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "fix_of": "CIVIO-VFIL-20261013-0001",
+      "replaces": "CIVIO-VFIL-20261013-0001",
+      "retire_on_signoff": "CIVIO-VFIL-20261013-0001",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Added the missing instruction to the stem.",
+          "prior": {
+            "id": "CIVIO-VFIL-20261013-0001",
+            "stem": "Sa ulat, inilalarawan ang kawani bilang MASIGASIG sa pag-asikaso ng mga kahilingan.",
+            "options": [
+              {
+                "option_id": "a",
+                "text": "masipag"
+              },
+              {
+                "option_id": "b",
+                "text": "marahas"
+              },
+              {
+                "option_id": "c",
+                "text": "malungkutin"
+              },
+              {
+                "option_id": "d",
+                "text": "pabaya"
+              }
+            ],
+            "reveal": {
+              "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
+              "shortcut": "Kasingkahulugan ng masigasig ang masipag.",
+              "why_correct": "Kasingkahulugan ng masigasig ang masipag.",
+              "why_wrong": {
+                "b": "Ang \"marahas\" ay hindi kasingkahulugan ng masigasig sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+                "c": "Ang \"malungkutin\" ay hindi kasingkahulugan ng masigasig sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+                "d": "Ang \"pabaya\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0003-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Ano ang kasingkahulugan ng salitang nasa malalaking titik? Hiniling ng opisina ang isang PAYAK na paliwanag.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "paligoy-ligoy"
+        },
+        {
+          "option_id": "b",
+          "text": "simple"
+        },
+        {
+          "option_id": "c",
+          "text": "masalimuot"
+        },
+        {
+          "option_id": "d",
+          "text": "mahaba"
+        }
+      ],
+      "answer_option_id": "b",
+      "reveal": {
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
+        "shortcut": "Ang payak ay simple at madaling unawain.",
+        "why_correct": "Ang payak ay simple at madaling unawain.",
+        "why_wrong": {
+          "a": "Ang \"paligoy-ligoy\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "c": "Ang \"masalimuot\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "d": "Ang \"mahaba\" ay hindi kasingkahulugan ng payak sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "FIL-ANTONYM-TRAP",
+        "c": "FIL-ANTONYM-TRAP",
+        "d": "FIL-SAME-FIELD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "fix_of": "CIVIO-VFIL-20261013-0003",
+      "replaces": "CIVIO-VFIL-20261013-0003",
+      "retire_on_signoff": "CIVIO-VFIL-20261013-0003",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Added the missing instruction to the stem.",
+          "prior": {
+            "id": "CIVIO-VFIL-20261013-0003",
+            "stem": "Hiniling ng opisina ang isang PAYAK na paliwanag.",
+            "options": [
+              {
+                "option_id": "a",
+                "text": "paligoy-ligoy"
+              },
+              {
+                "option_id": "b",
+                "text": "simple"
+              },
+              {
+                "option_id": "c",
+                "text": "masalimuot"
+              },
+              {
+                "option_id": "d",
+                "text": "mahaba"
+              }
+            ],
+            "reveal": {
+              "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
+              "shortcut": "Ang payak ay simple at madaling unawain.",
+              "why_correct": "Ang payak ay simple at madaling unawain.",
+              "why_wrong": {
+                "a": "Ang \"paligoy-ligoy\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+                "c": "Ang \"masalimuot\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+                "d": "Ang \"mahaba\" ay hindi kasingkahulugan ng payak sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0004-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Ano ang kasingkahulugan ng salitang nasa malalaking titik? Nananatiling MAHINAHON ang tagapamagitan sa gitna ng pagtatalo.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "maingay"
+        },
+        {
+          "option_id": "b",
+          "text": "padalos-dalos"
+        },
+        {
+          "option_id": "c",
+          "text": "marupok"
+        },
+        {
+          "option_id": "d",
+          "text": "kalmado"
+        }
+      ],
+      "answer_option_id": "d",
+      "reveal": {
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
+        "shortcut": "Ang mahinahon ay kalmado at hindi bugso ng damdamin.",
+        "why_correct": "Ang mahinahon ay kalmado at hindi bugso ng damdamin.",
+        "why_wrong": {
+          "a": "Ang \"maingay\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "b": "Ang \"padalos-dalos\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "c": "Ang \"marupok\" ay hindi kasingkahulugan ng mahinahon sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
+        }
+      },
+      "distractor_reasoning": {
+        "a": "FIL-ANTONYM-TRAP",
+        "b": "FIL-ANTONYM-TRAP",
+        "c": "FIL-SAME-FIELD"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "fix_of": "CIVIO-VFIL-20261013-0004",
+      "replaces": "CIVIO-VFIL-20261013-0004",
+      "retire_on_signoff": "CIVIO-VFIL-20261013-0004",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Added the missing instruction to the stem.",
+          "prior": {
+            "id": "CIVIO-VFIL-20261013-0004",
+            "stem": "Nananatiling MAHINAHON ang tagapamagitan sa gitna ng pagtatalo.",
+            "options": [
+              {
+                "option_id": "a",
+                "text": "maingay"
+              },
+              {
+                "option_id": "b",
+                "text": "padalos-dalos"
+              },
+              {
+                "option_id": "c",
+                "text": "marupok"
+              },
+              {
+                "option_id": "d",
+                "text": "kalmado"
+              }
+            ],
+            "reveal": {
+              "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
+              "shortcut": "Ang mahinahon ay kalmado at hindi bugso ng damdamin.",
+              "why_correct": "Ang mahinahon ay kalmado at hindi bugso ng damdamin.",
+              "why_wrong": {
+                "a": "Ang \"maingay\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+                "b": "Ang \"padalos-dalos\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+                "c": "Ang \"marupok\" ay hindi kasingkahulugan ng mahinahon sa pangungusap; iba o kabaligtaran ang ibig sabihin nito."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0008-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Ano ang kasingkahulugan ng salitang nasa malalaking titik? MAKABULUHAN ang mungkahi dahil tumutugon ito sa tunay na problema.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "may saysay"
+        },
+        {
+          "option_id": "b",
+          "text": "paulit-ulit"
+        },
+        {
+          "option_id": "c",
+          "text": "maingay"
+        },
+        {
+          "option_id": "d",
+          "text": "walang kaugnayan"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
+        "shortcut": "Ang makabuluhan ay may saysay o kabuluhan.",
+        "why_correct": "Ang makabuluhan ay may saysay o kabuluhan.",
+        "why_wrong": {
+          "b": "Ang \"paulit-ulit\" ay hindi kasingkahulugan ng makabuluhan sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "c": "Ang \"maingay\" ay hindi kasingkahulugan ng makabuluhan sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+          "d": "Ang \"walang kaugnayan\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "FIL-SAME-FIELD",
+        "c": "FIL-SAME-FIELD",
+        "d": "FIL-ANTONYM-TRAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "fix_of": "CIVIO-VFIL-20261013-0008",
+      "replaces": "CIVIO-VFIL-20261013-0008",
+      "retire_on_signoff": "CIVIO-VFIL-20261013-0008",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Added the missing instruction to the stem.",
+          "prior": {
+            "id": "CIVIO-VFIL-20261013-0008",
+            "stem": "MAKABULUHAN ang mungkahi dahil tumutugon ito sa tunay na problema.",
+            "options": [
+              {
+                "option_id": "a",
+                "text": "may saysay"
+              },
+              {
+                "option_id": "b",
+                "text": "paulit-ulit"
+              },
+              {
+                "option_id": "c",
+                "text": "maingay"
+              },
+              {
+                "option_id": "d",
+                "text": "walang kaugnayan"
+              }
+            ],
+            "reveal": {
+              "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
+              "shortcut": "Ang makabuluhan ay may saysay o kabuluhan.",
+              "why_correct": "Ang makabuluhan ay may saysay o kabuluhan.",
+              "why_wrong": {
+                "b": "Ang \"paulit-ulit\" ay hindi kasingkahulugan ng makabuluhan sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+                "c": "Ang \"maingay\" ay hindi kasingkahulugan ng makabuluhan sa pangungusap; iba o kabaligtaran ang ibig sabihin nito.",
+                "d": "Ang \"walang kaugnayan\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-VFIL-20261013-0009-R1",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "vocabulary",
+      "micro_skill": "word meaning",
+      "archetype": "VFIL-VOCAB",
+      "difficulty": "easy",
+      "est_seconds": 50,
+      "language": "fil",
+      "stem": "Ano ang kasingkahulugan ng salitang nasa malalaking titik? Ipinahayag ng pinuno ang MARUBDOB niyang hangaring makatulong.",
+      "options": [
+        {
+          "option_id": "a",
+          "text": "matindi"
+        },
+        {
+          "option_id": "b",
+          "text": "mababaw"
+        },
+        {
+          "option_id": "c",
+          "text": "malamig"
+        },
+        {
+          "option_id": "d",
+          "text": "walang pakialam"
+        }
+      ],
+      "answer_option_id": "a",
+      "reveal": {
+        "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
+        "shortcut": "Ang marubdob na hangarin ay matindi at taos-puso.",
+        "why_correct": "Ang marubdob na hangarin ay matindi at taos-puso.",
+        "why_wrong": {
+          "b": "Ang \"mababaw\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "c": "Ang \"malamig\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+          "d": "Ang \"walang pakialam\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
+        }
+      },
+      "distractor_reasoning": {
+        "b": "FIL-ANTONYM-TRAP",
+        "c": "FIL-ANTONYM-TRAP",
+        "d": "FIL-ANTONYM-TRAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "OpenAI GPT-6",
+        "method": "AI-assisted original composition",
+        "created_at": "2026-10-13",
+        "spec_version": "0.1.4"
+      },
+      "notes": "New Filipino domain. Independent human language review and QA registration required before activation.",
+      "fix_of": "CIVIO-VFIL-20261013-0009",
+      "replaces": "CIVIO-VFIL-20261013-0009",
+      "retire_on_signoff": "CIVIO-VFIL-20261013-0009",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Added the missing instruction to the stem.",
+          "prior": {
+            "id": "CIVIO-VFIL-20261013-0009",
+            "stem": "Ipinahayag ng pinuno ang MARUBDOB niyang hangaring makatulong.",
+            "options": [
+              {
+                "option_id": "a",
+                "text": "matindi"
+              },
+              {
+                "option_id": "b",
+                "text": "mababaw"
+              },
+              {
+                "option_id": "c",
+                "text": "malamig"
+              },
+              {
+                "option_id": "d",
+                "text": "walang pakialam"
+              }
+            ],
+            "reveal": {
+              "terms": "Kasingkahulugan/kasalungat: piliin ang salitang pinakamalapit (o kabaligtaran) sa kahulugan ng salitang nasa malalaking titik, ayon sa konteksto.",
+              "shortcut": "Ang marubdob na hangarin ay matindi at taos-puso.",
+              "why_correct": "Ang marubdob na hangarin ay matindi at taos-puso.",
+              "why_wrong": {
+                "b": "Ang \"mababaw\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+                "c": "Ang \"malamig\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan.",
+                "d": "Ang \"walang pakialam\" ay kabaligtaran ng kahulugan, hindi kasingkahulugan."
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

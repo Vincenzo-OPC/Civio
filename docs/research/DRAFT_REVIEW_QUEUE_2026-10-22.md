@@ -9,27 +9,27 @@ Script: `scripts/batches/qa/draft_review_queue_2026_10_22.py`, rendered by `draf
 
 ## Scope
 
-1829 non-approved rows reduce to **1753 unique stems**. The approved unique count is **1477** (GI 236, Clerical 207, Numerical 309, Analytical 251, Verbal EN 286, Verbal Fil 188).
+1859 non-approved rows reduce to **1777 unique stems**. The approved unique count is **1477** (GI 236, Clerical 207, Numerical 309, Analytical 251, Verbal EN 286, Verbal Fil 188).
 
 ## Pass/flag by subject
 
 | Subject | Unique drafts | Pass | Flag | new | revision | rev. of approved | baseline |
 |---|---|---|---|---|---|---|---|
 | GI | 286 | 273 | 13 | 83 | 24 | 45 | 134 |
-| Clerical | 297 | 200 | 97 | 164 | 15 | 38 | 80 |
-| Numerical | 259 | 167 | 92 | 141 | 27 | 0 | 91 |
-| Analytical | 390 | 273 | 117 | 205 | 5 | 66 | 114 |
+| Clerical | 291 | 194 | 97 | 158 | 15 | 38 | 80 |
+| Numerical | 279 | 187 | 92 | 141 | 46 | 1 | 91 |
+| Analytical | 395 | 278 | 117 | 205 | 10 | 66 | 114 |
 | Verbal EN | 347 | 119 | 228 | 137 | 5 | 77 | 128 |
-| Verbal Fil | 174 | 160 | 14 | 127 | 24 | 22 | 1 |
+| Verbal Fil | 179 | 165 | 14 | 127 | 34 | 17 | 1 |
 
 ## Open defects
 
 - `missing_est_seconds` (420): Baseline-550 rows outside GI still have no difficulty or est_seconds (metadata only).
-- `near_dup_approved` (246): Lint-fix revisions close to the approved item they fix. Expected, and not blocking for revisions.
+- `near_dup_approved` (261): Lint-fix revisions close to the approved item they fix. Expected, and not blocking for revisions.
 - `previously_rejected` (99): Already rejected in the ChatGPT batch 002/003 reviews.
+- `percent_change_topic` (31): Information only: the bank is already over the percent-change cap of 40.
 - `near_dup_draft` (22): Near-duplicate of another draft.
 - `passage_missing_or_unlinked` (19): Baseline reading item with no linked passage.
-- `percent_change_topic` (18): Information only: the bank is already over the percent-change cap of 40.
 - `duplicate_options` (11): Two identical options, e.g. CIVIO-CLEAN-0060 with "liaison" twice.
 - `template_stem_place_name` (10): "…for use in an official <City> document": the place name adds nothing.
 - `key_not_in_reveal` (10): Numerical baseline items whose explanation never states the answer.
@@ -45,8 +45,8 @@ Not found: mojibake, "(variant N)", keys outside the options, HOLD-source marker
 |---|---|---|
 | baseline-550-spec-2026-10-18.json | 132 | 417 |
 | gap-fill-2000-06-lintfix.json | 203 | 14 |
-| civio-flat-2100-2026-10-22.json | 122 | 0 |
 | civio-final-rewrite-2026-10-22.json | 120 | 0 |
+| civio-flat-2100-2026-10-22.json | 116 | 0 |
 | gap-fill-2000-02.json | 108 | 0 |
 | gap-fill-2000-03.json | 101 | 0 |
 | gap-fill-2000-01.json | 99 | 0 |
@@ -56,6 +56,7 @@ Not found: mojibake, "(variant N)", keys outside the options, HOLD-source marker
 | batch-subpro-num-001.json | 50 | 0 |
 | civio-fixed-flat-final-2026-10-22.json | 26 | 19 |
 | round-03-baseline-b3-drafts.json | 44 | 0 |
+| signoff-replacements-2026-10-22.json | 30 | 0 |
 | gap-fill-2000-05.json | 15 | 0 |
 | chatgpt-batch-003.json | 0 | 11 |
 | original-foundations-10-draft.json | 10 | 0 |
@@ -73,7 +74,7 @@ Order: gap-fill-2000 files, then round-03 replacements, then baseline GI, then f
 | Numerical | 309 | 167 | 91 | 400 | 400 | 0 |
 | GI | 236 | 226 | 164 | 400 | 400 | 0 |
 | Analytical | 251 | 203 | 49 | 300 | 300 | 0 |
-| Clerical | 207 | 147 | 93 | 300 | 300 | 0 |
+| Clerical | 207 | 141 | 93 | 300 | 300 | 0 |
 | **Total** | **1477** | | **523** | **2000** | **2,000** | **0** |
 
 Verbal split: EN 49 + Fil 77. GI draws on baseline rows: about 107 of the 164 recommended GI items.

@@ -3744,7 +3744,7 @@
       "difficulty": "medium",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Drivers serving five relief pickup sites need to know when their assigned shipments are scheduled for arrival. Which version uses correct grammar?",
+      "stem": "Which version uses correct grammar?",
       "options": [
         {
           "option_id": "o1",
@@ -3793,7 +3793,17 @@
         "spec_version": "0.1.7"
       },
       "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
-      "_legacy": true
+      "_legacy": true,
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Removed the scenario lead-in, which has nothing to do with the grammar point.",
+          "prior": {
+            "stem": "Drivers serving five relief pickup sites need to know when their assigned shipments are scheduled for arrival. Which version uses correct grammar?"
+          }
+        }
+      ]
     },
     {
       "id": "CIVIO-VEN-ERROR-AGREE-050062",
@@ -5542,7 +5552,7 @@
       "difficulty": "medium",
       "est_seconds": 40,
       "language": "en",
-      "stem": "Emergency planners are preparing a document for staff who need both detailed instructions and room for adjustments. Which sentence follows the appropriate grammar rule?",
+      "stem": "Which sentence follows the appropriate grammar rule?",
       "options": [
         {
           "option_id": "o1",
@@ -5591,7 +5601,17 @@
         "spec_version": "0.1.7"
       },
       "notes": "English Verbal gap-fill; independently review before approval. | Rejected by CoS 2026-10-17: templated item.",
-      "_legacy": true
+      "_legacy": true,
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Removed the scenario lead-in, which has nothing to do with the grammar point.",
+          "prior": {
+            "stem": "Emergency planners are preparing a document for staff who need both detailed instructions and room for adjustments. Which sentence follows the appropriate grammar rule?"
+          }
+        }
+      ]
     },
     {
       "id": "CIVIO-VEN-ERROR-MODIFIER-050091",

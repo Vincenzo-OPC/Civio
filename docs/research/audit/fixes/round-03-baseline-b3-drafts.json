@@ -105,9 +105,9 @@
    ],
    "answer_option_id": "o2",
    "reveal": {
-    "terms": "Conflict of interest: an official who is a board member, officer or substantial stockholder of a business whose interest may be opposed to or affected by faithful performance of duty (Sec. 3(i)).",
+    "terms": "Conflict of interest (Sec. 3(i)): an official's private interest in a business, as a board member, officer, substantial stockholder, owner or holder of a substantial interest, may be opposed to or affected by the faithful performance of official duty.",
     "shortcut": "Own stake + your decision affects it = conflict of interest.",
-    "why_correct": "Answer: A conflict of interest. A substantial stockholding in a business that her official decision can affect is exactly the Sec. 3(i) definition; Sec. 9 then requires resignation or divestment.",
+    "why_correct": "Answer: A conflict of interest. Her shares give her a financial interest in a supplier whose bid her own office will decide, so her private interest can be affected by her official duty (Sec. 3(i)). The item does not depend on whether 20% makes her a \"substantial stockholder\" (Sec. 3(f): enough shares to elect a director). Sec. 7(a) bars any financial or material interest in a transaction requiring her office's approval, and Sec. 9 requires divestment when a conflict arises.",
     "why_wrong": {
      "o1": "Sec. 4(A)(c) concerns favors to relatives; here the interest is the officer's own.",
      "o3": "Divestment (Sec. 3(j)) is the cure for the conflict, not its name.",
@@ -139,7 +139,27 @@
     "stem": "Which is an example of a conflict of interest?",
     "key": "An official deciding a bid where a close relative owns a bidder"
    },
-   "notes": "Round 03 B3 draft (Grok Bot, independent audit). Pending CoS."
+   "notes": "Round 03 B3 draft (Grok Bot, independent audit). Pending CoS.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "Explanation no longer calls a 20% holding a 'substantial stockholder'. It now rests on financial interest: Sec. 3(i), Sec. 7(a), Sec. 9.",
+     "prior": {
+      "reveal": {
+       "terms": "Conflict of interest: an official who is a board member, officer or substantial stockholder of a business whose interest may be opposed to or affected by faithful performance of duty (Sec. 3(i)).",
+       "shortcut": "Own stake + your decision affects it = conflict of interest.",
+       "why_correct": "Answer: A conflict of interest. A substantial stockholding in a business that her official decision can affect is exactly the Sec. 3(i) definition; Sec. 9 then requires resignation or divestment.",
+       "why_wrong": {
+        "o1": "Sec. 4(A)(c) concerns favors to relatives; here the interest is the officer's own.",
+        "o3": "Divestment (Sec. 3(j)) is the cure for the conflict, not its name.",
+        "o4": "Sec. 7(b) outside employment concerns working for a regulated firm; owning shares is not employment."
+       }
+      }
+     },
+     "source": "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html"
+    }
+   ]
   },
   {
    "id": "CIVIO-B3-GI-TERM-MATCH-0388",

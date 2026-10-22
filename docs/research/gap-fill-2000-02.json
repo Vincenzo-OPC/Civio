@@ -2907,7 +2907,7 @@
       "difficulty": "medium",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Find the value of 69 × (19 − 2) + 11?",
+      "stem": "What is the value of 69 × (19 − 2) + 11?",
       "options": [
         {
           "option_id": "o1",
@@ -2953,7 +2953,17 @@
         "created_at": "2026-10-18T02:45:00+08:00",
         "spec_version": "0.1.9"
       },
-      "notes": "gap-fill-2000-02. Pending CoS."
+      "notes": "gap-fill-2000-02. Pending CoS.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Punctuation: the command 'Find the value of … ?' became a question.",
+          "prior": {
+            "stem": "Find the value of 69 × (19 − 2) + 11?"
+          }
+        }
+      ]
     },
     {
       "id": "CIVIO-GF2K02-NUMOPS-0051",

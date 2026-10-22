@@ -2007,7 +2007,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Choose the version a dictionary would print.",
+      "stem": "Which word is spelled correctly?",
       "options": [
         {
           "option_id": "n1",
@@ -2030,7 +2030,17 @@
       "reveal": "The correct spelling is \"arctic\". \"artic\" drops the first c, \"arctik\" spells the end by sound, and \"artcic\" swaps two letters.",
       "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
-      "status": "draft"
+      "status": "draft",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Word-level spelling item: the sentence- or line-style stem was replaced with the standard spelling instruction.",
+          "prior": {
+            "stem": "Choose the version a dictionary would print."
+          }
+        }
+      ]
     },
     {
       "id": "CIVIO-2100-0062",
@@ -2106,7 +2116,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Select the line that is written properly.",
+      "stem": "Which word is spelled correctly?",
       "options": [
         {
           "option_id": "n1",
@@ -2129,7 +2139,17 @@
       "reveal": "The correct spelling is \"conscience\". The others drop a c, swap c for s, or drop the s. \"conscious\" is a different word and is not an option.",
       "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
-      "status": "draft"
+      "status": "draft",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Word-level spelling item: the sentence- or line-style stem was replaced with the standard spelling instruction.",
+          "prior": {
+            "stem": "Select the line that is written properly."
+          }
+        }
+      ]
     },
     {
       "id": "CIVIO-2100-0065",
@@ -2469,7 +2489,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which version belongs on the signed page?",
+      "stem": "Which word is spelled correctly?",
       "options": [
         {
           "option_id": "n1",
@@ -2492,7 +2512,17 @@
       "reveal": "The correct spelling is \"mischievous\". \"mischievious\" adds the extra i people often say, and the others drop a letter.",
       "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
-      "status": "draft"
+      "status": "draft",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Word-level spelling item: the sentence- or line-style stem was replaced with the standard spelling instruction.",
+          "prior": {
+            "stem": "Which version belongs on the signed page?"
+          }
+        }
+      ]
     },
     {
       "id": "CIVIO-2100-0076",
@@ -2601,7 +2631,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which line shows the proper letter order?",
+      "stem": "Which word is spelled correctly?",
       "options": [
         {
           "option_id": "n1",
@@ -2624,7 +2654,17 @@
       "reveal": "The correct spelling is \"absence\". \"absense\" uses the wrong ending, \"abcense\" follows the sound, and \"absance\" changes the vowel.",
       "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
-      "status": "draft"
+      "status": "draft",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Word-level spelling item: the sentence- or line-style stem was replaced with the standard spelling instruction.",
+          "prior": {
+            "stem": "Which line shows the proper letter order?"
+          }
+        }
+      ]
     },
     {
       "id": "CIVIO-2100-0080",
@@ -2964,7 +3004,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which version is ready to file?",
+      "stem": "Which word is spelled correctly?",
       "options": [
         {
           "option_id": "n1",
@@ -2987,7 +3027,17 @@
       "reveal": "The correct spelling is \"business\". The others swap the vowel, drop the i, or double the s.",
       "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
-      "status": "draft"
+      "status": "draft",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Word-level spelling item: the sentence- or line-style stem was replaced with the standard spelling instruction.",
+          "prior": {
+            "stem": "Which version is ready to file?"
+          }
+        }
+      ]
     },
     {
       "id": "CIVIO-2100-0091",
@@ -3129,7 +3179,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which line is the accepted written form?",
+      "stem": "Which word is spelled correctly?",
       "options": [
         {
           "option_id": "n1",
@@ -3152,7 +3202,17 @@
       "reveal": "The correct spelling is \"comparison\". The others add an i, double the r, or add an i in the middle.",
       "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
-      "status": "draft"
+      "status": "draft",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Word-level spelling item: the sentence- or line-style stem was replaced with the standard spelling instruction.",
+          "prior": {
+            "stem": "Which line is the accepted written form?"
+          }
+        }
+      ]
     },
     {
       "id": "CIVIO-2100-0096",
@@ -3261,7 +3321,7 @@
       "difficulty": "easy",
       "est_seconds": 35,
       "language": "en",
-      "stem": "Which version is the right written form?",
+      "stem": "Which word is spelled correctly?",
       "options": [
         {
           "option_id": "n1",
@@ -3284,7 +3344,17 @@
       "reveal": "The correct spelling is \"decision\". The others add an s, drop an i, or move the s.",
       "source": "original Civio flat-2100 rereview 2026-10-22",
       "source_group": "civio",
-      "status": "draft"
+      "status": "draft",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "approved_by": "GT",
+          "change": "Word-level spelling item: the sentence- or line-style stem was replaced with the standard spelling instruction.",
+          "prior": {
+            "stem": "Which version is the right written form?"
+          }
+        }
+      ]
     },
     {
       "id": "CIVIO-2100-0100",

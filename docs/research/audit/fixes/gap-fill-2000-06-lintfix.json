@@ -14,7 +14,7 @@
    "difficulty": "easy",
    "est_seconds": 50,
    "language": "fil",
-   "stem": "Naging SALAT sa pondo ang programa matapos bawasan ang badyet.",
+   "stem": "Ano ang kasingkahulugan ng salitang nasa malalaking titik? Naging SALAT sa pondo ang programa matapos bawasan ang badyet.",
    "options": [
     {
      "option_id": "a",
@@ -61,7 +61,17 @@
     "spec_version": "0.1.4"
    },
    "notes": "gap-fill-2000-06 lint fix of CIVIO-VFIL-20261013-0002 (was: PLACEHOLDER). Pending CoS.",
-   "fix_of": "CIVIO-VFIL-20261013-0002"
+   "fix_of": "CIVIO-VFIL-20261013-0002",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "Added the missing instruction to the stem.",
+     "prior": {
+      "stem": "Naging SALAT sa pondo ang programa matapos bawasan ang badyet."
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-VFIL-20261013-0005-LINTFIX",
@@ -74,7 +84,7 @@
    "difficulty": "easy",
    "est_seconds": 50,
    "language": "fil",
-   "stem": "MASALIMUOT ang proseso dahil maraming kailangang sundin.",
+   "stem": "Ano ang kasingkahulugan ng salitang nasa malalaking titik? MASALIMUOT ang proseso dahil maraming kailangang sundin.",
    "options": [
     {
      "option_id": "a",
@@ -121,7 +131,17 @@
     "spec_version": "0.1.4"
    },
    "notes": "gap-fill-2000-06 lint fix of CIVIO-VFIL-20261013-0005 (was: KEY-NOT-STATED, LONG-KEY). Wrong options rewritten for length: a, b. Pending CoS.",
-   "fix_of": "CIVIO-VFIL-20261013-0005"
+   "fix_of": "CIVIO-VFIL-20261013-0005",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "Added the missing instruction to the stem.",
+     "prior": {
+      "stem": "MASALIMUOT ang proseso dahil maraming kailangang sundin."
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-VFIL-20261013-0006-LINTFIX",
@@ -134,7 +154,7 @@
    "difficulty": "easy",
    "est_seconds": 50,
    "language": "fil",
-   "stem": "MAPANURI ang auditor bago pumirma sa ulat.",
+   "stem": "Ano ang kasingkahulugan ng salitang nasa malalaking titik? MAPANURI ang auditor bago pumirma sa ulat.",
    "options": [
     {
      "option_id": "a",
@@ -181,7 +201,17 @@
     "spec_version": "0.1.4"
    },
    "notes": "gap-fill-2000-06 lint fix of CIVIO-VFIL-20261013-0006 (was: KEY-NOT-STATED). Pending CoS.",
-   "fix_of": "CIVIO-VFIL-20261013-0006"
+   "fix_of": "CIVIO-VFIL-20261013-0006",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "Added the missing instruction to the stem.",
+     "prior": {
+      "stem": "MAPANURI ang auditor bago pumirma sa ulat."
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-VFIL-20261013-0007-LINTFIX",
@@ -194,7 +224,7 @@
    "difficulty": "easy",
    "est_seconds": 50,
    "language": "fil",
-   "stem": "May PAG-AALINLANGAN ang grupo sa hindi pa nasusuring datos.",
+   "stem": "Ano ang kasingkahulugan ng salitang nasa malalaking titik? May PAG-AALINLANGAN ang grupo sa hindi pa nasusuring datos.",
    "options": [
     {
      "option_id": "a",
@@ -241,7 +271,17 @@
     "spec_version": "0.1.4"
    },
    "notes": "gap-fill-2000-06 lint fix of CIVIO-VFIL-20261013-0007 (was: PLACEHOLDER). Pending CoS.",
-   "fix_of": "CIVIO-VFIL-20261013-0007"
+   "fix_of": "CIVIO-VFIL-20261013-0007",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "Added the missing instruction to the stem.",
+     "prior": {
+      "stem": "May PAG-AALINLANGAN ang grupo sa hindi pa nasusuring datos."
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-VFIL-20261013-0010-LINTFIX",
@@ -254,7 +294,7 @@
    "difficulty": "easy",
    "est_seconds": 50,
    "language": "fil",
-   "stem": "Nais ng pangkat ng WASTONG talaan bago mag-ulat.",
+   "stem": "Ano ang kasingkahulugan ng salitang nasa malalaking titik? Nais ng pangkat ng WASTONG talaan bago mag-ulat.",
    "options": [
     {
      "option_id": "a",
@@ -301,7 +341,17 @@
     "spec_version": "0.1.4"
    },
    "notes": "gap-fill-2000-06 lint fix of CIVIO-VFIL-20261013-0010 (was: PLACEHOLDER). Pending CoS.",
-   "fix_of": "CIVIO-VFIL-20261013-0010"
+   "fix_of": "CIVIO-VFIL-20261013-0010",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "Added the missing instruction to the stem.",
+     "prior": {
+      "stem": "Nais ng pangkat ng WASTONG talaan bago mag-ulat."
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-VFIL-20261013-0012-LINTFIX",
