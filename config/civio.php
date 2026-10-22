@@ -23,6 +23,17 @@ return [
 
     'allow_browser_migrations' => (bool) env('CIVIO_ALLOW_BROWSER_MIGRATIONS', false),
 
+    // Node binary that runs scripts/fsrs-apply.mjs. The production image
+    // keeps this binary and ts-fsrs, and does not keep npm.
+    'fsrs_node' => env('CIVIO_FSRS_NODE', 'node'),
+
+    // One learner at a time. The lock is held while Node runs so two
+    // submits cannot schedule the same card from the same old state.
+    // The wait is long enough for one 5 second Node timeout. A timeout
+    // leaves the event unscheduled.
+    'fsrs_lock_seconds' => (int) env('CIVIO_FSRS_LOCK_SECONDS', 20),
+    'fsrs_lock_wait' => (int) env('CIVIO_FSRS_LOCK_WAIT', 10),
+
     // Lite L2 offline drill packs: request limits per user (or IP) per minute.
     'offline' => [
         'packs_per_minute' => (int) env('CIVIO_OFFLINE_PACKS_PER_MINUTE', 60),

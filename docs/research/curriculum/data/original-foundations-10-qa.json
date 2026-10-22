@@ -1,0 +1,155 @@
+{
+  "warning": "Author checks only. Existing full QA is blocked by unsupported stem parsing. Do not activate or treat structural-only QA as full QA.",
+  "records": [
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-210001",
+      "item_sha256": "96432c9b50e3de3ada161a6c803f02e01023074e5245acc1f25b2c6b99cb9984",
+      "author_computed_exact": "3/10",
+      "unique_numeric_answer": true,
+      "shuffle_permutations_checked": 24,
+      "structural_only_errors": [],
+      "existing_full_qa_status": "ERROR",
+      "existing_full_qa_errors": [
+        "AttributeError: 'NoneType' object has no attribute 'group'"
+      ],
+      "near_candidates_main_baseline_prs": [],
+      "independent_review": "PENDING",
+      "release_approval": "NONE"
+    },
+    {
+      "id": "CIVIO-NUM-FRAC-DEC-210002",
+      "item_sha256": "7f7325576e318824dcd7bc73669a814717e663560439b7e590b875035f66891d",
+      "author_computed_exact": "5/8",
+      "unique_numeric_answer": true,
+      "shuffle_permutations_checked": 24,
+      "structural_only_errors": [],
+      "existing_full_qa_status": "ERROR",
+      "existing_full_qa_errors": [
+        "AttributeError: 'NoneType' object has no attribute 'group'"
+      ],
+      "near_candidates_main_baseline_prs": [],
+      "independent_review": "PENDING",
+      "release_approval": "NONE"
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-210003",
+      "item_sha256": "2d7e426a7052284b764fb5ad2cb4e812bd0d84c84030e32bd8b1276062a64aaa",
+      "author_computed_exact": "240",
+      "unique_numeric_answer": true,
+      "shuffle_permutations_checked": 24,
+      "structural_only_errors": [],
+      "existing_full_qa_status": "FAIL",
+      "existing_full_qa_errors": [
+        "solver could not recompute the key"
+      ],
+      "near_candidates_main_baseline_prs": [],
+      "independent_review": "PENDING",
+      "release_approval": "NONE"
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-210004",
+      "item_sha256": "8f7caad1a31f8082bae27b1bad9f02ec32c912c74d3ae892ffc8d89e3f63974a",
+      "author_computed_exact": "60",
+      "unique_numeric_answer": true,
+      "shuffle_permutations_checked": 24,
+      "structural_only_errors": [],
+      "existing_full_qa_status": "FAIL",
+      "existing_full_qa_errors": [
+        "solver could not recompute the key"
+      ],
+      "near_candidates_main_baseline_prs": [],
+      "independent_review": "PENDING",
+      "release_approval": "NONE"
+    },
+    {
+      "id": "CIVIO-NUM-WP-ALGEBRA-210005",
+      "item_sha256": "47a7a46518b76547da293eea5b6c4d3e192679150a64de939aa4677110b2e6ae",
+      "author_computed_exact": "12",
+      "unique_numeric_answer": true,
+      "shuffle_permutations_checked": 24,
+      "structural_only_errors": [],
+      "existing_full_qa_status": "FAIL",
+      "existing_full_qa_errors": [
+        "solver could not recompute the key"
+      ],
+      "near_candidates_main_baseline_prs": [],
+      "independent_review": "PENDING",
+      "release_approval": "NONE"
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-210006",
+      "item_sha256": "f603e2c65ea65e1fde0872e45ce2edf56f6c267158b1d8ab911789d5d02ba99e",
+      "author_computed_exact": "95",
+      "unique_numeric_answer": true,
+      "shuffle_permutations_checked": 24,
+      "structural_only_errors": [],
+      "existing_full_qa_status": "FAIL",
+      "existing_full_qa_errors": [
+        "solver could not recompute the key"
+      ],
+      "near_candidates_main_baseline_prs": [],
+      "independent_review": "PENDING",
+      "release_approval": "NONE"
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATIO-210007",
+      "item_sha256": "142514a9e21083448964bf72e0ba14aeb1ad23940f6208c4595db77f3631c9e5",
+      "author_computed_exact": "60",
+      "unique_numeric_answer": true,
+      "shuffle_permutations_checked": 24,
+      "structural_only_errors": [],
+      "existing_full_qa_status": "ERROR",
+      "existing_full_qa_errors": [
+        "AttributeError: 'NoneType' object has no attribute 'group'"
+      ],
+      "near_candidates_main_baseline_prs": [],
+      "independent_review": "PENDING",
+      "release_approval": "NONE"
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-210008",
+      "item_sha256": "a9f046b331a75c2b4ae08a68fdba524a550a336b1351161e5079b3142dccd9bb",
+      "author_computed_exact": "75",
+      "unique_numeric_answer": true,
+      "shuffle_permutations_checked": 24,
+      "structural_only_errors": [],
+      "existing_full_qa_status": "FAIL",
+      "existing_full_qa_errors": [
+        "solver could not recompute the key"
+      ],
+      "near_candidates_main_baseline_prs": [],
+      "independent_review": "PENDING",
+      "release_approval": "NONE"
+    },
+    {
+      "id": "CIVIO-NUM-WP-RATE-210009",
+      "item_sha256": "970aac5fded980eae069368783569e55995015f633d319535b95e69fe8bb2aba",
+      "author_computed_exact": "15/4",
+      "unique_numeric_answer": true,
+      "shuffle_permutations_checked": 24,
+      "structural_only_errors": [],
+      "existing_full_qa_status": "FAIL",
+      "existing_full_qa_errors": [
+        "solver could not recompute the key"
+      ],
+      "near_candidates_main_baseline_prs": [],
+      "independent_review": "PENDING",
+      "release_approval": "NONE"
+    },
+    {
+      "id": "CIVIO-NUM-WP-GEOM-210010",
+      "item_sha256": "cdddd4eb4a05c35d2d3202a1e1f4bad203a20a653add8d19721ccc16171284a1",
+      "author_computed_exact": "48",
+      "unique_numeric_answer": true,
+      "shuffle_permutations_checked": 24,
+      "structural_only_errors": [],
+      "existing_full_qa_status": "ERROR",
+      "existing_full_qa_errors": [
+        "AttributeError: 'NoneType' object has no attribute 'group'"
+      ],
+      "near_candidates_main_baseline_prs": [],
+      "independent_review": "PENDING",
+      "release_approval": "NONE"
+    }
+  ]
+}

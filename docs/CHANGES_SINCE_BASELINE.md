@@ -5,6 +5,14 @@ The living record of how Civio differs from the baseline (commit `d3f0368`, tag
 as any change that makes Civio behave differently from the baseline (see "How to
 keep this current" below).
 
+## Image smoke, 22 October 2026
+
+A manual GitHub Actions workflow, `image smoke`, builds the production Dockerfile and runs `scripts/fsrs-image-smoke.sh`. It does not push the image or deploy. The host key is a disposable `openssl` value because a clean runner has no Composer install. The build context excludes local SQLite files, logs, sessions, uploads, and secrets, and keeps the storage directory markers. [Run 39631539498](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631539498) passed (`php 8.4.26`, `node v22.23.2`, `sodium loaded`, `fsrs image smoke passed`). [Run 39631088212](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631088212) built the image and then stopped on a missing import while the job stayed green; it is not a pass. An image pass is not a deployment and is not operational production readiness.
+
+## Pre-deployment check, 22 October 2026
+
+The exam screen now receives `can_download_pdf`, so an allowed account can see Download PDF & Answer Key. At 320px the exam setup header wraps instead of clipping How it works. The readiness note is [DEPLOYMENT_READINESS_2026-10-21.md](DEPLOYMENT_READINESS_2026-10-21.md). Smart Review was not deployed.
+
 ## Baseline
 
 | | |
@@ -99,6 +107,8 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | The dial marks are a clock: 12 even ticks, longer at 12, 3, 6 and 9. The home picture is the Study Mock screen (timer, 1 of 150, choice rows), not a separate sample question. Each dial reads “150 questions · 3 hr 10 min” once. | The old marks were one every five minutes, so the longer ones bunched up and did not look like a clock. The sample card was not the exam. | `ec85910` |
 | The moving dial ring is lime, not violet, so it sits apart from the purple mark. The exam header keeps one clock: the ring and the time left. The per-item stopwatch is gone. The header uses the Civio wordmark; the favicon and app icon use the separate mark. The guest header no longer repeats Drills, and the dashboard Lite switch sits in the welcome row. | The ring matched the brand purple, the header showed two timers, and the old tile was still the logo. | `ea511cb` |
 | Exam header context is a `nav` breadcrumb: mode / subject / topic (topic from `sm` up), session title below. "Question N of M" moved from the header to a small tabular label above the stem. Stem set at 17px/1.7 (20px/1.65 from `md`) within 65ch with `text-pretty` and `overflow-wrap:anywhere` so long words and formulas wrap on phones; choice text gets the same wrapping. Question text unchanged. | Fernly-inspired workspace slice 2. Not browser-verified yet. | this PR |
+
+| Revealed choices pair colour with an icon and words: "Your answer · Correct" (check), "Correct answer" (check) and "Your answer · Incorrect" (cross), so the learner's pick and the key are told apart without relying on colour. Choice colours fade in 150 ms (none under reduced motion or Lite). The exam clock is a compact bordered pill on phones and a hairline ring beside larger tabular digits from `sm` up; untimed sessions show no clock instead of the word "Untimed". Same subscriber snapshot, no new interval. Strict Mock still never shows correctness and still has no Pause. | Fernly-inspired workspace slice 1 (`docs/design/CIVIO_FERNLY_LEARNER_EXPERIENCE_2026.md`). Not browser-verified yet. | this PR |
 | The sitting is the lime ring only. Tick marks are gone, and the time is not repeated under the dial. The exam facts are a panel: 80.00 is the mark, then 150 and 145 scored items with their times. Dark pages use the same navy paper as the home. | The ticks fought the ring, the time was written twice, and the passing rating was a paragraph. | `3098b51` |
 
 ### Study and tutor
@@ -151,7 +161,7 @@ Commits are on `Vincenzo-OPC/Civio` `main`. "Desktop" means it arrived through
 | `??` lost math symbols: root cause (PowerShell 5.1 pipe), `client_encoding` in seed SQL, `scripts/import-sql-utf8.ps1`, and `php artisan civio:repair-bank-encoding`. | Stems showed `??` instead of × ÷ ₱ etc. | `22fc855` |
 | `questions.source_group` (nullable, indexed; `App\Enums\QuestionSourceGroup`): existing rows tagged `baseline`, except post-baseline drafts (`civio`); questions created by the app default to `civio`; PHP seed scripts set `baseline`; `php artisan civio:tag-source-groups [--dry-run]` tags raw SQL seed rows. Never sent to the browser. Spec v0.1 Section 10 decisions recorded; re-parameterize workflow documented (`docs/QUESTION_SOURCE_GROUPS.md`). No question text changed. | Keep baseline items grouped for later re-parameterizing; new authored items stay drafts until approved. | `ac27f5a` |
 | Seeder saves one copy per item; `php artisan civio:remove-variant-clones` deletes or archives old "(variant N)" clones; Postgres SQL for desktop DBs. | Clone filler questions removed (GT approved). | `d8406d8`, `4bce08e` |
-| `questions.replaces_question_id` and `php artisan civio:reparameterize-baseline`. The command inserts an active `civio` item matched by the old stem and drafts the original. `scripts/seeds/baseline_reparameterized.json` is the 496-item paraphrase (numbers recomputed; statutory facts rephrased, not renumbered). Applied on the local preview database only. | The served baseline stems were still the original wording. GT asked for them to be paraphrased on 14 Oct 2026. A second-person spot check is still owed. | `988d862` |
+| `questions.replaces_question_id` and `php artisan civio:reparameterize-baseline`. The command inserts an active `civio` item matched by the old stem and drafts the original. `scripts/seeds/baseline_reparameterized.json` is the 495-item paraphrase (496 originally; the Sergeant item was dropped on 22 Oct 2026) (numbers recomputed; statutory facts rephrased, not renumbered). Applied on the local preview database only. | The served baseline stems were still the original wording. GT asked for them to be paraphrased on 14 Oct 2026. A second-person spot check is still owed. | `988d862` |
 
 ### Branding
 
@@ -236,3 +246,70 @@ the Docker autostart task, the desktop start shortcut, and any files
 4. Regenerate the changelog with `npm run changelog` (add `-- --tag vX.Y.Z` when
    cutting a release), then tag with an annotated tag and `git push origin <tag>`.
 5. Never push to `upstream-baseline`; it is a local, read-only remote.
+
+## Security execution checkpoint - 20 October 2026
+
+Verified MSI main was clean at efc0d81 and fast-forwarded it to fetched origin/main f2766db. GitHub PRs 1-16 were all OPEN and unmerged. No live service, study database, protected stack, question approval, or deployment was changed.
+
+Implemented F1/F6 answer-access slice: sessionless online drills/retakes require a browser- and principal-scoped served batch (20 recent batches, 300 items each, 24-hour expiry); arbitrary IDs cannot turn submission into a key endpoint. Active status and actual option bounds are checked again before grading. Session-backed mocks grade their entire served set, including blank items, and submissions re-read the session under a database row lock. Client track labels cannot turn drills into mocks. Strict locks cover other submissions and historical question feedback. Reveal/Expound reject inactive items. Reused PR #2's bank-key withholding while preserving an author's own draft response. Cached pool members are revalidated for current active status. Drill browsing is paged at 100; exam candidates and saved-set question responses are bounded at 300; saved-set summaries exclude inactive items. Bank-access limits apply in testing/local environments too, with distinct account/IP identity namespaces.
+
+F2 remains PARTIAL: complete-set scoring and stale-model duplicate protection are implemented; authoritative deadline enforcement, answer autosave, late-final grading from saved answers, and absolute UI recovery clocks are still pending. Do not present Strict Mock timing as protected until that work ships.
+
+Next: finish F2 before the importer review gate, readiness removal, Review Mistakes, composition and repetition work. The 496-item reparameterized file was not imported or approved. No current live-bank count was obtained (live database access is out of scope). Browser screenshots have not been captured.
+## Strict deadline checkpoint - 20 October 2026
+
+This supersedes the earlier PARTIAL F2 checkpoint. New Strict sessions persist started_at and deadline_at. Legacy sessions keep the deadline implied by original created_at and track. The authenticated/guest owner can save original-option answer patches with an optimistic save_version; stale writes, unserved IDs, inactive items, invalid options, expiry and submission all fail closed. Final grading uses the complete served set; at or after the exclusive deadline it ignores final-request answers and uses only saved server answers, leaving other items blank. The ten-minute grace protects visibility only and grants no answer-write time.
+
+Strict UI selections save serially, shuffled options map back to stored indices, and recovery fetches the server deadline and saved choices. Remaining time follows the absolute deadline rather than interval ticks or saved timeLeft. A failed save stops further answer changes until recovery and explains that late submission uses saved answers only. Study pause/untimed behavior and offline drills remain separate.
+
+Strict starts are serialized per learner/browser and a second protected Strict session is refused. Guest sessions also carry a server-only hash of their browser session identity, and protected guest session IDs survive the recent-session cap and login. This closes the ownership-list eviction bypass. Starts/submissions now share the always-on bank-access limiter; answer saves have a separate 180/minute limiter.
+
+Verification so far: full PHP suite 368 tests / 7,824 assertions; 96 JS tests and TypeScript passed. Final lint/format/build/size results are recorded below when complete. SQLite regressions cover stale models and revisions; a real concurrent PostgreSQL load test has not been run. No rendered browser screenshots or live migration/deployment are claimed.
+
+Shipped-to-source scope: F1/F2/F6 engineering. Still pending: fail-closed reparameterization importer and independent review gate; removal of fabricated readiness; Review Mistakes; fact/theme/passage composition; item exposure balancing. Do not approve or import the 496-item set. Editorial bank quality is not established by these security fixes. Next bounded slice is the importer review gate. Hosting remains GT's decision. See PAPER_PRACTICE_ASSESSMENT.md for the paper-booklet assessment; no paper flow or Complete Reviewer was built.
+Final security verification (20 October 2026): php artisan test passed 369 tests / 7,829 assertions; npm run types:check, npm run test:js (98 tests), npm run lint:check (no warnings), npm run format:check, composer lint:check, npm run build and npm run size all passed in the isolated test checkout. Exam JS is 10,944 / 11,000 bytes; aggregate JS is 1,038,071 / 1,040,000 bytes (Brotli). Budgets were not changed. A pre-existing homepage formatting issue was isolated in 43f9922; the first answer-access security commit is a390683. No rendered browser or real concurrent PostgreSQL load test is claimed. The new migration has only run against test SQLite, not the live study database. No question-bank source or approval status changed.
+
+## Bank import engineering checkpoint - 20 October 2026
+
+Canonical main was clean and synchronized at 06f3d23 before this slice. Both console importers now fail closed on malformed/colliding content and require separately signed GT authorization for active writes. Replacements require unambiguous baseline-only matches plus reviewed original fingerprints. The shared ledger preserves stable revision identities, prevents content overwrites, detects drift, and supports signed promotion of unchanged tracked drafts. Signed record/report/signature/signer digests are retained. Dry run performs equivalent locked validation. All-or-nothing writes and deferred observer cache invalidation are covered by regression tests.
+
+See [BANK_IMPORT_APPROVAL.md](BANK_IMPORT_APPROVAL.md) for the exact approval contract, operational prerequisites and limitations. No real approving key is configured or generated. No bank content/status, live database, deployment or collection changed. The 496-item file remains unapproved and was not imported. A separate reviewed revision workflow for changed legacy content and complete collection versioning remain future work. Verified in the isolated PHP 8.4 / Node 22 runtime: php artisan test 407 passed / 3,960 assertions; 98 JS tests; types, ESLint, Prettier, Pint, build and size passed. Aggregate JS remains 1,038,071 / 1,040,000 bytes and exam JS 10,944 / 11,000 bytes. Five inventory regressions pass separately. The old 496-row assertion loop was replaced with synthetic behavior/security tests; assertion totals are not comparable to the earlier manifest loop. No browser screenshots or concurrent PostgreSQL test are claimed.
+
+## Bank evidence inventory checkpoint - 20 October 2026
+
+Importer boundary shipped in 93633ef. Added a read-only Git-object inventory, five Python regressions, pinned source lock for main 06f3d23 and open PRs #3-12, and a mechanical review/report using the existing PR #12 explanation linter. Inventory covers 143 artifacts / 4,276 file occurrences (not live items), with 294 identity groups needing version reconciliation. Existing qa_all.py --no-fixes passed on 1,000 main batch occurrences, but GI official-text verification was skipped because no source cache was present. No editorial approval or status changed; AUDIT_TRACKER was intentionally left unchanged.
+
+See [bank review queue](research/bank/REVIEW_QUEUE_2026-10-20.md) for source hashes, exact reproduction commands, #462/B3 HOLD/source gaps, PR #12 passage-companion decisions, and the distinction between projection and release approval. Reconciliation/independent content review, sanitized runtime evidence, GT's final exact-content approvals and the provisional 2,000 split remain pending. No collection activation or authored bank content was produced. Next bounded bank slice: independently reconcile the #462 evidence and B3 HOLD/source gaps into a digest-bound decision packet for GT; do not apply fixes or retirements from stale snapshot IDs.
+
+## Research tooling checkpoint, 21 October 2026
+
+Added a read-only curriculum auditor with exact arithmetic and finite set-model checks, plus digest-bound evidence and an unapproved ten-item authoring packet. This changes research tooling only; no application behavior, active questions, database, access policy or deployment changed. See `docs/research/curriculum/CURRENT_BANK_ASSESSMENT.md`.
+
+## Review Mistakes and analytics honesty, 22 October 2026
+
+Published the recovered research commits, then added a signed-in mistake list. A wrong drill or Study Mock answer is stored once per question. An explanation seen on the server blocks that item from clearing. Strict Mocks are ignored. A thin percentile is no longer reported as Top 50%, and a subject that was not in an attempt is left blank instead of scored as zero. The ten numerical drafts were not activated. FSRS was not started.
+
+## Review help stays with the sitting, 22 October 2026
+
+An explanation now counts only in the browser session that opened it, and only when that item is actually answered. Skipping the item no longer erases the help. Another sitting can clear the mistake. The list is paged at 20, so older mistakes stay reachable. A locked Strict Mock item cannot be started from the list. The displayed mock percentage is the raw practice average. It is not adjusted into a pass chance, and the analytics index is no longer capped at 65 or 75.
+
+## Help follows the drill, not the browser, 22 October 2026
+
+Opening a second drill in the same browser no longer inherits an explanation from the first. Help is tied to the server-created served batch, or to the open Study Mock when there is no drill batch. A correct answer on a different drill can resolve the mistake. The practice percentage is the stored count of correct items, not a weighted category formula. Scorecards, analytics, and history say practice score rather than a readiness prediction or a mastered rank.
+
+## Practice labels stay factual, 22 October 2026
+
+The attempt average (mean of each finished run) and the mock-item percentage (correct mock items divided by mock items) are labeled as different counts. A subject with no items is "Not practiced", not a zero and not a critical weakness. The analytics page no longer shows a Top percent rank. "Passing Rate", "Subject Mastery", "Critical Concern", and stage names such as "Exam-Day Simulation" are not shown. A mock score of zero stays zero. "No mock yet" stays an empty ring, not a fake score. Stored attempt rows were not rewritten. Help attribution was rechecked: two drills in one browser do not share an explanation.
+
+## Help stays on the drill that was submitted, 22 October 2026
+
+A later drill that also contains an item no longer makes the earlier drill look unassisted. Submit uses the batch the page claims, then the batch whose ids match exactly. Reveal can claim the open Study Mock with its session id, so a newer drill does not take that explanation. A second drill still does not inherit the first explanation.
+
+## Smart Review, 22 October 2026
+
+A signed-in miss now stores one review card and one append-only review event. The server runs the existing ts-fsrs 5.4.2 package. A wrong answer is Again. An independent correct answer is Good and moves the due time. An assisted correct answer does not. A blank answer and a repeated submit do not add a success. Strict Mocks write nothing. Due reviews appear on Review Mistakes in Philippine time. The reminder is online only. Resolved still does not mean mastered. The public homepage says so in one short section. The catalog is `docs/FEATURE_CATALOG.md`.
+
+## Smart Review runtime, 22 October 2026
+
+The production image no longer deletes Node after the frontend build. It keeps the Node 22 binary and `ts-fsrs`, removes npm, and installs PHP sodium. The scheduler runs after the answer is saved, with a 5 second timeout, and does not hold the question lock while Node runs. One learner lock stops two requests from scheduling the same card together. If scheduling fails, including a repeated failure, the answer stays saved, the reminder stays unfinished, and Review Mistakes does not say Review Complete. An assisted answer and a Strict Mock stay out of that schedule. Due Today is paged at 20. This sandbox cannot unpack OCI layers (`lchown` fails because the user namespace maps only uid 0), so `docker build` was not run. `scripts/fsrs-image-smoke.sh` is the check on a Docker host that can unpack images. The same base filesystem (`serversideup/php:8.4-fpm-nginx`) plus the Node 22.23.2 binary and only `node_modules/ts-fsrs` was checked in a chroot: a wrong answer stored a future due date, an independent correct answer moved it, a missing Node binary left the reminder unscheduled, and restoring Node saved it. PHP sodium was loaded. It is not deployed. GitHub's aggregate JS check failed at 1,040,032 of 1,040,000 bytes. jsPDF's unused `html2canvas` import is no longer shipped. Smart Review is implemented and not production verified.
+

@@ -4,7 +4,6 @@ import {
     AlertTriangle,
     CheckCircle2,
     Calendar,
-    Users,
     Zap,
     HelpCircle,
 } from 'lucide-react';
@@ -27,7 +26,6 @@ interface CseReadinessCardProps {
 export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
     const readinessIndex = stats.cseReadinessIndex ?? stats.avgScore ?? 0;
     const hasSubtestRisk = stats.hasSubtestRisk ?? false;
-    const percentile = stats.percentileRank ?? 50;
     const subtestThresholds = stats.subtestThresholds ?? [];
     const daysUntilExam = stats.daysUntilExam;
     const examDate = stats.examDate;
@@ -46,7 +44,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
 
     const statusBadge = isIncompleteSyllabus
         ? {
-              text: `Syllabus Incomplete (${coveredCount}/5 Subjects)`,
+              text: `Practiced ${coveredCount} of 5 subjects`,
               color: 'border-violet-300 bg-violet-50 text-violet-800 dark:border-violet-800 dark:bg-violet-950/40 dark:text-violet-300',
               dotColor: 'bg-violet-500',
           }
@@ -86,7 +84,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                             {readinessIndex}%
                         </span>
                         <span className="text-[10px] font-semibold tracking-wider text-muted-foreground uppercase">
-                            Practice
+                            Attempt avg
                         </span>
                     </div>
 
@@ -101,13 +99,6 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                                 />
                                 {statusBadge.text}
                             </span>
-
-                            {percentile > 0 && (
-                                <span className="inline-flex items-center gap-1 rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-0.5 text-xs font-bold text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300">
-                                    <Users className="size-3" />
-                                    Top {Math.max(1, 100 - percentile)}%
-                                </span>
-                            )}
                         </div>
 
                         <div>
@@ -118,7 +109,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                                 {isIncompleteSyllabus
                                     ? `You've practiced ${coveredCount} of 5 exam subjects so far. A full mock gives a wider picture of your practice. It is not a prediction of your exam result.`
                                     : hasSubtestRisk
-                                      ? 'One or more subjects are well below the others. That is a practice signal, not an official subtest cutoff.'
+                                      ? 'One or more practiced subjects are under 70%. CSC does not publish that as a cutoff.'
                                       : isPassing
                                         ? 'Your practice average is at or above 80. Civio does not treat that as an official result.'
                                         : 'The published general passing rating is at least 80.00. CSC does not publish a separate minimum for each subtest.'}
@@ -184,7 +175,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
                                 <TooltipTrigger asChild>
                                     <button
                                         type="button"
-                                        aria-label="Passing rating explanation"
+                                        aria-label="Practice rating explanation"
                                         className="text-muted-foreground transition hover:text-foreground"
                                     >
                                         <HelpCircle className="size-3.5" />
@@ -202,7 +193,7 @@ export function CseReadinessCard({ stats, isDemoMode }: CseReadinessCardProps) {
 
                     <span className="text-[11px] font-semibold text-muted-foreground">
                         {subtestThresholds.filter((s) => s.passed).length} of{' '}
-                        {subtestThresholds.length || 5} passing
+                        {subtestThresholds.length || 5} at 70%+
                     </span>
                 </div>
 
