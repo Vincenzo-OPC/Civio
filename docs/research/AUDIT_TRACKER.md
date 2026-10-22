@@ -314,3 +314,18 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 Numbered labels use Title Case: **Session**, **Item**, **Scenario**, **Set**, **Case**.  
 Example: `Session 1`, `Item 60`, `Scenario 3`. Never lowercase.  
 Applied to residual and batch JSON. Remaining lowercase hits: 0.
+
+## 2026-10-22 (later): CoS rejected clone residuals — honest recount and rewrite
+
+**CoS finding:** The earlier 122 residual drafts were not genuine items. They were a few questions copied with only a city name or number changed. The projected 2,100 was not a real unique count.
+
+**Honest unique on official scope** (excluding the clone residual files): **2,033**
+- Numerical 440, Analytical 352, Verbal EN 389, Verbal Fil 315, Clerical 255, GI 282
+- Approved 1,477 · Draft 507 · Reviewed 49
+
+**Actions taken**
+1. New genuine rewrite: `docs/research/civio-final-rewrite-2026-10-22.json` (122 items). Each analytical pair, spelling target, antonym, and R.A. 6713 scenario is distinct. All `status: draft`.
+2. Restored the 15 Filipino reading passages: cleared `trimmed_verbal_fil_ids` in `civio-trim-lists-2026-10-22.json`.
+3. Clone files (`civio-exact-flat-cleaned`, `civio-fixed-flat-final`) are superseded. Do not count them toward unique totals.
+
+**Do not activate.** Send the rewrite to CoS for re-review. Label normalization and difficulty pass wait until the rewrite passes.
