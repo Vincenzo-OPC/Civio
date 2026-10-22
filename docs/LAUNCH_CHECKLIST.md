@@ -24,3 +24,24 @@ Code-only review of `main` at 052438a. Nothing was deployed and no host, Netlify
 2. Set Turnstile keys, `APP_ENV=production`, `APP_DEBUG=false`, `SESSION_SECURE_COOKIE=true` (#2–#4).
 3. Enable host and DB spending alerts (#8).
 4. Add exam-session pruning soon after launch (#6).
+
+
+## Architecture review decisions, 23 October 2026 (advisory; no paid activation)
+
+These are recommendations for the next implementation handoff. The owner has **not** authorized setting up hosting, enabling billing, deploying, or creating paid services.
+
+1. **Dashboard breakpoint: ACCEPT 1024px.** At 768px, retain a single column instead of forcing dense paired panels into narrow columns next to the sidebar. Accept restrained blank space inside a taller, equal-height desktop row; do not invent filler content. Preserve genuine mobile content heights and correct content hierarchy.
+2. **Abandoned-session cleanup: IMPLEMENT as a guarded code-only task.** Add `civio:prune-exam-sessions` with `--dry-run`, configurable retention and bounded batch deletes. Target only `exam_sessions` without an `exam_attempt_id`, and require older-than-cutoff inactivity (default **45 days**, beyond the existing 30-day local study recovery window). Never delete graded attempts, linked exam sessions, recent Study sessions, or question-bank rows. Tests must confirm these exclusions, Strict deadlines and guest/signed-in cases. Prepare a daily scheduler entry; don't activate external cron until hosting is chosen. Confirm legacy session ownership and database foreign-key dependencies before deletion.
+3. **Redis: DEFER.** Don't add Redis/Memcached merely to pass hypothetical load tests; this adds another billed component. Keep the current database-backed cache/session/rate-limit implementation for a small controlled pilot, measure DB CPU, query latency, 429 rates, active users and write volume, then migrate when supported by evidence. Avoid declaring the present setup fit for unlimited public scale.
+4. **Tentative hosting preference: Railway Hobby + Postgres in Singapore, with Cloudflare Free as the public CDN/WAF and Turnstile.** Railway provides a Southeast Asia region, $5/month Hobby minimum including $5 resource usage, and billing alerts/usage limits. **This is a recommendation only** pending owner approval of any spending and a test of PHP/Laravel deploy, Postgres backup/restore, cron, IPv6/client IP, network egress, latency and actual cost. Railway usage hard limits can stop workloads, and storage/backup costs must be examined separately: a usage cap is not a guarantee of uninterrupted uptime or a universal invoice ceiling. Initial suggested thresholds: $10 alert, $15 compute hard limit, subject to a budget decision by GT.
+5. **Trusted proxy setup: MUST PASS BEFORE LAUNCH.** For Cloudflare -> Railway -> Laravel, configure the chain using actual verified proxy ranges and supported forwarded headers, never unconditionally trust caller-supplied `CF-Connecting-IP` or `X-Forwarded-For`. Audit whether the origin can be accessed without Cloudflare and close bypass routes as supported by hosting. Test at least two distinct visitor IPs, a school/shared IP, malformed/spoofed headers, auth and guest rate-limit keys, HTTPS redirects and session cookies. Laravel 13 supports `trustProxies` in `bootstrap/app.php`. Host-specific configuration cannot be finalized in the repository without an actual deployment target.
+6. **Turnstile: USE FREE TIER; FAIL LAUNCH READINESS IF UNCONFIGURED.** Add production readiness validation of the site and secret keys; don't allow signup, password-reset or login bot checks to silently be disabled by absent keys. Never commit secrets. Confirm the actual POST routes are covered and fallback behavior is understandable for legitimate users. Turnstile Free supports normal production applications.
+7. **Cost control and backups: MUST PASS BEFORE LAUNCH.** Set the host's email spending warning and enforced usage limit, Postgres usage/storage alerts, backup schedule and one verified restoration test. Edge caching may be applied to versioned static assets, never user-specific exam/session/progress/score responses. Disallow surprise billable AI and unintended auto-scaling.
+
+Official sources checked:
+- Railway: https://docs.railway.com/pricing/cost-control and https://docs.railway.com/deployments/regions
+- Cloudflare Turnstile Free: https://developers.cloudflare.com/turnstile/plans/
+- Cloudflare visitor IP: https://developers.cloudflare.com/support/troubleshooting/restoring-visitor-ips/restoring-original-visitor-ips/
+- Laravel 13 proxy trust: https://laravel.com/framework/docs/requests#configuring-trusted-proxies
+
+**Release rule:** No deployment, hosting signup, paid service, DNS/proxy changes, keys, or billable activation without GT approval. Continue safe code-only fixes and tests on isolated infrastructure.
