@@ -1,0 +1,62 @@
+# Proves the Docker image runs a patched PHP and that the build guard rejects
+# a vulnerable base. Disposable runner containers only: no push, no deploy,
+# and only the job's throwaway Postgres on the ephemeral runner's port 5432.
+name: php runtime security
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - Dockerfile
+      - scripts/security/**
+      - .github/workflows/php-runtime-security.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: civio_ci
+          POSTGRES_USER: civio_ci
+          POSTGRES_PASSWORD: civio_ci_throwaway
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U civio_ci" --health-interval 5s --health-retries 20
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Guard rejects a vulnerable base (8.4.26)
+        run: |
+          set +e
+          docker build --build-arg PHP_BASE_IMAGE=serversideup/php:8.4.26-fpm-nginx -t civio-vuln-probe . > vuln.log 2>&1
+          status=$?
+          set -e
+          tail -n 20 vuln.log
+          if [ "$status" -eq 0 ]; then echo "Vulnerable base was NOT rejected" >&2; exit 1; fi
+          grep -q 'PHP 8.4.26 is vulnerable to CVE-2026-109618/109619' vuln.log
+
+      - name: Build pinned image
+        run: docker build -t civio-php-sec .
+
+      - name: Smoke test runtime
+        run: |
+          KEY="base64:$(openssl rand -base64 32 | tr -d '\n')"
+          run() { docker run --rm --network host -e APP_KEY="$KEY" --entrypoint "$1" civio-php-sec "${@:2}"; }
+          run php -v
+          run php -v | grep -q '^PHP 8\.4\.27 '
+          run php scripts/security/assert-patched-php.php
+          run php artisan --version
+          for ext in pdo_pgsql pdo_sqlite gd zip bcmath sodium mbstring; do run php -m | grep -qix "$ext" || { echo "missing $ext"; exit 1; }; done
+          run php -r 'echo function_exists("opcache_get_status") ? "opcache ok\n" : exit(1);'
+          docker run --rm --network host -e APP_KEY="$KEY" -e APP_ENV=testing \
+            -e DB_CONNECTION=pgsql -e DB_HOST=127.0.0.1 -e DB_PORT=5432 \
+            -e DB_DATABASE=civio_ci -e DB_USERNAME=civio_ci -e DB_PASSWORD=civio_ci_throwaway \
+            --entrypoint php civio-php-sec artisan migrate --force --no-interaction
