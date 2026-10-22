@@ -75,7 +75,11 @@ test('it generates full deterministic analysis with mock exam attempts', functio
         'personalized_study_plan',
     ])
         ->and($result['personalized_study_plan'])->toHaveCount(7)
-        ->and($result['pass_probability'])->toBeGreaterThan(0);
+        ->and($result['pass_probability'])->toBe(100)
+        ->and($result['timeline_prediction']['current_stage'])->toBe('Practice 85+')
+        ->and(collect($result['subject_mastery'])->pluck('rating')->all())->not->toContain('Critical Concern')
+        ->and(collect($result['subject_mastery'])->pluck('rating')->all())->not->toContain('Mastered')
+        ->and($result['predictive_metrics']['completion_pace'])->not->toContain('accelerat');
 });
 
 test('it handles drill attempts and singleAttemptOnly option correctly', function () {

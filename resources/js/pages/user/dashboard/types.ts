@@ -88,6 +88,9 @@ export interface AiAnalysisData {
     priority_action: string;
     recommended_modules: string[];
     encouragement: string;
+    predictive_metrics?: {
+        estimated_exam_score?: string;
+    };
     subject_mastery?: Array<{
         subject: string;
         rating: string;

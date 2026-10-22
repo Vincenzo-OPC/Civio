@@ -507,7 +507,7 @@ export function ScorecardView({
                                                         {formattedPercentage}%
                                                     </span>
                                                     <span className="mt-1 text-[0.65rem] tracking-[0.14em] text-[#101426]/60 uppercase dark:text-[#FAFAF7]/60">
-                                                        Passing Mark
+                                                        Practice score
                                                     </span>
                                                 </div>
                                             </div>

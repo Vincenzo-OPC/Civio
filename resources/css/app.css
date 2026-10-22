@@ -540,6 +540,14 @@ html.lite.dark .civio-glass {
     animation: civio-rise 480ms ease both;
 }
 
+.civio-setup-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
 @keyframes civio-rise {
     from {
         opacity: 0;

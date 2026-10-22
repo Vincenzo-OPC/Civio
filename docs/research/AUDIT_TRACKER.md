@@ -256,3 +256,178 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - **MSI:**
   - Backup first: `civio_local_pre_r03c_20261017.dump`.
   - Active: Analytical 365, Clerical 262, GI 347, Numerical 400, Verbal 604, **total 1,978**.
+
+## 2026-10-18: gap-fill-2000-05, English Verbal drafts (15) and EV lint fixes (117), pending CoS
+
+- **Correction (drill shuffle):** online drills already shuffle the answer choices. The real leak was answer keys sent in the drills-hub payloads, and it is fixed on `grok/drill-choice-shuffle`. The earlier claim that online drills do not shuffle is now marked superseded on `grok/batch-3-independent-audit` (tracker + B3 packet) and `grok/baseline-550-spec-convert` (QA doc). Stored key position is an editorial balance goal, not a user-facing giveaway.
+- **Part A drafts:** `docs/research/gap-fill-2000-05.json`, from `scripts/batches/gapfill/gap_fill_2000_05.py`.
+  - VEN-PARA-ORDER 8 (need 6).
+  - Reading comprehension 7 (need 5): VEN-RC-DETAIL/INFER/MAIN 2 each, VEN-RC-VOCAB 1.
+  - QA: `qa_file.py` 0 problems; `explanation_lint.py` 0 flagged.
+- **Part B lint fixes:** `docs/research/audit/fixes/gap-fill-2000-05-lintfix.json`, from `scripts/batches/gapfill/lintfix_2000_05.py` + `lintfix_2000_05_baseline.py`.
+  - 117 full-item fix drafts (`<id>-LINTFIX`, `fix_of`) for English Verbal Release picks that fail explanation_lint: sentence structure 27, error recognition 11, paragraph organization 36, reading comprehension 43.
+  - Originals are untouched.
+  - The 41 baseline items in the set are completed to full spec (terms, shortcut, coded why-wrong).
+  - Wrong options were lengthened on 22 long-key items, with the same error and code.
+  - 4 stems were clarified to clear false near-duplicates.
+  - QA:
+    - New checker `scripts/batches/audit/qa_fixfile.py`, which runs the qa_file checks but does not compare a fix with its own original: 0 problems.
+    - `explanation_lint.py`: 0 flagged.
+- **Not fixed (CoS):**
+  - `CIVIO-BASELINE-0466` is a Filipino item classified as English Verbal.
+  - The passage set `CIVIO-GAP1-VEN-RC-0014..0017` (approved) shares a passage shorter than the 400-character sibling floor, so it already fails qa_file.
+  - `CIVIO-GAP2-VEN-ERROR-0002` and `-0005` (approved) have identical stems.
+- **Release projection** (approved + kept + pending drafts incl. gap-fill-01/02/05): **EV 300, FV 300 and Num 400 exact.** Still short: Analytical analogy 61 and data interpretation 31; Clerical filing 41; R.A. 6713 32. These are on gap-fill-03/04 (other agents).
+
+## 2026-10-18 — gap-fill-2000-02: Numerical basic ops + sequences, Filipino reading + paragraph order (108 drafts, pending CoS)
+
+- `docs/research/gap-fill-2000-02.json` (generator `scripts/batches/gapfill/gap_fill_2000_02.py`): NUM-OPS-ORDER 60, NUM-SEQ-DIFF 11, NUM-SEQ-MULT 9, VFIL-PAGBASA 12, VFIL-PAGSUSUNOD 16. Numerical stems avoid near-duplicates: the generator rejects any stem with Jaccard ≥ 0.6 to an existing numerical stem. No percent items.
+- QA: `qa_file.py` 0 problems vs 1,755 bank items, with solver-recomputed keys on all 80 numerical items. `explanation_lint.py` 0 flagged. Positions 27/27/27/27. `qa_fil.py` GREEN.
+- Release projection (approved + kept + pending drafts incl. gap-fill-01/02): **FV 300 exact, Num 400 exact.** Remaining shortfalls: Analytical analogy 61, data interpretation 31; Clerical filing 41; R.A. 6713 32; EV paragraph organization 6, reading comprehension 5. Gap-fill-03 (Analytical) and -04 (Clerical filing + R.A. 6713) are being drafted on their own branches.
+
+## 2026-10-18: gap-fill-2000-01, Filipino Verbal (99 drafts, pending CoS)
+
+- `docs/research/gap-fill-2000-01.json`, built by `scripts/batches/gapfill/gap_fill_2000_01.py`: antonyms 41, synonyms 34, idioms 24. All target words and idioms are new to the bank. Spelling follows KWF.
+- Every item has 3 coded distractors with a specific why-wrong line each. Key positions are A 25, B 25, C 25, D 24.
+- QA:
+  - `qa_file.py docs/research/gap-fill-2000-01.json` → 0 problems against 1,656 bank items.
+  - `explanation_lint.py` → 0 flagged, after lengthening the distractors of 4 synonym items that had a long-key giveaway.
+  - `qa_fil.py` → GREEN.
+- Release Collection: new `scripts/batches/release/release_manifest.py` selects exactly EV300 / FV300 / Num400 / Ana400 / Cler300 / GI300 with round subtopic quotas. It exits 1 and lists the shortfalls until every quota is met. Over-target pools are trimmed by selection only; nothing is deleted or demoted.
+- Shortfalls after this batch (approved + kept + pending drafts):
+  - FIL reading 10, FIL paragraph order 14
+  - Numerical basic operations 55, number sequence 16
+  - Analytical analogy 61, data interpretation 31
+  - Clerical filing 41
+  - R.A. 6713 32 (CoS topic-mix decision)
+- Packet: `audit/gap-fill-2000-01-review-request.md`. Next: gap-fill-2000-02 (Numerical basic operations and sequences, plus FIL reading and paragraph order).
+
+## 21 October 2026 curriculum audit checkpoint
+
+Repository evidence at `dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1`: 1,478 approved-labeled primary records, not a runtime count. Independently checked 497 existing keys (400 numerical, 41 data tables, 44 syllogisms, 12 explicit sorts); all matched. Mechanically screened 2,127 main/export records; 83 quality flags, including historical #462 duplicate choices. All 45 Vera IDs reconciled; nine lack a correct listed option. Ten original numerical drafts remain unreviewed; existing full QA cannot parse their novel structures. No approvals, imports or activations. See [current assessment](curriculum/CURRENT_BANK_ASSESSMENT.md), [Vera ledger](curriculum/VERA_45_QUESTION_AUDIT.md), [production plan](curriculum/QUESTION_QUALITY_AND_PRODUCTION_PLAN.md), and [scope evidence](curriculum/CSC_COMPETENCY_GAP_MAP.md). The 2,000 milestone is incomplete; exact eligible release count unknown.
+
+### Product research continuation, 21 October 2026
+
+The [educational/product handoff](curriculum/CODEX_EDUCATIONAL_HANDOFF.md) extends this checkpoint: raw versus weighted score disagreement reproduced, unsupported percentile/pass-prediction outputs identified, guest-history and exposure limitations traced, existing graphs/Lite/FSRS reviewed. A 44-node curriculum blueprint and private Subprofessional diagnostic protocol are prepared. Three open-source UI repositories were pinned and evaluated; no dependency or feature was added. Recommendations follow existing security and Review Mistakes priorities. GitHub push was authentication-blocked; local commits are not remote publication.
+
+## Publication reconciliation, 22 October 2026
+
+Remote main `99ebe099376ca18c5a9338876c928fbea7519536` contains the research from commits `3c1fd91` and `b51c311`. Of 20 prepared files, 19 exactly match local checkpoint `57d79fa`; the baseline changes log has later engineering additions. No duplicate import or old-tree overwrite is needed. The audit baseline and content approval limits remain unchanged. Later Review Mistakes, FSRS and scoring work must be read through `docs/FEATURE_CATALOG.md`; this is publication verification, not a new test or live bank audit. GT authorized the connected GitHub integration for the documentation follow-up.
+
+## 2026-10-22: Subprofessional Numerical batch 001
+
+- **Draft file:** `docs/research/batch-subpro-num-001.json` (50 items). The requested allocation is 12 fraction, 12 percentage, 8 ratio/proportion, 8 basic algebra and 10 applied word-problem items. The uploaded geometry item `CIVIO-NUM-WP-GEOM-926037` was mathematically sound but held outside this allocation; the batch uses original algebra item `CIVIO-NUM-WP-ALGEBRA-926051` in its place. The held item remains in the original supplied upload.
+- **Astra content review:** 49 supplied items passed after corrections and are `status: reviewed` / `review_status: passed`. Replacement 926051 remains `draft/unreviewed` because its author cannot review it. No item is GT-approved, active, imported or counted toward the 2,000 verified release count.
+- **Evidence:** `docs/research/bank/subpro-num-001-audit-2026-10-22.json`, bound to the batch digest. Exact answer recomputation: 50/50; required-field, four-distinct-option, key mapping, distractor-code, Reveal-length and per-archetype timing checks passed. Keys: o1 12, o2 14, o3 12, o4 12.
+- **Duplicate screen:** 3,333 unique repository stems across current main `43529d8425b86b5a47b8032346eed26bbea48218` plus 10 pinned open content PR snapshots; no Jaccard ≥0.65 matches, within-batch collisions or stable-ID collisions. The scan did not compare stems to reviewer PDFs, so it is not source-by-source originality proof.
+- **Corrections:** 926036's 42 distractor explanation was corrected and recoded `NUM-EXTRA-STEP`; target times now follow spec §3.1 archetype values. The earlier generic `qa_file.py` CLI still aborts at 926001 because the NUM-FRAC-DEC solver assumes the stem contains `had <number>`. This is a validator coverage defect, not a content pass. A deterministic supplemental check passed; no claim that the repository CLI passed.
+- **Pacing:** exact archetype targets yield a 69.3-second mean for this content batch. Do not administer it as a standalone practice set under the spec's 60-second set-mean rule. Difficulty labels are 11 easy / 25 medium / 14 hard, versus the suggested 15/25/10; these are editorial, not empirically calibrated.
+- **Remaining gates:** GT must review the exact manifest and review report and provide the detached approval signature required by `docs/BANK_IMPORT_APPROVAL.md` before active import. No private key was requested or used.
+
+## 2026-10-22: Astra review of B4 Numerical replacement drafts in open PR #5
+
+Source snapshot: PR #5 head `fcc2ed22b39d60e0469304e690749bc17263f8bf`; file `docs/research/audit/fixes/round-03-baseline-b4-drafts.json`. These five items replace legacy baseline records. **They are not five new unique bank questions.**
+
+- **Answer check:** 5/5 answer keys independently recomputed; all four choices are distinct and only one matches each stated calculation.
+- **Targeted validators from that PR:** `qa_file.py` reports 0 problems against 1,656 bank items; `explanation_lint.py` reports 0 flags. These scripts do not validate target-time metadata or whether distractor codes describe the actual error.
+- **Exact edits still needed in the open draft file:**
+  - `CIVIO-B4-NUM-WP-ALGEBRA-0201`: 29 is correct. Set `est_seconds: 90` (the `NUM-WP-ALGEBRA` target) and difficulty to medium (sum/difference requires two steps).
+  - `CIVIO-B4-NUM-WP-GEOM-0206`: 34 m is correct. Set `est_seconds: 90` and difficulty to medium. Its 60 m distractor is the area/perimeter mix-up; the nearest available numerical code is acceptable only if the explanation says it multiplies length by width and reports area.
+  - `CIVIO-B4-NUM-WP-RATIO-0209`: ₱300 is correct. Set `est_seconds: 75` (not 60); classify difficulty as hard if retaining the three separate computations (parts total, value per part, middle share).
+  - `CIVIO-B4-NUM-WP-RATE-0349`: 72 is correct. Set `est_seconds: 90`. The distractor 64 is not produced by the claimed “16 × 4” from any given value. Replace it with 18 (one hour only; `NUM-PARTIAL`) or 90 (one extra hour; `NUM-EXTRA-STEP`), and remove the unsupported 82 “extra 10” distractor. Keep 54 as the 3-hour/off-by-one trap.
+  - `CIVIO-B4-NUM-PCT-BASIC-0495`: ₱2,040 is correct, but this is a discount/application item and should be `NUM-WP-PCT-CHANGE`, target 90 seconds, medium difficulty. Replace ₱2,085 (the claimed 315-peso error has no credible derivation) with ₱2,400 for “used the listed fee without applying the discount” (`NUM-GIVEN-REUSED)). The ₱2,160 distractor can be explained as taking off only the 10% part and omitting 5% (`NUM-PARTIAL)); ₱2,760 remains the add-instead-of-subtracting error.
+- The milestone plan's percent-change cap is a **Release Collection** selection rule, not by itself a content-quality failure for the whole verified bank. Exclude this replacement from that collection if the cap remains, but do not reject or hold otherwise-valid bank content solely because of the collection cap.
+- No source PR file was edited, merged, signed or activated in this review. The records remain drafts until the corrected packet is resubmitted with a digest-bound report; GT's signed approval remains necessary for active import.
+
+
+## 2026-10-22: Independent audit of gap-fill-2000-02 (open PR #8)
+
+**Scope and source:** Reviewed PR #8 head `5fd89f9dd0a5a3592f682187c9b7db07b37b6757`, batch `docs/research/gap-fill-2000-02.json` (108 draft items). It proposes 60 Numerical basic-operations items, 20 Numerical sequences, 12 Filipino reading-comprehension items and 16 Filipino paragraph-order items. The PR is open and marked draft. This audit did not edit the PR, merge it, approve its content for activation, or import it.
+
+**Reproducible repository check:** On the pinned PR head, `python scripts/batches/qa_file.py docs/research/gap-fill-2000-02.json` reported **108 items, compared with 1,656 bank items; 0 problems**. This is a content-file QA result, not the full PR check suite listed in its description (tests, type/lint/format/build/bundle checks were not run).
+
+**Independent Numerical answer audit: 80/80 keys recomputed.**
+- All 60 `NUM-OPS-ORDER` expressions were parsed and evaluated with arithmetic precedence, then compared with the keyed option and worked answer.
+- All 20 sequence keys were checked against their stated rules (11 growing-difference patterns; 9 multiply-then-add/subtract patterns). The reveal states the same next term.
+- The 80 items have four distinct choices each, no repeated exact stems, and numerical answer positions are balanced (20 each at o1–o4).
+- No wrong-key or arithmetic defect was found in these 80 items.
+
+**Required metadata and learning-quality changes before selection for a release collection:**
+- IDs `CIVIO-GF2K02-NUMOPS-0001` through `CIVIO-GF2K02-NUMOPS-0060` all set `est_seconds: 40`; spec §3.1 sets `NUM-OPS-ORDER` to **35 seconds**. Correct all 60 values. The 20 sequence items are correctly set at 45 seconds.
+- The 60 operation items repeat one micro-skill and only eight normalized expression structures, each with fresh numbers. This is substantial within-batch frame repetition. Keep only the number needed to fill the approved collection's numerical blueprint; retain representative expressions across the eight structures and do not count the whole 60 as demonstrated coverage breadth.
+- Difficulty labels are editorial, not empirically calibrated: batch Numerical has 16 easy and 64 medium, with no hard items. Do not present this distribution as measured difficulty.
+- Sequence rules are conventional and explicitly explained, but next-term questions remain pattern-inference tasks; do not treat them as uniquely determined by a finite sequence absent the stated rule.
+- Check all 12 reading items and 16 ordering items for one defensible key. The paragraph-order Reveals repeatedly say only “Panimula…sinundan…kinalabasan”; before release, explain the actual ordering cues (time, prerequisite/action/result, reference words) for each item. Some reading distractors are conspicuously implausible; improve distractor quality where doing so preserves a single text-supported answer.
+- These are third-party independent drafts (Grok Bot) with original-source labels; repository QA and this review do not establish source-by-source originality against every reviewer PDF. Keep draft/provenance status pending the existing approval procedure.
+
+**Disposition:** Numerical: 80 answer keys verified with the corrections/selection notes above. Filipino: 28 items reviewed for key defensibility and wording at the item level; paragraph-order explanation depth and distractor quality remain editorial work. The batch still has `status: draft` / `review_status: unreviewed`; no item was approved, activated, imported or counted toward the 2,000 verified release target. Its passing bank comparison (1,656 items) is the validator's comparison set, not the current approved inventory and not evidence that the 2,000 milestone is complete.
+
+**Next actions for the PR author / Codex:** (1) set the 60 operation targets to 35 seconds; (2) prepare a blueprint-based release subset rather than treating all 60 near-frames as distinct coverage; (3) rewrite the 16 sequencing Reveals to teach the actual ordering constraints and strengthen weak distractors; (4) rerun content QA on the revised digest and complete the PR's explicitly required check suite; (5) keep every item draft until independent review and the repository's signed approval/import workflow are satisfied. The current main inventory and exact release gap remain as recorded in [Current Bank Assessment](curriculum/CURRENT_BANK_ASSESSMENT.md); this PR draft does not change them.
+
+
+### PR #8 draft corrections and recheck (22 October 2026)
+
+Applied the specific editorial fixes to the existing PR #8 draft branch `grok/gap-fill-2000-02`, commit `8ef853ae22600cac8b0cb4f05309027e826ff626` (the branch head changed; PR remains open/draft):
+
+- Corrected all 60 `NUM-OPS-ORDER` target times from 40 to the spec's 35 seconds.
+- Rewrote the 16 `VFIL-PAGSUSUNOD` explanations to state the actual chronology, prerequisite/action/result, or reference cue that supports each order.
+- Preserved all statuses as `draft` / `unreviewed`; no approval, activation, import or merge.
+
+On the updated PR commit, `python scripts/batches/qa_file.py docs/research/gap-fill-2000-02.json` again reports **108 items, 1,656 comparison-bank items, 0 problems**. The independent numerical recomputation again returns **80/80 correct** (60 mixed-operation expressions and 20 sequences), with the 35-second targets verified and keys balanced 20 per option position. This still does not complete the full PR-required software test/build/bundle suite, source-by-source originality check, or content approval.
+
+
+## 2026-10-22: Independent audit of gap-fill-2000-03 (open PR #9)
+
+**Scope:** Reviewed PR #9's 101 draft items at original head `026519163498df7e47b49f5069a59f23cd4728d5`: 67 word analogies and 34 data-interpretation tables. The PR remained draft throughout; no activation, import or merge was performed.
+
+**Checks on the revised branch head `f54f8df2b88eeb6b3e4e8c6adc1c939dce82e0f4`:**
+- Repository `qa_file.py`: **101 items, 1,656 comparison items, 0 problems**.
+- Repository `explanation_lint.py`: **101 items, 0 flagged**; key positions A 26, B 26, C 25, D 24.
+- Independent audit: all 34 table keys recomputed from their displayed data; all 67 analogy keys reviewed against the stated semantic/form relationship. No wrong key or duplicate-choice defect found.
+- Found and corrected a calculation explanation missed by lint: `CIVIO-GF2K03-ANA-DI-TABLE-0024` has a 160-to-100 decrease, so 60 ÷ 160 = **0.375 (37.5%)**, not 0.38. The keyed 37.5% was already correct. Updated explanation is in the open PR branch commit above.
+- Recheck on the updated head: table solver reports **34/34** key matches and all displayed percentage decimals agree with the keyed percentages. Both the repository batch QA and explanation lint pass. All 101 items remain `draft/unreviewed`.
+
+**Release planning evidence (PR #9 head only):** The existing release manifest reports **1,401 selected / 2,000** from approved content plus the baseline, a 599 shortfall. With `--include-drafts` on this one PR head, it reports **1,502 / 2,000**, still 498 short. These are manifest projections from PR #9's checkout, not current live-bank counts; they do not incorporate all other open PRs and do not confer approval. Significant subtopic gaps persist in English paragraph organization/reading, Filipino vocabulary/idioms, numerical operations/sequences, clerical filing/spelling and General Information. Do not call the 2,000 milestone complete.
+
+**Disposition:** Corrected the one detected numerical explanation defect in PR #9. The questions remain unapproved drafts pending full independent/source-rights review, author-independent content approval and the repository release/import requirements. Full software type/lint/format/test/build/bundle checks required by the PR were not run.
+
+
+## 2026-10-22: Independent audit of gap-fill-2000-04 (open PR #10)
+
+**Scope:** Reviewed 83 draft items at revised branch head `c8800eb50743bb34ab3686346143ad32a0d8d3e1`: 48 clerical alphabetical-filing items and 35 R.A. 6713 application items. No approval, activation, import, merge or deployment.
+
+**Corrections applied to the existing draft branch:**
+- Added an explicit ANSI/ARMA 12-2005 filing-rule reference to 30 filing stems that previously left the convention unstated; reworded two resulting near-duplicate frames for distinct task demands.
+- Replaced all 35 R.A. 6713 source links with the official COMELEC law page.
+- Clarified item `CIVIO-GF2K04-GI-SCENARIO-APPLY-0015`: R.A. 6713 §7(d) permits Congress-consented gifts in the nature of scholarships/fellowships/medical treatment; the distinct national-interest and head-of-office conditions apply to foreign travel grants. This clarification does not change its key.
+
+**Checks on revised head:** repository `qa_file.py`: 83 items, 1,656 comparisons, 0 problems. `explanation_lint.py`: 83 items, 0 flagged; answer positions A 21, B 20, C 21, D 21. Independent deterministic filing solver matches 48/48 keyed answers; all 48 stems now specify ANSI/ARMA. RA 6713 source references and keyed statutory scenarios were reviewed against the cited Act.
+
+**Limitation:** The full ANSI/ARMA 12-2005 standard text was not accessible; its publisher preview establishes the standard title and scope but not the complete operative rules. The internal filing solver establishes consistency with the encoded rule interpretation, not authoritative proof of every normative filing answer. Keep these 48 items pending independent competent review against an authorized copy of the standard. The 35 law items remain draft pending the normal source-rights/content approval gate.
+
+**Disposition:** All 83 stay `draft/unreviewed`. Full PR software type/lint/format/test/build/bundle checks and required source-by-source originality review were not run. No part of this PR counts toward the verified/approved 2,000-item release target.
+
+
+## 2026-10-22: Independent review of gap-fill-2000-05 English items (open PR #11)
+
+**Scope:** Independently reviewed the 15 new paragraph-order and reading-comprehension items at PR #11's initial head `f3e154612a2f85f16681902bdd467b72aa92d411`. All eight ordering keys were checked against the four sentence events; all seven passage keys were checked against the provided text and the question's requested inference/detail/main idea. No third-party reviewer text was copied.
+
+**Defects corrected in the existing draft branch:**
+- `CIVIO-GF2K05-RCI-0001`: removed the unsupported comparison “as much as planting”; the answer now states only that selecting a suitable planting zone is important for survival.
+- `CIVIO-GF2K05-RCI-0002`: removed causal wording (“reminders helped”) unsupported by the before/after passage; the answer now reports that missed doses declined after reminders began while distance remains a stated barrier.
+
+Revised branch head: `882f571690e2fef11eedfc70f8b7b76ed1f5b9e9`. Repository `qa_file.py` passes: **15 items, 1,656 comparison records, 0 problems**. The 117-item lint-fix file separately passes `qa_fixfile.py`: **117 fixes, 1,592 comparison records (originals excluded), 0 problems**. This structural check does not constitute independent semantic review of those 117 fixes. The branch itself does not contain the referenced `explanation_lint.py`; I reproduced its check using the repository version present at PR #12 head `7220b8ade08deee3b348233702b97e4710fd807d`: 15/15 new items and 117/117 fixes, 0 flagged each.
+
+**Disposition:** The 15 new items remain `draft/unreviewed`; no approval, activation, import, merge or release count. The separate 117 full-item correction proposals remain unreviewed here, and the two known exceptions/holds identified in the PR's own tracker entry remain unresolved. Continue by auditing those fixes and obtaining the existing independent approval before any release selection.
+
+
+## 2026-10-22: Independent structural QA of gap-fill-2000-06 proposal (open PR #12)
+
+**Scope:** Checked PR #12 head `7220b8ade08deee3b348233702b97e4710fd807d`, containing the 99-item gap-fill-2000-01 batch and 254 full-item explanation-fix drafts. This is a validation pass, not a complete semantic audit or content approval.
+
+**Reproducible repository checks:**
+- `qa_file.py`: 99 new items, 1,656 comparison items, 0 problems.
+- `qa_fixfile.py` on PR #12 alone: 254 fixes, 1,504 comparison items excluding originals, six `CLR-FILE-ORDER` solver-unavailable flags. This branch predates the filing solver in PR #10. In a disposable integration checkout of PR #12 with PR #10's `qa.py` and `arma_solver.py` (head `c8800eb50743bb34ab3686346143ad32a0d8d3e1`), the same fix-file QA reports **254 fixes, 1,504 comparisons, 0 problems**. The six flags were branch dependency failures, not demonstrated answer defects. This integration check establishes internal solver consistency; independent normative review of the filing rules remains necessary because the full ANSI/ARMA standard was unavailable here.
+- `explanation_lint.py`: 99 new items and 254 fixes, 0 flagged in each file.
+
+**Disposition:** This does not verify the answers, explanations, or originality of all 99 + 254 records. Keep all proposed edits in draft/unreviewed state. Do not count drafts as approved or use the manifest's historical 1,641 + 359 projection as a current verified inventory. No activation, import, merge, or release approval.

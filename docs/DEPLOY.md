@@ -1,28 +1,17 @@
-# Civio deploy plan (not yet executed)
+# Civio hosting decision - pending GT
 
-Target free-first stack:
+Hosting is **undecided**. Earlier Cloud Run/Neon/Cloudflare and Koyeb/Neon/Netlify proposals conflict; neither is an approved deployment target. Select hosting with GT before creating accounts, enabling billing or preparing a release.
 
-1. **Google Cloud Run** — Laravel Docker image (`Dockerfile`), request-based billing,
-   scale to zero, max-instances cap, budget alert.
-2. **Neon** — free Postgres; set `DB_CONNECTION=pgsql` and Neon URL in Cloud Run secrets.
-3. **Cloudflare** — DNS/CDN for `civio.ph`, Turnstile, Web Analytics; optional AI Gateway.
+No deployment, paid service or Netlify credit spending is authorized. Preserve all Netlify ignore/build-skip settings. Every new commit includes [skip netlify]. A code push is not permission to publish.
 
-## Not done yet
+## MSI runtime boundaries
 
-- No production Cloud Run service created by Phase 0.
-- No Neon project wired from this repo.
-- Do not force-push; deploy from `main` after CI green.
+- Canonical source: C:\Users\GT\Desktop\Claude\Civio, branch main.
+- Civio live study: civio-local-app at localhost:8090; civio-local-db on localhost:5434.
+- Separate protected application: 8080/5433 (historical container names hiraya-review-app and hiraya-review-db).
+- Hermes: 8642.
+- Never stop, restart, rebuild, query or modify these services for development. Never use student data for tests.
 
-## Local Docker (MSI study)
+The task-owned security test container is civio-security-check-20261020. It has no network or published ports, uses an isolated task checkout and its own dependency volumes, and runs PHPUnit with SQLite in memory. Existing review checkouts and their dependency volumes remain preserved.
 
-```bash
-docker compose up --build
-# app :8080, Postgres :5433
-```
-
-Never touch Hermes `:8642` or break the MSI Docker study container (`:8080`).
-
-## Env
-
-Copy `.env.example`. Server-side AI keys only (`OPENAI_API_KEY`, `GEMINI_API_KEY`, …).
-Never `VITE_*` secrets. Sentry off unless `SENTRY_LARAVEL_DSN` is set.
+Keep .env, databases, credentials and preview overrides uncommitted. AI credentials stay server-side; never place them in VITE variables.

@@ -83,6 +83,7 @@ export interface ExamIndexProps {
     savedAttempt?: SavedAttempt | null;
     retakeSource?: RetakeSource | null;
     aiAnalysis?: AiAnalysisResult;
+    practiceBatchId?: string | null;
 }
 
 export interface ExamResults {

@@ -57,6 +57,30 @@ export default function Dashboard({
 
             <div className="grid grid-cols-1 items-start gap-5 sm:gap-6 md:grid-cols-2">
                 {/* Recent sessions and today's study-plan tasks */}
+
+                {/* Card 1: AI Readiness & Coaching */}
+                {/* Lite defers the analysis prop; show a text line until it lands. */}
+                <Deferred
+                    data="aiAnalysis"
+                    fallback={
+                        <p className="rounded-xl border p-5 text-sm text-muted-foreground">
+                            Loading your practice scores...
+                        </p>
+                    }
+                >
+                    <AiReadinessBentoCard aiAnalysis={aiAnalysis} />
+                </Deferred>
+
+                {/* Card 2: Daily Study Streak & Goal Progress */}
+                <DailyGoalStreakCard dailyGoal={dailyGoal} />
+
+                {/* Card 3: Smart Contextual Study Launchers */}
+                <SmartStudyLaunchers
+                    nextModule={nextModule}
+                    primaryWeakness={primaryWeakness}
+                />
+
+                {/* Card 4: Today's Tasks & Recent Exam Runs */}
                 <StudyScheduleActivityCard
                     todayTasks={todayTasks}
                     overdueTasksCount={overdueTasksCount}

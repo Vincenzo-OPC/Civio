@@ -15,6 +15,8 @@ import build_reparameterized_bank_part2 as words
 import reparam_verbal as verbal
 
 FACT_SUBS = {1, 2, 3, 4}
+# Baseline rows dropped from the set (GT, 22 Oct 2026): 256 was the Sergeant spelling item.
+EXCLUDED_IDS = {256}
 
 
 def main() -> None:
@@ -25,6 +27,8 @@ def main() -> None:
     for old in rows:
         qid = old["id"]
         sub = old["subcategory_id"]
+        if qid in EXCLUDED_IDS:
+            continue
         if qid in verbal.FILIPINO:
             built.append(verbal.build_filipino(old))
             continue
@@ -75,8 +79,9 @@ def main() -> None:
         raise SystemExit("duplicate stems:\n" + "\n".join(dupes[:20]))
     if len(prior) != len(set(prior)):
         raise SystemExit("duplicate prior stems")
-    if len(built) != len(rows):
-        raise SystemExit(f"count {len(built)} != {len(rows)}")
+    expected = len(rows) - sum(1 for old in rows if old["id"] in EXCLUDED_IDS)
+    if len(built) != expected:
+        raise SystemExit(f"count {len(built)} != {expected}")
     overlap = sorted(set(stems) & set(prior))
     if overlap:
         raise SystemExit("new stem repeats an old stem:\n" + "\n".join(overlap[:20]))
